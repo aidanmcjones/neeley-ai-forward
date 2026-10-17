@@ -11,7 +11,8 @@ Streamlit usage (the UI agent owns styling; this is only the call shape). With t
         st.markdown(html_out, unsafe_allow_html=True)
 
 Streamlit has no path routing, so serve it as a query-param page: '?doc=...&page=...&q=...'. The link builder emits
-'/viewer?...'; the app maps that prefix to the query-param view (or mounts it as a pages/viewer.py page).
+'<VIEWER_BASE>/viewer?...' (default http://127.0.0.1:8765), which agent.needle.cite.viewer_server serves with the
+standard library; the UI can mount viewer_server.viewer_response instead.
 """
 
 import html
@@ -19,7 +20,7 @@ import re
 
 from .index import load_index
 
-ZW = re.compile(r"[​­]")
+ZW = re.compile("[\u200b\u200c\u200d\u2060\ufeff\u00ad]")
 
 
 def _span(text, quote):

@@ -1,6 +1,6 @@
 # DECIDE: valuing the 24-month CEO move
 
-For the pitch writer. Spec: `docs/quant_model.md` Section 5 (on branch quant-model). Code: `agent/needle/quant/{moves,decide,kill,decide_cli}.py`. Dollars are USD millions.
+For the pitch writer. Spec: `docs/quant_model.md` Section 5 (v2.1 on branch quant-spec, matching quant-model ee7846c). Code: `agent/needle/quant/{moves,decide,kill,decide_cli}.py`. Dollars are USD millions.
 
 ## The equation
 
@@ -12,7 +12,9 @@ EV_m = sum_s p_s [ sum_{tau=1..24} ( P_alive(tau) CF_in - P_reach(tau) CF_out ) 
 - r = 7.85% a year (Damodaran pharma WACC, Jan 2026), converted to a monthly rate.
 - P_alive is the product of phase probabilities for readouts already passed (BIO 2021). P_reach is the probability of reaching the phase in which an outflow is spent (Stewart, Allison, Johnson 2001).
 - TV is everything after month 24 for the position held at month 24, valued with the same rules, to loss of exclusivity or 10 years after launch.
-- Correctness oracle: the synthetic label-expansion case gives EV 1,431.2 (bear 1,161.0, base 1,464.6, bull 1,768.2), cash at risk 57.6, payback month 51, spread 607.2. `tests/needle/test_decide.py` asserts all of it.
+- Ramp to peak: v2 templates ramp differently (label expansion 42 months, acquired or licensed 39.9, pricing 12, commercial 18). Label expansion now defaults to a 60-month ramp, 40% of peak at month 24, consistent with the 25-40% research default (commit 9a1932c); 42 months is kept as `LABEL_RAMP_MONTHS_ALT`. In-window value (months 1-24) and terminal value are reported separately for every move.
+- Correctness oracle, 60-month default ramp: EV 1,265.2 (bear 1,025.3, base 1,294.9, bull 1,564.5), in-window PV -53.3, cash at risk 57.6, payback month 54, spread 539.3.
+- Correctness oracle, 42-month alternative ramp (v2): the synthetic label-expansion case gives EV 1,431.2 (bear 1,161.0, base 1,464.6, bull 1,768.2), cash at risk 57.6, payback month 51, spread 607.2. `tests/needle/test_decide.py` asserts all of it.
 
 ## The five numbers and how to read them
 
@@ -22,7 +24,7 @@ EV_m = sum_s p_s [ sum_{tau=1..24} ( P_alive(tau) CF_in - P_reach(tau) CF_out ) 
 | Downside cash at risk | What the company has spent and cannot recover if the bear case holds and the first trial fails, net of inflows and of payments it can avoid (uncalled milestones, CVRs). Compare it with cash on the balance sheet: that is the feasibility gate. |
 | Payback month | First month the cumulative discounted expected cash turns positive, searched to 120 months. `None` means not within 120. |
 | Scenario EV spread | EV if the bull case is certain minus EV if the bear case is certain. It is the commercial uncertainty in dollars. It is understated: the multipliers are the ZS boundary values, the true tails are wider. |
-| MCDA score | 0 to 1, four criteria at 0.25 each: strategic fit (share of the company's top-five Part 1 finding score the move addresses), capability (share of required assets held), execution risk (P_alive x probability-weighted multiplier / 1.2), stakeholder evidence (share of deciders with documented evidence). It only decides between moves whose EV intervals overlap. |
+| MCDA score | 0 to 1, four criteria at 0.25 each: strategic fit (share of the company's top-five Part 1 M x E the move addresses; v2 used S, which contains obscurity, so a well-known material problem scored 0; `decide.finding_weight`, commit 9a1932c), capability (share of required assets held), execution risk (P_alive x probability-weighted multiplier / 1.2), stakeholder evidence (share of deciders with documented evidence). It only decides between moves whose EV intervals overlap. |
 
 Selection: drop moves whose cash at risk exceeds cash and equivalents; take the highest EV; if the top two [EV bear, EV bull] intervals overlap, take the higher MCDA. The next two moves are the reported rejected alternatives, each with the one reason that cost it the choice.
 
@@ -75,7 +77,8 @@ These are a pipeline demonstration, not a recommendation. The winner's EV rests 
 
 - No product-level net price, channel build cost, or PBM formulary data is public; those are team inputs and flagged.
 - Scenario weights are a launch-outcome base rate (Trinity) applied to every move, including ones that are not launches. The bear and bull multipliers are boundary values, so the spread is understated.
-- Technical and commercial risk are treated as independent (inference). A 7.85% WACC is used without a project hurdle above it.
+- Scenario weights (Trinity: any year-one miss) and multipliers (ZS: year-three boundaries) come from different bases, so the bear case is optimistic and EV leans up.
+- Technical and commercial risk are treated as independent (inference). A 7.85% WACC is the team's choice, with no project hurdle above it; the research note says hurdles are commonly higher (DiMasi's 10.5% real). EV at 10.5% is not yet shown.
 - The base-case kill likelihood (0.55) and the coverage likelihoods are inferences. Only the bear and bull ZS values are published.
 - A kill signal that needs paid claims data cannot be checked from free sources; the free ones (SDUD, FAERS, 10-Q, ClinicalTrials.gov) lag 1 to 18 months.
 - MCDA capability and stakeholder inputs are only as good as the facts the team documents; missing facts score 0.
@@ -83,7 +86,7 @@ These are a pipeline demonstration, not a recommendation. The winner's EV rests 
 
 ## Deviations from the spec
 
-1. The spec file is not committed in this branch's base; it was read from the quant-model worktree (`docs/quant_model.md`, untracked there).
+1. The spec was untracked when DECIDE was built; it is now committed (quant-spec, v2.0).
 2. `rank_moves` sorts by EV only. The feasibility gate and the MCDA tiebreak live in `select_move`, which returns the chosen move and the two rejected alternatives with a binding reason.
 3. Several kill-signal breaches from one evidence family (the three ZS metrics, and self-pay share which reuses the ZS rule) count as one Bayes update, because they are one observation. The spec shows a single breach only.
 4. Spec gives no base likelihood for commercial coverage: 0.75 (midpoint of 1.0 and 0.5), an inference. A year-one or SDUD miss sets p_bear to at least 0.70 and splits the rest over base and bull in proportion to their updated weights.
