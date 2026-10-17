@@ -1,0 +1,129 @@
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import type { ReactNode } from "react";
+import type { Evidence } from "../lib/types";
+
+// Global right-side source drawer. Any CiteChip calls useSource().open(evidence).
+// Esc closes, focus is trapped while open and restored to the opener on close.
+
+interface SourceCtx { open: (ev: Evidence) => void; close: () => void; current: Evidence | null }
+const Ctx = createContext<SourceCtx>({ open: () => {}, close: () => {}, current: null });
+export const useSource = () => useContext(Ctx);
+
+export function SourceProvider({ children }: { children: ReactNode }) {
+  const [current, setCurrent] = useState<Evidence | null>(null);
+  const opener = useRef<HTMLElement | null>(null);
+  const open = useCallback((ev: Evidence) => {
+    opener.current = document.activeElement as HTMLElement | null;
+    setCurrent(ev);
+  }, []);
+  const close = useCallback(() => {
+    setCurrent(null);
+    opener.current?.focus?.();
+  }, []);
+  const value = useMemo(() => ({ open, close, current }), [open, close, current]);
+  return (
+    <Ctx.Provider value={value}>
+      {children}
+      {current && <SourceDrawer evidence={current} onClose={close} />}
+    </Ctx.Provider>
+  );
+}
+
+const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"]), input, select, textarea';
+
+function Row({ k, children }: { k: string; children: ReactNode }) {
+  return (
+    <div className="grid grid-cols-[110px_1fr] gap-2 py-1.5 border-b border-line last:border-0">
+      <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted pt-0.5">{k}</dt>
+      <dd className="text-sm min-w-0 break-words">{children}</dd>
+    </div>
+  );
+}
+
+function verdictTone(v?: string) {
+  const s = (v ?? "").toLowerCase();
+  if (s.startsWith("verif") || s === "pass" || s === "ok") return "text-good";
+  if (s.startsWith("reject") || s === "fail") return "text-bad";
+  return "text-warn";
+}
+
+export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; onClose: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const closeBtn = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => { closeBtn.current?.focus(); }, [ev]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { e.preventDefault(); onClose(); return; }
+      if (e.key !== "Tab" || !ref.current) return;
+      const els = Array.from(ref.current.querySelectorAll<HTMLElement>(FOCUSABLE));
+      if (!els.length) return;
+      const first = els[0], last = els[els.length - 1];
+      const active = document.activeElement;
+      if (e.shiftKey && (active === first || !ref.current.contains(active))) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && (active === last || !ref.current.contains(active))) { e.preventDefault(); first.focus(); }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  const label = ev.citation || [ev.doc_id, ev.page != null ? `p. ${ev.printed || ev.page}` : ""].filter(Boolean).join(", ") || "Source";
+  const figures = Array.isArray(ev.figures) ? ev.figures.map(String).filter(Boolean) : [];
+  const ex = ev.excerpt;
+  const hasExcerpt = !!(ex && (ex.before || ex.match || ex.after));
+  const isCall = !!ev.speaker || /call|transcript/i.test(ev.doc_type ?? "");
+
+  return (
+    <div className="fixed inset-0 z-50 no-print">
+      <div className="absolute inset-0 bg-fg/30" onClick={onClose} aria-hidden="true" />
+      <div
+        ref={ref}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="source-drawer-title"
+        className="absolute right-0 top-0 h-full w-[480px] max-w-[92vw] bg-surface shadow-drawer border-l border-line flex flex-col"
+      >
+        <header className="flex items-start justify-between gap-3 px-5 py-4 border-b border-line">
+          <div className="min-w-0">
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted">Source</div>
+            <h2 id="source-drawer-title" className="font-mono text-sm font-medium mt-0.5 break-words">{label}</h2>
+          </div>
+          <button ref={closeBtn} onClick={onClose} className="rounded border border-line px-2 py-1 text-xs hover:bg-surface-2" aria-label="Close source drawer (Esc)">
+            Esc ✕
+          </button>
+        </header>
+        <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+          <dl>
+            <Row k="Document">
+              {ev.url ? (
+                <a href={ev.url} target="_blank" rel="noreferrer" className="text-purple underline break-all">{ev.url}</a>
+              ) : <span className="font-mono text-xs">{ev.doc_id ?? "n/a"}</span>}
+            </Row>
+            {(ev.page != null || ev.printed) && <Row k="Page"><span className="font-mono tnum">{ev.printed || ev.page}</span></Row>}
+            {ev.speaker && <Row k="Speaker">{ev.speaker}</Row>}
+            <Row k="Figures checked">
+              {figures.length ? (
+                <span className="flex flex-wrap gap-1">{figures.map((f, i) => <span key={i} className="font-mono text-xs bg-chip rounded px-1.5 py-0.5 tnum">{f}</span>)}</span>
+              ) : <span className="text-muted">none listed</span>}
+            </Row>
+            <Row k="Verifier"><span className={`font-semibold ${verdictTone(ev.verdict)}`}>{ev.verdict ?? "not recorded"}</span></Row>
+            {(isCall || ev.grade) && <Row k="Transcript grade">{ev.grade ? <span className="font-mono">{ev.grade}</span> : <span className="text-muted">ungraded</span>}{ev.source_quality ? <span className="text-muted"> · {ev.source_quality}</span> : null}</Row>}
+          </dl>
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted mb-1.5">Page excerpt</div>
+            {hasExcerpt ? (
+              <blockquote className="rounded-md bg-surface-2 border border-line p-3 text-sm leading-relaxed whitespace-pre-wrap">
+                {ex!.before}<mark>{ex!.match}</mark>{ex!.after}
+              </blockquote>
+            ) : ev.quote ? (
+              <blockquote className="rounded-md bg-surface-2 border border-line p-3 text-sm leading-relaxed"><mark>{ev.quote}</mark></blockquote>
+            ) : (
+              <p className="text-sm text-muted">No excerpt exported for this citation.</p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
