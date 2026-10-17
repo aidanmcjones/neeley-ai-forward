@@ -21,27 +21,27 @@ STATUS = {
     "fine_print": ("collected", "verified"), "product_evidence": ("collected", "verified"),
 }
 STAGES = [
-    ("Collect", "done", "7 streams done: filings, calls, policy, product, pricing, market, SEC fine print, plus I/B/E/S from WRDS"),
-    ("Verify", "done", "Opus re-checked every stream against its source; all 10 buckets verified, 70+ error types logged"),
-    ("Citation index", "done", "citations.sqlite: 3,118 docs, 39,940 pages, 69,553 verified facts, quote grades, verify_quote; 10 of 10 tests pass"),
-    ("Model", "blocked", "NEEDLE runs on the index; blocked on the Anthropic API key"),
-    ("UI", "waiting", "Cockpit restyle of the Streamlit app, after the model reads the index"),
-    ("Demo video", "waiting", "Sunday 10:30 to 12:30, after the 10:30 code freeze"),
+    ("Collect", "done", "7 streams plus I/B/E/S from WRDS; 5 official Bloomberg transcripts filed, inbox watcher running for the rest"),
+    ("Verify", "done", "Opus re-checked all 10 buckets against source pages; 61 AI error types logged for the report"),
+    ("Citation index", "done", "citations.sqlite: 3,118 docs, 39,940 pages, 69,553 facts, cite() and verify_quote(); frozen through the Sun 10:30 am freeze"),
+    ("Model", "blocked", "Model session is wiring NEEDLE to the index; the LLM steps still wait on the Anthropic API key"),
+    ("UI", "running", "UI session has 7 cockpit screens in build on top of the index"),
+    ("Demo video", "waiting", "Sunday 10:30 to 12:30, after the code freeze; needs the company pick first"),
 ]
 PART1 = [
     ("Why this company beat the other nine", ["policy", "consensus", "attention"], "ready"),
     ("5+ findings with filing and page", ["annual", "quarterly", "calls", "fine_print"], "ready"),
     ("Impact math per finding", ["product_revenue", "consensus"], "ready"),
     ("Peer comparison per finding", ["annual", "quarterly", "product_revenue"], "ready"),
-    ("Confidence and 'priced in' call", ["consensus", "attention"], "verifying"),
-    ("Sharpest Needle (least discussed)", ["attention"], "verifying"),
-    ("Product vs rivals: uses, boxed warnings, dosing", ["product_evidence"], "verifying"),
+    ("Confidence and 'priced in' call", ["consensus", "attention"], "ready"),
+    ("Sharpest Needle (least discussed)", ["attention", "fine_print"], "ready"),
+    ("Product vs rivals: uses, boxed warnings, dosing", ["product_evidence"], "ready"),
     ("Product: patent and exclusivity timeline", ["product_evidence"], "ready"),
-    ("Product: pricing and gross-to-net exposure", ["pricing"], "collecting"),
-    ("Exact call quotes with speaker", ["calls"], "verifying"),
+    ("Product: pricing and gross-to-net exposure", ["pricing"], "ready"),
+    ("Exact call quotes with speaker", ["calls"], "ready"),
 ]
 PART2 = [
-    ("The move, with budget or people", "Not started; waits on the company pick (Parker, about 4:30 pm)", "waiting"),
+    ("The move, with budget or people", "Waits on the company pick (Parker). Once named: 30 to 60 minute pulls per gap below", "waiting"),
     ("Cost and return math", "No cost benchmarks yet: sales force, launch, trial for a new use. Pull after the move is chosen", "gap"),
     ("Deal comps (if acquire or license)", "Some in 8-Ks and press releases; full sets are paywalled (BioCentury, Evaluate)", "gap"),
     ("Market sizing", "Patient counts by condition: free from CDC and SEER, not collected", "gap"),
@@ -49,7 +49,7 @@ PART2 = [
     ("Two rejected alternatives", "Argument, built from Part 1 data", "waiting"),
     ("What would prove us wrong (6 to 12 months)", "Argument, built from Part 1 data", "waiting"),
     ("Why it will work: doctors, payers, investors", "Mentor and industry interviews today in room 2303; no dataset replaces this", "human"),
-    ("Promo rules and claims map (campaign only)", "Head-to-head trial table supports which rival claims are allowed", "ready"),
+    ("Promo rules and claims map (campaign only)", "Verified head-to-head table (37 pairs) says which rival claims have evidence", "ready"),
 ]
 NO_SOURCE = [
     ("Commercial list and true net prices", "Medi-Span, First Databank, IQVIA", "Part B ASP, Medicaid, NADAC, Part D, company list-vs-net reports"),
