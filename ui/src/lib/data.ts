@@ -89,7 +89,21 @@ export function resolveCite(company: Company | null | undefined, ref: CiteRef): 
 
 export function findNeedle(company: Company | null | undefined): Finding | undefined {
   if (!company) return undefined;
-  return company.findings.find((f) => f.id === company.needle_id) ?? company.findings[0];
+  const byId = company.needle_id ? company.findings.find((f) => f.id === company.needle_id) : undefined;
+  if (byId) return byId;
+  // v3: needle status "none" means no row qualifies; never promote another row to needle.
+  if (needleNone(company)) return undefined;
+  return company.findings[0];
+}
+
+export function needleNone(company: Company | null | undefined): boolean {
+  return String(company?.needle_status ?? "").replace(/\s+/g, "_").toLowerCase() === "none";
+}
+
+/** Highest-scored finding (shown instead of a needle when none qualifies). */
+export function topFinding(company: Company | null | undefined): Finding | undefined {
+  if (!company?.findings.length) return undefined;
+  return [...company.findings].sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
 }
 
 /* ------------------------------------------------------------- base context */

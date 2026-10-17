@@ -49,9 +49,11 @@ export interface LeagueRow extends Loose {
   /** v2 engine: strict (row clears the obscurity floor), provisional or floor_relaxed. */
   needle_status?: NeedleStatus | string;
   needle_confidence?: Confidence;
+  rank?: number;
+  v2_rank?: number | null;
 }
 
-export type NeedleStatus = "strict" | "provisional" | "floor_relaxed";
+export type NeedleStatus = "strict" | "provisional" | "floor_relaxed" | "none";
 
 export interface Excerpt { before?: string; match?: string; after?: string }
 
@@ -107,6 +109,12 @@ export interface NumericCheck extends Loose {
 export interface Finding extends Loose {
   id: string;
   numeric_check?: NumericCheck | null;
+  flags?: string[];
+  guard_reason?: string | null;
+  not_quantified?: string | null;
+  corroborates?: string | null;
+  fact_key?: string | null;
+  impact_channel?: string | null;
   finding: string;
   signal_kind?: string;
   detector?: string;

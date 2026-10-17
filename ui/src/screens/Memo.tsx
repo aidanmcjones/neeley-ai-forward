@@ -154,7 +154,7 @@ export default function Memo() {
                 <li key={r.name} className="grid grid-cols-[200px_auto_1fr] items-center gap-3">
                   <span className={`font-semibold ${r.recommended ? "text-teal" : ""}`}>{r.recommended ? "▸ " : ""}{r.name}{r.recommended ? " (recommended)" : ""}</span>
                   <ScoreBar value={r.frac} tone="purple" width={150} label={r.valueLabel} />
-                  <span className="text-xs text-muted">{r.nFindings != null ? `${r.nFindings} verified findings` : ""}{r.dollars == null ? " · no direct $ in findings" : ""}</span>
+                  <span className="text-xs text-muted">{r.nFindings != null ? `${r.nFindings} verified findings` : ""}{r.dollars == null ? " · no quantified $ in findings" : ""}</span>
                 </li>
               ))}
             </ul>

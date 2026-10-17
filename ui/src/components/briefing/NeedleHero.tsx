@@ -1,15 +1,17 @@
-import { AiMark, CiteChip, ConfPill, NeedleStatusPill, NumericPill } from "..";
+import { AiMark, CiteChip, ConfPill, FlagPills, NeedleStatusPill, NumericPill } from "..";
 import { money, z } from "../../lib/format";
 import { externalSources, impactView, isShiftMetric, metricText } from "../../lib/stance";
 import type { Evidence, Finding } from "../../lib/types";
 
 // Full-width hero band: the Sharpest Needle as the engine's verdict.
-export function NeedleHero({ needle, ticker, onPreview, status, v2 = false }: {
+export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none = false }: {
   needle: Finding; ticker: string; onPreview?: (ev: Evidence | null) => void;
   /** league needle_status (strict / provisional / floor_relaxed). */
   status?: string | null;
   /** v2 engine export: floor is O ≥ 0.5, E ≥ 0.9. */
   v2?: boolean;
+  /** No row qualifies as the needle: `needle` is the highest-scored finding, shown as such. */
+  none?: boolean;
 }) {
   const im = impactView(needle);
   const peer = needle.peer;
@@ -18,7 +20,7 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false }: {
   const hasPeer = peer?.metric_value != null && peer?.peer_median != null;
 
   return (
-    <section aria-labelledby="needle-h" className="rounded-lg border border-teal/40 border-t-4 border-t-teal bg-teal-soft/40 shadow-card px-5 pt-3 pb-4">
+    <section aria-labelledby="needle-h" className={`rounded-lg border shadow-card px-5 pt-3 pb-4 ${none ? "border-line border-t-4 border-t-frog-grey bg-surface" : "border-teal/40 border-t-4 border-t-teal bg-teal-soft/40"}`}>
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2.5">
           <AiMark label="Sharpest Needle · engine verdict" />
@@ -26,9 +28,19 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false }: {
         </div>
         <span className="text-[11px] text-muted font-mono">{v2 ? "highest S = M·O·E·π with O ≥ 0.5, E ≥ 0.9" : "highest S with O ≥ 0.7, E ≥ 0.6"} · companies/{ticker}.json · league.json</span>
       </div>
-      <h2 id="needle-h" className="mt-1.5 font-display text-[40px] leading-[1.02] tracking-wide text-fg">
-        {needle.finding}
-      </h2>
+      {none ? (
+        <>
+          <h2 id="needle-h" className="mt-1.5 font-display text-[34px] leading-[1.02] tracking-wide text-muted">No row qualifies as the Sharpest Needle</h2>
+          <p className="mt-1 text-[15px] leading-snug">
+            <span className="mr-1.5 rounded border border-line px-1.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-muted">Highest-scored finding</span>
+            <span className="font-semibold">{needle.finding}</span>
+          </p>
+        </>
+      ) : (
+        <h2 id="needle-h" className={`mt-1.5 font-display leading-[1.02] tracking-wide text-fg ${needle.finding.length > 150 ? "text-[32px]" : "text-[40px]"}`}>
+          {needle.finding}
+        </h2>
+      )}
       <div className="mt-2.5 grid grid-cols-[auto_1fr_auto] items-start gap-x-6 gap-y-2 text-sm">
         <div className="flex flex-col items-start gap-1.5 pt-0.5">
           <div className="flex items-center gap-2">
@@ -36,6 +48,7 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false }: {
             {needle.verdict && <span className="text-[11px] font-semibold uppercase tracking-wide text-muted" title="Verifier verdict: the quote was located on the cited page">{needle.verdict === "verified" ? "quote located" : needle.verdict.replace("_", " ")}</span>}
           </div>
           <NumericPill check={needle.numeric_check} />
+          <FlagPills finding={needle} />
         </div>
         <dl className="min-w-0 grid grid-cols-[86px_1fr] gap-x-3 gap-y-1">
           <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted pt-0.5">Why unseen</dt>
@@ -66,7 +79,7 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false }: {
           <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">Proof on the page</span>
           {ev.length > 0 ? (
             <div className="flex flex-wrap justify-end gap-1.5">
-              {ev.map((e, i) => <CiteChip key={i} evidence={{ ...e, verdict: e.verdict ?? needle.verdict }} label={`[${i + 1}] ${e.citation ?? e.doc_id ?? "source"}`} onPreview={onPreview} />)}
+              {ev.map((e, i) => <CiteChip key={i} evidence={{ ...e, verdict: e.verdict ?? needle.verdict }} label={`[${i + 1}] ${(e.citation ?? e.doc_id ?? "source").replace(/\s*\(file page \d+\)$/, "")}`} onPreview={onPreview} />)}
             </div>
           ) : (
             <div className="text-right text-xs">

@@ -74,7 +74,7 @@ export function StancePanel({ company, preview, onPreview }: {
                 </span>
                 <span className="block text-[11px] text-muted truncate">
                   {r.nFindings != null ? `${r.nFindings} findings` : ""}
-                  {r.dollars == null ? <span className="italic">{r.nFindings != null ? " · " : ""}no direct $ in findings</span> : null}
+                  {r.dollars == null ? <span className="italic">{r.nFindings != null ? " · " : ""}no quantified $ in findings</span> : null}
                 </span>
               </span>
               <ScoreBar value={r.frac} max={1} tone="purple" width={84} label={r.valueLabel} />

@@ -55,7 +55,7 @@ export function weighOptions(stance: Stance | null | undefined): { basis: Weight
     const n = optExtra(o).n_findings;
     const s = optExtra(o).score_sum;
     let valueLabel = "n/a";
-    if (basis === "dollars") valueLabel = isNum(o.dollars) ? money(o.dollars) : "no direct $";
+    if (basis === "dollars") valueLabel = isNum(o.dollars) ? money(o.dollars) : "no quantified $";
     else if (basis === "share") valueLabel = isNum(o.share) ? pct(o.share, { digits: 0 }) : "n/a";
     else if (basis === "score") valueLabel = isNum(s) ? s.toFixed(3) : "0.000";
     return {

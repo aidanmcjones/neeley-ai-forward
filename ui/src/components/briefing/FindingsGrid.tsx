@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import { NumericPill, CiteChip, ConfPill, DataTable } from "..";
+import { NumericPill, CiteChip, ConfPill, DataTable, FlagPills } from "..";
 import type { Column } from "..";
 import { money, z } from "../../lib/format";
 import { impactView } from "../../lib/stance";
@@ -87,8 +87,12 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
       render: (r) => {
         const text = r.kind === "finding" ? r.f.finding : r.r.finding ?? "";
         return (
-          <span title={r.kind === "rejected" ? `${text}\nRejected: ${r.r.reason ?? ""}` : text} className={`line-clamp-2 ${r.kind === "rejected" ? "line-through text-muted" : ""}`}>
-            {text}
+          <span className="block">
+            <span title={r.kind === "rejected" ? `${text}\nRejected: ${r.r.reason ?? ""}` : text} className={`line-clamp-2 [overflow-wrap:anywhere] ${r.kind === "rejected" ? "line-through text-muted" : ""}`}>
+              {text}
+            </span>
+            {r.kind === "finding" && <FlagPills finding={r.f} className="mt-0.5" />}
+            {r.kind === "rejected" && r.r.reason && <span className="mt-0.5 block text-[10.5px] text-bad/90 line-clamp-1" title={r.r.reason}>{r.r.reason}</span>}
           </span>
         );
       },
@@ -102,6 +106,7 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
         if (im.kind === "dollars") return <span className="font-mono" title={im.formula}>{money(im.dollars)}</span>;
         if (im.kind === "suspect") return <s className="font-mono text-muted" title={`${im.formula}\nSuspect: ${im.note ?? ""}`}>{money(im.dollars)}</s>;
         if (im.kind === "proxy") return <span className="text-[11px] text-muted" title={im.formula}>proxy</span>;
+        if (r.f.not_quantified) return <span className="text-[11px] text-muted" title={r.f.not_quantified}>not quant.</span>;
         return <span className="text-muted">n/a</span>;
       },
     },

@@ -1,5 +1,5 @@
 import { useData } from "../lib/data";
-import { ScreenFrame } from "../components";
+import { Panel, RobustnessTable, ScreenFrame } from "../components";
 import { AiCaughtPanel, VerifierPanel } from "../components/proof/Verifier";
 import { BacktestPanel } from "../components/proof/Backtest";
 import { BlindPanel, CalibrationPanel, LimitsPanel, SealedPanel } from "../components/proof/Forecasts";
@@ -14,6 +14,11 @@ export default function Proof() {
       loading={loading} error={error}
     >
       <VerifierPanel meta={meta} league={league} rules={proof?.verifier_rules ?? meta?.verifier_rules ?? []} />
+      {meta?.league_robustness ? (
+        <Panel title="Does the league ranking hold?" meta={<span className="font-mono">meta.json · league_robustness</span>}>
+          <RobustnessTable meta={meta} league={league} selected={ticker} onPick={setTicker} />
+        </Panel>
+      ) : null}
       <AiCaughtPanel company={company} ticker={ticker} league={league} aiWrong={proof?.ai_wrong ?? []} onPick={setTicker} />
       <BacktestPanel hitRates={proof?.backtest?.hit_rates} gate2={proof?.backtest?.gate2_md} />
       <div className="grid grid-cols-1 gap-4">

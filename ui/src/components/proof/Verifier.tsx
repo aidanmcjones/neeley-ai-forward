@@ -127,7 +127,7 @@ export function AiCaughtPanel({ company, ticker, league, aiWrong, onPick }: {
             <tbody>{rejected.map((r, i) => (
               <tr key={i} className="border-b border-line last:border-0 align-top">
                 <td className="px-3 py-2">{r.finding ?? "n/a"} {r.signal_kind && <span className="ml-1 font-mono text-[11px] text-muted">{r.signal_kind}</span>}</td>
-                <td className="px-3 py-2"><Pill tone="bad">rejected</Pill> <span className="font-mono text-[12px] break-all">{r.reason ?? "n/a"}</span></td>
+                <td className="px-3 py-2"><Pill tone="bad">rejected</Pill> <span className="text-[12.5px] [overflow-wrap:anywhere]">{r.reason ?? "n/a"}</span></td>
               </tr>
             ))}</tbody>
           </table>

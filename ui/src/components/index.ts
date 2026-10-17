@@ -15,3 +15,5 @@ export { StanceBadge } from "./StanceBadge";
 export { SampleBanner, ScreenFrame } from "./ScreenFrame";
 export { NeedleStatusPill, needleStatusInfo } from "./NeedleStatus";
 export { NumericPill, NumericSummary, numericCheckText } from "./NumericCheck";
+export { FlagPills, findingFlags, flagInfo } from "./FindingFlags";
+export { RankChange, RobustnessTable, robustnessData } from "./Robustness";

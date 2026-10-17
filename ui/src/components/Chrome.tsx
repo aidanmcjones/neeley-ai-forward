@@ -5,7 +5,7 @@ import { needleStatusInfo } from "./NeedleStatus";
 
 function statusSuffix(s?: string | null): string {
   const i = needleStatusInfo(s);
-  return i && i.warn ? ` (needle ${i.label.toLowerCase()})` : "";
+  return i && (i.warn || i.muted) ? ` (needle ${i.label.toLowerCase()})` : "";
 }
 
 // Top bar: logo, tagline, company picker, As-of pill, ⌘K Ask.
