@@ -1,0 +1,26 @@
+{
+  "prediction": {
+    "id": "JNJ-2026Q3-revenue_yoy",
+    "ticker": "JNJ",
+    "target_period": "2026Q3",
+    "metric": "revenue_yoy",
+    "direction": "within",
+    "threshold": null,
+    "probability": 0.8,
+    "basis": [
+      "calibrated k=1.4",
+      "point +7.3%",
+      "80% interval +4.3% to +10.4%"
+    ],
+    "made_at": "data through 2026Q2 only",
+    "outcome": "hit",
+    "actual": 0.059000000000000004
+  },
+  "actual": 0.059000000000000004,
+  "abs_error_pts": 1.44,
+  "answer_key": {
+    "citation": "JNJ earnings release (8-K) 2026-10-13, file page 1",
+    "quote": "Third-Quarter reported sales growth of 5.9% to $25.4 Billion with operational growth of 6.0%*",
+    "verifier": "verified"
+  }
+}

@@ -80,8 +80,19 @@ def check(ev, ticker_docs):
     doc = ticker_docs.get(ev.doc_id)
     if doc and ev.page in doc["pages"]:
         ev.printed = doc["pages"][ev.page][0]
+        row = doc["row"]
+        # agent.findings.label() only knows 10-K / 10-Q / calls; name every other doc type correctly
+        if citation and row["doc_type"] in DOC_LABELS:
+            where = f"p. {ev.printed}" if ev.printed and ev.printed != "?" else f"file page {ev.page}"
+            citation = f"{row['ticker']} {DOC_LABELS[row['doc_type']]} {row.get('filed') or row['period']}, {where}"
     ev.citation = citation
     return status, reason
+
+
+DOC_LABELS = {"earnings_release": "earnings release (8-K)", "policy_8k": "8-K", "foreign_current_report": "6-K",
+              "earnings_slides": "earnings slides", "investor_presentation": "investor presentation",
+              "press_release": "press release", "interim_report": "interim report",
+              "annual_report_glossy": "annual report", "sales_supplement": "sales supplement"}
 
 
 def paragraphs(text, min_words=12):

@@ -1,0 +1,8 @@
+{
+  "k": 1.4,
+  "coverage": 0.794,
+  "target": 0.8,
+  "n_cases": 1793,
+  "median_abs_error_pts": 7.05,
+  "direction_accuracy_vs_last": 0.803
+}

@@ -1,0 +1,306 @@
+{
+  "universe": 50,
+  "firm_quarters": 1466,
+  "companies_observed": 44,
+  "window_quarters": 8,
+  "period": "2012-2024",
+  "signals": {
+    "inventory_outpaces_revenue": {
+      "n_fired": 490,
+      "n_observed": 1378,
+      "events": {
+        "revenue_drop": {
+          "hits": 104,
+          "n": 490,
+          "hit_rate": 0.212,
+          "base_rate": 0.193,
+          "lift": 1.1,
+          "ci95": [
+            0.178,
+            0.251
+          ]
+        },
+        "impairment": {
+          "hits": 56,
+          "n": 490,
+          "hit_rate": 0.114,
+          "base_rate": 0.115,
+          "lift": 0.99,
+          "ci95": [
+            0.089,
+            0.146
+          ]
+        },
+        "margin_drop": {
+          "hits": 149,
+          "n": 490,
+          "hit_rate": 0.304,
+          "base_rate": 0.245,
+          "lift": 1.24,
+          "ci95": [
+            0.265,
+            0.346
+          ]
+        },
+        "any": {
+          "hits": 224,
+          "n": 490,
+          "hit_rate": 0.457,
+          "base_rate": 0.409,
+          "lift": 1.12,
+          "ci95": [
+            0.414,
+            0.501
+          ]
+        }
+      }
+    },
+    "receivables_outpace_revenue": {
+      "n_fired": 414,
+      "n_observed": 1338,
+      "events": {
+        "revenue_drop": {
+          "hits": 80,
+          "n": 414,
+          "hit_rate": 0.193,
+          "base_rate": 0.199,
+          "lift": 0.97,
+          "ci95": [
+            0.158,
+            0.234
+          ]
+        },
+        "impairment": {
+          "hits": 44,
+          "n": 414,
+          "hit_rate": 0.106,
+          "base_rate": 0.119,
+          "lift": 0.89,
+          "ci95": [
+            0.08,
+            0.14
+          ]
+        },
+        "margin_drop": {
+          "hits": 131,
+          "n": 414,
+          "hit_rate": 0.316,
+          "base_rate": 0.248,
+          "lift": 1.28,
+          "ci95": [
+            0.273,
+            0.363
+          ]
+        },
+        "any": {
+          "hits": 186,
+          "n": 414,
+          "hit_rate": 0.449,
+          "base_rate": 0.416,
+          "lift": 1.08,
+          "ci95": [
+            0.402,
+            0.497
+          ]
+        }
+      }
+    },
+    "dso_rising": {
+      "n_fired": 331,
+      "n_observed": 1336,
+      "events": {
+        "revenue_drop": {
+          "hits": 75,
+          "n": 331,
+          "hit_rate": 0.227,
+          "base_rate": 0.198,
+          "lift": 1.15,
+          "ci95": [
+            0.185,
+            0.275
+          ]
+        },
+        "impairment": {
+          "hits": 30,
+          "n": 331,
+          "hit_rate": 0.091,
+          "base_rate": 0.119,
+          "lift": 0.76,
+          "ci95": [
+            0.064,
+            0.126
+          ]
+        },
+        "margin_drop": {
+          "hits": 117,
+          "n": 331,
+          "hit_rate": 0.353,
+          "base_rate": 0.249,
+          "lift": 1.42,
+          "ci95": [
+            0.304,
+            0.406
+          ]
+        },
+        "any": {
+          "hits": 159,
+          "n": 331,
+          "hit_rate": 0.48,
+          "base_rate": 0.415,
+          "lift": 1.16,
+          "ci95": [
+            0.427,
+            0.534
+          ]
+        }
+      }
+    },
+    "dio_rising": {
+      "n_fired": 329,
+      "n_observed": 1210,
+      "events": {
+        "revenue_drop": {
+          "hits": 62,
+          "n": 329,
+          "hit_rate": 0.188,
+          "base_rate": 0.202,
+          "lift": 0.93,
+          "ci95": [
+            0.15,
+            0.234
+          ]
+        },
+        "impairment": {
+          "hits": 30,
+          "n": 329,
+          "hit_rate": 0.091,
+          "base_rate": 0.113,
+          "lift": 0.81,
+          "ci95": [
+            0.065,
+            0.127
+          ]
+        },
+        "margin_drop": {
+          "hits": 95,
+          "n": 329,
+          "hit_rate": 0.289,
+          "base_rate": 0.274,
+          "lift": 1.06,
+          "ci95": [
+            0.242,
+            0.34
+          ]
+        },
+        "any": {
+          "hits": 134,
+          "n": 329,
+          "hit_rate": 0.407,
+          "base_rate": 0.427,
+          "lift": 0.95,
+          "ci95": [
+            0.356,
+            0.461
+          ]
+        }
+      }
+    },
+    "gross_margin_drop": {
+      "n_fired": 303,
+      "n_observed": 1258,
+      "events": {
+        "revenue_drop": {
+          "hits": 85,
+          "n": 303,
+          "hit_rate": 0.281,
+          "base_rate": 0.203,
+          "lift": 1.38,
+          "ci95": [
+            0.233,
+            0.334
+          ]
+        },
+        "impairment": {
+          "hits": 52,
+          "n": 303,
+          "hit_rate": 0.172,
+          "base_rate": 0.111,
+          "lift": 1.54,
+          "ci95": [
+            0.133,
+            0.218
+          ]
+        },
+        "margin_drop": {
+          "hits": 135,
+          "n": 303,
+          "hit_rate": 0.446,
+          "base_rate": 0.277,
+          "lift": 1.61,
+          "ci95": [
+            0.391,
+            0.502
+          ]
+        },
+        "any": {
+          "hits": 180,
+          "n": 303,
+          "hit_rate": 0.594,
+          "base_rate": 0.426,
+          "lift": 1.39,
+          "ci95": [
+            0.538,
+            0.648
+          ]
+        }
+      }
+    }
+  },
+  "exploratory": {
+    "dose_response": {
+      "0 signals": {
+        "n": 537,
+        "any_event_rate": 0.369
+      },
+      "1+": {
+        "n": 929,
+        "any_event_rate": 0.442
+      },
+      "2+": {
+        "n": 574,
+        "any_event_rate": 0.462
+      },
+      "3+": {
+        "n": 233,
+        "any_event_rate": 0.536
+      }
+    },
+    "large_cap": {
+      "inventory_outpaces_revenue": {
+        "n": 227,
+        "hit_rate": 0.498,
+        "base_rate": 0.441
+      },
+      "receivables_outpace_revenue": {
+        "n": 172,
+        "hit_rate": 0.512,
+        "base_rate": 0.443
+      },
+      "dso_rising": {
+        "n": 131,
+        "hit_rate": 0.542,
+        "base_rate": 0.443
+      },
+      "dio_rising": {
+        "n": 152,
+        "hit_rate": 0.408,
+        "base_rate": 0.448
+      },
+      "gross_margin_drop": {
+        "n": 162,
+        "hit_rate": 0.586,
+        "base_rate": 0.445
+      }
+    }
+  }
+}
