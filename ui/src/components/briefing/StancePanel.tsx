@@ -1,3 +1,4 @@
+import { isDerived } from "../../lib/cites";
 import { isWithheld, withheldReason } from "../../lib/data";
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
@@ -111,6 +112,8 @@ export function StancePanel({ company, preview, onPreview }: {
             <div className="mt-0.5 font-mono text-xs text-purple truncate" title={citeLabel(preview)}>{citeLabel(preview)}</div>
             {isWithheld(preview)
               ? <p className="mt-1 text-xs font-semibold text-warn">Quote withheld: {withheldReason(preview)}.</p>
+              : isDerived(preview)
+              ? <p className="mt-1 text-xs font-semibold text-purple">Derived from {preview.derived_from!.length} cited operand{preview.derived_from!.length > 1 ? "s" : ""}; click to see them.</p>
               : (preview.excerpt?.match || preview.quote)
                 ? <blockquote className="mt-1 text-xs leading-snug line-clamp-3"><mark>{preview.excerpt?.match || preview.quote}</mark></blockquote>
                 : <p className="mt-1 text-xs text-muted">No quote exported for this citation.</p>}

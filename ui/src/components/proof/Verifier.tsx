@@ -60,6 +60,11 @@ export function VerifierPanel({ meta, league, rules }: { meta: Meta | null; leag
               </li>
             ))}
           </ol>
+          <p className="mt-2 rounded-md border border-line bg-surface-2 px-3 py-2 text-[12px] leading-snug">
+            <span className="font-semibold">Citation statuses shown publicly: </span>
+            <span className="font-mono">exact</span>, <span className="font-mono">substring</span>, <span className="font-mono">fuzzy</span>, <span className="font-mono">number_match</span> and <span className="font-mono">derived</span> (only when every operand passes its own check).
+            {" "}<span className="font-mono">machine_data</span> and <span className="font-mono">unverified</span> never show a quote.
+          </p>
           <p className="mt-3 text-[12.5px] text-muted">
             Verified means every rule passed. Held for a human means no automatic check could confirm it: shown, labelled, and never used for stance dollars.
             Rejected claims never reach a screen except this one.

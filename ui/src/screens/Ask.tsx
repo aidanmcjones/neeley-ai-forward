@@ -8,6 +8,8 @@ import type { AnswerSentence, DataRow, Exhibit, RetrieveResult } from "../lib/re
 import { usePins } from "../lib/exhibits";
 import { NumericPill, AiMark, CiteChip, ScreenFrame, StanceBadge, useSource } from "../components";
 import { ExhibitView } from "../components/ask";
+import { MarkedSentence, hasMarked } from "../components/MarkedSentence";
+import { derivedOperands, isDerived } from "../lib/cites";
 
 // Ask NEEDLE (docs/ui_spec.md screen 2, Option C): preset + session questions on the left,
 // a cited answer with a visible trace, exhibit cards and source cards on the right.
@@ -156,6 +158,7 @@ function SourceCards({ company, refs, preview }: { company: Company; refs: CiteR
         <div className="mb-2 rounded-md border border-purple/30 bg-surface-2 p-3 text-xs" aria-live="polite">
           <div className="font-mono text-[11px] text-purple">{preview.citation ?? preview.doc_id}</div>
           {isWithheld(preview) ? <p className="mt-1 text-warn font-semibold">Quote withheld: {withheldReason(preview)}.</p>
+            : isDerived(preview) ? <p className="mt-1 text-purple font-semibold">Derived from {preview.derived_from!.length} cited operand{preview.derived_from!.length > 1 ? "s" : ""}; click to see them.</p>
             : preview.quote ? <blockquote className="mt-1 leading-relaxed"><mark>{preview.quote}</mark></blockquote> : <p className="mt-1 text-muted">No page quote exported for this source.</p>}
         </div>
       )}
@@ -172,6 +175,8 @@ function SourceCards({ company, refs, preview }: { company: Company; refs: CiteR
                 {isCall && <div className="mt-1 text-[11px]">Transcript grade <span className="font-mono font-bold">{e.grade ?? "ungraded"}</span>{e.speaker ? <span className="text-muted"> · {e.speaker}</span> : null}</div>}
                 {wh
                   ? <div className="mt-1 text-[10.5px] font-semibold text-warn">Quote withheld: {withheldReason(e)}</div>
+                  : isDerived(e)
+                  ? <div className="mt-1 text-[10.5px] font-semibold text-purple">derived from {derivedOperands(company, e).map((o, j) => `[${String.fromCharCode(97 + j)}] ${o.ev?.citation ?? o.id}`).join(" ")}</div>
                   : <div className={`mt-1 text-[10.5px] font-semibold ${e.verdict === "verified" ? "text-good" : "text-warn"}`}>{e.verdict === "verified" ? "✓ verified on page" : `⚠ ${e.verdict ?? "unverified"}`}</div>}
               </button>
             </li>
@@ -188,7 +193,10 @@ function Sentences({ company, sentences, onPreview }: { company: Company; senten
     <div className="space-y-2 text-[15px] leading-relaxed">
       {sentences.map((s, i) => (
         <p key={i}>
-          <span>{s.text}</span>{" "}
+          <span>{(() => {
+            const f = s.kind === "finding" && s.cites[0] ? resolveCite(company, s.cites[0]).finding : undefined;
+            return f && hasMarked(f) && f.finding === s.text ? <MarkedSentence finding={f} onPreview={onPreview} /> : s.text;
+          })()}</span>{" "}
           {s.cites.map((c) => {
             const k = `${c.finding_id}#${c.i ?? 0}`;
             const { evidence } = resolveCite(company, c);

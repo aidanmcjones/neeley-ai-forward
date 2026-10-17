@@ -1,3 +1,4 @@
+import { MarkedSentence } from "../MarkedSentence";
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { NumericPill, CiteChip, ConfPill, DataTable, FlagPills } from "..";
@@ -89,7 +90,7 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
         return (
           <span className="block">
             <span title={r.kind === "rejected" ? `${text}\nRejected: ${r.r.reason ?? ""}` : text} className={`line-clamp-2 [overflow-wrap:anywhere] ${r.kind === "rejected" ? "line-through text-muted" : ""}`}>
-              {text}
+              {r.kind === "finding" ? <MarkedSentence finding={r.f} /> : text}
             </span>
             {r.kind === "finding" && <FlagPills finding={r.f} className="mt-0.5" />}
             {r.kind === "rejected" && r.r.reason && <span className="mt-0.5 block text-[10.5px] text-bad/90 line-clamp-1" title={r.r.reason}>{r.r.reason}</span>}

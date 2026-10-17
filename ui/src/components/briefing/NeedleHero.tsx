@@ -1,3 +1,4 @@
+import { MarkedSentence } from "../MarkedSentence";
 import { AiMark, CiteChip, ConfPill, FlagPills, NeedleStatusPill, NumericPill } from "..";
 import { money, z } from "../../lib/format";
 import { externalSources, impactView, isShiftMetric, metricText } from "../../lib/stance";
@@ -33,12 +34,12 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
           <h2 id="needle-h" className="mt-1.5 font-display text-[34px] leading-[1.02] tracking-wide text-muted">No row qualifies as the Sharpest Needle</h2>
           <p className="mt-1 text-[15px] leading-snug">
             <span className="mr-1.5 rounded border border-line px-1.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-muted">Highest-scored finding</span>
-            <span className="font-semibold">{needle.finding}</span>
+            <span className="font-semibold"><MarkedSentence finding={needle} onPreview={onPreview} /></span>
           </p>
         </>
       ) : (
         <h2 id="needle-h" className={`mt-1.5 font-display leading-[1.02] tracking-wide text-fg ${needle.finding.length > 150 ? "text-[32px]" : "text-[40px]"}`}>
-          {needle.finding}
+          <MarkedSentence finding={needle} onPreview={onPreview} />
         </h2>
       )}
       <div className="mt-2.5 grid grid-cols-[auto_1fr_auto] items-start gap-x-6 gap-y-2 text-sm">

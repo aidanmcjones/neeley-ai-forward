@@ -80,6 +80,13 @@ export interface Evidence extends Loose {
   withheld?: boolean;
   withheld_reason?: string | null;
   verification?: { status?: string; score?: number; checked_at?: string; detail?: string } | null;
+  cite_id?: string;
+  /** Derived citation: operand cite_ids (no quote of its own). withheld wins over derived. */
+  derived_from?: string[] | null;
+  /** The computation as exported (e.g. "a / b"), when not withheld. */
+  derived_expr?: string | null;
+  value?: unknown;
+  unit?: string | null;
 }
 
 export interface Impact extends Loose {
@@ -110,6 +117,8 @@ export interface Finding extends Loose {
   id: string;
   numeric_check?: NumericCheck | null;
   flags?: string[];
+  /** Sentence with inline markers [n] (evidence n, 1-based), [derived: a, b] and [assumption]. */
+  sentence_marked?: string | null;
   guard_reason?: string | null;
   not_quantified?: string | null;
   corroborates?: string | null;

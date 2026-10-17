@@ -2,7 +2,8 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { ReactNode } from "react";
 import type React from "react";
 import type { Evidence } from "../lib/types";
-import { isWithheld, withheldReason } from "../lib/data";
+import { isWithheld, useData, withheldReason } from "../lib/data";
+import { derivedOperands, isDerived } from "../lib/cites";
 
 // Global right-side source drawer. Any CiteChip calls useSource().open(evidence).
 // Esc closes, focus is trapped while open and restored to the opener on close.
@@ -50,6 +51,8 @@ function verdictTone(v?: string) {
 }
 
 export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; onClose: () => void }) {
+  const { company } = useData();
+  const { open } = useSource();
   const ref = useRef<HTMLDivElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
 
@@ -77,6 +80,32 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
   const isCall = !!ev.speaker || /call|transcript/i.test(ev.doc_type ?? "");
   const withheld = isWithheld(ev);
   const vdetail = ev.verification?.detail;
+
+  if (!withheld && isDerived(ev)) {
+    const ops = derivedOperands(company, ev);
+    const title = String(ev.doc_title || ev.doc_label || ev.citation || ev.doc_id || "Derived figure");
+    const val = ev.value != null && ev.value !== "" ? `${String(ev.value)}${ev.unit ? ` ${ev.unit}` : ""}` : null;
+    return (
+      <DrawerShell refEl={ref} closeBtn={closeBtn} onClose={onClose} label={title}>
+        <dl>
+          <Row k="Document">{title}</Row>
+          {(ev.location || ev.printed || ev.page != null) && <Row k="Page"><span className="font-mono tnum">{ev.location || ev.printed || ev.page}</span></Row>}
+          {val && <Row k="Value"><span className="font-mono tnum">{val}</span></Row>}
+          {ev.derived_expr && <Row k="Computed as"><span className="font-mono text-xs">{ev.derived_expr}</span></Row>}
+          <Row k="Derived from">
+            <span className="flex flex-wrap gap-1">
+              {ops.map((o, i) => o.ev
+                ? <button key={o.id} type="button" onClick={() => open(o.ev!)} title={o.ev.citation ?? o.id}
+                    className="font-mono text-[11px] rounded px-1 py-px bg-chip text-purple border border-purple/20 hover:bg-purple hover:text-white dark:hover:bg-purple-deep">[{String.fromCharCode(97 + i)}] {o.ev.citation ?? o.ev.doc_title ?? o.id}</button>
+                : <span key={o.id} className="font-mono text-[11px] text-muted" title="Operand not in this export">[{String.fromCharCode(97 + i)}] {o.id}</span>)}
+            </span>
+          </Row>
+          <Row k="Verifier"><span className="font-semibold text-good">derived{ev.verification?.status && ev.verification.status !== "derived" ? ` (${ev.verification.status})` : ""}</span> <span className="text-muted text-xs">operands must pass their own checks</span></Row>
+        </dl>
+        <p className="text-sm text-muted">A derived figure has no quote of its own: it is computed from the operand citations above. Open each operand to see its page.</p>
+      </DrawerShell>
+    );
+  }
 
   if (withheld) {
     const title = ev.doc_title || ev.doc_label as string || ev.citation || ev.doc_id || "Source";
@@ -114,7 +143,7 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
                 <span className="flex flex-wrap gap-1">{figures.map((f, i) => <span key={i} className="font-mono text-xs bg-chip rounded px-1.5 py-0.5 tnum">{f}</span>)}</span>
               ) : <span className="text-muted">none listed</span>}
             </Row>
-            <Row k="Verifier"><span className={`font-semibold ${verdictTone(ev.verdict)}`}>{ev.verdict ?? "not recorded"}</span></Row>
+            <Row k="Verifier"><span className={`font-semibold ${verdictTone(ev.verdict || (ev.verification?.status && ev.verification.status !== "unverified" ? "verified" : ev.verification?.status))}`}>{ev.verdict || ev.verification?.status || "not recorded"}</span>{ev.verdict && ev.verification?.status ? <span className="text-muted text-xs"> · quote check: {ev.verification.status}</span> : null}</Row>
             {(isCall || ev.grade) && <Row k="Transcript grade">{ev.grade ? <span className="font-mono">{ev.grade}</span> : <span className="text-muted">ungraded</span>}{ev.source_quality ? <span className="text-muted"> · {ev.source_quality}</span> : null}</Row>}
           </dl>
           <div>

@@ -8,6 +8,9 @@ import { AiMark, CiteChip, EmptyState, NumericPill, NumericSummary, ScoreBar, Sc
 import type { NumericCheck } from "../lib/types";
 import { Editable } from "../components/memo/Editable";
 import { PinnedExhibits } from "../components/memo/PinnedExhibits";
+import { MarkedSentence, hasMarked } from "../components/MarkedSentence";
+import { derivedOperands, isDerived } from "../lib/cites";
+import type { Evidence } from "../lib/types";
 import { DecideFootnotes, DecideTable, KillSignalTable } from "../components/decide/Decide";
 
 // CEO memo (/memo): one printable page drafted from company.stance. Text blocks are editable;
@@ -75,9 +78,23 @@ export default function Memo() {
       const cites = reg.resolveAll(p.cites);
       const im = impactView(cites.find((c) => c.finding)?.finding);
       const f = cites.find((c) => c.finding)?.finding;
-      return { text: p.text, cites, suspect: im.kind === "suspect" ? im.note ?? "impact flagged suspect by the exporter" : null, check: f?.numeric_check ?? null, hasFinding: !!f };
+      return { text: p.text, cites, suspect: im.kind === "suspect" ? im.note ?? "impact flagged suspect by the exporter" : null, check: f?.numeric_check ?? null, hasFinding: !!f,
+        marked: f && hasMarked(f) && p.text.startsWith(f.finding) ? { f, rest: p.text.slice(f.finding.length) } : null };
     });
-    return { points: pts, sources: reg.list };
+    // Derived sources list their operands by footnote number; operands not cited directly are appended.
+    type Src = { n: number; evidence?: Evidence; ops?: number[] };
+    const list: Src[] = reg.list.map((c) => ({ n: c.n, evidence: c.evidence }));
+    const byCite = new Map<string, number>();
+    for (const c of list) if (c.evidence?.cite_id) byCite.set(c.evidence.cite_id, c.n);
+    for (const c of [...list]) {
+      if (!isDerived(c.evidence)) continue;
+      c.ops = derivedOperands(company, c.evidence!).map((o) => {
+        let n = byCite.get(o.id);
+        if (n == null) { n = list.length + 1; list.push({ n, evidence: o.ev ?? { citation: `operand ${o.id} (not in this export)` } }); byCite.set(o.id, n); }
+        return n;
+      });
+    }
+    return { points: pts, sources: list };
   }, [company, s]);
   const { rows } = useMemo(() => weighOptions(s), [s]);
 
@@ -130,7 +147,9 @@ export default function Memo() {
                   <li key={i} className="grid grid-cols-[22px_1fr] gap-1">
                     <span className="font-display text-[20px] leading-none text-purple pt-0.5">{i + 1}</span>
                     <span>
-                      {ed(`pt.${i}`, p.text)}{" "}
+                      {p.marked && !editing && edits[`pt.${i}`] == null
+                        ? <span><MarkedSentence finding={p.marked.f} />{p.marked.rest}</span>
+                        : ed(`pt.${i}`, p.text)}{" "}
                       <span className="memo-cite whitespace-nowrap">{p.cites.map((c) => <CiteChip key={c.key} n={c.n} evidence={c.evidence} />).reduce<ReactNode[]>((a, el, j) => (j ? [...a, " ", el] : [el]), [])}</span>
                       {p.hasFinding && <>{" "}<NumericPill check={p.check} /></>}
                       {p.suspect && <span className="mt-0.5 block text-xs text-warn"><span className="font-semibold">⚠ Impact dollars flagged suspect:</span> {p.suspect}.</span>}
@@ -207,6 +226,7 @@ export default function Memo() {
                     <span className="min-w-0 break-words">
                       <span className="font-mono">{citeLabel(c.evidence)}</span>
                       {c.evidence?.withheld === true && <span className="text-warn"> · quote withheld ({c.evidence.license ? "licensed source" : "unverified citation"})</span>}
+                      {c.ops?.length ? <span className="text-purple"> · derived from {c.ops.map((n) => `[${n}]`).join("")}</span> : null}
                       {c.evidence?.url && <> · <a href={c.evidence.url} target="_blank" rel="noreferrer" className="text-purple underline break-all">{c.evidence.url}</a></>}
                     </span>
                   </li>
