@@ -155,6 +155,20 @@ def downgraded(fam):
                   fam.topics)
 
 
+# Detector kinds that restate one underlying metric (a time-series flag and its peer-outlier twin, review S1).
+FACT_METRIC = {"receivables_outpace_revenue": "receivables_gap", "rec_gap_peer_outlier": "receivables_gap",
+               "inventory_outpaces_revenue": "inventory_gap", "inv_gap_peer_outlier": "inventory_gap",
+               "dio_rising": "dio", "dio_peer_outlier": "dio", "dso_rising": "dso", "dso_peer_outlier": "dso",
+               "tax_rate_shift": "etr", "etr_peer_outlier": "etr", "rnd_shift": "rnd", "rnd_pct_peer_outlier": "rnd",
+               "gross_margin_drop": "gross_margin", "gross_margin_peer_outlier": "gross_margin"}
+
+
+def fact_key(sig):
+    """(ticker, period, underlying metric) for statistical rows; None for rows that are their own fact."""
+    m = FACT_METRIC.get(sig.kind)
+    return f"{sig.ticker}|{sig.period}|{m}" if m else ""
+
+
 def topics_of(sig, fam):
     t = set(sig.meta.get("topics") or [])
     if sig.meta.get("topic") and sig.meta["topic"] != "other":
@@ -309,6 +323,7 @@ class Scored:
     detector: str = ""
     product: str = ""
     pi_downgraded: bool = False
+    fact_key: str = ""            # one underlying fact = one key (review S1); league keeps one row per key
 
     def to_dict(self):
         body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.page is not None][:6])])
@@ -318,7 +333,7 @@ class Scored:
             "channel": self.channel, "direction": self.direction, "sentence": self.sentence, "sentence_md": body,
             "impact": self.impact.to_dict(), "peer": self.peer, "vector": self.vector, "S": self.S,
             "confidence": self.confidence, "confidence_reasons": self.confidence_reasons, "flags": self.flags,
-            "needle_eligible": self.needle_eligible, "old_S": self.old_S,
+            "needle_eligible": self.needle_eligible, "old_S": self.old_S, "fact_key": self.fact_key,
             "citations": [c.to_dict() for c in self.citations],
         }
 
@@ -444,6 +459,7 @@ def score_signal(sig, co, panel=None):
     sc = _assemble(co, sig.ticker, sig.kind, sig.detail, fam, imp, page_cites, topics, disclosed, product=product,
                    peer=peer, extra_flags=flags, diagnostics_pass=diag, generic_placeholder=generic,
                    detector=sig.detector)
+    sc.fact_key = fact_key(sig)
     if pi_downgrade:
         sc.flags.append(f"pi downgraded to pi_min: row does not satisfy the backtest flag "
                         f"{BACKTEST_FLAG[fk]} (review A1)")

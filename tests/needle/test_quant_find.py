@@ -157,6 +157,16 @@ def test_concentration_penalty():
     assert ne2 == pytest.approx(0.16 / 0.10) and L2 == pytest.approx(0.4 * 1.6 / 3)
 
 
+def test_same_fact_counts_once_in_league():
+    """Review S1: a time-series flag and its peer-outlier twin on the same metric and period are one finding."""
+    a = F(0.05, "A"); a.fact_key, a.id, a.flags = "AZN|2025|receivables_gap", "a", []
+    b = F(0.05, "A"); b.fact_key, b.id, b.flags = "AZN|2025|receivables_gap", "b", []
+    c = F(0.04, "P"); c.fact_key, c.id, c.flags = "", "c", []
+    L, top, _, _ = league.league_score([a, b, c])
+    assert len(top) == 2 and {f.id for f in top} == {"a", "c"}
+    assert any(x.startswith("same fact as a") for x in b.flags)
+
+
 def test_needle_rule_and_fallbacks():
     fs = [F(0.5, "A", O=0.3), F(0.1, "T", O=0.6)]
     n, st = league.sharpest_needle(fs)
