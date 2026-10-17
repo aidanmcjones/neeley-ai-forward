@@ -1,0 +1,5 @@
+transcripts/2026Q1_transcript.md: no English full-text free source (only statementdog 202/Chinese, intellectia paywalled)
+Q3 2026 transcript: not yet held (before Oct 17 2026)
+policy: no Novartis release found on Kisqali/Cosentyx IRA negotiation (CMS list Jan 27 2026 only third-party)
+policy: no Novartis release found specifically on tariffs or Kisqali/Leqvio pricing
+presentations/2025-11_investor_day.md: only the 35-page deck at meet-novartis-management-2025-presentation.pdf; verify it is the full deck
