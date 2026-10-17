@@ -1,0 +1,6 @@
+Appl_Type,Appl_No,Product_No,Patent_No,Patent_Expire_Date_Text,Drug_Substance_Flag,Drug_Product_Flag,Patent_Use_Code,Delist_Flag,Submission_Date
+N,211994,001,11234985,"Jan 24, 2031",,Y,U-257,,"Feb 24, 2022"
+N,211994,001,9242986,"Dec 8, 2029",Y,Y,,,"Apr 24, 2019"
+N,211994,001,8129385,"Oct 5, 2027",Y,Y,,,"Apr 24, 2019"
+N,211994,001,8129385*PED,"Apr 5, 2028",,,,,
+N,211994,001,9242986*PED,"Jun 8, 2030",,,,,
