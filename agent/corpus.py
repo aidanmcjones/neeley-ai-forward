@@ -34,6 +34,8 @@ COMPANIES = {
     "ABBV": "companies", "JNJ": "companies", "AZN": "companies", "AMGN": "companies", "GILD": "companies",
     "NVS": "peers", "GSK": "peers", "SNY": "peers", "TAK": "peers", "REGN": "peers", "ALNY": "peers",
     "BBIO": "peers",
+    # the Big 3 US drug distributors: their 10-Ks describe brand stocking and buy-ins, a check on makers' sell-in
+    "MCK": "distributors", "COR": "distributors", "CAH": "distributors",
 }
 ANNUAL = {"10-K", "20-F"}
 QUARTERLY_SINCE = "2026-01-01"
