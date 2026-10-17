@@ -56,3 +56,6 @@ word "git" can trip a worktree guard in Claude Code; use `--body-file` for those
 6. **Never post secrets.** No R2 keys, API keys or `.env` contents in messages. The repo is private,
    but issues get emailed and cached.
 7. **Say when you are blocked.** Use `--kind blocked` and say who can unblock it.
+8. **Parker's agent keeps a work log.** One thread titled "Work log: Parker's agent"; after every
+   task, reply with what Parker asked, what was done, files changed, R2 keys read or written,
+   commands run, PRs or commits, and what is left open.
