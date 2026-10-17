@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T22:58:09+00:00",
+ "generated_at": "2026-10-17T23:04:59+00:00",
  "mode": "cached",
  "engine": "sample",
  "default_ticker": "BMY",
@@ -35,7 +35,18 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle is this: eliquis lists 6 indications vs rival median 10 ({'xarelto': 10}); narrower label should show up as a smaller addressable patient pool [1][2]. It is sharp because it is material and barely discussed: only in filings / data, not in headlines or call Q&A [3]. Impact: not quantified. Needle status is strict: the row clears every test on its own (barely discussed, quote verified on the page, confidence not low, not the case's starter thread)."
+     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle is this: eliquis lists 6 indications vs rival median 10 ({'xarelto': 10}); narrower label should show up as a smaller addressable patient pool [1][2]. It is sharp because it is material and barely discussed: only in filings / data, not in headlines or call Q&A [3]. Impact: Not quantified."
+    },
+    {
+     "type": "callout",
+     "tone": "muted",
+     "md": "Status strict: the row clears every test on its own (barely discussed, quote verified on the page, confidence not low, not the case's starter thread)."
+    },
+    {
+     "type": "math",
+     "label": "Obscurity test, as computed",
+     "text": "only in filings / data, not in headlines or call Q&A",
+     "cite": 3
     },
     {
      "type": "kpi",
@@ -232,7 +243,13 @@
     },
     {
      "type": "p",
-     "md": "The Sharpest Needle (row one below): the label is narrower than rivals' [1][2]. Impact: not quantified. Why the market has not priced it: only in filings / data, not in headlines or call Q&A [3]."
+     "md": "The Sharpest Needle (row one below): the label is narrower than rivals' [1][2]. Impact: Not quantified. Why the market has not priced it: only in filings / data, not in headlines or call Q&A [3]."
+    },
+    {
+     "type": "math",
+     "label": "Obscurity test, as computed",
+     "text": "only in filings / data, not in headlines or call Q&A",
+     "cite": 3
     },
     {
      "type": "table",
@@ -246,22 +263,22 @@
      "rows": [
       [
        "eliquis lists 6 indications vs rival median 10 ({'xarelto': 10}); narrower label should show up as a smaller addressable patient pool [1][2]",
-       "not quantified",
+       "Not quantified",
        "no peer figure for this signal",
        "high",
        "Eliquis label [1]; Xarelto label [2]"
       ],
       [
        "eliquis twice daily (730/yr) vs xarelto once daily (365/yr) [4][5]",
-       "not quantified",
+       "Not quantified",
        "no peer figure for this signal",
        "high",
        "Eliquis label [4]; Xarelto label [5]"
       ],
       [
-       "Receivables-vs-revenue growth gap -12.3 pts (Q2 2026) vs peers; peer median -0.3 pts, z -1.7 [6][7]",
-       "not quantified",
-       "peer median -0.3 pts, z -1.7",
+       "Receivables-vs-revenue growth gap -12.3 pts (Q2 2026) vs peers; peer median -0.3 pts (1.7 sd below) [6][7]",
+       "Not quantified",
+       "1.7 sd below the peer median of -0.3 pts",
        "high",
        "BMY 10-Q 2026-06-30 [6]; BMY 10-Q 2026-06-30 [7]"
       ]
