@@ -514,6 +514,7 @@ def build_findings(raw, side, ticker=""):
             "hit_rate": f.get("hit_rate") or {}, "outside": f.get("outside") or {},
             "evidence": [enrich_evidence(e, side) for e in f.get("evidence") or []],
             "external_sources": [] if f.get("evidence") else links.get(f["finding"], []),
+            "numeric_check": numeric_check(f.get("numeric_check")),
         })
     out.sort(key=lambda x: -(x["score"] or 0))
     return out
@@ -523,12 +524,47 @@ def build_findings(raw, side, ticker=""):
 PLACEHOLDER_NOTE = "impact is the generic 3%-of-revenue placeholder; no page-verified number backs it, so it is not summed"
 
 
+# docs/citations.md: exact / substring / fuzzy / number_match support a number; "derived" citations are computed from
+# cited operands (e.g. Q4 = FY minus Q1-Q3, review D11) and are shown; every other status is withheld.
+PUBLIC_STATUSES = {"exact", "substring", "fuzzy", "number_match", "derived"}
+NC_KEYS = ("checked", "total", "verified", "derived", "assumed")
+
+
+def assert_numeric_checks(obj, path="$"):
+    """Fail the export if any record claims 'passed' with checked == 0 or without the verified/derived/assumed
+    breakdown, or carries a numeric_check that is not a dict with a status."""
+    if isinstance(obj, dict):
+        if "numeric_check" in obj:
+            nc = obj["numeric_check"]
+            if not isinstance(nc, dict) or not nc.get("status"):
+                raise ValueError(f"{path}.numeric_check is not a status dict: {nc!r}")
+            if nc["status"] == "passed" and (not nc.get("checked") or any(k not in nc for k in NC_KEYS)):
+                raise ValueError(f"{path}.numeric_check says passed without a checked count or breakdown")
+        for k, v in obj.items():
+            assert_numeric_checks(v, f"{path}.{k}")
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            assert_numeric_checks(v, f"{path}[{i}]")
+
+
+def numeric_check(x):
+    """Pass numeric_check through; missing / null / empty / malformed -> {status: unchecked}. A 'passed' with
+    checked == 0 or without the verified/derived/assumed breakdown is never trusted as passed."""
+    if not isinstance(x, dict) or not x.get("status"):
+        return {"status": "unchecked"}
+    out = dict(x)
+    out.setdefault("unsupported", [])
+    if out["status"] == "passed" and (not out.get("checked") or any(k not in out for k in NC_KEYS)):
+        return {"status": "unchecked", "note": "reported passed without a checked count or breakdown", "raw": x}
+    return out
+
+
 def withhold_reason(c):
     st = (c.get("verification") or {}).get("status")
     if "bloomberg" in (c.get("license") or "").lower():
         return "Bloomberg-licensed source: quote and links withheld from the public export"
-    if st == "unverified":
-        return "citation did not verify against its page: quote and links withheld" + \
+    if st not in PUBLIC_STATUSES:
+        return f"citation status {st or 'missing'} is not public (did not verify): quote and links withheld" + \
                (f" ({c['confidence_note']})" if c.get("confidence_note") else "")
     return None
 
@@ -625,7 +661,8 @@ def guard_fields(f):
     return codes, {"fact_key": f.get("fact_key"), "guard": f.get("guard"),
                    "guard_reason": next((x for x in notes if re.match(r"guard \d+:", x)), None),
                    "not_quantified": f.get("not_quantified"), "impact_channel": f.get("impact_channel"),
-                   "corroborates": cor, "numeric_check": f.get("numeric_check")}
+                   "corroborates": cor, "numeric_check": numeric_check(f.get("numeric_check")),
+                   **{k: f[k] for k in ("sentence_marked", "derived", "assumptions", "aliases", "rejected_by") if f.get(k)}}
 
 
 def build_findings_v2(raw, side, ticker, lg, v1):
@@ -721,11 +758,17 @@ def rejected_v2(rows):
         cits = [c for c in r.get("citations") or [] if c.get("page_scheme") in ("marker", "section")]
         out.append({"finding": plain(r.get("sentence")), "finding_raw": r.get("sentence"), "id": r.get("id"),
                     "signal_kind": r.get("signal_kind"), "verdict": "rejected",
-                    "reason": (f"dropped by a review guard: {guard_fields(r)[1]['guard_reason'] or r.get('guard')}"
+                    "reason": ("numbers unsupported: " + "; ".join(f"{u.get('value')} ({u.get('where')}: {u.get('reason')})"
+                                                                   for u in (r.get("numeric_check") or {}).get("unsupported") or [])
+                               if r.get("rejected_by") == "numeric_gate" else
+                               f"dropped by a review guard: {guard_fields(r)[1]['guard_reason'] or r.get('guard')}"
                                if r.get("guard") == "drop" else
                                "withheld by the evidence gate (E = 0: no page-verified citation). "
                                + "; ".join(x for x in r.get("confidence_reasons") or [] if "fails" in x or "<" in x)),
-                    "guard": r.get("guard"), "fact_key": r.get("fact_key"), "numeric_check": r.get("numeric_check"),
+                    "guard": r.get("guard"), "fact_key": r.get("fact_key"), "numeric_check": numeric_check(r.get("numeric_check")),
+                    "rejected_by": r.get("rejected_by"),
+                    "unsupported": (r.get("numeric_check") or {}).get("unsupported") or [],
+                    **{k: r[k] for k in ("sentence_marked", "aliases") if r.get(k)},
                     "evidence": [{"doc_id": c.get("canonical_id"), "page": c.get("page"), "doc_title": c.get("doc_title"),
                                   "location": c.get("location"), "speaker": c.get("speaker") or "",
                                   "quote": "" if withhold_reason(c) else c.get("quote"),
@@ -770,7 +813,7 @@ def product_v2(ticker, slug):
             cell = (cells or {}).get(ent["name"])
             if cell is None:
                 continue
-            rows[row][ent["name"]] = {"slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
+            rows[row][ent["name"]] = {"numeric_check": numeric_check(cell.get("numeric_check")), "slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
                                       "value_raw": cell.get("value"), "detail": clean(cell.get("detail")),
                                       "citations": [cell_cite(c) for c in cell.get("citations") or []],
                                       "refs": cell.get("refs") or [], "empty_reason": cell.get("empty_reason") or "",
@@ -778,7 +821,7 @@ def product_v2(ticker, slug):
     fnd = []
     for f in d.get("findings") or []:
         imp = f.get("impact") or {}
-        fnd.append({"id": f.get("id"), "finding": plain(f.get("sentence")), "finding_raw": f.get("sentence"),
+        fnd.append({"numeric_check": numeric_check(f.get("numeric_check")), "id": f.get("id"), "finding": plain(f.get("sentence")), "finding_raw": f.get("sentence"),
                     "channel": f.get("channel"), "direction": f.get("direction"),
                     "confidence": (f.get("confidence") or "").lower(), "confidence_reasons": f.get("confidence_reasons"),
                     "impact": {"formula": imp.get("formula"), "dRev": imp.get("dRev"), "dOI": imp.get("dOI"),
@@ -788,9 +831,10 @@ def product_v2(ticker, slug):
     gl = d.get("growth_limiter") or {}
     return {"product": slug, "entities": ents, "row_titles": cmp_.get("row_titles"), "rows": rows,
             "findings": fnd, "notes": cmp_.get("notes") or [], "context": clean(cmp_.get("context")),
-            "growth_limiter": {"sentence": plain(gl.get("sentence")), "sentence_raw": gl.get("sentence"),
+            "growth_limiter": {"numeric_check": numeric_check(gl.get("numeric_check")), "sentence": plain(gl.get("sentence")), "sentence_raw": gl.get("sentence"),
                                "priced_in": gl.get("priced_in"), "reasons": gl.get("reasons") or [],
                                "citations": [cell_cite(c) for c in gl.get("citations") or []]} if gl else None,
+            "numeric_check": numeric_check(d.get("numeric_check")),
             "uncited_cells": d.get("uncited_cells") or [], "empty_cells": d.get("empty_cells") or [],
             "source_file": f"out/{ticker}/product_{slug}.json"}
 
@@ -866,7 +910,7 @@ def _move_row(m):
             "binding_reason": m.get("binding_reason") or "", "why": m.get("why"), "flags": m.get("flags") or [],
             "finding_ids": m.get("finding_ids") or [], "addressed": m.get("addressed") or [],
             "kill_signal_ids": m.get("kill_signals") or [], "p_alive_end": m.get("p_alive_end"),
-            "notes": m.get("notes") or [], "units": "USD millions"}
+            "notes": m.get("notes") or [], "units": "USD millions", "numeric_check": numeric_check(m.get("numeric_check"))}
 
 
 def apply_decide(ticker, stance, findings, v1=()):
@@ -892,7 +936,8 @@ def apply_decide(ticker, stance, findings, v1=()):
             for c in cl.get("citations") or []:
                 if c.get("cite_id") not in seen:
                     seen[c.get("cite_id")] = len(foot) + 1
-                    foot.append({"n": len(foot) + 1, "move": m.get("name"), "claim": cl.get("text"), "citation": cell_cite(c)})
+                    foot.append({"n": len(foot) + 1, "move": m.get("name"), "claim": cl.get("text"), "citation": cell_cite(c),
+                                 "numeric_check": numeric_check(cl.get("numeric_check"))})
     stance["template"] = {k: stance.get(k) for k in ("headline", "recommended", "decision_needed", "options", "alternatives", "prove_wrong")}
     stance["headline"] = f"{ch['name']}: {ch.get('why') or ''}".strip().rstrip(":")
     stance["recommended"] = ch["name"]
@@ -918,6 +963,7 @@ def apply_decide(ticker, stance, findings, v1=()):
     cites = [{"finding_id": ids[i]["id"], "i": 0} for i in ch.get("addressed") or ch.get("finding_ids") or []
              if i in ids and ids[i]["evidence"]]
     stance["decide"] = {"as_of": d.get("as_of"), "cash_and_equivalents": d.get("cash_and_equivalents"),
+                        "numeric_check": numeric_check(d.get("numeric_check")),
                         "units": "USD millions", "moves": [_move_row(m) for m in moves],
                         "ranked": d.get("ranked"), "selection_notes": d.get("selection_notes") or [],
                         "footnotes": foot, "finding_cites": cites,
@@ -1555,6 +1601,7 @@ def main():
         if data is None:
             print(f"{t}: no out/{t}/findings.jsonl, no company file")
             continue
+        assert_numeric_checks(data)
         path = DEST / "companies" / f"{t}.json"
         n = write(path, data)
         if n > MAX_COMPANY_BYTES:
