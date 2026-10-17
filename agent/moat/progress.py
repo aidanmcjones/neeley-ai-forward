@@ -198,6 +198,10 @@ def main():
     labels = table("label_changes.csv")
     insiders = table("insider_trades.csv")
     comp = table("exec_comp_metrics.csv")
+    # foreign filers' pay metrics come from the remuneration report (NVO 6-K, AZN 20-F exhibit 15.1), not a proxy
+    comp_f = table("incentive_metrics_foreign.csv")
+    if len(comp_f):
+        comp = pd.concat([comp, comp_f], ignore_index=True) if len(comp) else comp_f
 
     for t in COMPANIES:
         foreign = t in ("NVO", "AZN")
@@ -250,13 +254,13 @@ def main():
         fp += int(len(insiders) and (insiders.ticker == t).any()) if not foreign else 1  # no Form 4 for foreign
         has_comp = bool(len(comp) and (comp.ticker == t).any())
         fp += int(has_comp)
-        note = "" if fp == 6 else ("pay metrics not extracted from the 20-F remuneration report" if foreign and not has_comp else "")
+        note = "" if fp == 6 else ("pay metrics not extracted from the remuneration report" if foreign and not has_comp else "")
         b["fine_print"] = dict(have=fp, need=6, note=note)
         # 10 labels / product evidence: drugs for this company with label history and h2h
         labelled = (set(labels.drug.astype(str)) if len(labels) else set()) & my_drugs
         missing_l = sorted(my_drugs - labelled)
         b["product_evidence"] = dict(have=len(labelled), need=len(my_drugs),
-                                     note=f"{len(labelled)} of {len(my_drugs)} drugs" + (f"; {', '.join(missing_l)} has one label version so far (2026 launch), no history to compare" if missing_l else ""))
+                                     note=f"{len(labelled)} of {len(my_drugs)} drugs" + (f"; no label pack yet for {', '.join(missing_l)} (2026 launch)" if missing_l else ""))
         out["companies"][t] = b
 
     # tickers and drugs onboarded with agent.moat.onboard_company / onboard_drug (found by scanning manifests)
