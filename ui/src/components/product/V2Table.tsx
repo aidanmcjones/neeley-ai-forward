@@ -9,7 +9,7 @@ import { money } from "../../lib/format";
 // one column per entity, a citation chip in every cell, the tied product findings, and the
 // uncited-cell count stated as a footnote.
 
-interface V2Cell extends Loose { value?: string | null; citations?: Evidence[]; empty_reason?: string | null; source?: string }
+interface V2Cell extends Loose { value?: string | null; citations?: Evidence[]; empty_reason?: string | null; source?: string; uncited?: boolean }
 interface V2Entity extends Loose { name: string; slug?: string; maker?: string; variant?: string; note?: string }
 interface V2Finding extends Loose {
   id: string; finding: string; confidence?: string; direction?: string; channel?: string;
@@ -42,7 +42,9 @@ export function V2Table({ data, onPreview }: { data: ProductV2; onPreview?: (e: 
   const rowKeys = Object.keys(data.rows ?? {});
   const titles = data.row_titles ?? {};
   const uncited = data.uncited_cells ?? [];
-  const isUncited = (row: string, ent: string) => uncited.some((u) => u.row === row && u.entity === ent);
+  const isUncited = (row: string, ent: string) => data.rows?.[row]?.[ent]?.uncited === true || uncited.some((u) => u.row === row && u.entity === ent);
+  const nUncited = Object.entries(data.rows ?? {}).reduce((a, [rk, r]) => a + Object.keys(r).filter((e) => isUncited(rk, e)).length, 0);
+  const uncitedList = Object.entries(data.rows ?? {}).flatMap(([rk, r]) => Object.keys(r).filter((e) => isUncited(rk, e)).map((e) => ({ row: rk, entity: e })));
   return (
     <div className="min-w-0">
       <table className="w-full table-fixed border-collapse text-[12.5px]">
@@ -64,14 +66,16 @@ export function V2Table({ data, onPreview }: { data: ProductV2; onPreview?: (e: 
               <th scope="row" className="px-3 py-2 text-left text-[12px] font-semibold">{titles[rk] ?? rk.replace(/_/g, " ")}</th>
               {ents.map((e) => {
                 const c = data.rows?.[rk]?.[e.name];
-                const cites = c?.citations ?? [];
+                const unc = isUncited(rk, e.name);
+                const cites = unc ? [] : c?.citations ?? [];
                 return (
                   <td key={e.name} className="px-3 py-2 break-words">
-                    {c?.value ? <span className="leading-snug">{c.value}</span> : <span className="text-muted italic">{c?.empty_reason || "not exported"}</span>}
+                    {c?.value ? <span className={`leading-snug ${unc ? "text-muted" : ""}`}>{c.value}</span> : <span className="text-muted italic">{c?.empty_reason || "not exported"}</span>}
+                    {unc && c?.value && <span className="mt-1 block text-[10px] font-semibold uppercase tracking-wide text-warn" title="No page backs this cell yet">needs citation</span>}
                     <span className="mt-1 flex flex-wrap gap-1">
                       {cites.map((ev, j) => <CiteChip key={j} evidence={ev} label={shortCite(ev, j)} onPreview={onPreview} />)}
                       {c?.numeric_check ? <NumericPill check={c.numeric_check as NumericCheck} /> : null}
-                      {(isUncited(rk, e.name) || (!cites.length && c?.value)) && (
+                      {!unc && !cites.length && c?.value && (
                         <span className="rounded border border-dashed border-warn/60 px-1 text-[10px] font-semibold text-warn" title="No citation attached to this cell">uncited</span>
                       )}
                     </span>
@@ -83,8 +87,8 @@ export function V2Table({ data, onPreview }: { data: ProductV2; onPreview?: (e: 
         </tbody>
       </table>
       <p className="px-3 py-2 text-[11px] text-muted">
-        {uncited.length
-          ? <><span className="font-semibold text-warn">{uncited.length} uncited cell{uncited.length > 1 ? "s" : ""}</span> ({uncited.map((u) => `${titles[u.row] ?? u.row} · ${u.entity}`).join("; ")}): shown, but no page backs them yet.</>
+        {nUncited
+          ? <><span className="font-semibold text-warn">{nUncited} cell{nUncited > 1 ? "s" : ""} need{nUncited > 1 ? "" : "s"} a citation</span> ({uncitedList.map((u) => `${titles[u.row] ?? u.row} · ${u.entity}`).join("; ")}): shown muted, no page backs them yet.</>
           : <>Every cell carries a citation.</>}
         {" "}Source: labels.v2.{data.product} ({data.source_file ?? "product_v2"}).
       </p>

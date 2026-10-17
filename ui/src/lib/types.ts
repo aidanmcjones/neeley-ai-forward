@@ -122,6 +122,8 @@ export interface Finding extends Loose {
   flags?: string[];
   /** Sentence with inline markers [n] (evidence n, 1-based), [derived: a, b] and [assumption]. */
   sentence_marked?: string | null;
+  /** Impact formula with the same inline markers ([n], [derived: a, b], [constant: NAME], [assumption]). */
+  formula_marked?: string | null;
   guard_reason?: string | null;
   not_quantified?: string | null;
   corroborates?: string | null;
@@ -183,6 +185,8 @@ export interface DecideMove extends Loose {
 }
 export interface DecideFootnote extends Loose { n: number; move?: string; claim?: string; citation?: Evidence }
 export interface Decide extends Loose {
+  /** Pipeline demonstration, not the team's recommendation; `note` explains it. */
+  demo?: boolean | null; note?: string | null;
   as_of?: string; cash_and_equivalents?: number; units?: string; moves?: DecideMove[];
   footnotes?: DecideFootnote[]; finding_cites?: CiteRef[]; source_files?: string[];
 }
@@ -251,13 +255,15 @@ export type MemoBlock =
   | { type: "table"; columns: string[]; rows: string[][] }
   | { type: "list"; items: string[] }
   | { type: "callout"; tone: "ok" | "warn" | "muted" | string; md: string }
-  | { type: "math"; label?: string; text: string; cite?: number | null };
+  | { type: "math"; label?: string; text: string; text_marked?: string | null; cite?: number | null };
 
 export interface MemoRecord extends Loose {
   id: string; prompt: string; aliases?: string[]; ticker?: string | null; kind?: string;
   /** "chat" answers in the thread; "memo" renders a document card. */
   format?: "chat" | "memo" | string;
   memo_header?: { to?: string; from?: string; re?: string; date?: string } | null;
+  /** Pipeline demonstration (a decide run that is not the team's pick); the note opens the memo. */
+  demo?: boolean | null; demo_note?: string | null;
   generated_by?: "template" | "decide_v2" | "data" | string;
   summary?: string; blocks?: MemoBlock[]; cites?: MemoCite[]; numeric_check?: NumericCheck | null; ask_next?: string[];
 }

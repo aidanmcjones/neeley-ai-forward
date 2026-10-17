@@ -14,10 +14,17 @@ export function AssumptionPill() {
   );
 }
 
+export function ConstantPill({ name }: { name: string }) {
+  return (
+    <span title={`Constant: ${name} (a fixed model input, not a sourced figure)`}
+      className="inline-block rounded border border-line px-1 py-px align-middle font-body text-[10px] font-semibold normal-case tracking-normal leading-tight text-muted">constant</span>
+  );
+}
+
 export function hasMarked(f: Finding | null | undefined) { return !!markedOf(f); }
 
-export function MarkedSentence({ finding, text, onPreview }: { finding: Finding; text?: string; onPreview?: (e: Evidence | null) => void }) {
-  const marked = markedOf(finding);
+export function MarkedSentence({ finding, text, onPreview, marked: markedIn }: { finding: Finding; text?: string; onPreview?: (e: Evidence | null) => void; marked?: string | null }) {
+  const marked = markedIn !== undefined ? markedIn : markedOf(finding);
   if (!marked) return <>{text ?? finding.finding}</>;
   const ev = finding.evidence ?? [];
   const chip = (n: number, key: string) => {
@@ -32,6 +39,7 @@ export function MarkedSentence({ finding, text, onPreview }: { finding: Finding;
         if (tk.t === "text") return <Fragment key={i}>{tk.s}</Fragment>;
         if (tk.t === "cite") return chip(tk.n, `c${i}`);
         if (tk.t === "assumption") return <Fragment key={i}>{" "}<AssumptionPill /></Fragment>;
+        if (tk.t === "constant") return <Fragment key={i}>{" "}<ConstantPill name={tk.name} /></Fragment>;
         return (
           <span key={i} className="inline-flex items-baseline gap-0.5 align-baseline font-body normal-case tracking-normal text-[10.5px] leading-none text-purple" title="Derived number: computed from the cited operands">
             <span className="italic">derived</span>

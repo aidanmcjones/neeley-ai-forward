@@ -44,6 +44,15 @@ fixture `public/data/_sample/memos.json` and says so.
   `verification` and the row text in `quote`.
 - **Math blocks** (`{type: "math", label, text, cite}`): a collapsed "Show the math: <label>" disclosure in
   monospace with its cite chip; Print opens them so the printed memo shows the formulas.
+- **Markers** everywhere (finding `sentence_marked`, `formula_marked`, chat md, math `text_marked`): `[n]` cite
+  chip, `[derived: a, b]` derived mark with operand chips, `[constant: NAME]` muted "constant" pill (NAME in the
+  tooltip), `[assumption]` amber pill. `formula_marked` replaces the raw impact formula on the cockpit hero and
+  in Ask impact sentences.
+- **Pipeline demonstrations**: `stance.decide.demo` (cockpit stance panel and memo) or `memo.demo` with
+  `demo_note` (chat memo card) open with the note as a muted callout; the byline reads "Pipeline
+  demonstration (rules, no model)".
+- **Uncited product cells** (`uncited: true` or listed in `uncited_cells`): value muted with a "needs citation"
+  label, never a cite chip, and counted in the table footnote.
 - **Reveal**: a typewriter of 1.5 to 2.5 s per answer, skippable by click; instant under reduced motion.
 - **Matching** (`src/lib/memos.ts`): exact prompt or alias first, then term overlap using the retriever's
   synonym groups over prompt + aliases (floor 0.3), preferring the selected company; no match replies "I can

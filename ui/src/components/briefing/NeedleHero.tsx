@@ -1,3 +1,4 @@
+import { formulaMarkedOf } from "../../lib/cites";
 import { MarkedSentence } from "../MarkedSentence";
 import { AiMark, CiteChip, ConfPill, FlagPills, NeedleStatusPill, NumericPill } from "..";
 import { money, z } from "../../lib/format";
@@ -61,7 +62,9 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
               <span className="mr-2"><s className="font-display text-[22px] leading-none text-muted tnum">{money(im.dollars)}</s> <span className="text-warn font-semibold text-xs">suspect: {im.note}</span></span>
             )}
             {im.kind === "proxy" && <span className="mr-2 rounded bg-chip px-1.5 py-0.5 text-[11px] font-semibold text-purple">proxy, no direct $</span>}
-            <span className="font-mono text-xs text-muted">{im.formula || "no formula exported"}</span>
+            <span className="font-mono text-xs text-muted">{formulaMarkedOf(needle)
+              ? <MarkedSentence finding={needle} marked={formulaMarkedOf(needle)} onPreview={onPreview} />
+              : im.formula || "no formula exported"}</span>
           </dd>
           <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted pt-0.5">Peers</dt>
           <dd className="tnum">

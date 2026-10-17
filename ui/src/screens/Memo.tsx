@@ -127,6 +127,11 @@ export default function Memo() {
       {company && s && (
         <article className="memo-doc mx-auto max-w-[820px] rounded-lg border border-line bg-surface shadow-card px-12 py-10 space-y-6 text-[14px] leading-relaxed">
           {editing && <p className="no-print -mt-4 text-xs text-purple font-semibold">Editing: click any dashed block to change it. Changes save when you leave the block.</p>}
+          {decide?.demo === true && (
+            <p role="note" className="memo-keep rounded-md border-l-4 border-line bg-surface-2 px-4 py-2 text-[12.5px] text-muted">
+              {!/^pipeline demonstration/i.test(decide.note ?? "") && <span className="font-semibold text-fg">Pipeline demonstration. </span>}{decide.note || "This move was valued by rules on cited findings; it is not the team's recommendation."}
+            </p>
+          )}
           <header className="space-y-3">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b-2 border-purple pb-2 text-xs font-semibold uppercase tracking-wider">
               <span>TO: CEO · FROM: Competitive Intelligence (NEEDLE) · Draft 1</span>
@@ -244,7 +249,7 @@ export default function Memo() {
 
           <footer className="space-y-2 border-t border-line pt-3">
             <div className="rounded-md border border-teal/40 bg-teal-soft/50 px-3 py-2 text-[11px] leading-snug">
-              <AiMark label={byModel ? "Model-written draft" : "Drafted from verified findings by rules"} />
+              <AiMark label={byModel ? "Model-written draft" : decide?.demo === true ? "Pipeline demonstration (rules, no model)" : "Drafted from verified findings by rules"} />
               <p className="mt-1 text-fg">{s.note ?? "No drafting note exported."}{nEdits ? ` Edited by a person in this browser (${nEdits} block${nEdits > 1 ? "s" : ""}).` : ""}</p>
             </div>
             <p className="text-[10px] text-muted">Student concept, not actual promotional material. Built by TCU Neeley students. Source: companies/{t}.json stance.</p>

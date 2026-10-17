@@ -29,7 +29,9 @@ export function StancePanel({ company, preview, onPreview }: {
     );
   }
   const byModel = s.generated_by === "model";
+  const demo = !!s.decide?.moves?.length && s.decide?.demo === true;
   const byline = byModel ? "Model-written from verified findings"
+    : demo ? "Pipeline demonstration (rules, no model)"
     : s.decide?.moves?.length ? "Move valued and chosen by rules (quant.decide, no model)" : "Drafted from verified findings by rules (template, no model)";
   const hover = rows.find((r) => r.name === hoverOpt);
   const decide = s.decide?.moves?.length ? s.decide : null;
@@ -38,6 +40,11 @@ export function StancePanel({ company, preview, onPreview }: {
     <Panel ai className="border-t-4 border-t-teal" bodyClassName="p-4 space-y-4"
       title={<span title={s.note}><AiMark label="Draft stance" /></span>}
       meta={<span className="font-mono text-[10px]">companies/{company.ticker}.json stance</span>}>
+      {demo && (
+        <p role="note" className="rounded-md border-l-4 border-line bg-surface-2 px-3 py-2 text-[12px] leading-snug text-muted">
+          {!/^pipeline demonstration/i.test(s.decide?.note ?? "") && <span className="font-semibold text-fg">Pipeline demonstration. </span>}{s.decide?.note || "This move was valued by rules on cited findings; it is not the team's recommendation."}
+        </p>
+      )}
       <div>
         <p className="mb-1.5 text-[11px] font-semibold text-teal" title={s.note}>{byline}</p>
         <p className="text-[15px] font-semibold leading-snug">{s.headline ?? "No headline exported"}</p>

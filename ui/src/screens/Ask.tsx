@@ -9,7 +9,7 @@ import { usePins } from "../lib/exhibits";
 import { NumericPill, AiMark, CiteChip, ScreenFrame, StanceBadge, useSource } from "../components";
 import { ExhibitView } from "../components/ask";
 import { MarkedSentence, hasMarked } from "../components/MarkedSentence";
-import { derivedOperands, isDerived } from "../lib/cites";
+import { derivedOperands, formulaMarkedOf, isDerived } from "../lib/cites";
 
 // Ask NEEDLE (docs/ui_spec.md screen 2, Option C): preset + session questions on the left,
 // a cited answer with a visible trace, exhibit cards and source cards on the right.
@@ -195,7 +195,11 @@ function Sentences({ company, sentences, onPreview }: { company: Company; senten
         <p key={i}>
           <span>{(() => {
             const f = s.kind === "finding" && s.cites[0] ? resolveCite(company, s.cites[0]).finding : undefined;
-            return f && hasMarked(f) && f.finding === s.text ? <MarkedSentence finding={f} onPreview={onPreview} /> : s.text;
+            if (f && hasMarked(f) && f.finding === s.text) return <MarkedSentence finding={f} onPreview={onPreview} />;
+            const fi = s.kind === "impact" && s.cites[0] ? resolveCite(company, s.cites[0]).finding : undefined;
+            const fm = formulaMarkedOf(fi);
+            if (fi && fm && s.text === `Impact: ${fi.impact?.formula ?? ""}`) return <>Impact: <MarkedSentence finding={fi} marked={fm} onPreview={onPreview} /></>;
+            return s.text;
           })()}</span>{" "}
           {s.cites.map((c) => {
             const k = `${c.finding_id}#${c.i ?? 0}`;

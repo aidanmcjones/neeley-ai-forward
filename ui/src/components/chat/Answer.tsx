@@ -54,7 +54,7 @@ export function toMarkdown(m: MemoRecord): string {
     else if (b.type === "callout") out.push(`> ${b.md}`, "");
     else if (b.type === "list") out.push(...b.items.map((x) => `- ${x}`), "");
     else if (b.type === "kpi") out.push(...b.items.map((x) => `- ${x.label}: ${x.value}${x.cite ? ` [${x.cite}]` : ""}`), "");
-    else if (b.type === "math") out.push(`${b.label ? `**${b.label}**\n` : ""}\`\`\`\n${b.text}\n\`\`\`${b.cite ? ` [${b.cite}]` : ""}`, "");
+    else if (b.type === "math") out.push(`${b.label ? `**${b.label}**\n` : ""}\`\`\`\n${b.text_marked ?? b.text}\n\`\`\`${b.cite ? ` [${b.cite}]` : ""}`, "");
     else if (b.type === "table") out.push(`| ${b.columns.join(" | ")} |`, `|${b.columns.map(() => " --- ").join("|")}|`, ...b.rows.map((r) => `| ${r.join(" | ")} |`), "");
   }
   const cites = m.cites ?? [];
@@ -113,9 +113,10 @@ export function Answer({ memo, instant, onAsk, labelFor }: {
   };
 
   const byModel = memo.generated_by && !RULES[memo.generated_by];
+  const demo = memo.demo === true;
   const byline = (
     <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[12px] text-muted">
-      {byModel ? <AiMark label="Model-written" /> : <span>{RULES[memo.generated_by ?? "template"] ?? "Rules, no model"}</span>}
+      {byModel ? <AiMark label="Model-written" /> : <span>{demo ? "Pipeline demonstration (rules, no model)" : RULES[memo.generated_by ?? "template"] ?? "Rules, no model"}</span>}
       <NumericPill check={memo.numeric_check} />
       <span className="no-print ml-auto flex gap-1.5">
         <button type="button" onClick={copy} className="rounded-md border border-line px-2 py-1 text-[12px] font-semibold text-fg hover:border-purple hover:text-purple">{copied ? "Copied" : "Copy as markdown"}</button>
@@ -145,6 +146,9 @@ export function Answer({ memo, instant, onAsk, labelFor }: {
               ))}
             </dl>
           </header>
+        )}
+        {demo && memo.demo_note && (
+          <p role="note" className="rounded-md border-l-4 border-line bg-surface-2 px-3 py-2 text-[13px] text-muted">{memo.demo_note}</p>
         )}
         {rendered}
         {!done && <button type="button" onClick={skip} className="no-print text-[11px] text-muted underline">Show all</button>}
@@ -203,7 +207,7 @@ function Block({ b, cite, partial, memo }: { b: MemoBlock; cite: (n: number) => 
     return (
       <details className="rounded-md border border-line bg-surface-2 px-3 py-2 text-[13px]">
         <summary className="cursor-pointer select-none font-semibold text-purple">Show the math{b.label ? `: ${b.label}` : ""}</summary>
-        <pre className="mt-2 whitespace-pre-wrap break-words font-mono text-[12px] leading-relaxed">{b.text}</pre>
+        <pre className="mt-2 whitespace-pre-wrap break-words font-mono text-[12px] leading-relaxed">{b.text_marked ? <Md md={b.text_marked} cite={cite} /> : b.text}</pre>
         {b.cite != null && <div className="mt-1"><Md md={`[${b.cite}]`} cite={cite} /></div>}
       </details>
     );

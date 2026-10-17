@@ -50,23 +50,30 @@ export type MarkToken =
   | { t: "text"; s: string }
   | { t: "cite"; n: number }
   | { t: "derived"; ns: (number | "assumption")[] }
-  | { t: "assumption" };
+  | { t: "assumption" }
+  | { t: "constant"; name: string };
 
 /** Parse "[1]", "[1][2]", "[derived: 1, 3]", "[assumption]" markers; anything else stays text. */
 export function parseMarked(s: string): MarkToken[] {
   const out: MarkToken[] = [];
-  const re = /\[(\d+)\]|\[derived:\s*([^\]]+)\]|\[assumption\]/g;
+  const re = /\[(\d+)\]|\[derived:\s*([^\]]+)\]|\[constant:\s*([^\]]+)\]|\[assumption\]/g;
   let last = 0;
   let m: RegExpExecArray | null;
   while ((m = re.exec(s))) {
     if (m.index > last) out.push({ t: "text", s: s.slice(last, m.index) });
     if (m[1]) out.push({ t: "cite", n: Number(m[1]) });
     else if (m[2]) out.push({ t: "derived", ns: m[2].split(",").map((x) => x.trim()).map((x) => (/^\d+$/.test(x) ? Number(x) : "assumption")) });
+    else if (m[3]) out.push({ t: "constant", name: m[3].trim() });
     else out.push({ t: "assumption" });
     last = re.lastIndex;
   }
   if (last < s.length) out.push({ t: "text", s: s.slice(last) });
   return out;
+}
+
+export function formulaMarkedOf(f: Finding | null | undefined): string | null {
+  const s = f?.formula_marked ?? (f?.impact as { formula_marked?: unknown } | undefined)?.formula_marked;
+  return typeof s === "string" && s.trim() ? s : null;
 }
 
 export function markedOf(f: Finding | null | undefined): string | null {
