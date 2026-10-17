@@ -32,7 +32,9 @@ OFFICIAL_RAW = {"annual_report", "quarterly_report", "cms_fact_sheet", "mfp_expl
 
 
 def grade(c):
-    """g for one Citation (section 4.5 table)."""
+    """g for one Citation (section 4.5 table). A derived citation carries its weakest operand's grade as its score."""
+    if c.verification.status == "derived":
+        return float(c.verification.score or 0.0)
     return GRADE.get(c.verification.status, 0.0)
 
 

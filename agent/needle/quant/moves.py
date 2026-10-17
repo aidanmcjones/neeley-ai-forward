@@ -136,7 +136,9 @@ CM_VOLUME = _b("cm_volume", 0.70, "fraction", "pharma_impact_math / spec 4.3 e: 
 UPTAKE_MONTHS = _b("uptake_months", 39.9, "months to peak", "IQVIA 2021, 813 launches: 13.3 quarters to peak volume",
                    "https://www.iqvia.com/blogs/2021/10/using-historical-analogues-to-forecast-new-product-launches")
 UPTAKE_MONTHS_ONC = _b("uptake_months_onc", 60, "months to peak", "Spec 5.3 M1: 5 years for oncology (21 drugs, median)", "")
-LABEL_RAMP_MONTHS = _b("label_ramp_months", 42, "months to peak", "Spec 5.3 M3: share ramp 3.5-5 years (reference case 42 months)", "", kind="inference")
+LABEL_RAMP_MONTHS = _b("label_ramp_months", 60, "months to peak", "Spec 5.3 M3: 25-40% of peak 24 months after launch (strategic_move); a linear 60-month ramp gives 40% at 24 months and sits inside the spec's 3.5-5 year share ramp (review A23)", "", kind="inference")
+LABEL_RAMP_MONTHS_ALT = _b("label_ramp_months_alt", 42, "months to peak", "Alternative ramp: the spec 5.5 synthetic reference case (42 months = 57% of peak at 24 months, above the 25-40% benchmark; review A23)", "", kind="inference")
+LABEL_SHARE_24M = (0.25, 0.40)   # share of peak 24 months after launch the benchmark states (strategic_move L213)
 COVERAGE_LAG = _b("coverage_lag_months", 9, "months", "Tufts/ICER: 6-12 months to majority commercial coverage (midpoint)",
                   "https://www.beckerspayer.com/research-analysis/new-drugs-can-see-coverage-delays-of-up-to-1-year-report/")
 
@@ -320,7 +322,10 @@ def _build_label_expansion(p):
                Line("incremental label revenue (after tax)", "in", rev, alive_curve(events, H), scaled=True,
                     note=f"peak ${p['peak_sales']}M linear over {p['ramp_months']} months from approval, CM {p['cm']}, tax {p['tax_rate']}")],
         horizon=H, events=events, first_readout=ro,
-        notes=[f"P(success from Phase III) = {p['p_ph3']} x {p['p_nda']} = {p['p_ph3'] * p['p_nda']:.4f}"])
+        notes=[f"P(success from Phase III) = {p['p_ph3']} x {p['p_nda']} = {p['p_ph3'] * p['p_nda']:.4f}",
+               f"in-window ramp: {_ramp(24, p['ramp_months']):.0%} of peak 24 months after approval on a "
+               f"{p['ramp_months']:.0f}-month linear ramp (benchmark {LABEL_SHARE_24M[0]:.0%}-{LABEL_SHARE_24M[1]:.0%}; "
+               f"alternative ramp {LABEL_RAMP_MONTHS_ALT:.0f} months = {_ramp(24, LABEL_RAMP_MONTHS_ALT):.0%})"])
 
 
 LABEL_EXPANSION = MoveTemplate(

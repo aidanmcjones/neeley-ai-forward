@@ -1,0 +1,466 @@
+{
+  "base": {
+    "label": "v3 rules: H = 3, MFN directional at pi_min, IRA class rule, L = top-5 x N_eff/3",
+    "ranking": [
+      [
+        "AMGN",
+        0.08769086206380915
+      ],
+      [
+        "GILD",
+        0.05106803938207053
+      ],
+      [
+        "AZN",
+        0.029033177380705932
+      ],
+      [
+        "MRK",
+        0.0199159074640379
+      ],
+      [
+        "BMY",
+        0.008557545362698881
+      ],
+      [
+        "NVO",
+        0.008112317666068337
+      ],
+      [
+        "ABBV",
+        0.006553467026393145
+      ],
+      [
+        "LLY",
+        0.005057309236214908
+      ],
+      [
+        "PFE",
+        0.0006614471021727613
+      ],
+      [
+        "JNJ",
+        0.0001460026021652225
+      ]
+    ],
+    "strict": 5,
+    "needles": {
+      "AMGN": "strict",
+      "GILD": "floor relaxed",
+      "AZN": "strict",
+      "MRK": "strict",
+      "BMY": "floor relaxed",
+      "NVO": "strict",
+      "ABBV": "strict",
+      "LLY": "provisional",
+      "PFE": "floor relaxed",
+      "JNJ": "none"
+    }
+  },
+  "raw_sum": {
+    "label": "no concentration multiplier: rank by the raw top-5 sum",
+    "ranking": [
+      [
+        "AMGN",
+        0.2046829825343806
+      ],
+      [
+        "GILD",
+        0.1532041181462116
+      ],
+      [
+        "AZN",
+        0.06742431179071494
+      ],
+      [
+        "MRK",
+        0.0597477223921137
+      ],
+      [
+        "BMY",
+        0.025672636088096647
+      ],
+      [
+        "NVO",
+        0.024336952998205014
+      ],
+      [
+        "ABBV",
+        0.019660401079179435
+      ],
+      [
+        "LLY",
+        0.015171927708644726
+      ],
+      [
+        "PFE",
+        0.001984341306518284
+      ],
+      [
+        "JNJ",
+        0.0004380078064956675
+      ]
+    ],
+    "strict": 5,
+    "needles": {
+      "AMGN": "strict",
+      "GILD": "floor relaxed",
+      "AZN": "strict",
+      "MRK": "strict",
+      "BMY": "floor relaxed",
+      "NVO": "strict",
+      "ABBV": "strict",
+      "LLY": "provisional",
+      "PFE": "floor relaxed",
+      "JNJ": "none"
+    }
+  },
+  "mfn_universal": {
+    "label": "MFN at Pfizer's universal 0.65% of US revenue with pi = 1 (the v2 rule)",
+    "ranking": [
+      [
+        "AMGN",
+        0.16807790776576004
+      ],
+      [
+        "GILD",
+        0.05758938693313446
+      ],
+      [
+        "AZN",
+        0.029033177380705932
+      ],
+      [
+        "JNJ",
+        0.026545927666404096
+      ],
+      [
+        "MRK",
+        0.0199159074640379
+      ],
+      [
+        "ABBV",
+        0.015129450995753354
+      ],
+      [
+        "BMY",
+        0.01300904198836602
+      ],
+      [
+        "NVO",
+        0.008112317666068337
+      ],
+      [
+        "LLY",
+        0.007485440366903061
+      ],
+      [
+        "PFE",
+        0.0018697349990935586
+      ]
+    ],
+    "strict": 10,
+    "needles": {
+      "AMGN": "strict",
+      "GILD": "strict",
+      "AZN": "strict",
+      "JNJ": "strict",
+      "MRK": "strict",
+      "ABBV": "strict",
+      "BMY": "strict",
+      "NVO": "strict",
+      "LLY": "strict",
+      "PFE": "strict"
+    }
+  },
+  "amgn_rec_pi_min": {
+    "label": "AMGN receivables row (gap +8.01 pts, trigger 8) at pi_min with the anchor size kept",
+    "ranking": [
+      [
+        "GILD",
+        0.05106803938207053
+      ],
+      [
+        "AZN",
+        0.029033177380705932
+      ],
+      [
+        "AMGN",
+        0.02613351420967586
+      ],
+      [
+        "MRK",
+        0.0199159074640379
+      ],
+      [
+        "BMY",
+        0.008557545362698881
+      ],
+      [
+        "NVO",
+        0.008112317666068337
+      ],
+      [
+        "ABBV",
+        0.006553467026393145
+      ],
+      [
+        "LLY",
+        0.005057309236214908
+      ],
+      [
+        "PFE",
+        0.0006614471021727613
+      ],
+      [
+        "JNJ",
+        0.0001460026021652225
+      ]
+    ],
+    "strict": 5,
+    "needles": {
+      "GILD": "floor relaxed",
+      "AZN": "strict",
+      "AMGN": "strict",
+      "MRK": "strict",
+      "BMY": "floor relaxed",
+      "NVO": "strict",
+      "ABBV": "strict",
+      "LLY": "provisional",
+      "PFE": "floor relaxed",
+      "JNJ": "none"
+    }
+  },
+  "amgn_rec_not_fired": {
+    "label": "AMGN receivables row treated as below its trigger (v3 rule for unfired flags: S = 0)",
+    "ranking": [
+      [
+        "GILD",
+        0.05106803938207053
+      ],
+      [
+        "AZN",
+        0.029033177380705932
+      ],
+      [
+        "MRK",
+        0.0199159074640379
+      ],
+      [
+        "AMGN",
+        0.008674538175371085
+      ],
+      [
+        "BMY",
+        0.008557545362698881
+      ],
+      [
+        "NVO",
+        0.008112317666068337
+      ],
+      [
+        "ABBV",
+        0.006553467026393145
+      ],
+      [
+        "LLY",
+        0.005057309236214908
+      ],
+      [
+        "PFE",
+        0.0006614471021727613
+      ],
+      [
+        "JNJ",
+        0.0001460026021652225
+      ]
+    ],
+    "strict": 5,
+    "needles": {
+      "GILD": "floor relaxed",
+      "AZN": "strict",
+      "MRK": "strict",
+      "AMGN": "strict",
+      "BMY": "floor relaxed",
+      "NVO": "strict",
+      "ABBV": "strict",
+      "LLY": "provisional",
+      "PFE": "floor relaxed",
+      "JNJ": "none"
+    }
+  },
+  "H6": {
+    "label": "obscurity half-life 6 months (the v2 base)",
+    "ranking": [
+      [
+        "AMGN",
+        0.1846630154272989
+      ],
+      [
+        "GILD",
+        0.13858437749384533
+      ],
+      [
+        "AZN",
+        0.08245132441697914
+      ],
+      [
+        "BMY",
+        0.02797092738892283
+      ],
+      [
+        "MRK",
+        0.026374123220865825
+      ],
+      [
+        "NVO",
+        0.021353757480378287
+      ],
+      [
+        "ABBV",
+        0.020996486995856798
+      ],
+      [
+        "LLY",
+        0.013735880111687072
+      ],
+      [
+        "PFE",
+        0.00180513210590465
+      ],
+      [
+        "JNJ",
+        0.0004257899582794658
+      ]
+    ],
+    "strict": 5,
+    "needles": {
+      "AMGN": "strict",
+      "GILD": "floor relaxed",
+      "AZN": "strict",
+      "BMY": "floor relaxed",
+      "MRK": "strict",
+      "NVO": "strict",
+      "ABBV": "strict",
+      "LLY": "provisional",
+      "PFE": "floor relaxed",
+      "JNJ": "none"
+    }
+  },
+  "ira_spec": {
+    "label": "IRA league value on the spec formula G x max(0, d - g_pre) instead of the class rule",
+    "ranking": [
+      [
+        "AMGN",
+        0.07848137124807021
+      ],
+      [
+        "GILD",
+        0.04601536872773522
+      ],
+      [
+        "AZN",
+        0.027042238832054057
+      ],
+      [
+        "MRK",
+        0.0199159074640379
+      ],
+      [
+        "ABBV",
+        0.01181787394142208
+      ],
+      [
+        "NVO",
+        0.008112317666068337
+      ],
+      [
+        "BMY",
+        0.0058643139719912266
+      ],
+      [
+        "LLY",
+        0.0026306309906986747
+      ],
+      [
+        "PFE",
+        0.0004948841354112342
+      ],
+      [
+        "JNJ",
+        0.0001460026021652225
+      ]
+    ],
+    "strict": 5,
+    "needles": {
+      "AMGN": "strict",
+      "GILD": "floor relaxed",
+      "AZN": "strict",
+      "MRK": "strict",
+      "ABBV": "strict",
+      "NVO": "strict",
+      "BMY": "floor relaxed",
+      "LLY": "provisional",
+      "PFE": "floor relaxed",
+      "JNJ": "none"
+    }
+  },
+  "c_anchor_half": {
+    "label": "c = 0.5 on anchor rows too (consensus test not defined for them)",
+    "ranking": [
+      [
+        "AMGN",
+        0.059101748500208925
+      ],
+      [
+        "GILD",
+        0.05106803938207053
+      ],
+      [
+        "AZN",
+        0.019651458581923877
+      ],
+      [
+        "MRK",
+        0.00995795373201895
+      ],
+      [
+        "BMY",
+        0.008557545362698881
+      ],
+      [
+        "ABBV",
+        0.006553467026393145
+      ],
+      [
+        "LLY",
+        0.005057309236214908
+      ],
+      [
+        "NVO",
+        0.004056158833034168
+      ],
+      [
+        "PFE",
+        0.0006614471021727613
+      ],
+      [
+        "JNJ",
+        0.0001460026021652225
+      ]
+    ],
+    "strict": 4,
+    "needles": {
+      "AMGN": "strict",
+      "GILD": "floor relaxed",
+      "AZN": "strict",
+      "MRK": "strict",
+      "BMY": "floor relaxed",
+      "ABBV": "strict",
+      "LLY": "provisional",
+      "NVO": "floor relaxed",
+      "PFE": "floor relaxed",
+      "JNJ": "none"
+    }
+  }
+}

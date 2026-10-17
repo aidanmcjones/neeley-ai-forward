@@ -25,10 +25,13 @@ CM_VOLUME = 0.70     # volume change. KQ7 (COGS 15-25%, variable selling 5-15%)
 ANCHOR = 0.03        # margin-compression size for statistical flags: backtest margin_drop >= 3 pts
 
 # ---- obscurity (section 4.4) -----------------------------------------------------------------------------------
-H_MONTHS = 6.0       # obscurity half-life. Lazy Prices (persists to 6 months, accrues to 18); priced_in KQ5 3-6
+H_MONTHS = 3.0       # obscurity half-life, base. Low end of priced_in KQ5 3-6: mega-caps are read by many, so faster
+                     # absorption (review A11; Martineau: large-cap PEAD gone since 2006). 6 months is the sensitivity
+H_MONTHS_SENSITIVITY = 6.0   # Lazy Prices (persists to 6 months, accrues to 18); the v2 base, reported as a sensitivity
 H_VALUE = 0.9        # headline-page coverage. materiality_spec section 3 team rule; case "press-release skim"
 Z_VALUE = 1.0        # starter thread. case appendix; binary by design
 ATTENTION_QUARTERS = 10   # a_f = share of the last up-to-10 calls in which analysts asked (priced_in_scorecard)
+C_UNTESTABLE = 0.5   # c_f when the consensus-embedding test cannot be run: uninformative, not 0 (review A12)
 LOE_AGE_MONTHS_DEFAULT = 24.0   # inference: Orange/Purple Book and 10-K patent dates are long public (see notes)
 
 # ---- evidence grades (section 4.5) -----------------------------------------------------------------------------
@@ -63,9 +66,14 @@ def anchor_pi(alpha_k, d_k=D_PUB):
 
 
 PI_MISSTATEMENT = round(anchor_pi(12.0), 4)    # 0.0491. Beneish-Lee-Nichols 2013, 1%/month x 12 (inference)
-PI_RISK_FACTOR = round(anchor_pi(5.52), 4)     # 0.0226. Lazy Prices VW Jaccard 0.46%/month x 12
-PI_LITIGATION_TEXT = round(anchor_pi(8.52), 4)  # 0.0349. Lazy Prices 71 bps/month x 12
-PI_MDNA = round(anchor_pi(1.98), 4)            # 0.0081. Lazy Prices Table VII 11-22 bps/month, midpoint x 12
+# Text families (review A5): ONE Lazy Prices table for all of them, Table II (whole-document similarity, VW Q5-Q1
+# 5-factor alpha, Jaccard). Never mixed with the section-level Table VII (risk factors "up to 188 bps", MD&A 11-22 bps),
+# which the v2 weights used for MD&A only. The detectors compare sections, so applying a whole-document alpha to a
+# section change is the stated approximation.
+TEXT_ALPHA_TABLE = "Lazy Prices Table II (whole document)"
+PI_RISK_FACTOR = round(anchor_pi(5.52), 4)     # 0.0226. Table II VW Jaccard 0.46%/month x 12
+PI_LITIGATION_TEXT = round(anchor_pi(8.52), 4)  # 0.0349. Table II sort, high-litigiousness subsample (App. A-2) 71 bps x 12
+PI_MDNA = round(anchor_pi(5.52), 4)            # 0.0226. Table II (same table as risk factors); v2 used Table VII 0.0081
 PI_INSIDER = round(anchor_pi(4.92), 4)         # 0.0201. Cohen-Malloy-Pomorski 82 bps/month x 6
 PI_8K = round(anchor_pi(1.5), 4)               # 0.0061. Lerman-Livnat 2010 lower end 1.5%
 PI_MIN = round(anchor_pi(1.34), 4)             # 0.0055. Chen-Hollander-Law (WP) zero-question calls 1.34%
@@ -82,6 +90,12 @@ G_PRE_GLP1 = (0.60, 0.675, 0.75)        # GLP-1 pre-MFP concession, low / mid / 
 G_PRE_INSULIN = 0.75                    # insulin pre-cut (inference)
 G_PRE_IMMUNOLOGY = (0.50, 0.575, 0.65)  # immunology (inference)
 IRA_HEADLINE_RANGE = (0.38, 0.85)       # headline list-discount range across cycles 1-2
+# The one IRA formula (impact.ira_class_rule; review S2/S3, A15), used by FIND, product.py and DECIDE:
+#   net hit share of G = max(0, k x d - m_avoided)
+K_LOW_REBATE = (1.0, 1.0, 1.0)          # oncology and HIV: net hit ~ 1.0 x list discount (KQ2 cross-check)
+K_NET = (0.3, 0.4, 0.5)                 # highly rebated classes: 0.3-0.5 x list discount (KQ2 cross-check)
+M_MDP_AVOIDED = (0.20, 0.15, 0.10)      # Part D Manufacturer Discount Program liability avoided once the MFP applies:
+                                        # 20% catastrophic (bull), 10% initial (bear), 15% midpoint (KQ2 "10-15%")
 
 # ---- MFN, LOE, label (sections 4.3 c, e, h) --------------------------------------------------------------------
 S_MFN = (0.003, 0.0065, 0.010)        # Medicaid MFN share of US revenue: Pfizer <1% of US net; midpoint inference
@@ -95,7 +109,8 @@ DSO_STAR = 7.0                        # days of DSO excess that switch receivabl
 # ---- confidence, Needle, league (sections 4.7-4.9) -------------------------------------------------------------
 E_HIGH = 0.95        # between fuzzy (0.90) and exact (1.00)
 E_MED = 0.745        # the entailed grade
-NEEDLE_O = 0.5       # "roughly even chance" midpoint (ICD 203 bands)
+NEEDLE_O = 0.5       # "roughly even chance" midpoint (ICD 203 bands). Applied to the discussion term D, not to O:
+                     # decay stays inside S only (review R1, A11, B5)
 NEEDLE_E = 0.90      # quoted evidence only
 N_STAR = 3           # blocks for full league credit. Lazy Prices A-9; Beneish-Lee-Nichols; inference
 TOP_N = 5            # findings summed: the case minimum of five findings

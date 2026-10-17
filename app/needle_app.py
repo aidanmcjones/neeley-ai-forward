@@ -152,7 +152,24 @@ def money(x):
 
 
 # ----------------------------------------------------------------- data
-league = read_json("out/league.json") or []
+def load_league():
+    """out/league_v3.json if present, else league_v2.json, else league.json (review B22). FIND rows (v2/v3) are
+    mapped onto the columns this page shows; the AI-rejected count still comes from the engine's league.json."""
+    old = read_json("out/league.json") or []
+    for name in ("out/league_v3.json", "out/league_v2.json"):
+        rows = read_json(name)
+        if rows:
+            by = {r["ticker"]: r for r in old}
+            return [{"ticker": r["ticker"], "score": r["L"], "n_findings": r.get("n_findings", 0),
+                     "n_verified": r.get("n_findings", 0),
+                     "n_rejected": by.get(r["ticker"], {}).get("n_rejected", r.get("n_withheld", 0)),
+                     "high_confidence": sum(t.get("confidence") == "HIGH" for t in r.get("top", [])),
+                     "sharpest_needle": (f"{r['needle']['sentence']} ({r.get('needle_status')})" if r.get("needle")
+                                         else "none")} for r in rows]
+    return old
+
+
+league = load_league()
 tickers = [r["ticker"] for r in league] or sorted(p.name for p in OUT.glob("*") if (p / "findings.jsonl").exists())
 total_verified = sum(r.get("n_verified", 0) for r in league)
 total_rejected = sum(r.get("n_rejected", 0) for r in league)

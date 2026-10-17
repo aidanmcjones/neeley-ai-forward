@@ -124,6 +124,16 @@ class DecideInput:
 def _finding_value(f, fld):
     """Pull a $M number (or month) out of a finding's impact for a FeedRule; None when the finding has none."""
     imp = f.get("impact") or {}
+    if isinstance(imp.get("d_rev"), dict):
+        # FIND v2 row: d_rev comes from agent.needle.quant.impact (the one IRA / MFN / LOE implementation, review
+        # S3). FIND signs an adverse revenue change positive; the feeds use negative = loss for "base".
+        v = imp["d_rev"].get("base")
+        if v is None or (not imp.get("quantified", True) and not v):
+            return None
+        sign = 1.0 if imp.get("adverse", True) else -1.0
+        if fld == "month":
+            return None
+        return float(v) * sign * (1.0 if fld == "dollars" else -1.0)
     if fld == "dollars":
         v = imp.get("dollars")
         if v is None:
@@ -252,10 +262,20 @@ def payback_month(exp_by_s, p_s, r_mo, horizon):
     return None
 
 
+def finding_weight(f):
+    """Strategic-fit weight of a finding: M x E (materiality and evidence), not S (review A24). S also holds
+    obscurity and the prior, so a well-known material problem (O = 0) would get no fit. FIND v2 rows carry
+    vector M and E; old-shape rows fall back to their score."""
+    v = f.get("vector") or {}
+    if v.get("M") is not None and v.get("E") is not None:
+        return float(v["M"]) * float(v["E"])
+    return finding_score(f)
+
+
 def mcda_score(template, plan, findings, addressed_ids, capability, stakeholders, p_s):
     scored = [f for f in findings if finding_kind(f) not in FAVORABLE_LEVEL_KINDS]
-    top5 = sum(sorted((finding_score(f) for f in scored), reverse=True)[:5])
-    num = sum(finding_score(f) for f in scored if finding_id(f) in addressed_ids)
+    top5 = sum(sorted((finding_weight(f) for f in scored), reverse=True)[:5])
+    num = sum(finding_weight(f) for f in scored if finding_id(f) in addressed_ids)
     fit = min(1.0, num / top5) if top5 > 0 else 0.0
     cap = _share(capability, template.required_assets)
     stk = _share(stakeholders, template.deciders)

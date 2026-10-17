@@ -30,6 +30,9 @@ from agent.needle.cite.index import load_index
 from agent.needle.cite.locator import Citation, Claim
 from agent.needle.cite.verify import verify
 
+from . import impact as IM
+from . import weights as W
+
 REPO = Path(__file__).resolve().parents[3]
 _GAP = Path("/Users/aidanjones/dev/neeley-ai-forward/.claude/worktrees/gap-data")
 AS_OF = "2026-10-17"
@@ -843,7 +846,6 @@ OBSCURITY_NOTE = ("Label and exclusivity facts are old (often years), so a FIND 
 
 # loss-rate band for first full year after generic/biosimilar entry, from loe_curves.csv (US rows): q25/median/q75 pct of peak
 CM_DEFAULT = 0.70           # spec 4.3: contribution margin on an incremental net revenue dollar
-GTN_BAND = {"bear": 0.50, "base": 0.60, "bull": 0.70}   # lower GTN means a larger net price, so a larger MFP hit (bear)
 
 
 def _fmt_m(x):
@@ -870,6 +872,14 @@ def _is_biologic(cmp_, ent):
         and (P["biosimilars_referencing"]["value"] is not None)
 
 
+def _indication_text(P):
+    """Indication names as one string, for the IRA class rule's oncology / HIV test."""
+    try:
+        return " ".join(str(x) for x in (P["indications"]["value"] or []))
+    except Exception:
+        return ""
+
+
 def _channels(cmp_):
     """All feasible label-to-numbers channels for the product, each with math. Returned unranked."""
     me = cmp_.entities[0]
@@ -890,28 +900,35 @@ def _channels(cmp_):
         mfp = mfp or ira["mfp_per_30_days"]
         listp = listp or (med["avg_per_claim"])
         if mfp and listp:
-            res = {}
-            for case, g in GTN_BAND.items():
-                net_pre = listp * (1 - g)
-                res[case] = -med["claims"] * max(0.0, net_pre - mfp)
+            # the one IRA formula (impact.ira_class_rule, review S3): G x max(0, k x d - m_avoided)
+            G = med["claims"] * listp
+            d = max(0.0, 1 - mfp / listp)
+            revs, k, low, part_d = IM.ira_class_dollars(G, d, me["name"], _indication_text(P), part_d=True)
+            res = {case: -v for case, v in zip(("bull", "base", "bear"), revs)}
             out.append({"channel": "ira_mfp", "topic": "IRA_negotiation", "dRev": res,
-                        "formula": f"dRev = -Part D claims {med['year']} ({med['claims']:,.0f}) x max(0, list30 ${listp:,.0f} x (1 - GTN) - MFP30 ${mfp:,.0f}); GTN bear/base/bull = 50/60/70 percent",
-                        "inputs": {"claims": med["claims"], "list30": listp, "mfp30": mfp, "gtn": GTN_BAND, "mfp_effective": ira["mfp_effective"]},
+                        "formula": (f"dRev = -G x max(0, k x d - m_avoided): G = Part D claims {med['year']} ({med['claims']:,.0f}) x list30 ${listp:,.0f}; "
+                                    f"d = 1 - MFP30 ${mfp:,.0f} / list30 = {d:.0%}; k = {k} ({'low-rebate class' if low else 'rebated class'}); "
+                                    f"m_avoided = {W.M_MDP_AVOIDED} (FIND impact.ira_class_rule, the one IRA formula)"),
+                        "inputs": {"claims": med["claims"], "list30": listp, "mfp30": mfp, "d": d, "k": k, "m_avoided": W.M_MDP_AVOIDED, "mfp_effective": ira["mfp_effective"]},
                         "years_to_event": max(0.0, (pd.Timestamp(ira["mfp_effective"]) - pd.Timestamp(AS_OF)).days / 365.25) if ira["mfp_effective"] else None,
-                        "cm": CM_DEFAULT, "assumed": False, "citations": [c for c in pricing.citations]})
+                        "cm": W.CM_PRICE, "assumed": False, "citations": [c for c in pricing.citations]})
     elif not ira["selected"]:
         exp = [x for x in pol if "expected" in x["item"].lower() and "selection" in x["item"].lower()]
         cuts = _ira_cuts(cmp_.context.get("_data"))
         if exp and med and cuts:
             eff = next((x["value"] for x in exp if re.match(r"20\d\d-\d\d-\d\d", str(x["value"]))), None)
             q = statistics.quantiles(cuts, n=4)
-            res = {"bull": -med["spend"] * q[0] / 100, "base": -med["spend"] * statistics.median(cuts) / 100, "bear": -med["spend"] * q[2] / 100}
+            d = (q[0] / 100, statistics.median(cuts) / 100, q[2] / 100)
+            revs, k, low, part_d = IM.ira_class_dollars(med["spend"], d, me["name"], _indication_text(P),
+                                                        part_d=med["part"] == "D")
+            res = {case: -v for case, v in zip(("bull", "base", "bear"), revs)}
             out.append({"channel": "ira_expected", "topic": "IRA_negotiation", "dRev": res,
-                        "formula": (f"dRev = -Medicare Part {med['part']} gross spend {med['year']} ({_fmt_m(med['spend'])}) x MFP cut vs list; cut = observed CMS cuts "
-                                    f"in the verified IRA rows (n={len(cuts)}): q25 {q[0]:.0f} / median {statistics.median(cuts):.0f} / q75 {q[2]:.0f} percent (bull/base/bear)"),
+                        "formula": (f"dRev = -G x max(0, k x d - m_avoided): G = Medicare Part {med['part']} gross spend {med['year']} ({_fmt_m(med['spend'])}); "
+                                    f"d = observed CMS cuts in the verified IRA rows (n={len(cuts)}): q25 {q[0]:.0f} / median {statistics.median(cuts):.0f} / q75 {q[2]:.0f} percent (bull/base/bear); "
+                                    f"k = {k}; m_avoided = {W.M_MDP_AVOIDED if part_d else (0.0, 0.0, 0.0)} (FIND impact.ira_class_rule)"),
                         "inputs": {"medicare_spend": med["spend"], "year": med["year"], "cuts_pct": cuts, "mfp_effective": eff},
                         "years_to_event": max(0.0, (pd.Timestamp(eff) - pd.Timestamp(AS_OF)).days / 365.25) if eff else None,
-                        "cm": 1.0, "assumed": False, "citations": [c for c in pricing.citations]})
+                        "cm": W.CM_PRICE, "assumed": False, "citations": [c for c in pricing.citations]})
         else:
             uq.append("IRA: product is not a selected drug in the pack and no expected-selection row exists")
     # (2) LOE erosion

@@ -113,14 +113,40 @@ def xbrl_citation(ticker, concept, frame, value, unit="USD"):
 
 
 def derived_citation(formula, value, operands, unit=""):
-    """kind "derived": computed by code from cited operands; status is the weakest operand's (spec 4.5 derived_code)."""
+    """kind "derived": computed by code from cited operands. Status "derived" (never "exact": no document shows the
+    number); its score is the weakest operand's grade (spec 4.5 derived_code), which evidence.grade uses."""
     worst = min(operands, key=lambda c: _rank(c.verification.status)) if operands else None
-    st = worst.verification.status if worst else "unverified"
-    note = f"derived by code: {formula}; operands " + ", ".join(c.cite_id for c in operands)
+    note = (f"derived by code: {formula}; operands " +
+            ", ".join(f"{c.location or c.canonical_id} ({c.cite_id})" for c in operands))
     return Citation(canonical_id="derived", quote=formula, claim_type="number", value=f"{value:,.4g}", unit=unit,
-                    doc_title="derived", location="computed", page_scheme="none",
-                    verification=Verification(st, worst.verification.score if worst else 0.0, _now(), note),
+                    doc_title="derived", doc_type="derived", raw_doc_type="derived", location="computed",
+                    page_scheme="none",
+                    verification=Verification("derived", worst.verification.score if worst and
+                                              worst.verification.ok else 0.0, _now(), note),
                     confidence_note=note)
+
+
+def has_frame(ticker, col, q):
+    """Does companyfacts carry the calendar frame CY<q> for this flow metric (Q4 usually does not)?"""
+    try:
+        s = xbrl._metric_series(xbrl._facts(ticker), "flow", xbrl.METRICS[col][1])
+    except Exception:
+        return True
+    return q in s
+
+
+def flow_citation(ticker, p, col, q, value, unit):
+    """Citation for a quarterly flow value. A Q4 the panel derived as FY - (Q1 + Q2 + Q3) has no CY####Q4 frame in
+    companyfacts (review D11), so it is a derived citation over the CY#### frame and the three quarter frames."""
+    if not str(q).endswith("Q4") or has_frame(ticker, col, q):
+        return xbrl_citation(ticker, _concept(p, col, q), f"CY{q}", value, unit)
+    y = str(q)[:4]
+    a = xbrl.annual(ticker)
+    fy = float(a.at[y, col]) / 1e6 if y in a.index and col in a else None
+    ops = ([xbrl_citation(ticker, _concept(p, col, q), f"CY{y}", fy, unit)] if fy is not None else []) + \
+          [xbrl_citation(ticker, _concept(p, col, f"{y}Q{n}"), f"CY{y}Q{n}", float(p.at[f"{y}Q{n}", col]) / 1e6, unit)
+           for n in (1, 2, 3)]
+    return derived_citation(f"{col} CY{y} - (CY{y}Q1 + CY{y}Q2 + CY{y}Q3) = {value:,.0f}", value, ops, unit)
 
 
 def _rank(status):
@@ -238,11 +264,11 @@ def company(ticker):
         rev_ttm, tax = sum(rv) / 1e6, sum(tx) / sum(pt)
         sh = p["shares_diluted"].dropna()
         shares, lq = float(sh.iloc[-1]) / 1e6, last4[-1]
-        cites["Rev_TTM"] = [xbrl_citation(t, _concept(p, "revenue", q), f"CY{q}", v / 1e6, f"{fin_cur} millions")
+        cites["Rev_TTM"] = [flow_citation(t, p, "revenue", q, v / 1e6, f"{fin_cur} millions")
                             for q, v in zip(last4, rv)]
-        cites["t"] = [xbrl_citation(t, _concept(p, "income_tax", q), f"CY{q}", v / 1e6, f"{fin_cur} millions")
+        cites["t"] = [flow_citation(t, p, "income_tax", q, v / 1e6, f"{fin_cur} millions")
                       for q, v in zip(last4, tx)] + \
-                     [xbrl_citation(t, _concept(p, "pretax_income", q), f"CY{q}", v / 1e6, f"{fin_cur} millions")
+                     [flow_citation(t, p, "pretax_income", q, v / 1e6, f"{fin_cur} millions")
                       for q, v in zip(last4, pt)]
         cites["D"] = [xbrl_citation(t, _concept(p, "shares_diluted", sh.index[-1]), f"CY{sh.index[-1]}",
                                     float(sh.iloc[-1]) / 1e6, "shares millions")]

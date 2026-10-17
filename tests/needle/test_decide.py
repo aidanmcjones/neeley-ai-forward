@@ -19,8 +19,10 @@ def ref(**over):
     return D.evaluate_move("M3", over, [], name="reference")
 
 
-def test_reference_case_to_the_cent():
-    r = ref()
+def test_reference_case_to_the_cent_alternative_ramp():
+    """The spec 5.5 synthetic reference was built on a 42-month ramp (57% of peak at 24 months): kept as the
+    labelled alternative ramp (review A23)."""
+    r = ref(ramp_months=M.LABEL_RAMP_MONTHS_ALT)
     assert round(r.ev, 1) == 1431.2
     assert [round(r.ev_by_scenario[s], 1) for s in ("bear", "base", "bull")] == [1161.0, 1464.6, 1768.2]
     assert round(r.in_window_pv["base"], 1) == -53.3
@@ -28,6 +30,26 @@ def test_reference_case_to_the_cent():
     assert r.payback_month == 51
     assert round(r.spread, 1) == 607.2
     assert r.p_alive_end == pytest.approx(0.675 * 0.915)
+
+
+def test_reference_case_consistent_ramp():
+    """Default ramp 60 months = 40% of peak 24 months after approval, inside the stated 25-40% (review A23)."""
+    assert M.LABEL_RAMP_MONTHS == 60 and 24 / M.LABEL_RAMP_MONTHS == pytest.approx(M.LABEL_SHARE_24M[1])
+    r = ref()
+    assert round(r.ev, 1) == 1265.2
+    assert [round(r.ev_by_scenario[s], 1) for s in ("bear", "base", "bull")] == [1025.3, 1294.9, 1564.5]
+    assert round(r.in_window_pv["base"], 1) == -53.3      # the ramp starts after month 24: in-window value unchanged
+    assert round(r.car, 1) == 57.6
+    assert r.payback_month == 54
+    assert round(r.spread, 1) == 539.3
+
+
+def test_strategic_fit_uses_materiality_and_evidence_not_S():
+    """Review A24: a material, well-known finding (O = 0, so S = 0) still gives the move strategic fit."""
+    known = {"id": "k", "signal_kind": "label_narrower", "S": 0.0, "vector": {"M": 2.0, "E": 1.0}, "impact": {}}
+    other = {"id": "o", "signal_kind": "risk_added", "S": 0.05, "vector": {"M": 2.0, "E": 1.0}, "impact": {}}
+    r = D.evaluate_move("M3", {}, [known, other], finding_ids=["k"])
+    assert r.mcda_parts["strategic_fit"] == pytest.approx(0.5)
 
 
 def test_scenario_weights_sum_to_one_and_multipliers():
@@ -81,6 +103,20 @@ def test_finding_citations_and_feed_into_pricing_baseline():
     assert "LLY-ira-1" in r.finding_ids
     # the Part 1 delta lowers the baseline the move is measured on: EV changes with the finding
     assert r.ev != D.evaluate_move("M4", {"base_us_rev_annual": 5723.0}, []).ev
+
+
+def test_find_v2_ira_row_feeds_from_the_one_impact_channel():
+    """Review S3: DECIDE takes IRA dollars from FIND's impact (impact.ira_class_rule), not a formula of its own."""
+    from types import SimpleNamespace
+    from agent.needle.quant import impact as IM
+    co = SimpleNamespace(rev_ttm=79665.0, tax=0.2049, shares=893.7, citations={})
+    imp = IM.ira_class_rule(co, "Verzenio", 1428.714, (0.38, 0.50, 0.60), 2028)
+    assert round(imp.d_rev["base"], 1) == 500.0          # 1428.714 x (1.0 x 0.50 - 0.15)
+    finding = {"id": "v2-verz", "signal_kind": "ira_selected", "S": 0.0065, "vector": {"M": 0.2, "E": 1.0},
+               "impact": imp.to_dict(), "citations": []}
+    r = D.evaluate_move("M4", {"base_us_rev_annual": 5723.0}, [finding])
+    inp = {i.name: i for i in r.inputs}["baseline_delta_rev_annual"]
+    assert inp.finding_id == "v2-verz" and inp.value == pytest.approx(500.0, abs=0.1)
 
 
 def test_no_finding_means_strategic_fit_zero_and_flag():

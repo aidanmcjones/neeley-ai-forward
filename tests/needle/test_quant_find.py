@@ -29,9 +29,10 @@ def test_weights_match_table():
     assert (W.PI_INVENTORY, W.PI_DIO, W.PI_RECEIVABLES, W.PI_DSO, W.PI_GROSS_MARGIN_DROP) == \
         (0.0466, 0.0318, 0.0629, 0.0851, 0.0422)
     assert (W.PI_MISSTATEMENT, W.PI_RISK_FACTOR, W.PI_LITIGATION_TEXT, W.PI_MDNA, W.PI_INSIDER, W.PI_8K, W.PI_MIN,
-            W.PI_NONE) == (0.0491, 0.0226, 0.0349, 0.0081, 0.0201, 0.0061, 0.0055, 0.0028)
+            W.PI_NONE) == (0.0491, 0.0226, 0.0349, 0.0226, 0.0201, 0.0061, 0.0055, 0.0028)
     assert (W.R, W.H_MONTHS, W.ANCHOR, W.H_VALUE, W.N_STAR, W.NEEDLE_O, W.NEEDLE_E, W.E_HIGH, W.E_MED) == \
-        (0.0785, 6.0, 0.03, 0.9, 3, 0.5, 0.90, 0.95, 0.745)
+        (0.0785, 3.0, 0.03, 0.9, 3, 0.5, 0.90, 0.95, 0.745)
+    assert W.H_MONTHS_SENSITIVITY == 6.0     # review A11: H = 3 base, 6 the sensitivity
     assert (W.CM_PRICE, W.CM_VOLUME, W.DELTA_OOS, W.M_MDP_CATASTROPHIC) == (1.0, 0.7, 0.26, 0.20)
 
 
@@ -44,7 +45,12 @@ def test_lly_constants():
     assert round(c.tax, 4) == 0.2049
     assert round(c.shares, 1) == 893.7
     assert abs(c.sigma - 2.0294) < 2e-4          # 2 x sd 1.0147 (spec prints 2.0294 and 2.0295)
-    assert all(x.verification.ok for k in ("Rev_TTM", "t", "D", "sigma_EPS") for x in c.citations[k])
+    assert all(x.verification.ok or x.verification.status == "derived"
+               for k in ("Rev_TTM", "t", "D", "sigma_EPS") for x in c.citations[k])
+    # review D11: companyfacts has no CY2025Q4 frame; Q4 = FY - 9M is a derived citation over both operand frames
+    q4 = [x for x in c.citations["Rev_TTM"] if "2025Q4" in x.quote or "CY2025 -" in x.quote]
+    assert q4 and all(x.verification.status == "derived" and x.canonical_id == "derived" for x in q4)
+    assert "CY2025Q1" in q4[0].confidence_note and "CY2025 " in q4[0].confidence_note + " "
 
 
 # ---------------------------------------------------------------- Finding A: gross-margin level outlier
@@ -57,7 +63,7 @@ def test_gross_margin_level_outlier_scores_zero():
 
 
 # ---------------------------------------------------------------- Finding B: DIO
-def dio_S(H=W.H_MONTHS, r=W.R, hc=W.DELTA_OOS, anchor=W.ANCHOR):
+def dio_S(H=6.0, r=W.R, hc=W.DELTA_OOS, anchor=W.ANCHOR):
     d_eps = anchor * REV * (1 - TAX) / D
     M = find.materiality(d_eps, 0.5, SIGMA, r)
     O = OB.obscurity(0, 0, 0.6, 0, 0, OB.months_between(date(2026, 8, 5), AS_OF), H)
@@ -85,7 +91,7 @@ def test_dio_reference():
 
 
 # ---------------------------------------------------------------- Finding C: Verzenio IRA
-def verz_S(H=W.H_MONTHS, r=W.R, m=W.M_MDP_CATASTROPHIC):
+def verz_S(H=6.0, r=W.R, m=W.M_MDP_CATASTROPHIC):
     imp = IM.ira(co(), "Verzenio", 1428.714, find.ONC, m, 2028)
     M = find.materiality(imp.d_eps["base"], imp.t_years, SIGMA, r)
     O = OB.obscurity(0, 0, 0.5, 0, 0, OB.months_between(date(2026, 1, 27), AS_OF), H)
@@ -107,21 +113,33 @@ def test_verzenio_reference():
 
 
 @need_moat
-def test_lly_end_to_end_matches_worked_example():
+def test_lly_end_to_end_matches_worked_example(monkeypatch):
     from agent.needle.quant.run import score_ticker
-    _, fs, _ = score_ticker("LLY", write=False)
-    by = {f.kind: f for f in fs}
-    # review A1: LLY's DIO rose +14.2% YoY, below the backtest dio_rising trigger (+15%), so pi = pi_min and
-    # S = 1.0089 x 0.3032 x 1.0 x 0.0055 = 0.00168 (spec 10.3 printed 0.00973 with the backtest pi)
-    assert round(by["dio_peer_outlier"].S, 5) == 0.00168 and by["dio_peer_outlier"].confidence == "MEDIUM"
-    assert by["dio_peer_outlier"].pi_downgraded
+    monkeypatch.setattr(W, "H_MONTHS", 6.0)     # the worked example's half-life (now the sensitivity, review A11)
+    _, fs, wh = score_ticker("LLY", write=False)
+    by = {f.kind: f for f in fs + wh}
+    # review A1: LLY's DIO rose +14.2% YoY, below the backtest dio_rising trigger (+15%), so pi = pi_min; review R2:
+    # an unfired flag does not get the anchor event size either, so the row is "not quantified" with S = 0 (v2 printed
+    # 0.00168 = 1.0089 x 0.3032 x 1.0 x 0.0055; spec 10.3 printed 0.00973 with the backtest pi)
+    dio = by["dio_peer_outlier"]
+    assert dio.S == 0 and dio.not_quantified.startswith("not quantified") and dio.to_dict()["impact"] is None
+    assert dio.pi_downgraded and dio.vector["pi"] == W.PI_MIN
+    # guard 2 (agent-chat #19): on revenue, LLY's days inventory is not a peer outlier, so the row is withheld
+    assert dio.guard == "drop" and dio in wh
     assert "capacity build, not channel stuffing" in by["dio_peer_outlier"].flags
     v = [f for f in fs if f.kind == "ira_selected" and f.product == "Verzenio"][0]
     # league value uses the KQ2 class rule (1.0 x list discount, review A15); spec formula kept alongside
-    assert round(v.S, 4) == 0.0507 and round(v.vector["S_spec_formula"], 4) == 0.0304
+    # review A12: FY2028 consensus first appears after the selection date, so c is untestable and set to 0.5
+    # (uninformative) instead of 0: both values halve (v2 printed 0.0507 and 0.0304 with c = 0)
+    assert v.vector["c"] == W.C_UNTESTABLE
+    # review S3: one IRA formula, G x max(0, k x d - m_avoided): Verzenio base 1428.7 x (0.50 - 0.15) = 500.0
+    assert round(v.impact.d_rev["base"], 1) == 500.0
+    assert round(v.S, 4) == 0.0178 and round(v.vector["S_spec_formula"], 4) == 0.0152
     assert v.confidence == "HIGH" and v.vector["n_ind"] == 2
     assert all(f.S == 0 for f in fs if f.kind == "gross_margin_peer_outlier")
-    assert not by["dio_peer_outlier"].needle_eligible and not v.needle_eligible
+    assert not by["dio_peer_outlier"].needle_eligible
+    # review R1: the Needle floor is on the discussion term D, not on O (Verzenio O 0.18 but D = 1 - a)
+    assert v.needle_eligible == (v.vector["D"] >= W.NEEDLE_O) and v.vector["O"] < W.NEEDLE_O
 
 
 # ---------------------------------------------------------------- sensitivity: order C > B kept at x0.5 / x1.5
@@ -155,6 +173,27 @@ def test_concentration_penalty():
     two = [F(0.3, "A"), F(0.1, "T")]
     L2, _, ne2, _ = league.league_score(two)
     assert ne2 == pytest.approx(0.16 / 0.10) and L2 == pytest.approx(0.4 * 1.6 / 3)
+
+
+def test_same_fact_counts_once_in_league():
+    """Review S1: a time-series flag and its peer-outlier twin on the same metric and period are one finding."""
+    a = F(0.05, "A"); a.fact_key, a.id, a.flags = "AZN|2025|receivables_gap", "a", []
+    b = F(0.05, "A"); b.fact_key, b.id, b.flags = "AZN|2025|receivables_gap", "b", []
+    c = F(0.04, "P"); c.fact_key, c.id, c.flags = "", "c", []
+    L, top, _, _ = league.league_score([a, b, c])
+    assert len(top) == 2 and {f.id for f in top} == {"a", "c"}
+    assert any(x.startswith("same fact as a") for x in b.flags)
+
+
+def test_needle_floor_on_discussion_term_not_decay():
+    """Review R1: an old fact with D >= 0.5 keeps its Needle eligibility; decay only lowers S."""
+    assert OB.discussion(0, 0, 0.2, 0, 0) == pytest.approx(0.8)
+    O = OB.obscurity(0, 0, 0.2, 0, 0, 12.0)
+    assert O == pytest.approx(0.8 * 2 ** (-12 / W.H_MONTHS)) and O < W.NEEDLE_O
+    fs = [F(0.5, "A", O=0.05, D=0.8), F(0.1, "T", O=0.6, D=0.4)]
+    fs[0].needle_eligible, fs[1].needle_eligible = True, False
+    n, st = league.sharpest_needle(fs)
+    assert st == "strict" and n.S == 0.5
 
 
 def test_needle_rule_and_fallbacks():
@@ -233,3 +272,16 @@ def test_20f_filer_degrades_with_flags():
     sema = [f for f in fs if f.kind == "ira_selected"]
     assert sema and sema[0].vector["z"] == 1.0 and sema[0].S == 0.0        # starter thread
     assert any("FX" in x for x in sema[0].flags)
+
+
+@need_moat
+def test_amgn_receivables_yoy_on_one_basis():
+    """Review D1: receivables and revenue growth are both year-on-year (Q2 2026 vs Q2 2025), every operand is cited
+    (prior-year 10-Q page included), and the gap is a derived citation."""
+    from agent.needle.quant.run import score_ticker
+    _, fs, _ = score_ticker("AMGN", write=False)
+    f = [x for x in fs if x.kind == "receivables_outpace_revenue"][0]
+    assert "10,227 vs 8,701" in f.sentence and "+17.5%" in f.sentence and "+9.5%" in f.sentence
+    assert any(c.canonical_id.endswith("10q_2025Q2.md") and c.verification.ok for c in f.citations)
+    assert any(c.verification.status == "derived" for c in f.citations)
+    assert not f.pi_downgraded            # +8.01 pts meets the 8-pt trigger (an edge case: see league_v3)
