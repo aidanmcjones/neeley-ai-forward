@@ -5,4 +5,5 @@ __pycache__/
 .DS_Store
 agent/cache/
 data/sec/
+data/external/
 .streamlit/secrets.toml
