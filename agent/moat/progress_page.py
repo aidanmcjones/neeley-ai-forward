@@ -18,7 +18,7 @@ STATUS = {
     "calls": ("collected", "verified"), "product_revenue": ("collected", "verified"),
     "policy": ("collected", "verified"), "pricing": ("collected", "verifying"),
     "consensus": ("collected", "verifying"), "attention": ("collected", "verifying"),
-    "fine_print": ("collected", "verifying"), "product_evidence": ("collected", "verifying"),
+    "fine_print": ("collected", "verifying"), "product_evidence": ("collected", "verified"),
 }
 STAGES = [
     ("Collect", "done", "7 streams done: filings, calls, policy, product, pricing, market, SEC fine print, plus I/B/E/S from WRDS"),
