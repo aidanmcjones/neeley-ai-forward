@@ -542,6 +542,9 @@ def add(out=OUT, only_tables=None):
             if not have_keys[table]:
                 new_tables.append(table)
     db.execute("INSERT INTO facts_fts(rowid, text) SELECT id, text FROM facts WHERE id > ?", (max_fact,))
+    db.commit()
+    from agent.moat.locator import backfill  # additive facts.locator column for new rows
+    stats["locator"] = backfill(out)
     cur = dict(db.execute("SELECT key, value FROM meta").fetchall())
     tabs = json.loads(cur.get("fact_tables", "[]"))
     tabs += [t for t in new_tables if t not in tabs]
