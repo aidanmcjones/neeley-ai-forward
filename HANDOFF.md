@@ -2,7 +2,18 @@
 
 Update this every hour and at the end of every task.
 
-**Last updated:** Fri Oct 16, scaffold commit
+**Last updated:** Sat Oct 17, ~12:00, corpus branch (Parker's agent)
+
+## Sat Oct 17: the real case and the source corpus
+- The case is "The Fine Print" (Advanced track): pick 1 of 10 drugmakers, 5+ cited findings with page numbers and
+  impact math, a Sharpest Needle, one product vs rivals, then one CEO move. Case and rubric PDFs are with Parker.
+  Last night's LOE / revenue-at-risk plan is mostly superseded; the collectors are reused.
+- data/corpus/: 835 page-anchored documents for the 10 companies, 9 rival makers and 52 drugs. Start at
+  data/corpus/README.md, then manifest.csv and GAPS.md.
+- New code (new files only; no existing file edited): agent/corpus.py (SEC with page markers), agent/drug_pack.py
+  (labels + FDA/CMS slices), agent/ir_fetch.py (verbatim IR saves), agent/corpus_check.py (manifest + gaps).
+- Open: company not picked yet. Slides for BMY, ABBV, LLY, AMGN, REGN, ALNY need a manual browser download
+  (IR sites return 403 to scripts). 36 of 54 transcripts are third-party: verify cited quotes before use.
 
 ## What works
 - agent/llm.py: Claude Opus 5.5 call with cache and refusal fallback
