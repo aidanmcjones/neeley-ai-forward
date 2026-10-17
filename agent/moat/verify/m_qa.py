@@ -20,20 +20,20 @@ INTRO = re.compile(r"(first|next|last|final|following) question|question (today 
                    r"go ahead|we('ll| will) (go|move|take) (next )?to [A-Z]\w+ \w*\s?(at|from|with|of) |question,? please", re.I)
 EXEC_TITLE = re.compile(r"chief|officer|president|\bCEO\b|\bCFO\b|investor relations|\bIR\b|executive vice|\bEVP\b|\bSVP\b|"
                         r"head of|chair|treasurer|controller|general counsel|vice president|director, investor", re.I)
-COMPANY = {"ABBV": r"abbvie", "AMGN": r"amgen", "AZN": r"astrazeneca|alexion", "BMY": r"bristol|BMS", "GILD": r"gilead",
+COMPANY = {"ABBV": r"abbvie", "AMGN": r"amgen", "AZN": r"astrazeneca|alexion", "BMY": r"bristol|BMS", "GILD": r"gilead|kite",
            "JNJ": r"johnson", "LLY": r"lilly", "MRK": r"merck", "NVO": r"novo", "PFE": r"pfizer"}
 INTRO_NAME = re.compile(r"(?:from|is|to|of) (?:the line of )?([A-Z][A-Za-zÀ-ſ'’-]+(?: [A-Z][A-Za-zÀ-ſ'’.-]+){1,3}?)"
                         r"(?:,? (?:from|at|with|of) ([A-Z][A-Za-z&.'’ -]{1,40}?))?(?=[.,?]| Your| Please| over| Over|$)")
 NAME_RX = re.compile(r"(?:from|is|of|to|with|by) ([A-Z][A-Za-zÀ-ſ'.-]+(?: [A-Z][A-Za-zÀ-ſ'.-]+){0,3})")
 
 
-FIRM = re.compile(r" at |analyst|equity|research|capital|securities|partners|bank|sachs|morgan|cowen|leerink|evercore|"
+FIRM = re.compile(r"analyst|equity|research|capital|securities|partners|bank|sachs|morgan|cowen|leerink|evercore|"
                   r"bernstein|ubs|barclays|citi|jefferies|wolfe|guggenheim|piper|raymond|cantor|bmo|rbc|wells fargo|"
                   r"berenberg|redburn|danske|deutsche|hsbc|bnp|kepler|jyske|nordea|carnegie|exane|oddo|truist|mizuho", re.I)
 
 
 def an_title(s, comp):
-    return bool(re.search(r"analyst", s, re.I)) or (bool(s.strip()) and not comp.search(s) and bool(FIRM.search(s)))
+    return bool(re.search(r"analyst", s, re.I)) or (bool(s.strip()) and not comp.search(s) and (bool(FIRM.search(s)) or (" at " in s and not EXEC_TITLE.search(s))))
 
 
 def ex_title(s, comp):

@@ -16,7 +16,7 @@ SQ = {
                        r"partdredesign|pillpenalty|smallmoleculepenalty|epicact|selecteddrug|cmsnegotiat|negotiationwithcms|governmentpricesetting",
     "MFN": r"mostfavou?rednation|internationalreferencepric|trumprx|directtoconsumerpric|dtcpric|"
            r"(agreement|deal)with(the)?(administration|whitehouse|government)|administrationdeal|whitehousedeal",
-    "tariff": r"tariff|section232|onshor|reshor|manufacturinginvestment|usmanufacturing|domesticmanufacturing",
+    "tariff": r"tariff|section232|manufacturinginvestment|domesticmanufacturing",
     "gross_to_net_price": r"grosstonet|netprice|netpricing|pricingpressure|rebate|priceerosion|pricecut|listprice|pricedecline|340b|pricingenvironment",
     "inventory_channel": r"inventor(y|ies)|destock|stocking|wholesaler|distributor|channelinventor|channeldynamic|channelfill|tradeinventor",
     "biosimilar_generic": r"biosimilar|generic|lossofexclusivity|patentcliff|exclusivity|patentexpir",
@@ -33,6 +33,7 @@ ACR = {
 ORIG = {
     "IRA_negotiation": r"\bpart\s?d\b",
     "inventory_channel": r"\bbuy[- ]in\b",
+    "tariff": r"\b(on|re)-?shor|\bU\.?S\.? manufacturing|\bAmerican manufacturing",
 }
 PRODUCTS = {
     "ABBV": "skyrizi|rinvoq|humira|vraylar|botox|imbruvica|venclexta|ubrelvy|qulipta|elahere|vyalev|emraclidine",
@@ -79,6 +80,14 @@ def snippet(text, p):
     return re.sub(r"\s+", " ", text[a:b]).strip()[:500]
 
 
+def terms(hit):
+    out = set()
+    for t, ps in hit:
+        for p in ps:
+            out.add(re.sub(r"\s+", " ", t[3][p:p + 22]).strip())
+    return "; ".join(sorted(out))[:300]
+
+
 def pick_files():
     by = defaultdict(list)
     for base in ("data/corpus/companies", "data/moat/companies"):
@@ -119,10 +128,10 @@ def main():
                 o = old.get((tk, q), {}).get(topic)
                 rows.append([tk, q, topic, len(an), len(hit), len({t[1] for t, _ in hit}), sum(len(p) for _, p in hit),
                              snippet(ex[0][3], ex[1][0]) if ex else "", ex[0][1] if ex else "", rel if ex else "",
-                             ex[0][0] if ex else "", lay, o[0] if o else "", o[1] if o else "",
+                             ex[0][0] if ex else "", terms(hit), lay, o[0] if o else "", o[1] if o else "",
                              (len(hit) - o[1]) if o else "", rel, ex[0][0] if ex else ""])
     cols = ["ticker", "quarter", "topic", "analyst_turns", "turns_with_topic", "analysts_asking", "mentions", "example_quote",
-            "example_speaker", "example_file", "example_line", "layout", "collector_analyst_turns",
+            "example_speaker", "example_file", "example_line", "matched_terms", "layout", "collector_analyst_turns",
             "collector_turns_with_topic", "delta_vs_collector", "source", "source_row"]
     emit("analyst_topics.csv", cols, rows)
     emit("analyst_turns_all.csv", ["ticker", "quarter", "file", "line", "speaker", "question_text_first300"], sample)
