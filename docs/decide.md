@@ -12,7 +12,7 @@ EV_m = sum_s p_s [ sum_{tau=1..24} ( P_alive(tau) CF_in - P_reach(tau) CF_out ) 
 - r = 7.85% a year (Damodaran pharma WACC, Jan 2026), converted to a monthly rate.
 - P_alive is the product of phase probabilities for readouts already passed (BIO 2021). P_reach is the probability of reaching the phase in which an outflow is spent (Stewart, Allison, Johnson 2001).
 - TV is everything after month 24 for the position held at month 24, valued with the same rules, to loss of exclusivity or 10 years after launch.
-- Ramp to peak: v2 templates ramp differently (label expansion 42 months, acquired or licensed 39.9, pricing 12, commercial 18). **[landing in league_v3]** one consistent 24-month ramp across templates. In-window value (months 1-24) and terminal value are reported separately for every move.
+- Ramp to peak: v2 templates ramp differently (label expansion 42 months, acquired or licensed 39.9, pricing 12, commercial 18). Label expansion now defaults to a 60-month ramp, 40% of peak at month 24, consistent with the 25-40% research default (commit 9a1932c); 42 months is kept as `LABEL_RAMP_MONTHS_ALT`. In-window value (months 1-24) and terminal value are reported separately for every move.
 - Correctness oracle (42-month ramp, v2): the synthetic label-expansion case gives EV 1,431.2 (bear 1,161.0, base 1,464.6, bull 1,768.2), cash at risk 57.6, payback month 51, spread 607.2. `tests/needle/test_decide.py` asserts all of it.
 
 ## The five numbers and how to read them

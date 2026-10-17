@@ -8,12 +8,12 @@ State as of 2026-10-17 evening. Freeze: Sunday 10:30. Spec: `docs/quant_model.md
 |---|---|---|
 | FIND (M, O, E, π, confidence, needle, league) | `agent/needle/quant/{find,impact,obscurity,evidence,league,weights,data,run}.py` | committed (ca12339); v3 changes landing now |
 | Product fine print (five-row side-by-side, tie to numbers, growth limiter, priced-in call) | `agent/needle/quant/{product,product_cli}.py` | committed; shared IRA formula landing in v3 |
-| DECIDE (moves, five numbers, selection, kill signals) | `agent/needle/quant/{moves,decide,kill,decide_cli}.py` | committed; one ramp and M · E fit landing in v3; run so far only on old LLY rows |
+| DECIDE (moves, five numbers, selection, kill signals) | `agent/needle/quant/{moves,decide,kill,decide_cli}.py` | committed; 60-month label ramp and M · E fit committed in 9a1932c; run so far only on old LLY rows |
 | Citations (verify ladder, gate, deep links, footnotes, cited-request builder) | `agent/needle/cite/*.py` | committed; transcript speaker check landing in v3 |
 | Courtroom trial | `agent/needle/trial.py` | committed; needs the API key; reads old-shape `findings.jsonl` |
 | Tests | `tests/needle/test_quant_find.py`, `test_decide.py`, `test_product.py`, `test_cite.py`, `test_trust.py` | pass at ca12339 |
 
-v3 changes being made on quant-model now: MFN direction-only at π_min; AZN duplicate receivables row removed; needle floor on the discussion term with a 3-month half-life (6 as sensitivity); anchor rows only for fired backtest flags, others "not quantified"; consensus default 0.5 when untestable; one IRA formula for FIND, product and DECIDE; DECIDE one ramp and strategic fit on M · E; transcript speaker check; `league_v3` with a robustness table.
+v3 changes being made on quant-model now: MFN direction-only at π_min; AZN duplicate receivables row removed; needle floor on the discussion term with a 3-month half-life (6 as sensitivity); anchor rows only for fired backtest flags, others "not quantified"; consensus default 0.5 when untestable; one IRA formula for FIND, product and DECIDE; DECIDE 60-month label ramp (40% of peak at month 24) and strategic fit on M · E (committed, 9a1932c); transcript speaker check; `league_v3` with a robustness table.
 
 ## How to run the three CLIs
 

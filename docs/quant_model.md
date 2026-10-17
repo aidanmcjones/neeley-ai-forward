@@ -534,7 +534,7 @@ A move that addresses no Part 1 finding gets strategic fit 0. Benchmarks whose s
 | M6 | Commercial investment | ΔRev = ε · ΔSpend / 0.108 (`EPS_PROMO` 0.06, `PROMO_SHARE` 0.108); at ε = 0.06 each $1 of spend returns $0.56 of revenue | `REP_COST`, `REP_RAMP_MONTHS`, `DTC_TV_LOW` / `DTC_TV_HIGH`; compliance gate: approved uses only, fair balance, "Student concept, not actual promotional material" |
 | M7 | US manufacturing | capex `PLANT_CAPEX_LOW`-`PLANT_CAPEX_HIGH` over `PLANT_BUILD_MONTHS`; benefit from `TARIFF_START_MONTH` 27 at `TARIFF_RATE` 0.15 | depreciation pledge / `PLANT_DEPR_YEARS` 15 (inference) |
 
-**Ramp to peak: one constant for every template [landing in league_v3].** At ca12339 the templates ramp differently: M3 uses `LABEL_RAMP_MONTHS` 42 (57% of peak 24 months after launch, against the research note's 25-40% default; review A23), M1 and M2 use `UPTAKE_MONTHS` 39.9 (IQVIA 13.3 quarters), M4 12 months, M6 18 months. v3 uses one consistent 24-month ramp across the templates, so in-window value is comparable between moves. A 24-month linear ramp reaches 100% of peak at month 24, above the 25-40% research default; the deck states which ramp each number uses and shows the reference case under both.
+**Label-expansion ramp to peak: 60 months, 40% of peak at month 24 (quant-model commit 9a1932c, part of league_v3).** At ca12339, M3 used `LABEL_RAMP_MONTHS` 42, which puts 57% of peak 24 months after launch, against the research note's default of 25-40% (strategic_move; review A23). The default is now a linear 60-month ramp (`LABEL_RAMP_MONTHS` 60), which reaches 40% of peak at month 24: consistent with the 25-40% benchmark (`LABEL_SHARE_24M`) and inside the 3.5-5 year share ramp. The 42-month ramp is kept as `LABEL_RAMP_MONTHS_ALT`, and the M3 plan notes print the share of peak at month 24 under both. Other templates keep their own ramps: M1 and M2 `UPTAKE_MONTHS` 39.9 (IQVIA 13.3 quarters), M4 12 months, M6 18 months. The deck states which ramp each number uses.
 
 ### 5.4 The five numbers (every candidate, same scale)
 
@@ -558,7 +558,7 @@ MCDA criteria:
 
 Synthetic inputs, not a recommendation: label expansion of a marketed drug, two placebo-controlled pivotal trials at $28.8M each spread evenly over months 1-24, readout at month 24, approval at month 37, incremental peak sales $800M, CM 0.85, t 0.16, flat peak to 120 months after approval, no LOE.
 
-| Output | 42-month ramp (v2 oracle, `tests/needle/test_decide.py`) | 24-month ramp (v3) |
+| Output | 42-month ramp (v2 oracle, `LABEL_RAMP_MONTHS_ALT`, kept as its own test) | 60-month ramp, 40% of peak at month 24 (v3 default) |
 |---|---|---|
 | P(success from Phase III, non-NME) | 0.675 x 0.915 = 0.6176 | 0.6176 |
 | In-window PV (costs only) | -53.3 | [v3: pending] (v2 -53.3) |
@@ -568,7 +568,6 @@ Synthetic inputs, not a recommendation: label expansion of a marketed drug, two 
 | Payback | month 51 | [v3: pending] (v2 month 51) |
 | Scenario spread | 607.2 | [v3: pending] (v2 607.2) |
 
-For scale, the review recomputed the same case at a 60-month ramp (40% of peak at 24 months): EV 1,265.2, payback month 54.
 
 ### 5.6 Kill signals and the revised EV (`kill.py`)
 
@@ -1048,7 +1047,7 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 | `CM_ACQUIRED` | 0.7173 | acquired-product margin | Damodaran Jan 2026 | linear |
 | `CM_VOLUME` | 0.70 | volume flow-through | KQ7 inference | |
 | `CM_PRICE` | 1.0 | price flow-through | KQ7 | |
-| `UPTAKE_MONTHS` | 39.9 (v3: one 24-month ramp, **[landing in league_v3]**) | months to peak | IQVIA 2021, 813 launches | in-window revenue |
+| `UPTAKE_MONTHS` | 39.9 | months to peak | IQVIA 2021, 813 launches | in-window revenue |
 | `LOE_RETENTION` | biologic 0.65 / 0.35 / 0.20; small molecule 0.30 / 0.15 / 0.10 | LOE curves | 4.3 e | M5 |
 | `MFN_SHARE` | 0.0065 | Medicaid MFN share (registered; no template reads it) | Pfizer base rate, inference | none; MFN is direction-only in FIND |
 | `TARIFF_RATE` | 0.15 | tariff on imported cost | Proclamation 11020; Crowell | M7 benefit |
@@ -1061,7 +1060,9 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 | `SALES_MILESTONE_SHARE` | 0.64 | sales milestones | Goodwin 2025 | M2 |
 | `ROYALTY_EARLY`, `ROYALTY_LATE` | 0.065, 0.113 | royalty midpoints | Goodwin 2025; LES 2014 | linear in M2 inflows |
 | `UPTAKE_MONTHS_ONC` | 60 | oncology months to peak | 21 drugs, median | |
-| `LABEL_RAMP_MONTHS` | 42 (v3: 24, **[landing in league_v3]**) | M3 ramp to peak | v2 reference case; v3 one ramp | 60 months gives EV 1,265.2 on the reference case |
+| `LABEL_RAMP_MONTHS` | 60 (v2: 42; commit 9a1932c) | M3 ramp to peak | linear ramp reaching 40% of peak at month 24, the top of the strategic_move 25-40% benchmark (inference; review A23) | in-window revenue; reference case in 5.5 |
+| `LABEL_RAMP_MONTHS_ALT` | 42 | alternative M3 ramp (57% of peak at month 24) | the v2 reference case | v2 oracle in 5.5 |
+| `LABEL_SHARE_24M` | 0.25 / 0.40 | benchmark share of peak 24 months after launch | strategic_move KQ4 inference | printed in M3 plan notes |
 | `COVERAGE_LAG` | 9 | months to majority coverage | Tufts/ICER (6-12) | in-window revenue |
 | `TARIFF_START_MONTH` | 27 | months from as_of to 2029-01-20 | Proclamation 11020 | |
 | `SELF_PAY_SHARE` | 0.35 | self-pay share threshold | LillyDirect Q2 2025 | kill signal |
@@ -1181,7 +1182,7 @@ Finding ids are from the adversarial review (synthesis.md). "Code" means the cha
 9. **B10, B11, B12, B13.** Section 6 rewritten to match `agent/needle/cite` and `docs/citations.md`: five statuses, fuzzy 90, number_match graded 0.745, gate rule, deep links per document type with plain DailyMed setid pages, Bloomberg licence gate, no public viewer (spec); transcript speaker check ported (v3).
 10. **A2, A3, R4, B8.** AZN per-share σ (code); fallbacks "not league-comparable" (code); 2x labelled inference; imputed headline for 20-F filers (code); NVO USD channels not converted (code).
 11. **A16, A17, A26, A27.** CM conflict disclosed; σ_LLY 2.0295; source attributions corrected (DeMiguel by analogy, Novo 69% from its 20-F, Lazy Prices paraphrase, ICD 203 midpoint, MFN range as inference, label elasticities as inference, "four routes", 10-pt inventory trigger, CFO quote); every code constant in Section 11 by name (spec).
-12. **A21, A22, A23, A24, B15, B16.** DECIDE: 7.85% stated as the team's choice; scenario-basis bias stated; one consistent 24-month ramp and the reference case labelled by ramp (v3); strategic fit on M · E (v3); decider-evidence table in the deck (spec); DECIDE to run on the picked company's v3 findings (open).
+12. **A21, A22, A23, A24, B15, B16.** DECIDE: 7.85% stated as the team's choice; scenario-basis bias stated; 60-month label ramp, 40% of peak at month 24 (commit 9a1932c), with the 42-month v2 oracle kept and the reference case labelled by ramp; strategic fit on M · E (v3); decider-evidence table in the deck (spec); DECIDE to run on the picked company's v3 findings (open).
 13. **A25, A10, D5.** Validation: N ≤ 9 sealed calls, base-rate null, backtest panel absent and what that blocks (spec).
 14. **B1.** Product fine print integrated as Section 4.11 with the one IRA formula (spec; v3 for the formula import).
 15. **B2.** "Where AI is in the build" in `docs/ai_in_the_build.md`, summarized in Section 9 (spec).
