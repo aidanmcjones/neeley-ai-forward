@@ -34,6 +34,8 @@ export interface TraceEntry {
   /** Document label, e.g. "BMY 10-K FY2025, p. 39". */
   label: string;
   doc_id?: string;
+  /** Quote withheld under the public rule (unverified or licensed citation). */
+  withheld?: boolean;
 }
 
 export interface AnswerSentence {
@@ -354,7 +356,7 @@ function traceFromFindings(fs: Finding[]): TraceEntry[] {
   const seen = new Map<string, TraceEntry>();
   for (const f of fs) for (const e of (f.evidence ?? []).slice(0, 2)) {
     const label = e.citation || [e.doc_id, e.page != null ? `p. ${e.printed || e.page}` : ""].filter(Boolean).join(", ");
-    if (label && !seen.has(label)) seen.set(label, { label, doc_id: e.doc_id });
+    if (label && !seen.has(label)) seen.set(label, { label, doc_id: e.doc_id, withheld: e.withheld === true });
   }
   return [...seen.values()];
 }

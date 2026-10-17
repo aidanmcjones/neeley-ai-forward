@@ -13,3 +13,5 @@ export { SideNav, ROUTES } from "./SideNav";
 export { SourceDrawer, SourceProvider, useSource } from "./SourceDrawer";
 export { StanceBadge } from "./StanceBadge";
 export { SampleBanner, ScreenFrame } from "./ScreenFrame";
+export { NeedleStatusPill, needleStatusInfo } from "./NeedleStatus";
+export { NumericPill, NumericSummary, numericCheckText } from "./NumericCheck";

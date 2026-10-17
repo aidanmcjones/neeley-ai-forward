@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import { CiteChip, ConfPill, DataTable } from "..";
+import { NumericPill, CiteChip, ConfPill, DataTable } from "..";
 import type { Column } from "..";
 import { money, z } from "../../lib/format";
 import { impactView } from "../../lib/stance";
@@ -137,8 +137,11 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
       render: (r) => {
         const k = verdictKey(r.kind === "finding" ? r.f.verdict : "rejected");
         return (
-          <span className={`whitespace-nowrap text-[11px] font-semibold ${VERDICT_TONE[k]}`} title={[VERDICTS.find((v) => v.key === k)!.label, r.kind === "rejected" ? r.r.reason : r.f.reason].filter(Boolean).join(": ")}>
-            <span aria-hidden="true">{VERDICT_ICON[k]} </span>{VERDICTS.find((v) => v.key === k)!.short}
+          <span className="inline-flex flex-col items-start gap-0.5">
+            <span className={`whitespace-nowrap text-[11px] font-semibold ${VERDICT_TONE[k]}`} title={[VERDICTS.find((v) => v.key === k)!.label, r.kind === "rejected" ? r.r.reason : r.f.reason].filter(Boolean).join(": ")}>
+              <span aria-hidden="true">{VERDICT_ICON[k]} </span>{VERDICTS.find((v) => v.key === k)!.short}
+            </span>
+            {r.kind === "finding" && <NumericPill check={r.f.numeric_check} compact />}
           </span>
         );
       },

@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { useData } from "../lib/data";
 import { date } from "../lib/format";
 import { CiteRegistry, citeLabel, impactView, memoKey, weighOptions } from "../lib/stance";
-import { AiMark, CiteChip, EmptyState, ScoreBar, ScreenFrame } from "../components";
+import { AiMark, CiteChip, EmptyState, NumericPill, NumericSummary, ScoreBar, ScreenFrame } from "../components";
+import type { NumericCheck } from "../lib/types";
 import { Editable } from "../components/memo/Editable";
 import { PinnedExhibits } from "../components/memo/PinnedExhibits";
+import { DecideFootnotes, DecideTable, KillSignalTable } from "../components/decide/Decide";
 
 // CEO memo (/memo): one printable page drafted from company.stance. Text blocks are editable;
 // edits persist to localStorage needle.memo.<ticker> and "Reset to draft" restores the export.
@@ -72,7 +74,8 @@ export default function Memo() {
     const pts = (s?.memo_points ?? []).slice(0, 3).map((p) => {
       const cites = reg.resolveAll(p.cites);
       const im = impactView(cites.find((c) => c.finding)?.finding);
-      return { text: p.text, cites, suspect: im.kind === "suspect" ? im.note ?? "impact flagged suspect by the exporter" : null };
+      const f = cites.find((c) => c.finding)?.finding;
+      return { text: p.text, cites, suspect: im.kind === "suspect" ? im.note ?? "impact flagged suspect by the exporter" : null, check: f?.numeric_check ?? null, hasFinding: !!f };
     });
     return { points: pts, sources: reg.list };
   }, [company, s]);
@@ -83,6 +86,11 @@ export default function Memo() {
     <Editable key={`${id}-${version}`} id={id} text={v(id, draft)} editing={editing} onCommit={commit} onDraft={saveDraft} as={as} className={className} />
   );
   const nEdits = Object.keys(edits).length;
+  const decide = s?.decide?.moves?.length ? s.decide : null;
+  const kills = s?.kill_signals ?? [];
+  // Prove-wrong lines already shown in the kill-signal table are not repeated as bullets.
+  const restProveWrong = (s?.prove_wrong ?? []).map((x, i) => ({ x, i }))
+    .filter(({ x }) => !kills.some((k) => k.signal && x.startsWith(k.signal)));
   const byModel = s?.generated_by === "model";
 
   const btn = "rounded-md border border-line bg-surface px-3 py-1.5 text-sm font-semibold hover:bg-surface-2";
@@ -124,6 +132,7 @@ export default function Memo() {
                     <span>
                       {ed(`pt.${i}`, p.text)}{" "}
                       <span className="memo-cite whitespace-nowrap">{p.cites.map((c) => <CiteChip key={c.key} n={c.n} evidence={c.evidence} />).reduce<ReactNode[]>((a, el, j) => (j ? [...a, " ", el] : [el]), [])}</span>
+                      {p.hasFinding && <>{" "}<NumericPill check={p.check} /></>}
                       {p.suspect && <span className="mt-0.5 block text-xs text-warn"><span className="font-semibold">⚠ Impact dollars flagged suspect:</span> {p.suspect}.</span>}
                     </span>
                   </li>
@@ -132,6 +141,12 @@ export default function Memo() {
             ) : <p className="text-muted">No memo points in stance.memo_points.</p>}
           </section>
 
+          {decide ? (
+            <section className="memo-keep">
+              <H>Moves valued: chosen move first{decide.numeric_check ? <> <NumericSummary check={decide.numeric_check as NumericCheck} /></> : null}</H>
+              <DecideTable company={company} decide={decide} />
+            </section>
+          ) : (
           <section>
             <H>Options weighed</H>
             <ul className="space-y-1">
@@ -144,8 +159,9 @@ export default function Memo() {
               ))}
             </ul>
           </section>
+          )}
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className={decide ? "space-y-6" : "grid grid-cols-2 gap-6"}>
             <section>
               <H>Alternatives rejected</H>
               {(s.alternatives ?? []).length ? (
@@ -158,11 +174,12 @@ export default function Memo() {
             </section>
             <section>
               <H>What would prove us wrong in 6 to 12 months</H>
-              {(s.prove_wrong ?? []).length ? (
+              {kills.length > 0 && <div className="memo-keep mb-2"><KillSignalTable signals={kills} /></div>}
+              {restProveWrong.length ? (
                 <ul className="list-disc pl-5 space-y-1 text-[13px]">
-                  {s.prove_wrong!.map((x, i) => <li key={i}>{ed(`pw.${i}`, x)}</li>)}
+                  {restProveWrong.map(({ x, i }) => <li key={i}>{ed(`pw.${i}`, x)}</li>)}
                 </ul>
-              ) : <p className="text-muted">None exported.</p>}
+              ) : !kills.length ? <p className="text-muted">None exported.</p> : null}
             </section>
           </div>
 
@@ -189,6 +206,7 @@ export default function Memo() {
                     <span className="font-mono tnum">[{c.n}]</span>
                     <span className="min-w-0 break-words">
                       <span className="font-mono">{citeLabel(c.evidence)}</span>
+                      {c.evidence?.withheld === true && <span className="text-warn"> · quote withheld ({c.evidence.license ? "licensed source" : "unverified citation"})</span>}
                       {c.evidence?.url && <> · <a href={c.evidence.url} target="_blank" rel="noreferrer" className="text-purple underline break-all">{c.evidence.url}</a></>}
                     </span>
                   </li>
@@ -196,6 +214,13 @@ export default function Memo() {
               </ol>
             ) : <p className="text-muted text-sm">No citations in stance.memo_points.</p>}
           </section>
+
+          {decide && (
+            <section>
+              <H>Move inputs (footnotes f1 to f{(decide.footnotes ?? []).length})</H>
+              <DecideFootnotes decide={decide} />
+            </section>
+          )}
 
           <footer className="space-y-2 border-t border-line pt-3">
             <div className="rounded-md border border-teal/40 bg-teal-soft/50 px-3 py-2 text-[11px] leading-snug">

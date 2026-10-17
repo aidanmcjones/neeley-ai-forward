@@ -1,6 +1,8 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
+import type React from "react";
 import type { Evidence } from "../lib/types";
+import { isWithheld, withheldReason } from "../lib/data";
 
 // Global right-side source drawer. Any CiteChip calls useSource().open(evidence).
 // Esc closes, focus is trapped while open and restored to the opener on close.
@@ -73,27 +75,32 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
   const ex = ev.excerpt;
   const hasExcerpt = !!(ex && (ex.before || ex.match || ex.after));
   const isCall = !!ev.speaker || /call|transcript/i.test(ev.doc_type ?? "");
+  const withheld = isWithheld(ev);
+  const vdetail = ev.verification?.detail;
+
+  if (withheld) {
+    const title = ev.doc_title || ev.doc_label as string || ev.citation || ev.doc_id || "Source";
+    return (
+      <DrawerShell refEl={ref} closeBtn={closeBtn} onClose={onClose} label={String(title)}>
+        <dl>
+          <Row k="Document">{String(title)}</Row>
+          {ev.period && <Row k="Period">{ev.period}</Row>}
+          {(ev.page != null || ev.printed || ev.location) && <Row k="Page"><span className="font-mono tnum">{ev.location || ev.printed || ev.page}</span></Row>}
+        </dl>
+        <p className="rounded-md border border-dashed border-warn/60 px-3 py-2 text-sm">
+          <span className="font-semibold text-warn">Quote withheld: {withheldReason(ev)}.</span>{" "}
+          <span className="text-muted">{withheldReason(ev) === "licensed source"
+            ? "Licensed data is used as a model input but its text and links are not published."
+            : ev.doc_type === "benchmark"
+              ? "External benchmark input (team assumption source); it is not in the page-anchored corpus, so nothing could be checked against a page."
+              : `The quote could not be confirmed on the cited page${vdetail ? ` (${vdetail})` : ""}, so the quote and links are not shown.`}</span>
+        </p>
+      </DrawerShell>
+    );
+  }
 
   return (
-    <div className="fixed inset-0 z-50 no-print">
-      <div className="absolute inset-0 bg-fg/30" onClick={onClose} aria-hidden="true" />
-      <div
-        ref={ref}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="source-drawer-title"
-        className="absolute right-0 top-0 h-full w-[480px] max-w-[92vw] bg-surface shadow-drawer border-l border-line flex flex-col"
-      >
-        <header className="flex items-start justify-between gap-3 px-5 py-4 border-b border-line">
-          <div className="min-w-0">
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted">Source</div>
-            <h2 id="source-drawer-title" className="font-mono text-sm font-medium mt-0.5 break-words">{label}</h2>
-          </div>
-          <button ref={closeBtn} onClick={onClose} className="rounded border border-line px-2 py-1 text-xs hover:bg-surface-2" aria-label="Close source drawer (Esc)">
-            Esc ✕
-          </button>
-        </header>
-        <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+    <DrawerShell refEl={ref} closeBtn={closeBtn} onClose={onClose} label={label}>
           <dl>
             <Row k="Document">
               {ev.url ? (
@@ -122,7 +129,33 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
               <p className="text-sm text-muted">No excerpt exported for this citation.</p>
             )}
           </div>
-        </div>
+    </DrawerShell>
+  );
+}
+
+function DrawerShell({ refEl, closeBtn, onClose, label, children }: {
+  refEl: React.RefObject<HTMLDivElement>; closeBtn: React.RefObject<HTMLButtonElement>; onClose: () => void; label: string; children: ReactNode;
+}) {
+  return (
+    <div className="fixed inset-0 z-50 no-print">
+      <div className="absolute inset-0 bg-fg/30" onClick={onClose} aria-hidden="true" />
+      <div
+        ref={refEl}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="source-drawer-title"
+        className="absolute right-0 top-0 h-full w-[480px] max-w-[92vw] bg-surface shadow-drawer border-l border-line flex flex-col"
+      >
+        <header className="flex items-start justify-between gap-3 px-5 py-4 border-b border-line">
+          <div className="min-w-0">
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted">Source</div>
+            <h2 id="source-drawer-title" className="font-mono text-sm font-medium mt-0.5 break-words">{label}</h2>
+          </div>
+          <button ref={closeBtn} onClick={onClose} className="rounded border border-line px-2 py-1 text-xs hover:bg-surface-2" aria-label="Close source drawer (Esc)">
+            Esc ✕
+          </button>
+        </header>
+        <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">{children}</div>
       </div>
     </div>
   );

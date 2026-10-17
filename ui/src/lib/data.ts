@@ -253,3 +253,18 @@ export function useData(opts: { proof?: boolean } = {}): DataState {
     source: base.source,
   };
 }
+
+/* ------------------------------------------------------------ withheld cites */
+
+/** True when the public rule withheld this citation's quote, excerpt and links. */
+export function isWithheld(ev: Evidence | null | undefined): boolean {
+  return ev?.withheld === true;
+}
+
+/** Short reason for a withheld citation: "licensed source" or "unverified citation". */
+export function withheldReason(ev: Evidence): string {
+  const lic = ev.license;
+  const r = String(ev.withheld_reason ?? "");
+  if ((lic != null && lic !== "") || /licen[sc]ed|bloomberg|wrds/i.test(r)) return "licensed source";
+  return "unverified citation";
+}

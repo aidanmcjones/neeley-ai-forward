@@ -1,9 +1,11 @@
+import { isWithheld, withheldReason } from "../../lib/data";
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
-import { AiMark, CiteChip, ConfPill, EmptyState, Panel, ScoreBar, StanceBadge } from "..";
+import { AiMark, CiteChip, ConfPill, EmptyState, NumericSummary, Panel, ScoreBar, StanceBadge } from "..";
 import { BASIS_NOTE, CiteRegistry, citeLabel, weighOptions } from "../../lib/stance";
-import type { Company, Evidence } from "../../lib/types";
+import type { Company, Evidence, NumericCheck } from "../../lib/types";
+import { DecideTable } from "../decide/Decide";
 
 // Right-hand AI panel: the template-drafted stance, options, cited bullets, live source card.
 export function StancePanel({ company, preview, onPreview }: {
@@ -26,8 +28,10 @@ export function StancePanel({ company, preview, onPreview }: {
     );
   }
   const byModel = s.generated_by === "model";
-  const byline = byModel ? "Model-written from verified findings" : "Drafted from verified findings by rules (template, no model)";
+  const byline = byModel ? "Model-written from verified findings"
+    : s.decide?.moves?.length ? "Move valued and chosen by rules (quant.decide, no model)" : "Drafted from verified findings by rules (template, no model)";
   const hover = rows.find((r) => r.name === hoverOpt);
+  const decide = s.decide?.moves?.length ? s.decide : null;
 
   return (
     <Panel ai className="border-t-4 border-t-teal" bodyClassName="p-4 space-y-4"
@@ -37,12 +41,18 @@ export function StancePanel({ company, preview, onPreview }: {
         <p className="mb-1.5 text-[11px] font-semibold text-teal" title={s.note}>{byline}</p>
         <p className="text-[15px] font-semibold leading-snug">{s.headline ?? "No headline exported"}</p>
         <div className="mt-2 flex flex-wrap items-center gap-2">
-          <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">Recommended</span>
-          <StanceBadge stance={s.recommended} />
+          <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">{decide ? "CEO move" : "Recommended"}</span>
+          {decide ? <span className="text-sm font-semibold text-teal">{s.recommended}</span> : <StanceBadge stance={s.recommended} />}
           {s.confidence && <ConfPill level={s.confidence} />}
         </div>
       </div>
 
+      {decide ? (
+        <div>
+          <h3 className="mb-1.5 flex items-center justify-between gap-2 text-[11px] font-semibold uppercase tracking-wide text-muted">Moves valued (stance.decide){decide.numeric_check ? <NumericSummary check={decide.numeric_check as NumericCheck} /> : null}</h3>
+          <DecideTable company={company} decide={decide} compact onPreview={onPreview} />
+        </div>
+      ) : (
       <div>
         <div className="mb-1.5 flex items-baseline justify-between gap-2">
           <h3 className="text-[11px] font-semibold uppercase tracking-wide text-muted">Options weighed</h3>
@@ -75,6 +85,7 @@ export function StancePanel({ company, preview, onPreview }: {
           {hover?.option.rationale ?? "Hover an option for the rule that ranked it."}
         </p>
       </div>
+      )}
 
       <div>
         <h3 className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">Why</h3>
@@ -98,7 +109,11 @@ export function StancePanel({ company, preview, onPreview }: {
         {preview ? (
           <>
             <div className="mt-0.5 font-mono text-xs text-purple truncate" title={citeLabel(preview)}>{citeLabel(preview)}</div>
-            <blockquote className="mt-1 text-xs leading-snug line-clamp-3"><mark>{preview.excerpt?.match ?? preview.quote ?? "No quote exported"}</mark></blockquote>
+            {isWithheld(preview)
+              ? <p className="mt-1 text-xs font-semibold text-warn">Quote withheld: {withheldReason(preview)}.</p>
+              : (preview.excerpt?.match || preview.quote)
+                ? <blockquote className="mt-1 text-xs leading-snug line-clamp-3"><mark>{preview.excerpt?.match || preview.quote}</mark></blockquote>
+                : <p className="mt-1 text-xs text-muted">No quote exported for this citation.</p>}
           </>
         ) : <p className="mt-1 text-xs text-muted">Hover or focus a citation chip to see its page quote. Click it to open the page.</p>}
       </div>

@@ -1,12 +1,12 @@
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { resolveCite, useData } from "../lib/data";
+import { isWithheld, withheldReason, resolveCite, useData } from "../lib/data";
 import type { CiteRef, Company, Evidence, Question } from "../lib/types";
 import { retrieve } from "../lib/retrieve";
 import type { AnswerSentence, DataRow, Exhibit, RetrieveResult } from "../lib/retrieve";
 import { usePins } from "../lib/exhibits";
-import { AiMark, CiteChip, ScreenFrame, StanceBadge, useSource } from "../components";
+import { NumericPill, AiMark, CiteChip, ScreenFrame, StanceBadge, useSource } from "../components";
 import { ExhibitView } from "../components/ask";
 
 // Ask NEEDLE (docs/ui_spec.md screen 2, Option C): preset + session questions on the left,
@@ -84,7 +84,7 @@ function Bubble({ q }: { q: string }) {
   );
 }
 
-function TraceRow({ trace, terms }: { trace: { label: string }[]; terms: string[] }) {
+function TraceRow({ trace, terms }: { trace: { label: string; withheld?: boolean }[]; terms: string[] }) {
   if (!trace.length && !terms.length) return null;
   return (
     <div>
@@ -92,7 +92,9 @@ function TraceRow({ trace, terms }: { trace: { label: string }[]; terms: string[
       <ul className="flex flex-wrap gap-1.5">
         {trace.map((t) => (
           <li key={t.label}>
-            <span tabIndex={0} className="inline-block font-mono text-[11px] rounded border border-teal/30 bg-teal-soft text-teal px-1.5 py-0.5">read {t.label}</span>
+            {t.withheld
+              ? <span tabIndex={0} title="Quote withheld: unverified citation or licensed source" className="inline-block font-mono text-[11px] rounded border border-dashed border-muted/70 text-muted px-1.5 py-0.5">read {t.label} · quote withheld</span>
+              : <span tabIndex={0} className="inline-block font-mono text-[11px] rounded border border-teal/30 bg-teal-soft text-teal px-1.5 py-0.5">read {t.label}</span>}
           </li>
         ))}
         {terms.length > 0 && (
@@ -153,20 +155,24 @@ function SourceCards({ company, refs, preview }: { company: Company; refs: CiteR
       {preview && (
         <div className="mb-2 rounded-md border border-purple/30 bg-surface-2 p-3 text-xs" aria-live="polite">
           <div className="font-mono text-[11px] text-purple">{preview.citation ?? preview.doc_id}</div>
-          {preview.quote ? <blockquote className="mt-1 leading-relaxed"><mark>{preview.quote}</mark></blockquote> : <p className="mt-1 text-muted">No page quote exported for this source.</p>}
+          {isWithheld(preview) ? <p className="mt-1 text-warn font-semibold">Quote withheld: {withheldReason(preview)}.</p>
+            : preview.quote ? <blockquote className="mt-1 leading-relaxed"><mark>{preview.quote}</mark></blockquote> : <p className="mt-1 text-muted">No page quote exported for this source.</p>}
         </div>
       )}
       <ul className="flex gap-2 overflow-x-auto pb-1">
         {evs.map((e) => {
           const isCall = /transcript|call/i.test(e.doc_type ?? "") || !!e.speaker;
+          const wh = isWithheld(e);
           return (
             <li key={e.citation ?? e.doc_id} className="shrink-0 w-[220px]">
               <button type="button" onClick={() => open(e)}
-                className="w-full h-full text-left rounded-md border border-line bg-surface p-2.5 hover:border-purple focus-visible:border-purple">
+                className={`w-full h-full text-left rounded-md border bg-surface p-2.5 hover:border-purple focus-visible:border-purple ${wh ? "border-dashed border-muted/70" : "border-line"}`}>
                 <div className="text-[10px] font-semibold uppercase tracking-wide text-muted">{(e.doc_type ?? "document").replace(/_/g, " ")}{e.source_quality ? ` · ${e.source_quality}` : ""}</div>
                 <div className="mt-0.5 font-mono text-[11px] text-purple leading-snug line-clamp-2">{e.citation ?? e.doc_id}</div>
                 {isCall && <div className="mt-1 text-[11px]">Transcript grade <span className="font-mono font-bold">{e.grade ?? "ungraded"}</span>{e.speaker ? <span className="text-muted"> · {e.speaker}</span> : null}</div>}
-                <div className={`mt-1 text-[10.5px] font-semibold ${e.verdict === "verified" ? "text-good" : "text-warn"}`}>{e.verdict === "verified" ? "✓ verified on page" : `⚠ ${e.verdict ?? "unverified"}`}</div>
+                {wh
+                  ? <div className="mt-1 text-[10.5px] font-semibold text-warn">Quote withheld: {withheldReason(e)}</div>
+                  : <div className={`mt-1 text-[10.5px] font-semibold ${e.verdict === "verified" ? "text-good" : "text-warn"}`}>{e.verdict === "verified" ? "✓ verified on page" : `⚠ ${e.verdict ?? "unverified"}`}</div>}
               </button>
             </li>
           );
@@ -189,6 +195,7 @@ function Sentences({ company, sentences, onPreview }: { company: Company; senten
             return <Fragment key={k}><CiteChip evidence={evidence ?? null} n={nums.get(k)} onPreview={onPreview} />{" "}</Fragment>;
           })}
           {!s.cites.length && s.source && <CiteChip evidence={sourceEvidence(s, s.verdict)} label={`[${s.source.label}]`} onPreview={onPreview} />}
+          {s.kind === "finding" && s.cites.length > 0 && <>{" "}<NumericPill check={resolveCite(company, s.cites[0]).finding?.numeric_check} /></>}
           {s.verdict && s.verdict !== "verified" && (
             <span className="ml-1 inline-block rounded border border-warn/50 bg-warn/10 px-1 text-[10px] font-semibold uppercase text-warn align-middle">⚠ needs human review</span>
           )}

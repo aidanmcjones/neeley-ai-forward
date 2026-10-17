@@ -1,11 +1,15 @@
-import { AiMark, CiteChip, ConfPill } from "..";
+import { AiMark, CiteChip, ConfPill, NeedleStatusPill, NumericPill } from "..";
 import { money, z } from "../../lib/format";
 import { externalSources, impactView, isShiftMetric, metricText } from "../../lib/stance";
 import type { Evidence, Finding } from "../../lib/types";
 
 // Full-width hero band: the Sharpest Needle as the engine's verdict.
-export function NeedleHero({ needle, ticker, onPreview }: {
+export function NeedleHero({ needle, ticker, onPreview, status, v2 = false }: {
   needle: Finding; ticker: string; onPreview?: (ev: Evidence | null) => void;
+  /** league needle_status (strict / provisional / floor_relaxed). */
+  status?: string | null;
+  /** v2 engine export: floor is O ≥ 0.5, E ≥ 0.9. */
+  v2?: boolean;
 }) {
   const im = impactView(needle);
   const peer = needle.peer;
@@ -16,16 +20,22 @@ export function NeedleHero({ needle, ticker, onPreview }: {
   return (
     <section aria-labelledby="needle-h" className="rounded-lg border border-teal/40 border-t-4 border-t-teal bg-teal-soft/40 shadow-card px-5 pt-3 pb-4">
       <div className="flex items-center justify-between gap-3">
-        <AiMark label="Sharpest Needle · engine verdict" />
-        <span className="text-[11px] text-muted font-mono">highest S with O ≥ 0.7, E ≥ 0.6 · companies/{ticker}.json</span>
+        <div className="flex items-center gap-2.5">
+          <AiMark label="Sharpest Needle · engine verdict" />
+          <NeedleStatusPill status={status} />
+        </div>
+        <span className="text-[11px] text-muted font-mono">{v2 ? "highest S = M·O·E·π with O ≥ 0.5, E ≥ 0.9" : "highest S with O ≥ 0.7, E ≥ 0.6"} · companies/{ticker}.json · league.json</span>
       </div>
       <h2 id="needle-h" className="mt-1.5 font-display text-[40px] leading-[1.02] tracking-wide text-fg">
         {needle.finding}
       </h2>
       <div className="mt-2.5 grid grid-cols-[auto_1fr_auto] items-start gap-x-6 gap-y-2 text-sm">
-        <div className="flex items-center gap-2 pt-0.5">
-          <ConfPill level={needle.confidence} />
-          {needle.verdict && <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">{needle.verdict.replace("_", " ")}</span>}
+        <div className="flex flex-col items-start gap-1.5 pt-0.5">
+          <div className="flex items-center gap-2">
+            <ConfPill level={needle.confidence} />
+            {needle.verdict && <span className="text-[11px] font-semibold uppercase tracking-wide text-muted" title="Verifier verdict: the quote was located on the cited page">{needle.verdict === "verified" ? "quote located" : needle.verdict.replace("_", " ")}</span>}
+          </div>
+          <NumericPill check={needle.numeric_check} />
         </div>
         <dl className="min-w-0 grid grid-cols-[86px_1fr] gap-x-3 gap-y-1">
           <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted pt-0.5">Why unseen</dt>

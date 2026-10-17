@@ -46,7 +46,12 @@ export interface LeagueRow extends Loose {
   high_confidence?: number;
   sharpest_needle?: string;
   needle_id?: string;
+  /** v2 engine: strict (row clears the obscurity floor), provisional or floor_relaxed. */
+  needle_status?: NeedleStatus | string;
+  needle_confidence?: Confidence;
 }
+
+export type NeedleStatus = "strict" | "provisional" | "floor_relaxed";
 
 export interface Excerpt { before?: string; match?: string; after?: string }
 
@@ -65,6 +70,14 @@ export interface Evidence extends Loose {
   excerpt?: Excerpt;
   /** Filled in by the UI when the evidence is opened from a finding. */
   verdict?: string;
+  doc_title?: string;
+  period?: string;
+  location?: string;
+  deep_link?: string;
+  /** Public rule: unverified or licensed citations export no quote, excerpt or links. */
+  withheld?: boolean;
+  withheld_reason?: string | null;
+  verification?: { status?: string; score?: number; checked_at?: string; detail?: string } | null;
 }
 
 export interface Impact extends Loose {
@@ -77,10 +90,23 @@ export interface Peer extends Loose { metric_value?: number | null; peer_median?
 export interface Vector extends Loose {
   I_norm?: number; P?: number; T?: number; Z?: number; D?: number; O?: number; E?: number;
   obscurity_note?: string; topics?: string[];
+  v2?: VectorV2 | null;
+}
+
+export interface VectorV2 extends Loose { M?: number | null; O?: number | null; E?: number | null; pi?: number | null; S?: number | null; old_S?: number | null }
+
+/** Numbers-on-the-page check (league_v3 uncited-claim gate). Absent = not yet run. */
+export interface NumericCheck extends Loose {
+  status: "passed" | "failed" | "unchecked" | string;
+  checked?: number; total?: number;
+  verified?: number; derived?: number; assumed?: number;
+  unsupported?: { value?: unknown; where?: string; reason?: string }[];
+  note?: string;
 }
 
 export interface Finding extends Loose {
   id: string;
+  numeric_check?: NumericCheck | null;
   finding: string;
   signal_kind?: string;
   detector?: string;
@@ -124,6 +150,25 @@ export interface Stance extends Loose {
   deciders?: string[];
   generated_by?: "template" | "model" | string;
   note?: string;
+  decide?: Decide | null;
+  kill_signals?: KillSignal[] | null;
+}
+
+export interface DecideMove extends Loose {
+  name: string; code?: string; template?: string; status?: "chosen" | "rejected" | string; rank?: number;
+  ev?: number | null; ev_by_scenario?: { bear?: number; base?: number; bull?: number } | null;
+  cash_at_risk?: number | null; payback_month?: number | null; spread?: number | null; mcda?: number | null;
+  binding_reason?: string; why?: string; flags?: string[]; finding_ids?: string[]; kill_signal_ids?: string[];
+  budget?: Record<string, number> | null; units?: string;
+}
+export interface DecideFootnote extends Loose { n: number; move?: string; claim?: string; citation?: Evidence }
+export interface Decide extends Loose {
+  as_of?: string; cash_and_equivalents?: number; units?: string; moves?: DecideMove[];
+  footnotes?: DecideFootnote[]; finding_cites?: CiteRef[]; source_files?: string[];
+}
+export interface KillSignal extends Loose {
+  id: string; signal?: string; threshold?: string; source?: string; lag?: string; check_month?: number;
+  action?: string; basis?: string; stop?: boolean;
 }
 
 export interface Question {

@@ -11,7 +11,7 @@ import { StancePanel } from "../components/briefing/StancePanel";
 
 // Briefing (/): KPI row, Sharpest Needle hero, findings grid driving two charts, AI stance panel.
 export default function Briefing() {
-  const { meta, company, ticker, rank, league, loading, error } = useData();
+  const { meta, company, ticker, rank, league, leagueRow, loading, error } = useData();
   const needle = findNeedle(company);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [preview, setPreview] = useState<Evidence | null>(null);
@@ -33,7 +33,7 @@ export default function Briefing() {
         <div className="space-y-4">
           <KpiRow meta={meta} company={company} />
           {needle ? (
-            <NeedleHero needle={needle} ticker={t} onPreview={setPreview} />
+            <NeedleHero needle={needle} ticker={t} onPreview={setPreview} status={leagueRow?.needle_status ?? (company.needle_status as string | undefined)} v2={company.engine === "v2" || !!needle.vector?.v2} />
           ) : (
             <EmptyState file={`companies/${t}.json`} message="No Sharpest Needle: the company file has no findings" />
           )}
