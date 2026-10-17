@@ -541,9 +541,21 @@ def plain_obscurity(note):
     return re.sub(r"\bqa_turns regex\b", "analyst questions matching", note)
 
 
+def _dict_to_words(m):
+    """({'xarelto': 10}) -> (Xarelto 10), as the exporter's plain() does for v1-era sentences."""
+    try:
+        import ast
+        d = ast.literal_eval("{" + m.group(1) + "}")
+        return "(" + ", ".join(f"{str(k).replace('-', ' ').title()} {v:g}" if isinstance(v, (int, float)) else f"{str(k).title()} {v}"
+                               for k, v in d.items()) + ")"
+    except Exception:
+        return m.group(0)
+
+
 def plain_sentence(text):
-    """Finding sentence for display: peer z as 'sd above/below', derivation notes shortened; numbers unchanged."""
-    t = text or ""
+    """Finding sentence for display: peer z as 'sd above/below', derivation notes shortened, dict literals to
+    words; numbers unchanged."""
+    t = re.sub(r"\(\{([^{}]*)\}\)", _dict_to_words, text or "")
     t = t.replace(" (derived from the shortlist peer panel, not page-cited)", " (peer figures computed, not page-cited)")
     t = re.sub(r", z ([+-])([\d.]+)", lambda m: f" ({m.group(2)} sd {'above' if m.group(1) == '+' else 'below'})", t)
     t = t.replace(" (derived)", "")
@@ -691,7 +703,9 @@ ALIAS = {
     "ceo_memo": ["write the ceo memo for {n}", "{t} memo", "{n} memo", "ceo memo {n}", "what should {n}'s ceo do",
                  "{t} ceo memo", "{n} recommendation", "decide {t}", "what should {n} do", "{n} strategic move"],
     "league": ["league", "league table", "why {n}", "why does {n} beat the other nine", "who wins", "ranking",
-               "which company", "why this company", "league overview", "rank the ten companies", "{t} vs the field"],
+               "which company", "which company has the sharpest needle", "which company has the sharpest needle and why",
+               "which company wins", "best needle across companies", "rank the needles", "league overview",
+               "rank the ten companies"],
     "ai_wrong": ["where was the ai wrong", "ai wrong", "where the ai was confidently wrong", "ai mistakes",
                  "what did the ai get wrong", "how did you catch ai errors", "confidently wrong", "hallucinations",
                  "verifier catches"],
@@ -717,7 +731,7 @@ def aliases(kind, ctx, t=None, product=None, rival=None):
         if k and k not in seen:
             seen.add(k)
             uniq.append(a.lower())
-    return uniq[:12]
+    return uniq[:14]
 
 
 def ask_next(kind, ctx, t):
@@ -1685,6 +1699,11 @@ def check(path, ctx):
             seen_alias[k] = mid
         if len(m.get("aliases") or []) < 6:
             warns.append(f"{mid}: only {len(m.get('aliases') or [])} aliases")
+        if t and m.get("kind") == "needle":  # company-less needle phrasings must score the league memo, not a company
+            names = [norm_alias(x) for x in ctx.nicks(t)] + [t.lower()]
+            for a in [m.get("prompt")] + (m.get("aliases") or []):
+                if not any(nm and nm in norm_alias(a) for nm in names):
+                    errors.append(f"{mid}: alias '{a}' names neither the company nor the ticker")
         for x in m.get("ask_next") or []:
             if x not in idset:
                 errors.append(f"{mid}: ask_next {x} does not exist")
@@ -1723,6 +1742,8 @@ def check(path, ctx):
                         errors.append(f"{mid}: number without a cite marker in {kind}: {seg[:110]!r}")
                 stripped = re.sub("|".join(WHITELIST), "", seg)
                 bad = [x for x in num_tokens(stripped) if not token_ok(x, allowed_floats)]
+                if re.search(r"\{['\"]|\[\{|\(\{|': |\": ", seg) and not (m.get("kind") == "ai_wrong" and kind == "row"):
+                    errors.append(f"{mid}: dict or list literal in {kind}: {seg[:100]!r}")
                 if kind != "heading" and not (m.get("kind") == "ai_wrong" and kind == "row"):
                     vt = var_tokens(seg)
                     if vt:

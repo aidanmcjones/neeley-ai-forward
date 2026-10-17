@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T23:04:59+00:00",
+ "generated_at": "2026-10-17T23:12:36+00:00",
  "mode": "cached",
  "engine": "v3",
  "default_ticker": "AMGN",
@@ -4311,7 +4311,9 @@
     "gilead sharpest needle",
     "what did you find at gilead sciences",
     "what did you find at gilead",
-    "least discussed finding gilead sciences"
+    "least discussed finding gilead sciences",
+    "least discussed finding gilead",
+    "gild sharpest needle"
    ],
    "ticker": "GILD",
    "kind": "needle",
@@ -4632,7 +4634,9 @@
     "gilead findings table",
     "what are the findings for gilead sciences",
     "what are the findings for gilead",
-    "show me gilead sciences's findings"
+    "show me gilead sciences's findings",
+    "show me gilead's findings",
+    "gild top 5"
    ],
    "ticker": "GILD",
    "kind": "findings",
@@ -6396,7 +6400,8 @@
     "gilead three forces",
     "gild ira mfn tariff",
     "gilead sciences vs the other nine",
-    "gilead vs the other nine"
+    "gilead vs the other nine",
+    "gild peer table"
    ],
    "ticker": "GILD",
    "kind": "peers",
@@ -6732,7 +6737,9 @@
     "gilead analyst attention",
     "what do analysts ask gilead sciences",
     "what do analysts ask gilead",
-    "gild consensus vs guidance"
+    "gild consensus vs guidance",
+    "is the gilead sciences needle priced in",
+    "is the gilead needle priced in"
    ],
    "ticker": "GILD",
    "kind": "priced_in",
@@ -6990,7 +6997,9 @@
     "what should gilead's ceo do",
     "gild ceo memo",
     "gilead sciences recommendation",
-    "gilead recommendation"
+    "gilead recommendation",
+    "decide gild",
+    "what should gilead sciences do"
    ],
    "ticker": "GILD",
    "kind": "ceo_memo",
@@ -7796,7 +7805,8 @@
     "gilead sciences early warning signals",
     "gilead early warning signals",
     "what would prove you wrong gilead sciences",
-    "what would prove you wrong gilead"
+    "what would prove you wrong gilead",
+    "gild prove wrong"
    ],
    "ticker": "GILD",
    "kind": "prove_wrong",
@@ -8113,7 +8123,9 @@
     "astra sharpest needle",
     "what did you find at astrazeneca",
     "what did you find at astra",
-    "least discussed finding astrazeneca"
+    "least discussed finding astrazeneca",
+    "least discussed finding astra",
+    "azn sharpest needle"
    ],
    "ticker": "AZN",
    "kind": "needle",
@@ -8429,7 +8441,9 @@
     "astra findings table",
     "what are the findings for astrazeneca",
     "what are the findings for astra",
-    "show me astrazeneca's findings"
+    "show me astrazeneca's findings",
+    "show me astra's findings",
+    "azn top 5"
    ],
    "ticker": "AZN",
    "kind": "findings",
@@ -10560,7 +10574,8 @@
     "astra three forces",
     "azn ira mfn tariff",
     "astrazeneca vs the other nine",
-    "astra vs the other nine"
+    "astra vs the other nine",
+    "azn peer table"
    ],
    "ticker": "AZN",
    "kind": "peers",
@@ -10968,7 +10983,9 @@
     "astra analyst attention",
     "what do analysts ask astrazeneca",
     "what do analysts ask astra",
-    "azn consensus vs guidance"
+    "azn consensus vs guidance",
+    "is the astrazeneca needle priced in",
+    "is the astra needle priced in"
    ],
    "ticker": "AZN",
    "kind": "priced_in",
@@ -11226,7 +11243,9 @@
     "what should astra's ceo do",
     "azn ceo memo",
     "astrazeneca recommendation",
-    "astra recommendation"
+    "astra recommendation",
+    "decide azn",
+    "what should astrazeneca do"
    ],
    "ticker": "AZN",
    "kind": "ceo_memo",
@@ -11893,7 +11912,8 @@
     "astrazeneca early warning signals",
     "astra early warning signals",
     "what would prove you wrong astrazeneca",
-    "what would prove you wrong astra"
+    "what would prove you wrong astra",
+    "azn prove wrong"
    ],
    "ticker": "AZN",
    "kind": "prove_wrong",
@@ -12155,7 +12175,9 @@
     "merck sharpest needle",
     "what did you find at merck & co.",
     "what did you find at merck",
-    "least discussed finding merck & co."
+    "least discussed finding merck & co.",
+    "least discussed finding merck",
+    "mrk sharpest needle"
    ],
    "ticker": "MRK",
    "kind": "needle",
@@ -12476,7 +12498,9 @@
     "merck findings table",
     "what are the findings for merck & co.",
     "what are the findings for merck",
-    "show me merck & co.'s findings"
+    "show me merck & co.'s findings",
+    "show me merck's findings",
+    "mrk top 5"
    ],
    "ticker": "MRK",
    "kind": "findings",
@@ -14638,7 +14662,8 @@
     "merck three forces",
     "mrk ira mfn tariff",
     "merck & co. vs the other nine",
-    "merck vs the other nine"
+    "merck vs the other nine",
+    "mrk peer table"
    ],
    "ticker": "MRK",
    "kind": "peers",
@@ -15046,7 +15071,9 @@
     "merck analyst attention",
     "what do analysts ask merck & co.",
     "what do analysts ask merck",
-    "mrk consensus vs guidance"
+    "mrk consensus vs guidance",
+    "is the merck & co. needle priced in",
+    "is the merck needle priced in"
    ],
    "ticker": "MRK",
    "kind": "priced_in",
@@ -15304,7 +15331,9 @@
     "what should merck's ceo do",
     "mrk ceo memo",
     "merck & co. recommendation",
-    "merck recommendation"
+    "merck recommendation",
+    "decide mrk",
+    "what should merck & co. do"
    ],
    "ticker": "MRK",
    "kind": "ceo_memo",
@@ -16021,7 +16050,8 @@
     "merck & co. early warning signals",
     "merck early warning signals",
     "what would prove you wrong merck & co.",
-    "what would prove you wrong merck"
+    "what would prove you wrong merck",
+    "mrk prove wrong"
    ],
    "ticker": "MRK",
    "kind": "prove_wrong",
@@ -16338,7 +16368,9 @@
     "sharpest needle bristol",
     "what is bristol myers squibb's sharpest needle",
     "what is bms's sharpest needle",
-    "what is bristol myers's sharpest needle"
+    "what is bristol myers's sharpest needle",
+    "what is bristol's sharpest needle",
+    "bristol myers squibb sharpest needle"
    ],
    "ticker": "BMY",
    "kind": "needle",
@@ -16659,7 +16691,9 @@
     "top findings bristol",
     "five findings bristol myers squibb",
     "five findings bms",
-    "five findings bristol myers"
+    "five findings bristol myers",
+    "five findings bristol",
+    "bristol myers squibb findings table"
    ],
    "ticker": "BMY",
    "kind": "findings",
@@ -18447,7 +18481,9 @@
     "bristol peer comparison",
     "how does bristol myers squibb compare to peers",
     "how does bms compare to peers",
-    "how does bristol myers compare to peers"
+    "how does bristol myers compare to peers",
+    "how does bristol compare to peers",
+    "bristol myers squibb three forces"
    ],
    "ticker": "BMY",
    "kind": "peers",
@@ -18783,7 +18819,9 @@
     "has the market priced in bristol",
     "bristol myers squibb priced in",
     "bms priced in",
-    "bristol myers priced in"
+    "bristol myers priced in",
+    "bristol priced in",
+    "bristol myers squibb analyst attention"
    ],
    "ticker": "BMY",
    "kind": "priced_in",
@@ -19041,7 +19079,9 @@
     "bristol memo",
     "ceo memo bristol myers squibb",
     "ceo memo bms",
-    "ceo memo bristol myers"
+    "ceo memo bristol myers",
+    "ceo memo bristol",
+    "what should bristol myers squibb's ceo do"
    ],
    "ticker": "BMY",
    "kind": "ceo_memo",
@@ -19811,7 +19851,9 @@
     "bristol kill signals",
     "bmy kill signals",
     "how would we know we are wrong about bristol myers squibb",
-    "how would we know we are wrong about bms"
+    "how would we know we are wrong about bms",
+    "how would we know we are wrong about bristol myers",
+    "how would we know we are wrong about bristol"
    ],
    "ticker": "BMY",
    "kind": "prove_wrong",
@@ -20128,7 +20170,9 @@
     "novo sharpest needle",
     "what did you find at novo nordisk",
     "what did you find at novo",
-    "least discussed finding novo nordisk"
+    "least discussed finding novo nordisk",
+    "least discussed finding novo",
+    "nvo sharpest needle"
    ],
    "ticker": "NVO",
    "kind": "needle",
@@ -20444,7 +20488,9 @@
     "novo findings table",
     "what are the findings for novo nordisk",
     "what are the findings for novo",
-    "show me novo nordisk's findings"
+    "show me novo nordisk's findings",
+    "show me novo's findings",
+    "nvo top 5"
    ],
    "ticker": "NVO",
    "kind": "findings",
@@ -23154,7 +23200,8 @@
     "novo three forces",
     "nvo ira mfn tariff",
     "novo nordisk vs the other nine",
-    "novo vs the other nine"
+    "novo vs the other nine",
+    "nvo peer table"
    ],
    "ticker": "NVO",
    "kind": "peers",
@@ -23562,7 +23609,9 @@
     "novo analyst attention",
     "what do analysts ask novo nordisk",
     "what do analysts ask novo",
-    "nvo consensus vs guidance"
+    "nvo consensus vs guidance",
+    "is the novo nordisk needle priced in",
+    "is the novo needle priced in"
    ],
    "ticker": "NVO",
    "kind": "priced_in",
@@ -23820,7 +23869,9 @@
     "what should novo's ceo do",
     "nvo ceo memo",
     "novo nordisk recommendation",
-    "novo recommendation"
+    "novo recommendation",
+    "decide nvo",
+    "what should novo nordisk do"
    ],
    "ticker": "NVO",
    "kind": "ceo_memo",
@@ -24484,7 +24535,8 @@
     "novo nordisk early warning signals",
     "novo early warning signals",
     "what would prove you wrong novo nordisk",
-    "what would prove you wrong novo"
+    "what would prove you wrong novo",
+    "nvo prove wrong"
    ],
    "ticker": "NVO",
    "kind": "prove_wrong",
@@ -29558,7 +29610,9 @@
     "lilly sharpest needle",
     "what did you find at eli lilly",
     "what did you find at lilly",
-    "least discussed finding eli lilly"
+    "least discussed finding eli lilly",
+    "least discussed finding lilly",
+    "lly sharpest needle"
    ],
    "ticker": "LLY",
    "kind": "needle",
@@ -29879,7 +29933,9 @@
     "lilly findings table",
     "what are the findings for eli lilly",
     "what are the findings for lilly",
-    "show me eli lilly's findings"
+    "show me eli lilly's findings",
+    "show me lilly's findings",
+    "lly top 5"
    ],
    "ticker": "LLY",
    "kind": "findings",
@@ -32892,7 +32948,8 @@
     "lilly three forces",
     "lly ira mfn tariff",
     "eli lilly vs the other nine",
-    "lilly vs the other nine"
+    "lilly vs the other nine",
+    "lly peer table"
    ],
    "ticker": "LLY",
    "kind": "peers",
@@ -33228,7 +33285,9 @@
     "lilly analyst attention",
     "what do analysts ask eli lilly",
     "what do analysts ask lilly",
-    "lly consensus vs guidance"
+    "lly consensus vs guidance",
+    "is the eli lilly needle priced in",
+    "is the lilly needle priced in"
    ],
    "ticker": "LLY",
    "kind": "priced_in",
@@ -33486,7 +33545,9 @@
     "what should lilly's ceo do",
     "lly ceo memo",
     "eli lilly recommendation",
-    "lilly recommendation"
+    "lilly recommendation",
+    "decide lly",
+    "what should eli lilly do"
    ],
    "ticker": "LLY",
    "kind": "ceo_memo",
@@ -34192,7 +34253,8 @@
     "eli lilly early warning signals",
     "lilly early warning signals",
     "what would prove you wrong eli lilly",
-    "what would prove you wrong lilly"
+    "what would prove you wrong lilly",
+    "lly prove wrong"
    ],
    "ticker": "LLY",
    "kind": "prove_wrong",
@@ -38174,7 +38236,9 @@
     "what is j&j's sharpest needle",
     "what is johnson and johnson's sharpest needle",
     "johnson & johnson sharpest needle",
-    "j&j sharpest needle"
+    "j&j sharpest needle",
+    "johnson and johnson sharpest needle",
+    "what did you find at johnson & johnson"
    ],
    "ticker": "JNJ",
    "kind": "needle",
@@ -38500,7 +38564,9 @@
     "five findings j&j",
     "five findings johnson and johnson",
     "johnson & johnson findings table",
-    "j&j findings table"
+    "j&j findings table",
+    "johnson and johnson findings table",
+    "what are the findings for johnson & johnson"
    ],
    "ticker": "JNJ",
    "kind": "findings",
@@ -40502,7 +40568,9 @@
     "how does j&j compare to peers",
     "how does johnson and johnson compare to peers",
     "johnson & johnson three forces",
-    "j&j three forces"
+    "j&j three forces",
+    "johnson and johnson three forces",
+    "jnj ira mfn tariff"
    ],
    "ticker": "JNJ",
    "kind": "peers",
@@ -40838,7 +40906,9 @@
     "j&j priced in",
     "johnson and johnson priced in",
     "johnson & johnson analyst attention",
-    "j&j analyst attention"
+    "j&j analyst attention",
+    "johnson and johnson analyst attention",
+    "what do analysts ask johnson & johnson"
    ],
    "ticker": "JNJ",
    "kind": "priced_in",
@@ -41096,7 +41166,9 @@
     "ceo memo j&j",
     "ceo memo johnson and johnson",
     "what should johnson & johnson's ceo do",
-    "what should j&j's ceo do"
+    "what should j&j's ceo do",
+    "what should johnson and johnson's ceo do",
+    "jnj ceo memo"
    ],
    "ticker": "JNJ",
    "kind": "ceo_memo",
@@ -41847,7 +41919,9 @@
     "how would we know we are wrong about johnson & johnson",
     "how would we know we are wrong about j&j",
     "how would we know we are wrong about johnson and johnson",
-    "johnson & johnson early warning signals"
+    "johnson & johnson early warning signals",
+    "j&j early warning signals",
+    "johnson and johnson early warning signals"
    ],
    "ticker": "JNJ",
    "kind": "prove_wrong",
@@ -42140,10 +42214,13 @@
     "who wins",
     "ranking",
     "which company",
-    "why this company",
+    "which company has the sharpest needle",
+    "which company has the sharpest needle and why",
+    "which company wins",
+    "best needle across companies",
+    "rank the needles",
     "league overview",
-    "rank the ten companies",
-    "amgn vs the field"
+    "rank the ten companies"
    ],
    "ticker": null,
    "kind": "league",
