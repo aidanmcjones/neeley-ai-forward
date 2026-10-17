@@ -10,21 +10,21 @@ PYTHONPATH=. python -m agent.ui_export
 
 | File | Size | Contents |
 |---|---|---|
-| meta.json | 32 KB | totals (458 findings, 458 verified, 161 rejected), ledger (110 records, ok=True), corpus (836 docs), moat coverage + 62 tables, case sets, verifier rules, 11 limits |
-| league.json | 11 KB | 10 companies ranked by score |
-| proof.json | 118 KB | backtest (hit rates, gate-2 text, examples), calibration, J&J blind test, sealed forecasts with the canonical string and hashes, 83 ai_wrong rows |
-| companies/MRK.json | 1.47 MB | 51 findings (51 verified), 25 rejected, 75 evidence items (75 quotes located on the page), stance, questions, labels, price series |
-| companies/BMY.json | 1.23 MB | 39 findings (39 verified), 13 rejected, 60 evidence items (58 quotes located on the page), stance, questions, labels, price series |
-| companies/PFE.json | 1.49 MB | 47 findings (47 verified), 19 rejected, 74 evidence items (73 quotes located on the page), stance, questions, labels, price series |
-| companies/LLY.json | 1.63 MB | 46 findings (46 verified), 16 rejected, 67 evidence items (65 quotes located on the page), stance, questions, labels, price series |
-| companies/NVO.json | 0.86 MB | 52 findings (52 verified), 5 rejected, 62 evidence items (59 quotes located on the page), stance, questions, labels, price series |
-| companies/ABBV.json | 1.08 MB | 35 findings (35 verified), 16 rejected, 57 evidence items (55 quotes located on the page), stance, questions, labels, price series |
-| companies/JNJ.json | 1.40 MB | 45 findings (45 verified), 21 rejected, 71 evidence items (70 quotes located on the page), stance, questions, labels, price series |
-| companies/AZN.json | 0.92 MB | 52 findings (52 verified), 11 rejected, 65 evidence items (64 quotes located on the page), stance, questions, labels, price series |
-| companies/AMGN.json | 1.37 MB | 54 findings (54 verified), 22 rejected, 78 evidence items (77 quotes located on the page), stance, questions, labels, price series |
-| companies/GILD.json | 1.06 MB | 37 findings (37 verified), 13 rejected, 51 evidence items (51 quotes located on the page), stance, questions, labels, price series |
+| meta.json | 38 KB | totals (372 findings, 372 verified, 247 rejected), ledger (110 records, ok=True), corpus (836 docs), moat coverage + 64 tables, case sets, verifier rules, 11 limits |
+| league.json | 12 KB | 10 companies ranked by score |
+| proof.json | 303 KB | backtest (hit rates, gate-2 text, examples), calibration, J&J blind test, sealed forecasts with the canonical string and hashes, 474 ai_wrong rows |
+| companies/MRK.json | 0.75 MB | 41 findings (41 verified), 35 rejected, 63 evidence items (63 quotes located on the page), stance, questions, labels, price series |
+| companies/BMY.json | 0.62 MB | 30 findings (30 verified), 22 rejected, 54 evidence items (54 quotes located on the page), stance, questions, labels, price series |
+| companies/PFE.json | 0.67 MB | 41 findings (41 verified), 25 rejected, 66 evidence items (66 quotes located on the page), stance, questions, labels, price series |
+| companies/LLY.json | 0.86 MB | 39 findings (39 verified), 23 rejected, 56 evidence items (56 quotes located on the page), stance, questions, labels, price series |
+| companies/NVO.json | 0.60 MB | 38 findings (38 verified), 19 rejected, 50 evidence items (48 quotes located on the page), stance, questions, labels, price series |
+| companies/ABBV.json | 0.70 MB | 32 findings (32 verified), 19 rejected, 56 evidence items (56 quotes located on the page), stance, questions, labels, price series |
+| companies/JNJ.json | 0.64 MB | 38 findings (38 verified), 28 rejected, 64 evidence items (64 quotes located on the page), stance, questions, labels, price series |
+| companies/AZN.json | 0.68 MB | 36 findings (36 verified), 27 rejected, 53 evidence items (51 quotes located on the page), stance, questions, labels, price series |
+| companies/AMGN.json | 0.51 MB | 47 findings (47 verified), 29 rejected, 72 evidence items (72 quotes located on the page), stance, questions, labels, price series |
+| companies/GILD.json | 0.52 MB | 30 findings (30 verified), 20 rejected, 44 evidence items (44 quotes located on the page), stance, questions, labels, price series |
 
-Total: 12.66 MB.
+Total: 6.91 MB.
 
 Notes: `stance.generated_by` is `template` (no ANTHROPIC_API_KEY at export). Excerpts are about 900 characters either side of the quote (600 if a company file would exceed 4 MB). Onboarded tickers without findings are listed in meta.onboarding_pending and get no company file.
 

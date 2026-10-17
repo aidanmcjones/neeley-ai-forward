@@ -606,6 +606,28 @@ def _usd(x, cur):
     return None if x is None or cur != "USD" else round(x * 1e6, 2)
 
 
+def first_existing(*paths):
+    """First path that exists (engine output preference: v3 > v2 > v1)."""
+    return next((p for p in paths if Path(p).exists()), None)
+
+
+def guard_fields(f):
+    """v3 guard and corroboration fields of one row -> (extra flag codes, export dict)."""
+    notes = f.get("flags") or []
+    codes = []
+    if any("one-off" in x and x.startswith("guard") for x in notes):
+        codes.append("one_off")
+    if f.get("not_quantified"):
+        codes.append("not_quantified")
+    if f.get("needle_eligible"):
+        codes.append("needle_eligible")
+    cor = next((m.group(1) for x in notes for m in [re.match(r"corroborates ([0-9a-f]{6,})", x)] if m), None)
+    return codes, {"fact_key": f.get("fact_key"), "guard": f.get("guard"),
+                   "guard_reason": next((x for x in notes if re.match(r"guard \d+:", x)), None),
+                   "not_quantified": f.get("not_quantified"), "impact_channel": f.get("impact_channel"),
+                   "corroborates": cor, "numeric_check": f.get("numeric_check")}
+
+
 def build_findings_v2(raw, side, ticker, lg, v1):
     """v2 rows -> the same finding shape the v1 path exports, plus v2 keys."""
     top = max([f.get("S") or 0 for f in raw] or [0])
@@ -626,7 +648,8 @@ def build_findings_v2(raw, side, ticker, lg, v1):
         d_oi = (imp.get("d_oi") or {})
         base = d_oi.get("base")
         suspect = bool(base and rev and abs(base) > abs(rev))
-        flags = []
+        gcodes, gexp = guard_fields(f)
+        flags = list(gcodes)
         if placeholder:
             flags.append("generic_placeholder")
         if f["id"] == needle_id and status and status != "strict":
@@ -664,7 +687,7 @@ def build_findings_v2(raw, side, ticker, lg, v1):
                        "d_oi": d_oi, "d_eps": imp.get("d_eps"), "quantified": imp.get("quantified"),
                        "adverse": imp.get("adverse"), "impact_flags": imp.get("flags") or [],
                        "placeholder": placeholder, "suspect": suspect,
-                       "excluded": bool(suspect or placeholder or cur != "USD"),
+                       "excluded": bool(suspect or placeholder or cur != "USD" or f.get("not_quantified")),
                        "suspect_note": ("impact exceeds trailing revenue; left out of stance dollars" if suspect else
                                         PLACEHOLDER_NOTE if placeholder else None)},
             "peer": {"metric_value": peer.get("metric_value"), "peer_median": peer.get("peer_median"),
@@ -686,6 +709,7 @@ def build_findings_v2(raw, side, ticker, lg, v1):
                                 "sources": sorted({c.get("doc_title") or c.get("canonical_id") for c in lic}),
                                 "note": "licensed data rows (I/B/E/S via WRDS) used as model inputs; values not exported"} if lic else None,
             "external_sources": [],
+            **gexp,
         })
     out.sort(key=lambda x: -(x["score"] or 0))
     return out
@@ -697,8 +721,11 @@ def rejected_v2(rows):
         cits = [c for c in r.get("citations") or [] if c.get("page_scheme") in ("marker", "section")]
         out.append({"finding": plain(r.get("sentence")), "finding_raw": r.get("sentence"), "id": r.get("id"),
                     "signal_kind": r.get("signal_kind"), "verdict": "rejected",
-                    "reason": "withheld by the v2 evidence gate (E = 0: no page-verified citation). "
-                              + "; ".join(x for x in r.get("confidence_reasons") or [] if "fails" in x or "<" in x),
+                    "reason": (f"dropped by a review guard: {guard_fields(r)[1]['guard_reason'] or r.get('guard')}"
+                               if r.get("guard") == "drop" else
+                               "withheld by the evidence gate (E = 0: no page-verified citation). "
+                               + "; ".join(x for x in r.get("confidence_reasons") or [] if "fails" in x or "<" in x)),
+                    "guard": r.get("guard"), "fact_key": r.get("fact_key"), "numeric_check": r.get("numeric_check"),
                     "evidence": [{"doc_id": c.get("canonical_id"), "page": c.get("page"), "doc_title": c.get("doc_title"),
                                   "location": c.get("location"), "speaker": c.get("speaker") or "",
                                   "quote": "" if withhold_reason(c) else c.get("quote"),
@@ -1330,16 +1357,26 @@ def build_questions(ticker, findings, needle, stance, rejected, cset, forces_row
     return qs
 
 
+def mark_no_needle(qs, no_needle):
+    if no_needle and qs:
+        a = qs[0]["answer"]
+        a["text"] = ("No row qualifies as the Sharpest Needle (needle status: none). The top-scored row: " + a["text"])
+        a["basis"] = "league needle status none; " + a["basis"]
+    return qs
+
+
 # ---------------------------------------------------------------- company file
 def company(ticker, league_row, sealed, side, lg2=None):
     """Company file; prefers v2 engine output (findings_v2.jsonl + league_v2 row), falls back to v1."""
-    raw2 = read_jsonl(OUT / ticker / "findings_v2.jsonl")
+    fpath = first_existing(OUT / ticker / "findings_v3.jsonl", OUT / ticker / "findings_v2.jsonl")
+    raw2 = read_jsonl(fpath) if fpath else []
     v1 = read_jsonl(OUT / ticker / "findings.jsonl")
     if raw2:
         findings = build_findings_v2(raw2, side, ticker, lg2, v1)
         needle_id = ((lg2 or {}).get("needle") or {}).get("id")
-        rej_out = rejected_v2(read_jsonl(OUT / ticker / "rejected_v2.jsonl"))
-        engine = "v2"
+        rpath = first_existing(OUT / ticker / "rejected_v3.jsonl", OUT / ticker / "rejected_v2.jsonl")
+        rej_out = rejected_v2(read_jsonl(rpath) if rpath else [])
+        engine = LEAGUE_VERSION.get("v", "v2")
     elif v1:
         findings = build_findings(v1, side, ticker)
         needle_id = (league_row or {}).get("needle_id")
@@ -1348,7 +1385,9 @@ def company(ticker, league_row, sealed, side, lg2=None):
     else:
         return None
     byid = {f["id"]: f for f in findings}
+    status = ((lg2 or {}).get("needle_status") or "").replace(" ", "_")
     needle = byid.get(needle_id) or findings[0]
+    no_needle = engine != "v1" and status == "none"
     rejected = rej_out if rej_out is not None else read_jsonl(OUT / ticker / "rejected.jsonl")
     cset = CASE_SETS.get(ticker, {})
     slugs = list(dict.fromkeys([s for p, rv in cset.items() for s in [p, *rv]]))
@@ -1366,12 +1405,17 @@ def company(ticker, league_row, sealed, side, lg2=None):
         labels["v2_cells_preferred"] = prefer_v2(labels["comparison"], v2p)
     PRODUCT_LOG[ticker] = sorted(v2p)
     stance = apply_decide(ticker, build_stance(ticker, findings, needle, sealed), findings, v1)
+    NONE_NOTE = "No row qualifies as the Sharpest Needle (needle status: none); the top-scored row is shown instead."
+    if no_needle and stance.get("generated_by") == "template":
+        stance["headline"] = f"{NONE_NOTE} {stance['headline']}"
     sig_counts = {p.stem.replace("signals_", ""): sum(1 for x in p.read_text().splitlines() if x.strip())
                   for p in sorted((OUT / ticker).glob("signals_*.jsonl"))}
     forces = for_ticker(VER / "policy" / "force_summary.csv", ticker)
     cvg = for_ticker(VER / "market" / "consensus_vs_guidance.csv", ticker)
     return {
-        "ticker": ticker, "name": NAMES.get(ticker, ticker), "needle_id": needle["id"], "engine": engine,
+        "ticker": ticker, "name": NAMES.get(ticker, ticker), "needle_id": None if no_needle else needle["id"],
+        "engine": engine, "findings_file": str(fpath.relative_to(ROOT)) if raw2 else "out/<T>/findings.jsonl",
+        "top_row_id": needle["id"],
         "needle_status": ((lg2 or {}).get("needle_status") or "").replace(" ", "_") or None,
         "league_v2": {k: (lg2 or {}).get(k) for k in ("rank", "L", "top5_sum", "N_eff", "blocks", "largest_share",
                                                       "n_blocks", "comparable", "company_flags", "tariff_exposure",
@@ -1394,7 +1438,8 @@ def company(ticker, league_row, sealed, side, lg2=None):
         "gtn_exposure": gtn,
         "price_series": price_series(slugs),
         "stance": stance,
-        "questions": build_questions(ticker, findings, needle, stance, rejected, cset, forces[0] if forces else None),
+        "questions": mark_no_needle(build_questions(ticker, findings, needle, stance, rejected, cset,
+                                                    forces[0] if forces else None), no_needle),
         "sealed_forecast": next((p for p in sealed if p["ticker"] == ticker), None),
     }
 
@@ -1497,7 +1542,10 @@ def main():
     DEST.mkdir(parents=True, exist_ok=True)
     league = read_json(OUT / "league.json", []) or []
     lrow = {r["ticker"]: r for r in league}
-    league2 = read_json(OUT / "league_v2.json", []) or []
+    lpath = first_existing(OUT / "league_v3.json", OUT / "league_v2.json")
+    league2 = read_json(lpath, []) if lpath else []
+    LEAGUE_VERSION["v"] = "v3" if lpath and lpath.name == "league_v3.json" else "v2"
+    LEAGUE_VERSION["file"] = str(lpath.relative_to(ROOT)) if lpath else None
     l2 = {r["ticker"]: r for r in league2}
     sealed = (read_json(OUT / "predictions" / "sealed_2026Q3.json", {}) or {}).get("predictions", [])
     tickers = list(SHORTLIST) + [t for t in CASE_SETS if t not in SHORTLIST]
@@ -1541,7 +1589,8 @@ def main():
         "as_of": prog.get("as_of"), "built_at": pd.Timestamp.now(tz="UTC").isoformat(),
         "default_ticker": (sorted(league2, key=lambda r: r.get("rank") or 99)[0]["ticker"] if league2 else
                            league[0]["ticker"] if league else SHORTLIST[0]),
-        "engine": "v2" if league2 else "v1",
+        "engine": LEAGUE_VERSION["v"] if league2 else "v1", "league_file": LEAGUE_VERSION.get("file"),
+        "league_robustness": read_json(OUT / "league_v3_robustness.json"),
         "companies": [{"ticker": t, "name": NAMES.get(t, t)} for t in written if t in SHORTLIST],
         "onboarded": onboarded, "onboarding_pending": pending,
         "totals": {"verified": sum(f["verdict"] == "verified" for f in allf),
@@ -1573,6 +1622,7 @@ def main():
 
 
 COMPANY_CACHE = {}
+LEAGUE_VERSION = {}
 PRODUCT_LOG = {}
 
 
@@ -1587,13 +1637,14 @@ def league_v2_rows(league2):
                     "n_verified": sum(f["verdict"] == "verified" for f in fs), "n_rejected": r.get("n_withheld"),
                     "high_confidence": sum(f["confidence"] == "high" for f in fs),
                     "sharpest_needle": plain(nd.get("sentence")), "sharpest_needle_raw": nd.get("sentence"),
-                    "needle_id": nd.get("id"), "needle_status": (r.get("needle_status") or "").replace(" ", "_"),
+                    "needle_id": nd.get("id") or None, "needle_status": (r.get("needle_status") or "").replace(" ", "_"),
                     "needle_confidence": (nd.get("confidence") or "").lower(), "needle_S": nd.get("S"),
                     "rank": r.get("rank"), "top5_sum": r.get("top5_sum"), "N_eff": r.get("N_eff"),
                     "blocks": r.get("blocks"), "comparable": r.get("comparable"),
                     "company_flags": r.get("company_flags"), "old_score": r.get("old_score"),
                     "old_rank": r.get("old_rank"), "n_withheld": r.get("n_withheld"),
-                    "tariff_exposure": r.get("tariff_exposure")})
+                    "tariff_exposure": r.get("tariff_exposure"),
+                    **{k: r.get(k) for k in ("n_scored", "n_not_quantified", "n_guarded", "v2_L", "v2_rank") if k in r}})
     return out
 
 
