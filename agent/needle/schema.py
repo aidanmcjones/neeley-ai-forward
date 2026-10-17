@@ -92,7 +92,14 @@ def write_jsonl(path, records):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as fh:
         for r in records:
-            fh.write(json.dumps(_to_dict(r), ensure_ascii=False) + "\n")
+            fh.write(json.dumps(_to_dict(r), ensure_ascii=False, default=_plain) + "\n")
+
+
+def _plain(o):
+    """numpy / pandas scalars -> plain Python numbers for JSON."""
+    if hasattr(o, "item"):
+        return o.item()
+    return str(o)
 
 
 def read_jsonl(path, cls=None):

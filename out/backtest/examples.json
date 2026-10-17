@@ -2,154 +2,22 @@
  {
   "ticker": "ABBV",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q3",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q4",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q2",
-  "event_quarter": "2020Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q3",
-  "event_quarter": "2021Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ABBV",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q3",
   "event_quarter": "2023Q4",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "ACAD",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ACAD",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ACAD",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q3",
-  "event_quarter": "2024Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AGN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2017Q2",
-  "event_quarter": "2018Q1",
+  "event_quarter": "2019Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 9
+  "lead_months": 21
  },
  {
   "ticker": "AGN",
@@ -157,8 +25,7 @@
   "quarter": "2017Q3",
   "event_quarter": "2019Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 18
  },
@@ -176,192 +43,31 @@
   "ticker": "ALKS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q2",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q2",
   "events": [
    "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ALKS",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ALKS",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q1",
-  "event_quarter": "2022Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ALKS",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ALXN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q4",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ALXN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ALXN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "ALXN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ALXN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q4",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "ALXN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2017Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "AMGN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2019Q3",
   "event_quarter": "2020Q2",
   "events": [
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 9
  },
  {
-  "ticker": "AMGN",
+  "ticker": "ALXN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2019Q4",
   "event_quarter": "2020Q2",
   "events": [
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q2",
-  "event_quarter": "2021Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "AMGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "AMGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "AMGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "AMGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2024Q1",
-  "event_quarter": "2024Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
  },
  {
   "ticker": "AMRN",
@@ -377,11 +83,11 @@
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q3",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 24
  },
  {
   "ticker": "AMRN",
@@ -407,151 +113,132 @@
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q2",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q3",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q1",
-  "event_quarter": "2022Q2",
+  "event_quarter": "2023Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2023Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q2",
+  "event_quarter": "2023Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2023Q2",
-  "event_quarter": "2023Q3",
+  "event_quarter": "2024Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2023Q3",
-  "event_quarter": "2024Q1",
+  "event_quarter": "2024Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
+  "event_quarter": "2024Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2024Q1",
-  "event_quarter": "2024Q3",
+  "event_quarter": "2025Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2024Q2",
-  "event_quarter": "2024Q3",
+  "event_quarter": "2025Q2",
   "events": [
    "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BHC",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q2",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BHC",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "BHC",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2013Q1",
-  "event_quarter": "2013Q3",
+  "quarter": "2015Q4",
+  "event_quarter": "2016Q3",
   "events": [
-   "margin_drop"
+   "revenue_drop",
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 9
  },
  {
   "ticker": "BHC",
@@ -560,7 +247,7 @@
   "event_quarter": "2016Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
@@ -568,43 +255,43 @@
   "ticker": "BHC",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
+  "event_quarter": "2016Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 3
  },
  {
   "ticker": "BHC",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "BHC",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2019Q4",
-  "event_quarter": "2020Q2",
+  "event_quarter": "2020Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "BHC",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q1",
-  "event_quarter": "2020Q2",
+  "event_quarter": "2021Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BHC",
@@ -629,127 +316,92 @@
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q4",
-  "event_quarter": "2014Q1",
+  "quarter": "2020Q1",
+  "event_quarter": "2021Q1",
   "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BIIB",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2013Q1",
-  "event_quarter": "2014Q1",
-  "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BIIB",
-  "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q2",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q3",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q4",
-  "event_quarter": "2021Q1",
+  "event_quarter": "2021Q4",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
+  "event_quarter": "2022Q1",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q2",
-  "event_quarter": "2021Q3",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q3",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q2",
+  "event_quarter": "2022Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q3",
-  "event_quarter": "2023Q4",
+  "event_quarter": "2024Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 15
+  "lead_months": 24
  },
  {
   "ticker": "BMRN",
@@ -782,36 +434,6 @@
   "lead_months": 3
  },
  {
-  "ticker": "BMRN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMRN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BMRN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
   "ticker": "BMY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2012Q2",
@@ -826,156 +448,41 @@
   "ticker": "BMY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2012Q3",
-  "event_quarter": "2012Q4",
+  "event_quarter": "2013Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BMY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2012Q4",
-  "event_quarter": "2013Q1",
+  "event_quarter": "2013Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "BMY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
   "lead_months": 12
- },
- {
-  "ticker": "BMY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q4",
-  "event_quarter": "2024Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q3",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BMY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q4",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BMY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2024Q2",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
  },
  {
   "ticker": "CTLT",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q1",
-  "event_quarter": "2023Q1",
+  "quarter": "2022Q2",
+  "event_quarter": "2024Q2",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 24
  },
  {
   "ticker": "CTLT",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q2",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "CTLT",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q3",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "CTLT",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "CTLT",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q1",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "CTLT",
-  "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q3",
-  "event_quarter": "2023Q1",
+  "event_quarter": "2024Q3",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "ELAN",
@@ -1021,12 +528,11 @@
   "ticker": "ENDP",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2015Q1",
-  "event_quarter": "2015Q2",
+  "event_quarter": "2015Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "ENDP",
@@ -1034,8 +540,7 @@
   "quarter": "2015Q2",
   "event_quarter": "2015Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
@@ -1043,75 +548,51 @@
   "ticker": "ENDP",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2015Q3",
-  "event_quarter": "2015Q4",
+  "event_quarter": "2016Q4",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 15
  },
  {
   "ticker": "ENDP",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2015Q4",
-  "event_quarter": "2016Q1",
+  "event_quarter": "2016Q4",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "ENDP",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q3",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop"
+   "impairment"
   ],
-  "lead_months": 24
+  "lead_months": 21
  },
  {
   "ticker": "ENDP",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q1",
-  "event_quarter": "2022Q3",
+  "quarter": "2022Q3",
+  "event_quarter": "2023Q3",
   "events": [
-   "revenue_drop",
-   "impairment"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
-  "ticker": "EXEL",
+  "ticker": "ENDP",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
+  "quarter": "2022Q4",
+  "event_quarter": "2023Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "EXEL",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q2",
-  "event_quarter": "2015Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "EXEL",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q3",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
@@ -1119,20 +600,9 @@
   "quarter": "2015Q4",
   "event_quarter": "2016Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
- },
- {
-  "ticker": "GILD",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q4",
-  "event_quarter": "2021Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
  },
  {
   "ticker": "GILD",
@@ -1148,45 +618,11 @@
   "ticker": "GILD",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q4",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 12
- },
- {
-  "ticker": "GILD",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "GILD",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q2",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "GILD",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 15
  },
  {
   "ticker": "GILD",
@@ -1194,8 +630,7 @@
   "quarter": "2023Q3",
   "event_quarter": "2024Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
@@ -1232,358 +667,102 @@
  {
   "ticker": "HALO",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q2",
-  "event_quarter": "2012Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2013Q1",
-  "event_quarter": "2013Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2013Q4",
-  "event_quarter": "2014Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
   "quarter": "2016Q4",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2018Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q3",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q1",
-  "event_quarter": "2019Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q2",
-  "event_quarter": "2019Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q3",
-  "event_quarter": "2019Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q3",
-  "event_quarter": "2022Q3",
-  "events": [
-   "margin_drop"
-  ],
   "lead_months": 24
- },
- {
-  "ticker": "HALO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q3",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q1",
-  "event_quarter": "2016Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "HZNP",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q4",
-  "event_quarter": "2017Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "INCY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2013Q4",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "INCY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q1",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "INCY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q2",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "INCY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q1",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "INCY",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q2",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2019Q3",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 15
+  "lead_months": 24
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q1",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q2",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2020Q4",
-  "event_quarter": "2021Q2",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q1",
-  "event_quarter": "2021Q3",
+  "event_quarter": "2023Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q2",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 24
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q3",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 15
+  "lead_months": 24
  },
  {
   "ticker": "IONS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2024Q1",
-  "event_quarter": "2024Q4",
+  "event_quarter": "2025Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "JAZZ",
@@ -1638,54 +817,62 @@
  {
   "ticker": "JNJ",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q3",
+  "quarter": "2022Q2",
   "event_quarter": "2024Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 21
+  "lead_months": 24
+ },
+ {
+  "ticker": "JNJ",
+  "signal": "inventory_outpaces_revenue",
+  "quarter": "2022Q3",
+  "event_quarter": "2024Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 24
  },
  {
   "ticker": "JNJ",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q1",
+  "event_quarter": "2024Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 24
  },
  {
   "ticker": "JNJ",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q3",
+  "quarter": "2023Q1",
+  "event_quarter": "2024Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 15
+  "lead_months": 12
  },
  {
   "ticker": "LLY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2012Q3",
-  "event_quarter": "2014Q2",
+  "event_quarter": "2014Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 21
+  "lead_months": 24
  },
  {
   "ticker": "LLY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2012Q4",
-  "event_quarter": "2014Q2",
+  "event_quarter": "2014Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 24
  },
  {
   "ticker": "LLY",
@@ -1693,8 +880,7 @@
   "quarter": "2013Q2",
   "event_quarter": "2014Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
@@ -1702,216 +888,104 @@
   "ticker": "LLY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2013Q3",
-  "event_quarter": "2014Q2",
+  "event_quarter": "2014Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "LLY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2013Q4",
-  "event_quarter": "2014Q2",
+  "event_quarter": "2014Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "LLY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2014Q1",
-  "event_quarter": "2014Q3",
+  "event_quarter": "2015Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "LLY",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2014Q2",
-  "event_quarter": "2014Q4",
+  "event_quarter": "2015Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
-  "ticker": "MRK",
+  "ticker": "MNK",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q2",
+  "quarter": "2016Q3",
+  "event_quarter": "2017Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "inventory_outpaces_revenue",
+  "quarter": "2016Q4",
+  "event_quarter": "2017Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "inventory_outpaces_revenue",
+  "quarter": "2019Q3",
+  "event_quarter": "2020Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "inventory_outpaces_revenue",
+  "quarter": "2020Q1",
+  "event_quarter": "2021Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "MRK",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2013Q1",
-  "event_quarter": "2013Q4",
+  "event_quarter": "2014Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "MRK",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2013Q2",
-  "event_quarter": "2014Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "MRK",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2020Q2",
-  "event_quarter": "2021Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "MRNA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2022Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "MRNA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q1",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "MRNA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2024Q1",
-  "event_quarter": "2024Q4",
+  "event_quarter": "2015Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
- },
- {
-  "ticker": "MYL",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
+  "lead_months": 24
  },
  {
   "ticker": "OGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2024Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q3",
-  "event_quarter": "2025Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "OGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2023Q4",
-  "event_quarter": "2025Q2",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "PFE",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2023Q4",
   "event_quarter": "2025Q4",
@@ -1923,107 +997,72 @@
  {
   "ticker": "PFE",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2024Q2",
-  "event_quarter": "2025Q4",
+  "quarter": "2020Q1",
+  "event_quarter": "2021Q1",
   "events": [
-   "impairment"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
   "ticker": "PRGO",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
+  "quarter": "2020Q4",
+  "event_quarter": "2021Q4",
   "events": [
-   "impairment"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "PRGO",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q3",
+  "quarter": "2021Q1",
+  "event_quarter": "2022Q1",
   "events": [
-   "revenue_drop",
-   "impairment"
+   "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "PRGO",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2020Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
   "ticker": "REGN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2022Q2",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "REGN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "SGEN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q1",
-  "event_quarter": "2021Q3",
+  "event_quarter": "2022Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "SGEN",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q2",
-  "event_quarter": "2021Q3",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "SGEN",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "TEVA",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q2",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 9
  },
  {
   "ticker": "TEVA",
@@ -2031,62 +1070,7 @@
   "quarter": "2017Q2",
   "event_quarter": "2017Q4",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "TEVA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q3",
-  "event_quarter": "2019Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q2",
-  "events": [
-   "revenue_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
@@ -2094,171 +1078,103 @@
   "ticker": "TEVA",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q1",
-  "event_quarter": "2022Q2",
+  "event_quarter": "2023Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 15
- },
- {
-  "ticker": "UTHR",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2016Q4",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "UTHR",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2017Q1",
-  "event_quarter": "2018Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
+  "lead_months": 24
  },
  {
   "ticker": "UTHR",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2017Q2",
-  "event_quarter": "2018Q1",
+  "event_quarter": "2019Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 24
  },
  {
   "ticker": "UTHR",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2017Q3",
-  "event_quarter": "2018Q1",
+  "event_quarter": "2019Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "UTHR",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2018Q4",
-  "event_quarter": "2019Q2",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2019Q2",
   "event_quarter": "2019Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
-  "ticker": "VRTX",
+  "ticker": "UTHR",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q1",
-  "event_quarter": "2012Q2",
+  "quarter": "2019Q2",
+  "event_quarter": "2020Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2012Q3",
-  "event_quarter": "2012Q4",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q3",
-  "event_quarter": "2014Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "inventory_outpaces_revenue",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "VRTX",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q1",
-  "event_quarter": "2015Q4",
+  "quarter": "2012Q1",
+  "event_quarter": "2013Q1",
   "events": [
-   "margin_drop"
+   "revenue_drop",
+   "impairment"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
   "signal": "inventory_outpaces_revenue",
-  "quarter": "2015Q2",
-  "event_quarter": "2015Q4",
+  "quarter": "2012Q3",
+  "event_quarter": "2013Q1",
   "events": [
-   "margin_drop"
+   "revenue_drop",
+   "impairment"
   ],
   "lead_months": 6
+ },
+ {
+  "ticker": "VRTX",
+  "signal": "inventory_outpaces_revenue",
+  "quarter": "2014Q1",
+  "event_quarter": "2015Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "VRTX",
+  "signal": "inventory_outpaces_revenue",
+  "quarter": "2014Q2",
+  "event_quarter": "2015Q2",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2015Q3",
-  "event_quarter": "2016Q1",
+  "event_quarter": "2017Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "VRTX",
@@ -2294,11 +1210,11 @@
   "ticker": "VTRS",
   "signal": "inventory_outpaces_revenue",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "VTRS",
@@ -2307,8 +1223,7 @@
   "event_quarter": "2025Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 18
  },
@@ -2319,93 +1234,19 @@
   "event_quarter": "2025Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ABBV",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ABBV",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
  },
  {
   "ticker": "ABBV",
   "signal": "receivables_outpace_revenue",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ABBV",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q3",
   "event_quarter": "2023Q4",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "ACAD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ACAD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
   "ticker": "AGN",
@@ -2416,66 +1257,6 @@
    "revenue_drop"
   ],
   "lead_months": 12
- },
- {
-  "ticker": "AGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ALKS",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ALNY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ALNY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q3",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ALNY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q1",
-  "event_quarter": "2023Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ALXN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
  },
  {
   "ticker": "ALXN",
@@ -2498,114 +1279,14 @@
   "lead_months": 15
  },
  {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2019Q2",
-  "event_quarter": "2020Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "AMGN",
+  "ticker": "ALXN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2019Q4",
   "event_quarter": "2020Q2",
   "events": [
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q2",
-  "event_quarter": "2021Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "AMGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
  },
  {
   "ticker": "AMRN",
@@ -2621,1322 +1302,551 @@
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2021Q2",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2021Q3",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "AMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "AMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q4",
   "event_quarter": "2023Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
+ },
+ {
+  "ticker": "AMRN",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q3",
+  "event_quarter": "2023Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "AMRN",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q4",
+  "event_quarter": "2023Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2023Q1",
-  "event_quarter": "2023Q3",
+  "event_quarter": "2024Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2023Q3",
-  "event_quarter": "2024Q1",
+  "event_quarter": "2024Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
+  "event_quarter": "2024Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2024Q1",
-  "event_quarter": "2024Q3",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2024Q2",
-  "event_quarter": "2024Q3",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q2",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q4",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2013Q1",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2013Q2",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2022Q4",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q1",
-  "event_quarter": "2022Q4",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q4",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2024Q1",
-  "event_quarter": "2026Q1",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "BHC",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2024Q2",
-  "event_quarter": "2026Q1",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BIIB",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q4",
-  "event_quarter": "2014Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BIIB",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q4",
-  "event_quarter": "2021Q1",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q1",
-  "event_quarter": "2016Q2",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q2",
-  "event_quarter": "2016Q2",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q4",
-  "event_quarter": "2016Q2",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2018Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "BMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q3",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "BMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMRN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2019Q1",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q3",
-  "event_quarter": "2012Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q2",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q3",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q4",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2017Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2017Q2",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q4",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BMY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2024Q2",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "CTLT",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q1",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ELAN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2019Q3",
-  "event_quarter": "2020Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ELAN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ELAN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q2",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ELAN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2023Q3",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ELAN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q1",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q1",
-  "event_quarter": "2015Q2",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q2",
-  "event_quarter": "2015Q3",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q3",
-  "event_quarter": "2015Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q3",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q4",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "impairment"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "impairment"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ENDP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2022Q2",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "EXEL",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2013Q4",
-  "event_quarter": "2014Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "EXEL",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "EXEL",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q2",
-  "event_quarter": "2015Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q3",
-  "event_quarter": "2017Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q4",
-  "event_quarter": "2016Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q1",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q4",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q2",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "GILD",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q3",
-  "event_quarter": "2024Q1",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q2",
-  "event_quarter": "2012Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2013Q1",
-  "event_quarter": "2013Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2013Q3",
-  "event_quarter": "2013Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q3",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2019Q2",
-  "event_quarter": "2019Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q3",
-  "event_quarter": "2022Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q2",
-  "event_quarter": "2022Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "HALO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2013Q4",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q3",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q1",
-  "event_quarter": "2016Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q4",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q4",
-  "event_quarter": "2017Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2017Q1",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "JAZZ",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2020Q1",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "JAZZ",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q1",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "LLY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q2",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "LLY",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "MRK",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q1",
-  "event_quarter": "2013Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "MRNA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2020Q4",
-  "event_quarter": "2021Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MYL",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q4",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "MYL",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "NBIX",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q4",
-  "event_quarter": "2013Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "NBIX",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "NBIX",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q3",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "OGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "OGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q1",
-  "event_quarter": "2024Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q3",
   "event_quarter": "2025Q1",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
-  "ticker": "OGN",
+  "ticker": "AMRN",
   "signal": "receivables_outpace_revenue",
-  "quarter": "2023Q4",
+  "quarter": "2024Q2",
   "event_quarter": "2025Q2",
   "events": [
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
-  "ticker": "PFE",
+  "ticker": "BHC",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2014Q4",
+  "event_quarter": "2016Q3",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 21
+ },
+ {
+  "ticker": "BHC",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q4",
+  "event_quarter": "2016Q3",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 9
+ },
+ {
+  "ticker": "BHC",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2016Q1",
+  "event_quarter": "2016Q3",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 6
+ },
+ {
+  "ticker": "BHC",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2016Q2",
+  "event_quarter": "2016Q3",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "BHC",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2016Q3",
+  "event_quarter": "2017Q3",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BHC",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2024Q1",
+  "event_quarter": "2026Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 24
+ },
+ {
+  "ticker": "BHC",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2024Q2",
+  "event_quarter": "2026Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 21
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2020Q3",
+  "event_quarter": "2021Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2020Q4",
+  "event_quarter": "2021Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2021Q1",
+  "event_quarter": "2022Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BMRN",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q1",
+  "event_quarter": "2016Q2",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 15
+ },
+ {
+  "ticker": "BMRN",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q2",
+  "event_quarter": "2016Q2",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BMRN",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q4",
+  "event_quarter": "2016Q2",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 6
+ },
+ {
+  "ticker": "BMY",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2012Q3",
+  "event_quarter": "2013Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "CTLT",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q3",
+  "event_quarter": "2024Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 24
+ },
+ {
+  "ticker": "ELAN",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2023Q2",
+  "event_quarter": "2023Q3",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "ELAN",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2023Q3",
+  "event_quarter": "2023Q4",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q1",
+  "event_quarter": "2015Q3",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 6
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q2",
+  "event_quarter": "2015Q3",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q3",
+  "event_quarter": "2016Q4",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 15
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2020Q3",
+  "event_quarter": "2022Q2",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 21
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2021Q4",
+  "event_quarter": "2022Q2",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 6
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q1",
+  "event_quarter": "2022Q2",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q2",
+  "event_quarter": "2022Q3",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q3",
+  "event_quarter": "2023Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q4",
+  "event_quarter": "2023Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q3",
+  "event_quarter": "2017Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 24
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2015Q4",
+  "event_quarter": "2016Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2016Q1",
+  "event_quarter": "2017Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2016Q2",
+  "event_quarter": "2017Q2",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2020Q1",
+  "event_quarter": "2022Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 24
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2020Q4",
+  "event_quarter": "2022Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 15
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2023Q1",
+  "event_quarter": "2024Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "GILD",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2023Q3",
+  "event_quarter": "2024Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 6
+ },
+ {
+  "ticker": "HALO",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2013Q3",
+  "event_quarter": "2014Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "HALO",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2016Q1",
+  "event_quarter": "2017Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "JAZZ",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2018Q4",
+  "event_quarter": "2020Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 15
+ },
+ {
+  "ticker": "JAZZ",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2019Q4",
+  "event_quarter": "2020Q1",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "JNJ",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2022Q4",
+  "event_quarter": "2024Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 24
+ },
+ {
+  "ticker": "LLY",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2018Q4",
+  "event_quarter": "2019Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2017Q1",
+  "event_quarter": "2018Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2017Q2",
+  "event_quarter": "2018Q2",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "receivables_outpace_revenue",
+  "quarter": "2019Q3",
+  "event_quarter": "2020Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "OGN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2023Q4",
   "event_quarter": "2025Q4",
@@ -3948,95 +1858,43 @@
  {
   "ticker": "PFE",
   "signal": "receivables_outpace_revenue",
-  "quarter": "2024Q2",
-  "event_quarter": "2025Q4",
+  "quarter": "2020Q1",
+  "event_quarter": "2021Q1",
   "events": [
-   "impairment"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
   "ticker": "PRGO",
   "signal": "receivables_outpace_revenue",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q3",
+  "quarter": "2024Q1",
+  "event_quarter": "2026Q1",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "PRGO",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2024Q2",
-  "event_quarter": "2026Q1",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "REGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2012Q1",
-  "event_quarter": "2012Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "REGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 15
+  "lead_months": 24
  },
  {
   "ticker": "REGN",
   "signal": "receivables_outpace_revenue",
   "quarter": "2022Q2",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "REGN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "SGEN",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "TEVA",
   "signal": "receivables_outpace_revenue",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q2",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 9
  },
  {
   "ticker": "TEVA",
@@ -4044,9 +1902,7 @@
   "quarter": "2017Q1",
   "event_quarter": "2017Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
@@ -4056,105 +1912,30 @@
   "quarter": "2017Q2",
   "event_quarter": "2017Q4",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q1",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "UTHR",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q2",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "UTHR",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q3",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "UTHR",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2016Q4",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
  },
  {
   "ticker": "UTHR",
   "signal": "receivables_outpace_revenue",
   "quarter": "2017Q4",
-  "event_quarter": "2018Q2",
+  "event_quarter": "2018Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q3",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "UTHR",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
   "signal": "receivables_outpace_revenue",
   "quarter": "2012Q1",
-  "event_quarter": "2012Q2",
+  "event_quarter": "2013Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
@@ -4171,23 +1952,23 @@
   "ticker": "VRTX",
   "signal": "receivables_outpace_revenue",
   "quarter": "2013Q1",
-  "event_quarter": "2013Q2",
+  "event_quarter": "2013Q4",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 9
  },
  {
   "ticker": "VRTX",
   "signal": "receivables_outpace_revenue",
   "quarter": "2013Q2",
-  "event_quarter": "2013Q3",
+  "event_quarter": "2013Q4",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "VRTX",
@@ -4201,45 +1982,14 @@
   "lead_months": 3
  },
  {
-  "ticker": "VRTX",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q3",
-  "event_quarter": "2014Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "VRTX",
-  "signal": "receivables_outpace_revenue",
-  "quarter": "2015Q1",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
   "ticker": "VTRS",
   "signal": "receivables_outpace_revenue",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "VTRS",
@@ -4248,82 +1998,19 @@
   "event_quarter": "2025Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 18
- },
- {
-  "ticker": "ABBV",
-  "signal": "dso_rising",
-  "quarter": "2020Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ABBV",
-  "signal": "dso_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
  },
  {
   "ticker": "ABBV",
   "signal": "dso_rising",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "dso_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ABBV",
-  "signal": "dso_rising",
-  "quarter": "2023Q3",
   "event_quarter": "2023Q4",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "ACAD",
-  "signal": "dso_rising",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ACAD",
-  "signal": "dso_rising",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
   "ticker": "AGN",
@@ -4334,146 +2021,6 @@
    "revenue_drop"
   ],
   "lead_months": 12
- },
- {
-  "ticker": "AGN",
-  "signal": "dso_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ALNY",
-  "signal": "dso_rising",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ALNY",
-  "signal": "dso_rising",
-  "quarter": "2018Q3",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ALNY",
-  "signal": "dso_rising",
-  "quarter": "2022Q1",
-  "event_quarter": "2023Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ALXN",
-  "signal": "dso_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2019Q2",
-  "event_quarter": "2020Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2020Q2",
-  "event_quarter": "2021Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "AMGN",
-  "signal": "dso_rising",
-  "quarter": "2023Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
  },
  {
   "ticker": "AMRN",
@@ -4489,161 +2036,121 @@
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2021Q2",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2021Q3",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2023Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q2",
+  "event_quarter": "2023Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2023Q1",
-  "event_quarter": "2023Q3",
+  "event_quarter": "2024Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2023Q3",
-  "event_quarter": "2024Q1",
+  "event_quarter": "2024Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
+  "event_quarter": "2024Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2024Q1",
-  "event_quarter": "2024Q3",
+  "event_quarter": "2025Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dso_rising",
   "quarter": "2024Q2",
-  "event_quarter": "2024Q3",
+  "event_quarter": "2025Q2",
   "events": [
    "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BHC",
-  "signal": "dso_rising",
-  "quarter": "2012Q2",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BHC",
-  "signal": "dso_rising",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "BHC",
   "signal": "dso_rising",
-  "quarter": "2012Q4",
-  "event_quarter": "2013Q3",
+  "quarter": "2014Q4",
+  "event_quarter": "2016Q3",
   "events": [
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 9
- },
- {
-  "ticker": "BHC",
-  "signal": "dso_rising",
-  "quarter": "2013Q1",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "dso_rising",
-  "quarter": "2013Q2",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 21
  },
  {
   "ticker": "BHC",
@@ -4652,7 +2159,7 @@
   "event_quarter": "2016Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
@@ -4660,88 +2167,51 @@
   "ticker": "BHC",
   "signal": "dso_rising",
   "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
+  "event_quarter": "2016Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 3
  },
  {
   "ticker": "BHC",
   "signal": "dso_rising",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "dso_rising",
-  "quarter": "2021Q4",
-  "event_quarter": "2022Q4",
-  "events": [
    "impairment"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "BHC",
-  "signal": "dso_rising",
-  "quarter": "2022Q1",
-  "event_quarter": "2022Q4",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 9
- },
- {
   "ticker": "BIIB",
   "signal": "dso_rising",
   "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q3",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "dso_rising",
   "quarter": "2020Q4",
-  "event_quarter": "2021Q1",
+  "event_quarter": "2021Q4",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "dso_rising",
   "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
+  "event_quarter": "2022Q1",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "dso_rising",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
@@ -4776,168 +2246,24 @@
   "lead_months": 6
  },
  {
-  "ticker": "BMRN",
-  "signal": "dso_rising",
-  "quarter": "2018Q3",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "BMRN",
-  "signal": "dso_rising",
-  "quarter": "2018Q4",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMRN",
-  "signal": "dso_rising",
-  "quarter": "2019Q1",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
   "ticker": "BMY",
   "signal": "dso_rising",
   "quarter": "2012Q3",
-  "event_quarter": "2012Q4",
+  "event_quarter": "2013Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2015Q2",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2015Q3",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2015Q4",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2016Q2",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
   "lead_months": 12
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "dso_rising",
-  "quarter": "2024Q2",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
  },
  {
   "ticker": "CTLT",
   "signal": "dso_rising",
   "quarter": "2022Q3",
-  "event_quarter": "2023Q1",
+  "event_quarter": "2024Q3",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "ELAN",
-  "signal": "dso_rising",
-  "quarter": "2019Q3",
-  "event_quarter": "2020Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ELAN",
-  "signal": "dso_rising",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "ELAN",
@@ -4952,24 +2278,12 @@
  {
   "ticker": "ENDP",
   "signal": "dso_rising",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q1",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "dso_rising",
   "quarter": "2015Q1",
-  "event_quarter": "2015Q2",
+  "event_quarter": "2015Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "ENDP",
@@ -4977,8 +2291,7 @@
   "quarter": "2015Q2",
   "event_quarter": "2015Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
@@ -4986,33 +2299,21 @@
   "ticker": "ENDP",
   "signal": "dso_rising",
   "quarter": "2015Q3",
-  "event_quarter": "2015Q4",
+  "event_quarter": "2016Q4",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 15
  },
  {
   "ticker": "ENDP",
   "signal": "dso_rising",
   "quarter": "2020Q3",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ENDP",
-  "signal": "dso_rising",
-  "quarter": "2021Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
    "impairment"
   ],
-  "lead_months": 15
+  "lead_months": 21
  },
  {
   "ticker": "ENDP",
@@ -5021,375 +2322,121 @@
   "event_quarter": "2022Q2",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
  {
-  "ticker": "EXEL",
+  "ticker": "ENDP",
   "signal": "dso_rising",
-  "quarter": "2013Q4",
-  "event_quarter": "2014Q1",
+  "quarter": "2022Q1",
+  "event_quarter": "2022Q2",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
  {
-  "ticker": "EXEL",
+  "ticker": "ENDP",
   "signal": "dso_rising",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
+  "quarter": "2022Q2",
+  "event_quarter": "2022Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
  {
-  "ticker": "EXEL",
+  "ticker": "ENDP",
   "signal": "dso_rising",
-  "quarter": "2014Q2",
-  "event_quarter": "2015Q3",
+  "quarter": "2022Q3",
+  "event_quarter": "2023Q3",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 15
+  "lead_months": 12
+ },
+ {
+  "ticker": "ENDP",
+  "signal": "dso_rising",
+  "quarter": "2022Q4",
+  "event_quarter": "2023Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
   "signal": "dso_rising",
   "quarter": "2015Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 24
  },
  {
   "ticker": "GILD",
   "signal": "dso_rising",
   "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
+  "event_quarter": "2017Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
   "signal": "dso_rising",
   "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
+  "event_quarter": "2017Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "GILD",
-  "signal": "dso_rising",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
   "signal": "dso_rising",
   "quarter": "2020Q1",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 21
+  "lead_months": 24
  },
  {
   "ticker": "GILD",
   "signal": "dso_rising",
   "quarter": "2023Q1",
-  "event_quarter": "2023Q4",
+  "event_quarter": "2024Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2012Q2",
-  "event_quarter": "2012Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2013Q1",
-  "event_quarter": "2013Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "HALO",
   "signal": "dso_rising",
   "quarter": "2013Q3",
-  "event_quarter": "2013Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2014Q3",
   "events": [
    "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2018Q3",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2019Q2",
-  "event_quarter": "2019Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2021Q2",
-  "event_quarter": "2022Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "HALO",
-  "signal": "dso_rising",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2014Q3",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2015Q1",
-  "event_quarter": "2016Q1",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2015Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2015Q4",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
+  "ticker": "HALO",
   "signal": "dso_rising",
   "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2016Q4",
   "event_quarter": "2017Q1",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dso_rising",
-  "quarter": "2017Q1",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "JAZZ",
@@ -5402,283 +2449,85 @@
   "lead_months": 3
  },
  {
-  "ticker": "LLY",
+  "ticker": "JNJ",
   "signal": "dso_rising",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q2",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "LLY",
-  "signal": "dso_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2020Q4",
-  "event_quarter": "2021Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2023Q2",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2023Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dso_rising",
-  "quarter": "2024Q1",
+  "quarter": "2022Q4",
   "event_quarter": "2024Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 24
  },
  {
-  "ticker": "MYL",
+  "ticker": "LLY",
   "signal": "dso_rising",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "NBIX",
-  "signal": "dso_rising",
-  "quarter": "2012Q4",
-  "event_quarter": "2013Q1",
+  "quarter": "2018Q4",
+  "event_quarter": "2019Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
-  "ticker": "OGN",
+  "ticker": "MNK",
   "signal": "dso_rising",
-  "quarter": "2022Q1",
-  "event_quarter": "2023Q4",
+  "quarter": "2017Q2",
+  "event_quarter": "2018Q2",
   "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "OGN",
-  "signal": "dso_rising",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "OGN",
+  "ticker": "MNK",
   "signal": "dso_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2024Q1",
+  "quarter": "2019Q3",
+  "event_quarter": "2020Q3",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "dso_rising",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "dso_rising",
-  "quarter": "2023Q3",
-  "event_quarter": "2025Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
  },
  {
   "ticker": "PFE",
   "signal": "dso_rising",
-  "quarter": "2023Q4",
-  "event_quarter": "2025Q4",
+  "quarter": "2020Q1",
+  "event_quarter": "2021Q1",
   "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "PRGO",
+  "signal": "dso_rising",
+  "quarter": "2024Q1",
+  "event_quarter": "2026Q1",
+  "events": [
+   "revenue_drop",
    "impairment"
   ],
   "lead_months": 24
  },
  {
-  "ticker": "PFE",
-  "signal": "dso_rising",
-  "quarter": "2024Q2",
-  "event_quarter": "2025Q4",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "REGN",
-  "signal": "dso_rising",
-  "quarter": "2012Q1",
-  "event_quarter": "2012Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "REGN",
-  "signal": "dso_rising",
-  "quarter": "2021Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 15
- },
- {
   "ticker": "REGN",
   "signal": "dso_rising",
   "quarter": "2022Q2",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "REGN",
-  "signal": "dso_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "SGEN",
-  "signal": "dso_rising",
-  "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "TEVA",
   "signal": "dso_rising",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q2",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 9
  },
  {
   "ticker": "TEVA",
@@ -5686,9 +2535,7 @@
   "quarter": "2017Q1",
   "event_quarter": "2017Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
@@ -5698,105 +2545,30 @@
   "quarter": "2017Q2",
   "event_quarter": "2017Q4",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "dso_rising",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "dso_rising",
-  "quarter": "2016Q1",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "UTHR",
-  "signal": "dso_rising",
-  "quarter": "2016Q2",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "UTHR",
-  "signal": "dso_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "UTHR",
-  "signal": "dso_rising",
-  "quarter": "2016Q4",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
  },
  {
   "ticker": "UTHR",
   "signal": "dso_rising",
   "quarter": "2017Q4",
-  "event_quarter": "2018Q2",
+  "event_quarter": "2018Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "dso_rising",
-  "quarter": "2021Q3",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "UTHR",
-  "signal": "dso_rising",
-  "quarter": "2021Q4",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
   "signal": "dso_rising",
   "quarter": "2012Q1",
-  "event_quarter": "2012Q2",
+  "event_quarter": "2013Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
@@ -5813,23 +2585,23 @@
   "ticker": "VRTX",
   "signal": "dso_rising",
   "quarter": "2013Q1",
-  "event_quarter": "2013Q2",
+  "event_quarter": "2013Q4",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 9
  },
  {
   "ticker": "VRTX",
   "signal": "dso_rising",
   "quarter": "2013Q2",
-  "event_quarter": "2013Q3",
+  "event_quarter": "2013Q4",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "VRTX",
@@ -5846,53 +2618,21 @@
   "ticker": "VRTX",
   "signal": "dso_rising",
   "quarter": "2014Q2",
-  "event_quarter": "2014Q3",
+  "event_quarter": "2015Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "dso_rising",
-  "quarter": "2014Q3",
-  "event_quarter": "2014Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "dso_rising",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
- },
- {
-  "ticker": "VRTX",
-  "signal": "dso_rising",
-  "quarter": "2015Q1",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
  },
  {
   "ticker": "VTRS",
   "signal": "dso_rising",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "VTRS",
@@ -5901,142 +2641,29 @@
   "event_quarter": "2025Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 18
  },
  {
   "ticker": "ABBV",
   "signal": "dio_rising",
-  "quarter": "2015Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ABBV",
-  "signal": "dio_rising",
-  "quarter": "2015Q3",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "ABBV",
-  "signal": "dio_rising",
-  "quarter": "2015Q4",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "dio_rising",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ABBV",
-  "signal": "dio_rising",
-  "quarter": "2019Q2",
-  "event_quarter": "2020Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "ABBV",
-  "signal": "dio_rising",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "dio_rising",
-  "quarter": "2023Q2",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ACAD",
-  "signal": "dio_rising",
-  "quarter": "2021Q4",
   "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ACAD",
-  "signal": "dio_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ACAD",
-  "signal": "dio_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "AGN",
-  "signal": "dio_rising",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "AGN",
-  "signal": "dio_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AGN",
   "signal": "dio_rising",
   "quarter": "2017Q1",
-  "event_quarter": "2017Q4",
+  "event_quarter": "2019Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 9
+  "lead_months": 24
  },
  {
   "ticker": "ALKS",
@@ -6052,82 +2679,11 @@
   "ticker": "ALKS",
   "signal": "dio_rising",
   "quarter": "2020Q2",
-  "event_quarter": "2020Q4",
+  "event_quarter": "2021Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "ALKS",
-  "signal": "dio_rising",
-  "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ALKS",
-  "signal": "dio_rising",
-  "quarter": "2021Q1",
-  "event_quarter": "2022Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ALXN",
-  "signal": "dio_rising",
-  "quarter": "2015Q4",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "ALXN",
-  "signal": "dio_rising",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ALXN",
-  "signal": "dio_rising",
-  "quarter": "2016Q2",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "ALXN",
-  "signal": "dio_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "ALXN",
-  "signal": "dio_rising",
-  "quarter": "2017Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "ALXN",
@@ -6142,42 +2698,12 @@
  {
   "ticker": "ALXN",
   "signal": "dio_rising",
-  "quarter": "2018Q4",
+  "quarter": "2019Q3",
   "event_quarter": "2020Q2",
   "events": [
    "impairment"
   ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "dio_rising",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "dio_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "AMGN",
-  "signal": "dio_rising",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
+  "lead_months": 9
  },
  {
   "ticker": "AMRN",
@@ -6193,11 +2719,11 @@
   "ticker": "AMRN",
   "signal": "dio_rising",
   "quarter": "2020Q3",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 24
  },
  {
   "ticker": "AMRN",
@@ -6223,61 +2749,51 @@
   "ticker": "AMRN",
   "signal": "dio_rising",
   "quarter": "2021Q2",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dio_rising",
   "quarter": "2021Q3",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dio_rising",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "dio_rising",
   "quarter": "2022Q1",
-  "event_quarter": "2022Q2",
+  "event_quarter": "2023Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "BHC",
-  "signal": "dio_rising",
-  "quarter": "2012Q2",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BHC",
-  "signal": "dio_rising",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q3",
-  "events": [
-   "margin_drop"
-  ],
   "lead_months": 12
+ },
+ {
+  "ticker": "BHC",
+  "signal": "dio_rising",
+  "quarter": "2014Q4",
+  "event_quarter": "2016Q3",
+  "events": [
+   "impairment"
+  ],
+  "lead_months": 21
  },
  {
   "ticker": "BHC",
@@ -6286,134 +2802,79 @@
   "event_quarter": "2016Q3",
   "events": [
    "revenue_drop",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2012Q4",
-  "event_quarter": "2014Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2013Q1",
-  "event_quarter": "2014Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "dio_rising",
   "quarter": "2020Q1",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2020Q2",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2020Q4",
   "event_quarter": "2021Q1",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2021Q2",
-  "event_quarter": "2021Q3",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "dio_rising",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "dio_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q3",
+  "quarter": "2020Q2",
+  "event_quarter": "2021Q2",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "dio_rising",
+  "quarter": "2020Q3",
+  "event_quarter": "2021Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "dio_rising",
+  "quarter": "2020Q4",
+  "event_quarter": "2021Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "dio_rising",
+  "quarter": "2021Q1",
+  "event_quarter": "2022Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "dio_rising",
+  "quarter": "2021Q2",
+  "event_quarter": "2022Q2",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "dio_rising",
+  "quarter": "2021Q3",
+  "event_quarter": "2022Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "BMRN",
@@ -6434,26 +2895,6 @@
    "impairment"
   ],
   "lead_months": 6
- },
- {
-  "ticker": "BMRN",
-  "signal": "dio_rising",
-  "quarter": "2019Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
- },
- {
-  "ticker": "BMRN",
-  "signal": "dio_rising",
-  "quarter": "2024Q2",
-  "event_quarter": "2026Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
  },
  {
   "ticker": "BMY",
@@ -6470,71 +2911,21 @@
   "ticker": "BMY",
   "signal": "dio_rising",
   "quarter": "2012Q3",
-  "event_quarter": "2012Q4",
+  "event_quarter": "2013Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BMY",
   "signal": "dio_rising",
   "quarter": "2012Q4",
-  "event_quarter": "2013Q1",
+  "event_quarter": "2013Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "BMY",
-  "signal": "dio_rising",
-  "quarter": "2022Q1",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "dio_rising",
-  "quarter": "2023Q1",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "CTLT",
-  "signal": "dio_rising",
-  "quarter": "2021Q1",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "CTLT",
-  "signal": "dio_rising",
-  "quarter": "2021Q2",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "CTLT",
-  "signal": "dio_rising",
-  "quarter": "2021Q3",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
   "ticker": "ELAN",
@@ -6579,31 +2970,29 @@
  {
   "ticker": "ENDP",
   "signal": "dio_rising",
-  "quarter": "2015Q3",
-  "event_quarter": "2015Q4",
+  "quarter": "2015Q2",
+  "event_quarter": "2015Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
  {
   "ticker": "ENDP",
   "signal": "dio_rising",
-  "quarter": "2020Q3",
-  "event_quarter": "2022Q3",
+  "quarter": "2015Q3",
+  "event_quarter": "2016Q4",
   "events": [
-   "revenue_drop"
+   "impairment"
   ],
-  "lead_months": 24
+  "lead_months": 15
  },
  {
   "ticker": "ENDP",
   "signal": "dio_rising",
-  "quarter": "2020Q4",
-  "event_quarter": "2022Q3",
+  "quarter": "2020Q3",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop",
    "impairment"
   ],
   "lead_months": 21
@@ -6611,32 +3000,20 @@
  {
   "ticker": "ENDP",
   "signal": "dio_rising",
-  "quarter": "2021Q1",
-  "event_quarter": "2022Q3",
+  "quarter": "2020Q4",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop",
    "impairment"
   ],
   "lead_months": 18
  },
  {
-  "ticker": "EXEL",
+  "ticker": "ENDP",
   "signal": "dio_rising",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
+  "quarter": "2021Q1",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "EXEL",
-  "signal": "dio_rising",
-  "quarter": "2014Q2",
-  "event_quarter": "2015Q3",
-  "events": [
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 15
  },
@@ -6646,8 +3023,7 @@
   "quarter": "2015Q4",
   "event_quarter": "2016Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
@@ -6655,56 +3031,51 @@
   "ticker": "GILD",
   "signal": "dio_rising",
   "quarter": "2020Q4",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
+  ],
+  "lead_months": 15
+ },
+ {
+  "ticker": "GILD",
+  "signal": "dio_rising",
+  "quarter": "2021Q1",
+  "event_quarter": "2022Q1",
+  "events": [
+   "impairment"
   ],
   "lead_months": 12
  },
  {
   "ticker": "GILD",
   "signal": "dio_rising",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q4",
+  "quarter": "2021Q2",
+  "event_quarter": "2022Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 9
  },
  {
   "ticker": "GILD",
   "signal": "dio_rising",
-  "quarter": "2021Q2",
-  "event_quarter": "2021Q4",
+  "quarter": "2021Q3",
+  "event_quarter": "2022Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
  {
   "ticker": "GILD",
   "signal": "dio_rising",
-  "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "GILD",
-  "signal": "dio_rising",
   "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
+  "event_quarter": "2024Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 12
+  "lead_months": 15
  },
  {
   "ticker": "GILD",
@@ -6719,218 +3090,22 @@
  {
   "ticker": "HALO",
   "signal": "dio_rising",
-  "quarter": "2012Q2",
-  "event_quarter": "2012Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
   "quarter": "2016Q1",
-  "event_quarter": "2016Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2016Q4",
   "event_quarter": "2017Q1",
   "events": [
    "revenue_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2018Q3",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2019Q1",
-  "event_quarter": "2019Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2019Q2",
-  "event_quarter": "2019Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2020Q3",
-  "event_quarter": "2022Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "HALO",
-  "signal": "dio_rising",
-  "quarter": "2020Q4",
-  "event_quarter": "2022Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "HZNP",
-  "signal": "dio_rising",
-  "quarter": "2013Q3",
-  "event_quarter": "2015Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "HZNP",
-  "signal": "dio_rising",
-  "quarter": "2013Q4",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "HZNP",
-  "signal": "dio_rising",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dio_rising",
-  "quarter": "2014Q3",
-  "event_quarter": "2014Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dio_rising",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "dio_rising",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "dio_rising",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
+  "ticker": "HALO",
   "signal": "dio_rising",
   "quarter": "2016Q4",
-  "event_quarter": "2017Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "INCY",
-  "signal": "dio_rising",
-  "quarter": "2014Q1",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "INCY",
-  "signal": "dio_rising",
-  "quarter": "2014Q2",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "IONS",
-  "signal": "dio_rising",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q1",
+  "event_quarter": "2018Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 24
  },
  {
   "ticker": "IONS",
@@ -6946,11 +3121,11 @@
   "ticker": "IONS",
   "signal": "dio_rising",
   "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "IONS",
@@ -6963,15 +3138,24 @@
   "lead_months": 12
  },
  {
+  "ticker": "JNJ",
+  "signal": "dio_rising",
+  "quarter": "2022Q4",
+  "event_quarter": "2024Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 24
+ },
+ {
   "ticker": "LLY",
   "signal": "dio_rising",
   "quarter": "2012Q4",
-  "event_quarter": "2014Q2",
+  "event_quarter": "2014Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 24
  },
  {
   "ticker": "LLY",
@@ -6979,8 +3163,7 @@
   "quarter": "2013Q2",
   "event_quarter": "2014Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
@@ -6988,207 +3171,140 @@
   "ticker": "LLY",
   "signal": "dio_rising",
   "quarter": "2013Q3",
-  "event_quarter": "2014Q2",
+  "event_quarter": "2014Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "MNK",
   "signal": "dio_rising",
   "quarter": "2015Q3",
-  "event_quarter": "2016Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "MRK",
-  "signal": "dio_rising",
-  "quarter": "2020Q3",
-  "event_quarter": "2020Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dio_rising",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dio_rising",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "dio_rising",
-  "quarter": "2024Q1",
-  "event_quarter": "2024Q4",
+  "event_quarter": "2017Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 24
  },
  {
-  "ticker": "MRNA",
+  "ticker": "MNK",
   "signal": "dio_rising",
-  "quarter": "2024Q2",
-  "event_quarter": "2024Q4",
+  "quarter": "2016Q4",
+  "event_quarter": "2017Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "OGN",
-  "signal": "dio_rising",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q2",
-  "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "OGN",
+  "ticker": "MNK",
   "signal": "dio_rising",
-  "quarter": "2023Q3",
-  "event_quarter": "2025Q1",
+  "quarter": "2019Q3",
+  "event_quarter": "2020Q3",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "dio_rising",
+  "quarter": "2020Q1",
+  "event_quarter": "2021Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "PFE",
   "signal": "dio_rising",
-  "quarter": "2024Q2",
-  "event_quarter": "2025Q4",
+  "quarter": "2012Q3",
+  "event_quarter": "2013Q3",
   "events": [
-   "impairment"
+   "revenue_drop"
   ],
-  "lead_months": 18
+  "lead_months": 12
  },
  {
-  "ticker": "SGEN",
+  "ticker": "PRGO",
   "signal": "dio_rising",
-  "quarter": "2021Q3",
+  "quarter": "2020Q4",
   "event_quarter": "2021Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
+ },
+ {
+  "ticker": "PRGO",
+  "signal": "dio_rising",
+  "quarter": "2021Q1",
+  "event_quarter": "2022Q1",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "TEVA",
   "signal": "dio_rising",
   "quarter": "2019Q4",
-  "event_quarter": "2021Q1",
+  "event_quarter": "2020Q3",
   "events": [
-   "revenue_drop"
+   "revenue_drop",
+   "impairment"
   ],
-  "lead_months": 15
+  "lead_months": 9
  },
  {
   "ticker": "UTHR",
   "signal": "dio_rising",
-  "quarter": "2016Q1",
-  "event_quarter": "2018Q1",
+  "quarter": "2017Q2",
+  "event_quarter": "2019Q2",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 24
  },
  {
   "ticker": "UTHR",
   "signal": "dio_rising",
-  "quarter": "2017Q2",
-  "event_quarter": "2018Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "UTHR",
-  "signal": "dio_rising",
   "quarter": "2017Q3",
-  "event_quarter": "2018Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "dio_rising",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q2",
+  "event_quarter": "2019Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "UTHR",
   "signal": "dio_rising",
   "quarter": "2019Q1",
-  "event_quarter": "2019Q3",
+  "event_quarter": "2020Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "UTHR",
   "signal": "dio_rising",
   "quarter": "2019Q2",
-  "event_quarter": "2019Q4",
+  "event_quarter": "2020Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "UTHR",
   "signal": "dio_rising",
   "quarter": "2019Q3",
-  "event_quarter": "2020Q1",
+  "event_quarter": "2020Q3",
   "events": [
    "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "dio_rising",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q2",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 12
  },
@@ -7196,87 +3312,42 @@
   "ticker": "VRTX",
   "signal": "dio_rising",
   "quarter": "2012Q3",
-  "event_quarter": "2012Q4",
+  "event_quarter": "2013Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "VRTX",
   "signal": "dio_rising",
   "quarter": "2013Q4",
-  "event_quarter": "2014Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "dio_rising",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "dio_rising",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "dio_rising",
-  "quarter": "2014Q3",
   "event_quarter": "2014Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "dio_rising",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "VRTX",
   "signal": "dio_rising",
-  "quarter": "2015Q1",
-  "event_quarter": "2015Q4",
+  "quarter": "2014Q1",
+  "event_quarter": "2015Q1",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
   "signal": "dio_rising",
-  "quarter": "2015Q2",
-  "event_quarter": "2015Q4",
+  "quarter": "2014Q2",
+  "event_quarter": "2015Q2",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "VRTX",
@@ -7294,119 +3365,7 @@
   "quarter": "2017Q1",
   "event_quarter": "2017Q3",
   "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2015Q4",
-  "event_quarter": "2016Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q2",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q4",
-  "events": [
    "impairment"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q3",
-  "event_quarter": "2021Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q3",
-  "event_quarter": "2023Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ABBV",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ACAD",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q2",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ACAD",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q3",
-  "event_quarter": "2024Q1",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 6
  },
@@ -7424,265 +3383,134 @@
   "ticker": "ALKS",
   "signal": "gross_margin_drop",
   "quarter": "2022Q1",
-  "event_quarter": "2022Q3",
+  "event_quarter": "2023Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "ALKS",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ALNY",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ALNY",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q4",
-  "event_quarter": "2025Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q2",
-  "event_quarter": "2021Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q2",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q3",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q4",
-  "event_quarter": "2024Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "AMGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2024Q1",
-  "event_quarter": "2024Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "AMRN",
   "signal": "gross_margin_drop",
   "quarter": "2022Q1",
-  "event_quarter": "2022Q2",
+  "event_quarter": "2023Q1",
   "events": [
    "revenue_drop"
+  ],
+  "lead_months": 12
+ },
+ {
+  "ticker": "BHC",
+  "signal": "gross_margin_drop",
+  "quarter": "2016Q2",
+  "event_quarter": "2016Q3",
+  "events": [
+   "revenue_drop",
+   "impairment"
   ],
   "lead_months": 3
  },
  {
   "ticker": "BHC",
   "signal": "gross_margin_drop",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "gross_margin_drop",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BHC",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q4",
   "event_quarter": "2017Q3",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 9
+  "lead_months": 12
+ },
+ {
+  "ticker": "BHC",
+  "signal": "gross_margin_drop",
+  "quarter": "2016Q4",
+  "event_quarter": "2017Q4",
+  "events": [
+   "revenue_drop",
+   "impairment"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "BHC",
   "signal": "gross_margin_drop",
   "quarter": "2017Q3",
-  "event_quarter": "2018Q2",
+  "event_quarter": "2018Q1",
   "events": [
-   "revenue_drop",
    "impairment"
   ],
-  "lead_months": 9
+  "lead_months": 6
  },
  {
   "ticker": "BHC",
   "signal": "gross_margin_drop",
   "quarter": "2017Q4",
-  "event_quarter": "2018Q4",
+  "event_quarter": "2018Q1",
   "events": [
    "impairment"
+  ],
+  "lead_months": 3
+ },
+ {
+  "ticker": "BIIB",
+  "signal": "gross_margin_drop",
+  "quarter": "2020Q4",
+  "event_quarter": "2021Q4",
+  "events": [
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "gross_margin_drop",
-  "quarter": "2019Q1",
-  "event_quarter": "2021Q1",
+  "quarter": "2021Q1",
+  "event_quarter": "2022Q1",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 24
- },
- {
-  "ticker": "BIIB",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q4",
-  "event_quarter": "2021Q1",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BIIB",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "gross_margin_drop",
   "quarter": "2021Q2",
-  "event_quarter": "2021Q3",
+  "event_quarter": "2022Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "gross_margin_drop",
   "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q3",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "gross_margin_drop",
   "quarter": "2021Q4",
-  "event_quarter": "2022Q2",
+  "event_quarter": "2022Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
   "signal": "gross_margin_drop",
   "quarter": "2022Q1",
-  "event_quarter": "2022Q4",
+  "event_quarter": "2023Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "BIIB",
@@ -7690,86 +3518,29 @@
   "quarter": "2022Q2",
   "event_quarter": "2023Q2",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "BLUE",
   "signal": "gross_margin_drop",
-  "quarter": "2019Q1",
-  "event_quarter": "2019Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BLUE",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q2",
-  "event_quarter": "2019Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BLUE",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q3",
-  "event_quarter": "2019Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BLUE",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q4",
-  "event_quarter": "2021Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BLUE",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q4",
-  "event_quarter": "2021Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "BLUE",
-  "signal": "gross_margin_drop",
   "quarter": "2021Q1",
-  "event_quarter": "2021Q2",
+  "event_quarter": "2022Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BLUE",
   "signal": "gross_margin_drop",
   "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
+  "event_quarter": "2022Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "BMRN",
@@ -7790,163 +3561,26 @@
    "impairment"
   ],
   "lead_months": 3
- },
- {
-  "ticker": "BMRN",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q3",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 24
- },
- {
-  "ticker": "BMRN",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q2",
-  "event_quarter": "2020Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "BMY",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q4",
-  "event_quarter": "2017Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "BMY",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q2",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "BMY",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q4",
-  "event_quarter": "2024Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 21
- },
- {
-  "ticker": "BMY",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "BMY",
-  "signal": "gross_margin_drop",
-  "quarter": "2024Q1",
-  "event_quarter": "2024Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
  },
  {
   "ticker": "CTLT",
   "signal": "gross_margin_drop",
   "quarter": "2022Q3",
-  "event_quarter": "2023Q1",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ELAN",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q1",
-  "event_quarter": "2020Q2",
+  "event_quarter": "2024Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q3",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ENDP",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q3",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "ENDP",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q3",
-  "event_quarter": "2015Q1",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "ENDP",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q1",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 24
  },
  {
   "ticker": "ENDP",
   "signal": "gross_margin_drop",
   "quarter": "2015Q1",
-  "event_quarter": "2015Q2",
+  "event_quarter": "2015Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "ENDP",
@@ -7954,8 +3588,7 @@
   "quarter": "2015Q2",
   "event_quarter": "2015Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
@@ -7963,23 +3596,21 @@
   "ticker": "ENDP",
   "signal": "gross_margin_drop",
   "quarter": "2015Q3",
-  "event_quarter": "2015Q4",
+  "event_quarter": "2016Q4",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 15
  },
  {
   "ticker": "ENDP",
   "signal": "gross_margin_drop",
   "quarter": "2015Q4",
-  "event_quarter": "2016Q1",
+  "event_quarter": "2016Q4",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "ENDP",
@@ -8018,12 +3649,12 @@
   "ticker": "ENDP",
   "signal": "gross_margin_drop",
   "quarter": "2017Q3",
-  "event_quarter": "2017Q4",
+  "event_quarter": "2018Q1",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "ENDP",
@@ -8042,107 +3673,59 @@
   "quarter": "2019Q2",
   "event_quarter": "2019Q4",
   "events": [
-   "revenue_drop",
    "impairment"
   ],
   "lead_months": 6
  },
  {
-  "ticker": "EXEL",
+  "ticker": "ENDP",
   "signal": "gross_margin_drop",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
+  "quarter": "2022Q3",
+  "event_quarter": "2023Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
-  "ticker": "EXEL",
+  "ticker": "ENDP",
   "signal": "gross_margin_drop",
-  "quarter": "2014Q2",
-  "event_quarter": "2015Q3",
+  "quarter": "2022Q4",
+  "event_quarter": "2023Q4",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 15
- },
- {
-  "ticker": "EXEL",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q3",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
   "signal": "gross_margin_drop",
   "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
+  "event_quarter": "2017Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 9
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
   "signal": "gross_margin_drop",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q3",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
   "signal": "gross_margin_drop",
   "quarter": "2016Q4",
-  "event_quarter": "2017Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "GILD",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q2",
   "event_quarter": "2017Q4",
   "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
- },
- {
-  "ticker": "GILD",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "GILD",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
+  "lead_months": 12
  },
  {
   "ticker": "GILD",
@@ -8157,27 +3740,6 @@
  {
   "ticker": "GILD",
   "signal": "gross_margin_drop",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q4",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "GILD",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q4",
-  "event_quarter": "2022Q1",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "GILD",
-  "signal": "gross_margin_drop",
   "quarter": "2022Q3",
   "event_quarter": "2024Q1",
   "events": [
@@ -8191,8 +3753,7 @@
   "quarter": "2023Q3",
   "event_quarter": "2024Q1",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
@@ -8207,311 +3768,94 @@
   "lead_months": 3
  },
  {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2012Q3",
-  "event_quarter": "2013Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2013Q1",
-  "event_quarter": "2013Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2013Q2",
-  "event_quarter": "2013Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "HALO",
+  "ticker": "LLY",
   "signal": "gross_margin_drop",
   "quarter": "2013Q4",
-  "event_quarter": "2014Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q2",
-  "event_quarter": "2019Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q3",
-  "event_quarter": "2019Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q4",
-  "event_quarter": "2020Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q2",
-  "event_quarter": "2022Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q3",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "HALO",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q2",
-  "event_quarter": "2023Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q2",
   "event_quarter": "2014Q4",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
-  "ticker": "HZNP",
+  "ticker": "LLY",
   "signal": "gross_margin_drop",
-  "quarter": "2014Q4",
+  "quarter": "2014Q1",
   "event_quarter": "2015Q1",
   "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "gross_margin_drop",
-  "quarter": "2015Q1",
-  "event_quarter": "2016Q1",
-  "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "HZNP",
+  "ticker": "LLY",
   "signal": "gross_margin_drop",
-  "quarter": "2015Q3",
-  "event_quarter": "2016Q3",
+  "quarter": "2014Q2",
+  "event_quarter": "2015Q2",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "HZNP",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q1",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "HZNP",
+  "ticker": "MNK",
   "signal": "gross_margin_drop",
   "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q4",
-  "event_quarter": "2017Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "HZNP",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q1",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "INCY",
-  "signal": "gross_margin_drop",
-  "quarter": "2015Q2",
-  "event_quarter": "2016Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "LLY",
-  "signal": "gross_margin_drop",
-  "quarter": "2013Q4",
-  "event_quarter": "2014Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "LLY",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q1",
-  "event_quarter": "2014Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "LLY",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q2",
-  "event_quarter": "2014Q4",
+  "event_quarter": "2017Q3",
   "events": [
    "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "LLY",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q2",
-  "event_quarter": "2021Q2",
-  "events": [
-   "margin_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "LLY",
+  "ticker": "MNK",
   "signal": "gross_margin_drop",
-  "quarter": "2020Q4",
-  "event_quarter": "2021Q2",
+  "quarter": "2017Q2",
+  "event_quarter": "2018Q2",
   "events": [
-   "margin_drop"
+   "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
+ },
+ {
+  "ticker": "MNK",
+  "signal": "gross_margin_drop",
+  "quarter": "2019Q3",
+  "event_quarter": "2020Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 12
  },
  {
   "ticker": "MRK",
   "signal": "gross_margin_drop",
   "quarter": "2013Q1",
-  "event_quarter": "2013Q4",
+  "event_quarter": "2014Q1",
   "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "MRK",
-  "signal": "gross_margin_drop",
-  "quarter": "2013Q2",
-  "event_quarter": "2014Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
+   "revenue_drop"
   ],
   "lead_months": 12
  },
  {
   "ticker": "MRK",
   "signal": "gross_margin_drop",
-  "quarter": "2013Q4",
-  "event_quarter": "2015Q1",
+  "quarter": "2013Q2",
+  "event_quarter": "2015Q2",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 15
+  "lead_months": 24
+ },
+ {
+  "ticker": "MRK",
+  "signal": "gross_margin_drop",
+  "quarter": "2013Q4",
+  "event_quarter": "2015Q4",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 24
  },
  {
   "ticker": "MRK",
@@ -8527,236 +3871,14 @@
   "ticker": "MRK",
   "signal": "gross_margin_drop",
   "quarter": "2014Q3",
-  "event_quarter": "2015Q2",
+  "event_quarter": "2015Q3",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 9
- },
- {
-  "ticker": "MRNA",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q4",
-  "event_quarter": "2022Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "MRNA",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q1",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "MRNA",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q2",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q3",
-  "event_quarter": "2022Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q1",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q1",
-  "event_quarter": "2023Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "MRNA",
-  "signal": "gross_margin_drop",
-  "quarter": "2024Q1",
-  "event_quarter": "2024Q4",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2015Q4",
-  "event_quarter": "2017Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q1",
-  "event_quarter": "2017Q3",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q3",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q2",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q3",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "MYL",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q3",
-  "event_quarter": "2019Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "OGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "OGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q4",
-  "events": [
-   "margin_drop"
-  ],
   "lead_months": 12
  },
  {
   "ticker": "OGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q2",
-  "event_quarter": "2024Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "OGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q3",
-  "event_quarter": "2025Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "OGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2023Q4",
-  "event_quarter": "2025Q2",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "OGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2024Q1",
-  "event_quarter": "2025Q3",
-  "events": [
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "PFE",
   "signal": "gross_margin_drop",
   "quarter": "2023Q4",
   "event_quarter": "2025Q4",
@@ -8766,88 +3888,44 @@
   "lead_months": 24
  },
  {
-  "ticker": "PRGO",
+  "ticker": "OGN",
   "signal": "gross_margin_drop",
-  "quarter": "2016Q2",
-  "event_quarter": "2016Q4",
+  "quarter": "2024Q1",
+  "event_quarter": "2025Q4",
   "events": [
    "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 21
  },
  {
   "ticker": "PRGO",
   "signal": "gross_margin_drop",
-  "quarter": "2016Q3",
-  "event_quarter": "2016Q4",
-  "events": [
-   "impairment"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "REGN",
-  "signal": "gross_margin_drop",
-  "quarter": "2012Q1",
-  "event_quarter": "2012Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 9
- },
- {
-  "ticker": "SGEN",
-  "signal": "gross_margin_drop",
-  "quarter": "2020Q3",
+  "quarter": "2019Q3",
   "event_quarter": "2021Q3",
+  "events": [
+   "revenue_drop"
+  ],
+  "lead_months": 24
+ },
+ {
+  "ticker": "PRGO",
+  "signal": "gross_margin_drop",
+  "quarter": "2020Q1",
+  "event_quarter": "2021Q1",
   "events": [
    "revenue_drop"
   ],
   "lead_months": 12
  },
  {
-  "ticker": "SGEN",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q1",
-  "event_quarter": "2021Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "SGEN",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q2",
-  "event_quarter": "2021Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "SGEN",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q3",
-  "event_quarter": "2021Q4",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
   "ticker": "TEVA",
   "signal": "gross_margin_drop",
   "quarter": "2016Q3",
-  "event_quarter": "2017Q1",
+  "event_quarter": "2017Q2",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 9
  },
  {
   "ticker": "TEVA",
@@ -8855,9 +3933,7 @@
   "quarter": "2016Q4",
   "event_quarter": "2017Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
@@ -8867,9 +3943,7 @@
   "quarter": "2017Q1",
   "event_quarter": "2017Q2",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
  },
@@ -8879,9 +3953,7 @@
   "quarter": "2017Q2",
   "event_quarter": "2017Q4",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 6
  },
@@ -8891,180 +3963,51 @@
   "quarter": "2017Q3",
   "event_quarter": "2017Q4",
   "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 3
- },
- {
-  "ticker": "TEVA",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q4",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q2",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "TEVA",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q3",
-  "event_quarter": "2019Q1",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q4",
-  "event_quarter": "2019Q2",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "TEVA",
-  "signal": "gross_margin_drop",
-  "quarter": "2019Q1",
-  "event_quarter": "2020Q2",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 15
  },
  {
   "ticker": "TEVA",
   "signal": "gross_margin_drop",
   "quarter": "2020Q4",
-  "event_quarter": "2022Q1",
+  "event_quarter": "2022Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 15
- },
- {
-  "ticker": "UTHR",
-  "signal": "gross_margin_drop",
-  "quarter": "2016Q3",
-  "event_quarter": "2018Q1",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 18
- },
- {
-  "ticker": "UTHR",
-  "signal": "gross_margin_drop",
-  "quarter": "2017Q1",
-  "event_quarter": "2018Q2",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 15
+  "lead_months": 24
  },
  {
   "ticker": "UTHR",
   "signal": "gross_margin_drop",
   "quarter": "2017Q4",
-  "event_quarter": "2018Q2",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q1",
-  "event_quarter": "2018Q3",
-  "events": [
-   "revenue_drop",
-   "margin_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "gross_margin_drop",
-  "quarter": "2018Q2",
   "event_quarter": "2018Q4",
   "events": [
    "revenue_drop"
   ],
-  "lead_months": 6
+  "lead_months": 12
  },
  {
-  "ticker": "UTHR",
+  "ticker": "VRTX",
   "signal": "gross_margin_drop",
-  "quarter": "2018Q3",
-  "event_quarter": "2019Q1",
+  "quarter": "2012Q2",
+  "event_quarter": "2013Q1",
   "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 6
- },
- {
-  "ticker": "UTHR",
-  "signal": "gross_margin_drop",
-  "quarter": "2022Q4",
-  "event_quarter": "2023Q3",
-  "events": [
-   "margin_drop"
+   "revenue_drop",
+   "impairment"
   ],
   "lead_months": 9
  },
  {
   "ticker": "VRTX",
   "signal": "gross_margin_drop",
-  "quarter": "2012Q2",
-  "event_quarter": "2012Q3",
-  "events": [
-   "revenue_drop",
-   "impairment",
-   "margin_drop"
-  ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "gross_margin_drop",
   "quarter": "2012Q3",
-  "event_quarter": "2012Q4",
+  "event_quarter": "2013Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 3
+  "lead_months": 6
  },
  {
   "ticker": "VRTX",
@@ -9081,43 +4024,22 @@
   "ticker": "VRTX",
   "signal": "gross_margin_drop",
   "quarter": "2013Q1",
-  "event_quarter": "2013Q2",
+  "event_quarter": "2013Q4",
   "events": [
    "revenue_drop",
    "impairment"
   ],
-  "lead_months": 3
- },
- {
-  "ticker": "VRTX",
-  "signal": "gross_margin_drop",
-  "quarter": "2014Q4",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 12
- },
- {
-  "ticker": "VRTX",
-  "signal": "gross_margin_drop",
-  "quarter": "2015Q2",
-  "event_quarter": "2015Q4",
-  "events": [
-   "margin_drop"
-  ],
-  "lead_months": 6
+  "lead_months": 9
  },
  {
   "ticker": "VRTX",
   "signal": "gross_margin_drop",
   "quarter": "2015Q3",
-  "event_quarter": "2016Q1",
+  "event_quarter": "2017Q3",
   "events": [
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
-  "lead_months": 6
+  "lead_months": 24
  },
  {
   "ticker": "VRTX",
@@ -9158,16 +4080,6 @@
    "impairment"
   ],
   "lead_months": 3
- },
- {
-  "ticker": "VTRS",
-  "signal": "gross_margin_drop",
-  "quarter": "2021Q4",
-  "event_quarter": "2022Q3",
-  "events": [
-   "revenue_drop"
-  ],
-  "lead_months": 9
  },
  {
   "ticker": "VTRS",
@@ -9186,8 +4098,7 @@
   "event_quarter": "2025Q1",
   "events": [
    "revenue_drop",
-   "impairment",
-   "margin_drop"
+   "impairment"
   ],
   "lead_months": 9
  }

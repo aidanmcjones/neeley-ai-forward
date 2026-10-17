@@ -1,306 +1,464 @@
 {
+  "version": 2,
   "universe": 50,
-  "firm_quarters": 1466,
-  "companies_observed": 44,
+  "universe_note": "hand-selected 50 pharma/biotech filers incl. later-acquired or bankrupt companies",
+  "firm_quarters": 1410,
+  "companies_observed": 43,
   "window_quarters": 8,
   "period": "2012-2024",
+  "primary_event": "hard (revenue_drop or impairment)",
   "signals": {
     "inventory_outpaces_revenue": {
-      "n_fired": 490,
-      "n_observed": 1378,
+      "n_fired": 480,
+      "episodes": 180,
+      "firms": 39,
       "events": {
         "revenue_drop": {
-          "hits": 104,
-          "n": 490,
-          "hit_rate": 0.212,
-          "base_rate": 0.193,
-          "lift": 1.1,
-          "ci95": [
-            0.178,
-            0.251
+          "hits": 86,
+          "n": 480,
+          "hit_rate": 0.179,
+          "rate_when_not_fired": 0.151,
+          "lift": 1.18,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.147,
+            0.216
           ]
         },
         "impairment": {
-          "hits": 56,
-          "n": 490,
-          "hit_rate": 0.114,
-          "base_rate": 0.115,
-          "lift": 0.99,
-          "ci95": [
-            0.089,
-            0.146
+          "hits": 46,
+          "n": 480,
+          "hit_rate": 0.096,
+          "rate_when_not_fired": 0.109,
+          "lift": 0.88,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.073,
+            0.125
           ]
         },
         "margin_drop": {
-          "hits": 149,
-          "n": 490,
-          "hit_rate": 0.304,
-          "base_rate": 0.245,
-          "lift": 1.24,
-          "ci95": [
-            0.265,
-            0.346
+          "hits": 99,
+          "n": 480,
+          "hit_rate": 0.206,
+          "rate_when_not_fired": 0.143,
+          "lift": 1.44,
+          "lift_ci95_firm_clustered": [
+            1.08,
+            1.9
+          ],
+          "wilson_ci95_hit_rate": [
+            0.172,
+            0.245
           ]
         },
-        "any": {
-          "hits": 224,
-          "n": 490,
-          "hit_rate": 0.457,
-          "base_rate": 0.409,
-          "lift": 1.12,
-          "ci95": [
-            0.414,
-            0.501
+        "hard": {
+          "hits": 123,
+          "n": 480,
+          "hit_rate": 0.256,
+          "rate_when_not_fired": 0.218,
+          "lift": 1.17,
+          "lift_ci95_firm_clustered": [
+            0.83,
+            1.69
+          ],
+          "wilson_ci95_hit_rate": [
+            0.219,
+            0.297
           ]
+        }
+      },
+      "within_firm_hard": {
+        "firms": 39,
+        "mean_pp": 5.2,
+        "ci95_pp": [
+          -1.0,
+          11.9
+        ],
+        "firms_positive": 19
+      },
+      "by_size_hard": {
+        "large": {
+          "hit": 0.372,
+          "not_fired": 0.235
+        },
+        "mid": {
+          "hit": 0.203,
+          "not_fired": 0.269
+        },
+        "small": {
+          "hit": 0.224,
+          "not_fired": 0.139
         }
       }
     },
     "receivables_outpace_revenue": {
-      "n_fired": 414,
-      "n_observed": 1338,
+      "n_fired": 372,
+      "episodes": 180,
+      "firms": 38,
       "events": {
         "revenue_drop": {
-          "hits": 80,
-          "n": 414,
-          "hit_rate": 0.193,
-          "base_rate": 0.199,
-          "lift": 0.97,
-          "ci95": [
-            0.158,
-            0.234
+          "hits": 50,
+          "n": 372,
+          "hit_rate": 0.134,
+          "rate_when_not_fired": 0.169,
+          "lift": 0.79,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.103,
+            0.173
           ]
         },
         "impairment": {
-          "hits": 44,
-          "n": 414,
-          "hit_rate": 0.106,
-          "base_rate": 0.119,
-          "lift": 0.89,
-          "ci95": [
-            0.08,
+          "hits": 39,
+          "n": 372,
+          "hit_rate": 0.105,
+          "rate_when_not_fired": 0.109,
+          "lift": 0.96,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.078,
             0.14
           ]
         },
         "margin_drop": {
-          "hits": 131,
-          "n": 414,
-          "hit_rate": 0.316,
-          "base_rate": 0.248,
-          "lift": 1.28,
-          "ci95": [
-            0.273,
-            0.363
+          "hits": 85,
+          "n": 372,
+          "hit_rate": 0.228,
+          "rate_when_not_fired": 0.143,
+          "lift": 1.6,
+          "lift_ci95_firm_clustered": [
+            1.0,
+            2.33
+          ],
+          "wilson_ci95_hit_rate": [
+            0.189,
+            0.274
           ]
         },
-        "any": {
-          "hits": 186,
-          "n": 414,
-          "hit_rate": 0.449,
-          "base_rate": 0.416,
-          "lift": 1.08,
-          "ci95": [
-            0.402,
-            0.497
+        "hard": {
+          "hits": 75,
+          "n": 372,
+          "hit_rate": 0.202,
+          "rate_when_not_fired": 0.245,
+          "lift": 0.82,
+          "lift_ci95_firm_clustered": [
+            0.57,
+            1.13
+          ],
+          "wilson_ci95_hit_rate": [
+            0.164,
+            0.245
           ]
+        }
+      },
+      "within_firm_hard": {
+        "firms": 38,
+        "mean_pp": -1.2,
+        "ci95_pp": [
+          -8.5,
+          6.3
+        ],
+        "firms_positive": 13
+      },
+      "by_size_hard": {
+        "large": {
+          "hit": 0.259,
+          "not_fired": 0.28
+        },
+        "mid": {
+          "hit": 0.271,
+          "not_fired": 0.25
+        },
+        "small": {
+          "hit": 0.125,
+          "not_fired": 0.181
         }
       }
     },
     "dso_rising": {
-      "n_fired": 331,
-      "n_observed": 1336,
+      "n_fired": 297,
+      "episodes": 154,
+      "firms": 38,
       "events": {
         "revenue_drop": {
-          "hits": 75,
-          "n": 331,
-          "hit_rate": 0.227,
-          "base_rate": 0.198,
-          "lift": 1.15,
-          "ci95": [
-            0.185,
-            0.275
+          "hits": 48,
+          "n": 297,
+          "hit_rate": 0.162,
+          "rate_when_not_fired": 0.159,
+          "lift": 1.02,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.124,
+            0.208
           ]
         },
         "impairment": {
-          "hits": 30,
-          "n": 331,
-          "hit_rate": 0.091,
-          "base_rate": 0.119,
-          "lift": 0.76,
-          "ci95": [
-            0.064,
-            0.126
+          "hits": 28,
+          "n": 297,
+          "hit_rate": 0.094,
+          "rate_when_not_fired": 0.112,
+          "lift": 0.84,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.066,
+            0.133
           ]
         },
         "margin_drop": {
-          "hits": 117,
-          "n": 331,
-          "hit_rate": 0.353,
-          "base_rate": 0.249,
-          "lift": 1.42,
-          "ci95": [
-            0.304,
-            0.406
+          "hits": 76,
+          "n": 297,
+          "hit_rate": 0.256,
+          "rate_when_not_fired": 0.141,
+          "lift": 1.81,
+          "lift_ci95_firm_clustered": [
+            1.17,
+            2.6
+          ],
+          "wilson_ci95_hit_rate": [
+            0.21,
+            0.308
           ]
         },
-        "any": {
-          "hits": 159,
-          "n": 331,
-          "hit_rate": 0.48,
-          "base_rate": 0.415,
-          "lift": 1.16,
-          "ci95": [
-            0.427,
-            0.534
+        "hard": {
+          "hits": 63,
+          "n": 297,
+          "hit_rate": 0.212,
+          "rate_when_not_fired": 0.239,
+          "lift": 0.89,
+          "lift_ci95_firm_clustered": [
+            0.6,
+            1.22
+          ],
+          "wilson_ci95_hit_rate": [
+            0.169,
+            0.262
           ]
+        }
+      },
+      "within_firm_hard": {
+        "firms": 38,
+        "mean_pp": -1.9,
+        "ci95_pp": [
+          -9.4,
+          5.0
+        ],
+        "firms_positive": 12
+      },
+      "by_size_hard": {
+        "large": {
+          "hit": 0.267,
+          "not_fired": 0.277
+        },
+        "mid": {
+          "hit": 0.257,
+          "not_fired": 0.254
+        },
+        "small": {
+          "hit": 0.156,
+          "not_fired": 0.159
         }
       }
     },
     "dio_rising": {
-      "n_fired": 329,
-      "n_observed": 1210,
+      "n_fired": 322,
+      "episodes": 161,
+      "firms": 36,
       "events": {
         "revenue_drop": {
-          "hits": 62,
-          "n": 329,
-          "hit_rate": 0.188,
-          "base_rate": 0.202,
-          "lift": 0.93,
-          "ci95": [
-            0.15,
-            0.234
+          "hits": 49,
+          "n": 322,
+          "hit_rate": 0.152,
+          "rate_when_not_fired": 0.159,
+          "lift": 0.96,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.117,
+            0.195
           ]
         },
         "impairment": {
-          "hits": 30,
-          "n": 329,
-          "hit_rate": 0.091,
-          "base_rate": 0.113,
-          "lift": 0.81,
-          "ci95": [
-            0.065,
-            0.127
+          "hits": 27,
+          "n": 322,
+          "hit_rate": 0.084,
+          "rate_when_not_fired": 0.134,
+          "lift": 0.63,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.058,
+            0.119
           ]
         },
         "margin_drop": {
-          "hits": 95,
-          "n": 329,
-          "hit_rate": 0.289,
-          "base_rate": 0.274,
-          "lift": 1.06,
-          "ci95": [
-            0.242,
-            0.34
+          "hits": 70,
+          "n": 322,
+          "hit_rate": 0.217,
+          "rate_when_not_fired": 0.174,
+          "lift": 1.25,
+          "lift_ci95_firm_clustered": [
+            0.88,
+            1.71
+          ],
+          "wilson_ci95_hit_rate": [
+            0.176,
+            0.266
           ]
         },
-        "any": {
-          "hits": 134,
-          "n": 329,
-          "hit_rate": 0.407,
-          "base_rate": 0.427,
-          "lift": 0.95,
-          "ci95": [
-            0.356,
-            0.461
+        "hard": {
+          "hits": 72,
+          "n": 322,
+          "hit_rate": 0.224,
+          "rate_when_not_fired": 0.244,
+          "lift": 0.92,
+          "lift_ci95_firm_clustered": [
+            0.61,
+            1.31
+          ],
+          "wilson_ci95_hit_rate": [
+            0.182,
+            0.272
           ]
+        }
+      },
+      "within_firm_hard": {
+        "firms": 36,
+        "mean_pp": 1.2,
+        "ci95_pp": [
+          -6.5,
+          8.4
+        ],
+        "firms_positive": 13
+      },
+      "by_size_hard": {
+        "large": {
+          "hit": 0.289,
+          "not_fired": 0.273
+        },
+        "mid": {
+          "hit": 0.158,
+          "not_fired": 0.279
+        },
+        "small": {
+          "hit": 0.234,
+          "not_fired": 0.152
         }
       }
     },
     "gross_margin_drop": {
-      "n_fired": 303,
-      "n_observed": 1258,
+      "n_fired": 256,
+      "episodes": 137,
+      "firms": 35,
       "events": {
         "revenue_drop": {
-          "hits": 85,
-          "n": 303,
-          "hit_rate": 0.281,
-          "base_rate": 0.203,
-          "lift": 1.38,
-          "ci95": [
-            0.233,
-            0.334
+          "hits": 46,
+          "n": 256,
+          "hit_rate": 0.18,
+          "rate_when_not_fired": 0.157,
+          "lift": 1.14,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.138,
+            0.231
           ]
         },
         "impairment": {
-          "hits": 52,
-          "n": 303,
-          "hit_rate": 0.172,
-          "base_rate": 0.111,
-          "lift": 1.54,
-          "ci95": [
-            0.133,
-            0.218
+          "hits": 39,
+          "n": 256,
+          "hit_rate": 0.152,
+          "rate_when_not_fired": 0.102,
+          "lift": 1.49,
+          "lift_ci95_firm_clustered": null,
+          "wilson_ci95_hit_rate": [
+            0.113,
+            0.201
           ]
         },
         "margin_drop": {
-          "hits": 135,
-          "n": 303,
-          "hit_rate": 0.446,
-          "base_rate": 0.277,
-          "lift": 1.61,
-          "ci95": [
-            0.391,
-            0.502
+          "hits": 73,
+          "n": 256,
+          "hit_rate": 0.285,
+          "rate_when_not_fired": 0.163,
+          "lift": 1.75,
+          "lift_ci95_firm_clustered": [
+            1.29,
+            2.44
+          ],
+          "wilson_ci95_hit_rate": [
+            0.233,
+            0.343
           ]
         },
-        "any": {
-          "hits": 180,
-          "n": 303,
-          "hit_rate": 0.594,
-          "base_rate": 0.426,
-          "lift": 1.39,
-          "ci95": [
-            0.538,
-            0.648
+        "hard": {
+          "hits": 72,
+          "n": 256,
+          "hit_rate": 0.281,
+          "rate_when_not_fired": 0.224,
+          "lift": 1.25,
+          "lift_ci95_firm_clustered": [
+            0.82,
+            1.76
+          ],
+          "wilson_ci95_hit_rate": [
+            0.23,
+            0.339
           ]
+        }
+      },
+      "within_firm_hard": {
+        "firms": 34,
+        "mean_pp": 1.7,
+        "ci95_pp": [
+          -6.8,
+          10.0
+        ],
+        "firms_positive": 13
+      },
+      "by_size_hard": {
+        "large": {
+          "hit": 0.295,
+          "not_fired": 0.274
+        },
+        "mid": {
+          "hit": 0.38,
+          "not_fired": 0.206
+        },
+        "small": {
+          "hit": 0.164,
+          "not_fired": 0.184
         }
       }
     }
   },
-  "exploratory": {
-    "dose_response": {
-      "0 signals": {
-        "n": 537,
-        "any_event_rate": 0.369
-      },
-      "1+": {
-        "n": 929,
-        "any_event_rate": 0.442
-      },
-      "2+": {
-        "n": 574,
-        "any_event_rate": 0.462
-      },
-      "3+": {
-        "n": 233,
-        "any_event_rate": 0.536
-      }
+  "dose_response_full_coverage": {
+    "0": {
+      "n": 375,
+      "hard_rate": 0.253,
+      "margin_rate": 0.123
     },
-    "large_cap": {
-      "inventory_outpaces_revenue": {
-        "n": 227,
-        "hit_rate": 0.498,
-        "base_rate": 0.441
-      },
-      "receivables_outpace_revenue": {
-        "n": 172,
-        "hit_rate": 0.512,
-        "base_rate": 0.443
-      },
-      "dso_rising": {
-        "n": 131,
-        "hit_rate": 0.542,
-        "base_rate": 0.443
-      },
-      "dio_rising": {
-        "n": 152,
-        "hit_rate": 0.408,
-        "base_rate": 0.448
-      },
-      "gross_margin_drop": {
-        "n": 162,
-        "hit_rate": 0.586,
-        "base_rate": 0.445
-      }
+    "1": {
+      "n": 224,
+      "hard_rate": 0.232,
+      "margin_rate": 0.179
+    },
+    "2": {
+      "n": 248,
+      "hard_rate": 0.234,
+      "margin_rate": 0.23
+    },
+    "3": {
+      "n": 85,
+      "hard_rate": 0.235,
+      "margin_rate": 0.329
+    },
+    "4": {
+      "n": 79,
+      "hard_rate": 0.253,
+      "margin_rate": 0.291
+    },
+    "5": {
+      "n": 18,
+      "hard_rate": 0.278,
+      "margin_rate": 0.611
     }
   }
 }
