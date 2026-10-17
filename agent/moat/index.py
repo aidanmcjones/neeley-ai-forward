@@ -235,12 +235,16 @@ KEYISH = set(TICKER_COLS + DRUG_COLS + PERIOD_COLS + SOURCE_COLS + PAGE_COLS + [
 NUM = re.compile(r"^-?\$?[\d,]*\.?\d+%?$")
 
 
+SUPERSEDED = re.compile(r"(_dropped|_wave\d|_collector|_before_|_sample\d+|_raw)(_[a-z0-9]+)?\.csv$")
+
+
 def fact_tables():
     """(table name, path, default verify_status). Verified copies supersede raw tables of the same name."""
     out = []
     for p in sorted((MOAT / "verified").glob("*/*.csv")):
-        # *_dropped.csv lists rows a verifier rejected; they are kept for the report, never cited as facts
-        if p.name.endswith("_dropped.csv"):
+        # *_dropped.csv lists rows a verifier rejected; superseded or backup copies (_wave2, _collector, _before_,
+        # _sample60) are kept for the report only. None of them are cited as facts.
+        if SUPERSEDED.search(p.name):
             continue
         out.append((f"{p.parent.name}/{p.name}", p, "verified"))
     tables = MOAT / "tables"
