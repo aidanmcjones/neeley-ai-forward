@@ -16,12 +16,12 @@ STATUS = {
     # bucket key -> collect / verify state shown in the column header
     "annual": ("collected", "verified"), "quarterly": ("collected", "verified"),
     "calls": ("collected", "verified"), "product_revenue": ("collected", "verified"),
-    "policy": ("collected", "verified"), "pricing": ("collecting", "queued"),
+    "policy": ("collected", "verified"), "pricing": ("collected", "verifying"),
     "consensus": ("collected", "verifying"), "attention": ("collected", "verifying"),
     "fine_print": ("collecting", "queued"), "product_evidence": ("collected", "verifying"),
 }
 STAGES = [
-    ("Collect", "running", "7 streams; 5 done, pricing and SEC fine print still running"),
+    ("Collect", "running", "7 streams; 6 done, SEC fine print still running"),
     ("Verify", "running", "Opus re-checks every quote and number against its page; 5 verifiers running"),
     ("Citation index", "queued", "One search index over corpus + moat; starts when verification lands"),
     ("Model", "blocked", "NEEDLE runs on the index; blocked on the Anthropic API key"),
