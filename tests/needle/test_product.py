@@ -188,4 +188,4 @@ def test_cli_runs_and_writes_json_and_markdown(tmp_path):
     assert list(d["comparison"]["rows"]) == [k for k, _ in P.ROWS]
     assert d["growth_limiter"]["sentence"] and data["findings"]
     md = m.read_text()
-    assert "| Row |" in md and "**Sources**" in md and "verified:" in md and "—" not in md
+    assert "| Row |" in md and "**Sources**" in md and "verified:" in md and "\u2014" not in md
