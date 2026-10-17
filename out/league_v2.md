@@ -58,7 +58,7 @@ Constants: Rev_TTM 97,929.0, t 0.1651, D 2,440.1M, sigma_EPS 0.1457 USD. Largest
 | 5 | 0.01251 | 6.644 | 0.312 | 0.745 | 0.0081 | MEDIUM | T | stronger wording in MD&A vs FY2024 (topics: pricing, china); new risk vocabulary: substantial; new figures: $9.3, 1.1%, 2025; new topics:... |
 
 ## 4. AZN  L = 0.1127
-Constants: Rev_TTM 58,739.0, t 0.1749, D 1,562.0M, sigma_EPS 0.5408 USD. Largest finding share 26%. Findings 52, withheld 11. Flags: annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)
+Constants: Rev_TTM 58,739.0, t 0.1749, D 1,562.0M, sigma_EPS 0.5408 USD. Largest finding share 26%. Findings 52, withheld 11. Flags: annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4); sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used
 
 | # | S | M | O | E | pi | Conf | Block | Finding |
 |---|---|---|---|---|---|---|---|---|

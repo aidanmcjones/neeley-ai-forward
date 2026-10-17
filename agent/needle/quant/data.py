@@ -172,6 +172,9 @@ def sigma_eps(ticker):
         for _, r in d.iterrows():
             cites.append(fact_citation("tables/ibes_actuals.csv", r.act_row, "value", r.actual))
             cites.append(fact_citation("tables/ibes_eps_quarterly.csv", r.est_row, "meanest", r["mean"]))
+        gaps = pd.to_datetime(d.pends).diff().dt.days.dropna()
+        if (gaps > 100).any():
+            flags.append("sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used")
         if len(d) < W.SIGMA_QUARTERS:
             flags.append(f"sigma_EPS from {len(d)} quarters, not {W.SIGMA_QUARTERS}")
         return W.SIGMA_ANNUALIZE * float(d.surprise.std(ddof=1)), str(d.curr.iloc[-1]), cites, flags
@@ -362,3 +365,9 @@ def table_citation(table, row_key, fld, value, licensed=False):
                     value=None if value is None else str(value), doc_title=f"moat table {table}",
                     location=f"row {row_key}", page_scheme="none", license="wrds_licensed" if licensed else "",
                     verification=Verification("unverified", 0.0, _now(), note), confidence_note=note)
+
+
+# Case-appendix rivals missing from agent.needle.detect.CASE_SETS (review B24). No drug pack exists for these yet,
+# so the label detectors cannot compare against them; the product fine-print worker owns adding the packs.
+RIVALS_EXTRA = {"LLY": {"mounjaro": ["wegovy pill (oral semaglutide)"], "zepbound": ["wegovy pill (oral semaglutide)"],
+                        "trulicity": ["wegovy pill (oral semaglutide)"]}}

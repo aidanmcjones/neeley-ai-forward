@@ -466,7 +466,8 @@
     "n_withheld": 11,
     "comparable": true,
     "company_flags": [
-      "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)"
+      "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+      "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used"
     ],
     "top": [
       {
@@ -484,6 +485,7 @@
         "flags": [
           "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
           "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
           "c_f n/a (no consensus line item for this family)",
           "s_f no data (FINRA short interest not in moat)"
@@ -506,6 +508,7 @@
           "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
           "IRA net hit = (1.0, 1.0, 1.0) x list discount (low-rebate class; KQ2 cross-check, review A15)",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
           "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
           "c_f confounded (earnings announced between the two statpers)",
           "s_f no data (FINRA short interest not in moat)"
@@ -526,6 +529,7 @@
         "flags": [
           "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
           "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
           "c_f n/a (no consensus line item for this family)",
           "s_f no data (FINRA short interest not in moat)"
@@ -546,6 +550,7 @@
         "flags": [
           "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
           "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
           "c_f n/a (no consensus line item for this family)",
           "s_f no data (FINRA short interest not in moat)"
@@ -566,6 +571,7 @@
         "flags": [
           "stage split: inventory note with a stage split not found",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
           "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
           "c_f n/a (no consensus line item for this family)",
           "s_f no data (FINRA short interest not in moat)"
@@ -583,6 +589,7 @@
       "flags": [
         "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
         "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+        "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
         "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
         "c_f n/a (no consensus line item for this family)",
         "s_f no data (FINRA short interest not in moat)"
