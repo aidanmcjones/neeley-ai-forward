@@ -1,4 +1,4 @@
-# League v2: what changed and what to read first (for the 4:30 pick)
+# League v2: what changed and what to read first (for when the company is picked)
 
 Source: `out/league_v2.md` / `.json`, from `python -m agent.needle.quant.run --all` (FIND, `docs/quant_model.md`). It is deterministic and needs no API key. Every finding row, with all its components and citations, is in `out/<T>/findings_v2.jsonl`.
 

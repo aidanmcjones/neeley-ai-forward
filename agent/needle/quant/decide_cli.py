@@ -271,8 +271,7 @@ def _gate_line(doc, section, where, text, cites, Dm, A):
     res = numeric_gate([(where, text)], ok, Dm, A)
     if res.passed or res.numeric_check["status"] == "unchecked":
         return doc.cell(section, where, text, ok, Dm, A), None
-    return (f"(withheld by the numeric gate: {len(res.numeric_check['unsupported'])} unsupported number(s); see "
-            "decide.json)"), {"where": where, "text": text, "numeric_check": res.numeric_check}
+    return ("(withheld by the numeric gate: a number in this line is not supported; see decide.json)"), {"where": where, "text": text, "numeric_check": res.numeric_check}
 
 
 def build_md(out, findings, public=False):
@@ -374,7 +373,7 @@ def build_md(out, findings, public=False):
     L += ["", "## Five numbers: chosen move and the two rejected alternatives", "",
           "| Move | EV | Downside cash at risk | Payback | Scenario EV spread | MCDA |", "|---|---|---|---|---|---|"]
     for r in [c] + sel.rejected:
-        pb = "none within 120" if r.payback_month is None else "month " + cell("five numbers", f"five/{r.name}/payback",
+        pb = "none in the payback search window" if r.payback_month is None else "month " + cell("five numbers", f"five/{r.name}/payback",
                                                                                r.payback_month, (), Dall, Aall)
         L.append(f"| {r.name} | {cell('five numbers', f'five/{r.name}/EV', f1(r.ev), (), Dall, Aall)} | "
                  f"{cell('five numbers', f'five/{r.name}/CaR', f1(r.car), (), Dall, Aall)} | {pb} | "

@@ -43,7 +43,7 @@ def build(ticker, product, data_root=None, index=None, public=False):
         if res.passed or res.numeric_check["status"] == "unchecked":
             return doc.cell(section, where, text, cites, dm, am)
         withheld.append({"where": where, "text": text, "numeric_check": res.numeric_check})
-        return f"(withheld by the numeric gate: {len(res.numeric_check['unsupported'])} unsupported number(s); see JSON)"
+        return "(withheld by the numeric gate: a number in this line is not supported; see JSON)"
     names = [e["name"] for e in cmp_.entities]
     L = [f"# Product fine print: {cmp_.entities[0]['name']} ({ticker}) vs listed rivals", "",
          f"As of {cmp_.as_of}. Rivals are the case appendix set. Label rows cite DailyMed label sections; timeline rows cite "

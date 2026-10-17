@@ -1,6 +1,6 @@
 # Handoff: the quant model (for Parker and Aidan)
 
-State as of 2026-10-17 evening. Freeze: Sunday 10:30. Spec: `docs/quant_model.md` (v2.1, this branch, matching quant-model ee7846c). Companion docs: `docs/ai_in_the_build.md`, `docs/honest_limits.md`, `docs/decide.md`, `docs/product_fineprint.md`, `docs/citations.md`.
+State as of 2026-10-17 evening. Deadline: the Sunday 2:00 pm Devpost submission (the only deadline). Spec: `docs/quant_model.md` (v2.1, this branch, matching quant-model ee7846c). Companion docs: `docs/ai_in_the_build.md`, `docs/honest_limits.md`, `docs/decide.md`, `docs/product_fineprint.md`, `docs/citations.md`.
 
 ## What exists on quant-model
 
@@ -72,7 +72,7 @@ When the key is armed, run everything that needs a model once, cached, after the
 3. Memo and Q&A through `agent/llm.py` (cached).
 Nothing from the pass changes a number. Re-runs read the cache.
 
-## Open items, in priority order for the Sunday 10:30 freeze
+## Open items, in priority order before the Sunday 2:00 pm Devpost submission
 
 1. **Make the pick** (above): the AMGN 10-Q receivables check decides AMGN vs GILD.
 2. **Product table** for the picked product; commit the output.
@@ -80,4 +80,4 @@ Nothing from the pass changes a number. Re-runs read the cache.
 4. **LLM pass** (one pass, cached) once the key is armed: first add a cited-call variant to `agent/llm.py` that sends `build_cited_request`'s body through the cache, and point `trial.py` at the v3 rows.
 5. **Nuggets.** If Parker pushes his nugget files, re-run with `--nuggets` and check the robustness table again.
 6. **Merge** quant-spec (docs only) into quant-model. Expect no code conflicts.
-7. **Not doing before the freeze** (stated as limits instead): backtest re-run (panel not on disk), flag-strength scaling, leave-one-year-out, 20-F headline from interim report page 1, a public page viewer, a dedicated peer set for off-shortlist tickers, a live new-ticker run (use the recorded VRTX run).
+7. **Not doing before the submission** (stated as limits instead): backtest re-run (panel not on disk), flag-strength scaling, leave-one-year-out, 20-F headline from interim report page 1, a public page viewer, a dedicated peer set for off-shortlist tickers, a live new-ticker run (use the recorded VRTX run).

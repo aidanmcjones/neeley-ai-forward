@@ -67,7 +67,7 @@ tests/needle/      one fast test per module
 **Checkpoints:**
 - 5:30 pm Sat: phases 0 to 3 plus a minimal 7 and 8 (golden path).
 - Overnight: `run.py --all` cached.
-- Sun 10:30: freeze.
+- Sunday 2:00 pm: Devpost submission (the only deadline).
 
 ## Verification (end to end)
 - `pytest -q tests/needle` is green.
