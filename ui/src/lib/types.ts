@@ -124,6 +124,10 @@ export interface Finding extends Loose {
   sentence_marked?: string | null;
   /** Impact formula with the same inline markers ([n], [derived: a, b], [constant: NAME], [assumption]). */
   formula_marked?: string | null;
+  /** Marker number -> cite_id (resolve anywhere in the company file). */
+  marker_map?: Record<string, string> | null;
+  /** Marker numbers that point at licensed sources: shown as a muted mark, never a chip. */
+  marker_licensed?: number[] | null;
   guard_reason?: string | null;
   not_quantified?: string | null;
   corroborates?: string | null;
@@ -187,6 +191,10 @@ export interface DecideFootnote extends Loose { n: number; move?: string; claim?
 export interface Decide extends Loose {
   /** Pipeline demonstration, not the team's recommendation; `note` explains it. */
   demo?: boolean | null; note?: string | null;
+  /** null when no candidate clears the hurdle; then `least_bad` names the move shown, `selection_rule` says why. */
+  chosen?: string | { name?: string; code?: string } | null;
+  least_bad?: string | { name?: string; code?: string } | null;
+  selection_rule?: string | null;
   as_of?: string; cash_and_equivalents?: number; units?: string; moves?: DecideMove[];
   footnotes?: DecideFootnote[]; finding_cites?: CiteRef[]; source_files?: string[];
 }
@@ -264,6 +272,7 @@ export interface MemoRecord extends Loose {
   memo_header?: { to?: string; from?: string; re?: string; date?: string } | null;
   /** Pipeline demonstration (a decide run that is not the team's pick); the note opens the memo. */
   demo?: boolean | null; demo_note?: string | null;
+  least_bad?: string | null; selection_rule?: string | null;
   generated_by?: "template" | "decide_v2" | "data" | string;
   summary?: string; blocks?: MemoBlock[]; cites?: MemoCite[]; numeric_check?: NumericCheck | null; ask_next?: string[];
 }

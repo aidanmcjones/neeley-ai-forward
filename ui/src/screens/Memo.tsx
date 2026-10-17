@@ -11,7 +11,7 @@ import { PinnedExhibits } from "../components/memo/PinnedExhibits";
 import { MarkedSentence, hasMarked } from "../components/MarkedSentence";
 import { derivedOperands, isDerived } from "../lib/cites";
 import type { Evidence } from "../lib/types";
-import { DecideFootnotes, DecideTable, KillSignalTable } from "../components/decide/Decide";
+import { DecideFootnotes, DecideTable, KillSignalTable, noneClears } from "../components/decide/Decide";
 
 // CEO memo (/memo): one printable page drafted from company.stance. Text blocks are editable;
 // edits persist to localStorage needle.memo.<ticker> and "Reset to draft" restores the export.
@@ -137,8 +137,9 @@ export default function Memo() {
               <span>TO: CEO · FROM: Competitive Intelligence (NEEDLE) · Draft 1</span>
               <span className="font-mono normal-case tracking-normal">As of {meta?.as_of ? date(meta.as_of) : "n/a"}</span>
             </div>
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted">{company.name ?? t} ({t}) · recommended move: <span className="text-teal">{s.recommended ?? "n/a"}</span></div>
-            {ed("headline", s.headline ?? "No headline exported", "h2", "block font-display text-[34px] leading-[1.05] tracking-wide text-purple-deep dark:text-purple")}
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted">{company.name ?? t} ({t}) · {noneClears(s.decide) ? <>least-bad option: <span className="text-warn">{typeof s.decide!.least_bad === "string" ? s.decide!.least_bad : s.decide!.least_bad?.name ?? "n/a"}</span></> : <>recommended move: <span className="text-teal">{s.recommended ?? "n/a"}</span></>}</div>
+            {ed("headline", noneClears(s.decide) ? "No candidate clears the hurdle" : s.headline ?? "No headline exported", "h2", "block font-display text-[34px] leading-[1.05] tracking-wide text-purple-deep dark:text-purple")}
+            {s.decide?.selection_rule && <p className="text-[13px] text-muted">{s.decide.selection_rule}</p>}
             <p className="memo-keep rounded-md border-l-4 border-purple bg-surface-2 px-4 py-2">
               <span className="font-bold">Decision needed: </span>{ed("decision", s.decision_needed ?? "Not exported")}
             </p>

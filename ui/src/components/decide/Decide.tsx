@@ -10,10 +10,33 @@ import type { Company, Decide, DecideFootnote, DecideMove, Evidence, KillSignal,
 
 const usdM = (x: number | null | undefined) => (typeof x === "number" && Number.isFinite(x) ? money(x * 1e6) : "n/a");
 
-/** Moves with the chosen one first, then by rank. */
+/** True when DECIDE found no move that clears the hurdle (chosen: null with a least-bad move). */
+export function noneClears(d: Decide | null | undefined): boolean {
+  return !!d && "chosen" in d && d.chosen == null && !!d.least_bad;
+}
+
+const refName = (r: unknown) => (typeof r === "string" ? r : (r as { name?: string; code?: string } | null)?.name ?? (r as { code?: string } | null)?.code ?? "");
+
+/** "chosen", "least_bad" or the move's own status. */
+export function moveRole(d: Decide | null | undefined, m: DecideMove): "chosen" | "least_bad" | "other" {
+  if (noneClears(d)) {
+    const lb = refName(d!.least_bad);
+    return m.status === "least_bad" || m.name === lb || (!!m.code && m.code === lb) ? "least_bad" : "other";
+  }
+  return m.status === "chosen" ? "chosen" : "other";
+}
+
+/** Moves with the chosen (or least-bad) one first, then by rank. */
 export function orderedMoves(d: Decide | null | undefined): DecideMove[] {
   const ms = [...(d?.moves ?? [])];
-  return ms.sort((a, b) => (a.status === "chosen" ? -1 : b.status === "chosen" ? 1 : (a.rank ?? 99) - (b.rank ?? 99)));
+  const top = (m: DecideMove) => (moveRole(d, m) !== "other" ? 0 : 1);
+  return ms.sort((a, b) => top(a) - top(b) || (a.rank ?? 99) - (b.rank ?? 99));
+}
+
+export function RoleBadge({ role }: { role: "chosen" | "least_bad" | "other" }) {
+  if (role === "chosen") return <span className="mr-1 inline-block rounded border border-teal bg-teal-soft px-1 text-[9.5px] font-bold uppercase tracking-wide text-teal align-middle">Chosen</span>;
+  if (role === "least_bad") return <span className="mr-1 inline-block rounded border border-warn/60 bg-warn/10 px-1 text-[9.5px] font-bold uppercase tracking-wide text-warn align-middle" title="No candidate clears the hurdle; this is the least-bad option">Least-bad option</span>;
+  return null;
 }
 
 export function footnotesFor(d: Decide | null | undefined, move: string): DecideFootnote[] {
@@ -61,13 +84,14 @@ export function DecideTable({ company, decide, compact = false, onPreview }: {
         </thead>
         <tbody>
           {moves.map((m) => {
-            const chosen = m.status === "chosen";
+            const role = moveRole(decide, m);
+            const chosen = role !== "other";
             const sc = m.ev_by_scenario;
             return (
               <Fragment key={m.name}>
-                <tr className={`align-top ${chosen ? "bg-teal-soft/40" : ""}`}>
+                <tr className={`align-top ${role === "chosen" ? "bg-teal-soft/40" : role === "least_bad" ? "bg-warn/10" : ""}`}>
                   <th scope="row" className="px-1.5 pt-1.5 text-left font-semibold leading-snug">
-                    {chosen && <span className="mr-1 inline-block rounded border border-teal bg-teal-soft px-1 text-[9.5px] font-bold uppercase tracking-wide text-teal align-middle">Chosen</span>}
+                    <RoleBadge role={role} />
                     <span className={chosen ? "" : "text-fg/90"}>{m.name}</span>{" "}
                     {m.numeric_check ? <><NumericPill check={m.numeric_check as NumericCheck} />{" "}</> : null}
                     <Foot fs={footnotesFor(decide, m.name)} onPreview={onPreview} />
@@ -78,7 +102,7 @@ export function DecideTable({ company, decide, compact = false, onPreview }: {
                   <td className="px-1.5 pt-1.5 text-right font-mono">{usdM(m.spread)}</td>
                   <td className="px-1.5 pt-1.5 text-right font-mono">{m.mcda != null ? m.mcda.toFixed(2) : "n/a"}</td>
                 </tr>
-                <tr className={`border-b border-line ${chosen ? "bg-teal-soft/40" : ""}`}>
+                <tr className={`border-b border-line ${role === "chosen" ? "bg-teal-soft/40" : role === "least_bad" ? "bg-warn/10" : ""}`}>
                   <td colSpan={6} className="px-1.5 pb-1.5 text-[11px] leading-snug text-muted">
                     {chosen ? m.why : <>Not chosen: {m.binding_reason || "lower rank"}.</>}{" "}
                     <FindingChips company={company} ids={m.finding_ids} onPreview={onPreview} />
@@ -105,7 +129,8 @@ function DecideCards({ company, decide, moves, onPreview }: {
     <div className="space-y-1.5">
       <ol className="space-y-1.5">
         {moves.map((m) => {
-          const chosen = m.status === "chosen";
+          const role = moveRole(decide, m);
+          const chosen = role !== "other";
           const sc = m.ev_by_scenario;
           const nums: [string, string, string?][] = [
             ["EV", usdM(m.ev), sc ? `bear ${usdM(sc.bear)} · base ${usdM(sc.base)} · bull ${usdM(sc.bull)}` : undefined],
@@ -115,9 +140,9 @@ function DecideCards({ company, decide, moves, onPreview }: {
             ["MCDA", m.mcda != null ? m.mcda.toFixed(2) : "n/a", "multi-criteria score, used only when EV intervals overlap"],
           ];
           return (
-            <li key={m.name} className={`rounded-md border px-2.5 py-2 ${chosen ? "border-teal/60 bg-surface shadow-card" : "border-line"}`}>
+            <li key={m.name} className={`rounded-md border px-2.5 py-2 ${role === "chosen" ? "border-teal/60 bg-surface shadow-card" : role === "least_bad" ? "border-warn/60 bg-surface shadow-card" : "border-line"}`}>
               <div className="text-[13px] font-semibold leading-snug">
-                {chosen && <span className="mr-1 inline-block rounded border border-teal bg-teal-soft px-1 text-[9.5px] font-bold uppercase tracking-wide text-teal align-middle">Chosen</span>}
+                <RoleBadge role={role} />
                 {m.name}
                 {m.numeric_check ? <> <NumericPill check={m.numeric_check as NumericCheck} /></> : null}
               </div>

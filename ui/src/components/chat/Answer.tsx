@@ -147,6 +147,12 @@ export function Answer({ memo, instant, onAsk, labelFor }: {
             </dl>
           </header>
         )}
+        {memo.least_bad && (
+          <p role="note" className="rounded-md border-l-4 border-warn/70 bg-warn/10 px-3 py-2 text-[14px]">
+            <span className="font-semibold">No candidate clears the hurdle.</span> Least-bad option: <span className="font-semibold">{memo.least_bad}</span>.
+          </p>
+        )}
+        {memo.selection_rule && <p className="text-[13px] text-muted">{memo.selection_rule}</p>}
         {demo && memo.demo_note && (
           <p role="note" className="rounded-md border-l-4 border-line bg-surface-2 px-3 py-2 text-[13px] text-muted">{memo.demo_note}</p>
         )}
