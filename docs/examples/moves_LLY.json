@@ -22,7 +22,7 @@
       },
       "why": "Price cuts and the Wegovy pill are reshaping obesity; a larger self-pay channel at MFN-aligned prices protects share and reaches uninsured patients (case appendix).",
       "finding_ids": [
-        "LLY-labels-595152"
+        "d2aae6b94153"
       ],
       "params": {
         "base_us_rev_annual": {
@@ -87,7 +87,7 @@
       },
       "why": "Trulicity loses exclusivity in 2027 (10-K patent table); a rebate-wall defense and a Mounjaro switch program value the retained revenue.",
       "finding_ids": [
-        "LLY-labels-746909"
+        "d8177d9f7349"
       ],
       "params": {
         "rev_at_risk_annual": {
@@ -136,7 +136,7 @@
       },
       "why": "Zepbound lists 2 indications against Wegovy's 5 (label comparison); two outcomes trials would widen the addressable pool.",
       "finding_ids": [
-        "LLY-labels-595152"
+        "d2aae6b94153"
       ],
       "params": {
         "n_trials": 2,

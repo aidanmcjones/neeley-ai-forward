@@ -551,6 +551,8 @@ def assert_numeric_checks(obj, path="$"):
                 raise ValueError(f"{path}.numeric_check is not a status dict: {nc!r}")
             if nc["status"] == "passed" and (not nc.get("checked") or any(k not in nc for k in NC_KEYS)):
                 raise ValueError(f"{path}.numeric_check says passed without a checked count or breakdown")
+            if nc["status"] == "no_numbers" and (nc.get("total") != 0 or nc.get("checked") or nc.get("unsupported")):
+                raise ValueError(f"{path}.numeric_check says no_numbers but total = {nc.get('total')}")
         for k, v in obj.items():
             assert_numeric_checks(v, f"{path}.{k}")
     elif isinstance(obj, list):
@@ -565,10 +567,13 @@ def numeric_check(x):
         return {"status": "unchecked"}
     out = dict(x)
     out.setdefault("unsupported", [])
+    if out["status"] in ("passed", "no_numbers") and out.get("total") == 0 and not out.get("checked") \
+            and not out["unsupported"]:
+        # the gate ran and the record has no numbers: its own status, never shown as "passed"
+        return {"status": "no_numbers", "checked": 0, "total": 0, "verified": 0, "derived": 0, "assumed": 0,
+                "unsupported": [], "note": "no numbers to check"}
     if out["status"] == "passed" and (not out.get("checked") or any(k not in out for k in NC_KEYS)):
-        why = ("the gate found no numbers to check (checked = 0)" if out.get("checked") == 0 and
-               all(k in out for k in NC_KEYS) else "reported passed without a checked count or breakdown")
-        return {"status": "unchecked", "note": why, "raw": x}
+        return {"status": "unchecked", "note": "reported passed without a checked count or breakdown", "raw": x}
     return out
 
 
@@ -863,7 +868,8 @@ def product_v2(ticker, slug):
             if cell is None:
                 continue
             rows[row][ent["name"]] = {"numeric_check": numeric_check(cell.get("numeric_check")
-                                                                     or nc_by_where.get(f"{row}/{ent['name']}")), "slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
+                                                                     or nc_by_where.get(f"{row}/{ent['name']}")
+                                                                     or nc_by_where.get(f"empty/{row}/{ent['name']}")), "slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
                                       "value_raw": cell.get("value"), "detail": clean(cell.get("detail")),
                                       "citations": [cell_cite(c, pool={x.get("cite_id"): x for x in cell.get("citations") or []})
                                                     for c in cell.get("citations") or []],
