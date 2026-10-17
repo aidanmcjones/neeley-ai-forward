@@ -262,10 +262,20 @@ def payback_month(exp_by_s, p_s, r_mo, horizon):
     return None
 
 
+def finding_weight(f):
+    """Strategic-fit weight of a finding: M x E (materiality and evidence), not S (review A24). S also holds
+    obscurity and the prior, so a well-known material problem (O = 0) would get no fit. FIND v2 rows carry
+    vector M and E; old-shape rows fall back to their score."""
+    v = f.get("vector") or {}
+    if v.get("M") is not None and v.get("E") is not None:
+        return float(v["M"]) * float(v["E"])
+    return finding_score(f)
+
+
 def mcda_score(template, plan, findings, addressed_ids, capability, stakeholders, p_s):
     scored = [f for f in findings if finding_kind(f) not in FAVORABLE_LEVEL_KINDS]
-    top5 = sum(sorted((finding_score(f) for f in scored), reverse=True)[:5])
-    num = sum(finding_score(f) for f in scored if finding_id(f) in addressed_ids)
+    top5 = sum(sorted((finding_weight(f) for f in scored), reverse=True)[:5])
+    num = sum(finding_weight(f) for f in scored if finding_id(f) in addressed_ids)
     fit = min(1.0, num / top5) if top5 > 0 else 0.0
     cap = _share(capability, template.required_assets)
     stk = _share(stakeholders, template.deciders)

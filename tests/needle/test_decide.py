@@ -19,8 +19,10 @@ def ref(**over):
     return D.evaluate_move("M3", over, [], name="reference")
 
 
-def test_reference_case_to_the_cent():
-    r = ref()
+def test_reference_case_to_the_cent_alternative_ramp():
+    """The spec 5.5 synthetic reference was built on a 42-month ramp (57% of peak at 24 months): kept as the
+    labelled alternative ramp (review A23)."""
+    r = ref(ramp_months=M.LABEL_RAMP_MONTHS_ALT)
     assert round(r.ev, 1) == 1431.2
     assert [round(r.ev_by_scenario[s], 1) for s in ("bear", "base", "bull")] == [1161.0, 1464.6, 1768.2]
     assert round(r.in_window_pv["base"], 1) == -53.3
@@ -28,6 +30,26 @@ def test_reference_case_to_the_cent():
     assert r.payback_month == 51
     assert round(r.spread, 1) == 607.2
     assert r.p_alive_end == pytest.approx(0.675 * 0.915)
+
+
+def test_reference_case_consistent_ramp():
+    """Default ramp 60 months = 40% of peak 24 months after approval, inside the stated 25-40% (review A23)."""
+    assert M.LABEL_RAMP_MONTHS == 60 and 24 / M.LABEL_RAMP_MONTHS == pytest.approx(M.LABEL_SHARE_24M[1])
+    r = ref()
+    assert round(r.ev, 1) == 1265.2
+    assert [round(r.ev_by_scenario[s], 1) for s in ("bear", "base", "bull")] == [1025.3, 1294.9, 1564.5]
+    assert round(r.in_window_pv["base"], 1) == -53.3      # the ramp starts after month 24: in-window value unchanged
+    assert round(r.car, 1) == 57.6
+    assert r.payback_month == 54
+    assert round(r.spread, 1) == 539.3
+
+
+def test_strategic_fit_uses_materiality_and_evidence_not_S():
+    """Review A24: a material, well-known finding (O = 0, so S = 0) still gives the move strategic fit."""
+    known = {"id": "k", "signal_kind": "label_narrower", "S": 0.0, "vector": {"M": 2.0, "E": 1.0}, "impact": {}}
+    other = {"id": "o", "signal_kind": "risk_added", "S": 0.05, "vector": {"M": 2.0, "E": 1.0}, "impact": {}}
+    r = D.evaluate_move("M3", {}, [known, other], finding_ids=["k"])
+    assert r.mcda_parts["strategic_fit"] == pytest.approx(0.5)
 
 
 def test_scenario_weights_sum_to_one_and_multipliers():
