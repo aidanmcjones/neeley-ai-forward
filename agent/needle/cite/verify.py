@@ -1,49 +1,62 @@
 """Verification ladder for a Citation, and the gate that refuses uncited or unverifiable claims.
 
 Ladder, first rung that holds wins (status, score):
-  1. exact         quote is a byte-for-byte substring of the cited page            score 1.00
-  2. substring     equal after normalization (NFKC, smart quotes/dashes, case,     score 0.98
-                   whitespace collapsed; this is agent.findings._norm)
-  3. fuzzy         rapidfuzz.fuzz.partial_ratio >= FUZZY_THRESHOLD (difflib        score = ratio/100
-                   fallback), AND every number in the quote is in the matched span
-  4. number_match  claim_type "number": the emitted `value` (after unit normalization)   score 0.6
-                   is found among the numbers on the cited page although the quote itself did not verify
-  else unverified  (a note says if the quote lives on another page or another document)
+  1. exact         quote is a byte-for-byte substring of the cited page (zero-width chars removed)   score 1.00
+  2. substring     equal after normalization (NFKC, smart quotes/dashes, case, whitespace collapsed,  score 0.98
+                   zero-width chars removed; the agent.findings._norm / agent.moat.cite.verify_quote rule)
+  3. fuzzy         rapidfuzz.fuzz.partial_ratio >= FUZZY_THRESHOLD (difflib fallback), AND the       score = ratio/100
+                   quote's numerals appear in the same order as a contiguous run of the matched
+                   span's numerals, AND no direction word flips (DIRECTION_PAIRS, NEGATIONS)
+  4. number_match  claim_type "number" with a non-empty quote that did not verify: the emitted value  score 0.6
+                   is on the cited page with the same sign and the same scale. The footnote then shows
+                   the page text around that number (NUMBER_WINDOW chars), never the unverified quote.
+  else unverified  (a note says if the quote lives on another page, spans the page break, or another document)
+
+Before rungs 1-3 fail, a quote that runs past the end of the cited page is tried against page N + page N+1 joined;
+a hit keeps its status and the note "spans pages N-N+1" (char_end then counts into page N+1).
+
+Short quotes (review C9): a quote shorter than SHORT_QUOTE_CHARS (12) characters or with fewer than SHORT_QUOTE_TOKENS
+(3) tokens can verify at most as "substring", and only at a token boundary: "8" never matches inside "$29,482" or
+"18". (Quote claims still need MIN_QUOTE_CHARS = 20; the short rule bites on number claims.)
 
 FUZZY_THRESHOLD = 90. The research notes found no published threshold for citation matching. 90 is chosen
 because partial_ratio measures the best aligned window the length of the quote: markdown conversion noise (stray
 spaces in tables, dropped footnote marks, a swapped quote character) costs about 1 edit per 20-40 characters and
 scores 93-99, while a real paraphrase or a rewritten clause lands near 60-80. 90 sits in the empty gap between the
-two. The number guard exists because one altered digit in a long quote still scores 98: fuzzy never accepts a quote
-whose numerals differ from the page span it matched.
+two. One altered digit or one flipped word in a long quote still scores 97-98, so the rung has two guards (review C8):
+the ordered numeral sequence (not a set: swapping 18 and 29,482 is rejected) and the direction-word check: the
+count of each word in DIRECTION_PAIRS and NEGATIONS must be the same in the quote and in the matched span
+("an increase of 18 percent" vs "a decrease of 18 percent" is rejected).
 
-Numeric normalization: commas dropped, parentheses = negative, '%' / 'percent', scale words (thousand, million,
-billion, bn, mm, k). Tables in these filings say "in millions" once in the header, so a bare 15,144 on the page is
-also accepted against an emitted 15,144 million or 15.144 billion (page numeral x 1e3/1e6/1e9 equals the claim).
-A claim of +183 against a page showing (183) matches with a note; a claim of -183 against a page showing 183 does not.
+Numbers (review C7): agent.needle.cite.numbers. Commas dropped, parentheses = negative, '%' / 'percent', scale words
+(thousand, million, billion, bn, mm, glued M/B/K). A page number takes its inline scale word, else the scale the page
+declares before it ("(in millions)", "USD millions", "$ in thousands"), else 1. So "15,144" under "(in millions)"
+supports "15,144 million" and "15.144 billion" but never "15,144 thousand"; "2,025 employees" never supports
+"$2.025 billion"; a page "($183)" never supports a claim of +183, and "183" never supports -183.
 
-Reuse: rung 2 calls agent.moat.cite.verify_quote (the shared normalized-substring verifier) on the sqlite page;
-_norm and _numbers come from agent.findings. Mine: rung 1 (exact + char span), the fuzzy rung and its number guard,
-and the numeric value check (verify_quote has no numeric semantics). Pages come from the shared sqlite via
-agent.needle.cite.index (an adapter, not a second index). agent.findings.verify itself is not called (it needs a
-per-ticker docs dict), but its transcript rules are applied here (review B12, transcript_rule): a quote that sits
-before the fool.com "Full Conference Call Transcript" marker comes from the LLM-written takeaways and is rejected;
-a named speaker whose surname is not in the 4,000 characters before the quote, or is not the nearest "**Name
-(title):**" label before it, is rejected; with no speaker named, the quote is attributed to that nearest label.
+Reuse: _norm and the transcript constants come from agent.findings; the normalization equals
+agent.moat.cite.verify_quote's plus zero-width stripping (verify_quote itself keeps U+200B, review C10, so rung 2
+matches on the adapter's own normalized page text). Pages come from the shared sqlite via agent.needle.cite.index (an
+adapter, not a second index). agent.findings.verify itself is not called (it needs a per-ticker docs dict), but its
+transcript rules are applied here (review B12, transcript_rule): a quote that sits before the fool.com "Full
+Conference Call Transcript" marker comes from the LLM-written takeaways and is rejected; a named speaker whose surname
+is not in the 4,000 characters before the quote, or is not the nearest "**Name (title):**" label before it, is
+rejected; with no speaker named, the quote is attributed to that nearest label.
 """
 
 import re
 import unicodedata
+from collections import Counter
 from dataclasses import replace
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
 
-from agent.findings import FOOL_START, _norm, _numbers
-from agent.moat.cite import verify_quote
+from agent.findings import FOOL_START, _norm
 
-from .deeplink import build_deep_link, build_viewer_link
+from .deeplink import build_deep_link_with_note, build_viewer_link
 from .index import load_index
 from .locator import Verification
+from .numbers import declared_scale, zw_char, parse_value, same_number, strip_zw, strip_zw_map, tokenize
 
 try:
     from rapidfuzz import fuzz
@@ -52,7 +65,24 @@ except ImportError:  # pragma: no cover
 
 FUZZY_THRESHOLD = 90
 MIN_QUOTE_CHARS = 20          # same floor as agent.findings.verify
-_TR = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "})
+SHORT_QUOTE_CHARS = 12
+SHORT_QUOTE_TOKENS = 3
+NUMBER_WINDOW = 60            # chars of page text on each side of a number_match hit
+_TR = str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"', "\u2013": "-", "\u2014": "-",
+                     "\u00a0": " "})
+
+# Direction words for the fuzzy guard. Each pair is antonymous; any count difference between quote and matched span
+# (for either word of a pair) rejects the fuzzy match.
+DIRECTION_PAIRS = [("increase", "decrease"), ("increased", "decreased"), ("increases", "decreases"),
+                   ("increasing", "decreasing"), ("rose", "fell"), ("rise", "fall"), ("rises", "falls"),
+                   ("rising", "falling"), ("risen", "fallen"), ("up", "down"), ("higher", "lower"),
+                   ("high", "low"), ("gain", "loss"), ("gains", "losses"), ("grew", "declined"), ("grow", "decline"),
+                   ("growth", "decline"), ("above", "below"), ("more", "less"), ("positive", "negative"),
+                   ("favorable", "unfavorable"), ("improved", "worsened"), ("expand", "contract"),
+                   ("expanded", "contracted"), ("surplus", "deficit"), ("profit", "loss"), ("before", "after"),
+                   ("maximum", "minimum"), ("over", "under"), ("inflow", "outflow"), ("approved", "rejected")]
+NEGATIONS = ("not", "no", "never", "without", "neither", "nor", "none", "cannot")
+_DIRWORDS = {w for p in DIRECTION_PAIRS for w in p} | set(NEGATIONS)
 
 
 def _now():
@@ -60,9 +90,12 @@ def _now():
 
 
 def norm_with_map(text):
-    """(normalized text, list mapping each normalized char to its index in `text`)."""
+    """(normalized text, list mapping each normalized char to its index in `text`). Zero-width chars are dropped."""
     out, idx, space = [], [], True
-    for i, ch in enumerate(text):
+    for i in range(len(text)):
+        ch = zw_char(text, i)
+        if not ch:
+            continue
         for c in unicodedata.normalize("NFKC", ch).translate(_TR).lower():
             if c.isspace():
                 if not space:
@@ -79,10 +112,12 @@ def norm_with_map(text):
     return "".join(out), idx
 
 
-def _span_in_raw(norm_start, norm_end, imap, raw):
-    s = imap[norm_start]
-    e = imap[norm_end - 1] + 1
-    return s, e
+def _nz(s):
+    return _norm(strip_zw(s))
+
+
+def _span_in_raw(norm_start, norm_end, imap, raw=None):
+    return imap[norm_start], imap[norm_end - 1] + 1
 
 
 def _partial(a, b):
@@ -100,70 +135,77 @@ def _partial(a, b):
     return best
 
 
+def _numseq(s):
+    return [n.replace(",", "").rstrip(".") for n in re.findall(r"\d[\d,]*(?:\.\d+)?", s or "")]
+
+
+def _ordered_run(q, s):
+    """True when list q appears as a contiguous run inside list s (q empty -> True)."""
+    if not q:
+        return True
+    return any(s[i:i + len(q)] == q for i in range(len(s) - len(q) + 1))
+
+
+def _direction_flip(quote_n, span_n):
+    """'' when direction and negation words agree, else a short description of the first difference."""
+    qc = Counter(w for w in re.findall(r"[a-z]+", quote_n) if w in _DIRWORDS)
+    sc = Counter(w for w in re.findall(r"[a-z]+", span_n) if w in _DIRWORDS)
+    for w in sorted(set(qc) | set(sc)):
+        if qc[w] != sc[w]:
+            return f"direction word differs: '{w}' x{qc[w]} in quote, x{sc[w]} on page"
+    return ""
+
+
+def _bounded_find(hay, needle):
+    """First index of needle in hay at a token boundary (no letter/digit glued on either side, and a numeral is not
+    part of a longer digit string such as '29,482'), or -1."""
+    start = 0
+    while True:
+        i = hay.find(needle, start)
+        if i < 0:
+            return -1
+        e = i + len(needle)
+        left = hay[i - 1] if i > 0 else " "
+        right = hay[e] if e < len(hay) else " "
+        bad = left.isalnum() or right.isalnum()
+        if not bad and needle[:1].isdigit() and left in ",." and i >= 2 and hay[i - 2].isdigit():
+            bad = True
+        if not bad and needle[-1:].isdigit() and right in ",." and e + 1 < len(hay) and hay[e + 1].isdigit():
+            bad = True
+        if not bad:
+            return i
+        start = i + 1
+
+
 # ------------------------------------------------------------------ numbers
-_SCALE = {"thousand": 1e3, "k": 1e3, "million": 1e6, "mm": 1e6, "m": 1e6, "mn": 1e6,
-          "billion": 1e9, "bn": 1e9, "b": 1e9, "trillion": 1e12}
-_NUM = re.compile(r"(\()?\s*[$€£]?\s*(-|−)?\s*(\d[\d,]*(?:\.\d+)?)\s*(\))?\s*"
-                  r"(%|percent\b|thousands?\b|millions?\b|billions?\b|trillions?\b|bn\b|mm\b|mn\b|k\b|m\b|b\b)?", re.I)
-
-
 def parse_numbers(text):
-    """List of dicts {num: float numeral, neg: bool, scale: float|None, pct: bool} found in text."""
-    out = []
-    for m in _NUM.finditer(text or ""):
-        raw = m.group(3).replace(",", "").rstrip(".")
-        try:
-            num = float(raw)
-        except ValueError:
-            continue
-        word = (m.group(5) or "").lower()
-        out.append({"num": num, "neg": bool(m.group(2)) or (bool(m.group(1)) and bool(m.group(4))),
-                    "scale": _SCALE.get(word.rstrip("s") if word.endswith("s") and len(word) > 2 else word), "pct": word in ("%", "percent")})
-    return out
+    """List of dicts {num, neg, scale, pct} for every number in text (years included). Kept for callers of the old
+    API; new code uses agent.needle.cite.numbers.tokenize."""
+    return [{"num": t.num, "neg": t.neg, "scale": t.scale, "pct": t.pct}
+            for t in tokenize(text, include_years=True, include_ids=True)]
 
 
 def parse_claim_value(value, unit=""):
-    """Emitted value + unit string ('USD millions', 'percent') -> candidate dict, or None."""
-    cand = parse_numbers(str(value))
-    if not cand:
-        return None
-    c = cand[0]
-    u = (unit or "").lower()
-    if c["scale"] is None:
-        for w, f in (("trillion", 1e12), ("billion", 1e9), ("million", 1e6), ("thousand", 1e3)):
-            if w in u:
-                c["scale"] = f
-                break
-    if "percent" in u or "%" in u or "pct" in u:
-        c["pct"] = True
-    return c
+    """Emitted value + unit string ('USD millions', 'percent') -> candidate dict, or None (old API)."""
+    t = parse_value(value, unit)
+    return None if t is None else {"num": t.num, "neg": t.neg, "scale": t.scale, "pct": t.pct}
 
 
-def _same(a, b):
-    return abs(a - b) <= 1e-9 * max(abs(a), abs(b), 1.0)
-
-
-def value_on_text(claim, text):
-    """Does the emitted number appear in text? Returns (found, note)."""
-    c = parse_claim_value(claim.value, claim.unit) if claim.value not in (None, "") else None
+def value_on_text(claim, text, full_text=None, offset=0):
+    """Does the emitted number appear in text? Returns (found, note, (start, end) of the hit in text or None).
+    Page-declared scale is read from full_text (the whole page) up to offset + the hit position."""
+    c = parse_value(claim.value, claim.unit) if claim.value not in (None, "") else None
     if c is None:
-        return False, "no parsable value"
-    cs = c["num"] * (c["scale"] or 1.0)
-    for p in parse_numbers(text):
-        if c["pct"] != p["pct"]:
-            continue
-        ps = p["num"] * (p["scale"] or 1.0)
-        hit = _same(cs, ps)
-        if not hit and c["scale"] and p["scale"] is None:       # "15,144 million" vs table cell 15,144
-            hit = _same(c["num"], p["num"])
-        if not hit and (c["scale"] is None or p["scale"] is None):
-            hit = any(_same(cs, p["num"] * t) for t in (1e3, 1e6, 1e9)) and not c["pct"]
-        if not hit:
-            continue
-        if c["neg"] and not p["neg"]:
-            continue
-        return True, ("page shows a parenthesized negative; claim sign differs" if p["neg"] and not c["neg"] else "")
-    return False, f"value {claim.value} {claim.unit} not on the cited page"
+        return False, "no parsable value", None
+    full = text if full_text is None else full_text
+    why = ""
+    for p in tokenize(text, include_years=True):
+        ok, reason = same_number(c, p, None, declared_scale(full, offset + p.start))
+        if ok:
+            return True, "", (p.start, p.end)
+        if reason == "sign differs":
+            why = f"value {claim.value} {claim.unit} is on the page with the opposite sign ({p.raw})"
+    return False, why or f"value {claim.value} {claim.unit} not on the cited page", None
 
 
 # ------------------------------------------------------------------ ladder
@@ -185,15 +227,28 @@ def verify(citation, index=None):
     page, folio, text = got
     base.folio = folio
     base.location = idx.location(rec.canonical_id, page)
-    status, score, span, note = _ladder(base, text)
+    status, score, span, note, shown = _ladder(base, text)
+    link_text = text
+    if status == "unverified" and _quote_ok(base):
+        nxt = idx.get_page(rec.canonical_id, page + 1)
+        if nxt is not None:
+            joined = text + "\n" + nxt[2]
+            s2, sc2, sp2, n2, sh2 = _ladder(base, joined, number_rung=False)
+            if s2 != "unverified" and sp2 and sp2[1] > len(text):
+                status, score, span, shown, link_text = s2, sc2, sp2, sh2, joined
+                note = (n2 + "; " if n2 else "") + f"spans pages {page}-{page + 1}"
     if status == "unverified":
         elsewhere = _elsewhere(base, idx, page)
         if elsewhere:
             note = (note + "; " if note else "") + elsewhere
     base.char_start, base.char_end = span if span else (None, None)
+    if shown is not None:
+        base.quote = shown
     if status != "unverified" and rec.raw_doc_type == "transcript":
         status, score, note, base.speaker = transcript_rule(base, idx, page, span, status, score, note)
-    base.deep_link = build_deep_link(base, text)
+    base.deep_link, link_note = build_deep_link_with_note(base, link_text)
+    if link_note:
+        note = (note + "; " if note else "") + link_note
     base.viewer_link = build_viewer_link(base)
     return replace(base, verification=Verification(status, round(score, 4), now, note), confidence_note=note)
 
@@ -235,53 +290,85 @@ def transcript_rule(c, idx, page, span, status, score, note):
     return status, score, (note + "; " if note else "") + f"speaker attributed from transcript label: {who}", who
 
 
-def _ladder(c, text):
-    q = (c.quote or "").strip()
+def _quote_ok(c):
+    nq = _nz(c.quote)
+    return len(nq) >= MIN_QUOTE_CHARS or (c.claim_type == "number" and len(nq) > 0)
+
+
+def _ladder(c, text, number_rung=True):
+    """(status, score, span, note, shown_quote or None). span = raw char offsets into text."""
+    q = strip_zw(c.quote or "").strip()
     nq = _norm(q)
+    clean, cmap = strip_zw_map(text)
     ntext, imap = norm_with_map(text)
     has_val = c.value not in (None, "")
-    quote_ok = len(nq) >= MIN_QUOTE_CHARS or (c.claim_type == "number" and len(nq) > 0)
+    quote_ok = _quote_ok(c)
+    short = len(nq) < SHORT_QUOTE_CHARS or len(nq.split()) < SHORT_QUOTE_TOKENS
 
     def with_value(status, score, span, note=""):
-        """Numeric claims must also have their number in the matched span (or page when no span)."""
+        """Numeric claims must also have their number in the matched span."""
         if c.claim_type == "number" and has_val:
-            seg = text[span[0]:span[1]] if span else text
-            ok, n2 = value_on_text(c, seg)
+            ok, n2, _ = value_on_text(c, text[span[0]:span[1]], text, span[0])
             if not ok:
-                return "unverified", 0.0, span, f"quote verified but {n2}"
-            note = (note + "; " if note else "") + n2 if n2 else note
-        return status, score, span, note
+                return "unverified", 0.0, span, f"quote verified but {n2}", None
+        return status, score, span, note, None
 
-    if quote_ok:
-        i = text.find(q)
+    if quote_ok and short:
+        j = _bounded_find(ntext, nq)
+        if j >= 0:
+            return with_value("substring", 0.98, _span_in_raw(j, j + len(nq), imap),
+                              "short quote: capped at substring, matched at a token boundary")
+    elif quote_ok:
+        i = clean.find(q)
         if i >= 0:
-            return with_value("exact", 1.0, (i, i + len(q)))
+            return with_value("exact", 1.0, (cmap[i], cmap[i + len(q) - 1] + 1))
         j = ntext.find(nq)
-        if verify_quote(q, c.canonical_id, c.page) and j >= 0:      # shared moat verifier: normalized page substring
-            return with_value("substring", 0.98, _span_in_raw(j, j + len(nq), imap, text))
+        if j >= 0:
+            return with_value("substring", 0.98, _span_in_raw(j, j + len(nq), imap))
         if len(nq) >= MIN_QUOTE_CHARS:
             score, ds, de = _partial(nq, ntext)
             if score >= FUZZY_THRESHOLD and de > ds:
-                span = _span_in_raw(ds, de, imap, text)
-                qn, sn = _numbers(nq), _numbers(ntext[ds:de])
-                if not qn <= sn:
-                    return "unverified", 0.0, span, f"fuzzy match {score:.0f} but numbers differ from page: {sorted(qn - sn)}"
+                span = _span_in_raw(ds, de, imap)
+                qn, sn = _numseq(nq), _numseq(ntext[ds:de])
+                if not _ordered_run(qn, sn):
+                    return ("unverified", 0.0, None,
+                            f"fuzzy match {score:.0f} but numbers differ from page (quote {qn}, page {sn})", None)
+                flip = _direction_flip(nq, ntext[ds:de])
+                if flip:
+                    return "unverified", 0.0, None, f"fuzzy match {score:.0f} but {flip}", None
                 return with_value("fuzzy", score / 100.0, span, f"fuzzy partial_ratio {score:.0f}")
-    if c.claim_type == "number" and has_val:
-        ok, n2 = value_on_text(c, text)
+    if number_rung and c.claim_type == "number" and has_val:
+        if not q:
+            return "unverified", 0.0, None, "number claim with an empty quote cannot verify", None
+        ok, n2, hit = value_on_text(c, text)
         if ok:
-            return "number_match", 0.6, None, "number found on page; quote not verified" + (f"; {n2}" if n2 else "")
-        return "unverified", 0.0, None, n2
-    return "unverified", 0.0, None, "quote not found on cited page" if quote_ok else "quote missing or too short to check"
+            s0 = max(0, hit[0] - NUMBER_WINDOW)
+            e0 = min(len(text), hit[1] + NUMBER_WINDOW)
+            while s0 > 0 and not text[s0 - 1].isspace() and hit[0] - s0 < NUMBER_WINDOW + 20:
+                s0 -= 1
+            while e0 < len(text) and not text[e0].isspace() and e0 - hit[1] < NUMBER_WINDOW + 20:
+                e0 += 1
+            shown = " ".join(strip_zw(text[s0:e0]).split())
+            return ("number_match", 0.6, (s0, e0),
+                    f"number found on page; model quote not on page ({' '.join(q.split())[:80]!r}); "
+                    "footnote shows the page text around the number", shown)
+        return "unverified", 0.0, None, n2, None
+    return "unverified", 0.0, None, "quote not found on cited page" if quote_ok else "quote missing or too short to check", None
 
 
 def _elsewhere(c, idx, page):
-    nq = _norm(c.quote)
+    nq = _nz(c.quote)
     if len(nq) < MIN_QUOTE_CHARS:
         return ""
-    for n, (_, t) in idx.pages(c.canonical_id).items():
-        if n != page and nq in _norm(t):
+    pages = idx.pages(c.canonical_id)
+    if page in pages and nq in _nz(pages[page][1]):
+        return ""                                   # the quote is on the cited page; the failure is elsewhere
+    for n, (_, t) in pages.items():
+        if n != page and nq in _nz(t):
             return f"quote is on page {n}, not page {page}"
+    prev = pages.get(page - 1)
+    if prev and page in pages and nq in _nz(prev[1] + "\n" + pages[page][1]):
+        return f"quote spans pages {page - 1}-{page}; cite page {page - 1}"
     return ""
 
 

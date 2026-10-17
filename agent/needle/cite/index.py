@@ -6,6 +6,10 @@ The adapter adds only what the citation package needs on top:
   * alias resolution: a few documents are in the sqlite twice, once per id scheme (corpus
     `NVO:6k/2025-08-06_caq22025.md`, path under data/corpus; moat `NVO:companies/NVO/6k/...`, path under data/moat),
     with the same ticker, doc_type and source_url. They resolve to one DocRecord whose canonical_id is the corpus id.
+  * id-scheme aliasing (review D13): the detectors cite corpus-style ids (`VRTX:10k_FY2024.md`) while some tickers
+    are indexed only under moat-style ids (`VRTX:companies/VRTX/10k_FY2024.md`), and the reverse. When no record
+    has the exact id, resolve() tries the other scheme (`T:<rel>` <-> `T:companies/T/<rel>`), then a unique suffix
+    match among the ticker's records (`T:<rel>` -> the one `T:.../<rel>`). Ambiguous suffixes resolve to None.
   * doc_type normalisation to the citation vocabulary (10-K, 10-Q, 20-F, 8-K, call transcript, label, proxy,
     comment letter, press, other).
 Page id convention (frozen by the scraper): doc_id#p<page_no>, page_no = first number of "[[page N | printed M]]".
@@ -100,7 +104,36 @@ class DocIndex:
 
     def resolve(self, doc_id):
         self._use()
-        return self.records.get(self._alias.get(doc_id, doc_id))
+        r = self.records.get(self._alias.get(doc_id, doc_id))
+        return r if r is not None else self._scheme_alias(doc_id)
+
+    def _scheme_alias(self, doc_id):
+        """Corpus-style <-> moat-style id, then a unique suffix within the ticker (review D13)."""
+        if not doc_id or ":" not in str(doc_id):
+            return None
+        pre, rel = str(doc_id).split(":", 1)
+        moat_pre = f"companies/{pre}/"
+        other = f"{pre}:{rel[len(moat_pre):]}" if rel.startswith(moat_pre) else f"{pre}:{moat_pre}{rel}"
+        r = self.records.get(self._alias.get(other, other))
+        if r is not None:
+            return r
+        base = rel[len(moat_pre):] if rel.startswith(moat_pre) else rel
+        hits = {id(x): x for k, x in self._suffix().get(pre, ()) if k == base or k.endswith("/" + base)}
+        return next(iter(hits.values())) if len(hits) == 1 else None
+
+    def _suffix(self):
+        if getattr(self, "_sfx", None) is None:
+            sfx = {}
+            for cid, r in self.records.items():
+                if ":" in cid:
+                    pre, rel = cid.split(":", 1)
+                    sfx.setdefault(pre, []).append((rel, r))
+            for a, cid in self._alias.items():
+                if ":" in a and cid in self.records:
+                    pre, rel = a.split(":", 1)
+                    sfx.setdefault(pre, []).append((rel, self.records[cid]))
+            self._sfx = sfx
+        return self._sfx
 
     def canonical(self, doc_id):
         r = self.resolve(doc_id)

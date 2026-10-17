@@ -72,9 +72,26 @@ class Citation:
 class Claim:
     text: str                                          # the model's sentence
     citations: list = field(default_factory=list)      # list[Citation]
+    derived: dict = None                               # gate.derived_entry map for computed numbers in text
+    assumptions: dict = None                           # {number or key: label} for assumed numbers in text
 
     def to_dict(self):
-        return {"text": self.text, "citations": [c.to_dict() for c in self.citations]}
+        d = {"text": self.text, "citations": [c.to_dict() for c in self.citations]}
+        if self.derived:
+            d["derived"] = _jsonable(self.derived)
+        if self.assumptions:
+            d["assumptions"] = _jsonable(self.assumptions)
+        return d
+
+
+def _jsonable(x):
+    if isinstance(x, Citation):
+        return x.to_dict()
+    if isinstance(x, dict):
+        return {k: _jsonable(v) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [_jsonable(v) for v in x]
+    return x
 
 
 def make_cite_id(canonical_id, page, quote):
