@@ -80,6 +80,10 @@ def fact_citation(table, source_row, fld, value=None, license=""):
         v = Verification("unverified", 0.0, _now(), f"no facts row {table} {source_row} {fld}")
         return Citation(canonical_id=table, quote=f"{source_row} {fld}={value}", claim_type="number",
                         value=None if value is None else str(value), verification=v, confidence_note=v.detail)
+    return _fact_row_citation(table, r, source_row, fld, value, license)
+
+
+def _fact_row_citation(table, r, source_row, fld, value=None, license=""):
     from agent.needle.cite.facts import fact_citation_status, fact_status_grade
     reread = value is not None and _num_eq(r["value"], value)
     status = fact_citation_status(r["verify_status"], reread)
@@ -121,7 +125,8 @@ def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, 
             rj = _json.loads(r["row_json"] or "{}")
         except ValueError:
             continue
-        if where and any(str(rj.get(k, "")).strip().lower() != str(v).strip().lower() for k, v in where.items()):
+        if where and any(str(rj.get(k, "")).strip().lower() != str(v).strip().lower()
+                         and not (_isnum(rj.get(k)) and _isnum(v) and _num_eq(rj.get(k), v)) for k, v in where.items()):
             continue
         if fld not in rj:
             continue
@@ -142,6 +147,14 @@ def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, 
                         verification=Verification(status, grade if status != "unverified" else 0.0, _now(), note),
                         confidence_note=note)
     return table_citation(table, row_key or ticker or "", fld, value)
+
+
+def _isnum(x):
+    try:
+        float(x)
+        return True
+    except (TypeError, ValueError):
+        return False
 
 
 def _num_eq(a, b):
@@ -503,11 +516,11 @@ def latest_release_page1(ticker):
 
 def fact_by_key(table, row_key, fld="value", value=None):
     """Facts row looked up by its row_key (e.g. policy_exposure row_id R010)."""
-    r = db().execute('SELECT source_row FROM facts WHERE "table" = ? AND row_key = ? AND field = ? LIMIT 1',
+    r = db().execute('SELECT * FROM facts WHERE "table" = ? AND row_key = ? AND field = ? LIMIT 1',
                      (table, row_key, fld)).fetchone()
     if r is None:
         return table_citation(table, row_key, fld, value)
-    return fact_citation(table, r[0], fld, value)
+    return _fact_row_citation(table, r, r["source_row"], fld, value)
 
 
 def table_citation(table, row_key, fld, value, licensed=False):

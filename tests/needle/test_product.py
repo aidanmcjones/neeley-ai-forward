@@ -156,8 +156,13 @@ def test_real_table_has_five_rows_and_cited_label_cells(lly):
 def test_real_tied_finding_passes_gate_and_has_the_find_shape(lly):
     claims = P.tie_to_financials(lly)
     assert claims
-    passed, rejected = gate(claims)
-    assert len(passed) == len(claims) and not rejected
+    # review C5: the per-number gate decides, not "one citation verifies"; every shown claim re-passes it
+    from agent.needle.cite.gate import numeric_gate
+    for cl in claims:
+        assert cl.numeric_check["status"] == "passed"
+        res = numeric_gate([("sentence", cl.text)] + [(f"impact.math[{j}]", m) for j, m in enumerate(cl.impact["math_lines"])],
+                           cl.citations, cl.derived, cl.assumptions)
+        assert res.passed, res.numeric_check["unsupported"]
     c = claims[0]
     assert c.signal_family == "product" and c.obscurity_note and "consequence" in c.obscurity_note
     assert set(c.impact["dRev"]) == {"bull", "base", "bear"} and c.impact["formula"]
