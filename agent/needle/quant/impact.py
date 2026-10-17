@@ -195,7 +195,7 @@ def loe(co, product, rev_pre, loe_date, biologic, cites=(), as_of=AS_OF):
             best = (hit, fy, i + 1)
     imp = Impact("loe", fiscal_year=best[1], t_years=years_to_mid(best[1]) if best[1] else 0.0)
     imp.formula = (f"Rev_pre {rev_pre:,.1f} x (1 - R(y{best[2]}) {R[best[2] - 1] if best[2] else 'n/a'})"
-                   f" [{'biologic' if biologic else 'small molecule'}; LOE {loe_date.isoformat()}]")
+                   f" ({'biologic' if biologic else 'small molecule'}; LOE {loe_date.isoformat()})")
     if best[1] is None:
         imp.flags.append("LOE outside the 24-month window: dEPS = 0")
     imp.citations = list(cites) + constants_citations(co)

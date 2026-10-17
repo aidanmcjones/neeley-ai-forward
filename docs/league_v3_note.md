@@ -1,5 +1,7 @@
 # League v3: what survived the review, and what to read before the pick
 
+**Company choice is made by Parker's red-team read and a human read of the findings; league_v3 is internal triage only (it orders candidates for review and is not pitched).**
+
 Source: `out/league_v3.md`, `out/league_v3.json` and `out/league_v3_robustness.json`, from `python -m agent.needle.quant.run --all` on branch quant-model (FIND after the two-round adversarial review, `scratchpad/review/synthesis.md`). The score itself is computed by code with no model call. Every row, with its components, citations, guard, "not quantified" reason and `numeric_check`, is in `out/<T>/findings_v3.jsonl` (rows that failed the per-number citation gate, had no page evidence or hit a drop guard are in `rejected_v3.jsonl` with `rejected_by`).
 
 ## The table

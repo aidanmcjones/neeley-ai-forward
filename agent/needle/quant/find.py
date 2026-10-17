@@ -386,7 +386,7 @@ ONC_ANALOG_QUOTES = [(NEG26, 2, "Imbruvica Pharmacyclics LLC Blood cancers $9,31
                      (NEG27, 2, "Ibrance Pfizer Inc. Breast cancer $7,871 $15,741 50%"),
                      (NEG27, 2, "Multiple myeloma\n$8,650 $21,744 60%")]
 IMM = (0.65, 0.66, 0.67)   # immunology cycle 1-2 analogs: Otezla 65%, Stelara 66%, Enbrel 67% (ira_cut_check)
-IMM_QUOTES = [(NEG27, 2, "Psoriatic \narthritis\n$1,650 $4,722 65%"), (NEG26, 2, "$4,695.00 $13,836.00 66%"), (NEG26, 2, "$2,355.00 $7,106.00 67%")]
+IMM_QUOTES = [(NEG27, 2, "Psoriatic arthritis $1,650 $4,722 65%"), (NEG26, 2, "$4,695.00 $13,836.00 66%"), (NEG26, 2, "$2,355.00 $7,106.00 67%")]
 DIAB = (0.66, 0.71, 0.85)  # diabetes: smallest (Jardiance 66%), same class GLP-1 (Ozempic 71%), largest (Janumet 85%)
 DIAB_QUOTES = [(NEG27, 2, "overweight\n$274 $959 71%")]
 ALL_CUTS = (0.38, 0.655, 0.85)  # no same-class analog: cycle 1-2 smallest, median of the 16 in ira_cut_check, largest
@@ -426,7 +426,7 @@ IRA_DRUGS = [
     ("ABBV", "Vraylar", 2027, 1085.788, CMS27, 1, "Schizophrenia $1,085,788,000", 0.44, None, K_NET,
      [(NEG27, 2, "Schizophrenia\n$770 $1,376 44%")], date(2025, 11, 15)),
     ("AMGN", "Otezla", 2027, 994.001, CMS27, 1, "Psoriatic arthritis $994,001,000", 0.65, W.G_PRE_IMMUNOLOGY, None,
-     [(NEG27, 2, "Psoriatic \narthritis\n$1,650 $4,722 65%")], date(2025, 11, 15)),
+     [(NEG27, 2, "Psoriatic arthritis $1,650 $4,722 65%")], date(2025, 11, 15)),
     ("MRK", "Janumet", 2027, 1082.464, CMS27, 1, "Janumet; Janumet XR Type 2 diabetes $1,082,464,000", 0.85,
      W.G_PRE_GLP1, None, [(NEG27, 2, "Janumet; Janumet XR Merck Sharp & Dohme LLC Type 2 diabetes $80 $526 85%")],
      date(2025, 11, 15)),

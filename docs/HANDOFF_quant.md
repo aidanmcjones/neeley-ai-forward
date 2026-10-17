@@ -41,22 +41,27 @@ export CITATIONS_DB=$NEEDLE_MOAT/index/citations.sqlite
    ```
    `moves_<T>.json` lists candidate moves with their parameters, `cash_and_equivalents` (a cited 10-Q number) and the finding ids each move addresses; template: `docs/examples/moves_LLY.json`. Output: `out/<T>/decide.json` and `.md`.
 
-## How to read league_v3 and make the pick
+## Making the pick
+
+**Company choice is made by Parker's red-team read and a human read of the findings; league_v3 is internal triage only (it orders candidates for review and is not pitched).** The pitch ranks each company's findings by cited dollar impact (`out/<T>/findings_table.md` and `.json`, `rank_basis: "impact"`) and names the Sharpest Needle by one plain rule: the biggest-impact finding that analysts asked about least (docs/quant_model.md Sections 4.8 and 12).
+
+### league_v3 as internal triage (not pitched)
+
 
 1. Open `out/league_v3.md`. For each company: L, the raw top-5 sum, N_eff, blocks, largest-finding share, the top five rows (S, M, O, E, π, confidence) and the Sharpest Needle with its status (strict, provisional, floor relaxed).
 2. Read the **robustness table** first (eight rows): base; no N_eff term; MFN at the v2 universal rule; AMGN's receivables row at π_min; that row as unfired; H = 6; IRA on the draft formula; c = 0.5 on anchor rows.
 3. **What league_v3 says.** AMGN 0.0877 leads GILD 0.0511, AZN 0.0290, MRK 0.0199, BMY 0.0086. AMGN is first in 6 of 8 variants; GILD is first in the other 2, both about one row: AMGN's receivables growth beat revenue growth by +8.01 pts against an 8.00-pt trigger, and that row is 87% of AMGN's L. AZN is third in 6 of 8. The N_eff term and the MFN rule no longer decide #1. **First place is AMGN or GILD, and it turns on one human check.**
 4. Before committing to AMGN: read its Q2 2026 10-Q for an acquisition, timing or Part D redesign billing cause of the receivables build; if there is one, GILD leads. AMGN has a strict needle (the same row). Before committing to GILD: its L is one Biktarvy IRA row on an assumed discount (no HIV MFP is published; 65.5% median of a cited 38-85% range), adjacent to GILD's starter thread (HIV durability), and its needle is "floor relaxed" (D 0.40).
 5. The top-5 tables are thin (1 to 4 scored rows for most companies). The case's five findings can draw on "not quantified" rows in `findings_v2.jsonl` as qualitative findings, with their reason shown.
-6. The "why it beat the other nine" sentence names rank, the raw sum beside L, N_eff and the needle status, each with its number, and cites the robustness table.
+6. Do not pitch L, S or the league rank; the "why this company" argument comes from the red-team read and the findings themselves.
 
 ## What feeds the deck
 
 | Deck element | Source |
 |---|---|
-| Findings table (five rows: sentence, source, impact with math, peer, confidence) | top five rows of the picked company in `out/<T>/findings_v2.jsonl` (v3 run): `sentence_md` (with footnote markers), `impact.formula` and `d_rev` / `d_eps`, `peer` ("no peer analogue" when empty), `confidence`. Show S as a tier and π as a tier, not decimals |
-| Sharpest Needle | `needle` and `needle_status` in `league_v3.json`; print the status word if it is not strict |
-| Why this company | the league row and the robustness table in `league_v3.md` |
+| Findings table (ranked by dollar impact) | `out/<T>/findings_table.md` and `.json` (`rank_basis: "impact"`): marked sentence, marked impact math, base-case abs dEPS and dOI, analyst share asked, one shared footnote list. No S and no league number |
+| Sharpest Needle | the row marked Needle in `findings_table.*` (`needle_id`), by the plain rule: the biggest-impact finding that analysts asked about least |
+| Why this company | Parker's red-team read and a human read of the findings (league_v3 is internal triage only) |
 | Product table and growth limiter | `out/<T>/product_<slug>.md`: five rows, the tie row, the limiter sentence and the priced-in call with its reasons |
 | DECIDE five numbers | `out/<T>/decide.md`: EV (in-window and TV), cash at risk, payback month, scenario spread, MCDA, for the pick and the two rejected moves with each one's binding reason; plus a hand-built decider-evidence table for the picked move |
 | Kill signals | `kill.KILL_SIGNALS` as listed in `decide.md`: threshold, source and lag, check month, effect on EV |
@@ -74,7 +79,7 @@ Nothing from the pass changes a number. Re-runs read the cache.
 
 ## Open items, in priority order before the Sunday 2:00 pm Devpost submission
 
-1. **Make the pick** (above): the AMGN 10-Q receivables check decides AMGN vs GILD.
+1. **Make the pick** (above): by the red-team read and a human read of the findings tables; league_v3 is triage only.
 2. **Product table** for the picked product; commit the output.
 3. **DECIDE on the picked company's v3 rows** with a moves file; add one EV line at 10.5% and the decider-evidence table.
 4. **LLM pass** (one pass, cached) once the key is armed: first add a cited-call variant to `agent/llm.py` that sends `build_cited_request`'s body through the cache, and point `trial.py` at the v3 rows.

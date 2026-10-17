@@ -1,4 +1,9 @@
-"""FIND over the detectors' saved candidate findings; writes findings_v3 and the league table (no model call).
+"""FIND over the detectors' saved candidate findings; writes findings_v3, the pitch findings table and the internal
+league table (no model call).
+
+Pitch output per ticker: out/<T>/findings_table.md and .json, the gated rows ranked by base-case dollar impact with the
+Sharpest Needle picked by one plain rule (findings_table.py; rank_basis "impact"). The FIND score S and league_v3 are
+still computed and written: they order candidates for internal review and are not pitched.
 
   python -m agent.needle.quant.run --all            all 10 shortlist companies + out/league_v3.json, .md and
                                                     out/league_v3_robustness.json (the variant table)
@@ -27,7 +32,7 @@ from agent.needle.schema import Signal, read_jsonl
 
 from agent.needle.cite.gate import gate_record
 
-from . import data, find, guards, league
+from . import data, find, findings_table, guards, league
 
 DETECTORS = ["forensics", "drift", "calls", "labels", "supply"]
 
@@ -128,6 +133,8 @@ def score_ticker(ticker, write=True, extra_signals=None):
             rec, _ = gate_record(f.to_dict(), GATE_TEXT, "citations")
             why = "drop guard" if f.guard == "drop" else "no page evidence"
             fh.write(json.dumps(dict(rec, rejected_by=why), default=str, ensure_ascii=False) + "\n")
+    # pitch output: the same gated rows ranked by dollar impact, needle by the plain rule (findings_table.py)
+    findings_table.write(ticker, shown, d, PUBLIC)
     for old in ("findings_v2.jsonl", "rejected_v2.jsonl"):     # ungated v2 rows must not linger next to v3
         (d / old).unlink(missing_ok=True)
     g = GATE_LOG[ticker]

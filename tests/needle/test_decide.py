@@ -136,6 +136,7 @@ def test_rank_moves_orders_by_ev_and_select_reports_two_rejected():
     assert [x.name for x in ranked] == ["A", "B", "C", "D"] and [x.rank for x in ranked] == [1, 2, 3, 4]
     sel = D.select_move([c, a, d, b], cash=1000)
     assert sel.chosen.name == "A" and [x.name for x in sel.rejected] == ["B", "C"]
+    assert sel.rule == "Selected on EV"
     assert all(x.binding_reason for x in sel.rejected)
 
 
@@ -144,6 +145,7 @@ def test_feasibility_gate_uses_cash_at_risk():
     small = D.evaluate_move("M3", {"peak_sales": 300}, [], name="small")
     sel = D.select_move([big, small], cash=200)
     assert sel.chosen.name == "small"
+    assert sel.rule.startswith("Cash gate excluded big")
     assert "exceeds cash" in sel.rejected[0].binding_reason
 
 
@@ -154,6 +156,20 @@ def test_mcda_tiebreak_when_intervals_overlap():
     sel = D.select_move([a, b], cash=1000)
     assert sel.chosen.name == "B"   # EV intervals [EV_bear, EV_bull] overlap, so the higher MCDA wins
     assert any("overlap" in n for n in sel.notes)
+    assert sel.rule == f"EV ranges overlap (A vs B); selected on MCDA score {b.mcda:.3f} vs {a.mcda:.3f}"
+
+
+def test_non_positive_ev_is_never_chosen():
+    a = D.evaluate_move("M3", {"peak_sales": 1}, [], name="A")
+    b = D.evaluate_move("M3", {"peak_sales": 2}, [], name="B")
+    assert a.ev <= 0 and b.ev <= 0
+    sel = D.select_move([a, b], cash=1000)
+    assert sel.chosen is None and sel.least_bad.name == "B" and sel.top is sel.least_bad
+    assert sel.least_bad.status == "least_bad" and "least-bad" in sel.rule
+    # the MCDA tie-break never promotes a move with EV <= 0 over one with EV > 0
+    good = D.evaluate_move("M3", {"peak_sales": 800}, [], name="good")
+    sel = D.select_move([good, a], cash=1000)
+    assert sel.chosen.name == "good"
 
 
 def test_kill_breach_lowers_ev_and_matches_spec_posterior():
@@ -277,4 +293,11 @@ def test_demo_fixtures_are_marked_and_tie_three_moves_to_gated_findings(t, tmp_p
     assert d["demo"] and d["numeric_check"]["status"] == "passed" and len(d["ranked"]) == 3
     assert all(i["numeric_check"]["status"] in ("passed", "no_numbers") for i in d["numeric_items"])
     md = (tmp_path / "decide.md").read_text()
-    assert CLI.DEMO_NOTE in md and "## Chosen move (pipeline demonstration)" in md
+    assert CLI.DEMO_NOTE in md and "Selection rule: " in md and d["selection_rule"]
+    evs = {r["name"]: r["ev"] for r in d["ranked"]}
+    if all(v <= 0 for v in evs.values()):     # no candidate clears the hurdle: chosen is null, least-bad is the top EV
+        assert d["chosen"] is None and d["least_bad"] == max(evs, key=evs.get)
+        assert "## No candidate clears the hurdle; least-bad option: " + d["least_bad"] in md
+    else:
+        assert d["chosen"]["ev"] > 0 and d["least_bad"] is None
+        assert "## Chosen move (pipeline demonstration)" in md
