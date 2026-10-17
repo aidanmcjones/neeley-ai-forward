@@ -1,0 +1,174 @@
+"""Per-number citation gate (agent/needle/cite/gate.py): review C6, C1-C3/C5 mechanism, D2. Offline, synthetic index."""
+
+import sqlite3
+
+import pytest
+
+from agent.moat import cite as moat
+from agent.needle.cite import gate as G, verify as V
+from agent.needle.cite.index import load_index
+from agent.needle.cite.locator import Citation, Claim
+from tests.needle.test_cite import ADV_DOC, ADV_P2, EDGAR, SCHEMA, _doc
+
+KEYS = {"status", "checked", "total", "verified", "derived", "assumed", "unsupported"}
+DOC = "AAA:10k_FY2025.md"
+
+
+@pytest.fixture(scope="module", autouse=True)
+def _restore_moat_db():
+    old = moat.DB
+    yield
+    moat.DB = old
+    moat.db.cache_clear()
+
+
+@pytest.fixture(scope="module")
+def idx(tmp_path_factory):
+    f = tmp_path_factory.mktemp("gate") / "citations.sqlite"
+    con = sqlite3.connect(f)
+    con.executescript(SCHEMA)
+    _doc(con, DOC, "annual_report", EDGAR, "data/corpus/companies/AAA/10k_FY2025.md", ADV_DOC, "10-K", "2025-12-31", "2026-02-20")
+    con.commit()
+    con.close()
+    return load_index(f)
+
+
+@pytest.fixture(scope="module")
+def good(idx):
+    return V.verify(Citation(DOC, 2, ADV_P2[:90]), idx)          # exact: "... $29,482 million in 2025, an increase of 18 percent ..."
+
+
+@pytest.fixture(scope="module")
+def full_year(idx):
+    return V.verify(Citation(DOC, 2, "$64,168 million for the full year."), idx)
+
+
+@pytest.fixture(scope="module")
+def bad(idx):
+    return V.verify(Citation(DOC, 2, "Invented sentence about revenue doubling to 99 billion dollars this year."), idx)
+
+
+def _shape(chk):
+    assert set(chk) == KEYS and chk["status"] in ("passed", "failed", "unchecked")
+    assert chk["verified"] + chk["derived"] + chk["assumed"] + len(chk["unsupported"]) == chk["total"]
+    for u in chk["unsupported"]:
+        assert set(u) == {"value", "where", "reason"} and u["reason"]
+    assert (chk["status"] == "passed") == (not chk["unsupported"] and chk["status"] != "unchecked")
+
+
+def test_g1_one_verified_citation_no_longer_clears_invented_numbers(idx, good, bad):
+    text = "Keytruda sales were $29,482 million; revenue will double to $99 billion; margin 95%; 4,000 layoffs."
+    r = G.numeric_gate(text, [Claim(text, [good, bad, bad])], index=idx)
+    chk = r.numeric_check
+    _shape(chk)
+    assert chk["status"] == "failed" and not r.passed
+    assert chk["total"] == 4 and chk["verified"] == 1
+    assert [u["value"] for u in chk["unsupported"]] == ["$99 billion", "95%", "4,000"]
+    assert V.gate([Claim(text, [good, bad])])[0]                 # the old per-claim gate still lets it through
+
+
+def test_g2_fabricated_quote_number_match_does_not_cover_other_units(idx):
+    nm = V.verify(Citation(DOC, 3, "Totally fabricated quote that is not on any page at all", claim_type="number",
+                           value="18", unit="percent"), idx)
+    assert nm.verification.status == "number_match" and "18 percent" in nm.quote     # footnote shows the page text
+    assert not G.numeric_gate("Margin rose 18 points.", [nm], index=idx).passed      # pts is not percent
+    assert G.numeric_gate("Sales rose 18%.", [nm], index=idx).passed
+
+
+def test_unverified_citation_supports_nothing(idx, bad):
+    c = Citation(DOC, 2, "Keytruda sales were $31,000 million overall", claim_type="quote")
+    c = V.verify(c, idx)
+    assert c.verification.status == "unverified"
+    r = G.numeric_gate("Keytruda sales were $31,000 million.", [c], index=idx)
+    assert r.numeric_check["unsupported"][0]["value"] == "$31,000 million"
+
+
+def test_scale_and_sign_and_rounding(idx, good):
+    t4 = V.verify(Citation(DOC, 4, "Revenue 15,144 12,000 Inventory 183", claim_type="quote"), idx)
+    assert t4.verification.ok
+    assert G.numeric_gate("Revenue was $15.144 billion.", [t4], index=idx).passed      # "(in millions)" header
+    assert G.numeric_gate("Revenue was 15,144.", [t4], index=idx).passed               # restates the cell
+    bad_scale = G.numeric_gate("Revenue was $15,144 thousand.", [t4], index=idx)
+    assert not bad_scale.passed
+    other = V.verify(Citation(DOC, 2, "Other income was ($183) million lower."), idx)
+    r = G.numeric_gate("Other income was $183 million higher.", [other], index=idx)
+    assert not r.passed and "sign differs" in r.numeric_check["unsupported"][0]["reason"]
+    assert G.numeric_gate("Other income fell by ($183) million.", [other], index=idx).passed
+    assert G.numeric_gate("Keytruda sold about $29.5 billion.", [good], index=idx).passed  # rounds 29,482 million
+    assert not G.numeric_gate("Keytruda sold $29.6 billion.", [good], index=idx).passed
+
+
+def test_years_dates_and_ids_are_not_counted(idx, good):
+    r = G.numeric_gate("In 2025 (10-K p. 41, Item 7, Q4 2025, filed 2026-02-20) Keytruda sales were $29,482 million.[1]",
+                       [good], index=idx)
+    assert r.passed and r.numeric_check["total"] == 1
+
+
+def test_derived_recomputes_from_verified_operands(idx, good, full_year, bad):
+    a = Citation.from_dict({**good.to_dict(), "value": "29,482", "unit": "USD millions"})
+    der = {"share": G.derived_entry(45.9, "a / b * 100", {"a": a, "b": (64168, full_year)}, unit="%")}
+    r = G.numeric_gate("Keytruda was 45.9% of revenue.", [], derived=der, index=idx)
+    assert r.passed and r.numeric_check["derived"] == 1
+    assert set(r.numbers[0]["operands"]) == {good.cite_id, full_year.cite_id}
+    wrong = {"share": G.derived_entry(46.9, "a / b * 100", {"a": a, "b": (64168, full_year)}, unit="%")}
+    w = G.numeric_gate("Keytruda was 46.9% of revenue.", [], derived=wrong, index=idx)
+    assert not w.passed and "re-computes to" in w.numeric_check["unsupported"][0]["reason"]
+    unv = {"share": G.derived_entry(45.9, "a / b * 100", {"a": a, "b": (64168, bad)}, unit="%")}
+    u = G.numeric_gate("Keytruda was 45.9% of revenue.", [], derived=unv, index=idx)
+    assert not u.passed and "did not pass verification" in u.numeric_check["unsupported"][0]["reason"]
+    off = {"share": G.derived_entry(45.9, "a / b * 100", {"a": a, "b": (64000, full_year)}, unit="%")}
+    assert not G.numeric_gate("Keytruda was 45.9% of revenue.", [], derived=off, index=idx).passed  # 64,000 not cited
+
+
+def test_assumptions_and_formula_constants(idx, good):
+    ass = {"0.65%": "Pfizer MFN base rate (weights constant)", "0.15": "tax rate t (assumed)"}
+    assert G.numeric_gate("at the base rate of 0.65% of US revenue", [], assumptions=ass, index=idx).passed
+    assert not G.numeric_gate("at the base rate of 0.65% of US revenue", [], assumptions={"0.65%": ""}, index=idx).passed
+    f = "0.65% x Rev 29,482 x (1 - t 0.15) / 100"
+    ok = G.numeric_gate([("impact.formula", f)], [good], assumptions=ass, index=idx)
+    assert ok.passed and ok.numeric_check["assumed"] == 4 and ok.numeric_check["verified"] == 1
+    assert not G.numeric_gate([("sentence", f)], [good], assumptions=ass, index=idx).passed   # 1 and 100 need a source
+
+
+def test_fail_closed_on_errors(idx, good, monkeypatch):
+    monkeypatch.setattr(G, "same_number", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("boom")))
+    r = G.numeric_gate("Keytruda sales were $29,482 million.", [good], index=idx)
+    assert not r.passed and r.numeric_check["unsupported"][0]["reason"].startswith("gate error")
+    assert r.numeric_check["checked"] == 0 and r.numeric_check["total"] == 1
+    monkeypatch.undo()
+    monkeypatch.setattr(G, "tokenize", lambda *a, **k: 1 / 0)
+    r2 = G.numeric_gate("Keytruda sales were $29,482 million.", [good], index=idx)
+    assert r2.numeric_check["status"] == "failed" and "gate error" in r2.numeric_check["unsupported"][0]["reason"]
+
+
+def test_gate_record_findings_shape(idx, good):
+    rec = {"id": "x1", "sentence": "Keytruda sales were $29,482 million, up 18%.",
+           "impact": {"formula": "0.03 x Rev 29,482 x (1 - t 0.15)"},
+           "citations": [good.to_dict()], "assumptions": {"0.03": "anchor placeholder (3% margin event)", "0.15": "t"}}
+    out, passed = G.gate_record(rec, ["sentence", "impact.formula"], "citations", index=idx)
+    _shape(out["numeric_check"])
+    assert passed and out["numeric_check"]["total"] == 6 and "numeric_check" not in rec
+    out2, passed2 = G.gate_record({**rec, "sentence": "Sales were $31,000 million."}, ["sentence"], "citations", index=idx)
+    assert not passed2 and out2["numeric_check"]["unsupported"][0]["where"].startswith("sentence@")
+    out3, passed3 = G.gate_record({"citations": []}, ["sentence"], "citations", index=idx)
+    assert out3["numeric_check"]["status"] == "unchecked" and not passed3
+
+
+def test_gate_document_per_item_and_document_level(idx, good, bad):
+    doc = {"five numbers": [{"where": "EV", "text": "EV 1,551.3", "citations": []},
+                            {"where": "cash", "text": "cash 29,482", "citations": [good.to_dict()], "unit": "USD millions"}],
+           "inputs": [Claim("Keytruda sales were $29,482 million.", [good]), ("bad", "revenue 99 billion", [bad])]}
+    s = G.gate_document(doc, index=idx)
+    _shape(s["numeric_check"])
+    assert not s["passed"] and s["failed"] == ["EV", "bad"]
+    assert [x["passed"] for x in s["items"]] == [False, True, True, False]
+    assert s["numeric_check"]["total"] == 4 and s["numeric_check"]["verified"] == 2
+    ok = G.gate_document([Claim("Keytruda sales were $29,482 million.", [good])], index=idx)
+    assert ok["passed"] and ok["numeric_check"]["status"] == "passed"
+    assert G.gate_document([], index=idx)["numeric_check"]["status"] == "unchecked"
+
+
+def test_safe_eval_rejects_code():
+    assert G.safe_eval("max(a, b) / 2 - -1", {"a": 4, "b": 6}) == 4.0
+    with pytest.raises(ValueError):
+        G.safe_eval("__import__('os').getcwd()", {})
