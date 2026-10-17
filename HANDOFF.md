@@ -98,7 +98,16 @@ points and Ask answers. Both were checked by injecting values; the export does n
 states the public status whitelist (exact, substring, fuzzy, number_match, derived; machine_data and
 unverified never quote). For the current artifact link, see PR #22.
 
+**Chat overhaul (Sat Oct 17, night): the chat is the demo, the cockpit is depth.** `/#/` is now one page: a
+chatbot over cached answers in `ui/public/data/memos.json` (format "chat" for Part 1 Find questions, "memo"
+for the Part 2 CEO memo card with TO / FROM / RE / DATE, Copy as markdown and Print). Suggested chips run
+needle, findings, product, priced-in, the CEO memo, then "Where was the AI wrong?", and `ask_next` chips let a
+judge click through in under a minute. `/#/?q=<prompt>` opens on an answer. The seven cockpit screens moved
+under `/#/cockpit` (old links redirect), reached from a small "Full cockpit" link. Until the exporter's
+memos.json lands, the page shows a 3-record sample (`_sample/memos.json`) with a banner.
+
 **Open.**
+- `ui/public/data/memos.json` from the exporter (the chat runs on the sample until then).
 - `sentence_marked` / `derived_from` in the export.
 - `numeric_check` and token-level assumption tags (for "[assumption]" markers) not in the export yet.
 - stance.decide for the nine companies other than LLY; AMGN product v2 tables.

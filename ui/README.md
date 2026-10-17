@@ -1,4 +1,6 @@
-# NEEDLE cockpit (`ui/`)
+# NEEDLE (`ui/`)
+
+**The demo is the chat page at `/#/`; the cockpit at `/#/cockpit` is the depth.**
 
 Static single-page app (Vite + React 18 + TypeScript + Tailwind v3 + Recharts) that reads
 precomputed JSON from `public/data/`. No network at runtime, fonts bundled via @fontsource.
@@ -17,28 +19,53 @@ python3 -m http.server 8090 -d dist           # serve the static build: http://l
 
 `base: "./"` and a hash router mean `dist/` works from any static server or sub-path, with Wi-Fi off:
 fonts are bundled (@fontsource woff2 in `dist/assets/`), and the default build makes no network
-request outside its own origin. Deep links: `/#/ask?q=...`; company via `?t=BMY` (before or
+request outside its own origin. Deep links: `/#/?q=<prompt>` opens the chat on that answer;
+`/#/cockpit/ask?q=...` for the cockpit (old `/#/ask`, `/#/proof`, ... links redirect under `/cockpit`); company via `?t=BMY` (before or
 inside the hash). The picked company is remembered in localStorage (`needle.ticker`) and kept in
 step with any `?t=` in the URL, so a hard reload keeps it. A first visit with nothing stored opens
 `/#/` on `meta.default_ticker` (the league leader).
 
+## Chat (the demo page, `/`)
+
+One centered column (max 760 px), no side nav: the NEEDLE wordmark, "Ask for a memo. Every number is cited to
+the page.", a company pill, the thread, and a prompt box (Enter sends, Shift+Enter new line). Answers are
+cached in `public/data/memos.json` (no API key, no live mode); if it is missing the page uses the 3-record
+fixture `public/data/_sample/memos.json` and says so.
+
+- **Two formats.** `format: "chat"` (Part 1, Find) answers as prose with inline cite chips, optional KPI row
+  or table, then follow-up chips from `ask_next`. `format: "memo"` (Part 2, Decide) renders a paper card with a
+  TO / FROM / RE / DATE header (`memo_header`), section headings, byline, numeric-check pill, Copy as markdown
+  and Print (prints only that card).
+- **Blocks**: h, p (markdown: **bold**, *italic*, `code`, `[n]` cite chips, `[derived: a, b]`, amber
+  `[assumption]`), kpi, table, list, callout. Cite chips open the shared source drawer; withheld and derived
+  styles are the same as in the cockpit, and derived operands resolve against the memo's own `cites`.
+- **Reveal**: a typewriter of 1.5 to 2.5 s per answer, skippable by click; instant under reduced motion.
+- **Matching** (`src/lib/memos.ts`): exact prompt or alias first, then term overlap using the retriever's
+  synonym groups over prompt + aliases (floor 0.3), preferring the selected company; no match replies "I can
+  write these memos:" with the suggested chips and a "Show all prompts" list grouped by kind.
+- **Suggestions**: `memos.suggested` (a Part 1 to Part 2 flow), re-mapped by kind when the company pill changes.
+- Byline: teal AiMark only for model-written records; template / decide_v2 / data read "rules, no model".
+  Numeric-check pill: passed (counts), failed, unchecked, or `no_numbers` ("no numbers to check").
+
+The cockpit screens below now live under `/cockpit` (link "Full cockpit" under the prompt box).
+
 ## Screens
 
-- `/` **Briefing**: KPI row, the Sharpest Needle hero (engine verdict, why unseen, impact, peers,
+- `/cockpit` **Briefing**: KPI row, the Sharpest Needle hero (engine verdict, why unseen, impact, peers,
   page cites), the sortable findings grid with filters, peer and score charts for the selected row,
   and the draft stance panel.
-- `/ask` **Ask NEEDLE**: preset and typed questions answered by the offline retriever with cited
+- `/cockpit/ask` **Ask NEEDLE**: preset and typed questions answered by the offline retriever with cited
   sentences, a "what was checked" trace, exhibit cards (timeline, head-to-head, price, peer) with
   Pin to memo, and source cards.
-- `/product` **Product fine print**: product vs rivals on label, safety, dosing, exclusivity,
+- `/cockpit/product` **Product fine print**: product vs rivals on label, safety, dosing, exclusivity,
   IRA, Medicare spend and gross-to-net; price series per drug; what limits growth.
-- `/forces` **Three forces and priced-in**: IRA / MFN / tariff exposure across the 10, the
+- `/cockpit/forces` **Three forces and priced-in**: IRA / MFN / tariff exposure across the 10, the
   priced-in scorecard, consensus vs guidance and the IRA cut check.
-- `/proof` **Proof**: verifier rules and verdict counts, AI-caught cases, backtest (v1 refuted,
+- `/cockpit/proof` **Proof**: verifier rules and verdict counts, AI-caught cases, backtest (v1 refuted,
   v2 with CIs), calibration, the J&J blind test and sealed forecasts with in-browser sha256 check.
-- `/moat` **Data moat**: coverage matrix, the derived tables, no-free-source proxies, corpus
+- `/cockpit/moat` **Data moat**: coverage matrix, the derived tables, no-free-source proxies, corpus
   trust levels and the any-ticker onboarding card.
-- `/memo` **CEO memo**: one printable page from `stance`, editable inline (saved per browser),
+- `/cockpit/memo` **CEO memo**: one printable page from `stance`, editable inline (saved per browser),
   pinned exhibits drawn full size, Export PDF via `window.print()`.
 - Global: source drawer (any citation chip; Enter opens, Esc closes) and the ⌘K / Ctrl-K palette.
 

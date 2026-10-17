@@ -71,7 +71,7 @@
 
 @layer base {
   html, body { background: rgb(var(--bg)); color: rgb(var(--fg)); }
-  body { @apply font-body text-[14px] leading-snug antialiased; min-width: 1280px; overflow-x: hidden; }
+  body { @apply font-body text-[14px] leading-snug antialiased; overflow-x: hidden; }
   :focus-visible { outline: 2px solid rgb(var(--purple-bright)); outline-offset: 2px; border-radius: 3px; }
   mark { background: rgb(var(--warn) / 0.25); color: inherit; padding: 0 1px; border-radius: 2px; }
 }
@@ -90,5 +90,10 @@
   .no-print, [data-chrome], [data-sidenav] { display: none !important; }
   body { min-width: 0; background: #fff; color: #000; }
   main { padding: 0 !important; overflow: visible !important; }
+  body.print-one [data-turn]:not(.print-turn) { display: none !important; }
+  body.print-one .chat-page main { padding-top: 0 !important; }
+  .memo-card { box-shadow: none !important; border: 0 !important; padding: 0 !important; background: #fff !important; color: #000 !important; }
+  .memo-card * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .chat-page { min-height: 0 !important; background: #fff !important; }
   .app-shell, .app-shell > div { height: auto !important; min-width: 0 !important; overflow: visible !important; display: block !important; }
 }

@@ -19,6 +19,10 @@ export function numericCheckText(c: NumericCheck | null | undefined, compact = f
     return { text: compact ? `nums: ${k} unsupported` : `${k} number${k === 1 ? "" : "s"} unsupported`, tone: "bad",
       tip: `Numbers not found on the cited page: ${list || "list not exported"}.${c.note ? ` ${c.note}` : ""}` };
   }
+  if (c?.status === "no_numbers") {
+    return { text: compact ? "no numbers" : "no numbers to check", tone: "muted",
+      tip: `The numeric gate ran and this record states no numbers to check.${c.note ? ` ${c.note}` : ""}` };
+  }
   return { text: compact ? "nums unchecked" : "numbers not yet page-checked", tone: "muted",
     tip: "The quote was located on the page, but the numbers in this sentence have not been checked against the page yet (pending the v3 uncited-claim gate)." };
 }

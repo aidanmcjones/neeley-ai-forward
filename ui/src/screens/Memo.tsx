@@ -113,7 +113,7 @@ export default function Memo() {
   const btn = "rounded-md border border-line bg-surface px-3 py-1.5 text-sm font-semibold hover:bg-surface-2";
   const actions = (
     <div className="no-print flex gap-2">
-      <button type="button" onClick={() => nav("/")} className={btn}>Back to briefing</button>
+      <button type="button" onClick={() => nav("/cockpit")} className={btn}>Back to briefing</button>
       {nEdits > 0 && <button type="button" onClick={reset} className={btn}>Reset to draft</button>}
       <button type="button" onClick={() => setEditing((e) => !e)} aria-pressed={editing} className={btn}>{editing ? "Done" : "Edit"}</button>
       <button type="button" onClick={() => { setEditing(false); window.setTimeout(() => window.print(), 50); }} className="rounded-md bg-purple dark:bg-purple-deep px-3 py-1.5 text-sm font-semibold text-white hover:bg-purple-bright">Export PDF</button>

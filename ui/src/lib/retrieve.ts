@@ -138,7 +138,7 @@ export function tokens(text: string): string[] {
 }
 
 /** Tokens plus "#group" synonym ids. */
-function terms(text: string, extraTopics: string[] = []): Set<string> {
+export function terms(text: string, extraTopics: string[] = []): Set<string> {
   const out = new Set<string>();
   const low = text.toLowerCase();
   for (const [p, g] of PHRASES) if (low.includes(p)) out.add(`#${g}`);

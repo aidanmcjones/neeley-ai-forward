@@ -106,7 +106,7 @@ export interface VectorV2 extends Loose { M?: number | null; O?: number | null; 
 
 /** Numbers-on-the-page check (league_v3 uncited-claim gate). Absent = not yet run. */
 export interface NumericCheck extends Loose {
-  status: "passed" | "failed" | "unchecked" | string;
+  status: "passed" | "failed" | "unchecked" | "no_numbers" | string;
   checked?: number; total?: number;
   verified?: number; derived?: number; assumed?: number;
   unsupported?: { value?: unknown; where?: string; reason?: string }[];
@@ -226,4 +226,38 @@ export interface Proof extends Loose {
   ai_wrong?: Loose[];
   verifier_rules?: string[];
   limits?: string[];
+}
+
+/* ------------------------------------------------------------ memos.json (chat) */
+
+export interface MemoCite extends Loose {
+  n: number; cite_id?: string; finding_id?: string | null; ticker?: string | null;
+  doc_title?: string | null; period?: string | null; page?: number | string | null; quote?: string | null;
+  excerpt?: Excerpt | null; url?: string | null; withheld?: boolean; withheld_reason?: string | null;
+  verification?: { status?: string; score?: number; detail?: string } | null;
+  /** Operand cite_ids (or footnote numbers) of a derived figure. */
+  derived_from?: (string | number)[] | null; derived_expr?: string | null;
+  numeric_check?: NumericCheck | null;
+}
+
+export type MemoBlock =
+  | { type: "h"; text: string }
+  | { type: "p"; md: string }
+  | { type: "kpi"; items: { label: string; value: string; cite?: number | null }[] }
+  | { type: "table"; columns: string[]; rows: string[][] }
+  | { type: "list"; items: string[] }
+  | { type: "callout"; tone: "ok" | "warn" | "muted" | string; md: string };
+
+export interface MemoRecord extends Loose {
+  id: string; prompt: string; aliases?: string[]; ticker?: string | null; kind?: string;
+  /** "chat" answers in the thread; "memo" renders a document card. */
+  format?: "chat" | "memo" | string;
+  memo_header?: { to?: string; from?: string; re?: string; date?: string } | null;
+  generated_by?: "template" | "decide_v2" | "data" | string;
+  summary?: string; blocks?: MemoBlock[]; cites?: MemoCite[]; numeric_check?: NumericCheck | null; ask_next?: string[];
+}
+
+export interface MemosFile extends Loose {
+  generated_at?: string; mode?: string; engine?: string; default_ticker?: string | null;
+  suggested?: string[]; memos: MemoRecord[];
 }

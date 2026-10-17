@@ -10,8 +10,8 @@ import type { CiteRef, Company, Evidence, Finding, LeagueRow, Meta, Proof } from
 
 export type * from "./types";
 
-const ROOT = `${import.meta.env.BASE_URL}data/`;
-const SAMPLE = `${ROOT}_sample/`;
+export const ROOT = `${import.meta.env.BASE_URL}data/`;
+export const SAMPLE = `${ROOT}_sample/`;
 
 export class DataError extends Error {
   constructor(public readonly file: string, detail?: string) {
@@ -21,7 +21,7 @@ export class DataError extends Error {
 
 const cache = new Map<string, Promise<unknown>>();
 
-async function fetchJson<T>(prefix: string, file: string): Promise<T> {
+export async function fetchJson<T>(prefix: string, file: string): Promise<T> {
   const url = prefix + file;
   let p = cache.get(url) as Promise<T> | undefined;
   if (!p) {

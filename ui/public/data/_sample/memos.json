@@ -1,0 +1,400 @@
+{
+ "generated_at": "2026-10-17T22:00:00Z",
+ "mode": "cached",
+ "engine": "sample",
+ "default_ticker": "AMGN",
+ "suggested": [
+  "amgn-needle",
+  "league-why",
+  "amgn-ceo-memo"
+ ],
+ "memos": [
+  {
+   "id": "amgn-needle",
+   "format": "chat",
+   "prompt": "What is Amgen's sharpest needle?",
+   "aliases": [
+    "amgn needle",
+    "amgen needle",
+    "sharpest needle amgen",
+    "what did you find at amgen",
+    "amgen receivables"
+   ],
+   "ticker": "AMGN",
+   "kind": "needle",
+   "generated_by": "template",
+   "summary": "Receivables grew about twice as fast as revenue in Q2 2026.",
+   "blocks": [
+    {
+     "type": "p",
+     "md": "Amgen's trade receivables were **10,227** at June 30, 2026 against 8,701 a year earlier [1], while quarterly revenue rose from 9,179 to 10,054 [2]. Receivables outgrew revenue by about **8 points** [3], the widest gap in the peer set."
+    },
+    {
+     "type": "kpi",
+     "items": [
+      {
+       "label": "Receivables YoY",
+       "value": "+17.5%",
+       "cite": 1
+      },
+      {
+       "label": "Revenue YoY",
+       "value": "+9.5%",
+       "cite": 2
+      },
+      {
+       "label": "Gap",
+       "value": "+8.0 pts",
+       "cite": 3
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "warn",
+     "md": "Numbers are not yet page-checked: the quote is located on the page, the figures in the sentence are pending the numeric gate."
+    }
+   ],
+   "cites": [
+    {
+     "n": 1,
+     "cite_id": "c_8abd86f273",
+     "finding_id": "bc852b02400d",
+     "ticker": "AMGN",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "period": "2026-06-30",
+     "page": "3",
+     "quote": "ASSETS Current assets: Cash and cash equivalents $ 13,989 $ 9,129 Trade receivables, net 10,227 9,570 Inventories 6,220 6,225 Other current assets 4,525 4,133 Total current assets 34,961 29,057 Property,",
+     "excerpt": {
+      "before": "\n\nAMGEN INC. \n\n CONDENSED CONSOLIDATED BALANCE SHEETS \n\n (In millions, except per-share data) \n\n June 30, 2026 December 31, 2025 \n\n (Unaudited) \n\n ",
+      "match": "ASSETS \n\n Current assets: \n\n Cash and cash equivalents $ 13,989 $ 9,129 \n\n Trade receivables, net 10,227 9,570 \n\n Inventories 6,220 6,225 \n\n Other current assets 4,525 4,133 \n\n Total current assets 34,961 29,057 \n\n Property,",
+      "after": " plant and equipment, net 8,547 7,913 \n\n Intangible assets, net 20,487 22,276 \n\n Goodwill 18,668 18,680 \n\n Other noncurrent assets 12,976 12,660 \n\n Total assets $ 95,639 $ 90,586 \n\n LIABILITIES AND STOCKHOLDERS\u2019 EQUITY \n\n Current liabilities: \n\n Accounts payable $ 2,865 $ 2,367 \n\n Accrued liabilities 17,192 18,523 \n\n Current portion of long-term debt 5,445 4,599 \n\n Total current liabilities 25,502 25,489 \n\n Long-term debt 51,859 50,005 \n\n Long-term deferred tax liabilities 1,301 1,366 \n\n Long-term tax liabilities 2,844 2,690 \n\n Other noncurrent liabilities 2,445 2,378 \n\n Contingencies and commitments (see Note 13) \n\n Stockholders\u2019 equity: \n\n Common stock and additional paid-in capital; $ 0.0001 par value; 2,750.0 shares authorized; outstanding\u2014 540.6 shares in 2026 and 538.8 shares in 2025 \n 34,082 34,023 \n\n Accumulated deficit ( 22,275 ) ( 25,107 ) \n\n Accumulated other comprehensive los",
+      "located": true,
+      "how": "full",
+      "scope": "page"
+     },
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "withheld": false,
+     "withheld_reason": null,
+     "verification": {
+      "status": "substring",
+      "score": 0.98,
+      "checked_at": "2026-10-17T22:31:31+00:00",
+      "detail": ""
+     },
+     "derived_from": null,
+     "numeric_check": null
+    },
+    {
+     "n": 2,
+     "cite_id": "c_c545bf0ffa",
+     "finding_id": "bc852b02400d",
+     "ticker": "AMGN",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "period": "2026-06-30",
+     "page": "1",
+     "quote": "$ 8,771 $ 17,755 $ 16,644 Other revenues 517 408 917 684 Total revenues 10,054 9,179 18,672 17,328 Operating expenses: Cost of sales 2,811 3,011 5,555 5,979 Research and development",
+     "excerpt": {
+      "before": "\n\nPART I\u2014FINANCIAL INFORMATION \n\n Item 1. FINANCIAL STATEMENTS \n\n AMGEN INC. \n\n CONDENSED CONSOLIDATED STATEMENTS OF INCOME \n\n (In millions, except per-share data) \n\n (Unaudited) \n\n Three months ended\nJune 30, Six months ended\nJune 30, \n\n 2026 2025 2026 2025 \n\n Revenues: \n\n Product sales $ 9,537 ",
+      "match": "$ 8,771 $ 17,755 $ 16,644 \n\n Other revenues 517 408 917 684 \n\n Total revenues 10,054 9,179 18,672 17,328 \n\n Operating expenses: \n\n Cost of sales 2,811 3,011 5,555 5,979 \n\n Research and development",
+      "after": " 1,868 1,744 3,587 3,230 \n\n Selling, general and administrative 1,745 1,691 3,347 3,378 \n\n Other 116 77 3 907 \n\n Total operating expenses 6,540 6,523 12,492 13,494 \n\n Operating income 3,514 2,656 6,180 3,834 \n\n Other income (expense): \n\n Interest expense, net ( 673 ) ( 694 ) ( 1,330 ) ( 1,417 ) \n\n Other (expense) income, net ( 73 ) ( 394 ) 2 1,124 \n\n Income before income taxes 2,768 1,568 4,852 3,541 \n\n Provision for income taxes 393 136 658 379 \n\n Net income $ 2,375 $ 1,432 $ 4,194 $ 3,162 \n\n Earnings per share: \n\n Basic $ 4.40 $ 2.66 $ 7.77 $ 5.88 \n\n Diluted $ 4.37 $ 2.65 $ 7.71 $ 5.84 \n\n Weighted-average shares used in calculation of earnings per share: \n\n Basic 540 538 540 538 \n\n Diluted 544 541 544 541 \n\n See accompanying notes. \n\n 1\n\n",
+      "located": true,
+      "how": "full",
+      "scope": "page"
+     },
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "withheld": false,
+     "withheld_reason": null,
+     "verification": {
+      "status": "substring",
+      "score": 0.98,
+      "checked_at": "2026-10-17T22:31:31+00:00",
+      "detail": ""
+     },
+     "derived_from": null,
+     "numeric_check": null
+    },
+    {
+     "n": 3,
+     "cite_id": "c_sample_derived",
+     "finding_id": "bc852b02400d",
+     "ticker": "AMGN",
+     "doc_title": "Derived: receivables growth vs revenue growth",
+     "period": "2026Q2",
+     "page": null,
+     "quote": "",
+     "excerpt": null,
+     "url": null,
+     "withheld": false,
+     "withheld_reason": null,
+     "verification": {
+      "status": "derived"
+     },
+     "derived_from": [
+      "c_8abd86f273",
+      "c_c545bf0ffa"
+     ],
+     "derived_expr": "(10,227 / 8,701 - 1) - (10,054 / 9,179 - 1)",
+     "numeric_check": null
+    }
+   ],
+   "numeric_check": {
+    "status": "unchecked"
+   },
+   "ask_next": [
+    "amgn-ceo-memo",
+    "league-why"
+   ]
+  },
+  {
+   "id": "league-why",
+   "format": "chat",
+   "prompt": "Why does Amgen beat the other nine?",
+   "aliases": [
+    "league",
+    "ranking",
+    "why amgen",
+    "who wins",
+    "league table"
+   ],
+   "ticker": null,
+   "kind": "league",
+   "generated_by": "data",
+   "summary": "Amgen leads the materiality league.",
+   "blocks": [
+    {
+     "type": "p",
+     "md": "The league ranks each company by its top five scored findings, discounted when one finding carries the score. Amgen leads [1]."
+    },
+    {
+     "type": "table",
+     "columns": [
+      "Company",
+      "Score",
+      "Needle"
+     ],
+     "rows": [
+      [
+       "**AMGN**",
+       "0.088",
+       "strict"
+      ],
+      [
+       "**GILD**",
+       "0.051",
+       "floor_relaxed"
+      ],
+      [
+       "**AZN**",
+       "0.029",
+       "strict"
+      ],
+      [
+       "**MRK**",
+       "0.020",
+       "strict"
+      ],
+      [
+       "**BMY**",
+       "0.009",
+       "floor_relaxed"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "items": [
+      "Scores come from league.json.",
+      "A provisional or floor-relaxed needle means no row cleared the strict floor."
+     ]
+    }
+   ],
+   "cites": [
+    {
+     "n": 1,
+     "cite_id": "c_8abd86f273",
+     "finding_id": "bc852b02400d",
+     "ticker": "AMGN",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "period": "2026-06-30",
+     "page": "3",
+     "quote": "ASSETS Current assets: Cash and cash equivalents $ 13,989 $ 9,129 Trade receivables, net 10,227 9,570 Inventories 6,220 6,225 Other current assets 4,525 4,133 Total current assets 34,961 29,057 Property,",
+     "excerpt": {
+      "before": "\n\nAMGEN INC. \n\n CONDENSED CONSOLIDATED BALANCE SHEETS \n\n (In millions, except per-share data) \n\n June 30, 2026 December 31, 2025 \n\n (Unaudited) \n\n ",
+      "match": "ASSETS \n\n Current assets: \n\n Cash and cash equivalents $ 13,989 $ 9,129 \n\n Trade receivables, net 10,227 9,570 \n\n Inventories 6,220 6,225 \n\n Other current assets 4,525 4,133 \n\n Total current assets 34,961 29,057 \n\n Property,",
+      "after": " plant and equipment, net 8,547 7,913 \n\n Intangible assets, net 20,487 22,276 \n\n Goodwill 18,668 18,680 \n\n Other noncurrent assets 12,976 12,660 \n\n Total assets $ 95,639 $ 90,586 \n\n LIABILITIES AND STOCKHOLDERS\u2019 EQUITY \n\n Current liabilities: \n\n Accounts payable $ 2,865 $ 2,367 \n\n Accrued liabilities 17,192 18,523 \n\n Current portion of long-term debt 5,445 4,599 \n\n Total current liabilities 25,502 25,489 \n\n Long-term debt 51,859 50,005 \n\n Long-term deferred tax liabilities 1,301 1,366 \n\n Long-term tax liabilities 2,844 2,690 \n\n Other noncurrent liabilities 2,445 2,378 \n\n Contingencies and commitments (see Note 13) \n\n Stockholders\u2019 equity: \n\n Common stock and additional paid-in capital; $ 0.0001 par value; 2,750.0 shares authorized; outstanding\u2014 540.6 shares in 2026 and 538.8 shares in 2025 \n 34,082 34,023 \n\n Accumulated deficit ( 22,275 ) ( 25,107 ) \n\n Accumulated other comprehensive los",
+      "located": true,
+      "how": "full",
+      "scope": "page"
+     },
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "withheld": false,
+     "withheld_reason": null,
+     "verification": {
+      "status": "substring",
+      "score": 0.98,
+      "checked_at": "2026-10-17T22:31:31+00:00",
+      "detail": ""
+     },
+     "derived_from": null,
+     "numeric_check": null
+    }
+   ],
+   "numeric_check": null,
+   "ask_next": [
+    "amgn-needle",
+    "amgn-ceo-memo"
+   ]
+  },
+  {
+   "id": "amgn-ceo-memo",
+   "format": "memo",
+   "prompt": "Write the CEO memo for Amgen",
+   "aliases": [
+    "ceo memo",
+    "amgen memo",
+    "what should amgen do",
+    "write the memo",
+    "decide"
+   ],
+   "ticker": "AMGN",
+   "kind": "decide",
+   "generated_by": "template",
+   "memo_header": {
+    "to": "Robert Bradway, CEO, Amgen",
+    "from": "Competitive Intelligence (NEEDLE)",
+    "re": "Receivables are outrunning revenue: defend before the market prices it",
+    "date": "2026-10-17"
+   },
+   "summary": "Recommend Defend.",
+   "blocks": [
+    {
+     "type": "h",
+     "text": "Decision needed"
+    },
+    {
+     "type": "p",
+     "md": "Approve 'Defend' as Amgen's response to the Sharpest Needle (finding bc852b02400d) before the next quarterly filing. [1]"
+    },
+    {
+     "type": "h",
+     "text": "Options weighed"
+    },
+    {
+     "type": "table",
+     "columns": [
+      "Option",
+      "Dollars",
+      "Why"
+     ],
+     "rows": [
+      [
+       "Defend",
+       "$1143M",
+       "Fix the exposure the filings reveal (channel, receivables, margin, disclosure) before the "
+      ],
+      [
+       "Attack",
+       "not quantified",
+       "Press a label, dosing or safety advantage over rivals with prescribers and payers. 3 verif"
+      ],
+      [
+       "Reprice",
+       "$290M",
+       "Reset net price and contracting where IRA, MFN or gross-to-net pressure lands. Largest imp"
+      ],
+      [
+       "Partner-or-buy",
+       "not quantified",
+       "License or acquire to replace revenue at risk from earlier exclusivity loss, a narrower la"
+      ]
+     ]
+    },
+    {
+     "type": "h",
+     "text": "What would prove us wrong"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Receivables growth falls back inside revenue growth in the next two 10-Qs.",
+      "CMS's next selected-drug list or MFP schedule leaves the product's exposure unchanged.",
+      "The company's own disclosure puts the Medicaid MFN cost well below this estimate in the next 10-Q."
+     ]
+    },
+    {
+     "type": "callout",
+     "tone": "muted",
+     "md": "Drafted from verified findings by rules; no model wrote this memo."
+    }
+   ],
+   "cites": [
+    {
+     "n": 1,
+     "cite_id": "c_8abd86f273",
+     "finding_id": "bc852b02400d",
+     "ticker": "AMGN",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "period": "2026-06-30",
+     "page": "3",
+     "quote": "ASSETS Current assets: Cash and cash equivalents $ 13,989 $ 9,129 Trade receivables, net 10,227 9,570 Inventories 6,220 6,225 Other current assets 4,525 4,133 Total current assets 34,961 29,057 Property,",
+     "excerpt": {
+      "before": "\n\nAMGEN INC. \n\n CONDENSED CONSOLIDATED BALANCE SHEETS \n\n (In millions, except per-share data) \n\n June 30, 2026 December 31, 2025 \n\n (Unaudited) \n\n ",
+      "match": "ASSETS \n\n Current assets: \n\n Cash and cash equivalents $ 13,989 $ 9,129 \n\n Trade receivables, net 10,227 9,570 \n\n Inventories 6,220 6,225 \n\n Other current assets 4,525 4,133 \n\n Total current assets 34,961 29,057 \n\n Property,",
+      "after": " plant and equipment, net 8,547 7,913 \n\n Intangible assets, net 20,487 22,276 \n\n Goodwill 18,668 18,680 \n\n Other noncurrent assets 12,976 12,660 \n\n Total assets $ 95,639 $ 90,586 \n\n LIABILITIES AND STOCKHOLDERS\u2019 EQUITY \n\n Current liabilities: \n\n Accounts payable $ 2,865 $ 2,367 \n\n Accrued liabilities 17,192 18,523 \n\n Current portion of long-term debt 5,445 4,599 \n\n Total current liabilities 25,502 25,489 \n\n Long-term debt 51,859 50,005 \n\n Long-term deferred tax liabilities 1,301 1,366 \n\n Long-term tax liabilities 2,844 2,690 \n\n Other noncurrent liabilities 2,445 2,378 \n\n Contingencies and commitments (see Note 13) \n\n Stockholders\u2019 equity: \n\n Common stock and additional paid-in capital; $ 0.0001 par value; 2,750.0 shares authorized; outstanding\u2014 540.6 shares in 2026 and 538.8 shares in 2025 \n 34,082 34,023 \n\n Accumulated deficit ( 22,275 ) ( 25,107 ) \n\n Accumulated other comprehensive los",
+      "located": true,
+      "how": "full",
+      "scope": "page"
+     },
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "withheld": false,
+     "withheld_reason": null,
+     "verification": {
+      "status": "substring",
+      "score": 0.98,
+      "checked_at": "2026-10-17T22:31:31+00:00",
+      "detail": ""
+     },
+     "derived_from": null,
+     "numeric_check": null
+    },
+    {
+     "n": 2,
+     "cite_id": "c_c545bf0ffa",
+     "finding_id": "bc852b02400d",
+     "ticker": "AMGN",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "period": "2026-06-30",
+     "page": "1",
+     "quote": "$ 8,771 $ 17,755 $ 16,644 Other revenues 517 408 917 684 Total revenues 10,054 9,179 18,672 17,328 Operating expenses: Cost of sales 2,811 3,011 5,555 5,979 Research and development",
+     "excerpt": {
+      "before": "\n\nPART I\u2014FINANCIAL INFORMATION \n\n Item 1. FINANCIAL STATEMENTS \n\n AMGEN INC. \n\n CONDENSED CONSOLIDATED STATEMENTS OF INCOME \n\n (In millions, except per-share data) \n\n (Unaudited) \n\n Three months ended\nJune 30, Six months ended\nJune 30, \n\n 2026 2025 2026 2025 \n\n Revenues: \n\n Product sales $ 9,537 ",
+      "match": "$ 8,771 $ 17,755 $ 16,644 \n\n Other revenues 517 408 917 684 \n\n Total revenues 10,054 9,179 18,672 17,328 \n\n Operating expenses: \n\n Cost of sales 2,811 3,011 5,555 5,979 \n\n Research and development",
+      "after": " 1,868 1,744 3,587 3,230 \n\n Selling, general and administrative 1,745 1,691 3,347 3,378 \n\n Other 116 77 3 907 \n\n Total operating expenses 6,540 6,523 12,492 13,494 \n\n Operating income 3,514 2,656 6,180 3,834 \n\n Other income (expense): \n\n Interest expense, net ( 673 ) ( 694 ) ( 1,330 ) ( 1,417 ) \n\n Other (expense) income, net ( 73 ) ( 394 ) 2 1,124 \n\n Income before income taxes 2,768 1,568 4,852 3,541 \n\n Provision for income taxes 393 136 658 379 \n\n Net income $ 2,375 $ 1,432 $ 4,194 $ 3,162 \n\n Earnings per share: \n\n Basic $ 4.40 $ 2.66 $ 7.77 $ 5.88 \n\n Diluted $ 4.37 $ 2.65 $ 7.71 $ 5.84 \n\n Weighted-average shares used in calculation of earnings per share: \n\n Basic 540 538 540 538 \n\n Diluted 544 541 544 541 \n\n See accompanying notes. \n\n 1\n\n",
+      "located": true,
+      "how": "full",
+      "scope": "page"
+     },
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "withheld": false,
+     "withheld_reason": null,
+     "verification": {
+      "status": "substring",
+      "score": 0.98,
+      "checked_at": "2026-10-17T22:31:31+00:00",
+      "detail": ""
+     },
+     "derived_from": null,
+     "numeric_check": null
+    }
+   ],
+   "numeric_check": {
+    "status": "unchecked"
+   },
+   "ask_next": [
+    "amgn-needle",
+    "league-why"
+   ]
+  }
+ ]
+}

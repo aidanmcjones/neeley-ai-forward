@@ -30,9 +30,15 @@ export function citeIndex(company: Company | null | undefined): Map<string, Evid
   return m;
 }
 
+/** Citations registered by pages that are not company-file screens (the chat), keyed by cite_id. */
+const EXTRA = new Map<string, Evidence>();
+export function registerCites(evs: Evidence[]) {
+  for (const e of evs) if (e.cite_id) EXTRA.set(e.cite_id, e);
+}
+
 export function derivedOperands(company: Company | null | undefined, ev: Evidence): { id: string; ev?: Evidence }[] {
   const ix = citeIndex(company);
-  return (ev.derived_from ?? []).map((id) => ({ id, ev: ix.get(id) }));
+  return (ev.derived_from ?? []).map((id) => ({ id, ev: EXTRA.get(id) ?? ix.get(id) }));
 }
 
 export type MarkToken =

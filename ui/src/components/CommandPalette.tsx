@@ -63,7 +63,7 @@ export function CommandPalette({ onClose }: { onClose: () => void }) {
   const run = (it: Item | undefined) => {
     if (!it) return;
     onClose();
-    if (it.kind === "ask") nav(`/ask?q=${encodeURIComponent(it.q)}`);
+    if (it.kind === "ask") nav(`/cockpit/ask?q=${encodeURIComponent(it.q)}`);
     else setTicker(it.ticker);
   };
 

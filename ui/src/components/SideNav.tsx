@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
 export const ROUTES = [
-  { to: "/", label: "Briefing", end: true },
-  { to: "/ask", label: "Ask" },
-  { to: "/product", label: "Product" },
-  { to: "/forces", label: "Forces" },
-  { to: "/proof", label: "Proof" },
-  { to: "/moat", label: "Data moat" },
-  { to: "/memo", label: "Memo" },
+  { to: "/cockpit", label: "Briefing", end: true },
+  { to: "/cockpit/ask", label: "Ask" },
+  { to: "/cockpit/product", label: "Product" },
+  { to: "/cockpit/forces", label: "Forces" },
+  { to: "/cockpit/proof", label: "Proof" },
+  { to: "/cockpit/moat", label: "Data moat" },
+  { to: "/cockpit/memo", label: "Memo" },
 ] as const;
 
 // Left nav, 220px. Plain links: Tab/Enter work natively; aria-current marks the active route.
@@ -31,7 +31,10 @@ export function SideNav() {
           </li>
         ))}
       </ul>
-      <div className="mt-auto px-5 py-4 text-[11px] text-muted">Built by TCU Neeley students</div>
+      <div className="mt-auto px-5 py-4 text-[11px] text-muted space-y-1">
+        <NavLink to="/" className="block font-semibold text-purple hover:underline">← Back to chat</NavLink>
+        <div>Built by TCU Neeley students</div>
+      </div>
     </nav>
   );
 }

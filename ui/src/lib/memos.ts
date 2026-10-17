@@ -1,0 +1,88 @@
+// memos.json: cached chat answers and CEO memos. Same loader pattern as data.ts (real export,
+// else the _sample fixture). Matching: exact prompt/alias first, then term overlap with the
+// retriever's synonym groups over prompt + aliases (floor 0.3).
+import { useEffect, useState } from "react";
+import { fetchJson, ROOT, SAMPLE } from "./data";
+import { terms } from "./retrieve";
+import type { Evidence, MemoCite, MemoRecord, MemosFile } from "./types";
+
+export interface MemosState { file: MemosFile | null; sample: boolean; error: string | null; loading: boolean }
+
+export function useMemos(): MemosState {
+  const [st, setSt] = useState<MemosState>({ file: null, sample: false, error: null, loading: true });
+  useEffect(() => {
+    let live = true;
+    (async () => {
+      try {
+        const f = await fetchJson<MemosFile>(ROOT, "memos.json");
+        if (live) setSt({ file: norm(f), sample: false, error: null, loading: false });
+      } catch (e) {
+        try {
+          const f = await fetchJson<MemosFile>(SAMPLE, "memos.json");
+          if (live) setSt({ file: norm(f), sample: true, error: null, loading: false });
+        } catch {
+          if (live) setSt({ file: null, sample: false, error: (e as Error).message, loading: false });
+        }
+      }
+    })();
+    return () => { live = false; };
+  }, []);
+  return st;
+}
+
+function norm(f: MemosFile): MemosFile {
+  return { ...f, memos: Array.isArray(f?.memos) ? f.memos.filter((m) => m && m.id && m.prompt) : [], suggested: Array.isArray(f?.suggested) ? f.suggested : [] };
+}
+
+const normText = (s: string) => s.toLowerCase().replace(/[^a-z0-9&]+/g, " ").trim();
+
+export interface MatchResult { memo: MemoRecord | null; score: number; how: "exact" | "fuzzy" | "none" }
+
+/** Exact prompt/alias match, then weighted term overlap (prefers the active ticker on ties). */
+export function matchMemo(file: MemosFile | null, query: string, ticker?: string | null): MatchResult {
+  if (!file?.memos.length || !query.trim()) return { memo: null, score: 0, how: "none" };
+  const q = normText(query);
+  const exact = file.memos.filter((m) => [m.prompt, ...(m.aliases ?? [])].some((a) => normText(a) === q));
+  if (exact.length) return { memo: exact.find((m) => m.ticker === ticker) ?? exact[0], score: 1, how: "exact" };
+
+  const docs = file.memos.map((m) => ({ m, t: terms([m.prompt, ...(m.aliases ?? []), m.ticker ?? ""].join(" . ")) }));
+  const df = new Map<string, number>();
+  for (const d of docs) for (const t of d.t) df.set(t, (df.get(t) ?? 0) + 1);
+  const idf = (t: string) => Math.log(1 + docs.length / (df.get(t) ?? 0.5));
+  const qt = terms(query);
+  // Tickers and company names named in the query.
+  const named = new Set<string>();
+  for (const m of file.memos) if (m.ticker && new RegExp(`\\b${m.ticker.toLowerCase()}\\b`).test(query.toLowerCase())) named.add(m.ticker);
+  let qw = 0;
+  for (const t of qt) qw += idf(t);
+  let best: MatchResult = { memo: null, score: 0, how: "none" };
+  for (const d of docs) {
+    let inter = 0, dw = 0;
+    for (const t of d.t) dw += idf(t);
+    for (const t of qt) if (d.t.has(t)) inter += idf(t);
+    if (!inter) continue;
+    const coverage = qw ? inter / qw : 0;          // how much of the question the memo answers
+    const precision = dw ? inter / dw : 0;         // how much of the memo the question asks for
+    let s = 0.7 * coverage + 0.3 * Math.min(1, precision * 3);
+    if (named.size) s *= d.m.ticker && named.has(d.m.ticker) ? 1.1 : d.m.ticker ? 0.6 : 1;
+    else if (ticker && d.m.ticker === ticker) s *= 1.05;
+    if (s > best.score) best = { memo: d.m, score: s, how: "fuzzy" };
+  }
+  return best.score >= 0.3 ? best : { memo: null, score: best.score, how: "none" };
+}
+
+/** Memo cite -> the Evidence shape the CiteChip / SourceDrawer already render. */
+export function citeEvidence(c: MemoCite, all: MemoCite[]): Evidence {
+  const page = c.page != null && c.page !== "" ? `p. ${c.page}` : "";
+  const period = c.period && !(c.doc_title ?? "").includes(c.period) ? c.period : null;
+  const label = [c.doc_title, period, page].filter(Boolean).join(", ") || c.cite_id || `source ${c.n}`;
+  const ops = (c.derived_from ?? []).map((x) => (typeof x === "number" ? all.find((o) => o.n === x)?.cite_id : x)).filter((x): x is string => !!x);
+  return {
+    doc_id: c.cite_id ?? `memo-cite-${c.n}`, cite_id: c.cite_id, citation: label, doc_title: c.doc_title ?? undefined,
+    period: c.period ?? undefined, page: typeof c.page === "number" ? c.page : null, printed: c.page != null ? String(c.page) : undefined,
+    location: page || undefined, quote: c.quote ?? "", excerpt: c.excerpt ?? undefined, url: c.url ?? undefined,
+    withheld: c.withheld === true, withheld_reason: c.withheld_reason ?? null, verification: c.verification ?? null,
+    derived_from: ops.length ? ops : null, derived_expr: c.derived_expr ?? null,
+    verdict: c.verification?.status && c.verification.status !== "unverified" ? "verified" : undefined,
+  };
+}

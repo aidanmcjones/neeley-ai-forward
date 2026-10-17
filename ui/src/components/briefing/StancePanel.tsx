@@ -122,11 +122,11 @@ export function StancePanel({ company, preview, onPreview }: {
       </div>
 
       <div className="flex gap-2">
-        <button type="button" onClick={() => nav("/memo")}
+        <button type="button" onClick={() => nav("/cockpit/memo")}
           className="flex-1 rounded-md bg-purple dark:bg-purple-deep px-3 py-2 text-sm font-semibold text-white hover:bg-purple-bright">
           Generate CEO memo
         </button>
-        <button type="button" onClick={() => nav("/ask")}
+        <button type="button" onClick={() => nav("/cockpit/ask")}
           className="flex-1 rounded-md border border-purple/40 bg-surface px-3 py-2 text-sm font-semibold text-purple hover:bg-chip">
           Ask a follow-up
         </button>
