@@ -16,13 +16,13 @@ STATUS = {
     # bucket key -> collect / verify state shown in the column header
     "annual": ("collected", "verified"), "quarterly": ("collected", "verified"),
     "calls": ("collected", "verified"), "product_revenue": ("collected", "verified"),
-    "policy": ("collected", "verified"), "pricing": ("collected", "verifying"),
+    "policy": ("collected", "verified"), "pricing": ("collected", "verified"),
     "consensus": ("collected", "verified"), "attention": ("collected", "verified"),
     "fine_print": ("collected", "verified"), "product_evidence": ("collected", "verified"),
 }
 STAGES = [
     ("Collect", "done", "7 streams done: filings, calls, policy, product, pricing, market, SEC fine print, plus I/B/E/S from WRDS"),
-    ("Verify", "running", "Opus re-checks every quote and number against its page; 8 of 10 buckets verified; pricing in progress"),
+    ("Verify", "done", "Opus re-checked every stream against its source; all 10 buckets verified, 70+ error types logged"),
     ("Citation index", "running", "Opus is building one SQLite search index over corpus + moat: pages, verified facts, quote grades"),
     ("Model", "blocked", "NEEDLE runs on the index; blocked on the Anthropic API key"),
     ("UI", "waiting", "Cockpit restyle of the Streamlit app, after the model reads the index"),
