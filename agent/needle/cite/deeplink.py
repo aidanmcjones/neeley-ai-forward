@@ -39,7 +39,7 @@ from .numbers import strip_zw
 HEAD_WORDS = 8
 MIN_RUN_WORDS = 4
 LICENSED = ("bloomberg_licensed",)
-DEFAULT_VIEWER_BASE = ""
+DEFAULT_VIEWER_BASE = "http://127.0.0.1:8765"
 
 
 def _enc(s):

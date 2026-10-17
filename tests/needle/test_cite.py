@@ -143,7 +143,7 @@ def test_exact(idx):
     page_text = idx.get_page(c.canonical_id, 2)[2]
     assert page_text[c.char_start:c.char_end] == EXACT
     assert c.folio == "41" and c.location == "p. 41" and c.doc_title == "AAA 10-K FY2025" and c.source_url == EDGAR
-    assert c.deep_link.startswith(EDGAR + "#:~:text=") and c.viewer_link.startswith("/viewer?doc=")
+    assert c.deep_link.startswith(EDGAR + "#:~:text=") and c.viewer_link.startswith("http://127.0.0.1:8765/viewer?doc=")
 
 
 def test_substring_after_whitespace_and_quote_changes(idx):
@@ -219,9 +219,9 @@ def test_render_links_and_dedupe(idx):
     assert "[1]" in md and "[2]" in md and "[3]" not in md
     assert "Keytruda sales were $29,482 million.[1]" in md and "Margin held.[1][2]" in md
     assert 'AAA 10-K FY2025, p. 41 (file page 2) -- "' in md and "AAA 10-K FY2025, Item 1A (file page 3)" in md
-    assert "[open](https://www.sec.gov/" in md and "[viewer](/viewer?doc=" in md and "verified: exact" in md
+    assert "[open](https://www.sec.gov/" in md and "[viewer](http://127.0.0.1:8765/viewer?doc=" in md and "verified: exact" in md
     h = render.render_html(cl)
-    assert '<sup><a href="#fn-1">[1]</a></sup>' in h and 'id="fn-2"' in h and 'href="/viewer?doc=' in h
+    assert '<sup><a href="#fn-1">[1]</a></sup>' in h and 'id="fn-2"' in h and 'href="http://127.0.0.1:8765/viewer?doc=' in h
 
 
 def test_unknown_folio_reads_file_page(idx):
@@ -297,7 +297,7 @@ def test_build_request(idx, monkeypatch):
     blocks = body["messages"][0]["content"]
     sr = [b for b in blocks if b["type"] == "search_result"]
     assert len(sr) == 2 and all(b["citations"] == {"enabled": True} for b in sr)
-    assert sr[0]["title"] == "AAA 10-K FY2025 p. 41" and sr[0]["source"].startswith("/viewer?doc=AAA%3A10k_FY2025.md&page=2")
+    assert sr[0]["title"] == "AAA 10-K FY2025 p. 41" and sr[0]["source"].startswith("http://127.0.0.1:8765/viewer?doc=AAA%3A10k_FY2025.md&page=2")
     assert "cache_control" in sr[-1] and "cache_control" not in sr[0]
     assert blocks[-1] == {"type": "text", "text": "What were Keytruda sales?"}
     assert "output_config" not in body and CITATION_SYSTEM_RULE in body["system"][0]["text"]
@@ -599,3 +599,31 @@ def test_llm_refusal_empty_and_truncation(idx):
     assert response_status(resp) == "max_tokens"
     out = parse_cited_response(resp, idx)
     assert [c.text for c in out] == ["Keytruda sales were $29,482 million."]           # truncated tail dropped
+
+
+# ---------------------------------------------------------------- review D6, C14: the /viewer route is served
+def test_viewer_link_base_is_configurable(monkeypatch):
+    c = Citation("AAA:x/y.md", 4, "a b")
+    assert build_viewer_link(c).startswith("http://127.0.0.1:8765/viewer?doc=")
+    monkeypatch.setenv("VIEWER_BASE", "https://team.example/app/")
+    assert build_viewer_link(c).startswith("https://team.example/app/viewer?doc=AAA%3Ax%2Fy.md&page=4")
+    monkeypatch.setenv("VIEWER_BASE", "")
+    assert build_viewer_link(c).startswith("/viewer?doc=")
+
+
+def test_viewer_server_serves_marked_page(root, idx):
+    from urllib.request import urlopen
+    from urllib.error import HTTPError
+    from agent.needle.cite.viewer_server import serve
+    srv, _ = serve(0, db_path=root, background=True)
+    try:
+        port = srv.server_address[1]
+        c = V.verify(cite(), idx)
+        link = build_viewer_link(c, base=f"http://127.0.0.1:{port}")
+        body = urlopen(link, timeout=10).read().decode("utf-8")
+        assert "<mark>Net sales of Keytruda" in body and "p. 41" in body
+        with pytest.raises(HTTPError):
+            urlopen(f"http://127.0.0.1:{port}/nope", timeout=10)
+    finally:
+        srv.shutdown()
+        srv.server_close()
