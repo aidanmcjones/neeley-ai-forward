@@ -1,0 +1,1144 @@
+"""Export precomputed JSON for the NEEDLE cockpit UI (ui/, Vite + React) into ui/public/data/.
+
+Follows the data contract in docs/ui_spec.md. Read-only over engine outputs; no network, no API key.
+
+  PYTHONPATH=. python -m agent.ui_export            # writes meta.json, league.json, proof.json, companies/<T>.json
+
+Inputs: out/ (findings, rejected, labels tables, ledger, backtest, predictions), data/corpus (pages + manifest),
+data/moat (progress, tables, verified CSVs, ai_wrong log), docs (gate2, sealed hash, materiality limits).
+
+Rules this module keeps:
+- Contract keys are never renamed; extra keys are added only where useful. NaN/inf become null.
+- Every evidence item gets excerpt {before, match, after}: the quote located on its page (or label section) with the
+  same whitespace/quote-mark normalization the verifier uses; `match` is the text as printed on the page.
+- `stance` and `questions` are deterministic templates over verified findings. Answer text reuses finding sentences
+  and impact formulas verbatim; option dollars are sums of impact dollars present in the findings, nothing else.
+- proof.sealed.canonical is the exact string agent.needle.audit.seal() hashes, so the browser can recompute sha256.
+"""
+
+import ast
+import hashlib
+import json
+import math
+import re
+import unicodedata
+from pathlib import Path
+
+import pandas as pd
+
+from agent.needle import audit, pages
+from agent.needle.detect import CASE_SETS, SHORTLIST
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "out"
+MOAT = ROOT / "data" / "moat"
+VER = MOAT / "verified"
+DRUGS = ROOT / "data" / "corpus" / "drugs"
+DEST = ROOT / "ui" / "public" / "data"
+SIDE, SIDE_SMALL, MAX_COMPANY_BYTES = 900, 600, 4_000_000
+REGEN = "PYTHONPATH=. python -m agent.ui_export"
+
+NAMES = {"MRK": "Merck & Co.", "BMY": "Bristol Myers Squibb", "PFE": "Pfizer", "LLY": "Eli Lilly",
+         "NVO": "Novo Nordisk", "ABBV": "AbbVie", "JNJ": "Johnson & Johnson", "AZN": "AstraZeneca",
+         "AMGN": "Amgen", "GILD": "Gilead Sciences", "VRTX": "Vertex Pharmaceuticals"}
+
+VERIFIER_RULES = [
+    "The quote must appear on the cited page (whitespace-normalized).",
+    "For call transcripts, the named speaker must appear before the quote.",
+    "Every figure cited must appear on that page.",
+    "LLM-written summaries (for example fool.com transcripts) are rejected as sources; only primary documents count.",
+    "Label facts must occur verbatim in the drug's DailyMed label (label_sections.md), cited by section.",
+    "Transcripts flagged unquotable (duplicate, no speaker names, garbled) are never quoted.",
+]
+
+# one honest sentence per moat table, inferred from its header and the collector that built it
+TABLE_WHAT = {
+    "analyst_topics.csv": "Per company and quarter, how many analyst Q&A turns touched each topic, with an example quote.",
+    "company_list_vs_net.csv": "Companies' own published average list vs net price change per year (portfolio level, unaudited).",
+    "event_returns.csv": "Abnormal stock returns around each earnings filing date (day 0, days 0 to 1, days -1 to 5).",
+    "exec_comp_metrics.csv": "Incentive-plan metrics and weights from proxy statements, with the page they are printed on.",
+    "force_summary.csv": "Three-forces exposure per company: IRA-selected revenue share, MFN date, US pledge, tariff exemption, sites, US share.",
+    "gtn_proxy.csv": "Per drug and year: Part D gross per unit, Part B ASP, brand NADAC and IRA MFP side by side, with ratios.",
+    "head_to_head_pubmed.csv": "PubMed articles naming two or more of the case drugs (possible head-to-head evidence).",
+    "head_to_head.csv": "ClinicalTrials.gov studies naming two or more case drugs, with design, phase, status and primary outcome.",
+    "ibes_actuals.csv": "I/B/E/S reported actuals (EPS and revenue) per company and period.",
+    "ibes_eps_consensus.csv": "I/B/E/S EPS consensus snapshots (mean, median, high, low, count) by forecast period.",
+    "ibes_eps_quarterly.csv": "I/B/E/S quarterly EPS consensus snapshots by forecast period.",
+    "ibes_ids.csv": "I/B/E/S ticker, CUSIP and company-name mapping used to join WRDS data.",
+    "ibes_recommendations.csv": "I/B/E/S analyst recommendation summaries (mean rating, buy/hold/sell shares, revisions).",
+    "ibes_revenue_consensus.csv": "I/B/E/S revenue consensus snapshots by forecast period.",
+    "indication_timeline.csv": "Every DailyMed label version per drug with its effective date and indication count.",
+    "insider_trades.csv": "SEC Form 4 insider transactions (person, role, date, code, shares, price, value).",
+    "label_changes.csv": "Section-level changes between consecutive DailyMed label versions, with old and new excerpts.",
+    "manufacturing_sites_detail.csv": "FDA establishment registrations matched to each company, with country and operations.",
+    "manufacturing_sites.csv": "Count of FDA-registered manufacturing sites per company and country, US vs non-US.",
+    "material_agreements.csv": "Material agreements filed as SEC exhibits, with the products they mention.",
+    "medicaid_sdud.csv": "Medicaid State Drug Utilization (national) units, prescriptions and reimbursement by quarter.",
+    "nadac_history.csv": "Medicaid NADAC weekly pharmacy acquisition cost per unit for brands and their generics, 2020 to 2026.",
+    "news_mentions.csv": "Monthly news article counts per company and topic (press-attention proxy).",
+    "partb_asp_quarterly.csv": "CMS Part B payment limit per HCPCS dosage unit by quarter (ASP + 6%).",
+    "partd_by_year.csv": "Medicare Part D gross spend, units, claims and beneficiaries per drug and year, before rebates.",
+    "policy_exposure.csv": "Quoted policy-exposure facts (IRA, MFN, tariffs) per company with document and page.",
+    "prices_daily.csv": "Daily adjusted close and volume per ticker.",
+    "product_revenue_quarterly.csv": "XBRL product revenue facts per filing, period, product member and geography.",
+    "qa_turns.csv": "Every earnings-call Q&A turn with speaker, role, firm and transcript page.",
+    "recalls.csv": "FDA enforcement recalls for the case drugs with classification and reason.",
+    "rems.csv": "Whether each case drug has an active REMS and its elements (Drugs@FDA).",
+    "restatements.csv": "Product revenue values that differ across filings for the same period (candidates, mostly recasts).",
+    "sec_comment_letters.csv": "SEC staff comment letters and company replies per company with topics.",
+    "subsidiaries.csv": "Subsidiary entities and countries listed in Exhibit 21 of each 10-K.",
+    "supplement_approvals.csv": "Drugs@FDA supplement approvals per case drug (submission class, priority, status date).",
+    "transcripts_index.csv": "Index of the earnings-call transcripts collected, with source quality and Q&A turn counts.",
+    "wac_increases.csv": "California HCAI manufacturer-reported WAC increases over 16% in three years, 2019 to 2026.",
+}
+LIST_OR_NET = {
+    "partd_by_year.csv": "list-like (gross before rebates)", "nadac_history.csv": "list-like (pharmacy acquisition)",
+    "medicaid_sdud.csv": "list-like (before Medicaid rebates)", "partb_asp_quarterly.csv": "net-like (ASP)",
+    "wac_increases.csv": "list (WAC events)", "company_list_vs_net.csv": "both (company-reported, portfolio level)",
+    "gtn_proxy.csv": "both, side by side (proxies; true net is not free)",
+}
+
+# stance buckets: which CEO option a finding kind argues for (first match wins)
+OPTION_RULES = [
+    ("Attack", {"label_broader", "dosing_advantage", "boxed_warning_advantage"}, set()),
+    ("Reprice", {"ira_exposed", "spend_per_claim_gap"}, {"ira", "mfn", "gtn", "pricing", "340b", "tariff"}),
+    ("Partner-or-buy", {"exclusivity_earlier", "label_narrower", "dosing_burden", "boxed_warning_disadvantage",
+                        "trial_terminated", "impairment", "faers_serious_rising", "demand_divergence"}, set()),
+    ("Defend", None, set()),  # everything else: balance-sheet, margin, disclosure-drift and call findings
+]
+OPTION_WHY = {
+    "Defend": "fix the exposure the filings reveal (channel, receivables, margin, disclosure) before the market prices it",
+    "Attack": "press a label, dosing or safety advantage over rivals with prescribers and payers",
+    "Reprice": "reset net price and contracting where IRA, MFN or gross-to-net pressure lands",
+    "Partner-or-buy": "license or acquire to replace revenue at risk from earlier exclusivity loss, a narrower label or a dropped trial",
+}
+
+LEADS = [  # plain-words lead for the headline, by signal kind
+    (("dio", "inventory"), "Inventory is building faster than sales"),
+    (("dso", "receivables", "rec_gap"), "Customers are taking longer to pay than revenue growth explains"),
+    (("rnd",), "R&D spending jumped as a share of revenue"),
+    (("gross_margin",), "Gross margin moved sharply"),
+    (("etr", "tax_rate"), "The effective tax rate swung"),
+    (("impairment",), "A write-down hit the books"),
+    (("label_broader",), "The label is broader than rivals'"),
+    (("label_narrower",), "The label is narrower than rivals'"),
+    (("dosing_advantage",), "Dosing is less frequent than rivals'"),
+    (("dosing_burden",), "Dosing is more frequent than rivals'"),
+    (("boxed_warning_disadvantage",), "It carries a boxed warning a rival does not"),
+    (("boxed_warning_advantage",), "A rival carries a boxed warning it does not"),
+    (("exclusivity",), "Exclusivity ends earlier than rivals'"),
+    (("ira",), "Medicare price setting reaches this product"),
+    (("qa_",), "Management deflected an analyst question"),
+    (("risk_", "mdna_"), "The filing wording changed"),
+    (("trial",), "A late-stage trial was stopped"),
+]
+
+PROVE_WRONG = [  # early signals that would show the call is wrong, by kind
+    (("dio", "inventory"), "Inventory days fall back toward the peer median{pm} in the next two 10-Qs."),
+    (("dso", "receivables", "rec_gap"), "Receivables growth falls back inside revenue growth in the next two 10-Qs."),
+    (("rnd",), "R&D share of revenue returns toward the peer median{pm} in the next two 10-Qs."),
+    (("gross_margin",), "Gross margin holds at the prior-year level in the next two quarterly reports."),
+    (("etr", "tax_rate"), "The effective tax rate reverts to the prior-year level in the next 10-Q."),
+    (("impairment",), "No further impairment on the same asset in the next two filings."),
+    (("label", "dosing", "boxed"), "A new DailyMed label version for the product or a rival closes the gap within 12 months."),
+    (("exclusivity",), "A settlement, court ruling or new patent listing moves the generic or biosimilar entry date."),
+    (("ira", "spend_per_claim"), "CMS's next selected-drug list or MFP schedule leaves the product's exposure unchanged."),
+    (("qa_", "call_topic"), "Management gives the product-level number analysts asked for on the next earnings call."),
+    (("risk_", "mdna_"), "The next 10-K drops or softens the new wording without a matching hit to results."),
+    (("trial",), "The sponsor restarts or replaces the stopped trial within 12 months."),
+]
+
+
+# ---------------------------------------------------------------- small helpers
+def clean(o):
+    """Recursively turn NaN/inf/numpy/pandas values into JSON-safe plain values."""
+    if isinstance(o, dict):
+        return {str(k): clean(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [clean(v) for v in o]
+    if hasattr(o, "item") and not isinstance(o, (str, bytes)):
+        try:
+            o = o.item()
+        except Exception:
+            pass
+    if isinstance(o, float) and not math.isfinite(o):
+        return None
+    if o is pd.NaT:
+        return None
+    return o
+
+
+def read_json(p, default=None):
+    p = Path(p)
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else default
+
+
+def read_jsonl(p):
+    p = Path(p)
+    if not p.exists():
+        return []
+    return [json.loads(x) for x in p.read_text(encoding="utf-8").splitlines() if x.strip()]
+
+
+_CSV = {}
+
+
+def csv_rows(p):
+    """All rows of a CSV as dicts with NaN -> None (cached)."""
+    p = Path(p)
+    if p not in _CSV:
+        if not p.exists():
+            _CSV[p] = []
+        else:
+            df = pd.read_csv(p, low_memory=False)
+            _CSV[p] = clean(df.astype(object).where(df.notna(), None).to_dict("records"))
+    return _CSV[p]
+
+
+def for_ticker(p, ticker, col="ticker"):
+    return [r for r in csv_rows(p) if str(r.get(col) or "").upper() == ticker]
+
+
+def write(path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(clean(obj), ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+    path.write_text(text, encoding="utf-8")
+    return len(text.encode("utf-8"))
+
+
+def money(x):
+    if x is None:
+        return "n/a"
+    return f"${x / 1e9:,.2f}B" if abs(x) >= 1e9 else f"${x / 1e6:,.0f}M"
+
+
+def match_rule(kind, rules):
+    for keys, val in rules:
+        if any(k in kind for k in keys):
+            return val
+    return None
+
+
+WITHHELD = "(impact figure withheld: flagged suspect)"
+
+
+def _drug(slug):
+    return "-".join(w[:1].upper() + w[1:] for w in slug.split("-"))
+
+
+_MFP_FIX = None
+FIX_COUNT = {"mfp_text": 0, "ira_status": 0}
+
+
+def mfp_fixes():
+    """[(averaged value the engine printed, initial MFP)] for drugs whose engine MFP mixed two effective years
+    (agent.needle.detect.labels takes the median over every row of the first IPAY, e.g. Eliquis 234.125)."""
+    global _MFP_FIX
+    if _MFP_FIX is None:
+        _MFP_FIX = []
+        for p in sorted(DRUGS.glob("*/ira_negotiation.csv")):
+            df = pd.read_csv(p, low_memory=False)
+            ip = pd.to_numeric(df["IPAY"], errors="coerce")
+            rows = df[ip == ip.min()]
+            v = pd.to_numeric(rows["Single MFP per 30 DES"], errors="coerce")
+            d = pd.to_datetime(rows["MFP Effective Date"], errors="coerce")
+            ok = v.notna() & d.notna()
+            if not ok.any():
+                continue
+            avg, init = float(v[ok].median()), float(v[ok & (d == d[ok].min())].median())
+            if abs(avg - init) > 0.001:
+                _MFP_FIX.append((avg, init))
+    return _MFP_FIX
+
+
+def fix_mfp_text(t):
+    """Rewrite an averaged MFP figure printed after 'MFP' or 'MFP/30d' to the initial MFP."""
+    for avg, init in mfp_fixes():
+        forms = sorted({f"{avg:,.2f}", f"{avg:.2f}", f"{avg:g}"}, key=len, reverse=True)
+        pat = r"(MFP(?:/30d)?:? \$?)(" + "|".join(re.escape(x) for x in forms) + r")(?![\d])"
+        t, n = re.subn(pat, lambda m: m.group(1) + (f"{init:,.2f}" if "," in m.group(2) or m.group(1).endswith("$")
+                                                     else f"{init:.2f}"), t)
+        FIX_COUNT["mfp_text"] += n
+    return t
+
+
+def plain(text):
+    """Sentence cleanup for display: Python dict text -> plain English, drug names capitalised, odd characters
+    normalized. The original stays in finding_raw for the verifier trail."""
+    if not text:
+        return text
+    t = text.replace("\u00a0", " ").replace("\u2011", "-").replace("\u200b", "")
+
+    def dict_to_words(m):
+        try:
+            d = ast.literal_eval("{" + m.group(1) + "}")
+            return "(" + ", ".join(f"{_drug(str(k))} {v:g}" if isinstance(v, (int, float)) else f"{_drug(str(k))} {v}"
+                                   for k, v in d.items()) + ")"
+        except Exception:
+            return m.group(0)
+
+    t = re.sub(r"\(\{([^{}]*)\}\)", dict_to_words, t)
+    t = t.replace("MFP/30d None", "MFP/30d not yet published")
+    t = fix_mfp_text(t)
+    t = re.sub(r"\bdeflected a other question\b", "deflected a question (topic not classified)", t)
+    for slug in all_slugs_global():
+        t = re.sub(rf"(?<![\w/:.-]){re.escape(slug)}(?![\w-])", _drug(slug), t)
+    return t[:1].upper() + t[1:]
+
+
+def impact_txt(f, proxy=False):
+    """' Impact: <formula>.' for stated dollars (or any formula when proxy=True); withheld note when suspect."""
+    imp = f["impact"]
+    if imp.get("suspect"):
+        return " " + WITHHELD
+    if imp.get("formula") and (imp.get("dollars") or proxy):
+        return f" Impact: {imp['formula']}."
+    return ""
+
+
+# peer basis: kinds whose metric is a year-over-year change while peer_median is a level
+CHANGE_VS_LEVEL = {"dio_rising", "dso_rising", "tax_rate_shift", "rnd_shift", "gross_margin_drop"}
+CHANGE_VS_CHANGE = {"receivables_outpace_revenue", "inventory_outpaces_revenue", "rec_gap_peer_outlier",
+                    "faers_serious_rising", "demand_divergence"}
+
+
+def peer_basis(kind, finding, peer):
+    """(comparable, basis, note) for a finding's peer block."""
+    if kind in CHANGE_VS_LEVEL or (kind not in CHANGE_VS_CHANGE and "a year earlier" in finding and "peer median" in finding):
+        return False, "yoy_change", ("metric_value is the change vs a year earlier, peer_median is the peers' level; "
+                                     "compare the level in the finding text, not these two numbers")
+    basis = "yoy_change" if kind in CHANGE_VS_CHANGE else "level"
+    if peer.get("metric_value") is None or peer.get("peer_median") is None:
+        return False, basis, "no peer median for this signal; metric_value stands alone"
+    return True, basis, None
+
+
+# ---------------------------------------------------------------- quote location (excerpt)
+ZW = set("​‌‍﻿­")
+TR = {"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "}
+
+
+def _normmap(text):
+    """Normalized copy of text plus, for each normalized char, its index in the original."""
+    out, idx = [], []
+    for i, c in enumerate(text):
+        if c in ZW:
+            continue
+        c = TR.get(c, c)
+        for ch in unicodedata.normalize("NFKC", c):
+            out.append(TR.get(ch, ch))
+            idx.append(i)
+    return "".join(out), idx
+
+
+def _pattern(q):
+    words = [w for w in re.split(r"\s+", q.strip()) if w]
+    return r"\s*".join(re.escape(w) for w in words) if words else None
+
+
+def locate(text, quote):
+    """(start, end, how) of quote in text, original coordinates; how in {full, prefix} or None."""
+    if not text or not quote:
+        return None
+    norm, idx = _normmap(text)
+    q, _ = _normmap(quote)
+    q = " ".join(q.split())
+    for cand, how in ((q, "full"), (q[:120], "prefix"), (q[:60], "prefix"), (q[-60:], "suffix")):
+        pat = _pattern(cand)
+        if pat and len(cand) >= 20:
+            m = re.search(pat, norm, flags=re.I)
+            if m:
+                return idx[m.start()], idx[m.end() - 1] + 1, how
+    return None
+
+
+_PAGES = {}
+
+
+def page_text(doc_id, page):
+    row = pages.manifest().get(doc_id)
+    if not row:
+        return None, None
+    if doc_id not in _PAGES:
+        try:
+            _PAGES[doc_id] = pages.parse(ROOT / row["path"])[0]
+        except Exception:
+            _PAGES[doc_id] = {}
+    pg = _PAGES[doc_id].get(page)
+    return (pg[1], pg[0]) if pg else (None, None)
+
+
+_LABELS = {}
+
+
+def label_text(slug, fname):
+    key = (slug, fname)
+    if key not in _LABELS:
+        p = DRUGS / slug / fname
+        _LABELS[key] = p.read_text(encoding="utf-8", errors="ignore") if p.exists() else None
+    return _LABELS[key]
+
+
+def excerpt(ev, side):
+    """{before, match, after, located, how, scope} for one evidence item."""
+    d = ev.get("doc_id") or ""
+    scope = "page"
+    if d.startswith("drug:"):
+        _, slug, fname = d.split(":", 2)
+        text, scope = label_text(slug, fname), "label section"
+    else:
+        text, _ = page_text(d, ev.get("page"))
+    if not text:
+        return {"before": "", "match": "", "after": "", "located": False, "how": None,
+                "scope": "source not found in corpus"}
+    hit = locate(text, ev.get("quote") or "")
+    if not hit:
+        return {"before": text[: 2 * side].strip(), "match": "", "after": "", "located": False, "how": None,
+                "scope": scope + " (quote not located; page head shown)"}
+    s, e, how = hit
+    lo, hi = max(0, s - side), min(len(text), e + side)
+    if scope == "label section":  # clip to the enclosing ## section of the label
+        heads = [m.start() for m in re.finditer(r"^#{2,4} .*$", text, flags=re.M)]
+        lo = max(lo, max([h for h in heads if h <= s], default=0))
+        hi = min(hi, min([h for h in heads if h >= e], default=len(text)))
+    return {"before": text[lo:s], "match": text[s:e], "after": text[e:hi], "located": True, "how": how,
+            "scope": scope}
+
+
+# ---------------------------------------------------------------- evidence metadata
+_GRADES = None
+
+
+def grade_for(doc_id):
+    global _GRADES
+    if _GRADES is None:
+        _GRADES = {(r["ticker"], r["quarter"]): r for r in csv_rows(VER / "calls" / "transcript_grades.csv")}
+    m = re.match(r"([A-Z]+):transcripts/(\d{4}Q\d)", doc_id or "")
+    if not m:
+        return None, None
+    r = _GRADES.get((m.group(1), m.group(2)))
+    return (r.get("grade"), r.get("reason")) if r else (None, None)
+
+
+_LABEL_URL = {}
+
+
+def label_url(slug):
+    if slug not in _LABEL_URL:
+        t = label_text(slug, "label_sections.md") or ""
+        m = re.search(r"setid=([0-9a-f-]+)", t[:800])
+        _LABEL_URL[slug] = f"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid={m.group(1)}" if m else None
+    return _LABEL_URL[slug]
+
+
+def doc_label(ev):
+    """Citation label of the document (no page), for answer traces."""
+    c = ev.get("citation") or ""
+    if c:
+        c = re.split(r", (?:p\. |file page |Item )", c)[0]
+        c = re.sub(r" §[\d.]+.*$| Boxed Warning.*$", "", c)
+        return c.strip()
+    return ev.get("doc_id")
+
+
+def enrich_evidence(ev, side):
+    d = ev.get("doc_id") or ""
+    out = dict(ev)
+    if d.startswith("drug:"):
+        slug = d.split(":")[1]
+        out.update(url=label_url(slug), doc_type="fda_label", source_quality="official", grade=None)
+    else:
+        row = pages.manifest().get(d) or {}
+        g, why = grade_for(d)
+        out.update(url=row.get("source_url"), doc_type=row.get("doc_type"),
+                   source_quality=row.get("source_quality") or ("official" if row else None), grade=g)
+        if why:
+            out["grade_reason"] = why
+    out["doc_label"] = doc_label(ev)
+    out["excerpt"] = excerpt(ev, side)
+    return out
+
+
+# ---------------------------------------------------------------- findings
+def detector_of(f):
+    parts = f["id"].split("-")
+    return parts[1] if len(parts) >= 3 else ""
+
+
+def signal_links(ticker):
+    """{signal detail: [urls]} from out/<T>/signals_*.jsonl meta, for findings that carry no page evidence."""
+    out = {}
+    for p in (OUT / ticker).glob("signals_*.jsonl"):
+        for s in read_jsonl(p):
+            meta = s.get("meta") or {}
+            urls = [u for u in (meta.get("url"), (meta.get("data") or {}).get("source_url"), meta.get("source"))
+                    if isinstance(u, str) and u.startswith("http")]
+            if urls and s.get("detail"):
+                out.setdefault(s["detail"], list(dict.fromkeys(urls)))
+    return out
+
+
+def build_findings(raw, side, ticker=""):
+    top = max([f.get("score") or 0 for f in raw] or [0])
+    links = signal_links(ticker) if ticker else {}
+    seen, out = {}, []
+    for f in raw:
+        imp = f.get("impact") or {}
+        seen[f["id"]] = seen.get(f["id"], 0) + 1
+        uid = f["id"] if seen[f["id"]] == 1 else f"{f['id']}-d{seen[f['id']]}"
+        oi = imp.get("ttm_operating_income")
+        suspect = bool(imp.get("dollars") and oi and abs(imp["dollars"]) > abs(oi))
+        vec = f.get("vector") or {}
+        peer = f.get("peer") or {}
+        comparable, basis, pnote = peer_basis(f["signal_kind"], f["finding"], peer)
+        out.append({
+            "id": uid, "source_id": f["id"], "finding": plain(f["finding"]), "finding_raw": f["finding"], "signal_kind": f["signal_kind"], "detector": detector_of(f),
+            "score": f.get("score"), "score_norm": round((f.get("score") or 0) / top, 4) if top else None,
+            "confidence": f.get("confidence"), "verdict": f.get("verdict"), "reason": f.get("reason"),
+            "impact": {"formula": imp.get("formula"), "dollars": imp.get("dollars"), "base": imp.get("base"),
+                       "bear": imp.get("bear"), "bull": imp.get("bull"), "line": imp.get("line"),
+                       "eps": imp.get("eps"), "i_norm": imp.get("i_norm"),
+                       "ttm_operating_income": oi, "suspect": suspect,
+                       "suspect_note": ("impact dollars exceed trailing operating income; likely a level-vs-change "
+                                        "error in the formula, so it is left out of stance dollars") if suspect else None},
+            "peer": {"metric_value": peer.get("metric_value"), "peer_median": peer.get("peer_median"),
+                     "z": peer.get("z"), "note": peer.get("note") or pnote, "comparable": comparable,
+                     "basis": basis},
+            "vector": {k: vec.get(k) for k in ("I_norm", "P", "T", "Z", "D", "O", "E")} |
+                      {"obscurity_note": vec.get("obscurity_note"), "topics": vec.get("topics") or [],
+                       "prior": vec.get("prior")},
+            "hit_rate": f.get("hit_rate") or {}, "outside": f.get("outside") or {},
+            "evidence": [enrich_evidence(e, side) for e in f.get("evidence") or []],
+            "external_sources": [] if f.get("evidence") else links.get(f["finding"], []),
+        })
+    out.sort(key=lambda x: -(x["score"] or 0))
+    return out
+
+
+def cites_of(f, n=2):
+    return [{"finding_id": f["id"], "i": i} for i in range(min(n, len(f["evidence"])))]
+
+
+def trace_of(fs):
+    seen = []
+    for f in fs:
+        for e in f["evidence"]:
+            lab = e.get("doc_label")
+            if lab and lab not in seen:
+                seen.append(lab)
+    return seen
+
+
+def slugs_in(f):
+    t = f["finding"].lower() + " " + " ".join(e["doc_id"] for e in f["evidence"])
+    return {s for s in all_slugs_global() if re.search(rf"\b{re.escape(s)}\b", t)}
+
+
+_ALL_SLUGS = None
+
+
+def all_slugs_global():
+    global _ALL_SLUGS
+    if _ALL_SLUGS is None:
+        _ALL_SLUGS = sorted({s for cs in CASE_SETS.values() for p, rv in cs.items() for s in [p, *rv]},
+                            key=len, reverse=True)
+    return _ALL_SLUGS
+
+
+# ---------------------------------------------------------------- labels comparison
+def _v(x):
+    if isinstance(x, str):
+        if x in ("None", "nan", ""):
+            return None
+        if x in ("True", "False"):
+            return x == "True"
+    return x
+
+
+def _profile(slug):
+    try:
+        from agent.needle.detect import labels as L
+        return L.profile(slug)
+    except Exception:
+        return None
+
+
+def mfp_cell(slug, latest=False):
+    """Initial (earliest effective) or latest published IRA MFP per 30 days from the CMS MFP file in the drug pack.
+    The file lists one row per NDC per effective year; the value is the median across NDCs for that one date."""
+    p = DRUGS / slug / "ira_negotiation.csv"
+    if not p.exists():
+        return None
+    df = pd.read_csv(p, low_memory=False)
+    df["_d"] = pd.to_datetime(df["MFP Effective Date"], errors="coerce")
+    df["_v"] = pd.to_numeric(df["Single MFP per 30 DES"], errors="coerce")
+    df = df.dropna(subset=["_d", "_v"])
+    if df.empty:
+        return None
+    d = df["_d"].max() if latest else df["_d"].min()
+    v = float(df.loc[df["_d"] == d, "_v"].median())
+    return {"value": round(v, 2), "year": int(d.year), "effective": d.strftime("%Y-%m-%d"),
+            "source": f"CMS MFP file, effective {d.strftime('%Y-%m-%d')} (data/corpus/drugs/{slug}/ira_negotiation.csv)"}
+
+
+def comparison(labels_table, gtn_rows):
+    gtn = {r["drug"]: r for r in gtn_rows}
+    out = []
+    for product, block in (labels_table or {}).get("products", {}).items():
+        rivals = block.get("rivals") or []
+        slugs = [product, *rivals]
+        cells = {r["field"]: r for r in block.get("table", [])}
+        prof = {s: _profile(s) for s in slugs}
+
+        def tab(field, slug):
+            r = cells.get(field)
+            if not r:
+                return {"value": None, "source": f"'{field}' not in labels_table.json"}
+            if slug == product:
+                return {"value": _v(r.get("product")), "source": r.get("source")}
+            return {"value": _v((r.get("rivals") or {}).get(slug)), "source": (r.get("rival_sources") or {}).get(slug)}
+
+        def prof_cell(slug, key, sub=None, src_default=None):
+            P = prof.get(slug)
+            if not P or key not in P:
+                return {"value": None, "source": "labels.profile() unavailable"}
+            node = P[key]
+            val = node.get(sub) if sub else node.get("value")
+            return {"value": clean(val), "source": node.get("source") or src_default}
+
+        def generic(slug):
+            b, pv = tab("Biosimilars referencing", slug), tab("Paragraph IV filings", slug)
+            parts = []
+            if b["value"] is not None:
+                parts.append(f"{b['value']} biosimilars referencing (Purple Book)")
+            if pv["value"] is not None:
+                parts.append(f"Paragraph IV: {pv['value']}")
+            return {"value": "; ".join(parts) or None, "source": f"{b['source']}; {pv['source']}"}
+
+        def dosing(slug):
+            c = prof_cell(slug, "dosing_frequency", "doses_per_year")
+            c["text"] = tab("Dosing frequency", slug)["value"]
+            return c
+
+        def mfp(slug, latest=False):
+            c = mfp_cell(slug, latest)
+            if c:
+                return c
+            if latest:
+                return {"value": None, "year": None, "source": f"data/corpus/drugs/{slug}/ira_negotiation.csv not in pack (not selected)"}
+            P = prof.get(slug)
+            if not P or "ira" not in P:
+                g = gtn.get(slug) or {}
+                return {"value": g.get("ira_mfp_per_30day"), "source": "verified/pricing/gtn_exposure.csv"}
+            return {"value": (P["ira"]["value"] or {}).get("mfp_per_30_days"), "source": P["ira"]["source"]}
+
+        def gtn_call(slug):
+            g = gtn.get(slug)
+            if not g:
+                return {"value": None, "source": "no row in data/moat/verified/pricing/gtn_exposure.csv"}
+            return {"value": g.get("exposure_call"), "source": "data/moat/verified/pricing/gtn_exposure.csv",
+                    "confidence": g.get("confidence")}
+
+        def ira_status(slug):
+            c = tab("IRA negotiation", slug)
+            first, last = mfp_cell(slug), mfp_cell(slug, latest=True)
+            if not first:
+                return c
+            df = pd.read_csv(DRUGS / slug / "ira_negotiation.csv", low_memory=False)
+            ipay = int(pd.to_numeric(df["IPAY"], errors="coerce").min())
+            txt = f"Selected IPAY {ipay}, MFP ${first['value']:,.2f}/30 days"
+            if last and last["effective"] != first["effective"]:
+                txt += f" ({last['year']}: ${last['value']:,.2f})"
+            if txt != c["value"]:
+                FIX_COUNT["ira_status"] += 1
+            return {"value": txt, "source": first["source"], "ira_status_raw": c["value"], "raw_source": c["source"]}
+
+        fields = [
+            ("indications_count", "Approved uses (count)", lambda s: tab("Approved indications (count)", s)),
+            ("indications", "Approved uses", lambda s: prof_cell(s, "indications")),
+            ("boxed_warning", "Boxed warning", lambda s: tab("Boxed warning", s)),
+            ("rems", "REMS", lambda s: tab("REMS", s)),
+            ("dosing_frequency_per_year", "Doses per year", dosing),
+            ("route", "Route", lambda s: tab("Route", s)),
+            ("exclusivity_company_stated", "Exclusivity (company-stated)",
+             lambda s: {"value": None, "source": "company-stated LOE store (agent/cache/company_stated_loe.jsonl) "
+                                                 "is not in this checkout; not guessed"}),
+            ("exclusivity_fda_estimate", "Protection ends (FDA data)", lambda s: tab("Protection ends (latest)", s)),
+            ("generic_or_biosimilar_status", "Generic / biosimilar status", generic),
+            ("ira_status", "IRA negotiation", ira_status),
+            ("mfp_per_30day", "IRA MFP per 30 days ($), initial", mfp),
+            ("mfp_latest_per_30day", "IRA MFP per 30 days ($), latest published", lambda s: mfp(s, latest=True)),
+            ("partd_spend_latest", "Medicare spend (latest year)", lambda s: tab("Medicare spend (latest year)", s)),
+            ("gtn_exposure_call", "Gross-to-net exposure call", gtn_call),
+        ]
+        rows = [{"field": k, "label": lab, "values": {s: clean(fn(s)) for s in slugs}} for k, lab, fn in fields]
+        out.append({"product": product, "rivals": rivals, "rows": rows})
+    return out
+
+
+# ---------------------------------------------------------------- price series
+def price_series(slugs):
+    gp = csv_rows(MOAT / "tables" / "gtn_proxy.csv")
+    pd_rows = [r for r in csv_rows(MOAT / "tables" / "partd_by_year.csv") if r.get("mftr") == "Overall"]
+    out = {}
+    for s in slugs:
+        claims = {}
+        for r in pd_rows:
+            if r.get("drug") == s and r.get("spend_per_claim") is not None:
+                y = re.match(r"\d{4}", str(r["period"]))
+                if y:
+                    claims[int(y.group(0))] = r["spend_per_claim"]
+        rows = []
+        for r in gp:
+            if r.get("drug") != s or r.get("year") is None:
+                continue
+            y = int(float(r["year"]))
+            rows.append({"year": y, "partd_per_unit": r.get("partd_spend_per_unit"),
+                         "nadac_brand": r.get("nadac_brand_mean_per_unit"), "asp": r.get("partb_asp_payment_limit"),
+                         "mfp_per_unit": r.get("ira_mfp_per_unit"), "mfp_per_30day": r.get("ira_mfp_per_30day"),
+                         "partd_per_claim": claims.get(y), "asp_dosage": r.get("partb_asp_dosage"),
+                         "nadac_unit": r.get("nadac_pricing_unit")})
+        out[s] = sorted(rows, key=lambda x: x["year"])
+    return out
+
+
+# ---------------------------------------------------------------- stance (templated CEO memo)
+def option_of(f):
+    topics = set(f["vector"].get("topics") or [])
+    for name, kinds, tops in OPTION_RULES:
+        if kinds is None or f["signal_kind"] in kinds or (topics & tops and f["detector"] == "drift"):
+            return name
+    return "Defend"
+
+
+def build_stance(ticker, findings, needle, sealed):
+    ver = [f for f in findings if f["verdict"] == "verified"]
+    opts = {}
+    for name, *_ in OPTION_RULES:
+        fs = [f for f in ver if option_of(f) == name]
+        dol = [f["impact"]["dollars"] for f in fs if f["impact"].get("dollars") and not f["impact"]["suspect"]]
+        opts[name] = {"name": name, "fs": fs, "dollars": round(sum(dol), 0) if dol else None,
+                      "score_sum": round(sum(f["score"] or 0 for f in fs), 6)}
+    total = sum(o["dollars"] or 0 for o in opts.values())
+    ranked = sorted(opts.values(), key=lambda o: (-(o["dollars"] or 0), -o["score_sum"]))
+    options = []
+    for name in ("Defend", "Attack", "Reprice", "Partner-or-buy"):
+        o = opts[name]
+        with_d = [f for f in o["fs"] if f["impact"].get("dollars") and not f["impact"]["suspect"]]
+        sus = [f for f in o["fs"] if f["impact"]["suspect"]]
+        if o["dollars"]:
+            rule = (f"Sum of impact dollars of the {len(with_d)} verified finding(s) in this bucket that state one: "
+                    + "; ".join(f"{f['id']} {money(f['impact']['dollars'])}" for f in with_d)
+                    + f". Share = this sum / {money(total)} across all four options.")
+        else:
+            rule = (f"{len(o['fs'])} verified finding(s) argue for this option but none states a direct dollar path "
+                    "(their impact is a stated proxy of operating income), so no dollar figure is shown; "
+                    f"ranked by summed materiality score {o['score_sum']}.")
+        if sus:
+            rule += (" Left out as suspect (impact above trailing operating income): "
+                     + "; ".join(f"{f['id']} {WITHHELD}" for f in sus) + ".")
+        options.append({"name": name, "dollars": o["dollars"],
+                        "share": round(o["dollars"] / total, 4) if o["dollars"] and total else None,
+                        "rationale": f"{OPTION_WHY[name][0].upper()}{OPTION_WHY[name][1:]}. {rule}",
+                        "n_findings": len(o["fs"]), "score_sum": o["score_sum"],
+                        "finding_ids": [f["id"] for f in o["fs"]][:12]})
+    rec = ranked[0]["name"]
+    alts = [{"name": o["name"],
+             "why_rejected": (f"Protects {money(o['dollars'])} vs {money(ranked[0]['dollars'])} for {rec}"
+                              if o["dollars"] and ranked[0]["dollars"] else
+                              f"Backed by {len(o['fs'])} verified finding(s) (score {o['score_sum']}) vs "
+                              f"{len(ranked[0]['fs'])} (score {ranked[0]['score_sum']}) for {rec}, "
+                              "with less stated dollar impact") + f"; the move would {OPTION_WHY[o['name']]}."}
+            for o in ranked[1:3]]
+
+    lead = match_rule(needle["signal_kind"], LEADS) or "The sharpest needle"
+    obsc = needle["vector"].get("obscurity_note")
+    headline = f"{lead}: {needle['finding']}" + (f" ({obsc})." if obsc else "")
+    bullets = [{"text": needle["finding"] + (" " + WITHHELD if needle["impact"].get("suspect") else ""),
+                "cites": cites_of(needle)}]
+    if needle["impact"].get("formula") and not needle["impact"].get("suspect"):
+        bullets.append({"text": "Impact: " + needle["impact"]["formula"], "cites": cites_of(needle, 1)})
+    if obsc:
+        bullets.append({"text": "Why it is not priced in: " + obsc, "cites": cites_of(needle, 1)})
+    top3 = ver[:3]
+    memo_points = [{"text": f["finding"].rstrip(".") + "." + impact_txt(f),
+                    "cites": cites_of(f), "finding_id": f["id"]} for f in top3]
+
+    prove = []
+    for f in [needle, *ver]:
+        t = match_rule(f["signal_kind"], PROVE_WRONG)
+        if t:
+            pm = f["peer"].get("peer_median")
+            pmtxt = ""
+            if pm is not None and any(k in f["signal_kind"] for k in ("dio", "rnd")):
+                pmtxt = f" ({pm:.0f} days)" if "dio" in f["signal_kind"] else f" ({pm:.1%})"
+            t = t.format(pm=pmtxt)
+            if t not in prove:
+                prove.append(t)
+        if len(prove) == 3:
+            break
+    for p in sealed:
+        if p["ticker"] == ticker and len(prove) < 3:
+            iv = next((b for b in p.get("basis", []) if "interval" in b), "")
+            prove.append(f"Q3 2026 revenue growth lands outside the sealed forecast ({iv}, sha256-committed).")
+    kinds = " ".join(f["signal_kind"] + " " + f["detector"] for f in ver[:15])
+    deciders = []
+    if re.search(r"ira|spend_per_claim|gtn|pricing", kinds) or rec == "Reprice":
+        deciders.append("Payers: CMS (Medicare negotiation) and Part D plan sponsors")
+    if re.search(r"labels|dosing|boxed|label_", kinds) or rec == "Attack":
+        deciders.append("Prescribers: the specialists choosing between this product and its rivals")
+    deciders.append("Investors: analysts and holders who will read the next 10-Q and earnings call")
+    if re.search(r"labels|exclusivity|boxed|trial|drift", kinds):
+        deciders.append("Regulators: FDA (labels, exclusivity) and SEC (disclosure)")
+    return {
+        "headline": headline, "confidence": needle["confidence"], "bullets": bullets, "options": options,
+        "recommended": rec,
+        "decision_needed": (f"Approve '{rec}' as {NAMES.get(ticker, ticker)}'s response to the Sharpest Needle "
+                            f"(finding {needle['id']}) before the next quarterly filing."),
+        "memo_points": memo_points, "alternatives": alts, "prove_wrong": prove[:3], "deciders": deciders,
+        "generated_by": "template",
+        "note": ("Drafted from verified findings by deterministic rules (agent/ui_export.py): headline from the "
+                 "Sharpest Needle, options from finding kinds, dollars only from impact figures stated in findings. "
+                 "A model-written draft requires ANTHROPIC_API_KEY, which was not available for this export."),
+        "rules": {"option_buckets": {n: (sorted(k) if k else "all other kinds") for n, k, _ in OPTION_RULES},
+                  "recommended": "option with the largest summed impact dollars; ties or no dollars: largest summed score",
+                  "suspect": "impact dollars above trailing operating income are flagged and left out of sums"},
+    }
+
+
+# ---------------------------------------------------------------- preset questions
+def answer(fs, stance=None, exhibits=None, basis="", formulas=True, data_refs=None, empty=""):
+    fs = [f for f in fs if f]
+    parts = []
+    for f in fs:
+        s = f["finding"].rstrip(".") + "."
+        if formulas or f["impact"].get("suspect"):
+            s += impact_txt(f)
+        parts.append(s)
+    cites = [c for f in fs for c in cites_of(f, 1)]
+    return {"stance": stance, "text": " ".join(parts) if parts else empty, "cites": cites, "trace": trace_of(fs),
+            "exhibits": exhibits or [], "basis": basis, "data_refs": data_refs or []}
+
+
+def build_questions(ticker, findings, needle, stance, rejected, cset, forces_row=None):
+    ver = [f for f in findings if f["verdict"] == "verified"]
+    name = NAMES.get(ticker, ticker)
+    product = next(iter(cset), None)
+    rivals = cset.get(product, []) if product else []
+    qs = []
+
+    def add(q, a):
+        qs.append({"id": f"{ticker}-q{len(qs) + 1}", "q": q, "answer": a})
+
+    peer_ex = [{"kind": "peer", "ref": needle["id"]}] if needle["peer"].get("peer_median") is not None else []
+    add("What is the Sharpest Needle and why is it not priced in?",
+        answer([needle], stance=option_of(needle), exhibits=peer_ex,
+               basis="Highest-scoring finding (out/league.json needle_id); obscurity note from its materiality vector.")
+        | {"text": needle["finding"].rstrip(".") + ". "
+                   + (impact_txt(needle, proxy=True).strip() + " ")
+                   + (needle["vector"].get("obscurity_note") or "").capitalize() + "."})
+
+    if product:
+        slugs = {product, *rivals}
+        lab = [f for f in findings if f["detector"] == "labels" and product in slugs_in(f)][:4]
+        ex = [{"kind": "h2h", "ref": product}, {"kind": "timeline", "ref": product}, {"kind": "price", "ref": product}]
+        add(f"Compare {product.title()} with {', '.join(r.title() for r in rivals)} on label, dosing and exclusivity",
+            answer(lab, exhibits=ex, basis="Label-detector findings naming the product; full side-by-side in labels.comparison.",
+                   data_refs=[f"out/{ticker}/labels_table.json"],
+                   empty="No label finding names this product; see the side-by-side table."))
+
+    force = {"ira": [], "mfn": [], "tariff": []}
+    for f in ver:
+        tops = set(f["vector"].get("topics") or [])
+        for k in force:
+            if k in tops or (k == "ira" and "ira" in f["signal_kind"]):
+                force[k].append(f)
+    hardest = max(force, key=lambda k: (len(force[k]), sum(f["score"] or 0 for f in force[k])))
+    pick = sorted({f["id"]: f for k in force for f in force[k]}.values(), key=lambda f: -(f["score"] or 0))
+    pick = sorted(force[hardest], key=lambda f: -(f["score"] or 0))[:2] + [f for f in pick if f not in force[hardest]][:1]
+    add(f"Which of the three forces hits {name} hardest?",
+        answer(pick, stance="Reprice" if hardest in ("ira", "mfn") else None,
+               basis=(f"Verified findings tagged per force: IRA {len(force['ira'])}, MFN {len(force['mfn'])}, "
+                      f"tariff {len(force['tariff'])}; the most-tagged force ({hardest.upper()}) leads. "
+                      "Exposure figures are in forces (verified/policy/force_summary.csv)"
+                      + (f": IRA-selected share of revenue {fr.get('ira_share_of_total_revenue_pct')}%, MFN date "
+                         f"{fr.get('mfn_date')}, tariff exempt until {fr.get('tariff_exempt_until')}, "
+                         f"{fr.get('pct_mfg_sites_outside_us')}% of manufacturing sites outside the US, US revenue "
+                         f"share {fr.get('us_revenue_share_pct')}%." if (fr := forces_row or {}) else ".")),
+               data_refs=["data/moat/verified/policy/force_summary.csv", "data/moat/verified/policy/ira_cut_check.csv"],
+               empty="No verified finding is tagged with IRA, MFN or tariff; see the forces table."))
+
+    quiet = [f for f in ver if f["detector"] == "calls"][:2] + \
+            [f for f in ver if "only in filings" in (f["vector"].get("obscurity_note") or "") and f["detector"] != "calls"][:2]
+    add("What did analysts never ask about?",
+        answer(quiet, basis="Call-detector findings (deflections, topic surges) plus the top findings whose obscurity "
+                            "note says they appear only in filings or data; topic streaks in never_asked.",
+               data_refs=["data/moat/verified/market/never_asked.csv", "data/moat/verified/market/priced_in_scorecard.csv"],
+               exhibits=[{"kind": "peer", "ref": f["id"]} for f in quiet if f["peer"].get("peer_median") is not None][:1]))
+
+    rec_fs = [f for f in ver if option_of(f) == stance["recommended"]][:3]
+    add("What would the CEO do and what would prove it wrong?",
+        answer(rec_fs, stance=stance["recommended"],
+               exhibits=[{"kind": "peer", "ref": f["id"]} for f in rec_fs if f["peer"].get("peer_median") is not None][:1],
+               basis=f"Findings behind the recommended option ({stance['recommended']}); the early warning signals are "
+                     "stance.prove_wrong.", data_refs=["stance"]))
+
+    rej_txt = " ".join(f"Rejected: {plain(r['finding']).rstrip('.')}. Reason: {r.get('reason') or 'n/a'}." for r in rejected[:3])
+    nh = [f for f in findings if f["verdict"] == "needs_human"]
+    add("Where was the AI wrong, and how did we catch it?",
+        {"stance": None,
+         "text": rej_txt or (f"The page verifier rejected no {ticker} claim in this run; "
+                             f"{len(nh)} finding(s) are held for a human (verdict needs_human) instead of being shown as verified."),
+         "cites": [], "trace": [], "exhibits": [],
+         "basis": "Rejected claims from out/<T>/rejected.jsonl (verbatim with the verifier's reason); the 45-row log of "
+                  "data-stream errors is proof.ai_wrong.",
+         "data_refs": [f"out/{ticker}/rejected.jsonl", "data/moat/verify/ai_wrong.jsonl"]})
+
+    pr = [f for f in findings if f["signal_kind"] in ("ira_exposed", "spend_per_claim_gap")][:3]
+    if product:
+        add(f"How exposed is {product.title()} to gross-to-net and Medicare price setting?",
+            answer(pr, stance="Reprice" if pr else None, exhibits=[{"kind": "price", "ref": product}],
+                   basis="IRA and Part D spend findings; price series from data/moat/tables/gtn_proxy.csv.",
+                   data_refs=["data/moat/verified/pricing/gtn_exposure.csv", "data/moat/tables/gtn_proxy.csv"],
+                   empty="No IRA or spend-per-claim finding for this product; see the price series."))
+    fx = [f for f in ver if f["detector"] == "forensics"][:3]
+    add("What do the balance-sheet numbers say against peers?",
+        answer(fx, exhibits=[{"kind": "peer", "ref": f["id"]} for f in fx if f["peer"].get("peer_median") is not None][:2],
+               basis="Verified forensics findings (inventory, receivables, margin, R&D, tax) ranked by score.",
+               empty="No verified forensics finding."))
+    return qs
+
+
+# ---------------------------------------------------------------- company file
+def company(ticker, league_row, sealed, side):
+    raw = read_jsonl(OUT / ticker / "findings.jsonl")
+    if not raw:
+        return None
+    findings = build_findings(raw, side, ticker)
+    byid = {f["id"]: f for f in findings}
+    needle = byid.get((league_row or {}).get("needle_id")) or findings[0]
+    rejected = read_jsonl(OUT / ticker / "rejected.jsonl")
+    cset = CASE_SETS.get(ticker, {})
+    slugs = list(dict.fromkeys([s for p, rv in cset.items() for s in [p, *rv]]))
+    gtn = [r for r in csv_rows(VER / "pricing" / "gtn_exposure.csv") if r.get("drug") in slugs or r.get("company") == ticker]
+    labels = read_json(OUT / ticker / "labels_table.json", {}) or {}
+    labels = dict(labels)
+    labels["comparison"] = comparison(labels, gtn)
+    stance = build_stance(ticker, findings, needle, sealed)
+    sig_counts = {p.stem.replace("signals_", ""): sum(1 for x in p.read_text().splitlines() if x.strip())
+                  for p in sorted((OUT / ticker).glob("signals_*.jsonl"))}
+    forces = for_ticker(VER / "policy" / "force_summary.csv", ticker)
+    cvg = for_ticker(VER / "market" / "consensus_vs_guidance.csv", ticker)
+    return {
+        "ticker": ticker, "name": NAMES.get(ticker, ticker), "needle_id": needle["id"],
+        "case_set": cset, "signals_count": sig_counts,
+        "findings": findings,
+        "rejected": [{"finding": plain(r.get("finding")), "finding_raw": r.get("finding"), "reason": r.get("reason"), "verdict": r.get("verdict"),
+                      "signal_kind": r.get("signal_kind"), "id": r.get("id"),
+                      "evidence": [{k: e.get(k) for k in ("doc_id", "page", "quote", "speaker")} for e in r.get("evidence", [])]}
+                     for r in rejected],
+        "labels": labels,
+        "forces": forces[0] if forces else None,
+        "priced_in": for_ticker(VER / "market" / "priced_in_scorecard.csv", ticker),
+        "never_asked": for_ticker(VER / "market" / "never_asked.csv", ticker),
+        "consensus_vs_guidance": cvg[0] if cvg else None,
+        "ira_cut_check": for_ticker(VER / "policy" / "ira_cut_check.csv", ticker),
+        "comment_letters": for_ticker(VER / "secx" / "comment_letter_findings.csv", ticker),
+        "discontinued_breakouts": for_ticker(VER / "filings" / "discontinued_breakouts.csv", ticker),
+        "transcript_grades": for_ticker(VER / "calls" / "transcript_grades.csv", ticker),
+        "gtn_exposure": gtn,
+        "price_series": price_series(slugs),
+        "stance": stance,
+        "questions": build_questions(ticker, findings, needle, stance, rejected, cset, forces[0] if forces else None),
+        "sealed_forecast": next((p for p in sealed if p["ticker"] == ticker), None),
+    }
+
+
+# ---------------------------------------------------------------- meta, proof
+def tracker_data():
+    """progress.json plus the hand-kept STATUS/STAGES/no_source block (latest copy: data/moat/tracker.html)."""
+    prog = read_json(MOAT / "progress.json", {}) or {}
+    extra = {}
+    t = MOAT / "tracker.html"
+    if t.exists():
+        m = re.search(r"const DATA = (\{.*?\});\s*$", t.read_text(encoding="utf-8"), flags=re.M)
+        if m:
+            try:
+                extra = json.loads(m.group(1))
+            except Exception:
+                extra = {}
+    if not extra:
+        try:
+            from agent.moat import progress_page as pp
+            extra = {"status": pp.STATUS, "stages": pp.STAGES, "part1": pp.PART1, "part2": pp.PART2,
+                     "no_source": pp.NO_SOURCE}
+        except Exception:
+            extra = {}
+    return prog, extra
+
+
+def tables_index():
+    out = []
+    for p in sorted((MOAT / "tables").glob("*.csv")):
+        try:
+            df = pd.read_csv(p, low_memory=False)
+            rows = len(df)
+            src = None
+            for col in ("source", "url"):
+                if col in df.columns and df[col].notna().any():
+                    src = str(df[col].dropna().iloc[0])
+                    break
+        except Exception:
+            rows, src = None, None
+        out.append({"name": p.name, "rows": rows, "what": TABLE_WHAT.get(p.name, "Derived table (see its header)."),
+                    "list_or_net": LIST_OR_NET.get(p.name), "source": src})
+    return out
+
+
+def limits(no_source):
+    text = (ROOT / "docs" / "materiality_spec.md").read_text(encoding="utf-8")
+    sec = text.split("## 8.", 1)[1] if "## 8." in text else ""
+    out = [l.strip()[2:].strip() for l in sec.splitlines() if l.strip().startswith("- ")]
+    out.append("Forensic signals predict margin compression, not hard events (revenue drops or impairments); lift on "
+               "hard events is statistically indistinguishable from 1 (out/backtest/hit_rates.json).")
+    out.append("Findings marked needs_human passed no automatic check that would let us call them verified; they are "
+               "shown, labelled, and never used for stance dollars.")
+    out.append("The CEO memo in this export is drafted from verified findings by rules, not written by a model.")
+    for miss, who, proxy in no_source:
+        out.append(f"No free source for {miss.lower()} (sold by {who}); our proxy: {proxy}.")
+    return out
+
+
+def corpus_stats():
+    m = pd.read_csv(ROOT / "data" / "corpus" / "manifest.csv", low_memory=False)
+    tr = m[m.doc_type == "transcript"]
+    grades = csv_rows(VER / "calls" / "transcript_grades.csv")
+    drugs = [p for p in DRUGS.iterdir() if p.is_dir() and not p.name.startswith("_")]
+    return {"docs": int(len(m)), "companies": int(m[m.group == "companies"].ticker.nunique()),
+            "peers": int(m[m.group == "peers"].ticker.nunique()), "drugs": len(drugs),
+            "drugs_with_label": sum(1 for p in drugs if (p / "label_sections.md").exists()),
+            "transcripts": int(len(tr)), "transcripts_official": int((tr.source_quality == "official").sum()),
+            "transcripts_graded": len(grades),
+            "transcript_grades": {g: sum(1 for r in grades if r.get("grade") == g) for g in ("A", "B", "C")},
+            "pages": int(m.pages.fillna(0).sum()),
+            "source_quality": {k: int(v) for k, v in m.source_quality.value_counts().items()},
+            "doc_types": {k: int(v) for k, v in m.doc_type.value_counts().items()}}
+
+
+def proof(rules, lims):
+    sealed = read_json(OUT / "predictions" / "sealed_2026Q3.json", {}) or {}
+    body = {k: v for k, v in sealed.items() if k != "sha256"}
+    canonical = audit.canonical(body)
+    doc = (ROOT / "docs" / "needle_sealed.md").read_text(encoding="utf-8") if (ROOT / "docs" / "needle_sealed.md").exists() else ""
+    m = re.search(r"sha256=([0-9a-f]{64})", doc)
+    return {
+        "backtest": {"hit_rates": read_json(OUT / "backtest" / "hit_rates.json"),
+                     "gate2_md": (ROOT / "docs" / "needle_gate2.md").read_text(encoding="utf-8"),
+                     "examples": read_json(OUT / "backtest" / "examples.json", [])},
+        "calibration": read_json(OUT / "predictions" / "calibration.json"),
+        "blind": read_json(OUT / "predictions" / "blind_JNJ_2026Q3.json"),
+        "sealed": {"file": sealed, "canonical": canonical, "doc_hash": m.group(1) if m else None,
+                   "file_hash": sealed.get("sha256"),
+                   "recomputed": hashlib.sha256(canonical.encode("utf-8")).hexdigest(),
+                   "how": "sha256 over the UTF-8 bytes of `canonical` = json.dumps(file minus sha256, sort_keys=True, "
+                          "ensure_ascii=False, separators=(',', ':')) as in agent.needle.audit.seal()"},
+        "ai_wrong": read_jsonl(MOAT / "verify" / "ai_wrong.jsonl"),
+        "verifier_rules": rules, "limits": lims,
+    }
+
+
+# ---------------------------------------------------------------- main
+def main():
+    DEST.mkdir(parents=True, exist_ok=True)
+    league = read_json(OUT / "league.json", []) or []
+    lrow = {r["ticker"]: r for r in league}
+    sealed = (read_json(OUT / "predictions" / "sealed_2026Q3.json", {}) or {}).get("predictions", [])
+    tickers = list(SHORTLIST) + [t for t in CASE_SETS if t not in SHORTLIST]
+    sizes, stats, written = {}, {}, []
+    for t in tickers:
+        data = company(t, lrow.get(t), sealed, SIDE)
+        if data is None:
+            print(f"{t}: no out/{t}/findings.jsonl, no company file")
+            continue
+        path = DEST / "companies" / f"{t}.json"
+        n = write(path, data)
+        if n > MAX_COMPANY_BYTES:
+            data = company(t, lrow.get(t), sealed, SIDE_SMALL)
+            n = write(path, data)
+        sizes[f"companies/{t}.json"] = n
+        written.append(t)
+        evs = [e for f in data["findings"] for e in f["evidence"]]
+        stats[t] = {"findings": len(data["findings"]),
+                    "verified": sum(f["verdict"] == "verified" for f in data["findings"]),
+                    "rejected": len(data["rejected"]), "evidence": len(evs),
+                    "located": sum(e["excerpt"]["located"] for e in evs)}
+        print(f"{t}: {stats[t]} {n / 1e6:.2f} MB")
+
+    prog, extra = tracker_data()
+    no_source = extra.get("no_source") or []
+    lims = limits(no_source)
+    ok, n, bad = audit.verify_chain()
+    onboarded = [t for t in written if t not in SHORTLIST]
+    pending = []
+    for t in CASE_SETS:
+        if t not in SHORTLIST and t not in written:
+            cs = read_json(OUT / t / "case_set.json", {}) or {}
+            pending.append({"ticker": t, "name": NAMES.get(t, cs.get("registrant", t)), "case_set": cs.get("case_set"),
+                            "packs": cs.get("packs"), "has_findings": False,
+                            "note": f"onboarded (out/{t}/case_set.json) but no out/{t}/findings.jsonl yet; no company file"})
+    allf = [json.loads(x) for t in written for x in (OUT / t / "findings.jsonl").read_text().splitlines() if x.strip()]
+    meta = {
+        "as_of": prog.get("as_of"), "built_at": pd.Timestamp.now(tz="UTC").isoformat(),
+        "default_ticker": league[0]["ticker"] if league else SHORTLIST[0],
+        "companies": [{"ticker": t, "name": NAMES.get(t, t)} for t in written if t in SHORTLIST],
+        "onboarded": onboarded, "onboarding_pending": pending,
+        "totals": {"verified": sum(f["verdict"] == "verified" for f in allf),
+                   "rejected": sum(stats[t]["rejected"] for t in written),
+                   "findings": len(allf), "high_confidence": sum(f.get("confidence") == "high" for f in allf),
+                   "needs_human": sum(f["verdict"] == "needs_human" for f in allf)},
+        "ledger": {"ok": bool(ok), "n": n, "bad": bad},
+        "corpus": corpus_stats(),
+        "moat": {"as_of": prog.get("as_of"), "coverage": prog.get("companies", {}), "buckets": prog.get("buckets", []),
+                 "status": extra.get("status", {}), "tables": tables_index(), "no_source": no_source,
+                 "stages": extra.get("stages", []), "part1": extra.get("part1", []), "part2": extra.get("part2", []),
+                 "ai_wrong_count": len(read_jsonl(MOAT / "verify" / "ai_wrong.jsonl"))},
+        "case_sets": CASE_SETS, "verifier_rules": VERIFIER_RULES, "limits": lims,
+        "evidence_located": stats, "regenerate": REGEN,
+    }
+    sizes["meta.json"] = write(DEST / "meta.json", meta)
+    sizes["league.json"] = write(DEST / "league.json",
+                                 [r | {"name": NAMES.get(r["ticker"], r["ticker"]),
+                                       "sharpest_needle": plain(r.get("sharpest_needle")),
+                                       "sharpest_needle_raw": r.get("sharpest_needle")} for r in
+                                  sorted(league, key=lambda r: -(r.get("score") or 0))])
+    sizes["proof.json"] = write(DEST / "proof.json", proof(VERIFIER_RULES, lims))
+    write_readme(sizes, stats, meta)
+    print(f"total {sum(sizes.values()) / 1e6:.2f} MB -> {DEST}")
+
+
+def write_readme(sizes, stats, meta):
+    lines = ["# ui/public/data", "",
+             "Precomputed JSON for the NEEDLE cockpit (contract: docs/ui_spec.md). Generated by `agent/ui_export.py`; "
+             "do not edit by hand.", "", "Regenerate from the repo root:", "", "```", REGEN, "```", "",
+             "| File | Size | Contents |", "|---|---|---|",
+             f"| meta.json | {sizes['meta.json'] / 1e3:,.0f} KB | totals ({meta['totals']['findings']} findings, "
+             f"{meta['totals']['verified']} verified, {meta['totals']['rejected']} rejected), ledger "
+             f"({meta['ledger']['n']} records, ok={meta['ledger']['ok']}), corpus ({meta['corpus']['docs']} docs), moat "
+             f"coverage + {len(meta['moat']['tables'])} tables, case sets, verifier rules, {len(meta['limits'])} limits |",
+             f"| league.json | {sizes['league.json'] / 1e3:,.0f} KB | {len(stats)} companies ranked by score |",
+             f"| proof.json | {sizes['proof.json'] / 1e3:,.0f} KB | backtest (hit rates, gate-2 text, examples), "
+             "calibration, J&J blind test, sealed forecasts with the canonical string and hashes, "
+             f"{meta['moat']['ai_wrong_count']} ai_wrong rows |"]
+    for t, s in stats.items():
+        lines.append(f"| companies/{t}.json | {sizes[f'companies/{t}.json'] / 1e6:.2f} MB | {s['findings']} findings "
+                     f"({s['verified']} verified), {s['rejected']} rejected, {s['evidence']} evidence items "
+                     f"({s['located']} quotes located on the page), stance, questions, labels, price series |")
+    lines += ["", f"Total: {sum(sizes.values()) / 1e6:.2f} MB.", "",
+              "Notes: `stance.generated_by` is `template` (no ANTHROPIC_API_KEY at export). Excerpts are about "
+              f"{SIDE} characters either side of the quote ({SIDE_SMALL} if a company file would exceed 4 MB). "
+              "Onboarded tickers without findings are listed in meta.onboarding_pending and get no company file."]
+    (DEST / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()

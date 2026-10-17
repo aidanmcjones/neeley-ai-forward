@@ -1,0 +1,70 @@
+{
+ "as_of": "2026-10-17",
+ "default_ticker": "BMY",
+ "companies": [
+  {
+   "ticker": "LLY",
+   "name": "LLY"
+  },
+  {
+   "ticker": "AZN",
+   "name": "AZN"
+  },
+  {
+   "ticker": "MRK",
+   "name": "MRK"
+  },
+  {
+   "ticker": "GILD",
+   "name": "GILD"
+  },
+  {
+   "ticker": "AMGN",
+   "name": "AMGN"
+  },
+  {
+   "ticker": "PFE",
+   "name": "PFE"
+  },
+  {
+   "ticker": "ABBV",
+   "name": "ABBV"
+  },
+  {
+   "ticker": "JNJ",
+   "name": "JNJ"
+  },
+  {
+   "ticker": "BMY",
+   "name": "BMY"
+  },
+  {
+   "ticker": "NVO",
+   "name": "NVO"
+  }
+ ],
+ "onboarded": [],
+ "totals": {
+  "verified": 425,
+  "rejected": 8,
+  "findings": 591,
+  "high_confidence": 70
+ },
+ "ledger": {
+  "ok": true,
+  "n": 0,
+  "bad": 0
+ },
+ "corpus": {
+  "docs": 835,
+  "drugs": 52
+ },
+ "moat": {
+  "tables": []
+ },
+ "case_sets": {},
+ "verifier_rules": [],
+ "limits": [
+  "Sample fixture: not the real export."
+ ]
+}

@@ -1,0 +1,102 @@
+[
+ {
+  "ticker": "LLY",
+  "score": 0.3034,
+  "n_findings": 55,
+  "n_verified": 39,
+  "n_rejected": 4,
+  "high_confidence": 5,
+  "sharpest_needle": "Days inventory 469 days (Q2 2026) vs peers; peer median 187 days, z +2.9",
+  "needle_id": "LLY-forensics-185801"
+ },
+ {
+  "ticker": "AZN",
+  "score": 0.19,
+  "n_findings": 61,
+  "n_verified": 50,
+  "n_rejected": 0,
+  "high_confidence": 9,
+  "sharpest_needle": "Receivables +23.3% YoY vs revenue +8.6% (FY2025); gap +14.7 pts; peer median -0.3 pts, z +2.1",
+  "needle_id": "AZN-forensics-405528"
+ },
+ {
+  "ticker": "MRK",
+  "score": 0.1398,
+  "n_findings": 74,
+  "n_verified": 49,
+  "n_rejected": 0,
+  "high_confidence": 10,
+  "sharpest_needle": "R&D 58.7% of revenue vs 25.6% a year earlier (+33.0 pts) (Q2 2026); peer median 18.6%, z +3.0",
+  "needle_id": "MRK-forensics-346149"
+ },
+ {
+  "ticker": "GILD",
+  "score": 0.1079,
+  "n_findings": 50,
+  "n_verified": 35,
+  "n_rejected": 0,
+  "high_confidence": 8,
+  "sharpest_needle": "biktarvy lists 3 indications vs rival median 1 ({'dovato': 1, 'cabenuva': 1}); broader label supports more volume growth routes",
+  "needle_id": "GILD-labels-292410"
+ },
+ {
+  "ticker": "AMGN",
+  "score": 0.0894,
+  "n_findings": 74,
+  "n_verified": 52,
+  "n_rejected": 0,
+  "high_confidence": 10,
+  "sharpest_needle": "Receivables +17.5% YoY vs revenue +9.5% (Q2 2026); gap +8.0 pts; peer median -0.3 pts, z +1.2",
+  "needle_id": "AMGN-forensics-801116"
+ },
+ {
+  "ticker": "PFE",
+  "score": 0.0804,
+  "n_findings": 65,
+  "n_verified": 44,
+  "n_rejected": 0,
+  "high_confidence": 4,
+  "sharpest_needle": "Effective tax rate 62.3% vs 4.6% a year earlier (+57.7 pts) (Q2 2026); peer median 17.7%, z +3.0",
+  "needle_id": "PFE-forensics-672883"
+ },
+ {
+  "ticker": "ABBV",
+  "score": 0.075,
+  "n_findings": 47,
+  "n_verified": 31,
+  "n_rejected": 0,
+  "high_confidence": 10,
+  "sharpest_needle": "skyrizi every 12 weeks (4.3/yr) vs cosentyx every 4 weeks (13/yr)",
+  "needle_id": "ABBV-labels-923114"
+ },
+ {
+  "ticker": "JNJ",
+  "score": 0.0696,
+  "n_findings": 64,
+  "n_verified": 43,
+  "n_rejected": 0,
+  "high_confidence": 5,
+  "sharpest_needle": "rinvoq carries a boxed warning (WARNING: SERIOUS INFECTIONS, MORTALITY, MALIGNANCY, MAJOR ADVERSE CARDIOVASCULAR EVENTS, and\u00a0THROMBOSIS); tremfya does not",
+  "needle_id": "JNJ-labels-506282"
+ },
+ {
+  "ticker": "BMY",
+  "score": 0.0508,
+  "n_findings": 49,
+  "n_verified": 36,
+  "n_rejected": 0,
+  "high_confidence": 4,
+  "sharpest_needle": "eliquis lists 6 indications vs rival median 10 ({'xarelto': 10}); narrower label should show up as a smaller addressable patient pool",
+  "needle_id": "BMY-labels-484154"
+ },
+ {
+  "ticker": "NVO",
+  "score": 0.05,
+  "n_findings": 52,
+  "n_verified": 46,
+  "n_rejected": 4,
+  "high_confidence": 5,
+  "sharpest_needle": "wegovy lists 5 indications vs rival median 1.5 ({'zepbound': 2, 'foundayo': 1}); broader label supports more volume growth routes",
+  "needle_id": "NVO-labels-035909"
+ }
+]
