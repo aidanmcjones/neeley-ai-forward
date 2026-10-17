@@ -99,12 +99,19 @@ def ira(co, drug, G, d, g_pre, ipay, k_factor=None, cites=()):
 
 
 # ---------------------------------------------------------------- (c) MFN and (d) tariff
-def mfn(co, rev_us, s=W.S_MFN, cites=()):
-    """dRev = s_MFN . Rev_US, s base 0.0065 (0.003-0.010), CM = 1.00 (section 4.3 c). TrumpRx modeled neutral."""
-    imp = Impact("mfn", formula=f"s_MFN {s} x Rev_US {rev_us:,.1f}", fiscal_year=AS_OF.year + 1,
+def mfn(co, rev_us, s=W.S_MFN, cites=(), effective=None, formula=None):
+    """dRev = s_MFN . Rev_US, s base 0.0065 (0.003-0.010), CM = 1.00 (section 4.3 c). TrumpRx modeled neutral.
+    With a dated company term (`effective`) on or before as_of the effect is already in reported numbers and dEPS = 0,
+    the same timing rule as the IRA channel (review S2)."""
+    imp = Impact("mfn", formula=formula or f"s_MFN {s} x Rev_US {rev_us:,.1f}", fiscal_year=AS_OF.year + 1,
                  t_years=years_to_mid(AS_OF.year + 1))
-    imp.citations = list(cites) + constants_citations(co)
-    return _fill(imp, tuple(x * rev_us for x in s), W.CM_PRICE, co)
+    imp.citations = [c for c in cites if c is not None] + constants_citations(co)
+    _fill(imp, tuple(x * rev_us for x in s), W.CM_PRICE, co)
+    if effective is not None and effective <= AS_OF:
+        imp.flags.append(f"company MFN term effective {effective.isoformat()}: already in reported numbers, dEPS = 0 "
+                         "(IRA timing rule, review S2); size shown as context")
+        imp.d_eps = {k: 0.0 for k in imp.d_eps}
+    return imp
 
 
 def tariff_note(cogs_imported_patented, rates=(0.15, 0.20, 1.00)):

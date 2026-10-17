@@ -607,44 +607,151 @@ def tariff_exposure(ticker):
                     "pay no Section 232 duty until 2029-01-20 (outside the window)"}
 
 
+# Variant knob for the league_v3 robustness table: True restores the v2 rule (Pfizer's universal 0.65% of US revenue at
+# pi = 1 for every company). The league value is the directional rule (review R3, A9, B9).
+MFN_UNIVERSAL = False
+MFN_DIRECTIONAL = Family("directional: MFN agreement (deal terms confidential)", "P", W.PI_MIN, "directional", False,
+                         ("mfn",))
+SDUD_MEDICAID_BASIC_REBATE = 0.231   # statutory Medicaid basic rebate for brand drugs (23.1% of AMP), 42 USC 1396r-8
+
+
+def _policy_cite(row, idx):
+    """Page citation for one policy_exposure row, falling back to its facts row when the page quote does not verify."""
+    page = int(re.sub(r"\D", "", str(row.printed_page_or_section)) or 1)
+    pc = cite_verify(Citation(canonical_id=_moat_doc_id(row.doc), page=page, quote=str(row.quote), claim_type="quote"),
+                     idx)
+    if pc.verification.ok:
+        return pc
+    ft = data.fact_by_key("policy/policy_exposure.csv", row.row_id)
+    return ft if ft.verification.ok else None
+
+
+def _eliquis_medicaid_gross():
+    """(FY2025 Medicaid gross reimbursement for Eliquis in USD m, Citation) from medicaid_sdud.csv, or (None, None)."""
+    import pandas as pd
+    try:
+        d = pd.read_csv(data.tables("medicaid_sdud.csv"), dtype={"ndc": str})
+    except FileNotFoundError:
+        return None, None
+    e = d[(d.drug.astype(str).str.lower() == "eliquis") & (d.year == 2025)]
+    if e.empty or e.quarter.nunique() < 4:
+        return None, None
+    g = float(e.total_amount_reimbursed.sum()) / 1e6
+    return g, data.table_citation("medicaid_sdud.csv", "eliquis|2025Q1-Q4", "total_amount_reimbursed", f"{g:,.1f}M")
+
+
+def _mfn_quantified(ticker, co, pe, idx):
+    """A company-stated or computable MFN size (review D2: NVO's stated sales-growth impact; BMY's Eliquis free to
+    Medicaid via SDUD). Returns (Impact, sentence clause, [Citation], [flags]) or None."""
+    mfn = pe[pe.force == "MFN"]
+    if ticker == "NVO":
+        r = mfn[mfn.item.str.contains("Stated", na=False) & mfn.value.str.contains("low single-digit", na=False)]
+        if r.empty:
+            return None
+        row = r.iloc[0]
+        c = _policy_cite(row, idx)
+        share = (0.01, 0.02, 0.03)   # "low single-digit %": 1 / 2 / 3 percent of sales (inference)
+        imp = IM.mfn(co, co.rev_ttm, s=share, cites=[c] if c else [], effective=OB.to_date(row.effective_date),
+                     formula=f"company-stated {row.row_id}: low single-digit % x Rev_TTM {co.rev_ttm:,.1f} "
+                             f"{co.fin_currency} (1 / 2 / 3%)")
+        clause = (f"Novo states a negative low single-digit % impact on {str(row.effective_date)[:4]} global sales "
+                  f"growth ({row.row_id}), about {co.fin_currency} {imp.d_rev['bull']:,.0f}M to "
+                  f"{imp.d_rev['bear']:,.0f}M on TTM revenue")
+        return imp, clause, [c] if c else [], ["MFN size from the company's own statement (review D2)"]
+    if ticker == "BMY":
+        r = mfn[mfn.item.str.contains("Eliquis free", na=False)]
+        g, gc = _eliquis_medicaid_gross()
+        if r.empty or g is None:
+            return None
+        row = r.iloc[0]
+        c = _policy_cite(row, idx)
+        up = g * (1 - SDUD_MEDICAID_BASIC_REBATE)
+        imp = IM.mfn(co, up, s=(1.0, 1.0, 1.0), cites=([c] if c else []) + [gc],
+                     effective=OB.to_date(row.effective_date),
+                     formula=f"Eliquis FY2025 Medicaid gross reimbursement {g:,.1f} (SDUD) x (1 - basic rebate "
+                             f"{SDUD_MEDICAID_BASIC_REBATE}): upper bound on net revenue given up")
+        clause = (f"Eliquis is free to Medicaid from {row.effective_date} ({row.row_id}); FY2025 Medicaid gross "
+                  f"reimbursement was ${g:,.0f}M (SDUD), at most about ${up:,.0f}M of net revenue a year before the "
+                  "Pfizer alliance split")
+        return imp, clause, [c] if c else [], ["MFN size computed from SDUD: upper bound (statutory basic rebate "
+                                               "only; inflation rebates and the Pfizer alliance split lower it)"]
+    return None
+
+
 def mfn_findings(ticker, co):
-    """One MFN candidate per company with a Medicaid MFN term in policy_exposure.csv: dRev = s_MFN x Rev_US,
-    Rev_US = Rev_TTM x us_revenue_share_pct (force_summary.csv). Deal texts are confidential, so s_MFN (Pfizer's
-    <1% Medicaid base rate) is the same for every company; the per-company rows supply the date, the term and US share."""
+    """One MFN candidate per company with a Medicaid MFN term in policy_exposure.csv (review R3, A9, B9).
+
+    Deal texts are confidential, so MFN is scored as a direction: pi = pi_min (the directional floor) and no dollar
+    figure in the sentence. M is the Pfizer Medicaid base rate (0.65% of US revenue) as an internal placeholder that
+    is never printed. Where the company's own row states or lets us compute a size (NVO stated growth impact; BMY
+    Eliquis free to Medicaid via SDUD), the row is sized from that row and cited. The sentence carries the per-company
+    facts (agreement date, US investment pledge, TrumpRx prices) as cited context."""
     try:
         pe, fs = _policy_rows(ticker)
     except FileNotFoundError:
         return []
     if fs.empty:
         return []
-    med = pe[(pe.force == "MFN") & pe.item.str.contains("Medicaid", na=False)]
+    mfn = pe[pe.force == "MFN"]
+    med = mfn[mfn.item.str.contains("Medicaid", na=False)]
     if med.empty:
         return []
-    row, f = med.iloc[0], fs.iloc[0]
+    exact = med[med.item == "Medicaid MFN pricing"]
+    row, f = (exact if len(exact) else med).iloc[0], fs.iloc[0]
     idx = data.index()
-    page = int(re.sub(r"\D", "", str(row.printed_page_or_section)) or 1)
-    pc = cite_verify(Citation(canonical_id=_moat_doc_id(row.doc), page=page, quote=str(row.quote), claim_type="quote"),
-                     idx)
+    pc = _policy_cite(row, idx)
     fact_term = data.fact_by_key("policy/policy_exposure.csv", row.row_id)
     us_share = float(f.us_revenue_share_pct) / 100
     fact_us = data.table_citation("policy/force_summary.csv", ticker, "us_revenue_share_pct", f.us_revenue_share_pct)
-    flags = ["MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
-             "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers"]
+    flags = []
     tx = tariff_exposure(ticker)
     if tx:
         flags.append(f"tariff exposure proxy {tx['proxy']:.3f} (sites outside US {tx['pct_mfg_sites_outside_us']:.1f}% "
                      f"x US revenue {tx['us_revenue_share_pct']:.1f}%), exempt until {tx['exempt_until']}: not scored")
     rev_us = co.rev_ttm * us_share
     cur_ok = co.fin_currency.startswith("USD") and co.currency == "USD"
-    if not cur_ok:
-        flags.append("non-USD reporter: company states its own MFN effect (see policy_exposure); not converted")
-    imp = IM.mfn(co, rev_us if cur_ok else 0.0, cites=[fact_us] + ([fact_term] if fact_term.verification.ok else []))
-    sentence = (f"{ticker}'s MFN agreement ({f.mfn_date}) extends MFN pricing to Medicaid: at the Pfizer base rate of "
-                f"0.65% of US revenue (US share {f.us_revenue_share_pct}%), about ${imp.d_rev['base']:,.0f}M a year.")
-    page_cites = [pc] if pc.verification.ok else ([fact_term] if fact_term.verification.ok else [])
-    if not pc.verification.ok:
-        flags.append(f"MFN page quote did not verify ({pc.confidence_note}); cited by the table row")
-    sc = _assemble(co, ticker, "mfn_medicaid", sentence, FAM["mfn"], imp, page_cites, ["mfn"],
+    page_cites = [pc] if pc is not None else []
+    if pc is None:
+        flags.append("MFN page quote did not verify and no facts row backs it")
+    if MFN_UNIVERSAL:   # v2 rule, kept only for the robustness table
+        flags += ["MFN (variant): s_MFN is Pfizer's Medicaid base rate applied to every company at pi = 1",
+                  "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers"]
+        imp = IM.mfn(co, rev_us if cur_ok else 0.0, cites=[fact_us] + ([fact_term] if fact_term.verification.ok else []))
+        sentence = (f"{ticker}'s MFN agreement ({f.mfn_date}) extends MFN pricing to Medicaid: at the Pfizer base rate "
+                    f"of 0.65% of US revenue (US share {f.us_revenue_share_pct}%), about ${imp.d_rev['base']:,.0f}M a year.")
+        sc = _assemble(co, ticker, "mfn_medicaid", sentence, FAM["mfn"], imp, page_cites, ["mfn"],
+                       OB.to_date(f.mfn_date), extra_flags=flags, z_text="mfn", detector="mfn_generator")
+        return [sc]
+    # per-company context: pledge and TrumpRx prices (cited, never sized)
+    ctx, ctx_cites = [], []
+    pledge = str(f.us_investment_pledge_usd_bn or "").strip()
+    if pledge and pledge.lower() != "nan":
+        ctx.append(f"US investment pledge ${pledge}bn")
+        ctx_cites.append(data.table_citation("policy/force_summary.csv", ticker, "us_investment_pledge_usd_bn", pledge))
+    for _, r in mfn[mfn.item.str.startswith("TrumpRx", na=False)].iterrows():
+        ctx.append(f"TrumpRx: {r.value} ({r.row_id})")
+        c = _policy_cite(r, idx)
+        if c is not None:
+            ctx_cites.append(c)
+    q = _mfn_quantified(ticker, co, pe, idx)
+    head = (f"{ticker} signed an MFN agreement on {f.mfn_date} that extends MFN pricing to Medicaid ({row.row_id})"
+            + (f"; {'; '.join(ctx)}" if ctx else ""))
+    if q is not None:
+        imp, clause, qcites, qflags = q
+        flags += qflags
+        page_cites += [c for c in qcites if c is not None and c.verification.ok and c not in page_cites]
+        sentence = f"{head}. {clause}. Direction: adverse to US net price."
+    else:
+        imp = IM.mfn(co, rev_us if cur_ok else 0.0, cites=[fact_us])
+        imp.flags.append("MFN size is an internal placeholder (Pfizer base rate 0.65% of US revenue), not printed: "
+                         "deal terms are confidential (review R3)")
+        flags.append("Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers")
+        if not cur_ok:
+            flags.append("non-USD reporter: USD placeholder not converted, dEPS 0")
+        sentence = (f"{head}. Direction: adverse to US net price; size not disclosed (deal terms confidential), so no "
+                    "dollar figure is given.")
+    sc = _assemble(co, ticker, "mfn_medicaid", sentence, MFN_DIRECTIONAL, imp, page_cites, ["mfn"],
                    OB.to_date(f.mfn_date), extra_flags=flags, z_text="mfn", detector="mfn_generator")
+    sc.citations += [c for c in ctx_cites if c not in sc.citations]
     sc.product = ""
     return [sc]
