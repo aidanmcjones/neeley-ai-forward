@@ -42,7 +42,7 @@ PART1 = [
 ]
 PART2 = [
     ("The move, with budget or people", "Engine must propose and price a move for any company; inputs below are being collected for all 10 and all 52 drugs", "collecting"),
-    ("Cost and return math", "Collecting: company cost structure, trial cost per phase (ASPE, JAMA), launch and DTC spend, Open Payments per drug", "collecting"),
+    ("Cost and return math", "Collected: cost structure FY2021 to FY2025 for the 10 plus USD peers (SG&A 13.5 to 26.3% of revenue, advertising 2.5 to 6%), trial cost per phase (ASPE 2014, Sertkaya 2024), 102 Open Payments drug-years, 27 precedent pricing moves with disclosed effects, 520 new-indication timing rows. Opus verifying against companyfacts and the pages", "verifying"),
     ("Deal comps (acquire or license)", "Collected: 1,611 cited deals 2020 to 2026 from 2,934 8-Ks and 10-K notes with upfront, milestones, royalty, deal value; 151 benchmark cells by stage and area. Opus verifying quotes, roles and duplicates; benchmarks will be rebuilt from verified rows only", "verifying"),
     ("Market sizing", "Verified and indexed: 212 drug x indication label rows, US prevalence for 30 of 50 indications (all 30 rechecked on the primary page; ATTR-CM, RA and PrEP marked low confidence), Part D 2024 floors recomputed 15 of 15, 95 funnels with Medicare floor %. 20 indications still have no epidemiology", "ready"),
     ("Peer comparison at rival-maker depth", "Verified and indexed: 833 of 852 rival product statements verbatim on the cited page (19 publisher-text rows dropped, 224 junk speakers fixed), NVS top-20 revenue rebuilt from the 20-F, 72 of 72 XBRL rows match. 8 rival makers covered; Boehringer blocked by bot protection", "ready"),
