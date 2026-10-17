@@ -185,7 +185,7 @@ def test_stop_rule():
 
 def test_cli_runs_on_sample_file(tmp_path):
     out = tmp_path / "LLY"
-    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_old.jsonl"), "--moves", str(EX / "moves_LLY.json"),
+    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_v3.jsonl"), "--moves", str(EX / "moves_LLY.json"),
                    "--out", str(out)])
     assert rc == 0
     d = json.loads((out / "decide.json").read_text())
@@ -202,6 +202,8 @@ def test_cli_runs_on_sample_file(tmp_path):
     assert "verified: unverified" not in md
     assert "verified: substring" in md or "verified: exact" in md
     assert d["numeric_check"]["status"] == "passed" and not d["numeric_check"]["unsupported"]
+    # spec 5.2: the chosen move addresses a gated v3 finding; a zero-fit move is never chosen
+    assert d["chosen"]["addressed"] and set(d["chosen"]["addressed"]) <= {"ccde14de6e25", "4bf1a2f5e9e4"}
 
 
 def _stale(out):
@@ -236,7 +238,7 @@ def test_exit_2_deletes_stale_decide_files_gate_failure(tmp_path, monkeypatch):
         items = summary["items"] + [{"where": "x", "text": "9", "passed": False, "numeric_check": bad, "numbers": []}]
         return md, dict(summary, passed=False, numeric_check=bad, items=items, failed=["x"]), withheld
     monkeypatch.setattr(CLI, "build_md", failing)
-    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_old.jsonl"), "--moves", str(EX / "moves_LLY.json"),
+    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_v3.jsonl"), "--moves", str(EX / "moves_LLY.json"),
                    "--out", str(out)])
     assert rc == 2
     assert not (out / "decide.json").exists() and not (out / "decide.md").exists()

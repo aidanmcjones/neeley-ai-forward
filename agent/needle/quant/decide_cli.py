@@ -107,6 +107,8 @@ def f1(x):
 # Gated document (docs/gate_wiring.md 3): every number in decide.md is a cell that the numeric gate classifies
 # --------------------------------------------------------------------------------------------------------------
 
+TOP20 = {"top20": {"value": "20", "unit": "%", "label": "definition: claims share of the top 20% of prescribers "
+                                                         "(rx/prescriber_concentration.csv column top20pct_share)"}}
 MODEL = "model output: computed by the DECIDE cash model (agent/needle/quant/moves.py {code}) from the inputs listed"
 
 
@@ -387,7 +389,7 @@ def build_md(out, findings, public=False):
                 if v is not None and cit is not None and abs(v) < 1:
                     from agent.needle.cite.gate import derived_entry
                     bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
-                txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, [cit] if cit else [], bd, {})
+                txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, [cit] if cit else [], bd, TOP20)
                 src = cell("kill signals", f"kill/rx_context[{j}]/source", f"{k['source']}; lag {k['lag']}", (), {},
                            {"lag": {"value": "18", "label": "CMS Part D PUF publication lag, about 18 months (assumption)"}})
                 L.append(f"| {k['signal']} | context | {txt_cell} | {src} | n/a | human review |")
@@ -418,7 +420,7 @@ def build_md(out, findings, public=False):
             if v is not None and abs(v) < 1:
                 from agent.needle.cite.gate import derived_entry
                 bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
-            bl = cell("kill signals", w + "/baseline", txt, [cit], bd, {})
+            bl = cell("kill signals", w + "/baseline", txt, [cit], bd, TOP20)
         L.append(f"| {k['signal']} | {cell('kill signals', w + '/threshold', k['threshold'], (), {}, ka)} | {bl} | "
                  f"{cell('kill signals', w + '/source', k['source'] + '; lag ' + k['lag'], (), {}, ka)} | "
                  f"{cell('kill signals', w + '/check', k['check_month'], (), {}, ka)} | "

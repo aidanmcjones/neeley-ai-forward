@@ -790,6 +790,31 @@ def _prq():
     return _PRQ["d"]
 
 
+def _price_sentences(c, value, idx):
+    """A row value such as "Zepbound avg $346/mo; Trulicity $389/mo" names several prices; the row's own quote holds
+    one. Each other price is cited to the sentence of the same page that names the product and the price (verified
+    on the page), so every printed price has its own quote."""
+    out = []
+    try:
+        got = idx.get_page(c.canonical_id, c.page) if c.page is not None else None
+    except Exception:
+        got = None
+    if not got:
+        return out
+    sents = re.split(r"(?<=[.;])\s+|\n+", got[2])
+    for m in re.finditer(r"([A-Z][A-Za-z]+)[^$;]*?\$([\d,]+)", value):
+        name, price = m.group(1), m.group(2)
+        if price in (c.quote or ""):
+            continue
+        hit = next((x.strip() for x in sents if name.lower() in x.lower() and f"${price}" in x), None)
+        if hit:
+            pc = cite_verify(Citation(canonical_id=c.canonical_id, page=c.page, quote=hit[:300], claim_type="quote"),
+                             idx)
+            if pc.verification.ok:
+                out.append(pc)
+    return out
+
+
 def ira_findings(ticker, co):
     """IRA channel candidates for one company (section 4.3 b): one per CMS-selected drug with IPAY 2027 or 2028."""
     idx = data.index()
@@ -1062,6 +1087,7 @@ def mfn_findings(ticker, co):
         c = _policy_cite(r, idx)
         if c is not None:
             ctx_cites.append(c)
+            ctx_cites += _price_sentences(c, str(r.value), idx)
     q = _mfn_quantified(ticker, co, pe, idx)
     head = (f"{ticker} signed an MFN agreement on {f.mfn_date} that extends MFN pricing to Medicaid ({row.row_id})"
             + (f"; {'; '.join(ctx)}" if ctx else ""))

@@ -1,7 +1,7 @@
 {
   "ticker": "LLY",
   "as_of": "2026-10-17",
-  "_comment": "Sample candidate moves built from the case appendix (Mounjaro/Zepbound lead obesity; Trulicity loses exclusivity in 2027; Verzenio enters the IRA 2028 cycle; rivals Ozempic, Wegovy, Wegovy pill). Parameter values marked assumption are team inputs, not facts; they are flagged in decide.md.",
+  "_comment": "Sample candidate moves built from the case appendix (Mounjaro/Zepbound lead obesity; Trulicity loses exclusivity in 2027; Trulicity and Verzenio enter the IRA 2028 cycle; rivals Ozempic, Wegovy, Wegovy pill). finding_ids are v3 ids in out/LLY/findings_v3.jsonl (gated rows only). Parameter values marked assumption are team inputs, not facts; they are flagged in decide.md.",
   "cash_and_equivalents": {
     "value": 8950,
     "citation": {
@@ -20,9 +20,9 @@
       "context": {
         "product": "zepbound"
       },
-      "why": "Price cuts and the Wegovy pill are reshaping obesity; a larger self-pay channel at MFN-aligned prices protects share and reaches uninsured patients (case appendix).",
+      "why": "LLY's MFN agreement puts Zepbound at an average $346 a month through TrumpRx; a larger self-pay channel at MFN-aligned prices protects share and reaches uninsured patients (case appendix).",
       "finding_ids": [
-        "LLY-labels-595152"
+        "ccde14de6e25"
       ],
       "params": {
         "base_us_rev_annual": {
@@ -77,7 +77,8 @@
         "payers": false,
         "regulators": true,
         "investors": false
-      }
+      },
+      "note": "Re-pointed from LLY-labels-595152 (v3 d2aae6b94153, 'zepbound lists 2 indications vs rival median 5'). The recount from epi/indication_map.csv rows, each cited to its DailyMed label line, gives zepbound 2 vs wegovy 3, below the detector's 2-indication rule, so FIND drops that row. The move now rests on the passing MFN/TrumpRx finding ccde14de6e25 (Zepbound avg $346/mo cash price, White House fact sheet p. 1). Claim change: the move is argued from the cash-price channel, not from a narrower label."
     },
     {
       "name": "Defend Trulicity through the 2027 loss of exclusivity and switch patients to Mounjaro",
@@ -85,9 +86,9 @@
       "context": {
         "product": "trulicity"
       },
-      "why": "Trulicity loses exclusivity in 2027 (10-K patent table); a rebate-wall defense and a Mounjaro switch program value the retained revenue.",
+      "why": "Trulicity's Medicare price is set by negotiation from January 2028 and its US compound patent ends in 2027 (FY2025 10-K patent table); a rebate-wall defense and a Mounjaro switch program value the retained revenue.",
       "finding_ids": [
-        "LLY-labels-746909"
+        "4bf1a2f5e9e4"
       ],
       "params": {
         "rev_at_risk_annual": {
@@ -124,7 +125,8 @@
         "payers": true,
         "regulators": false,
         "investors": false
-      }
+      },
+      "note": "Re-pointed from LLY-labels-746909 (v3 d8177d9f7349, now 68c1713e96ef: 'trulicity protection ends 2026-09-18, 14.4 years before ozempic'). Engine fix: the Trulicity date is now the company-stated 2027 cited to the FY2025 10-K page (pipeline/loe_calendar.csv row, facts.locator LLY:10k_FY2025.md#p12) and the gap is derived as rival year minus product year. The row still fails: ozempic's 2041-02-17 is an Orange Book table value with no verified facts row or page, so the 14-year gap has an unverified operand. The move now rests on the passing finding 4bf1a2f5e9e4 (Trulicity selected for IRA negotiation, price set from January 2028). Claim change: the Trulicity pressure is argued from the IRA 2028 price and the cited 2027 compound patent, not from a gap to ozempic."
     },
     {
       "name": "Seek new Zepbound indications to close the label gap with Wegovy",
@@ -134,10 +136,8 @@
         "ta": "metabolic",
         "stage": "ph3"
       },
-      "why": "Zepbound lists 2 indications against Wegovy's 5 (label comparison); two outcomes trials would widen the addressable pool.",
-      "finding_ids": [
-        "LLY-labels-595152"
-      ],
+      "why": "Zepbound's label lists fewer indications than Wegovy's (cited label lines); outcomes trials would widen the addressable pool.",
+      "finding_ids": [],
       "params": {
         "n_trials": 2,
         "trial_cost_each": {
@@ -171,7 +171,8 @@
         "payers": false,
         "regulators": true,
         "investors": false
-      }
+      },
+      "note": "Was tied to LLY-labels-595152. The cited recount (zepbound 2 indication rows vs wegovy 3) does not meet the detector's narrower-label rule, so no passing finding supports this move: it carries strategic fit 0 and is shown only as an alternative, never the recommendation (spec 5.2)."
     }
   ]
 }

@@ -341,7 +341,7 @@ def rx_baselines(drug):
     hit = _latest("rx/prescriber_concentration.csv", {"drug": d}, "top20pct_share_all_prescribers")
     if hit:
         v, c, r = hit
-        out["zs_depth"] = (v, c, f"top 20% of prescribers write {v:.1%} of claims ({r['year']})")
+        out["zs_depth"] = (v, c, f"top 20% of prescribers write {v:.1%} of claims in {r['year']}")
     rows = [x for x in find_rows("rx/formulary_history.csv", {"drug": d, "rxcui_link": "brand"})
             if _num(x[2].get("coverage_share")) is not None]
     rows.sort(key=lambda x: str(x[2].get("quarter")), reverse=True)

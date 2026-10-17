@@ -630,7 +630,13 @@ def select_move(results, cash=None):
     notes = []
     if not feas:
         raise ValueError("no feasible move: every candidate's cash at risk exceeds cash and equivalents")
-    order = list(feas)
+    # spec 5.2: a move that addresses no Part 1 finding cannot be recommended; it is chosen only when no feasible
+    # move addresses one (then the WARNING below says so)
+    unfit = [r for r in feas if not r.addressed]
+    order = [r for r in feas if r.addressed] or list(feas)
+    if len(order) < len(feas):
+        notes.append("moves that address no Part 1 finding are not eligible to be chosen (spec 5.2): "
+                     + ", ".join(r.name for r in unfit))
     if len(order) > 1:
         a, b = order[0], order[1]
         lo_a, hi_a = a.ev_by_scenario["bear"], a.ev_by_scenario["bull"]
@@ -640,12 +646,14 @@ def select_move(results, cash=None):
             notes.append(f"EV intervals of {a.name} and {b.name} overlap; chose the higher MCDA ({b.mcda:.3f} vs {a.mcda:.3f})")
     chosen = order[0]
     chosen.status = "chosen"
-    rest = order[1:] + infeas
+    rest = order[1:] + [r for r in unfit if r not in order] + infeas
     rejected = rest[:2]
     for r in rest:
         r.status = "rejected" if r in rejected else r.status
         if r.status == "infeasible" or (cash is not None and r.car > cash):
             r.binding_reason = f"cash at risk {r.car:,.1f} exceeds cash and equivalents {cash:,.1f}"
+        elif not r.addressed and chosen.addressed:
+            r.binding_reason = "addresses no Part 1 finding, so it cannot be recommended (spec 5.2)"
         elif r.ev < chosen.ev and r.mcda > chosen.mcda and _overlap(r, chosen):
             r.binding_reason = f"lower EV ({r.ev:,.1f} vs {chosen.ev:,.1f}); intervals overlap and MCDA does not rescue it"
         elif r.ev < chosen.ev:
