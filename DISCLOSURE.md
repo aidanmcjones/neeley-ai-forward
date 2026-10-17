@@ -13,3 +13,5 @@ Everything case-specific (data handling, prompts, analysis, UI, financial model,
 AI tools used: Claude (Anthropic API, model claude-opus-5-5) inside the product; Claude Code for development.
 
 Open-source libraries: anthropic, streamlit, pandas, python-dotenv.
+
+UI (`ui/`, built during the competition on Sat Oct 17): Vite, React, React Router, TypeScript, Tailwind CSS and Recharts (all open source); fonts Montserrat, Bebas Neue and JetBrains Mono (SIL Open Font License) bundled locally via @fontsource.
