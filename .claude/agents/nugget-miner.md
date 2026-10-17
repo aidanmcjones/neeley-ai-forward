@@ -74,4 +74,18 @@ Then write `docs/nuggets/<TICKER>.md` for Parker: a ranked table in the case's e
 - One-off charges (acquired IPR&D, impairments, tax settlements) are context, not nuggets, unless the footnote shows they recur or are larger than guided.
 - Hold findings to the backtest's limits: forensic ratios are flags for review, not predictions.
 - Stay read-only outside `docs/nuggets/`. Do not edit `agent/`, `app/` or `out/`.
+- Scratch files go in your own subfolder of the scratchpad (`<scratchpad>/<TICKER>/`), never its root: parallel miners share it.
+
+## Lessons from round 1 (red team v2, docs/red_team_v2_company_pick.md): every Sharpest Needle must pass these
+- **Baseline check:** compare against at least two prior years. AZN's "$1.8B gross-to-net give-back" vanished against 2023 (49.1% vs 49.5%); 2024 was the outlier.
+- **Inside the window:** the case asks about the next 24 months. A needle that pays off in 2029 is context.
+- **Not already said:** grep every transcript for the topic. If the CEO or CFO already stated it on a call (JNJ's Genmab roll-off), it is not least discussed.
+- **Priced-in defense:** if the fact is public (a royalty schedule in the 10-K since 2017), say so and argue why the market still misses its size or timing.
+- **Peer column never empty:** "None checked" fails the case. Use another shortlist company or a rival maker in `data/corpus/peers/`.
+- **Units and scope:** apply a rate to the right geography (a European injunction is not a US royalty); split an amortization rise by its cause before attributing it.
+- **Do not trust the code's label tables** (`out/<T>/labels_table.json`) for exclusivity dates: they mix orphan exclusivity with patent expiry. Use the 10-K patent table and the Orange or Purple Book files.
+- **Transcripts:** third-party sites (fool.com and others) are lower trust; their "takeaways" sections are machine summaries, never quotes. If the verifier's speaker check fails on a long prepared remark, cite the filing instead.
+- **No unsourced teammate claims:** if a lead (for example "disclosed only after the SEC asked") is not in the corpus, log it as unsupported; never assert it.
+- **Stacked assumptions:** if an impact rests on three or more assumptions, mark confidence low and keep it off the Sharpest Needle.
+
 - Stop after at most 12 verified nuggets per ticker. Quality beats count. End with a five-line summary: count kept, count dropped, top candidate, biggest gap in the corpus, suggested next ticker or theme.
