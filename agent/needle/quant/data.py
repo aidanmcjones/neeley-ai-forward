@@ -92,12 +92,29 @@ def _fact_row_citation(table, r, source_row, fld, value=None, license=""):
         note += f"; cited value {value} differs from the row value {r['value']}"
     lic = license or ("wrds_licensed" if r["verify_status"] == "no_verified_copy" else "")
     src = r["source"] or ""
-    return Citation(canonical_id=table, page=None, quote=f"{r['row_key']} [{source_row}] {fld} = {r['value']}",
+    return _located(r, Citation(canonical_id=table, page=None, quote=f"{r['row_key']} [{source_row}] {fld} = {r['value']}",
                     claim_type="number", value=str(r["value"]), unit=r["unit"] or "", doc_title=f"moat table {table}",
                     location=f"row {r['row_key']}", source_url=src if src.startswith("http") else "",
                     deep_link=src if src.startswith("http") else "", license=lic, page_scheme="none",
                     verification=Verification(status, grade if status != "unverified" else 0.0, _now(), note),
-                    confidence_note=note)
+                    confidence_note=note), None, value is not None and not reread)
+
+
+def _located(r, cit, rj=None, mismatch=False):
+    """facts.locator applied to a facts-row citation (agent.needle.cite.facts.apply_locator): a doc_id#pN locator
+    (or a label-section source_row) gives a verified page citation, url: a machine-data deep link, fact: the row key.
+    With no locator column (older sqlite) the citation is unchanged. Fail closed: an error keeps the facts citation."""
+    from agent.needle.cite.facts import apply_locator
+    import json as _json
+    try:
+        if rj is None:
+            try:
+                rj = _json.loads(r["row_json"] or "{}")
+            except (ValueError, KeyError, IndexError):
+                rj = {}
+        return apply_locator(r, cit, rj, index(), value_mismatch=mismatch)
+    except Exception:
+        return cit
 
 
 def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, license=""):
@@ -135,14 +152,14 @@ def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, 
         if value is not None and not reread:
             note += f"; cited value {value} differs from the row value {rj[fld]}"
         src = r["source"] or ""
-        return Citation(canonical_id=table, page=None, quote=f"{r['row_key']} {fld} = {rj[fld]}",
+        return _located(r, Citation(canonical_id=table, page=None, quote=f"{r['row_key']} {fld} = {rj[fld]}",
                         claim_type="number", value=str(rj[fld]), unit=r["unit"] if r["field"] == fld else ("%" if fld.endswith("_pct") else ""),
                         ticker=ticker or "", doc_title=f"moat table {table}", location=f"row {r['row_key']}",
                         source_url=src if src.startswith("http") else "", deep_link=src if src.startswith("http") else "",
                         license=license or ("wrds_licensed" if r["verify_status"] == "no_verified_copy" else ""),
                         page_scheme="none",
                         verification=Verification(status, grade if status != "unverified" else 0.0, _now(), note),
-                        confidence_note=note)
+                        confidence_note=note), rj, value is not None and not reread)
     return table_citation(table, row_key or ticker or "", fld, value)
 
 
