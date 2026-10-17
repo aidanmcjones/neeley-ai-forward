@@ -31,10 +31,12 @@ Fail closed: an exception while checking one number marks that number unsupporte
 an exception before tokenizing a block marks the block unsupported. Nothing passes on an error.
 
 Record shape (agreed with the quant and UI workers):
-    numeric_check = {status: passed | failed | unchecked, checked, total, verified, derived, assumed,
+    numeric_check = {status: passed | no_numbers | failed | unchecked, checked, total, verified, derived, assumed,
                      unsupported: [{value, where, reason}]}
-  status is "passed" only when unsupported is empty and at least one text block was checked; "unchecked" when there
-  was no text to check (the caller must not show an unchecked record either); otherwise "failed".
+  status is "passed" when at least one number was found and unsupported is empty; "no_numbers" when there was text
+  but it carried no number (total == 0: nothing to support, so it is not a failure, but it is not a pass on evidence
+  either); "unchecked" when there was no text to check (the caller must not show an unchecked record either);
+  otherwise "failed". check_ok(numeric_check) is True for passed and no_numbers; league, top 5 and the writers use it.
   total = numbers found; checked = numbers whose check ran to completion (total minus gate errors);
   verified + derived + assumed + len(unsupported) == total.
 
@@ -57,6 +59,7 @@ from .locator import Citation
 from .numbers import parse_value, same_number, scale_lookup, tokenize, tolerance
 
 PASSING = ("exact", "substring", "fuzzy", "number_match")
+OK_STATUSES = ("passed", "no_numbers")        # numeric_check statuses that may be emitted (no_numbers is not a failure)
 DERIVED_REL_TOL = 0.005
 FORMULA_WORDS = ("formula", "math", "impact")
 FORMULA_CONSTANTS = (0.0, 1.0, 100.0)
@@ -70,10 +73,15 @@ class GateResult:
 
     @property
     def passed(self):
-        return self.numeric_check.get("status") == "passed"
+        return check_ok(self.numeric_check)
 
     def to_dict(self):
         return {"numeric_check": self.numeric_check, "numbers": self.numbers}
+
+
+def check_ok(numeric_check):
+    """True when a numeric_check may be emitted: status passed, or no_numbers (text with no number in it)."""
+    return (numeric_check or {}).get("status") in OK_STATUSES
 
 
 # ------------------------------------------------------------------ input normalization
@@ -413,7 +421,7 @@ def numeric_gate(text_blocks, claims, derived=None, assumptions=None, index=None
             else:
                 chk[rec["kind"]] += 1
             nums.append(rec)
-    chk["status"] = "passed" if not chk["unsupported"] else "failed"
+    chk["status"] = "failed" if chk["unsupported"] else ("no_numbers" if chk["total"] == 0 else "passed")
     return GateResult(chk, nums)
 
 
@@ -466,7 +474,7 @@ def operands_missing(cits):
 def gate_record(record, text_fields, citation_field, derived=None, assumptions=None, index=None):
     """(copy of record with 'numeric_check', passed) for a findings-style dict. text_fields may be dotted paths
     ('impact.formula'); citation_field names the list of citation dicts or Citations. derived / assumptions default to
-    record['derived'] / record['assumptions']. passed is True only for status 'passed'."""
+    record['derived'] / record['assumptions']. passed is True for status 'passed' or 'no_numbers' (check_ok)."""
     out = dict(record)
     try:
         cits = _get(record, citation_field) or []
@@ -481,12 +489,13 @@ def gate_record(record, text_fields, citation_field, derived=None, assumptions=N
     except Exception as e:                                      # fail closed
         out["numeric_check"] = dict(_empty_check("failed"),
                                     unsupported=[{"value": None, "where": "record", "reason": f"gate error: {e}"}])
-    return out, out["numeric_check"]["status"] == "passed"
+    return out, check_ok(out["numeric_check"])
 
 
 def merge_checks(checks):
-    """Document-level numeric_check from per-item checks: counts summed, unsupported concatenated; passed only when
-    every item passed; unchecked when no item was checked."""
+    """Document-level numeric_check from per-item checks: counts summed, unsupported concatenated; failed when any
+    item failed (or anything is unsupported); else passed when the document holds at least one number, no_numbers when
+    items were checked but none carried a number; unchecked when no item was checked."""
     m = _empty_check("unchecked")
     any_checked = False
     for c in checks:
@@ -498,7 +507,12 @@ def merge_checks(checks):
         if c.get("status") == "failed":
             m["status"] = "failed"
     if m["status"] != "failed":
-        m["status"] = "passed" if any_checked and not m["unsupported"] else ("unchecked" if not any_checked else "failed")
+        if m["unsupported"]:
+            m["status"] = "failed"
+        elif not any_checked:
+            m["status"] = "unchecked"
+        else:
+            m["status"] = "passed" if m["total"] else "no_numbers"
     return m
 
 
@@ -546,8 +560,8 @@ def gate_document(sections, index=None):
                                                               "reason": f"gate error: {e}"}])
             nums = []
         checks.append(chk)
-        items.append({"where": str(where), "text": text, "passed": chk["status"] == "passed", "numeric_check": chk,
+        items.append({"where": str(where), "text": text, "passed": check_ok(chk), "numeric_check": chk,
                       "numbers": nums})
     doc = merge_checks(checks)
-    return {"passed": doc["status"] == "passed", "numeric_check": doc, "items": items,
+    return {"passed": check_ok(doc), "numeric_check": doc, "items": items,
             "failed": [x["where"] for x in items if not x["passed"]]}

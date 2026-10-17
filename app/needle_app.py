@@ -177,8 +177,8 @@ def load_findings(ticker):
         return read_jsonl(f"out/{ticker}/findings.jsonl")
     out = []
     for r in v3:
-        if (r.get("numeric_check") or {}).get("status") != "passed":
-            continue                       # fail closed: only rows the numeric gate passed
+        if (r.get("numeric_check") or {}).get("status") not in ("passed", "no_numbers"):
+            continue                       # fail closed: only rows the numeric gate passed (no_numbers is not a failure)
         imp = r.get("impact") or {}
         out.append({"finding": r.get("sentence_md") or r.get("sentence", ""), "score": r.get("S", 0),
                     "confidence": str(r.get("confidence", "")).lower(),

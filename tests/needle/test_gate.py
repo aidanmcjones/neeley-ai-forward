@@ -49,11 +49,12 @@ def bad(idx):
 
 
 def _shape(chk):
-    assert set(chk) == KEYS and chk["status"] in ("passed", "failed", "unchecked")
+    assert set(chk) == KEYS and chk["status"] in ("passed", "no_numbers", "failed", "unchecked")
     assert chk["verified"] + chk["derived"] + chk["assumed"] + len(chk["unsupported"]) == chk["total"]
     for u in chk["unsupported"]:
         assert set(u) == {"value", "where", "reason"} and u["reason"]
-    assert (chk["status"] == "passed") == (not chk["unsupported"] and chk["status"] != "unchecked")
+    assert (chk["status"] in G.OK_STATUSES) == (not chk["unsupported"] and chk["status"] != "unchecked")
+    assert (chk["status"] == "no_numbers") == (chk["status"] != "unchecked" and chk["total"] == 0 and not chk["unsupported"])
 
 
 def test_g1_one_verified_citation_no_longer_clears_invented_numbers(idx, good, bad):
@@ -212,3 +213,19 @@ def test_render_footnote_page_and_quotes_and_public(idx):
     pub = render.render_markdown([Claim("Keytruda US sales 29,482.", [fact])], public=True)
     assert "licensed text withheld" in pub and "Keytruda \"US\"" not in pub
     assert "licensed text withheld" in render.render_html([Claim("x", [fact])], public=True)
+
+
+def test_no_numbers_status_is_not_passed_but_is_not_a_failure(idx, good):
+    r = G.numeric_gate("Management reworded the pricing risk factor.", [good], index=idx)
+    _shape(r.numeric_check)
+    assert r.numeric_check["status"] == "no_numbers" and r.numeric_check["total"] == 0 and r.passed
+    out, ok = G.gate_record({"sentence": "paragraph dropped from MD&A", "citations": []}, ["sentence"], "citations",
+                            index=idx)
+    assert out["numeric_check"]["status"] == "no_numbers" and ok
+    s = G.gate_document({"notes": [("n1", "no figures here", []), ("n2", "none here either", [])]}, index=idx)
+    assert s["passed"] and s["numeric_check"]["status"] == "no_numbers"
+    assert [x["numeric_check"]["status"] for x in s["items"]] == ["no_numbers", "no_numbers"]
+    mixed = G.gate_document([("n", "no figures", []), Claim("Keytruda sales were $29,482 million.", [good])], index=idx)
+    assert mixed["passed"] and mixed["numeric_check"]["status"] == "passed"
+    bad = G.gate_document([("n", "no figures", []), ("x", "revenue 99 billion", [])], index=idx)
+    assert not bad["passed"] and bad["numeric_check"]["status"] == "failed" and bad["failed"] == ["x"]
