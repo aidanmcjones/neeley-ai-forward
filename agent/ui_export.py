@@ -527,6 +527,13 @@ PLACEHOLDER_NOTE = "impact is the generic 3%-of-revenue placeholder; no page-ver
 # docs/citations.md: exact / substring / fuzzy / number_match support a number; "derived" citations are computed from
 # cited operands (e.g. Q4 = FY minus Q1-Q3, review D11) and are shown; every other status is withheld.
 PUBLIC_STATUSES = {"exact", "substring", "fuzzy", "number_match", "derived"}
+PAGE_PASS = {"exact", "substring", "fuzzy", "number_match"}   # statuses that may back a derived citation's operands
+
+
+def derived_operands(c):
+    """Operand cite_ids of a derived citation, parsed from its verification detail ('... (c_0103942818), ...')."""
+    text = (c.get("verification") or {}).get("detail") or c.get("confidence_note") or ""
+    return re.findall(r"\((c_[0-9a-f]{6,})\)", text)
 NC_KEYS = ("checked", "total", "verified", "derived", "assumed")
 
 
@@ -559,10 +566,20 @@ def numeric_check(x):
     return out
 
 
-def withhold_reason(c):
+def withhold_reason(c, pool=None):
+    """None when the citation may show its quote and links; else the reason. Bloomberg is withheld whatever the
+    status; machine_data / unverified / unverified_onboard and any other non-whitelisted status never export text;
+    a derived citation is public only when every operand is in `pool` with a passing page status and is itself public."""
     st = (c.get("verification") or {}).get("status")
     if "bloomberg" in (c.get("license") or "").lower():
         return "Bloomberg-licensed source: quote and links withheld from the public export"
+    if st == "derived":
+        ops = derived_operands(c)
+        pool = pool or {}
+        if not ops or any(o not in pool or (pool[o].get("verification") or {}).get("status") not in PAGE_PASS
+                          or withhold_reason(pool[o], pool) for o in ops):
+            return "operand not page-verified"
+        return None
     if st not in PUBLIC_STATUSES:
         return f"citation status {st or 'missing'} is not public (did not verify): quote and links withheld" + \
                (f" ({c['confidence_note']})" if c.get("confidence_note") else "")
@@ -594,10 +611,12 @@ def _moat_pages(cid, page):
     return None
 
 
-def citation_evidence(c, side):
-    """One v2 Citation -> evidence item (contract keys plus v2 keys); public withholding rule applied."""
+def citation_evidence(c, side, pool=None):
+    """One v2 Citation -> evidence item (contract keys plus v2 keys); public withholding rule applied.
+    `pool` is {cite_id: citation} for the record, used to check a derived citation's operands."""
     cid = c.get("canonical_id") or ""
-    why = withhold_reason(c)
+    why = withhold_reason(c, pool)
+    derived = (c.get("verification") or {}).get("status") == "derived"
     ev = {"doc_id": cid, "page": c.get("page"), "printed": c.get("folio") or "",
           "citation": f"{c.get('doc_title')}, {c.get('location')}" + (
               f" (file page {c['page']})" if c.get("page") and c.get("page_scheme") == "marker" else ""),
@@ -609,6 +628,12 @@ def citation_evidence(c, side):
           "claim_type": c.get("claim_type"), "value": c.get("value"), "unit": c.get("unit"),
           "license": c.get("license") or None, "verification": c.get("verification"),
           "confidence_note": c.get("confidence_note") or "", "withheld": bool(why), "withheld_reason": why}
+    if derived:  # never rendered as a quote: the UI shows "derived from [a][b]"
+        ev.update(quote="", deep_link="", viewer_link="", url=None, derived_from=derived_operands(c),
+                  derived_expr=None if why else (c.get("quote") or None))
+        if why:
+            ev["confidence_note"] = ""
+            ev["verification"] = {k: v for k, v in (c.get("verification") or {}).items() if k != "detail"}
     row = pages.manifest().get(cid) or {}
     ev["source_quality"] = row.get("source_quality") or ("official" if (row or cid.startswith(("drug:", "policy_gov:", "xbrl:"))) else None)
     g, gwhy = grade_for(cid)
@@ -619,6 +644,8 @@ def citation_evidence(c, side):
     if why:
         ev["excerpt"] = {"before": "", "match": "", "after": "", "located": False, "how": None,
                          "scope": "withheld", "withheld": True}
+    elif derived:
+        ev["excerpt"] = {"before": "", "match": "", "after": "", "located": False, "how": None, "scope": "derived"}
     elif c.get("page_scheme") in ("marker", "section") and c.get("page") is not None:
         if cid.startswith("drug:") or _resolve_doc(cid):
             ev["excerpt"] = excerpt({"doc_id": cid, "page": c["page"], "quote": c.get("quote")}, side)
@@ -706,7 +733,8 @@ def build_findings_v2(raw, side, ticker, lg, v1):
         paged = [c for c in cits if c.get("page_scheme") in ("marker", "section")]
         lic = [c for c in cits if c not in paged and (c.get("license") or "")]
         data = [c for c in cits if c not in paged and c not in lic]
-        evid = [citation_evidence(c, side) for c in (paged or data)]
+        pool = {c.get("cite_id"): c for c in cits}
+        evid = [citation_evidence(c, side, pool) for c in (paged or data)]
         out.append({
             "id": uid, "source_id": f["id"], "finding": plain(f["sentence"]), "finding_raw": f["sentence"],
             "signal_kind": f["signal_kind"], "signal_family": f.get("signal_family"), "has_detector": f.get("has_detector"),
@@ -741,7 +769,7 @@ def build_findings_v2(raw, side, ticker, lg, v1):
                                                          "sigma_currency", "dEPS_base", "headline_doc")}}},
             "hit_rate": {}, "outside": {},
             "evidence": evid,
-            "data_citations": [citation_evidence(c, side) for c in data] if paged else [],
+            "data_citations": [citation_evidence(c, side, pool) for c in data] if paged else [],
             "licensed_inputs": {"count": len(lic), "license": sorted({c["license"] for c in lic}),
                                 "sources": sorted({c.get("doc_title") or c.get("canonical_id") for c in lic}),
                                 "note": "licensed data rows (I/B/E/S via WRDS) used as model inputs; values not exported"} if lic else None,
@@ -778,12 +806,12 @@ def rejected_v2(rows):
 
 
 # ---------------------------------------------------------------- v2 product fine print (agent.needle.quant.product)
-def cell_cite(c, side=400):
+def cell_cite(c, side=400, pool=None):
     """Compact public citation for a product/decide cell (same withholding rule as findings)."""
-    ev = citation_evidence(c, side)
+    ev = citation_evidence(c, side, pool)
     keep = ("doc_id", "page", "printed", "citation", "quote", "speaker", "url", "deep_link", "viewer_link", "doc_type",
             "cite_id", "doc_title", "location", "claim_type", "value", "unit", "verification", "confidence_note",
-            "withheld", "withheld_reason", "excerpt", "license")
+            "withheld", "withheld_reason", "excerpt", "license", "derived_from", "derived_expr")
     return {k: ev.get(k) for k in keep}
 
 
@@ -791,7 +819,7 @@ def _cite_source(cell):
     cs = cell.get("citations") or []
     if cs:
         c = cs[0]
-        why = withhold_reason(c)
+        why = withhold_reason(c, {x.get("cite_id"): x for x in cs})
         return f"{c.get('doc_title')}, {c.get('location')}" + (f" (citation withheld: {why})" if why else "")
     refs = cell.get("refs") or []
     if refs:
@@ -815,7 +843,8 @@ def product_v2(ticker, slug):
                 continue
             rows[row][ent["name"]] = {"numeric_check": numeric_check(cell.get("numeric_check")), "slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
                                       "value_raw": cell.get("value"), "detail": clean(cell.get("detail")),
-                                      "citations": [cell_cite(c) for c in cell.get("citations") or []],
+                                      "citations": [cell_cite(c, pool={x.get("cite_id"): x for x in cell.get("citations") or []})
+                                                    for c in cell.get("citations") or []],
                                       "refs": cell.get("refs") or [], "empty_reason": cell.get("empty_reason") or "",
                                       "source": _cite_source(cell)}
     fnd = []
@@ -827,13 +856,15 @@ def product_v2(ticker, slug):
                     "impact": {"formula": imp.get("formula"), "dRev": imp.get("dRev"), "dOI": imp.get("dOI"),
                                "units": "USD", "CM": imp.get("CM")},
                     "peer": f.get("peer"), "flags": f.get("flags"), "obscurity_note": f.get("obscurity_note"),
-                    "evidence": [cell_cite(c) for c in f.get("citations") or []]})
+                    "evidence": [cell_cite(c, pool={x.get("cite_id"): x for x in f.get("citations") or []})
+                                 for c in f.get("citations") or []]})
     gl = d.get("growth_limiter") or {}
     return {"product": slug, "entities": ents, "row_titles": cmp_.get("row_titles"), "rows": rows,
             "findings": fnd, "notes": cmp_.get("notes") or [], "context": clean(cmp_.get("context")),
             "growth_limiter": {"numeric_check": numeric_check(gl.get("numeric_check")), "sentence": plain(gl.get("sentence")), "sentence_raw": gl.get("sentence"),
                                "priced_in": gl.get("priced_in"), "reasons": gl.get("reasons") or [],
-                               "citations": [cell_cite(c) for c in gl.get("citations") or []]} if gl else None,
+                               "citations": [cell_cite(c, pool={x.get("cite_id"): x for x in gl.get("citations") or []})
+                                             for c in gl.get("citations") or []]} if gl else None,
             "numeric_check": numeric_check(d.get("numeric_check")),
             "uncited_cells": d.get("uncited_cells") or [], "empty_cells": d.get("empty_cells") or [],
             "source_file": f"out/{ticker}/product_{slug}.json"}
@@ -936,7 +967,8 @@ def apply_decide(ticker, stance, findings, v1=()):
             for c in cl.get("citations") or []:
                 if c.get("cite_id") not in seen:
                     seen[c.get("cite_id")] = len(foot) + 1
-                    foot.append({"n": len(foot) + 1, "move": m.get("name"), "claim": cl.get("text"), "citation": cell_cite(c),
+                    foot.append({"n": len(foot) + 1, "move": m.get("name"), "claim": cl.get("text"),
+                                 "citation": cell_cite(c, pool={x.get("cite_id"): x for x in cl.get("citations") or []}),
                                  "numeric_check": numeric_check(cl.get("numeric_check"))})
     stance["template"] = {k: stance.get(k) for k in ("headline", "recommended", "decision_needed", "options", "alternatives", "prove_wrong")}
     stance["headline"] = f"{ch['name']}: {ch.get('why') or ''}".strip().rstrip(":")
