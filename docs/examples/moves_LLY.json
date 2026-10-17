@@ -1,0 +1,166 @@
+{
+  "ticker": "LLY",
+  "as_of": "2026-10-17",
+  "_comment": "Sample candidate moves built from the case appendix (Mounjaro/Zepbound lead obesity; Trulicity loses exclusivity in 2027; Verzenio enters the IRA 2028 cycle; rivals Ozempic, Wegovy, Wegovy pill). Parameter values marked assumption are team inputs, not facts; they are flagged in decide.md.",
+  "cash_and_equivalents": {
+    "value": 8950,
+    "citation": {
+      "canonical_id": "LLY:10q_2026Q2.md",
+      "page": 7,
+      "quote": "equivalents $ 8,950 $ 7,268 Accounts receivable 20,083 17,760 Other receivables 3,392 2,395 Inventories 16,793",
+      "ticker": "LLY",
+      "doc_title": "Eli Lilly 10-Q 2026-06-30",
+      "doc_type": "10-Q"
+    }
+  },
+  "moves": [
+    {
+      "name": "Expand the LillyDirect cash-pay Zepbound channel (MFN-aligned)",
+      "template": "M4",
+      "why": "Price cuts and the Wegovy pill are reshaping obesity; a larger self-pay channel at MFN-aligned prices protects share and reaches uninsured patients (case appendix).",
+      "finding_ids": [
+        "LLY-labels-595152"
+      ],
+      "params": {
+        "base_us_rev_annual": {
+          "value": 13484,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "LLY:10k_FY2025.md",
+            "page": 49,
+            "quote": "Zepbound (1) 13,484 58 13,542 4,926 175",
+            "ticker": "LLY",
+            "doc_title": "Eli Lilly 10-K FY2025",
+            "doc_type": "10-K"
+          },
+          "note": "Zepbound US revenue FY2025"
+        },
+        "share_moved": {
+          "value": 0.1,
+          "kind": "assumption",
+          "note": "10 points of volume to self-pay; precedent ~35% of new scripts (Walmart/LillyDirect 2025)"
+        },
+        "price_delta": {
+          "value": -0.2,
+          "kind": "assumption",
+          "note": "self-pay net 20% below current net; no product-level net price is public"
+        },
+        "volume_gain": {
+          "value": 0.05,
+          "kind": "assumption",
+          "note": "5% more patients reached"
+        },
+        "baseline_delta_rev_annual": {
+          "value": -87.6,
+          "kind": "benchmark",
+          "benchmark": "mfn_share",
+          "note": "s_MFN 0.0065 x 13,484 (spec 4.3 c): Medicaid MFN erosion of the baseline"
+        },
+        "baseline_start_month": 1,
+        "tax_rate": {
+          "value": 0.2049,
+          "kind": "company",
+          "note": "TTM income tax 6,884 / pretax 33,595 (spec 10.1)"
+        }
+      },
+      "capability": {
+        "approved label": true,
+        "commercial footprint in the TA": true,
+        "direct-to-patient fulfilment channel": true
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": false,
+        "regulators": true,
+        "investors": false
+      }
+    },
+    {
+      "name": "Defend Trulicity through the 2027 loss of exclusivity and switch patients to Mounjaro",
+      "template": "M5",
+      "why": "Trulicity loses exclusivity in 2027 (10-K patent table); a rebate-wall defense and a Mounjaro switch program value the retained revenue.",
+      "finding_ids": [
+        "LLY-labels-746909"
+      ],
+      "params": {
+        "rev_at_risk_annual": {
+          "value": 2914,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "LLY:10k_FY2025.md",
+            "page": 65,
+            "quote": "Trulicity 2,914 3,694 5,433 1,362 1,560 1,699",
+            "ticker": "LLY",
+            "doc_title": "Eli Lilly 10-K FY2025",
+            "doc_type": "10-K"
+          },
+          "note": "Trulicity US revenue FY2025"
+        },
+        "loe_month": {
+          "value": 3,
+          "kind": "company",
+          "note": "January 2027, 10-K patent table (Trulicity compound patent U.S. 2027)"
+        },
+        "tax_rate": {
+          "value": 0.2049,
+          "kind": "company",
+          "note": "TTM income tax 6,884 / pretax 33,595 (spec 10.1)"
+        }
+      },
+      "capability": {
+        "incumbent brand with payer contracts": true,
+        "successor brand with supply": true
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": false,
+        "payers": true,
+        "regulators": false,
+        "investors": false
+      }
+    },
+    {
+      "name": "Seek new Zepbound indications to close the label gap with Wegovy",
+      "template": "M3",
+      "why": "Zepbound lists 2 indications against Wegovy's 5 (label comparison); two outcomes trials would widen the addressable pool.",
+      "finding_ids": [
+        "LLY-labels-595152"
+      ],
+      "params": {
+        "n_trials": 2,
+        "trial_cost_each": {
+          "value": 157.0,
+          "kind": "benchmark",
+          "benchmark": "trial_cost_cardio",
+          "note": "Moore 2018 cardiovascular pivotal mean"
+        },
+        "trial_months": 30,
+        "readout_month": 30,
+        "approval_month": 42,
+        "peak_sales": {
+          "value": 1079.0,
+          "kind": "assumption",
+          "note": "8% of Zepbound US FY2025 revenue 13,484; team input pending the label-channel finding (4.3 h)"
+        },
+        "tax_rate": {
+          "value": 0.2049,
+          "kind": "company",
+          "note": "TTM income tax 6,884 / pretax 33,595 (spec 10.1)"
+        }
+      },
+      "capability": {
+        "approved label for the molecule": true,
+        "commercial footprint in the therapeutic area": true,
+        "clinical development capacity": true
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": false,
+        "payers": false,
+        "regulators": true,
+        "investors": false
+      }
+    }
+  ]
+}
