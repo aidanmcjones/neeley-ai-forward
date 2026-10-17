@@ -1,3 +1,4 @@
+NOT QUOTABLE: transcripts/2025Q3_transcript.md (fool.com) is garbled machine transcription about half normal length (e.g. 'Operator: Our next Rough.', operator lines attributed to analysts). Use for leads only; verify any quote against the webcast replay
 transcripts/2025Q3,2025Q4,2026Q1: only third-party (fool.com); no official Gilead transcript found on IR site (Gilead posts prepared remarks, not full transcript).
 transcripts/2026Q2: third-party roic.ai (Alphastreet copy was overwritten at same rel path; sources.jsonl has two rows for it); no fool.com version found.
 transcripts/2026Q3: call not yet held as of 2026-10-17 (typically late Oct).

@@ -32,7 +32,8 @@ Every document has page markers: `[[page 41 | printed 39]]`. Cite the **printed*
 - `source_quality` in `manifest.csv`: `official` (SEC, FDA, CMS, company site) or `third_party`.
 - **36 of 54 transcripts are third_party** (fool.com, roic.ai, allmind.ai, marketbeat, webull) because most IR sites block scripted downloads. Fine for finding leads. **Before a quote goes in the findings table, check it against Bloomberg/FactSet or the webcast replay.** Official transcripts: MRK, PFE, JNJ (all quarters), GSK, SNY.
 - Third-party pages include site navigation text around the call.
-- Text was extracted mechanically (no AI paraphrase), so quotes are verbatim to the source page.
+- Text was extracted mechanically (we did not paraphrase), but some source pages contain AI-written text. **fool.com transcripts open with TAKEAWAYS / SUMMARY sections written by Motley Fool with LLMs: never quote them.** Quote only from the call itself (after 'Full Conference Call Transcript').
+- Known bad files: AZN `transcripts/2026Q1_transcript.md` is actually the Q2 2026 call (duplicate); AZN 2025Q3 has no speaker names; GILD 2025Q3 is garbled. AMGN, NVO and AZN have only 3 distinct calls in 2025Q3 to 2026Q2. See GAPS.md.
 
 ## Regenerate
 

@@ -78,7 +78,8 @@ Expected documents that are not in data/corpus. Regenerate with `python -m agent
 ## AZN (companies)
 - complete against the checklist
 - worker notes:
-  - Q1 2026 transcript is third-party roic.ai page (speaker-labelled, includes Q&A); official AZ transcripts not published on astrazeneca.com
+  - MISLABELED: transcripts/2026Q1_transcript.md is NOT the Q1 2026 call. It is a second copy of the H1/Q2 2026 call held Jul 27 2026 (roic.ai page; Operator: 'Half 1 and Q2 2026 Webinar'). Do not cite it as Q1. AZN Q1 2026 call (Apr 29 2026) is missing; official AZ transcripts not published on astrazeneca.com
+  - NOT QUOTABLE BY SPEAKER: transcripts/2025Q3_transcript.md (allmind.ai) has no speaker names (every turn is 'Speaker #n'). 2025Q4 and 2026Q2 (allmind.ai) mix 'Speaker #n' and named turns and repeat sentences; confirm the speaker before quoting
   - All transcripts (2025Q3, 2025Q4, 2026Q2) are third_party allmind.ai pages with site chrome; Seeking Alpha 403, MarketBeat 500, financialfilings 403
   - Q3 2026 transcript: results due 30 Oct 2026, not yet held
   - Investor day 2025-2026: none found (only Ambition 2030 investor day from 2024 listed on IR page; not collected)
@@ -100,6 +101,7 @@ Expected documents that are not in data/corpus. Regenerate with `python -m agent
 ## GILD (companies)
 - complete against the checklist
 - worker notes:
+  - NOT QUOTABLE: transcripts/2025Q3_transcript.md (fool.com) is garbled machine transcription about half normal length (e.g. 'Operator: Our next Rough.', operator lines attributed to analysts). Use for leads only; verify any quote against the webcast replay
   - transcripts/2025Q3,2025Q4,2026Q1: only third-party (fool.com); no official Gilead transcript found on IR site (Gilead posts prepared remarks, not full transcript).
   - transcripts/2026Q2: third-party roic.ai (Alphastreet copy was overwritten at same rel path; sources.jsonl has two rows for it); no fool.com version found.
   - transcripts/2026Q3: call not yet held as of 2026-10-17 (typically late Oct).
