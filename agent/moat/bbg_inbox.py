@@ -64,9 +64,13 @@ def mail_messages():
 def tidy_name(title, subject):
     text = f"{title} {subject}"
     tk = next((v for k, v in TICKERS.items() if k in text.lower()), "UNK")
-    m = re.search(r"Earnings Call (\d{4})(\d{1,2})(\d{1,2})", text)
+    m = re.search(r"Earnings Call (\d{4})(\d{2,4})\b", text)
     if m:
-        y, mo = int(m.group(1)), int(m.group(2))
+        y, rest = int(m.group(1)), m.group(2)
+        # Bloomberg writes the call date without zero padding: 2026429 = Apr 29, 2026506 = May 6, 20251106 = Nov 6
+        mo = next((int(rest[:k]) for k in (2, 1) if 1 <= int(rest[:k]) <= 12 and 1 <= int(rest[k:] or "0") <= 31), None)
+        if mo is None:
+            return f"{tk}_{re.sub(r'[^A-Za-z0-9._-]+', '_', title)[:80]}.pdf"
         # a call held in month mo reports the quarter that ended the month before (Apr call = Q1, Jul = Q2, Oct/Nov = Q3, Jan/Feb = Q4 prior year)
         q = {1: ("Q4", y - 1), 2: ("Q4", y - 1), 3: ("Q4", y - 1), 4: ("Q1", y), 5: ("Q1", y), 6: ("Q1", y),
              7: ("Q2", y), 8: ("Q2", y), 9: ("Q2", y), 10: ("Q3", y), 11: ("Q3", y), 12: ("Q3", y)}[mo]
