@@ -48,7 +48,7 @@ streamlit run app/main.py
 **What it is.** `ui/` is a static single-page app (Vite + React 18 + TypeScript + Tailwind 3 + Recharts,
 hash router) that reads precomputed JSON from `ui/public/data/` written by `python -m agent.ui_export`.
 No API key, no network, fonts bundled: it runs with Wi-Fi off. Spec and data contract: `docs/ui_spec.md`.
-Seven screens: Briefing (opens here, league leader preloaded), Ask NEEDLE, Product fine print, Three forces
+Seven screens: Briefing (opens here, league leader preloaded: AMGN under v2), Ask NEEDLE, Product fine print, Three forces
 and priced-in, Proof, Data moat, CEO memo; plus the global source drawer and ⌘K palette.
 
 **How to run.**
@@ -68,10 +68,23 @@ Tab reaches the company select, nav, chips and grid rows; Enter on a chip opens 
 closes and returns focus; ⌘K opens the palette; `?q=` and "Jump to <T>" survive a hard reload. Dark mode
 text passes a 3:1 contrast scan (4 tickers x 7 routes). The static build loads `/#/` and `/#/proof` with zero off-origin requests.
 
+**v2 data (follow-up pass, same evening).** The UI now reads the v2 engine export. League order AMGN, GILD,
+JNJ, AZN, MRK, ABBV, BMY, LLY, PFE, NVO; default ticker AMGN. New on screen: needle status pill (strict /
+provisional / floor relaxed; 5 of 10 provisional), withheld-citation chips and drawer, the decide panel and
+kill-signal table (stance.decide covers LLY only; the other nine keep the template stance), Score anatomy v2,
+product v2 tables with per-cell citations (20 of 22 case-set products; AMGN Repatha and Enbrel pending a
+product_cli error, so they show the v1 table with a note), and a numbers-check pill next to "quote located".
+Re-swept: 70 route pages and 102 product/Ask states clean, dark mode and static build clean.
+
+**Known gap: numbers are not page-checked yet.** The verifier proves each quote is on its page, not the
+numbers in the finding sentence; the citation skeptics found about 58% of numeric tokens in v2 finding
+sentences on pages that do not contain them. Until league_v3 fills `numeric_check`, every finding shows a muted
+"numbers not yet page-checked" pill (hero, grid rows, memo points, Ask answers); the demo must not present
+numbers as page-verified. **AMGN's needle (receivables +17.5% YoY) is disputed pending v3:** the cited balance
+sheet compares June 2026 with December 2025, which is 6.9%.
+
 **Open.**
-- Company-stated exclusivity is not in this export (timelines show the FDA estimate only).
-- 166 findings are held for a human (no page quote confirmed); shown and labelled, never used for $.
-- LLY gross-margin impact dollars are flagged suspect by the exporter; the UI strikes them through.
-- `meta.moat.stages` text is stale (Model "blocked", UI "waiting"); fix in data/moat/progress.json.
-- VRTX is onboarded but has no findings, so it has no company file and is not in the picker.
-- The JS bundle is about 775 kB (227 kB gzip); fine for a local demo, not code-split.
+- league_v3 / `numeric_check` and token-level assumption tags (for "[assumption]" markers) not in the export yet.
+- stance.decide for the nine companies other than LLY; AMGN product v2 tables.
+- VRTX is onboarding-pending (no findings, no company file, not in the picker).
+- The JS bundle is about 800 kB (about 230 kB gzip); fine for a local demo, not code-split.

@@ -67,20 +67,47 @@ then open `/?live=1#/ask` (remembered; `?live=0` turns it off). Only then does t
 `http://localhost:8787/api/health`; the answer is grounded in the retrieved findings and its
 cites and numbers are checked server side.
 
+## v2 engine data (Sat Oct 17 evening)
+
+The export now comes from the v2 engine (FIND, `docs/quant_model.md`; league note `docs/league_v2_note.md`).
+League order: AMGN, GILD, JNJ, AZN, MRK, ABBV, BMY, LLY, PFE, NVO; `meta.default_ticker` is AMGN.
+
+- **Needle status pill** (hero, and a suffix in the company picker): `league[].needle_status` strict (green),
+  provisional or floor_relaxed (warn, tooltip explains the fallback). Provisional today: GILD, AZN, ABBV, BMY, NVO.
+- **Withheld citations**: evidence with `withheld: true` (unverified, or a licensed source) renders as a dashed,
+  muted chip; the drawer shows document, period and page only, plus "Quote withheld: <reason>", never an empty
+  excerpt box. Ask trace chips, source cards and the live source card follow the same rule.
+- **Decide panel** (`stance.decide`, LLY only today): the three moves with EV, cash at risk, payback month,
+  scenario spread and MCDA, chosen move first and badged, footnote chips f1..fN (listed under "Move inputs"
+  in the memo), and the kill-signal table under "What would prove us wrong". Other companies keep the
+  template stance and show `stance.note`.
+- **Score anatomy v2**: S = M x O x E x pi from `vector.v2`, with the v1 score struck through; v1 chart otherwise.
+- **Product v2** (`labels.v2[slug]`): five cited rows with a chip in every cell, the tied product findings
+  and growth limiter, and the uncited-cell count as a footnote; the v1 table sits in a collapsible below.
+  AMGN (Repatha, Enbrel) has no v2 table yet: v1 table with "v2 table pending (product_cli error)".
+- **Numbers check pill**, separate from the "quote located" verdict: driven by `numeric_check`
+  (`{status, checked, total, verified, derived, assumed, unsupported[]}`) on findings, decide moves and
+  footnotes, and labels.v2 cells, with a block summary in the panel header when present. Passed = green
+  "numbers page-checked a verified · b derived · c assumed"; failed = red "N numbers unsupported" (list in the
+  tooltip); unchecked or absent = muted "numbers not yet page-checked". Shown on the hero, grid rows, memo
+  points and Ask answers.
+
 ## Known data gaps (stated, not hidden)
 
-- Company-stated exclusivity / LOE dates are not in this export; timelines show the FDA estimate
-  (Orange / Purple Book) and say "company-stated LOE not exported".
-- 166 findings are held for a human: no automatic check could confirm a page quote. They are
-  shown and labelled, never used for stance dollars.
-- LLY gross-margin impact dollars are flagged suspect by the exporter (impact exceeds trailing
-  operating income); the UI strikes them through and says why.
-- `meta.moat.stages` text is stale (it still says Model "blocked" and UI "waiting"); the Data moat
-  screen shows it as exported until the exporter is updated.
-- NVO and AZN file 20-F / 6-K, so they have no quarterly product revenue breakouts
-  (`discontinued_breakouts` is empty) and no sealed forecast. AZN has no rejected claims and LLY no
-  IRA cut rows; those panels show an empty state. VRTX is onboarded but has no findings yet
-  (`meta.onboarding_pending`), so it is not in the company picker.
+- **Numbers are not yet page-checked.** The verifier checks that each quote is on its page; it does not yet
+  check the numbers in the finding sentence. The skeptic pass found about 58% of numeric tokens in v2 finding
+  sentences sit on pages that do not contain them. Until league_v3 fills `numeric_check`, every finding shows
+  "numbers not yet page-checked". AMGN's needle (receivables +17.5% YoY) is disputed pending v3: the cited
+  balance sheet compares June 2026 with December 2025, which is 6.9%.
+- Company-stated exclusivity / LOE dates are not in the v1 export; v2 product tables carry the 10-K date where found.
+- 11 finding citations are withheld under the public rule (quote not confirmed on the page); all 17 decide
+  footnotes for LLY are external benchmarks or team inputs with quotes withheld, and several move inputs
+  are flagged as assumptions in the data.
+- `stance.decide` exists for LLY only; the other nine show the rule-drafted template stance.
+- NVO and AZN file 20-F / 6-K: no quarterly product revenue breakouts and no sealed forecast. VRTX is
+  onboarding-pending (no findings, so not in the picker).
+- No "[assumption]" markers are drawn in finding or memo text yet: the export does not tag assumed numbers
+  at token level; when it does, they should be rendered from that field, not inferred.
 
 ## Code map
 
