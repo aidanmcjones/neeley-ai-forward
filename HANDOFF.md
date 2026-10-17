@@ -91,7 +91,15 @@ selected-row strip. `numeric_check` is still unchecked everywhere pending the ga
 102 sub-states, 10 printed memos clean; hero above the fold for all 10 (headline drops to 32 px for very long
 sentences); dark mode and static build clean.
 
+**Derived cites and marked sentences (fourth pass).** The UI renders `derived_from` evidence (own chip style;
+drawer lists clickable operands; memo sources print "derived from [n][m]"; withheld wins) and
+`finding.sentence_marked` (`[n]` chips, `[derived: a, b]`, amber `[assumption]` pills) on the hero, grid, memo
+points and Ask answers. Both were checked by injecting values; the export does not carry them yet. Proof now
+states the public status whitelist (exact, substring, fuzzy, number_match, derived; machine_data and
+unverified never quote). For the current artifact link, see PR #22.
+
 **Open.**
+- `sentence_marked` / `derived_from` in the export.
 - `numeric_check` and token-level assumption tags (for "[assumption]" markers) not in the export yet.
 - stance.decide for the nine companies other than LLY; AMGN product v2 tables.
 - VRTX is onboarding-pending (no findings, no company file, not in the picker).

@@ -112,6 +112,21 @@ promoted to needle; `needle_id` is null).
 - `numeric_check` is still null on every row (the uncited-claim gate is not committed yet), so every finding
   shows "numbers not yet page-checked".
 
+## Derived citations and marked sentences (rendered from the spec, awaiting export)
+
+- **Derived evidence** (`derived_from: [cite_id, ...]`, no quote): solid-bordered italic chip with an "ƒ" prefix
+  (distinct from the dashed withheld chip). The drawer shows document, page, value, the computation
+  (`derived_expr`) and "Derived from [a][b]", each operand a button that opens that operand's own drawer entry;
+  never an empty quote box. Operands are looked up by `cite_id` anywhere in the company file. Memo Sources print
+  "derived from [n][m]" with the operands' footnote numbers (operands not cited directly are appended); Ask
+  source cards and live source cards say "derived from". `withheld: true` wins over `derived_from`.
+- **`finding.sentence_marked`**: when present it replaces the sentence on the hero, grid rows, memo points (when
+  the point starts with the finding sentence and has not been edited) and Ask answers. `[n]` becomes a cite
+  chip for evidence n (1-based), `[derived: a, b]` a "derived" mark with operand chips, `[assumption]` an amber
+  "assumption" pill. Absent: the plain sentence, unchanged. The UI never adds markers.
+- Proof states the public status whitelist: exact, substring, fuzzy, number_match, derived (operands must pass);
+  machine_data and unverified never show a quote.
+
 ## Known data gaps (stated, not hidden)
 
 - **Numbers are not yet page-checked** (still true under v3: `numeric_check` is null until the gate commit). The verifier checks that each quote is on its page; it does not yet
@@ -126,8 +141,8 @@ promoted to needle; `needle_id` is null).
 - `stance.decide` exists for LLY only; the other nine show the rule-drafted template stance.
 - NVO and AZN file 20-F / 6-K: no quarterly product revenue breakouts and no sealed forecast. VRTX is
   onboarding-pending (no findings, so not in the picker).
-- No "[assumption]" markers are drawn in finding or memo text yet: the export does not tag assumed numbers
-  at token level; when it does, they should be rendered from that field, not inferred.
+- `sentence_marked` and `derived_from` are not in the current export yet (verified by injecting values); until
+  they land, sentences render plain and no number carries an "[assumption]" marker.
 
 ## Code map
 
