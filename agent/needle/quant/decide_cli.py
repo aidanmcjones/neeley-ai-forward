@@ -56,7 +56,8 @@ def run(ticker, findings, spec, as_of=None, cash=None):
         t = get_template(mv["template"])
         results.append(D.evaluate_move(
             t, mv.get("params", {}), findings, name=mv.get("name"), capability=mv.get("capability"),
-            stakeholders=mv.get("stakeholders"), finding_ids=mv.get("finding_ids"), why=mv.get("why", "")))
+            stakeholders=mv.get("stakeholders"), finding_ids=mv.get("finding_ids"), why=mv.get("why", ""),
+            context=dict(mv.get("context") or {}, ticker=ticker)))
     sel = D.select_move(results, cash)
     ranked = sorted(results, key=lambda r: r.ev, reverse=True)   # statuses were set by select_move
     cash_claim = None
@@ -67,14 +68,32 @@ def run(ticker, findings, spec, as_of=None, cash=None):
             "selection": sel, "ranked": ranked}
 
 
-def kill_table(result):
+def kill_table(result, context=None):
+    """Kill signals with, where the rx tables have a row, the chosen product's latest-year baseline (cited facts row).
+    The ZS thresholds stay the rule; a baseline says where the product starts."""
+    base = {}
+    if context and context.get("product"):
+        try:
+            from agent.needle.quant import verified_tables as V
+            base = V.rx_baselines(context["product"])
+        except Exception:
+            base = {}
     rows = []
     for sg in K.signals_for(result):
         rev = K.revise_ev(result, [sg.id])
         rows.append({"id": sg.id, "signal": sg.name, "threshold": sg.threshold, "source": sg.source, "lag": sg.lag,
                      "check_month": sg.check_month, "action": sg.action, "basis": sg.basis,
                      "p_posterior": rev.p_posterior, "ev_remaining_prior": rev.ev_remaining_prior,
-                     "ev_revised": rev.ev_revised, "ev_revised_total": rev.ev_revised_total, "stop": rev.stop})
+                     "ev_revised": rev.ev_revised, "ev_revised_total": rev.ev_revised_total, "stop": rev.stop,
+                     "baseline": base.get(sg.id)})
+    used = {sg.id for sg in K.signals_for(result)}
+    extra = [v for k, v in base.items() if k not in used]
+    if extra:
+        rows.append({"id": "rx_context", "signal": "Prescriber and payer baselines (rx tables)", "threshold": "context",
+                     "source": "CMS Part D / Part B PUF, formulary files, Open Payments", "lag": "Part D PUF about 18 months",
+                     "check_month": 0, "action": "review", "basis": "", "p_posterior": {}, "ev_remaining_prior": 0.0,
+                     "ev_revised": 0.0, "ev_revised_total": 0.0, "stop": False,
+                     "baseline": None, "context": extra})
     return rows
 
 
@@ -138,6 +157,8 @@ def move_maps(r):
     for i in r.inputs:
         A.update(D.input_assumptions(i, [c for c in r.citations if c.cite_id in i.citation_ids]))
     Dm = {}
+    for i in r.inputs:
+        Dm.update(i.derived or {})
     for s in SCENARIOS:
         Dm[f"ev_{s}"] = _derived(r.ev_by_scenario[s], "a + b", {"a": leaf(f"inwin_{s}", r.in_window_pv[s]),
                                                                  "b": leaf(f"tv_{s}", r.tv_pv[s])})
@@ -165,9 +186,16 @@ def move_maps(r):
     for i in probs:
         prod *= float(i.value)
     if probs and abs(prod - r.p_alive_end) < 1e-9:
+        def _op(i):
+            if i.derived:
+                return {"derived": next(iter(i.derived))}
+            ok = [c for c in r.citations if c.cite_id in i.citation_ids and c.verification.ok]
+            if ok:
+                return (float(i.value), ok[0])
+            return {"value": float(i.value), "assumption": A.get(f"{i.name}#0", {}).get("label")
+                    or D.benchmark_label("p_nonnme_ph3")}
         Dm["p_alive"] = _derived(r.p_alive_end, " * ".join(f"q{k}" for k in range(len(probs))),
-                                 {f"q{k}": {"value": float(i.value), "assumption": A.get(f"{i.name}#0", {}).get(
-                                     "label") or D.benchmark_label("p_nonnme_ph3")} for k, i in enumerate(probs)})
+                                 {f"q{k}": _op(i) for k, i in enumerate(probs)})
     else:
         leaf("p_alive", r.p_alive_end)
     rows = r.tables["base"]
@@ -298,7 +326,7 @@ def build_md(out, findings, public=False):
     L += ["", "Inputs:", "", "| Input | Value | Unit | Kind |", "|---|---|---|---|"]
     for i in c.inputs:
         cl = [x for x in c.citations if x.cite_id in i.citation_ids]
-        L.append(f"| {i.name} | {cell('inputs', f'inputs/{i.name}', D._fmt_val(i.value), cl, Dc, D.input_assumptions(i, cl))} "
+        L.append(f"| {i.name} | {cell('inputs', f'inputs/{i.name}', D._fmt_val(i.value), cl, dict(Dc, **(i.derived or {})), D.input_assumptions(i, cl))} "
                  f"| {i.unit} | {i.kind}{' (' + i.finding_id + ')' if i.finding_id else ''} |")
     L += ["", "## Five numbers: chosen move and the two rejected alternatives", "",
           "| Move | EV | Downside cash at risk | Payback | Scenario EV spread | MCDA |", "|---|---|---|---|---|---|"]
@@ -317,9 +345,21 @@ def build_md(out, findings, public=False):
     L += ["", "MCDA parts (chosen): " + cell("five numbers", "mcda_parts", ", ".join(
         f"{k} {v:.2f}" for k, v in c.mcda_parts.items()) + " (weights 0.25 each)") + ".", ""]
     L += ["## Kill signals (early 6-to-12-month signals that would prove the move wrong)", "",
-          "| Signal | Threshold | Source and lag | Check month | If breached |", "|---|---|---|---|---|"]
+          "| Signal | Threshold | Baseline (chosen product, latest year in the rx tables) | Source and lag | Check month | "
+          "If breached |", "|---|---|---|---|---|---|"]
     from agent.needle.cite.numbers import tokenize
     for k in out["kill"]:
+        if k["id"] == "rx_context":
+            for j, (v, cit, txt) in enumerate(k.get("context") or []):
+                bd = {}
+                if v is not None and cit is not None and abs(v) < 1:
+                    from agent.needle.cite.gate import derived_entry
+                    bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
+                txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, [cit] if cit else [], bd, {})
+                src = cell("kill signals", f"kill/rx_context[{j}]/source", f"{k['source']}; lag {k['lag']}", (), {},
+                           {"lag": {"value": "18", "label": "CMS Part D PUF publication lag, about 18 months (assumption)"}})
+                L.append(f"| {k['signal']} | context | {txt_cell} | {src} | n/a | human review |")
+            continue
         ka = {f"thr{j}": {"value": f"{t.num * (-1 if t.neg else 1):.12g}", "unit": t.unit,
                           "label": f"kill-signal threshold (assumption; basis: {k['basis'] or 'design rule'})"}
               for j, t in enumerate(tokenize(k["threshold"]))}
@@ -339,11 +379,33 @@ def build_md(out, findings, public=False):
                        "er": {"value": f"{k['ev_remaining_prior']:.12g}", "label": lab},
                        "ev": {"value": f"{k['ev_revised']:.12g}", "label": lab}})
         w = f"kill/{k['id']}"
-        L.append(f"| {k['signal']} | {cell('kill signals', w + '/threshold', k['threshold'], (), {}, ka)} | "
+        bl = "no rx row: research threshold only"
+        if k.get("baseline"):
+            v, cit, txt = k["baseline"]
+            bd = {}
+            if v is not None and abs(v) < 1:
+                from agent.needle.cite.gate import derived_entry
+                bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
+            bl = cell("kill signals", w + "/baseline", txt, [cit], bd, {})
+        L.append(f"| {k['signal']} | {cell('kill signals', w + '/threshold', k['threshold'], (), {}, ka)} | {bl} | "
                  f"{cell('kill signals', w + '/source', k['source'] + '; lag ' + k['lag'], (), {}, ka)} | "
                  f"{cell('kill signals', w + '/check', k['check_month'], (), {}, ka)} | "
                  f"{cell('kill signals', w + '/effect', eff, (), {}, ka)} |")
-    L += ["", line("kill signals", "part_d_note", K.PART_D_NOTE), "", "## Flags", ""]
+    if any(r.code == "M4" for r in [c] + sel.rejected):
+        try:
+            from agent.needle.quant import verified_tables as V
+            pm = V.pricing_moves(T)
+        except Exception:
+            pm = []
+        if pm:
+            L += ["", "Pricing-move precedents for the pricing and access move (verified table "
+                      "costs/pricing_move_benchmarks.csv, verbatim magnitude):", ""]
+            for j, (row, cit) in enumerate(pm):
+                txt = f"{row.get('product')}: {row.get('move_type')}, {row.get('magnitude')} ({row.get('effect_type')})"
+                L.append("- " + line("pricing precedents", f"pricing_moves[{j}]", txt, [cit], {}, {}))
+    L += ["", line("kill signals", "part_d_note", K.PART_D_NOTE + " The baselines come from the chosen product's latest "
+                   "year in the rx tables; the thresholds are the ZS rule, with the research constants as labelled "
+                   "fallbacks."), "", "## Flags", ""]
     for r in [c] + sel.rejected:
         fa = {}
         for i in r.inputs:
@@ -422,7 +484,9 @@ def main(argv=None):
         print(f"finding_ids do not resolve against {a.findings}: {', '.join(missing)}", file=sys.stderr)
         return 2
     out = run(a.ticker, findings, spec, a.as_of, a.cash)
-    out["kill"] = kill_table(out["selection"].chosen)
+    ctx = next((dict(mv.get("context") or {}, ticker=a.ticker) for mv in spec["moves"]
+                if (mv.get("name") or get_template(mv["template"]).name) == out["selection"].chosen.name), {})
+    out["kill"] = kill_table(out["selection"].chosen, ctx)
     md, summary, withheld = build_md(out, findings, a.public)
     (d / "decide.json").write_text(json.dumps(to_json(out, summary, withheld), indent=2, default=str))
     if not summary["passed"]:

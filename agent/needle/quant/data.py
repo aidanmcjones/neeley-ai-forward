@@ -31,9 +31,6 @@ ROOT = Path(__file__).resolve().parents[3]
 _GAP = Path("/Users/aidanjones/dev/neeley-ai-forward/.claude/worktrees/gap-data/data/moat")
 MOAT = Path(os.environ["NEEDLE_MOAT"]) if os.environ.get("NEEDLE_MOAT") else (
     ROOT / "data" / "moat" if (ROOT / "data" / "moat" / "tables").exists() else _GAP)
-LOE_CACHE = Path(os.environ.get("NEEDLE_LOE_CACHE", "")) if os.environ.get("NEEDLE_LOE_CACHE") else next(
-    (p for p in (ROOT / "agent" / "cache" / "company_stated_loe.jsonl",
-                 _GAP.parent.parent / "agent" / "cache" / "company_stated_loe.jsonl") if p.exists()), None)
 AS_OF = date(2026, 10, 17)
 REAL_DB = Path(moat.DB)   # resolved at import (env CITATIONS_DB, repo copy, else gap-data); tests may re-point moat.DB
 
@@ -86,8 +83,8 @@ def fact_citation(table, source_row, fld, value=None, license=""):
 def _fact_row_citation(table, r, source_row, fld, value=None, license=""):
     from agent.needle.cite.facts import fact_citation_status, fact_status_grade
     reread = value is not None and _num_eq(r["value"], value)
-    status = fact_citation_status(r["verify_status"], reread)
-    grade, label = fact_status_grade(r["verify_status"])
+    status = fact_citation_status(r["verify_status"], reread, table)
+    grade, label = fact_status_grade(r["verify_status"], table)
     note = f"facts row {r['row_key']} re-read ({r['verify_status']}: {label})"
     if label == "machine data":
         note += "; machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
@@ -132,8 +129,8 @@ def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, 
             continue
         from agent.needle.cite.facts import fact_citation_status, fact_status_grade
         reread = value is not None and _num_eq(rj[fld], value)
-        status = fact_citation_status(r["verify_status"], reread)
-        grade, label = fact_status_grade(r["verify_status"])
+        status = fact_citation_status(r["verify_status"], reread, table)
+        grade, label = fact_status_grade(r["verify_status"], table)
         note = f"facts row {r['row_key']} field {fld} re-read from row_json ({r['verify_status']}: {label})"
         if value is not None and not reread:
             note += f"; cited value {value} differs from the row value {rj[fld]}"

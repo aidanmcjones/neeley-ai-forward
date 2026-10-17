@@ -145,3 +145,43 @@ def test_every_cli_accepts_public(monkeypatch, tmp_path):
     with pytest.raises(SystemExit):
         decide_cli.main(["--ticker", "LLY", "--findings", "x", "--moves", "y", "--public"])
     assert calls["public"] is True
+
+
+# ---------------------------------------------------------------- phase 2: DECIDE and FIND on the verified tables
+@needs_real
+def test_verified_tables_cite_by_row_with_status_in_the_note():
+    from agent.needle.quant import verified_tables as V
+    acq = V.acquisition_value("ph3")
+    assert acq.value == 2650.0 and acq.citations[0].verification.status == "exact"
+    assert "verified" in acq.citations[0].verification.detail                 # verify_status carried into the note
+    assert V.acquisition_value("all").value == 1675.0 and V.acquisition_value("approved").value == 1800.0
+    assert V.royalty("ph2").value == 0.15 and V.royalty("ph2").derived              # cell n = 5, used
+    lm = V.loe_month("LLY", "trulicity")
+    assert lm.value == 3 and lm.derived and lm.citations[0].verification.ok   # company_stated_loe 2027, 10-K page
+    comps = V.deal_comps()
+    assert comps and all(r.get("verify_status") in ("verified", "corrected") for r in comps)
+
+
+@needs_real
+def test_decide_uses_table_rows_and_keeps_research_fallback_labelled():
+    from agent.needle.quant import moves as M
+    r = D.evaluate_move("M3", {}, [], context={"ta": "metabolic"})
+    inp = {i.name: i for i in r.inputs}
+    assert inp["trial_cost_each"].kind == "table" and inp["trial_cost_each"].value == 35.1      # moore2018|controlled
+    assert inp["p_ph3"].kind == "benchmark"                                                    # BIO non-NME: no row
+    labels = D.input_assumptions(inp["p_ph3"], [c for c in r.citations if c.cite_id in inp["p_ph3"].citation_ids])
+    assert all(v["label"].startswith("research-note fallback") for v in labels.values())
+    r5 = D.evaluate_move("M5", {"loe_month": {"value": 3, "kind": "company"}}, [],
+                         context={"ticker": "LLY", "product": "trulicity"})
+    lm = {i.name: i for i in r5.inputs}["loe_month"]
+    assert lm.kind == "table" and lm.derived and M.get_template("M5")
+
+
+@needs_real
+def test_kill_table_baselines_from_rx_tables():
+    from agent.needle.quant import decide_cli
+    r = D.evaluate_move("M3", {}, [])
+    rows = decide_cli.kill_table(r, {"product": "zepbound"})
+    ctx = next(x for x in rows if x["id"] == "rx_context")
+    assert any("Part D prescribers" in t for _, _, t in ctx["context"])
+    assert all(c.verification.ok for _, c, _ in ctx["context"] if c is not None)

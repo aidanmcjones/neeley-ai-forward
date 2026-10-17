@@ -15,8 +15,10 @@ EX = ROOT / "docs" / "examples"
 
 
 def ref(**over):
-    """Section 5.5 synthetic label expansion: two placebo pivotals at $28.8M over months 1-24, readout 24, approval 37."""
-    return D.evaluate_move("M3", over, [], name="reference")
+    """Section 5.5 synthetic label expansion: two placebo pivotals at $28.8M over months 1-24, readout 24, approval 37.
+    The reference case states $28.8M (Moore 2018 placebo-controlled mean), so it is passed explicitly: the template
+    default now comes from the verified trial-cost table (moore2018|controlled, $35.1M)."""
+    return D.evaluate_move("M3", dict({"trial_cost_each": 28.8}, **over), [], name="reference")
 
 
 def test_reference_case_to_the_cent_alternative_ramp():

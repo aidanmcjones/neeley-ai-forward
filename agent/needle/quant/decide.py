@@ -170,6 +170,7 @@ class DecideInput:
     finding_id: str | None = None
     citation_ids: list = field(default_factory=list)
     note: str = ""
+    derived: dict = field(default_factory=dict)     # gate derived entries when the value is computed from a table row
 
 
 def _finding_value(f, fld):
@@ -351,8 +352,48 @@ def _share(spec, universe):
 # evaluate_move
 # --------------------------------------------------------------------------------------------------------------
 
-def _bind_params(template, params, findings, finding_ids):
-    """Merge defaults, user values and Part 1 feeds. Returns (values, inputs, citations_by_param, flags, addressed)."""
+def table_value(code, name, spec, vals, ctx, bench=None):
+    """The verified-table value for one template parameter (agent.needle.quant.verified_tables), or None, in which
+    case the research-note constant stays as the labelled fallback."""
+    from agent.needle.quant import verified_tables as V
+    ctx = ctx or {}
+    b = bench or spec.bench
+    stage = ctx.get("stage") or vals.get("stage") or "ph3"
+    ta = ctx.get("ta") or vals.get("ta")
+    try:
+        if b in V.MOORE_ROWS:
+            return V.moore(b)
+        if b == "royalty_late":
+            return V.royalty(stage)
+        if b == "royalty_early":
+            return V.royalty("preclinical")
+        if b == "upfront_share":
+            return V.licensing_upfront_share(stage)
+        if code == "M2" and name == "total_deal_value":
+            return V.licensing_total(stage)
+        if code == "M2" and name == "p_ph3":
+            return V.sertkaya_pos(ta, "Phase 3 to FDA review")
+        if code == "M2" and name == "p_nda":
+            return V.sertkaya_pos(ta, "FDA review to approval")
+        if code == "M1" and name == "equity_value":
+            return V.target_ev(ctx["target"]) if ctx.get("target") else V.acquisition_value(stage)
+        if code in ("M4", "M5") and name == "loe_month" and ctx.get("product") and ctx.get("ticker"):
+            return V.loe_month(ctx["ticker"], ctx["product"])
+    except Exception:
+        return None
+    return None
+
+
+def _table_input(name, spec, tv, cites, inputs, note=""):
+    cites[name] = list(tv.citations)
+    inputs.append(DecideInput(name, tv.value, spec.unit, "table", citation_ids=[c.cite_id for c in tv.citations],
+                              note=tv.label + (f"; {note}" if note else ""), derived=dict(tv.derived)))
+
+
+def _bind_params(template, params, findings, finding_ids, context=None):
+    """Merge defaults, user values and Part 1 feeds. Returns (values, inputs, citations_by_param, flags, addressed).
+    A parameter with a verified-table row (table_value) takes the table value and its facts-row citation; the
+    research-note constant is the labelled fallback when no row exists."""
     vals = template.defaults()
     inputs, cites, flags, addressed = [], {}, [], set(finding_ids or [])
     by_id = {finding_id(f): f for f in findings}
@@ -378,6 +419,11 @@ def _bind_params(template, params, findings, finding_ids):
     for name, spec in template.params.items():
         u = user.get(name)
         if u is None:
+            tv = table_value(template.code, name, spec, vals, context)
+            if tv is not None:
+                vals[name] = tv.value
+                _table_input(name, spec, tv, cites, inputs, f"replaces research-note default {spec.default}")
+                continue
             v = spec.default
             c = spec_citation(spec)
             vals[name] = v
@@ -392,6 +438,20 @@ def _bind_params(template, params, findings, finding_ids):
                     flags.append(f"unsourced default: {name} = {v} ({spec.source or 'no source'}); state it or replace it")
             continue
         v = u["value"]
+        bench = u.get("benchmark")
+        # a research-note benchmark the moves file names, or an uncited company number, is replaced by its verified
+        # table row; a plain value the caller sets (no kind, no benchmark) is the caller's and is kept
+        if not u.get("citation") and not u.get("finding_id") and (bench or u.get("kind") == "company"):
+            tv = table_value(template.code, name, spec, vals, context, bench)
+            rv = REGISTRY[bench].value if bench in REGISTRY else None
+            if tv is not None and (bench is None or rv == v or not isinstance(rv, (int, float))):
+                vals[name] = tv.value
+                _table_input(name, spec, tv, cites, inputs, f"moves file gave {v}"
+                             + (f" (research note {bench})" if bench else ""))
+                if tv.value != v:
+                    flags.append(f"{name}: verified table value {tv.value:g} replaces the moves-file value {v} "
+                                 f"({tv.label})")
+                continue
         vals[name] = v
         cl = []
         fid = u.get("finding_id")
@@ -417,7 +477,7 @@ def _bind_params(template, params, findings, finding_ids):
 
 
 def evaluate_move(template, params, findings, *, name=None, capability=None, stakeholders=None, finding_ids=None,
-                  wacc=WACC, p_scenario=None, why="", abandon_value=None):
+                  wacc=WACC, p_scenario=None, why="", abandon_value=None, context=None):
     """Value one candidate move. `template` is a MoveTemplate or a code/alias ("M3", "label_expansion")."""
     if isinstance(template, str):
         template = get_template(template)
@@ -426,7 +486,7 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
     assert abs(sum(p_s.values()) - 1.0) < 1e-9, "scenario weights must sum to 1"
     r_mo = r_monthly(wacc)
 
-    vals, inputs, cites, flags, addressed = _bind_params(template, params, findings, finding_ids)
+    vals, inputs, cites, flags, addressed = _bind_params(template, params, findings, finding_ids, context)
     plan = template.build(vals)
     if abandon_value is not None:
         plan.abandon_value = abandon_value
@@ -456,7 +516,7 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
         if cl:
             ok = [c for c in cl if c.verification.ok]
             claims.append(Claim(f"{inp.name} = {_fmt_val(inp.value)} {inp.unit} ({inp.kind})", ok,
-                                assumptions=input_assumptions(inp, cl)))
+                                derived=inp.derived or None, assumptions=input_assumptions(inp, cl)))
             for c in cl:
                 seen[c.cite_id] = c
     glob = [("Discount rate", benchmark_citation("wacc")), ("Bear weight", benchmark_citation("p_bear")),
@@ -494,12 +554,12 @@ def _vals(v):
 def input_assumptions(inp, cl=()):
     """Assumption labels for an input's value: an external benchmark, an inference, a team assumption, a design
     parameter, or a Part 1 finding's impact. A company input with a passing citation needs none (it verifies)."""
-    if inp.kind == "company" and any(c.verification.ok for c in cl):
+    if inp.kind in ("company", "table") and any(c.verification.ok for c in cl):
         return {}
     bench = [c for c in cl if c.canonical_id.startswith("benchmark:")]
     if bench:
         name = bench[0].canonical_id.split(":", 1)[1]
-        label = benchmark_label(name) if name in REGISTRY else \
+        label = ("research-note fallback (no verified table row): " + benchmark_label(name)) if name in REGISTRY else \
             f"external benchmark: {bench[0].quote}, {bench[0].source_url or 'no URL'} (unverified)"
     elif inp.kind == "finding":
         label = f"Part 1 finding {inp.finding_id}: impact d_rev base (see the finding's own numeric check)"

@@ -27,6 +27,10 @@ The quant data layer calls this from agent.needle.quant.data.fact_citation (see 
 VERIFIED_STATUSES = ("verified", "corrected", "fixed", "yes", "true", "match", "matches page")
 MACHINE_STATUSES = ("no_verified_copy",)
 NOT_CHECKED = ("unverified_onboard", "unchecked")
+# Table-scoped verified statuses, from the table's own NOTES.md: "pass" means something only where the scraper
+# defines it (pipeline/NOTES.md: loe_calendar "stated dates re-found in the FY2025 10-K with page (tenk_page)";
+# target_profiles "recomputed from SEC companyfacts; use the verified values"). Elsewhere "pass" stays unverified.
+TABLE_VERIFIED = {"pipeline/loe_calendar.csv": ("pass",), "pipeline/target_profiles.csv": ("pass", "recomputed")}
 
 
 def _key(verify_status):
@@ -35,10 +39,11 @@ def _key(verify_status):
     return str(verify_status if verify_status is not None else "").strip().lower()
 
 
-def fact_status_grade(verify_status):
-    """(grade 0..1, label) for a facts.verify_status value. Unknown values are unverified (fail closed)."""
+def fact_status_grade(verify_status, table=None):
+    """(grade 0..1, label) for a facts.verify_status value. Unknown values are unverified (fail closed). `table`
+    enables that table's own verified statuses (TABLE_VERIFIED)."""
     k = _key(verify_status)
-    if k in VERIFIED_STATUSES:
+    if k in VERIFIED_STATUSES or k in TABLE_VERIFIED.get(table or "", ()):
         return 1.0, "verified"
     if k in MACHINE_STATUSES:
         return 0.6, "machine data"
@@ -47,11 +52,11 @@ def fact_status_grade(verify_status):
     return 0.0, "unverified" + (f" (status {verify_status!r})" if k else " (no status)")
 
 
-def fact_citation_status(verify_status, reread_ok):
+def fact_citation_status(verify_status, reread_ok, table=None):
     """Citation status for a facts-row citation: exact / number_match / unverified (see the module docstring)."""
     if not reread_ok:
         return "unverified"
-    grade, label = fact_status_grade(verify_status)
+    grade, label = fact_status_grade(verify_status, table)
     if label == "verified":
         return "exact"
     if label == "machine data":

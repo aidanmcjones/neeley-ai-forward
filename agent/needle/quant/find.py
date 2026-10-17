@@ -705,38 +705,34 @@ def apply_guard(sc, guard):
 
 
 def _loe_impact(sig, co):
-    """LOE channel with company-stated dates (10-K patent table, company_stated_loe.jsonl) ahead of the detector's
-    Orange/Purple Book date."""
+    """LOE channel with the company-stated date from the verified pipeline/loe_calendar.csv row (company_stated_loe,
+    10-K page in tenk_page, cited through the facts table), else its rule_output_loe, else the detector's
+    Orange/Purple Book date. The uncommitted agent/cache/company_stated_loe.jsonl is no longer read."""
     import json
+    from . import verified_tables as VT
     flags = []
     meta = sig.meta.get("data") or {}
     prod = (sig.meta.get("product") or "").lower()
     loe_date = OB.to_date(meta.get("product_end"))
-    src = "Orange/Purple Book (detector)"
-    if data.LOE_CACHE and data.LOE_CACHE.exists():
-        for line in data.LOE_CACHE.read_text(encoding="utf-8").splitlines():
-            try:
-                r = json.loads(line)
-            except ValueError:
-                continue
-            if prod and prod in (r.get("product") or "").lower():
-                m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", str(r.get("us_loe")))
-                y = re.search(r"(20\d\d)", str(r.get("us_loe")))
-                if m:
-                    loe_date = date(int(m.group(3)), int(m.group(1)), int(m.group(2)))
-                elif y:
-                    loe_date = date(int(y.group(1)), 1, 1)
-                src = f"company-stated {r.get('form')} {r.get('period')}: \"{(r.get('quote') or '')[:80]}\""
-                break
+    src, cites = "Orange/Purple Book (detector)", []
+    got = VT.loe(sig.ticker, prod.split(" ")[0]) if prod else None
+    if got:
+        loe_date, tv, row = got
+        cites = list(tv.citations)
+        src = tv.label
     flags.append(f"LOE date source: {src}")
     rev_pre = _product_revenue(sig.ticker, prod)
     if rev_pre is None:
         flags.append("product revenue not found: LOE not quantified")
         imp = IM.Impact("loe", formula="product revenue missing", quantified=False)
         imp.d_eps = {"bull": 0.0, "base": 0.0, "bear": 0.0}
+        imp.citations = cites
         return imp, flags, None
     biologic = "purple_book" in json.dumps(meta).lower() and "orange" not in str(meta.get("product_fields", "")).lower()
-    imp = IM.loe(co, prod, rev_pre, loe_date or date(2100, 1, 1), biologic)
+    imp = IM.loe(co, prod, rev_pre, loe_date or date(2100, 1, 1), biologic, cites=cites)
+    imp.assumptions = {"rev_pre": {"value": f"{rev_pre:.12g}", "label": "unverified table value: moat table "
+                                   "product_revenue_quarterly.csv, latest full-year product revenue (XBRL product member; "
+                                   "no verified facts row)"}}
     return imp, flags, None
 
 
