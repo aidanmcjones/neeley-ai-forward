@@ -17,6 +17,7 @@ Rules this module keeps:
 """
 
 import ast
+import collections
 import hashlib
 import json
 import math
@@ -717,6 +718,58 @@ def compact_derived(dmap):
             for k, e in (dmap or {}).items()}
 
 
+_MARK = re.compile(r"\[(\d+)\]|\[derived: ([^\]]+)\]|\[constant: ([A-Z0-9_]+)\]|\[assumption\]")
+_FOOT = re.compile(r"^\[(\d+)\] (.*?) -- (\"(?:.*)\"|\[licensed text withheld\]|[^-]*?)(?: -- .*?)?(?: · verified: (\w+))?$")
+
+
+def split_md(md):
+    """(marked text, {n: footnote line}) from an engine *_md field ('text[1]...\n\n**Sources**\n\n[1] ...')."""
+    if not md:
+        return md, {}
+    text, _, foot = md.partition("\n\n**Sources**")
+    notes = {}
+    for line in foot.splitlines():
+        m = re.match(r"^\[(\d+)\] (.*)$", line.strip())
+        if m:
+            notes[int(m.group(1))] = m.group(2)
+    return text.strip(), notes
+
+
+def marker_map(notes, citations):
+    """{n: cite_id} matching each footnote '<doc_title>, <location> ... -- "<quote>"' to the record's citations."""
+    out, used = {}, set()
+    for n, line in sorted(notes.items()):
+        head = line.split(" -- ")[0]
+        qm = re.search(r' -- "(.*)" -- ', line + " -- ")
+        q = qm.group(1) if qm else None
+        cand = [c for c in citations if c.get("cite_id") not in used
+                and head.startswith(f"{c.get('doc_title')}, {c.get('location')}")]
+        hit = next((c for c in cand if q is not None and (c.get("quote") or "") == q), None) or \
+              (cand[0] if len(cand) == 1 or (cand and q is None) else None)
+        out[n] = hit.get("cite_id") if hit else None
+        if hit:
+            used.add(hit.get("cite_id"))
+    return out
+
+
+def marker_kinds(text):
+    """Counts of marker kinds in a marked text, plus any bracket token the parser does not know."""
+    kinds, unknown = collections.Counter(), []
+    for m in re.finditer(r"\[[^\]]*\]", text or ""):
+        tok = m.group(0)
+        if re.fullmatch(r"\[\d+\]", tok):
+            kinds["cite"] += 1
+        elif tok.startswith("[derived: "):
+            kinds["derived"] += 1
+        elif tok.startswith("[constant: "):
+            kinds["constant"] += 1
+        elif tok == "[assumption]":
+            kinds["assumption"] += 1
+        else:
+            unknown.append(tok)
+    return dict(kinds), unknown
+
+
 def text_states(text, amount, money=True, forms=None):
     """Does text print `amount` (or one of `forms`)? money=True needs a currency sign or scale word on the token and
     compares absolute values within the printed precision or 0.5%, whichever is larger."""
@@ -741,10 +794,11 @@ def gate_figures(row, raw):
     the sign and impact.gated is false. peer.metric_value is nulled when the sentence does not print it."""
     imp = row["impact"]
     rimp = raw.get("impact") or {}
-    gtext = rimp.get("text") or raw.get("impact_text")
-    if gtext:
+    gtext = rimp.get("text") or raw.get("impact_text") or \
+        (_MARK.sub("", split_md(raw.get("formula_md"))[0] or "") if raw.get("formula_md") else None)
+    if gtext and not raw.get("formula_md"):
         imp["text"] = plain(gtext)
-    src = gtext or raw.get("sentence") or ""
+    src = " ".join(x for x in (gtext, raw.get("sentence")) if x)
     amount = imp.get("dollars")
     stated = bool(amount) and text_states(src, amount)
     base = imp.get("base")
@@ -854,6 +908,25 @@ def build_findings_v2(raw, side, ticker, lg, v1):
             **gexp,
         })
         gate_figures(out[-1], f)
+        if f.get("sentence_md") or f.get("formula_md"):
+            st_, notes = split_md(f.get("sentence_md"))
+            fo_, fnotes = split_md(f.get("formula_md"))
+            notes = {**fnotes, **notes}
+            row = out[-1]
+            row["sentence_marked"] = plain(st_) if st_ else None
+            row["formula_marked"] = fo_ or None
+            if fo_:
+                row["impact"]["text"] = fo_
+            row["marker_map"] = marker_map(notes, cits)
+            lic_ids = {c.get("cite_id") for c in lic}
+            # markers that point at licensed data rows: shown as "licensed source" (values not exported)
+            row["marker_licensed"] = sorted(n for n, cid in row["marker_map"].items() if cid in lic_ids)
+            k1, u1 = marker_kinds(st_)
+            k2, u2 = marker_kinds(fo_)
+            row["marker_kinds"] = {"sentence": k1, "formula": k2}
+            if u1 or u2:
+                row["marker_unknown"] = u1 + u2
+                MARKER_UNKNOWN.extend(u1 + u2)
     out.sort(key=lambda x: -(x["score"] or 0))
     return out
 
@@ -913,6 +986,7 @@ def product_v2(ticker, slug):
     cmp_ = d.get("comparison") or {}
     ents = cmp_.get("entities") or []
     nc_by_where = {it.get("where"): it.get("numeric_check") for it in d.get("numeric_items") or []}
+    uncited = {(u.get("row"), u.get("entity")): u for u in d.get("uncited_cells") or [] if isinstance(u, dict)}
     rows = {}
     for row, cells in (cmp_.get("rows") or {}).items():
         rows[row] = {}
@@ -920,7 +994,9 @@ def product_v2(ticker, slug):
             cell = (cells or {}).get(ent["name"])
             if cell is None:
                 continue
-            rows[row][ent["name"]] = {"numeric_check": numeric_check(cell.get("numeric_check")
+            unc = uncited.get((row, ent["name"]))
+            rows[row][ent["name"]] = {"uncited": bool(unc), "verified": not unc,
+                                      "numeric_check": numeric_check((unc or {}).get("numeric_check") or cell.get("numeric_check")
                                                                      or nc_by_where.get(f"{row}/{ent['name']}")
                                                                      or nc_by_where.get(f"empty/{row}/{ent['name']}")), "slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
                                       "value_raw": cell.get("value"), "detail": clean(cell.get("detail")),
@@ -957,7 +1033,7 @@ def _v2_values(v2, slug):
     """{field: {value, source, citation?}} for one slug from a product_v2 block (first entity with that slug)."""
     out = {}
     for row, cells in (v2.get("rows") or {}).items():
-        cell = next((c for c in cells.values() if c.get("slug") == slug), None)
+        cell = next((c for c in cells.values() if c.get("slug") == slug and not c.get("uncited")), None)
         if not cell or cell.get("value") in (None, ""):
             continue
         det = cell.get("detail") or {}
@@ -1087,6 +1163,10 @@ def apply_decide(ticker, stance, findings, v1=()):
     cites = [{"finding_id": ids[i]["id"], "i": 0} for i in ch.get("addressed") or ch.get("finding_ids") or []
              if i in ids and ids[i]["evidence"]]
     stance["decide"] = {"as_of": d.get("as_of"), "cash_and_equivalents": d.get("cash_and_equivalents"),
+                        "demo": bool(d.get("demo")), "note": d.get("header_note"),
+                        "numeric_items": [{**it, "numeric_check": numeric_check(it.get("numeric_check"))}
+                                          for it in d.get("numeric_items") or []],
+                        "withheld_lines": d.get("withheld_lines") or [],
                         "numeric_check": numeric_check(d.get("numeric_check")),
                         "units": "USD millions", "moves": [_move_row(m) for m in moves],
                         "ranked": d.get("ranked"), "selection_notes": d.get("selection_notes") or [],
@@ -1094,11 +1174,14 @@ def apply_decide(ticker, stance, findings, v1=()):
                         "unmapped_finding_ids": [i for i in ch.get("finding_ids") or [] if i not in ids],
                         "source_files": [f"out/{ticker}/decide.json", f"docs/examples/moves_{ticker}.json"]}
     stance["generated_by"] = "decide_v2"
+    if d.get("demo"):
+        stance["headline"] = f"[Demo] {stance['headline']}"
     stance["note"] = ("CEO move chosen by agent.needle.quant.decide over the moves in docs/examples/moves_"
                       f"{ticker}.json (team inputs, flagged as assumptions): highest expected value after the cash "
                       "feasibility gate, MCDA only when EV intervals overlap. External benchmark inputs are unverified "
                       "and their quotes are withheld under the public rule. Memo points stay drafted from verified "
-                      "findings by rules; a model-written memo requires ANTHROPIC_API_KEY.")
+                      "findings by rules; a model-written memo requires ANTHROPIC_API_KEY."
+                      + (f" DEMO: {d.get('header_note')}" if d.get("demo") else ""))
     return stance
 
 
@@ -1793,6 +1876,7 @@ def main():
 
 
 COMPANY_CACHE = {}
+MARKER_UNKNOWN = []
 LEAGUE_VERSION = {}
 PRODUCT_LOG = {}
 
