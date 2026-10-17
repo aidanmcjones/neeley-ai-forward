@@ -141,11 +141,13 @@ def onboard_buckets(t):
     top_q = _onboard_table(t, "analyst_topics")
     b["attention"] = dict(have=min(top_q.quarter.nunique(), 10) if len(top_q) else 0, need=10)
     fp = int(len(_onboard_table(t, "sec_comment_letters")) > 0)
-    fp += min(sum(1 for r in docs.values() if r.get("doc_type") == "proxy_statement")
-              + sum(1 for r in corp if r.get("doc_type") == "proxy_statement"), 3)
+    # foreign filers have no DEF 14A: the three latest annual reports (remuneration report inside or alongside) stand in
+    proxies = (sum(1 for r in docs.values() if r.get("doc_type") == "proxy_statement")
+               + sum(1 for r in corp if r.get("doc_type") == "proxy_statement"))
+    fp += min(proxies, 3) if not foreign else min(len(fy), 3)
     fp += int(len(_onboard_table(t, "insider_trades")) > 0) if not foreign else 1
     fp += int(len(_onboard_table(t, "exec_comp_metrics")) > 0) if not foreign else 1
-    b["fine_print"] = dict(have=fp, need=6)
+    b["fine_print"] = dict(have=fp, need=6, note="" if fp == 6 or not foreign else "remuneration report not yet extracted")
     lab = 0
     for x in top:
         s = re.sub(r"[^a-z0-9]+", "-", str(x).lower()).strip("-")
