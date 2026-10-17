@@ -566,7 +566,9 @@ def numeric_check(x):
     out = dict(x)
     out.setdefault("unsupported", [])
     if out["status"] == "passed" and (not out.get("checked") or any(k not in out for k in NC_KEYS)):
-        return {"status": "unchecked", "note": "reported passed without a checked count or breakdown", "raw": x}
+        why = ("the gate found no numbers to check (checked = 0)" if out.get("checked") == 0 and
+               all(k in out for k in NC_KEYS) else "reported passed without a checked count or breakdown")
+        return {"status": "unchecked", "note": why, "raw": x}
     return out
 
 
@@ -693,7 +695,21 @@ def guard_fields(f):
                    "guard_reason": next((x for x in notes if re.match(r"guard \d+:", x)), None),
                    "not_quantified": f.get("not_quantified"), "impact_channel": f.get("impact_channel"),
                    "corroborates": cor, "numeric_check": numeric_check(f.get("numeric_check")),
-                   **{k: f[k] for k in ("sentence_marked", "derived", "assumptions", "aliases", "rejected_by") if f.get(k)}}
+                   **({"derived": compact_derived(f["derived"])} if f.get("derived") else {}),
+                   **{k: f[k] for k in ("sentence_marked", "assumptions", "aliases", "rejected_by") if f.get(k)}}
+
+
+def compact_derived(dmap):
+    """Gate `derived` map with operand Citations replaced by their cite_id (the Citation is inline in the record's
+    citations, exported and withheld there); nested derived / assumption operands are kept as given."""
+    def op(v):
+        if isinstance(v, dict) and isinstance(v.get("citation"), dict):
+            return {"value": v.get("value"), "cite_id": v["citation"].get("cite_id")}
+        if isinstance(v, dict) and "cite_id" in v and "verification" in v:
+            return {"value": v.get("value"), "cite_id": v.get("cite_id")}
+        return v
+    return {k: ({**e, "operands": {n: op(v) for n, v in (e.get("operands") or {}).items()}} if isinstance(e, dict) else e)
+            for k, e in (dmap or {}).items()}
 
 
 def build_findings_v2(raw, side, ticker, lg, v1):
@@ -838,6 +854,7 @@ def product_v2(ticker, slug):
         return None
     cmp_ = d.get("comparison") or {}
     ents = cmp_.get("entities") or []
+    nc_by_where = {it.get("where"): it.get("numeric_check") for it in d.get("numeric_items") or []}
     rows = {}
     for row, cells in (cmp_.get("rows") or {}).items():
         rows[row] = {}
@@ -845,7 +862,8 @@ def product_v2(ticker, slug):
             cell = (cells or {}).get(ent["name"])
             if cell is None:
                 continue
-            rows[row][ent["name"]] = {"numeric_check": numeric_check(cell.get("numeric_check")), "slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
+            rows[row][ent["name"]] = {"numeric_check": numeric_check(cell.get("numeric_check")
+                                                                     or nc_by_where.get(f"{row}/{ent['name']}")), "slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
                                       "value_raw": cell.get("value"), "detail": clean(cell.get("detail")),
                                       "citations": [cell_cite(c, pool={x.get("cite_id"): x for x in cell.get("citations") or []})
                                                     for c in cell.get("citations") or []],
@@ -865,11 +883,13 @@ def product_v2(ticker, slug):
     gl = d.get("growth_limiter") or {}
     return {"product": slug, "entities": ents, "row_titles": cmp_.get("row_titles"), "rows": rows,
             "findings": fnd, "notes": cmp_.get("notes") or [], "context": clean(cmp_.get("context")),
-            "growth_limiter": {"numeric_check": numeric_check(gl.get("numeric_check")), "sentence": plain(gl.get("sentence")), "sentence_raw": gl.get("sentence"),
+            "growth_limiter": {"numeric_check": numeric_check(gl.get("numeric_check") or nc_by_where.get("growth_limiter")), "sentence": plain(gl.get("sentence")), "sentence_raw": gl.get("sentence"),
                                "priced_in": gl.get("priced_in"), "reasons": gl.get("reasons") or [],
                                "citations": [cell_cite(c, pool={x.get("cite_id"): x for x in gl.get("citations") or []})
                                              for c in gl.get("citations") or []]} if gl else None,
             "numeric_check": numeric_check(d.get("numeric_check")),
+            "numeric_items": [{**it, "numeric_check": numeric_check(it.get("numeric_check"))} for it in d.get("numeric_items") or []],
+            "table_value_cells": d.get("table_value_cells") or [], "withheld_lines": d.get("withheld_lines") or [],
             "uncited_cells": d.get("uncited_cells") or [], "empty_cells": d.get("empty_cells") or [],
             "source_file": f"out/{ticker}/product_{slug}.json"}
 
@@ -951,6 +971,15 @@ def _move_row(m):
 def apply_decide(ticker, stance, findings, v1=()):
     d = read_json(OUT / ticker / "decide.json")
     moves_file = ROOT / "docs" / "examples" / f"moves_{ticker}.json"
+    rej_md = OUT / ticker / "decide_rejected.md"
+    dj = OUT / ticker / "decide.json"
+    if rej_md.exists() and (not dj.exists() or rej_md.stat().st_mtime >= dj.stat().st_mtime):
+        text = rej_md.read_text(encoding="utf-8").strip()
+        stance["decide_rejected"] = {"file": f"out/{ticker}/decide_rejected.md", "text": text}
+        stance["note"] += (" The CEO-move valuation was rejected by agent.needle.quant.decide_cli (see "
+                           f"out/{ticker}/decide_rejected.md), so the stance stays templated: "
+                           + " ".join(l for l in text.splitlines() if l and not l.startswith("#")))
+        return stance
     if not d or not d.get("chosen"):
         stance["note"] += (f" No CEO-move valuation: no docs/examples/moves_{ticker}.json moves file, so the stance "
                            "stays templated.") if not moves_file.exists() else " decide.json missing; stance stays templated."
