@@ -10,7 +10,7 @@ PYTHONPATH=. python -m agent.ui_export
 
 | File | Size | Contents |
 |---|---|---|
-| meta.json | 40 KB | totals (340 findings, 340 verified, 279 rejected), ledger (110 records, ok=True), corpus (836 docs), moat coverage + 72 tables, case sets, verifier rules, 11 limits |
+| meta.json | 41 KB | totals (340 findings, 340 verified, 279 rejected), ledger (110 records, ok=True), corpus (836 docs), moat coverage + 72 tables, case sets, verifier rules, 11 limits |
 | league.json | 12 KB | 10 companies ranked by score |
 | proof.json | 325 KB | backtest (hit rates, gate-2 text, examples), calibration, J&J blind test, sealed forecasts with the canonical string and hashes, 513 ai_wrong rows |
 | companies/MRK.json | 1.45 MB | 37 findings (37 verified), 39 rejected, 106 evidence items (106 quotes located on the page), stance, questions, labels, price series |

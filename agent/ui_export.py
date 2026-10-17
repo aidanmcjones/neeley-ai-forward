@@ -17,6 +17,7 @@ Rules this module keeps:
 """
 
 import ast
+import os
 import collections
 import hashlib
 import json
@@ -1694,6 +1695,8 @@ def company(ticker, league_row, sealed, side, lg2=None):
         "questions": mark_no_needle(build_questions(ticker, findings, needle, stance, rejected, cset,
                                                     forces[0] if forces else None), no_needle),
         "sealed_forecast": next((p for p in sealed if p["ticker"] == ticker), None),
+        "findings_table": findings_table(ticker, raw2 or v1, side),
+        **({"needle_rule": (lg2 or {}).get("needle_rule")} if (lg2 or {}).get("needle_rule") else {}),
     }
 
 
@@ -1831,6 +1834,18 @@ def main():
     lims = limits(no_source)
     ok, n, bad = audit.verify_chain()
     onboarded = [t for t in written if t not in SHORTLIST]
+    league_t = (sorted(league2, key=lambda r: r.get("rank") or 99)[0]["ticker"] if league2 else
+                league[0]["ticker"] if league else SHORTLIST[0])
+    pick, default_warn = picked_ticker(), None
+    # no league fallback: without a valid pick the cockpit routes to the first shortlist ticker alphabetically
+    # and the chat treats default_ticker_source "unpicked" as no company selected
+    if pick and pick in written and pick in SHORTLIST:
+        default_t, default_src = pick, "pick"
+    else:
+        default_t, default_src = sorted(t for t in written if t in SHORTLIST)[0], "unpicked"
+        if pick:
+            default_warn = f"NEEDLE_TICKER={pick} is not one of the ten shortlist companies; treated as unpicked"
+    LEAGUE_VERSION["leader"] = league_t
     pending = []
     for t in CASE_SETS:
         if t not in SHORTLIST and t not in written:
@@ -1841,8 +1856,14 @@ def main():
     allf = [f for t in written for f in COMPANY_CACHE[t]["findings"]]
     meta = {
         "as_of": prog.get("as_of"), "built_at": pd.Timestamp.now(tz="UTC").isoformat(),
-        "default_ticker": (sorted(league2, key=lambda r: r.get("rank") or 99)[0]["ticker"] if league2 else
-                           league[0]["ticker"] if league else SHORTLIST[0]),
+        "default_ticker": default_t, "default_ticker_source": default_src,
+        **({"default_ticker_warning": default_warn} if default_warn else {}),
+        "league_internal": True, "league_leader": LEAGUE_VERSION.get("leader"),
+        "league_note": ("league.json, league_robustness and the S equation are internal triage only; the pitch-facing "
+                        "outputs are pitch_outputs (findings table ranked by dollar impact, Sharpest Needle, product "
+                        "fine print, CEO move)."),
+        "pitch_outputs": ["findings_table", "needle", "product", "decide"],
+        "findings_table_available": [t for t in written if COMPANY_CACHE[t].get("findings_table")],
         "engine": LEAGUE_VERSION["v"] if league2 else "v1", "league_file": LEAGUE_VERSION.get("file"),
         "league_robustness": read_json(OUT / "league_v3_robustness.json"),
         "companies": [{"ticker": t, "name": NAMES.get(t, t)} for t in written if t in SHORTLIST],
@@ -1876,6 +1897,40 @@ def main():
 
 
 COMPANY_CACHE = {}
+
+
+def picked_ticker():
+    """NEEDLE_TICKER from the environment, else from the repo .env (only that key is read); None when unset."""
+    v = os.environ.get("NEEDLE_TICKER")
+    if not v and (ROOT / ".env").exists():
+        for line in (ROOT / ".env").read_text(encoding="utf-8", errors="ignore").splitlines():
+            if line.strip().startswith("NEEDLE_TICKER="):
+                v = line.split("=", 1)[1].strip().strip("'\"")
+    return (v or "").strip().upper() or None
+
+
+def findings_table(ticker, raw_findings, side):
+    """out/<T>/findings_table.json (cited findings ranked by dollar impact) -> company findings_table, or None."""
+    d = read_json(OUT / ticker / "findings_table.json")
+    if d is None:
+        return None
+    rows = d.get("rows") if isinstance(d, dict) else d
+    basis = d.get("rank_basis") if isinstance(d, dict) else None
+    by_id = {f.get("id"): f for f in raw_findings}
+    out = []
+    for i, r in enumerate(rows or []):
+        fid = r.get("finding_id") or r.get("id")
+        src = by_id.get(fid) or {}
+        cits = r.get("citations") or src.get("citations") or []
+        st, notes = split_md(r.get("sentence_md") or src.get("sentence_md"))
+        im, inotes = split_md(r.get("impact_md") or r.get("formula_md") or src.get("formula_md"))
+        notes = {**inotes, **notes}
+        out.append({"rank": r.get("rank", i + 1), "rank_basis": r.get("rank_basis") or basis, "finding_id": fid,
+                    "sentence_marked": plain(st) if st else plain(r.get("sentence") or src.get("sentence")),
+                    "impact_marked": im or r.get("impact_text"), "marker_map": marker_map(notes, cits),
+                    "numeric_check": numeric_check(r.get("numeric_check") or src.get("numeric_check")),
+                    **{k: r[k] for k in ("dollars", "impact_dollars", "direction", "confidence", "signal_kind") if k in r}})
+    return {"rank_basis": basis, "rows": out, "source_file": f"out/{ticker}/findings_table.json"}
 MARKER_UNKNOWN = []
 LEAGUE_VERSION = {}
 PRODUCT_LOG = {}
@@ -1892,6 +1947,7 @@ def league_v2_rows(league2):
                     "n_verified": sum(f["verdict"] == "verified" for f in fs), "n_rejected": r.get("n_withheld"),
                     "high_confidence": sum(f["confidence"] == "high" for f in fs),
                     "sharpest_needle": plain(nd.get("sentence")), "sharpest_needle_raw": nd.get("sentence"),
+                    **({"needle_rule": r["needle_rule"]} if r.get("needle_rule") else {}),
                     "needle_id": nd.get("id") or None, "needle_status": (r.get("needle_status") or "").replace(" ", "_"),
                     "needle_confidence": (nd.get("confidence") or "").lower(), "needle_S": nd.get("S"),
                     "rank": r.get("rank"), "top5_sum": r.get("top5_sum"), "N_eff": r.get("N_eff"),
