@@ -18,11 +18,11 @@ STATUS = {
     "calls": ("collected", "verified"), "product_revenue": ("collected", "verified"),
     "policy": ("collected", "verified"), "pricing": ("collected", "verifying"),
     "consensus": ("collected", "verifying"), "attention": ("collected", "verifying"),
-    "fine_print": ("collecting", "queued"), "product_evidence": ("collected", "verifying"),
+    "fine_print": ("collected", "verifying"), "product_evidence": ("collected", "verifying"),
 }
 STAGES = [
-    ("Collect", "running", "7 streams; 6 done, SEC fine print still running"),
-    ("Verify", "running", "Opus re-checks every quote and number against its page; 5 verifiers running"),
+    ("Collect", "done", "7 streams done: filings, calls, policy, product, pricing, market, SEC fine print, plus I/B/E/S from WRDS"),
+    ("Verify", "running", "Opus re-checks every quote and number against its page; 6 done or running: filings, policy, calls verified; product, market, pricing, SEC fine print in progress"),
     ("Citation index", "queued", "One search index over corpus + moat; starts when verification lands"),
     ("Model", "blocked", "NEEDLE runs on the index; blocked on the Anthropic API key"),
     ("UI", "waiting", "Cockpit restyle of the Streamlit app, after the model reads the index"),
