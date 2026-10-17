@@ -20,11 +20,11 @@ Cells that hold values but no page citation are listed in the markdown under "Ce
 
 | Channel | Equation | Inputs |
 |---|---|---|
-| ira_mfp | dRev = -claims x max(0, list30 x (1 - GTN) - MFP30); GTN 50/60/70 percent | Part D claims, CMS list and MFP per 30 days |
-| ira_expected | dRev = -Medicare gross spend x cut; cut = quartiles of the CMS cuts already set | company says selection is expected (Keytruda: 2027 selection, MFP 2029) |
+| ira_mfp | **[landing in league_v3]** the one IRA formula shared with FIND and DECIDE: dRev = -G x d x k (CMS Medicare spend x list discount x k; k = 1.0 for oncology and HIV, 0.3/0.4/0.5 for rebated classes), CM 1.00. v2 formula, kept as a comparison field: -claims x max(0, list30 x (1 - GTN) - MFP30), GTN 50/60/70 percent, CM 0.70 | CMS spend and discount; v2: Part D claims, CMS list and MFP per 30 days |
+| ira_expected | dRev = -Medicare gross spend x cut (x k after v3); cut = quartiles of the CMS cuts already set | company says selection is expected (Keytruda: 2027 selection, MFP 2029) |
 | loe_erosion | dRev = -annual US revenue x (1 - pct_of_peak at t=1); US curves by modality | company-stated LOE year, `loe_curves.csv` |
 | label_breadth_medicare | dRev = -(rival claims - own claims) x capture x own gross per claim x (1 - GTN); capture 50/35/20 percent (assumed) | rival with more uses and shared uses has Part D claims where the product has none |
-| mfn_cash_price | dRev = -revenue x share moved x (1 - cash / list); share 40/25/10 percent (assumed scenario) | White House cash price and list price quote |
+| mfn_cash_price | dRev = -revenue x share moved x (1 - cash / list); share 40/25/10 percent (assumed scenario). FIND scores MFN as a direction only, so present this as a scenario, never as an estimate of MFN cost | White House cash price and list price quote |
 | boxed_warning_share | dRev = -revenue x 10 to 25 percent, only if no rival carries a boxed warning | applied as a ceiling to a static difference |
 
 dEPS is left to the FIND scorer: dEPS = dRev x CM x (1 - t) / D. The finding carries dRev, CM and dOI.
