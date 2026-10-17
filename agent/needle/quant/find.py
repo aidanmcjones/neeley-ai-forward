@@ -243,6 +243,93 @@ def first_public(sig):
     return d, f"age from first public date {d.isoformat()} (earnings release {rel[0]}), not the filing {filed.isoformat()}"
 
 
+# ------------------------------------------------------------------ YoY growth rows re-derived on one basis (review D1)
+YOY_METRIC = {"receivables_outpace_revenue": ("receivables", "Receivables", r"(?:Trade )?(?:accounts )?receivables?,? net"),
+              "rec_gap_peer_outlier": ("receivables", "Receivables", r"(?:Trade )?(?:accounts )?receivables?,? net"),
+              "inventory_outpaces_revenue": ("inventory", "Inventory", r"Inventories"),
+              "inv_gap_peer_outlier": ("inventory", "Inventory", r"Inventories")}
+REV_LABEL = r"Total revenues?|Revenues?|Net sales|Total net sales"
+
+
+def _q_end(per):
+    y, q = int(per[:4]), int(per[-1])
+    return date(y, 3 * q, {3: 31, 6: 30, 9: 30, 12: 31}[3 * q])
+
+
+def _filing_for(ticker, pend):
+    r = data.db().execute("SELECT doc_id FROM docs WHERE ticker = ? AND doc_type IN ('quarterly_report', "
+                          "'annual_report') AND period = ? ORDER BY filed LIMIT 1",
+                          (ticker, pend.isoformat())).fetchone()
+    return r[0] if r else None
+
+
+def _value_page_cite(doc_id, label, value_m):
+    """Page citation of a statement line `label ... value` (value in millions, printed with commas)."""
+    if not doc_id:
+        return None
+    idx = data.index()
+    val = f"{value_m:,.0f}"
+    pat = re.compile(rf"({label})[^\n]{{0,80}}?\$?\s*{re.escape(val)}\b", re.I)
+    for n, (_, text) in idx.pages(doc_id).items():
+        m = pat.search(text)
+        if m:
+            c = cite_verify(Citation(canonical_id=doc_id, page=n, quote=text[m.start():m.end()], claim_type="number",
+                                     value=val, unit="USD millions"), idx)
+            if c.verification.ok:
+                return c
+    return None
+
+
+def _is_stmt_vs_year_end(c):
+    """False: the detector's statement-page citations stay (they support the current values); kept as a hook."""
+    return False
+
+
+def yoy_basis(sig):
+    """Quarterly receivables / inventory growth rows: re-derive metric and revenue growth as true year-on-year
+    (quarter-end vs the same quarter-end a year earlier; quarter revenue vs the same quarter) from XBRL, cite the four
+    operands (XBRL frame and, where the index has it, the statement page), and the gap as derived. The 10-Q balance
+    sheet compares the quarter with the prior year-end, so it cannot support a YoY number on its own (review D1).
+    Returns None for rows this does not apply to, else a dict."""
+    from agent.needle import xbrl
+    spec = YOY_METRIC.get(sig.kind)
+    per = str(sig.period or "")
+    if spec is None or not re.fullmatch(r"\d{4}Q[1-4]", per):
+        return None
+    col, label, line = spec
+    prev = f"{int(per[:4]) - 1}Q{per[-1]}"
+    try:
+        p = xbrl.panel(sig.ticker)
+        m_now, m_prev = float(p.at[per, col]), float(p.at[prev, col])
+        r_now, r_prev = float(p.at[per, "revenue"]), float(p.at[prev, "revenue"])
+    except Exception:
+        return None
+    cur = p.attrs.get("units", {}).get("revenue", ["USD"])[0]
+    ops = [data.xbrl_citation(sig.ticker, data._concept(p, col, per), f"CY{per}I", m_now / 1e6, f"{cur} millions"),
+           data.xbrl_citation(sig.ticker, data._concept(p, col, prev), f"CY{prev}I", m_prev / 1e6, f"{cur} millions"),
+           data.flow_citation(sig.ticker, p, "revenue", per, r_now / 1e6, f"{cur} millions"),
+           data.flow_citation(sig.ticker, p, "revenue", prev, r_prev / 1e6, f"{cur} millions")]
+    g_m, g_r = m_now / m_prev - 1, r_now / r_prev - 1
+    gap = g_m - g_r
+    derived = data.derived_citation(f"({col} CY{per}I / CY{prev}I - 1) - (revenue CY{per} / CY{prev} - 1)", gap, ops)
+    d_now, d_prev = _filing_for(sig.ticker, _q_end(per)), _filing_for(sig.ticker, _q_end(prev))
+    pages = [c for c in (_value_page_cite(d_now, line, m_now / 1e6), _value_page_cite(d_prev, line, m_prev / 1e6),
+                         _value_page_cite(d_now, REV_LABEL, r_now / 1e6), _value_page_cite(d_prev, REV_LABEL, r_prev / 1e6))
+             if c is not None]
+    peer = ""
+    if sig.peer_median is not None and sig.peer_z is not None:
+        peer = (f"; peer median {sig.peer_median * 100:+.1f} pts, z {sig.peer_z:+.1f} (derived from the shortlist peer "
+                "panel, not page-cited)")
+    sentence = (f"{label} {m_now / 1e6:,.0f} vs {m_prev / 1e6:,.0f} a year earlier ({g_m:+.1%}, {per} vs {prev}) "
+                f"against quarterly revenue {r_now / 1e6:,.0f} vs {r_prev / 1e6:,.0f} ({g_r:+.1%}); gap "
+                f"{gap * 100:+.1f} pts (derived){peer}.")
+    flags = [f"YoY re-derived from XBRL on one basis (review D1): {col} {g_m:+.2%}, revenue {g_r:+.2%}, gap "
+             f"{gap * 100:+.2f} pts; {len(pages)} of 4 operands also page-cited"]
+    if sig.value is not None and abs(sig.value - gap) > 0.005:
+        flags.append(f"detector gap {sig.value * 100:+.1f} pts differs from the re-derived {gap * 100:+.1f} pts")
+    return {"sentence": sentence, "page_cites": pages, "cites": ops + [derived], "flags": flags, "gap": gap}
+
+
 def stage_split(cites):
     """Inventory stage split (section 4.3 g i): finished-goods share from the inventory note of the cited filing.
     Returns (fg_share or None, detail, citation or None)."""
@@ -521,10 +608,17 @@ def score_signal(sig, co, panel=None):
         flags.append("disclosure date unknown")
     peer = {"metric_value": sig.value, "peer_median": sig.peer_median, "peer_z": sig.peer_z,
             "rival": sig.meta.get("rival")}
-    sc = _assemble(co, sig.ticker, sig.kind, sig.detail, fam, imp, page_cites, topics, disclosed, product=product,
+    yb = yoy_basis(sig)
+    sentence, extra_cites = sig.detail, []
+    if yb is not None:
+        sentence, extra_cites = yb["sentence"], yb["cites"]
+        page_cites = [c for c in page_cites if not _is_stmt_vs_year_end(c)] + yb["page_cites"]
+        flags += yb["flags"]
+    sc = _assemble(co, sig.ticker, sig.kind, sentence, fam, imp, page_cites, topics, disclosed, product=product,
                    peer=peer, extra_flags=flags, diagnostics_pass=diag, generic_placeholder=generic,
                    detector=sig.detector)
     sc.fact_key = fact_key(sig)
+    sc.citations += extra_cites
     sc.not_quantified = nq_reason
     if pi_downgrade:
         sc.flags.append(f"pi downgraded to pi_min: row does not satisfy the backtest flag "

@@ -45,7 +45,12 @@ def test_lly_constants():
     assert round(c.tax, 4) == 0.2049
     assert round(c.shares, 1) == 893.7
     assert abs(c.sigma - 2.0294) < 2e-4          # 2 x sd 1.0147 (spec prints 2.0294 and 2.0295)
-    assert all(x.verification.ok for k in ("Rev_TTM", "t", "D", "sigma_EPS") for x in c.citations[k])
+    assert all(x.verification.ok or x.verification.status == "derived"
+               for k in ("Rev_TTM", "t", "D", "sigma_EPS") for x in c.citations[k])
+    # review D11: companyfacts has no CY2025Q4 frame; Q4 = FY - 9M is a derived citation over both operand frames
+    q4 = [x for x in c.citations["Rev_TTM"] if "2025Q4" in x.quote or "CY2025 -" in x.quote]
+    assert q4 and all(x.verification.status == "derived" and x.canonical_id == "derived" for x in q4)
+    assert "CY2025Q1" in q4[0].confidence_note and "CY2025 " in q4[0].confidence_note + " "
 
 
 # ---------------------------------------------------------------- Finding A: gross-margin level outlier
@@ -265,3 +270,16 @@ def test_20f_filer_degrades_with_flags():
     sema = [f for f in fs if f.kind == "ira_selected"]
     assert sema and sema[0].vector["z"] == 1.0 and sema[0].S == 0.0        # starter thread
     assert any("FX" in x for x in sema[0].flags)
+
+
+@need_moat
+def test_amgn_receivables_yoy_on_one_basis():
+    """Review D1: receivables and revenue growth are both year-on-year (Q2 2026 vs Q2 2025), every operand is cited
+    (prior-year 10-Q page included), and the gap is a derived citation."""
+    from agent.needle.quant.run import score_ticker
+    _, fs, _ = score_ticker("AMGN", write=False)
+    f = [x for x in fs if x.kind == "receivables_outpace_revenue"][0]
+    assert "10,227 vs 8,701" in f.sentence and "+17.5%" in f.sentence and "+9.5%" in f.sentence
+    assert any(c.canonical_id.endswith("10q_2025Q2.md") and c.verification.ok for c in f.citations)
+    assert any(c.verification.status == "derived" for c in f.citations)
+    assert not f.pi_downgraded            # +8.01 pts meets the 8-pt trigger (an edge case: see league_v3)
