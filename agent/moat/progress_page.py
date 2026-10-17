@@ -14,8 +14,8 @@ TEMPLATE = Path(__file__).with_name("progress_template.html")
 
 STATUS = {
     # bucket key -> collect / verify state shown in the column header
-    "annual": ("collected", "verifying"), "quarterly": ("collected", "verifying"),
-    "calls": ("collected", "verifying"), "product_revenue": ("collected", "verifying"),
+    "annual": ("collected", "verified"), "quarterly": ("collected", "verified"),
+    "calls": ("collected", "verifying"), "product_revenue": ("collected", "verified"),
     "policy": ("collected", "verifying"), "pricing": ("collecting", "queued"),
     "consensus": ("collected", "verifying"), "attention": ("collected", "verifying"),
     "fine_print": ("collecting", "queued"), "product_evidence": ("collected", "verifying"),

@@ -164,6 +164,12 @@ def parse(html):
             last_op = QI.search(t["text"]) or last_op
         elif t["name"] == "Analyst" and last_op:
             t["name"], t["role"] = last_op.group(1), f"Analyst at {last_op.group(2).strip()}"
+        elif " at " in t["name"]:
+            title = t["name"]
+            if last_op:
+                t["name"], t["role"] = last_op.group(1), title
+            else:
+                t["name"], t["role"] = "Unidentified analyst", title
 
     def firm_of(role):
         return role.rsplit(" at ", 1)[1].strip() if " at " in role else ""

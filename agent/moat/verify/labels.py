@@ -129,7 +129,7 @@ def verify_changes():
         pv = prev_version(setid, v)
         prev = load(setid, pv) if pv else None
         if cur is None:
-            r.update(status="dropped", verify_note="SPL version not in cache; cannot verify")
+            r.update(verify_status="dropped", verify_note="SPL version not in cache; cannot verify")
             out.append(r)
             continue
         m = meta(cur)
@@ -168,7 +168,7 @@ def verify_changes():
             note.append(f"old excerpt verbatim in SPL v{pv} ({co:.0%}), new excerpt verbatim in SPL v{v} ({cn:.0%}), "
                         "whitespace-normalized" + ("; unmatched remainder is table-cell ordering, quote tables from the "
                                                    "SPL directly" if min(cn, co) < 0.97 else ""))
-        r["status"], r["verify_note"] = status, "; ".join(note)
+        r["verify_status"], r["verify_note"] = status, "; ".join(note)
         stats[status] = stats.get(status, 0) + 1
         out.append(r)
         if (status != "dropped" and r["drug"] in APPENDIX and r["section"] in ("BOXED WARNING", "1 INDICATIONS")
@@ -178,7 +178,7 @@ def verify_changes():
                         "effective_date": r["effective_date"], "section": sec,
                         "sentences_added": " || ".join(add)[:2500], "sentences_removed": " || ".join(rem)[:2500],
                         "source": r["source"], "prev_source": r["source"].replace(f"version={v}", f"version={pv}")})
-    cols = list(rows[0].keys()) + ["prev_version", "dailymed_published_date", "status", "verify_note"]
+    cols = list(rows[0].keys()) + ["prev_version", "dailymed_published_date", "verify_status", "verify_note"]
     with open(OUTD / "label_changes.csv", "w", newline="") as f:
         w = csv.DictWriter(f, cols, restval="")
         w.writeheader()
@@ -200,7 +200,7 @@ def verify_timeline():
         cur = load(r["setid"], int(r["version"]))
         note, status = [], "verified"
         if cur is None:
-            r.update(status="dropped", verify_note="SPL version not in cache")
+            r.update(verify_status="dropped", verify_note="SPL version not in cache")
             stats["dropped"] = stats.get("dropped", 0) + 1
             continue
         m = meta(cur)
@@ -220,10 +220,10 @@ def verify_timeline():
             note.append("no titled 1.x subsections; n_indications is a paragraph-count heuristic, use with care")
         r["n_indications_note"] = ("count of 1.x subsections (one subsection can hold several tumor types or "
                                    "settings); not a count of FDA-approved indications") if titles else "heuristic"
-        r["status"], r["verify_note"] = status, "; ".join(note) or "date and subsection count match SPL XML"
+        r["verify_status"], r["verify_note"] = status, "; ".join(note) or "date and subsection count match SPL XML"
         stats[status] = stats.get(status, 0) + 1
     cols = list(rows[0].keys())
-    for c in ["dailymed_published_date", "n_indications_note", "status", "verify_note"]:
+    for c in ["dailymed_published_date", "n_indications_note", "verify_status", "verify_note"]:
         if c not in cols:
             cols.append(c)
     with open(OUTD / "indication_timeline.csv", "w", newline="") as f:

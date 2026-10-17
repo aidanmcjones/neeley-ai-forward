@@ -1,16 +1,17 @@
 """For each restatement row, compare product members reported for the same period/geo/dims in the old vs new filing,
 and test whether the change is explained by members moving in or out of the bucket."""
 import json, collections, pickle
+SUBS = json.load(open("data/moat/scratch/f_subs.json"))
 from agent.moat.verify.f_lib import PANEL, RESTATE
 
 idx = collections.defaultdict(dict)  # (acc, concept, geo, dims, start, end) -> {member: value}
 for r in PANEL:
-    idx[(r["accession"], r["concept"], r["geography"], r["other_dims"], r["period_start"], r["period_end"])][r["product_member"]] = float(r["value_usd"])
+    idx[(r["accession"], r["concept"], r["geography"], r["other_dims"], r["period_start"], r["period_end"])][r["product_member"].lower()] = float(r["value_usd"])
 
 out = []
 for i, r in enumerate(RESTATE):
     v = json.loads(r["values_by_accession"])
-    pairs = sorted(((a, float(val)) for val, accs in v.items() for a in accs), key=lambda x: x[0])
+    pairs = sorted(((a, float(val)) for val, accs in v.items() for a in accs), key=lambda x: (SUBS.get(x[0], {}).get("filed", ""), x[0]))
     res = {"i": i, "pairs": pairs, "steps": []}
     for (a0, v0), (a1, v1) in zip(pairs, pairs[1:]):
         if v0 == v1:
