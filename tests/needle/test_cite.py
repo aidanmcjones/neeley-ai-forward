@@ -182,14 +182,18 @@ def test_number_claims(idx):
     assert ok.verification.status == "exact"
     bad = V.verify(cite(claim_type="number", value="29,842", unit="USD millions"), idx)
     assert bad.verification.status == "unverified" and "not on the cited page" in bad.confidence_note
-    # quote absent but number on the page -> number_match
-    nm = V.verify(cite(quote="", claim_type="number", value="29.482", unit="USD billions"), idx)
+    # quote not on the page but number on the page -> number_match; the footnote shows the page text around it
+    nq = "a sentence the model wrote that is not on the page"
+    nm = V.verify(cite(quote=nq, claim_type="number", value="29.482", unit="USD billions"), idx)
     assert nm.verification.status == "number_match" and nm.verification.score == 0.6
+    assert "$29,482 million" in nm.quote and nq not in nm.quote and nq in nm.confidence_note
+    # an empty quote never verifies (review C7, A12)
+    assert V.verify(cite(quote="", claim_type="number", value="29.482", unit="USD billions"), idx).verification.status == "unverified"
     # parentheses negative and percent
-    assert V.verify(cite(quote="", claim_type="number", value="-183", unit="USD millions"), idx).verification.status == "number_match"
-    assert V.verify(cite(quote="", claim_type="number", value="71.5", unit="percent"), idx).verification.status == "number_match"
-    assert V.verify(cite(quote="", claim_type="number", value="71.5", unit="USD millions"), idx).verification.status == "unverified"
-    assert V.verify(cite(quote="", claim_type="number", value="15", unit="USD billions"), idx).verification.status == "unverified"
+    assert V.verify(cite(quote=nq, claim_type="number", value="-183", unit="USD millions"), idx).verification.status == "number_match"
+    assert V.verify(cite(quote=nq, claim_type="number", value="71.5", unit="percent"), idx).verification.status == "number_match"
+    assert V.verify(cite(quote=nq, claim_type="number", value="71.5", unit="USD millions"), idx).verification.status == "unverified"
+    assert V.verify(cite(quote=nq, claim_type="number", value="15", unit="USD billions"), idx).verification.status == "unverified"
 
 
 def test_parse_numbers():
@@ -228,14 +232,16 @@ def test_unknown_folio_reads_file_page(idx):
 # ---------------------------------------------------------------- deep links
 def test_deep_links_by_source_type():
     q = "Net sales of Keytruda were $29,482 million in 2025, an increase of 18 percent, driven by continued uptake"
-    e = build_deep_link(Citation("a", 2, q, source_url=EDGAR, raw_doc_type="annual_report"))
+    e = build_deep_link(Citation("a", 2, q, source_url=EDGAR, raw_doc_type="annual_report"), "Results. " + q + ".")
     assert e == EDGAR + "#:~:text=Net%20sales%20of%20Keytruda%20were%20%2429%2C482%20million%20in"
+    # no page text to validate against -> plain URL (review D5)
+    assert build_deep_link(Citation("a", 2, q, source_url=EDGAR, raw_doc_type="annual_report")) == EDGAR
     assert text_fragment("short quote here") == "#:~:text=short%20quote%20here"
     assert text_fragment("direct-to-patient, a & b") == "#:~:text=direct%2Dto%2Dpatient%2C%20a%20%26%20b"
     assert text_fragment("") == "" and build_deep_link(Citation("a", 2, "", source_url=EDGAR)) == EDGAR
     # comment letters: htm -> fragment, pdf -> #page; gov pdf -> #page
     assert build_deep_link(Citation("a", 2, q, source_url=PDF, raw_doc_type="sec_comment_letter")) == PDF + "#page=2"
-    assert build_deep_link(Citation("a", 2, q, source_url=EDGAR.replace("xyz-20251231", "filename1"), raw_doc_type="sec_comment_letter")).count("#:~:text=") == 1
+    assert build_deep_link(Citation("a", 2, q, source_url=EDGAR.replace("xyz-20251231", "filename1"), raw_doc_type="sec_comment_letter"), q).count("#:~:text=") == 1
     cms = "https://www.cms.gov/files/document/fact-sheet.pdf"
     assert build_deep_link(Citation("a", 7, q, source_url=cms, raw_doc_type="cms_fact_sheet", page_scheme="marker")) == cms + "#page=7"
     # DailyMed: setid page, never #section; versions -> history page
@@ -383,3 +389,137 @@ def test_transcript_speaker_and_fool_rules(tmp_path):
     assert not mis.verification.ok and "spoken by 'John Doe'" in mis.confidence_note
     fool = V.verify(Citation("ACME:t.md", 1, "management said demand for the lead product is strong"), idx)
     assert not fool.verification.ok and "fool.com takeaways" in fool.confidence_note
+
+
+# ---------------------------------------------------------------- review C7-C10, C13, C15, D5: adversarial ladder cases
+ADV_P2 = ("Net sales of Keytruda were $29,482 million in 2025, an increase of 18 percent, driven by continued uptake "
+          "across indications. Other income was ($183) million lower. Gross margin was 71.5% in 2025.")
+ADV_ZW = "Net​sales of Keytruda were $29,​482 million in 2025, an​increase of 18 percent, driven by continued uptake."
+ADV_DOC = f"""<!-- source: {EDGAR} -->
+[[page 1 | printed 40]]
+Cover. The company reported total revenue that grew strongly through the year and ended at
+[[page 2 | printed 41]]
+$64,168 million for the full year. {ADV_P2}
+[[page 3 | printed 42]]
+Risk factors. Item 18 lists 2,025 employees. {ADV_ZW}
+[[page 4 | printed 43]]
+Table (in millions): Revenue 15,144 12,000 Inventory 183
+"""
+NQ = "a sentence the model wrote that is not on this page at all"
+
+
+@pytest.fixture(scope="module")
+def adv(tmp_path_factory):
+    """The synthetic filing of scratchpad/citecheck/adv.py (review C), same text, same pages."""
+    f = tmp_path_factory.mktemp("adv") / "citations.sqlite"
+    con = sqlite3.connect(f)
+    con.executescript(SCHEMA)
+    _doc(con, "AAA:10k_FY2025.md", "annual_report", EDGAR, "data/corpus/companies/AAA/10k_FY2025.md", ADV_DOC, "10-K",
+         "2025-12-31", "2026-02-20")
+    _doc(con, "costs:costs/x.md", "report", "https://example.gov/x.pdf", "data/moat/costs/x.md",
+         "[[page 1 | printed Summary]]\nSection text that is long enough to quote here.\n", scheme="section")
+    con.commit()
+    con.close()
+    return load_index(f)
+
+
+def _v(adv, page, quote, **kw):
+    return V.verify(Citation("AAA:10k_FY2025.md", page, quote, **kw), adv)
+
+
+# (case id, page, quote, kwargs, expected status, note fragment). Every row from adv.py plus the same number claims
+# with a non-empty (unverifiable) quote, so the scale and sign rules are exercised past the empty-quote rule.
+ADV_CASES = [
+    ("A1", 2, ADV_P2[:120].replace("an increase", "a decrease"), {}, "unverified", "direction word differs"),
+    ("A2", 2, "Net sales of Keytruda were $18 million in 2025, an increase of 29,482 percent, driven by continued uptake",
+     {}, "unverified", "numbers differ"),
+    ("A3", 4, "", dict(claim_type="number", value="15,144", unit="USD thousands"), "unverified", "empty quote"),
+    ("A3q", 4, NQ, dict(claim_type="number", value="15,144", unit="USD thousands"), "unverified", "not on the cited page"),
+    ("A4", 4, "", dict(claim_type="number", value="15.144", unit="USD billions"), "unverified", "empty quote"),
+    ("A4q", 4, NQ, dict(claim_type="number", value="15.144", unit="USD billions"), "number_match", "model quote not on page"),
+    ("A5", 3, "", dict(claim_type="number", value="2.025", unit="USD billions"), "unverified", "empty quote"),
+    ("A5q", 3, NQ, dict(claim_type="number", value="2.025", unit="USD billions"), "unverified", "not on the cited page"),
+    ("A6", 4, "", dict(claim_type="number", value="183", unit="USD thousands"), "unverified", "empty quote"),
+    ("A6q", 4, NQ, dict(claim_type="number", value="183", unit="USD thousands"), "unverified", "not on the cited page"),
+    ("A6ok", 4, NQ, dict(claim_type="number", value="183", unit="USD millions"), "number_match", ""),
+    ("A7", 2, "", dict(claim_type="number", value="183", unit="USD millions"), "unverified", "empty quote"),
+    ("A7q", 2, NQ, dict(claim_type="number", value="183", unit="USD millions"), "unverified", "opposite sign"),
+    ("A8", 4, "", dict(claim_type="number", value="-183", unit="USD millions"), "unverified", "empty quote"),
+    ("A8q", 4, NQ, dict(claim_type="number", value="-183", unit="USD millions"), "unverified", "opposite sign"),
+    ("A9", 1, "ended at $64,168 million for the full year", {}, "substring", "spans pages 1-2"),
+    ("A9b", 2, "ended at $64,168 million for the full year", {}, "unverified", "quote spans pages 1-2; cite page 1"),
+    ("A10", 3, "Net sales of Keytruda were $29,482 million in 2025, an increase of 18 percent, driven by continued uptake.",
+     {}, "exact", ""),
+    ("A10b", 3, "Net sales of Keytruda were $29,482 million in 2025", dict(claim_type="number", value="29,482",
+                                                                         unit="USD millions"), "exact", ""),
+    ("A11", 2, "", {}, "unverified", "too short"),
+    ("A12", 3, "", dict(claim_type="number", value="18", unit=""), "unverified", "empty quote"),
+    ("A13", 2, "8", dict(claim_type="number", value="8"), "unverified", "not on the cited page"),
+    # A14/A15: page 3 really carries the sentence once its zero-width chars are handled, so it verifies there
+    ("A14", 3, ADV_P2[:90], {}, "exact", ""),
+    ("A14b", 3, "Other income was ($183) million lower.", {}, "unverified", "quote is on page 2, not page 3"),
+    ("A15", 3, ADV_P2[:90], dict(claim_type="number", value="18", unit="percent"), "exact", ""),
+    ("A16", 2, ADV_P2[:90], dict(claim_type="number", value="18"), "unverified", "quote verified but value 18"),
+    ("A16ok", 2, ADV_P2[:90], dict(claim_type="number", value="18", unit="percent"), "exact", ""),
+]
+
+
+@pytest.mark.parametrize("case", ADV_CASES, ids=[c[0] for c in ADV_CASES])
+def test_adversarial_ladder_cases(adv, case):
+    _, page, quote, kw, status, note = case
+    c = _v(adv, page, quote, **kw)
+    assert c.verification.status == status, c.confidence_note
+    assert note in c.confidence_note
+
+
+def test_short_quote_capped_and_bounded(adv):
+    # "18 percent" is two tokens: verifies, but only as substring, and only at a token boundary
+    c = _v(adv, 2, "18 percent", claim_type="number", value="18", unit="percent")
+    assert c.verification.status == "substring" and "short quote" in c.confidence_note
+    assert _v(adv, 2, "482", claim_type="number", value="482").verification.status == "unverified"   # inside 29,482
+    assert V._bounded_find("$29,482 and 18", "8") == -1 and V._bounded_find("a 8 b", "8") == 2
+
+
+def test_zero_width_page_and_fragment(adv):
+    c = _v(adv, 3, "Net sales of Keytruda were $29,482 million in 2025, an increase of 18 percent")
+    assert c.verification.status == "exact"
+    assert "#:~:text=Net%20sales%20of%20Keytruda" in c.deep_link
+    page = adv.get_page("AAA:10k_FY2025.md", 3)[2]
+    assert "​" in page[c.char_start:c.char_end]                   # span maps back into the raw page
+
+
+def test_fragment_validated_against_page_text():
+    from agent.needle.cite.deeplink import fragment_for_page, fragment_run
+    page = "| ASSETS | |\n| Current assets: | |\n| Cash and cash equivalents | $ 8,950 | $ 7,268 |\n• Announced settlement agreements to resolve patent litigation"
+    # the run that crosses table cells is never used; a run inside one cell is
+    assert fragment_run("ASSETS Current assets: Cash and cash equivalents $", page) == "Cash and cash equivalents"
+    assert fragment_run("• Announced settlement agreements to resolve Biktarvy patent", page) == \
+        "Announced settlement agreements to resolve"
+    frag, note = fragment_for_page("Revenue 8,771 17,755 Other revenues", page)
+    assert frag == "" and "plain URL" in note
+    c = Citation("a", 2, "Totally different words that are not there", source_url=EDGAR, raw_doc_type="annual_report")
+    link, note = __import__("agent.needle.cite.deeplink", fromlist=["x"]).build_deep_link_with_note(c, page)
+    assert link == EDGAR and "plain URL" in note
+
+
+def test_pdf_page_basis_uses_page_scheme(adv):
+    pdf = "https://example.gov/x.pdf"
+    assert build_deep_link(Citation("a", 3, "q", source_url=pdf, page_scheme="pdf_page")) == pdf + "#page=3"
+    assert build_deep_link(Citation("a", 37, "q", source_url=pdf, page_scheme="marker")) == pdf + "#page=37"
+    assert build_deep_link(Citation("a", 1, "q", source_url=pdf, page_scheme="section")) == pdf
+    c = V.verify(Citation("costs:costs/x.md", 1, "Section text that is long enough to quote here."), adv)
+    assert c.deep_link == pdf and "no PDF page in the index" in c.confidence_note
+
+
+def test_number_tokenizer_rules():
+    from agent.needle.cite.numbers import declared_scale, parse_value, same_number, tokenize
+    raw = [t.raw for t in tokenize("In 2025 (10-K p. 41, Item 7, Q4 2025, 2025-12-19) sales were $29,482 million, "
+                                    "up 18%; GLP-1 [1][2] FY2025; Revenue was 2030 million; ($183); $319M; 0.65%")]
+    assert raw == ["$29,482 million", "18%", "2030 million", "($183)", "$319M", "0.65%"]
+    t = tokenize("($183) million")[0]
+    assert t.neg and t.scale == 1e6 and t.value() == -183e6
+    assert declared_scale("Table (in millions): Revenue 15,144") == 1e6 and declared_scale("2,025 employees") is None
+    claim = parse_value("1,937.9", "USD millions")
+    src = tokenize("spend $1,937,912,000")[0]
+    assert same_number(claim, src)[0]                          # claim rounds the source to its printed precision
+    assert not same_number(parse_value("1,937.912", "USD millions"), tokenize("$1,937.9 million")[0])[0]
