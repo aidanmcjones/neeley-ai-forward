@@ -85,7 +85,7 @@ def check(ev, ticker_docs):
         if citation and row["doc_type"] in DOC_LABELS:
             where = f"p. {ev.printed}" if ev.printed and ev.printed != "?" else f"file page {ev.page}"
             citation = f"{row['ticker']} {DOC_LABELS[row['doc_type']]} {row.get('filed') or row['period']}, {where}"
-    ev.citation = citation
+    ev.citation = citation.replace(", p. Item ", ", Item ") if citation else citation  # Item-sectioned filings
     return status, reason
 
 

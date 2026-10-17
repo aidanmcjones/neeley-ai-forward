@@ -210,7 +210,13 @@ def score_ticker(ticker):
         for sig in read_jsonl(OUT / ticker / f"signals_{det}.jsonl", Signal):
             f = score_signal(sig, docs, p, oi or 0, hits)
             (rejected if f.verdict == "rejected" else findings).append(f)
-    findings.sort(key=lambda f: -f.score)
+    seen, unique = set(), []
+    for f in findings:  # one finding per (kind, sentence, first citation)
+        key = (f.signal_kind, f.finding, f.evidence[0].citation if f.evidence else "")
+        if key not in seen:
+            seen.add(key)
+            unique.append(f)
+    findings = sorted(unique, key=lambda f: -f.score)
     write_jsonl(OUT / ticker / "findings.jsonl", findings)
     write_jsonl(OUT / ticker / "rejected.jsonl", rejected)
     return findings, rejected

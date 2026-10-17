@@ -1,0 +1,28 @@
+{
+  "case_set": {
+    "trikafta": [],
+    "kalydeco": [],
+    "symdeko": []
+  },
+  "packs": [
+    {
+      "slug": "trikafta",
+      "label": true,
+      "spend_2024": 724709204.3
+    },
+    {
+      "slug": "kalydeco",
+      "label": true,
+      "spend_2024": 28727988.9
+    },
+    {
+      "slug": "symdeko",
+      "label": true,
+      "spend_2024": 16445248.99
+    }
+  ],
+  "ticker": "VRTX",
+  "cik": 875320,
+  "registrant": "VERTEX PHARMACEUTICALS INC / MA",
+  "match_key": "vertex"
+}

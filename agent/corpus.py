@@ -55,8 +55,33 @@ def now():
 
 # ---------------------------------------------------------------- text with pages
 
+ITEM_HEADING = re.compile(r"(?im)^\s*(item\s+\d{1,2}[A-K]?)\s*[\.:\-]")
+
+
+def item_sections(text):
+    """For filings with no page breaks (newer Workiva XHTML): split at Item headings, folio = 'Item 1A' etc.
+    The table of contents repeats every heading, so only the longest occurrence of each Item becomes a section."""
+    hits = [(m.start(), " ".join(m.group(1).split()).title()) for m in ITEM_HEADING.finditer(text)]
+    if len(hits) < 3:
+        return [(None, text)]
+    spans = [(hits[i][0], hits[i + 1][0] if i + 1 < len(hits) else len(text), hits[i][1]) for i in range(len(hits))]
+    best = {}
+    for s, e, name in spans:
+        if name not in best or e - s > best[name][1] - best[name][0]:
+            best[name] = (s, e)
+    starts = sorted((s, e, n) for n, (s, e) in best.items())
+    out = [(None, text[:starts[0][0]])] if starts[0][0] > 0 else []
+    for s, e, n in starts:
+        out.append((n, text[s:e]))
+    return [(f, t) for f, t in out if t.strip()]
+
+
 def paged_text(raw):
-    """[(printed_folio or None, text)] for one HTML document, split on its page breaks."""
+    """[(printed_folio or None, text)] for one HTML document, split on its page breaks.
+    Documents with no page breaks at all are split by Item heading instead (folio 'Item 7', never a made-up page)."""
+    if not PAGE_BREAK.search(raw):
+        text = html_to_text(raw)
+        return item_sections(text) if len(text) > 50_000 else [(None, text)]
     pages = []
     for chunk in PAGE_BREAK.split(raw):
         text = html_to_text(chunk)
@@ -165,7 +190,7 @@ class Collector:
         p.write_bytes(gzip.compress(facts.encode()))
 
         annual = [f for f in fs if f["form"] in ANNUAL]
-        n_annual = 2 if self.group == "companies" else 1
+        n_annual = 2 if self.group in ("companies", "onboarded") else 1
         for f in annual[-n_annual:]:
             fy = (f["period"] or f["filed"])[:4]
             stem = f"{f['form'].lower().replace('-', '')}_FY{fy}"
@@ -178,7 +203,7 @@ class Collector:
                     self.save(f"{stem}_{m.group(1)}.md", url, sec_get(url), "annual_report", f)
 
         tenqs = [f for f in fs if f["form"] == "10-Q" and f["filed"] >= QUARTERLY_SINCE]
-        for f in tenqs if self.group == "companies" else tenqs[-1:]:
+        for f in tenqs if self.group in ("companies", "onboarded") else tenqs[-1:]:
             self.fetch_primary(f, f"10q_{quarter_label(f['period'])}.md", "quarterly_report")
         for f in fs:
             if f["form"] == "10-Q":

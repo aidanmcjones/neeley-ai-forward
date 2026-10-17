@@ -12,6 +12,7 @@ Rules shared by all detectors:
 """
 
 import argparse
+import json
 from pathlib import Path
 
 from agent.needle.schema import write_jsonl
@@ -41,6 +42,20 @@ CASE_SETS = {
     "AMGN": {"repatha": ["praluent", "leqvio", "lipfendra"], "enbrel": ["skyrizi", "rinvoq", "humira"]},
     "GILD": {"biktarvy": ["dovato", "cabenuva"], "yeztugo": ["apretude"]},
 }
+
+
+def _load_onboarded():
+    """Companies added with agent.needle.onboard carry their product set in out/<T>/case_set.json."""
+    for p in OUT.glob("*/case_set.json"):
+        try:
+            cs = json.loads(p.read_text(encoding="utf-8")).get("case_set") or {}
+        except Exception:
+            continue
+        if cs and p.parent.name not in CASE_SETS:
+            CASE_SETS[p.parent.name] = cs
+
+
+_load_onboarded()
 
 
 def save(ticker, name, signals):

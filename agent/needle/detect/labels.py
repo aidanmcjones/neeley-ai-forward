@@ -601,6 +601,13 @@ def compare(ticker):
         S = lambda *a, **k: sigs.append(x) if (x := _sig(ticker, *a, **k)) else None
         ev = P["_evidence"]
 
+        if not rivals and ev.get("indications"):
+            # onboarded products whose FDA pharmacologic class has no other manufacturer's brand in Medicare
+            S("no_class_rival", slug, f"{slug} has no marketed rival from another manufacturer in its FDA "
+              "pharmacologic class (NLM RxClass EPC, Medicare Part D); the exclusivity and patent timeline is "
+              "its main competitive risk", [ev["indications"]],
+              meta={"data": {"protection_end": P.get("protection_end", {}).get("value")}})
+
         # label breadth vs rival median
         rc = {r: profile(r)["indication_count"]["value"] for r in rivals}
         known = [v for v in rc.values() if v is not None]
