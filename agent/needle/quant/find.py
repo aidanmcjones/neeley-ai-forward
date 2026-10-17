@@ -14,12 +14,13 @@ import re
 from dataclasses import dataclass, field
 from datetime import date
 
-from agent.needle.cite.locator import Claim, Citation
+from agent.needle.cite.gate import derived_entry
+from agent.needle.cite.locator import Claim, Citation, _jsonable
 from agent.needle.cite.render import render_markdown
 from agent.needle.cite.index import load_index
 from agent.needle.cite.verify import verify as cite_verify
 
-from . import data, evidence as EV, impact as IM, obscurity as OB
+from . import data, evidence as EV, gatewire as GW, impact as IM, obscurity as OB
 from . import weights as W
 
 
@@ -344,8 +345,14 @@ def yoy_basis(sig):
         mismatch = (f"guard 5: period mismatch: the row states a gap of {sig.value * 100:+.1f} pts but the operands of "
                     f"its own period {per} give {gap * 100:+.1f} pts")
         flags.append(mismatch)
+    dm = {}
+    on = {k: data.gate_operand(c, dm, v) for k, c, v in zip(("a", "b", "c", "d"), ops,
+                                                              (m_now / 1e6, m_prev / 1e6, r_now / 1e6, r_prev / 1e6))}
+    dm["g_metric"] = derived_entry(g_m * 100, "(a / b - 1) * 100", {"a": on["a"], "b": on["b"]}, "%")
+    dm["g_revenue"] = derived_entry(g_r * 100, "(c / d - 1) * 100", {"c": on["c"], "d": on["d"]}, "%")
+    dm["gap"] = derived_entry(gap * 100, "((a / b - 1) - (c / d - 1)) * 100", on, "pts")
     return {"sentence": sentence, "page_cites": pages, "cites": ops + [derived], "flags": flags, "gap": gap,
-            "mismatch": mismatch}
+            "mismatch": mismatch, "derived": dm}
 
 
 def stage_split(cites):
@@ -475,9 +482,24 @@ class Scored:
     not_quantified: str = ""      # reason when the row has no impact channel (review R2): impact None, S = 0
     guard: str = ""               # guards.py action applied to the row (drop | context | no_needle)
     needle_blocked: bool = False  # never the Sharpest Needle, not even as the provisional pick
+    derived: dict = field(default_factory=dict)       # numeric gate: computed numbers with cited operands
+    assumptions: dict = field(default_factory=dict)   # numeric gate: labelled assumptions and model constants
+    public: bool = False                              # render with public=True (licensed text withheld)
+
+    def all_citations(self):
+        """citations plus every derived citation's operands and every derived-map operand citation, inline and
+        deduped by cite_id (a derived number's operands live in the same record)."""
+        extra = []
+        for e in (self.derived or {}).values():
+            for o in (e.get("operands") or {}).values() if isinstance(e, dict) else []:
+                c = o if isinstance(o, Citation) else (o.get("citation") if isinstance(o, dict) else None)
+                if isinstance(c, Citation):
+                    extra.append(c)
+        return data.expand_citations(list(self.citations) + extra)
 
     def to_dict(self):
-        body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.page is not None][:6])])
+        body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.verification.ok],
+                                      derived=self.derived, assumptions=self.assumptions)], public=self.public)
         return {
             "id": self.id, "ticker": self.ticker, "signal_kind": self.kind, "signal_family": self.family.name,
             "has_detector": self.family.has_detector, "detector": self.detector, "block": self.family.block,
@@ -488,7 +510,8 @@ class Scored:
             "peer": self.peer or {"note": "no peer analogue"}, "vector": self.vector, "S": self.S,
             "confidence": self.confidence, "confidence_reasons": self.confidence_reasons, "flags": self.flags,
             "needle_eligible": self.needle_eligible, "old_S": self.old_S, "fact_key": self.fact_key,
-            "citations": [c.to_dict() for c in self.citations],
+            "citations": [c.to_dict() for c in self.all_citations()],
+            "derived": _jsonable(self.derived), "assumptions": _jsonable(self.assumptions),
         }
 
 
@@ -554,6 +577,10 @@ def _assemble(co, ticker, kind, sentence, fam, imp, page_cites, topics, disclose
                 detector=detector, product=product or "")
     sc.needle_eligible = (Dd >= W.NEEDLE_O and E >= W.NEEDLE_E and conf != "LOW" and z == 0
                           and (adverse or imp.quantified) and S > 0)
+    GW.company_maps(co, sc.derived, sc.assumptions)
+    GW.channel_constants(imp, sc.assumptions)
+    sc.derived.update(getattr(imp, "derived", None) or {})
+    sc.assumptions.update(getattr(imp, "assumptions", None) or {})
     return sc
 
 
@@ -647,6 +674,11 @@ def score_signal(sig, co, panel=None):
                    detector=sig.detector)
     sc.fact_key = fact_key(sig)
     sc.citations += extra_cites
+    if yb is not None:
+        sc.derived.update(yb["derived"])
+    GW.forensics_maps(sig, sc.derived, sc.assumptions)
+    GW.dose_counts(sc.sentence, sc.assumptions)
+    GW.peer_stats(sc.assumptions, sig)
     if yb is not None and yb["mismatch"]:
         apply_guard(sc, ("context", yb["mismatch"]))
     sc.not_quantified = nq_reason
@@ -673,38 +705,34 @@ def apply_guard(sc, guard):
 
 
 def _loe_impact(sig, co):
-    """LOE channel with company-stated dates (10-K patent table, company_stated_loe.jsonl) ahead of the detector's
-    Orange/Purple Book date."""
+    """LOE channel with the company-stated date from the verified pipeline/loe_calendar.csv row (company_stated_loe,
+    10-K page in tenk_page, cited through the facts table), else its rule_output_loe, else the detector's
+    Orange/Purple Book date. The uncommitted agent/cache/company_stated_loe.jsonl is no longer read."""
     import json
+    from . import verified_tables as VT
     flags = []
     meta = sig.meta.get("data") or {}
     prod = (sig.meta.get("product") or "").lower()
     loe_date = OB.to_date(meta.get("product_end"))
-    src = "Orange/Purple Book (detector)"
-    if data.LOE_CACHE and data.LOE_CACHE.exists():
-        for line in data.LOE_CACHE.read_text(encoding="utf-8").splitlines():
-            try:
-                r = json.loads(line)
-            except ValueError:
-                continue
-            if prod and prod in (r.get("product") or "").lower():
-                m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", str(r.get("us_loe")))
-                y = re.search(r"(20\d\d)", str(r.get("us_loe")))
-                if m:
-                    loe_date = date(int(m.group(3)), int(m.group(1)), int(m.group(2)))
-                elif y:
-                    loe_date = date(int(y.group(1)), 1, 1)
-                src = f"company-stated {r.get('form')} {r.get('period')}: \"{(r.get('quote') or '')[:80]}\""
-                break
+    src, cites = "Orange/Purple Book (detector)", []
+    got = VT.loe(sig.ticker, prod.split(" ")[0]) if prod else None
+    if got:
+        loe_date, tv, row = got
+        cites = list(tv.citations)
+        src = tv.label
     flags.append(f"LOE date source: {src}")
     rev_pre = _product_revenue(sig.ticker, prod)
     if rev_pre is None:
         flags.append("product revenue not found: LOE not quantified")
         imp = IM.Impact("loe", formula="product revenue missing", quantified=False)
         imp.d_eps = {"bull": 0.0, "base": 0.0, "bear": 0.0}
+        imp.citations = cites
         return imp, flags, None
     biologic = "purple_book" in json.dumps(meta).lower() and "orange" not in str(meta.get("product_fields", "")).lower()
-    imp = IM.loe(co, prod, rev_pre, loe_date or date(2100, 1, 1), biologic)
+    imp = IM.loe(co, prod, rev_pre, loe_date or date(2100, 1, 1), biologic, cites=cites)
+    imp.assumptions = {"rev_pre": {"value": f"{rev_pre:.12g}", "label": "unverified table value: moat table "
+                                   "product_revenue_quarterly.csv, latest full-year product revenue (XBRL product member; "
+                                   "no verified facts row)"}}
     return imp, flags, None
 
 
@@ -769,8 +797,8 @@ def ira_findings(ticker, co):
             flags.append("adjacent to GILD's starter thread (HIV franchise durability): human check before pitching")
         base_d = d[1] if isinstance(d, tuple) else d
         if d == ALL_CUTS:
-            dtxt = (f"assumed base list discount {base_d:.1%} (median of the 16 cycle 1-2 negotiated discounts; cited "
-                    "range 38% to 85%; no same-class MFP published)")
+            dtxt = (f"assumed base list discount {base_d:.1%} (median of the cycle 1-2 negotiated discounts in the CMS "
+                    "fact sheets; cited range 38% to 85%; no same-class MFP published)")
         elif analogs:
             dtxt = f"base list discount {base_d:.0%} (CMS-published analog, cited)"
         else:
@@ -784,6 +812,15 @@ def ira_findings(ticker, co):
                        peer={"analogs": [c.quote for c in analog_cites]}, extra_flags=flags,
                        z_text=f"{drug} ira negotiation", detector="ira_generator")
         sc.product = drug
+        # numeric gate: G in USD millions from the CMS spend quote, each list discount from a cited CMS percent
+        sc.derived["G"] = derived_entry(G, "g / 1000000", {"g": {"value": G * 1e6, "citation": spend}})
+        dm = {}
+        miss = GW.ira_discount_maps(d, analog_cites, dm)
+        sc.derived.update(dm)
+        if "ira_cut_median" in dm:
+            sc.citations += [o["citation"] for o in dm["ira_cut_median"]["operands"].values()]
+        for v in miss:
+            sc.flags.append(f"list discount {v:g} has no cited CMS percent: the numeric gate withholds the row")
         if imp_spec is not None:
             m_spec = materiality(imp_spec.d_eps.get("base", 0.0), imp_spec.t_years, co.sigma)
             sc.vector["dRev_spec_formula"] = imp_spec.d_rev
@@ -882,7 +919,15 @@ def _mfn_quantified(ticker, co, pe, idx):
         clause = (f"Novo states a negative low single-digit % impact on {str(row.effective_date)[:4]} global sales "
                   f"growth ({row.row_id}), about {co.fin_currency} {imp.d_rev['bull']:,.0f}M to "
                   f"{imp.d_rev['bear']:,.0f}M on TTM revenue")
-        return imp, clause, [c] if c else [], ["MFN size from the company's own statement (review D2)"]
+        dm, am = {}, {}
+        lab = "inference: 'low single-digit %' read as 1 / 2 / 3 percent of sales"
+        GW.assume(am, "nvo_s2", 2, lab)
+        GW.assume(am, "nvo_s3", 3, lab, "%")
+        GW.assume(am, "nvo_s1", 1, lab)
+        for k_, x in (("bull", share[0]), ("bear", share[2])):
+            dm[f"nvo_{k_}"] = derived_entry(imp.d_rev[k_], "r * s", {"r": {"derived": "Rev_TTM"},
+                                            "s": {"value": x, "assumption": lab}}, "millions")
+        return imp, clause, [c] if c else [], ["MFN size from the company's own statement (review D2)"], dm, am
     if ticker == "BMY":
         r = mfn[mfn.item.str.contains("Eliquis free", na=False)]
         g, gc = _eliquis_medicaid_gross()
@@ -898,9 +943,30 @@ def _mfn_quantified(ticker, co, pe, idx):
         clause = (f"Eliquis is free to Medicaid from {row.effective_date} ({row.row_id}); FY2025 Medicaid gross "
                   f"reimbursement was ${g:,.0f}M (SDUD), at most about ${up:,.0f}M of net revenue a year before the "
                   "Pfizer alliance split")
+        dm, am = {}, {}
+        glab = ("CMS State Drug Utilization Data value: moat table medicaid_sdud.csv, Eliquis FY2025 sum of four "
+                "quarters (not page-verified; no facts row)")
+        rlab = "constant: statutory Medicaid basic rebate 23.1% of AMP (42 USC 1396r-8)"
+        GW.assume(am, "sdud_g", g, glab)
+        GW.assume(am, "sdud_g_m", g, glab, "millions")
+        GW.assume(am, "basic_rebate", SDUD_MEDICAID_BASIC_REBATE, rlab)
+        dm["sdud_up"] = derived_entry(up, "g * (1 - r)", {"g": {"value": g, "assumption": glab},
+                                                         "r": {"value": SDUD_MEDICAID_BASIC_REBATE, "assumption": rlab}},
+                                      "millions")
         return imp, clause, [c] if c else [], ["MFN size computed from SDUD: upper bound (statutory basic rebate "
-                                               "only; inflation rebates and the Pfizer alliance split lower it)"]
+                                               "only; inflation rebates and the Pfizer alliance split lower it)"], dm, am
     return None
+
+
+def _rev_us_entry(sc, rev_us, fact_us):
+    """Rev_US = Rev_TTM x US share / 100, the share re-read from the force_summary facts row."""
+    try:
+        share = float(fact_us.value)
+    except (TypeError, ValueError):
+        return
+    sc.derived["Rev_US"] = derived_entry(rev_us, "r * s / 100", {"r": {"derived": "Rev_TTM"}, "s": (share, fact_us)})
+    if fact_us not in sc.citations:
+        sc.citations.append(fact_us)
 
 
 def mfn_findings(ticker, co):
@@ -927,7 +993,8 @@ def mfn_findings(ticker, co):
     pc = _policy_cite(row, idx)
     fact_term = data.fact_by_key("policy/policy_exposure.csv", row.row_id)
     us_share = float(f.us_revenue_share_pct) / 100
-    fact_us = data.table_citation("policy/force_summary.csv", ticker, "us_revenue_share_pct", f.us_revenue_share_pct)
+    fact_us = data.fact_row_citation("policy/force_summary.csv", "us_revenue_share_pct", f.us_revenue_share_pct,
+                                     ticker=ticker)
     flags = []
     tx = tariff_exposure(ticker)
     if tx:
@@ -946,13 +1013,23 @@ def mfn_findings(ticker, co):
                     f"of 0.65% of US revenue (US share {f.us_revenue_share_pct}%), about ${imp.d_rev['base']:,.0f}M a year.")
         sc = _assemble(co, ticker, "mfn_medicaid", sentence, FAM["mfn"], imp, page_cites, ["mfn"],
                        OB.to_date(f.mfn_date), extra_flags=flags, z_text="mfn", detector="mfn_generator")
+        _rev_us_entry(sc, rev_us, fact_us)
+        sc.derived["mfn_base"] = derived_entry(imp.d_rev["base"], "s * r", {
+            "s": {"value": W.S_MFN[1], "assumption": "constant: S_MFN base (Pfizer Medicaid base rate)"},
+            "r": {"derived": "Rev_US"}}, "millions")
+        GW.assume(sc.assumptions, "S_MFN_pct", W.S_MFN[1] * 100,
+                  "constant: S_MFN base (Pfizer Medicaid base rate, percent of US revenue)", "%")
         return [sc]
     # per-company context: pledge and TrumpRx prices (cited, never sized)
     ctx, ctx_cites = [], []
     pledge = str(f.us_investment_pledge_usd_bn or "").strip()
+    gate_d = {}
     if pledge and pledge.lower() != "nan":
-        ctx.append(f"US investment pledge ${pledge}bn")
-        ctx_cites.append(data.table_citation("policy/force_summary.csv", ticker, "us_investment_pledge_usd_bn", pledge))
+        pc_ = data.fact_row_citation("policy/force_summary.csv", "us_investment_pledge_usd_bn", pledge, ticker=ticker)
+        if pc_.verification.ok:     # an unverified table value is not printed (numeric gate)
+            ctx.append(f"US investment pledge ${pledge}bn")
+            ctx_cites.append(pc_)
+            GW.identity(gate_d, "pledge", float(pledge), pc_, unit="USD billion")
     for _, r in mfn[mfn.item.str.startswith("TrumpRx", na=False)].iterrows():
         ctx.append(f"TrumpRx: {r.value} ({r.row_id})")
         c = _policy_cite(r, idx)
@@ -962,7 +1039,7 @@ def mfn_findings(ticker, co):
     head = (f"{ticker} signed an MFN agreement on {f.mfn_date} that extends MFN pricing to Medicaid ({row.row_id})"
             + (f"; {'; '.join(ctx)}" if ctx else ""))
     if q is not None:
-        imp, clause, qcites, qflags = q
+        imp, clause, qcites, qflags = q[:4]
         flags += qflags
         page_cites += [c for c in qcites if c is not None and c.verification.ok and c not in page_cites]
         sentence = f"{head}. {clause}. Direction: adverse to US net price."
@@ -977,6 +1054,12 @@ def mfn_findings(ticker, co):
                     "dollar figure is given.")
     sc = _assemble(co, ticker, "mfn_medicaid", sentence, MFN_DIRECTIONAL, imp, page_cites, ["mfn"],
                    OB.to_date(f.mfn_date), extra_flags=flags, z_text="mfn", detector="mfn_generator")
+    sc.derived.update(gate_d)
+    if q is None:
+        _rev_us_entry(sc, rev_us, fact_us)
+    else:
+        sc.derived.update(q[4])
+        sc.assumptions.update(q[5])
     if q is None and sc.needle_eligible:
         # a direction with a universal placeholder size cannot be the company's sharpest specific finding
         sc.needle_eligible, sc.needle_blocked = False, True

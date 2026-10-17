@@ -445,6 +445,24 @@ def _text_blocks_of(record, text_fields):
     return blocks
 
 
+def operands_missing(cits):
+    """Unsupported entries for derived citations (status 'derived' or canonical_id 'derived') whose `operands`
+    cite_ids are not all present in the same citations list: reason "operand not in record"."""
+    cl = [as_citation(c) if not isinstance(c, Citation) else c for c in cits or []]
+    ids = {c.cite_id for c in cl if c is not None}
+    out = []
+    for c in cl:
+        if c is None or not (c.canonical_id == "derived" or _status(c) == "derived"):
+            continue
+        ops = list(getattr(c, "operands", None) or [])
+        gone = [o for o in ops if o not in ids]
+        if gone or not ops:
+            out.append({"value": c.value, "where": f"citations/{c.cite_id}",
+                        "reason": "operand not in record" + (f": {', '.join(gone)}" if gone else
+                                                             " (derived citation lists no operands)")})
+    return out
+
+
 def gate_record(record, text_fields, citation_field, derived=None, assumptions=None, index=None):
     """(copy of record with 'numeric_check', passed) for a findings-style dict. text_fields may be dotted paths
     ('impact.formula'); citation_field names the list of citation dicts or Citations. derived / assumptions default to
@@ -455,7 +473,11 @@ def gate_record(record, text_fields, citation_field, derived=None, assumptions=N
         res = numeric_gate(_text_blocks_of(record, text_fields), cits,
                            derived if derived is not None else record.get("derived"),
                            assumptions if assumptions is not None else record.get("assumptions"), index=index)
-        out["numeric_check"] = res.numeric_check
+        chk = res.numeric_check
+        miss = operands_missing(cits)
+        if miss:
+            chk = dict(chk, unsupported=list(chk["unsupported"]) + miss, status="failed")
+        out["numeric_check"] = chk
     except Exception as e:                                      # fail closed
         out["numeric_check"] = dict(_empty_check("failed"),
                                     unsupported=[{"value": None, "where": "record", "reason": f"gate error: {e}"}])
@@ -515,6 +537,9 @@ def gate_document(sections, index=None):
             res = numeric_gate([(str(where), str(text), unit)], cits, der, ass, index=index)
             chk = res.numeric_check
             nums = res.numbers
+            miss = operands_missing(cits)        # a derived citation's operands must sit in the same item
+            if miss:
+                chk = dict(chk, unsupported=list(chk["unsupported"]) + miss, status="failed")
         except Exception as e:                                  # fail closed
             where = where or (f"{sec}[{i}]" if sec else f"item{i}")
             chk = dict(_empty_check("failed"), unsupported=[{"value": None, "where": str(where),

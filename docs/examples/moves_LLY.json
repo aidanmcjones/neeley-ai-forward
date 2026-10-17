@@ -17,6 +17,9 @@
     {
       "name": "Expand the LillyDirect cash-pay Zepbound channel (MFN-aligned)",
       "template": "M4",
+      "context": {
+        "product": "zepbound"
+      },
       "why": "Price cuts and the Wegovy pill are reshaping obesity; a larger self-pay channel at MFN-aligned prices protects share and reaches uninsured patients (case appendix).",
       "finding_ids": [
         "LLY-labels-595152"
@@ -79,6 +82,9 @@
     {
       "name": "Defend Trulicity through the 2027 loss of exclusivity and switch patients to Mounjaro",
       "template": "M5",
+      "context": {
+        "product": "trulicity"
+      },
       "why": "Trulicity loses exclusivity in 2027 (10-K patent table); a rebate-wall defense and a Mounjaro switch program value the retained revenue.",
       "finding_ids": [
         "LLY-labels-746909"
@@ -123,6 +129,11 @@
     {
       "name": "Seek new Zepbound indications to close the label gap with Wegovy",
       "template": "M3",
+      "context": {
+        "product": "zepbound",
+        "ta": "metabolic",
+        "stage": "ph3"
+      },
       "why": "Zepbound lists 2 indications against Wegovy's 5 (label comparison); two outcomes trials would widen the addressable pool.",
       "finding_ids": [
         "LLY-labels-595152"

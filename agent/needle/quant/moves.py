@@ -26,6 +26,9 @@ from types import SimpleNamespace
 
 BIO = "https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf"
 DAMODARAN = "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.html"
+DAMODARAN_MARGIN = "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/margin.html"   # gross margin, SG&A
+BIO_P15 = BIO + "#page=15"     # Figure 9 (non-NME transition rates) is on PDF page 15 (review D7)
+MOORE_JAMA = "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2702287"   # Moore et al. 2018
 CIDARA = "https://www.sec.gov/Archives/edgar/data/1610618/000119312525309970/d59361dsc14d9.htm"
 FURIEX = "https://www.sec.gov/Archives/edgar/data/0001484478/000119312514225775/d727381ddefm14a.htm"
 
@@ -70,10 +73,10 @@ PAYBACK_SEARCH = 120   # spec 5.4: payback searched to 120 months
 POST_LAUNCH_MONTHS = 120  # spec 5.1: TV to LOE or 10 years after launch
 
 # Clinical probabilities (BIO/Informa/QLS 2021)
-NON_NME = {"ph1": _b("p_nonnme_ph1", 0.575, "probability", "BIO 2021 Figure 9 non-NME Phase I->II 57.5%", BIO),
-           "ph2": _b("p_nonnme_ph2", 0.375, "probability", "BIO 2021 Figure 9 non-NME Phase II->III 37.5%", BIO),
-           "ph3": _b("p_nonnme_ph3", 0.675, "probability", "BIO 2021 Figure 9 non-NME Phase III->NDA/BLA 67.5%", BIO),
-           "nda": _b("p_nonnme_nda", 0.915, "probability", "BIO 2021 Figure 9 non-NME NDA/BLA->approval 91.5%", BIO)}
+NON_NME = {"ph1": _b("p_nonnme_ph1", 0.575, "probability", "BIO 2021 Figure 9 non-NME Phase I->II 57.5%", BIO_P15),
+           "ph2": _b("p_nonnme_ph2", 0.375, "probability", "BIO 2021 Figure 9 non-NME Phase II->III 37.5%", BIO_P15),
+           "ph3": _b("p_nonnme_ph3", 0.675, "probability", "BIO 2021 Figure 9 non-NME Phase III->NDA/BLA 67.5%", BIO_P15),
+           "nda": _b("p_nonnme_nda", 0.915, "probability", "BIO 2021 Figure 9 non-NME NDA/BLA->approval 91.5%", BIO_P15)}
 # BIO 2021 Figure 1, Phase I->II / II->III / III->NDA / NDA->approval, by therapeutic area
 BIO_TA = {
     "hematology": (0.696, 0.481, 0.768, 0.931), "metabolic": (0.618, 0.450, 0.636, 0.875),
@@ -95,7 +98,7 @@ TRIAL_COST_ACTIVE = _b("trial_cost_active", 48.9, "USD M per pivotal trial", "Mo
 TRIAL_COST_MEDIAN = _b("trial_cost_median", 19.0, "USD M per pivotal trial", "Moore et al. 2018: median $19M (IQR 12.2-33.1)",
                        "https://www.raps.org/resource/phase-3-trial-costs-estimated-at-19m-study-finds.html")
 TRIAL_COST_CARDIO = _b("trial_cost_cardio", 157.0, "USD M per pivotal trial", "Moore et al. 2018: cardiovascular pivotal trials mean $157M (driven by one $346.8M trial)",
-                       "https://www.outsourcing-pharma.com/Article/2018/09/26/Clinical-trial-cost-is-a-fraction-of-the-drug-development-bill")
+                       MOORE_JAMA)   # the outsourcing-pharma article returned HTTP 410 (review D7)
 REP_COST = _b("rep_cost", 176.5, "USD K per rep-year", "Rework 2025: developed-market loaded rep cost $134,000-219,000 (midpoint; vendor estimate)",
               "https://resources.rework.com/libraries/pharmaceutical-growth/pharma-field-sales-economics")
 REP_RAMP_MONTHS = _b("rep_ramp_months", 18, "months", "Rework 2025: 12-24 month ramp to full productivity (midpoint)",
@@ -129,8 +132,8 @@ ROYALTY_LATE = _b("royalty_late", 0.113, "fraction of net sales", "Goodwin 2025 
                   "https://www.goodwinlaw.com/en/insights/publications/2026/03/insights-lifesciences-2025-yir-life-sciences-licensing-collaboration-deals")
 
 # Margins and uptake
-CM_EXISTING = _b("cm_existing", 0.85, "fraction", "Spec 5.3 M3: 80-90% incremental contribution for an existing brand (inference from Damodaran 71.73% gross margin, 21.91% SG&A/sales)", DAMODARAN, kind="inference")
-CM_ACQUIRED = _b("cm_acquired", 0.7173, "fraction", "Damodaran Jan 2026 pharma gross margin 71.73%", DAMODARAN)
+CM_EXISTING = _b("cm_existing", 0.85, "fraction", "Spec 5.3 M3: 80-90% incremental contribution for an existing brand (inference from Damodaran 71.73% gross margin, 21.91% SG&A/sales)", DAMODARAN_MARGIN, kind="inference")
+CM_ACQUIRED = _b("cm_acquired", 0.7173, "fraction", "Damodaran Jan 2026 pharma gross margin 71.73%", DAMODARAN_MARGIN)
 CM_PRICE = 1.0     # price changes drop through (pharma_impact_math: dOI = dRev_net x 1.0)
 CM_VOLUME = _b("cm_volume", 0.70, "fraction", "pharma_impact_math / spec 4.3 e: volume-led change CM 0.70", "", kind="inference")
 UPTAKE_MONTHS = _b("uptake_months", 39.9, "months to peak", "IQVIA 2021, 813 launches: 13.3 quarters to peak volume",

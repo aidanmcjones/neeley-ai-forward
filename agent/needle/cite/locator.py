@@ -53,6 +53,8 @@ class Citation:
     verification: Verification = field(default_factory=Verification)
     confidence_note: str = ""
     cite_id: str = ""
+    operands: list = field(default_factory=list)   # derived citations: cite_ids of the operand citations, which
+                                                   # must sit in the same record's citations list
 
     def __post_init__(self):
         if not self.cite_id:

@@ -15,8 +15,10 @@ EX = ROOT / "docs" / "examples"
 
 
 def ref(**over):
-    """Section 5.5 synthetic label expansion: two placebo pivotals at $28.8M over months 1-24, readout 24, approval 37."""
-    return D.evaluate_move("M3", over, [], name="reference")
+    """Section 5.5 synthetic label expansion: two placebo pivotals at $28.8M over months 1-24, readout 24, approval 37.
+    The reference case states $28.8M (Moore 2018 placebo-controlled mean), so it is passed explicitly: the template
+    default now comes from the verified trial-cost table (moore2018|controlled, $35.1M)."""
+    return D.evaluate_move("M3", dict({"trial_cost_each": 28.8}, **over), [], name="reference")
 
 
 def test_reference_case_to_the_cent_alternative_ramp():
@@ -195,4 +197,8 @@ def test_cli_runs_on_sample_file(tmp_path):
     md = (out / "decide.md").read_text()
     for h in ("## Recommended move", "### Budget", "### Return math", "## Five numbers", "## Kill signals", "**Sources**"):
         assert h in md
-    assert md.count("verified: unverified") >= 1
+    # review C2: company numbers are re-verified against the index; no footnote prints an unverified source, and every
+    # headline number passed the numeric gate (decide.json numeric_check)
+    assert "verified: unverified" not in md
+    assert "verified: substring" in md or "verified: exact" in md
+    assert d["numeric_check"]["status"] == "passed" and not d["numeric_check"]["unsupported"]

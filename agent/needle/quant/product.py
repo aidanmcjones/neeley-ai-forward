@@ -242,8 +242,31 @@ class ProductComparison:
         return self.rows[row][name]
 
     def uncited(self):
-        """Non-empty cells that carry no verified page citation (numbers that live only in a table)."""
-        return [(r, n) for r, d in self.rows.items() for n, c in d.items() if not c.empty and not c.citations]
+        """Non-empty cells whose numbers the numeric gate does not pass (review C5, D9): every number in the cell must
+        be verified by one of its citations (page or verified facts row), derived, or a labelled assumption; a
+        cell with citations that do not carry its numbers is uncited."""
+        out = []
+        for r, d in self.rows.items():
+            for n, c in d.items():
+                if c.empty:
+                    continue
+                if not cell_gate(self, r, n).passed:
+                    out.append((r, n))
+        return out
+
+    def table_only(self):
+        """Non-empty cells that pass the gate but carry numbers taken from table rows with no verified facts row
+        (labelled 'unverified table value' assumptions): listed so the reader knows which numbers are not page-cited."""
+        out = []
+        for r, d in self.rows.items():
+            for n, c in d.items():
+                if c.empty:
+                    continue
+                res = cell_gate(self, r, n)
+                if res.passed and any(x["kind"] == "assumed" and str(x.get("label", "")).startswith("unverified table")
+                                      for x in res.numbers):
+                    out.append((r, n))
+        return out
 
     def empties(self):
         return [(r, n, c.empty_reason) for r, d in self.rows.items() for n, c in d.items() if c.empty]
@@ -307,6 +330,23 @@ def cite_quote(idx, doc, quote, claim_type="quote", value=None, unit="", page=No
 
 def _ok(c):
     return c is not None and c.verification.ok
+
+
+def cell_gate(cmp_, row, name):
+    """GateResult for one table cell: its passing citations plus the facts-row citations and labels of product_gate."""
+    from agent.needle.cite.gate import numeric_gate
+    from .product_gate import cell_maps
+    key = f"_gate|{row}|{name}"
+    if key in cmp_.context:
+        return cmp_.context[key]
+    cell = cmp_.rows[row][name]
+    ent = next(e for e in cmp_.entities if e["name"] == name)
+    xc, dm, am = cell_maps(cmp_, row, ent, cell)
+    cites = [c for c in list(cell.citations) + xc if c.verification.ok]
+    res = numeric_gate([(f"{row}/{name}", cell.value or "")], cites, dm, am)
+    res.citations, res.derived, res.assumptions = cites, dm, am
+    cmp_.context[key] = res
+    return res
 
 
 def label_doc(slug):
@@ -558,7 +598,9 @@ def _timeline_cell(idx, data, ticker, ent):
         det["company_stated"] = cs_det
         parts.insert(0, f"Company-stated US LOE {cs_txt}")
         if ob_end:
-            gap = int(str(ob_end)[:4]) - int(str(cs_val)[:4])
+            # review D10: company-stated dates come as "8/27/2029" too; read the 4-digit year, never the first 4 chars
+            cs_year = re.search(r"\d{4}", str(cs_val))
+            gap = int(str(ob_end)[:4]) - int(cs_year.group()) if cs_year else 0
             if abs(gap) >= 1:
                 disc = (f"Orange/Purple Book protection ends {ob_end[:4]} vs company-stated {cs_val}: "
                         f"{abs(gap)} year(s) {'later' if gap > 0 else 'earlier'} in the regulatory data "
@@ -831,11 +873,16 @@ class ProductClaim(Claim):
     obscurity_note: str = ""
     flags: list = field(default_factory=list)
 
+    numeric_check: dict = field(default_factory=dict)
+
     def record(self):
+        from agent.needle.cite.locator import _jsonable
         d = {k: getattr(self, k) for k in ("id", "ticker", "signal_family", "channel", "direction", "impact", "peer", "confidence",
-                                          "confidence_reasons", "obscurity_note", "flags")}
+                                          "confidence_reasons", "obscurity_note", "flags", "numeric_check")}
         d["sentence"] = self.text
         d["citations"] = [c.to_dict() for c in self.citations]
+        d["derived"] = _jsonable(self.derived or {})
+        d["assumptions"] = _jsonable(self.assumptions or {})
         return d
 
 
@@ -906,7 +953,7 @@ def _channels(cmp_):
             revs, k, low, part_d = IM.ira_class_dollars(G, d, me["name"], _indication_text(P), part_d=True)
             res = {case: -v for case, v in zip(("bull", "base", "bear"), revs)}
             out.append({"channel": "ira_mfp", "topic": "IRA_negotiation", "dRev": res,
-                        "formula": (f"dRev = -G x max(0, k x d - m_avoided): G = Part D claims {med['year']} ({med['claims']:,.0f}) x list30 ${listp:,.0f}; "
+                        "formula": (f"dRev = -G x max(0, k x d - m_avoided): G = Part D claims {med['year']}: {med['claims']:,.0f} x list30 ${listp:,.0f}; "
                                     f"d = 1 - MFP30 ${mfp:,.0f} / list30 = {d:.0%}; k = {k} ({'low-rebate class' if low else 'rebated class'}); "
                                     f"m_avoided = {W.M_MDP_AVOIDED} (FIND impact.ira_class_rule, the one IRA formula)"),
                         "inputs": {"claims": med["claims"], "list30": listp, "mfp30": mfp, "d": d, "k": k, "m_avoided": W.M_MDP_AVOIDED, "mfp_effective": ira["mfp_effective"]},
@@ -1063,14 +1110,31 @@ def tie_to_financials(comparison, findings=None):
     chans, uq = _channels(cmp_)
     me = cmp_.entities[0]
     claims = []
+    from agent.needle.cite.gate import numeric_gate
+    from .product_gate import channel_maps
     for ch in sorted(chans, key=lambda c: (bool(c.get("assumed")), -abs(c["dRev"]["base"]))):
         d = ch["dRev"]
         cm = ch["cm"]
-        cites = [c for c in ch["citations"] if c.verification.ok]
-        if not cites:
-            continue
+        # review C5: the per-number gate replaces "keep the claim when any one citation verifies"
+        try:
+            xc, dmap, amap = channel_maps(cmp_, ch)
+        except Exception as e:                                   # fail closed
+            xc, dmap, amap = [], {}, {}
+            cmp_.notes.append(f"{ch['channel']}: gate maps failed ({e})")
+        seen_ids, cites = set(), []
+        for c in list(ch["citations"]) + xc:
+            if c is not None and c.verification.ok and c.cite_id not in seen_ids:
+                seen_ids.add(c.cite_id)
+                cites.append(c)
         rival = ch.get("rival") or (cmp_.entities[1]["name"] if len(cmp_.entities) > 1 else "its rivals")
         sent = _sentence(cmp_, ch)
+        math = math_lines(ch)
+        res = numeric_gate([("sentence", sent)] + [(f"impact.math[{j}]", m) for j, m in enumerate(math)], cites, dmap,
+                           amap)
+        if not res.passed:
+            cmp_.notes.append(f"{ch['channel']}: withheld by numeric gate: "
+                              + "; ".join(f"{u['value']} ({u['reason']})" for u in res.numeric_check["unsupported"][:6]))
+            continue
         peer = _peer(cmp_, ch)
         rec_conf = "medium" if ch["channel"] in ("ira_mfp", "loe_erosion") and len(cites) >= 1 else "low"
         reasons = [f"{len(cites)} verified citation(s)"]
@@ -1082,9 +1146,11 @@ def tie_to_financials(comparison, findings=None):
                   "dOI": {k: round(v * cm) for k, v in d.items()},
                   "bull_bear": {"bull": round(d["bull"]), "bear": round(d["bear"])},
                   "dEPS": None, "dEPS_note": "dEPS = dRev x CM x (1 - t) / D; t and D are company constants held by the FIND scorer (spec 10.1)",
-                  "t_years": ch.get("years_to_event"), "horizon_months": HORIZON_MONTHS, "as_of": cmp_.as_of}
+                  "t_years": ch.get("years_to_event"), "horizon_months": HORIZON_MONTHS, "as_of": cmp_.as_of,
+                  "math_lines": math}
         cid = hashlib.sha256(f"{cmp_.ticker}|product|{ch['channel']}|{cites[0].cite_id}".encode()).hexdigest()[:12]
-        claims.append(ProductClaim(text=sent, citations=cites, id=cid, ticker=cmp_.ticker, channel=ch["channel"],
+        claims.append(ProductClaim(text=sent, citations=cites, derived=dmap, assumptions=amap,
+                                   numeric_check=res.numeric_check, id=cid, ticker=cmp_.ticker, channel=ch["channel"],
                                    direction="negative", impact=impact, peer=peer, confidence=rec_conf, confidence_reasons=reasons,
                                    obscurity_note=OBSCURITY_NOTE, flags=["signal_family=product", "topic=" + "|".join(ch["topic"] if isinstance(ch["topic"], list) else [ch["topic"]]), f"assumed_parameters={bool(ch.get('assumed'))}"]
                                    + (["event_beyond_24_months"] if (ch.get("years_to_event") or 0) > 2 else [])))
@@ -1092,6 +1158,15 @@ def tie_to_financials(comparison, findings=None):
         cmp_.notes.append("tie_to_financials produced no finding: " + "; ".join(uq))
     cmp_.context["unquantified"] = uq
     return claims
+
+
+def math_lines(ch):
+    """The impact lines product.md prints for a channel (gated with the sentence)."""
+    d, cm = ch["dRev"], ch["cm"]
+    r = {k: round(v) for k, v in d.items()}
+    o = {k: round(v * cm) for k, v in d.items()}
+    return [f"math: {ch['formula']}",
+            f"dRev bull/base/bear: ${r['bull']:,} / ${r['base']:,} / ${r['bear']:,}; dOI at CM {cm}: base ${o['base']:,}"]
 
 
 def _sentence(cmp_, ch):

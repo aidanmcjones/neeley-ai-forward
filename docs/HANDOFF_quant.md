@@ -9,7 +9,7 @@ State as of 2026-10-17 evening. Freeze: Sunday 10:30. Spec: `docs/quant_model.md
 | FIND (M, O, E, π, confidence, needle, league) | `agent/needle/quant/{find,impact,obscurity,evidence,league,weights,data,run}.py` | committed; league_v3 at ee7846c, with nine red-team guards (`guards.py`) and a `--nuggets` ingest |
 | Product fine print (five-row side-by-side, tie to numbers, growth limiter, priced-in call) | `agent/needle/quant/{product,product_cli}.py` | committed; uses FIND's IRA formula (`impact.ira_class_rule`) with CM 1.00 |
 | DECIDE (moves, five numbers, selection, kill signals) | `agent/needle/quant/{moves,decide,kill,decide_cli}.py` | committed; 60-month label ramp and M · E fit committed in 9a1932c; run so far only on old LLY rows |
-| Citations (verify ladder, gate, deep links, footnotes, cited-request builder) | `agent/needle/cite/*.py` | committed; transcript speaker and fool.com rules in the ladder (8a94bc0) |
+| Citations (verify ladder, per-number gate, deep links, footnotes, cited-request builder) | `agent/needle/cite/*.py` | committed; transcript speaker and fool.com rules in the ladder (8a94bc0); the numeric gate is wired into run.py (findings_v3 / rejected_v3), decide_cli.py (decide_rejected.md on failure) and product_cli.py (docs/gate_wiring.md) |
 | Courtroom trial | `agent/needle/trial.py` | committed; needs the API key; reads old-shape `findings.jsonl` |
 | Tests | `tests/needle/test_quant_find.py`, `test_decide.py`, `test_product.py`, `test_cite.py`, `test_trust.py` | plus `test_quant_guards.py`; updated with league_v3 |
 
