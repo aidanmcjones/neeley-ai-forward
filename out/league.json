@@ -7,7 +7,7 @@
     "n_rejected": 0,
     "high_confidence": 8,
     "sharpest_needle": "Receivables +23.3% YoY vs revenue +8.6% (FY2025); gap +14.7 pts; peer median -0.3 pts, z +2.1",
-    "needle_id": "AZN-forensics-416286"
+    "needle_id": "AZN-forensics-328835"
   },
   {
     "ticker": "MRK",
@@ -17,7 +17,7 @@
     "n_rejected": 0,
     "high_confidence": 6,
     "sharpest_needle": "Robert Davis deflected a question in 2025Q3 ('not going to get into'); asked: 'Hi everyone, thanks so much. For taking my question today. Just coming back to some of the White House price policy pressures and comments you've made already. I wanted to'",
-    "needle_id": "MRK-calls-482796"
+    "needle_id": "MRK-calls-879939"
   },
   {
     "ticker": "NVO",
@@ -27,7 +27,7 @@
     "n_rejected": 4,
     "high_confidence": 5,
     "sharpest_needle": "New paragraph in risk factors vs FY2024: 'Sustainability reporting risks and controls are assessed annually. Data owners evaluate risks related to sustainability data, while a...'",
-    "needle_id": "NVO-drift-449147"
+    "needle_id": "NVO-drift-742156"
   },
   {
     "ticker": "GILD",
@@ -37,7 +37,7 @@
     "n_rejected": 0,
     "high_confidence": 7,
     "sharpest_needle": "Stronger wording in MD&A vs FY2024; hedges dropped: potential; new figures: 2026, 50: 'Our R&D portfolio includes over 50 clinical-stage programs across our core therapeutic areas. We expect updates in 2026...'",
-    "needle_id": "GILD-drift-136410"
+    "needle_id": "GILD-drift-660739"
   },
   {
     "ticker": "AMGN",
@@ -47,7 +47,7 @@
     "n_rejected": 0,
     "high_confidence": 10,
     "sharpest_needle": "Receivables +17.5% YoY vs revenue +9.5% (Q2 2026); gap +8.0 pts; peer median -0.3 pts, z +1.2",
-    "needle_id": "AMGN-forensics-462452"
+    "needle_id": "AMGN-forensics-004011"
   },
   {
     "ticker": "ABBV",
@@ -57,7 +57,7 @@
     "n_rejected": 0,
     "high_confidence": 11,
     "sharpest_needle": "Effective tax rate (trailing 4q) 27.4% (Q2 2026) vs peers; peer median 19.0%, z +1.6",
-    "needle_id": "ABBV-forensics-829969"
+    "needle_id": "ABBV-forensics-858653"
   },
   {
     "ticker": "JNJ",
@@ -67,7 +67,7 @@
     "n_rejected": 0,
     "high_confidence": 5,
     "sharpest_needle": "Stronger wording in MD&A vs FY2024; hedges dropped: may; new figures: $8.9, 15.8%, 2025: 'The Cardiovascular franchise achieved sales of $8.9 billion in 2025, representing an increase of 15.8% from 2024. Electrophysiology...'",
-    "needle_id": "JNJ-drift-910246"
+    "needle_id": "JNJ-drift-013893"
   },
   {
     "ticker": "BMY",
@@ -77,7 +77,7 @@
     "n_rejected": 0,
     "high_confidence": 2,
     "sharpest_needle": "New paragraph in risk factors vs FY2024 (topics: tariff): 'The U.S. and other countries have recently imposed, and may continue to impose, new tariffs. While pharmaceuticals are...'",
-    "needle_id": "BMY-drift-262275"
+    "needle_id": "BMY-drift-866150"
   },
   {
     "ticker": "PFE",
@@ -87,7 +87,7 @@
     "n_rejected": 0,
     "high_confidence": 2,
     "sharpest_needle": "New paragraph in risk factors vs FY2024 (topics: litigation, ai): 'AI, including machine learning and generative AI, is increasingly being used in the biopharmaceutical and global healthcare industries....'",
-    "needle_id": "PFE-drift-011190"
+    "needle_id": "PFE-drift-496629"
   },
   {
     "ticker": "LLY",
@@ -97,6 +97,6 @@
     "n_rejected": 4,
     "high_confidence": 2,
     "sharpest_needle": "R&D 16.6% of revenue vs 21.4% a year earlier (-4.8 pts) (Q2 2026); peer median 18.6%, z -0.3",
-    "needle_id": "LLY-forensics-910358"
+    "needle_id": "LLY-forensics-023227"
   }
 ]

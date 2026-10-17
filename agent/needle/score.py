@@ -13,6 +13,7 @@ S = I_norm x P x T x O x E x (1 + 0.25 x max(Z, 0)) x (1 + 0.25 x D)
 Findings with E = 0 go to out/<T>/rejected.jsonl: the live "AI caught" log.
 """
 
+import hashlib
 import json
 import math
 import re
@@ -152,6 +153,11 @@ def _impact(sig, p, ttm_oi):
     return None, "no direct dollar path; scored on a stated proxy of 2% of operating income"
 
 
+def _stable_id(*parts):
+    """Six digits that are the same on every run (Python's hash() is salted per process, so ids churned)."""
+    return f"{int(hashlib.sha256('|'.join(parts).encode()).hexdigest(), 16) % 10**6:06d}"
+
+
 def score_signal(sig, docs, p, ttm_oi, hits):
     E, verdicts = _recheck(sig, docs)
     dollars, formula = _impact(sig, p, ttm_oi)
@@ -174,7 +180,7 @@ def score_signal(sig, docs, p, ttm_oi, hits):
            "medium" if E >= 0.6 else "low"
     status = "verified" if E == 1.0 else "needs_human" if E >= 0.3 else "rejected"
     return Finding(
-        id=f"{sig.ticker}-{sig.detector}-{abs(hash((sig.kind, sig.detail))) % 10**6:06d}", ticker=sig.ticker,
+        id=f"{sig.ticker}-{sig.detector}-{_stable_id(sig.kind, sig.detail)}", ticker=sig.ticker,
         finding=sig.detail, signal_kind=sig.kind, evidence=sig.evidence,
         impact={"dollars": dollars, "formula": formula, "i_norm": round(i_norm, 4), "ttm_operating_income": ttm_oi},
         peer={"metric_value": sig.value, "peer_median": sig.peer_median, "z": sig.peer_z},

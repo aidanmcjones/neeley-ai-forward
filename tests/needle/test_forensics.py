@@ -68,3 +68,10 @@ def test_needle_never_undirected_mdna_or_label():
         n = score.sharpest_needle(score.score_ticker(t)[0])
         assert n is None or (n.signal_kind not in score.NEEDS_DIRECTION and not n.signal_kind.startswith(
             ("label_", "dosing_", "boxed_")))
+
+
+def test_finding_ids_stable_across_processes():
+    import subprocess, sys
+    code = "from agent.needle import score; print(score._stable_id('a', 'b'))"
+    ids = {subprocess.run([sys.executable, "-c", code], capture_output=True, text=True).stdout for _ in range(2)}
+    assert len(ids) == 1
