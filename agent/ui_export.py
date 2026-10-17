@@ -101,7 +101,7 @@ LIST_OR_NET = {
 # stance buckets: which CEO option a finding kind argues for (first match wins)
 OPTION_RULES = [
     ("Attack", {"label_broader", "dosing_advantage", "boxed_warning_advantage"}, set()),
-    ("Reprice", {"ira_exposed", "spend_per_claim_gap"}, {"ira", "mfn", "gtn", "pricing", "340b", "tariff"}),
+    ("Reprice", {"ira_exposed", "spend_per_claim_gap", "ira_selected", "mfn_medicaid"}, {"ira", "mfn", "gtn", "pricing", "340b", "tariff"}),
     ("Partner-or-buy", {"exclusivity_earlier", "label_narrower", "dosing_burden", "boxed_warning_disadvantage",
                         "trial_terminated", "impairment", "faers_serious_rising", "demand_divergence"}, set()),
     ("Defend", None, set()),  # everything else: balance-sheet, margin, disclosure-drift and call findings
@@ -128,6 +128,7 @@ LEADS = [  # plain-words lead for the headline, by signal kind
     (("boxed_warning_advantage",), "A rival carries a boxed warning it does not"),
     (("exclusivity",), "Exclusivity ends earlier than rivals'"),
     (("ira",), "Medicare price setting reaches this product"),
+    (("mfn",), "The MFN agreement reaches Medicaid"),
     (("qa_",), "Management deflected an analyst question"),
     (("risk_", "mdna_"), "The filing wording changed"),
     (("trial",), "A late-stage trial was stopped"),
@@ -142,6 +143,7 @@ PROVE_WRONG = [  # early signals that would show the call is wrong, by kind
     (("impairment",), "No further impairment on the same asset in the next two filings."),
     (("label", "dosing", "boxed"), "A new DailyMed label version for the product or a rival closes the gap within 12 months."),
     (("exclusivity",), "A settlement, court ruling or new patent listing moves the generic or biosimilar entry date."),
+    (("mfn",), "The company's own disclosure puts the Medicaid MFN cost well below this estimate in the next 10-Q."),
     (("ira", "spend_per_claim"), "CMS's next selected-drug list or MFP schedule leaves the product's exposure unchanged."),
     (("qa_", "call_topic"), "Management gives the product-level number analysts asked for on the next earnings call."),
     (("risk_", "mdna_"), "The next 10-K drops or softens the new wording without a matching hit to results."),
@@ -291,7 +293,9 @@ def impact_txt(f, proxy=False):
     imp = f["impact"]
     if imp.get("suspect"):
         return " " + WITHHELD
-    if imp.get("formula") and (imp.get("dollars") or proxy):
+    if imp.get("placeholder"):
+        return f" ({imp.get('suspect_note')})" if proxy else ""
+    if imp.get("formula") and (imp.get("dollars") or imp.get("quantified") or proxy):
         return f" Impact: {imp['formula']}."
     return ""
 
@@ -515,6 +519,392 @@ def build_findings(raw, side, ticker=""):
     return out
 
 
+# ---------------------------------------------------------------- v2 engine output (agent.needle.quant)
+PLACEHOLDER_NOTE = "impact is the generic 3%-of-revenue placeholder; no page-verified number backs it, so it is not summed"
+
+
+def withhold_reason(c):
+    st = (c.get("verification") or {}).get("status")
+    if "bloomberg" in (c.get("license") or "").lower():
+        return "Bloomberg-licensed source: quote and links withheld from the public export"
+    if st == "unverified":
+        return "citation did not verify against its page: quote and links withheld" + \
+               (f" ({c['confidence_note']})" if c.get("confidence_note") else "")
+    return None
+
+
+def _resolve_doc(cid):
+    """Corpus or moat page file for a v2 canonical_id, or None."""
+    if cid in pages.manifest():
+        return cid
+    return None
+
+
+def _moat_pages(cid, page):
+    """Page text for ids the corpus manifest does not know (policy_gov:..., moat paths)."""
+    if ":" not in cid:
+        return None
+    pre, rel = cid.split(":", 1)
+    for base in (MOAT / rel, MOAT / pre / rel, ROOT / "data" / "corpus" / rel, MOAT / "companies" / pre / rel):
+        if base.exists() and base.suffix == ".md":
+            key = str(base)
+            if key not in _PAGES:
+                try:
+                    _PAGES[key] = pages.parse(base)[0]
+                except Exception:
+                    _PAGES[key] = {}
+            pg = _PAGES[key].get(page)
+            return pg[1] if pg else None
+    return None
+
+
+def citation_evidence(c, side):
+    """One v2 Citation -> evidence item (contract keys plus v2 keys); public withholding rule applied."""
+    cid = c.get("canonical_id") or ""
+    why = withhold_reason(c)
+    ev = {"doc_id": cid, "page": c.get("page"), "printed": c.get("folio") or "",
+          "citation": f"{c.get('doc_title')}, {c.get('location')}" + (
+              f" (file page {c['page']})" if c.get("page") and c.get("page_scheme") == "marker" else ""),
+          "quote": "" if why else (c.get("quote") or ""), "speaker": c.get("speaker") or "", "figures": [],
+          "url": None if why else (c.get("source_url") or None), "deep_link": "" if why else (c.get("deep_link") or ""),
+          "viewer_link": "" if why else (c.get("viewer_link") or ""),
+          "doc_type": c.get("raw_doc_type") or c.get("doc_type") or None, "cite_id": c.get("cite_id"),
+          "doc_title": c.get("doc_title"), "period": c.get("period"), "location": c.get("location"),
+          "claim_type": c.get("claim_type"), "value": c.get("value"), "unit": c.get("unit"),
+          "license": c.get("license") or None, "verification": c.get("verification"),
+          "confidence_note": c.get("confidence_note") or "", "withheld": bool(why), "withheld_reason": why}
+    row = pages.manifest().get(cid) or {}
+    ev["source_quality"] = row.get("source_quality") or ("official" if (row or cid.startswith(("drug:", "policy_gov:", "xbrl:"))) else None)
+    g, gwhy = grade_for(cid)
+    ev["grade"] = g
+    if gwhy:
+        ev["grade_reason"] = gwhy
+    ev["doc_label"] = c.get("doc_title") or cid
+    if why:
+        ev["excerpt"] = {"before": "", "match": "", "after": "", "located": False, "how": None,
+                         "scope": "withheld", "withheld": True}
+    elif c.get("page_scheme") in ("marker", "section") and c.get("page") is not None:
+        if cid.startswith("drug:") or _resolve_doc(cid):
+            ev["excerpt"] = excerpt({"doc_id": cid, "page": c["page"], "quote": c.get("quote")}, side)
+        else:
+            text = _moat_pages(cid, c["page"])
+            hit = locate(text, c.get("quote") or "") if text else None
+            if hit:
+                a, b, how = hit
+                ev["excerpt"] = {"before": text[max(0, a - side):a], "match": text[a:b], "after": text[b:b + side],
+                                 "located": True, "how": how, "scope": "page"}
+            else:
+                ev["excerpt"] = {"before": (text or "")[: 2 * side], "match": "", "after": "", "located": False,
+                                 "how": None, "scope": "page not resolvable locally" if not text else "page (quote not located)"}
+    else:
+        ev["excerpt"] = {"before": "", "match": "", "after": "", "located": False, "how": None,
+                         "scope": "data row (no page)"}
+    return ev
+
+
+def _usd(x, cur):
+    return None if x is None or cur != "USD" else round(x * 1e6, 2)
+
+
+def build_findings_v2(raw, side, ticker, lg, v1):
+    """v2 rows -> the same finding shape the v1 path exports, plus v2 keys."""
+    top = max([f.get("S") or 0 for f in raw] or [0])
+    const = (lg or {}).get("constants") or {}
+    cur = const.get("currency") or "USD"
+    rev = const.get("Rev_TTM")
+    needle_id = ((lg or {}).get("needle") or {}).get("id")
+    status = ((lg or {}).get("needle_status") or "").replace(" ", "_")
+    company_comparable = (lg or {}).get("comparable", True)
+    v1i = {(r["signal_kind"], r["finding"]): r for r in v1}
+    seen, out = {}, []
+    for f in raw:
+        seen[f["id"]] = seen.get(f["id"], 0) + 1
+        uid = f["id"] if seen[f["id"]] == 1 else f"{f['id']}-d{seen[f['id']]}"
+        imp, vec, peer = f.get("impact") or {}, f.get("vector") or {}, f.get("peer") or {}
+        notes = f.get("flags") or []
+        placeholder = any("generic anchor placeholder" in x for x in notes)
+        d_oi = (imp.get("d_oi") or {})
+        base = d_oi.get("base")
+        suspect = bool(base and rev and abs(base) > abs(rev))
+        flags = []
+        if placeholder:
+            flags.append("generic_placeholder")
+        if f["id"] == needle_id and status and status != "strict":
+            flags.append("provisional")
+        if not company_comparable or any("not league-comparable" in x or "not converted" in x for x in notes):
+            flags.append("not_league_comparable")
+        old = v1i.get((f["signal_kind"], f["sentence"])) or {}
+        ov = old.get("vector") or {}
+        a, h = vec.get("a"), vec.get("h")
+        quiet = (a == 0 and h == 0)
+        onote = (f"not in the earnings-release headline and not asked on calls; {vec.get('a_source')}" if quiet else
+                 f"raised: headline h {h if h is not None else 'n/a'}, analyst attention a "
+                 f"{a if a is not None else 'n/a'}; {vec.get('a_source')}")
+        comparable, basis, pnote = peer_basis(f["signal_kind"], f["sentence"], {"metric_value": peer.get("metric_value"),
+                                                                             "peer_median": peer.get("peer_median")})
+        cits = f.get("citations") or []
+        paged = [c for c in cits if c.get("page_scheme") in ("marker", "section")]
+        lic = [c for c in cits if c not in paged and (c.get("license") or "")]
+        data = [c for c in cits if c not in paged and c not in lic]
+        evid = [citation_evidence(c, side) for c in (paged or data)]
+        out.append({
+            "id": uid, "source_id": f["id"], "finding": plain(f["sentence"]), "finding_raw": f["sentence"],
+            "signal_kind": f["signal_kind"], "signal_family": f.get("signal_family"), "has_detector": f.get("has_detector"),
+            "detector": f.get("detector") or detector_of(f), "block": f.get("block"), "channel": f.get("channel"),
+            "direction": f.get("direction"),
+            "score": f.get("S"), "score_norm": round((f.get("S") or 0) / top, 4) if top else None,
+            "old_score": f.get("old_S"),
+            "confidence": (f.get("confidence") or "").lower(), "confidence_reasons": f.get("confidence_reasons") or [],
+            "verdict": "verified", "reason": "", "flags": flags, "flag_notes": notes,
+            "needle_eligible": f.get("needle_eligible"),
+            "impact": {"formula": imp.get("formula"), "dollars": _usd(base, cur),
+                       "base": _usd(base, cur), "bear": _usd(d_oi.get("bear"), cur), "bull": _usd(d_oi.get("bull"), cur),
+                       "line": imp.get("channel"), "eps": (imp.get("d_eps") or {}).get("base"),
+                       "currency": cur, "units": f"{cur} millions (d_rev, d_oi)", "d_rev": imp.get("d_rev"),
+                       "d_oi": d_oi, "d_eps": imp.get("d_eps"), "quantified": imp.get("quantified"),
+                       "adverse": imp.get("adverse"), "impact_flags": imp.get("flags") or [],
+                       "placeholder": placeholder, "suspect": suspect,
+                       "excluded": bool(suspect or placeholder or cur != "USD"),
+                       "suspect_note": ("impact exceeds trailing revenue; left out of stance dollars" if suspect else
+                                        PLACEHOLDER_NOTE if placeholder else None)},
+            "peer": {"metric_value": peer.get("metric_value"), "peer_median": peer.get("peer_median"),
+                     "z": peer.get("peer_z"), "rival": peer.get("rival"), "analogs": peer.get("analogs"),
+                     "note": pnote, "comparable": comparable, "basis": basis},
+            "vector": {"I_norm": ov.get("I_norm"), "P": vec.get("pi"), "T": ov.get("T"), "Z": peer.get("peer_z"),
+                       "D": ov.get("D"), "O": vec.get("O"), "E": vec.get("E"), "obscurity_note": onote,
+                       "topics": vec.get("topics") or [], "prior": ov.get("prior"),
+                       "signal_family": f.get("signal_family"), "has_detector": f.get("has_detector"),
+                       "v2": {"M": vec.get("M"), "O": vec.get("O"), "E": vec.get("E"), "pi": vec.get("pi"),
+                              "S": f.get("S"), "old_S": f.get("old_S"),
+                              **{k: vec.get(k) for k in ("z", "h", "a", "c", "s", "H", "age_months", "disclosed",
+                                                         "E_pages", "n_ind", "pi_route", "a_source", "sigma_EPS",
+                                                         "sigma_currency", "dEPS_base", "headline_doc")}}},
+            "hit_rate": {}, "outside": {},
+            "evidence": evid,
+            "data_citations": [citation_evidence(c, side) for c in data] if paged else [],
+            "licensed_inputs": {"count": len(lic), "license": sorted({c["license"] for c in lic}),
+                                "sources": sorted({c.get("doc_title") or c.get("canonical_id") for c in lic}),
+                                "note": "licensed data rows (I/B/E/S via WRDS) used as model inputs; values not exported"} if lic else None,
+            "external_sources": [],
+        })
+    out.sort(key=lambda x: -(x["score"] or 0))
+    return out
+
+
+def rejected_v2(rows):
+    out = []
+    for r in rows:
+        cits = [c for c in r.get("citations") or [] if c.get("page_scheme") in ("marker", "section")]
+        out.append({"finding": plain(r.get("sentence")), "finding_raw": r.get("sentence"), "id": r.get("id"),
+                    "signal_kind": r.get("signal_kind"), "verdict": "rejected",
+                    "reason": "withheld by the v2 evidence gate (E = 0: no page-verified citation). "
+                              + "; ".join(x for x in r.get("confidence_reasons") or [] if "fails" in x or "<" in x),
+                    "evidence": [{"doc_id": c.get("canonical_id"), "page": c.get("page"), "doc_title": c.get("doc_title"),
+                                  "location": c.get("location"), "speaker": c.get("speaker") or "",
+                                  "quote": "" if withhold_reason(c) else c.get("quote"),
+                                  "withheld": bool(withhold_reason(c)), "withheld_reason": withhold_reason(c),
+                                  "verification": c.get("verification")} for c in cits]})
+    return out
+
+
+# ---------------------------------------------------------------- v2 product fine print (agent.needle.quant.product)
+def cell_cite(c, side=400):
+    """Compact public citation for a product/decide cell (same withholding rule as findings)."""
+    ev = citation_evidence(c, side)
+    keep = ("doc_id", "page", "printed", "citation", "quote", "speaker", "url", "deep_link", "viewer_link", "doc_type",
+            "cite_id", "doc_title", "location", "claim_type", "value", "unit", "verification", "confidence_note",
+            "withheld", "withheld_reason", "excerpt", "license")
+    return {k: ev.get(k) for k in keep}
+
+
+def _cite_source(cell):
+    cs = cell.get("citations") or []
+    if cs:
+        c = cs[0]
+        why = withhold_reason(c)
+        return f"{c.get('doc_title')}, {c.get('location')}" + (f" (citation withheld: {why})" if why else "")
+    refs = cell.get("refs") or []
+    if refs:
+        return "; ".join(f"{r.get('file')} [{r.get('key')}]" for r in refs) + " (table ref, no page citation)"
+    return None
+
+
+def product_v2(ticker, slug):
+    """out/<T>/product_<slug>.json -> labels.v2[slug] (public rule applied), or None."""
+    d = read_json(OUT / ticker / f"product_{slug}.json")
+    if not d:
+        return None
+    cmp_ = d.get("comparison") or {}
+    ents = cmp_.get("entities") or []
+    rows = {}
+    for row, cells in (cmp_.get("rows") or {}).items():
+        rows[row] = {}
+        for ent in ents:
+            cell = (cells or {}).get(ent["name"])
+            if cell is None:
+                continue
+            rows[row][ent["name"]] = {"slug": ent.get("slug"), "value": plain(cell.get("value")) if isinstance(cell.get("value"), str) else cell.get("value"),
+                                      "value_raw": cell.get("value"), "detail": clean(cell.get("detail")),
+                                      "citations": [cell_cite(c) for c in cell.get("citations") or []],
+                                      "refs": cell.get("refs") or [], "empty_reason": cell.get("empty_reason") or "",
+                                      "source": _cite_source(cell)}
+    fnd = []
+    for f in d.get("findings") or []:
+        imp = f.get("impact") or {}
+        fnd.append({"id": f.get("id"), "finding": plain(f.get("sentence")), "finding_raw": f.get("sentence"),
+                    "channel": f.get("channel"), "direction": f.get("direction"),
+                    "confidence": (f.get("confidence") or "").lower(), "confidence_reasons": f.get("confidence_reasons"),
+                    "impact": {"formula": imp.get("formula"), "dRev": imp.get("dRev"), "dOI": imp.get("dOI"),
+                               "units": "USD", "CM": imp.get("CM")},
+                    "peer": f.get("peer"), "flags": f.get("flags"), "obscurity_note": f.get("obscurity_note"),
+                    "evidence": [cell_cite(c) for c in f.get("citations") or []]})
+    gl = d.get("growth_limiter") or {}
+    return {"product": slug, "entities": ents, "row_titles": cmp_.get("row_titles"), "rows": rows,
+            "findings": fnd, "notes": cmp_.get("notes") or [], "context": clean(cmp_.get("context")),
+            "growth_limiter": {"sentence": plain(gl.get("sentence")), "sentence_raw": gl.get("sentence"),
+                               "priced_in": gl.get("priced_in"), "reasons": gl.get("reasons") or [],
+                               "citations": [cell_cite(c) for c in gl.get("citations") or []]} if gl else None,
+            "uncited_cells": d.get("uncited_cells") or [], "empty_cells": d.get("empty_cells") or [],
+            "source_file": f"out/{ticker}/product_{slug}.json"}
+
+
+def _v2_values(v2, slug):
+    """{field: {value, source, citation?}} for one slug from a product_v2 block (first entity with that slug)."""
+    out = {}
+    for row, cells in (v2.get("rows") or {}).items():
+        cell = next((c for c in cells.values() if c.get("slug") == slug), None)
+        if not cell or cell.get("value") in (None, ""):
+            continue
+        det = cell.get("detail") or {}
+        src = cell.get("source")
+        cit = (cell.get("citations") or [None])[0]
+
+        def tref(*names):
+            rs = [r for r in cell.get("refs") or [] if any(n in (r.get("file") or "") for n in names)]
+            return "; ".join(f"{r['file']} [{r.get('key')}]" for r in rs) + " (table ref, no page citation)" if rs else None
+
+        def put(field, value, table=None, **kw):
+            if value is not None:
+                t = tref(*table) if table else None
+                out[field] = {"value": value, "source": t or src, "citation": None if t else cit, "from": "product_v2", **kw}
+        if row == "approved_uses":
+            put("indications_count", det.get("count"))
+            put("indications", det.get("names"))
+        elif row == "safety":
+            bw = det.get("boxed_warning")
+            put("boxed_warning", (f"Yes: {bw.get('heading')}" if isinstance(bw, dict) else ("Yes" if bw else "No")) if "boxed_warning" in det else None)
+            put("rems", det.get("rems"))
+        elif row == "dosing":
+            put("dosing_frequency_per_year", det.get("doses_per_year"), text=det.get("frequency"))
+            put("route", det.get("route"))
+        elif row == "timeline":
+            cs = det.get("company_stated") or {}
+            put("exclusivity_company_stated", cs.get("us_loe"), basis=cs.get("basis"), stated_in=cs.get("source"))
+            put("exclusivity_fda_estimate", det.get("protection_end_regulatory"), table=("orange_book", "purple_book"))
+        elif row == "pricing":
+            g = det.get("gtn_exposure") or {}
+            put("gtn_exposure_call", g.get("exposure_call"), table=("gtn_exposure",), confidence=g.get("confidence"))
+    return out
+
+
+# fields where the exporter's own rule wins over a v2 cell (CMS MFP file rule, see mfp_cell)
+KEEP_EXPORTER = {"ira_status", "mfp_per_30day", "mfp_latest_per_30day", "partd_spend_latest", "generic_or_biosimilar_status"}
+
+
+def prefer_v2(comparison_rows, v2_by_product):
+    n = 0
+    for block in comparison_rows:
+        v2 = v2_by_product.get(block["product"])
+        if not v2:
+            continue
+        for slug in [block["product"], *block["rivals"]]:
+            vals = _v2_values(v2, slug)
+            for r in block["rows"]:
+                if r["field"] in vals and r["field"] not in KEEP_EXPORTER:
+                    old = r["values"].get(slug) or {}
+                    r["values"][slug] = vals[r["field"]] | {"v1_value": old.get("value"), "v1_source": old.get("source")}
+                    n += 1
+    return n
+
+
+# ---------------------------------------------------------------- v2 CEO move (agent.needle.quant.decide)
+FIVE = ("ev", "car", "payback_month", "spread", "mcda")
+
+
+def _move_row(m):
+    return {"name": m.get("name"), "code": m.get("code"), "template": m.get("template_name"), "status": m.get("status"),
+            "rank": m.get("rank"), "ev": m.get("ev"), "ev_by_scenario": m.get("ev_by_scenario"),
+            "cash_at_risk": m.get("car"), "payback_month": m.get("payback_month"), "spread": m.get("spread"),
+            "mcda": m.get("mcda"), "mcda_parts": m.get("mcda_parts"), "budget": m.get("budget"),
+            "binding_reason": m.get("binding_reason") or "", "why": m.get("why"), "flags": m.get("flags") or [],
+            "finding_ids": m.get("finding_ids") or [], "addressed": m.get("addressed") or [],
+            "kill_signal_ids": m.get("kill_signals") or [], "p_alive_end": m.get("p_alive_end"),
+            "notes": m.get("notes") or [], "units": "USD millions"}
+
+
+def apply_decide(ticker, stance, findings, v1=()):
+    d = read_json(OUT / ticker / "decide.json")
+    moves_file = ROOT / "docs" / "examples" / f"moves_{ticker}.json"
+    if not d or not d.get("chosen"):
+        stance["note"] += (f" No CEO-move valuation: no docs/examples/moves_{ticker}.json moves file, so the stance "
+                           "stays templated.") if not moves_file.exists() else " decide.json missing; stance stays templated."
+        return stance
+    ids = {f["id"]: f for f in findings} | {f.get("source_id"): f for f in findings}
+    by_text = {(f["signal_kind"], f.get("finding_raw")): f for f in findings}
+    for r in v1:  # moves files may name old-engine finding ids; map them by kind + sentence
+        hit = by_text.get((r.get("signal_kind"), r.get("finding")))
+        if hit and r.get("id") not in ids:
+            ids[r["id"]] = hit
+    ch, rej = d["chosen"], d.get("rejected") or []
+    moves = [ch, *rej]
+    total = sum(max(m.get("ev") or 0, 0) for m in moves)
+    m_ = lambda x: "n/a" if x is None else f"${x:,.1f}M"
+    foot, seen = [], {}
+    for m in moves:
+        for cl in m.get("claims") or []:
+            for c in cl.get("citations") or []:
+                if c.get("cite_id") not in seen:
+                    seen[c.get("cite_id")] = len(foot) + 1
+                    foot.append({"n": len(foot) + 1, "move": m.get("name"), "claim": cl.get("text"), "citation": cell_cite(c)})
+    stance["template"] = {k: stance.get(k) for k in ("headline", "recommended", "decision_needed", "options", "alternatives", "prove_wrong")}
+    stance["headline"] = f"{ch['name']}: {ch.get('why') or ''}".strip().rstrip(":")
+    stance["recommended"] = ch["name"]
+    budget = (ch.get("budget") or {}).get("total 24-month committed outflow")
+    stance["decision_needed"] = (f"Approve '{ch['name']}': {m_(budget)} committed over 24 months, cash at risk "
+                                 f"{m_(ch.get('car'))} against {m_(d.get('cash_and_equivalents'))} cash and equivalents; "
+                                 f"expected value {m_(ch.get('ev'))}, payback month {ch.get('payback_month')}.")
+    stance["options"] = [{"name": m["name"], "dollars": round((m.get("ev") or 0) * 1e6, 0),
+                          "share": round(max(m.get("ev") or 0, 0) / total, 4) if total else None,
+                          "rationale": (f"{m.get('why') or ''} EV {m_(m.get('ev'))} (bear {m_((m.get('ev_by_scenario') or {}).get('bear'))}, "
+                                        f"bull {m_((m.get('ev_by_scenario') or {}).get('bull'))}), cash at risk {m_(m.get('car'))}, "
+                                        f"payback month {m.get('payback_month')}, scenario spread {m_(m.get('spread'))}, "
+                                        f"MCDA {m.get('mcda'):.3f}. Dollars = expected value from agent.needle.quant.decide."
+                                        + (f" Not chosen: {m['binding_reason']}." if m.get("binding_reason") else "")).strip(),
+                          "status": m.get("status"), "code": m.get("code")} for m in moves]
+    stance["alternatives"] = [{"name": m["name"], "why_rejected": m.get("binding_reason") or "lower expected value",
+                               **{k: m.get(k) for k in FIVE}} for m in rej[:2]]
+    ks = d.get("kill_signals") or []
+    stance["kill_signals"] = ks
+    pw = [f"{k.get('signal')}: {k.get('threshold')} by month {k.get('check_month')} ({k.get('source')}; {k.get('lag')}); "
+          f"action: {k.get('action')}" for k in ks]
+    stance["prove_wrong"] = (pw + [x for x in stance["template"]["prove_wrong"] if x not in pw])[:max(3, len(pw))]
+    cites = [{"finding_id": ids[i]["id"], "i": 0} for i in ch.get("addressed") or ch.get("finding_ids") or []
+             if i in ids and ids[i]["evidence"]]
+    stance["decide"] = {"as_of": d.get("as_of"), "cash_and_equivalents": d.get("cash_and_equivalents"),
+                        "units": "USD millions", "moves": [_move_row(m) for m in moves],
+                        "ranked": d.get("ranked"), "selection_notes": d.get("selection_notes") or [],
+                        "footnotes": foot, "finding_cites": cites,
+                        "unmapped_finding_ids": [i for i in ch.get("finding_ids") or [] if i not in ids],
+                        "source_files": [f"out/{ticker}/decide.json", f"docs/examples/moves_{ticker}.json"]}
+    stance["generated_by"] = "decide_v2"
+    stance["note"] = ("CEO move chosen by agent.needle.quant.decide over the moves in docs/examples/moves_"
+                      f"{ticker}.json (team inputs, flagged as assumptions): highest expected value after the cash "
+                      "feasibility gate, MCDA only when EV intervals overlap. External benchmark inputs are unverified "
+                      "and their quotes are withheld under the public rule. Memo points stay drafted from verified "
+                      "findings by rules; a model-written memo requires ANTHROPIC_API_KEY.")
+    return stance
+
+
 def cites_of(f, n=2):
     return [{"finding_id": f["id"], "i": i} for i in range(min(n, len(f["evidence"])))]
 
@@ -711,12 +1101,27 @@ def option_of(f):
     return "Defend"
 
 
+def _counted(f):
+    return bool(f["impact"].get("dollars")) and not f["impact"].get("excluded", f["impact"]["suspect"])
+
+
+def channel_dollars(fs):
+    """Dollars an option protects: v1 sums stated impacts; v2 takes the largest impact per impact channel and sums
+    across channels, because findings on one channel (e.g. the 3%-of-revenue anchor) restate the same dollars."""
+    by = {}
+    for f in fs:
+        if _counted(f):
+            ch = f["impact"].get("line") if f["impact"].get("d_oi") is not None else f["id"]
+            by[ch] = max(by.get(ch, 0), f["impact"]["dollars"], key=abs)
+    return list(by.values())
+
+
 def build_stance(ticker, findings, needle, sealed):
     ver = [f for f in findings if f["verdict"] == "verified"]
     opts = {}
     for name, *_ in OPTION_RULES:
         fs = [f for f in ver if option_of(f) == name]
-        dol = [f["impact"]["dollars"] for f in fs if f["impact"].get("dollars") and not f["impact"]["suspect"]]
+        dol = channel_dollars(fs)
         opts[name] = {"name": name, "fs": fs, "dollars": round(sum(dol), 0) if dol else None,
                       "score_sum": round(sum(f["score"] or 0 for f in fs), 6)}
     total = sum(o["dollars"] or 0 for o in opts.values())
@@ -724,16 +1129,24 @@ def build_stance(ticker, findings, needle, sealed):
     options = []
     for name in ("Defend", "Attack", "Reprice", "Partner-or-buy"):
         o = opts[name]
-        with_d = [f for f in o["fs"] if f["impact"].get("dollars") and not f["impact"]["suspect"]]
+        with_d = [f for f in o["fs"] if _counted(f)]
+        n_fx = sum(1 for f in o["fs"] if f["impact"].get("currency") not in (None, "USD"))
+        n_ph = sum(1 for f in o["fs"] if f["impact"].get("placeholder"))
         sus = [f for f in o["fs"] if f["impact"]["suspect"]]
         if o["dollars"]:
-            rule = (f"Sum of impact dollars of the {len(with_d)} verified finding(s) in this bucket that state one: "
-                    + "; ".join(f"{f['id']} {money(f['impact']['dollars'])}" for f in with_d)
+            rule = (("Largest impact per impact channel, summed across channels" if any(f["impact"].get("d_oi") is not None for f in with_d)
+                     else "Sum of impact dollars") + f", over the {len(with_d)} verified finding(s) in this bucket that state one: "
+                    + "; ".join(f"{f['id']} {money(f['impact']['dollars'])}" for f in with_d[:8])
+                    + (f"; and {len(with_d) - 8} more" if len(with_d) > 8 else "")
                     + f". Share = this sum / {money(total)} across all four options.")
         else:
             rule = (f"{len(o['fs'])} verified finding(s) argue for this option but none states a direct dollar path "
-                    "(their impact is a stated proxy of operating income), so no dollar figure is shown; "
+                    "that can be summed (proxy, placeholder or unconverted currency), so no dollar figure is shown; "
                     f"ranked by summed materiality score {o['score_sum']}.")
+        if n_fx:
+            rule += f" {n_fx} finding(s) are in the reporting currency ({o['fs'][0]['impact'].get('currency')}) and are not converted to USD."
+        if n_ph:
+            rule += f" {n_ph} finding(s) carry only the generic 3%-of-revenue placeholder impact and are not summed."
         if sus:
             rule += (" Left out as suspect (impact above trailing operating income): "
                      + "; ".join(f"{f['id']} {WITHHELD}" for f in sus) + ".")
@@ -851,7 +1264,7 @@ def build_questions(ticker, findings, needle, stance, rejected, cset, forces_row
     for f in ver:
         tops = set(f["vector"].get("topics") or [])
         for k in force:
-            if k in tops or (k == "ira" and "ira" in f["signal_kind"]):
+            if k in tops or k in f["signal_kind"] or f.get("channel") == k:
                 force[k].append(f)
     hardest = max(force, key=lambda k: (len(force[k]), sum(f["score"] or 0 for f in force[k])))
     pick = sorted({f["id"]: f for k in force for f in force[k]}.values(), key=lambda f: -(f["score"] or 0))
@@ -869,19 +1282,27 @@ def build_questions(ticker, findings, needle, stance, rejected, cset, forces_row
                empty="No verified finding is tagged with IRA, MFN or tariff; see the forces table."))
 
     quiet = [f for f in ver if f["detector"] == "calls"][:2] + \
-            [f for f in ver if "only in filings" in (f["vector"].get("obscurity_note") or "") and f["detector"] != "calls"][:2]
+            [f for f in ver if any(x in (f["vector"].get("obscurity_note") or "") for x in ("only in filings", "not asked on calls"))
+             and f["detector"] != "calls"][:2]
     add("What did analysts never ask about?",
         answer(quiet, basis="Call-detector findings (deflections, topic surges) plus the top findings whose obscurity "
                             "note says they appear only in filings or data; topic streaks in never_asked.",
                data_refs=["data/moat/verified/market/never_asked.csv", "data/moat/verified/market/priced_in_scorecard.csv"],
                exhibits=[{"kind": "peer", "ref": f["id"]} for f in quiet if f["peer"].get("peer_median") is not None][:1]))
 
-    rec_fs = [f for f in ver if option_of(f) == stance["recommended"]][:3]
+    dec = stance.get("decide")
+    byid = {f["id"]: f for f in findings}
+    opt = (stance.get("template") or {}).get("recommended") or stance["recommended"]
+    rec_fs = ([byid[c["finding_id"]] for c in dec["finding_cites"]] if dec else []) or \
+             [f for f in ver if option_of(f) == opt][:3]
     add("What would the CEO do and what would prove it wrong?",
         answer(rec_fs, stance=stance["recommended"],
                exhibits=[{"kind": "peer", "ref": f["id"]} for f in rec_fs if f["peer"].get("peer_median") is not None][:1],
-               basis=f"Findings behind the recommended option ({stance['recommended']}); the early warning signals are "
-                     "stance.prove_wrong.", data_refs=["stance"]))
+               basis=(f"Chosen move '{stance['recommended']}' from out/{ticker}/decide.json (EV, cash at risk, payback, "
+                      "spread, MCDA in stance.decide); text is the findings it addresses, or the findings behind the "
+                      f"template option {opt} when none map; kill signals are stance.prove_wrong." if dec else
+                      f"Findings behind the recommended option ({stance['recommended']}); the early warning signals are "
+                      "stance.prove_wrong."), data_refs=["stance"] + ([f"out/{ticker}/decide.json"] if dec else [])))
 
     rej_txt = " ".join(f"Rejected: {plain(r['finding']).rstrip('.')}. Reason: {r.get('reason') or 'n/a'}." for r in rejected[:3])
     nh = [f for f in findings if f["verdict"] == "needs_human"]
@@ -910,30 +1331,54 @@ def build_questions(ticker, findings, needle, stance, rejected, cset, forces_row
 
 
 # ---------------------------------------------------------------- company file
-def company(ticker, league_row, sealed, side):
-    raw = read_jsonl(OUT / ticker / "findings.jsonl")
-    if not raw:
+def company(ticker, league_row, sealed, side, lg2=None):
+    """Company file; prefers v2 engine output (findings_v2.jsonl + league_v2 row), falls back to v1."""
+    raw2 = read_jsonl(OUT / ticker / "findings_v2.jsonl")
+    v1 = read_jsonl(OUT / ticker / "findings.jsonl")
+    if raw2:
+        findings = build_findings_v2(raw2, side, ticker, lg2, v1)
+        needle_id = ((lg2 or {}).get("needle") or {}).get("id")
+        rej_out = rejected_v2(read_jsonl(OUT / ticker / "rejected_v2.jsonl"))
+        engine = "v2"
+    elif v1:
+        findings = build_findings(v1, side, ticker)
+        needle_id = (league_row or {}).get("needle_id")
+        rej_out = None
+        engine = "v1"
+    else:
         return None
-    findings = build_findings(raw, side, ticker)
     byid = {f["id"]: f for f in findings}
-    needle = byid.get((league_row or {}).get("needle_id")) or findings[0]
-    rejected = read_jsonl(OUT / ticker / "rejected.jsonl")
+    needle = byid.get(needle_id) or findings[0]
+    rejected = rej_out if rej_out is not None else read_jsonl(OUT / ticker / "rejected.jsonl")
     cset = CASE_SETS.get(ticker, {})
     slugs = list(dict.fromkeys([s for p, rv in cset.items() for s in [p, *rv]]))
     gtn = [r for r in csv_rows(VER / "pricing" / "gtn_exposure.csv") if r.get("drug") in slugs or r.get("company") == ticker]
     labels = read_json(OUT / ticker / "labels_table.json", {}) or {}
     labels = dict(labels)
     labels["comparison"] = comparison(labels, gtn)
-    stance = build_stance(ticker, findings, needle, sealed)
+    v2p = {}
+    for prod in cset:
+        b = product_v2(ticker, prod)
+        if b:
+            v2p[prod] = b
+    if v2p:
+        labels["v2"] = v2p
+        labels["v2_cells_preferred"] = prefer_v2(labels["comparison"], v2p)
+    PRODUCT_LOG[ticker] = sorted(v2p)
+    stance = apply_decide(ticker, build_stance(ticker, findings, needle, sealed), findings, v1)
     sig_counts = {p.stem.replace("signals_", ""): sum(1 for x in p.read_text().splitlines() if x.strip())
                   for p in sorted((OUT / ticker).glob("signals_*.jsonl"))}
     forces = for_ticker(VER / "policy" / "force_summary.csv", ticker)
     cvg = for_ticker(VER / "market" / "consensus_vs_guidance.csv", ticker)
     return {
-        "ticker": ticker, "name": NAMES.get(ticker, ticker), "needle_id": needle["id"],
+        "ticker": ticker, "name": NAMES.get(ticker, ticker), "needle_id": needle["id"], "engine": engine,
+        "needle_status": ((lg2 or {}).get("needle_status") or "").replace(" ", "_") or None,
+        "league_v2": {k: (lg2 or {}).get(k) for k in ("rank", "L", "top5_sum", "N_eff", "blocks", "largest_share",
+                                                      "n_blocks", "comparable", "company_flags", "tariff_exposure",
+                                                      "old_score", "old_rank", "constants")} if lg2 else None,
         "case_set": cset, "signals_count": sig_counts,
         "findings": findings,
-        "rejected": [{"finding": plain(r.get("finding")), "finding_raw": r.get("finding"), "reason": r.get("reason"), "verdict": r.get("verdict"),
+        "rejected": rej_out if rej_out is not None else [{"finding": plain(r.get("finding")), "finding_raw": r.get("finding"), "reason": r.get("reason"), "verdict": r.get("verdict"),
                       "signal_kind": r.get("signal_kind"), "id": r.get("id"),
                       "evidence": [{k: e.get(k) for k in ("doc_id", "page", "quote", "speaker")} for e in r.get("evidence", [])]}
                      for r in rejected],
@@ -1052,26 +1497,31 @@ def main():
     DEST.mkdir(parents=True, exist_ok=True)
     league = read_json(OUT / "league.json", []) or []
     lrow = {r["ticker"]: r for r in league}
+    league2 = read_json(OUT / "league_v2.json", []) or []
+    l2 = {r["ticker"]: r for r in league2}
     sealed = (read_json(OUT / "predictions" / "sealed_2026Q3.json", {}) or {}).get("predictions", [])
     tickers = list(SHORTLIST) + [t for t in CASE_SETS if t not in SHORTLIST]
     sizes, stats, written = {}, {}, []
     for t in tickers:
-        data = company(t, lrow.get(t), sealed, SIDE)
+        data = company(t, lrow.get(t), sealed, SIDE, l2.get(t))
         if data is None:
             print(f"{t}: no out/{t}/findings.jsonl, no company file")
             continue
         path = DEST / "companies" / f"{t}.json"
         n = write(path, data)
         if n > MAX_COMPANY_BYTES:
-            data = company(t, lrow.get(t), sealed, SIDE_SMALL)
+            data = company(t, lrow.get(t), sealed, SIDE_SMALL, l2.get(t))
             n = write(path, data)
         sizes[f"companies/{t}.json"] = n
         written.append(t)
         evs = [e for f in data["findings"] for e in f["evidence"]]
-        stats[t] = {"findings": len(data["findings"]),
+        stats[t] = {"engine": data["engine"], "findings": len(data["findings"]),
+                    "high_confidence": sum(f["confidence"] == "high" for f in data["findings"]),
+                    "evidence_withheld": sum(bool(e.get("withheld")) for e in evs),
                     "verified": sum(f["verdict"] == "verified" for f in data["findings"]),
                     "rejected": len(data["rejected"]), "evidence": len(evs),
                     "located": sum(e["excerpt"]["located"] for e in evs)}
+        COMPANY_CACHE[t] = data
         print(f"{t}: {stats[t]} {n / 1e6:.2f} MB")
 
     prog, extra = tracker_data()
@@ -1086,10 +1536,12 @@ def main():
             pending.append({"ticker": t, "name": NAMES.get(t, cs.get("registrant", t)), "case_set": cs.get("case_set"),
                             "packs": cs.get("packs"), "has_findings": False,
                             "note": f"onboarded (out/{t}/case_set.json) but no out/{t}/findings.jsonl yet; no company file"})
-    allf = [json.loads(x) for t in written for x in (OUT / t / "findings.jsonl").read_text().splitlines() if x.strip()]
+    allf = [f for t in written for f in COMPANY_CACHE[t]["findings"]]
     meta = {
         "as_of": prog.get("as_of"), "built_at": pd.Timestamp.now(tz="UTC").isoformat(),
-        "default_ticker": league[0]["ticker"] if league else SHORTLIST[0],
+        "default_ticker": (sorted(league2, key=lambda r: r.get("rank") or 99)[0]["ticker"] if league2 else
+                           league[0]["ticker"] if league else SHORTLIST[0]),
+        "engine": "v2" if league2 else "v1",
         "companies": [{"ticker": t, "name": NAMES.get(t, t)} for t in written if t in SHORTLIST],
         "onboarded": onboarded, "onboarding_pending": pending,
         "totals": {"verified": sum(f["verdict"] == "verified" for f in allf),
@@ -1104,9 +1556,13 @@ def main():
                  "ai_wrong_count": len(read_jsonl(MOAT / "verify" / "ai_wrong.jsonl"))},
         "case_sets": CASE_SETS, "verifier_rules": VERIFIER_RULES, "limits": lims,
         "evidence_located": stats, "regenerate": REGEN,
+        "v2_status": {"decide_v2": [t for t in written if COMPANY_CACHE[t]["stance"].get("generated_by") == "decide_v2"],
+                      "products_v2": PRODUCT_LOG,
+                      "products_missing": {t: sorted(set(CASE_SETS.get(t, {})) - set(PRODUCT_LOG.get(t, [])))
+                                           for t in CASE_SETS if set(CASE_SETS.get(t, {})) - set(PRODUCT_LOG.get(t, []))}},
     }
     sizes["meta.json"] = write(DEST / "meta.json", meta)
-    sizes["league.json"] = write(DEST / "league.json",
+    sizes["league.json"] = write(DEST / "league.json", league_v2_rows(league2) if league2 else
                                  [r | {"name": NAMES.get(r["ticker"], r["ticker"]),
                                        "sharpest_needle": plain(r.get("sharpest_needle")),
                                        "sharpest_needle_raw": r.get("sharpest_needle")} for r in
@@ -1114,6 +1570,31 @@ def main():
     sizes["proof.json"] = write(DEST / "proof.json", proof(VERIFIER_RULES, lims))
     write_readme(sizes, stats, meta)
     print(f"total {sum(sizes.values()) / 1e6:.2f} MB -> {DEST}")
+
+
+COMPANY_CACHE = {}
+PRODUCT_LOG = {}
+
+
+def league_v2_rows(league2):
+    """league_v2.json -> the league.json contract (score = L), plus v2 keys and needle_status."""
+    out = []
+    for r in sorted(league2, key=lambda r: r.get("rank") or 99):
+        t = r["ticker"]
+        fs = (COMPANY_CACHE.get(t) or {}).get("findings", [])
+        nd = r.get("needle") or {}
+        out.append({"ticker": t, "name": NAMES.get(t, t), "score": r.get("L"), "n_findings": r.get("n_findings"),
+                    "n_verified": sum(f["verdict"] == "verified" for f in fs), "n_rejected": r.get("n_withheld"),
+                    "high_confidence": sum(f["confidence"] == "high" for f in fs),
+                    "sharpest_needle": plain(nd.get("sentence")), "sharpest_needle_raw": nd.get("sentence"),
+                    "needle_id": nd.get("id"), "needle_status": (r.get("needle_status") or "").replace(" ", "_"),
+                    "needle_confidence": (nd.get("confidence") or "").lower(), "needle_S": nd.get("S"),
+                    "rank": r.get("rank"), "top5_sum": r.get("top5_sum"), "N_eff": r.get("N_eff"),
+                    "blocks": r.get("blocks"), "comparable": r.get("comparable"),
+                    "company_flags": r.get("company_flags"), "old_score": r.get("old_score"),
+                    "old_rank": r.get("old_rank"), "n_withheld": r.get("n_withheld"),
+                    "tariff_exposure": r.get("tariff_exposure")})
+    return out
 
 
 def write_readme(sizes, stats, meta):
@@ -1136,7 +1617,11 @@ def write_readme(sizes, stats, meta):
     lines += ["", f"Total: {sum(sizes.values()) / 1e6:.2f} MB.", "",
               "Notes: `stance.generated_by` is `template` (no ANTHROPIC_API_KEY at export). Excerpts are about "
               f"{SIDE} characters either side of the quote ({SIDE_SMALL} if a company file would exceed 4 MB). "
-              "Onboarded tickers without findings are listed in meta.onboarding_pending and get no company file."]
+              "Onboarded tickers without findings are listed in meta.onboarding_pending and get no company file.", "",
+              "Engine: v2 (out/<T>/findings_v2.jsonl, rejected_v2.jsonl, out/league_v2.json) when present, else v1. "
+              "Public rule: a citation that is unverified or Bloomberg-licensed exports no quote, excerpt, deep link or "
+              "viewer link (`withheld: true` + reason); WRDS-licensed data rows are summarised in `licensed_inputs` "
+              "(count and table names only)."]
     (DEST / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
