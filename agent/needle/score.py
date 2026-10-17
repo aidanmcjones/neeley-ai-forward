@@ -135,6 +135,10 @@ def _impact(sig, p, ttm_oi):
             return excess, (f"excess {col} = {col} now {p.at[q, col] / 1e6:,.0f}M - prior {p.at[prior, col] / 1e6:,.0f}M "
                             f"x (1 + revenue growth {rev_g:+.1%}) = {excess / 1e6:,.0f}M at risk of write-down or "
                             f"channel destocking")
+        if sig.kind == "gross_margin_peer_outlier":
+            # value is a margin LEVEL (e.g. 0.858), not a change; multiplying it by revenue is not an impact.
+            # A level versus peers has no dollar path (docs/quant_model.md section 10.2).
+            return None, "gross-margin level vs peers is not a margin change; no direct dollar path"
         if sig.kind.startswith("gross_margin"):
             rev4 = p["revenue"].dropna().iloc[-4:].sum()
             dollars = abs(sig.value or 0) * rev4
