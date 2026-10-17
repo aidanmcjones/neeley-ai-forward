@@ -472,7 +472,7 @@ def _label_cells(idx, data, ent):
             cites.append(c)
             det["contra_cite_id"] = c.cite_id
     if rems["value"] is not None:
-        parts.append("REMS: yes" if rems["value"] else "REMS: none found in sections 1-5")
+        parts.append("REMS: yes" if rems["value"] else "REMS: none found in label sections one to five")
         det["rems"] = rems["value"]
         if rems["value"] and ev.get("rems"):
             c = cite_quote(idx, doc, ev["rems"].quote)

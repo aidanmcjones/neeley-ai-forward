@@ -117,11 +117,11 @@ class Doc:
     def __init__(self, public=False):
         self.items, self.public = [], public
 
-    def cell(self, section, where, text, cites=(), derived=None, assumptions=None):
+    def cell(self, section, where, text, cites=(), derived=None, assumptions=None, dates=""):
         text = str(text)
         cites = [c for c in cites if getattr(c, "verification", None) is not None and c.verification.ok]
         self.items.append({"section": section, "where": where, "text": text, "citations": cites,
-                           "derived": derived or {}, "assumptions": assumptions or {}})
+                           "derived": derived or {}, "assumptions": assumptions or {}, "dates": dates})
         return f"\x00{len(self.items) - 1}\x00"
 
     def sections(self):
@@ -132,8 +132,8 @@ class Doc:
         return out
 
     def claims(self):
-        return [Claim(it["text"], it["citations"], derived=it["derived"], assumptions=it["assumptions"])
-                for it in self.items]
+        return [Claim(it["text"], it["citations"], derived=it["derived"], assumptions=it["assumptions"],
+                      dates=it.get("dates", "")) for it in self.items]
 
     def render(self, md):
         import re

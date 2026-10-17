@@ -63,7 +63,7 @@ def build(ticker, product, data_root=None, index=None, public=False):
             res = P.cell_gate(cmp_, rk, e["name"])
             if res.passed:
                 cells.append(doc.cell("cells", f"{rk}/{e['name']}", _cell_text(c), res.citations, res.derived,
-                                      res.assumptions))
+                                      res.assumptions, dates={"timeline": "all", "pricing": "full"}.get(rk, "")))
             else:
                 failed_cells.append({"row": rk, "entity": e["name"], "numeric_check": res.numeric_check})
                 cells.append("(withheld by the numeric gate; see below)")

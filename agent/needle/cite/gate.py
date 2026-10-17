@@ -663,24 +663,37 @@ def date_check(where, text, cites, assumptions=None, years=True):
     """Dates, bare years and 'Ny' durations in a fact cell (timeline, pricing): numbers.tokenize excludes them from
     numeric_gate, but in a table cell they are the fact. Each must appear verbatim (or in an equivalent spelling,
     _date_forms) in the quote or value of a passing citation, or equal the 'value' of a labelled assumption entry
-    (kind 'date'). years=False checks only full dates (a bare year in a pricing cell is a period label, "2026:").
+    (kind 'date'). years=False (pricing cells) skips years that are period labels ("2026:", "(2020-2026)") and
+    "Ny" durations; a year in prose ("selection in 2027") is still a fact.
     Returns {"total", "verified", "assumed", "unsupported": [{value, where, reason}]}."""
     import re
-    out = {"total": 0, "verified": 0, "assumed": 0, "unsupported": []}
+    out = {"total": 0, "verified": 0, "assumed": 0, "unsupported": [], "numbers": []}
     passing = [c for c in citations_of(cites) if _status(c) in PASSING]
-    for m in (_DATE_TOKENS if years else _FULL_DATES).finditer(text or ""):
+    for m in _DATE_TOKENS.finditer(text or ""):
         raw = m.group()
+        if not years and re.fullmatch(r"(?:19|20)\d{2}", raw):
+            t = text or ""
+            nxt, prv = t[m.end():m.end() + 1], t[max(0, m.start() - 1):m.start()]
+            if nxt in (":", "-", ")") or prv in ("(", "-") or re.fullmatch(r"\d{1,2}y", raw):
+                continue                      # a period label ("2026:", "(2020-2026)"), not a fact
+        if not years and re.fullmatch(r"\d{1,2}y", raw):
+            continue
         out["total"] += 1
         forms = _date_forms(raw)
-        hay = [" ".join(str(x or "").split()) for c in passing for x in (c.quote, c.value)]
-        if any(re.search(r"(?<![\w/-])" + re.escape(f) + r"(?![\w/-])", h, re.I) for f in forms for h in hay):
+        hits = [c.cite_id for c in passing
+                if any(re.search(r"(?<![\w/-])" + re.escape(f) + r"(?![\w/-])", " ".join(str(x or "").split()), re.I)
+                       for f in forms for x in (c.quote, c.value))]
+        if hits:
             out["verified"] += 1
+            out["numbers"].append({"value": raw, "start": m.start(), "end": m.end(), "kind": "verified", "cites": hits,
+                                   "basis": ["quote"] * len(hits)})
             continue
         lab = next((str(a.get("label") or "").strip() for a in (assumptions or {}).values()
                     if isinstance(a, dict) and a.get("kind") == "date" and str(a.get("value")) in forms
                     and str(a.get("label") or "").strip()), None)
         if lab:
             out["assumed"] += 1
+            out["numbers"].append({"value": raw, "start": m.start(), "end": m.end(), "kind": "assumed", "label": lab})
             continue
         out["unsupported"].append({"value": raw, "where": f"{where}@{m.start()}",
                                    "reason": "date or year in a fact cell with no passing citation or labelled "

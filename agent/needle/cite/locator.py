@@ -77,6 +77,7 @@ class Claim:
     derived: dict = None                               # gate.derived_entry map for computed numbers in text
     assumptions: dict = None                           # {number or key: label} for assumed numbers in text
     where: str = "claim"                               # gate block name; "impact.formula" enables the formula rule
+    dates: str = ""                                    # "all" (timeline cell) or "full" (pricing cell): mark dates too
 
     def to_dict(self):
         d = {"text": self.text, "citations": [c.to_dict() for c in self.citations]}

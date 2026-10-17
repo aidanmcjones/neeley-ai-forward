@@ -71,6 +71,13 @@ def _plan(cl, num_of, index=None):
         nums = res.numbers
     except Exception:
         nums = []
+    dmode = getattr(cl, "dates", "")
+    if dmode:                                 # dates in a fact cell are claims too (gate.date_check)
+        try:
+            nums = list(nums) + _gate.date_check("claim", text, cl.citations, getattr(cl, "assumptions", None),
+                                                 years=dmode == "all")["numbers"]
+        except Exception:
+            pass
     if not nums:
         return [], own
     for r in nums:                            # prefer citations whose quote or value carries the number over page text
