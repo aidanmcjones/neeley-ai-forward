@@ -21,7 +21,7 @@ STATUS = {
     "fine_print": ("collected", "verified"), "product_evidence": ("collected", "verified"),
 }
 STAGES = [
-    ("Collect", "done", "7 streams plus I/B/E/S from WRDS; 5 official Bloomberg transcripts filed, inbox watcher running for the rest"),
+    ("Collect", "running", "Part 1 streams done. Wave 2 running: deal comps, cost benchmarks, epidemiology, prescribers and payments, pipeline and targets, rival-maker depth, onboarding commands"),
     ("Verify", "done", "Opus re-checked all 10 buckets against source pages; 61 AI error types logged for the report"),
     ("Citation index", "done", "citations.sqlite: 3,118 docs, 39,940 pages, 69,553 facts, cite() and verify_quote(); frozen through the Sun 10:30 am freeze"),
     ("Model", "blocked", "Model session is wiring NEEDLE to the index; the LLM steps still wait on the Anthropic API key"),
@@ -41,15 +41,17 @@ PART1 = [
     ("Exact call quotes with speaker", ["calls"], "ready"),
 ]
 PART2 = [
-    ("The move, with budget or people", "Waits on the company pick (Parker). Once named: 30 to 60 minute pulls per gap below", "waiting"),
-    ("Cost and return math", "No cost benchmarks yet: sales force, launch, trial for a new use. Pull after the move is chosen", "gap"),
-    ("Deal comps (if acquire or license)", "Some in 8-Ks and press releases; full sets are paywalled (BioCentury, Evaluate)", "gap"),
-    ("Market sizing", "Patient counts by condition: free from CDC and SEER, not collected", "gap"),
-    ("Prescriber uptake", "Medicare Part D prescriber file: free, not collected", "gap"),
-    ("Two rejected alternatives", "Argument, built from Part 1 data", "waiting"),
-    ("What would prove us wrong (6 to 12 months)", "Argument, built from Part 1 data", "waiting"),
-    ("Why it will work: doctors, payers, investors", "Mentor and industry interviews today in room 2303; no dataset replaces this", "human"),
+    ("The move, with budget or people", "Engine must propose and price a move for any company; inputs below are being collected for all 10 and all 52 drugs", "collecting"),
+    ("Cost and return math", "Collecting: company cost structure, trial cost per phase (ASPE, JAMA), launch and DTC spend, Open Payments per drug", "collecting"),
+    ("Deal comps (acquire or license)", "Collecting: 300+ biopharma deals since 2020 from 8-Ks and 10-K notes with upfront, milestones, royalty; benchmarks by stage and area", "collecting"),
+    ("Market sizing", "Collecting: prevalence and treated share per indication from CDC, SEER, NIDDK, CMS chronic conditions; funnel per drug", "collecting"),
+    ("Prescriber and payer uptake", "Collecting: Part D prescribers by specialty and state 2019 to 2023, concentration, Open Payments, formulary history, Part B providers", "collecting"),
+    ("Pipeline and targets", "Collecting: Phase 2/3 landscape in the case indications, non-owned assets, target profiles with cash and EV, FDA and LOE calendars", "collecting"),
+    ("Two rejected alternatives", "Argument, built from Part 1 and the tables above", "waiting"),
+    ("What would prove us wrong (6 to 12 months)", "Argument; leading indicators come from prescriber, formulary and price series", "waiting"),
+    ("Why it will work: doctors, payers, investors", "Mentor and industry interviews today in room 2303 plus prescriber, formulary and consensus data", "human"),
     ("Promo rules and claims map (campaign only)", "Verified head-to-head table (37 pairs) says which rival claims have evidence", "ready"),
+    ("Any company, any drug", "Opus worker building onboard_company and onboard_drug commands with incremental index --add; proving on REGN, NVS, VRTX, Dupixent, Xtandi", "collecting"),
 ]
 NO_SOURCE = [
     ("Commercial list and true net prices", "Medi-Span, First Databank, IQVIA", "Part B ASP, Medicaid, NADAC, Part D, company list-vs-net reports"),
