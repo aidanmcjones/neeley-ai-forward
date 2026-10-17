@@ -43,7 +43,7 @@ PART1 = [
 PART2 = [
     ("The move, with budget or people", "Engine must propose and price a move for any company; inputs below are being collected for all 10 and all 52 drugs", "collecting"),
     ("Cost and return math", "Collecting: company cost structure, trial cost per phase (ASPE, JAMA), launch and DTC spend, Open Payments per drug", "collecting"),
-    ("Deal comps (acquire or license)", "Collecting: 300+ biopharma deals since 2020 from 8-Ks and 10-K notes with upfront, milestones, royalty; benchmarks by stage and area", "collecting"),
+    ("Deal comps (acquire or license)", "Collected: 1,611 cited deals 2020 to 2026 from 2,934 8-Ks and 10-K notes with upfront, milestones, royalty, deal value; 151 benchmark cells by stage and area. Opus verifying quotes, roles and duplicates; benchmarks will be rebuilt from verified rows only", "verifying"),
     ("Market sizing", "Collected: 212 drug x indication label rows, 30 of 50 indications with US prevalence (CDC, SEER, NIDDK, PMC), Part D 2024 floor for 318 drug-periods, 124 funnels. Opus verifying; 20 indications still have no epidemiology", "verifying"),
     ("Peer comparison at rival-maker depth", "Collected: 3 annual reports, quarterlies and 6 calls each for NVS, GSK, SNY, TAK, REGN, ALNY, BBIO, Roche; 852 quoted statements about the 17 rival products. Opus verifying quotes page by page. Boehringer blocked by bot protection", "verifying"),
     ("Prescriber and payer uptake", "Collecting: Part D prescribers by specialty and state 2019 to 2023, concentration, Open Payments, formulary history, Part B providers", "collecting"),
