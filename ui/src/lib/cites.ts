@@ -1,6 +1,11 @@
 // Derived citations and marked sentences (agent/needle/cite/render.py marker grammar).
 import type { Company, Evidence, Finding } from "./types";
 
+/** Data-row cite (cite_id "row:..."): a value read from a JSON row, not a page. Withheld and derived win. */
+export function isRowCite(ev: Evidence | null | undefined): boolean {
+  return !!ev && ev.withheld !== true && !isDerived(ev) && (String(ev.cite_id ?? "").startsWith("row:") || !!ev.row_ref);
+}
+
 /** Derived citation: computed from operand citations (derived_from: [cite_id, ...]). Withheld wins. */
 export function isDerived(ev: Evidence | null | undefined): boolean {
   return !!ev && ev.withheld !== true && Array.isArray(ev.derived_from) && ev.derived_from.length > 0;

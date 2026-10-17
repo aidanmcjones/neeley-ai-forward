@@ -85,6 +85,9 @@ export interface Evidence extends Loose {
   derived_from?: string[] | null;
   /** The computation as exported (e.g. "a / b"), when not withheld. */
   derived_expr?: string | null;
+  /** Data-row cite (cite_id "row:..."): the JSON path it resolves to and how the value was checked. */
+  row_ref?: string | null;
+  row_check?: string | null;
   value?: unknown;
   unit?: string | null;
 }
@@ -234,7 +237,8 @@ export interface MemoCite extends Loose {
   n: number; cite_id?: string; finding_id?: string | null; ticker?: string | null;
   doc_title?: string | null; period?: string | null; page?: number | string | null; quote?: string | null;
   excerpt?: Excerpt | null; url?: string | null; withheld?: boolean; withheld_reason?: string | null;
-  verification?: { status?: string; score?: number; detail?: string } | null;
+  verification?: { status?: string; score?: number; detail?: string } | string | null;
+  ref?: string | null; finding_ids?: string[] | null; doc_title_raw?: string | null; value?: unknown;
   /** Operand cite_ids (or footnote numbers) of a derived figure. */
   derived_from?: (string | number)[] | null; derived_expr?: string | null;
   numeric_check?: NumericCheck | null;
@@ -246,7 +250,8 @@ export type MemoBlock =
   | { type: "kpi"; items: { label: string; value: string; cite?: number | null }[] }
   | { type: "table"; columns: string[]; rows: string[][] }
   | { type: "list"; items: string[] }
-  | { type: "callout"; tone: "ok" | "warn" | "muted" | string; md: string };
+  | { type: "callout"; tone: "ok" | "warn" | "muted" | string; md: string }
+  | { type: "math"; label?: string; text: string; cite?: number | null };
 
 export interface MemoRecord extends Loose {
   id: string; prompt: string; aliases?: string[]; ticker?: string | null; kind?: string;

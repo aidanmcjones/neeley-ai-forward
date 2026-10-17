@@ -59,7 +59,7 @@ export default function Chat() {
   const send = useCallback((prompt: string, memo?: MemoRecord) => {
     const p = prompt.trim();
     if (!p) return;
-    const m = memo ?? matchMemo(file, p, ticker).memo;
+    const m = memo ?? matchMemo(file, p, ticker ?? file?.default_ticker ?? null).memo;
     setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memo: m }]);
     setText("");
   }, [file, ticker]);

@@ -60,12 +60,19 @@ export function matchMemo(file: MemosFile | null, query: string, ticker?: string
     let inter = 0, dw = 0;
     for (const t of d.t) dw += idf(t);
     for (const t of qt) if (d.t.has(t)) inter += idf(t);
-    if (!inter) continue;
+    if (!inter && ![d.m.prompt, ...(d.m.aliases ?? [])].some((a) => normText(a).split(" ").length >= 2 && ` ${q} `.includes(` ${normText(a)} `))) continue;
     const coverage = qw ? inter / qw : 0;          // how much of the question the memo answers
     const precision = dw ? inter / dw : 0;         // how much of the memo the question asks for
     let s = 0.7 * coverage + 0.3 * Math.min(1, precision * 3);
+    // A multi-word alias said verbatim inside the question ("which company ...") is strong evidence.
+    const padded = ` ${q} `;
+    for (const a of [d.m.prompt, ...(d.m.aliases ?? [])]) {
+      const na = normText(a);
+      const nw = na.split(" ").length;
+      if (nw >= 2 && padded.includes(` ${na} `)) { s = Math.max(s, 0.55) + 0.4; break; }
+    }
     if (named.size) s *= d.m.ticker && named.has(d.m.ticker) ? 1.1 : d.m.ticker ? 0.6 : 1;
-    else if (ticker && d.m.ticker === ticker) s *= 1.05;
+    else if (ticker) s *= d.m.ticker === ticker ? 1.25 : d.m.ticker ? 0.8 : 1.1;
     if (s > best.score) best = { memo: d.m, score: s, how: "fuzzy" };
   }
   return best.score >= 0.3 ? best : { memo: null, score: best.score, how: "none" };
@@ -77,12 +84,17 @@ export function citeEvidence(c: MemoCite, all: MemoCite[]): Evidence {
   const period = c.period && !(c.doc_title ?? "").includes(c.period) ? c.period : null;
   const label = [c.doc_title, period, page].filter(Boolean).join(", ") || c.cite_id || `source ${c.n}`;
   const ops = (c.derived_from ?? []).map((x) => (typeof x === "number" ? all.find((o) => o.n === x)?.cite_id : x)).filter((x): x is string => !!x);
+  const ver = typeof c.verification === "string" ? { status: c.verification } : c.verification ?? null;
+  const isRow = (c.cite_id ?? "").startsWith("row:");
   return {
+    row_ref: isRow ? c.ref ?? null : null,
+    row_check: isRow ? (typeof c.verification === "string" ? c.verification : c.verification?.detail ?? c.verification?.status ?? null) : null,
+    value: c.value ?? undefined,
     doc_id: c.cite_id ?? `memo-cite-${c.n}`, cite_id: c.cite_id, citation: label, doc_title: c.doc_title ?? undefined,
     period: c.period ?? undefined, page: typeof c.page === "number" ? c.page : null, printed: c.page != null ? String(c.page) : undefined,
     location: page || undefined, quote: c.quote ?? "", excerpt: c.excerpt ?? undefined, url: c.url ?? undefined,
-    withheld: c.withheld === true, withheld_reason: c.withheld_reason ?? null, verification: c.verification ?? null,
+    withheld: c.withheld === true, withheld_reason: c.withheld_reason ?? null, verification: ver,
     derived_from: ops.length ? ops : null, derived_expr: c.derived_expr ?? null,
-    verdict: c.verification?.status && c.verification.status !== "unverified" ? "verified" : undefined,
+    verdict: isRow ? "data row" : ver?.status && ver.status !== "unverified" ? "verified" : undefined,
   };
 }

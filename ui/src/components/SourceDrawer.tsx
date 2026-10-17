@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import type React from "react";
 import type { Evidence } from "../lib/types";
 import { isWithheld, useData, withheldReason } from "../lib/data";
-import { derivedOperands, isDerived } from "../lib/cites";
+import { derivedOperands, isDerived, isRowCite } from "../lib/cites";
 
 // Global right-side source drawer. Any CiteChip calls useSource().open(evidence).
 // Esc closes, focus is trapped while open and restored to the opener on close.
@@ -80,6 +80,28 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
   const isCall = !!ev.speaker || /call|transcript/i.test(ev.doc_type ?? "");
   const withheld = isWithheld(ev);
   const vdetail = ev.verification?.detail;
+
+  if (isRowCite(ev)) {
+    const title = String(ev.doc_title || ev.citation || ev.cite_id || "Data row");
+    const val = ev.value != null && ev.value !== "" ? String(ev.value) : null;
+    return (
+      <DrawerShell refEl={ref} closeBtn={closeBtn} onClose={onClose} label={title}>
+        <dl>
+          <Row k="Source">{title}</Row>
+          <Row k="Data row"><span className="font-mono text-xs break-all">{ev.row_ref ?? ev.cite_id}</span></Row>
+          {val && <Row k="Value"><span className="font-mono tnum">{val}</span></Row>}
+          <Row k="Check"><span className="font-semibold text-good">{ev.row_check || "data row"}</span></Row>
+        </dl>
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-muted mb-1.5">Row text</div>
+          {ev.quote
+            ? <blockquote className="rounded-md bg-surface-2 border border-line p-3 text-sm leading-relaxed whitespace-pre-wrap">{ev.quote}</blockquote>
+            : <p className="text-sm text-muted">No row text exported for this cite.</p>}
+        </div>
+        <p className="text-xs text-muted">A data-row cite points at a value in the exported JSON (a table row, a score or a count), not at a printed page. The path above is the exact row it was read from.</p>
+      </DrawerShell>
+    );
+  }
 
   if (!withheld && isDerived(ev)) {
     const ops = derivedOperands(company, ev);

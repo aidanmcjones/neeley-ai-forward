@@ -39,6 +39,11 @@ fixture `public/data/_sample/memos.json` and says so.
 - **Blocks**: h, p (markdown: **bold**, *italic*, `code`, `[n]` cite chips, `[derived: a, b]`, amber
   `[assumption]`), kpi, table, list, callout. Cite chips open the shared source drawer; withheld and derived
   styles are the same as in the cockpit, and derived operands resolve against the memo's own `cites`.
+- **Data-row cites** (`cite_id` "row:...", no page or url): a "data" chip (▦, solid underline), separate from
+  withheld (dashed) and derived (ƒ); the drawer shows the source, the JSON path in `ref`, the check text from
+  `verification` and the row text in `quote`.
+- **Math blocks** (`{type: "math", label, text, cite}`): a collapsed "Show the math: <label>" disclosure in
+  monospace with its cite chip; Print opens them so the printed memo shows the formulas.
 - **Reveal**: a typewriter of 1.5 to 2.5 s per answer, skippable by click; instant under reduced motion.
 - **Matching** (`src/lib/memos.ts`): exact prompt or alias first, then term overlap using the retriever's
   synonym groups over prompt + aliases (floor 0.3), preferring the selected company; no match replies "I can

@@ -54,6 +54,7 @@ export function toMarkdown(m: MemoRecord): string {
     else if (b.type === "callout") out.push(`> ${b.md}`, "");
     else if (b.type === "list") out.push(...b.items.map((x) => `- ${x}`), "");
     else if (b.type === "kpi") out.push(...b.items.map((x) => `- ${x.label}: ${x.value}${x.cite ? ` [${x.cite}]` : ""}`), "");
+    else if (b.type === "math") out.push(`${b.label ? `**${b.label}**\n` : ""}\`\`\`\n${b.text}\n\`\`\`${b.cite ? ` [${b.cite}]` : ""}`, "");
     else if (b.type === "table") out.push(`| ${b.columns.join(" | ")} |`, `|${b.columns.map(() => " --- ").join("|")}|`, ...b.rows.map((r) => `| ${r.join(" | ")} |`), "");
   }
   const cites = m.cites ?? [];
@@ -61,7 +62,7 @@ export function toMarkdown(m: MemoRecord): string {
     out.push("Sources", "");
     for (const c of cites) {
       const where = [c.doc_title, c.period, c.page != null ? `p. ${c.page}` : ""].filter(Boolean).join(", ");
-      const tail = c.withheld ? " (quote withheld)" : c.derived_from?.length ? ` (derived from ${c.derived_from.join(", ")})` : c.quote ? `: "${c.quote}"` : "";
+      const tail = c.withheld ? " (quote withheld)" : String(c.cite_id ?? "").startsWith("row:") ? ` (data row ${c.ref ?? c.cite_id})${c.quote ? `: "${c.quote}"` : ""}` : c.derived_from?.length ? ` (derived from ${c.derived_from.join(", ")})` : c.quote ? `: "${c.quote}"` : "";
       out.push(`[${c.n}] ${where}${tail}${c.url && !c.withheld ? ` ${c.url}` : ""}`);
     }
   }
@@ -101,6 +102,7 @@ export function Answer({ memo, instant, onAsk, labelFor }: {
     skip();
     const el = cardRef.current;
     if (!el) return;
+    el.querySelectorAll("details").forEach((d) => { d.open = true; }); // the printed memo shows its math
     const turn = el.closest("[data-turn]");
     el.classList.add("print-target");
     turn?.classList.add("print-turn");
@@ -179,7 +181,7 @@ function Block({ b, cite, partial, memo }: { b: MemoBlock; cite: (n: number) => 
           <div key={i} className="rounded-md border border-line bg-surface px-3 py-2 min-w-0">
             <div className="text-[11px] font-semibold uppercase tracking-wide text-muted truncate">{k.label}</div>
             <div className="mt-0.5 flex items-baseline gap-1.5">
-              <span className="font-display text-[28px] leading-none tnum text-purple-deep dark:text-purple">{k.value}</span>
+              <span className={`leading-tight tnum text-purple-deep dark:text-purple ${String(k.value).length > 14 ? "text-[15px] font-semibold" : "font-display text-[28px] leading-none"}`}>{k.value}</span>
               {k.cite != null && <Md md={`[${k.cite}]`} cite={cite} />}
             </div>
           </div>
@@ -195,6 +197,15 @@ function Block({ b, cite, partial, memo }: { b: MemoBlock; cite: (n: number) => 
           <tbody>{b.rows.map((r, i) => <tr key={i} className="border-t border-line align-top">{r.map((cell, j) => <td key={j} className="px-2.5 py-1.5"><Md md={String(cell ?? "")} cite={cite} /></td>)}</tr>)}</tbody>
         </table>
       </div>
+    );
+  }
+  if (b.type === "math") {
+    return (
+      <details className="rounded-md border border-line bg-surface-2 px-3 py-2 text-[13px]">
+        <summary className="cursor-pointer select-none font-semibold text-purple">Show the math{b.label ? `: ${b.label}` : ""}</summary>
+        <pre className="mt-2 whitespace-pre-wrap break-words font-mono text-[12px] leading-relaxed">{b.text}</pre>
+        {b.cite != null && <div className="mt-1"><Md md={`[${b.cite}]`} cite={cite} /></div>}
+      </details>
     );
   }
   if (b.type === "list") return <ul className="list-disc pl-5 space-y-1">{b.items.map((x, i) => <li key={i}><Md md={x} cite={cite} /></li>)}</ul>;
