@@ -23,6 +23,10 @@ from . import data, evidence as EV, impact as IM, obscurity as OB
 from . import weights as W
 
 
+# Robustness knob (league_v3 variant): give anchor rows, which have no fiscal-year consensus line, c = 0.5 as well.
+C_ANCHOR_UNINFORMATIVE = False
+
+
 # ------------------------------------------------------------------ pure equations
 def materiality(d_eps, t_years, sigma, r=W.R):
     """M_f = |dEPS_f| . (1 + r)^(-t_f) / sigma_EPS (section 4.2). r = 7.85% Damodaran Jan 2026."""
@@ -392,10 +396,13 @@ def _assemble(co, ticker, kind, sentence, fam, imp, page_cites, topics, disclose
     a, a_note, aflags = OB.attention(ticker, topics, product)
     flags += aflags
     adverse = imp.adverse
-    if fam.route in ("type_c",) and imp.fiscal_year:
+    if (fam.route == "type_c" or detector == "mfn_generator") and imp.fiscal_year:
+        # rows with a dated fiscal-year impact: the consensus-embedding test is defined; untestable -> 0.5 (A12)
         c, cflags = OB.consensus_embedding(ticker, imp.fiscal_year, disclosed, imp.d_eps.get("base", 0.0), adverse)
+    elif C_ANCHOR_UNINFORMATIVE and imp.quantified:
+        c, cflags = W.C_UNTESTABLE, [f"c_f set to {W.C_UNTESTABLE} on a row with no fiscal-year line (variant)"]
     else:
-        c, cflags = 0.0, ["c_f n/a (no consensus line item for this family)"]
+        c, cflags = 0.0, ["c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)"]
     flags += cflags
     s = 0.0
     flags.append("s_f no data (FINRA short interest not in moat)")

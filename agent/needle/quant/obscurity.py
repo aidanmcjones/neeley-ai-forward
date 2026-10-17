@@ -10,7 +10,8 @@ h  0.9 if a topic pattern of the finding matches page 1 of the latest earnings r
 a  share of the last up-to-10 calls in which analysts asked about the topic: priced_in_scorecard for its nine
    topics, qa_turns.csv (analyst turns, regex) for every other topic; products use the product name
 c  consensus embedding: clip(dcons_dir / |dEPS|, 0, 1) over the I/B/E/S FY mean around the first public date;
-   0 and flagged "untestable" when that fiscal year's consensus first appears after the disclosure
+   0.5 (uninformative) and flagged "untestable" when the test cannot be run, e.g. that fiscal year's consensus
+   first appears after the disclosure (review A12; v2 used 0, the most optimistic value)
 s  short sellers: 0 with a flag on every row (no FINRA data in the moat)
 H  3 months base, 6 months as the reported sensitivity (review A11)
 Each factor is the probability one channel has not priced the fact; channels are assumed independent (D8).
@@ -125,14 +126,15 @@ def consensus_embedding(ticker, fiscal_year, disclosed, d_eps, adverse=True):
     """(c_f, flags). c = clip(dcons_dir / |dEPS|, 0, 1); dcons = change in the FY I/B/E/S mean EPS from the last
     statpers before to the first statpers after the disclosure, signed in the finding's direction."""
     if not d_eps or fiscal_year is None or disclosed is None:
-        return 0.0, ["c_f n/a (no consensus line for this family)"]
+        return W.C_UNTESTABLE, [f"c_f untestable (no dEPS, year or date): set to {W.C_UNTESTABLE}, uninformative (A12)"]
     _, _, c = data._ibes()
     rows = c[(c.oftic == ticker.upper()) & (c.fpedats.astype(str).str.startswith(str(fiscal_year)))
              & (c.measure == "EPS")].sort_values("statpers")
     d = disclosed.isoformat()
     before, after = rows[rows.statpers < d], rows[rows.statpers >= d]
     if before.empty or after.empty:
-        return 0.0, ["c_f untestable (FY consensus first appears after the disclosure)"]
+        return W.C_UNTESTABLE, [f"c_f untestable (FY consensus first appears after the disclosure): set to "
+                                f"{W.C_UNTESTABLE}, uninformative, not 0 (review A12)"]
     b, a = before.iloc[-1], after.iloc[0]
     delta = float(a.meanest - b.meanest)
     dirn = -delta if adverse else delta

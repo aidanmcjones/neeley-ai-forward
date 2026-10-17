@@ -31,6 +31,7 @@ H_MONTHS_SENSITIVITY = 6.0   # Lazy Prices (persists to 6 months, accrues to 18)
 H_VALUE = 0.9        # headline-page coverage. materiality_spec section 3 team rule; case "press-release skim"
 Z_VALUE = 1.0        # starter thread. case appendix; binary by design
 ATTENTION_QUARTERS = 10   # a_f = share of the last up-to-10 calls in which analysts asked (priced_in_scorecard)
+C_UNTESTABLE = 0.5   # c_f when the consensus-embedding test cannot be run: uninformative, not 0 (review A12)
 LOE_AGE_MONTHS_DEFAULT = 24.0   # inference: Orange/Purple Book and 10-K patent dates are long public (see notes)
 
 # ---- evidence grades (section 4.5) -----------------------------------------------------------------------------
