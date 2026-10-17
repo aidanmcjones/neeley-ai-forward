@@ -62,4 +62,5 @@ def main():
         write_csv("tables/insider_trades.csv", COLS, allrows)
 
 
-main()
+if __name__ == "__main__":
+    main()

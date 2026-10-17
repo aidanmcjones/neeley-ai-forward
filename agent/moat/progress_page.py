@@ -21,9 +21,9 @@ STATUS = {
     "fine_print": ("collected", "verified"), "product_evidence": ("collected", "verified"),
 }
 STAGES = [
-    ("Collect", "running", "Part 1 streams done. Wave 2 running: deal comps, cost benchmarks, epidemiology, prescribers and payments, pipeline and targets, rival-maker depth, onboarding commands"),
-    ("Verify", "done", "Opus re-checked all 10 buckets against source pages; 61 AI error types logged for the report"),
-    ("Citation index", "done", "citations.sqlite: 3,118 docs, 39,940 pages, 69,553 facts, cite() and verify_quote(); frozen through the Sun 10:30 am freeze"),
+    ("Collect", "running", "Part 1 streams done. Wave 2: epidemiology, rival-maker depth, deal comps, pipeline and onboarding landed; cost benchmarks and prescribers still collecting"),
+    ("Verify", "running", "Opus re-checked all 10 Part 1 buckets plus epi and peers; 83 AI error types logged for the report. Deals and pipeline verifying now"),
+    ("Citation index", "done", "citations.sqlite: 6,607 docs, 71,682 pages, 79,954 facts, cite() and verify_quote(); contract frozen, new material added with index.py --add"),
     ("Model", "running", "Model session is wiring NEEDLE to the index and the Part 2 tables. API key is staged in .env, pending Aidan's arm once model, data and UI are complete (no spend before then)"),
     ("UI", "running", "UI session has 7 cockpit screens in build on top of the index"),
     ("Demo video", "waiting", "Sunday 10:30 to 12:30, after the code freeze; needs the company pick first"),
@@ -44,15 +44,15 @@ PART2 = [
     ("The move, with budget or people", "Engine must propose and price a move for any company; inputs below are being collected for all 10 and all 52 drugs", "collecting"),
     ("Cost and return math", "Collecting: company cost structure, trial cost per phase (ASPE, JAMA), launch and DTC spend, Open Payments per drug", "collecting"),
     ("Deal comps (acquire or license)", "Collected: 1,611 cited deals 2020 to 2026 from 2,934 8-Ks and 10-K notes with upfront, milestones, royalty, deal value; 151 benchmark cells by stage and area. Opus verifying quotes, roles and duplicates; benchmarks will be rebuilt from verified rows only", "verifying"),
-    ("Market sizing", "Collected: 212 drug x indication label rows, 30 of 50 indications with US prevalence (CDC, SEER, NIDDK, PMC), Part D 2024 floor for 318 drug-periods, 124 funnels. Opus verifying; 20 indications still have no epidemiology", "verifying"),
-    ("Peer comparison at rival-maker depth", "Collected: 3 annual reports, quarterlies and 6 calls each for NVS, GSK, SNY, TAK, REGN, ALNY, BBIO, Roche; 852 quoted statements about the 17 rival products. Opus verifying quotes page by page. Boehringer blocked by bot protection", "verifying"),
+    ("Market sizing", "Verified and indexed: 212 drug x indication label rows, US prevalence for 30 of 50 indications (all 30 rechecked on the primary page; ATTR-CM, RA and PrEP marked low confidence), Part D 2024 floors recomputed 15 of 15, 95 funnels with Medicare floor %. 20 indications still have no epidemiology", "ready"),
+    ("Peer comparison at rival-maker depth", "Verified and indexed: 833 of 852 rival product statements verbatim on the cited page (19 publisher-text rows dropped, 224 junk speakers fixed), NVS top-20 revenue rebuilt from the 20-F, 72 of 72 XBRL rows match. 8 rival makers covered; Boehringer blocked by bot protection", "ready"),
+    ("Pipeline and targets", "Collected: 3,383 Phase 2/3 trials, 2,446 assets (1,726 potential targets), 204 target profiles (78 with price and EV, rest Tiingo-limited), 921 FDA calendar rows, 452 LOE rows. Opus verifying against CT.gov, 10-Ks and the Orange and Purple Books", "verifying"),
     ("Prescriber and payer uptake", "Collecting: Part D prescribers by specialty and state 2019 to 2023, concentration, Open Payments, formulary history, Part B providers", "collecting"),
-    ("Pipeline and targets", "Collecting: Phase 2/3 landscape in the case indications, non-owned assets, target profiles with cash and EV, FDA and LOE calendars", "collecting"),
     ("Two rejected alternatives", "Argument, built from Part 1 and the tables above", "waiting"),
     ("What would prove us wrong (6 to 12 months)", "Argument; leading indicators come from prescriber, formulary and price series", "waiting"),
     ("Why it will work: doctors, payers, investors", "Mentor and industry interviews today in room 2303 plus prescriber, formulary and consensus data", "human"),
     ("Promo rules and claims map (campaign only)", "Verified head-to-head table (37 pairs) says which rival claims have evidence", "ready"),
-    ("Any company, any drug", "Opus worker building onboard_company and onboard_drug commands with incremental index --add; proving on REGN, NVS, VRTX, Dupixent, Xtandi", "collecting"),
+    ("Any company, any drug", "Ready: `onboard_company <TICKER>` and `onboard_drug \"<BRAND>\"` build the same cited data for anything new and `index.py --add` registers it with stable ids. Proven on REGN (147 s, 77 docs), NVS (93 s), VRTX from zero (190 s, 85 docs), Dupixent and Xtandi. Onboarded facts are flagged unverified_onboard until a verifier runs", "ready"),
 ]
 NO_SOURCE = [
     ("Commercial list and true net prices", "Medi-Span, First Databank, IQVIA", "Part B ASP, Medicaid, NADAC, Part D, company list-vs-net reports"),

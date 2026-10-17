@@ -54,4 +54,5 @@ def main():
                                                   "pdf_page", "printed_page", "url"], allrows)
 
 
-main()
+if __name__ == "__main__":
+    main()

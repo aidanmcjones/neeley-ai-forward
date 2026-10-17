@@ -14,11 +14,20 @@ Sonnet agent and then re-verified by an Opus agent against the primary source. B
 | product | label version history, head-to-head trials, supplements, recalls, REMS | `verified/product/`: h2h_by_pair (37 pairs), label_changes_key, label_changes, supplement_approvals |
 | market | daily prices, event returns, analyst topic counts, GDELT, I/B/E/S from WRDS | `verified/market/`: priced_in_scorecard, analyst_topics, consensus_vs_guidance, never_asked |
 | secx | SEC comment letters, proxies, 8-Ks, agreements, insider trades, subsidiaries | `verified/secx/`: comment_letter_findings (9 candidates), incentive_metrics, insider_summary, agreement_terms |
+| epi | drug x indication label map, US prevalence per indication (CDC, SEER, NIDDK, PMC), Part D 2024 market floors, sizing funnels | `verified/epi/`: indication_map (212 rows), indication_epidemiology (30 rows with confidence), medicare_market_checks, market_sizing_inputs (124 funnels, subset_caveat) |
+| peers | rival makers (NVS, GSK, SNY, TAK, REGN, ALNY, BBIO, Roche): 3 annual reports, quarterlies, 6 calls each | `verified/peers/`: rival_product_statements (833 verbatim, topic_fixed), peer_product_revenue (NVS top 20, rebuilt), peer_product_revenue_xbrl_checks, transcript_labels |
+| deals | 1,611 biopharma deals 2020 to 2026 from 2,934 8-Ks and 10-K notes | `verified/deals/` (verifying) |
+| pipeline | Phase 2/3 landscape, 2,446 assets, target profiles, FDA and LOE calendars | `verified/pipeline/` (verifying) |
+| costs, rx | cost benchmarks; Part D prescribers, Open Payments, formulary history | collecting |
+| onboard | `python -m agent.moat.onboard_company <TICKER>` and `onboard_drug "<BRAND>"` build all of the above for any new company or drug, then `index.py --add` | `onboard/<KEY>/*.csv`, flagged `unverified_onboard` until a verifier runs; docs/research/onboarding.md |
 
 ## Citation index
 
-`data/moat/index/citations.sqlite` (R2 `moat/index/citations.sqlite.gz`): 3,118 docs, 39,940 pages, 69,553 facts,
+`data/moat/index/citations.sqlite` (R2 `moat/index/citations.sqlite.gz`): 6,607 docs, 71,682 pages, 79,954 facts,
 FTS5 search, transcript grades, `verify_quote`. API in `agent/moat/cite.py`; docs in `docs/research/citation_index.md`.
+Facts carry `verify_status`: use `verified`/`corrected`/`fixed`/`yes`/`True`; `unverified_onboard` means an onboarded
+table no verifier has checked; `no_verified_copy` is machine data (prices, I/B/E/S). `*_dropped.csv` files are never indexed.
+New material is registered with `python -m agent.moat.index --add` (ids stable, idempotent).
 
 ```
 python -m agent.moat.cite "Genmab royalty" --ticker JNJ --doc-type annual_report

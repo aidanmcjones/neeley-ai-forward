@@ -2,6 +2,7 @@
 
 python -m agent.moat.index            # build (about 2 to 4 minutes)
 python -m agent.moat.index --upload   # build, then gzip and put to R2 moat/index/citations.sqlite.gz
+python -m agent.moat.index --add      # incremental: insert only docs and fact rows not yet indexed (ids stable)
 
 Page ids match NEEDLE (agent/needle/pages.py, agent/findings.py verify()): a page is (doc_id, page_no) where
 page_no is the first number in the "[[page N | printed M]]" marker, so "doc_id#pN" is the same source id the
@@ -238,6 +239,9 @@ def fact_tables():
     """(table name, path, default verify_status). Verified copies supersede raw tables of the same name."""
     out = []
     for p in sorted((MOAT / "verified").glob("*/*.csv")):
+        # *_dropped.csv lists rows a verifier rejected; they are kept for the report, never cited as facts
+        if p.name.endswith("_dropped.csv"):
+            continue
         out.append((f"{p.parent.name}/{p.name}", p, "verified"))
     tables = MOAT / "tables"
     for p in sorted(tables.glob("ibes_*.csv")) + [tables / "prices_daily.csv"]:
@@ -249,6 +253,10 @@ def fact_tables():
                      "partd_by_year.csv", "medicaid_sdud.csv", "nadac_history.csv"]:
             if (tables / name).exists():
                 out.append((f"tables/{name}", tables / name, "unverified"))
+    # Per-entity tables written by agent.moat.onboard_company / onboard_drug: same source / source_row columns,
+    # not yet re-verified by a second agent, so they carry their own status.
+    for p in sorted((MOAT / "onboard").glob("*/*.csv")):
+        out.append((f"onboard/{p.parent.name}/{p.name}", p, "unverified_onboard"))
     return out
 
 
@@ -321,18 +329,22 @@ def fact_rows(table, path, default_status, doc_id):
 
 # ---------------------------------------------------------------- build
 
-def build(out=OUT):
-    t0 = time.time()
-    out.parent.mkdir(parents=True, exist_ok=True)
-    tmp = out.with_suffix(".tmp")
-    if tmp.exists():
-        tmp.unlink()
-    db = sqlite3.connect(tmp)
-    db.executescript("PRAGMA journal_mode=OFF; PRAGMA synchronous=OFF;" + SCHEMA)
+def onboard_names():
+    """ticker -> registrant name for tickers onboarded by agent.moat.onboard_company (profile.json)."""
+    out = {}
+    for p in sorted((MOAT / "onboard").glob("*/profile.json")):
+        try:
+            d = json.loads(p.read_text())
+            if d.get("ticker") and d.get("name"):
+                out[d["ticker"]] = d["name"]
+        except Exception:
+            pass
+    return out
 
-    grades = grade_map()
+
+def all_doc_rows():
+    """Every doc row (corpus, moat manifests, Bloomberg, unlisted verified notes) and a path -> doc_id map."""
     allrows = {}
-    known = set()
     for src in (corpus_rows(), moat_rows(), bloomberg_rows()):
         allrows.update(src)
     known = {s(r.get("path")) for r in allrows.values()}
@@ -342,87 +354,122 @@ def build(out=OUT):
     by_path = {}
     for d, r in allrows.items():
         by_path.setdefault(s(r.get("path")), d)
+    return allrows, by_path
 
+
+def doc_context(allrows):
+    ctx = {"grades": grade_map(), "company": {**onboard_names(), **COMPANY}}
     # raw moat tables superseded by the verified copy of the same file name
-    verified_by_name = {Path(s(r["path"])).name: d for d, r in allrows.items()
-                        if "/verified/" in s(r.get("path")) and s(r.get("path")).endswith(".csv")}
+    ctx["verified_by_name"] = {Path(s(r["path"])).name: d for d, r in allrows.items()
+                               if "/verified/" in s(r.get("path")) and s(r.get("path")).endswith(".csv")}
     drug_ticker = {}
     for r in allrows.values():
         m = re.match(r"data/corpus/drugs/([^/]+)/", s(r.get("path")))
         if m and s(r.get("ticker")):
             drug_ticker.setdefault(m.group(1), s(r["ticker"]))
-    bbg_by_call = {(r["ticker"], r["period"]): d for d, r in allrows.items() if r.get("stream") == "bloomberg"}
+    ctx["drug_ticker"] = drug_ticker
+    ctx["bbg_by_call"] = {(r["ticker"], r["period"]): d for d, r in allrows.items() if r.get("stream") == "bloomberg"}
+    return ctx
 
+
+def doc_record(doc_id, r, ctx, stats):
+    """(docs row tuple, pages [(n, printed, a, b, text)], turns [(page_no, k, speaker, pos)], speakers by page)."""
+    path = s(r.get("path"))
+    p = ROOT / path
+    notes, scheme, pages, kind = [], "", [], "md"
+    sup = ""
+    if doc_id in SUPERSEDED:
+        sup, note = SUPERSEDED[doc_id]
+        notes.append(note)
+    elif path.startswith("data/moat/tables/") and Path(path).name in ctx["verified_by_name"]:
+        sup = ctx["verified_by_name"][Path(path).name]
+        notes.append("raw collector table; the verified copy supersedes it")
+    ticker = s(r.get("ticker")) or (doc_id.split(":")[0] if doc_id.split(":")[0].isupper() else "")
+    m = re.match(r"data/(?:corpus|moat)/drugs/([^/]+)/", path)
+    drug = m.group(1) if m else ""
+    if drug and ticker == drug:  # moat label manifests put the drug in the ticker column
+        ticker = ctx["drug_ticker"].get(drug, "")
+    grade = ctx["grades"].get(path, "")
+    if r.get("stream") == "bloomberg":
+        grade = "A"
+        notes.append("official Bloomberg transcript; licensed: index only, never copy text into a public artifact")
+    if s(r.get("doc_type")) == "transcript" and (ticker, s(r.get("period"))) in ctx["bbg_by_call"] \
+            and r.get("stream") != "bloomberg":
+        notes.append(f"Bloomberg copy of this call: {ctx['bbg_by_call'][(ticker, s(r.get('period')))]}")
+    if s(r.get("doc_type")) == "transcript" and not grade and s(r.get("stream")).startswith("onboard_"):
+        grade = "C" if s(r.get("source_quality")) != "official" else ""
+    if s(r.get("doc_type")) == "transcript" and grade == "C":
+        notes.append("grade C: check the quote against Bloomberg before it goes in a findings table")
+    if s(r.get("doc_type")) == "transcript" and grade == "D":
+        notes.append("grade D: not quotable")
+    if not p.exists():
+        notes.append("file missing on disk")
+    elif p.suffix == ".md":
+        text = p.read_text(encoding="utf-8", errors="ignore")
+        pages = marked_pages(text)
+        scheme = "marker"
+        if not pages:
+            pages = section_pages(text)
+            scheme = "section"
+            notes.append("no page markers: one page per section heading, printed = heading (cite by section)")
+        if s(r.get("doc_type")) in ("transcript",):
+            kind = "md"
+    elif p.suffix == ".pdf":
+        pages = pdf_pages(p)
+        scheme = "pdf_page"
+        kind = "bloomberg" if r.get("stream") == "bloomberg" else "lseg"
+        notes.append("PDF: one page per PDF page; printed = PDF page number")
+    else:
+        scheme = "none"
+        if p.suffix == ".csv":
+            notes.append("table: rows are in facts if verified or listed, no pages")
+        else:
+            notes.append(f"{p.suffix} file: not page-indexed")
+            stats["pages_skipped_docs"].append(doc_id)
+    transcriptish = s(r.get("doc_type")) in ("transcript", "transcript_source")
+    turns = turns_for(pages, kind) if transcriptish and pages else []
+    sp_by_page = {}
+    for page_no, _, sp, _ in turns:
+        sp_by_page.setdefault(page_no, [])
+        if sp not in sp_by_page[page_no]:
+            sp_by_page[page_no].append(sp)
+    lic = "bloomberg_licensed" if r.get("stream") == "bloomberg" else ""
+    doc = (doc_id, ticker, ctx["company"].get(ticker, ticker), s(r.get("group")), s(r.get("doc_type")),
+           s(r.get("form")), s(r.get("period")), s(r.get("filed")), s(r.get("source_quality")),
+           s(r.get("source_url")), path, s(r.get("stream")), grade, sup, lic, drug, len(pages), scheme,
+           "; ".join(notes))
+    return doc, pages, turns, sp_by_page
+
+
+def insert_doc(db, rec):
+    doc, pages, turns, sp_by_page = rec
+    doc_id = doc[0]
+    db.executemany("INSERT INTO pages(doc_id,page_no,printed,char_start,char_end,speakers,text) VALUES (?,?,?,?,?,?,?)",
+                   [(doc_id, n, pr, a, b, "; ".join(sp_by_page.get(n, [])), t) for n, pr, a, b, t in pages])
+    db.executemany("INSERT INTO turns VALUES (?,?,?,?,?)", [(doc_id, *t) for t in turns])
+    db.execute("INSERT INTO docs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", doc)
+    return len(pages)
+
+
+FACT_INSERT = ('INSERT INTO facts("table",doc_id,row_key,ticker,drug,period,field,value,unit,source,'
+               'source_row,verify_status,row_json,text) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)')
+
+
+def build(out=OUT):
+    t0 = time.time()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    tmp = out.with_suffix(".tmp")
+    if tmp.exists():
+        tmp.unlink()
+    db = sqlite3.connect(tmp)
+    db.executescript("PRAGMA journal_mode=OFF; PRAGMA synchronous=OFF;" + SCHEMA)
+
+    allrows, by_path = all_doc_rows()
+    ctx = doc_context(allrows)
     stats = {"pages_skipped_docs": []}
     n_pages = 0
     for doc_id, r in allrows.items():
-        path = s(r.get("path"))
-        p = ROOT / path
-        notes, scheme, pages, kind = [], "", [], "md"
-        sup = ""
-        if doc_id in SUPERSEDED:
-            sup, note = SUPERSEDED[doc_id]
-            notes.append(note)
-        elif path.startswith("data/moat/tables/") and Path(path).name in verified_by_name:
-            sup = verified_by_name[Path(path).name]
-            notes.append("raw collector table; the verified copy supersedes it")
-        ticker = s(r.get("ticker")) or (doc_id.split(":")[0] if doc_id.split(":")[0].isupper() else "")
-        m = re.match(r"data/(?:corpus|moat)/drugs/([^/]+)/", path)
-        drug = m.group(1) if m else ""
-        if drug and ticker == drug:  # moat label manifests put the drug in the ticker column
-            ticker = drug_ticker.get(drug, "")
-        grade = grades.get(path, "")
-        if r.get("stream") == "bloomberg":
-            grade = "A"
-            notes.append("official Bloomberg transcript; licensed: index only, never copy text into a public artifact")
-        if s(r.get("doc_type")) == "transcript" and (ticker, s(r.get("period"))) in bbg_by_call \
-                and r.get("stream") != "bloomberg":
-            notes.append(f"Bloomberg copy of this call: {bbg_by_call[(ticker, s(r.get('period')))]}")
-        if s(r.get("doc_type")) == "transcript" and grade == "C":
-            notes.append("grade C: check the quote against Bloomberg before it goes in a findings table")
-        if s(r.get("doc_type")) == "transcript" and grade == "D":
-            notes.append("grade D: not quotable")
-        if not p.exists():
-            notes.append("file missing on disk")
-        elif p.suffix == ".md":
-            text = p.read_text(encoding="utf-8", errors="ignore")
-            pages = marked_pages(text)
-            scheme = "marker"
-            if not pages:
-                pages = section_pages(text)
-                scheme = "section"
-                notes.append("no page markers: one page per section heading, printed = heading (cite by section)")
-            if s(r.get("doc_type")) in ("transcript",):
-                kind = "md"
-        elif p.suffix == ".pdf":
-            pages = pdf_pages(p)
-            scheme = "pdf_page"
-            kind = "bloomberg" if r.get("stream") == "bloomberg" else "lseg"
-            notes.append("PDF: one page per PDF page; printed = PDF page number")
-        else:
-            scheme = "none"
-            if p.suffix == ".csv":
-                notes.append("table: rows are in facts if verified or listed, no pages")
-            else:
-                notes.append(f"{p.suffix} file: not page-indexed")
-                stats["pages_skipped_docs"].append(doc_id)
-        transcriptish = s(r.get("doc_type")) in ("transcript", "transcript_source")
-        turns = turns_for(pages, kind) if transcriptish and pages else []
-        sp_by_page = {}
-        for page_no, _, sp, _ in turns:
-            sp_by_page.setdefault(page_no, [])
-            if sp not in sp_by_page[page_no]:
-                sp_by_page[page_no].append(sp)
-        db.executemany("INSERT INTO pages(doc_id,page_no,printed,char_start,char_end,speakers,text) VALUES (?,?,?,?,?,?,?)",
-                       [(doc_id, n, pr, a, b, "; ".join(sp_by_page.get(n, [])), t) for n, pr, a, b, t in pages])
-        db.executemany("INSERT INTO turns VALUES (?,?,?,?,?)", [(doc_id, *t) for t in turns])
-        n_pages += len(pages)
-        lic = "bloomberg_licensed" if r.get("stream") == "bloomberg" else ""
-        db.execute("INSERT INTO docs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                   (doc_id, ticker, COMPANY.get(ticker, ticker), s(r.get("group")), s(r.get("doc_type")),
-                    s(r.get("form")), s(r.get("period")), s(r.get("filed")), s(r.get("source_quality")),
-                    s(r.get("source_url")), path, s(r.get("stream")), grade, sup, lic, drug, len(pages), scheme,
-                    "; ".join(notes)))
+        n_pages += insert_doc(db, doc_record(doc_id, r, ctx, stats))
 
     n_facts = 0
     tabs = fact_tables()
@@ -430,8 +477,7 @@ def build(out=OUT):
         rel = path.relative_to(ROOT).as_posix()
         doc_id = by_path.get(rel, "")
         rows = list(fact_rows(table, path, status, doc_id))
-        db.executemany('INSERT INTO facts("table",doc_id,row_key,ticker,drug,period,field,value,unit,source,'
-                       'source_row,verify_status,row_json,text) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)', rows)
+        db.executemany(FACT_INSERT, rows)
         n_facts += len(rows)
 
     db.execute("CREATE INDEX pages_doc ON pages(doc_id, page_no)")
@@ -458,6 +504,59 @@ def build(out=OUT):
     return meta
 
 
+def add(out=OUT, only_tables=None):
+    """Incremental update: insert docs whose doc_id is not in the index and fact rows whose (table, row_key) is not,
+    appending to pages / facts and their FTS tables. Existing rows and ids are never touched, so running it twice
+    is a no-op. Falls back to a full build when the index does not exist yet."""
+    t0 = time.time()
+    if not out.exists():
+        meta = build(out)
+        meta["mode"] = "full_build (no index yet)"
+        return meta
+    db = sqlite3.connect(out)
+    have_docs = {r[0] for r in db.execute("SELECT doc_id FROM docs")}
+    allrows, by_path = all_doc_rows()
+    new = {d: r for d, r in allrows.items() if d not in have_docs}
+    ctx = doc_context(allrows) if new else None
+    stats = {"pages_skipped_docs": []}
+    n_pages = 0
+    max_page = db.execute("SELECT COALESCE(MAX(id), 0) FROM pages").fetchone()[0]
+    for doc_id, r in new.items():
+        n_pages += insert_doc(db, doc_record(doc_id, r, ctx, stats))
+    db.execute("INSERT INTO pages_fts(rowid, text) SELECT id, text FROM pages WHERE id > ?", (max_page,))
+
+    have_keys = {}
+    max_fact = db.execute("SELECT COALESCE(MAX(id), 0) FROM facts").fetchone()[0]
+    n_facts = 0
+    new_tables = []
+    for table, path, status in fact_tables():
+        if only_tables and table not in only_tables:
+            continue
+        if table not in have_keys:
+            have_keys[table] = {r[0] for r in db.execute('SELECT row_key FROM facts WHERE "table" = ?', (table,))}
+        rel = path.relative_to(ROOT).as_posix()
+        rows = [x for x in fact_rows(table, path, status, by_path.get(rel, "")) if x[2] not in have_keys[table]]
+        if rows:
+            db.executemany(FACT_INSERT, rows)
+            n_facts += len(rows)
+            if not have_keys[table]:
+                new_tables.append(table)
+    db.execute("INSERT INTO facts_fts(rowid, text) SELECT id, text FROM facts WHERE id > ?", (max_fact,))
+    cur = dict(db.execute("SELECT key, value FROM meta").fetchall())
+    tabs = json.loads(cur.get("fact_tables", "[]"))
+    tabs += [t for t in new_tables if t not in tabs]
+    upd = {"n_docs": db.execute("SELECT COUNT(*) FROM docs").fetchone()[0],
+           "n_pages": db.execute("SELECT COUNT(*) FROM pages").fetchone()[0],
+           "n_facts": db.execute("SELECT COUNT(*) FROM facts").fetchone()[0],
+           "fact_tables": json.dumps(tabs), "last_add_at": time.strftime("%Y-%m-%dT%H:%M:%S")}
+    db.executemany("INSERT OR REPLACE INTO meta VALUES (?,?)", [(k, str(v)) for k, v in upd.items()])
+    db.commit()
+    db.close()
+    return {"mode": "add", "new_docs": len(new), "new_pages": n_pages, "new_facts": n_facts,
+            "new_tables": new_tables, "n_docs": upd["n_docs"], "n_pages": upd["n_pages"], "n_facts": upd["n_facts"],
+            "seconds": round(time.time() - t0, 1)}
+
+
 def upload(path=OUT):
     from agent.tenk import Store
     data = gzip.compress(path.read_bytes(), compresslevel=6)
@@ -467,6 +566,9 @@ def upload(path=OUT):
 
 
 def main():
+    if "--add" in sys.argv:
+        print(json.dumps(add(), indent=1))
+        return
     meta = build()
     print(json.dumps({k: v for k, v in meta.items() if k not in ("fact_tables",)}, indent=1))
     if "--upload" in sys.argv:
