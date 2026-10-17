@@ -1,0 +1,255 @@
+{
+  "ticker": "AMGN",
+  "as_of": "2026-10-17",
+  "demo": true,
+  "header_note": "Pipeline demonstration for the default ticker; not the team's Part 2 recommendation, which follows the company pick.",
+  "_comment": "Demo fixture: one chosen move and two rejected alternatives, each tied by finding id to AMGN rows that pass the numeric gate in out/AMGN/findings_v3.jsonl. Case-appendix themes: Repatha cash price (TrumpRx), Enbrel loss of exclusivity, Otezla in the IRA 2027 cycle. Repatha's IRA 2028 selection and MariTide have no passing AMGN finding in v3, so no move is tied to them. Every parameter is cited (10-K page or verified table row through verified_tables.py) or labelled an assumption.",
+  "cash_and_equivalents": {
+    "value": 13989,
+    "citation": {
+      "canonical_id": "AMGN:10q_2026Q2.md",
+      "page": 47,
+      "ticker": "AMGN",
+      "quote": "Cash and cash equivalents $ 13,989 $ 9,129",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "doc_type": "10-Q"
+    }
+  },
+  "moves": [
+    {
+      "name": "Expand a Repatha direct-to-patient cash channel at the TrumpRx price",
+      "template": "M4",
+      "context": {
+        "product": "repatha"
+      },
+      "why": "Amgen's MFN agreement lists Repatha at $239 a month through TrumpRx, down from $573, and receivables are growing faster than revenue; a direct cash channel moves part of the volume off wholesaler and PBM terms.",
+      "finding_ids": [
+        "e78dad58497e",
+        "bc852b02400d"
+      ],
+      "params": {
+        "base_us_rev_annual": {
+          "value": 1663,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "AMGN:10k_FY2025.md",
+            "page": 119,
+            "ticker": "AMGN",
+            "doc_title": "Amgen 10-K FY2025",
+            "doc_type": "10-K",
+            "quote": "1,663 1,353 3,016 1,139 1,083 2,222 793 842 1,635"
+          },
+          "note": "Repatha US product sales FY2025"
+        },
+        "share_moved": {
+          "value": 0.08,
+          "kind": "assumption",
+          "note": "8% of Repatha US volume moves to the cash channel at plateau (team input)"
+        },
+        "price_delta": {
+          "value": -0.15,
+          "kind": "assumption",
+          "note": "cash-channel net 15% below current US net; no product-level net price is public (team input)"
+        },
+        "volume_gain": {
+          "value": 0.04,
+          "kind": "assumption",
+          "note": "4% more patients reached, uninsured and high-deductible (team input)"
+        },
+        "ramp_months": {
+          "value": 12,
+          "kind": "assumption",
+          "note": "channel ramp to plateau (team input)"
+        },
+        "channel_build_cost": {
+          "value": 40.0,
+          "kind": "assumption",
+          "note": "one-time build; TrumpRx listing exists (team input, not disclosed)"
+        },
+        "channel_annual_cost": {
+          "value": 25.0,
+          "kind": "assumption",
+          "note": "operating cost (team input, not disclosed)"
+        },
+        "baseline_delta_rev_annual": {
+          "value": 0.0,
+          "kind": "assumption",
+          "note": "Medicaid MFN size not disclosed; no baseline erosion modeled (the finding is direction only)"
+        },
+        "tax_rate": {
+          "value": 0.1501,
+          "kind": "company",
+          "note": "TTM effective tax rate t from SEC XBRL (income tax / pretax, four quarters), as FIND"
+        }
+      },
+      "capability": {
+        "approved label": true,
+        "TrumpRx listing in place": true,
+        "direct-to-patient fulfilment channel": false
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": false,
+        "regulators": true,
+        "investors": false
+      }
+    },
+    {
+      "name": "Defend ENBREL through its US loss of exclusivity",
+      "template": "M5",
+      "context": {
+        "product": "enbrel"
+      },
+      "why": "ENBREL's company-stated US protection ends years before its immunology rivals' (cited 10-K patent tables); a contracting defense and a switch program value the retained revenue.",
+      "finding_ids": [
+        "cc375a27a20d"
+      ],
+      "params": {
+        "rev_at_risk_annual": {
+          "value": 2199,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "AMGN:10k_FY2025.md",
+            "page": 119,
+            "ticker": "AMGN",
+            "doc_title": "Amgen 10-K FY2025",
+            "doc_type": "10-K",
+            "quote": "ENBREL 2,199 27 2,226 3,288 28 3,316 3,650 47 3,697"
+          },
+          "note": "ENBREL US product sales FY2025"
+        },
+        "loe_month": {
+          "value": 15,
+          "kind": "company",
+          "note": "replaced by the verified pipeline/loe_calendar.csv row (company-stated LOE, 10-K page)"
+        },
+        "curve": "biologic",
+        "uplift_y1": {
+          "value": 0.08,
+          "kind": "assumption",
+          "note": "retention gained by the defense, year 1 (team input)"
+        },
+        "uplift_y2": {
+          "value": 0.06,
+          "kind": "assumption",
+          "note": "year 2 (team input)"
+        },
+        "uplift_y3": {
+          "value": 0.04,
+          "kind": "assumption",
+          "note": "year 3 (team input)"
+        },
+        "rebate_depth": {
+          "value": 0.1,
+          "kind": "assumption",
+          "note": "extra rebate on retained volume (team input)"
+        },
+        "program_cost_annual": {
+          "value": 40.0,
+          "kind": "assumption",
+          "note": "contracting and patient support (team input)"
+        },
+        "switch_capture": {
+          "value": 0.08,
+          "kind": "assumption",
+          "note": "share of lost patients moved to Otezla or TEZSPIRE (team input)"
+        },
+        "tax_rate": {
+          "value": 0.1501,
+          "kind": "company",
+          "note": "TTM effective tax rate t from SEC XBRL (income tax / pretax, four quarters), as FIND"
+        }
+      },
+      "capability": {
+        "incumbent brand with payer contracts": true,
+        "successor brand with supply": true
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": false,
+        "payers": true,
+        "regulators": false,
+        "investors": false
+      }
+    },
+    {
+      "name": "Reprice Otezla into a cash channel ahead of its Medicare negotiated price",
+      "template": "M4",
+      "context": {
+        "product": "otezla"
+      },
+      "why": "Otezla's Medicare price is set by negotiation from January 2027; a commercial cash channel limits the spillover of the negotiated price into other channels.",
+      "finding_ids": [
+        "a4b34956387a"
+      ],
+      "params": {
+        "base_us_rev_annual": {
+          "value": 1839,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "AMGN:10k_FY2025.md",
+            "page": 119,
+            "ticker": "AMGN",
+            "doc_title": "Amgen 10-K FY2025",
+            "doc_type": "10-K",
+            "quote": "Otezla 1,839 426 2,265 1,699 427 2,126 1,777 411 2,188"
+          },
+          "note": "Otezla US product sales FY2025"
+        },
+        "share_moved": {
+          "value": 0.05,
+          "kind": "assumption",
+          "note": "5% of commercial volume to the cash channel (team input)"
+        },
+        "price_delta": {
+          "value": -0.2,
+          "kind": "assumption",
+          "note": "cash net 20% below current net (team input)"
+        },
+        "volume_gain": {
+          "value": 0.02,
+          "kind": "assumption",
+          "note": "2% more patients reached (team input)"
+        },
+        "ramp_months": {
+          "value": 12,
+          "kind": "assumption",
+          "note": "channel ramp (team input)"
+        },
+        "channel_build_cost": {
+          "value": 40.0,
+          "kind": "assumption",
+          "note": "one-time build (team input, not disclosed)"
+        },
+        "channel_annual_cost": {
+          "value": 20.0,
+          "kind": "assumption",
+          "note": "operating cost (team input, not disclosed)"
+        },
+        "baseline_start_month": {
+          "value": 3,
+          "kind": "assumption",
+          "note": "January 2027, month 3 after 2026-10-17 (the finding's IPAY date)"
+        },
+        "tax_rate": {
+          "value": 0.1501,
+          "kind": "company",
+          "note": "TTM effective tax rate t from SEC XBRL (income tax / pretax, four quarters), as FIND"
+        }
+      },
+      "capability": {
+        "approved label": true,
+        "commercial footprint in the TA": true,
+        "direct-to-patient fulfilment channel": false
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": true,
+        "regulators": false,
+        "investors": false
+      }
+    }
+  ]
+}

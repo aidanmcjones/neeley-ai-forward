@@ -301,6 +301,26 @@ def indication_timing(ta, name):
 LOE = "pipeline/loe_calendar.csv"
 
 
+_MONTHS = {m: i for i, m in enumerate(("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov",
+                                        "dec"), 1)}
+
+
+def _parse_loe(v):
+    """A loe_calendar date: '2028', '2028-11-22', '11/22/2028', 'May 2026' (month kept), else None."""
+    s = str(v or "")
+    m = re.search(r"(\d{4})-(\d{2})-(\d{2})", s)
+    if m:
+        return date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", s)
+    if m:
+        return date(int(m.group(3)), int(m.group(1)), int(m.group(2)))
+    m = re.search(r"\b([A-Za-z]{3})[a-z]*\.?\s+(\d{4})", s)
+    if m and m.group(1).lower() in _MONTHS:
+        return date(int(m.group(2)), _MONTHS[m.group(1).lower()], 1)
+    m = re.search(r"(\d{4})", s)
+    return date(int(m.group(1)), 1, 1) if m else None
+
+
 def loe(ticker, brand, territory="US"):
     """(date, TableValue for the year, row) from pipeline/loe_calendar.csv: company_stated_loe first (10-K page in
     tenk_page), else rule_output_loe. None when no passing row."""
@@ -309,14 +329,13 @@ def loe(ticker, brand, territory="US"):
         if not hit:
             continue
         v, c, rk, r = hit
-        m = re.search(r"(\d{4})(?:-(\d{2})-(\d{2}))?", str(v))
-        if not m:
+        d = _parse_loe(v)
+        if d is None:
             continue
-        d = date(int(m.group(1)), int(m.group(2) or 1), int(m.group(3) or 1))
         page = r.get("tenk_page")
         extra = (f"{fld} {v}" + (f", 10-K page {int(float(page))}" if _num(page) else "")
                  + (f"; rule {r.get('rule_output_loe')} ({r.get('rule_method')})" if r.get("rule_output_loe") else ""))
-        return d, TableValue(float(m.group(1)), [c], _label(LOE, rk, extra), LOE, rk), r
+        return d, TableValue(float(d.year), [c], _label(LOE, rk, extra), LOE, rk), r
     return None
 
 
@@ -342,7 +361,7 @@ def loe_month(ticker, brand):
     m = months_to(d)
     a = DATA.AS_OF
     tv.derived = {"loe_month": derived_entry(m, f"(y - {a.year}) * 12 + ({d.month} - {a.month})",
-                                             {"y": (d.year, tv.citations[0])})}
+                                             {"y": {"value": d.year, "citation": tv.citations[0], "year": True}})}
     tv.value = m
     return tv
 

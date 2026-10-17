@@ -1,0 +1,265 @@
+{
+  "ticker": "MRK",
+  "as_of": "2026-10-17",
+  "demo": true,
+  "header_note": "Pipeline demonstration for the default ticker; not the team's Part 2 recommendation, which follows the company pick.",
+  "_comment": "Demo fixture: one chosen move and two rejected alternatives, each tied by finding id to MRK rows that pass the numeric gate in out/MRK/findings_v3.jsonl. Case-appendix themes: Keytruda's 2028 US patent expiry and the subcutaneous formulation, Januvia and Janumet generics plus the Medicare negotiated price. The Terns and Verona acquisitions have no passing MRK finding in v3 to tie a portfolio-shift move to. Every parameter is cited (10-K page or verified table row through verified_tables.py) or labelled an assumption. The company pick is open between MRK, AMGN and GILD; this file is not the recommendation.",
+  "cash_and_equivalents": {
+    "value": 6849,
+    "citation": {
+      "canonical_id": "MRK:10q_2026Q2.md",
+      "page": 4,
+      "ticker": "MRK",
+      "quote": "Cash and cash equivalents $ 6,849 $ 14,565",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "doc_type": "10-Q"
+    }
+  },
+  "moves": [
+    {
+      "name": "Move Keytruda patients to the subcutaneous formulation before the US loss of exclusivity",
+      "template": "M5",
+      "context": {
+        "product": "keytruda"
+      },
+      "why": "Keytruda's label is the broadest in its class (cited label lines) and its company-stated US compound patent ends in 2028; moving patients to the subcutaneous formulation before then retains revenue the IV biosimilars would take.",
+      "finding_ids": [
+        "3f39dd0d23f0"
+      ],
+      "params": {
+        "rev_at_risk_annual": {
+          "value": 18829,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "MRK:10k_FY2025.md",
+            "page": 134,
+            "ticker": "MRK",
+            "doc_title": "Merck 10-K FY2025",
+            "doc_type": "10-K",
+            "quote": "Keytruda $ 18,829 $ 12,812 $ 31,641 $ 17,872 $ 11,610 $ 29,482"
+          },
+          "note": "Keytruda US sales FY2025"
+        },
+        "loe_month": {
+          "value": 15,
+          "kind": "company",
+          "note": "replaced by the verified pipeline/loe_calendar.csv row (company-stated 2028, 10-K page)"
+        },
+        "curve": "biologic",
+        "uplift_y1": {
+          "value": 0.05,
+          "kind": "assumption",
+          "note": "retention gained by contracting, year 1 (team input)"
+        },
+        "uplift_y2": {
+          "value": 0.04,
+          "kind": "assumption",
+          "note": "year 2 (team input)"
+        },
+        "uplift_y3": {
+          "value": 0.03,
+          "kind": "assumption",
+          "note": "year 3 (team input)"
+        },
+        "rebate_depth": {
+          "value": 0.05,
+          "kind": "assumption",
+          "note": "extra rebate on retained volume (team input)"
+        },
+        "program_cost_annual": {
+          "value": 150.0,
+          "kind": "assumption",
+          "note": "switch program and field support (team input)"
+        },
+        "switch_capture": {
+          "value": 0.25,
+          "kind": "assumption",
+          "note": "share of patients on the subcutaneous formulation at LOE (team input; uptake not disclosed)"
+        },
+        "tax_rate": {
+          "value": 0.1854,
+          "kind": "assumption",
+          "note": "peer median TTM GAAP ETR: MRK's own TTM ETR lies outside [0, 0.40] (section 4.2 fallback rule)"
+        }
+      },
+      "capability": {
+        "incumbent brand with payer contracts": true,
+        "successor brand with supply": true
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": true,
+        "regulators": true,
+        "investors": false
+      }
+    },
+    {
+      "name": "Sell Januvia through a cash channel at the TrumpRx price",
+      "template": "M4",
+      "context": {
+        "product": "januvia"
+      },
+      "why": "Merck's MFN agreement lists Januvia at $100 through TrumpRx, down from $330, and Januvia's label is narrower than its rivals'; a cash channel keeps patients as generics arrive.",
+      "finding_ids": [
+        "055023d4eff6",
+        "fc96c4e7ed6a"
+      ],
+      "params": {
+        "base_us_rev_annual": {
+          "value": 999,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "MRK:10k_FY2025.md",
+            "page": 134,
+            "ticker": "MRK",
+            "doc_title": "Merck 10-K FY2025",
+            "doc_type": "10-K",
+            "quote": "Januvia 999 605 1,604 469 865 1,334 1,151 1,039 2,189"
+          },
+          "note": "Januvia US sales FY2025"
+        },
+        "share_moved": {
+          "value": 0.1,
+          "kind": "assumption",
+          "note": "10% of US volume to the cash channel (team input)"
+        },
+        "price_delta": {
+          "value": -0.3,
+          "kind": "assumption",
+          "note": "cash net 30% below current net (team input)"
+        },
+        "volume_gain": {
+          "value": 0.03,
+          "kind": "assumption",
+          "note": "3% more patients reached (team input)"
+        },
+        "ramp_months": {
+          "value": 9,
+          "kind": "assumption",
+          "note": "channel ramp (team input)"
+        },
+        "channel_build_cost": {
+          "value": 20.0,
+          "kind": "assumption",
+          "note": "one-time build; TrumpRx listing exists (team input)"
+        },
+        "channel_annual_cost": {
+          "value": 15.0,
+          "kind": "assumption",
+          "note": "operating cost (team input)"
+        },
+        "baseline_delta_rev_annual": {
+          "value": 0.0,
+          "kind": "assumption",
+          "note": "Medicaid MFN size not disclosed; no baseline erosion modeled (the finding is direction only)"
+        },
+        "loe_month": {
+          "value": 0,
+          "kind": "assumption",
+          "note": "US exclusivity already ended (May 2026); no further LOE step inside the horizon"
+        },
+        "tax_rate": {
+          "value": 0.1854,
+          "kind": "assumption",
+          "note": "peer median TTM GAAP ETR: MRK's own TTM ETR lies outside [0, 0.40] (section 4.2 fallback rule)"
+        }
+      },
+      "capability": {
+        "approved label": true,
+        "TrumpRx listing in place": true,
+        "direct-to-patient fulfilment channel": false
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": false,
+        "regulators": true,
+        "investors": false
+      }
+    },
+    {
+      "name": "Reprice Janumet ahead of its Medicare negotiated price",
+      "template": "M4",
+      "context": {
+        "product": "janumet"
+      },
+      "why": "Janumet's Medicare price is set by negotiation from January 2027; a commercial cash channel limits the spillover of the negotiated price.",
+      "finding_ids": [
+        "dd2b47cc4d2b"
+      ],
+      "params": {
+        "base_us_rev_annual": {
+          "value": 268,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "MRK:10k_FY2025.md",
+            "page": 134,
+            "ticker": "MRK",
+            "doc_title": "Merck 10-K FY2025",
+            "doc_type": "10-K",
+            "quote": "Janumet 268 672 940 161 774 935 223 954 1,177"
+          },
+          "note": "Janumet US sales FY2025"
+        },
+        "share_moved": {
+          "value": 0.05,
+          "kind": "assumption",
+          "note": "5% of commercial volume to the cash channel (team input)"
+        },
+        "price_delta": {
+          "value": -0.25,
+          "kind": "assumption",
+          "note": "cash net 25% below current net (team input)"
+        },
+        "volume_gain": {
+          "value": 0.02,
+          "kind": "assumption",
+          "note": "2% more patients reached (team input)"
+        },
+        "ramp_months": {
+          "value": 9,
+          "kind": "assumption",
+          "note": "channel ramp (team input)"
+        },
+        "channel_build_cost": {
+          "value": 10.0,
+          "kind": "assumption",
+          "note": "one-time build (team input)"
+        },
+        "channel_annual_cost": {
+          "value": 8.0,
+          "kind": "assumption",
+          "note": "operating cost (team input)"
+        },
+        "baseline_start_month": {
+          "value": 3,
+          "kind": "assumption",
+          "note": "January 2027, month 3 after 2026-10-17 (the finding's IPAY date)"
+        },
+        "loe_month": {
+          "value": 0,
+          "kind": "assumption",
+          "note": "US exclusivity already ended (May 2026); no further LOE step inside the horizon"
+        },
+        "tax_rate": {
+          "value": 0.1854,
+          "kind": "assumption",
+          "note": "peer median TTM GAAP ETR: MRK's own TTM ETR lies outside [0, 0.40] (section 4.2 fallback rule)"
+        }
+      },
+      "capability": {
+        "approved label": true,
+        "commercial footprint in the TA": true,
+        "direct-to-patient fulfilment channel": false
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": true,
+        "regulators": false,
+        "investors": false
+      }
+    }
+  ]
+}

@@ -67,7 +67,12 @@ def run(ticker, findings, spec, as_of=None, cash=None):
         c = D.citation_from_dict(cash_spec["citation"], cash_spec["value"], "USD millions")
         cash_claim = Claim(f"cash and equivalents {cash_spec['value']:,} (latest balance sheet)", [c])
     return {"ticker": ticker, "as_of": as_of or spec.get("as_of") or str(date.today()), "cash": cash, "cash_claim": cash_claim,
-            "selection": sel, "ranked": ranked}
+            "selection": sel, "ranked": ranked, "demo": bool(spec.get("demo")),
+            "header_note": str(spec.get("header_note") or (DEMO_NOTE if spec.get("demo") else ""))}
+
+
+DEMO_NOTE = ("Pipeline demonstration for the default ticker; not the team's Part 2 recommendation, which follows the "
+             "company pick.")
 
 
 def kill_table(result, context=None):
@@ -301,10 +306,14 @@ def build_md(out, findings, public=False):
     def cell(section, where, text, cites=(), derived=Dc, assumptions=Ac):
         return doc.cell(section, where, text, cites, derived, assumptions)
     p = c.p_scenario
-    L = [f"# Decide: {T} 24-month CEO move (as of {out['as_of']})", "",
+    L = [f"# Decide: {T} 24-month CEO move (as of {out['as_of']})", ""]
+    if out.get("header_note"):
+        L += ["> " + line("header", "header_note", out["header_note"], (), {}, {}), ""]
+    L += [
          cell("header", "header", f"All dollars USD millions. EV is present value at {out['as_of']} at WACC {c.wacc:.2%}, "
               f"scenario weights {p['bear']:.2f} / {p['base']:.2f} / {p['bull']:.2f} (bear / base / bull)."), "",
-         f"## Recommended move: {c.name}", ""]
+         (f"## Chosen move (pipeline demonstration): {c.name}" if out.get("demo") else f"## Recommended move: {c.name}"),
+         ""]
     if c.why:
         # the moves file's narrative: only the addressed findings' passing citations can support its numbers
         fc = [x for fid in c.finding_ids for x in (D.finding_citations(by_id[fid]) if fid in by_id else [])]
@@ -386,7 +395,7 @@ def build_md(out, findings, public=False):
         if k["id"] == "rx_context":
             for j, (v, cit, txt) in enumerate(k.get("context") or []):
                 bd = {}
-                if v is not None and cit is not None and abs(v) < 1:
+                if v is not None and cit is not None and abs(v) <= 1:
                     from agent.needle.cite.gate import derived_entry
                     bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
                 txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, [cit] if cit else [], bd, TOP20)
@@ -417,7 +426,7 @@ def build_md(out, findings, public=False):
         if k.get("baseline"):
             v, cit, txt = k["baseline"]
             bd = {}
-            if v is not None and abs(v) < 1:
+            if v is not None and abs(v) <= 1:
                 from agent.needle.cite.gate import derived_entry
                 bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
             bl = cell("kill signals", w + "/baseline", txt, [cit], bd, TOP20)
@@ -483,7 +492,8 @@ def rejected_md(out, summary, withheld):
 
 def to_json(out, summary=None, withheld=()):
     sel = out["selection"]
-    d = {"ticker": out["ticker"], "as_of": out["as_of"], "cash_and_equivalents": out["cash"],
+    d = {"ticker": out["ticker"], "as_of": out["as_of"], "demo": out.get("demo", False),
+         "header_note": out.get("header_note", ""), "cash_and_equivalents": out["cash"],
          "chosen": sel.chosen.to_dict(), "rejected": [r.to_dict() for r in sel.rejected],
          "ranked": [{"name": r.name, "rank": r.rank, "status": r.status, "binding_reason": r.binding_reason, **r.five()} for r in out["ranked"]],
          "selection_notes": sel.notes, "kill_signals": out["kill"]}

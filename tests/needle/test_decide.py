@@ -261,3 +261,20 @@ def test_verify2_benchmarks_link_only_where_the_page_shows_the_figure():
     for name in ("p_bear", "p_base", "p_bull", "cm_existing", "trial_cost_cardio", "coverage_lag_months"):
         assert M.REGISTRY[name].url == "", name
     assert D.benchmark_label("p_bear").endswith("no URL (unverified)")
+
+
+@pytest.mark.parametrize("t", ["AMGN", "MRK"])
+def test_demo_fixtures_are_marked_and_tie_three_moves_to_gated_findings(t, tmp_path):
+    spec = json.loads((EX / f"moves_{t}.json").read_text())
+    assert spec["demo"] is True and spec["header_note"] == CLI.DEMO_NOTE and len(spec["moves"]) == 3
+    assert all(mv["finding_ids"] for mv in spec["moves"])
+    f = ROOT / "out" / t / "findings_v3.jsonl"
+    if not f.exists():
+        pytest.skip("out/<T>/findings_v3.jsonl not generated (gitignored)")
+    rc = CLI.main(["--ticker", t, "--findings", str(f), "--moves", str(EX / f"moves_{t}.json"), "--out", str(tmp_path)])
+    assert rc == 0
+    d = json.loads((tmp_path / "decide.json").read_text())
+    assert d["demo"] and d["numeric_check"]["status"] == "passed" and len(d["ranked"]) == 3
+    assert all(i["numeric_check"]["status"] in ("passed", "no_numbers") for i in d["numeric_items"])
+    md = (tmp_path / "decide.md").read_text()
+    assert CLI.DEMO_NOTE in md and "## Chosen move (pipeline demonstration)" in md
