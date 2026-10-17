@@ -102,3 +102,9 @@ Index each finding (text, topics, signal_kind, drug slugs mentioned, evidence ci
 - Keyboard: tab through chips, Enter opens the drawer, Esc closes, ⌘K opens Ask.
 - Phone width does not matter; the demo laptop is 13 to 16 inches at 1280 to 1728 px wide. Must not break at 1280.
 - Honest empty states: if a file is missing say which file, never silently blank.
+
+## Next pass (queued Sat Oct 17, evening)
+
+- Quant-model session (branch `quant-model`) is fixing the scorer bug our exporter flagged (LLY gross-margin level scored as a change). When `out/league_v2.json`, `out/<T>/findings_v2.jsonl` and `out/<T>/decide.json` are committed, `agent/ui_export.py` must prefer them: map score components (M, O, E, pi, S, old_S) onto `vector`, the `citations` list (cite_id, doc_type, doc_title, period, page, folio, quote, source_url, deep_link, viewer_link, verification{status, score}, confidence_note) onto `evidence`, and `decide.json` (chosen move, two rejected alternatives on the same five numbers, kill-signal table, footnotes) onto `stance`. Public build rule: a citation with verification status `unverified` or a Bloomberg-licensed source never renders a deep link or quote text (their `render_html(public=True)` behaviour). Contract: `docs/citations.md` on that branch.
+- Optional `/viewer` route via `ui/server.py` calling `agent/needle/cite/viewer.py render_viewer(doc, page, q)`; the offline source drawer stays the default so the demo runs with Wi-Fi off.
+- Regenerate `data/moat/progress.json` so `meta.moat.stages` stops saying Model blocked / UI waiting.
