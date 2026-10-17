@@ -1116,6 +1116,8 @@ def apply_decide(ticker, stance, findings, v1=()):
                            f"out/{ticker}/decide_rejected.md), so the stance stays templated: "
                            + " ".join(l for l in text.splitlines() if l and not l.startswith("#")))
         return stance
+    if d and not d.get("chosen") and isinstance(d.get("least_bad_move"), dict):
+        d = {**d, "chosen": {**d["least_bad_move"], "status": "least_bad"}, "_least_bad": True}
     if not d or not d.get("chosen"):
         stance["note"] += (f" No CEO-move valuation: no docs/examples/moves_{ticker}.json moves file, so the stance "
                            "stays templated.") if not moves_file.exists() else " decide.json missing; stance stays templated."
@@ -1140,10 +1142,12 @@ def apply_decide(ticker, stance, findings, v1=()):
                                  "citation": cell_cite(c, pool={x.get("cite_id"): x for x in cl.get("citations") or []}),
                                  "numeric_check": numeric_check(cl.get("numeric_check"))})
     stance["template"] = {k: stance.get(k) for k in ("headline", "recommended", "decision_needed", "options", "alternatives", "prove_wrong")}
-    stance["headline"] = f"{ch['name']}: {ch.get('why') or ''}".strip().rstrip(":")
+    stance["headline"] = (f"No candidate clears the hurdle; least-bad option: {ch['name']}." if d.get("_least_bad") else
+                          f"{ch['name']}: {ch.get('why') or ''}".strip().rstrip(":"))
     stance["recommended"] = ch["name"]
     budget = (ch.get("budget") or {}).get("total 24-month committed outflow")
-    stance["decision_needed"] = (f"Approve '{ch['name']}': {m_(budget)} committed over 24 months, cash at risk "
+    stance["decision_needed"] = (f"No move clears zero expected value ({d.get('selection_rule')}). Least-bad option "
+                                 f"'{ch['name']}':" if d.get("_least_bad") else f"Approve '{ch['name']}':") + (f" {m_(budget)} committed over 24 months, cash at risk "
                                  f"{m_(ch.get('car'))} against {m_(d.get('cash_and_equivalents'))} cash and equivalents; "
                                  f"expected value {m_(ch.get('ev'))}, payback month {ch.get('payback_month')}.")
     stance["options"] = [{"name": m["name"], "dollars": round((m.get("ev") or 0) * 1e6, 0),
@@ -1165,6 +1169,9 @@ def apply_decide(ticker, stance, findings, v1=()):
              if i in ids and ids[i]["evidence"]]
     stance["decide"] = {"as_of": d.get("as_of"), "cash_and_equivalents": d.get("cash_and_equivalents"),
                         "demo": bool(d.get("demo")), "note": d.get("header_note"),
+                        "selection_rule": d.get("selection_rule"),
+                        "chosen": None if d.get("_least_bad") else ch.get("name"),
+                        "least_bad": d.get("least_bad"), "least_bad_move": ch.get("name") if d.get("_least_bad") else None,
                         "numeric_items": [{**it, "numeric_check": numeric_check(it.get("numeric_check"))}
                                           for it in d.get("numeric_items") or []],
                         "withheld_lines": d.get("withheld_lines") or [],
@@ -1695,8 +1702,11 @@ def company(ticker, league_row, sealed, side, lg2=None):
         "questions": mark_no_needle(build_questions(ticker, findings, needle, stance, rejected, cset,
                                                     forces[0] if forces else None), no_needle),
         "sealed_forecast": next((p for p in sealed if p["ticker"] == ticker), None),
-        "findings_table": findings_table(ticker, raw2 or v1, side),
-        **({"needle_rule": (lg2 or {}).get("needle_rule")} if (lg2 or {}).get("needle_rule") else {}),
+        "findings_table": (ft := findings_table(ticker, raw2 or v1, side, findings)),
+        **({"needle_rule": ft.get("needle_rule"),
+            "needle_id_rule": next((f["id"] for f in findings if (f.get("source_id") or f["id"]) == ft.get("needle_id")),
+                                   ft.get("needle_id"))} if ft and ft.get("needle_rule") else
+           {"needle_rule": (lg2 or {}).get("needle_rule")} if (lg2 or {}).get("needle_rule") else {}),
     }
 
 
@@ -1771,6 +1781,60 @@ def corpus_stats():
             "doc_types": {k: int(v) for k, v in m.doc_type.value_counts().items()}}
 
 
+def md_table(text, after=None):
+    """Rows of the first markdown table in text (after the heading `after`, if given) as dicts keyed by header."""
+    if after and after in text:
+        text = text.split(after, 1)[1]
+    lines = [l for l in text.splitlines()]
+    i = next((k for k, l in enumerate(lines) if l.strip().startswith("|")), None)
+    if i is None:
+        return []
+    head = [h.strip() for h in lines[i].strip().strip("|").split("|")]
+    rows = []
+    for l in lines[i + 2:]:
+        if not l.strip().startswith("|"):
+            break
+        cells = [c.strip() for c in l.strip().strip("|").split("|")]
+        rows.append(dict(zip(head, cells)))
+    return rows
+
+
+def _md_plain(t):
+    return re.sub(r"\*\*(.+?)\*\*", r"\1", t or "").strip()
+
+
+def ai_wrong_cases():
+    """docs/ai_in_the_build.md 'When the AI was wrong' table -> rows with their file/commit citations."""
+    p = ROOT / "docs" / "ai_in_the_build.md"
+    if not p.exists():
+        return []
+    out = []
+    for r in md_table(p.read_text(encoding="utf-8"), "## When the AI was wrong"):
+        ref = r.get("File or commit", "")
+        out.append({"n": int(r["#"]) if r.get("#", "").isdigit() else r.get("#"), "date": r.get("Date"),
+                    "ai_claimed": r.get("What the AI claimed"), "caught_by": r.get("Caught by"), "fix": r.get("Fix"),
+                    "evidence": ref, "evidence_refs": re.findall(r"`([^`]+)`", ref) +
+                    re.findall(r"\b[0-9a-f]{7}\b", re.sub(r"`[^`]+`", "", ref)),
+                    "source": "docs/ai_in_the_build.md"})
+    return out
+
+
+def honest_limits():
+    """docs/honest_limits.md: the limits table plus the 'Further limits' bullets."""
+    p = ROOT / "docs" / "honest_limits.md"
+    if not p.exists():
+        return []
+    text = p.read_text(encoding="utf-8")
+    out = [{"limit": r.get("Limit"), "sentence": (r.get("Sentence for the pitch") or "").strip('"'),
+            "proxy": r.get("Proxy we use"), "source": "docs/honest_limits.md"} for r in md_table(text)]
+    for l in text.split("Further limits", 1)[-1].splitlines() if "Further limits" in text else []:
+        m = re.match(r"^- \*\*(.+?)\*\*\s*(.*)$", l.strip())
+        if m:
+            out.append({"limit": m.group(1).rstrip("."), "sentence": _md_plain(m.group(2)).strip('"'),
+                        "proxy": None, "source": "docs/honest_limits.md"})
+    return out
+
+
 def proof(rules, lims):
     sealed = read_json(OUT / "predictions" / "sealed_2026Q3.json", {}) or {}
     body = {k: v for k, v in sealed.items() if k != "sha256"}
@@ -1789,6 +1853,11 @@ def proof(rules, lims):
                    "how": "sha256 over the UTF-8 bytes of `canonical` = json.dumps(file minus sha256, sort_keys=True, "
                           "ensure_ascii=False, separators=(',', ':')) as in agent.needle.audit.seal()"},
         "ai_wrong": read_jsonl(MOAT / "verify" / "ai_wrong.jsonl"),
+        "ai_wrong_cases": ai_wrong_cases(),
+        "how_we_did_it_md": (ROOT / "docs" / "how_we_did_it_quant.md").read_text(encoding="utf-8")
+        if (ROOT / "docs" / "how_we_did_it_quant.md").exists() else None,
+        "ai_in_the_build_md": (ROOT / "docs" / "ai_in_the_build.md").read_text(encoding="utf-8")
+        if (ROOT / "docs" / "ai_in_the_build.md").exists() else None,
         "verifier_rules": rules, "limits": lims,
     }
 
@@ -1858,6 +1927,7 @@ def main():
         "as_of": prog.get("as_of"), "built_at": pd.Timestamp.now(tz="UTC").isoformat(),
         "default_ticker": default_t, "default_ticker_source": default_src,
         **({"default_ticker_warning": default_warn} if default_warn else {}),
+        "honest_limits": honest_limits(),
         "league_internal": True, "league_leader": LEAGUE_VERSION.get("leader"),
         "league_note": ("league.json, league_robustness and the S equation are internal triage only; the pitch-facing "
                         "outputs are pitch_outputs (findings table ranked by dollar impact, Sharpest Needle, product "
@@ -1909,28 +1979,60 @@ def picked_ticker():
     return (v or "").strip().upper() or None
 
 
-def findings_table(ticker, raw_findings, side):
-    """out/<T>/findings_table.json (cited findings ranked by dollar impact) -> company findings_table, or None."""
+def findings_table(ticker, raw_findings, side, exported=()):
+    """out/<T>/findings_table.json (cited findings ranked by dollar impact; one shared footnote list in the .md)
+    -> company findings_table. Markers map to cite_ids through the shared footnotes, matched against every
+    citation of the ticker's findings. dEPS, dOI and the analyst share are model outputs labelled [assumption]."""
     d = read_json(OUT / ticker / "findings_table.json")
     if d is None:
         return None
     rows = d.get("rows") if isinstance(d, dict) else d
-    basis = d.get("rank_basis") if isinstance(d, dict) else None
+    md = OUT / ticker / "findings_table.md"
+    _, notes = split_md(md.read_text(encoding="utf-8")) if md.exists() else (None, {})
+    pool, seen = [], set()
+    for f in raw_findings:
+        for c in f.get("citations") or []:
+            if c.get("cite_id") not in seen:
+                seen.add(c.get("cite_id"))
+                pool.append(c)
+    mmap = marker_map(notes, pool)
+    lic = {c.get("cite_id") for c in pool if c.get("license")}
+    uid = {}
+    for f in exported:
+        uid.setdefault(f.get("source_id") or f["id"], f["id"])
     by_id = {f.get("id"): f for f in raw_findings}
     out = []
     for i, r in enumerate(rows or []):
         fid = r.get("finding_id") or r.get("id")
         src = by_id.get(fid) or {}
-        cits = r.get("citations") or src.get("citations") or []
-        st, notes = split_md(r.get("sentence_md") or src.get("sentence_md"))
-        im, inotes = split_md(r.get("impact_md") or r.get("formula_md") or src.get("formula_md"))
-        notes = {**inotes, **notes}
-        out.append({"rank": r.get("rank", i + 1), "rank_basis": r.get("rank_basis") or basis, "finding_id": fid,
-                    "sentence_marked": plain(st) if st else plain(r.get("sentence") or src.get("sentence")),
-                    "impact_marked": im or r.get("impact_text"), "marker_map": marker_map(notes, cits),
-                    "numeric_check": numeric_check(r.get("numeric_check") or src.get("numeric_check")),
-                    **{k: r[k] for k in ("dollars", "impact_dollars", "direction", "confidence", "signal_kind") if k in r}})
-    return {"rank_basis": basis, "rows": out, "source_file": f"out/{ticker}/findings_table.json"}
+        st = r.get("sentence_marked") or split_md(src.get("sentence_md"))[0]
+        fo = r.get("formula_marked") or split_md(src.get("formula_md"))[0]
+        nums = sorted({int(n) for t in (st or "", fo or "") for n in re.findall(r"\[(\d+)\]", t)} |
+                      {int(n) for t in (st or "", fo or "") for m in re.findall(r"\[derived: ([^\]]+)\]", t)
+                       for n in re.findall(r"\d+", m)})
+        k1, u1 = marker_kinds(st)
+        k2, u2 = marker_kinds(fo)
+        MARKER_UNKNOWN.extend(u1 + u2)
+        out.append({"rank": r.get("rank", i + 1), "rank_basis": r.get("rank_basis") or d.get("rank_basis"),
+                    "finding_id": uid.get(fid, fid), "source_id": fid, "signal_kind": r.get("signal_kind"),
+                    "direction": r.get("direction"), "channel": r.get("channel"),
+                    "sentence": plain(r.get("sentence")), "sentence_marked": plain(st) if st else None,
+                    "impact_marked": fo or None,
+                    "d_eps_base_abs": r.get("d_eps_base_abs"), "d_oi_base_abs": r.get("d_oi_base_abs"),
+                    "analyst_share_asked": r.get("analyst_share_asked"),
+                    "analyst_share_source": r.get("analyst_share_source"),
+                    "assumption_fields": ["d_eps_base_abs", "d_oi_base_abs", "analyst_share_asked"],
+                    "confidence": (r.get("confidence") or "").lower(), "not_quantified": r.get("not_quantified"),
+                    "needle": r.get("needle"), "needle_blocked": r.get("needle_blocked"),
+                    "marker_map": {n: mmap.get(n) for n in nums},
+                    "marker_licensed": [n for n in nums if mmap.get(n) in lic],
+                    "marker_kinds": {"sentence": k1, "formula": k2},
+                    "numeric_check": numeric_check(r.get("numeric_check") or src.get("numeric_check"))})
+    return {"rank_basis": d.get("rank_basis"), "needle_rule": d.get("needle_rule"), "needle_id": d.get("needle_id"),
+            "note": d.get("note"), "numeric_check": numeric_check(d.get("numeric_check")),
+            "failed": d.get("failed") or [], "rows": out, "footnotes_n": len(notes),
+            "marker_unresolved": sorted(n for n, c in mmap.items() if not c),
+            "source_file": f"out/{ticker}/findings_table.json"}
 MARKER_UNKNOWN = []
 LEAGUE_VERSION = {}
 PRODUCT_LOG = {}
