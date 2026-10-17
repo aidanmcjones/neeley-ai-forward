@@ -41,6 +41,40 @@ function useReveal(total: number, instant: boolean) {
   return { shown, done, skip };
 }
 
+/* The league score (L, S), score anatomy, robustness variants and rank-vs-v2 are internal triage, not the
+   pitch: they never render on the chat page. The league answer becomes a plain ranked list. */
+const INTERNAL = /\bS ?= |score L\b|\bL ?= |robustness|scoring variants|vs v2|M x O x E|M × O × E/i;
+const INTERNAL_COL = /^(score( L)?|L|S|rank vs v2|v2 rank|old rank)$/i;
+
+function stripSentences(md: string): string {
+  return md.split(/(?<=[.!?])\s+/).filter((x) => !INTERNAL.test(x)).join(" ");
+}
+
+export function pitchSafe(m: MemoRecord): MemoRecord {
+  const blocks = m.blocks ?? [];
+  if (m.kind === "league") {
+    const t = blocks.find((b): b is Extract<MemoBlock, { type: "table" }> => b.type === "table");
+    const ci = t ? Math.max(0, t.columns.findIndex((c) => /company|ticker/i.test(c))) : -1;
+    const names = t ? t.rows.map((r) => String(r[ci] ?? "").replace(/\s*\[\d+\]/g, "")) : [];
+    const out: MemoBlock[] = [{ type: "p", md: "The ten companies, in the order the engine ranks them:" }];
+    if (names.length) out.push({ type: "list", items: names.map((n, i) => `${i + 1}. ${n}`) });
+    return { ...m, blocks: out, numeric_check: { status: "no_numbers" } };
+  }
+  const out: MemoBlock[] = [];
+  for (const b of blocks) {
+    if (b.type === "math" && (INTERNAL.test(b.label ?? "") || INTERNAL.test(b.text))) continue;
+    if (b.type === "p" || b.type === "callout") { const md = stripSentences(b.md); if (md.trim()) out.push({ ...b, md }); continue; }
+    if (b.type === "list") { const items = b.items.filter((x) => !INTERNAL.test(x)); if (items.length) out.push({ ...b, items }); continue; }
+    if (b.type === "table") {
+      const keep = b.columns.map((c, i) => (INTERNAL_COL.test(c.trim()) ? -1 : i)).filter((i) => i >= 0);
+      out.push({ ...b, columns: keep.map((i) => b.columns[i]), rows: b.rows.map((r) => keep.map((i) => r[i])) });
+      continue;
+    }
+    out.push(b);
+  }
+  return { ...m, blocks: out };
+}
+
 const RULES: Record<string, string> = { template: "Drafted by rules, no model", decide_v2: "Valued by decide rules, no model", data: "Read from the data, no model" };
 
 export function toMarkdown(m: MemoRecord): string {
@@ -69,9 +103,10 @@ export function toMarkdown(m: MemoRecord): string {
   return out.join("\n");
 }
 
-export function Answer({ memo, instant, onAsk, labelFor }: {
+export function Answer({ memo: raw, instant, onAsk, labelFor }: {
   memo: MemoRecord; instant: boolean; onAsk: (id: string) => void; labelFor: (id: string) => string | null;
 }) {
+  const memo = useMemo(() => pitchSafe(raw), [raw]);
   const cites = memo.cites ?? [];
   const evs = useMemo(() => new Map(cites.map((c) => [c.n, citeEvidence(c, cites)] as const)), [cites]);
   useEffect(() => { registerCites([...evs.values()]); }, [evs]);

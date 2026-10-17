@@ -106,8 +106,13 @@ judge click through in under a minute. `/#/?q=<prompt>` opens on an answer. The 
 under `/#/cockpit` (old links redirect), reached from a small "Full cockpit" link. Until the exporter's
 memos.json lands, the page shows a 3-record sample (`_sample/memos.json`) with a banner.
 
+**Pitch trim (Sat Oct 17, late night).** League score, S equation, score anatomy, robustness and rank vs v2
+are off every judge-facing surface (chat and cockpit Briefing / Proof) and live at `/#/cockpit/triage` (unlinked,
+"Internal triage view, not part of the pitch"). The chat starts at "Pick a company" unless
+`meta.default_ticker_source` is "pick". Parker's trim layer (`ui/public/assets/trim.js`, `trim.css`) runs on
+cockpit routes only with a "Full detail" pill; `fit.css` is now in the repo and linked from `index.html`.
+
 **Open.**
-- `ui/public/data/memos.json` from the exporter (the chat runs on the sample until then).
 - `sentence_marked` / `derived_from` in the export.
 - `numeric_check` and token-level assumption tags (for "[assumption]" markers) not in the export yet.
 - stance.decide for the nine companies other than LLY; AMGN product v2 tables.

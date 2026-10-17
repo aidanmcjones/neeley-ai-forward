@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import { findNeedle, needleNone, topFinding, useData } from "../lib/data";
 import type { Evidence } from "../lib/types";
-import { EmptyState, Panel, RankChange, RobustnessTable, ScreenFrame } from "../components";
+import { EmptyState, ScreenFrame } from "../components";
 import { FindingDetail } from "../components/briefing/FindingDetail";
 import { KpiRow } from "../components/briefing/KpiRow";
 import { NeedleHero } from "../components/briefing/NeedleHero";
 import { FindingsGrid } from "../components/briefing/FindingsGrid";
 import { PeerChart } from "../components/briefing/PeerChart";
-import { ScoreAnatomy } from "../components/briefing/ScoreAnatomy";
 import { StancePanel } from "../components/briefing/StancePanel";
 
 // Briefing (/): KPI row, Sharpest Needle hero, findings grid driving two charts, AI stance panel.
 export default function Briefing() {
-  const { meta, company, ticker, rank, league, leagueRow, setTicker, loading, error } = useData();
+  const { meta, company, ticker, league, leagueRow, loading, error } = useData();
   const leagueRowStatus = (t?: string) => String(league?.find((r) => r.ticker === t)?.needle_status ?? "");
   const none = needleNone(company) || leagueRowStatus(company?.ticker) === "none";
   const needle = none ? undefined : findNeedle(company);
@@ -29,7 +28,7 @@ export default function Briefing() {
   return (
     <ScreenFrame
       title="Briefing"
-      subtitle={company ? <>{company.name ?? t} <span className="font-mono">({t})</span>{rank ? <> · league rank <span className="font-mono tnum">#{rank} of {league?.length ?? "?"}</span> <RankChange row={leagueRow} /> (league.json)</> : null}</> : ticker ?? undefined}
+      subtitle={company ? <>{company.name ?? t} <span className="font-mono">({t})</span></> : ticker ?? undefined}
       loading={loading}
       error={error}
     >
@@ -49,15 +48,7 @@ export default function Briefing() {
                 <EmptyState file={`companies/${t}.json`} message="No findings exported for this company" />
               )}
               {selected && <FindingDetail company={company} finding={selected} onSelect={(id) => setSelectedId(id)} />}
-              <div className="grid grid-cols-2 gap-4">
-                <PeerChart finding={selected} ticker={t} />
-                <ScoreAnatomy finding={selected} ticker={t} />
-              </div>
-              {meta?.league_robustness ? (
-                <Panel title="Does the ranking hold?" meta={<span className="font-mono">rank under each scoring variant</span>} bodyClassName="px-3 py-2.5">
-                  <RobustnessTable meta={meta} league={league} selected={t} onPick={setTicker} compact />
-                </Panel>
-              ) : null}
+              <PeerChart finding={selected} ticker={t} />
             </div>
             <StancePanel company={company} preview={preview} onPreview={setPreview} />
           </div>

@@ -28,7 +28,7 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
           <AiMark label="Sharpest Needle · engine verdict" />
           <NeedleStatusPill status={status} />
         </div>
-        <span className="text-[11px] text-muted font-mono">{v2 ? "highest S = M·O·E·π with O ≥ 0.5, E ≥ 0.9" : "highest S with O ≥ 0.7, E ≥ 0.6"} · companies/{ticker}.json · league.json</span>
+        <span className="text-[11px] text-muted font-mono">{v2 ? "most material, least discussed, quote verified" : "most material, least discussed"} · companies/{ticker}.json</span>
       </div>
       {none ? (
         <>

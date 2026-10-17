@@ -280,4 +280,6 @@ export interface MemoRecord extends Loose {
 export interface MemosFile extends Loose {
   generated_at?: string; mode?: string; engine?: string; default_ticker?: string | null;
   suggested?: string[]; memos: MemoRecord[];
+  /** Per-company suggested flow, used once a company is picked in the pill. */
+  suggested_by_ticker?: Record<string, string[]>;
 }

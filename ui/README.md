@@ -64,6 +64,23 @@ fixture `public/data/_sample/memos.json` and says so.
 - Byline: teal AiMark only for model-written records; template / decide_v2 / data read "rules, no model".
   Numeric-check pill: passed (counts), failed, unchecked, or `no_numbers` ("no numbers to check").
 
+**Default company (chat).** `meta.default_ticker_source` decides: "pick" preselects `meta.default_ticker`
+and shows its flow (`memos.suggested_by_ticker[T]`); "unpicked" (or absent) starts at "Pick a company" with
+the company-agnostic `memos.suggested`, and picking a company switches to that company's chips. The league
+leader is never auto-selected. The cockpit keeps routing on `meta.default_ticker`.
+
+**Pitch surfaces.** The league score (L, S), the S equation, score anatomy, robustness variants and rank vs v2
+never render on the chat page (the league answer is a plain ranked list; any table column or sentence naming
+them is dropped) or on the cockpit Briefing / Proof. They live at `/#/cockpit/triage` ("Internal triage", not
+in the side nav, reachable by URL, with a muted "not part of the pitch" banner). When a company file carries
+`findings_table`, the Briefing grid follows its order and shows its `rank_basis`.
+
+**Trim layer (cockpit only).** `public/assets/trim.js` + `trim.css` (Parker's layer from `docs/ui-trim/` on
+branch `ui-trim`) tag secondary content by its visible label and cut or fade it; a "Full detail" pill (bottom
+right) turns it off. Default on. Adapted: it runs only on `#/cockpit` routes and the pill is hidden on the chat
+page. `public/assets/fit.css` lets the cockpit shrink below 1280 px (it now also releases `.app-shell`'s
+min-width). All three are linked from `index.html`, so the repo build is self-contained.
+
 The cockpit screens below now live under `/cockpit` (link "Full cockpit" under the prompt box).
 
 ## Screens

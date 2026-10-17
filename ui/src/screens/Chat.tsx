@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type React from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { matchMemo, useMemos } from "../lib/memos";
+import { useData } from "../lib/data";
 import type { MemoRecord, MemosFile } from "../lib/types";
 import { Answer } from "../components/chat/Answer";
 
@@ -22,6 +23,12 @@ const kindRank = (k?: string) => { const i = KIND_ORDER.indexOf((k ?? "").toLowe
 function suggestionsFor(file: MemosFile | null, ticker: string | null): MemoRecord[] {
   if (!file) return [];
   const byId = new Map(file.memos.map((m) => [m.id, m]));
+  // Company-agnostic flow when no company is picked; the company's own flow once one is.
+  const byTicker = (file.suggested_by_ticker as Record<string, string[]> | undefined)?.[ticker ?? ""];
+  if (!ticker || byTicker) {
+    const ids = ticker ? byTicker! : file.suggested ?? [];
+    return ids.map((id) => byId.get(id)).filter((m): m is MemoRecord => !!m).slice(0, 8);
+  }
   const base = (file.suggested ?? []).map((id) => byId.get(id)).filter((m): m is MemoRecord => !!m);
   const out: MemoRecord[] = [];
   for (const s of base) {
@@ -40,8 +47,10 @@ function suggestionsFor(file: MemosFile | null, ticker: string | null): MemoReco
 
 export default function Chat() {
   const { file, sample, error, loading } = useMemos();
+  const { meta, loading: metaLoading } = useData();
   const [params] = useSearchParams();
-  const [ticker, setTicker] = useState<string | null>(null);
+  // undefined until the default rule has run; null = no company picked.
+  const [ticker, setTicker] = useState<string | null | undefined>(undefined);
   const [turns, setTurns] = useState<Turn[]>([]);
   const [text, setText] = useState("");
   const nextId = useRef(1);
@@ -49,30 +58,33 @@ export default function Chat() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const sentQ = useRef<string | null>(null);
 
-  useEffect(() => { if (file && ticker == null) setTicker(file.default_ticker ?? null); }, [file, ticker]);
+  // Default company: only when the exporter says the team picked one (meta.default_ticker_source "pick").
+  // "unpicked" (or no rule exported) starts with no company; the league leader is never auto-selected.
+  const picked = meta?.default_ticker_source === "pick" ? (meta.default_ticker ?? null) : null;
+  useEffect(() => { if (file && ticker === undefined && !metaLoading) setTicker(picked); }, [file, ticker, metaLoading, picked]);
 
   const tickers = useMemo(() => [...new Set((file?.memos ?? []).map((m) => m.ticker).filter((t): t is string => !!t))].sort(), [file]);
-  const suggested = useMemo(() => suggestionsFor(file, ticker), [file, ticker]);
+  const suggested = useMemo(() => suggestionsFor(file, ticker ?? null), [file, ticker]);
   const byId = useMemo(() => new Map((file?.memos ?? []).map((m) => [m.id, m])), [file]);
   const labelFor = useCallback((id: string) => byId.get(id)?.prompt ?? null, [byId]);
 
   const send = useCallback((prompt: string, memo?: MemoRecord) => {
     const p = prompt.trim();
     if (!p) return;
-    const m = memo ?? matchMemo(file, p, ticker ?? file?.default_ticker ?? null).memo;
+    const m = memo ?? matchMemo(file, p, ticker === undefined ? picked : ticker).memo;
     setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memo: m }]);
     setText("");
-  }, [file, ticker]);
+  }, [file, ticker, picked]);
 
   const askId = useCallback((id: string) => { const m = byId.get(id); if (m) send(m.prompt, m); }, [byId, send]);
 
   // ?q= sends on load (judge links open on an answer).
   const q = params.get("q");
   useEffect(() => {
-    if (!file || !q || sentQ.current === q) return;
+    if (!file || !q || sentQ.current === q || metaLoading) return;
     sentQ.current = q;
     send(q);
-  }, [file, q, send]);
+  }, [file, q, send, metaLoading]);
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length]);
 
@@ -105,6 +117,7 @@ export default function Chat() {
             <label className="shrink-0 mt-1 inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-[12px] font-semibold text-muted">
               <span className="sr-only">Company</span>
               <select value={ticker ?? ""} onChange={(e) => setTicker(e.target.value || null)} className="bg-transparent text-fg font-semibold outline-none">
+                <option value="">Pick a company</option>
                 {tickers.map((t) => <option key={t} value={t}>{t}</option>)}
               </select>
             </label>

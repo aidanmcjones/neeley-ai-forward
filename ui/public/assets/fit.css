@@ -1,0 +1,43 @@
+/* Let the app shrink to the window instead of clipping at 1280px. */
+body{min-width:0!important}
+.app-shell{min-width:0!important}
+main#main{overflow-x:auto!important}
+section.shadow-card>div:has(>table){overflow-x:auto}
+
+@media (max-width:1279px){
+  [data-sidenav]{width:150px!important}
+  main#main{padding:1rem!important}
+  .grid-cols-\[minmax\(0\,3fr\)_minmax\(0\,2fr\)\],
+  .grid-cols-\[minmax\(0\,5fr\)_minmax\(0\,7fr\)\],
+  .grid-cols-\[minmax\(0\,7fr\)_minmax\(0\,5fr\)\]{grid-template-columns:minmax(0,1fr)!important}
+}
+@media (max-width:1050px){
+  main .grid.grid-cols-2.gap-4,
+  main .grid.grid-cols-3.gap-4,
+  main .grid.grid-cols-3.gap-3{grid-template-columns:minmax(0,1fr)!important}
+  main .grid.grid-cols-2.gap-3{grid-template-columns:minmax(0,1fr)!important}
+  .grid-cols-\[260px_minmax\(0\,1fr\)\]{grid-template-columns:210px minmax(0,1fr)!important}
+  header[data-chrome] label>span{display:none}
+}
+@media (max-width:1100px){
+  .grid-cols-\[auto_1fr_auto\]{grid-template-columns:auto minmax(0,1fr)!important}
+  .grid-cols-\[auto_1fr_auto\]>.max-w-\[280px\]{grid-column:1/-1;align-items:flex-start;max-width:none}
+  .grid-cols-\[auto_1fr_auto\]>.max-w-\[280px\]>.flex-wrap{justify-content:flex-start}
+}
+@media (max-width:900px){
+  main .grid.grid-cols-4.gap-3,
+  main .grid.grid-cols-5.gap-3{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (max-width:820px){
+  .grid-cols-\[auto_1fr_auto\]{grid-template-columns:minmax(0,1fr)!important}
+
+  .app-shell>div.flex{flex-direction:column}
+  [data-sidenav]{width:auto!important;border-right:0!important;border-bottom:1px solid rgb(var(--line))}
+  [data-sidenav] ul{display:flex;overflow-x:auto;padding:.4rem 0!important}
+  [data-sidenav] ul>li{margin:0!important}
+  [data-sidenav] ul a{white-space:nowrap;margin:0 .15rem!important}
+  [data-sidenav]>div{display:none}
+  header[data-chrome]{gap:.5rem!important;padding:0 .75rem!important}
+  header[data-chrome] select{max-width:150px}
+  header[data-chrome] .rounded-full.bg-chip{display:none}
+}

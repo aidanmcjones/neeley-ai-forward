@@ -10,12 +10,12 @@ const INFO: Record<string, { label: string; tip: string; warn: boolean; muted?: 
   },
   strict: {
     label: "Strict",
-    tip: "Strict: the highest-S finding that clears the needle floor (obscurity O ≥ 0.5, evidence E ≥ 0.9, not low confidence).",
+    tip: "Strict: the most material finding that clears the needle floor (barely discussed, quote verified on the page, confidence not low).",
     warn: false,
   },
   provisional: {
     label: "Provisional",
-    tip: "Provisional: no finding clears the obscurity floor (O ≥ 0.5), so this is the highest S among findings with O at or above the company median.",
+    tip: "Provisional: no finding clears the obscurity floor, so this is the most material finding among the company's less-discussed half.",
     warn: true,
   },
   floor_relaxed: {

@@ -9,6 +9,7 @@ import Proof from "./screens/Proof";
 import Moat from "./screens/Moat";
 import Memo from "./screens/Memo";
 import Chat from "./screens/Chat";
+import Triage from "./screens/Triage";
 
 function Shell() {
   const { sample } = useData();
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="proof" element={<Proof />} />
             <Route path="moat" element={<Moat />} />
             <Route path="memo" element={<Memo />} />
+            <Route path="triage" element={<Triage />} />
             <Route path="*" element={<Navigate to="/cockpit" replace />} />
           </Route>
           {["/ask", "/product", "/forces", "/proof", "/moat", "/memo"].map((p) => <Route key={p} path={p} element={<ToCockpit />} />)}

@@ -62,18 +62,33 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
     [company],
   );
 
+  // findings_table (when exported): the engine's ranked table, e.g. by dollar impact, with its rank_basis.
+  const { order, tableBasis } = useMemo(() => {
+    const ft = company.findings_table as unknown;
+    const rowsT = Array.isArray(ft) ? ft : Array.isArray((ft as { rows?: unknown })?.rows) ? (ft as { rows: unknown[] }).rows : null;
+    if (!rowsT) return { order: null as Map<string, number> | null, tableBasis: null as string | null };
+    const m = new Map<string, number>();
+    rowsT.forEach((r, i) => {
+      const o = r as { finding_id?: string; id?: string; rank?: number };
+      const id = o.finding_id ?? o.id;
+      if (id) m.set(id, typeof o.rank === "number" ? o.rank : i + 1);
+    });
+    const basis = (ft as { rank_basis?: unknown })?.rank_basis ?? company.rank_basis;
+    return { order: m, tableBasis: typeof basis === "string" && basis ? basis : "ranked by dollar impact" };
+  }, [company]);
+
   const rows = useMemo<GridRow[]>(() => {
     const fs = [...company.findings]
       .filter((f) => confs.has((f.confidence ?? "").toLowerCase()) || (!f.confidence && confs.size === CONFS.length))
       .filter((f) => verdicts.has(verdictKey(f.verdict)))
       .filter((f) => detector === "all" || (f.detector ?? "other") === detector)
-      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+      .sort((a, b) => (order ? (order.get(a.id) ?? 1e9) - (order.get(b.id) ?? 1e9) : (b.score ?? 0) - (a.score ?? 0)))
       .map<GridRow>((f) => ({ kind: "finding", id: f.id, f }));
     const rej = verdicts.has("rejected")
       ? (company.rejected ?? []).map<GridRow>((r, i) => ({ kind: "rejected", id: `rej-${i}`, r }))
       : [];
     return [...fs, ...rej];
-  }, [company, confs, verdicts, detector]);
+  }, [company, confs, verdicts, detector, order]);
 
   const flip = <T,>(set: Set<T>, v: T, put: (s: Set<T>) => void) => {
     const n = new Set(set);
@@ -190,7 +205,7 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
             {detectors.map((d) => <option key={d} value={d}>{d}</option>)}
           </select>
         </label>
-        <span className="ml-auto font-mono text-[11px] text-muted">{rows.length} rows · by score</span>
+        <span className="ml-auto font-mono text-[11px] text-muted">{rows.length} rows · {tableBasis ?? "ranked by the engine"}</span>
       </div>
       <DataTable<GridRow>
         dense
