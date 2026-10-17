@@ -209,6 +209,8 @@ def channel_constants(imp, assumptions):
         const(assumptions, "K_NET", W.K_NET, "KQ2 cross-check: net hit 0.3-0.5 x list discount, rebated classes")
         const(assumptions, "M_MDP_AVOIDED", W.M_MDP_AVOIDED, "Part D discount-program liability avoided, CMS MDP "
                                                              "guidance")
+        if "low-rebate" in (imp.formula or "") or "low rebate" in (imp.formula or ""):
+            const(assumptions, "K_LOW_REBATE", 1.0, "class rule: a low-rebate class passes the full list discount, k = 1")
         if "g_pre" in (imp.formula or ""):
             const(assumptions, "G_PRE_GLP1", W.G_PRE_GLP1, "GLP-1 pre-MFP concession, Drug Channels; inference")
             const(assumptions, "G_PRE_IMMUNOLOGY", W.G_PRE_IMMUNOLOGY, "immunology pre-MFP concession; inference")

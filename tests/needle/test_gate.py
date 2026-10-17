@@ -284,3 +284,13 @@ def test_count_operands_and_median(idx, good, full_year, bad):
     assert not G.numeric_gate("lists 1 indication", [], derived={"n": unv}, index=idx).passed
     med = G.derived_entry(1.5, "median(x, y)", {"x": {"derived": "n"}, "y": {"value": 1, "citation": good, "count": True}})
     assert G.numeric_gate("rival median 1.5", [], derived={"n": two, "m": med}, index=idx).passed
+
+
+def test_verify2_bare_formula_constants_are_arithmetic_and_k1_is_labelled(idx, good):
+    from dataclasses import replace
+    hiv = replace(good, quote="Human immunodeficiency virus type 1 infection $3,904,486,000", value="3,904,486,000")
+    am = {"K": {"value": "1", "label": "constant: K_LOW_REBATE (class rule)"}, "z": {"value": "0", "label": "zero entry"}}
+    r = G.numeric_gate([("impact.formula", "max(0, k (1.0, 1.0) x 1)")], [hiv], assumptions=am, index=idx)
+    kinds = [(n["value"], n["kind"], n.get("label")) for n in r.numbers]
+    assert kinds[0][2] == "arithmetic constant" and kinds[-1][2] == "arithmetic constant"
+    assert all(k == "assumed" and lab.startswith("constant: K_LOW_REBATE") for v, k, lab in kinds[1:3])

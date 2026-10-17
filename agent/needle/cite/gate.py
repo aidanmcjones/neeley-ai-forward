@@ -401,9 +401,10 @@ def _match_assumption(tok, assumptions, claim_ctx, name=""):
     if not hits:
         return None
     if name:
-        n = name.lower()
+        parts = [p for p in name.lower().split("_") if len(p) > 1] or [name.lower()]
         for key, label in hits:
-            if n in key.lower() or n in label.lower():
+            hay = (key + " " + label).lower()
+            if name.lower() in hay or all(p in hay for p in parts):
                 return label
     return hits[0][1]
 
@@ -450,8 +451,14 @@ def numeric_gate(text_blocks, claims, derived=None, assumptions=None, index=None
             rec = {"value": tok.raw, "where": f"{where}@{tok.start}", "block": where, "start": tok.start,
                    "end": tok.end, "kind": "unsupported", "cites": [], "operands": []}
             try:
-                key, refs = _match_derived(tok, derived, assumptions, pages, use_page_text, ctx)
-                if key is not None:
+                bare = tok.raw.strip().strip("()").strip() in ("0", "1", "100")
+                if formula and bare and not tok.unit and tok.scale is None and not tok.currency:
+                    key, refs = None, ""              # a bare 0 / 1 / 100 in a formula is arithmetic, never a fact
+                else:
+                    key, refs = _match_derived(tok, derived, assumptions, pages, use_page_text, ctx)
+                if formula and bare and not tok.unit and tok.scale is None and not tok.currency:
+                    rec.update(kind="assumed", label="arithmetic constant")
+                elif key is not None:
                     rec.update(kind="derived", derived=key, operands=refs)
                 else:
                     dwhy = refs                                 # (None, reason) from _match_derived
