@@ -2,6 +2,7 @@
 
   doc_id#p<page_no>        when the row names a document and a page (same convention as pages, so cite(doc_id, page_no)
                            and get_page() work on it unchanged)
+  url:<dataset URL>#<row_key>  when the row's source is a dataset or API URL and no page exists (machine data with a link)
   fact:<table>#<row_key>   otherwise (a synthetic locator that keeps the row addressable)
 
 Run after every build or --add:  python -m agent.moat.locator   (idempotent; fills only empty locators unless --all)
@@ -104,6 +105,12 @@ def derive(table, row_key, row, doc_ids, tails, paths):
     if d and p:
         return f"{d}#p{p}"
     key = row_key[len(table) + 1:] if row_key.startswith(table + "#") else row_key
+    # third form: a row whose source is a dataset or API URL (CMS, data.medicaid.gov, SEC companyfacts, CT.gov, WRDS)
+    for c in ("source_url", "url", "source", "geo_source", "dataset_url"):
+        v = _s(row.get(c))
+        m = re.search(r"https?://[^\s|,;\"')]+", v)
+        if m:
+            return f"url:{m.group(0).rstrip('.')}#{key}"
     return f"fact:{table}#{key}"
 
 
