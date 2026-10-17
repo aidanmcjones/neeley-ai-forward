@@ -277,7 +277,7 @@ def _gate_line(doc, section, where, text, cites, Dm, A):
 def build_md(out, findings, public=False):
     """(markdown, gate summary, withheld lines). Every number is a gated cell; see docs/gate_wiring.md 3."""
     sel, T = out["selection"], out["ticker"]
-    c = sel.chosen
+    c = sel.top          # the chosen move, or the least-bad option when no candidate has EV above zero
     doc = Doc(public)
     by_id = {D.finding_id(f): f for f in findings}
     Dc, Ac = move_maps(c)
@@ -311,8 +311,14 @@ def build_md(out, findings, public=False):
     L += [
          cell("header", "header", f"All dollars USD millions. EV is present value at {out['as_of']} at WACC {c.wacc:.2%}, "
               f"scenario weights {p['bear']:.2f} / {p['base']:.2f} / {p['bull']:.2f} (bear / base / bull)."), "",
-         (f"## Chosen move (pipeline demonstration): {c.name}" if out.get("demo") else f"## Recommended move: {c.name}"),
-         ""]
+         ]
+    if sel.chosen is None:
+        L += ["## No candidate clears the hurdle; least-bad option: " + c.name + " (EV "
+              + cell("header", "least_bad_ev", f1(c.ev), (), Dall, Aall) + ")", ""]
+    else:
+        L += [(f"## Chosen move (pipeline demonstration): {c.name}" if out.get("demo") else f"## Recommended move: {c.name}"),
+              ""]
+    L += ["Selection rule: " + line("selection", "selection_rule", sel.rule) + ".", ""]
     if c.why:
         # the moves file's narrative: only the addressed findings' passing citations can support its numbers
         fc = [x for fid in c.finding_ids for x in (D.finding_citations(by_id[fid]) if fid in by_id else [])]
@@ -370,7 +376,8 @@ def build_md(out, findings, public=False):
         cl = [x for x in c.citations if x.cite_id in i.citation_ids]
         L.append(f"| {i.name} | {cell('inputs', f'inputs/{i.name}', D._fmt_val(i.value), cl, dict(Dc, **(i.derived or {})), D.input_assumptions(i, cl))} "
                  f"| {i.unit} | {i.kind}{' (' + i.finding_id + ')' if i.finding_id else ''} |")
-    L += ["", "## Five numbers: chosen move and the two rejected alternatives", "",
+    L += ["", "## Five numbers: " + ("chosen move" if sel.chosen is not None else "least-bad option")
+          + " and the two rejected alternatives", "",
           "| Move | EV | Downside cash at risk | Payback | Scenario EV spread | MCDA |", "|---|---|---|---|---|---|"]
     for r in [c] + sel.rejected:
         pb = "none in the payback search window" if r.payback_month is None else "month " + cell("five numbers", f"five/{r.name}/payback",
@@ -384,7 +391,7 @@ def build_md(out, findings, public=False):
         L.append(f"- Rejected: **{r.name}**. Binding reason: {line('selection', f'binding/{r.name}', r.binding_reason)}.")
     for i, n in enumerate(sel.notes):
         L.append(f"- Note: {line('selection', f'selection_note[{i}]', n)}")
-    L += ["", "MCDA parts (chosen): " + cell("five numbers", "mcda_parts", ", ".join(
+    L += ["", f"MCDA parts ({'chosen' if sel.chosen is not None else 'least-bad'}): " + cell("five numbers", "mcda_parts", ", ".join(
         f"{k} {v:.2f}" for k, v in c.mcda_parts.items()) + " (weights 0.25 each)") + ".", ""]
     L += ["## Kill signals (early 6-to-12-month signals that would prove the move wrong)", "",
           "| Signal | Threshold | Baseline (chosen product, latest year in the rx tables) | Source and lag | Check month | "
@@ -493,7 +500,10 @@ def to_json(out, summary=None, withheld=()):
     sel = out["selection"]
     d = {"ticker": out["ticker"], "as_of": out["as_of"], "demo": out.get("demo", False),
          "header_note": out.get("header_note", ""), "cash_and_equivalents": out["cash"],
-         "chosen": sel.chosen.to_dict(), "rejected": [r.to_dict() for r in sel.rejected],
+         "chosen": sel.chosen.to_dict() if sel.chosen is not None else None,
+         "least_bad": sel.least_bad.name if sel.least_bad is not None else None,
+         "least_bad_move": sel.least_bad.to_dict() if sel.least_bad is not None else None,
+         "selection_rule": sel.rule, "rejected": [r.to_dict() for r in sel.rejected],
          "ranked": [{"name": r.name, "rank": r.rank, "status": r.status, "binding_reason": r.binding_reason, **r.five()} for r in out["ranked"]],
          "selection_notes": sel.notes, "kill_signals": out["kill"]}
     if summary is not None:
@@ -535,8 +545,8 @@ def main(argv=None):
         return 2
     out = run(a.ticker, findings, spec, a.as_of, a.cash)
     ctx = next((dict(mv.get("context") or {}, ticker=a.ticker) for mv in spec["moves"]
-                if (mv.get("name") or get_template(mv["template"]).name) == out["selection"].chosen.name), {})
-    out["kill"] = kill_table(out["selection"].chosen, ctx)
+                if (mv.get("name") or get_template(mv["template"]).name) == out["selection"].top.name), {})
+    out["kill"] = kill_table(out["selection"].top, ctx)
     md, summary, withheld = build_md(out, findings, a.public)
     js = json.dumps(to_json(out, summary, withheld), indent=2, default=str)
     if not summary["passed"]:
@@ -551,9 +561,11 @@ def main(argv=None):
         (d / stale).unlink(missing_ok=True)
     (d / "decide.json").write_text(js)
     (d / "decide.md").write_text(md)
-    c = out["selection"].chosen
-    print(f"{a.ticker}: chosen {c.name}: EV {c.ev:,.1f}, CaR {c.car:,.1f}, payback {c.payback_month}, spread {c.spread:,.1f}, MCDA {c.mcda:.3f}")
-    for r in out["selection"].rejected:
+    sel = out["selection"]
+    c = sel.top
+    print(f"{a.ticker}: {'chosen' if sel.chosen is not None else 'NO CANDIDATE CLEARS THE HURDLE; least-bad'} {c.name}: EV {c.ev:,.1f}, CaR {c.car:,.1f}, payback {c.payback_month}, spread {c.spread:,.1f}, MCDA {c.mcda:.3f}")
+    print(f"  rule: {sel.rule}")
+    for r in sel.rejected:
         print(f"  rejected {r.name}: EV {r.ev:,.1f}, CaR {r.car:,.1f}, payback {r.payback_month}, MCDA {r.mcda:.3f} ({r.binding_reason})")
     print(f"wrote {d / 'decide.json'} and {d / 'decide.md'}")
     return 0

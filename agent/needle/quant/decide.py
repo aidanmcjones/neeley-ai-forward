@@ -624,14 +624,24 @@ def rank_moves(results, cash=None):
 
 @dataclass
 class Selection:
-    chosen: MoveResult
+    """`chosen` is None when no eligible move has a base-case EV above zero; `least_bad` then names the highest-EV
+    eligible move. `top` is whichever of the two the report is built on. `rule` is the one-sentence selection rule."""
+    chosen: MoveResult | None
     rejected: list
     notes: list
+    least_bad: MoveResult | None = None
+    rule: str = ""
+
+    @property
+    def top(self):
+        return self.chosen if self.chosen is not None else self.least_bad
 
 
 def select_move(results, cash=None):
     """(1) feasibility gate CaR <= cash, (2) argmax EV, (3) if the top two [EV_bear, EV_bull] intervals overlap prefer
-    the higher MCDA. Returns the chosen move and the next two by the same rule, each with its binding reason."""
+    the higher MCDA, (4) a move whose EV is at or below zero is never chosen: when no eligible move has EV > 0 the
+    result has chosen None and least_bad = the highest-EV eligible move. Returns the selection, the next two moves by
+    the same rule (each with its binding reason) and the one-sentence rule applied."""
     ranked = rank_moves(results, cash)
     feas = [r for r in ranked if r.status == "feasible"]
     infeas = [r for r in ranked if r.status == "infeasible"]
@@ -645,34 +655,55 @@ def select_move(results, cash=None):
     if len(order) < len(feas):
         notes.append("moves that address no Part 1 finding are not eligible to be chosen (spec 5.2): "
                      + ", ".join(r.name for r in unfit))
-    if len(order) > 1:
+    cleared = order[0].ev > 0      # order is EV-descending, so the best eligible EV decides whether any move clears
+    tie = ""
+    if cleared and len(order) > 1:
         a, b = order[0], order[1]
         lo_a, hi_a = a.ev_by_scenario["bear"], a.ev_by_scenario["bull"]
         lo_b, hi_b = b.ev_by_scenario["bear"], b.ev_by_scenario["bull"]
         if max(lo_a, lo_b) <= min(hi_a, hi_b) and b.mcda > a.mcda:
-            order[0], order[1] = b, a
-            notes.append(f"EV intervals of {a.name} and {b.name} overlap; chose the higher MCDA ({b.mcda:.3f} vs {a.mcda:.3f})")
-    chosen = order[0]
-    chosen.status = "chosen"
+            if b.ev > 0:
+                order[0], order[1] = b, a
+                notes.append(f"EV intervals of {a.name} and {b.name} overlap; chose the higher MCDA ({b.mcda:.3f} vs {a.mcda:.3f})")
+                tie = f"EV ranges overlap ({a.name} vs {b.name}); selected on MCDA score {b.mcda:.3f} vs {a.mcda:.3f}"
+            else:
+                notes.append(f"EV intervals of {a.name} and {b.name} overlap but {b.name} has EV at or below zero, "
+                             "so the MCDA tie-break does not apply")
+    top = order[0]
+    top.status = "chosen" if cleared else "least_bad"
+    # why a higher-EV move was not picked: the cash gate and the strategic-fit rule, stated before the EV/MCDA step
+    excl = [f"Cash gate excluded {r.name}" for r in infeas if r.ev > top.ev]
+    excl += [f"Strategic-fit rule excluded {r.name} (addresses no Part 1 finding)" for r in unfit
+             if r not in order and r.ev > top.ev]
+    if cleared:
+        rule = "; ".join(excl + [tie or ("Selected on EV" if not excl else "selected on EV among the rest")])
+    else:
+        rule = "; ".join(excl + [f"No candidate has EV above zero, so none is chosen; {top.name} is the least-bad "
+                                 "option on EV"])
+    rule = rule[0].upper() + rule[1:]
     rest = order[1:] + [r for r in unfit if r not in order] + infeas
     rejected = rest[:2]
     for r in rest:
         r.status = "rejected" if r in rejected else r.status
         if r.status == "infeasible" or (cash is not None and r.car > cash):
             r.binding_reason = f"cash at risk {r.car:,.1f} exceeds cash and equivalents {cash:,.1f}"
-        elif not r.addressed and chosen.addressed:
+        elif not r.addressed and top.addressed:
             r.binding_reason = "addresses no Part 1 finding, so it cannot be recommended (spec 5.2)"
-        elif r.ev < chosen.ev and r.mcda > chosen.mcda and _overlap(r, chosen):
-            r.binding_reason = f"lower EV ({r.ev:,.1f} vs {chosen.ev:,.1f}); intervals overlap and MCDA does not rescue it"
-        elif r.ev < chosen.ev:
-            r.binding_reason = f"lower EV ({r.ev:,.1f} vs {chosen.ev:,.1f})"
+        elif r.ev < top.ev and r.mcda > top.mcda and _overlap(r, top):
+            r.binding_reason = f"lower EV ({r.ev:,.1f} vs {top.ev:,.1f}); intervals overlap and MCDA does not rescue it"
+        elif r.ev < top.ev:
+            r.binding_reason = f"lower EV ({r.ev:,.1f} vs {top.ev:,.1f})"
         else:
-            r.binding_reason = f"lower MCDA under overlapping EV intervals ({r.mcda:.3f} vs {chosen.mcda:.3f})"
+            r.binding_reason = f"lower MCDA under overlapping EV intervals ({r.mcda:.3f} vs {top.mcda:.3f})"
+        if r.ev <= 0 and "EV at or below zero" not in r.binding_reason:
+            r.binding_reason += "; EV at or below zero"
         if r.payback_month is None and "payback" not in r.binding_reason:
             r.binding_reason += "; payback beyond 120 months"
-    if any(f.startswith("strategic fit 0") for f in chosen.flags):
-        notes.append(f"WARNING: {chosen.name} addresses no Part 1 finding and cannot be recommended (spec 5.2)")
-    return Selection(chosen, rejected, notes)
+    if any(f.startswith("strategic fit 0") for f in top.flags):
+        notes.append(f"WARNING: {top.name} addresses no Part 1 finding and cannot be recommended (spec 5.2)")
+    if cleared:
+        return Selection(top, rejected, notes, None, rule)
+    return Selection(None, rejected, notes, top, rule)
 
 
 def _overlap(a, b):
