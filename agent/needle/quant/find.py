@@ -64,6 +64,7 @@ FAM = {
     "none_A": Family("ETR / R&D shift or level outlier (no evidence)", "A", W.PI_NONE, "none", False),
     "none_X": Family("outside data: FAERS, demand divergence, distributor (no evidence)", "X", W.PI_NONE, "none", False),
     "ira": Family("contractual: IRA negotiation", "P", W.PI_CONTRACTUAL, "type_c", True, ("ira",)),
+    "mfn": Family("contractual: MFN agreement", "P", W.PI_CONTRACTUAL, "type_c", True, ("mfn",)),
     "loe": Family("contractual: loss of exclusivity", "P", W.PI_CONTRACTUAL, "type_c", True, ("generic", "loe")),
     "label": Family("contractual: label fact", "L", W.PI_CONTRACTUAL, "type_c", True),
     "footnote": Family("contractual: booked footnote item", "F", W.PI_CONTRACTUAL, "type_c", True, ("impairment",)),
@@ -87,7 +88,7 @@ KIND = {
 }
 # Families in section 4.6 with no engine detector yet (made visible in findings_v2 via has_detector).
 MISSING_DETECTORS = ["misstatement score (Beneish/Dechow)", "opportunistic insider sales", "negative 8-K items",
-                     "zero-question calls", "MFN channel candidates", "GTN widening", "footnote extractor"]
+                     "zero-question calls", "GTN widening", "footnote extractor"]
 
 TOPIC_KEYS = list(OB.TOPIC_WORDS)
 
@@ -123,6 +124,37 @@ def favorable_statistical(sig):
     return False
 
 
+BACKTEST_FLAG = {"inventory": "inventory_outpaces_revenue", "receivables": "receivables_outpace_revenue",
+                 "dio": "dio_rising", "dso": "dso_rising", "gm_drop": "gross_margin_drop"}
+ANNUAL_TRIGGER = {"inventory_outpaces_revenue": 0.10, "receivables_outpace_revenue": 0.08, "dio_rising": 0.15,
+                  "dso_rising": 0.10}   # agent/needle/backtest.py signals_at thresholds
+
+
+def backtest_fired(sig, fam_key):
+    """Does the row satisfy the backtest flag whose lift gives its pi (review A1)? Quarterly rows: re-evaluate
+    agent.needle.backtest.signals_at on the XBRL panel at the row's quarter. Annual rows: the row's own value when
+    it is that flag's quantity. Peer-level outliers that do not fire take pi_min."""
+    from agent.needle import backtest, xbrl
+    flag = BACKTEST_FLAG[fam_key]
+    per = str(sig.period or "")
+    if re.fullmatch(r"\d{4}Q[1-4]", per):
+        try:
+            return bool(backtest.signals_at(xbrl.panel(sig.ticker), per).get(flag))
+        except Exception:
+            return False
+    if sig.value is None or sig.kind.endswith("_peer_outlier") and fam_key in ("dio", "dso"):
+        return False
+    if flag == "gross_margin_drop":
+        return -sig.value >= 0.02
+    return sig.value >= ANNUAL_TRIGGER[flag]
+
+
+def downgraded(fam):
+    """The same family with the backtest lift removed: pi_min (directional route), not diagnostic."""
+    return Family(fam.name + " (backtest flag not fired: pi_min)", fam.block, W.PI_MIN, "directional", False,
+                  fam.topics)
+
+
 def topics_of(sig, fam):
     t = set(sig.meta.get("topics") or [])
     if sig.meta.get("topic") and sig.meta["topic"] != "other":
@@ -143,7 +175,7 @@ def finding_id(ticker, kind, first_cite):
 def _filed(doc_id):
     r = data.doc_row(doc_id) if doc_id else None
     if r is None:
-        idx = load_index()
+        idx = data.index()
         rec = idx.resolve(doc_id) if doc_id else None
         r = rec.row if rec else None
     if r is None:
@@ -162,7 +194,7 @@ def _filed(doc_id):
 def stage_split(cites):
     """Inventory stage split (section 4.3 g i): finished-goods share from the inventory note of the cited filing.
     Returns (fg_share or None, detail, citation or None)."""
-    idx = load_index()
+    idx = data.index()
     for c in cites:
         if not c.canonical_id or c.canonical_id.startswith(("xbrl:", "tables/", "derived")):
             continue
@@ -195,6 +227,8 @@ DIAB = (0.66, 0.71, 0.85)  # diabetes: smallest (Jardiance 66%), same class GLP-
 DIAB_QUOTES = [(NEG27, 2, "$274 $959 71%")]
 ALL_CUTS = (0.38, 0.655, 0.85)  # no same-class analog: cycle 1-2 smallest, median of the 16 in ira_cut_check, largest
 K_NET = (0.3, 0.4, 0.5)         # KQ2 cross-check: net hit 0.3-0.5 x list discount for rebated classes
+
+LOW_REBATE = {"Verzenio", "Erleada", "Pomalyst", "Ibrance", "Calquence", "Biktarvy"}   # oncology, HIV
 
 IRA_DRUGS = [
     # ticker, drug, ipay, G (USD m), spend doc, page, spend quote, d, g_pre or None, k, analog quotes, disclosed
@@ -234,9 +268,9 @@ IRA_DRUGS = [
 
 def _company_selection_quote(ticker, drug):
     """A sentence in the company's own annual or quarterly report that names the drug as selected or negotiated."""
-    idx = load_index()
+    idx = data.index()
     from agent.moat import cite as moat
-    rows = moat.db().execute("SELECT doc_id FROM docs WHERE ticker = ? AND doc_type IN ('annual_report', "
+    rows = data.db().execute("SELECT doc_id FROM docs WHERE ticker = ? AND doc_type IN ('annual_report', "
                              "'quarterly_report') ORDER BY filed DESC LIMIT 4", (ticker,)).fetchall()
     first = drug.split("/")[0]
     for (doc_id,) in rows:
@@ -274,6 +308,7 @@ class Scored:
     needle_eligible: bool = False
     detector: str = ""
     product: str = ""
+    pi_downgraded: bool = False
 
     def to_dict(self):
         body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.page is not None][:6])])
@@ -354,6 +389,10 @@ def score_signal(sig, co, panel=None):
     topics = topics_of(sig, fam0 or FAM["none_X"])
     fam = family_of(sig, topics)
     topics = topics_of(sig, fam)
+    pi_downgrade = False
+    fk = next((k for k, v in FAM.items() if v is fam), None)
+    if fk in BACKTEST_FLAG and not backtest_fired(sig, fk):
+        fam, pi_downgrade = downgraded(fam), True
     page_cites = [EV.from_evidence(ev) for ev in sig.evidence]
     flags, diag = [], True
     product = sig.meta.get("product")
@@ -362,7 +401,7 @@ def score_signal(sig, co, panel=None):
     if fam.route in ("backtest", "anchor", "directional", "none"):
         imp = IM.anchor(co)
         generic = sig.detector in ("drift", "calls")
-        if fam in (FAM["inventory"], FAM["dio"]):
+        if fk in ("inventory", "dio"):
             share, detail, cit = stage_split(page_cites)
             flags.append(f"stage split: {detail}")
             if cit is not None:
@@ -372,7 +411,7 @@ def score_signal(sig, co, panel=None):
             elif share < 0.5:
                 diag = False
                 flags.append("capacity build, not channel stuffing")
-        if fam in (FAM["receivables"], FAM["dso"]):
+        if fk in ("receivables", "dso"):
             diag = False
             flags.append("DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)")
     elif fam is FAM["favorable"]:
@@ -405,6 +444,10 @@ def score_signal(sig, co, panel=None):
     sc = _assemble(co, sig.ticker, sig.kind, sig.detail, fam, imp, page_cites, topics, disclosed, product=product,
                    peer=peer, extra_flags=flags, diagnostics_pass=diag, generic_placeholder=generic,
                    detector=sig.detector)
+    if pi_downgrade:
+        sc.flags.append(f"pi downgraded to pi_min: row does not satisfy the backtest flag "
+                        f"{BACKTEST_FLAG[fk]} (review A1)")
+        sc.pi_downgraded = True
     if not sig.evidence:
         sc.flags.append("no page evidence from the detector: E = 0, withheld by the gate")
     return sc
@@ -475,7 +518,7 @@ def _prq():
 
 def ira_findings(ticker, co):
     """IRA channel candidates for one company (section 4.3 b): one per CMS-selected drug with IPAY 2027 or 2028."""
-    idx = load_index()
+    idx = data.index()
     out = []
     for (t, drug, ipay, G, sdoc, spage, squote, d, g_pre, k, analogs, disclosed) in IRA_DRUGS:
         if t != ticker:
@@ -490,8 +533,17 @@ def ira_findings(ticker, co):
         if not cur_ok:
             flags.append(f"USD channel on a {co.fin_currency}/{co.currency} reporter: no cited FX rate; not converted, "
                          "dEPS set to 0")
-        imp = IM.ira(co, drug, G if cur_ok else 0.0, d, g_pre, ipay, k_factor=k,
-                     cites=[spend] + analog_cites)
+        cites = [spend] + analog_cites
+        # Spec formula G x (d - g_pre) kept for comparison; the league uses the KQ2 class rule (coordinator
+        # review A15): net hit = 1.0 x list discount for low-rebate classes (oncology, HIV), 0.3 / 0.4 / 0.5 x for
+        # highly rebated classes.
+        imp_spec = IM.ira(co, drug, G if cur_ok else 0.0, d, g_pre, ipay, k_factor=k, cites=cites) \
+            if (g_pre is not None or k) else None
+        k_cross = (1.0, 1.0, 1.0) if drug in LOW_REBATE else K_NET
+        imp = IM.ira(co, drug, G if cur_ok else 0.0, d, None, ipay, k_factor=k_cross, cites=cites)
+        imp.flags = [x for x in imp.flags if "no g_pre prior" not in x]
+        imp.flags.append(f"IRA net hit = {k_cross} x list discount ({'low-rebate class' if drug in LOW_REBATE else 'rebated class'}; "
+                         "KQ2 cross-check, review A15)")
         if k is None and isinstance(d, tuple) and d == ALL_CUTS:
             flags.append("no same-class MFP analog: d = cycle 1-2 smallest / median / largest (deviation, see notes)")
         if drug == "Trulicity":
@@ -507,5 +559,92 @@ def ira_findings(ticker, co):
                        peer={"analogs": [c.quote for c in analog_cites]}, extra_flags=flags,
                        z_text=f"{drug} ira negotiation", detector="ira_generator")
         sc.product = drug
+        if imp_spec is not None:
+            m_spec = materiality(imp_spec.d_eps.get("base", 0.0), imp_spec.t_years, co.sigma)
+            sc.vector["dRev_spec_formula"] = imp_spec.d_rev
+            sc.vector["M_spec_formula"] = m_spec
+            sc.vector["S_spec_formula"] = score(m_spec, sc.vector["O"], sc.vector["E"], sc.vector["pi"])
         out.append(sc)
     return out
+
+
+# ------------------------------------------------------------------ MFN candidates (section 4.3 c) and tariff note
+def _moat_doc_id(path):
+    """policy_exposure.csv doc path -> citation index doc_id."""
+    p = str(path or "")
+    if p.startswith("data/moat/policy_gov/"):
+        return "policy_gov:" + p[len("data/moat/"):]
+    m = re.match(r"data/corpus/companies/([A-Z]+)/(.+)", p)
+    if m:
+        return f"{m.group(1)}:{m.group(2)}"
+    m = re.match(r"data/moat/companies/([A-Z]+)/.+", p)
+    if m:
+        return f"{m.group(1)}:{p[len('data/moat/'):]}"
+    return p
+
+
+def _policy_rows(ticker):
+    import pandas as pd
+    pe = pd.read_csv(data.verified("policy/policy_exposure.csv"), dtype=str)
+    fs = pd.read_csv(data.verified("policy/force_summary.csv"), dtype=str)
+    return pe[pe.ticker == ticker], fs[fs.ticker == ticker]
+
+
+def tariff_exposure(ticker):
+    """Exposure proxy (coordinator review B9): pct_mfg_sites_outside_us x us_revenue_share, with the 2029-01-20 cliff.
+    Not a scored dEPS (outside the 24-month window, section 4.3 d). Returns a dict or None."""
+    try:
+        _, fs = _policy_rows(ticker)
+    except FileNotFoundError:
+        return None
+    if fs.empty:
+        return None
+    r = fs.iloc[0]
+    out = float(r.pct_mfg_sites_outside_us) / 100 * float(r.us_revenue_share_pct) / 100
+    return {"proxy": out, "pct_mfg_sites_outside_us": float(r.pct_mfg_sites_outside_us),
+            "us_revenue_share_pct": float(r.us_revenue_share_pct), "exempt_until": r.tariff_exempt_until,
+            "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers "
+                    "pay no Section 232 duty until 2029-01-20 (outside the window)"}
+
+
+def mfn_findings(ticker, co):
+    """One MFN candidate per company with a Medicaid MFN term in policy_exposure.csv: dRev = s_MFN x Rev_US,
+    Rev_US = Rev_TTM x us_revenue_share_pct (force_summary.csv). Deal texts are confidential, so s_MFN (Pfizer's
+    <1% Medicaid base rate) is the same for every company; the per-company rows supply the date, the term and US share."""
+    try:
+        pe, fs = _policy_rows(ticker)
+    except FileNotFoundError:
+        return []
+    if fs.empty:
+        return []
+    med = pe[(pe.force == "MFN") & pe.item.str.contains("Medicaid", na=False)]
+    if med.empty:
+        return []
+    row, f = med.iloc[0], fs.iloc[0]
+    idx = data.index()
+    page = int(re.sub(r"\D", "", str(row.printed_page_or_section)) or 1)
+    pc = cite_verify(Citation(canonical_id=_moat_doc_id(row.doc), page=page, quote=str(row.quote), claim_type="quote"),
+                     idx)
+    fact_term = data.fact_by_key("policy/policy_exposure.csv", row.row_id)
+    us_share = float(f.us_revenue_share_pct) / 100
+    fact_us = data.table_citation("policy/force_summary.csv", ticker, "us_revenue_share_pct", f.us_revenue_share_pct)
+    flags = ["MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+             "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers"]
+    tx = tariff_exposure(ticker)
+    if tx:
+        flags.append(f"tariff exposure proxy {tx['proxy']:.3f} (sites outside US {tx['pct_mfg_sites_outside_us']:.1f}% "
+                     f"x US revenue {tx['us_revenue_share_pct']:.1f}%), exempt until {tx['exempt_until']}: not scored")
+    rev_us = co.rev_ttm * us_share
+    cur_ok = co.fin_currency.startswith("USD") and co.currency == "USD"
+    if not cur_ok:
+        flags.append("non-USD reporter: company states its own MFN effect (see policy_exposure); not converted")
+    imp = IM.mfn(co, rev_us if cur_ok else 0.0, cites=[fact_us] + ([fact_term] if fact_term.verification.ok else []))
+    sentence = (f"{ticker}'s MFN agreement ({f.mfn_date}) extends MFN pricing to Medicaid: at the Pfizer base rate of "
+                f"0.65% of US revenue (US share {f.us_revenue_share_pct}%), about ${imp.d_rev['base']:,.0f}M a year.")
+    page_cites = [pc] if pc.verification.ok else ([fact_term] if fact_term.verification.ok else [])
+    if not pc.verification.ok:
+        flags.append(f"MFN page quote did not verify ({pc.confidence_note}); cited by the table row")
+    sc = _assemble(co, ticker, "mfn_medicaid", sentence, FAM["mfn"], imp, page_cites, ["mfn"],
+                   OB.to_date(f.mfn_date), extra_flags=flags, z_text="mfn", detector="mfn_generator")
+    sc.product = ""
+    return [sc]

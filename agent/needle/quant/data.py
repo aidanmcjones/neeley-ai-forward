@@ -35,6 +35,22 @@ LOE_CACHE = Path(os.environ.get("NEEDLE_LOE_CACHE", "")) if os.environ.get("NEED
     (p for p in (ROOT / "agent" / "cache" / "company_stated_loe.jsonl",
                  _GAP.parent.parent / "agent" / "cache" / "company_stated_loe.jsonl") if p.exists()), None)
 AS_OF = date(2026, 10, 17)
+REAL_DB = Path(moat.DB)   # resolved at import (env CITATIONS_DB, repo copy, else gap-data); tests may re-point moat.DB
+
+
+def db():
+    """agent.moat.cite.db() on the real citation index, re-pointing the module global if something moved it."""
+    if Path(moat.DB) != REAL_DB:
+        moat.DB = REAL_DB
+        moat.db.cache_clear()
+    return moat.db()
+
+
+def index():
+    from agent.needle.cite.index import load_index
+    idx = load_index(REAL_DB)
+    idx._use()
+    return idx
 
 CIK = {"LLY": 59478, "MRK": 310158, "BMY": 14272, "PFE": 78003, "NVO": 353278, "ABBV": 1551152, "JNJ": 200406,
        "AZN": 901832, "AMGN": 318154, "GILD": 882095}
@@ -56,7 +72,7 @@ def fact_citation(table, source_row, fld, value=None, license=""):
     """Citation for a facts row in citations.sqlite (kind "fact" in the spec): claim_type "number", canonical_id =
     the table, quote = row key + field = value, deep link = fact_link(source) when the source is http."""
     try:
-        r = moat.db().execute('SELECT * FROM facts WHERE "table" = ? AND source_row = ? AND field = ? LIMIT 1',
+        r = db().execute('SELECT * FROM facts WHERE "table" = ? AND source_row = ? AND field = ? LIMIT 1',
                               (table, source_row, fld)).fetchone()
     except Exception:
         r = None
@@ -112,6 +128,9 @@ def _rank(status):
 
 
 # ------------------------------------------------------------------ I/B/E/S
+# I/B/E/S ticker -> multiplier to the per-ordinary-share basis of XBRL D. ZEN is AstraZeneca's per-ADR history
+# (1 ADR = 0.5 ordinary share) before I/B/E/S moved AZN to per-share in 2026Q1 (review A2).
+PER_SHARE = {"ZEN": 2.0}
 @lru_cache(maxsize=1)
 def _ibes():
     a = pd.read_csv(tables("ibes_actuals.csv"))
@@ -127,12 +146,16 @@ def surprises(ticker, n=W.SIGMA_QUARTERS):
     aq = a[(a.oftic == ticker) & (a.pdicity == "QTR") & (a.measure == "EPS")]
     rows = []
     for _, r in aq.iterrows():
-        cand = q[(q.oftic == ticker) & (q.fpedats == r.pends) & (q.statpers < r.anndats)]
+        cand = q[(q.oftic == ticker) & (q.ticker == r.ticker) & (q.fpedats == r.pends) & (q.statpers < r.anndats)]
+        if cand.empty:
+            cand = q[(q.oftic == ticker) & (q.fpedats == r.pends) & (q.statpers < r.anndats)]
         if cand.empty:
             continue
         last = cand.sort_values("statpers").iloc[-1]
-        rows.append((r.pends, r.value, last.meanest, last.statpers, r.value - last.meanest, r.source_row,
-                     last.source_row, r.curr_act, r.anndats))
+        fa = PER_SHARE.get(r.ticker, 1.0)        # one per-share basis per company (review A2)
+        fm = PER_SHARE.get(last.ticker, 1.0)
+        rows.append((r.pends, r.value * fa, last.meanest * fm, last.statpers, r.value * fa - last.meanest * fm,
+                     r.source_row, last.source_row, r.curr_act, r.anndats))
     d = pd.DataFrame(rows, columns=["pends", "actual", "mean", "statpers", "surprise", "act_row", "est_row", "curr",
                                     "anndats"]).sort_values("pends")
     return d.tail(n)
@@ -156,7 +179,8 @@ def sigma_eps(ticker):
     cf = c[(c.oftic == ticker) & (c.fpi.astype(str) == "1")].sort_values("statpers")
     if len(cf) and pd.notna(cf.iloc[-1].stdev) and cf.iloc[-1].stdev > 0:
         r = cf.iloc[-1]
-        flags.append("sigma_EPS fallback 1: FY1 forecast dispersion")
+        flags.append("sigma_EPS fallback 1: FY1 forecast dispersion; not league-comparable (dispersion is 1.2x to "
+                     "7.5x smaller than surprise noise, review A3)")
         return float(r.stdev), str(r.curcode), [fact_citation("tables/ibes_eps_consensus.csv", r.source_row, "stdev",
                                                               r.stdev)], flags
     flags.append("sigma_EPS fallback 2: 0.041 x |trailing EPS| (no I/B/E/S)")
@@ -243,7 +267,7 @@ def company(ticker):
         tax = peer_median_tax()
     sigma, cur, scites, sflags = sigma_eps(t)
     flags += sflags
-    comparable = sigma is not None
+    comparable = sigma is not None and not any("fallback" in f for f in sflags)
     if sigma is None:
         eps = rev_ttm * 0.2 / shares
         sigma = W.SIGMA_FY1_RATIO * abs(eps)
@@ -306,16 +330,35 @@ def qa_turns():
 
 def doc_row(doc_id):
     try:
-        return moat.db().execute("SELECT * FROM docs WHERE doc_id = ?", (doc_id,)).fetchone()
+        return db().execute("SELECT * FROM docs WHERE doc_id = ?", (doc_id,)).fetchone()
     except Exception:
         return None
 
 
 def latest_release_page1(ticker):
     """(doc_id, text) of page 1 of the latest earnings release in the citation index (section 4.4 h_f)."""
-    r = moat.db().execute("SELECT doc_id FROM docs WHERE ticker = ? AND doc_type = 'earnings_release' "
+    r = db().execute("SELECT doc_id FROM docs WHERE ticker = ? AND doc_type = 'earnings_release' "
                           "ORDER BY filed DESC LIMIT 1", (ticker.upper(),)).fetchone()
     if not r:
         return None, ""
-    pg = moat.db().execute("SELECT text FROM pages WHERE doc_id = ? ORDER BY page_no LIMIT 1", (r[0],)).fetchone()
+    pg = db().execute("SELECT text FROM pages WHERE doc_id = ? ORDER BY page_no LIMIT 1", (r[0],)).fetchone()
     return r[0], (pg[0] if pg else "")
+
+
+def fact_by_key(table, row_key, fld="value"):
+    """Facts row looked up by its row_key (e.g. policy_exposure row_id R010)."""
+    r = db().execute('SELECT source_row FROM facts WHERE "table" = ? AND row_key = ? AND field = ? LIMIT 1',
+                     (table, row_key, fld)).fetchone()
+    if r is None:
+        return table_citation(table, row_key, fld, None)
+    return fact_citation(table, r[0], fld)
+
+
+def table_citation(table, row_key, fld, value, licensed=False):
+    """A moat-table number that is not a facts row in citations.sqlite: the Citation still exists (table + row key,
+    claim_type "number") with status "unverified" and a note, so it is visible but never counts toward E."""
+    note = f"derived from moat table {table} row {row_key} field {fld}" + ("; licensed, not shown publicly" if licensed else "")
+    return Citation(canonical_id=table, quote=f"{row_key} {fld} = {value}", claim_type="number",
+                    value=None if value is None else str(value), doc_title=f"moat table {table}",
+                    location=f"row {row_key}", page_scheme="none", license="wrds_licensed" if licensed else "",
+                    verification=Verification("unverified", 0.0, _now(), note), confidence_note=note)

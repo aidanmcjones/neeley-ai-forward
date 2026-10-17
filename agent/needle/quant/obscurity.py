@@ -83,6 +83,7 @@ def _qa_share(ticker, pattern):
     if not quarters:
         return None, 0
     q = q[q.quarter.isin(quarters)]
+    pattern = re.sub(r"\((?!\?)", "(?:", pattern)   # non-capturing groups for pandas
     asked = q[q.text.astype(str).str.contains(pattern, case=False, regex=True)].quarter.nunique()
     return asked / len(quarters), len(quarters)
 

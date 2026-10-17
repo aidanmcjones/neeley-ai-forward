@@ -79,8 +79,8 @@ def ira(co, drug, G, d, g_pre, ipay, k_factor=None, cites=()):
     fx = getattr(co, "fx", 1.0)
     if k_factor:
         revs = tuple(G * fx * di * k for di, k in zip(dd, k_factor))
-        imp.formula = (f"G {G:,.3f} x d {dd} x k {k_factor} (no class g_pre prior; KQ2 cross-check)")
-        imp.flags.append("IRA: class has no g_pre prior; net hit = k x list discount (inference)")
+        imp.formula = f"G {G:,.3f} x d {dd} x k {k_factor} (KQ2 cross-check: net hit = k x list discount)"
+        imp.flags.append("IRA: net hit = k x list discount (KQ2 cross-check, inference)")
     else:
         gg = g_pre if isinstance(g_pre, tuple) else (g_pre, g_pre, g_pre)
         # bull pairs the smallest discount with the largest concession already paid, bear the reverse

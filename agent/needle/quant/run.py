@@ -40,7 +40,7 @@ def _old_league():
     return {r["ticker"]: (r["score"], i + 1, r.get("sharpest_needle")) for i, r in enumerate(rows)}
 
 
-def score_ticker(ticker):
+def score_ticker(ticker, write=True):
     co = data.company(ticker)
     old = _old_scores(ticker)
     shown, withheld, seen = [], [], set()
@@ -58,9 +58,11 @@ def score_ticker(ticker):
             f = find.score_signal(sig, co)
             f.old_S = old.get((sig.kind, sig.detail))
             (shown if f.vector["E"] > 0 else withheld).append(f)
-    for f in find.ira_findings(ticker, co):
+    for f in find.ira_findings(ticker, co) + find.mfn_findings(ticker, co):
         (shown if f.vector["E"] > 0 else withheld).append(f)
     shown.sort(key=lambda f: -f.S)
+    if not write:
+        return co, shown, withheld
     d = OUT / ticker
     d.mkdir(parents=True, exist_ok=True)
     with (d / "findings_v2.jsonl").open("w", encoding="utf-8") as fh:
@@ -97,7 +99,9 @@ def league_table(tickers):
                                                            "confidence": needle.confidence, "kind": needle.kind,
                                                            "flags": needle.flags},
                      "needle_status": status,
+                     "n_pi_downgraded": sum(getattr(f, "pi_downgraded", False) for f in fs),
                      "n_strict_needle_candidates": sum(f.needle_eligible and f.S > 0 for f in fs),
+                     "tariff_exposure": find.tariff_exposure(t),
                      "old_score": old.get(t, (None, None, None))[0], "old_rank": old.get(t, (None, None, None))[1],
                      "constants": {"Rev_TTM": co.rev_ttm, "t": co.tax, "D": co.shares, "sigma_EPS": co.sigma,
                                    "currency": co.currency, "annual_only": co.annual_only}})
@@ -125,6 +129,11 @@ def render_md(rows):
         L.append(f"| {r['rank']} | {r['ticker']} | {r['L']:.4f} | {r['top5_sum']:.4f} | {r['N_eff']:.2f} | "
                  f"{r['n_blocks']} ({''.join(sorted(r['blocks']))}) | {tf} | {ns} | "
                  f"{r['old_score'] if r['old_score'] is not None else 'n/a'} | {r['old_rank'] or 'n/a'} |")
+    L += ["", "Rows whose backtest pi was downgraded to pi_min because the row does not satisfy the backtest flag "
+          "(review A1): " + ", ".join(f"{r['ticker']} {r['n_pi_downgraded']}" for r in rows) + ".", "",
+          "IRA rows use the KQ2 class rule (net hit 1.0x list discount for oncology/HIV, 0.3/0.4/0.5x for rebated "
+          "classes; review A15). The spec formula G x (d - g_pre) is kept per row as S_spec_formula in findings_v2 "
+          "(LLY Verzenio: 0.0507 league value vs 0.0304 spec formula).", ""]
     L += ["", f"Companies with no finding clearing the strict Needle floors (O >= 0.5, E >= 0.90, not LOW, z = 0): "
           f"{len(no_needle)} of {len(rows)} ({', '.join(no_needle) or 'none'}). Their Needle column shows the "
           "provisional pick (highest S among findings with O at or above the company median) or, failing that, the "

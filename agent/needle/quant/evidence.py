@@ -21,6 +21,7 @@ from agent.needle.cite.locator import Citation
 from agent.needle.cite.verify import verify as cite_verify
 from agent.findings import _norm
 
+from . import data
 from . import weights as W
 
 GRADE = {"exact": W.G_EXACT, "substring": W.G_EXACT, "fuzzy": W.G_FUZZY, "number_match": W.G_ENTAILED,
@@ -38,7 +39,7 @@ def grade(c):
 def from_evidence(ev, index=None):
     """Engine Evidence -> verified Citation (spec 6.2 adapter). A missing page on a section-paged label is located by
     finding the quote among the document's pages; a wrong page is never corrected (the verifier reports it)."""
-    idx = index or load_index()
+    idx = index or data.index()
     page = ev.page
     if page is None and ev.quote and idx.resolve(ev.doc_id) is not None:
         nq = _norm(ev.quote)
