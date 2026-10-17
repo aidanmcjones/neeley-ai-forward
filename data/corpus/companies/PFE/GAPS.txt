@@ -1,0 +1,4 @@
+transcripts/2026Q3_transcript: Q3 2026 call scheduled Nov 3 2026, not yet happened
+presentations/investor_day: no separate investor day deck located (JPM 2026 decks saved instead)
+policy/ press releases on tariffs, standalone US manufacturing, IRA Medicare negotiation: no official Pfizer press release found via search; pfizer.com blocks scripted access (Cloudflare 403)
+presentations/2026Q3_earnings_slides: Q3 2026 not yet reported

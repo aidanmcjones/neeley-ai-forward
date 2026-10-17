@@ -1,0 +1,7 @@
+transcript 2025Q3: official IR (403), insidermonkey (truncated, discarded), fool.com URL not found, seekingalpha/gurufocus/investing/equibles 403, bullfincher 503
+transcript 2026Q3: call not yet held as of 2026-10-17 (Amgen typically reports early Nov)
+earnings_slides 2025Q3, 2025Q4, 2026Q1, 2026Q2: investors.amgen.com static-files/event pages return 403 to scripted fetch; no alternate official host found
+investor_presentation JPM Jan 2026: only announcement notice found (saved as press); deck/webcast on investors.amgen.com 403
+investor_presentation investor day/business review: not located
+press release on IRA negotiation of Enbrel/Otezla (2026/2027 selection): no standalone Amgen release found; only 2022 IRA statement + 10-K/10-Q disclosures
+press release on pharma tariffs: no standalone release; covered within 2025-12-19 MFN release
