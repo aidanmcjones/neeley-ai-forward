@@ -76,10 +76,11 @@ def fact_citation_status(verify_status, reread_ok, table=None):
 #
 # Page citation rules (fail closed): the quote must be verbatim on that page, so it is taken, in order, from the row's
 # own quote field (QUOTE_FIELDS); for rows that name an indication or a label item (MATCH_FIELDS), from the one line of
-# the page that shares at least MIN_SHARED_TERMS terms with the row (a row matched to a line, never a paraphrase);
-# then from the cited value itself (a number claim: the ladder checks the value is on the page). Each candidate
+# the page that shares at least MIN_SHARED_TERMS terms with the row (a row matched to a line, never a paraphrase).
+# A bare value is never used as the quote: "66" found somewhere on a page is not evidence that the page states the
+# row's fact (review verify2). Each candidate
 # runs through agent.needle.cite.verify.verify; the first that passes is returned. When none passes, the facts-row
-# citation is kept (whitelist status) with a note and a viewer link to the locator page.
+# citation is kept (whitelist status) with a note, the page in its location and a viewer link to the locator page.
 #
 # Label-section rule: a row whose source_row is data/corpus/drugs/<drug>/<file>#<section heading> (epi/indication_map.csv)
 # is resolved to the page of document drug:<drug>:<file> whose printed heading equals that section, when the locator
@@ -202,8 +203,6 @@ def _page_citation(base, doc_id, page, row, row_json, index, how):
         ln, _n = match_line(got[2], row_json)
         if ln:
             cands.append((ln, "quote", None, ""))
-    if base.value not in (None, ""):
-        cands.append((str(base.value), "number", base.value, base.unit))
     for q, ct, val, unit in cands:
         try:
             c = verify(Citation(canonical_id=doc_id, page=page, quote=q, claim_type=ct or "quote", value=val,
@@ -243,7 +242,8 @@ def apply_locator(row, base, row_json=None, index=None, value_mismatch=False):
             return cit
         note = (base.confidence_note + "; " if base.confidence_note else "") + \
             f"{page_ref[2]}: no quote verified on page {page_ref[1]} ({'; '.join(why[:3]) or 'no candidate'})"
-        out = replace(base, confidence_note=note, verification=replace(base.verification, detail=note))
+        out = replace(base, confidence_note=note, verification=replace(base.verification, detail=note),
+                      location=f"{base.location or 'row ' + str(row['row_key'])}; {page_ref[0]} page {page_ref[1]}")
         try:
             out.viewer_link = build_viewer_link(replace(out, canonical_id=page_ref[0], page=page_ref[1], quote=""))
         except Exception:

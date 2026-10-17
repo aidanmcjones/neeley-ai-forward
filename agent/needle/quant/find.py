@@ -16,7 +16,7 @@ from datetime import date
 
 from agent.needle.cite.gate import derived_entry
 from agent.needle.cite.locator import Claim, Citation, _jsonable
-from agent.needle.cite.render import render_markdown
+from agent.needle.cite.render import claim_markup, render_footnotes_md, render_markdown
 from agent.needle.cite.index import load_index
 from agent.needle.cite.verify import verify as cite_verify
 
@@ -498,12 +498,18 @@ class Scored:
         return data.expand_citations(list(self.citations) + extra)
 
     def to_dict(self):
-        body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.verification.ok],
-                                      derived=self.derived, assumptions=self.assumptions)], public=self.public)
+        ok = [c for c in self.citations if c.verification.ok]
+        claims = [Claim(self.sentence, ok, derived=self.derived, assumptions=self.assumptions)]
+        formula = "" if self.not_quantified else (self.impact.formula or "")
+        if formula:      # the math the reader sees, marked from the same maps the gate checks (review verify2)
+            claims.append(Claim(formula, ok, derived=self.derived, assumptions=self.assumptions, where="impact.formula"))
+        texts, order = claim_markup(claims)
+        body = texts[0] + ("\n" + render_footnotes_md(order, self.public) if order else "")
         return {
             "id": self.id, "ticker": self.ticker, "signal_kind": self.kind, "signal_family": self.family.name,
             "has_detector": self.family.has_detector, "detector": self.detector, "block": self.family.block,
             "channel": self.channel, "direction": self.direction, "sentence": self.sentence, "sentence_md": body,
+            "formula_md": texts[1] if formula else "",
             "impact": None if self.not_quantified else self.impact.to_dict(),
             "impact_channel": self.impact.channel, "not_quantified": self.not_quantified or None,
             "guard": self.guard or None,

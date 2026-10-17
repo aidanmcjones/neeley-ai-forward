@@ -11,20 +11,24 @@ checks each number.
 
 Numbers: agent.needle.cite.numbers.tokenize on every text block (sentence, impact math, peer comparison, table cell,
 formula line). Years, dates, period labels, form names, page / section / item numbers, ids and footnote markers are
-excluded by the rule documented there. Everything else is classified, first rule that holds wins:
+excluded by the rule documented there. Everything else is classified, first rule that holds wins (review verify2:
+the record's own maps are read before any citation, so a code-computed statistic is never "verified" by a numeral
+that happens to round to it):
 
-  verified    the number (after scale and sign normalization, numbers.same_number) appears in the cited_text (the
-              citation's quote), in its verified value+unit, or in the page text of a citation whose status is
-              exact, substring, fuzzy (the ladder already required matching numerals) or number_match. Only
-              citations that PASSED verification count; an unverified citation supports nothing.
   derived     the number matches a `derived` entry whose expression re-computes, from operands that are themselves
-              supported (a passing citation that carries the operand value, an assumption, or another derived
-              entry), to the printed number within DERIVED_REL_TOL (0.5% relative) or the printed precision of the
-              number (half a unit of its last digit), whichever is larger.
+              supported (a passing citation that carries the operand value in its quote or value, an assumption, or
+              another derived entry), to the printed number within DERIVED_REL_TOL (0.5% relative) or the printed
+              precision of the number (half a unit of its last digit), whichever is larger.
   assumed     the number matches an `assumptions` entry with a non-empty label.
-              In a block whose `where` names a formula ("formula", "math", "impact"), the bare constants 0, 1 and 100
-              (no unit, no scale) are assumed with the label "arithmetic constant": "(1 - t)" and "x 100" are
-              arithmetic, not facts.
+  verified    the number (after scale and sign normalization, numbers.same_number) is inside the cited_text (the
+              citation's quoted span) or equals the citation's own value+unit, for a citation whose status is
+              exact, substring, fuzzy or number_match. The rest of the page never supports a number (a "1.2"
+              elsewhere on the page, an EPS of 1.18 or a footer "- 3 -" is not the cited fact); the page text is
+              read only for the scale it declares before the quote. Unverified citations support nothing.
+  constant    in a block whose `where` names a formula ("formula", "math", "impact"), the bare constants 0, 1 and
+              100 (no unit, no scale) are assumed with the label "arithmetic constant": "(1 - t)" and "x 100" are
+              arithmetic, not facts. The renderer prints no marker for them (documented rule); every other
+              assumption prints [assumption], a model constant (label "constant: <name>") prints [constant: <name>].
   unsupported anything else, with a reason.
 
 Fail closed: an exception while checking one number marks that number unsupported with reason "gate error: ...";
@@ -183,7 +187,9 @@ def _page_tokens(page):
 
 
 def _sources(c, pages, use_page_text):
-    """[(basis, [(NumTok, declared scale)])] for one citation, computed once per gate call."""
+    """[(basis, [(NumTok, declared scale)])] for one citation, computed once per gate call: the quoted span and the
+    citation's own value. Page text is read only for the scale it declares before the quote (use_page_text is kept
+    for the API; page numerals never support a number)."""
     key = (c.cite_id, c.canonical_id, c.page, c.quote, c.value, c.unit, c.char_start, bool(use_page_text))
     hit = pages.src_cache.get(key)
     if hit is not None:
@@ -199,8 +205,6 @@ def _sources(c, pages, use_page_text):
         t = parse_value(c.value, c.unit)
         if t is not None:
             out.append(("value", [(t, None)]))
-    if use_page_text and page:
-        out.append(("page", _page_tokens(page)))
     pages.src_cache[key] = out
     return out
 
@@ -348,7 +352,11 @@ def _match_derived(tok, derived, assumptions, pages, use_page_text, claim_ctx):
     return None, reason
 
 
-def _match_assumption(tok, assumptions, claim_ctx):
+def _match_assumption(tok, assumptions, claim_ctx, name=""):
+    """Label of the assumption entry that carries this number. When several entries carry the value, the one whose
+    key or label names the symbol printed before the number ("m_avoided (0.2, ...)") wins (review verify2: 0.2 was
+    labelled as the tax rate t)."""
+    hits = []
     for key, a in (assumptions or {}).items():
         if isinstance(a, dict):
             label, raw, unit = str(a.get("label") or "").strip(), a.get("value", key), a.get("unit", "")
@@ -357,10 +365,25 @@ def _match_assumption(tok, assumptions, claim_ctx):
         at = parse_value(raw if isinstance(raw, str) else f"{float(raw):.12g}", unit)
         if at is None:
             continue
-        if same_number(tok, at, claim_ctx, None)[0] or str(raw).strip() == tok.raw:
-            if label:
+        if (same_number(tok, at, claim_ctx, None)[0] or str(raw).strip() == tok.raw) and label:
+            hits.append((str(key), label))
+    if not hits:
+        return None
+    if name:
+        n = name.lower()
+        for key, label in hits:
+            if n in key.lower() or n in label.lower():
                 return label
-    return None
+    return hits[0][1]
+
+
+_SYMBOL = __import__("re").compile(r"([A-Za-z_][A-Za-z0-9_]*)\s*[(=:]?\s*(?:[-+]?[\d.]+\s*,\s*)*$")
+
+
+def _symbol_before(text, start):
+    """The identifier printed just before a number ("t 0.15" -> "t", "m_avoided (0.2" -> "m_avoided"), or ''."""
+    m = _SYMBOL.search(text[max(0, start - 40):start])
+    return m.group(1) if m else ""
 
 
 # ------------------------------------------------------------------ the gate
@@ -396,21 +419,21 @@ def numeric_gate(text_blocks, claims, derived=None, assumptions=None, index=None
             rec = {"value": tok.raw, "where": f"{where}@{tok.start}", "block": where, "start": tok.start,
                    "end": tok.end, "kind": "unsupported", "cites": [], "operands": []}
             try:
-                hits, why = _supported_by(tok, cits, pages, use_page_text, ctx)
-                if hits:
-                    rec.update(kind="verified", cites=[h[0] for h in hits], basis=[h[1] for h in hits])
+                key, refs = _match_derived(tok, derived, assumptions, pages, use_page_text, ctx)
+                if key is not None:
+                    rec.update(kind="derived", derived=key, operands=refs)
                 else:
-                    key, refs = _match_derived(tok, derived, assumptions, pages, use_page_text, ctx)
-                    if key is not None:
-                        rec.update(kind="derived", derived=key, operands=refs)
+                    dwhy = refs                                 # (None, reason) from _match_derived
+                    label = _match_assumption(tok, assumptions, ctx, _symbol_before(text, tok.start))
+                    if label is not None:
+                        rec.update(kind="assumed", label=label)
                     else:
-                        dwhy = refs                             # (None, reason) from _match_derived
-                        label = _match_assumption(tok, assumptions, ctx)
-                        if label is None and formula and not tok.unit and tok.scale is None and not tok.currency \
+                        hits, why = _supported_by(tok, cits, pages, use_page_text, ctx)
+                        if hits:
+                            rec.update(kind="verified", cites=[h[0] for h in hits], basis=[h[1] for h in hits])
+                        elif formula and not tok.unit and tok.scale is None and not tok.currency \
                                 and tok.num in FORMULA_CONSTANTS:
-                            label = "arithmetic constant"
-                        if label is not None:
-                            rec.update(kind="assumed", label=label)
+                            rec.update(kind="assumed", label="arithmetic constant")
                         else:
                             rec["reason"] = dwhy or why or "no passing citation, derivation or assumption carries this number"
                 chk["checked"] += 1

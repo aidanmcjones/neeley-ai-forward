@@ -229,3 +229,44 @@ def test_no_numbers_status_is_not_passed_but_is_not_a_failure(idx, good):
     assert mixed["passed"] and mixed["numeric_check"]["status"] == "passed"
     bad = G.gate_document([("n", "no figures", []), ("x", "revenue 99 billion", [])], index=idx)
     assert not bad["passed"] and bad["numeric_check"]["status"] == "failed" and bad["failed"] == ["x"]
+
+
+def test_verify2_page_numerals_outside_the_quote_support_nothing(idx, good):
+    # good quotes "...$29,482 million in 2025, an increase of 18 percent..."; 71.5% and ($183) sit on the same page
+    # outside the quote. Review verify2: a footer "- 3 -" or an EPS "1.18" on the page verified a z-score.
+    r = G.numeric_gate("Gross margin was 71.5%; other income ($183) million; sales $29,482 million.", [good], index=idx)
+    assert [u["value"] for u in r.numeric_check["unsupported"]] == ["71.5%", "($183) million"]
+    assert r.numeric_check["verified"] == 1
+    n = [x for x in r.numbers if x["kind"] == "verified"][0]
+    assert set(n["basis"]) <= {"quote", "value"}
+
+
+def test_verify2_record_maps_win_over_a_coincidental_citation(idx):
+    # the AMGN case: "z +1.2" is a code-computed peer statistic; a passing citation quoting "$ 1.18" must not verify it
+    eps = V.verify(Citation(DOC, 2, "Net sales of Keytruda were $29,482 million in 2025"), idx)
+    from dataclasses import replace
+    eps = replace(eps, quote="basic EPS $ 1.18")                 # a passing citation whose quote holds 1.18
+    peer = {"peer_z": {"value": "1.2", "label": "shortlist peer panel statistic (not page-cited)"}}
+    r = G.numeric_gate("DSO 93 days; z +1.2", [eps], assumptions=dict(peer, d={"value": "93", "label": "x"}), index=idx)
+    z = [x for x in r.numbers if x["value"].endswith("1.2")][0]
+    assert z["kind"] == "assumed" and "peer panel" in z["label"]
+
+
+def test_verify2_constants_are_labelled_where_the_reader_sees_them(idx):
+    from agent.needle.cite.render import render_markdown
+    cl = Claim("0.03 x Rev 29,482 x (1 - t 0.15)", [],
+               derived={"rev": {"value": 29482, "expr": "a", "operands": {"a": {"value": 29482, "assumption": "rev"}}}},
+               assumptions={"0.03": {"value": "0.03", "label": "constant: ANCHOR (3% margin event)"},
+                            "t": {"value": "0.15", "label": "effective tax rate t (assumption)"}}, where="impact.formula")
+    md = render_markdown([cl], index=idx)
+    assert "0.03[constant: ANCHOR]" in md and "0.15)[assumption]" in md
+    assert "(1 - t" in md and "(1[" not in md                    # bare arithmetic 1 is excluded by the documented rule
+
+
+def test_verify2_assumption_label_follows_the_printed_symbol(idx):
+    am = {"t": {"value": "0.2", "label": "effective tax rate t"},
+          "m": {"value": "0.2", "label": "constant: M_MDP_AVOIDED (m_avoided)"}}
+    r = G.numeric_gate([("impact.formula", "t 0.2 and m_avoided (0.3, 0.2, 0.1)")], [],
+                       assumptions=dict(am, x={"value": "0.3", "label": "x"}, y={"value": "0.1", "label": "y"}), index=idx)
+    lab = {(n["value"], n["start"]): n["label"] for n in r.numbers}
+    assert lab[("0.2", 2)] == "effective tax rate t" and lab[("0.2", 26)].startswith("constant: M_MDP_AVOIDED")

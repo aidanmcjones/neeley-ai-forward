@@ -76,6 +76,7 @@ class Claim:
     citations: list = field(default_factory=list)      # list[Citation]
     derived: dict = None                               # gate.derived_entry map for computed numbers in text
     assumptions: dict = None                           # {number or key: label} for assumed numbers in text
+    where: str = "claim"                               # gate block name; "impact.formula" enables the formula rule
 
     def to_dict(self):
         d = {"text": self.text, "citations": [c.to_dict() for c in self.citations]}
