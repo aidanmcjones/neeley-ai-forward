@@ -21,9 +21,9 @@ STATUS = {
     "fine_print": ("collected", "verified"), "product_evidence": ("collected", "verified"),
 }
 STAGES = [
-    ("Collect", "running", "Part 1 streams done. Wave 2: epidemiology, rival-maker depth, deal comps, pipeline and onboarding landed; cost benchmarks and prescribers still collecting"),
-    ("Verify", "running", "Opus re-checked all 10 Part 1 buckets plus epi and peers; 83 AI error types logged for the report. Deals and pipeline verifying now"),
-    ("Citation index", "done", "citations.sqlite: 6,607 docs, 71,682 pages, 79,954 facts, cite() and verify_quote(); contract frozen, new material added with index.py --add"),
+    ("Collect", "done", "Part 1 streams and all seven wave 2 streams landed: epidemiology, rival-maker depth, deal comps, pipeline and targets, cost benchmarks, prescribers and payers, onboarding commands. GDELT news still trickling in under its rate limit"),
+    ("Verify", "done", "Opus re-checked every stream against the source page or the raw CMS and SEC files; 486 AI errors logged for the report. Only verified rows are citable; dropped rows are kept for the write-up"),
+    ("Citation index", "done", "citations.sqlite: 6,649 docs, 71,706 pages, 106,230 facts, cite() and verify_quote(); contract frozen, new material added with index.py --add. PR #16 ready for review"),
     ("Model", "running", "Model session is wiring NEEDLE to the index and the Part 2 tables. API key is staged in .env, pending Aidan's arm once model, data and UI are complete (no spend before then)"),
     ("UI", "running", "UI session has 7 cockpit screens in build on top of the index"),
     ("Demo video", "waiting", "Sunday 10:30 to 12:30, after the code freeze; needs the company pick first"),
@@ -47,7 +47,7 @@ PART2 = [
     ("Market sizing", "Verified and indexed: 212 drug x indication label rows, US prevalence for 30 of 50 indications (all 30 rechecked on the primary page; ATTR-CM, RA and PrEP marked low confidence), Part D 2024 floors recomputed 15 of 15, 95 funnels with Medicare floor %. 20 indications still have no epidemiology", "ready"),
     ("Peer comparison at rival-maker depth", "Verified and indexed: 833 of 852 rival product statements verbatim on the cited page (19 publisher-text rows dropped, 224 junk speakers fixed), NVS top-20 revenue rebuilt from the 20-F, 72 of 72 XBRL rows match. 8 rival makers covered; Boehringer blocked by bot protection", "ready"),
     ("Pipeline and targets", "Verified and indexed: 3,383 Phase 2/3 trials reclassified to the epi vocabulary (collector regex was wrong 8%, new classifier 1 of 150), 2,222 assets after 177 trial-arm rows dropped, 199 target profiles with cash, debt and EV re-pulled from one balance-sheet date (collector used facts up to 10 years stale; 78 priced, Tiingo-limited), 452 LOE rows with stated date, page and a corrected rule date (5 wrong-strength generics flagged, biologics on BLA + 12 years), 921 FDA calendar rows", "ready"),
-    ("Prescriber and payer uptake", "Collected: Part D prescribers by drug, specialty and state 2019 to 2024 (216 drug-years, 9,071 state rows), prescriber concentration and growth, Open Payments 2021 to 2024 by nature and specialty, Part B providers for 13 J-code drugs, formulary history 2023Q4 to 2026Q3 (1,780 rows). Opus verifying against the raw CMS files", "verifying"),
+    ("Prescriber and payer uptake", "Verified and indexed: Part D prescribers by drug, specialty and state 2019 to 2024 with CMS all-prescriber counts and true beneficiaries added (the 11-claim floor hid 90% of Skyrizi prescribers; Biktarvy was missing; Humira undercounted 3 to 7x), concentration and growth on both bases, Open Payments 2021 to 2024 with royalties split from promotion, Part B providers for 16 HCPCS codes (Darzalex Faspro unmixed from IV), formulary history 1,780 of 1,780 recompute with contract_year and part_b flags", "ready"),
     ("Two rejected alternatives", "Argument, built from Part 1 and the tables above", "waiting"),
     ("What would prove us wrong (6 to 12 months)", "Argument; leading indicators come from prescriber, formulary and price series", "waiting"),
     ("Why it will work: doctors, payers, investors", "Mentor and industry interviews today in room 2303 plus prescriber, formulary and consensus data", "human"),

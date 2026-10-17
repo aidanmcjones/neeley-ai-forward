@@ -19,12 +19,12 @@ Sonnet agent and then re-verified by an Opus agent against the primary source. B
 | deals | 1,611 biopharma deals 2020 to 2026 from 2,934 8-Ks and 10-K notes | `verified/deals/`: deal_comps (use verify_status verified or corrected only; unchecked rows are leads), deal_benchmarks (74 cells from verified rows, `thin` when n 5 to 9), duplicates, pr_checks (n=4, do not use) |
 | pipeline | Phase 2/3 landscape, assets, target profiles, FDA and LOE calendars | `verified/pipeline/`: pipeline_landscape (use primary_indication_epi, stale_registry_date), pipeline_assets (2,222), target_profiles (199; cash, debt, EV from one balance-sheet date, 78 priced), loe_calendar (stated date + tenk_page, rule_method), fda_calendar (exposure_not_sponsor flag), pipe_indication_to_epi |
 | costs | cost structure, cost ratios, trial cost per phase, pricing moves, launch and marketing, Open Payments | `verified/costs/`: company_cost_structure (row_holds says restated vs original), cost_ratios (scope column), pricing_move_benchmarks (effect_type, disclosed_effect), trial_cost_benchmarks (cost_year, confidence), launch_and_marketing_benchmarks, open_payments_by_drug and _by_nature (use the promotional share only). new_indication_benchmarks: 82% of checked matches were wrong, do not use its timing columns |
-| rx | Part D prescribers, Open Payments, formulary history, Part B providers | collecting |
+| rx | Part D prescribers by drug, specialty, state 2019 to 2024; concentration; Open Payments 2021 to 2024; Part B providers; formulary history | `verified/rx/`: partd_prescribers_by_drug (use prescribers_all_cms and true_beneficiaries, the 11-claim floor hides most specialty prescribers), partd_prescribers_by_specialty, partd_prescribers_by_state, prescriber_concentration (use the _all_prescribers columns for launches), open_payments_by_drug (usd_promotional vs usd_royalty_license_ownership), open_payments_research, partb_providers_by_drug (16 HCPCS), formulary_history (contract_year, part_b_drug), reconciliation |
 | onboard | `python -m agent.moat.onboard_company <TICKER>` and `onboard_drug "<BRAND>"` build all of the above for any new company or drug, then `index.py --add` | `onboard/<KEY>/*.csv`, flagged `unverified_onboard` until a verifier runs; docs/research/onboarding.md |
 
 ## Citation index
 
-`data/moat/index/citations.sqlite` (R2 `moat/index/citations.sqlite.gz`): 6,607 docs, 71,682 pages, 79,954 facts,
+`data/moat/index/citations.sqlite` (R2 `moat/index/citations.sqlite.gz`): 6,649 docs, 71,706 pages, 106,230 facts,
 FTS5 search, transcript grades, `verify_quote`. API in `agent/moat/cite.py`; docs in `docs/research/citation_index.md`.
 Facts carry `verify_status`: use `verified`/`corrected`/`fixed`/`yes`/`True`; `unverified_onboard` means an onboarded
 table no verifier has checked; `no_verified_copy` is machine data (prices, I/B/E/S). `*_dropped.csv` files are never indexed.
@@ -38,5 +38,5 @@ python -m agent.moat.cite "Genmab royalty" --ticker JNJ --doc-type annual_report
 
 - Quote transcripts only from grade A or B (see `verified/calls/transcript_grades.csv`), or after a check against the Bloomberg copy.
 - Bloomberg exports (`data/corpus/_inbox/bloomberg/`, R2 `bloomberg/`) are licensed: cite, never redistribute.
-- `data/moat/verify/ai_wrong.jsonl` logs every error type the verifiers found (61 entries): the "AI was confidently wrong" material for the report.
+- `data/moat/verify/ai_wrong.jsonl` logs every error the verifiers found (486 entries across 13 streams): the "AI was confidently wrong" material for the report.
 - Rebuild the coverage tracker with `python -m agent.moat.progress && python -m agent.moat.progress_page`.
