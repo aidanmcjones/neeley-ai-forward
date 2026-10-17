@@ -88,7 +88,6 @@ Expected documents that are not in data/corpus. Regenerate with `python -m agent
 
 ## AMGN (companies)
 - transcript 2025Q3
-- earnings slides: none
 - worker notes:
   - transcript 2025Q3: official IR (403), insidermonkey (truncated, discarded), fool.com URL not found, seekingalpha/gurufocus/investing/equibles 403, bullfincher 503
   - transcript 2026Q3: call not yet held as of 2026-10-17 (Amgen typically reports early Nov)
