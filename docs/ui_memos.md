@@ -22,7 +22,9 @@ are at that moment.
     format: "chat" | "memo",
     prompt, aliases: [6 to 12], ticker | null, kind,
     generated_by: "template" | "decide_v2" | "data",
-    summary, blocks: [h | p | kpi | table | list | callout],
+    summary, blocks: [h | p | kpi | table | list | callout | math],
+      # math: {"type":"math","label":"Impact math","text":"<raw engine formula or note>","cite": n}, placed right
+      # after the block it supports; the UI renders it collapsed under "Show the math"
     cites: [{ n, cite_id, finding_id, finding_ids, ticker, doc_title, period, page, quote, excerpt, url,
               withheld, withheld_reason, verification, derived_from, derived_expr, numeric_check, ref? }],
     numeric_check, ask_next: [2 or 3 ids],
@@ -73,6 +75,12 @@ separate decision."). Template-stance companies get "Template stance, no valued 
   lower"); peer cells reuse the peer clause of the finding sentence. KPI values carry no numbers unless they appear
   verbatim in a gated field. The five DECIDE numbers (ev, cash at risk, payback month, spread, MCDA) are printed when
   a decide exists.
+- Plain-English rule: prose and table cells say what the gated math means, using only numbers that appear in it
+  (a percent of a gated decimal counts: "taxed at 15%" for `t 0.1501`, "3% of trailing revenue" for `0.03`).
+  Every raw formula, obscurity note and robustness variant label lives in a `math` block; engine variable names
+  (Rev_TTM, D, t, G, k, d, m_avoided, s_MFN, qa_turns, pi_min, S = 0, any snake_case token) never appear in
+  p, list, callout, kpi or table text. Translators: the 3%-of-revenue anchor, the IRA class rule, the MFN scenario,
+  the label channel, and the two obscurity-note forms; unknown formulas print the direction and defer to the math.
 - Findings whose `numeric_check.status` is `failed` are excluded from every memo; impacts flagged suspect are
   printed as withheld, never as dollars; `not_quantified` rows say so.
 
@@ -85,10 +93,13 @@ separate decision."). Template-stance companies get "Template stance, no valued 
 4. No number without a marker: digits outside markers are flagged per sentence, list item, table row or kpi
    value, except the whitelist below. In a paragraph, a marker covers the unmarked sentences before it in the
    same block.
-5. Gated-number rule: every numeric token in memo text must appear in a gated field of a cited finding (finding,
-   sentence, sentence_marked, impact.formula, impact.text_gated, peer.note, peer.named_peer_row, obscurity note),
-   in a cited data row (row-cite quote or the resolved row), in the product's gated cells, or among the decide
-   numbers.
+5. Gated-number rule: every numeric token in memo text must equal (at the printed precision, directly or as a
+   percent of a decimal) a number in a gated field of a cited finding (finding, sentence, sentence_marked,
+   impact.formula, impact.text_gated, peer.note, peer.named_peer_row, obscurity note), in a cited data row
+   (row-cite quote or the resolved row), in the product's gated cells, in one of the memo's math blocks, or among
+   the decide numbers. Each math block's `cite` must resolve.
+5b. Plain-English rule: engine variable names and formula fragments are flagged in p, list, callout, kpi and
+   table text; ai_wrong table cells quote the error log verbatim and are exempt.
 6. No memo cites a finding whose numeric check failed; no suspect impact is printed as dollars.
 7. Aliases unique across memos; `suggested` and `ask_next` ids exist; `format` matches the kind; memo format
    carries a `memo_header`.
