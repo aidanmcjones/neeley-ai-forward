@@ -540,3 +540,19 @@ def test_real_vrtx_corpus_id_resolves():
     i = load_index(moat._GAP)
     r = i.resolve("VRTX:10k_FY2024.md")
     assert r is not None and r.canonical_id == "VRTX:companies/VRTX/10k_FY2024.md"
+
+
+# ---------------------------------------------------------------- review C4: facts status whitelist
+def test_fact_status_whitelist():
+    from agent.needle.cite.facts import fact_citation_status, fact_status_grade
+    for s in ("verified", "corrected", "fixed", "yes", "True", True, "match", "matches page"):
+        assert fact_status_grade(s) == (1.0, "verified"), s
+        assert fact_citation_status(s, True) == "exact" and fact_citation_status(s, False) == "unverified"
+    assert fact_status_grade("no_verified_copy") == (0.6, "machine data")
+    assert fact_citation_status("no_verified_copy", True) == "number_match"
+    assert fact_citation_status("no_verified_copy", False) == "unverified"
+    for s in ("unverified_onboard", "unchecked"):
+        g, label = fact_status_grade(s)
+        assert g == 0.0 and "not checked" in label and fact_citation_status(s, True) == "unverified"
+    for s in ("added", "pass", "unsampled", "dropped", "no", "False", "", None, "anything new"):
+        assert fact_status_grade(s)[0] == 0.0 and fact_citation_status(s, True) == "unverified", s
