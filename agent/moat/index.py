@@ -305,7 +305,12 @@ def fact_rows(table, path, default_status, doc_id):
             row = dict(zip(cols, vals))
             if not any(v.strip() for v in vals):
                 continue
-            tick = s(row.get("ticker")) or s(row.get("company"))
+            # I/B/E/S tables carry the IBES internal ticker in `ticker` and the exchange ticker in `oftic`
+            tick = s(row.get("oftic")) or s(row.get("ticker")) or s(row.get("company"))
+            # onboard/<TICKER>/*.csv rows belong to that ticker even when the file keys rows by an IBES id
+            parts = table.split("/")
+            if parts[0] == "onboard" and len(parts) > 2 and parts[1].isupper() and (not tick or tick != parts[1]):
+                tick = parts[1]
             _, drug = first(row, DRUG_COLS)
             _, period = first(row, PERIOD_COLS)
             _, src = first(row, SOURCE_COLS)
