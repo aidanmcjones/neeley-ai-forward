@@ -61,6 +61,12 @@ def score_ticker(ticker, write=True):
     for f in find.ira_findings(ticker, co) + find.mfn_findings(ticker, co):
         (shown if f.vector["E"] > 0 else withheld).append(f)
     shown.sort(key=lambda f: -f.S)
+    # review R2: a text or call row mapped to a channel points at the row that carries that channel's dollars
+    for f in shown:
+        if f.not_quantified.startswith("mapped to"):
+            tgt = next((g for g in shown if g.S > 0 and g.impact.channel == f.impact.channel and g is not f), None)
+            f.flags.append(f"corroborates {tgt.id} ({tgt.kind})" if tgt else
+                           f"no scored {f.impact.channel} row for {ticker}: not quantified")
     if not write:
         return co, shown, withheld
     d = OUT / ticker

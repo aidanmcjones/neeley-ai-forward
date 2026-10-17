@@ -68,6 +68,15 @@ def anchor(co):
     return _fill(imp, (r, r, r), 1.0, co)
 
 
+def not_quantified(channel, reason):
+    """A row with no impact channel inputs (review R2): impact None in findings_v2, M = 0, kept out of the top 5."""
+    imp = Impact(channel, formula=reason, quantified=False)
+    imp.d_rev = {"bull": 0.0, "base": 0.0, "bear": 0.0}
+    imp.d_oi = dict(imp.d_rev)
+    imp.d_eps = dict(imp.d_rev)
+    return imp
+
+
 # ---------------------------------------------------------------- (b) IRA negotiation
 def ira(co, drug, G, d, g_pre, ipay, k_factor=None, cites=()):
     """dRev_IPAY = G_Medicare . max(0, d - g_pre), CM = 1.00, step on 1 January of the IPAY year (section 4.3 b).

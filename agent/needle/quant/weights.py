@@ -65,9 +65,14 @@ def anchor_pi(alpha_k, d_k=D_PUB):
 
 
 PI_MISSTATEMENT = round(anchor_pi(12.0), 4)    # 0.0491. Beneish-Lee-Nichols 2013, 1%/month x 12 (inference)
-PI_RISK_FACTOR = round(anchor_pi(5.52), 4)     # 0.0226. Lazy Prices VW Jaccard 0.46%/month x 12
-PI_LITIGATION_TEXT = round(anchor_pi(8.52), 4)  # 0.0349. Lazy Prices 71 bps/month x 12
-PI_MDNA = round(anchor_pi(1.98), 4)            # 0.0081. Lazy Prices Table VII 11-22 bps/month, midpoint x 12
+# Text families (review A5): ONE Lazy Prices table for all of them, Table II (whole-document similarity, VW Q5-Q1
+# 5-factor alpha, Jaccard). Never mixed with the section-level Table VII (risk factors "up to 188 bps", MD&A 11-22 bps),
+# which the v2 weights used for MD&A only. The detectors compare sections, so applying a whole-document alpha to a
+# section change is the stated approximation.
+TEXT_ALPHA_TABLE = "Lazy Prices Table II (whole document)"
+PI_RISK_FACTOR = round(anchor_pi(5.52), 4)     # 0.0226. Table II VW Jaccard 0.46%/month x 12
+PI_LITIGATION_TEXT = round(anchor_pi(8.52), 4)  # 0.0349. Table II sort, high-litigiousness subsample (App. A-2) 71 bps x 12
+PI_MDNA = round(anchor_pi(5.52), 4)            # 0.0226. Table II (same table as risk factors); v2 used Table VII 0.0081
 PI_INSIDER = round(anchor_pi(4.92), 4)         # 0.0201. Cohen-Malloy-Pomorski 82 bps/month x 6
 PI_8K = round(anchor_pi(1.5), 4)               # 0.0061. Lerman-Livnat 2010 lower end 1.5%
 PI_MIN = round(anchor_pi(1.34), 4)             # 0.0055. Chen-Hollander-Law (WP) zero-question calls 1.34%

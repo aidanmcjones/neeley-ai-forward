@@ -57,7 +57,7 @@ FAM = {
     "dso": Family("days sales outstanding", "A", W.PI_DSO, "backtest", True, ("receivables",)),
     "gm_drop": Family("gross margin drop", "A", W.PI_GROSS_MARGIN_DROP, "backtest", False, ("gross_margin",)),
     "risk": Family("risk-factor change", "T", W.PI_RISK_FACTOR, "anchor", True),
-    "litigation": Family("litigation-language change", "T", W.PI_LITIGATION_TEXT, "anchor", True),
+    "litigation": Family("high-litigiousness text change", "T", W.PI_LITIGATION_TEXT, "anchor", True),
     "mdna": Family("MD&A change", "T", W.PI_MDNA, "anchor", False),
     "directional": Family("non-answer / deflection", "C", W.PI_MIN, "directional", False),
     "none_C": Family("repeated deflection / topic surge (no evidence)", "C", W.PI_NONE, "none", False),
@@ -91,6 +91,15 @@ MISSING_DETECTORS = ["misstatement score (Beneish/Dechow)", "opportunistic insid
                      "zero-question calls", "GTN widening", "footnote extractor"]
 
 TOPIC_KEYS = list(OB.TOPIC_WORDS)
+# Text and call topics that name an impact channel with its own scored row (review R2). Other topics (pricing, gtn,
+# 340b, supply, tariff, litigation, china, guidance) have no channel inputs in the data layer.
+TOPIC_CHANNEL = {"ira": "ira", "mfn": "mfn", "generic": "loe"}
+
+
+def topic_channel(topics):
+    """The one impact channel a text or call row's topics map to, or None (no mapping, or several channels)."""
+    chans = {TOPIC_CHANNEL[t] for t in topics if t in TOPIC_CHANNEL}
+    return chans.pop() if len(chans) == 1 else None
 
 
 def family_of(sig, topics):
@@ -101,8 +110,8 @@ def family_of(sig, topics):
         return FAM["favorable"] if favorable else FAM["none_A"]
     if favorable_statistical(sig):
         return FAM["favorable"]
-    if sig.detector == "drift" and "litigation" in topics:
-        return FAM["litigation"]
+    if sig.detector == "drift" and [t for t in topics if t != "other"] == ["litigation"]:
+        return FAM["litigation"]     # review A5: only when litigation is the row's only (primary) topic
     return FAM.get(k, FAM["none_X"])
 
 
@@ -349,6 +358,7 @@ class Scored:
     product: str = ""
     pi_downgraded: bool = False
     fact_key: str = ""            # one underlying fact = one key (review S1); league keeps one row per key
+    not_quantified: str = ""      # reason when the row has no impact channel (review R2): impact None, S = 0
 
     def to_dict(self):
         body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.page is not None][:6])])
@@ -356,7 +366,9 @@ class Scored:
             "id": self.id, "ticker": self.ticker, "signal_kind": self.kind, "signal_family": self.family.name,
             "has_detector": self.family.has_detector, "detector": self.detector, "block": self.family.block,
             "channel": self.channel, "direction": self.direction, "sentence": self.sentence, "sentence_md": body,
-            "impact": self.impact.to_dict(), "peer": self.peer, "vector": self.vector, "S": self.S,
+            "impact": None if self.not_quantified else self.impact.to_dict(),
+            "impact_channel": self.impact.channel, "not_quantified": self.not_quantified or None,
+            "peer": self.peer or {"note": "no peer analogue"}, "vector": self.vector, "S": self.S,
             "confidence": self.confidence, "confidence_reasons": self.confidence_reasons, "flags": self.flags,
             "needle_eligible": self.needle_eligible, "old_S": self.old_S, "fact_key": self.fact_key,
             "citations": [c.to_dict() for c in self.citations],
@@ -442,9 +454,25 @@ def score_signal(sig, co, panel=None):
     if age_note:
         flags.append(age_note)
     generic = False
+    nq_reason = ""
     if fam.route in ("backtest", "anchor", "directional", "none"):
-        imp = IM.anchor(co)
-        generic = sig.detector in ("drift", "calls")
+        # Review R2 (A20, B4, A1): the 3%-of-revenue anchor is the size of a backtested margin event, so it applies
+        # only to a backtested time-series flag that fired. hit_rates.json has a dose response only by the number of
+        # flags (dose_response_full_coverage), not by one flag's strength, so the anchor is flat (D3, a stated limit).
+        if fk in BACKTEST_FLAG and not pi_downgrade:
+            imp = IM.anchor(co)
+            imp.flags.append("anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)")
+        else:
+            ch = topic_channel(topics) if sig.detector in ("drift", "calls") else None
+            if ch:
+                nq_reason = (f"mapped to the {ch} channel: that channel's own row carries the dollars; this row "
+                             "corroborates it and is not scored separately (one fact, one row)")
+            elif fk in BACKTEST_FLAG:
+                nq_reason = "not quantified: backtest flag not fired, so the anchor event size does not apply (R2)"
+            else:
+                nq_reason = (f"not quantified: no impact channel for {sig.detector} topics {', '.join(topics)} "
+                             "(R2: the generic anchor applies only to fired backtest flags)")
+            imp = IM.not_quantified(ch or "none", nq_reason)
         if fk in ("inventory", "dio"):
             share, detail, cit = stage_split(page_cites)
             flags.append(f"stage split: {detail}")
@@ -489,6 +517,7 @@ def score_signal(sig, co, panel=None):
                    peer=peer, extra_flags=flags, diagnostics_pass=diag, generic_placeholder=generic,
                    detector=sig.detector)
     sc.fact_key = fact_key(sig)
+    sc.not_quantified = nq_reason
     if pi_downgrade:
         sc.flags.append(f"pi downgraded to pi_min: row does not satisfy the backtest flag "
                         f"{BACKTEST_FLAG[fk]} (review A1)")

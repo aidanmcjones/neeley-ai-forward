@@ -29,7 +29,7 @@ def test_weights_match_table():
     assert (W.PI_INVENTORY, W.PI_DIO, W.PI_RECEIVABLES, W.PI_DSO, W.PI_GROSS_MARGIN_DROP) == \
         (0.0466, 0.0318, 0.0629, 0.0851, 0.0422)
     assert (W.PI_MISSTATEMENT, W.PI_RISK_FACTOR, W.PI_LITIGATION_TEXT, W.PI_MDNA, W.PI_INSIDER, W.PI_8K, W.PI_MIN,
-            W.PI_NONE) == (0.0491, 0.0226, 0.0349, 0.0081, 0.0201, 0.0061, 0.0055, 0.0028)
+            W.PI_NONE) == (0.0491, 0.0226, 0.0349, 0.0226, 0.0201, 0.0061, 0.0055, 0.0028)
     assert (W.R, W.H_MONTHS, W.ANCHOR, W.H_VALUE, W.N_STAR, W.NEEDLE_O, W.NEEDLE_E, W.E_HIGH, W.E_MED) == \
         (0.0785, 3.0, 0.03, 0.9, 3, 0.5, 0.90, 0.95, 0.745)
     assert W.H_MONTHS_SENSITIVITY == 6.0     # review A11: H = 3 base, 6 the sensitivity
@@ -113,10 +113,12 @@ def test_lly_end_to_end_matches_worked_example(monkeypatch):
     monkeypatch.setattr(W, "H_MONTHS", 6.0)     # the worked example's half-life (now the sensitivity, review A11)
     _, fs, _ = score_ticker("LLY", write=False)
     by = {f.kind: f for f in fs}
-    # review A1: LLY's DIO rose +14.2% YoY, below the backtest dio_rising trigger (+15%), so pi = pi_min and
-    # S = 1.0089 x 0.3032 x 1.0 x 0.0055 = 0.00168 (spec 10.3 printed 0.00973 with the backtest pi)
-    assert round(by["dio_peer_outlier"].S, 5) == 0.00168 and by["dio_peer_outlier"].confidence == "MEDIUM"
-    assert by["dio_peer_outlier"].pi_downgraded
+    # review A1: LLY's DIO rose +14.2% YoY, below the backtest dio_rising trigger (+15%), so pi = pi_min; review R2:
+    # an unfired flag does not get the anchor event size either, so the row is "not quantified" with S = 0 (v2 printed
+    # 0.00168 = 1.0089 x 0.3032 x 1.0 x 0.0055; spec 10.3 printed 0.00973 with the backtest pi)
+    dio = by["dio_peer_outlier"]
+    assert dio.S == 0 and dio.not_quantified.startswith("not quantified") and dio.to_dict()["impact"] is None
+    assert dio.pi_downgraded and dio.vector["pi"] == W.PI_MIN
     assert "capacity build, not channel stuffing" in by["dio_peer_outlier"].flags
     v = [f for f in fs if f.kind == "ira_selected" and f.product == "Verzenio"][0]
     # league value uses the KQ2 class rule (1.0 x list discount, review A15); spec formula kept alongside
