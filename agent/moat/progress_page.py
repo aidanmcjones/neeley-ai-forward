@@ -24,7 +24,7 @@ STAGES = [
     ("Collect", "running", "Part 1 streams done. Wave 2 running: deal comps, cost benchmarks, epidemiology, prescribers and payments, pipeline and targets, rival-maker depth, onboarding commands"),
     ("Verify", "done", "Opus re-checked all 10 buckets against source pages; 61 AI error types logged for the report"),
     ("Citation index", "done", "citations.sqlite: 3,118 docs, 39,940 pages, 69,553 facts, cite() and verify_quote(); frozen through the Sun 10:30 am freeze"),
-    ("Model", "blocked", "Model session is wiring NEEDLE to the index; the LLM steps still wait on the Anthropic API key"),
+    ("Model", "running", "Model session is wiring NEEDLE to the index and the Part 2 tables. API key is staged in .env, pending Aidan's arm once model, data and UI are complete (no spend before then)"),
     ("UI", "running", "UI session has 7 cockpit screens in build on top of the index"),
     ("Demo video", "waiting", "Sunday 10:30 to 12:30, after the code freeze; needs the company pick first"),
 ]
