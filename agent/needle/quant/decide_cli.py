@@ -340,7 +340,7 @@ def build_md(out, findings, public=False):
     cash_txt = ""
     if out["cash"] is not None:
         cc = out["cash_claim"].citations if out["cash_claim"] else []
-        cash_txt = "; cash and equivalents " + cell("budget", "budget/cash", f1(out["cash"]), cc)
+        cash_txt = "; cash and equivalents " + cell("budget", "budget/cash", f"{out['cash']:,.0f}" if float(out["cash"]).is_integer() else f1(out["cash"]), cc)
     L += ["", "Cash at risk (bear scenario, technical failure at the first readout, net of inflows and avoidable "
           f"payments): {cell('budget', 'budget/car', f1(c.car))}" + cash_txt, "", "### Return math, line by line", ""]
     for i, n in enumerate(c.notes):

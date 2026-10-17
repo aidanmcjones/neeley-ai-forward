@@ -549,7 +549,13 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
 
 
 def _fmt_val(v):
-    return v if not isinstance(v, (dict, tuple, list)) else "table"
+    """An input value as printed: floats from a model feed are rounded (109.34011000000001 -> 109.3), integers and
+    cited values keep their printed form."""
+    if isinstance(v, (dict, tuple, list)):
+        return "table"
+    if isinstance(v, float) and not v.is_integer():
+        return f"{v:,.1f}" if abs(v) >= 100 else f"{v:.4g}"
+    return v
 
 
 def _vals(v):
