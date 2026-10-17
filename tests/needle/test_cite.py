@@ -627,3 +627,14 @@ def test_viewer_server_serves_marked_page(root, idx):
     finally:
         srv.shutdown()
         srv.server_close()
+
+
+def test_verify2_fragment_never_crosses_flattened_table_cells():
+    from agent.needle.cite.deeplink import fragment_for_page, fragment_run
+    page = ("Cash and cash equivalents $ 8,950 $ 7,268 Accounts receivable 20,083 17,760\n"
+            "Zepbound (1) 13,484 58 13,542 4,926 175\n"
+            "Net sales of Keytruda were $29,482 million in 2025, an increase of 18 percent.")
+    assert fragment_run("equivalents $ 8,950 $ 7,268 Accounts receivable 20,083", page) == ""
+    frag, note = fragment_for_page("Zepbound (1) 13,484 58 13,542 4,926 175", page)
+    assert frag == "" and "plain URL" in note
+    assert fragment_run("Net sales of Keytruda were $29,482 million in 2025", page).startswith("Net sales of Keytruda")
