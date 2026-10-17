@@ -523,3 +523,20 @@ def test_number_tokenizer_rules():
     src = tokenize("spend $1,937,912,000")[0]
     assert same_number(claim, src)[0]                          # claim rounds the source to its printed precision
     assert not same_number(parse_value("1,937.912", "USD millions"), tokenize("$1,937.9 million")[0])[0]
+
+
+# ---------------------------------------------------------------- review D13: id-scheme aliasing
+def test_corpus_and_moat_ids_alias_by_scheme_and_suffix(idx):
+    # moat-only doc reached by its corpus-style id, and a corpus doc reached by its moat-style id
+    assert idx.resolve("AAA:10q_2025Q1.md").canonical_id == "AAA:companies/AAA/10q_2025Q1.md"
+    assert idx.resolve("AAA:companies/AAA/10k_FY2025.md").canonical_id == "AAA:10k_FY2025.md"
+    c = V.verify(Citation("AAA:10q_2025Q1.md", 1, "Quarter text here is long enough to quote."), idx)
+    assert c.verification.status == "exact" and c.canonical_id == "AAA:companies/AAA/10q_2025Q1.md"
+    assert idx.resolve("AAA:nothing_like_this.md") is None and idx.resolve("BBB:10q_2025Q1.md") is None
+
+
+@pytest.mark.skipif(not moat._GAP.exists(), reason="real data not present")
+def test_real_vrtx_corpus_id_resolves():
+    i = load_index(moat._GAP)
+    r = i.resolve("VRTX:10k_FY2024.md")
+    assert r is not None and r.canonical_id == "VRTX:companies/VRTX/10k_FY2024.md"
