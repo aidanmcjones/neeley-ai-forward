@@ -7,7 +7,13 @@ scenario EV spread, MCDA score), per-scenario monthly cash tables and a citation
 a company filing or a benchmark.  rank_moves() sorts by EV; select_move() applies the Section 5.4 selection rule.
 
 Benchmarks whose source is a URL get a Citation with claim_type "number", verification status "unverified" and
-confidence_note "external benchmark", so the gate treats them explicitly instead of silently.
+confidence_note "external benchmark". They are not in the citation index, so they never support a number: the
+numeric gate (agent.needle.cite.gate) sees them as labelled assumptions ("external benchmark: <name>, <url>",
+benchmark_label) and the renderer prints them as [assumption], never as a numbered footnote marker.
+
+Company citations (from the moves file or a finding) are re-verified here against the citation index
+(agent.needle.cite.verify.verify); a verification status supplied in the moves JSON or a findings file is discarded
+(review C2, decide.py citation_from_dict).
 """
 
 from dataclasses import asdict, dataclass, field, is_dataclass
@@ -53,11 +59,48 @@ def finding_score(f):
     return 0.0
 
 
-def finding_citations(f):
-    """Citations for a finding: v2 rows carry `citations`; old rows carry `evidence` (doc_id, page, quote)."""
+_IDX = {}
+
+
+def _index():
+    if "i" not in _IDX:
+        from agent.needle.quant import data
+        _IDX["i"] = data.index()
+    return _IDX["i"]
+
+
+def reverify(c, index=None):
+    """Never trust a supplied status: page citations are re-run through verify(); XBRL citations re-read their frame;
+    derived citations keep status 'derived' (they support nothing by themselves); anything else (a table row the
+    DECIDE path cannot re-read) becomes unverified."""
+    from dataclasses import replace
+    if c.page is not None and not c.canonical_id.startswith(("xbrl:", "derived", "benchmark:", "tables/")):
+        try:
+            from agent.needle.cite.verify import verify
+            return verify(replace(c, verification=Verification(), cite_id=""), index or _index())
+        except Exception as e:                      # fail closed
+            return replace(c, verification=Verification("unverified", 0.0, "", f"verify failed: {e}"))
+    if c.canonical_id.startswith("xbrl:") and c.value:
+        from agent.needle.quant import data
+        concept, _, frame = (c.location or "").rpartition(" ")
+        try:
+            val = float(str(c.value).replace(",", ""))
+            fresh = data.xbrl_citation(c.canonical_id[5:], concept, frame, val, c.unit)
+            return replace(c, verification=fresh.verification, confidence_note=fresh.confidence_note)
+        except Exception as e:
+            return replace(c, verification=Verification("unverified", 0.0, "", f"XBRL re-read failed: {e}"))
+    if c.canonical_id == "derived":
+        return replace(c, verification=Verification("derived", 0.0, "", c.verification.detail if c.verification else ""))
+    return replace(c, verification=Verification("unverified", 0.0, "", "supplied status discarded: DECIDE cannot re-read "
+                                                                         "this table row"))
+
+
+def finding_citations(f, index=None):
+    """Citations for a finding, each re-verified (reverify): v2/v3 rows carry `citations`; old rows carry `evidence`
+    (doc_id, page, quote)."""
     out = []
     for c in f.get("citations") or []:
-        out.append(c if isinstance(c, Citation) else Citation.from_dict(c))
+        out.append(reverify(c if isinstance(c, Citation) else Citation.from_dict(c), index))
     if out:
         return out
     for ev in f.get("evidence") or []:
@@ -66,9 +109,9 @@ def finding_citations(f):
         out.append(Citation(
             canonical_id=ev["doc_id"], page=ev.get("page"), quote=ev.get("quote", ""), claim_type="quote",
             ticker=f.get("ticker", ""), doc_title=ev.get("citation", ""), speaker=ev.get("speaker", ""),
-            verification=Verification("unverified", 0.0, "", f"evidence of finding {finding_id(f)}; the gate re-verifies"),
+            verification=Verification("unverified", 0.0, "", f"evidence of finding {finding_id(f)}"),
             confidence_note=f"taken from finding {finding_id(f)}"))
-    return out
+    return [reverify(c, index) for c in out]
 
 
 def _short_title(b):
@@ -87,6 +130,13 @@ def benchmark_citation(name_or_bench):
         confidence_note=EXTERNAL)
 
 
+def benchmark_label(name_or_bench):
+    """Assumption label for a benchmark number: external, not in the citation index, unverified."""
+    b = REGISTRY[name_or_bench] if isinstance(name_or_bench, str) else name_or_bench
+    return f"external benchmark: {b.source}, {b.url or 'no URL'} (unverified)" if b.kind != "inference" else \
+        f"inference: {b.source}" + (f", {b.url}" if b.url else "") + " (unverified)"
+
+
 def spec_citation(spec):
     """Citation for a ParamSpec default that carries a source URL or a registered benchmark."""
     if spec.bench and spec.bench in REGISTRY:
@@ -97,17 +147,18 @@ def spec_citation(spec):
     return None
 
 
-def citation_from_dict(d, value=None, unit=""):
+def citation_from_dict(d, value=None, unit="", index=None):
+    """A company citation from the moves file, verified against the citation index. Any caller-supplied
+    `verification` (and cite_id) is discarded, never trusted (review C2: a forged "exact" must not print)."""
     d = dict(d)
+    d.pop("verification", None)
+    d.pop("cite_id", None)
     d.setdefault("claim_type", "number")
     if value is not None:
         d.setdefault("value", f"{value:,}" if isinstance(value, (int, float)) else str(value))
     d.setdefault("unit", unit)
-    ver = d.pop("verification", None) or {}
-    if "status" not in ver:
-        ver = {"status": "unverified", "detail": "company number; run agent.needle.cite.verify.verify before the gate"}
-    c = Citation(**d, verification=Verification(**ver))
-    return c
+    d = {k: v for k, v in d.items() if k in Citation.__dataclass_fields__}
+    return reverify(Citation(**d), index)
 
 
 @dataclass
@@ -403,7 +454,9 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
     for inp in inputs:
         cl = cites.get(inp.name) or []
         if cl:
-            claims.append(Claim(f"{inp.name} = {inp.value} {inp.unit} ({inp.kind})", cl))
+            ok = [c for c in cl if c.verification.ok]
+            claims.append(Claim(f"{inp.name} = {_fmt_val(inp.value)} {inp.unit} ({inp.kind})", ok,
+                                assumptions=input_assumptions(inp, cl)))
             for c in cl:
                 seen[c.cite_id] = c
     glob = [("Discount rate", benchmark_citation("wacc")), ("Bear weight", benchmark_citation("p_bear")),
@@ -411,7 +464,8 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
             ("Bear multiplier", benchmark_citation("mult_bear")), ("Bull multiplier", benchmark_citation("mult_bull"))]
     for label, c in glob:
         seen[c.cite_id] = c
-    claims.append(Claim("scenario weights 0.50 / 0.11 / 0.39, multipliers 0.8 / 1.0 / 1.2, WACC 7.85%", [c for _, c in glob]))
+    claims.append(Claim("scenario weights 0.50 / 0.11 / 0.39, multipliers 0.8 / 1.0 / 1.2, WACC 7.85%", [],
+                        assumptions=global_assumptions()))
 
     return MoveResult(
         name=name or template.name, code=template.code, template_name=template.name, params=vals, ev=ev,
@@ -420,6 +474,61 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
         citations=list(seen.values()), flags=flags, finding_ids=sorted(addressed), addressed=sorted(addressed),
         p_alive_end=plan.p_alive_end(), horizon=plan.horizon, notes=plan.notes, kill_signals=template.kill_signals,
         abandon_value=plan.abandon_value, wacc=wacc, p_scenario=p_s, why=why)
+
+
+def _fmt_val(v):
+    return v if not isinstance(v, (dict, tuple, list)) else "table"
+
+
+def _vals(v):
+    if isinstance(v, dict):
+        return [x for y in v.values() for x in _vals(y)]
+    if isinstance(v, (tuple, list)):
+        return [x for y in v for x in _vals(y)]
+    try:
+        return [float(v)]
+    except (TypeError, ValueError):
+        return []
+
+
+def input_assumptions(inp, cl=()):
+    """Assumption labels for an input's value: an external benchmark, an inference, a team assumption, a design
+    parameter, or a Part 1 finding's impact. A company input with a passing citation needs none (it verifies)."""
+    if inp.kind == "company" and any(c.verification.ok for c in cl):
+        return {}
+    bench = [c for c in cl if c.canonical_id.startswith("benchmark:")]
+    if bench:
+        name = bench[0].canonical_id.split(":", 1)[1]
+        label = benchmark_label(name) if name in REGISTRY else \
+            f"external benchmark: {bench[0].quote}, {bench[0].source_url or 'no URL'} (unverified)"
+    elif inp.kind == "finding":
+        label = f"Part 1 finding {inp.finding_id}: impact d_rev base (see the finding's own numeric check)"
+    elif inp.kind == "design":
+        label = f"design parameter: {inp.note or inp.name}"
+    elif inp.kind == "company":
+        label = None                                  # a company number whose citation did not verify: unsupported
+    else:
+        label = f"{inp.kind}: {inp.note or 'team input, no source'}"
+    if label is None:
+        return {}
+    out = {}
+    for i, x in enumerate(_vals(inp.value)):
+        out[f"{inp.name}#{i}"] = {"value": f"{x:.12g}", "label": label}
+        if inp.unit in ("fraction", "probability") or "fraction" in str(inp.unit):
+            out[f"{inp.name}#{i}%"] = {"value": f"{x * 100:.12g}", "label": label, "unit": "%"}
+    return out
+
+
+def global_assumptions():
+    """Scenario weights, multipliers and WACC: external benchmarks, labelled."""
+    out = {}
+    for name in ("p_bear", "p_base", "p_bull", "mult_bear", "mult_bull", "wacc"):
+        b = REGISTRY[name]
+        out[name] = {"value": f"{float(b.value):.12g}", "label": benchmark_label(name)}
+        if name == "wacc":
+            out["wacc%"] = {"value": f"{float(b.value) * 100:.12g}", "label": benchmark_label(name), "unit": "%"}
+    out["mult_base"] = {"value": "1", "label": "design: base scenario revenue multiplier 1.0 (no adjustment)"}
+    return out
 
 
 # --------------------------------------------------------------------------------------------------------------

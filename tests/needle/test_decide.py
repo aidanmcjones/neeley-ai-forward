@@ -195,4 +195,8 @@ def test_cli_runs_on_sample_file(tmp_path):
     md = (out / "decide.md").read_text()
     for h in ("## Recommended move", "### Budget", "### Return math", "## Five numbers", "## Kill signals", "**Sources**"):
         assert h in md
-    assert md.count("verified: unverified") >= 1
+    # review C2: company numbers are re-verified against the index; no footnote prints an unverified source, and every
+    # headline number passed the numeric gate (decide.json numeric_check)
+    assert "verified: unverified" not in md
+    assert "verified: substring" in md or "verified: exact" in md
+    assert d["numeric_check"]["status"] == "passed" and not d["numeric_check"]["unsupported"]
