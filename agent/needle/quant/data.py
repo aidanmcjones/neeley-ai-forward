@@ -13,6 +13,7 @@ Each constant carries a Citation: XBRL values cite the companyfacts concept and 
 facts row in citations.sqlite (licensed WRDS rows: internal math only, never quoted publicly).
 """
 
+import json
 import os
 from dataclasses import dataclass, field
 from datetime import date
@@ -80,24 +81,78 @@ def fact_citation(table, source_row, fld, value=None, license=""):
     return _fact_row_citation(table, r, source_row, fld, value, license)
 
 
+def clean_source_url(src):
+    """A facts.source as a link: the scraper writes some sources as "<url>, p. 9" or "<url>, p. p1" (review verify2:
+    the suffix was linked and returned 404). The page goes to the footnote location, never into the URL."""
+    import re as _re
+    s = str(src or "").strip()
+    return _re.sub(r",\s*(?:p\.|page)\s*p?\d+\s*$", "", s, flags=_re.I).strip()
+
+
+def row_caveats(table, rj):
+    """Caveat columns the scraper sets on wave 3 tables, carried into the citation note when the row is used:
+    epi/market_sizing_inputs.csv do_not_read_as_penetration (Part D counts are drug-level, medicare_floor_pct can
+    exceed 100); pipeline/pipeline_assets.csv marketed_comparator = 1 (the asset is a marketed comparator, not a
+    pipeline asset); peers/peer_product_revenue.csv currency EUR, GBP or JPY (the *_usd_m columns hold the native
+    currency; TAK quarterly figures are cumulative H1, 9M, FY as labelled)."""
+    rj = rj or {}
+    out = []
+    flag = str(rj.get("do_not_read_as_penetration", "")).strip().lower()
+    if table == "epi/market_sizing_inputs.csv" and flag not in ("", "0", "false", "nan", "no"):
+        out.append("do_not_read_as_penetration: Part D count is drug-level; medicare_floor_pct can exceed 100")
+    if table == "pipeline/pipeline_assets.csv" and str(rj.get("marketed_comparator", "")).strip() in ("1", "1.0", "true", "True"):
+        out.append("marketed_comparator = 1: a marketed comparator, not a pipeline asset")
+    if table == "peers/peer_product_revenue.csv":
+        cur = str(rj.get("currency") or rj.get("units") or "").upper()
+        for c in ("EUR", "GBP", "JPY"):
+            if c in cur:
+                out.append(f"currency {c}: the *_usd_m columns hold {c}, not USD (convert or label)"
+                           + ("; TAK quarters are cumulative H1, 9M, FY" if str(rj.get("ticker")) == "TAK" else ""))
+                break
+    return "; ".join(out)
+
+
 def _fact_row_citation(table, r, source_row, fld, value=None, license=""):
     from agent.needle.cite.facts import fact_citation_status, fact_status_grade
     reread = value is not None and _num_eq(r["value"], value)
     status = fact_citation_status(r["verify_status"], reread, table)
     grade, label = fact_status_grade(r["verify_status"], table)
     note = f"facts row {r['row_key']} re-read ({r['verify_status']}: {label})"
+    try:
+        cav = row_caveats(table, json.loads(r["row_json"] or "{}"))
+    except Exception:
+        cav = ""
+    if cav:
+        note += f"; caveat: {cav}"
     if label == "machine data":
         note += "; machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
     if value is not None and not reread:
         note += f"; cited value {value} differs from the row value {r['value']}"
     lic = license or ("wrds_licensed" if r["verify_status"] == "no_verified_copy" else "")
-    src = r["source"] or ""
-    return Citation(canonical_id=table, page=None, quote=f"{r['row_key']} [{source_row}] {fld} = {r['value']}",
+    src = clean_source_url(r["source"])
+    return _located(r, Citation(canonical_id=table, page=None, quote=f"{r['row_key']} [{source_row}] {fld} = {r['value']}",
                     claim_type="number", value=str(r["value"]), unit=r["unit"] or "", doc_title=f"moat table {table}",
                     location=f"row {r['row_key']}", source_url=src if src.startswith("http") else "",
                     deep_link=src if src.startswith("http") else "", license=lic, page_scheme="none",
                     verification=Verification(status, grade if status != "unverified" else 0.0, _now(), note),
-                    confidence_note=note)
+                    confidence_note=note), None, value is not None and not reread)
+
+
+def _located(r, cit, rj=None, mismatch=False):
+    """facts.locator applied to a facts-row citation (agent.needle.cite.facts.apply_locator): a doc_id#pN locator
+    (or a label-section source_row) gives a verified page citation, url: a machine-data deep link, fact: the row key.
+    With no locator column (older sqlite) the citation is unchanged. Fail closed: an error keeps the facts citation."""
+    from agent.needle.cite.facts import apply_locator
+    import json as _json
+    try:
+        if rj is None:
+            try:
+                rj = _json.loads(r["row_json"] or "{}")
+            except (ValueError, KeyError, IndexError):
+                rj = {}
+        return apply_locator(r, cit, rj, index(), value_mismatch=mismatch)
+    except Exception:
+        return cit
 
 
 def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, license=""):
@@ -132,17 +187,20 @@ def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, 
         status = fact_citation_status(r["verify_status"], reread, table)
         grade, label = fact_status_grade(r["verify_status"], table)
         note = f"facts row {r['row_key']} field {fld} re-read from row_json ({r['verify_status']}: {label})"
+        cav = row_caveats(table, rj)
+        if cav:
+            note += f"; caveat: {cav}"
         if value is not None and not reread:
             note += f"; cited value {value} differs from the row value {rj[fld]}"
-        src = r["source"] or ""
-        return Citation(canonical_id=table, page=None, quote=f"{r['row_key']} {fld} = {rj[fld]}",
+        src = clean_source_url(r["source"])
+        return _located(r, Citation(canonical_id=table, page=None, quote=f"{r['row_key']} {fld} = {rj[fld]}",
                         claim_type="number", value=str(rj[fld]), unit=r["unit"] if r["field"] == fld else ("%" if fld.endswith("_pct") else ""),
                         ticker=ticker or "", doc_title=f"moat table {table}", location=f"row {r['row_key']}",
                         source_url=src if src.startswith("http") else "", deep_link=src if src.startswith("http") else "",
                         license=license or ("wrds_licensed" if r["verify_status"] == "no_verified_copy" else ""),
                         page_scheme="none",
                         verification=Verification(status, grade if status != "unverified" else 0.0, _now(), note),
-                        confidence_note=note)
+                        confidence_note=note), rj, value is not None and not reread)
     return table_citation(table, row_key or ticker or "", fld, value)
 
 

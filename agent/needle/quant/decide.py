@@ -249,6 +249,7 @@ class MoveResult:
     status: str = ""
     binding_reason: str = ""
     why: str = ""
+    car_parts: dict = field(default_factory=dict)    # {"out": [...], "in": [...]} by month (cash_at_risk_parts)
 
     def five(self):
         return {"ev": self.ev, "car": self.car, "payback_month": self.payback_month, "spread": self.spread, "mcda": self.mcda}
@@ -289,19 +290,26 @@ def scenario_tables(plan, r_mo):
     return tables, exp_cf, inwin, tv, pv
 
 
+def cash_at_risk_parts(plan):
+    """(outflow by month, inflow by month) that cash_at_risk nets: months 1..min(24, first readout)."""
+    T = min(WINDOW, plan.first_readout or WINDOW)
+    mult = MULT_SCENARIO["bear"]
+    n = min(T, plan.horizon)
+    out, inn = [0.0] * n, [0.0] * n
+    for l in plan.lines:
+        for i in range(n):
+            if l.kind == "out" and not l.avoidable:
+                out[i] += l.amount[i] * l.prob[i]
+            elif l.kind == "in":
+                inn[i] += l.amount[i] * (mult if l.scaled else 1.0)   # pre-failure, so P_alive = 1
+    return out, inn
+
+
 def cash_at_risk(plan):
     """Spec 5.4: bear scenario, technical failure at the first readout: undiscounted outflow through min(24, readout),
     net of inflows received before then and of avoidable payments."""
-    T = min(WINDOW, plan.first_readout or WINDOW)
-    mult = MULT_SCENARIO["bear"]
-    out = inn = 0.0
-    for l in plan.lines:
-        for i in range(min(T, plan.horizon)):
-            if l.kind == "out" and not l.avoidable:
-                out += l.amount[i] * l.prob[i]
-            elif l.kind == "in":
-                inn += l.amount[i] * (mult if l.scaled else 1.0)   # pre-failure, so P_alive = 1
-    return max(0.0, out - inn)
+    out, inn = cash_at_risk_parts(plan)
+    return max(0.0, sum(out) - sum(inn))
 
 
 def payback_month(exp_by_s, p_s, r_mo, horizon):
@@ -377,6 +385,8 @@ def table_value(code, name, spec, vals, ctx, bench=None):
             return V.sertkaya_pos(ta, "FDA review to approval")
         if code == "M1" and name == "equity_value":
             return V.target_ev(ctx["target"]) if ctx.get("target") else V.acquisition_value(stage)
+        if code == "M3" and name in ("trial_months", "readout_month", "approval_month") and ctx.get("timing") == "table":
+            return V.indication_timing(ta, name)
         if code in ("M4", "M5") and name == "loe_month" and ctx.get("product") and ctx.get("ticker"):
             return V.loe_month(ctx["ticker"], ctx["product"])
     except Exception:
@@ -495,6 +505,7 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
     ev = sum(p_s[s] * pv[s] for s in SCENARIOS)
     spread = pv["bull"] - pv["bear"]   # EV with p_bull = 1 minus EV with p_bear = 1
     car = cash_at_risk(plan)
+    car_out, car_in = cash_at_risk_parts(plan)
     pb = payback_month(exp_cf, p_s, r_mo, plan.horizon)
     mcda, parts = mcda_score(template, plan, findings, addressed, capability, stakeholders, p_s)
     if not addressed:
@@ -533,11 +544,18 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
         mcda_parts=parts, tables=tables, expected_cf=exp_cf, budget=budget, inputs=inputs, claims=claims,
         citations=list(seen.values()), flags=flags, finding_ids=sorted(addressed), addressed=sorted(addressed),
         p_alive_end=plan.p_alive_end(), horizon=plan.horizon, notes=plan.notes, kill_signals=template.kill_signals,
-        abandon_value=plan.abandon_value, wacc=wacc, p_scenario=p_s, why=why)
+        abandon_value=plan.abandon_value, wacc=wacc, p_scenario=p_s, why=why,
+        car_parts={"out": car_out, "in": car_in})
 
 
 def _fmt_val(v):
-    return v if not isinstance(v, (dict, tuple, list)) else "table"
+    """An input value as printed: floats from a model feed are rounded (109.34011000000001 -> 109.3), integers and
+    cited values keep their printed form."""
+    if isinstance(v, (dict, tuple, list)):
+        return "table"
+    if isinstance(v, float) and not v.is_integer():
+        return f"{v:,.1f}" if abs(v) >= 100 else f"{v:.4g}"
+    return v
 
 
 def _vals(v):
@@ -620,7 +638,13 @@ def select_move(results, cash=None):
     notes = []
     if not feas:
         raise ValueError("no feasible move: every candidate's cash at risk exceeds cash and equivalents")
-    order = list(feas)
+    # spec 5.2: a move that addresses no Part 1 finding cannot be recommended; it is chosen only when no feasible
+    # move addresses one (then the WARNING below says so)
+    unfit = [r for r in feas if not r.addressed]
+    order = [r for r in feas if r.addressed] or list(feas)
+    if len(order) < len(feas):
+        notes.append("moves that address no Part 1 finding are not eligible to be chosen (spec 5.2): "
+                     + ", ".join(r.name for r in unfit))
     if len(order) > 1:
         a, b = order[0], order[1]
         lo_a, hi_a = a.ev_by_scenario["bear"], a.ev_by_scenario["bull"]
@@ -630,12 +654,14 @@ def select_move(results, cash=None):
             notes.append(f"EV intervals of {a.name} and {b.name} overlap; chose the higher MCDA ({b.mcda:.3f} vs {a.mcda:.3f})")
     chosen = order[0]
     chosen.status = "chosen"
-    rest = order[1:] + infeas
+    rest = order[1:] + [r for r in unfit if r not in order] + infeas
     rejected = rest[:2]
     for r in rest:
         r.status = "rejected" if r in rejected else r.status
         if r.status == "infeasible" or (cash is not None and r.car > cash):
             r.binding_reason = f"cash at risk {r.car:,.1f} exceeds cash and equivalents {cash:,.1f}"
+        elif not r.addressed and chosen.addressed:
+            r.binding_reason = "addresses no Part 1 finding, so it cannot be recommended (spec 5.2)"
         elif r.ev < chosen.ev and r.mcda > chosen.mcda and _overlap(r, chosen):
             r.binding_reason = f"lower EV ({r.ev:,.1f} vs {chosen.ev:,.1f}); intervals overlap and MCDA does not rescue it"
         elif r.ev < chosen.ev:

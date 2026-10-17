@@ -7,7 +7,9 @@ Every number in decide.md is a cell checked by the numeric gate (agent.needle.ci
 passing citation (company citations are re-verified, never trusted from the moves file), derived from cited or
 labelled operands, or labelled an assumption (external benchmarks, model outputs, team inputs). If any headline cell
 fails, decide.md is not written: decide_rejected.md lists the failures and the exit code is 2. finding_ids that do
-not resolve against the findings file also exit 2 (review D8). decide.json carries numeric_check.
+not resolve against the findings file also exit 2 (review D8). decide.json carries numeric_check. On every exit 2 any
+decide.json and decide.md left by an earlier run are deleted first (a stale file must never be read as current); the
+rejected run's JSON goes to decide_rejected.json.
 --moves is JSON (or YAML when PyYAML is installed): {"as_of", "cash_and_equivalents", "moves": [...]} or a bare list.
 See docs/examples/moves_LLY.json.
 """
@@ -22,7 +24,7 @@ from agent.needle.cite.locator import Claim
 from agent.needle.cite.render import render_markdown
 from agent.needle.quant import decide as D
 from agent.needle.quant import kill as K
-from agent.needle.quant.moves import SCENARIOS, WINDOW, get_template
+from agent.needle.quant.moves import PAYBACK_SEARCH, SCENARIOS, WINDOW, get_template, r_monthly
 
 
 def load_findings(path):
@@ -65,7 +67,12 @@ def run(ticker, findings, spec, as_of=None, cash=None):
         c = D.citation_from_dict(cash_spec["citation"], cash_spec["value"], "USD millions")
         cash_claim = Claim(f"cash and equivalents {cash_spec['value']:,} (latest balance sheet)", [c])
     return {"ticker": ticker, "as_of": as_of or spec.get("as_of") or str(date.today()), "cash": cash, "cash_claim": cash_claim,
-            "selection": sel, "ranked": ranked}
+            "selection": sel, "ranked": ranked, "demo": bool(spec.get("demo")),
+            "header_note": str(spec.get("header_note") or (DEMO_NOTE if spec.get("demo") else ""))}
+
+
+DEMO_NOTE = ("Pipeline demonstration for the default ticker; not the team's Part 2 recommendation, which follows the "
+             "company pick.")
 
 
 def kill_table(result, context=None):
@@ -105,6 +112,8 @@ def f1(x):
 # Gated document (docs/gate_wiring.md 3): every number in decide.md is a cell that the numeric gate classifies
 # --------------------------------------------------------------------------------------------------------------
 
+TOP20 = {"top20": {"value": "20", "unit": "%", "label": "definition: claims share of the top 20% of prescribers "
+                                                         "(rx/prescriber_concentration.csv column top20pct_share)"}}
 MODEL = "model output: computed by the DECIDE cash model (agent/needle/quant/moves.py {code}) from the inputs listed"
 
 
@@ -115,11 +124,11 @@ class Doc:
     def __init__(self, public=False):
         self.items, self.public = [], public
 
-    def cell(self, section, where, text, cites=(), derived=None, assumptions=None):
+    def cell(self, section, where, text, cites=(), derived=None, assumptions=None, dates=""):
         text = str(text)
         cites = [c for c in cites if getattr(c, "verification", None) is not None and c.verification.ok]
         self.items.append({"section": section, "where": where, "text": text, "citations": cites,
-                           "derived": derived or {}, "assumptions": assumptions or {}})
+                           "derived": derived or {}, "assumptions": assumptions or {}, "dates": dates})
         return f"\x00{len(self.items) - 1}\x00"
 
     def sections(self):
@@ -130,8 +139,8 @@ class Doc:
         return out
 
     def claims(self):
-        return [Claim(it["text"], it["citations"], derived=it["derived"], assumptions=it["assumptions"])
-                for it in self.items]
+        return [Claim(it["text"], it["citations"], derived=it["derived"], assumptions=it["assumptions"],
+                      dates=it.get("dates", "")) for it in self.items]
 
     def render(self, md):
         import re
@@ -159,9 +168,23 @@ def move_maps(r):
     Dm = {}
     for i in r.inputs:
         Dm.update(i.derived or {})
+    # review verify2 4: PV pieces, payback month and cash at risk are compositions, derived from the monthly model
+    # rows (labelled model outputs) and the labelled WACC, never a bare [assumption]
+    Dm["r_mo"] = _derived(r_monthly(r.wacc), "(1 + w) ** (1 / 12) - 1",
+                          {"w": {"value": r.wacc, "assumption": D.benchmark_label("wacc")}})
+
+    def month(key, v, m, what):
+        return {"value": float(v), "assumption": lab + f" ({what}, month {m})"}
     for s in SCENARIOS:
-        Dm[f"ev_{s}"] = _derived(r.ev_by_scenario[s], "a + b", {"a": leaf(f"inwin_{s}", r.in_window_pv[s]),
-                                                                 "b": leaf(f"tv_{s}", r.tv_pv[s])})
+        rows_s = r.tables[s]
+        for part, sel in (("pvin", lambda m: m <= WINDOW), ("pvtv", lambda m: m > WINDOW)):
+            ops = {f"n{x['month']}": month(f"{s}_{x['month']}", x["net"], x["month"], f"{s} expected net cash flow")
+                   for x in rows_s if sel(x["month"])}
+            expr = " + ".join(f"n{x['month']} * (1 + r) ** -{x['month']}" for x in rows_s if sel(x["month"])) or "0"
+            ops["r"] = {"derived": "r_mo"}
+            Dm[f"{part}_{s}"] = _derived(r.in_window_pv[s] if part == "pvin" else r.tv_pv[s], expr, ops)
+        Dm[f"ev_{s}"] = _derived(r.ev_by_scenario[s], "a + b", {"a": {"derived": f"pvin_{s}"},
+                                                                 "b": {"derived": f"pvtv_{s}"}})
     p = r.p_scenario
     Dm["ev"] = _derived(r.ev, "pb * eb + pm * em + pu * eu", {
         "pb": {"value": p["bear"], "assumption": D.benchmark_label("p_bear")},
@@ -173,9 +196,25 @@ def move_maps(r):
     if lines:
         Dm["budget_total"] = _derived(sum(lines.values()), " + ".join(f"l{i}" for i in range(len(lines))),
                                       {f"l{i}": leaf(f"budget_{k}", v) for i, (k, v) in enumerate(lines.items())})
-    leaf("car", r.car)
+    co, ci = (r.car_parts or {}).get("out") or [], (r.car_parts or {}).get("in") or []
+    if co:
+        ops = {f"o{m}": month("", v, m, "bear non-avoidable outflow before the first readout") for m, v in enumerate(co, 1)}
+        ops.update({f"i{m}": month("", v, m, "bear inflow before the first readout") for m, v in enumerate(ci, 1)})
+        Dm["car"] = _derived(r.car, f"max(0, ({' + '.join(f'o{m}' for m in range(1, len(co) + 1))}) - "
+                                    f"({' + '.join(f'i{m}' for m in range(1, len(ci) + 1)) or '0'}))", ops)
+    else:
+        leaf("car", r.car)
     if r.payback_month is not None:
-        leaf("payback", r.payback_month)
+        horizon = min(len(r.expected_cf["base"]), PAYBACK_SEARCH)
+        ops = {"pb": {"value": r.p_scenario["bear"], "assumption": D.benchmark_label("p_bear")},
+               "pm": {"value": r.p_scenario["base"], "assumption": D.benchmark_label("p_base")},
+               "pu": {"value": r.p_scenario["bull"], "assumption": D.benchmark_label("p_bull")}, "r": {"derived": "r_mo"}}
+        terms = []
+        for m in range(1, min(horizon, r.payback_month) + 1):
+            for sc, k in (("bear", "b"), ("base", "m"), ("bull", "u")):
+                ops[f"{k}{m}"] = month("", r.expected_cf[sc][m - 1], m, f"{sc} expected net cash flow")
+            terms.append(f"(pb * b{m} + pm * m{m} + pu * u{m}) * (1 + r) ** -{m}")
+        Dm["payback"] = _derived(r.payback_month, f"payback({', '.join(terms)})", ops)
     parts = list(r.mcda_parts.items())
     Dm["mcda"] = _derived(r.mcda, " + ".join(f"0.25 * x{i}" for i in range(len(parts))),
                           {f"x{i}": leaf(f"mcda_{k}", v) for i, (k, v) in enumerate(parts)})
@@ -232,8 +271,7 @@ def _gate_line(doc, section, where, text, cites, Dm, A):
     res = numeric_gate([(where, text)], ok, Dm, A)
     if res.passed or res.numeric_check["status"] == "unchecked":
         return doc.cell(section, where, text, ok, Dm, A), None
-    return (f"(withheld by the numeric gate: {len(res.numeric_check['unsupported'])} unsupported number(s); see "
-            "decide.json)"), {"where": where, "text": text, "numeric_check": res.numeric_check}
+    return ("(withheld by the numeric gate: a number in this line is not supported; see decide.json)"), {"where": where, "text": text, "numeric_check": res.numeric_check}
 
 
 def build_md(out, findings, public=False):
@@ -267,10 +305,14 @@ def build_md(out, findings, public=False):
     def cell(section, where, text, cites=(), derived=Dc, assumptions=Ac):
         return doc.cell(section, where, text, cites, derived, assumptions)
     p = c.p_scenario
-    L = [f"# Decide: {T} 24-month CEO move (as of {out['as_of']})", "",
+    L = [f"# Decide: {T} 24-month CEO move (as of {out['as_of']})", ""]
+    if out.get("header_note"):
+        L += ["> " + line("header", "header_note", out["header_note"], (), {}, {}), ""]
+    L += [
          cell("header", "header", f"All dollars USD millions. EV is present value at {out['as_of']} at WACC {c.wacc:.2%}, "
               f"scenario weights {p['bear']:.2f} / {p['base']:.2f} / {p['bull']:.2f} (bear / base / bull)."), "",
-         f"## Recommended move: {c.name}", ""]
+         (f"## Chosen move (pipeline demonstration): {c.name}" if out.get("demo") else f"## Recommended move: {c.name}"),
+         ""]
     if c.why:
         # the moves file's narrative: only the addressed findings' passing citations can support its numbers
         fc = [x for fid in c.finding_ids for x in (D.finding_citations(by_id[fid]) if fid in by_id else [])]
@@ -297,7 +339,7 @@ def build_md(out, findings, public=False):
     cash_txt = ""
     if out["cash"] is not None:
         cc = out["cash_claim"].citations if out["cash_claim"] else []
-        cash_txt = "; cash and equivalents " + cell("budget", "budget/cash", f1(out["cash"]), cc)
+        cash_txt = "; cash and equivalents " + cell("budget", "budget/cash", f"{out['cash']:,.0f}" if float(out["cash"]).is_integer() else f1(out["cash"]), cc)
     L += ["", "Cash at risk (bear scenario, technical failure at the first readout, net of inflows and avoidable "
           f"payments): {cell('budget', 'budget/car', f1(c.car))}" + cash_txt, "", "### Return math, line by line", ""]
     for i, n in enumerate(c.notes):
@@ -331,7 +373,7 @@ def build_md(out, findings, public=False):
     L += ["", "## Five numbers: chosen move and the two rejected alternatives", "",
           "| Move | EV | Downside cash at risk | Payback | Scenario EV spread | MCDA |", "|---|---|---|---|---|---|"]
     for r in [c] + sel.rejected:
-        pb = "none within 120" if r.payback_month is None else "month " + cell("five numbers", f"five/{r.name}/payback",
+        pb = "none in the payback search window" if r.payback_month is None else "month " + cell("five numbers", f"five/{r.name}/payback",
                                                                                r.payback_month, (), Dall, Aall)
         L.append(f"| {r.name} | {cell('five numbers', f'five/{r.name}/EV', f1(r.ev), (), Dall, Aall)} | "
                  f"{cell('five numbers', f'five/{r.name}/CaR', f1(r.car), (), Dall, Aall)} | {pb} | "
@@ -352,10 +394,10 @@ def build_md(out, findings, public=False):
         if k["id"] == "rx_context":
             for j, (v, cit, txt) in enumerate(k.get("context") or []):
                 bd = {}
-                if v is not None and cit is not None and abs(v) < 1:
+                if v is not None and cit is not None and abs(v) <= 1:
                     from agent.needle.cite.gate import derived_entry
                     bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
-                txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, [cit] if cit else [], bd, {})
+                txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, [cit] if cit else [], bd, TOP20)
                 src = cell("kill signals", f"kill/rx_context[{j}]/source", f"{k['source']}; lag {k['lag']}", (), {},
                            {"lag": {"value": "18", "label": "CMS Part D PUF publication lag, about 18 months (assumption)"}})
                 L.append(f"| {k['signal']} | context | {txt_cell} | {src} | n/a | human review |")
@@ -383,10 +425,10 @@ def build_md(out, findings, public=False):
         if k.get("baseline"):
             v, cit, txt = k["baseline"]
             bd = {}
-            if v is not None and abs(v) < 1:
+            if v is not None and abs(v) <= 1:
                 from agent.needle.cite.gate import derived_entry
                 bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
-            bl = cell("kill signals", w + "/baseline", txt, [cit], bd, {})
+            bl = cell("kill signals", w + "/baseline", txt, [cit], bd, TOP20)
         L.append(f"| {k['signal']} | {cell('kill signals', w + '/threshold', k['threshold'], (), {}, ka)} | {bl} | "
                  f"{cell('kill signals', w + '/source', k['source'] + '; lag ' + k['lag'], (), {}, ka)} | "
                  f"{cell('kill signals', w + '/check', k['check_month'], (), {}, ka)} | "
@@ -449,7 +491,8 @@ def rejected_md(out, summary, withheld):
 
 def to_json(out, summary=None, withheld=()):
     sel = out["selection"]
-    d = {"ticker": out["ticker"], "as_of": out["as_of"], "cash_and_equivalents": out["cash"],
+    d = {"ticker": out["ticker"], "as_of": out["as_of"], "demo": out.get("demo", False),
+         "header_note": out.get("header_note", ""), "cash_and_equivalents": out["cash"],
          "chosen": sel.chosen.to_dict(), "rejected": [r.to_dict() for r in sel.rejected],
          "ranked": [{"name": r.name, "rank": r.rank, "status": r.status, "binding_reason": r.binding_reason, **r.five()} for r in out["ranked"]],
          "selection_notes": sel.notes, "kill_signals": out["kill"]}
@@ -458,6 +501,13 @@ def to_json(out, summary=None, withheld=()):
         d["numeric_items"] = [{k: it[k] for k in ("where", "text", "passed", "numeric_check")} for it in summary["items"]]
         d["withheld_lines"] = list(withheld)
     return d
+
+
+def _clear_stale(d):
+    """Exit-2 path: delete decide.json and decide.md from an earlier run before the rejection is written, so a stale
+    recommendation can never be read as the current one."""
+    for stale in ("decide.json", "decide.md"):
+        (d / stale).unlink(missing_ok=True)
 
 
 def main(argv=None):
@@ -477,7 +527,7 @@ def main(argv=None):
     known = {D.finding_id(f) for f in findings}
     missing = sorted({fid for mv in spec["moves"] for fid in mv.get("finding_ids") or [] if fid not in known})
     if missing:      # review D8: a move's finding ids must resolve against the findings file
-        (d / "decide.md").unlink(missing_ok=True)
+        _clear_stale(d)
         (d / "decide_rejected.md").write_text(
             f"# Decide: {a.ticker} rejected\n\nfinding_ids in {a.moves} do not resolve against {a.findings}: "
             + ", ".join(missing) + "\n")
@@ -488,15 +538,18 @@ def main(argv=None):
                 if (mv.get("name") or get_template(mv["template"]).name) == out["selection"].chosen.name), {})
     out["kill"] = kill_table(out["selection"].chosen, ctx)
     md, summary, withheld = build_md(out, findings, a.public)
-    (d / "decide.json").write_text(json.dumps(to_json(out, summary, withheld), indent=2, default=str))
+    js = json.dumps(to_json(out, summary, withheld), indent=2, default=str)
     if not summary["passed"]:
-        (d / "decide.md").unlink(missing_ok=True)
+        _clear_stale(d)
+        (d / "decide_rejected.json").write_text(js)
         (d / "decide_rejected.md").write_text(rejected_md(out, summary, withheld))
         nc = summary["numeric_check"]
         print(f"{a.ticker}: numeric gate failed ({len(nc['unsupported'])} unsupported of {nc['total']}); wrote "
               f"{d / 'decide_rejected.md'}", file=sys.stderr)
         return 2
-    (d / "decide_rejected.md").unlink(missing_ok=True)
+    for stale in ("decide_rejected.md", "decide_rejected.json"):
+        (d / stale).unlink(missing_ok=True)
+    (d / "decide.json").write_text(js)
     (d / "decide.md").write_text(md)
     c = out["selection"].chosen
     print(f"{a.ticker}: chosen {c.name}: EV {c.ev:,.1f}, CaR {c.car:,.1f}, payback {c.payback_month}, spread {c.spread:,.1f}, MCDA {c.mcda:.3f}")

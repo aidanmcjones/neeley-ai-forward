@@ -16,7 +16,7 @@ from datetime import date
 
 from agent.needle.cite.gate import derived_entry
 from agent.needle.cite.locator import Claim, Citation, _jsonable
-from agent.needle.cite.render import render_markdown
+from agent.needle.cite.render import claim_markup, render_footnotes_md, render_markdown
 from agent.needle.cite.index import load_index
 from agent.needle.cite.verify import verify as cite_verify
 
@@ -498,12 +498,18 @@ class Scored:
         return data.expand_citations(list(self.citations) + extra)
 
     def to_dict(self):
-        body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.verification.ok],
-                                      derived=self.derived, assumptions=self.assumptions)], public=self.public)
+        ok = [c for c in self.citations if c.verification.ok]
+        claims = [Claim(self.sentence, ok, derived=self.derived, assumptions=self.assumptions)]
+        formula = "" if self.not_quantified else (self.impact.formula or "")
+        if formula:      # the math the reader sees, marked from the same maps the gate checks (review verify2)
+            claims.append(Claim(formula, ok, derived=self.derived, assumptions=self.assumptions, where="impact.formula"))
+        texts, order = claim_markup(claims)
+        body = texts[0] + ("\n" + render_footnotes_md(order, self.public) if order else "")
         return {
             "id": self.id, "ticker": self.ticker, "signal_kind": self.kind, "signal_family": self.family.name,
             "has_detector": self.family.has_detector, "detector": self.detector, "block": self.family.block,
             "channel": self.channel, "direction": self.direction, "sentence": self.sentence, "sentence_md": body,
+            "formula_md": texts[1] if formula else "",
             "impact": None if self.not_quantified else self.impact.to_dict(),
             "impact_channel": self.impact.channel, "not_quantified": self.not_quantified or None,
             "guard": self.guard or None,
@@ -605,6 +611,7 @@ def score_signal(sig, co, panel=None):
         flags.append(age_note)
     generic = False
     nq_reason = ""
+    ex = None                     # exclusivity_earlier rewritten on its cited loe_calendar row (gatewire)
     if fam.route in ("backtest", "anchor", "directional", "none"):
         # Review R2 (A20, B4, A1): the 3%-of-revenue anchor is the size of a backtested margin event, so it applies
         # only to a backtested time-series flag that fired. hit_rates.json has a dose response only by the number of
@@ -643,6 +650,12 @@ def score_signal(sig, co, panel=None):
     elif fam is FAM["loe"]:
         imp, lflags, disclosed = _loe_impact(sig, co)
         flags += lflags
+        if sig.kind == "exclusivity_earlier":
+            from . import verified_tables as VT
+            prod_ = (sig.meta.get("product") or "").lower()
+            ex = GW.exclusivity_maps(sig, VT.loe(sig.ticker, prod_.split(" ")[0]) if prod_ else None)
+            if ex is not None:
+                page_cites += ex["page_cites"]    # the 10-K page of the company-stated LOE is page evidence
     elif fam is FAM["footnote"]:
         imp, _ = IM.footnote(co, "impairment_booked")
     elif fam is FAM["trial"]:
@@ -665,6 +678,11 @@ def score_signal(sig, co, panel=None):
             "rival": sig.meta.get("rival")}
     yb = yoy_basis(sig)
     sentence, extra_cites = sig.detail, []
+    lc = GW.label_count_maps(sig) if sig.kind in ("label_narrower", "label_broader") else None
+    if lc is not None:
+        sentence, extra_cites = lc["sentence"], list(lc["cites"])
+    if sig.kind == "exclusivity_earlier" and ex is not None:
+        sentence, extra_cites = ex["sentence"], list(ex["cites"])
     if yb is not None:
         sentence, extra_cites = yb["sentence"], yb["cites"]
         page_cites = [c for c in page_cites if not _is_stmt_vs_year_end(c)] + yb["page_cites"]
@@ -676,6 +694,15 @@ def score_signal(sig, co, panel=None):
     sc.citations += extra_cites
     if yb is not None:
         sc.derived.update(yb["derived"])
+    if ex is not None and sig.meta.get("rival"):      # one row per (product, rival): the product's LOE page is shared
+        sc.id = finding_id(sig.ticker, sig.kind, (page_cites[0].cite_id if page_cites else sig.kind)
+                           + "|" + str(sig.meta["rival"]).lower())
+    for got in (lc, ex):
+        if got is not None:
+            sc.derived.update(got["derived"])
+            sc.flags += got["flags"]
+    if lc is not None and not lc["holds"]:
+        apply_guard(sc, ("drop", lc["why"]))
     GW.forensics_maps(sig, sc.derived, sc.assumptions)
     GW.dose_counts(sc.sentence, sc.assumptions)
     GW.peer_stats(sc.assumptions, sig)
@@ -761,6 +788,31 @@ def _prq():
     if "d" not in _PRQ:
         _PRQ["d"] = pd.read_csv(data.tables("product_revenue_quarterly.csv"), low_memory=False)
     return _PRQ["d"]
+
+
+def _price_sentences(c, value, idx):
+    """A row value such as "Zepbound avg $346/mo; Trulicity $389/mo" names several prices; the row's own quote holds
+    one. Each other price is cited to the sentence of the same page that names the product and the price (verified
+    on the page), so every printed price has its own quote."""
+    out = []
+    try:
+        got = idx.get_page(c.canonical_id, c.page) if c.page is not None else None
+    except Exception:
+        got = None
+    if not got:
+        return out
+    sents = re.split(r"(?<=[.;])\s+|\n+", got[2])
+    for m in re.finditer(r"([A-Z][A-Za-z]+)[^$;]*?\$([\d,]+)", value):
+        name, price = m.group(1), m.group(2)
+        if price in (c.quote or ""):
+            continue
+        hit = next((x.strip() for x in sents if name.lower() in x.lower() and f"${price}" in x), None)
+        if hit:
+            pc = cite_verify(Citation(canonical_id=c.canonical_id, page=c.page, quote=hit[:300], claim_type="quote"),
+                             idx)
+            if pc.verification.ok:
+                out.append(pc)
+    return out
 
 
 def ira_findings(ticker, co):
@@ -1035,6 +1087,7 @@ def mfn_findings(ticker, co):
         c = _policy_cite(r, idx)
         if c is not None:
             ctx_cites.append(c)
+            ctx_cites += _price_sentences(c, str(r.value), idx)
     q = _mfn_quantified(ticker, co, pe, idx)
     head = (f"{ticker} signed an MFN agreement on {f.mfn_date} that extends MFN pricing to Medicaid ({row.row_id})"
             + (f"; {'; '.join(ctx)}" if ctx else ""))

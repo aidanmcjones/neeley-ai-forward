@@ -256,8 +256,69 @@ def pricing_moves(company):
     return out
 
 
+# ------------------------------------------------------------------ new-indication timing (M3)
+TIMING = "costs/new_indication_timing_summary.csv"
+TIMING_TA = {"metabolic": "cardiometabolic", "cardiovascular": "cardiometabolic", "endocrine": "cardiometabolic",
+             "cardiometabolic": "cardiometabolic", "oncology": "oncology", "immunology": "immunology",
+             "autoimmune": "immunology", "dermatology": "immunology", "rare disease": "rare_disease"}
+
+
+def _timing_cell(group, metric):
+    hit = cell(TIMING, {"group": group, "metric": metric}, "median")
+    if hit and _num(hit[0]) is not None and int(_num(hit[3].get("n")) or 0) >= 5:
+        return float(hit[0]), hit[1], hit[2], hit[3]
+    return None
+
+
+def indication_timing(ta, name):
+    """M3 timing from the verified new-indication timing summary (pivotal_confirmed rows only, built by the scraper
+    from new_indication_benchmarks.csv): trial_months / readout_month = median months from pivotal start to primary
+    completion; approval_month = that plus the median months from completion to approval. The therapeutic-area row
+    is used when it has n >= 5, else the overall row. Values are rounded to whole months (derived entries)."""
+    grp = TIMING_TA.get(str(ta or "").lower())
+    groups = ([f"ta:{grp}"] if grp else []) + ["overall"]
+    for g in groups:
+        s2c = _timing_cell(g, "months_start_to_completion")
+        c2a = _timing_cell(g, "months_completion_to_approval")
+        if not s2c or not c2a:
+            continue
+        if name in ("trial_months", "readout_month"):
+            v = round(s2c[0])
+            d = {name: derived_entry(v, "round(a)", {"a": (s2c[0], s2c[1])}, "months")}
+            return TableValue(v, [s2c[1]], _label(TIMING, s2c[2], f"{g} median start to primary completion "
+                                                                     f"{s2c[0]:g} months, n {s2c[3].get('n')}"),
+                              TIMING, s2c[2], d)
+        if name == "approval_month":
+            v = round(s2c[0] + c2a[0])
+            d = {name: derived_entry(v, "round(a + b)", {"a": (s2c[0], s2c[1]), "b": (c2a[0], c2a[1])}, "months")}
+            return TableValue(v, [s2c[1], c2a[1]], _label(TIMING, f"{s2c[2]} + {c2a[2]}",
+                                                          f"{g} median start to completion {s2c[0]:g} + completion to "
+                                                          f"approval {c2a[0]:g} months"), TIMING, s2c[2], d)
+    return None
+
+
 # ------------------------------------------------------------------ LOE
 LOE = "pipeline/loe_calendar.csv"
+
+
+_MONTHS = {m: i for i, m in enumerate(("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov",
+                                        "dec"), 1)}
+
+
+def _parse_loe(v):
+    """A loe_calendar date: '2028', '2028-11-22', '11/22/2028', 'May 2026' (month kept), else None."""
+    s = str(v or "")
+    m = re.search(r"(\d{4})-(\d{2})-(\d{2})", s)
+    if m:
+        return date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", s)
+    if m:
+        return date(int(m.group(3)), int(m.group(1)), int(m.group(2)))
+    m = re.search(r"\b([A-Za-z]{3})[a-z]*\.?\s+(\d{4})", s)
+    if m and m.group(1).lower() in _MONTHS:
+        return date(int(m.group(2)), _MONTHS[m.group(1).lower()], 1)
+    m = re.search(r"(\d{4})", s)
+    return date(int(m.group(1)), 1, 1) if m else None
 
 
 def loe(ticker, brand, territory="US"):
@@ -268,14 +329,22 @@ def loe(ticker, brand, territory="US"):
         if not hit:
             continue
         v, c, rk, r = hit
-        m = re.search(r"(\d{4})(?:-(\d{2})-(\d{2}))?", str(v))
-        if not m:
+        d = _parse_loe(v)
+        if d is None:
             continue
-        d = date(int(m.group(1)), int(m.group(2) or 1), int(m.group(3) or 1))
         page = r.get("tenk_page")
         extra = (f"{fld} {v}" + (f", 10-K page {int(float(page))}" if _num(page) else "")
                  + (f"; rule {r.get('rule_output_loe')} ({r.get('rule_method')})" if r.get("rule_output_loe") else ""))
-        return d, TableValue(float(m.group(1)), [c], _label(LOE, rk, extra), LOE, rk), r
+        return d, TableValue(float(d.year), [c], _label(LOE, rk, extra), LOE, rk), r
+    return None
+
+
+def loe_any(brand, territory="US"):
+    """loe() for a brand of any company (a rival's own loe_calendar row), or None."""
+    for fld in ("company_stated_loe", "rule_output_loe"):
+        hit = cell(LOE, {"brand": str(brand).upper(), "territory": territory}, fld)
+        if hit:
+            return loe(hit[3].get("ticker"), brand, territory)
     return None
 
 
@@ -292,7 +361,7 @@ def loe_month(ticker, brand):
     m = months_to(d)
     a = DATA.AS_OF
     tv.derived = {"loe_month": derived_entry(m, f"(y - {a.year}) * 12 + ({d.month} - {a.month})",
-                                             {"y": (d.year, tv.citations[0])})}
+                                             {"y": {"value": d.year, "citation": tv.citations[0], "year": True}})}
     tv.value = m
     return tv
 
@@ -332,7 +401,7 @@ def rx_baselines(drug):
     hit = _latest("rx/prescriber_concentration.csv", {"drug": d}, "top20pct_share_all_prescribers")
     if hit:
         v, c, r = hit
-        out["zs_depth"] = (v, c, f"top 20% of prescribers write {v:.1%} of claims ({r['year']})")
+        out["zs_depth"] = (v, c, f"top 20% of prescribers write {v:.1%} of claims in {r['year']}")
     rows = [x for x in find_rows("rx/formulary_history.csv", {"drug": d, "rxcui_link": "brand"})
             if _num(x[2].get("coverage_share")) is not None]
     rows.sort(key=lambda x: str(x[2].get("quarter")), reverse=True)

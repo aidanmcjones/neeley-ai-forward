@@ -49,11 +49,12 @@ def bad(idx):
 
 
 def _shape(chk):
-    assert set(chk) == KEYS and chk["status"] in ("passed", "failed", "unchecked")
+    assert set(chk) == KEYS and chk["status"] in ("passed", "no_numbers", "failed", "unchecked")
     assert chk["verified"] + chk["derived"] + chk["assumed"] + len(chk["unsupported"]) == chk["total"]
     for u in chk["unsupported"]:
         assert set(u) == {"value", "where", "reason"} and u["reason"]
-    assert (chk["status"] == "passed") == (not chk["unsupported"] and chk["status"] != "unchecked")
+    assert (chk["status"] in G.OK_STATUSES) == (not chk["unsupported"] and chk["status"] != "unchecked")
+    assert (chk["status"] == "no_numbers") == (chk["status"] != "unchecked" and chk["total"] == 0 and not chk["unsupported"])
 
 
 def test_g1_one_verified_citation_no_longer_clears_invented_numbers(idx, good, bad):
@@ -212,3 +213,99 @@ def test_render_footnote_page_and_quotes_and_public(idx):
     pub = render.render_markdown([Claim("Keytruda US sales 29,482.", [fact])], public=True)
     assert "licensed text withheld" in pub and "Keytruda \"US\"" not in pub
     assert "licensed text withheld" in render.render_html([Claim("x", [fact])], public=True)
+
+
+def test_no_numbers_status_is_not_passed_but_is_not_a_failure(idx, good):
+    r = G.numeric_gate("Management reworded the pricing risk factor.", [good], index=idx)
+    _shape(r.numeric_check)
+    assert r.numeric_check["status"] == "no_numbers" and r.numeric_check["total"] == 0 and r.passed
+    out, ok = G.gate_record({"sentence": "paragraph dropped from MD&A", "citations": []}, ["sentence"], "citations",
+                            index=idx)
+    assert out["numeric_check"]["status"] == "no_numbers" and ok
+    s = G.gate_document({"notes": [("n1", "no figures here", []), ("n2", "none here either", [])]}, index=idx)
+    assert s["passed"] and s["numeric_check"]["status"] == "no_numbers"
+    assert [x["numeric_check"]["status"] for x in s["items"]] == ["no_numbers", "no_numbers"]
+    mixed = G.gate_document([("n", "no figures", []), Claim("Keytruda sales were $29,482 million.", [good])], index=idx)
+    assert mixed["passed"] and mixed["numeric_check"]["status"] == "passed"
+    bad = G.gate_document([("n", "no figures", []), ("x", "revenue 99 billion", [])], index=idx)
+    assert not bad["passed"] and bad["numeric_check"]["status"] == "failed" and bad["failed"] == ["x"]
+
+
+def test_verify2_page_numerals_outside_the_quote_support_nothing(idx, good):
+    # good quotes "...$29,482 million in 2025, an increase of 18 percent..."; 71.5% and ($183) sit on the same page
+    # outside the quote. Review verify2: a footer "- 3 -" or an EPS "1.18" on the page verified a z-score.
+    r = G.numeric_gate("Gross margin was 71.5%; other income ($183) million; sales $29,482 million.", [good], index=idx)
+    assert [u["value"] for u in r.numeric_check["unsupported"]] == ["71.5%", "($183) million"]
+    assert r.numeric_check["verified"] == 1
+    n = [x for x in r.numbers if x["kind"] == "verified"][0]
+    assert set(n["basis"]) <= {"quote", "value"}
+
+
+def test_verify2_record_maps_win_over_a_coincidental_citation(idx):
+    # the AMGN case: "z +1.2" is a code-computed peer statistic; a passing citation quoting "$ 1.18" must not verify it
+    eps = V.verify(Citation(DOC, 2, "Net sales of Keytruda were $29,482 million in 2025"), idx)
+    from dataclasses import replace
+    eps = replace(eps, quote="basic EPS $ 1.18")                 # a passing citation whose quote holds 1.18
+    peer = {"peer_z": {"value": "1.2", "label": "shortlist peer panel statistic (not page-cited)"}}
+    r = G.numeric_gate("DSO 93 days; z +1.2", [eps], assumptions=dict(peer, d={"value": "93", "label": "x"}), index=idx)
+    z = [x for x in r.numbers if x["value"].endswith("1.2")][0]
+    assert z["kind"] == "assumed" and "peer panel" in z["label"]
+
+
+def test_verify2_constants_are_labelled_where_the_reader_sees_them(idx):
+    from agent.needle.cite.render import render_markdown
+    cl = Claim("0.03 x Rev 29,482 x (1 - t 0.15)", [],
+               derived={"rev": {"value": 29482, "expr": "a", "operands": {"a": {"value": 29482, "assumption": "rev"}}}},
+               assumptions={"0.03": {"value": "0.03", "label": "constant: ANCHOR (3% margin event)"},
+                            "t": {"value": "0.15", "label": "effective tax rate t (assumption)"}}, where="impact.formula")
+    md = render_markdown([cl], index=idx)
+    assert "0.03[constant: ANCHOR]" in md and "0.15)[assumption]" in md
+    assert "(1 - t" in md and "(1[" not in md                    # bare arithmetic 1 is excluded by the documented rule
+
+
+def test_verify2_assumption_label_follows_the_printed_symbol(idx):
+    am = {"t": {"value": "0.2", "label": "effective tax rate t"},
+          "m": {"value": "0.2", "label": "constant: M_MDP_AVOIDED (m_avoided)"}}
+    r = G.numeric_gate([("impact.formula", "t 0.2 and m_avoided (0.3, 0.2, 0.1)")], [],
+                       assumptions=dict(am, x={"value": "0.3", "label": "x"}, y={"value": "0.1", "label": "y"}), index=idx)
+    lab = {(n["value"], n["start"]): n["label"] for n in r.numbers}
+    assert lab[("0.2", 2)] == "effective tax rate t" and lab[("0.2", 26)].startswith("constant: M_MDP_AVOIDED")
+
+
+def test_count_operands_and_median(idx, good, full_year, bad):
+    two = G.derived_entry(2, "a + b", {"a": {"value": 1, "citation": good, "count": True},
+                                       "b": {"value": 1, "citation": full_year, "count": True}})
+    r = G.numeric_gate("lists 2 indications", [], derived={"n": two}, index=idx)
+    assert r.passed and r.numeric_check["derived"] == 1
+    dup = G.derived_entry(2, "a + b", {"a": {"value": 1, "citation": good, "count": True},
+                                       "b": {"value": 1, "citation": good, "count": True}})
+    assert not G.numeric_gate("lists 2 indications", [], derived={"n": dup}, index=idx).passed
+    unv = G.derived_entry(1, "a", {"a": {"value": 1, "citation": bad, "count": True}})
+    assert not G.numeric_gate("lists 1 indication", [], derived={"n": unv}, index=idx).passed
+    med = G.derived_entry(1.5, "median(x, y)", {"x": {"derived": "n"}, "y": {"value": 1, "citation": good, "count": True}})
+    assert G.numeric_gate("rival median 1.5", [], derived={"n": two, "m": med}, index=idx).passed
+
+
+def test_verify2_bare_formula_constants_are_arithmetic_and_k1_is_labelled(idx, good):
+    from dataclasses import replace
+    hiv = replace(good, quote="Human immunodeficiency virus type 1 infection $3,904,486,000", value="3,904,486,000")
+    am = {"K": {"value": "1", "label": "constant: K_LOW_REBATE (class rule)"}, "z": {"value": "0", "label": "zero entry"}}
+    r = G.numeric_gate([("impact.formula", "max(0, k (1.0, 1.0) x 1)")], [hiv], assumptions=am, index=idx)
+    kinds = [(n["value"], n["kind"], n.get("label")) for n in r.numbers]
+    assert kinds[0][2] == "arithmetic constant" and kinds[-1][2] == "arithmetic constant"
+    assert all(k == "assumed" and lab.startswith("constant: K_LOW_REBATE") for v, k, lab in kinds[1:3])
+
+
+def test_failed_derivation_is_not_rescued_by_a_rounding_value_and_year_operands(idx, good):
+    from dataclasses import replace
+    eps = replace(good, quote="EPS value = 5.32", value="5.32")
+    loe_p = replace(good, quote="Enbrel U.S. 11/22/2028 core patent", value="11/22/2028")
+    loe_r = replace(good, quote="Skyrizi U.S. 2033", value="2033")
+    unv = replace(loe_r, verification=replace(loe_r.verification, status="unverified"))
+    bad = {"gap": G.derived_entry(5, "r - p", {"r": {"value": 2033, "citation": unv, "year": True},
+                                               "p": {"value": 2028, "citation": loe_p, "year": True}})}
+    r = G.numeric_gate("about 5 years before", [eps], derived=bad, index=idx)
+    assert not r.passed and "did not pass" in r.numeric_check["unsupported"][0]["reason"]
+    ok = {"gap": G.derived_entry(5, "r - p", {"r": {"value": 2033, "citation": loe_r, "year": True},
+                                              "p": {"value": 2028, "citation": loe_p, "year": True}})}
+    assert G.numeric_gate("about 5 years before", [], derived=ok, index=idx).passed

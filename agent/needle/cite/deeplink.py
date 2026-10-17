@@ -6,8 +6,9 @@
       percent-encoded (WICG text fragment: every term encodes '-', ',' and '&'). Chrome and Edge honor it; Safari
       lands at the top. The run is validated against the stored page text (review D5): it must appear, word for
       word, inside ONE text block of the page (a line, split again at markdown table pipes), because the browser
-      matches within a DOM block and a run that crosses table cells or a heading never matches. Leading bullets and
-      lone punctuation are skipped. No page text, no quote, or no run found -> plain URL, with a note.
+      matches within a DOM block and a run that crosses table cells or a heading never matches. A line that reads
+      like a flattened table row (two numeric cells side by side) is split at every numeric cell, since each td is its
+      own block. Leading bullets and lone punctuation are skipped. No page text, no quote, or no run found -> plain URL, with a note.
   sec_comment_letter: .htm -> text fragment; .pdf -> "#page=N".
   any other .pdf (CMS, White House, Federal Register fact sheets, IR PDFs): url + "#page=N".
   PDF page basis: "#page=" uses the index's page_no (the [[page N]] marker). For page_scheme "pdf_page" that is the
@@ -56,12 +57,24 @@ def text_fragment(quote, head=HEAD_WORDS):
     return "#:~:text=" + _enc(" ".join(w[:head])) if w else ""
 
 
+_ADJ_NUMS = re.compile(r"\d[\d,.]*\)?%?\s+[($]*\$?\s?[-\u2212]?\d")     # two numeric cells side by side
+_NUMCELL = re.compile(r"(?:^|\s)[($]*\s?[-\u2212+]?\$?\s?\d[\d,.]*\)?%?(?=\s|$)")
+
+
 def _blocks(page_text):
+    """Text blocks a browser matches a fragment inside. A line is a block, split at markdown table pipes. A line that
+    reads like a flattened table row (two numeric cells side by side; the converter drops the cell borders) is split at
+    every numeric cell too, so a run can only come from one label cell (review verify2: 9 of 15 table-row fragments
+    crossed td cells and failed in the browser)."""
     out = []
     for line in strip_zw(page_text).splitlines():
         for cell in line.split("|"):
             b = " ".join(cell.split())
-            if b:
+            if not b:
+                continue
+            if _ADJ_NUMS.search(b):
+                out += [p.strip() for p in _NUMCELL.split(b) if p and p.strip()]
+            else:
                 out.append(b)
     return out
 

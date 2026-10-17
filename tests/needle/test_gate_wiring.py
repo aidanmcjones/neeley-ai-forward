@@ -111,6 +111,38 @@ def test_product_cell_number_missing_from_its_citations_is_uncited():
     assert ok.uncited() == [] and P.cell_gate(ok, "pricing", "Foo").passed
 
 
+def _cmp_row(row, text, cites):
+    c = _cmp_with_cell("x", [])
+    c.rows[row]["Foo"] = P.Cell(text, {}, cites, [], "")
+    return c
+
+
+def test_verify2_dates_in_a_timeline_cell_need_a_citation_or_label():
+    # Tecentriq: "Purple Book 12y reference exclusivity 2028-05-18" passed with zero citations (dates excluded)
+    c = _cmp_row("timeline", "Purple Book 12y reference exclusivity 2028-05-18", [])
+    res = P.cell_gate(c, "timeline", "Foo")
+    assert not res.passed and [u["value"] for u in res.numeric_check["unsupported"]] == ["2028-05-18"]
+    assert res.numeric_check["assumed"] == 1                     # "12y" is the BPCIA rule, labelled
+    assert ("timeline", "Foo") in c.uncited() and ("timeline", "Foo") in c.withheld()
+    ok = _cmp_row("timeline", "Company-stated US LOE 8/27/2029", [_cite("Repatha U.S. 8/27/2029 core patent", "8/27/2029")])
+    assert P.cell_gate(ok, "timeline", "Foo").passed
+    # in a pricing cell a bare year is a period label; a full date is a fact
+    pr = _cmp_row("pricing", "2026: MFP effective 2029-01-01", [])
+    assert [u["value"] for u in P.cell_gate(pr, "pricing", "Foo").numeric_check["unsupported"]] == ["2029-01-01"]
+
+
+def test_verify2_cell_with_no_citation_is_listed_as_uncited():
+    c = _cmp_row("safety", "No boxed warning (label has no WARNING heading)", [])
+    assert P.cell_gate(c, "safety", "Foo").passed and ("safety", "Foo") in c.uncited()
+    assert ("safety", "Foo") not in c.withheld()
+
+
+def test_verify2_source_url_page_suffix_is_not_linked():
+    from agent.needle.quant.data import clean_source_url
+    assert clean_source_url("https://www.sec.gov/a/mrk-20251231.htm, p. 9") == "https://www.sec.gov/a/mrk-20251231.htm"
+    assert clean_source_url("https://news.abbvie.com/x, p. p1") == "https://news.abbvie.com/x"
+
+
 @needs_real
 def test_amgn_product_no_longer_crashes(tmp_path):
     from agent.needle.quant import product_cli
@@ -185,3 +217,12 @@ def test_kill_table_baselines_from_rx_tables():
     ctx = next(x for x in rows if x["id"] == "rx_context")
     assert any("Part D prescribers" in t for _, _, t in ctx["context"])
     assert all(c.verification.ok for _, c, _ in ctx["context"] if c is not None)
+
+
+def test_wave3_caveat_columns_reach_the_note():
+    from agent.needle.quant.data import row_caveats
+    assert "do_not_read_as_penetration" in row_caveats("epi/market_sizing_inputs.csv", {"do_not_read_as_penetration": "1"})
+    assert "marketed comparator" in row_caveats("pipeline/pipeline_assets.csv", {"marketed_comparator": "1"})
+    assert "GBP" in row_caveats("peers/peer_product_revenue.csv", {"currency": "GBP"})
+    assert "cumulative" in row_caveats("peers/peer_product_revenue.csv", {"currency": "JPY", "ticker": "TAK"})
+    assert row_caveats("peers/peer_product_revenue.csv", {"currency": "USD"}) == ""

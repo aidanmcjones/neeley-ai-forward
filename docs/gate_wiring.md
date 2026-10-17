@@ -19,9 +19,9 @@ out, passed = gate_record(record, ["sentence", "impact.formula"], "citations")  
 summary = gate_document({"five numbers": [...], "inputs": claims})                    # decide / product docs
 ```
 
-- `numeric_check = {status: passed|failed|unchecked, checked, total, verified, derived, assumed,
-  unsupported: [{value, where, reason}]}`; `passed` is True only for `status == "passed"`. `unchecked` (no text) is
-  not shown either.
+- `numeric_check = {status: passed|no_numbers|failed|unchecked, checked, total, verified, derived, assumed,
+  unsupported: [{value, where, reason}]}`; `passed` (and `gate.check_ok`) is True for `passed` and `no_numbers` (text
+  with no number in it: not a failure, shown and ranked like a pass). `unchecked` (no text) is not shown either.
 - A record's `derived` and `assumptions` keys are read by `gate_record` when present. Shapes are in the gate.py
   docstring; build derived entries with `derived_entry(value, expr, {name: Citation | (value, Citation) |
   {"value", "assumption": label} | {"derived": key}}, unit)`. `value` is in the units the text prints.

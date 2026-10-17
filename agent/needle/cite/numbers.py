@@ -74,8 +74,8 @@ _MASKS = [
     re.compile(r"\b(?:Q[1-4]\s?(?:FY)?\s?'?\d{2,4}|[1-4]Q\s?'?\d{2,4}|\d{4}\s?Q[1-4]I?|FY\s?'?\d{2,4}(?:\s?Q[1-4])?|"
                r"CY\s?\d{4}(?:Q[1-4]I?)?|[12]H\s?'?\d{2,4}|H[12]\s?'?\d{2,4})\b", re.I),
     re.compile(r"\b(?:10-K|10-Q|20-F|8-K|6-K|40-F|S-[1-4]|DEF\s?14A)\b", re.I),
-    re.compile(r"(?:\b(?:file\s+page|PDF\s+p|pp?|pages?|Item|Note|Notes|Section|Part|Table|Exhibit|Figure|Fig|"
-               r"row|CIK|ID|Rule|Schedule|Appendix|Chapter|Article|NCT|Phase|Tier|Stage|Grade|Cycle)\.?|§|#)\s*"
+    re.compile(r"(?:\b(?:file\s+page|PDF\s+p|pp?|pages?|Items?|Note|Notes|Sections?|Part|Table|Exhibit|Figure|Fig|"
+               r"row|CIK|ID|Rule|Schedule|spec|Appendix|Chapter|Article|NCT|Phase|Tier|Stage|Grade|Cycle)\.?|§|#)\s*"
                r"[A-Z]?\d[\w.]*(?:\s*(?:-|–|to)\s*[A-Z]?\d[\w.]*)?", re.I),
     re.compile(r"\b(?=[0-9a-f]*[a-f])(?=[0-9a-f]*\d)[0-9a-f]{8,}\b|\bc_[0-9a-f]+\b"),   # hashes, cite ids
 ]

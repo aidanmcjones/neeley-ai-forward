@@ -185,7 +185,7 @@ def test_stop_rule():
 
 def test_cli_runs_on_sample_file(tmp_path):
     out = tmp_path / "LLY"
-    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_old.jsonl"), "--moves", str(EX / "moves_LLY.json"),
+    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_v3.jsonl"), "--moves", str(EX / "moves_LLY.json"),
                    "--out", str(out)])
     assert rc == 0
     d = json.loads((out / "decide.json").read_text())
@@ -202,3 +202,79 @@ def test_cli_runs_on_sample_file(tmp_path):
     assert "verified: unverified" not in md
     assert "verified: substring" in md or "verified: exact" in md
     assert d["numeric_check"]["status"] == "passed" and not d["numeric_check"]["unsupported"]
+    # spec 5.2: the chosen move addresses a gated v3 finding; a zero-fit move is never chosen
+    assert d["chosen"]["addressed"] and set(d["chosen"]["addressed"]) <= {"ccde14de6e25", "4bf1a2f5e9e4"}
+
+
+def _stale(out):
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "decide.json").write_text('{"stale": true}')
+    (out / "decide.md").write_text("# stale recommendation\n")
+
+
+def test_exit_2_deletes_stale_decide_files_unresolved_ids(tmp_path):
+    out = tmp_path / "LLY"
+    _stale(out)
+    spec = json.loads((EX / "moves_LLY.json").read_text())
+    spec["moves"][0]["finding_ids"] = ["no-such-finding"]
+    mv = tmp_path / "moves.json"
+    mv.write_text(json.dumps(spec))
+    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_old.jsonl"), "--moves", str(mv),
+                   "--out", str(out)])
+    assert rc == 2
+    assert not (out / "decide.json").exists() and not (out / "decide.md").exists()
+    assert "no-such-finding" in (out / "decide_rejected.md").read_text()
+
+
+def test_exit_2_deletes_stale_decide_files_gate_failure(tmp_path, monkeypatch):
+    out = tmp_path / "LLY"
+    _stale(out)
+    real = CLI.build_md
+
+    def failing(o, f, public=False):
+        md, summary, withheld = real(o, f, public)
+        bad = {"status": "failed", "checked": 1, "total": 1, "verified": 0, "derived": 0, "assumed": 0,
+               "unsupported": [{"value": "9", "where": "x", "reason": "test"}]}
+        items = summary["items"] + [{"where": "x", "text": "9", "passed": False, "numeric_check": bad, "numbers": []}]
+        return md, dict(summary, passed=False, numeric_check=bad, items=items, failed=["x"]), withheld
+    monkeypatch.setattr(CLI, "build_md", failing)
+    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_v3.jsonl"), "--moves", str(EX / "moves_LLY.json"),
+                   "--out", str(out)])
+    assert rc == 2
+    assert not (out / "decide.json").exists() and not (out / "decide.md").exists()
+    assert (out / "decide_rejected.md").exists() and json.loads((out / "decide_rejected.json").read_text())["numeric_check"]["status"] == "failed"
+
+
+def test_verify2_pv_payback_and_car_are_derived_not_assumed():
+    from agent.needle.cite.gate import numeric_gate
+    r = ref()
+    Dm, A = CLI.move_maps(r)
+    for k in ("pvin_base", "pvtv_bear", "car", "payback", "ev"):
+        assert k in Dm and Dm[k]["expr"], k
+    for where, txt in (("pv_in", CLI.f1(r.in_window_pv["base"])), ("pv_tv", CLI.f1(r.tv_pv["bull"])),
+                       ("car", CLI.f1(r.car)), ("payback", str(r.payback_month))):
+        res = numeric_gate([(where, txt)], [], Dm, A)
+        assert res.passed and [n["kind"] for n in res.numbers] == ["derived"], (where, res.numbers)
+
+
+def test_verify2_benchmarks_link_only_where_the_page_shows_the_figure():
+    for name in ("p_bear", "p_base", "p_bull", "cm_existing", "trial_cost_cardio", "coverage_lag_months"):
+        assert M.REGISTRY[name].url == "", name
+    assert D.benchmark_label("p_bear").endswith("no URL (unverified)")
+
+
+@pytest.mark.parametrize("t", ["AMGN", "MRK"])
+def test_demo_fixtures_are_marked_and_tie_three_moves_to_gated_findings(t, tmp_path):
+    spec = json.loads((EX / f"moves_{t}.json").read_text())
+    assert spec["demo"] is True and spec["header_note"] == CLI.DEMO_NOTE and len(spec["moves"]) == 3
+    assert all(mv["finding_ids"] for mv in spec["moves"])
+    f = ROOT / "out" / t / "findings_v3.jsonl"
+    if not f.exists():
+        pytest.skip("out/<T>/findings_v3.jsonl not generated (gitignored)")
+    rc = CLI.main(["--ticker", t, "--findings", str(f), "--moves", str(EX / f"moves_{t}.json"), "--out", str(tmp_path)])
+    assert rc == 0
+    d = json.loads((tmp_path / "decide.json").read_text())
+    assert d["demo"] and d["numeric_check"]["status"] == "passed" and len(d["ranked"]) == 3
+    assert all(i["numeric_check"]["status"] in ("passed", "no_numbers") for i in d["numeric_items"])
+    md = (tmp_path / "decide.md").read_text()
+    assert CLI.DEMO_NOTE in md and "## Chosen move (pipeline demonstration)" in md

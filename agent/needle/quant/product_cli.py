@@ -43,7 +43,7 @@ def build(ticker, product, data_root=None, index=None, public=False):
         if res.passed or res.numeric_check["status"] == "unchecked":
             return doc.cell(section, where, text, cites, dm, am)
         withheld.append({"where": where, "text": text, "numeric_check": res.numeric_check})
-        return f"(withheld by the numeric gate: {len(res.numeric_check['unsupported'])} unsupported number(s); see JSON)"
+        return "(withheld by the numeric gate: a number in this line is not supported; see JSON)"
     names = [e["name"] for e in cmp_.entities]
     L = [f"# Product fine print: {cmp_.entities[0]['name']} ({ticker}) vs listed rivals", "",
          f"As of {cmp_.as_of}. Rivals are the case appendix set. Label rows cite DailyMed label sections; timeline rows cite "
@@ -63,7 +63,7 @@ def build(ticker, product, data_root=None, index=None, public=False):
             res = P.cell_gate(cmp_, rk, e["name"])
             if res.passed:
                 cells.append(doc.cell("cells", f"{rk}/{e['name']}", _cell_text(c), res.citations, res.derived,
-                                      res.assumptions))
+                                      res.assumptions, dates={"timeline": "all", "pricing": "full"}.get(rk, "")))
             else:
                 failed_cells.append({"row": rk, "entity": e["name"], "numeric_check": res.numeric_check})
                 cells.append("(withheld by the numeric gate; see below)")
@@ -98,11 +98,14 @@ def build(ticker, product, data_root=None, index=None, public=False):
     L += ["", "## Empty cells", ""] + ([f"- {r} / {n}: {line('empty', f'empty/{r}/{n}', why)}" for r, n, why in emp]
                                        or ["- none"])
     unc = cmp_.uncited()
+    wh = cmp_.withheld()
     tab = cmp_.table_only()
     L += ["", "## Cells with values but no verified page citation", "",
-          "Withheld (a number in the cell is not verified, derived or labelled):", ""]
+          "Withheld (a number or date in the cell is not verified, derived or labelled):", ""]
     L += [f"- {r} / {n}: " + "; ".join(f"{u['value']} ({u['reason']})" for u in
-                                         P.cell_gate(cmp_, r, n).numeric_check["unsupported"][:4]) for r, n in unc] or ["- none"]
+                                         P.cell_gate(cmp_, r, n).numeric_check["unsupported"][:4]) for r, n in wh] or ["- none"]
+    L += ["", "Shown with no citation at all (every number in them is a labelled table value or constant):", ""]
+    L += [f"- {r} / {n}" for r, n in unc if (r, n) not in wh] or ["- none"]
     L += ["", "Shown, with numbers labelled as unverified table values (file and key in the label and the JSON refs):", ""]
     L += [f"- {r} / {n}" for r, n in tab] or ["- none"]
     unq = cmp_.context.get("unquantified", [])

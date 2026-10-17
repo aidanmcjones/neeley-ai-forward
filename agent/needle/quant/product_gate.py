@@ -72,21 +72,73 @@ def _fact(table, fld, value, **kw):
 
 
 # ------------------------------------------------------------------ table cells
+BPCIA = "design rule: 12-year US reference-product exclusivity for biologics (42 U.S.C. 262(k)(7)), counted from approval"
+
+
+def _date_label(A, key, value, label):
+    if value not in (None, ""):
+        A[key] = {"value": str(value), "label": label, "kind": "date"}
+
+
+def _timeline_dates(cmp_, ent, det, cites, A):
+    """Dates in a timeline cell (gate.date_check): the company-stated LOE is cited to its pipeline/loe_calendar.csv
+    row (a 10-K page citation through facts.locator when the row verifies); Orange Book, Purple Book and the derived
+    12-year date are table values with no verified facts row, labelled with their file (review verify2 3)."""
+    slug = ent.get("slug") or ""
+    cs = det.get("company_stated") or {}
+    if cs.get("us_loe"):
+        try:
+            from . import verified_tables as VT
+            got = VT.loe(ent.get("ticker") or cmp_.ticker, (ent.get("name") or slug).split(" ")[0])
+            if got and got[1].citations and got[1].citations[0].verification.ok:
+                cites.append(got[1].citations[0])
+        except Exception:
+            pass
+    pb = det.get("purple_book") or {}
+    _date_label(A, "pb.12y", pb.get("derived_12y"), TABLE.format(file=f"data/corpus/drugs/{slug}/purple_book.csv",
+                                                                  key="approval date + 12 years (BPCIA rule)"))
+    A["pb.12y.rule"] = {"value": "12y", "label": BPCIA, "kind": "date"}
+    for k, v in (pb.get("exclusivity") or {}).items():
+        _date_label(A, f"pb.{k}", v, TABLE.format(file=f"data/corpus/drugs/{slug}/purple_book.csv", key=k))
+    pe = str(det.get("protection_end_regulatory") or "")
+    src = "orange_book_patents.csv / purple_book.csv"
+    _date_label(A, "pe", pe, TABLE.format(file=f"data/corpus/drugs/{slug}/{src}", key="protection end"))
+    _date_label(A, "pe.year", pe[:4], TABLE.format(file=f"data/corpus/drugs/{slug}/{src}", key="protection end year"))
+    _date_label(A, "ob.latest", det.get("orange_book_latest_patent"),
+                TABLE.format(file=f"data/corpus/drugs/{slug}/orange_book_patents.csv", key="latest patent expiry"))
+    for x in det.get("orange_book_exclusivity") or []:
+        _date_label(A, f"ob.{x.get('code')}", x.get("date"),
+                    TABLE.format(file=f"data/corpus/drugs/{slug}/orange_book_exclusivity.csv", key=x.get("code")))
+
+
 def cell_maps(cmp_, row, ent, cell):
     cites, Dm, A = [], {}, {}
     slug = ent.get("slug") or ""
     det = cell.detail or {}
-    if row in ("approved_uses", "safety", "dosing"):
-        for path, v in _leaves(det):
-            _assume(A, f"{row}.{path}", v, COUNT.format(what=path.replace("_", " ")))
-    if row in ("approved_uses", "safety", "dosing"):
-        from agent.needle.cite.numbers import tokenize
-        for j, t in enumerate(tokenize(cell.value or "")):
-            _assume(A, f"{row}.tok{j}", t.num, COUNT.format(what="items (or the section number)"), t.unit)
+    # review verify2 3: no blanket labels on label-row numbers. Counts derive from cited items (count operands);
+    # what is left must verify in a quote or fail.
     if row == "approved_uses" and det.get("names") is not None:
-        _assume(A, "n_uses", len(det["names"]), COUNT.format(what="approved uses"))
+        from .gatewire import indication_count
+        got = indication_count(slug)
+        if got and got[0] == len(det["names"]):
+            n, ops, cl = got
+            cites += cl
+            Dm["n_uses"] = derived_entry(n, " + ".join(ops), ops)
+    if row == "safety":
+        byid = {c.cite_id: c for c in cell.citations if c.verification.ok}
+        wc = [byid[i] for i in det.get("warning_cite_ids") or [] if i in byid]
+        titles = det.get("warnings_and_precautions") or []
+        if titles and len(wc) == len(titles) and len(set(det["warning_cite_ids"])) == len(titles):
+            Dm["n_warn"] = derived_entry(len(wc), " + ".join(f"w{i}" for i in range(len(wc))),
+                                         {f"w{i}": {"value": 1, "citation": c, "count": True} for i, c in enumerate(wc)})
+        if det.get("contraindications") == 0 and det.get("contra_cite_id") in byid:
+            _assume(A, "ci0", 0, COUNT.format(what="contraindication items (label section 4 lists none; cited)"))
+    if row == "dosing":
+        for path, v in _leaves({k: x for k, x in det.items() if k in ("doses_per_year",)}):
+            _assume(A, f"dosing.{path}", v, "derived by code from the cited dosing interval: doses per year")
     if row == "timeline":
         f = f"data/corpus/drugs/{slug}/orange_book_patents.csv"
+        _timeline_dates(cmp_, ent, det, cites, A)
         for path, v in _leaves(det):
             _assume(A, f"tl.{path}", v, TABLE.format(file=f if "orange" in path else "drug pack", key=path))
         cnt = re.search(r"\((\d+) patents\)", cell.value or "")

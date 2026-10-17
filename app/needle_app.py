@@ -177,13 +177,13 @@ def load_findings(ticker):
         return read_jsonl(f"out/{ticker}/findings.jsonl")
     out = []
     for r in v3:
-        if (r.get("numeric_check") or {}).get("status") != "passed":
-            continue                       # fail closed: only rows the numeric gate passed
+        if (r.get("numeric_check") or {}).get("status") not in ("passed", "no_numbers"):
+            continue                       # fail closed: only rows the numeric gate passed (no_numbers is not a failure)
         imp = r.get("impact") or {}
         out.append({"finding": r.get("sentence_md") or r.get("sentence", ""), "score": r.get("S", 0),
                     "confidence": str(r.get("confidence", "")).lower(),
                     "verdict": "numeric gate: " + r["numeric_check"]["status"],
-                    "impact": {"formula": imp.get("formula", ""), "dollars": ((imp.get("d_rev") or {}).get("base") or 0) * 1e6},
+                    "impact": {"formula": imp.get("formula", "")}, "formula_md": r.get("formula_md", ""),
                     "peer": {"metric_value": (r.get("peer") or {}).get("metric_value"),
                              "peer_median": (r.get("peer") or {}).get("peer_median"), "z": (r.get("peer") or {}).get("peer_z")},
                     "vector": r.get("vector") or {},
@@ -285,15 +285,11 @@ with tab_find:
                     "Confidence: " + badge(conf.upper(), CONF_COLOR.get(conf, SKY)), unsafe_allow_html=True
                 )
                 c.markdown(f"Verdict: **{r.get('verdict', 'n/a')}**")
-                imp = r.get("impact") or {}
-                if imp.get("formula"):
-                    st.markdown(f"Impact: **{money(imp.get('dollars', 0))}**. {imp['formula']}")
-                pe = r.get("peer") or {}
-                if pe.get("peer_median") is not None and pe.get("metric_value") is not None:
-                    zt = f"z {pe['z']:+.2f}" if pe.get("z") is not None else "z n/a"
-                    st.markdown(
-                        f"Peer line: value {pe['metric_value']:+.3f} vs peer median {pe['peer_median']:+.3f} ({zt})"
-                    )
+                # review verify2: only gated text is printed. The impact math comes from formula_md (marked from the
+                # gate's maps: [n], [derived], [assumption], [constant: name]); no ungated dollar total or peer line
+                # (the peer comparison is in the gated sentence).
+                if r.get("formula_md"):
+                    st.markdown(f"Impact math: {r['formula_md']}")
                 vec = r.get("vector") or {}
                 if vec.get("obscurity_note"):
                     st.markdown(f"Obscurity: {vec['obscurity_note']}")

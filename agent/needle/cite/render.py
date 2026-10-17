@@ -66,11 +66,18 @@ def _plan(cl, num_of, index=None):
     own = sorted({num_of[_key(c)] for c in cl.citations})
     text = cl.text.rstrip()
     try:
-        res = _gate.numeric_gate([("claim", text)], cl.citations, getattr(cl, "derived", None),
+        res = _gate.numeric_gate([(getattr(cl, "where", None) or "claim", text)], cl.citations, getattr(cl, "derived", None),
                                  getattr(cl, "assumptions", None), index=index)
         nums = res.numbers
     except Exception:
         nums = []
+    dmode = getattr(cl, "dates", "")
+    if dmode:                                 # dates in a fact cell are claims too (gate.date_check)
+        try:
+            nums = list(nums) + _gate.date_check("claim", text, cl.citations, getattr(cl, "assumptions", None),
+                                                 years=dmode == "all")["numbers"]
+        except Exception:
+            pass
     if not nums:
         return [], own
     for r in nums:                            # prefer citations whose quote or value carries the number over page text
@@ -99,7 +106,9 @@ def _plan(cl, num_of, index=None):
             labels = list(dict.fromkeys(labels))
             inserts.append((r["end"], [("derived", labels)]))
         elif r["kind"] == "assumed":
-            inserts.append((r["end"], [("assumption",)]))
+            if r.get("label") == "arithmetic constant":
+                continue                      # documented rule: bare 0, 1, 100 in a formula carry no marker
+            inserts.append((r["end"], [("assumption", r.get("label") or "")]))
     return inserts, sorted(set(own) - used)
 
 
@@ -110,12 +119,23 @@ def _apply(text, inserts, fmt):
     return out
 
 
+CONSTANT = "constant: "
+
+
+def _assumption_tag(label):
+    """'[constant: <name>]' for a model constant (gatewire label 'constant: <name> (...)'), else 'assumption'."""
+    label = str(label or "")
+    if label.startswith(CONSTANT):
+        return "constant: " + label[len(CONSTANT):].split(" (")[0].strip()
+    return "assumption"
+
+
 def _md_mark(m):
     if m[0] == "cite":
         return f"[{m[1]}]"
     if m[0] == "derived":
         return f"[derived: {', '.join(m[1])}]" if m[1] else "[derived]"
-    return "[assumption]"
+    return f"[{_assumption_tag(m[1] if len(m) > 1 else '')}]"
 
 
 def _html_mark(m):
@@ -124,7 +144,7 @@ def _html_mark(m):
     if m[0] == "derived":
         refs = ", ".join(f'<a href="#fn-{x}">{x}</a>' if x.isdigit() else x for x in m[1])
         return f"<sup>[derived{': ' + refs if refs else ''}]</sup>"
-    return "<sup>[assumption]</sup>"
+    return f"<sup>[{html.escape(_assumption_tag(m[1] if len(m) > 1 else ''))}]</sup>"
 
 
 def claim_markup(claims, fmt="md", index=None):
