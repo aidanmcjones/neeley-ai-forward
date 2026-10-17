@@ -29,5 +29,8 @@ Then open Claude Code in this folder (`claude`) and start with: "Read CLAUDE.md,
 | data/ | Case data, clean CSVs, demo inputs | Parker |
 | docs/ | Case PDFs, game plan, kickoff notes | Parker |
 | deck/ | Slides | Parker |
+| agent/tenk.py | SEC 10-K / 20-F collector (R2 or local) | Aidan |
 | eval/ | Test inputs and scoring script | Aidan |
+| docs/kickoff/ | Kickoff call transcripts | Parker |
+| docs/research/ | Sponsor, judges, winning playbooks | Parker |
 | demo_script.md, qa.md | Golden path script, judge Q&A | Shared |

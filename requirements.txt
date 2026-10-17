@@ -2,3 +2,5 @@ anthropic>=0.70
 streamlit>=1.40
 python-dotenv>=1.0
 pandas>=2.2
+requests>=2.32
+boto3>=1.35

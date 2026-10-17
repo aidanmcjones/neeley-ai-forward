@@ -1,0 +1,196 @@
+[00:00:00.000 --> 00:00:17.960]   Okay, well, it's right at three. I want to honor everyone's time, and I'll keep admitting
+[00:00:17.960 --> 00:00:22.820]   people as they come into the Zoom. I'm also recording this, and so I will share it with
+[00:00:22.820 --> 00:00:27.920]   participants once we're done, but we are really excited to kick off this event. It's our first
+[00:00:27.920 --> 00:00:32.440]   event, and we're really excited to bring this to TCU. Dr. Drover leads the Mealy AI Forward
+[00:00:32.440 --> 00:00:35.860]   initiative here, and I'm going to hand it off to you to get us started and share about
+[00:00:35.860 --> 00:00:39.800]   Mealy AI Forward, and then we'll get into some more information about the competition.
+[00:00:41.660 --> 00:00:48.000]   Okay, one second here. I'm going to share my screen. Who is this, bro?
+[00:00:53.040 --> 00:00:56.820]   Okay, you guys can see that okay? Yes. Cool.
+[00:00:56.820 --> 00:00:57.820]   All right.
+[00:00:57.920 --> 00:01:00.660]   Well, I just want to say a quick thanks. I'm not going to take much of your time,
+[00:01:00.800 --> 00:01:04.960]   but I'm really excited for this competition, and glad you guys are all here. We have an
+[00:01:04.960 --> 00:01:09.640]   exceptional turnout, and it will be a really cool event. So as Kaylee mentioned, my name is
+[00:01:09.640 --> 00:01:13.120]   Will Drover. I'm the Chair of Entrepreneurship and Innovation here at TCU. I'm a faculty,
+[00:01:13.600 --> 00:01:18.900]   and also the Director of Mealy AI Forward. So I want to just put just the quick visual up of
+[00:01:18.900 --> 00:01:22.700]   what Mealy AI Forward is. I know several of you are hopefully familiar with what this model is,
+[00:01:22.700 --> 00:01:27.860]   but we're basically the team that's driving AI integration across the Mealy School of,
+[00:01:27.920 --> 00:01:32.080]   of business. And you can kind of see the mission statement there, which is an integrated ongoing
+[00:01:32.080 --> 00:01:37.600]   initiative to help keep Mealy on the leading edge of AI. So you can see we don't view, I guess,
+[00:01:37.600 --> 00:01:43.760]   AI integration as one thing, not one person, not one course, not one program. It's like an integrated
+[00:01:43.760 --> 00:01:47.440]   entity here that impacts a bunch of different pillars across Mealy, and these are the key ones.
+[00:01:47.440 --> 00:01:52.720]   So student AI, faculty AI, research AI, community AI, and operations AI. So we're a coordinated team
+[00:01:52.720 --> 00:01:57.280]   that's working really hard to bring AI to the forefront in ways that you guys are hopefully
+[00:01:57.280 --> 00:02:01.760]   increasingly noticing, especially under the student pillar. So as one of these events,
+[00:02:01.760 --> 00:02:06.320]   this is, this is the structure that basically this event lives under. So Dr. Zain Ali has been
+[00:02:06.320 --> 00:02:10.160]   the really effective lead here to help bring this event to life in coordination with our,
+[00:02:10.160 --> 00:02:16.160]   our board and other judges who have volunteered her time as well. So I'm really excited to be here
+[00:02:16.160 --> 00:02:20.640]   and to, to see this event run this weekend. Unfortunately, there's no perfect date for this,
+[00:02:20.640 --> 00:02:25.600]   and I was, I wasn't able to be here this weekend, so I'm actually be in San Antonio this weekend.
+[00:02:25.600 --> 00:02:30.720]   So I'm sorry I can't be there in person. I know you guys are in great hands. It's going to be
+[00:02:30.720 --> 00:02:35.120]   a really cool thing. Again, hopefully more and more you guys see events like the student club
+[00:02:35.120 --> 00:02:39.200]   is working hard. We have a bunch of workshops coming up and certificates, and we have curriculum
+[00:02:39.200 --> 00:02:44.000]   integration happening across the board under the student pillar. But we are here to support you
+[00:02:44.000 --> 00:02:48.560]   guys, and we'd love to stay in touch and keep you guys, and to push things forward. If you guys have
+[00:02:48.560 --> 00:02:50.560]   any ideas, we're always happy to stay in touch. Dr. Zain Ali:
+[00:02:50.560 --> 00:02:51.280]   Thank you. Dr. Eric Arsena:
+[00:02:51.280 --> 00:02:55.280]   With how we're pushing AI forward. I want to put the brief screen up here to show you who
+[00:02:55.280 --> 00:02:59.840]   is involved on this team. There we go. This is some familiar faces that you're probably
+[00:03:01.840 --> 00:03:06.960]   that have seen around, but this is, includes me and then Dr. Eric Arsena, who oversees operations
+[00:03:06.960 --> 00:03:07.600]   pillar. Dr. Eric Arsena:
+[00:03:07.600 --> 00:03:07.920]   Yeah. Dr. Eric Arsena:
+[00:03:07.920 --> 00:03:12.000]   Shelly Carter, who's been a big part of helping support this initiative and this competition as
+[00:03:12.000 --> 00:03:16.320]   well. Dr. Beata Jones, Dr. Zain Ali, who's leading this event, Dr. Elijah Clark,
+[00:03:16.320 --> 00:03:20.480]   and then Kaylee as well, who is our, our GA in the program. So we're kind of the forces
+[00:03:20.480 --> 00:03:26.480]   behind the interconnected pillars here that are trying to push AI forward as fast as we can here
+[00:03:26.480 --> 00:03:33.360]   in Neely. So I just want to conclude my part by just saying, thanks. It's been a whole lot of work
+[00:03:33.360 --> 00:03:39.760]   to pull this off, to integrate this competition. And I think Dr. Zain Ali has worked tremendously
+[00:03:39.760 --> 00:03:44.560]   hard to run this effectively. She's worked really closely with Kaylee and Shelly as well,
+[00:03:44.560 --> 00:03:50.400]   who's been a huge supporter here, along with others on the team and our judges and our board.
+[00:03:50.400 --> 00:03:52.800]   Dr. Eric Arsena: There's a long list of people who have worked
+[00:03:52.800 --> 00:03:57.040]   hard to bring this event together. And I'm sure we'll get some shout outs along the way, but just
+[00:03:57.040 --> 00:04:00.880]   know that a lot of time and effort and planning has been going on under Dr. Zain Ali's leadership.
+[00:04:00.880 --> 00:04:06.880]   And again, special thanks to the sponsors who financially contributed, the Center for Supply
+[00:04:06.880 --> 00:04:10.240]   Chain and Neely, and also the Institute for Entrepreneurship and Innovation, who pitched
+[00:04:10.240 --> 00:04:13.680]   in some money to help bring this competition to life. So this is the kind of thing where
+[00:04:13.680 --> 00:04:16.960]   you guys will get really cool hands-on experience with building and competing.
+[00:04:16.960 --> 00:04:20.320]   And this is the kind of thing that helps set you apart on the job market by competing,
+[00:04:20.320 --> 00:04:22.960]   and these things, and building, and innovating, and showing what you can do with your skills
+[00:04:22.960 --> 00:04:26.720]   around AI. So it'll be a really cool event, some great experiences. You'll be surrounded
+[00:04:26.720 --> 00:04:30.560]   with some really strong people from industry, from our board that Dr. Zain Ali has helped to
+[00:04:30.560 --> 00:04:37.200]   build out, and the mentors will be there to help steer the weekend. So mainly have fun, lean in.
+[00:04:37.200 --> 00:04:40.720]   Really looking forward to seeing how things are going. Again, sorry I can't be there in person,
+[00:04:40.720 --> 00:04:44.560]   but I know it's going to go really well. And I'm looking forward to hearing about it and seeing the
+[00:04:44.560 --> 00:04:49.280]   results. So I won't take up much more of your time, but hopefully that overview of Neely AI Forward
+[00:04:50.240 --> 00:04:54.720]   gives you an overview and then a decent kickoff and some of the shout outs to the people who
+[00:04:54.720 --> 00:04:58.160]   are making this possible. So I'll turn it back over to you, Kaylee, and Dr. Lee.
+[00:04:59.280 --> 00:05:02.320]   Thank you, Dr. Drover, for your time and your leadership on this initiative.
+[00:05:02.880 --> 00:05:06.960]   I'm going to share my screen. Can everyone see that okay?
+[00:05:11.120 --> 00:05:11.620]   Perfect.
+[00:05:14.400 --> 00:05:18.320]   Like Dr. Drover mentioned, this event is in partnership with some other
+[00:05:18.320 --> 00:05:20.160]   centers on campus as well as Dallas AI. So
+[00:05:20.160 --> 00:05:24.640]   we thank them for their contributions, whether financially or by supporting us with mentors.
+[00:05:25.360 --> 00:05:27.440]   And Dr. Ali, I'll let you share a little bit more.
+[00:05:28.720 --> 00:05:33.200]   So both the centers, the Center of Entrepreneurship, as well as the
+[00:05:34.720 --> 00:05:38.000]   Supply Chain Center, they collaborated with us. They are actually
+[00:05:38.560 --> 00:05:45.280]   providing all the prize money is coming from those two centers. And Dallas AI is an organization that
+[00:05:45.280 --> 00:05:50.080]   was founded by a couple of guys a couple of years ago, actually, with the push on AI.
+[00:05:50.480 --> 00:05:54.240]   And a lot of the members from Dallas AI are also going to be here on campus,
+[00:05:55.520 --> 00:06:01.520]   helping us with judging or being a mentor or being a technical advisor.
+[00:06:01.520 --> 00:06:07.840]   So I don't know if Barbara is on the call or not, but a lot of those folks who are
+[00:06:07.840 --> 00:06:11.840]   volunteering their time and also have financially contributed to it also. So thank you for doing that.
+[00:06:15.120 --> 00:06:20.060]   So why would we conduct the Neely AI Forward? So there were the three key drivers that we basically
+[00:06:20.060 --> 00:06:27.500]   felt like that we needed to do this. One of them was that, you know, we have various Neely students
+[00:06:27.500 --> 00:06:34.860]   that are at different levels of competency in the AI, AI competency levels. And we figured that the
+[00:06:34.860 --> 00:06:40.140]   way we want to structure it is no matter what your competency level of AI is, we would like you all
+[00:06:40.140 --> 00:06:46.460]   to participate and improve, improve that AI competency level. So whether you have a background
+[00:06:46.460 --> 00:06:51.820]   in coding or not, it really doesn't matter. We would like to you to leverage the mentors
+[00:06:51.820 --> 00:06:56.620]   that will be assigned to each team, as well as the technical advisors that we will have available.
+[00:06:57.340 --> 00:07:03.020]   In addition to that, we also did some workshops prior to the event. And if needed, we will we have
+[00:07:03.020 --> 00:07:08.780]   folks that are willing to do workshops in the event also on Saturday to kind of help folks
+[00:07:08.780 --> 00:07:12.620]   increase their competency on there. The second thing we wanted to do was kind of,
+[00:07:12.620 --> 00:07:16.380]   if you look at the judging rubric, you're going to see that the way we want the
+[00:07:16.380 --> 00:07:21.660]   the teams to work is working a team and take something from a concept to a prototype
+[00:07:22.460 --> 00:07:28.780]   in, you know, like 48 hours or 24 hours or something like that. So, so second objective was that.
+[00:07:28.780 --> 00:07:34.380]   And the third is that we want to continue to build our relationships with the community. So I know
+[00:07:34.380 --> 00:07:39.900]   that we have folks from the community that are attending. I know Michael, Michael Cupps is on the
+[00:07:39.900 --> 00:07:46.300]   on the call. Michael and I had an opportunity to work with Global 360. Madhuri is on the call. Madhuri is at Exchange
+[00:07:46.300 --> 00:07:51.340]   here and Arun is there. So David Garcia is there. So these are all folks that bring in a lot of
+[00:07:51.340 --> 00:07:56.380]   experience and we would like our students to kind of learn from them and also for them to kind of
+[00:07:56.380 --> 00:08:00.780]   know the skills and values that our students bring to the table. So those are the three driving
+[00:08:00.780 --> 00:08:05.260]   factors for trying to do this event. And he's using AI also.
+[00:08:06.700 --> 00:08:11.660]   Perfect. And so just some housekeeping things. I'll go over the agenda. I'm sure I'm the one
+[00:08:11.660 --> 00:08:16.220]   who's been sending all the emails. I'm sorry that if I've been crowding your outlook today, but thank
+[00:08:16.220 --> 00:08:21.900]   you for responding or engaging and we're excited for your participation. I think many of you have,
+[00:08:21.900 --> 00:08:26.460]   I've seen a lot of familiar names as I've admitted you all down to the Zoom, but please if you haven't
+[00:08:26.460 --> 00:08:31.580]   or if you have people in your team who haven't, go ahead and head to the DevPost and create a profile.
+[00:08:32.140 --> 00:08:37.100]   If you are still looking for a team, please email me, but also you can indicate that on
+[00:08:37.100 --> 00:08:41.420]   your profile and I'll reach out as well. And so DevPost is a platform that hackathons use
+[00:08:42.060 --> 00:08:46.140]   and you'll submit your final video submission. And then sort
+[00:08:46.140 --> 00:08:51.500]   of as a way to talk about, yes, Austin, if you want to go ahead and unmute.
+[00:08:51.500 --> 00:08:56.620]   Thank you. I'm just wondering for DevPost, we have a team, like I've noticed that it says
+[00:08:56.620 --> 00:09:01.180]   already in a team. Is there a way to make sure that the guys that I requested are on my team in
+[00:09:01.180 --> 00:09:05.420]   DevPost or is that something we just figure out like before the meeting or before the competition?
+[00:09:05.420 --> 00:09:07.980]   Right. If you've already created a team,
+[00:09:07.980 --> 00:09:11.980]   I haven't put you in any other team. So if you have a team already created,
+[00:09:12.700 --> 00:09:16.060]   you don't have to worry about putting place in another team. The only people that I've placed in
+[00:09:16.060 --> 00:09:20.380]   a team is if they've communicated with me or indicated on the DevPost that they don't have a
+[00:09:20.380 --> 00:09:28.300]   team. And then I've also set you guys up in a Microsoft Teams. This is just going to be used
+[00:09:28.300 --> 00:09:33.020]   as an internal communication. I'll just sort of post in the channel throughout the competition
+[00:09:33.020 --> 00:09:37.900]   weekend when lunch is available. I'll put any documents. So I will upload the judging rubric
+[00:09:37.900 --> 00:09:45.980]   after this. As we have teams finalized, I'll put all the information on the Microsoft Teams. So if you aren't on there,
+[00:09:45.980 --> 00:09:50.860]   again, please just email me and I'll add you on there. Or if you have a teammate who isn't on there
+[00:09:50.860 --> 00:09:55.740]   as well. I know some people registered with their Gmail account. So I think some people, I was able
+[00:09:55.740 --> 00:10:01.820]   to tie in your TCU email. But if you aren't on the teams, just message me. And after this, I'll be
+[00:10:01.820 --> 00:10:06.460]   sort of going back and fine-tuning and making sure we're all there. But just wanted to highlight those
+[00:10:06.460 --> 00:10:14.300]   two spots because that's where we'll be sharing the most information. And then what Saturday is
+[00:10:14.300 --> 00:10:18.540]   going to look like. We're in 2303 A and B. It's the banquet room on the second floor of Neely.
+[00:10:19.100 --> 00:10:24.140]   So we'll just do check-in and breakfast from 8:30 to 9. We have a continental style breakfast with
+[00:10:24.140 --> 00:10:29.260]   fruit and pastries and we'll have coffee. We'll do a welcome sort of just housekeeping announcements
+[00:10:29.260 --> 00:10:33.420]   and that's when the cases go live. So Dr. Ali is going to end our kickoff meeting today just
+[00:10:33.420 --> 00:10:37.180]   sharing about the different cases and giving you a little bit background. But you won't get the full
+[00:10:37.180 --> 00:10:44.220]   information until tomorrow morning. And then again, I'll put all the documents on the teams for everyone to have access to.
+[00:10:44.220 --> 00:10:48.540]   We'll sort of give you time to start talking with your teams. And that's when we'll sort of
+[00:10:49.260 --> 00:10:53.820]   facilitate the mentor assignments. So we'll have mentors working with each team, but then we'll
+[00:10:53.820 --> 00:10:58.300]   have just technical advisors. Dr. Ali and I have talked about it sort of like the genius bar at the
+[00:10:58.300 --> 00:11:02.540]   Apple store. They'll be housed in a central location and anyone from your team can come
+[00:11:03.260 --> 00:11:07.660]   and ask them questions and they won't be formally assigned to a team because some of them will also
+[00:11:07.660 --> 00:11:14.140]   be serving as judges on Sunday. Then like Dr. Ali mentioned, we'll have some optional AI tool workshops just for you to
+[00:11:14.140 --> 00:11:19.820]   get more in-depth knowledge about AI or generate that fluency a little bit more. We have lunch.
+[00:11:19.820 --> 00:11:25.740]   We're having Jason's provided for us and so that will be all in the same banquet room. And then
+[00:11:25.740 --> 00:11:30.140]   you'll have time to build with your teams. We have study rooms reserved here on campus that you can
+[00:11:30.700 --> 00:11:36.220]   sign up for day of on Saturday or if you would rather take the build time somewhere else, whatever
+[00:11:36.220 --> 00:11:44.060]   you and your team decide. Again, you'll make sure that you have your mentor information and if mentors and volunteers are on
+[00:11:44.060 --> 00:11:50.220]   this Zoom, we know it's a long day and we just want to honor your time as well. So after
+[00:11:50.220 --> 00:11:53.900]   lunch, if you feel like you need to head off to something else, as long as your team has that
+[00:11:53.900 --> 00:11:59.020]   information to contact you, feel free to do that. And then we'll wrap up the day at 6 p.m.
+[00:11:59.020 --> 00:12:05.180]   with dinner and we'll be providing some Domino's pizza and all the room reservations are through
+[00:12:05.180 --> 00:12:09.020]   10 p.m. and if your students are here at TCU, you know you have access to the building.
+[00:12:09.820 --> 00:12:13.980]   On Sunday morning, we won't have any room reservations on campus. You'll be building for
+[00:12:13.980 --> 00:12:19.420]   whatever your team decides, but at 2 p.m. all projects need to be submitted on DevPost.
+[00:12:19.420 --> 00:12:23.340]   We just want a video showcasing the product that you've built and again I'll upload the
+[00:12:23.340 --> 00:12:27.660]   rubric to the teams just so you can know what it looks like. From 2 to 4 p.m. we're going to
+[00:12:27.660 --> 00:12:32.940]   do a participant showcase, so please just bring your laptop, have your project ready up on your
+[00:12:32.940 --> 00:12:38.220]   laptop to show and it'll just be almost like, you know, instead of a science fair, it's going to be a
+[00:12:38.220 --> 00:12:42.380]   AI fair. You're going to be getting to walk around looking at other people's projects, but then you'll
+[00:12:42.380 --> 00:12:43.900]   also be presenting your research.
+[00:12:43.900 --> 00:12:47.580]   You're presenting your projects to other people as well and really just showcasing all the wonderful
+[00:12:47.580 --> 00:12:53.820]   work that you did. And then we'll wrap up the day with an award ceremony. So again, here's the food
+[00:12:53.820 --> 00:12:58.540]   throughout the weekend. We'll do a light style continental breakfast tomorrow, lunch and dinner,
+[00:12:58.540 --> 00:13:03.580]   and then Sunday we'll have some light snacks available. Here's what some of the judging
+[00:13:03.580 --> 00:13:08.540]   criteria looks like and what some of our judges will be looking for in regards to the projects.
+[00:13:08.540 --> 00:13:11.660]   And again, I'll upload the rubric to teams once we get done with this call.
+[00:13:11.660 --> 00:13:13.820]   I already have it.
+[00:13:13.820 --> 00:13:17.740]   And so before Dr. Ali goes in to the case teasers,
+[00:13:18.780 --> 00:13:20.540]   is there any questions that I can answer?
+[00:13:20.540 --> 00:13:24.300]   Pharmaceuticals, that's gas.
+[00:13:24.300 --> 00:13:30.460]   Hey, Dr. Ali, go ahead and take it away. And please not my email. I'll put it in the chat,
+[00:13:31.180 --> 00:13:32.780]   but feel free to email me with any questions.
+[00:13:32.780 --> 00:13:37.980]   Pharmaceuticals.
+[00:13:37.980 --> 00:13:43.100]   So if you don't have questions, I would like to start by just saying,
+[00:13:43.740 --> 00:13:49.260]   ask me a question. How many of y'all have been involved with starting something? Anybody?
+[00:13:49.260 --> 00:13:51.980]   Wow.
+[00:13:53.260 --> 00:13:58.060]   So whoever said, had the thumbs up, can you tell me a little bit more about it, Aiden?
+[00:13:58.060 --> 00:14:06.780]   Yeah, how's it going? Yeah, I worked at a YC startup this past summer. It's a legal tech
+[00:14:06.780 --> 00:14:11.020]   company called Vulcan Technologies. I was doing some forward deployed engineering work
+[00:14:11.020 --> 00:14:11.980]   for them this past summer.
+[00:14:11.980 --> 00:14:13.660]   Mm-hmm . And what was
+[00:14:13.660 --> 00:14:14.860]   one key learning from there?
+[00:14:15.500 --> 00:14:18.940]   Key learning is automate everything. Every inconvenience you can really automate,
+[00:14:18.940 --> 00:14:21.740]   and it just overall increases your output and efficiency.
+[00:14:22.940 --> 00:14:24.060]   And thank you for sharing.
+[00:14:24.060 --> 00:14:24.380]   Of course.
+[00:14:24.380 --> 00:14:27.420]   Arun, I think you also had something about the startup?
+[00:14:29.900 --> 00:14:36.060]   Yeah, this is Arun. Yeah, I'm building something. I have not launched it yet. It is in the pre-launch
+[00:14:36.060 --> 00:14:42.860]   phase, but I'm building something that is going to go global. And the key thing that I understood is
+[00:14:43.580 --> 00:15:01.420]   that the technology is not a problem to solve at all. It is a functionality. So the more we connect to the people, I think the product is going to win. So I never felt technology as a problem. I only felt understanding an objective and building to connect with people is a problem. So that's the problem we need to solve.
+[00:15:01.420 --> 00:15:09.100]   Great. So thanks for sharing that, Arun. So the key message that you shared was that connect the business to the technology. Did I get that right?
+[00:15:09.100 --> 00:15:10.620]   Yeah, that's the key message.
+[00:15:10.620 --> 00:15:15.500]   And more than the technology, I would say, I mean, technology helps you,
+[00:15:15.500 --> 00:15:17.820]   and the technology is not a problem. So connect the business with the people.
+[00:15:19.580 --> 00:15:24.220]   Michael, you have had a few startups, both Gups and Chiron. Any thoughts?
+[00:15:27.500 --> 00:15:30.860]   Yeah, I just had to come off mute there, but it's good to see you, Dr. Lee. It's been a while.
+[00:15:32.540 --> 00:15:39.020]   You know, I think that what's interesting is outcomes. In everything that I've built along the way, when we focus on the outcomes,
+[00:15:39.020 --> 00:15:47.980]   for the customer or the user, then that's when you see more success. So with that outcome in mind, you can kind of back into how you deliver that experience.
+[00:15:47.980 --> 00:15:51.340]   Thanks for sharing that, Michael. Sharad, anything from your side?
+[00:15:51.340 --> 00:15:55.820]   It's going to blow their mind when I tell them something silly. By the way, I've built that in like four hours.
+[00:15:57.420 --> 00:16:08.940]   So I've been part of a few startups also, and the couple of learnings that I have from them is that, number one, you know, it's never about the technology.
