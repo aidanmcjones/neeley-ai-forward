@@ -1,13 +1,20 @@
-"""FIND over the detectors' saved candidate findings; writes findings_v2 and the league table (no model call).
+"""FIND over the detectors' saved candidate findings; writes findings_v3 and the league table (no model call).
 
   python -m agent.needle.quant.run --all            all 10 shortlist companies + out/league_v3.json, .md and
                                                     out/league_v3_robustness.json (the variant table)
-  python -m agent.needle.quant.run --ticker LLY     one company (out/LLY/findings_v2.jsonl)
+  python -m agent.needle.quant.run --ticker LLY     one company (out/LLY/findings_v3.jsonl, rejected_v3.jsonl)
   python -m agent.needle.quant.run --all --detect   re-run the detectors first (agent.needle.run.detect)
   python -m agent.needle.quant.run --all --nuggets docs/nuggets   add nugget-miner rows as candidates
 
+  python -m agent.needle.quant.run --all --public   footnotes rendered with licensed text withheld
+
 Inputs: out/<T>/signals_<detector>.jsonl (the existing engine's candidates), the moat (env NEEDLE_MOAT), the
-citation index (env CITATIONS_DB). Output per finding: every FIND component, citations, confidence, old S.
+citation index (env CITATIONS_DB). Output per finding: every FIND component, citations, confidence, old S, and
+numeric_check (agent.needle.cite.gate). The numeric gate runs after scoring and before the league: every number in
+the sentence (with its peer comparison) and in the impact formula must be verified by a passing citation, derived
+from cited operands, or a labelled assumption. A row that fails goes to out/<T>/rejected_v3.jsonl with its
+numeric_check and "rejected_by": "numeric_gate", and is excluded from the top 5, from L and from the Sharpest Needle.
+Rows with E = 0 or a drop guard go there too ("rejected_by": "no page evidence" / "drop guard").
 """
 
 import argparse
@@ -17,6 +24,8 @@ import time
 
 from agent.needle.detect import OUT, SHORTLIST
 from agent.needle.schema import Signal, read_jsonl
+
+from agent.needle.cite.gate import gate_record
 
 from . import data, find, guards, league
 
@@ -40,6 +49,26 @@ def _old_league():
         rows = json.loads(p.read_text()) if p.exists() else []
     rows = sorted(rows, key=lambda r: -r["score"])
     return {r["ticker"]: (r["score"], i + 1, r.get("sharpest_needle")) for i, r in enumerate(rows)}
+
+
+GATE_TEXT = ["sentence", "impact.formula"]   # the prose the UI renders: sentence (with the peer comparison) and math
+PUBLIC = False                                # --public: footnotes withhold licensed text (render public=True)
+GATE_LOG = {}                                 # ticker -> {"passed", "total", "unsupported", "reasons"} (last run)
+
+
+def gate_findings(fs):
+    """[(Scored, record with numeric_check)] split into (passed, failed) by the numeric gate (fail closed)."""
+    ok_rows, bad_rows = [], []
+    for f in fs:
+        f.public = PUBLIC
+        try:
+            rec, ok = gate_record(f.to_dict(), GATE_TEXT, "citations")
+        except Exception as e:                   # fail closed: a row the gate cannot check is not shown
+            rec, ok = dict(f.to_dict(), numeric_check={"status": "failed", "checked": 0, "total": 0, "verified": 0,
+                                                       "derived": 0, "assumed": 0, "unsupported": [
+                                                           {"value": None, "where": "record", "reason": f"gate error: {e}"}]}), False
+        (ok_rows if ok else bad_rows).append((f, rec))
+    return ok_rows, bad_rows
 
 
 def score_ticker(ticker, write=True, extra_signals=None):
@@ -67,6 +96,14 @@ def score_ticker(ticker, write=True, extra_signals=None):
         (shown if f.vector["E"] > 0 and not dropped else withheld).append(f)
     for f in find.ira_findings(ticker, co) + find.mfn_findings(ticker, co):
         (shown if f.vector["E"] > 0 else withheld).append(f)
+    # numeric gate (docs/gate_wiring.md 1): after scoring, before the league; failed rows never reach the top 5
+    passed, failed = gate_findings(shown)
+    shown = [f for f, _ in passed]
+    gated = failed
+    GATE_LOG[ticker] = {"passed": len(passed), "total": len(passed) + len(failed),
+                        "unsupported": sum(len(r["numeric_check"]["unsupported"]) for _, r in failed),
+                        "failed": [{"id": f.id, "kind": f.kind, "S": f.S, "unsupported": r["numeric_check"]["unsupported"]}
+                                   for f, r in failed]}
     shown.sort(key=lambda f: -f.S)
     # review R2: a text or call row mapped to a channel points at the row that carries that channel's dollars
     for f in shown:
@@ -75,16 +112,27 @@ def score_ticker(ticker, write=True, extra_signals=None):
             f.flags.append(f"corroborates {tgt.id} ({tgt.kind})" if tgt else
                            f"no scored {f.impact.channel} row for {ticker}: not quantified")
     if not write:
-        return co, shown, withheld
+        return co, shown, withheld + [f for f, _ in gated]
     d = OUT / ticker
     d.mkdir(parents=True, exist_ok=True)
-    with (d / "findings_v2.jsonl").open("w", encoding="utf-8") as fh:
+    recs = {f.id: r for f, r in passed}
+    with (d / "findings_v3.jsonl").open("w", encoding="utf-8") as fh:
         for f in shown:
-            fh.write(json.dumps(f.to_dict(), default=str, ensure_ascii=False) + "\n")
-    with (d / "rejected_v2.jsonl").open("w", encoding="utf-8") as fh:
+            rec, _ = gate_record(f.to_dict(), GATE_TEXT, "citations") if f.id not in recs else (recs[f.id], True)
+            fh.write(json.dumps(rec, default=str, ensure_ascii=False) + "\n")
+    with (d / "rejected_v3.jsonl").open("w", encoding="utf-8") as fh:
+        for f, rec in gated:
+            fh.write(json.dumps(dict(rec, rejected_by="numeric_gate"), default=str, ensure_ascii=False) + "\n")
         for f in withheld:
-            fh.write(json.dumps(f.to_dict(), default=str, ensure_ascii=False) + "\n")
-    return co, shown, withheld
+            f.public = PUBLIC
+            rec, _ = gate_record(f.to_dict(), GATE_TEXT, "citations")
+            why = "drop guard" if f.guard == "drop" else "no page evidence"
+            fh.write(json.dumps(dict(rec, rejected_by=why), default=str, ensure_ascii=False) + "\n")
+    for old in ("findings_v2.jsonl", "rejected_v2.jsonl"):     # ungated v2 rows must not linger next to v3
+        (d / old).unlink(missing_ok=True)
+    g = GATE_LOG[ticker]
+    print(f"{ticker} gate: {g['passed']}/{g['total']} passed, {g['unsupported']} numbers unsupported")
+    return co, shown, withheld + [f for f, _ in gated]
 
 
 def load_nuggets(path):
@@ -137,6 +185,8 @@ def league_rows(tickers, extra_signals=None, write=True):
         rows.append({"ticker": t, "L": L, "top5_sum": raw, "N_eff": ne, "blocks": blocks,
                      "largest_share": (top[0].S / raw) if raw else 0.0,
                      "n_blocks": len(blocks), "n_findings": len(fs), "n_withheld": len(wh),
+                     "n_gate_rejected": GATE_LOG.get(t, {}).get("total", 0) - GATE_LOG.get(t, {}).get("passed", 0),
+                     "gate_failed": GATE_LOG.get(t, {}).get("failed", []),
                      "n_scored": sum(f.S > 0 for f in fs), "n_not_quantified": sum(bool(f.not_quantified) for f in fs),
                      "n_guarded": sum(bool(f.guard) for f in fs + wh),
                      "comparable": co.comparable, "company_flags": co.flags,
@@ -273,7 +323,7 @@ def render_md(rows, rob=None):
         L.append(f"Constants: Rev_TTM {c['Rev_TTM']:,.1f}, t {c['t']:.4f}, D {c['D']:,.1f}M, sigma_EPS "
                  f"{c['sigma_EPS']:.4f} {c['currency']}. Largest finding share {r['largest_share']:.0%}. Findings "
                  f"{r['n_findings']} ({r['n_scored']} scored, {r['n_not_quantified']} not quantified), withheld "
-                 f"{r['n_withheld']}, guarded {r['n_guarded']}. Flags: {'; '.join(r['company_flags']) or 'none'}")
+                 f"{r['n_withheld']} (numeric gate {r.get('n_gate_rejected', 0)}), guarded {r['n_guarded']}. Flags: {'; '.join(r['company_flags']) or 'none'}")
         L.append("")
         L.append("| # | S | M | D | O | E | pi | c | Conf | Block | Finding |")
         L.append("|---|---|---|---|---|---|---|---|---|---|---|")
@@ -295,7 +345,10 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--detect", action="store_true", help="re-run the detectors and the old scorer first")
     ap.add_argument("--nuggets", help="nugget-miner JSONL file or directory (docs/nuggets): extra candidate findings")
+    ap.add_argument("--public", action="store_true", help="render footnotes with licensed text withheld (public build)")
     a = ap.parse_args()
+    global PUBLIC
+    PUBLIC = a.public
     extra = load_nuggets(a.nuggets) if a.nuggets else None
     tickers = SHORTLIST if a.all or not a.ticker else [a.ticker.upper()]
     t0 = time.time()

@@ -80,17 +80,68 @@ def fact_citation(table, source_row, fld, value=None, license=""):
         v = Verification("unverified", 0.0, _now(), f"no facts row {table} {source_row} {fld}")
         return Citation(canonical_id=table, quote=f"{source_row} {fld}={value}", claim_type="number",
                         value=None if value is None else str(value), verification=v, confidence_note=v.detail)
-    ok = value is None or _num_eq(r["value"], value)
-    status = "exact" if ok and r["verify_status"] not in ("dropped", "False", "no") else "unverified"
-    note = f"facts row {r['row_key']} re-read ({r['verify_status']})"
+    from agent.needle.cite.facts import fact_citation_status, fact_status_grade
+    reread = value is not None and _num_eq(r["value"], value)
+    status = fact_citation_status(r["verify_status"], reread)
+    grade, label = fact_status_grade(r["verify_status"])
+    note = f"facts row {r['row_key']} re-read ({r['verify_status']}: {label})"
+    if label == "machine data":
+        note += "; machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    if value is not None and not reread:
+        note += f"; cited value {value} differs from the row value {r['value']}"
     lic = license or ("wrds_licensed" if r["verify_status"] == "no_verified_copy" else "")
     src = r["source"] or ""
     return Citation(canonical_id=table, page=None, quote=f"{r['row_key']} [{source_row}] {fld} = {r['value']}",
                     claim_type="number", value=str(r["value"]), unit=r["unit"] or "", doc_title=f"moat table {table}",
                     location=f"row {r['row_key']}", source_url=src if src.startswith("http") else "",
                     deep_link=src if src.startswith("http") else "", license=lic, page_scheme="none",
-                    verification=Verification(status, 1.0 if status == "exact" else 0.0, _now(), note),
+                    verification=Verification(status, grade if status != "unverified" else 0.0, _now(), note),
                     confidence_note=note)
+
+
+def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, license=""):
+    """Citation for one field of a facts row's row_json (citations.sqlite facts keeps one indexed field per table
+    row; the other columns live in row_json). The row is found by table + ticker (+ row_key, + a dict of row_json
+    fields that must match), the field re-read from row_json and compared with `value`; the status follows the
+    facts.verify_status whitelist (agent.needle.cite.facts). No row, or a value that differs: unverified."""
+    import json as _json
+    q, args = 'SELECT * FROM facts WHERE "table" = ?', [table]
+    if ticker:
+        q += " AND ticker = ?"
+        args.append(ticker)
+    if row_key:
+        q += " AND row_key = ?"
+        args.append(row_key)
+    try:
+        rows = db().execute(q, args).fetchall()
+    except Exception:
+        rows = []
+    for r in rows:
+        try:
+            rj = _json.loads(r["row_json"] or "{}")
+        except ValueError:
+            continue
+        if where and any(str(rj.get(k, "")).strip().lower() != str(v).strip().lower() for k, v in where.items()):
+            continue
+        if fld not in rj:
+            continue
+        from agent.needle.cite.facts import fact_citation_status, fact_status_grade
+        reread = value is not None and _num_eq(rj[fld], value)
+        status = fact_citation_status(r["verify_status"], reread)
+        grade, label = fact_status_grade(r["verify_status"])
+        note = f"facts row {r['row_key']} field {fld} re-read from row_json ({r['verify_status']}: {label})"
+        if value is not None and not reread:
+            note += f"; cited value {value} differs from the row value {rj[fld]}"
+        src = r["source"] or ""
+        return Citation(canonical_id=table, page=None, quote=f"{r['row_key']} {fld} = {rj[fld]}",
+                        claim_type="number", value=str(rj[fld]), unit=r["unit"] if r["field"] == fld else ("%" if fld.endswith("_pct") else ""),
+                        ticker=ticker or "", doc_title=f"moat table {table}", location=f"row {r['row_key']}",
+                        source_url=src if src.startswith("http") else "", deep_link=src if src.startswith("http") else "",
+                        license=license or ("wrds_licensed" if r["verify_status"] == "no_verified_copy" else ""),
+                        page_scheme="none",
+                        verification=Verification(status, grade if status != "unverified" else 0.0, _now(), note),
+                        confidence_note=note)
+    return table_citation(table, row_key or ticker or "", fld, value)
 
 
 def _num_eq(a, b):
@@ -100,30 +151,103 @@ def _num_eq(a, b):
         return str(a) == str(b)
 
 
+def _xbrl_reread(ticker, concept, frame):
+    """[(value, unit)] for concept (one name or 'A/B') at the companyfacts frame, read from the file."""
+    try:
+        f = xbrl._facts(ticker)
+    except Exception:
+        return []
+    out = []
+    for name in str(concept).split("/"):
+        name = name.split(":")[-1]
+        for ns in ("us-gaap", "ifrs-full", "dei"):
+            node = f.get("facts", {}).get(ns, {}).get(name)
+            if not node:
+                continue
+            for unit, vals in node.get("units", {}).items():
+                out += [(float(v["val"]), unit) for v in vals if v.get("frame") == frame]
+    return out
+
+
 def xbrl_citation(ticker, concept, frame, value, unit="USD"):
-    """Citation for one SEC companyfacts value (concept + frame), re-read from the XBRL file by code."""
+    """Citation for one SEC companyfacts value (concept + frame), re-read from the XBRL file inside this function
+    (review C4): status number_match only when the file has that frame and its value equals the cited value (value in
+    millions when the unit says millions, else as given); a frame the file does not carry (CY####Q4 for most 10-K
+    filers, review D11) or a different value is unverified."""
     cik = CIK.get(ticker.upper())
     url = f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json" if cik else ""
-    note = f"companyfacts {concept} frame {frame} re-read from xbrl_companyfacts.json.gz"
+    found = _xbrl_reread(ticker.upper(), concept, frame)
+    ok = any(abs(v - value * 1e6) <= 1e-6 * max(1.0, abs(v)) or abs(v - value) <= 1e-6 * max(1.0, abs(v))
+             for v, _ in found)
+    if ok:
+        status, note = "number_match", f"companyfacts {concept} frame {frame} re-read from xbrl_companyfacts.json.gz: equal"
+    elif found:
+        status, note = "unverified", (f"companyfacts {concept} frame {frame} holds {found[0][0]:,.0f}, not the cited "
+                                      f"{value:,.0f}")
+    else:
+        status, note = "unverified", f"companyfacts has no frame {frame} for {concept} (re-read failed)"
     return Citation(canonical_id=f"xbrl:{ticker.upper()}", page=None, quote=f"{concept} {frame} = {value:,.0f}",
                     claim_type="number", value=f"{value:,.0f}", unit=unit, ticker=ticker.upper(),
                     doc_title=f"{ticker.upper()} SEC XBRL companyfacts", location=f"{concept} {frame}",
                     source_url=url, deep_link=url, page_scheme="none",
-                    verification=Verification("exact", 1.0, _now(), note), confidence_note=note)
+                    verification=Verification(status, 0.6 if ok else 0.0, _now(), note), confidence_note=note)
 
 
-def derived_citation(formula, value, operands, unit=""):
+# Derived citations remember their expression and operands by cite_id so the numeric gate can re-compute them
+# (gate.derived_entry); data.derived_citation itself stores only a formula string.
+DERIVED_OPS = {}
+CITES = {}          # cite_id -> Citation for every operand of a derived citation (expand_citations)
+
+
+def expand_citations(cites):
+    """cites plus, recursively, every operand Citation of each derived citation, deduped by cite_id (order kept).
+    A record must carry a derived citation's operands inline (the UI and gate_record check it)."""
+    out, seen = [], set()
+
+    def add(c):
+        if c is None or c.cite_id in seen:
+            return
+        seen.add(c.cite_id)
+        out.append(c)
+        for oid in getattr(c, "operands", None) or []:
+            add(CITES.get(oid))
+    for c in cites:
+        add(c)
+    return out
+
+
+def derived_citation(formula, value, operands, unit="", expr=None, names=None):
     """kind "derived": computed by code from cited operands. Status "derived" (never "exact": no document shows the
     number); its score is the weakest operand's grade (spec 4.5 derived_code), which evidence.grade uses."""
     worst = min(operands, key=lambda c: _rank(c.verification.status)) if operands else None
     note = (f"derived by code: {formula}; operands " +
             ", ".join(f"{c.location or c.canonical_id} ({c.cite_id})" for c in operands))
-    return Citation(canonical_id="derived", quote=formula, claim_type="number", value=f"{value:,.4g}", unit=unit,
+    c = Citation(canonical_id="derived", quote=formula, claim_type="number", value=f"{value:,.4g}", unit=unit,
                     doc_title="derived", doc_type="derived", raw_doc_type="derived", location="computed",
                     page_scheme="none",
                     verification=Verification("derived", worst.verification.score if worst and
                                               worst.verification.ok else 0.0, _now(), note),
                     confidence_note=note)
+    c.operands = [o.cite_id for o in operands]
+    CITES.update({o.cite_id: o for o in operands})
+    if expr:
+        DERIVED_OPS[c.cite_id] = (expr, dict(zip(names or [f"o{i}" for i in range(len(operands))], operands)), value)
+    return c
+
+
+def gate_operand(c, dmap, value=None):
+    """A gate operand for citation c: a derived citation registers its own derived entry in dmap (recursively) and
+    returns {"derived": key}; any other citation returns (value, c) with value defaulting to c.value."""
+    from agent.needle.cite.gate import derived_entry
+    spec = DERIVED_OPS.get(c.cite_id)
+    if spec is None:
+        v = value if value is not None else float(str(c.value).replace(",", ""))
+        return (v, c)
+    expr, ops, val = spec
+    key = f"d_{c.cite_id}"
+    if key not in dmap:
+        dmap[key] = derived_entry(val, expr, {n: gate_operand(o, dmap) for n, o in ops.items()}, c.unit)
+    return {"derived": key}
 
 
 def has_frame(ticker, col, q):
@@ -146,6 +270,9 @@ def flow_citation(ticker, p, col, q, value, unit):
     ops = ([xbrl_citation(ticker, _concept(p, col, q), f"CY{y}", fy, unit)] if fy is not None else []) + \
           [xbrl_citation(ticker, _concept(p, col, f"{y}Q{n}"), f"CY{y}Q{n}", float(p.at[f"{y}Q{n}", col]) / 1e6, unit)
            for n in (1, 2, 3)]
+    if len(ops) == 4:
+        return derived_citation(f"{col} CY{y} - (CY{y}Q1 + CY{y}Q2 + CY{y}Q3) = {value:,.0f}", value, ops, unit,
+                                expr="fy - q1 - q2 - q3", names=["fy", "q1", "q2", "q3"])
     return derived_citation(f"{col} CY{y} - (CY{y}Q1 + CY{y}Q2 + CY{y}Q3) = {value:,.0f}", value, ops, unit)
 
 
@@ -374,13 +501,13 @@ def latest_release_page1(ticker):
     return r[0], (pg[0] if pg else "")
 
 
-def fact_by_key(table, row_key, fld="value"):
+def fact_by_key(table, row_key, fld="value", value=None):
     """Facts row looked up by its row_key (e.g. policy_exposure row_id R010)."""
     r = db().execute('SELECT source_row FROM facts WHERE "table" = ? AND row_key = ? AND field = ? LIMIT 1',
                      (table, row_key, fld)).fetchone()
     if r is None:
-        return table_citation(table, row_key, fld, None)
-    return fact_citation(table, r[0], fld)
+        return table_citation(table, row_key, fld, value)
+    return fact_citation(table, r[0], fld, value)
 
 
 def table_citation(table, row_key, fld, value, licensed=False):
