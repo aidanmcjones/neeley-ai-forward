@@ -1,0 +1,313 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:19+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT03517722",
+   "title": "A Study of Ustekinumab in Participants With Active Systemic Lupus Erythematosus",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated early as a result of the outcome of the pre-planned Interim Analysis",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT03517722"
+  },
+  {
+   "nct_id": "NCT03982199",
+   "title": "A Study of an Ad26.RSV.preF-based Regimen in the Prevention of Reverse Transcriptase Polymerase Chain Reaction (RT-PCR)-Confirmed Respiratory Syncytial Virus (RSV)-Mediated Lower Respiratory Tract Disease in Adults Aged 65 Years and Older",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated early by the sponsor due to strategic reprioritization reasons.",
+   "last_update": "2025-05-25",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Vaccines & Prevention B.V.",
+   "url": "https://clinicaltrials.gov/study/NCT03982199"
+  },
+  {
+   "nct_id": "NCT02406027",
+   "title": "An Extension Study to Evaluate the Long-Term Safety and Tolerability of JNJ-54861911 in Participants in the Early Alzheimer's Disease Spectrum",
+   "status": "TERMINATED",
+   "why_stopped": "",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT02406027"
+  },
+  {
+   "nct_id": "NCT03981744",
+   "title": "A Study of Ustekinumab in Participants With Active Polymyositis and Dermatomyositis Who Have Not Adequately Responded to One or More Standard-of-care Treatments",
+   "status": "TERMINATED",
+   "why_stopped": "The study did not meet the primary endpoint.",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Pharmaceutical K.K.",
+   "url": "https://clinicaltrials.gov/study/NCT03981744"
+  },
+  {
+   "nct_id": "NCT06635135",
+   "title": "A Study of Aticaprant Plus an Antidepressant to Prevent Return of Depression Symptoms in Participants With Major Depressive Disorder Who Experience a Loss of Interest and Pleasure",
+   "status": "TERMINATED",
+   "why_stopped": "Early study termination due to insufficient efficacy.",
+   "last_update": "2026-06-08",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT06635135"
+  },
+  {
+   "nct_id": "NCT02437162",
+   "title": "A Study to Evaluate the Efficacy and Safety of Ustekinumab in the Treatment of Anti-TNF\u03b1 Naive Participants With Active Radiographic Axial Spondyloarthritis",
+   "status": "TERMINATED",
+   "why_stopped": "Neither dose achieved the study's primary or major secondary endpoints. The safety profile was consistent with previous ustekinumab studies.",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT02437162"
+  },
+  {
+   "nct_id": "NCT04882072",
+   "title": "A Study of Ustekinumab in Participants With Takayasu Arteritis (TAK)",
+   "status": "TERMINATED",
+   "why_stopped": "Due to difficulties in enrollment and ongoing feasibility issues",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Pharmaceutical K.K.",
+   "url": "https://clinicaltrials.gov/study/NCT04882072"
+  },
+  {
+   "nct_id": "NCT05461209",
+   "title": "A Study of Comparing Talquetamab to Belantamab Mafodotin in Participants With Relapsed/Refractory Multiple Myeloma",
+   "status": "WITHDRAWN",
+   "why_stopped": "Business Decision",
+   "last_update": "2025-08-15",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT05461209"
+  },
+  {
+   "nct_id": "NCT02569398",
+   "title": "An Efficacy and Safety Study of Atabecestat in Participants Who Are Asymptomatic at Risk for Developing Alzheimer's Dementia",
+   "status": "TERMINATED",
+   "why_stopped": "Change in benefit-risk profile for individuals with early sporadic Alzheimer Disease because of elevations in liver enzymes in subjects receiving atabecestat",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT02569398"
+  },
+  {
+   "nct_id": "NCT05242432",
+   "title": "A Study of Adenovirus Serotype 26.Respiratory Syncytial Virus.Pre-Fusion F (Ad26.RSV.preF)-Based Vaccine for Prevention of Respiratory Syncytial Virus (RSV) Mediated- Lower Respiratory Tract Disease (LRTD) in Japanese Participants",
+   "status": "TERMINATED",
+   "why_stopped": "Terminated (Janssen made the strategic decision to discontinue the RSV3007 study. This decision is not based on any safety concerns.)",
+   "last_update": "2025-05-23",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Pharmaceutical K.K.",
+   "url": "https://clinicaltrials.gov/study/NCT05242432"
+  },
+  {
+   "nct_id": "NCT05518149",
+   "title": "A Study of Aticaprant in Adult and Elderly Participants With Major Depressive Disorder (MDD)",
+   "status": "TERMINATED",
+   "why_stopped": "The study was Early Terminated as per Sponsor's decision (communicated to sites on 06Mar2025)",
+   "last_update": "2026-10-06",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT05518149"
+  },
+  {
+   "nct_id": "NCT05327816",
+   "title": "A Study of Various Respiratory Syncytial Virus (RSV) Pre-Fusion (preF)-Based Vaccine Formulations in Adults Aged 60 Years and Older",
+   "status": "TERMINATED",
+   "why_stopped": "Based on recent study data from VAC18193, it was decided to terminate the study. There are no underlying safety concerns to terminate VAC18195RSV1001",
+   "last_update": "2025-05-25",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Vaccines & Prevention B.V.",
+   "url": "https://clinicaltrials.gov/study/NCT05327816"
+  },
+  {
+   "nct_id": "NCT04532749",
+   "title": "A Study of Seltorexant as Adjunctive Therapy to Antidepressants in Adult and Elderly Participants With Major Depressive Disorder With Insomnia Symptoms Who Have Responded Inadequately to Antidepressant Therapy",
+   "status": "TERMINATED",
+   "why_stopped": "42847922MDD3002 was stopped based on the interim analysis (IA) results as recommended by the Independent Data Monitoring Committee (IDMC)",
+   "last_update": "2025-06-04",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT04532749"
+  },
+  {
+   "nct_id": "NCT02354014",
+   "title": "Pharmacokinetic Study to Evaluate Anti-mycobacterial Activity of TMC207 in Combination With Background Regimen (BR) of Multidrug Resistant Tuberculosis (MDR-TB) Medications for Treatment of Children/Adolescents With Pulmonary MDR-TB",
+   "status": "SUSPENDED",
+   "why_stopped": "As part of the protocol-specified interim pharmacokinetic (PK) evaluation in Study TMC207-C211, PK data demonstrated lower-than-anticipated bedaquiline exposure",
+   "last_update": "2026-09-17",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT02354014"
+  },
+  {
+   "nct_id": "NCT04655807",
+   "title": "A Study of JNJ-64304500 as Add-on Therapy in Participants With Active Crohn's Disease",
+   "status": "WITHDRAWN",
+   "why_stopped": "Sponsor Decision.",
+   "last_update": "2025-04-27",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT04655807"
+  },
+  {
+   "nct_id": "NCT02438787",
+   "title": "A Study to Evaluate the Efficacy and Safety of Ustekinumab in the Treatment of Anti-TNF(Alpha) Refractory Participants With Active Radiographic Axial Spondyloarthritis",
+   "status": "TERMINATED",
+   "why_stopped": "This study was stopped because ustekinumab did not achieve key endpoints in a related study. The safety profile was consistent with past ustekinumab studies.",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT02438787"
+  },
+  {
+   "nct_id": "NCT05784129",
+   "title": "A Study of Guselkumab for the Treatment of Participants With Crohn's Disease After Surgical Resection",
+   "status": "TERMINATED",
+   "why_stopped": "Janssen made an internal business decision to discontinue the PROGRESS study. This decision is not related to any efficacy or safety concerns.",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT05784129"
+  },
+  {
+   "nct_id": "NCT05201794",
+   "title": "A Study of JNJ-64281802 for the Prevention of Dengue Infection",
+   "status": "TERMINATED",
+   "why_stopped": "The study was stopped due to portfolio reprioritization. This decision is not based on any safety concerns.",
+   "last_update": "2025-07-31",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT05201794"
+  },
+  {
+   "nct_id": "NCT01114698",
+   "title": "A Safety and Efficacy Study of JNJ26489112 in Patients With Treatment-Resistant Major Depressive Disorder",
+   "status": "TERMINATED",
+   "why_stopped": "Study was terminated due to sponsor portfolio decision.",
+   "last_update": "2025-04-29",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT01114698"
+  },
+  {
+   "nct_id": "NCT04619420",
+   "title": "A Study of JNJ-63733657 in Participants With Early Alzheimer's Disease",
+   "status": "TERMINATED",
+   "why_stopped": "Posdinemab did not achieve statistical significance in slowing clinical decline",
+   "last_update": "2026-04-03",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT04619420"
+  },
+  {
+   "nct_id": "NCT03852160",
+   "title": "A Study of Esketamine Nasal Spray Plus a New Standard-of-care Oral Antidepressant or Placebo Nasal Spray Plus a New Standard-of-care Oral Antidepressant in Adult and Elderly Participants With Treatment-resistant Depression",
+   "status": "WITHDRAWN",
+   "why_stopped": "New design was developed to better fit company strategy, a new study has replaced 5413541TRD3011 study",
+   "last_update": "2025-04-27",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen-Cilag International NV",
+   "url": "https://clinicaltrials.gov/study/NCT03852160"
+  },
+  {
+   "nct_id": "NCT06514742",
+   "title": "A Study of Aticaprant 10 mg as Adjunctive Therapy in Adult Participants With Major Depressive Disorder (MDD) With Moderate-to-severe Anhedonia and Inadequate Response to Current Antidepressant Therapy and Long-term Extension Treatment With Aticaprant",
+   "status": "TERMINATED",
+   "why_stopped": "Early study termination due to insufficient efficacy.",
+   "last_update": "2026-02-17",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT06514742"
+  },
+  {
+   "nct_id": "NCT04883619",
+   "title": "A Study of Nipocalimab in Adult Participants With Active Lupus Nephritis",
+   "status": "WITHDRAWN",
+   "why_stopped": "Business Decision",
+   "last_update": "2026-02-27",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT04883619"
+  },
+  {
+   "nct_id": "NCT06881251",
+   "title": "A Study of JNJ-95475939 in the Treatment of Participants With Moderate to Severe Atopic Dermatitis (AD)",
+   "status": "TERMINATED",
+   "why_stopped": "Terminated: futility criteria met at interim efficacy analysis.",
+   "last_update": "2026-07-31",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT06881251"
+  },
+  {
+   "nct_id": "NCT04633447",
+   "title": "A Study to Evaluate Guselkumab for the Treatment of Participants With New-onset or Relapsing Giant Cell Arteritis",
+   "status": "TERMINATED",
+   "why_stopped": "The study primary endpoint was not met",
+   "last_update": "2025-07-01",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Janssen Research & Development, LLC",
+   "url": "https://clinicaltrials.gov/study/NCT04633447"
+  }
+ ],
+ "sponsors_queried": [
+  "Janssen",
+  "Johnson & Johnson"
+ ],
+ "since": "2025-04-17"
+}

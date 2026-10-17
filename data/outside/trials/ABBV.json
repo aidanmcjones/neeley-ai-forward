@@ -1,0 +1,154 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:18+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT05368558",
+   "title": "Study to Assess Adverse Events and Change in Disease Activity of Oral Cariprazine Capsules in Adult Participants With Schizophrenia",
+   "status": "TERMINATED",
+   "why_stopped": "Strategic considerations",
+   "last_update": "2025-10-20",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT05368558"
+  },
+  {
+   "nct_id": "NCT06032546",
+   "title": "A Study to Assess Change in Disease Activity, Adverse Events, and How the Drug Moves Through the Body in Adult Participants Living With Human Immunodeficiency Virus (HIV) Receiving Intravenous (IV) Infusion or Subcutaneous (SC) Injection of Budigalimab and/or ABBV-382",
+   "status": "TERMINATED",
+   "why_stopped": "Company Decision",
+   "last_update": "2025-10-29",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT06032546"
+  },
+  {
+   "nct_id": "NCT04161885",
+   "title": "A Study Evaluating Safety and Efficacy of Venetoclax in Combination With Azacitidine Versus Standard of Care After Allogeneic Stem Cell Transplantation (SCT) in Participants With Acute Myeloid Leukemia (AML)",
+   "status": "TERMINATED",
+   "why_stopped": "Strategic considerations",
+   "last_update": "2026-06-04",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT04161885"
+  },
+  {
+   "nct_id": "NCT05316220",
+   "title": "A Study to Assess Adverse Events and Change in Disease Condition of Mesalamine Capsules in Children Aged 5 to 17 Years With Ulcerative Colitis",
+   "status": "WITHDRAWN",
+   "why_stopped": "strategic considerations",
+   "last_update": "2025-08-12",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT05316220"
+  },
+  {
+   "nct_id": "NCT05443724",
+   "title": "A Study to Evaluate Safety and Tolerability of CVL-231 (Emraclidine) in Adult Participants With Schizophrenia",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated due to business reasons, not safety reasons.",
+   "last_update": "2026-08-21",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT05443724"
+  },
+  {
+   "nct_id": "NCT05941442",
+   "title": "A Study to Evaluate Efficacy, Safety, and Tolerability of Darigabat in Participants With Panic Disorder",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor terminated due to significant enrollment and study design challenges",
+   "last_update": "2026-05-07",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT05941442"
+  },
+  {
+   "nct_id": "NCT04686786",
+   "title": "An Open-label Extension Trial of CVL-865 as Adjunctive Therapy in the Treatment of Focal Onset Seizures",
+   "status": "TERMINATED",
+   "why_stopped": "Closed early after CVL-865-SZ-001 (NCT04244175) did not meet its primary objective",
+   "last_update": "2025-12-11",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT04686786"
+  },
+  {
+   "nct_id": "NCT04064827",
+   "title": "A Study to Evaluate Safety, Efficacy and Pharmacokinetics of Paricalcitol For Treatment of Secondary Hyperparathyroidism (SHPT) in Pediatric Participants With Stage 5 Chronic Kidney Disease (CKD)",
+   "status": "TERMINATED",
+   "why_stopped": "Company Decision",
+   "last_update": "2026-06-15",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT04064827"
+  },
+  {
+   "nct_id": "NCT05028569",
+   "title": "Study of BOTOX Injections in Prevention of Migraine in Adult Participants With Episodic Migraine",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated early due to lack of efficacy from the primary analysis results.",
+   "last_update": "2025-12-09",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT05028569"
+  },
+  {
+   "nct_id": "NCT05513703",
+   "title": "A Study to Assess Disease Activity of Intravenously (IV) Infused Telisotuzumab Vedotin in Adult Participants With Advanced/Metastatic Non-Squamous Non-Small Cell Lung Cancer (NSCLC)",
+   "status": "TERMINATED",
+   "why_stopped": "Strategic considerations",
+   "last_update": "2025-10-24",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT05513703"
+  },
+  {
+   "nct_id": "NCT05785715",
+   "title": "Study to Evaluate the Clinical Activity and Safety of Oral NX-13 in Moderate to Severe Ulcerative Colitis",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision\\_Not Safety Related",
+   "last_update": "2026-06-15",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT05785715"
+  },
+  {
+   "nct_id": "NCT04958031",
+   "title": "A Trial of the Safety, Tolerability, and Pharmacodynamics of CVL-871 in Subjects With Dementia-Related Apathy",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision - Not Safety Related",
+   "last_update": "2026-03-11",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "AbbVie",
+   "url": "https://clinicaltrials.gov/study/NCT04958031"
+  }
+ ],
+ "sponsors_queried": [
+  "AbbVie"
+ ],
+ "since": "2025-04-17"
+}

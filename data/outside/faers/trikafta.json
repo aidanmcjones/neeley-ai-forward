@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:41:16+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 356,
+   "serious": 143
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 345,
+   "serious": 151
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 372,
+   "serious": 190
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 377,
+   "serious": 181
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 357,
+   "serious": 155
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 336,
+   "serious": 140
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 383,
+   "serious": 189
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 318,
+   "serious": 164
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 256,
+   "serious": 128
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 303,
+   "serious": 154
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 274,
+   "serious": 145
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 253,
+   "serious": 124
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = TRIKAFTA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRIKAFTA\"+OR+patient.drug.medicinalproduct:\"TRIKAFTA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

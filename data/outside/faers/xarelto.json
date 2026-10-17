@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:31+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 2042,
+   "serious": 1620
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 2107,
+   "serious": 1709
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 2095,
+   "serious": 1646
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 2171,
+   "serious": 1693
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 2016,
+   "serious": 1583
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 2049,
+   "serious": 1637
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 1718,
+   "serious": 1334
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 1783,
+   "serious": 1384
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1844,
+   "serious": 1446
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1704,
+   "serious": 1369
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1722,
+   "serious": 1371
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1781,
+   "serious": 1406
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = XARELTO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"XARELTO\"+OR+patient.drug.medicinalproduct:\"XARELTO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

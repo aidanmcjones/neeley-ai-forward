@@ -1,0 +1,219 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:18+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT01437787",
+   "title": "Phase III Study of SAR302503 in Intermediate-2 and High Risk Patients With Myelofibrosis",
+   "status": "TERMINATED",
+   "why_stopped": "",
+   "last_update": "2026-08-11",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT01437787"
+  },
+  {
+   "nct_id": "NCT05582395",
+   "title": "A Study of Mavacamten in Non-Obstructive Hypertrophic Cardiomyopathy",
+   "status": "TERMINATED",
+   "why_stopped": "Trial terminated because of lack of efficacy in the short term acute phase",
+   "last_update": "2026-09-18",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05582395"
+  },
+  {
+   "nct_id": "NCT05556265",
+   "title": "A Study to Evaluate Efficacy and Safety of Deucravacitinib in Participants With Alopecia Areata",
+   "status": "TERMINATED",
+   "why_stopped": "Business objectives have changed",
+   "last_update": "2025-05-31",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05556265"
+  },
+  {
+   "nct_id": "NCT04149574",
+   "title": "A Study Comparing the Efficacy and Safety of Nivolumab in Combination With Bacillus Calmette-Guerin (BCG) Versus BCG Alone in Participants With High-Risk Non-Muscle Invasive Bladder Cancer (HR NMIBC)",
+   "status": "TERMINATED",
+   "why_stopped": "Insufficient enrollment, inability to meet protocol objectives, and slow accrual.",
+   "last_update": "2025-09-16",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT04149574"
+  },
+  {
+   "nct_id": "NCT05169684",
+   "title": "A Study of BMS-986218 or BMS-986218 Plus Nivolumab in Combination With Docetaxel in Participants With Metastatic Castration-resistant Prostate Cancer",
+   "status": "TERMINATED",
+   "why_stopped": "Business objectives have changed",
+   "last_update": "2025-06-10",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05169684"
+  },
+  {
+   "nct_id": "NCT01523171",
+   "title": "Phase II, Open Label, Single Arm Study of SAR302503 In Myelofibrosis Patients Previously Treated With Ruxolitinib",
+   "status": "TERMINATED",
+   "why_stopped": "",
+   "last_update": "2026-07-16",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT01523171"
+  },
+  {
+   "nct_id": "NCT05328908",
+   "title": "A Study of Nivolumab-relatlimab Fixed-dose Combination Versus Regorafenib or TAS-102 in Participants With Later-lines of Metastatic Colorectal Cancer",
+   "status": "TERMINATED",
+   "why_stopped": "",
+   "last_update": "2026-08-26",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05328908"
+  },
+  {
+   "nct_id": "NCT05002569",
+   "title": "A Study to Assess Adjuvant Immunotherapy With Nivolumab Plus Relatlimab Versus Nivolumab Alone After Complete Resection of Stage III-IV Melanoma",
+   "status": "TERMINATED",
+   "why_stopped": "Inability to meet protocol objectives",
+   "last_update": "2026-01-08",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05002569"
+  },
+  {
+   "nct_id": "NCT05470985",
+   "title": "A Study to Evaluate the Efficacy, Safety, and Drug Levels of Oral Ozanimod in Pediatric Participants With Moderately to Severely Active Crohn's Disease With an Inadequate Response to Conventional Therapy",
+   "status": "TERMINATED",
+   "why_stopped": "Study was terminated due to business reasons.",
+   "last_update": "2025-04-22",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05470985"
+  },
+  {
+   "nct_id": "NCT04572893",
+   "title": "Exploratory Study of Danicamtiv in Patients With Primary Dilated Cardiomyopathy (DCM) Due to Genetic Variants or Other Causalities",
+   "status": "TERMINATED",
+   "why_stopped": "Business objectives have changed",
+   "last_update": "2025-05-21",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT04572893"
+  },
+  {
+   "nct_id": "NCT05255601",
+   "title": "A Study to Evaluate the Safety, Tolerability, Drug Levels, and Preliminary Efficacy of Relatlimab Plus Nivolumab in Pediatric and Young Adults With Hodgkin and Non-Hodgkin Lymphoma",
+   "status": "TERMINATED",
+   "why_stopped": "",
+   "last_update": "2026-06-26",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05255601"
+  },
+  {
+   "nct_id": "NCT03110107",
+   "title": "First-In-Human Study of Monoclonal Antibody BMS-986218 by Itself and in Combination With Nivolumab in Participants With Advanced Solid Tumors",
+   "status": "TERMINATED",
+   "why_stopped": "Business Objectives have changed.",
+   "last_update": "2025-04-24",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT03110107"
+  },
+  {
+   "nct_id": "NCT05577715",
+   "title": "A Study of MORAb-202 in Participants With Previously Treated Metastatic Non-Small Cell Lung Cancer (NSCLC) Adenocarcinoma (AC)",
+   "status": "TERMINATED",
+   "why_stopped": "Business objectives have changed",
+   "last_update": "2025-09-04",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05577715"
+  },
+  {
+   "nct_id": "NCT03446040",
+   "title": "An Investigational Immunotherapy Study of BMS-986258 Alone and in Combination With Nivolumab in Participants With Solid Cancers That Are Advanced or Have Spread",
+   "status": "TERMINATED",
+   "why_stopped": "Business objectives have changed",
+   "last_update": "2025-09-18",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT03446040"
+  },
+  {
+   "nct_id": "NCT06313996",
+   "title": "A Study to Evaluate the Efficacy and Safety of Liso-cel Compared to Standard of Care in Adults With Relapsed or Refractory Follicular Lymphoma",
+   "status": "WITHDRAWN",
+   "why_stopped": "Replaced with another clinical trial.",
+   "last_update": "2026-03-18",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",
+   "url": "https://clinicaltrials.gov/study/NCT06313996"
+  },
+  {
+   "nct_id": "NCT05556343",
+   "title": "A Study to Evaluate the Efficacy, Safety, and Tolerability of MYK-224 in Participants With Symptomatic Obstructive Hypertrophic Cardiomyopathy",
+   "status": "TERMINATED",
+   "why_stopped": "Business objectives have changed",
+   "last_update": "2026-06-02",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT05556343"
+  },
+  {
+   "nct_id": "NCT06024174",
+   "title": "A Study of BMS-986466 With Adagrasib With or Without Cetuximab in Participants With Kirsten Rat Sarcoma Virus Glycine 12 to Cysteine (KRAS G12C)-Mutant Solid Tumors",
+   "status": "TERMINATED",
+   "why_stopped": "Business objectives have changed",
+   "last_update": "2025-07-22",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Bristol-Myers Squibb",
+   "url": "https://clinicaltrials.gov/study/NCT06024174"
+  }
+ ],
+ "sponsors_queried": [
+  "Bristol-Myers Squibb"
+ ],
+ "since": "2025-04-17"
+}

@@ -1,0 +1,5586 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:28:33+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.29259",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.27739",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.23363",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.52893",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.47470",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.29259",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.27739",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.23363",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.52893",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.47470",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.25974",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.33059",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.29270",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.51116",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.46658",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.25974",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.33059",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.29270",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.51116",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.46658",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.25974",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.33059",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.29270",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.51116",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.46658",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.25974",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.33059",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "653.29270",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.51116",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-21",
+   "nadac_per_unit": "435.46658",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.25839",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.36291",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.54575",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.54689",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.47874",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.25839",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.36291",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.54575",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.54689",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.47874",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.25839",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.36291",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.54575",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.54689",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.47874",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.25839",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.36291",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "653.54575",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.54689",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "435.47874",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.50301",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.65203",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.39335",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.67736",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.47358",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.50301",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.65203",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.39335",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.67736",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.47358",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.50301",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.65203",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.39335",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.67736",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.47358",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.50301",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.65203",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.39335",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.67736",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.47358",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.50301",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.65203",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "653.39335",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.67736",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "435.47358",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47611",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.53408",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47545",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.61765",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.43259",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47611",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.53408",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47545",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.61765",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.43259",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47611",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.53408",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47545",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.61765",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.43259",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47611",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.53408",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "653.47545",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.45014",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.61765",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "435.43259",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.01656",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "43.22390",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "42.99832",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.50703",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.55707",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.53044",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.50821",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.46271",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.44322",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.32005",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.47236",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.34981",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.50703",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.55707",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.53044",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.50821",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.46271",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.44322",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.32005",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.47236",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.34981",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.50703",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.55707",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.53044",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.50821",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.46271",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.44322",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.32005",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.47236",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.34981",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.50703",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.55707",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "653.53044",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.50821",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.46271",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "435.44322",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.32005",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.47236",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "43.34981",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.03864",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.11605",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.44566",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.51050",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.42303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.32569",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.36055",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.49041",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.41879",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.03864",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.11605",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.44566",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.51050",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.42303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.32569",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.36055",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.49041",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.41879",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.03864",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.11605",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.44566",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.51050",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.42303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.32569",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.36055",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.49041",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.41879",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.03864",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.11605",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.44566",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.51050",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.42303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.32569",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.36055",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.49041",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.41879",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.03864",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.11605",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "653.44566",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.51050",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.42303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.32569",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.36055",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.49041",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "43.41879",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.38721",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.43339",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.41049",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.50931",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.62889",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.57294",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.38349",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.49649",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.43512",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.38721",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.43339",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.41049",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.50931",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.62889",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.57294",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.38349",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.49649",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.43512",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.38721",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.43339",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.41049",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.50931",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.62889",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.57294",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.38349",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.49649",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.43512",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.38721",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.43339",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "653.41049",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.50931",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.62889",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "435.57294",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.38349",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.49649",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "43.43512",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "435.64137",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.36730",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.24458",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.04086",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.51449",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.40075",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.35779",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.40810",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.48141",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.45279",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "434.41662",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.36730",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.24458",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.04086",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.51449",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.40075",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.35779",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.40810",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.48141",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.45279",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "434.41662",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.36730",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.24458",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.04086",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.51449",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.40075",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.35779",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.40810",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.48141",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.45279",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "434.41662",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.36730",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.24458",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.04086",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.51449",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.40075",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.35779",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.40810",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.48141",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.45279",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "434.41662",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.36730",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.24458",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "653.04086",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.51449",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.40075",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "435.35779",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.40810",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.48141",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "43.45279",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "434.41662",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.29422",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.27365",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.04458",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.51871",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.55769",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.52629",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.42890",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.48634",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.46516",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "434.95017",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.29422",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.27365",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.04458",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.51871",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.55769",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.52629",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.42890",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.48634",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.46516",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "434.95017",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.29422",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.27365",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.04458",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.51871",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.55769",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.52629",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.42890",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.48634",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.46516",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "434.95017",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.29422",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.27365",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "653.04458",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.51871",
+   "ndc_description": "WEGOVY 1.5 MG TABLET",
+   "ndc": "00169441531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.55769",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "435.52629",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.42890",
+   "ndc_description": "WEGOVY 25 MG TABLET",
+   "ndc": "00169442531",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.48634",
+   "ndc_description": "WEGOVY 4 MG TABLET",
+   "ndc": "00169440431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "43.46516",
+   "ndc_description": "WEGOVY 9 MG TABLET",
+   "ndc": "00169440931",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "434.95017",
+   "ndc_description": "WEGOVY HD 7.2 MG/0.75 ML PEN",
+   "ndc": "00169457214",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.46729",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.49760",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.14031",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.53248",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.73251",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.46729",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.49760",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.14031",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.53248",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.73251",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.46729",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.49760",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.14031",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.53248",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.73251",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.79141",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.66092",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.48669",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "433.77470",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "434.07071",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.79141",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.66092",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.48669",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "433.77470",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "434.07071",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.79141",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.66092",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.48669",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "433.77470",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "434.07071",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.79141",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.66092",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "650.48669",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "433.77470",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "434.07071",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.90037",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.89138",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.65934",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "433.88355",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "434.23570",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.90037",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.89138",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.65934",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "433.88355",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "434.23570",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.90037",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.89138",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.65934",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "433.88355",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "434.23570",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.90037",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.89138",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "650.65934",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "433.88355",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-02-19",
+   "nadac_per_unit": "434.23570",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.14230",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.08161",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "650.85415",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.03997",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.15267",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.14230",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.08161",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "650.85415",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.03997",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.15267",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.14230",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.08161",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "650.85415",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.03997",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.15267",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.14230",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.08161",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "650.85415",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.03997",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.15267",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.14230",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "651.08161",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "650.85415",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.03997",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-19",
+   "nadac_per_unit": "434.15267",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.35446",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.32688",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.13868",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.22336",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.28876",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.35446",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.32688",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.13868",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.22336",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.28876",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.35446",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.32688",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.13868",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.22336",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.28876",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.35446",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.32688",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "651.13868",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.22336",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-04-23",
+   "nadac_per_unit": "434.28876",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.57915",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.47614",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.37892",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.33394",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.38535",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.57915",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.47614",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.37892",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.33394",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.38535",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.57915",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.47614",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.37892",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.33394",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.38535",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.57915",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.47614",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "651.37892",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.33394",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "434.38535",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "652.00079",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.68931",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.64357",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.53128",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.59813",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "652.00079",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.68931",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.64357",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.53128",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.59813",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "652.00079",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.68931",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.64357",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.53128",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.59813",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "652.00079",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.68931",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.64357",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.53128",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.59813",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "652.00079",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.68931",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "651.64357",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.53128",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "434.59813",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.21556",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.05502",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "651.86770",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.65266",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.69956",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.21556",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.05502",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "651.86770",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.65266",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.69956",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.21556",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.05502",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "651.86770",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.65266",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.69956",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.21556",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "652.05502",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "651.86770",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.65266",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "434.69956",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.41508",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.21544",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.10758",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.77357",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.80193",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.41508",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.21544",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.10758",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.77357",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.80193",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.41508",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.21544",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.10758",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.77357",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.80193",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.41508",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.21544",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "652.10758",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.77357",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "434.80193",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.72518",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.60947",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.43715",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.98449",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.99894",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.72518",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.60947",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.43715",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.98449",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.99894",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.72518",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.60947",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.43715",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.98449",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.99894",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.72518",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.60947",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.43715",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.98449",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.99894",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.72518",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.60947",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "652.43715",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.98449",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "434.99894",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.88715",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.82778",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.57950",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.11972",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.10441",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.88715",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.82778",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.57950",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.11972",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.10441",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.88715",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.82778",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.57950",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.11972",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.10441",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.88715",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.82778",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "652.57950",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.11972",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "435.10441",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.26526",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.17331",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.04824",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.39303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.38136",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.26526",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.17331",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.04824",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.39303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.38136",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.26526",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.17331",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.04824",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.39303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.38136",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.26526",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.17331",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "653.04824",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.39303",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "435.38136",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.29259",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.27739",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.23363",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.52893",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.47470",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.29259",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.27739",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.23363",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.52893",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.47470",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.29259",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.27739",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "653.23363",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.52893",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "435.47470",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.60984",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.64850",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.40516",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.66925",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.70670",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.60984",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.64850",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.40516",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.66925",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.70670",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.60984",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.64850",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.40516",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.66925",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.70670",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.60984",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.64850",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.40516",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.66925",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.70670",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.60984",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.64850",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "649.40516",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.66925",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "432.70670",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.19180",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.20079",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "649.77960",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.86496",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.89431",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.19180",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.20079",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "649.77960",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.86496",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.89431",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.19180",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.20079",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "649.77960",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.86496",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.89431",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.19180",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "650.20079",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "649.77960",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.86496",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "432.89431",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.17794",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.44960",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "649.87230",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.90905",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.97917",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.17794",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.44960",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "649.87230",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.90905",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.97917",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.17794",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.44960",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "649.87230",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.90905",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.97917",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.17794",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "650.44960",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "649.87230",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.90905",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "432.97917",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.38733",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.33704",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.13390",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.12463",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.17837",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.38733",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.33704",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.13390",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.12463",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.17837",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.38733",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.33704",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.13390",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.12463",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.17837",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.38733",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.33704",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.13390",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.12463",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.17837",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.38733",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.33704",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "650.13390",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.12463",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "433.17837",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.45169",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.43178",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.06093",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.18715",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.23592",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.45169",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.43178",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.06093",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.18715",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.23592",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.45169",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.43178",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.06093",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.18715",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.23592",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.45169",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.43178",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "650.06093",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.18715",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "433.23592",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.37440",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.32241",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "649.97225",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.25501",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.30507",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.37440",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.32241",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "649.97225",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.25501",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.30507",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.37440",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.32241",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "649.97225",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.25501",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.30507",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.37440",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.32241",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "649.97225",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.25501",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.30507",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.37440",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "650.32241",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "649.97225",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.25501",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "433.30507",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.42429",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.27957",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.03675",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.31615",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.53758",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.42429",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.27957",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.03675",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.31615",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.53758",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.42429",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.27957",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.03675",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.31615",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.53758",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.42429",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.27957",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "650.03675",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.31615",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "433.53758",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.40859",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.31261",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "649.96485",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.36079",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.58561",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.40859",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.31261",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "649.96485",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.36079",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.58561",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.40859",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.31261",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "649.96485",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.36079",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.58561",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.40859",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "650.31261",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "649.96485",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.36079",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "433.58561",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.46729",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.49760",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.14031",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.53248",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.73251",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.46729",
+   "ndc_description": "WEGOVY 0.25 MG/0.5 ML PEN",
+   "ndc": "00169452514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.49760",
+   "ndc_description": "WEGOVY 0.5 MG/0.5 ML PEN",
+   "ndc": "00169450514",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "650.14031",
+   "ndc_description": "WEGOVY 1 MG/0.5 ML PEN",
+   "ndc": "00169450114",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.53248",
+   "ndc_description": "WEGOVY 1.7 MG/0.75 ML PEN",
+   "ndc": "00169451714",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "433.73251",
+   "ndc_description": "WEGOVY 2.4 MG/0.75 ML PEN",
+   "ndc": "00169452414",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

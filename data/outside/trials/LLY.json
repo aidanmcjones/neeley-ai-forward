@@ -1,0 +1,179 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:18+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT05074420",
+   "title": "A Study of Baricitinib (LY3009104) in Children With COVID-19",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated due to an inability to enroll participants.",
+   "last_update": "2026-08-11",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT05074420"
+  },
+  {
+   "nct_id": "NCT04752332",
+   "title": "A Study of Abemaciclib (LY2835219) Plus Hormone Therapy in Participants With Early Breast Cancer",
+   "status": "TERMINATED",
+   "why_stopped": "Study is terminated due to inability to enroll study participants",
+   "last_update": "2025-07-15",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT04752332"
+  },
+  {
+   "nct_id": "NCT05516758",
+   "title": "A Study of Peresolimab (LY3462817) in Participants With Moderately-to-Severely Active Rheumatoid Arthritis",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated due to an unfavourable benefit-risk profile observed in interim data analysis.",
+   "last_update": "2025-12-04",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT05516758"
+  },
+  {
+   "nct_id": "NCT06220669",
+   "title": "A Study of LY3541860 in Adult Participants With Relapsing Multiple Sclerosis",
+   "status": "TERMINATED",
+   "why_stopped": "The interim analysis data failed to demonstrate the intended treatment effect.",
+   "last_update": "2026-09-23",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT06220669"
+  },
+  {
+   "nct_id": "NCT05911841",
+   "title": "A Study of LY3454738 in the Treatment of Adult Participants With Moderate-to-Severe Atopic Dermatitis",
+   "status": "TERMINATED",
+   "why_stopped": "The decision to terminate the study was due to efficacy/effectiveness reasons.",
+   "last_update": "2025-12-02",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT05911841"
+  },
+  {
+   "nct_id": "NCT04396236",
+   "title": "A Study of Lasmiditan (LY573144) Treatment in Children Aged 6 to 17 With Migraine",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated due to strategic business decision",
+   "last_update": "2026-09-02",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT04396236"
+  },
+  {
+   "nct_id": "NCT04396574",
+   "title": "A 12-Month Study of Lasmiditan (LY573144) Treatment in Children Aged 6 to 17 With Migraine",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated due to strategic business decision",
+   "last_update": "2026-06-25",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT04396574"
+  },
+  {
+   "nct_id": "NCT04517253",
+   "title": "A Study of Baricitinib (LY3009104) in Adult and Pediatric Japanese Participants With NNS/CANDLE, SAVI, and AGS",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated due to efficacy/effectiveness reasons",
+   "last_update": "2025-07-10",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT04517253"
+  },
+  {
+   "nct_id": "NCT06901349",
+   "title": "A Study of Bimagrumab (LY3985863) and Tirzepatide (LY3298176), Alone or in Combination, in Participants With Obesity or Overweight With Type 2 Diabetes",
+   "status": "WITHDRAWN",
+   "why_stopped": "Study terminated for strategic business reasons",
+   "last_update": "2025-09-24",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT06901349"
+  },
+  {
+   "nct_id": "NCT06598631",
+   "title": "Efficacy and Safety of Volenrelaxin in Adults With Chronic Kidney Disease",
+   "status": "WITHDRAWN",
+   "why_stopped": "Study was terminated due to a lack of foreseeable clinical benefit in the proposed chronic kidney disease population, following the termination of a related heart failure study that demonstrated no benefit in an overlapping patient group.",
+   "last_update": "2026-09-08",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT06598631"
+  },
+  {
+   "nct_id": "NCT06859294",
+   "title": "A Study of LY3541860 in Adult Participants With Moderately to Severely Active Rheumatoid Arthritis",
+   "status": "TERMINATED",
+   "why_stopped": "The interim analysis data failed to demonstrate the intended treatment effect.",
+   "last_update": "2026-06-17",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT06859294"
+  },
+  {
+   "nct_id": "NCT07030868",
+   "title": "A Study of LY3549492 in Adults With Obesity or Overweight With Type 2 Diabetes",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated for strategic business reasons",
+   "last_update": "2026-08-31",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT07030868"
+  },
+  {
+   "nct_id": "NCT05592275",
+   "title": "A Study of LY3540378 in Participants With Worsening Chronic Heart Failure With Preserved Ejection Fraction (HFpEF)",
+   "status": "TERMINATED",
+   "why_stopped": "An interim was conducted and after review of available data, including efficacy evaluation of heart failure events, Lilly is terminating the study due to low likelihood of study success for this HFpEF patient population.",
+   "last_update": "2026-02-05",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT05592275"
+  },
+  {
+   "nct_id": "NCT07085468",
+   "title": "A Study of LY3549492 in Healthy Weight Adult Participants",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated for strategic business reasons",
+   "last_update": "2026-09-21",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Eli Lilly and Company",
+   "url": "https://clinicaltrials.gov/study/NCT07085468"
+  }
+ ],
+ "sponsors_queried": [
+  "Eli Lilly and Company"
+ ],
+ "since": "2025-04-17"
+}

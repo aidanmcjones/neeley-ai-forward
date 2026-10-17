@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:43+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 1838,
+   "serious": 1416
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 1562,
+   "serious": 1254
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 1007,
+   "serious": 856
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 1034,
+   "serious": 898
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 907,
+   "serious": 804
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 958,
+   "serious": 809
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 975,
+   "serious": 824
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 1267,
+   "serious": 1094
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1207,
+   "serious": 1043
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1128,
+   "serious": 977
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1088,
+   "serious": 926
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1243,
+   "serious": 1053
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = KISQALI",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KISQALI\"+OR+patient.drug.medicinalproduct:\"KISQALI\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

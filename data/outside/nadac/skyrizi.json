@@ -1,0 +1,3619 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:29:42+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21415.66745",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22807.68584",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "22738.13000",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "22738.13000",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "22738.13000",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "22738.13000",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "22710.11211",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "22710.11211",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "22710.11211",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "22710.11211",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "22710.11211",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "22942.37158",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "9679.49213",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22731.99409",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22757.35000",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22731.99409",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22757.35000",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22731.99409",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22757.35000",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22731.99409",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "22757.35000",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "9537.27153",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22761.46290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22761.46290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22761.46290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22761.46290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22761.46290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "9565.60052",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22774.36091",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22774.36091",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22774.36091",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22774.36091",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "22887.43857",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "9572.66500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "20211.78290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "20284.34353",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21525.54879",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "21602.82586",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21548.77167",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21573.20571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21548.77167",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21573.20571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21548.77167",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21573.20571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21548.77167",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "21573.20571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21440.93143",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21502.85714",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21440.93143",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21502.85714",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21440.93143",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21502.85714",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21440.93143",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21502.85714",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21440.93143",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "21502.85714",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21462.49538",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21534.19571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21462.49538",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21534.19571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21462.49538",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21534.19571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21462.49538",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "21534.19571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21451.83129",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21504.56400",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21451.83129",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21504.56400",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21451.83129",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21504.56400",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21451.83129",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "21504.56400",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21439.45081",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21439.45081",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21439.45081",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21439.45081",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21439.45081",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21409.75200",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21409.75200",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21409.75200",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21409.75200",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "21524.52250",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21408.46489",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21408.46489",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21408.46489",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21408.46489",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "9069.04478",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21415.66745",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21415.66745",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21415.66745",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "21542.13294",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9088.72500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20292.26778",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "20226.05700",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "20226.05700",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "20226.05700",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "20226.05700",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "20514.45191",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20250.38923",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20250.38923",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20250.38923",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20250.38923",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20246.37444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20246.37444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20246.37444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20246.37444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20246.37444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "20346.30571",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20273.78895",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20334.29600",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20273.78895",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20334.29600",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20273.78895",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20334.29600",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20273.78895",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "20334.29600",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20254.98421",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20284.61909",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20254.98421",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20284.61909",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20254.98421",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20284.61909",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20254.98421",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20284.61909",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20254.98421",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "20284.61909",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20209.24375",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20290.86067",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20209.24375",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20290.86067",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20209.24375",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20290.86067",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20209.24375",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "20290.86067",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20216.79444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20287.37882",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20216.79444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20287.37882",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20216.79444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20287.37882",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20216.79444",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "20287.37882",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "20211.78290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "20284.34353",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "20211.78290",
+   "ndc_description": "SKYRIZI 150 MG/ML PEN",
+   "ndc": "00074210001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "20284.34353",
+   "ndc_description": "SKYRIZI 150 MG/ML SYRINGE",
+   "ndc": "00074105001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074106901",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "8515.53500",
+   "ndc_description": "SKYRIZI 360 MG/2.4 ML ON-BODY",
+   "ndc": "00074107001",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:13+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 2155,
+   "serious": 1696
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 2533,
+   "serious": 2065
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 2441,
+   "serious": 2018
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 2477,
+   "serious": 2038
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 3005,
+   "serious": 2593
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 3457,
+   "serious": 3044
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 3188,
+   "serious": 2776
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 3440,
+   "serious": 2918
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 3164,
+   "serious": 2630
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 3142,
+   "serious": 2791
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 3043,
+   "serious": 2481
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 3092,
+   "serious": 2721
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = FARXIGA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"FARXIGA\"+OR+patient.drug.medicinalproduct:\"FARXIGA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

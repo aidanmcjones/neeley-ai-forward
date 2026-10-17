@@ -12,7 +12,7 @@ import time
 from agent.needle import audit, score
 from agent.needle.detect import SHORTLIST, save
 
-DETECTORS = ["forensics", "drift", "calls", "labels"]
+DETECTORS = ["forensics", "drift", "calls", "labels", "supply"]
 
 
 def detect(ticker):

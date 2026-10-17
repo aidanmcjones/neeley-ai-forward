@@ -1,0 +1,3304 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:35:17+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.69106",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.69106",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.69106",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-04",
+   "nadac_per_unit": "136.69106",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.69106",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-04",
+   "nadac_per_unit": "136.69106",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-02-18",
+   "nadac_per_unit": "136.73931",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.73160",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "136.74030",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "136.73167",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.69251",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "136.73992",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.66953",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "136.74014",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.64075",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "136.74616",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.64291",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "136.73311",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.65502",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250601",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "136.72840",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.47817",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "136.39078",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.05366",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.05366",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.05366",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.05366",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "136.70105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.43310",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.43310",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.43310",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.43310",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.43310",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "136.70947",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.51906",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.51906",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.51906",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.51906",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "136.70238",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.61964",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.61964",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.61964",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.61964",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "136.69665",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.55984",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.55984",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.55984",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.55984",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.55984",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "136.70733",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.50435",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.50435",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.50435",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.50435",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "136.69994",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "136.70090",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.62868",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "136.70289",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-12-20",
+   "nadac_per_unit": "123.08558",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-12-20",
+   "nadac_per_unit": "123.08558",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "129.11677",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "128.83923",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.66393",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "128.89072",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.80138",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.80138",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.80138",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.80138",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.80138",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "128.84296",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.89079",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.89079",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.89079",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.89079",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "128.83953",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.82263",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.82263",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.82263",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.82263",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.82263",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "128.85449",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.85792",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.85792",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.85792",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.85792",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "128.87250",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "128.80254",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.87457",
+   "ndc_description": "BIKTARVY 30-120-15 MG TABLET",
+   "ndc": "61958250501",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "128.79205",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-25",
+   "nadac_per_unit": "122.83105",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-12-20",
+   "nadac_per_unit": "123.08558",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-12-20",
+   "nadac_per_unit": "123.08558",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-12-20",
+   "nadac_per_unit": "123.08558",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250101",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-12-20",
+   "nadac_per_unit": "123.08558",
+   "ndc_description": "BIKTARVY 50-200-25 MG TABLET",
+   "ndc": "61958250103",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

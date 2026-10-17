@@ -1,0 +1,344 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:18+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT03573882",
+   "title": "Study to Assess the Effect of Long-term Treatment With Voxelotor in Participants Who Have Completed Treatment in Study GBT440-031",
+   "status": "TERMINATED",
+   "why_stopped": "Emerging clinical data evaluated by Pfizer and shared with regulatory authorities indicates that the risk profile of voxelotor in people with SCD exceeds the benefits observed in previously generated global research and requires further assessment.",
+   "last_update": "2025-11-18",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT03573882"
+  },
+  {
+   "nct_id": "NCT02850406",
+   "title": "Study to Evaluate the Effect of GBT440 in Pediatrics With Sickle Cell Disease",
+   "status": "TERMINATED",
+   "why_stopped": "Emerging clinical data evaluated by Pfizer and shared with regulatory authorities indicates that the risk profile of voxelotor in people with SCD exceeds the benefits observed in previously generated global research and requires further assessment.",
+   "last_update": "2025-08-15",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT02850406"
+  },
+  {
+   "nct_id": "NCT05926960",
+   "title": "A Study Comparing 3 Study Medicines (Encorafenib, Binimetinib, Pembrolizumab) to 2 Study Medicines (Ipilimumab and Nivolumab) in Patients With Advanced Melanoma",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated due to inability to recruit the target number of patients. There were no safety and/or efficacy concerns involved in the decision to stop enrollment.",
+   "last_update": "2026-03-09",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05926960"
+  },
+  {
+   "nct_id": "NCT05090566",
+   "title": "MagnetisMM-4: Umbrella Study of Elranatamab (PF-06863135) in Combination With Anti-Cancer Treatments in Multiple Myeloma",
+   "status": "TERMINATED",
+   "why_stopped": "A business decision was made by Pfizer to terminate the study and not proceed with the Phase 2 expansion of this study. The reason for study termination is not due to any safety concerns or requests from regulatory authorities.",
+   "last_update": "2026-04-24",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05090566"
+  },
+  {
+   "nct_id": "NCT04585815",
+   "title": "Study of Immunotherapy (Sasanlimab) in Combination With Targeted Therapies in People With Advanced Non-small Cell Lung Cancer (NSCLC) (Landscape 1011 Study)",
+   "status": "TERMINATED",
+   "why_stopped": "Study was terminated due to portfolio re-prioritization and strategic considerations. The decision was not based on any safety concerns and/or regulatory interactions",
+   "last_update": "2026-01-09",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT04585815"
+  },
+  {
+   "nct_id": "NCT04173273",
+   "title": "A Study Evaluating the Efficacy and Safety of Oral Etrasimod in the Treatment of Adult Participants With Moderately to Severely Active Crohn's Disease",
+   "status": "TERMINATED",
+   "why_stopped": "The study was prematurely discontinued due to a lack of efficacy in sub-study 1",
+   "last_update": "2026-07-01",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT04173273"
+  },
+  {
+   "nct_id": "NCT04188509",
+   "title": "Open-Label Extension of Voxelotor",
+   "status": "TERMINATED",
+   "why_stopped": "Emerging clinical data evaluated by Pfizer and shared with regulatory authorities indicates that the risk profile of voxelotor in people with SCD exceeds the benefits observed in previously generated global research and requires further assessment.",
+   "last_update": "2025-11-13",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT04188509"
+  },
+  {
+   "nct_id": "NCT03519178",
+   "title": "A Study of PF-06873600 in People With Cancer",
+   "status": "TERMINATED",
+   "why_stopped": "Per business decision, but not due to safety concerns or regulatory request.",
+   "last_update": "2025-11-14",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT03519178"
+  },
+  {
+   "nct_id": "NCT05703607",
+   "title": "A Study to Learn About a Modified RNA Vaccine Against Shingles in Healthy Adults",
+   "status": "TERMINATED",
+   "why_stopped": "Strategic decision made by the company",
+   "last_update": "2026-05-04",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05703607"
+  },
+  {
+   "nct_id": "NCT05879718",
+   "title": "A Study to Learn About the Study Medicine (PF-06823859) in Adults With Active CLE or SLE With Skin Symptoms.",
+   "status": "TERMINATED",
+   "why_stopped": "Pfizer has made an internal business decision to not continue this study. This decision was not due to safety concerns or clinical effect reasons or requests from any regulatory authorities.",
+   "last_update": "2026-08-11",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05879718"
+  },
+  {
+   "nct_id": "NCT06079320",
+   "title": "A Study to Learn About the Study Medicine Sisunatovir in Adults With Respiratory Syncytial Virus (RSV) Infection",
+   "status": "TERMINATED",
+   "why_stopped": "Study discontinued due to business reasons. There were no safety concerns in the decision to stop study and no changes to sponsor's assessment of the risk-benefit profile for participants who received sisunatovir in the study.",
+   "last_update": "2025-11-10",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT06079320"
+  },
+  {
+   "nct_id": "NCT03307980",
+   "title": "Long-term Safety and Efficacy Study and Dose-Escalation Substudy of PF 06838435 in Individuals With Hemophilia B",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated early due to Sponsor and participants may transition into a long-term follow-up study. The decision to terminate the trial was not based on any safety and/or efficacy concerns.",
+   "last_update": "2026-10-05",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT03307980"
+  },
+  {
+   "nct_id": "NCT05896163",
+   "title": "A Study to Learn About the Effects of Two Study Medicines (Maplirpacept [PF-07901801] And Glofitamab) When Given Together In People With Relapsed Or Refractory Diffuse Large B Cell Lymphoma.",
+   "status": "TERMINATED",
+   "why_stopped": "Business/Administrative decision to pursue other programs/assets within the oncology portfolio. Not due to any detected safety signals or requests from regulatory authorities.",
+   "last_update": "2026-05-06",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05896163"
+  },
+  {
+   "nct_id": "NCT04517864",
+   "title": "PLACEBO-CONTROLLED SAFETY STUDY OF RITLECITINIB (PF-06651600) IN ADULTS WITH ALOPECIA AREATA",
+   "status": "TERMINATED",
+   "why_stopped": "For business reasons",
+   "last_update": "2025-07-11",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT04517864"
+  },
+  {
+   "nct_id": "NCT04218084",
+   "title": "Study to Evaluate the Effect of GBT440 on TCD in Pediatrics With Sickle Cell Disease",
+   "status": "TERMINATED",
+   "why_stopped": "Emerging clinical data evaluated by Pfizer and shared with regulatory authorities indicates that the risk profile of voxelotor in people with SCD exceeds the benefits observed in previously generated global research and requires further assessment.",
+   "last_update": "2026-03-10",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT04218084"
+  },
+  {
+   "nct_id": "NCT05689164",
+   "title": "A Study to Understand the Long-term Safety and Effects of an Experimental Gene Therapy for Duchenne Muscular Dystrophy.",
+   "status": "TERMINATED",
+   "why_stopped": "All participants who have received fordadistrogene movaparvovec in any Pfizer study will now be assessed for long-term safety in 1 combined study: C3391003",
+   "last_update": "2025-10-21",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05689164"
+  },
+  {
+   "nct_id": "NCT06103734",
+   "title": "A Study to Learn About Zavegepant as a Treatment for Multiple Migraine Attacks in Adult Participants",
+   "status": "WITHDRAWN",
+   "why_stopped": "Strategic decision to cancel the study based on adjusted clinical development plan.",
+   "last_update": "2026-01-13",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT06103734"
+  },
+  {
+   "nct_id": "NCT05429372",
+   "title": "Study of Fordadistrogene Movaparvovec in Early Stage Duchenne Muscular Dystrophy",
+   "status": "TERMINATED",
+   "why_stopped": "All participants who have received fordadistrogene movaparvovec in any Pfizer study will now be assessed for long-term safety in one combined study: C3391003",
+   "last_update": "2025-10-21",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05429372"
+  },
+  {
+   "nct_id": "NCT05632354",
+   "title": "GBT021601-022: A Study of GBT021601 in Participants With Sickle Cell Disease (SCD)",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated as data obtained from this non-placebo-controlled trial may not be informative for the interpretation of the benefits and risks of osivelotor",
+   "last_update": "2026-03-19",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05632354"
+  },
+  {
+   "nct_id": "NCT05626322",
+   "title": "Effects of Maplirpacept (PF-07901801),Tafasitamab, and Lenalidomide in People With Relapsed or Refractory Diffuse Large B-cell Lymphoma",
+   "status": "TERMINATED",
+   "why_stopped": "The trial terminated due to the inability to recruit the planned number of subjects. The decision was not based on any safety and/or efficacy concerns",
+   "last_update": "2025-09-05",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05626322"
+  },
+  {
+   "nct_id": "NCT05492500",
+   "title": "A Study of Ponsegromab in People With Heart Failure",
+   "status": "TERMINATED",
+   "why_stopped": "Following a prespecified interim analysis, and in consultation with the independent Data Monitoring Committee, the Sponsor terminated the study",
+   "last_update": "2026-03-18",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05492500"
+  },
+  {
+   "nct_id": "NCT05561140",
+   "title": "Resolution of Sickle Cell Leg Ulcers With Voxelotor",
+   "status": "TERMINATED",
+   "why_stopped": "Emerging clinical data evaluated by Pfizer and shared with regulatory authorities indicates that the risk profile of voxelotor in people with SCD exceeds the benefits observed in previously generated global research and requires further assessment.",
+   "last_update": "2025-07-09",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05561140"
+  },
+  {
+   "nct_id": "NCT05348915",
+   "title": "A Study to Evaluate the Long-term Safety of Inclacumab Administered to Participants With Sickle Cell Disease",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor decision to terminate study based on results of parent study GBT2104-131.",
+   "last_update": "2025-12-17",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05348915"
+  },
+  {
+   "nct_id": "NCT03786081",
+   "title": "Safety and Efficacy of Tisotumab Vedotin Monotherapy & in Combination With Other Cancer Agents in Subjects With Cervical Cancer",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor has decided to stop the trial based on strategic decisions",
+   "last_update": "2026-07-22",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Seagen, a wholly owned subsidiary of Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT03786081"
+  },
+  {
+   "nct_id": "NCT05732454",
+   "title": "A Study to Learn About the Study Medicine Etrasimod in Adults With Moderate to Severe Atopic Dermatitis (AD) Who Have Already Tried Treatments Taken by Mouth or by Injection",
+   "status": "TERMINATED",
+   "why_stopped": "Per the results of the planned interim analysis, the study met futility criteria for efficacy so the trial was terminated. This decision was made for efficacy reasons only and is not due to any safety concerns.",
+   "last_update": "2025-05-08",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05732454"
+  },
+  {
+   "nct_id": "NCT04821310",
+   "title": "Protonix Treatment of Maintenance of Healing in Pediatric Participants Aged 1-11 Years and 12-17 Years",
+   "status": "TERMINATED",
+   "why_stopped": "Pfizer has made an internal business decision to terminate the B1791094 study. This decision was not due to safety concerns or requests from any regulatory authorities.",
+   "last_update": "2026-06-15",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT04821310"
+  },
+  {
+   "nct_id": "NCT05070845",
+   "title": "Safety and Efficacy Study of PF-06835375 in Primary Immune Thrombocytopenia",
+   "status": "TERMINATED",
+   "why_stopped": "The study terminated due to a business decision. The decision to terminate the trial was not based on any safety concerns.",
+   "last_update": "2026-10-16",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Pfizer",
+   "url": "https://clinicaltrials.gov/study/NCT05070845"
+  }
+ ],
+ "sponsors_queried": [
+  "Pfizer"
+ ],
+ "since": "2025-04-17"
+}

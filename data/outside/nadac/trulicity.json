@@ -1,0 +1,4095 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:29:08+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.15449",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.06838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.17547",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.07085",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.71758",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.62975",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.73898",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "487.63227",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.73706",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.54381",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.35337",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.48662",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.73706",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.54381",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.35337",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.48662",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.73706",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.54381",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.35337",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.48662",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.73706",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.54381",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.35337",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "487.48662",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.69143",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.52099",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.46539",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.47886",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.69143",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.52099",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.46539",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.47886",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.69143",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.52099",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.46539",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.47886",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.69143",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.52099",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.46539",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.47886",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.69143",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.52099",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.46539",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "487.47886",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.65321",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.52807",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.44939",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.39422",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.65321",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.52807",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.44939",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.39422",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.65321",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.52807",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.44939",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.39422",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.65321",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.52807",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.44939",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "487.39422",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.63550",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.51831",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.44058",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.37501",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.63550",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.51831",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.44058",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.37501",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.63550",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.51831",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.44058",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.37501",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.63550",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.51831",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.44058",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.37501",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.63550",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.51831",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.44058",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "487.37501",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.57264",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.54289",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.50220",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.41808",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.57264",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.54289",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.50220",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.41808",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.57264",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.54289",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.50220",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.41808",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.57264",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.54289",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.50220",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "487.41808",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.69300",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.69755",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.86467",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.62643",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.40993",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.41453",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.58332",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "476.34270",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.93637",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.98599",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.26024",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.18437",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.93637",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.98599",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.26024",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.18437",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.93637",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.98599",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.26024",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.18437",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.93637",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "477.98599",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.26024",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "478.18437",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.86071",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.96997",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.17628",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.05990",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.86071",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.96997",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.17628",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.05990",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.86071",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.96997",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.17628",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.05990",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.86071",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.96997",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.17628",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.05990",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.86071",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "477.96997",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.17628",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "478.05990",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "477.96885",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.07127",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.18064",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.03758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "477.96885",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.07127",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.18064",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.03758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "477.96885",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.07127",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.18064",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.03758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "477.96885",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.07127",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.18064",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "478.03758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.03229",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.08021",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.20202",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.04128",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.03229",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.08021",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.20202",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.04128",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.03229",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.08021",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.20202",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.04128",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.03229",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.08021",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.20202",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "478.04128",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.09812",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.04011",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.19948",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.00758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.09812",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.04011",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.19948",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.00758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.09812",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.04011",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.19948",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.00758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.09812",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.04011",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.19948",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.00758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.09812",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.04011",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.19948",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "478.00758",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.08793",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.06163",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.18663",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.05238",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.08793",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.06163",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.18663",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.05238",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.08793",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.06163",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.18663",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.05238",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.08793",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.06163",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.18663",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "478.05238",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.18957",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11625",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.22656",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11785",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.18957",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11625",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.22656",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11785",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.18957",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11625",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.22656",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11785",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.18957",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11625",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.22656",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "478.11785",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.15449",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.06838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.17547",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.07085",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.15449",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.06838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.17547",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.07085",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.15449",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.06838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.17547",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "478.07085",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.58621",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.57971",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.31516",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "470.48194",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.80350",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.73846",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.65241",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.41180",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.80350",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.73846",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.65241",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.41180",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.80350",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.73846",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.65241",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.41180",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.80350",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.73846",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.65241",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "471.41180",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.54158",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.45838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.59097",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.49290",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.54158",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.45838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.59097",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.49290",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.54158",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.45838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.59097",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.49290",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.54158",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.45838",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.59097",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "471.49290",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.64805",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.59100",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.72914",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.57427",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.64805",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.59100",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.72914",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.57427",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.64805",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.59100",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.72914",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.57427",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.64805",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.59100",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.72914",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.57427",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.64805",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.59100",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.72914",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "471.57427",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.60714",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.54149",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.74421",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.47340",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.60714",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.54149",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.74421",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.47340",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.60714",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.54149",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.74421",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.47340",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.60714",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.54149",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.74421",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "471.47340",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.60330",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.63655",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.82527",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.57860",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.60330",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.63655",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.82527",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.57860",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.60330",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.63655",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.82527",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.57860",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.60330",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.63655",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.82527",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.57860",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.60330",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.63655",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.82527",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "471.57860",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.61218",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.60600",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.83612",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.53498",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.61218",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.60600",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.83612",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.53498",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.61218",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.60600",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.83612",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.53498",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.61218",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.60600",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.83612",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "471.53498",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.64439",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.63676",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.79876",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.56282",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.64439",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.63676",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.79876",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.56282",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.64439",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.63676",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.79876",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.56282",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.64439",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.63676",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.79876",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "471.56282",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.69300",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.69755",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.86467",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.62643",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.69300",
+   "ndc_description": "TRULICITY 0.75 MG/0.5 ML PEN",
+   "ndc": "00002143380",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.69755",
+   "ndc_description": "TRULICITY 1.5 MG/0.5 ML PEN",
+   "ndc": "00002143480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.86467",
+   "ndc_description": "TRULICITY 3 MG/0.5 ML PEN",
+   "ndc": "00002223680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "471.62643",
+   "ndc_description": "TRULICITY 4.5 MG/0.5 ML PEN",
+   "ndc": "00002318280",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

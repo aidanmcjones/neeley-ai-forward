@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:52+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 357,
+   "serious": 68
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 310,
+   "serious": 60
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 340,
+   "serious": 66
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 356,
+   "serious": 55
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 454,
+   "serious": 51
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 350,
+   "serious": 62
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 319,
+   "serious": 77
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 414,
+   "serious": 122
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 439,
+   "serious": 129
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 338,
+   "serious": 89
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 354,
+   "serious": 89
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 429,
+   "serious": 80
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = CABENUVA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"CABENUVA\"+OR+patient.drug.medicinalproduct:\"CABENUVA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

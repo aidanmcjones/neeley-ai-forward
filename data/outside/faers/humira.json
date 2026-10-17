@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:40+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 7885,
+   "serious": 5448
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 7767,
+   "serious": 5496
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 7512,
+   "serious": 5463
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 6962,
+   "serious": 5264
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 5945,
+   "serious": 4364
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 6510,
+   "serious": 4872
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 5919,
+   "serious": 4463
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 5475,
+   "serious": 3916
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 5388,
+   "serious": 4170
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 4295,
+   "serious": 3340
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 3376,
+   "serious": 2648
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 4047,
+   "serious": 3046
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = HUMIRA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"HUMIRA\"+OR+patient.drug.medicinalproduct:\"HUMIRA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

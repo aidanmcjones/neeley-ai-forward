@@ -1,0 +1,2863 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:27:07+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-03-18",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "346.93837",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "346.94686",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-04-22",
+   "nadac_per_unit": "289.71673",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "292.67615",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086714",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078086742",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "347.40527",
+   "ndc_description": "KISQALI 400 MG DAILY DOSE",
+   "ndc": "00078089514",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "290.69701",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078087463",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.99644",
+   "ndc_description": "KISQALI 600 MG DAILY DOSE",
+   "ndc": "00078090221",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

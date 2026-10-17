@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:55+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 397,
+   "serious": 378
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 319,
+   "serious": 306
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 210,
+   "serious": 199
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 200,
+   "serious": 180
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 179,
+   "serious": 161
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 242,
+   "serious": 213
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 184,
+   "serious": 158
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 211,
+   "serious": 195
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 184,
+   "serious": 163
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 150,
+   "serious": 129
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 186,
+   "serious": 176
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 282,
+   "serious": 260
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = SARCLISA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SARCLISA\"+OR+patient.drug.medicinalproduct:\"SARCLISA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

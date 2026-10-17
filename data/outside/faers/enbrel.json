@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:36+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 3201,
+   "serious": 1530
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 3143,
+   "serious": 1669
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 3209,
+   "serious": 1736
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 2942,
+   "serious": 1657
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 3162,
+   "serious": 1627
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 2628,
+   "serious": 1760
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 2205,
+   "serious": 1498
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 2073,
+   "serious": 1351
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1934,
+   "serious": 1490
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1647,
+   "serious": 1302
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1293,
+   "serious": 952
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 2123,
+   "serious": 1546
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = ENBREL",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENBREL\"+OR+patient.drug.medicinalproduct:\"ENBREL\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

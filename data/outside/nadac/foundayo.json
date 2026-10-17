@@ -1,0 +1,819 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:29:25+00:00",
+ "rows": [
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.66373",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "20.64933",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.81383",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.77211",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "20.65635",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417801",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.89256",
+   "ndc_description": "FOUNDAYO 0.8 MG TABLET",
+   "ndc": "00002417831",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.83709",
+   "ndc_description": "FOUNDAYO 2.5 MG TABLET",
+   "ndc": "00002450331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479401",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.81886",
+   "ndc_description": "FOUNDAYO 5.5 MG TABLET",
+   "ndc": "00002479431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480301",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "20.85370",
+   "ndc_description": "FOUNDAYO 9 MG TABLET",
+   "ndc": "00002480331",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

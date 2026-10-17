@@ -1,0 +1,4333 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:30:35+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3706.20933",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7404.96583",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7358.90476",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3692.31105",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3836.91976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7874.02810",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3950.77283",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "4105.50415",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "3976.89917",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "4090.21294",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "3976.89917",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "4090.21294",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "3976.89917",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "4090.21294",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "3976.89917",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "4090.21294",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "3961.24950",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "4085.71976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "3961.24950",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "4085.71976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "3961.24950",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "4085.71976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "3961.24950",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "4085.71976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "3965.64399",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "7923.31344",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "7869.83200",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "3961.24950",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "4085.71976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3936.20917",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7875.87400",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7850.54250",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3938.84083",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "4082.85633",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3936.20917",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7875.87400",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7850.54250",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3938.84083",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "4082.85633",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3936.20917",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7875.87400",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7850.54250",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3938.84083",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "4082.85633",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3936.20917",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7875.87400",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7850.54250",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "3938.84083",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "4082.85633",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7869.62750",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7854.31900",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3941.79952",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "4088.10141",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7869.62750",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7854.31900",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3941.79952",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "4088.10141",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7869.62750",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7854.31900",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3941.79952",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "4088.10141",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7869.62750",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7854.31900",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3941.79952",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "4088.10141",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7869.62750",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7854.31900",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "3941.79952",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "4088.10141",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7879.81111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7858.47545",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3946.34864",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "4087.40667",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7879.81111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7858.47545",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3946.34864",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "4087.40667",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7879.81111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7858.47545",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3946.34864",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "4087.40667",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3924.35313",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7879.81111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7858.47545",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "3946.34864",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "4087.40667",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3600.89647",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7206.70000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7208.96625",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3593.02900",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3605.62583",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3600.89647",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7206.70000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7208.96625",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3593.02900",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3605.62583",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3600.89647",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7206.70000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7208.96625",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3593.02900",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3605.62583",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3708.92336",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7425.23523",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3700.81987",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "3713.79460",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3707.96000",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "7377.54571",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3680.00208",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3695.66139",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3707.96000",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "7377.54571",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3680.00208",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3695.66139",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3707.96000",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "7377.54571",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3680.00208",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3695.66139",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3707.96000",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "7377.54571",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3680.00208",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "3695.66139",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3705.91625",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "7356.96400",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3682.40250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3696.09087",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3705.91625",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "7356.96400",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3682.40250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3696.09087",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3705.91625",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "7356.96400",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3682.40250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3696.09087",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3705.91625",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "7356.96400",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3682.40250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3705.91625",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-14",
+   "nadac_per_unit": "7422.90100",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "7356.96400",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "3682.40250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7408.40000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7366.10917",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3689.91565",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7408.40000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7366.10917",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3689.91565",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7408.40000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7366.10917",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3689.91565",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7408.40000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "7366.10917",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "3689.91565",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7385.63333",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7369.52750",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3692.53250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7385.63333",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7369.52750",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3692.53250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7385.63333",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7369.52750",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3692.53250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3708.77800",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7385.63333",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "7369.52750",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "3692.53250",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7388.01429",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7373.69941",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3691.40433",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7388.01429",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7373.69941",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3691.40433",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7388.01429",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7373.69941",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3691.40433",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7388.01429",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7373.69941",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3691.40433",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7388.01429",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "7373.69941",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "3691.40433",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7397.80111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3691.20234",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7397.80111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3691.20234",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7397.80111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3691.20234",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3709.15950",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7397.80111",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "3691.20234",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-02",
+   "nadac_per_unit": "3843.93450",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3710.24577",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7402.08727",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3693.47200",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3846.67385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3710.24577",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7402.08727",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3693.47200",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3846.67385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3710.24577",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7402.08727",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3693.47200",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3846.67385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3710.24577",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7402.08727",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "7365.54316",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3693.47200",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "3846.67385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3706.20933",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7404.96583",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7358.90476",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3692.31105",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3836.91976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3706.20933",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7404.96583",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7358.90476",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3692.31105",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3836.91976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3706.20933",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7404.96583",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "7358.90476",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3692.31105",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "3836.91976",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-10",
+   "nadac_per_unit": "3587.78590",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "7206.91000",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "3579.49100",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "7206.91000",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "3579.49100",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "7206.91000",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "3579.49100",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "7206.91000",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "3579.49100",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3579.90429",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "7209.01375",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3580.77026",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3610.01700",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3579.90429",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "7209.01375",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3580.77026",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3610.01700",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3579.90429",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "7209.01375",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3580.77026",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3610.01700",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3579.90429",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "7209.01375",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3580.77026",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "3610.01700",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3598.71875",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "7204.47556",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3584.97087",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3597.68643",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3598.71875",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "7204.47556",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3584.97087",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3597.68643",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3598.71875",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "7204.47556",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3584.97087",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3597.68643",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3598.71875",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "7204.47556",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3584.97087",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3597.68643",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3598.71875",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "7204.47556",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3584.97087",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "3597.68643",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "7198.54818",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3587.56660",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3595.89889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "7198.54818",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3587.56660",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3595.89889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "7198.54818",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3587.56660",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3595.89889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "7198.54818",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3587.56660",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "3595.89889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "7203.73417",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3587.07464",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3591.89625",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "7203.73417",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3587.07464",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3591.89625",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "7203.73417",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3587.07464",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3591.89625",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "7203.73417",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3587.07464",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3591.89625",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "7203.73417",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3587.07464",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "3591.89625",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7213.36833",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7204.27800",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3590.32636",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.96385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7213.36833",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7204.27800",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3590.32636",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.96385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7213.36833",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7204.27800",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3590.32636",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.96385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.85417",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7213.36833",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "7204.27800",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3590.32636",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "3597.96385",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.85643",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.26571",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.33688",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3591.81951",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.76889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.85643",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.26571",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.33688",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3591.81951",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.76889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.85643",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.26571",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.33688",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3591.81951",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.76889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.85643",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.26571",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "7204.33688",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3591.81951",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "3599.76889",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3600.89647",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7206.70000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7208.96625",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3593.02900",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3605.62583",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3600.89647",
+   "ndc_description": "COSENTYX (150 MG/ML) 300 MG DOSE-2 SYRINGES",
+   "ndc": "00078063998",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7206.70000",
+   "ndc_description": "COSENTYX 150 MG/ML SYRINGE",
+   "ndc": "00078063997",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "7208.96625",
+   "ndc_description": "COSENTYX SENSOREADY 150 MG/ML PEN",
+   "ndc": "00078063968",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3593.02900",
+   "ndc_description": "COSENTYX SENSOREADY 300 MG DOSE/2 PENS (150 MG/PEN)",
+   "ndc": "00078063941",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "3605.62583",
+   "ndc_description": "COSENTYX UNOREADY 300 MG/2 ML PEN (1 PEN)",
+   "ndc": "00078107068",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

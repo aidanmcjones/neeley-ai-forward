@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:41:19+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 145,
+   "serious": 134
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 137,
+   "serious": 131
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 174,
+   "serious": 163
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 171,
+   "serious": 157
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 176,
+   "serious": 165
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 230,
+   "serious": 212
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 211,
+   "serious": 199
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 180,
+   "serious": 175
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 130,
+   "serious": 126
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 173,
+   "serious": 164
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 150,
+   "serious": 142
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 87,
+   "serious": 82
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = KALYDECO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KALYDECO\"+OR+patient.drug.medicinalproduct:\"KALYDECO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

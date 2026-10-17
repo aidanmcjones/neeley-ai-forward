@@ -1,0 +1,2009 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:33:47+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.64698",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.55098",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.64698",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.55098",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.64698",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.55098",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.16388",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-16",
+   "nadac_per_unit": "258.06500",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.96785",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.75640",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.96785",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.75640",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.96785",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.75640",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.96785",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "257.75640",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.98123",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.84157",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.98123",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.84157",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.98123",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.84157",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.98123",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.84157",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.98123",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "257.84157",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "258.02856",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "257.65581",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "258.02856",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "257.65581",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "258.02856",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "257.65581",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "258.02856",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "257.65581",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "258.02446",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "257.73149",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "258.02446",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "257.73149",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "258.02446",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "257.73149",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "258.02446",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "257.73149",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "258.02446",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "257.73149",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "258.00732",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "257.73160",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "258.00732",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "257.73160",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "258.00732",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "257.73160",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "258.00732",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "257.73160",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.93641",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.88232",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.93641",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.88232",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.93641",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.88232",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.20571",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-13",
+   "nadac_per_unit": "251.15001",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.30483",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.38981",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.30483",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.38981",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.30483",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.38981",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.30483",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "250.38981",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.54040",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.64360",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.54040",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.64360",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.54040",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.64360",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.54040",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.64360",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.54040",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "250.64360",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.54974",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.52878",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.54974",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.52878",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.54974",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.52878",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.54974",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "250.52878",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.61910",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.62603",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.61910",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.62603",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.61910",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.62603",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.61910",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "250.62603",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.59337",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.62879",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.59337",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.62879",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.59337",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.62879",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.59337",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.62879",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.59337",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "250.62879",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.63235",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.67898",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.63235",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.67898",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.63235",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.67898",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.63235",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "250.67898",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.66858",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.53546",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.66858",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.53546",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.66858",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.53546",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.66858",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "250.53546",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.64698",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.55098",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.64698",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.55098",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.64698",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "250.55098",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.38094",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-12",
+   "nadac_per_unit": "245.18104",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.47176",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.14988",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.47176",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.14988",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.47176",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.14988",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.47176",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "244.14988",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.21321",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.09182",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.21321",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.09182",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.21321",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.09182",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.21321",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "244.09182",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.04277",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.09256",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.04277",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.09256",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.04277",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.09256",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.04277",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.09256",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.04277",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "244.09256",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.19794",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.11451",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.19794",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.11451",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.19794",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.11451",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.19794",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "244.11451",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.16763",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.10159",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.16763",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.10159",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.16763",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.10159",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.16763",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.10159",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.16763",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "244.10159",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.20655",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.07393",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.20655",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.07393",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.20655",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.07393",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.20655",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "244.07393",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.12469",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.01012",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.12469",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.01012",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.12469",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.01012",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.12469",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "244.01012",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.93641",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.88232",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.93641",
+   "ndc_description": "PRALUENT 150 MG/ML PEN",
+   "ndc": "61755002102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "243.88232",
+   "ndc_description": "PRALUENT 75 MG/ML PEN",
+   "ndc": "61755002002",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

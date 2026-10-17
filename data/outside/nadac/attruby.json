@@ -1,0 +1,6 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:27:41+00:00",
+ "rows": [],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

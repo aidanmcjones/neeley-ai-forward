@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:34+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 2294,
+   "serious": 1244
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 2315,
+   "serious": 1520
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 1893,
+   "serious": 1075
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 1490,
+   "serious": 910
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 1357,
+   "serious": 814
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 1329,
+   "serious": 851
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 1433,
+   "serious": 900
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 1184,
+   "serious": 803
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1073,
+   "serious": 683
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1037,
+   "serious": 682
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 569,
+   "serious": 471
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 614,
+   "serious": 498
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = IBRANCE",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IBRANCE\"+OR+patient.drug.medicinalproduct:\"IBRANCE\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

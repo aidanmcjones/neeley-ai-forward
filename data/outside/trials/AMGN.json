@@ -1,0 +1,193 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:19+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT04933695",
+   "title": "A Study of Sotorasib (AMG 510) in Participants With Stage IV NSCLC Whose Tumors Harbor a KRAS p.G12C Mutation in Need of First-line Treatment",
+   "status": "TERMINATED",
+   "why_stopped": "Futility",
+   "last_update": "2026-07-13",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT04933695"
+  },
+  {
+   "nct_id": "NCT05322577",
+   "title": "A Study Evaluating Bemarituzumab in Combination With Other Anti-cancer Therapies in Subjects With Previously Untreated Advanced Gastric or Gastroesophageal Junction Cancer.",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision",
+   "last_update": "2026-07-29",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05322577"
+  },
+  {
+   "nct_id": "NCT06527404",
+   "title": "A Phase 3, Placebo-controlled, Double-blind Study Assessing Rocatinlimab in Prurigo Nodularis",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision",
+   "last_update": "2026-07-27",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT06527404"
+  },
+  {
+   "nct_id": "NCT05626751",
+   "title": "An Open-label Extension Trial of HZNP-HZN-825-301 in Adult Participants With Diffuse Cutaneous Systemic Sclerosis (Diffuse Cutaneous SSc)",
+   "status": "TERMINATED",
+   "why_stopped": "The study was not stopped due to safety reasons",
+   "last_update": "2026-01-05",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05626751"
+  },
+  {
+   "nct_id": "NCT06376045",
+   "title": "A Phase 2, Dose Ranging Study Assessing Rocatinlimab in Moderate-to-severe Asthma",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision",
+   "last_update": "2026-08-11",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT06376045"
+  },
+  {
+   "nct_id": "NCT05591222",
+   "title": "Study of Daxdilimab (HZN-7734) in Participants With Moderate-to-Severe Primary Discoid Lupus Erythematosus",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor business decision, not related to safety concerns.",
+   "last_update": "2026-05-14",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05591222"
+  },
+  {
+   "nct_id": "NCT05882877",
+   "title": "A Study to Assess Long-term Safety, Tolerability, and Efficacy of Rocatinlimab in Adult and Adolescent Participants With Moderate-to-severe Atopic Dermatitis (AD)",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision",
+   "last_update": "2026-07-16",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05882877"
+  },
+  {
+   "nct_id": "NCT05672199",
+   "title": "Long-term Safety and Efficacy of Efavaleukin Alfa in Participants With Moderately to Severely Active Ulcerative Colitis",
+   "status": "TERMINATED",
+   "why_stopped": "The parent study 20170104 was terminated due to the study meeting a prespecified futility rule. Consequently, this study was terminated.",
+   "last_update": "2025-10-15",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05672199"
+  },
+  {
+   "nct_id": "NCT06312020",
+   "title": "A Phase 2 Study to Investigate Efficacy and Safety of HZN-1116 in Participants With Sjogren's Syndrome",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated by sponsor due to meeting pre-defined criteria for futility.",
+   "last_update": "2026-05-08",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT06312020"
+  },
+  {
+   "nct_id": "NCT04781543",
+   "title": "A Multicenter Trial to Evaluate the Efficacy, Safety, Tolerability and Pharmacokinetics of HZN-825 in Patients With Diffuse Cutaneous Systemic Sclerosis",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated due to meeting pre-defined criteria for futility.",
+   "last_update": "2026-03-20",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT04781543"
+  },
+  {
+   "nct_id": "NCT05111626",
+   "title": "Bemarituzumab Plus Chemotherapy and Nivolumab Versus Chemotherapy and Nivolumab for FGFR2b Overexpressed Untreated Advanced Gastric and Gastroesophageal Junction Cancer.",
+   "status": "TERMINATED",
+   "why_stopped": "Study was terminated by sponsor",
+   "last_update": "2026-09-10",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05111626"
+  },
+  {
+   "nct_id": "NCT05325866",
+   "title": "A Study Evaluating Bemarituzumab in Solid Tumors With Fibroblast Growth Factor Receptor 2b (FGFR2b) Overexpression",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision",
+   "last_update": "2026-06-22",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05325866"
+  },
+  {
+   "nct_id": "NCT04987307",
+   "title": "Safety and Efficacy of Efavaleukin Alfa in Participants With Moderately to Severely Active Ulcerative Colitis",
+   "status": "TERMINATED",
+   "why_stopped": "The study was terminated due to meeting a prespecified futility rule and not related to any safety concerns.",
+   "last_update": "2026-01-13",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT04987307"
+  },
+  {
+   "nct_id": "NCT04631601",
+   "title": "Safety and Efficacy of Therapies for Metastatic Castration-resistant Prostate Cancer (mCRPC)",
+   "status": "TERMINATED",
+   "why_stopped": "Amgen made a business decision to discontinue all AMG 160 clinical trials. This decision is not related to safety.",
+   "last_update": "2026-08-26",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT04631601"
+  },
+  {
+   "nct_id": "NCT05032066",
+   "title": "A Multicenter Trial to Evaluate the Efficacy, Safety and Tolerability of HZN-825 in Subjects With Idiopathic Pulmonary Fibrosis",
+   "status": "TERMINATED",
+   "why_stopped": "The trial was terminated due to not meeting primary or key secondary endpoints.",
+   "last_update": "2025-12-03",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Amgen",
+   "url": "https://clinicaltrials.gov/study/NCT05032066"
+  }
+ ],
+ "sponsors_queried": [
+  "Amgen"
+ ],
+ "since": "2025-04-17"
+}

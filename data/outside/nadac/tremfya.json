@@ -1,0 +1,2723 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:30:00+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14766.32802",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "14769.73527",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14740.01800",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14779.63200",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14740.01800",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14779.63200",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14740.01800",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14779.63200",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14740.01800",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14779.63200",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14740.01800",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14597.92800",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "14779.63200",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-02-03",
+   "nadac_per_unit": "7349.67030",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14710.05333",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14715.71455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14710.05333",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14715.71455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14710.05333",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14715.71455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14710.05333",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14609.29778",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "14715.71455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "7309.90100",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14745.84214",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14745.84214",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14745.84214",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14745.84214",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14745.84214",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14610.18000",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "7318.98833",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14743.71813",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14743.71813",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14743.71813",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14743.71813",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064003",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14620.06917",
+   "ndc_description": "TREMFYA 100 MG/ML PEN",
+   "ndc": "57894064006",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "14728.90533",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "7321.65571",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13350.90031",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13361.82750",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13350.90031",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13361.82750",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13350.90031",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13361.82750",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "13346.30778",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "13361.82750",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "13346.30778",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-22",
+   "nadac_per_unit": "13361.82750",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14013.62317",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "14009.27375",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "14009.27375",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "14009.27375",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "14009.27375",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "14009.27375",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-28",
+   "nadac_per_unit": "14029.91888",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14099.69000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14099.69000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14099.69000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14019.59167",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "14099.69000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14031.25118",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "14073.73000",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14051.07900",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14088.01333",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14051.07900",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14088.01333",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14051.07900",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14088.01333",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14051.07900",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "14088.01333",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14063.16955",
+   "ndc_description": "TREMFYA 100 MG/ML ONE-PRESS",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "14066.41455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "6999.68600",
+   "ndc_description": "TREMFYA 200 MG/2 ML PEN",
+   "ndc": "57894065102",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-24",
+   "nadac_per_unit": "13494.07301",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13420.54778",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13375.36286",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13420.54778",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13375.36286",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13420.54778",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13375.36286",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13420.54778",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "13375.36286",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13407.60000",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13347.27455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13407.60000",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13347.27455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13407.60000",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13347.27455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13407.60000",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13347.27455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13407.60000",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "13347.27455",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13397.27222",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13354.07417",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13397.27222",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13354.07417",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13397.27222",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13354.07417",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13397.27222",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "13354.07417",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13404.04632",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13404.04632",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13404.04632",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13404.04632",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13404.04632",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13355.57750",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13355.57750",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13355.57750",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13355.57750",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "13350.22385",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13339.26407",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13362.77786",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13339.26407",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13362.77786",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13339.26407",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13362.77786",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13339.26407",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "13362.77786",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13350.90031",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13361.82750",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13350.90031",
+   "ndc_description": "TREMFYA 100 MG/ML INJECTOR",
+   "ndc": "57894064011",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "13361.82750",
+   "ndc_description": "TREMFYA 100 MG/ML SYRINGE",
+   "ndc": "57894064001",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

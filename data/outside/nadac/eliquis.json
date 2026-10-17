@@ -1,0 +1,6601 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:25:39+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.66849",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52317",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.52654",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "5.51104",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.51604",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.52374",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "5.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.50728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.50728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.50728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.50728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.51612",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.52276",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "5.50728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.50588",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.50588",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.50588",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.51491",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.52277",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "5.50588",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.50609",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.50609",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.50609",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.50609",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.51857",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.52106",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "5.50609",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.50766",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.50766",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.50766",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.51282",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.52114",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "5.50766",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50803",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50803",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50288",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69819",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.70084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "9.69294",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.65515",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.65515",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.65515",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.68496",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.69113",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "9.65515",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.65836",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.65836",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.65836",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.65836",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.68451",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.69011",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "9.65836",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.65728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.65728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.65728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.68563",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.69129",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "9.65728",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.66022",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.66022",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.66022",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.68579",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "9.66022",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.66235",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.66235",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.66235",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.66235",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.68735",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.69127",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "9.66235",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.65738",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.65738",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.65738",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.68863",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.69370",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "9.65738",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.66021",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.66021",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.66021",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.68852",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.69413",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "9.66021",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.66849",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.66849",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.68961",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.69551",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "9.66849",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49893",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.50366",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "9.49126",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51032",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51032",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51032",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51329",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51479",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "9.51032",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.50186",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.50186",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.50186",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51070",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.51282",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "9.50186",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.50375",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.50375",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.50375",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.50375",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51025",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.51325",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "9.50375",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51083",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.51390",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "9.50716",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50615",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50615",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50615",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50615",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50939",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.51193",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "9.50615",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50305",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50305",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50305",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50929",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.51156",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "9.50305",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50461",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50461",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50461",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50846",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.51084",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "9.50461",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50803",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50803",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50288",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50803",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50803",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.51063",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "9.50288",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089321",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96117",
+   "ndc_description": "ELIQUIS 2.5 MG TABLET",
+   "ndc": "00003089331",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089421",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089431",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.96563",
+   "ndc_description": "ELIQUIS 5 MG TABLET",
+   "ndc": "00003089470",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "8.95402",
+   "ndc_description": "ELIQUIS DVT-PE TREATMENT 30-DAY STARTER 5 MG PACK",
+   "ndc": "00003376474",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

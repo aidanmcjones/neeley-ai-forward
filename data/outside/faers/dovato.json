@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:49+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 210,
+   "serious": 66
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 160,
+   "serious": 58
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 186,
+   "serious": 56
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 200,
+   "serious": 37
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 158,
+   "serious": 54
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 218,
+   "serious": 85
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 239,
+   "serious": 60
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 148,
+   "serious": 57
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 109,
+   "serious": 62
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 84,
+   "serious": 55
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 96,
+   "serious": 68
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 62,
+   "serious": 47
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = DOVATO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DOVATO\"+OR+patient.drug.medicinalproduct:\"DOVATO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

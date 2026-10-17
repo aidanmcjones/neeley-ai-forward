@@ -1,0 +1,2821 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:31:10+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "218.29280",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "217.92897",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "438.13636",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "229.20744",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "228.82542",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-02",
+   "nadac_per_unit": "460.04317",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.78722",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.11397",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "458.94155",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.78722",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.11397",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "458.94155",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.78722",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.11397",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "458.94155",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.78722",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "228.11397",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "458.94155",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.91899",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.77208",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "458.53777",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.91899",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.77208",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "458.53777",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.91899",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.77208",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "458.53777",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.91899",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.77208",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "458.53777",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.91899",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "228.77208",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "458.53777",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.93752",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.58843",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "459.24093",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.93752",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.58843",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "459.24093",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.93752",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.58843",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "459.24093",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.93752",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "228.58843",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "459.24093",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.27495",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.23663",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "459.41429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.27495",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.23663",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "459.41429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.27495",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.23663",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "459.41429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.27495",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.23663",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "459.41429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.27495",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "229.23663",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "459.41429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.30897",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.29390",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "459.62250",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.30897",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.29390",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "459.62250",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.30897",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.29390",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "459.62250",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.30897",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "229.29390",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "459.62250",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "207.87854",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "207.19160",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "415.83850",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "218.27247",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "217.55118",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-02",
+   "nadac_per_unit": "436.63042",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.25346",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.31943",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "436.25545",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.25346",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.31943",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "436.25545",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.25346",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.31943",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "436.25545",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.25346",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "218.31943",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "436.25545",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "218.46735",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "217.96933",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "436.55210",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "218.46735",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "217.96933",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "436.55210",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "218.46735",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "217.96933",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "436.55210",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "218.46735",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "217.96933",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "436.55210",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "218.46735",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "217.96933",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "436.55210",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.67097",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.68485",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.67097",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.68485",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.67097",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.68485",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.67097",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "218.68485",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.77976",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.62632",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.77976",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.62632",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.77976",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.62632",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.77976",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "218.62632",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "436.78943",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.34290",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.73480",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "437.02895",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.34290",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.73480",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "437.02895",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.34290",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.73480",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "437.02895",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.34290",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.73480",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "437.02895",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.34290",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "218.73480",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "437.02895",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.34704",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.26249",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "437.76331",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.34704",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.26249",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "437.76331",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.34704",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.26249",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "437.76331",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.34704",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "218.26249",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "437.76331",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.49102",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.47284",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "438.14254",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.49102",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.47284",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "438.14254",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.49102",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.47284",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "438.14254",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.49102",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "218.47284",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "438.14254",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "218.29280",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "217.92897",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "438.13636",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "218.29280",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "217.92897",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "438.13636",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "218.29280",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "217.92897",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "438.13636",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "206.80633",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "206.80633",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "206.80633",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "206.80633",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-02",
+   "nadac_per_unit": "208.19577",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-04-17",
+   "nadac_per_unit": "206.80633",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "208.36067",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "207.21896",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "208.36067",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "207.21896",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "208.36067",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "207.21896",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "208.36067",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "207.21896",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "208.22087",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "206.81704",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "208.22087",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "206.81704",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "208.22087",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "206.81704",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "208.22087",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "206.81704",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "416.06429",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "207.96123",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "206.78108",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "414.83601",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "207.96123",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "206.78108",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "414.83601",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "207.96123",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "206.78108",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "414.83601",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "207.96123",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "206.78108",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "414.83601",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "207.96123",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "206.78108",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "414.83601",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "207.86350",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "206.88077",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "415.88715",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "207.86350",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "206.88077",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "415.88715",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "207.86350",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "206.88077",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "415.88715",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "207.86350",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "206.88077",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "415.88715",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.97260",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.21455",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "415.81010",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.97260",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.21455",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "415.81010",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.97260",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.21455",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "415.81010",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.97260",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.21455",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "415.81010",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.97260",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "207.21455",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "415.81010",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.86386",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.21448",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "415.74334",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.86386",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.21448",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "415.74334",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.86386",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.21448",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "415.74334",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.86386",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "207.21448",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "415.74334",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.83485",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.18722",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "415.54656",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.83485",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.18722",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "415.54656",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.83485",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.18722",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "415.54656",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.83485",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "207.18722",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "415.54656",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "207.87854",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "207.19160",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "415.83850",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "207.87854",
+   "ndc_description": "RINVOQ ER 15 MG TABLET",
+   "ndc": "00074230630",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "207.19160",
+   "ndc_description": "RINVOQ ER 30 MG TABLET",
+   "ndc": "00074231030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "415.83850",
+   "ndc_description": "RINVOQ ER 45 MG TABLET",
+   "ndc": "00074104328",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:26+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 5723,
+   "serious": 4022
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 5449,
+   "serious": 3988
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 5112,
+   "serious": 3517
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 5424,
+   "serious": 3702
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 5514,
+   "serious": 3666
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 5127,
+   "serious": 3422
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 4881,
+   "serious": 3073
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 5021,
+   "serious": 3102
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 4244,
+   "serious": 2380
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 3954,
+   "serious": 2494
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 3720,
+   "serious": 2231
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 4068,
+   "serious": 2385
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = ELIQUIS",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ELIQUIS\"+OR+patient.drug.medicinalproduct:\"ELIQUIS\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

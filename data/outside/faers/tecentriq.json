@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:03+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 1399,
+   "serious": 1378
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 1312,
+   "serious": 1280
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 1220,
+   "serious": 1178
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 1343,
+   "serious": 1188
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 1286,
+   "serious": 1223
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 1308,
+   "serious": 1263
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 1079,
+   "serious": 1048
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 1024,
+   "serious": 1002
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1150,
+   "serious": 1116
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1414,
+   "serious": 1384
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1073,
+   "serious": 1035
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1138,
+   "serious": 1118
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = TECENTRIQ",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TECENTRIQ\"+OR+patient.drug.medicinalproduct:\"TECENTRIQ\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

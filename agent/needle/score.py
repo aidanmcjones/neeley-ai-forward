@@ -208,6 +208,8 @@ def score_ticker(ticker):
     findings, rejected = [], []
     for det in DETECTORS:
         for sig in read_jsonl(OUT / ticker / f"signals_{det}.jsonl", Signal):
+            if sig.kind == "trial_terminated" and not sig.meta.get("business_reason"):
+                continue  # safety / efficacy / enrollment stops are routine; business-driven stops are the signal
             f = score_signal(sig, docs, p, oi or 0, hits)
             (rejected if f.verdict == "rejected" else findings).append(f)
     seen, unique = set(), []

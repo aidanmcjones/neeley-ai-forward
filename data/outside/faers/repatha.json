@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:19+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 5987,
+   "serious": 579
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 6817,
+   "serious": 563
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 9062,
+   "serious": 648
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 7941,
+   "serious": 653
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 6415,
+   "serious": 608
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 2117,
+   "serious": 591
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 2007,
+   "serious": 591
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 2000,
+   "serious": 711
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1952,
+   "serious": 680
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1961,
+   "serious": 693
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1939,
+   "serious": 704
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 4105,
+   "serious": 2168
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = REPATHA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"REPATHA\"+OR+patient.drug.medicinalproduct:\"REPATHA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

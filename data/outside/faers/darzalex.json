@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:51+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 823,
+   "serious": 669
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 964,
+   "serious": 796
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 799,
+   "serious": 620
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 942,
+   "serious": 762
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 830,
+   "serious": 671
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 758,
+   "serious": 585
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 930,
+   "serious": 732
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 836,
+   "serious": 607
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 656,
+   "serious": 508
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 705,
+   "serious": 579
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 677,
+   "serious": 526
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 722,
+   "serious": 573
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = DARZALEX",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"DARZALEX\"+OR+patient.drug.medicinalproduct:\"DARZALEX\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

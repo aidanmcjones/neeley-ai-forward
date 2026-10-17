@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:08+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 5898,
+   "serious": 529
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 4743,
+   "serious": 537
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 5509,
+   "serious": 778
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 5343,
+   "serious": 829
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 5902,
+   "serious": 1331
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 5886,
+   "serious": 1707
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 6709,
+   "serious": 1796
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 8191,
+   "serious": 2559
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 9031,
+   "serious": 3473
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 7808,
+   "serious": 3196
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 7206,
+   "serious": 2883
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 6486,
+   "serious": 3240
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = MOUNJARO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"MOUNJARO\"+OR+patient.drug.medicinalproduct:\"MOUNJARO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

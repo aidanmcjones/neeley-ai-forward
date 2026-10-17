@@ -1,0 +1,58 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:18+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT07357766",
+   "title": "A Research Study to Compare Different Versions of Injectable CagriSema and Placebo in People With Excess Body Weight",
+   "status": "WITHDRAWN",
+   "why_stopped": "The study is withdrawn due to strategic reasons.",
+   "last_update": "2026-07-09",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Novo Nordisk A/S",
+   "url": "https://clinicaltrials.gov/study/NCT07357766"
+  },
+  {
+   "nct_id": "NCT05636176",
+   "title": "A Research Study to Look at How Ziltivekimab Works Compared to Placebo in People With Heart Failure and Inflammation",
+   "status": "TERMINATED",
+   "why_stopped": "No longer looking for participants.",
+   "last_update": "2026-10-01",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Novo Nordisk A/S",
+   "url": "https://clinicaltrials.gov/study/NCT05636176"
+  },
+  {
+   "nct_id": "NCT04764448",
+   "title": "A Study of Belcesiran in Patients With AATLD",
+   "status": "TERMINATED",
+   "why_stopped": "Development project was discontinued",
+   "last_update": "2026-04-07",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Dicerna Pharmaceuticals, Inc., a Novo Nordisk company",
+   "url": "https://clinicaltrials.gov/study/NCT04764448"
+  },
+  {
+   "nct_id": "NCT07357740",
+   "title": "A Research Study to Compare Two Different Versions of Injectable CagriSema in People With Type 2 Diabetes",
+   "status": "WITHDRAWN",
+   "why_stopped": "The study is withdrawn due to strategic reasons.",
+   "last_update": "2026-07-09",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Novo Nordisk A/S",
+   "url": "https://clinicaltrials.gov/study/NCT07357740"
+  }
+ ],
+ "sponsors_queried": [
+  "Novo Nordisk"
+ ],
+ "since": "2025-04-17"
+}

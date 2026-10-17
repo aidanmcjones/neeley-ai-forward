@@ -1,0 +1,2009 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:35:34+00:00",
+ "rows": [
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "105.28740",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "105.10517",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "105.25514",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "105.21714",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "105.03202",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "105.22465",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "96.16558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "96.16558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "100.01220",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "99.97868",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "99.99351",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "99.96558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "99.96433",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "99.95902",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "100.24186",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "100.27036",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "100.27372",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "100.27372",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "100.27372",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "100.27372",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "100.27372",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "100.27372",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-02-07",
+   "nadac_per_unit": "96.07497",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "96.44469",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "96.41767",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "96.40557",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "96.44648",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "96.27532",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "96.26444",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "96.17938",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "96.16558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "96.16558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "96.16558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024613",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "96.16558",
+   "ndc_description": "DOVATO 50-300 MG TABLET",
+   "ndc": "49702024633",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

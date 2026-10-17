@@ -1,0 +1,6601 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:25:21+00:00",
+ "rows": [
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19625",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "11.19650",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19542",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "11.19617",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19341",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "11.19434",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19289",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "11.19451",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18819",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "11.18576",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18929",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "11.18970",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13339",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "20.13118",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12245",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "20.12249",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.12174",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "20.11965",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12474",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "20.12330",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12576",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "20.12632",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12802",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "20.12959",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.12978",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "20.13090",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13164",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "20.13207",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13497",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "20.13542",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53466",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "19.53888",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54874",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "19.54518",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.54149",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "19.53967",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54700",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "19.54415",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54980",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "19.54513",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54662",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "19.54309",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54581",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "19.54170",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54600",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "19.54397",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54698",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "19.54483",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015230",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015237",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96569",
+   "ndc_description": "JARDIANCE 10 MG TABLET",
+   "ndc": "00597015290",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015330",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015337",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.96979",
+   "ndc_description": "JARDIANCE 25 MG TABLET",
+   "ndc": "00597015390",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

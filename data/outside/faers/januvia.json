@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:10+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 641,
+   "serious": 452
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 701,
+   "serious": 559
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 778,
+   "serious": 604
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 647,
+   "serious": 445
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 733,
+   "serious": 568
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 699,
+   "serious": 527
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 676,
+   "serious": 499
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 726,
+   "serious": 580
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 813,
+   "serious": 634
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 596,
+   "serious": 479
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 626,
+   "serious": 478
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 640,
+   "serious": 469
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = JANUVIA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JANUVIA\"+OR+patient.drug.medicinalproduct:\"JANUVIA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:19:51+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 3750,
+   "serious": 3355
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 4836,
+   "serious": 4448
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 4009,
+   "serious": 3593
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 3864,
+   "serious": 3466
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 3889,
+   "serious": 3332
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 4330,
+   "serious": 3913
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 4097,
+   "serious": 3699
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 4449,
+   "serious": 4046
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 4508,
+   "serious": 4105
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 4320,
+   "serious": 3993
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 3894,
+   "serious": 3535
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 3998,
+   "serious": 3718
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = KEYTRUDA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"KEYTRUDA\"+OR+patient.drug.medicinalproduct:\"KEYTRUDA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

@@ -1,0 +1,4074 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:33:30+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.94923",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "281.24484",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "282.04173",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "281.91349",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "282.02091",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "281.69732",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "174.20192",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.99444",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "281.79708",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.96916",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.96114",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "281.80579",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "271.20880",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.88680",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "167.72356",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "271.20880",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.88680",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "167.72356",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-14",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.62213",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-03-05",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "276.29912",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "171.07971",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "170.48460",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "170.48460",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "170.48460",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "275.45456",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "170.48460",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "275.58451",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "276.31380",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "275.64990",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "170.48014",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "276.46927",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "275.65681",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "276.47393",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "275.62247",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "276.43278",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "275.95136",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "276.39903",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "275.69987",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511039302",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "276.41810",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511050101",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "275.72753",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "170.78619",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "272.04673",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "271.34923",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "167.64812",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.24372",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.11715",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "168.06314",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.24372",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.11715",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "168.06314",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.24372",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.11715",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "168.06314",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.24372",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "271.11715",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "168.06314",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.34050",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.27155",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "168.15612",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.34050",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.27155",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "168.15612",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.34050",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.27155",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "168.15612",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.34050",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "271.27155",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "168.15612",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.34169",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.08860",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "167.87092",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.34169",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.08860",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "167.87092",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.34169",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.08860",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "167.87092",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.34169",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.08860",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "167.87092",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.34169",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "271.08860",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "167.87092",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.34205",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.26544",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "167.97200",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.34205",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.26544",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "167.97200",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.34205",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.26544",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "167.97200",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.34205",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "271.26544",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "167.97200",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.34558",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.13557",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "167.96984",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.34558",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.13557",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "167.96984",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.34558",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.13557",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "167.96984",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.34558",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.13557",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "167.96984",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.34558",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "271.13557",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "167.96984",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.33259",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.00777",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "167.75280",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.33259",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.00777",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "167.75280",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.33259",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.00777",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "167.75280",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.33259",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "271.00777",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "167.75280",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "271.26799",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "270.92834",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "167.72321",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "271.26799",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "270.92834",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "167.72321",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "271.26799",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "270.92834",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "167.72321",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "271.26799",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "270.92834",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "167.72321",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "271.20880",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.88680",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "167.72356",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "271.20880",
+   "ndc_description": "REPATHA 140 MG/ML SURECLICK",
+   "ndc": "72511076002",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "270.88680",
+   "ndc_description": "REPATHA 140 MG/ML SYRINGE",
+   "ndc": "72511075001",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "167.72356",
+   "ndc_description": "REPATHA 420 MG/3.5 ML PUSHTRONX",
+   "ndc": "72511077001",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

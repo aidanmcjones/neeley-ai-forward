@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:58+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 22,
+   "serious": 19
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 49,
+   "serious": 19
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 1615,
+   "serious": 120
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 2406,
+   "serious": 171
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 3273,
+   "serious": 270
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 3906,
+   "serious": 290
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 5347,
+   "serious": 387
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 7789,
+   "serious": 664
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 9070,
+   "serious": 703
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 9891,
+   "serious": 882
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 12762,
+   "serious": 1174
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 13905,
+   "serious": 1504
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = ZEPBOUND",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ZEPBOUND\"+OR+patient.drug.medicinalproduct:\"ZEPBOUND\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

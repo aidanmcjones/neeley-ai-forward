@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:28+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 577,
+   "serious": 214
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 562,
+   "serious": 201
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 466,
+   "serious": 173
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 485,
+   "serious": 176
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 496,
+   "serious": 189
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 460,
+   "serious": 191
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 442,
+   "serious": 204
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 614,
+   "serious": 327
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 451,
+   "serious": 244
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 426,
+   "serious": 239
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 506,
+   "serious": 318
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 461,
+   "serious": 277
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = LEQVIO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"LEQVIO\"+OR+patient.drug.medicinalproduct:\"LEQVIO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

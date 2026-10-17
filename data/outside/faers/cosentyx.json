@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:34+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 4571,
+   "serious": 1851
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 3683,
+   "serious": 1810
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 2676,
+   "serious": 1507
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 2975,
+   "serious": 1714
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 2662,
+   "serious": 1472
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 2746,
+   "serious": 1748
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 2535,
+   "serious": 1547
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 2312,
+   "serious": 1412
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 2203,
+   "serious": 1565
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 2182,
+   "serious": 1607
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1502,
+   "serious": 1033
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1531,
+   "serious": 1126
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = COSENTYX",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"COSENTYX\"+OR+patient.drug.medicinalproduct:\"COSENTYX\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

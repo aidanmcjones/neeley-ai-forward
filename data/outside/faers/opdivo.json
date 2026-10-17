@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:19:55+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 1698,
+   "serious": 1488
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 1831,
+   "serious": 1657
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 2115,
+   "serious": 1585
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 1818,
+   "serious": 1604
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 1873,
+   "serious": 1647
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 1823,
+   "serious": 1621
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 2191,
+   "serious": 1580
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 1553,
+   "serious": 1409
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1548,
+   "serious": 1399
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1665,
+   "serious": 1468
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1999,
+   "serious": 1550
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1668,
+   "serious": 1492
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = OPDIVO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"OPDIVO\"+OR+patient.drug.medicinalproduct:\"OPDIVO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

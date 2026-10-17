@@ -1,0 +1,6139 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:28:51+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.01866",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.89024",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.95127",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.10230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.05222",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.04826",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.70922",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.57695",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.63980",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.79537",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.74379",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "538.73971",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.72547",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46545",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46743",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.73230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.62274",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.68162",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.72547",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46545",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46743",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.73230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.62274",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.68162",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.72547",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46545",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46743",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.73230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.62274",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.68162",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.72547",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46545",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.46743",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.73230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.62274",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "538.68162",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.61650",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47911",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47688",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.66863",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.63269",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.62615",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.61650",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47911",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47688",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.66863",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.63269",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.62615",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.61650",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47911",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47688",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.66863",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.63269",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.62615",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.61650",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47911",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47688",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.66863",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.63269",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.62615",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.61650",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47911",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.47688",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.66863",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.63269",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "538.62615",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.60429",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45143",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45947",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.61101",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.57666",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.62819",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.60429",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45143",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45947",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.61101",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.57666",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.62819",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.60429",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45143",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45947",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.61101",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.57666",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.62819",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.60429",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45143",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.45947",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.61101",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.57666",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "538.62819",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.63345",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47912",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47697",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.64193",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.59420",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.61287",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.63345",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47912",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47697",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.64193",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.59420",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.61287",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.63345",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47912",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47697",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.64193",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.59420",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.61287",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.63345",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47912",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47697",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.64193",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.59420",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.61287",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.63345",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47912",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.47697",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.64193",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.59420",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "538.61287",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68356",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.52518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.51759",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68839",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.63384",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68042",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68356",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.52518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.51759",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68839",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.63384",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68042",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68356",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.52518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.51759",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68839",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.63384",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68042",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68356",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.52518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.51759",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68839",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.63384",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "538.68042",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.84649",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.74770",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.57852",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.90451",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.95071",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.96314",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.00496",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.90518",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "520.73431",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.06355",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.11022",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "521.12277",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.77086",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.54207",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.80516",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.97062",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.66216",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.87690",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.77086",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.54207",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.80516",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.97062",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.66216",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.87690",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.77086",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.54207",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.80516",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.97062",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.66216",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.87690",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.77086",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.54207",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.80516",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.97062",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.66216",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "522.87690",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.78864",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.61149",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.80958",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.95784",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.72012",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.84164",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.78864",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.61149",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.80958",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.95784",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.72012",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.84164",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.78864",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.61149",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.80958",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.95784",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.72012",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.84164",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.78864",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.61149",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.80958",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.95784",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.72012",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.84164",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.78864",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.61149",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.80958",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.95784",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.72012",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "522.84164",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83532",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.73671",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.85977",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "523.02308",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83546",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.91964",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83532",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.73671",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.85977",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "523.02308",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83546",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.91964",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83532",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.73671",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.85977",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "523.02308",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83546",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.91964",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83532",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.73671",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.85977",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "523.02308",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.83546",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "522.91964",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89049",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.81206",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89781",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "523.03662",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.91576",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.96989",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89049",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.81206",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89781",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "523.03662",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.91576",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.96989",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89049",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.81206",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89781",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "523.03662",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.91576",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.96989",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89049",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.81206",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.89781",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "523.03662",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.91576",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "522.96989",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.93733",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.80238",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.90694",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "523.04311",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.94051",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.98336",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.93733",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.80238",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.90694",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "523.04311",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.94051",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.98336",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.93733",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.80238",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.90694",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "523.04311",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.94051",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.98336",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.93733",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.80238",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.90694",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "523.04311",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.94051",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.98336",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.93733",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.80238",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.90694",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "523.04311",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.94051",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "522.98336",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.98738",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.88128",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.93822",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.07567",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.01624",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.03214",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.98738",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.88128",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.93822",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.07567",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.01624",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.03214",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.98738",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.88128",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.93822",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.07567",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.01624",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.03214",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.98738",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.88128",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "522.93822",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.07567",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.01624",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "523.03214",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.06514",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.97416",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.99985",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.14266",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.07850",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.09925",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.06514",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.97416",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.99985",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.14266",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.07850",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.09925",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.06514",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.97416",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.99985",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.14266",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.07850",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.09925",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.06514",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.97416",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "522.99985",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.14266",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.07850",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "523.09925",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.01866",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.89024",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.95127",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.10230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.05222",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.04826",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.01866",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.89024",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.95127",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.10230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.05222",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.04826",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.01866",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.89024",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "522.95127",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.10230",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.05222",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "523.04826",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.26101",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-24",
+   "nadac_per_unit": "515.89755",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-24",
+   "nadac_per_unit": "515.89755",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-24",
+   "nadac_per_unit": "515.89755",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.29860",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.62729",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.88599",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.69314",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "514.37515",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-04-24",
+   "nadac_per_unit": "515.89755",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.59318",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.74902",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.41509",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.80589",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.14409",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.13421",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.59318",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.74902",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.41509",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.80589",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.14409",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.13421",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.59318",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.74902",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.41509",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.80589",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.14409",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.13421",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.59318",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.74902",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.41509",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "515.80589",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.14409",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "516.13421",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.67805",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.41462",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.11169",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78539",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.90450",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78412",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.67805",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.41462",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.11169",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78539",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.90450",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78412",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.67805",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.41462",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.11169",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78539",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.90450",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78412",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.67805",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.41462",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.11169",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78539",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.90450",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "515.78412",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.65772",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.54216",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.04966",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82065",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "516.04535",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82046",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.65772",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.54216",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.04966",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82065",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "516.04535",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82046",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.65772",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.54216",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.04966",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82065",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "516.04535",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82046",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.65772",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.54216",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.04966",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82065",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "516.04535",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82046",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.65772",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.54216",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.04966",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82065",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "516.04535",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "515.82046",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.64113",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.53672",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.45652",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.81352",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.90797",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.86538",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.64113",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.53672",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.45652",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.81352",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.90797",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.86538",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.64113",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.53672",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.45652",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.81352",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.90797",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.86538",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.64113",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.53672",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.45652",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.81352",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.90797",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "515.86538",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.72771",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.53437",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.32659",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.85860",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.93113",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.87126",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.72771",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.53437",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.32659",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.85860",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.93113",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.87126",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.72771",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.53437",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.32659",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.85860",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.93113",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.87126",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.72771",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.53437",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.32659",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.85860",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.93113",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.87126",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.72771",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.53437",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.32659",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.85860",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.93113",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "515.87126",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.76516",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.52145",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.34804",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.83240",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.95000",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.86949",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.76516",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.52145",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.34804",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.83240",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.95000",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.86949",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.76516",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.52145",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.34804",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.83240",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.95000",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.86949",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.76516",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.52145",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.34804",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.83240",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.95000",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "515.86949",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.74539",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.55898",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.37611",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.79692",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.90193",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.86296",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.74539",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.55898",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.37611",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.79692",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.90193",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.86296",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.74539",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.55898",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.37611",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.79692",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.90193",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.86296",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.74539",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.55898",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.37611",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.79692",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.90193",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "515.86296",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.84649",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.74770",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.57852",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.90451",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.95071",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.96314",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.84649",
+   "ndc_description": "MOUNJARO 10 MG/0.5 ML PEN",
+   "ndc": "00002147180",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.74770",
+   "ndc_description": "MOUNJARO 12.5 MG/0.5 ML PEN",
+   "ndc": "00002146080",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.57852",
+   "ndc_description": "MOUNJARO 15 MG/0.5 ML PEN",
+   "ndc": "00002145780",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.90451",
+   "ndc_description": "MOUNJARO 2.5 MG/0.5 ML PEN",
+   "ndc": "00002150680",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.95071",
+   "ndc_description": "MOUNJARO 5 MG/0.5 ML PEN",
+   "ndc": "00002149580",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "515.96314",
+   "ndc_description": "MOUNJARO 7.5 MG/0.5 ML PEN",
+   "ndc": "00002148480",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:44+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 3094,
+   "serious": 2297
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 3377,
+   "serious": 2464
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 3507,
+   "serious": 2678
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 3752,
+   "serious": 2910
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 3844,
+   "serious": 2908
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 4134,
+   "serious": 3073
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 4175,
+   "serious": 3108
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 4464,
+   "serious": 3454
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 4208,
+   "serious": 3383
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 4390,
+   "serious": 3757
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 4178,
+   "serious": 3478
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 3824,
+   "serious": 3082
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = RINVOQ",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RINVOQ\"+OR+patient.drug.medicinalproduct:\"RINVOQ\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:55+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 110,
+   "serious": 79
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 115,
+   "serious": 92
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 137,
+   "serious": 111
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 141,
+   "serious": 118
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 116,
+   "serious": 101
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 122,
+   "serious": 99
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 157,
+   "serious": 132
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 202,
+   "serious": 178
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 218,
+   "serious": 180
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 294,
+   "serious": 247
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 377,
+   "serious": 328
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 382,
+   "serious": 334
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = AMVUTTRA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"AMVUTTRA\"+OR+patient.drug.medicinalproduct:\"AMVUTTRA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

@@ -1,0 +1,4039 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:34:41+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1977.36267",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1982.46161",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1984.14268",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1981.65935",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2081.58469",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2083.34982",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2080.74231",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.37417",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.48247",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2080.70983",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.37417",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.48247",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2080.70983",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.37417",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.48247",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2080.70983",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.37417",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2083.48247",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "2080.70983",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.53545",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2082.92587",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.75244",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.53545",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2082.92587",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.75244",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.53545",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2082.92587",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.75244",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.53545",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2082.92587",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.75244",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-01-07",
+   "nadac_per_unit": "2076.23080",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.53545",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2082.92587",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "2080.75244",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.95250",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2083.19341",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.51112",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.95250",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2083.19341",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.51112",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.95250",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2083.19341",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.51112",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.95250",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2083.19341",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "2080.51112",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2083.62323",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.67504",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2083.62323",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.67504",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2083.62323",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.67504",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2083.62323",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.67504",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2086.20417",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2083.62323",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "2080.67504",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2084.14429",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2083.47839",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.59222",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2084.14429",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2083.47839",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.59222",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2084.14429",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2083.47839",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.59222",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2084.14429",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.99500",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2083.47839",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "2080.59222",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.73186",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.56914",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1981.42601",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1982.21188",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1984.25657",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1981.76000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1982.21188",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1984.25657",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1981.76000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1982.21188",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1984.25657",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1981.76000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-01-08",
+   "nadac_per_unit": "1983.31341",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1982.21188",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1984.25657",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "1981.76000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1977.19900",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1982.23328",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1984.04814",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1980.94068",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1977.19900",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1982.23328",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1984.04814",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1980.94068",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1977.19900",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1982.23328",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1984.04814",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1980.94068",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1977.19900",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1982.23328",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1984.04814",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1980.94068",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1977.19900",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1982.23328",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1984.04814",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "1980.94068",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1979.06833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1983.00641",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1984.28030",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1981.35924",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1979.06833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1983.00641",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1984.28030",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1981.35924",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1979.06833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1983.00641",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1984.28030",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1981.35924",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1979.06833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1983.00641",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1984.28030",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "1981.35924",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.40357",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1982.06183",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1984.16311",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.81297",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.40357",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1982.06183",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1984.16311",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.81297",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.40357",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1982.06183",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1984.16311",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.81297",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.40357",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1982.06183",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1984.16311",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "1980.81297",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.13063",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1984.16942",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.96690",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.13063",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1984.16942",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.96690",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.13063",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1984.16942",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.96690",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.13063",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1984.16942",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.96690",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.13063",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1984.16942",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "1980.96690",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1977.14875",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1984.06299",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.26291",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1977.14875",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1984.06299",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.26291",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1977.14875",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1984.06299",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.26291",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1977.14875",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.80620",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1984.06299",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "1981.26291",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1978.01538",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1982.05103",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1984.08975",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1981.61250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1978.01538",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1982.05103",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1984.08975",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1981.61250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1978.01538",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1982.05103",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1984.08975",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1981.61250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1978.01538",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1982.05103",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1984.08975",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "1981.61250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1977.36267",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1982.46161",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1984.14268",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1981.65935",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1977.36267",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1982.46161",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1984.14268",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1981.65935",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1977.36267",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1982.46161",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1984.14268",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "1981.65935",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1801.41825",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.86263",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1803.90142",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-01-05",
+   "nadac_per_unit": "1800.82312",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1798.01533",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.56560",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.82250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1798.01533",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.56560",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.82250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1798.01533",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.56560",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.82250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1798.01533",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.56560",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "1796.82250",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.82947",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.65229",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.30836",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.82947",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.65229",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.30836",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.82947",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.65229",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.30836",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.74833",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.82947",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1797.65229",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "1798.30836",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.13192",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.21859",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.81538",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.92000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.13192",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.21859",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.81538",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.92000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.13192",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.21859",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.81538",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.92000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.13192",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.21859",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.81538",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.92000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.13192",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1798.21859",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.81538",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "1797.92000",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1799.55917",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1798.14160",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1797.99396",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1797.86409",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1799.55917",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1798.14160",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1797.99396",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "1797.86409",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1853.56394",
+   "ndc_description": "ENBREL 25 MG/0.5 ML SYRINGE",
+   "ndc": "58406001004",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1852.08585",
+   "ndc_description": "ENBREL 50 MG/ML MINI CARTRIDGE",
+   "ndc": "58406004404",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.93378",
+   "ndc_description": "ENBREL 50 MG/ML SURECLICK",
+   "ndc": "58406003204",
+   "pricing_unit": "ML"
+  },
+  {
+   "effective_date": "2024-08-23",
+   "nadac_per_unit": "1851.80001",
+   "ndc_description": "ENBREL 50 MG/ML SYRINGE",
+   "ndc": "58406002104",
+   "pricing_unit": "ML"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

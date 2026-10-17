@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:24+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 1504,
+   "serious": 325
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 1078,
+   "serious": 317
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 1077,
+   "serious": 349
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 1345,
+   "serious": 379
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 1276,
+   "serious": 343
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 1317,
+   "serious": 317
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 1368,
+   "serious": 420
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 1754,
+   "serious": 431
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1630,
+   "serious": 389
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 2093,
+   "serious": 475
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1929,
+   "serious": 479
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 2289,
+   "serious": 520
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = TREMFYA",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TREMFYA\"+OR+patient.drug.medicinalproduct:\"TREMFYA\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:23:00+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 530,
+   "serious": 101
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 499,
+   "serious": 102
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 724,
+   "serious": 93
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 660,
+   "serious": 111
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 756,
+   "serious": 68
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 519,
+   "serious": 101
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 537,
+   "serious": 87
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 493,
+   "serious": 100
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 429,
+   "serious": 79
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 301,
+   "serious": 75
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 191,
+   "serious": 70
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 155,
+   "serious": 61
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = APRETUDE",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"APRETUDE\"+OR+patient.drug.medicinalproduct:\"APRETUDE\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

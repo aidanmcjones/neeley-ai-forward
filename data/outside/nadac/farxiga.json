@@ -1,0 +1,4928 @@
+{
+ "source_url": "https://data.medicaid.gov/api/1/datastore/query/4a00010a-132b-4e4d-a611-543c9521280f/0",
+ "retrieved_at": "2026-10-17T17:33:12+00:00",
+ "rows": [
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07753",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-01-01",
+   "nadac_per_unit": "12.07003",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.08377",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-05-20",
+   "nadac_per_unit": "12.07962",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.08155",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-06-17",
+   "nadac_per_unit": "12.07881",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.08152",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-07-22",
+   "nadac_per_unit": "12.07993",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07711",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-08-19",
+   "nadac_per_unit": "12.07553",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07703",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2026-09-23",
+   "nadac_per_unit": "12.07577",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.61985",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.61985",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.18758",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-01-01",
+   "nadac_per_unit": "19.17845",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.16219",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-05-21",
+   "nadac_per_unit": "19.14620",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.16344",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-06-18",
+   "nadac_per_unit": "19.14729",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.16674",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-07-23",
+   "nadac_per_unit": "19.15349",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.16421",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-08-20",
+   "nadac_per_unit": "19.15238",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.16128",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-09-17",
+   "nadac_per_unit": "19.14974",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.16771",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-10-22",
+   "nadac_per_unit": "19.15575",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.16814",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-11-19",
+   "nadac_per_unit": "19.15435",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.17096",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2025-12-17",
+   "nadac_per_unit": "19.15906",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61794",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-01-01",
+   "nadac_per_unit": "18.61743",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.62552",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.62552",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.62552",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.63823",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-05-22",
+   "nadac_per_unit": "18.62552",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63659",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63659",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63659",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63231",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-06-19",
+   "nadac_per_unit": "18.63659",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-31",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-31",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-31",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-31",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-31",
+   "nadac_per_unit": "18.63728",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-17",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-07-31",
+   "nadac_per_unit": "18.62819",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63730",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-08-21",
+   "nadac_per_unit": "18.63833",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.63029",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-09-18",
+   "nadac_per_unit": "18.62146",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.63040",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-10-23",
+   "nadac_per_unit": "18.62147",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.62952",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-11-20",
+   "nadac_per_unit": "18.61825",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.61985",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.61985",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.62872",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621090",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.61985",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2024-12-18",
+   "nadac_per_unit": "18.61985",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620590",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621030",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07567",
+   "ndc_description": "FARXIGA 10 MG TABLET",
+   "ndc": "00310621039",
+   "pricing_unit": "EA"
+  },
+  {
+   "effective_date": "2023-10-18",
+   "nadac_per_unit": "18.07518",
+   "ndc_description": "FARXIGA 5 MG TABLET",
+   "ndc": "00310620530",
+   "pricing_unit": "EA"
+  }
+ ],
+ "note": "empty rows = brand not in NADAC (retail-pharmacy NDCs only)"
+}

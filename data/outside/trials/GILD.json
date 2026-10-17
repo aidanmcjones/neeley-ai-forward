@@ -1,0 +1,168 @@
+{
+ "source_url": "https://clinicaltrials.gov/api/v2/studies",
+ "retrieved_at": "2026-10-17T17:19:19+00:00",
+ "rows": [
+  {
+   "nct_id": "NCT04827576",
+   "title": "Study of Magrolimab in Patients With Solid Tumors",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor decision to terminate study",
+   "last_update": "2025-05-08",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT04827576"
+  },
+  {
+   "nct_id": "NCT06784973",
+   "title": "Study of Obeldesivir to Treat Children With Respiratory Syncytial Virus (RSV) Infection",
+   "status": "TERMINATED",
+   "why_stopped": "Study was terminated by Sponsor; the decision was not due to any safety findings.",
+   "last_update": "2026-06-08",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT06784973"
+  },
+  {
+   "nct_id": "NCT00814372",
+   "title": "Evaluate Safety and Effectiveness of MBX-102 in Type 2 Diabetes Patients With Poor Glycemic Control on Metformin",
+   "status": "TERMINATED",
+   "why_stopped": "MBX-102 did not meet the target efficacy profile of HbA1c change.",
+   "last_update": "2026-09-18",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT00814372"
+  },
+  {
+   "nct_id": "NCT06585150",
+   "title": "Study of Obeldesivir to Treat Nonhospitalized Adults With Acute Respiratory Syncytial Virus (RSV) Infection",
+   "status": "TERMINATED",
+   "why_stopped": "Study was terminated by Sponsor; the decision was not due to any safety findings.",
+   "last_update": "2026-06-30",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT06585150"
+  },
+  {
+   "nct_id": "NCT06613685",
+   "title": "Study of Oral Weekly GS-1720 and GS-4182 Compared With Biktarvy in People With HIV-1 Who Have Not Been Treated",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor decision to terminate study.",
+   "last_update": "2026-04-15",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT06613685"
+  },
+  {
+   "nct_id": "NCT02953509",
+   "title": "Trial of Magrolimab (Hu5F9-G4) in Combination With Rituximab or Rituximab + Chemotherapy in Participants With Relapsed/Refractory B-cell Non-Hodgkin's Lymphoma",
+   "status": "TERMINATED",
+   "why_stopped": "Study terminated early due to the magrolimab program discontinuation.",
+   "last_update": "2025-05-29",
+   "phases": [
+    "PHASE1",
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT02953509"
+  },
+  {
+   "nct_id": "NCT06682234",
+   "title": "Study of Obeldesivir as Postexposure Prophylaxis for Filovirus Diseases Virus Disease",
+   "status": "WITHDRAWN",
+   "why_stopped": "The study was withdrawn after the Marburg outbreak in Rwanda was declared over, prior to enrollment of any participants.",
+   "last_update": "2026-03-20",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT06682234"
+  },
+  {
+   "nct_id": "NCT05330429",
+   "title": "Study of Magrolimab Given Together With FOLFIRI/Bevacizumab (BEV) in Participants With Previously Treated Advanced Inoperable Metastatic Colorectal Cancer (mCRC)",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor decision to terminate study",
+   "last_update": "2025-07-01",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT05330429"
+  },
+  {
+   "nct_id": "NCT02842086",
+   "title": "Study to Evaluate the Safety and Efficacy of Emtricitabine and Tenofovir Alafenamide (F/TAF) Fixed-Dose Combination Once Daily for Pre-Exposure Prophylaxis in Men and Transgender Women Who Have Sex With Men and Are At Risk of HIV-1 Infection",
+   "status": "TERMINATED",
+   "why_stopped": "Following review of accumulated safety data from DISCOVER and real-world use of F/TAF, the sponsor determined that the long-term safety of F/TAF had been demonstrated and no further safety monitoring within the study was required.",
+   "last_update": "2026-09-08",
+   "phases": [
+    "PHASE3"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT02842086"
+  },
+  {
+   "nct_id": "NCT04892446",
+   "title": "Study of Magrolimab Combinations in Patients With Relapsed/Refractory Multiple Myeloma",
+   "status": "TERMINATED",
+   "why_stopped": "This study was terminated early due to the Sponsor's decision to discontinue development of the investigational drug and close the program.",
+   "last_update": "2025-05-02",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT04892446"
+  },
+  {
+   "nct_id": "NCT04958785",
+   "title": "Study of Magrolimab Combination Therapy in Patients With Non-Surgically Removable Locally Advanced or Metastatic Triple-Negative Breast Cancer",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor decision to terminate study.",
+   "last_update": "2025-11-04",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT04958785"
+  },
+  {
+   "nct_id": "NCT04854499",
+   "title": "Study of Magrolimab Combination Therapy in Patients With Head and Neck Squamous Cell Carcinoma",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor decision to terminate study",
+   "last_update": "2025-11-19",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT04854499"
+  },
+  {
+   "nct_id": "NCT05629208",
+   "title": "Study of Edecesertib in Participants With Cutaneous Lupus Erythematosus (CLE)",
+   "status": "TERMINATED",
+   "why_stopped": "Sponsor Decision",
+   "last_update": "2026-02-17",
+   "phases": [
+    "PHASE2"
+   ],
+   "lead_sponsor": "Gilead Sciences",
+   "url": "https://clinicaltrials.gov/study/NCT05629208"
+  }
+ ],
+ "sponsors_queried": [
+  "Gilead Sciences"
+ ],
+ "since": "2025-04-17"
+}

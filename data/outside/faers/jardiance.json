@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:20:22+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 2263,
+   "serious": 1362
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 2264,
+   "serious": 1414
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 2441,
+   "serious": 1435
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 2636,
+   "serious": 1631
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 2532,
+   "serious": 1604
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 2282,
+   "serious": 1641
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 2346,
+   "serious": 1547
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 2409,
+   "serious": 1587
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 2731,
+   "serious": 1825
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 2142,
+   "serious": 1477
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 2600,
+   "serious": 1609
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 2420,
+   "serious": 1494
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = JARDIANCE",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"JARDIANCE\"+OR+patient.drug.medicinalproduct:\"JARDIANCE\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:40+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 2725,
+   "serious": 2543
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 2966,
+   "serious": 2755
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 3308,
+   "serious": 2940
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 3061,
+   "serious": 2764
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 2825,
+   "serious": 2554
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 2995,
+   "serious": 2717
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 2737,
+   "serious": 2516
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 2860,
+   "serious": 2647
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 2812,
+   "serious": 2509
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 2818,
+   "serious": 2609
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 3333,
+   "serious": 3093
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1858,
+   "serious": 1599
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = ENTYVIO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"ENTYVIO\"+OR+patient.drug.medicinalproduct:\"ENTYVIO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

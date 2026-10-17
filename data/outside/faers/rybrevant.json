@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:05+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 39,
+   "serious": 24
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 65,
+   "serious": 40
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 82,
+   "serious": 47
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 158,
+   "serious": 76
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 172,
+   "serious": 92
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 182,
+   "serious": 113
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 319,
+   "serious": 194
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 356,
+   "serious": 238
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 366,
+   "serious": 267
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 442,
+   "serious": 338
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 427,
+   "serious": 335
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 461,
+   "serious": 359
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = RYBREVANT",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"RYBREVANT\"+OR+patient.drug.medicinalproduct:\"RYBREVANT\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

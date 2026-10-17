@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:22:00+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 975,
+   "serious": 930
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 1061,
+   "serious": 1028
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 898,
+   "serious": 869
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 807,
+   "serious": 763
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 1455,
+   "serious": 1414
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 592,
+   "serious": 557
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 308,
+   "serious": 262
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 327,
+   "serious": 302
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 397,
+   "serious": 349
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 368,
+   "serious": 337
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 322,
+   "serious": 296
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 385,
+   "serious": 348
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = TAGRISSO",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TAGRISSO\"+OR+patient.drug.medicinalproduct:\"TAGRISSO\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

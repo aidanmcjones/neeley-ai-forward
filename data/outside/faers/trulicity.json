@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:13+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 2447,
+   "serious": 534
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 1992,
+   "serious": 525
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 2068,
+   "serious": 516
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 1937,
+   "serious": 552
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 1839,
+   "serious": 650
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 1456,
+   "serious": 485
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 1538,
+   "serious": 497
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 1345,
+   "serious": 426
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 1925,
+   "serious": 1049
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1087,
+   "serious": 436
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1139,
+   "serious": 542
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1344,
+   "serious": 677
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = TRULICITY",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"TRULICITY\"+OR+patient.drug.medicinalproduct:\"TRULICITY\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

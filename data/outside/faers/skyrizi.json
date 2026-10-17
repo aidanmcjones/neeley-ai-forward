@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:21:20+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 2926,
+   "serious": 2260
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 2849,
+   "serious": 2258
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 3295,
+   "serious": 2605
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 3545,
+   "serious": 2971
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 3694,
+   "serious": 3143
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 3976,
+   "serious": 3319
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 4118,
+   "serious": 3410
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 4894,
+   "serious": 3941
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 5314,
+   "serious": 4379
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 5247,
+   "serious": 4276
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 4772,
+   "serious": 3792
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 4482,
+   "serious": 3350
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = SKYRIZI",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"SKYRIZI\"+OR+patient.drug.medicinalproduct:\"SKYRIZI\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}

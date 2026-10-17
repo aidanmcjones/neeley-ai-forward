@@ -1,0 +1,78 @@
+{
+ "source_url": "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+ "retrieved_at": "2026-10-17T17:19:59+00:00",
+ "rows": [
+  {
+   "quarter": "2023Q3",
+   "reports": 724,
+   "serious": 697
+  },
+  {
+   "quarter": "2023Q4",
+   "reports": 998,
+   "serious": 985
+  },
+  {
+   "quarter": "2024Q1",
+   "reports": 932,
+   "serious": 896
+  },
+  {
+   "quarter": "2024Q2",
+   "reports": 784,
+   "serious": 732
+  },
+  {
+   "quarter": "2024Q3",
+   "reports": 906,
+   "serious": 876
+  },
+  {
+   "quarter": "2024Q4",
+   "reports": 1088,
+   "serious": 1064
+  },
+  {
+   "quarter": "2025Q1",
+   "reports": 810,
+   "serious": 782
+  },
+  {
+   "quarter": "2025Q2",
+   "reports": 955,
+   "serious": 930
+  },
+  {
+   "quarter": "2025Q3",
+   "reports": 987,
+   "serious": 975
+  },
+  {
+   "quarter": "2025Q4",
+   "reports": 1248,
+   "serious": 1222
+  },
+  {
+   "quarter": "2026Q1",
+   "reports": 1293,
+   "serious": 1266
+  },
+  {
+   "quarter": "2026Q2",
+   "reports": 1396,
+   "serious": 1368
+  }
+ ],
+ "latest_receivedate": "20260630",
+ "query": "brand_name or medicinalproduct = IMFINZI",
+ "urls": [
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+serious:1+AND+receivedate:[20230701+TO+20231231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+serious:1+AND+receivedate:[20240101+TO+20241231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+serious:1+AND+receivedate:[20250101+TO+20251231]&count=receivedate&limit=500",
+  "https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.brand_name:\"IMFINZI\"+OR+patient.drug.medicinalproduct:\"IMFINZI\")+AND+serious:1+AND+receivedate:[20260101+TO+20261231]&count=receivedate&limit=500"
+ ]
+}
