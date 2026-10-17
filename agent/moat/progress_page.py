@@ -23,7 +23,7 @@ STATUS = {
 STAGES = [
     ("Collect", "done", "7 streams done: filings, calls, policy, product, pricing, market, SEC fine print, plus I/B/E/S from WRDS"),
     ("Verify", "done", "Opus re-checked every stream against its source; all 10 buckets verified, 70+ error types logged"),
-    ("Citation index", "running", "Opus is building one SQLite search index over corpus + moat: pages, verified facts, quote grades"),
+    ("Citation index", "done", "citations.sqlite: 3,118 docs, 39,940 pages, 69,553 verified facts, quote grades, verify_quote; 10 of 10 tests pass"),
     ("Model", "blocked", "NEEDLE runs on the index; blocked on the Anthropic API key"),
     ("UI", "waiting", "Cockpit restyle of the Streamlit app, after the model reads the index"),
     ("Demo video", "waiting", "Sunday 10:30 to 12:30, after the 10:30 code freeze"),
