@@ -24,7 +24,7 @@ from agent.needle.cite.locator import Claim
 from agent.needle.cite.render import render_markdown
 from agent.needle.quant import decide as D
 from agent.needle.quant import kill as K
-from agent.needle.quant.moves import SCENARIOS, WINDOW, get_template
+from agent.needle.quant.moves import PAYBACK_SEARCH, SCENARIOS, WINDOW, get_template, r_monthly
 
 
 def load_findings(path):
@@ -161,9 +161,23 @@ def move_maps(r):
     Dm = {}
     for i in r.inputs:
         Dm.update(i.derived or {})
+    # review verify2 4: PV pieces, payback month and cash at risk are compositions, derived from the monthly model
+    # rows (labelled model outputs) and the labelled WACC, never a bare [assumption]
+    Dm["r_mo"] = _derived(r_monthly(r.wacc), "(1 + w) ** (1 / 12) - 1",
+                          {"w": {"value": r.wacc, "assumption": D.benchmark_label("wacc")}})
+
+    def month(key, v, m, what):
+        return {"value": float(v), "assumption": lab + f" ({what}, month {m})"}
     for s in SCENARIOS:
-        Dm[f"ev_{s}"] = _derived(r.ev_by_scenario[s], "a + b", {"a": leaf(f"inwin_{s}", r.in_window_pv[s]),
-                                                                 "b": leaf(f"tv_{s}", r.tv_pv[s])})
+        rows_s = r.tables[s]
+        for part, sel in (("pvin", lambda m: m <= WINDOW), ("pvtv", lambda m: m > WINDOW)):
+            ops = {f"n{x['month']}": month(f"{s}_{x['month']}", x["net"], x["month"], f"{s} expected net cash flow")
+                   for x in rows_s if sel(x["month"])}
+            expr = " + ".join(f"n{x['month']} * (1 + r) ** -{x['month']}" for x in rows_s if sel(x["month"])) or "0"
+            ops["r"] = {"derived": "r_mo"}
+            Dm[f"{part}_{s}"] = _derived(r.in_window_pv[s] if part == "pvin" else r.tv_pv[s], expr, ops)
+        Dm[f"ev_{s}"] = _derived(r.ev_by_scenario[s], "a + b", {"a": {"derived": f"pvin_{s}"},
+                                                                 "b": {"derived": f"pvtv_{s}"}})
     p = r.p_scenario
     Dm["ev"] = _derived(r.ev, "pb * eb + pm * em + pu * eu", {
         "pb": {"value": p["bear"], "assumption": D.benchmark_label("p_bear")},
@@ -175,9 +189,25 @@ def move_maps(r):
     if lines:
         Dm["budget_total"] = _derived(sum(lines.values()), " + ".join(f"l{i}" for i in range(len(lines))),
                                       {f"l{i}": leaf(f"budget_{k}", v) for i, (k, v) in enumerate(lines.items())})
-    leaf("car", r.car)
+    co, ci = (r.car_parts or {}).get("out") or [], (r.car_parts or {}).get("in") or []
+    if co:
+        ops = {f"o{m}": month("", v, m, "bear non-avoidable outflow before the first readout") for m, v in enumerate(co, 1)}
+        ops.update({f"i{m}": month("", v, m, "bear inflow before the first readout") for m, v in enumerate(ci, 1)})
+        Dm["car"] = _derived(r.car, f"max(0, ({' + '.join(f'o{m}' for m in range(1, len(co) + 1))}) - "
+                                    f"({' + '.join(f'i{m}' for m in range(1, len(ci) + 1)) or '0'}))", ops)
+    else:
+        leaf("car", r.car)
     if r.payback_month is not None:
-        leaf("payback", r.payback_month)
+        horizon = min(len(r.expected_cf["base"]), PAYBACK_SEARCH)
+        ops = {"pb": {"value": r.p_scenario["bear"], "assumption": D.benchmark_label("p_bear")},
+               "pm": {"value": r.p_scenario["base"], "assumption": D.benchmark_label("p_base")},
+               "pu": {"value": r.p_scenario["bull"], "assumption": D.benchmark_label("p_bull")}, "r": {"derived": "r_mo"}}
+        terms = []
+        for m in range(1, min(horizon, r.payback_month) + 1):
+            for sc, k in (("bear", "b"), ("base", "m"), ("bull", "u")):
+                ops[f"{k}{m}"] = month("", r.expected_cf[sc][m - 1], m, f"{sc} expected net cash flow")
+            terms.append(f"(pb * b{m} + pm * m{m} + pu * u{m}) * (1 + r) ** -{m}")
+        Dm["payback"] = _derived(r.payback_month, f"payback({', '.join(terms)})", ops)
     parts = list(r.mcda_parts.items())
     Dm["mcda"] = _derived(r.mcda, " + ".join(f"0.25 * x{i}" for i in range(len(parts))),
                           {f"x{i}": leaf(f"mcda_{k}", v) for i, (k, v) in enumerate(parts)})

@@ -102,6 +102,13 @@ _STOP = {"the", "and", "with", "for", "who", "are", "from", "that", "this", "int
          "patients", "patient", "years", "older", "aged", "least", "one", "treatment", "indicated", "combination"}
 
 
+def is_bulk_url(url):
+    """A dataset API endpoint or a bulk download (zip, csv, json): opening it does not show the cited row (review
+    verify2: the CMS Part D API link did not show the cited 250 prescribers; the SPUF zip is 2.5 GB)."""
+    u = str(url or "").lower().split("?")[0]
+    return "/api/" in u or "/data-api/" in u or u.endswith((".zip", ".csv", ".json", ".gz", ".xlsx", ".txt"))
+
+
 def row_locator(r):
     """facts.locator for a sqlite Row or dict, '' when the column is absent (older sqlite) or empty."""
     try:
@@ -266,9 +273,12 @@ def apply_locator(row, base, row_json=None, index=None, value_mismatch=False):
     if loc and loc["kind"] == "url":
         url = loc["url"]
         status = base.verification.status
+        bulk = is_bulk_url(url)
         note = (base.confidence_note + "; " if base.confidence_note else "") + \
-            f"machine data: API row {loc['row_key'] or row['row_key']} at {url} (no page copy)"
-        return replace(base, deep_link=url, source_url=url, page_scheme="none", raw_doc_type="machine_data",
+            f"machine data: API row {loc['row_key'] or row['row_key']} at {url} (no page copy)" + \
+            ("; the URL returns the whole dataset or a bulk file, so the row key is the citation (no deep link)"
+             if bulk else "")
+        return replace(base, deep_link="" if bulk else url, source_url=url, page_scheme="none", raw_doc_type="machine_data",
                        doc_type=base.doc_type or "machine_data", confidence_note=note,
                        verification=replace(base.verification, status=status, detail=note))
     if loc and loc["kind"] == "fact":

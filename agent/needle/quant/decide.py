@@ -249,6 +249,7 @@ class MoveResult:
     status: str = ""
     binding_reason: str = ""
     why: str = ""
+    car_parts: dict = field(default_factory=dict)    # {"out": [...], "in": [...]} by month (cash_at_risk_parts)
 
     def five(self):
         return {"ev": self.ev, "car": self.car, "payback_month": self.payback_month, "spread": self.spread, "mcda": self.mcda}
@@ -289,19 +290,26 @@ def scenario_tables(plan, r_mo):
     return tables, exp_cf, inwin, tv, pv
 
 
+def cash_at_risk_parts(plan):
+    """(outflow by month, inflow by month) that cash_at_risk nets: months 1..min(24, first readout)."""
+    T = min(WINDOW, plan.first_readout or WINDOW)
+    mult = MULT_SCENARIO["bear"]
+    n = min(T, plan.horizon)
+    out, inn = [0.0] * n, [0.0] * n
+    for l in plan.lines:
+        for i in range(n):
+            if l.kind == "out" and not l.avoidable:
+                out[i] += l.amount[i] * l.prob[i]
+            elif l.kind == "in":
+                inn[i] += l.amount[i] * (mult if l.scaled else 1.0)   # pre-failure, so P_alive = 1
+    return out, inn
+
+
 def cash_at_risk(plan):
     """Spec 5.4: bear scenario, technical failure at the first readout: undiscounted outflow through min(24, readout),
     net of inflows received before then and of avoidable payments."""
-    T = min(WINDOW, plan.first_readout or WINDOW)
-    mult = MULT_SCENARIO["bear"]
-    out = inn = 0.0
-    for l in plan.lines:
-        for i in range(min(T, plan.horizon)):
-            if l.kind == "out" and not l.avoidable:
-                out += l.amount[i] * l.prob[i]
-            elif l.kind == "in":
-                inn += l.amount[i] * (mult if l.scaled else 1.0)   # pre-failure, so P_alive = 1
-    return max(0.0, out - inn)
+    out, inn = cash_at_risk_parts(plan)
+    return max(0.0, sum(out) - sum(inn))
 
 
 def payback_month(exp_by_s, p_s, r_mo, horizon):
@@ -495,6 +503,7 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
     ev = sum(p_s[s] * pv[s] for s in SCENARIOS)
     spread = pv["bull"] - pv["bear"]   # EV with p_bull = 1 minus EV with p_bear = 1
     car = cash_at_risk(plan)
+    car_out, car_in = cash_at_risk_parts(plan)
     pb = payback_month(exp_cf, p_s, r_mo, plan.horizon)
     mcda, parts = mcda_score(template, plan, findings, addressed, capability, stakeholders, p_s)
     if not addressed:
@@ -533,7 +542,8 @@ def evaluate_move(template, params, findings, *, name=None, capability=None, sta
         mcda_parts=parts, tables=tables, expected_cf=exp_cf, budget=budget, inputs=inputs, claims=claims,
         citations=list(seen.values()), flags=flags, finding_ids=sorted(addressed), addressed=sorted(addressed),
         p_alive_end=plan.p_alive_end(), horizon=plan.horizon, notes=plan.notes, kill_signals=template.kill_signals,
-        abandon_value=plan.abandon_value, wacc=wacc, p_scenario=p_s, why=why)
+        abandon_value=plan.abandon_value, wacc=wacc, p_scenario=p_s, why=why,
+        car_parts={"out": car_out, "in": car_in})
 
 
 def _fmt_val(v):

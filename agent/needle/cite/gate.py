@@ -243,11 +243,22 @@ def _median(*xs):
     return v[n // 2] if n % 2 else (v[n // 2 - 1] + v[n // 2]) / 2
 
 
-_FUNCS = {"min": min, "max": max, "abs": abs, "round": round, "median": _median}
+def _payback(*xs):
+    """First 1-based period at which the running sum of xs (discounted expected net cash flows) is >= 0, else 0."""
+    cum = 0.0
+    for i, x in enumerate(xs, 1):
+        cum += x
+        if cum >= 0.0:
+            return i
+    return 0
+
+
+_FUNCS = {"min": min, "max": max, "abs": abs, "round": round, "median": _median, "payback": _payback}
 
 
 def safe_eval(expr, env):
-    """Arithmetic only: numbers, names from env, + - * / **, unary +/-, min/max/abs/round/median."""
+    """Arithmetic only: numbers, names from env, + - * / **, unary +/-, min/max/abs/round/median/payback (the first
+    period whose running sum is >= 0)."""
     def ev(n):
         if isinstance(n, ast.Expression):
             return ev(n.body)

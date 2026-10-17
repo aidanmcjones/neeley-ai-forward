@@ -27,6 +27,10 @@ from types import SimpleNamespace
 BIO = "https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf"
 DAMODARAN = "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.html"
 DAMODARAN_MARGIN = "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/margin.html"   # gross margin, SG&A
+# Review verify2: a benchmark keeps a URL only when the page at that URL shows the figure. The Trinity homepage, the
+# Damodaran margin page for the 0.85 inference, the AbbVie 10-Q (switch capture), the Walmart release (share moved)
+# do not; JAMA and Becker's return 403 to a script. Their figures stay labelled assumptions naming the source.
+NO_URL = ""
 BIO_P15 = BIO + "#page=15"     # Figure 9 (non-NME transition rates) is on PDF page 15 (review D7)
 MOORE_JAMA = "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2702287"   # Moore et al. 2018
 CIDARA = "https://www.sec.gov/Archives/edgar/data/1610618/000119312525309970/d59361dsc14d9.htm"
@@ -56,11 +60,11 @@ def _b(name, value, unit, source, url="", kind="benchmark", note=""):
 WACC = _b("wacc", 0.0785, "fraction per year", "Damodaran Drugs (Pharmaceutical), 228 firms, WACC 7.85%, Jan 2026", DAMODARAN)
 P_SCENARIO = {
     "bear": _b("p_bear", 0.50, "probability", "Trinity 2023 US launches: 50% underperformed first-year forecasts",
-               "https://www.trinitylifesciences.com/"),
+               NO_URL),
     "base": _b("p_base", 0.11, "probability", "Trinity 2023 US launches: remaining 11% on forecast",
-               "https://www.trinitylifesciences.com/"),
+               NO_URL),
     "bull": _b("p_bull", 0.39, "probability", "Trinity 2023 US launches: 39% overperformed",
-               "https://www.trinitylifesciences.com/"),
+               NO_URL),
 }
 MULT_SCENARIO = {  # ZS success (>=120% of prelaunch forecast, year 3) and failure (<=80%) definitions
     "bear": _b("mult_bear", 0.8, "x revenue", "ZS: failure = year-3 sales <= 80% of prelaunch forecast", ""),
@@ -98,7 +102,7 @@ TRIAL_COST_ACTIVE = _b("trial_cost_active", 48.9, "USD M per pivotal trial", "Mo
 TRIAL_COST_MEDIAN = _b("trial_cost_median", 19.0, "USD M per pivotal trial", "Moore et al. 2018: median $19M (IQR 12.2-33.1)",
                        "https://www.raps.org/resource/phase-3-trial-costs-estimated-at-19m-study-finds.html")
 TRIAL_COST_CARDIO = _b("trial_cost_cardio", 157.0, "USD M per pivotal trial", "Moore et al. 2018: cardiovascular pivotal trials mean $157M (driven by one $346.8M trial)",
-                       MOORE_JAMA)   # the outsourcing-pharma article returned HTTP 410 (review D7)
+                       NO_URL)   # JAMA returns 403 to a script, the outsourcing-pharma article 410 (review D7, verify2)
 REP_COST = _b("rep_cost", 176.5, "USD K per rep-year", "Rework 2025: developed-market loaded rep cost $134,000-219,000 (midpoint; vendor estimate)",
               "https://resources.rework.com/libraries/pharmaceutical-growth/pharma-field-sales-economics")
 REP_RAMP_MONTHS = _b("rep_ramp_months", 18, "months", "Rework 2025: 12-24 month ramp to full productivity (midpoint)",
@@ -132,7 +136,7 @@ ROYALTY_LATE = _b("royalty_late", 0.113, "fraction of net sales", "Goodwin 2025 
                   "https://www.goodwinlaw.com/en/insights/publications/2026/03/insights-lifesciences-2025-yir-life-sciences-licensing-collaboration-deals")
 
 # Margins and uptake
-CM_EXISTING = _b("cm_existing", 0.85, "fraction", "Spec 5.3 M3: 80-90% incremental contribution for an existing brand (inference from Damodaran 71.73% gross margin, 21.91% SG&A/sales)", DAMODARAN_MARGIN, kind="inference")
+CM_EXISTING = _b("cm_existing", 0.85, "fraction", "Spec 5.3 M3: 80-90% incremental contribution for an existing brand (inference from Damodaran 71.73% gross margin, 21.91% SG&A/sales)", NO_URL, kind="inference")
 CM_ACQUIRED = _b("cm_acquired", 0.7173, "fraction", "Damodaran Jan 2026 pharma gross margin 71.73%", DAMODARAN_MARGIN)
 CM_PRICE = 1.0     # price changes drop through (pharma_impact_math: dOI = dRev_net x 1.0)
 CM_VOLUME = _b("cm_volume", 0.70, "fraction", "pharma_impact_math / spec 4.3 e: volume-led change CM 0.70", "", kind="inference")
@@ -143,7 +147,7 @@ LABEL_RAMP_MONTHS = _b("label_ramp_months", 60, "months to peak", "Spec 5.3 M3: 
 LABEL_RAMP_MONTHS_ALT = _b("label_ramp_months_alt", 42, "months to peak", "Alternative ramp: the spec 5.5 synthetic reference case (42 months = 57% of peak at 24 months, above the 25-40% benchmark; review A23)", "", kind="inference")
 LABEL_SHARE_24M = (0.25, 0.40)   # share of peak 24 months after launch the benchmark states (strategic_move L213)
 COVERAGE_LAG = _b("coverage_lag_months", 9, "months", "Tufts/ICER: 6-12 months to majority commercial coverage (midpoint)",
-                  "https://www.beckerspayer.com/research-analysis/new-drugs-can-see-coverage-delays-of-up-to-1-year-report/")
+                  NO_URL)   # Becker's returns 403 to a script (review verify2)
 
 # LOE and policy curves: brand revenue retention R(y) by year since entry (spec 4.3 e; pharma_impact_math KQ4)
 LOE_RETENTION = {
@@ -522,7 +526,7 @@ PRICING = MoveTemplate(
     probability_structure="No clinical event. Baseline follows the LOE retention curve and the IRA/MFN step from Part 1; commercial uncertainty is the scenario spread only",
     params=_wrap(
         _ps("base_us_rev_annual", 10000.0, "USD M per year", source="US annual revenue of the brand (company, cite the 10-K)", kind="company"),
-        _ps("share_moved", 0.10, "fraction of volume", source="Share of volume moved to the new channel at plateau; precedent ~35% of new Zepbound scripts via self-pay (Walmart/LillyDirect 2025)", url=REGISTRY["self_pay_share"].url, kind="inference"),
+        _ps("share_moved", 0.10, "fraction of volume", source="Share of volume moved to the new channel at plateau; precedent ~35% of new Zepbound scripts via self-pay (Walmart/LillyDirect 2025)", url=NO_URL, kind="inference"),
         _ps("price_delta", -0.20, "fraction of net price", source="Net price of the new channel versus current net (team input; no product-level net price is public)", kind="inference"),
         _ps("volume_gain", 0.03, "fraction of base volume", source="Incremental patients reached by the channel (team input)", kind="inference"),
         _ps("ramp_months", 12, "months", source="Channel ramp to plateau (team input; payer coverage lag is 6-12 months, Tufts/ICER)", url=REGISTRY["coverage_lag_months"].url, kind="inference"),
@@ -591,7 +595,7 @@ LOE_DEFENSE = MoveTemplate(
         _ps("uplift_y3", 0.05, "retention points", source="Year 3 (team input)", kind="inference"),
         _ps("rebate_depth", 0.10, "fraction of retained revenue", source="Extra rebate paid on retained volume (team input)", kind="inference"),
         _ps("program_cost_annual", 50.0, "USD M per year", source="Contracting and patient-support program cost (team input)", kind="inference"),
-        _ps("switch_capture", 0.15, "fraction of lost revenue", source="Share of lost patients moved to the successor brand; precedent Skyrizi +49% / Rinvoq +55% 9M 2024", url=REGISTRY["successor_offset"].url, kind="inference"),
+        _ps("switch_capture", 0.15, "fraction of lost revenue", source="Share of lost patients moved to the successor brand; precedent Skyrizi +49% / Rinvoq +55% 9M 2024", url=NO_URL, kind="inference"),
         _ps("successor_cm", CM_EXISTING, "fraction", bench="cm_existing"),
         _ps("horizon", 60, "months", source="24-month window plus 36 months (to year 3 after LOE)", kind="design"),
         _ps("tax_rate", 0.2049, "fraction", source="Company effective tax rate t", kind="company"),

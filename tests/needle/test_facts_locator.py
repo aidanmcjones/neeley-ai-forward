@@ -116,11 +116,15 @@ def test_url_locator_is_machine_data_with_the_url_as_deep_link_and_keeps_the_whi
     con, idx, _, _ = env
     r = _row(con, "rx/partd.csv#3")
     c = F.apply_locator(r, _base(r, "number_match"), {}, idx)
-    assert c.deep_link == "https://data.cms.gov/api/1/x" and c.raw_doc_type == "machine_data"
+    assert c.source_url == "https://data.cms.gov/api/1/x" and c.raw_doc_type == "machine_data"
+    assert c.deep_link == ""                  # an API endpoint does not show the row: the row key is the citation
     assert c.verification.status == "number_match" and "machine data" in c.confidence_note
     r4 = _row(con, "rx/partd.csv#4")                         # unchecked row: a URL is not a check (fail closed)
     c4 = F.apply_locator(r4, _base(r4, "unverified"), {}, idx)
-    assert c4.deep_link == "https://data.cms.gov/api/1/x" and c4.verification.status == "unverified"
+    assert c4.verification.status == "unverified"
+    page = dict(r)
+    page["locator"] = "url:https://www.cms.gov/medicare/drug-list.html#3"
+    assert F.apply_locator(page, _base(r, "number_match"), {}, idx).deep_link == "https://www.cms.gov/medicare/drug-list.html"
 
 
 def test_label_section_row_resolves_to_the_label_page_line(env):

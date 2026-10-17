@@ -241,3 +241,21 @@ def test_exit_2_deletes_stale_decide_files_gate_failure(tmp_path, monkeypatch):
     assert rc == 2
     assert not (out / "decide.json").exists() and not (out / "decide.md").exists()
     assert (out / "decide_rejected.md").exists() and json.loads((out / "decide_rejected.json").read_text())["numeric_check"]["status"] == "failed"
+
+
+def test_verify2_pv_payback_and_car_are_derived_not_assumed():
+    from agent.needle.cite.gate import numeric_gate
+    r = ref()
+    Dm, A = CLI.move_maps(r)
+    for k in ("pvin_base", "pvtv_bear", "car", "payback", "ev"):
+        assert k in Dm and Dm[k]["expr"], k
+    for where, txt in (("pv_in", CLI.f1(r.in_window_pv["base"])), ("pv_tv", CLI.f1(r.tv_pv["bull"])),
+                       ("car", CLI.f1(r.car)), ("payback", str(r.payback_month))):
+        res = numeric_gate([(where, txt)], [], Dm, A)
+        assert res.passed and [n["kind"] for n in res.numbers] == ["derived"], (where, res.numbers)
+
+
+def test_verify2_benchmarks_link_only_where_the_page_shows_the_figure():
+    for name in ("p_bear", "p_base", "p_bull", "cm_existing", "trial_cost_cardio", "coverage_lag_months"):
+        assert M.REGISTRY[name].url == "", name
+    assert D.benchmark_label("p_bear").endswith("no URL (unverified)")
