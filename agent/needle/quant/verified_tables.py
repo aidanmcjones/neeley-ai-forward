@@ -256,6 +256,47 @@ def pricing_moves(company):
     return out
 
 
+# ------------------------------------------------------------------ new-indication timing (M3)
+TIMING = "costs/new_indication_timing_summary.csv"
+TIMING_TA = {"metabolic": "cardiometabolic", "cardiovascular": "cardiometabolic", "endocrine": "cardiometabolic",
+             "cardiometabolic": "cardiometabolic", "oncology": "oncology", "immunology": "immunology",
+             "autoimmune": "immunology", "dermatology": "immunology", "rare disease": "rare_disease"}
+
+
+def _timing_cell(group, metric):
+    hit = cell(TIMING, {"group": group, "metric": metric}, "median")
+    if hit and _num(hit[0]) is not None and int(_num(hit[3].get("n")) or 0) >= 5:
+        return float(hit[0]), hit[1], hit[2], hit[3]
+    return None
+
+
+def indication_timing(ta, name):
+    """M3 timing from the verified new-indication timing summary (pivotal_confirmed rows only, built by the scraper
+    from new_indication_benchmarks.csv): trial_months / readout_month = median months from pivotal start to primary
+    completion; approval_month = that plus the median months from completion to approval. The therapeutic-area row
+    is used when it has n >= 5, else the overall row. Values are rounded to whole months (derived entries)."""
+    grp = TIMING_TA.get(str(ta or "").lower())
+    groups = ([f"ta:{grp}"] if grp else []) + ["overall"]
+    for g in groups:
+        s2c = _timing_cell(g, "months_start_to_completion")
+        c2a = _timing_cell(g, "months_completion_to_approval")
+        if not s2c or not c2a:
+            continue
+        if name in ("trial_months", "readout_month"):
+            v = round(s2c[0])
+            d = {name: derived_entry(v, "round(a)", {"a": (s2c[0], s2c[1])}, "months")}
+            return TableValue(v, [s2c[1]], _label(TIMING, s2c[2], f"{g} median start to primary completion "
+                                                                     f"{s2c[0]:g} months, n {s2c[3].get('n')}"),
+                              TIMING, s2c[2], d)
+        if name == "approval_month":
+            v = round(s2c[0] + c2a[0])
+            d = {name: derived_entry(v, "round(a + b)", {"a": (s2c[0], s2c[1]), "b": (c2a[0], c2a[1])}, "months")}
+            return TableValue(v, [s2c[1], c2a[1]], _label(TIMING, f"{s2c[2]} + {c2a[2]}",
+                                                          f"{g} median start to completion {s2c[0]:g} + completion to "
+                                                          f"approval {c2a[0]:g} months"), TIMING, s2c[2], d)
+    return None
+
+
 # ------------------------------------------------------------------ LOE
 LOE = "pipeline/loe_calendar.csv"
 

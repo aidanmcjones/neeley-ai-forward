@@ -13,6 +13,7 @@ Each constant carries a Citation: XBRL values cite the companyfacts concept and 
 facts row in citations.sqlite (licensed WRDS rows: internal math only, never quoted publicly).
 """
 
+import json
 import os
 from dataclasses import dataclass, field
 from datetime import date
@@ -88,12 +89,41 @@ def clean_source_url(src):
     return _re.sub(r",\s*(?:p\.|page)\s*p?\d+\s*$", "", s, flags=_re.I).strip()
 
 
+def row_caveats(table, rj):
+    """Caveat columns the scraper sets on wave 3 tables, carried into the citation note when the row is used:
+    epi/market_sizing_inputs.csv do_not_read_as_penetration (Part D counts are drug-level, medicare_floor_pct can
+    exceed 100); pipeline/pipeline_assets.csv marketed_comparator = 1 (the asset is a marketed comparator, not a
+    pipeline asset); peers/peer_product_revenue.csv currency EUR, GBP or JPY (the *_usd_m columns hold the native
+    currency; TAK quarterly figures are cumulative H1, 9M, FY as labelled)."""
+    rj = rj or {}
+    out = []
+    flag = str(rj.get("do_not_read_as_penetration", "")).strip().lower()
+    if table == "epi/market_sizing_inputs.csv" and flag not in ("", "0", "false", "nan", "no"):
+        out.append("do_not_read_as_penetration: Part D count is drug-level; medicare_floor_pct can exceed 100")
+    if table == "pipeline/pipeline_assets.csv" and str(rj.get("marketed_comparator", "")).strip() in ("1", "1.0", "true", "True"):
+        out.append("marketed_comparator = 1: a marketed comparator, not a pipeline asset")
+    if table == "peers/peer_product_revenue.csv":
+        cur = str(rj.get("currency") or rj.get("units") or "").upper()
+        for c in ("EUR", "GBP", "JPY"):
+            if c in cur:
+                out.append(f"currency {c}: the *_usd_m columns hold {c}, not USD (convert or label)"
+                           + ("; TAK quarters are cumulative H1, 9M, FY" if str(rj.get("ticker")) == "TAK" else ""))
+                break
+    return "; ".join(out)
+
+
 def _fact_row_citation(table, r, source_row, fld, value=None, license=""):
     from agent.needle.cite.facts import fact_citation_status, fact_status_grade
     reread = value is not None and _num_eq(r["value"], value)
     status = fact_citation_status(r["verify_status"], reread, table)
     grade, label = fact_status_grade(r["verify_status"], table)
     note = f"facts row {r['row_key']} re-read ({r['verify_status']}: {label})"
+    try:
+        cav = row_caveats(table, json.loads(r["row_json"] or "{}"))
+    except Exception:
+        cav = ""
+    if cav:
+        note += f"; caveat: {cav}"
     if label == "machine data":
         note += "; machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
     if value is not None and not reread:
@@ -157,6 +187,9 @@ def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, 
         status = fact_citation_status(r["verify_status"], reread, table)
         grade, label = fact_status_grade(r["verify_status"], table)
         note = f"facts row {r['row_key']} field {fld} re-read from row_json ({r['verify_status']}: {label})"
+        cav = row_caveats(table, rj)
+        if cav:
+            note += f"; caveat: {cav}"
         if value is not None and not reread:
             note += f"; cited value {value} differs from the row value {rj[fld]}"
         src = clean_source_url(r["source"])

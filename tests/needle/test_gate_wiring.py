@@ -217,3 +217,12 @@ def test_kill_table_baselines_from_rx_tables():
     ctx = next(x for x in rows if x["id"] == "rx_context")
     assert any("Part D prescribers" in t for _, _, t in ctx["context"])
     assert all(c.verification.ok for _, c, _ in ctx["context"] if c is not None)
+
+
+def test_wave3_caveat_columns_reach_the_note():
+    from agent.needle.quant.data import row_caveats
+    assert "do_not_read_as_penetration" in row_caveats("epi/market_sizing_inputs.csv", {"do_not_read_as_penetration": "1"})
+    assert "marketed comparator" in row_caveats("pipeline/pipeline_assets.csv", {"marketed_comparator": "1"})
+    assert "GBP" in row_caveats("peers/peer_product_revenue.csv", {"currency": "GBP"})
+    assert "cumulative" in row_caveats("peers/peer_product_revenue.csv", {"currency": "JPY", "ticker": "TAK"})
+    assert row_caveats("peers/peer_product_revenue.csv", {"currency": "USD"}) == ""

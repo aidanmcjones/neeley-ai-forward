@@ -385,6 +385,8 @@ def table_value(code, name, spec, vals, ctx, bench=None):
             return V.sertkaya_pos(ta, "FDA review to approval")
         if code == "M1" and name == "equity_value":
             return V.target_ev(ctx["target"]) if ctx.get("target") else V.acquisition_value(stage)
+        if code == "M3" and name in ("trial_months", "readout_month", "approval_month") and ctx.get("timing") == "table":
+            return V.indication_timing(ta, name)
         if code in ("M4", "M5") and name == "loe_month" and ctx.get("product") and ctx.get("ticker"):
             return V.loe_month(ctx["ticker"], ctx["product"])
     except Exception:
