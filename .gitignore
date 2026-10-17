@@ -9,3 +9,9 @@ data/external/
 .streamlit/secrets.toml
 out/
 data/backtest/
+
+# moat dataset bulk files (documents live in R2 moat/); README, GAPS and manifest are tracked
+data/moat/*
+!data/moat/README.md
+!data/moat/GAPS.md
+!data/moat/manifest.csv
