@@ -172,3 +172,43 @@ def test_safe_eval_rejects_code():
     assert G.safe_eval("max(a, b) / 2 - -1", {"a": 4, "b": 6}) == 4.0
     with pytest.raises(ValueError):
         G.safe_eval("__import__('os').getcwd()", {})
+
+
+# ---------------------------------------------------------------- per-number markers (review D2, D15, C18)
+def test_render_per_number_markers(idx, good, full_year):
+    from agent.needle.cite import render
+    other = V.verify(Citation(DOC, 2, "Gross margin was 71.5% in 2025."), idx)
+    cl = Claim("Keytruda sales were $29,482 million and gross margin was 71.5%; total $64,168 million.",
+               [good, other, full_year])
+    md = render.render_markdown([cl], index=idx)
+    assert "$29,482 million[1] and gross margin was 71.5%[2]; total $64,168 million[3]." in md
+    h = render.render_html([cl], index=idx)
+    assert '$29,482 million<sup><a href="#fn-1">[1]</a></sup>' in h
+    # all numbers share one citation -> a single marker after the clause
+    one = render.render_markdown([Claim("Sales were $29,482 million, up 18%.", [good])], index=idx)
+    assert "Sales were $29,482 million, up 18%.[1]" in one
+
+
+def test_render_derived_and_assumption_markers(idx, good, full_year):
+    from agent.needle.cite import render
+    a = Citation.from_dict({**good.to_dict(), "value": "29,482", "unit": "USD millions"})
+    der = {"share": G.derived_entry(45.9, "a / b * 100", {"a": a, "b": (64168, full_year)}, unit="%")}
+    cl = Claim("Keytruda was 45.9% of revenue at a base rate of 0.65%.", [], derived=der,
+               assumptions={"0.65%": "Pfizer MFN base rate"})
+    md = render.render_markdown([cl], index=idx)
+    assert "45.9%[derived: 1, 2] of revenue at a base rate of 0.65%[assumption]." in md
+    assert md.count("**Sources**") == 1 and "[1] AAA 10-K FY2025" in md and "[2] AAA 10-K FY2025" in md
+    assert G.gate_document([cl], index=idx)["passed"]
+
+
+def test_render_footnote_page_and_quotes_and_public(idx):
+    from agent.needle.cite import render
+    fact = Citation("tables/x.csv", None, 'Keytruda "US" sales = 29,482', claim_type="number", value="29,482",
+                    doc_title="moat table x", location="row MRK-2025", license="wrds_licensed")
+    fact.verification.status = "exact"
+    md = render.render_markdown([Claim("Keytruda US sales 29,482.", [fact])])
+    assert "file page None" not in md and "moat table x, row MRK-2025 --" in md
+    assert '"Keytruda "US" sales = 29,482"' in md                      # double quotes kept verbatim
+    pub = render.render_markdown([Claim("Keytruda US sales 29,482.", [fact])], public=True)
+    assert "licensed text withheld" in pub and "Keytruda \"US\"" not in pub
+    assert "licensed text withheld" in render.render_html([Claim("x", [fact])], public=True)
