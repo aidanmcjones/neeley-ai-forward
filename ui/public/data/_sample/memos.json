@@ -258,7 +258,7 @@
     "decide"
    ],
    "ticker": "AMGN",
-   "kind": "decide",
+   "kind": "ceo_memo",
    "generated_by": "template",
    "memo_header": {
     "to": "Robert Bradway, CEO, Amgen",

@@ -44,6 +44,9 @@ fixture `public/data/_sample/memos.json` and says so.
   synonym groups over prompt + aliases (floor 0.3), preferring the selected company; no match replies "I can
   write these memos:" with the suggested chips and a "Show all prompts" list grouped by kind.
 - **Suggestions**: `memos.suggested` (a Part 1 to Part 2 flow), re-mapped by kind when the company pill changes.
+  Kinds: needle, findings, product, peers, priced_in, league, ai_wrong, moat, how_it_works (format chat) and
+  ceo_memo, prove_wrong (format memo); ceo_memo is the Part 2 step. Memo cites may carry `derived_expr`, shown
+  in the drawer as "Computed as".
 - Byline: teal AiMark only for model-written records; template / decide_v2 / data read "rules, no model".
   Numeric-check pill: passed (counts), failed, unchecked, or `no_numbers` ("no numbers to check").
 

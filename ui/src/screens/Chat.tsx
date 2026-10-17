@@ -10,7 +10,13 @@ import { Answer } from "../components/chat/Answer";
 
 interface Turn { id: number; prompt: string; memo: MemoRecord | null }
 
-const KIND_ORDER = ["needle", "findings", "finding", "product", "priced_in", "priced-in", "league", "decide", "memo", "ai_wrong", "proof"];
+// Generator kinds, in Part 1 (Find, chat) to Part 2 (Decide, memo) order.
+const KIND_ORDER = ["needle", "findings", "product", "peers", "priced_in", "league", "ceo_memo", "prove_wrong", "ai_wrong", "moat", "how_it_works"];
+const KIND_LABEL: Record<string, string> = {
+  needle: "Sharpest Needle", findings: "Findings", product: "Product fine print", peers: "Peers", priced_in: "Priced in?",
+  league: "League", ceo_memo: "CEO memo", prove_wrong: "What would prove us wrong", ai_wrong: "Where the AI was wrong",
+  moat: "Data moat", how_it_works: "How it works",
+};
 const kindRank = (k?: string) => { const i = KIND_ORDER.indexOf((k ?? "").toLowerCase()); return i < 0 ? 50 : i; };
 
 function suggestionsFor(file: MemosFile | null, ticker: string | null): MemoRecord[] {
@@ -133,7 +139,7 @@ export default function Chat() {
                     <div className="mt-2 space-y-3">
                       {grouped.map(([k, ms]) => (
                         <div key={k}>
-                          <div className="text-[11px] font-semibold uppercase tracking-wide text-muted">{k.replace(/_/g, " ")}</div>
+                          <div className="text-[11px] font-semibold uppercase tracking-wide text-muted">{KIND_LABEL[k] ?? k.replace(/_/g, " ")}</div>
                           <ul className="mt-1 space-y-1">
                             {ms.map((m) => (
                               <li key={m.id}><button type="button" onClick={() => send(m.prompt, m)} className="text-left text-[13px] text-purple hover:underline">{m.prompt}{m.ticker ? <span className="text-muted"> · {m.ticker}</span> : null}</button></li>
