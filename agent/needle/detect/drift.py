@@ -156,12 +156,14 @@ def _quote(p):
     return " ".join(w[:40]) if len(w) > 40 else p
 
 
-def _describe(kind, sec, topics, extra=""):
+def _describe(kind, sec, topics, extra="", p=""):
     s = {"risk": "risk factors", "mdna": "MD&A"}[sec]
     verb = {"added": "new paragraph in", "removed": "paragraph dropped from", "intensified": "stronger wording in",
             "modified": "reworded paragraph in"}[kind]
     t = f" (topics: {', '.join(topics)})" if topics else ""
-    return f"{verb} {s} vs FY2024{t}{extra}"
+    w = p.split()
+    gist = f": '{' '.join(w[:18])}{'...' if len(w) > 18 else ''}'" if w else ""  # say what the paragraph says
+    return f"{verb.capitalize()} {s} vs FY2024{t}{extra}{gist}"
 
 
 def _cand(kind, sec, pg, p, sim, old=None, oldpg=None, extra=""):
@@ -262,7 +264,7 @@ def _compare(ticker, ds, id25, id24, glossy):
             continue
         sigs.append(Signal(
             ticker, "drift", f"{c['sec']}_{c['kind']}", "FY2025", float(c["score"]),
-            detail=_describe(c["kind"], c["sec"], c["topics"], c["extra"]), evidence=evs,
+            detail=_describe(c["kind"], c["sec"], c["topics"], c["extra"], c["p"]), evidence=evs,
             meta={"section": c["sec"], "topics": c["topics"], "fy24_quote": _quote(c["old"]) if c["old"] else "",
                   "similarity": round(c["sim"], 3)}))
     print(f"{ticker}: drift candidates={len(cands)} emitted={len(sigs)} dropped_unverified={dropped}")

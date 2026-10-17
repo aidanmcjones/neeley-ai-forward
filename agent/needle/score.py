@@ -6,7 +6,7 @@ S = I_norm x P x T x O x E x (1 + 0.25 x max(Z, 0)) x (1 + 0.25 x D)
           kinds without a dollar path (drift, calls, labels) get a stated proxy and say so in impact["formula"].
   P       evidence-type prior from spec section 5 (contractual 0.9, trend 0.6, language drift 0.4, one quarter 0.3)
   T       1 / 1.08^(months/12), months = 12 unless the signal says otherwise
-  O       1 - coverage: 0.9 if its topic is in the latest earnings-release first page, 0.7 if analysts asked about it
+  O       1 - coverage (label facts floored at 0.5: the FDA label is public): 0.9 if its topic is in the latest earnings-release first page, 0.7 if analysts asked about it
           on the last 4 calls, else 0.1 (only in the filing body). "Not priced in" is measured, not asserted.
   E       re-verified here, never trusted from the detector: verified 1.0, needs_human 0.6, data-only 0.3, failed 0
   Z, D    peer z-score (capped 3) and trend (-1/0/1)
@@ -35,6 +35,10 @@ KIND_PRIOR = {
     "dosing_burden": "contractual", "dosing_advantage": "contractual", "boxed_warning_advantage": "contractual",
     "spend_per_claim_gap": "trend", "qa_repeated_deflection": "guidance",
 }
+LABEL_COVERAGE = 0.5  # O = 0.5 keeps label findings out of the Sharpest Needle pool (O >= 0.7)
+# peer-outlier metric -> the trend signal measuring the identical number (other outliers compare a level, not
+# a change, so they stay)
+PEER_BASE = {"inv_gap": "inventory_outpaces_revenue", "rec_gap": "receivables_outpace_revenue"}
 TOPIC_WORDS = {
     "inventory": r"inventor", "receivables": r"receivable", "gross_margin": r"gross margin|cost of (sales|products)",
     "impairment": r"impairment", "tax": r"tax rate", "rnd": r"research and development", "ira": r"Inflation Reduction|negotiat",
@@ -122,11 +126,13 @@ def _trend(t):
 def _impact(sig, p, ttm_oi):
     """(dollars, formula) for kinds with a dollar path; (None, proxy note) otherwise."""
     try:
-        q = max(p["revenue"].dropna().index)
-        if not str(sig.period).startswith(q[:4]) or len(p["revenue"].dropna()) < 8:
-            # 20-F filers (annual data only): compare fiscal years from the annual table
+        # Use the signal's own period, so the math matches the sentence. A fiscal-year signal (20-F filers)
+        # reads the annual table: AZN's quarterly panel holds half-year 6-K figures on a broader receivables
+        # concept (14,168M "trade and other" at mid-2025 vs 10,237M trade receivables at year end).
+        period = str(sig.period)
+        if "Q" not in period or len(p["revenue"].dropna()) < 8:
             p = xbrl.annual(sig.ticker)
-            q = max(p["revenue"].dropna().index)
+        q = period if period in p["revenue"].dropna().index else max(p["revenue"].dropna().index)
         if sig.kind.startswith("inventory_outpaces") or sig.kind.startswith("receivables_outpace"):
             col = "inventory" if sig.kind.startswith("inventory") else "receivables"
             prior = f"{int(q[:4]) - 1}{q[4:]}"
@@ -135,7 +141,7 @@ def _impact(sig, p, ttm_oi):
             return excess, (f"excess {col} = {col} now {p.at[q, col] / 1e6:,.0f}M - prior {p.at[prior, col] / 1e6:,.0f}M "
                             f"x (1 + revenue growth {rev_g:+.1%}) = {excess / 1e6:,.0f}M at risk of write-down or "
                             f"channel destocking")
-        if sig.kind.startswith("gross_margin"):
+        if sig.kind == "gross_margin_drop":  # a change; the peer outlier carries a level, which has no dollar path
             rev4 = p["revenue"].dropna().iloc[-4:].sum()
             dollars = abs(sig.value or 0) * rev4
             return dollars, f"gross-margin change {sig.value:+.1%} x TTM revenue {rev4 / 1e9:,.1f}B = {dollars / 1e6:,.0f}M"
@@ -156,6 +162,9 @@ def score_signal(sig, docs, p, ttm_oi, hits):
     T = 1 / 1.08 ** (12 / 12)
     topics = _topics(sig)
     cov, cov_note = _coverage(sig.ticker, topics)
+    if sig.detector == "labels" and cov < LABEL_COVERAGE:
+        # the FDA label is public and read by every prescriber and analyst: a fine-print finding, not a needle
+        cov, cov_note = LABEL_COVERAGE, "on the public FDA label"
     O = 1 - cov
     Z = max(min(sig.peer_z or 0, 3), -3)
     D = _trend(sig.meta.get("trend"))
@@ -170,7 +179,8 @@ def score_signal(sig, docs, p, ttm_oi, hits):
         impact={"dollars": dollars, "formula": formula, "i_norm": round(i_norm, 4), "ttm_operating_income": ttm_oi},
         peer={"metric_value": sig.value, "peer_median": sig.peer_median, "z": sig.peer_z},
         vector={"I_norm": round(i_norm, 4), "P": P, "T": round(T, 3), "O": round(O, 2), "E": E, "Z": Z, "D": D,
-                "obscurity_note": cov_note, "prior": prior_key, "topics": sorted(topics)},
+                "obscurity_note": cov_note, "prior": prior_key, "topics": sorted(topics),
+                **({"one_off": sig.meta["one_off"]} if sig.meta.get("one_off") else {})},
         score=round(S, 6), confidence=conf, verdict=status,
         reason="; ".join(r for v, r in verdicts if v != "verified"), hit_rate=hr or {},
     )
@@ -212,20 +222,34 @@ def score_ticker(ticker):
                 continue  # safety / efficacy / enrollment stops are routine; business-driven stops are the signal
             f = score_signal(sig, docs, p, oi or 0, hits)
             (rejected if f.verdict == "rejected" else findings).append(f)
+    # one-off charges (acquired IPR&D) explain a move; they are context for the analyst, not findings
+    context = [f for f in findings if f.vector.get("one_off")]
+    findings = [f for f in findings if not f.vector.get("one_off")]
+    fired = {f.signal_kind for f in findings}
     seen, unique = set(), []
     for f in findings:  # one finding per (kind, sentence, first citation)
         key = (f.signal_kind, f.finding, f.evidence[0].citation if f.evidence else "")
+        base = PEER_BASE.get(f.signal_kind.replace("_peer_outlier", ""))
+        if f.signal_kind.endswith("_peer_outlier") and base in fired:
+            continue  # same fact as its base signal, whose sentence already carries the peer median and z
         if key not in seen:
             seen.add(key)
             unique.append(f)
     findings = sorted(unique, key=lambda f: -f.score)
     write_jsonl(OUT / ticker / "findings.jsonl", findings)
     write_jsonl(OUT / ticker / "rejected.jsonl", rejected)
+    write_jsonl(OUT / ticker / "context.jsonl", context)
     return findings, rejected
 
 
+# An MD&A paragraph that is only new, reworded or dropped has no direction until the LLM reads it (GILD's
+# "positive topline Phase 3 results" scored as drift). Risk-factor changes and intensified wording stay eligible.
+NEEDS_DIRECTION = {"mdna_added", "mdna_modified", "mdna_removed"}
+
+
 def sharpest_needle(findings):
-    pool = [f for f in findings if f.vector.get("O", 0) >= 0.7 and f.vector.get("E", 0) >= 0.6]
+    pool = [f for f in findings if f.vector.get("O", 0) >= 0.7 and f.vector.get("E", 0) >= 0.6
+            and f.signal_kind not in NEEDS_DIRECTION]
     return max(pool, key=lambda f: f.score) if pool else None
 
 
