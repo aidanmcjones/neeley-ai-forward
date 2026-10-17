@@ -782,7 +782,7 @@ def needle_memo(ctx, t):
     p = f"**{lead}.** {poss(name)} Sharpest Needle is this: {s} {C.mark(*ns)}."
     note, ons = obscurity_cite(f, C, t)
     if note:
-        p += f" It is sharp because it is material and barely discussed: {plain_obscurity(note)} {C.mark(*ons)}."
+        p += f" How much the market already discusses it: {plain_obscurity(note)} {C.mark(*ons)}."
     imp = f.get("impact") or {}
     itxt, formula, ins = impact_cell(f, C, t)
     p += f" Impact: {itxt} {C.mark(*ins)}." if ins else f" Impact: {itxt}."

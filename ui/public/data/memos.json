@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T23:12:36+00:00",
+ "generated_at": "2026-10-17T23:12:54+00:00",
  "mode": "cached",
  "engine": "v3",
  "default_ticker": "AMGN",
@@ -34,7 +34,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Customers are taking longer to pay than revenue growth explains.** Amgen's Sharpest Needle is this: Receivables 10,227 vs 8,701 a year earlier (+17.5%, 2026Q2 vs 2025Q2) against quarterly revenue 10,054 vs 9,179 (+9.5%); gap +8.0 pts; peer median -0.3 pts (1.2 sd above) (peer figures computed, not page-cited) [1][2]. It is sharp because it is material and barely discussed: Not in the earnings-release headline, and analysts raised receivables in 0 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $38,095M at risk, taxed at 15% and spread over 544M diluted shares [4][5][6]."
+     "md": "**Customers are taking longer to pay than revenue growth explains.** Amgen's Sharpest Needle is this: Receivables 10,227 vs 8,701 a year earlier (+17.5%, 2026Q2 vs 2025Q2) against quarterly revenue 10,054 vs 9,179 (+9.5%); gap +8.0 pts; peer median -0.3 pts (1.2 sd above) (peer figures computed, not page-cited) [1][2]. How much the market already discusses it: Not in the earnings-release headline, and analysts raised receivables in 0 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $38,095M at risk, taxed at 15% and spread over 544M diluted shares [4][5][6]."
     },
     {
      "type": "callout",
@@ -4322,7 +4322,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Medicare price setting reaches this product.** Gilead Sciences' Sharpest Needle is this: Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published) [1][2]. It is sharp because it is material and barely discussed: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.2 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.2 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $3,904.5M with a 65.5% negotiated discount applied in full, less the 15% of rebates it no longer pays; bull and bear vary those shares (low-rebate class) [4][5][6]."
+     "md": "**Medicare price setting reaches this product.** Gilead Sciences' Sharpest Needle is this: Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published) [1][2]. How much the market already discusses it: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.2 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.2 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $3,904.5M with a 65.5% negotiated discount applied in full, less the 15% of rebates it no longer pays; bull and bear vary those shares (low-rebate class) [4][5][6]."
     },
     {
      "type": "callout",
@@ -8134,7 +8134,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Customers are taking longer to pay than revenue growth explains.** AstraZeneca's Sharpest Needle is this: DSO 64 days vs 56 a year earlier (+13.5%) (FY2025); peer median 72 days (0.7 sd below) [1][2]. It is sharp because it is material and barely discussed: Not in the earnings-release headline, and analysts raised receivables in 0 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $58,739M at risk, taxed at 17.5% and spread over 1,562M diluted shares [4][5][6]."
+     "md": "**Customers are taking longer to pay than revenue growth explains.** AstraZeneca's Sharpest Needle is this: DSO 64 days vs 56 a year earlier (+13.5%) (FY2025); peer median 72 days (0.7 sd below) [1][2]. How much the market already discusses it: Not in the earnings-release headline, and analysts raised receivables in 0 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $58,739M at risk, taxed at 17.5% and spread over 1,562M diluted shares [4][5][6]."
     },
     {
      "type": "callout",
@@ -12186,7 +12186,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Gross margin moved sharply.** Merck & Co.'s Sharpest Needle is this: Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1% (0.1 sd below) [1][2]. It is sharp because it is material and barely discussed: Not in the earnings-release headline, and analysts raised gross margin or cost of sales in 0 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $66,569M at risk, taxed at 18.5% and spread over 2,470M diluted shares [4][5][6]."
+     "md": "**Gross margin moved sharply.** Merck & Co.'s Sharpest Needle is this: Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1% (0.1 sd below) [1][2]. How much the market already discusses it: Not in the earnings-release headline, and analysts raised gross margin or cost of sales in 0 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $66,569M at risk, taxed at 18.5% and spread over 2,470M diluted shares [4][5][6]."
     },
     {
      "type": "callout",
@@ -16379,7 +16379,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Medicare price setting reaches this product.** Bristol Myers Squibb's Sharpest Needle is this: Pomalyst's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $2,069.1M; base list discount 60% (CMS-published analog, cited) [1][2]. It is sharp because it is material and barely discussed: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.7 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.7 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $2,069.1M with a 60% negotiated discount applied in full, less the 15% of rebates it no longer pays; bull and bear vary those shares (low-rebate class) [4][5][6]."
+     "md": "**Medicare price setting reaches this product.** Bristol Myers Squibb's Sharpest Needle is this: Pomalyst's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $2,069.1M; base list discount 60% (CMS-published analog, cited) [1][2]. How much the market already discusses it: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.7 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.7 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $2,069.1M with a 60% negotiated discount applied in full, less the 15% of rebates it no longer pays; bull and bear vary those shares (low-rebate class) [4][5][6]."
     },
     {
      "type": "callout",
@@ -20181,7 +20181,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Gross margin moved sharply.** Novo Nordisk's Sharpest Needle is this: Gross margin 81.0% vs 84.7% a year earlier (-3.7 pts) (FY2025); peer median 74.1% (1.1 sd above) [1][2]. It is sharp because it is material and barely discussed: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.1 (higher means more discussed); analysts raised gross margin or cost of sales in 1 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $309,064M at risk, taxed at 21.5% and spread over 4,448M diluted shares (stated in DKK, not converted to US dollars) [4][5][6]."
+     "md": "**Gross margin moved sharply.** Novo Nordisk's Sharpest Needle is this: Gross margin 81.0% vs 84.7% a year earlier (-3.7 pts) (FY2025); peer median 74.1% (1.1 sd above) [1][2]. How much the market already discusses it: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.1 (higher means more discussed); analysts raised gross margin or cost of sales in 1 of the last 10 earnings calls [3]. Impact: Operating income lower. Base case assumes 3% of trailing revenue of $309,064M at risk, taxed at 21.5% and spread over 4,448M diluted shares (stated in DKK, not converted to US dollars) [4][5][6]."
     },
     {
      "type": "callout",
@@ -24803,7 +24803,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Medicare price setting reaches this product.** AbbVie's Sharpest Needle is this: Linzess's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,937.9M; base list discount 75% (CMS-published analog, cited) [1][2]. It is sharp because it is material and barely discussed: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.4 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.4 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $1,937.9M with a 75% negotiated discount applied to the 40% of that spend not already rebated, less the 15% of rebates it no longer pays; bull and bear vary those shares (rebated class) [4][5][6]."
+     "md": "**Medicare price setting reaches this product.** AbbVie's Sharpest Needle is this: Linzess's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,937.9M; base list discount 75% (CMS-published analog, cited) [1][2]. How much the market already discusses it: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.4 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.4 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $1,937.9M with a 75% negotiated discount applied to the 40% of that spend not already rebated, less the 15% of rebates it no longer pays; bull and bear vary those shares (rebated class) [4][5][6]."
     },
     {
      "type": "callout",
@@ -29621,7 +29621,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Medicare price setting reaches this product.** Eli Lilly's Sharpest Needle is this: Trulicity's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $4,898.4M; base list discount 71% (CMS-published analog, cited) [1][2]. It is sharp because it is material and barely discussed: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.5 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.5 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $4,898.4M with a 71% negotiated discount applied to the 40% of that spend not already rebated, less the 15% of rebates it no longer pays; bull and bear vary those shares (rebated class) [4][5][6]."
+     "md": "**Medicare price setting reaches this product.** Eli Lilly's Sharpest Needle is this: Trulicity's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $4,898.4M; base list discount 71% (CMS-published analog, cited) [1][2]. How much the market already discusses it: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.5 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.5 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $4,898.4M with a 71% negotiated discount applied to the 40% of that spend not already rebated, less the 15% of rebates it no longer pays; bull and bear vary those shares (rebated class) [4][5][6]."
     },
     {
      "type": "callout",
@@ -34576,7 +34576,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**Medicare price setting reaches this product.** Pfizer's Sharpest Needle is this: Xeljanz's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,013.3M; base list discount 66% (CMS-published analog, cited) [1][2]. It is sharp because it is material and barely discussed: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.5 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.5 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $1,013.3M with a 66% negotiated discount applied to the 40% of that spend not already rebated, less the 15% of rebates it no longer pays; bull and bear vary those shares (rebated class) [4][5][6]."
+     "md": "**Medicare price setting reaches this product.** Pfizer's Sharpest Needle is this: Xeljanz's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,013.3M; base list discount 66% (CMS-published analog, cited) [1][2]. How much the market already discusses it: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.5 (higher means more discussed); analysts' scorecard share for Medicare price negotiation is 0.5 [3]. Impact: Revenue lower from the Medicare negotiated price. Base case: Medicare spend of $1,013.3M with a 66% negotiated discount applied to the 40% of that spend not already rebated, less the 15% of rebates it no longer pays; bull and bear vary those shares (rebated class) [4][5][6]."
     },
     {
      "type": "callout",
@@ -38247,7 +38247,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**The MFN agreement reaches Medicaid.** Johnson & Johnson's Sharpest Needle is this: JNJ signed an MFN agreement on 2026-01-08 that extends MFN pricing to Medicaid (R037); US investment pledge $55bn; TrumpRx: participating (R038). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given [1][2]. It is sharp because it is material and barely discussed: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.09 (higher means more discussed); analysts' scorecard share for the MFN deal is 0.1 [3]. Impact: US net price lower. Base case assumes 0.65% of US revenue of $55,917.5M (bull 0.3%, bear 1%); the deal terms are confidential, so the size is a scenario [4][5][6]."
+     "md": "**The MFN agreement reaches Medicaid.** Johnson & Johnson's Sharpest Needle is this: JNJ signed an MFN agreement on 2026-01-08 that extends MFN pricing to Medicaid (R037); US investment pledge $55bn; TrumpRx: participating (R038). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given [1][2]. How much the market already discusses it: Already raised in part: the earnings-release headline scores 0.0 and analyst attention 0.09 (higher means more discussed); analysts' scorecard share for the MFN deal is 0.1 [3]. Impact: US net price lower. Base case assumes 0.65% of US revenue of $55,917.5M (bull 0.3%, bear 1%); the deal terms are confidential, so the size is a scenario [4][5][6]."
     },
     {
      "type": "callout",
