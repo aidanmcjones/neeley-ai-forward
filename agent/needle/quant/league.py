@@ -72,7 +72,7 @@ def sharpest_needle(findings):
     pool = [f for f in findings if f.needle_eligible and f.S > 0]
     if pool:
         return max(pool, key=lambda f: f.S), "strict"
-    scored = [f for f in findings if f.S > 0 and f.vector["z"] == 0]
+    scored = [f for f in findings if f.S > 0 and f.vector["z"] == 0 and not getattr(f, "needle_blocked", False)]
     if not scored:
         return None, "none"
     med = _median([_D(f) for f in findings])

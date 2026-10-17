@@ -23,6 +23,10 @@ from . import data, evidence as EV, impact as IM, obscurity as OB
 from . import weights as W
 
 
+# Robustness knob (league_v3 variant): {(ticker, kind): "keep_anchor" | "not_fired"} treats a fired backtest row as if
+# it sat below its trigger: "keep_anchor" keeps the anchor size at pi_min, "not_fired" applies the v3 rule (S = 0).
+FORCE_PI_MIN = {}
+
 # Robustness knob (league_v3 variant): give anchor rows, which have no fiscal-year consensus line, c = 0.5 as well.
 C_ANCHOR_UNINFORMATIVE = False
 
@@ -470,6 +474,7 @@ class Scored:
     fact_key: str = ""            # one underlying fact = one key (review S1); league keeps one row per key
     not_quantified: str = ""      # reason when the row has no impact channel (review R2): impact None, S = 0
     guard: str = ""               # guards.py action applied to the row (drop | context | no_needle)
+    needle_blocked: bool = False  # never the Sharpest Needle, not even as the provisional pick
 
     def to_dict(self):
         body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.page is not None][:6])])
@@ -560,8 +565,11 @@ def score_signal(sig, co, panel=None):
     topics = topics_of(sig, fam)
     pi_downgrade = False
     fk = next((k for k, v in FAM.items() if v is fam), None)
+    keep_anchor = False
     if fk in BACKTEST_FLAG and not backtest_fired(sig, fk):
         fam, pi_downgrade = downgraded(fam), True
+    elif fk in BACKTEST_FLAG and (sig.ticker, sig.kind) in FORCE_PI_MIN:   # robustness variant only
+        fam, pi_downgrade, keep_anchor = downgraded(fam), True, FORCE_PI_MIN[(sig.ticker, sig.kind)] == "keep_anchor"
     page_cites = [EV.from_evidence(ev) for ev in sig.evidence]
     flags, diag = [], True
     product = sig.meta.get("product")
@@ -574,7 +582,7 @@ def score_signal(sig, co, panel=None):
         # Review R2 (A20, B4, A1): the 3%-of-revenue anchor is the size of a backtested margin event, so it applies
         # only to a backtested time-series flag that fired. hit_rates.json has a dose response only by the number of
         # flags (dose_response_full_coverage), not by one flag's strength, so the anchor is flat (D3, a stated limit).
-        if fk in BACKTEST_FLAG and not pi_downgrade:
+        if fk in BACKTEST_FLAG and (not pi_downgrade or keep_anchor):
             imp = IM.anchor(co)
             imp.flags.append("anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)")
         else:
@@ -656,7 +664,7 @@ def apply_guard(sc, guard):
     "no_needle" -> scored but not needle-eligible."""
     action, reason = guard
     sc.flags.append(reason)
-    sc.needle_eligible = False
+    sc.needle_eligible, sc.needle_blocked = False, True
     if action in ("context", "drop"):
         sc.not_quantified = sc.not_quantified or reason
         sc.S = 0.0
@@ -969,6 +977,10 @@ def mfn_findings(ticker, co):
                     "dollar figure is given.")
     sc = _assemble(co, ticker, "mfn_medicaid", sentence, MFN_DIRECTIONAL, imp, page_cites, ["mfn"],
                    OB.to_date(f.mfn_date), extra_flags=flags, z_text="mfn", detector="mfn_generator")
+    if q is None and sc.needle_eligible:
+        # a direction with a universal placeholder size cannot be the company's sharpest specific finding
+        sc.needle_eligible, sc.needle_blocked = False, True
+        sc.flags.append("MFN direction with a placeholder size: not eligible as the Sharpest Needle")
     sc.citations += [c for c in ctx_cites if c not in sc.citations]
     sc.product = ""
     return [sc]
