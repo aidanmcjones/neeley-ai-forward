@@ -359,12 +359,16 @@ NEG26 = "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md"
 NEG27 = "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md"
 ONC_ANALOG_QUOTES = [(NEG26, 2, "Imbruvica Pharmacyclics LLC Blood cancers $9,319.00 $14,934.00 38%"),
                      (NEG27, 2, "Ibrance Pfizer Inc. Breast cancer $7,871 $15,741 50%"),
-                     (NEG27, 2, "$8,650 $21,744 60%")]
+                     (NEG27, 2, "Multiple myeloma\n$8,650 $21,744 60%")]
 IMM = (0.65, 0.66, 0.67)   # immunology cycle 1-2 analogs: Otezla 65%, Stelara 66%, Enbrel 67% (ira_cut_check)
-IMM_QUOTES = [(NEG27, 2, "$1,650 $4,722 65%"), (NEG26, 2, "$4,695.00 $13,836.00 66%"), (NEG26, 2, "$2,355.00 $7,106.00 67%")]
+IMM_QUOTES = [(NEG27, 2, "Psoriatic \narthritis\n$1,650 $4,722 65%"), (NEG26, 2, "$4,695.00 $13,836.00 66%"), (NEG26, 2, "$2,355.00 $7,106.00 67%")]
 DIAB = (0.66, 0.71, 0.85)  # diabetes: smallest (Jardiance 66%), same class GLP-1 (Ozempic 71%), largest (Janumet 85%)
-DIAB_QUOTES = [(NEG27, 2, "$274 $959 71%")]
+DIAB_QUOTES = [(NEG27, 2, "overweight\n$274 $959 71%")]
 ALL_CUTS = (0.38, 0.655, 0.85)  # no same-class analog: cycle 1-2 smallest, median of the 16 in ira_cut_check, largest
+# Cited endpoints of the cycle 1-2 range (review D4): Imbruvica 38% (IPAY 2026) and Janumet 85% (IPAY 2027). The
+# median 65.5% is an assumption (median of the 16 negotiated discounts) and the sentence says so.
+ALL_CUTS_QUOTES = [(NEG26, 2, "Imbruvica Pharmacyclics LLC Blood cancers $9,319.00 $14,934.00 38%"),
+                   (NEG27, 2, "Janumet; Janumet XR Merck Sharp & Dohme LLC Type 2 diabetes $80 $526 85%")]
 K_NET = W.K_NET                 # KQ2 cross-check: net hit 0.3-0.5 x list discount for rebated classes
 LOW_REBATE = IM.LOW_REBATE      # oncology, HIV (the one IRA formula lives in impact.ira_class_rule)
 # Robustness knob: "spec" makes the spec formula G x max(0, d - g_pre) the league value (S_spec_formula otherwise).
@@ -377,7 +381,7 @@ IRA_DRUGS = [
     ("LLY", "Trulicity", 2028, 4898.378, CMS28, 1, "multiple cardiovascular risk factors $4,898,378,000", DIAB,
      W.G_PRE_GLP1, None, DIAB_QUOTES, date(2026, 1, 27)),
     ("GILD", "Biktarvy", 2028, 3904.486, CMS28, 1, "Biktarvy Human immunodeficiency virus type 1 infection $3,904,486,000",
-     ALL_CUTS, W.M_MDP_CATASTROPHIC, None, [], date(2026, 1, 27)),
+     ALL_CUTS, W.M_MDP_CATASTROPHIC, None, ALL_CUTS_QUOTES, date(2026, 1, 27)),
     ("BMY", "Orencia", 2028, 2450.065, CMS28, 1, "Orencia Psoriatic arthritis; Rheumatoid arthritis $2,450,065,000",
      IMM, W.G_PRE_IMMUNOLOGY, None, IMM_QUOTES, date(2026, 1, 27)),
     ("JNJ", "Erleada", 2028, 1947.504, CMS28, 1, "Erleada Prostate cancer $1,947,504,000", ONC, W.M_MDP_CATASTROPHIC,
@@ -385,24 +389,24 @@ IRA_DRUGS = [
     ("PFE", "Xeljanz", 2028, 1013.332, CMS28, 1, "Rheumatoid arthritis; Ulcerative colitis $1,013,332,000", IMM,
      W.G_PRE_IMMUNOLOGY, None, IMM_QUOTES, date(2026, 1, 27)),
     ("ABBV", "Botox", 2028, 1143.070, CMS28, 1, "Spasticity; Other movement disorders $1,143,070,000", ALL_CUTS, None,
-     K_NET, [], date(2026, 1, 27)),
+     K_NET, ALL_CUTS_QUOTES, date(2026, 1, 27)),
     ("BMY", "Pomalyst", 2027, 2069.147, CMS27, 1, "Pomalyst Kaposi sarcoma; Multiple myeloma $2,069,147,000", 0.60,
-     W.M_MDP_CATASTROPHIC, None, [(NEG27, 2, "$8,650 $21,744 60%")], date(2025, 11, 15)),
+     W.M_MDP_CATASTROPHIC, None, [(NEG27, 2, "Multiple myeloma\n$8,650 $21,744 60%")], date(2025, 11, 15)),
     ("PFE", "Ibrance", 2027, 1984.624, CMS27, 1, "Ibrance Breast cancer $1,984,624,000", 0.50, W.M_MDP_CATASTROPHIC,
      None, [(NEG27, 2, "Ibrance Pfizer Inc. Breast cancer $7,871 $15,741 50%")], date(2025, 11, 15)),
     ("AZN", "Calquence", 2027, 1614.250, CMS27, 1, "Mantle cell lymphoma $1,614,250,000", 0.40, W.M_MDP_CATASTROPHIC,
-     None, [(NEG27, 2, "$8,600 $14,228 40%")], date(2025, 11, 15)),
+     None, [(NEG27, 2, "cell lymphoma\n$8,600 $14,228 40%")], date(2025, 11, 15)),
     ("ABBV", "Linzess", 2027, 1937.912, CMS27, 1, "syndrome with constipation $1,937,912,000", 0.75, None, K_NET,
-     [(NEG27, 2, "$136 $539 75%")], date(2025, 11, 15)),
+     [(NEG27, 2, "constipation\n$136 $539 75%")], date(2025, 11, 15)),
     ("ABBV", "Vraylar", 2027, 1085.788, CMS27, 1, "Schizophrenia $1,085,788,000", 0.44, None, K_NET,
-     [(NEG27, 2, "$770 $1,376 44%")], date(2025, 11, 15)),
+     [(NEG27, 2, "Schizophrenia\n$770 $1,376 44%")], date(2025, 11, 15)),
     ("AMGN", "Otezla", 2027, 994.001, CMS27, 1, "Psoriatic arthritis $994,001,000", 0.65, W.G_PRE_IMMUNOLOGY, None,
-     [(NEG27, 2, "$1,650 $4,722 65%")], date(2025, 11, 15)),
+     [(NEG27, 2, "Psoriatic \narthritis\n$1,650 $4,722 65%")], date(2025, 11, 15)),
     ("MRK", "Janumet", 2027, 1082.464, CMS27, 1, "Janumet; Janumet XR Type 2 diabetes $1,082,464,000", 0.85,
      W.G_PRE_GLP1, None, [(NEG27, 2, "Janumet; Janumet XR Merck Sharp & Dohme LLC Type 2 diabetes $80 $526 85%")],
      date(2025, 11, 15)),
     ("NVO", "Ozempic/Rybelsus/Wegovy", 2027, 14426.566, CMS27, 1, "$14,426,566,000", 0.71, W.G_PRE_GLP1, None,
-     [(NEG27, 2, "$274 $959 71%")], date(2025, 11, 15)),
+     [(NEG27, 2, "overweight\n$274 $959 71%")], date(2025, 11, 15)),
 ]
 
 
@@ -724,8 +728,16 @@ def ira_findings(ticker, co):
             flags.append("Trulicity loses US exclusivity in 2027 (starter thread); biosimilar entry would end selection")
         if ticker == "GILD":
             flags.append("adjacent to GILD's starter thread (HIV franchise durability): human check before pitching")
+        base_d = d[1] if isinstance(d, tuple) else d
+        if d == ALL_CUTS:
+            dtxt = (f"assumed base list discount {base_d:.1%} (median of the 16 cycle 1-2 negotiated discounts; cited "
+                    "range 38% to 85%; no same-class MFP published)")
+        elif analogs:
+            dtxt = f"base list discount {base_d:.0%} (CMS-published analog, cited)"
+        else:
+            dtxt = f"base list discount {base_d:.0%}"
         sentence = (f"{drug}'s Medicare price is set by negotiation from January {ipay}: CMS Part B+D spend "
-                    f"${G:,.1f}M; base list discount {d[1] if isinstance(d, tuple) else d:.0%}.")
+                    f"${G:,.1f}M; {dtxt}.")
         page_cites = [spend] + ([comp] if comp else [])
         if comp is None:
             flags.append("company filing sentence naming the selection not found: n_ind = 1")
