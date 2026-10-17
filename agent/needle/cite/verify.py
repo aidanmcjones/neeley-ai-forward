@@ -26,7 +26,10 @@ Reuse: rung 2 calls agent.moat.cite.verify_quote (the shared normalized-substrin
 _norm and _numbers come from agent.findings. Mine: rung 1 (exact + char span), the fuzzy rung and its number guard,
 and the numeric value check (verify_quote has no numeric semantics). Pages come from the shared sqlite via
 agent.needle.cite.index (an adapter, not a second index). agent.findings.verify itself is not called (it needs a
-per-ticker docs dict); its transcript speaker rule is not repeated here.
+per-ticker docs dict), but its transcript rules are applied here (review B12, transcript_rule): a quote that sits
+before the fool.com "Full Conference Call Transcript" marker comes from the LLM-written takeaways and is rejected;
+a named speaker whose surname is not in the 4,000 characters before the quote, or is not the nearest "**Name
+(title):**" label before it, is rejected; with no speaker named, the quote is attributed to that nearest label.
 """
 
 import re
@@ -35,7 +38,7 @@ from dataclasses import replace
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
 
-from agent.findings import _norm, _numbers
+from agent.findings import FOOL_START, _norm, _numbers
 from agent.moat.cite import verify_quote
 
 from .deeplink import build_deep_link, build_viewer_link
@@ -188,9 +191,48 @@ def verify(citation, index=None):
         if elsewhere:
             note = (note + "; " if note else "") + elsewhere
     base.char_start, base.char_end = span if span else (None, None)
+    if status != "unverified" and rec.raw_doc_type == "transcript":
+        status, score, note, base.speaker = transcript_rule(base, idx, page, span, status, score, note)
     base.deep_link = build_deep_link(base, text)
     base.viewer_link = build_viewer_link(base)
     return replace(base, verification=Verification(status, round(score, 4), now, note), confidence_note=note)
+
+
+_SPEAKER = re.compile(r"\*\*([^*\n]{2,80}?)(?:\s*\([^)\n]*\))?:\*\*")
+SPEAKER_WINDOW = 4000     # same window as agent.findings.verify
+
+
+def transcript_rule(c, idx, page, span, status, score, note):
+    """agent.findings' earnings-call checks inside the ladder (review B12). Returns (status, score, note, speaker)."""
+    pages = sorted(idx.pages(c.canonical_id).items())
+    off, flat = 0, []
+    pos = None
+    for n, (_, t) in pages:
+        if n == page:
+            pos = off + (span[0] if span else 0)
+        flat.append(t)
+        off += len(t) + 1
+    flat = "\n".join(flat)
+    if pos is None:
+        return status, score, note, c.speaker
+    low = flat.lower()
+    start = low.find(FOOL_START)
+    if start != -1 and pos < start:
+        return "unverified", 0.0, "quote comes from the LLM-written fool.com takeaways, not the call", c.speaker
+    before = flat[max(0, pos - SPEAKER_WINDOW):pos]
+    labels = list(_SPEAKER.finditer(flat[:pos]))
+    if c.speaker:
+        surname = _norm(c.speaker.split()[-1])
+        if surname and surname not in _norm(before):
+            return "unverified", 0.0, f"speaker {c.speaker!r} not found just before the quote", c.speaker
+        if labels and surname and surname not in _norm(labels[-1].group(1)):
+            return ("unverified", 0.0, f"quote is spoken by {labels[-1].group(1).strip()!r}, not {c.speaker!r}",
+                    c.speaker)
+        return status, score, note, c.speaker
+    if not labels:
+        return status, score, (note + "; " if note else "") + "speaker not identified", ""
+    who = labels[-1].group(1).strip()
+    return status, score, (note + "; " if note else "") + f"speaker attributed from transcript label: {who}", who
 
 
 def _ladder(c, text):

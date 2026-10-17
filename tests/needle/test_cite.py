@@ -345,3 +345,41 @@ def test_citation_roundtrip(idx):
     assert Citation.from_dict(d) == c
     assert {"cite_id", "canonical_id", "ticker", "doc_type", "doc_title", "period", "page", "folio", "char_start", "char_end", "quote",
             "claim_type", "value", "unit", "source_url", "deep_link", "viewer_link", "verification", "confidence_note"} <= set(d)
+
+
+# ---------------------------------------------------------------- transcript speaker and fool.com rules (review B12)
+def test_transcript_speaker_and_fool_rules(tmp_path):
+    import sqlite3
+    from agent.needle.cite import index as I
+    from agent.needle.cite import verify as V
+    from agent.needle.cite.locator import Citation
+    db = tmp_path / "c.sqlite"
+    con = sqlite3.connect(db)
+    con.executescript("""CREATE TABLE docs (doc_id TEXT, ticker TEXT, company TEXT, "group" TEXT, doc_type TEXT,
+      form TEXT, period TEXT, filed TEXT, source_quality TEXT, source_url TEXT, path TEXT, stream TEXT, quote_grade TEXT,
+      superseded_by TEXT, license TEXT, drug TEXT, n_pages INTEGER, page_scheme TEXT, notes TEXT);
+      CREATE TABLE pages (doc_id TEXT, page_no INTEGER, printed TEXT, char_start INTEGER, char_end INTEGER,
+      speakers TEXT, text TEXT);""")
+    take = "Key takeaways: management said demand for the lead product is strong across regions this quarter."
+    call = ("Full Conference Call Transcript\n**Jane Roe (CFO at Acme):** Our gross-to-net erosion was about four "
+            "points this year and we expect a similar step next year.\n**John Doe (CEO at Acme):** We remain "
+            "confident in the launch trajectory and the pipeline readouts.")
+    con.execute("INSERT INTO docs (doc_id, ticker, doc_type, period, filed, source_url, n_pages) VALUES "
+                "('ACME:t.md', 'ACME', 'transcript', '2026Q2', '2026-07-30', 'https://www.fool.com/x/', 1)")
+    con.execute("INSERT INTO pages (doc_id, page_no, text) VALUES ('ACME:t.md', 1, ?)", (take + "\n" + call,))
+    con.commit()
+    con.close()
+    idx = I.load_index(db)
+    q1 = "Our gross-to-net erosion was about four points this year"
+    ok = V.verify(Citation("ACME:t.md", 1, q1), idx)
+    assert ok.verification.ok and ok.speaker == "Jane Roe"                       # attributed from the label
+    assert V.verify(Citation("ACME:t.md", 1, q1, speaker="Jane Roe"), idx).verification.ok
+    wrong = V.verify(Citation("ACME:t.md", 1, q1, speaker="John Doe"), idx)
+    assert not wrong.verification.ok and "John Doe" in wrong.confidence_note
+    # a speaker who talks elsewhere in the window but is not the nearest label is still rejected
+    later = "We remain confident in the launch trajectory and the pipeline readouts."
+    assert V.verify(Citation("ACME:t.md", 1, later, speaker="John Doe"), idx).verification.ok
+    mis = V.verify(Citation("ACME:t.md", 1, later, speaker="Jane Roe"), idx)
+    assert not mis.verification.ok and "spoken by 'John Doe'" in mis.confidence_note
+    fool = V.verify(Citation("ACME:t.md", 1, "management said demand for the lead product is strong"), idx)
+    assert not fool.verification.ok and "fool.com takeaways" in fool.confidence_note
