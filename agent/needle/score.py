@@ -191,10 +191,19 @@ def ttm_operating_income(ticker, p):
     return 0.0
 
 
+def scale_base(ticker, p):
+    """Denominator for I_norm: TTM operating income, floored at 10% of TTM revenue so a one-off loss quarter
+    (e.g. a large IPR&D charge) cannot flip the sign or explode the ratio."""
+    oi = ttm_operating_income(ticker, p)
+    rev = p["revenue"].dropna()
+    rev4 = float(rev.iloc[-4:].sum()) if len(rev) >= 4 else float(xbrl.annual(ticker)["revenue"].dropna().iloc[-1])
+    return max(oi, 0.10 * rev4)
+
+
 def score_ticker(ticker):
     docs = pages.docs(ticker)
     p = xbrl.panel(ticker)
-    oi = ttm_operating_income(ticker, p)
+    oi = scale_base(ticker, p)
     hits = _hit_rates()
     findings, rejected = [], []
     for det in DETECTORS:

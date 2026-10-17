@@ -1,5 +1,15 @@
 [
   {
+    "ticker": "LLY",
+    "score": 0.3034,
+    "n_findings": 8,
+    "n_verified": 6,
+    "n_rejected": 0,
+    "high_confidence": 5,
+    "sharpest_needle": "Days inventory 469 days (Q2 2026) vs peers; peer median 187 days, z +2.9",
+    "needle_id": "LLY-forensics-521746"
+  },
+  {
     "ticker": "AZN",
     "score": 0.19,
     "n_findings": 51,
@@ -7,7 +17,27 @@
     "n_rejected": 0,
     "high_confidence": 9,
     "sharpest_needle": "Receivables +23.3% YoY vs revenue +8.6% (FY2025); gap +14.7 pts; peer median -0.3 pts, z +2.1",
-    "needle_id": "AZN-forensics-771600"
+    "needle_id": "AZN-forensics-865176"
+  },
+  {
+    "ticker": "MRK",
+    "score": 0.1398,
+    "n_findings": 15,
+    "n_verified": 12,
+    "n_rejected": 0,
+    "high_confidence": 10,
+    "sharpest_needle": "R&D 58.7% of revenue vs 25.6% a year earlier (+33.0 pts) (Q2 2026); peer median 18.6%, z +3.0",
+    "needle_id": "MRK-forensics-882883"
+  },
+  {
+    "ticker": "GILD",
+    "score": 0.1079,
+    "n_findings": 16,
+    "n_verified": 10,
+    "n_rejected": 0,
+    "high_confidence": 8,
+    "sharpest_needle": "biktarvy lists 3 indications vs rival median 1 ({'dovato': 1, 'cabenuva': 1}); broader label supports more volume growth routes",
+    "needle_id": "GILD-labels-974778"
   },
   {
     "ticker": "AMGN",
@@ -17,17 +47,7 @@
     "n_rejected": 0,
     "high_confidence": 10,
     "sharpest_needle": "Receivables +17.5% YoY vs revenue +9.5% (Q2 2026); gap +8.0 pts; peer median -0.3 pts, z +1.2",
-    "needle_id": "AMGN-forensics-315665"
-  },
-  {
-    "ticker": "MRK",
-    "score": 0.0887,
-    "n_findings": 15,
-    "n_verified": 12,
-    "n_rejected": 0,
-    "high_confidence": 10,
-    "sharpest_needle": "R&D 58.7% of revenue vs 25.6% a year earlier (+33.0 pts) (Q2 2026); peer median 18.6%, z +3.0",
-    "needle_id": "MRK-forensics-108617"
+    "needle_id": "AMGN-forensics-356129"
   },
   {
     "ticker": "PFE",
@@ -37,7 +57,7 @@
     "n_rejected": 0,
     "high_confidence": 4,
     "sharpest_needle": "Effective tax rate 62.3% vs 4.6% a year earlier (+57.7 pts) (Q2 2026); peer median 17.7%, z +3.0",
-    "needle_id": "PFE-forensics-263371"
+    "needle_id": "PFE-forensics-810756"
   },
   {
     "ticker": "ABBV",
@@ -47,17 +67,7 @@
     "n_rejected": 0,
     "high_confidence": 10,
     "sharpest_needle": "skyrizi every 12 weeks (4.3/yr) vs cosentyx every 4 weeks (13/yr)",
-    "needle_id": "ABBV-labels-868712"
-  },
-  {
-    "ticker": "GILD",
-    "score": 0.075,
-    "n_findings": 16,
-    "n_verified": 10,
-    "n_rejected": 0,
-    "high_confidence": 8,
-    "sharpest_needle": "biktarvy lists 3 indications vs rival median 1 ({'dovato': 1, 'cabenuva': 1}); broader label supports more volume growth routes",
-    "needle_id": "GILD-labels-835784"
+    "needle_id": "ABBV-labels-674677"
   },
   {
     "ticker": "JNJ",
@@ -67,17 +77,7 @@
     "n_rejected": 0,
     "high_confidence": 5,
     "sharpest_needle": "rinvoq carries a boxed warning (WARNING: SERIOUS INFECTIONS, MORTALITY, MALIGNANCY, MAJOR ADVERSE CARDIOVASCULAR EVENTS, and\u00a0THROMBOSIS); tremfya does not",
-    "needle_id": "JNJ-labels-558966"
-  },
-  {
-    "ticker": "LLY",
-    "score": 0.0646,
-    "n_findings": 8,
-    "n_verified": 6,
-    "n_rejected": 0,
-    "high_confidence": 5,
-    "sharpest_needle": "Days inventory 469 days (Q2 2026) vs peers; peer median 187 days, z +2.9",
-    "needle_id": "LLY-forensics-913918"
+    "needle_id": "JNJ-labels-650069"
   },
   {
     "ticker": "NVO",
@@ -87,7 +87,7 @@
     "n_rejected": 0,
     "high_confidence": 5,
     "sharpest_needle": "wegovy lists 5 indications vs rival median 1.5 ({'zepbound': 2, 'foundayo': 1}); broader label supports more volume growth routes",
-    "needle_id": "NVO-labels-890763"
+    "needle_id": "NVO-labels-377709"
   },
   {
     "ticker": "BMY",
@@ -97,6 +97,6 @@
     "n_rejected": 0,
     "high_confidence": 4,
     "sharpest_needle": "eliquis lists 6 indications vs rival median 10 ({'xarelto': 10}); narrower label should show up as a smaller addressable patient pool",
-    "needle_id": "BMY-labels-674520"
+    "needle_id": "BMY-labels-881430"
   }
 ]
