@@ -91,7 +91,7 @@ The page text is the moat `where()` string (`Citation.location`): `p. 58`, `Item
 - A public host for the viewer (hard blocker for external readers). The app serves only local files; R2 is private and stores moat docs as gzip (`moat/<rel>.gz`); the corpus is not in R2. A deployed app needs the data or a signed-URL proxy.
 - EDGAR iXBRL fact anchors (`ix.xhtml?doc=...#fact-identifier-N`) are not generated; derived numbers (ratios, z-scores) cite only the filing page of the base figure, not the XBRL concept and accession.
 - Text-fragment hit rate on SEC HTML is unmeasured.
-- Transcript speaker rule (`findings.verify`) and the fool.com takeaway exclusion are not applied here.
+- Done (commit 8a94bc0): the transcript speaker rule and the fool.com takeaway exclusion from `findings.verify` now run inside `verify` for transcript citations. A quote before the fool.com "Full Conference Call Transcript" marker is rejected; a named speaker must be the nearest `**Name (title):**` label within 4,000 characters before the quote, else the citation is unverified; with no speaker named, the quote is attributed to that label.
 - Facts rows (`search_facts`) are not Citations yet: they link via `fact_link` only; `page_scheme = none` documents (tables, drug reference data) have no pages.
 - The index contract is frozen at 704741d until the scraper's Sunday freeze; re-copy `agent/moat/cite.py` if it changes.
 - Not live-tested against the Anthropic API (no key); the response shapes follow the documented fields. If the API joins multi-block `cited_text` without whitespace, the fuzzy rung absorbs it.
