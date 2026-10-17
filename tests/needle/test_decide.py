@@ -202,3 +202,42 @@ def test_cli_runs_on_sample_file(tmp_path):
     assert "verified: unverified" not in md
     assert "verified: substring" in md or "verified: exact" in md
     assert d["numeric_check"]["status"] == "passed" and not d["numeric_check"]["unsupported"]
+
+
+def _stale(out):
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "decide.json").write_text('{"stale": true}')
+    (out / "decide.md").write_text("# stale recommendation\n")
+
+
+def test_exit_2_deletes_stale_decide_files_unresolved_ids(tmp_path):
+    out = tmp_path / "LLY"
+    _stale(out)
+    spec = json.loads((EX / "moves_LLY.json").read_text())
+    spec["moves"][0]["finding_ids"] = ["no-such-finding"]
+    mv = tmp_path / "moves.json"
+    mv.write_text(json.dumps(spec))
+    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_old.jsonl"), "--moves", str(mv),
+                   "--out", str(out)])
+    assert rc == 2
+    assert not (out / "decide.json").exists() and not (out / "decide.md").exists()
+    assert "no-such-finding" in (out / "decide_rejected.md").read_text()
+
+
+def test_exit_2_deletes_stale_decide_files_gate_failure(tmp_path, monkeypatch):
+    out = tmp_path / "LLY"
+    _stale(out)
+    real = CLI.build_md
+
+    def failing(o, f, public=False):
+        md, summary, withheld = real(o, f, public)
+        bad = {"status": "failed", "checked": 1, "total": 1, "verified": 0, "derived": 0, "assumed": 0,
+               "unsupported": [{"value": "9", "where": "x", "reason": "test"}]}
+        items = summary["items"] + [{"where": "x", "text": "9", "passed": False, "numeric_check": bad, "numbers": []}]
+        return md, dict(summary, passed=False, numeric_check=bad, items=items, failed=["x"]), withheld
+    monkeypatch.setattr(CLI, "build_md", failing)
+    rc = CLI.main(["--ticker", "LLY", "--findings", str(EX / "findings_LLY_old.jsonl"), "--moves", str(EX / "moves_LLY.json"),
+                   "--out", str(out)])
+    assert rc == 2
+    assert not (out / "decide.json").exists() and not (out / "decide.md").exists()
+    assert (out / "decide_rejected.md").exists() and json.loads((out / "decide_rejected.json").read_text())["numeric_check"]["status"] == "failed"

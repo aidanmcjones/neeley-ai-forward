@@ -7,7 +7,9 @@ Every number in decide.md is a cell checked by the numeric gate (agent.needle.ci
 passing citation (company citations are re-verified, never trusted from the moves file), derived from cited or
 labelled operands, or labelled an assumption (external benchmarks, model outputs, team inputs). If any headline cell
 fails, decide.md is not written: decide_rejected.md lists the failures and the exit code is 2. finding_ids that do
-not resolve against the findings file also exit 2 (review D8). decide.json carries numeric_check.
+not resolve against the findings file also exit 2 (review D8). decide.json carries numeric_check. On every exit 2 any
+decide.json and decide.md left by an earlier run are deleted first (a stale file must never be read as current); the
+rejected run's JSON goes to decide_rejected.json.
 --moves is JSON (or YAML when PyYAML is installed): {"as_of", "cash_and_equivalents", "moves": [...]} or a bare list.
 See docs/examples/moves_LLY.json.
 """
@@ -460,6 +462,13 @@ def to_json(out, summary=None, withheld=()):
     return d
 
 
+def _clear_stale(d):
+    """Exit-2 path: delete decide.json and decide.md from an earlier run before the rejection is written, so a stale
+    recommendation can never be read as the current one."""
+    for stale in ("decide.json", "decide.md"):
+        (d / stale).unlink(missing_ok=True)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--ticker", required=True)
@@ -477,7 +486,7 @@ def main(argv=None):
     known = {D.finding_id(f) for f in findings}
     missing = sorted({fid for mv in spec["moves"] for fid in mv.get("finding_ids") or [] if fid not in known})
     if missing:      # review D8: a move's finding ids must resolve against the findings file
-        (d / "decide.md").unlink(missing_ok=True)
+        _clear_stale(d)
         (d / "decide_rejected.md").write_text(
             f"# Decide: {a.ticker} rejected\n\nfinding_ids in {a.moves} do not resolve against {a.findings}: "
             + ", ".join(missing) + "\n")
@@ -488,15 +497,18 @@ def main(argv=None):
                 if (mv.get("name") or get_template(mv["template"]).name) == out["selection"].chosen.name), {})
     out["kill"] = kill_table(out["selection"].chosen, ctx)
     md, summary, withheld = build_md(out, findings, a.public)
-    (d / "decide.json").write_text(json.dumps(to_json(out, summary, withheld), indent=2, default=str))
+    js = json.dumps(to_json(out, summary, withheld), indent=2, default=str)
     if not summary["passed"]:
-        (d / "decide.md").unlink(missing_ok=True)
+        _clear_stale(d)
+        (d / "decide_rejected.json").write_text(js)
         (d / "decide_rejected.md").write_text(rejected_md(out, summary, withheld))
         nc = summary["numeric_check"]
         print(f"{a.ticker}: numeric gate failed ({len(nc['unsupported'])} unsupported of {nc['total']}); wrote "
               f"{d / 'decide_rejected.md'}", file=sys.stderr)
         return 2
-    (d / "decide_rejected.md").unlink(missing_ok=True)
+    for stale in ("decide_rejected.md", "decide_rejected.json"):
+        (d / stale).unlink(missing_ok=True)
+    (d / "decide.json").write_text(js)
     (d / "decide.md").write_text(md)
     c = out["selection"].chosen
     print(f"{a.ticker}: chosen {c.name}: EV {c.ev:,.1f}, CaR {c.car:,.1f}, payback {c.payback_month}, spread {c.spread:,.1f}, MCDA {c.mcda:.3f}")
