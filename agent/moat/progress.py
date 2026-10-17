@@ -34,7 +34,17 @@ def moat():
     return pd.DataFrame(rows)
 
 
+VERIFIED_NAME = {"exec_comp_metrics.csv": "incentive_metrics.csv"}
+
+
 def table(name):
+    """A moat table: the Opus-verified copy under data/moat/verified/<stream>/ when one exists, else the raw
+    collector table. The verified copies are complete where the raw ones were partial (analyst_topics has 10
+    quarters per company, incentive_metrics has all 8 US filers)."""
+    vname = VERIFIED_NAME.get(name, name)
+    hits = sorted((ROOT / "data/moat/verified").glob(f"*/{vname}"))
+    if hits:
+        return pd.read_csv(hits[0], low_memory=False)
     p = ROOT / "data/moat/tables" / name
     return pd.read_csv(p, low_memory=False) if p.exists() else pd.DataFrame()
 
@@ -224,7 +234,9 @@ def main():
                 priced |= set(df[col].astype(str)) & my_drugs
         if len(asp) and "drugs" in asp.columns:
             priced |= {d for d in my_drugs if asp.drugs.astype(str).str.contains(d).any()}
-        b["pricing"] = dict(have=len(priced), need=len(my_drugs), note=f"{len(priced)} of {len(my_drugs)} drugs")
+        missing_p = sorted(my_drugs - priced)
+        b["pricing"] = dict(have=len(priced), need=len(my_drugs),
+                            note=f"{len(priced)} of {len(my_drugs)} drugs" + (f"; no public price series yet for {', '.join(missing_p)} (2026 launch)" if missing_p else ""))
         # 7 consensus: IBES revenue consensus present
         b["consensus"] = dict(have=int(len(ibes) and (ibes.oftic == t).any()), need=1)
         # 8 analyst attention: quarters with topic counts; need 10
@@ -232,13 +244,19 @@ def main():
         # 9 SEC fine print: comment letters, proxies (3), insider trades, exec comp
         fp = 0
         fp += int(len(letters) and (letters.ticker == t).any())
-        fp += min(m_paths(t, "secx", "proxy_"), 3)
-        fp += int(len(insiders) and (insiders.ticker == t).any()) if not foreign else 1
-        fp += int(len(comp) and (comp.ticker == t).any())
-        b["fine_print"] = dict(have=fp, need=6)
+        # US filers: 3 DEF 14A proxies. Foreign filers have no proxy; the remuneration report is Item 6B of the
+        # 20-F, which is indexed, so the three 20-Fs stand in for the three proxies.
+        fp += min(m_paths(t, "secx", "proxy_"), 3) if not foreign else min(ann, 3)
+        fp += int(len(insiders) and (insiders.ticker == t).any()) if not foreign else 1  # no Form 4 for foreign
+        has_comp = bool(len(comp) and (comp.ticker == t).any())
+        fp += int(has_comp)
+        note = "" if fp == 6 else ("pay metrics not extracted from the 20-F remuneration report" if foreign and not has_comp else "")
+        b["fine_print"] = dict(have=fp, need=6, note=note)
         # 10 labels / product evidence: drugs for this company with label history and h2h
         labelled = (set(labels.drug.astype(str)) if len(labels) else set()) & my_drugs
-        b["product_evidence"] = dict(have=len(labelled), need=len(my_drugs), note=f"{len(labelled)} of {len(my_drugs)} drugs")
+        missing_l = sorted(my_drugs - labelled)
+        b["product_evidence"] = dict(have=len(labelled), need=len(my_drugs),
+                                     note=f"{len(labelled)} of {len(my_drugs)} drugs" + (f"; {', '.join(missing_l)} has one label version so far (2026 launch), no history to compare" if missing_l else ""))
         out["companies"][t] = b
 
     # tickers and drugs onboarded with agent.moat.onboard_company / onboard_drug (found by scanning manifests)
