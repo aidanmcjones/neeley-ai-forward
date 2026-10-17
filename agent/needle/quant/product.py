@@ -911,7 +911,7 @@ def _channels(cmp_):
                                     f"m_avoided = {W.M_MDP_AVOIDED} (FIND impact.ira_class_rule, the one IRA formula)"),
                         "inputs": {"claims": med["claims"], "list30": listp, "mfp30": mfp, "d": d, "k": k, "m_avoided": W.M_MDP_AVOIDED, "mfp_effective": ira["mfp_effective"]},
                         "years_to_event": max(0.0, (pd.Timestamp(ira["mfp_effective"]) - pd.Timestamp(AS_OF)).days / 365.25) if ira["mfp_effective"] else None,
-                        "cm": CM_DEFAULT, "assumed": False, "citations": [c for c in pricing.citations]})
+                        "cm": W.CM_PRICE, "assumed": False, "citations": [c for c in pricing.citations]})
     elif not ira["selected"]:
         exp = [x for x in pol if "expected" in x["item"].lower() and "selection" in x["item"].lower()]
         cuts = _ira_cuts(cmp_.context.get("_data"))
@@ -928,7 +928,7 @@ def _channels(cmp_):
                                     f"k = {k}; m_avoided = {W.M_MDP_AVOIDED if part_d else (0.0, 0.0, 0.0)} (FIND impact.ira_class_rule)"),
                         "inputs": {"medicare_spend": med["spend"], "year": med["year"], "cuts_pct": cuts, "mfp_effective": eff},
                         "years_to_event": max(0.0, (pd.Timestamp(eff) - pd.Timestamp(AS_OF)).days / 365.25) if eff else None,
-                        "cm": 1.0, "assumed": False, "citations": [c for c in pricing.citations]})
+                        "cm": W.CM_PRICE, "assumed": False, "citations": [c for c in pricing.citations]})
         else:
             uq.append("IRA: product is not a selected drug in the pack and no expected-selection row exists")
     # (2) LOE erosion
