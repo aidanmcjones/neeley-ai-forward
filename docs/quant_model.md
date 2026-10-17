@@ -1,12 +1,12 @@
 # Quant model specification: FIND and DECIDE
 
-Version 2.0, 2026-10-17. Branch quant-spec (docs only), written against the code committed on quant-model at ca12339 plus the changes landing in league_v3. Archive copy: `~/reports/Fine Print quant model design.md` (identical).
+Version 2.1, 2026-10-17. Branch quant-spec (docs only), written against the code committed on quant-model at ee7846c (league_v3). Archive copy: `~/reports/Fine Print quant model design.md` (identical).
 Readers: (a) the pitch writer, (b) judges, including a quant reviewer, (c) engineers.
 
 Conventions:
 - Every constant carries a source (paper and number, or our backtest and number) or the label **inference** (our derivation, stated). Every constant in the code has a row in Section 11, under its code name.
 - Dollar figures are USD millions unless marked.
-- **Status markers.** Text with no marker describes what the committed code does at ca12339. Text marked **[landing in league_v3]** describes a change being made on quant-model now; the code and this spec must agree once it lands. Numbers that depend on the v3 re-run are written `[v3: pending] (v2 X)`, where X is the committed league_v2 value.
+- **Status.** Text describes the code at quant-model ee7846c, which produced `out/league_v3.json`, `out/league_v3.md` and `out/league_v3_robustness.json`. Where a value changed from league_v2 (ca12339) the v2 value is given beside it, so a reader can see what the review changed. The v3 run writes its rows to `out/<T>/findings_v2.jsonl` (the file name was kept).
 - This document replaces the reviewed draft (spec_frozen.md, sha1 57f3effb). What changed and why, by review finding id, is in Section 14.
 
 ---
@@ -48,7 +48,7 @@ FIND    S_f = M_f · O_f · E_f · π_k(f)
 DECIDE  EV_m = Σ_s p_s [ Σ_{τ=1..24} ( P_alive(τ)·CF^in_{m,s,τ} - P_reach(τ)·CF^out_{m,τ} ) / (1 + r_mo)^τ  +  TV_{m,s,24} / (1 + r_mo)^24 ]
 ```
 
-The split of O into D and τ, the needle floor on D only and H = 3 are **[landing in league_v3]**. At ca12339 the code computes the same O as one product with H = 6 and puts the needle floor on the whole O (O ≥ 0.5). Exponents on M, O, E are 1 by design (Section 2, D3). One-slide legend in Section 12.
+In league_v2 (ca12339) O was one product with H = 6 and the needle floor sat on the whole O (O ≥ 0.5); league_v3 splits it as above (`obscurity.discussion`).
 
 ---
 
@@ -74,11 +74,11 @@ Each decision states what this spec does and why. Where it departs from the orig
 
 **D8. Obscurity is a noisy-OR of independent "ways the market could already know", times a decay.** D = probability that none of the channels (starter thread, headline page, analyst questions, consensus, short sellers) has priced the finding; τ = decay in its age. Independence across channels is an **inference**; it makes D conservative when channels overlap.
 
-**D9. Half-life H = 3 months base, 6 months as the sensitivity [landing in league_v3].** Lazy Prices: negative alpha "persists and increases up to 6 months out, never reversing" and accrues "out to 18 months"; the priced-in note puts filing-only information at "a half-life on the order of 3 to 6 months". v2 used H = 6. Both skeptics agreed that decay inside the needle floor made "least discussed" mean "recent" (review R1). The fix has two parts that land together: the needle floor moves to the discussion term D, so decay no longer decides needle eligibility, and H moves to 3, the lower end of the range, because decay now only ranks findings by S. H = 6 is reported as the sensitivity row. Age runs from the latest filing that states the fact (D1 in Section 5 of the review, our named default); age from the first public date is a sensitivity.
+**D9. Half-life H = 3 months base, 6 months as the sensitivity.** Lazy Prices: negative alpha "persists and increases up to 6 months out, never reversing" and accrues "out to 18 months"; the priced-in note puts filing-only information at "a half-life on the order of 3 to 6 months". v2 used H = 6. Both skeptics agreed that decay inside the needle floor made "least discussed" mean "recent" (review R1). The fix has two parts, both in code: the needle floor moved to the discussion term D, so decay no longer decides needle eligibility, and H moved to 3 (`H_MONTHS`), the low end of the range, because mega-caps are read by many and decay now only ranks findings by S. H = 6 (`H_MONTHS_SENSITIVITY`) is a row of the robustness table; the strict-needle count is the same at both (5 of 10). **Age runs from the first public date of the fact** (`find.first_public`; review D1 resolved toward the first-public side): the newest filing that states the fact, and for financial-statement rows the earlier earnings release for that period when the index has one.
 
 **D10. Confidence is deterministic; the LLM never sets it.** ICD 203 separates confidence (sourcing quality) from likelihood. Our label is a fixed function of E, independent-source count, claim kind and diagnosticity (`evidence.confidence`). The courtroom trial (`agent/needle/trial.py`) can only lower a label, never raise it. Reason: verbalized confidence clusters at 80-100% and has ECE 0.18 to 0.52 across models (Xiong et al. 2023); legal LLMs "systematically overestimate their confidence" (Dahl et al. 2024).
 
-**D11. League score: one dominant evidence block counts as one finding.** L = sum of the top five S, times min(1, N_eff / 3), where N_eff is the inverse Herfindahl of S across evidence blocks. Said plainly: on these ten companies N_eff never reaches 3 (v2 maximum 2.19, AMGN), so the cap never binds and **L = top-5 sum x N_eff / 3** for every company. The term is a design choice, not a tested parameter, and it decides #1 in v2 (AMGN on L, GILD on the raw sum). The league output prints the raw top-5 sum beside L, and league_v3 ships a robustness table (Section 4.9, 10.5) so the pick is made only on what survives.
+**D11. League score: one dominant evidence block counts as one finding.** L = sum of the top five S, times min(1, N_eff / 3), where N_eff is the inverse Herfindahl of S across evidence blocks. Said plainly: on these ten companies N_eff never reaches 3 (v2 maximum 2.19; v3 maximum 1.29), so the cap never binds and **L = top-5 sum x N_eff / 3** for every company. The term is a design choice, not a tested parameter, and in v2 it decided #1 (AMGN on L, GILD on the raw sum). In v3 it does not: AMGN leads on both. The league output prints the raw top-5 sum beside L, and league_v3 ships a robustness table (Section 4.9, 10.5) so the pick is made only on what survives.
 
 **D12. DECIDE values cash, not stories.** One 24-month scenario-weighted rNPV with explicit monthly cash flows and a terminal value at month 24, so a trial that reads out in month 30 is still valued, and the two rejected moves get the same five numbers as the winner. In-window value (months 1-24) and terminal value are reported separately. Scenario weights come from Trinity (2023 US launches: 50% under first-year forecast, 39% over); multipliers from the ZS success and failure boundaries (≥120% and ≤80% of forecast). These are two different bases (any year-one miss versus a year-three boundary), so the bear case is not conservative and EV is biased upward (review A22; Section 9).
 
@@ -97,7 +97,7 @@ The moat is gitignored. FIND reads it from env `NEEDLE_MOAT` (default: the gap-d
 | XBRL quarterly panel (revenue, COGS, pretax income, income tax, diluted shares, inventory, receivables) | Rev_TTM, t, D, ratio flags | `agent/needle/xbrl.py` over `data/corpus/*/<T>/xbrl_companyfacts.json.gz` | 20-F filers (a `20f_*` or `40f_*` file in the corpus): latest fiscal year via `xbrl.annual()`, flagged |
 | Page store and citation index | every quote, every number, deep links | `citations.sqlite` via `agent/moat/cite.py` and `agent/needle/cite/index.py` | no citation, no claim (gate) |
 | I/B/E/S quarterly EPS consensus and actuals | σ_EPS | `tables/ibes_eps_quarterly.csv`, `ibes_actuals.csv`, joined on `oftic`. AZN's I/B/E/S ticker ZEN is a per-ADR history and is put on the per-share basis by `data.PER_SHARE = {"ZEN": 2.0}` (review A2). A gap of more than one quarter in the 8-quarter window is flagged | FY1 dispersion, then 0.041 x a proxy EPS; both marked "not league-comparable" (Section 4.2). No shortlist company uses a fallback |
-| I/B/E/S FY consensus by `statpers` | consensus term c_f | `ibes_eps_consensus.csv` | untestable: c_f = 0.5 with a flag **[landing in league_v3]** (v2: 0) |
+| I/B/E/S FY consensus by `statpers` | consensus term c_f | `ibes_eps_consensus.csv` | untestable: c_f = 0.5 (`C_UNTESTABLE`) with a flag (v2: 0) |
 | Analyst topic attention | a_f | `verified/market/priced_in_scorecard.csv` (10 tickers x 9 topics), else a regex over analyst turns in `qa_turns.csv` (last up to 10 quarters) | scorecard median, flagged "imputed" |
 | Latest earnings release, page 1 | h_f | citation index, `doc_type = earnings_release` | NVO and AZN have none in the index: h_f = shortlist median of h for the same topics, flagged (review B8) |
 | Short interest | s_f | not collected | s_f = 0, flagged on every row |
@@ -119,7 +119,7 @@ Currency: NVO reports in DKK in both XBRL and I/B/E/S, so its M is unit-free. US
 
 ## 4. Model 1: FIND
 
-Code: `agent/needle/quant/` (`find.py`, `impact.py`, `obscurity.py`, `evidence.py`, `league.py`, `weights.py`, `data.py`, `run.py`). Tests: `tests/needle/test_quant_find.py`. Output: `out/<T>/findings_v2.jsonl`, `out/<T>/rejected_v2.jsonl`, `out/league_v2.json` and `.md` (v3: `league_v3`).
+Code: `agent/needle/quant/` (`find.py`, `impact.py`, `obscurity.py`, `evidence.py`, `league.py`, `weights.py`, `data.py`, `run.py`). Tests: `tests/needle/test_quant_find.py`. Output: `out/<T>/findings_v2.jsonl` and `out/<T>/rejected_v2.jsonl` (file names kept by the v3 run), `out/league_v3.json`, `.md` and `out/league_v3_robustness.json`; `league_v2.*` is kept for comparison.
 
 ### 4.1 Equation and what counts as a finding
 
@@ -129,7 +129,7 @@ S_f = M_f · O_f · E_f · π_k(f)            (find.score; S = 0 if any factor �
 
 A finding f is one candidate row: a sentence, at least one page citation, a signal family k(f), an impact channel and a direction. Candidates come from the five existing detectors plus two generators the old engine lacked: IRA (one row per CMS-selected shortlist drug with IPAY 2027 or 2028, `find.IRA_DRUGS`) and MFN (one row per company with a Medicaid MFN term in `policy_exposure.csv`).
 
-Rows enter the scored list only when E > 0; the others go to `rejected_v2.jsonl` with the reason. Before scoring, rows are de-duplicated by (kind, sentence, first source). **[landing in league_v3]** A second de-duplication by (ticker, period, underlying metric) removes one fact counted twice: in v2, AZN's rows 3 and 4 (`receivables_outpace_revenue` and `rec_gap_peer_outlier`, both +14.7 pts FY2025, S 0.0427 each) were the same receivables fact (review S1).
+Rows enter the scored list only when E > 0 and no drop guard fired (4.12); the others go to `rejected_v2.jsonl` with the reason. Before scoring, rows are de-duplicated by (kind, sentence, first source). In the league, **one underlying fact contributes one top-5 row** (`league.dedupe_facts` on each row's `fact_key`, keeping the highest S; guard 6 also drops a peer-outlier twin that repeats its fired base signal). This removed AZN's second +14.7-pt receivables row (v2 rows 3 and 4 were one fact; review S1).
 
 Only adverse rows and favourable rows with a quantified upside can have S > 0. A favourable level outlier with no scenario is context for the peer column, not a finding (π = 0).
 
@@ -198,35 +198,41 @@ Each finding maps to exactly one channel (`impact.py`). Bull is the scenario lea
 
 0.03 is the event threshold, so this is a lower bound on the event's size (**inference**). Because π for these families is an excess probability of exactly this event, M x π is the expected EPS loss the flag reveals. The size is the same for every flag in a company: strength of the flag changes only whether it counts, not how much (review D3, stated as a limit).
 
-Who may use the anchor:
-- **v2 (ca12339).** Every statistical row: the five backtested families, drift (risk-factor, MD&A, litigation-language) rows, call rows, directional and no-evidence rows. Drift and call rows carried it as a flagged generic placeholder with E capped at 0.745 (`G_ENTAILED`), so they could not be HIGH. Backtest-family rows that did not fire the flag took π_min.
-- **[landing in league_v3]** Only rows in the five backtested families **whose backtest flag fired** use the anchor. Every other statistical row (drift, calls, directional, no evidence, and backtest-family rows that did not fire) is **"not quantified"**: M = 0, no dollar figure, its π tier shown, and it cannot enter the top-5 table or the league sum. Where a topic maps to a real channel (IRA, MFN, LOE), that channel's generator carries the dollars instead (review R2).
+Who may use the anchor (`find.score_signal`, review R2):
+- Only rows in the five backtested families **whose backtest flag fired** use the anchor.
+- Every other statistical row (drift, calls, directional, no evidence, and backtest-family rows that did not fire) is **"not quantified"**: M = 0, S = 0, `impact` = null and a `not_quantified` reason on the row, its π tier shown, and it cannot enter the top-5 table or the league sum. Where a text or call row's topic maps to a real channel (`find.TOPIC_CHANNEL`: IRA, MFN, LOE), that channel's generator carries the dollars instead.
+- v2 put every statistical row on the anchor, with drift and call rows as flagged placeholders capped at E 0.745 and unfired backtest rows at π_min. In v2 those rows filled slots 4 and 5 for AMGN, GILD, JNJ, MRK and ABBV.
 
-**(b) IRA negotiation (Medicare MFP): the one IRA formula.** This is the formula FIND, the product table (4.11) and DECIDE (5.2) all use **[landing in league_v3: product.py and DECIDE import it; FIND already uses it]**:
+**(b) IRA negotiation (Medicare MFP): the one IRA formula.** FIND, the product table (4.11) and DECIDE (5.2) all size an IRA hit with the same function, `impact.ira_class_rule` (dollars from `impact.ira_class_dollars`):
 
 ```
-ΔRev_IPAY = G_Medicare · d · k          CM = 1.00, step on 1 January of the IPAY year        (find.ira_findings -> impact.ira with k_factor)
+ΔRev_IPAY = G_Medicare · max(0, k · d - m_avoided)          CM = 1.00 (CM_PRICE), step on 1 January of the IPAY year
 
-k = (1.0, 1.0, 1.0)       low-rebate classes: oncology and HIV (LOW_REBATE = Verzenio, Erleada, Pomalyst, Ibrance, Calquence, Biktarvy)
-k = (0.3, 0.4, 0.5)       highly rebated classes, bull / base / bear (K_NET)
+k          = (1.0, 1.0, 1.0)  K_LOW_REBATE: oncology and HIV (impact.LOW_REBATE = Verzenio, Erleada, Pomalyst, Ibrance,
+                              Calquence, Biktarvy, or an indication naming a cancer or HIV)
+           = (0.3, 0.4, 0.5)  K_NET: highly rebated classes, bull / base / bear
+m_avoided  = (0.20, 0.15, 0.10)  M_MDP_AVOIDED: Part D Manufacturer Discount Program liability no longer owed once the
+                              MFP applies (20% catastrophic, 10% initial, 15% midpoint); 0 for Part B drugs (impact.PART_B = Botox, Orencia)
 ```
 
 - **G_Medicare**: CMS gross Medicare Part B+D spend for the selected drug from the CMS selected-drug fact sheet (IPAY 2027 or IPAY 2028), verified on its page, held flat (**inference**).
-- **d**: the MFP's list-price discount. Published (IPAY 2027): the CMS figure, page-cited (Pomalyst 60%, Ibrance 50%, Calquence 40%, Linzess 75%, Vraylar 44%, Otezla 65%, Janumet 85%, semaglutide 71%). Not yet published (IPAY 2028): bull / base / bear = the smallest / same-class / largest published discount in the class: oncology `ONC_D_*` 0.38 / 0.50 / 0.60 (Imbruvica, Ibrance, Pomalyst); immunology `IMM` 0.65 / 0.66 / 0.67 (Otezla, Stelara, Enbrel); diabetes `DIAB` 0.66 / 0.71 / 0.85 (Jardiance, Ozempic, Janumet). With no same-class analog (Biktarvy, Botox): `ALL_CUTS` 0.38 / 0.655 / 0.85, the cycle 1-2 smallest, median of the 16 in `ira_cut_check.csv`, and largest.
-- **k**: the KQ2 cross-check, now the rule: cycle 1 CMS net savings were 22% against list discounts of 38-79%, i.e. "net hit ~= 0.3-0.5 x list discount for highly rebated classes, and near 1.0x for low-rebate oncology" (pharma_impact_math KQ2, marked inference there). HIV is treated as low-rebate (**inference**; no HIV MFP is published).
+- **d**: the MFP's list-price discount. Published (IPAY 2027): the CMS figure, page-cited (Pomalyst 60%, Ibrance 50%, Calquence 40%, Linzess 75%, Vraylar 44%, Otezla 65%, Janumet 85%, semaglutide 71%). Not yet published (IPAY 2028): bull / base / bear = the smallest / same-class / largest published discount in the class: oncology `ONC_D_*` 0.38 / 0.50 / 0.60 (Imbruvica, Ibrance, Pomalyst); immunology `find.IMM` 0.65 / 0.66 / 0.67 (Otezla, Stelara, Enbrel); diabetes `find.DIAB` 0.66 / 0.71 / 0.85 (Jardiance, Ozempic, Janumet). With no same-class analog (Biktarvy, Botox): `find.ALL_CUTS` 0.38 / 0.655 / 0.85, the cycle 1-2 smallest, median of the 16 in `ira_cut_check.csv`, and largest. The sentence says "assumed base list discount" and cites the range endpoints (review cite D4).
+- **k and m_avoided**: the KQ2 cross-check is the rule: cycle 1 CMS net savings were 22% against list discounts of 38-79%, i.e. "net hit ~= 0.3-0.5 x list discount for highly rebated classes, and near 1.0x for low-rebate oncology" (pharma_impact_math KQ2, marked inference there), less the discount-program liability the manufacturer no longer pays (KQ2: "roughly 10-15% of gross Medicare sales for a Part D brand"; 20% in the catastrophic phase). HIV is treated as low-rebate (**inference**; no HIV MFP is published). Bull pairs the smallest d and k with the largest avoided liability.
 - **Timing.** IPAY 2026 drugs are already effective before `as_of`: ΔEPS = 0, flagged ("already in reported numbers"). An effective date outside the 24-month window: ΔEPS = 0.
-- **Not added:** the bear-case commercial spillover of 0-5% of commercial net revenue (inference in the note). Not calibrated: k is not fitted to reproduce the CMS 22% cycle-1 net savings (stated as a limit).
-- **Comparison field only.** Each IRA row also carries the reviewed draft's formula, ΔRev = G · max(0, d - g_pre), as `dRev_spec_formula`, `M_spec_formula` and `S_spec_formula` (g_pre = `M_MDP_CATASTROPHIC` 0.20 for low-rebate classes; `G_PRE_GLP1` and `G_PRE_IMMUNOLOGY` priors for rebated classes; where no g_pre prior exists, Botox, Linzess and Vraylar, the comparison field equals the league value). It is never the league value. Reason (review A15): the draft formula gives a net hit of 0.6x the list discount for oncology, not the "near 1.0x" its own cross-check states, and near zero for rebated classes because company-wide GTN is not a Part D concession rate. Example: Verzenio S 0.0507 under the rule, 0.0304 under the comparison formula (v2, H = 6).
-- **Biktarvy band.** GILD's v2 L is 92% one Biktarvy row (S 1.078). Its d is the all-cycle band 38 / 65.5 / 85%, at k = 1.0. The league_v3 robustness table shows GILD with Biktarvy on the comparison formula (d - 0.20).
+- **Not added:** the bear-case commercial spillover of 0-5% of commercial net revenue. Not calibrated: k and m_avoided are not fitted to reproduce the CMS 22% cycle-1 net savings (stated as a limit).
+- **Comparison field only.** Each IRA row also carries the reviewed draft's formula, ΔRev = G · max(0, d - g_pre), as `dRev_spec_formula`, `M_spec_formula` and `S_spec_formula` (g_pre = `M_MDP_CATASTROPHIC` 0.20 for low-rebate classes; `G_PRE_GLP1` and `G_PRE_IMMUNOLOGY` for rebated classes). It is never the league value; the robustness table has an "IRA on the spec formula" row (`find.IRA_MODE`). Reason (review A15): the draft formula gives a net hit of 0.6x the list discount for oncology, not the "near 1.0x" its own cross-check states, and near zero for rebated classes because company-wide GTN is not a Part D concession rate.
+- **Verzenio, base case:** 1,428.714 x (1.0 x 0.50 - 0.15) = **500.0** (v2 class rule without m_avoided: 714.4; draft formula: 428.6). Worked in 10.4.
+- **Biktarvy.** GILD's L is one Biktarvy row (v3 S 0.1531; v2 1.078). Its d is the all-cycle band 38 / 65.5 / 85% at k = 1.0. On the draft formula GILD's L moves by about 10% and its rank does not change (robustness table).
 
-**(c) MFN (Medicaid): direction only, at π_min [landing in league_v3].**
+**(c) MFN (Medicaid): direction only, at π_min.**
 
-At ca12339 the MFN generator scores every company with a Medicaid MFN term at one universal rate, ΔRev = s_MFN · Rev_US (s_MFN 0.0065, Pfizer's Medicaid base rate, `S_MFN`), with π = 1, and prints "about $X M a year" in the sentence. Both skeptics rejected this: deal texts are confidential, one rate is applied to everyone, and Medicaid MFN has been effective since 2026, so part of it may already be in reported numbers. In v2 it was JNJ's #1 row (71% of its L) and AMGN's #2.
+v2 scored every company with a Medicaid MFN term at one universal rate, ΔRev = s_MFN · Rev_US (s_MFN 0.0065, Pfizer's Medicaid base rate, `S_MFN`), with π = 1, and printed "about $X M a year" in the sentence. Both skeptics rejected this: deal texts are confidential, one rate was applied to everyone, and Medicaid MFN has been effective since 2026, so part of it may already be in reported numbers. In v2 it was JNJ's #1 row (71% of its L) and AMGN's #2.
 
-The v3 rule:
-- An MFN row is **directional**: π = π_min (0.0055), and the sentence states the agreement, its date and the direction of the effect with no dollar figure.
-- The base-rate size Rev_TTM x US share x s_MFN stays inside the row only as the internal M used to rank it; it is never printed as an estimate.
-- A dollar figure is printed only where the company itself states a quantified MFN effect, cited to its own page. Two candidates exist (NVO's stated effect on sales growth; BMY's Eliquis free to Medicaid, computable from SDUD). Neither is built: NVO's term is in DKK and growth terms and is zeroed by the USD-only rule, and the SDUD computation for BMY is not coded. So in v3 every MFN row is direction-only.
+The rule in code (`find.mfn_findings`, family `MFN_DIRECTIONAL`):
+- An MFN row is **directional**: π = π_min (0.0055). The sentence states the agreement, its date and the direction of the effect with no dollar figure.
+- Without a company-stated term, the base-rate size Rev_TTM x US share x s_MFN stays inside the row only as an internal placeholder M used to rank it. It is never printed, and a placeholder MFN row can never be the Sharpest Needle. JNJ's MFN row falls from S 0.2322 (v2) to 0.0004; AMGN's from 0.2219 to 0.0004.
+- A row is sized from the company's own cited term where one exists. Two do: **NVO** states a low-single-digit effect on sales growth, and **BMY** gives Eliquis free to Medicaid (about $1,093M upper bound, computed from SDUD net of the statutory 23.1% Medicaid basic rebate, `find.SDUD_MEDICAID_BASIC_REBATE`). **Both terms took effect before `as_of`, so under the same timing rule as the IRA channel their ΔEPS, and so M, is 0** (`impact.mfn(effective=...)`, review S2); the size is shown as context.
+- The v2 rule is kept as a robustness knob (`find.MFN_UNIVERSAL`): it puts JNJ back at 4th from a single MFN row and leaves the top three unchanged.
 - TrumpRx cash prices are neutral in FIND (base 0), because "the TrumpRx price usually sits at or above the manufacturer's existing net" (KQ3 inference). The product table (4.11) shows a cash-price scenario separately and labels it an assumption.
 
 **(d) Tariff (Section 232): exposure proxy, never scored.** MFN signers pay no duty "until January 20, 2029" (Proclamation 11020, `policy_exposure.csv` R062), outside the 24-month window. FIND reports `tariff_exposure` = pct_mfg_sites_outside_us x us_revenue_share (`force_summary.csv`) with the 2029-01-20 date, in the league output and the row flags. For DECIDE's onshoring move only:
@@ -286,19 +292,19 @@ D_f = (1 - z_f)(1 - h_f)(1 - a_f)(1 - c_f)(1 - s_f)        discussion: the proba
 τ_f = 2^(-age_f / H)                                        decay
 ```
 
-At ca12339, `obscurity.obscurity` computes the same product in one expression with H = 6. **[landing in league_v3]** D and τ are separated so the needle floor (4.8) applies to D only, and H = 3.
+D is `obscurity.discussion`; the needle floor (4.8) applies to D only, and H = 3. (v2 computed O in one expression with H = 6 and put the floor on O.)
 
 | Term | Rule as coded | Source |
 |---|---|---|
 | z_f | 1 if the finding restates the company's case-appendix starter thread: a fixed per-company list of (product regex, topic set) in `obscurity.STARTER` (e.g. LLY: Mounjaro or Zepbound with pricing, GTN or MFN topics; any pill; Trulicity with LOE). GILD has none | case: "Restating it will not score well" |
 | h_f | 0.9 (`H_VALUE`) if any topic regex of the finding matches page 1 of the latest earnings release; 0 otherwise. No release in the index (NVO, AZN): the shortlist median of h for the same topics, flagged | case: "a press-release skim would miss"; 0.9 is the team rule from materiality_spec §3, not literature |
 | a_f | share of the last up-to-10 quarters (`ATTENTION_QUARTERS`) in which analysts asked about the topic: the scorecard for its nine topics; a regex over analyst turns in `qa_turns.csv` for other topics; the product name for product rows; the most-asked of the finding's topics wins. No measurable topic: scorecard median, flagged "imputed" | Hong, Lim, Stein 2000; Chen, Nagar, Schoenfeld 2018 |
-| c_f | type C rows only: clip(Δcons_dir / abs(ΔEPS_f), 0, 1), where Δcons_dir is the change in the affected fiscal year's I/B/E/S mean EPS from the last `statpers` before to the first after the disclosure, signed in the finding's direction; flagged "confounded" when earnings were announced between the two. When the fiscal year's consensus first appears after the disclosure ("untestable"): **c_f = 0.5 with a flag [landing in league_v3]** (v2: 0, the most optimistic value; review A12). Families with no consensus line item (accounting, text, call rows): c_f = 0, flagged "n/a" | inference: no published test exists (priced_in KQ3 "Gaps") |
+| c_f | type C rows only: clip(Δcons_dir / abs(ΔEPS_f), 0, 1), where Δcons_dir is the change in the affected fiscal year's I/B/E/S mean EPS from the last `statpers` before to the first after the disclosure, signed in the finding's direction; flagged "confounded" when earnings were announced between the two. Applies to type C and MFN rows. When the fiscal year's consensus first appears after the disclosure ("untestable"): **c_f = 0.5 (`C_UNTESTABLE`), flagged** (v2: 0, the most optimistic value; review A12). Anchor, text and call rows have no fiscal-year consensus line: c_f = 0, flagged "n/a"; the robustness row "c = 0.5 on anchor rows too" (`find.C_ANCHOR_UNINFORMATIVE`) shows that choice | inference: no published test exists (priced_in KQ3 "Gaps") |
 | s_f | 0 on every row, flagged "no data". The specified form max(0, 2·(pct_rank(days-to-cover in its own 24-month history) - 0.5)) is not implemented | Hong et al. 2015 (DTC); not collected |
-| age_f | months from the latest cited document's `filed` date to `as_of` (our named default: age runs from the latest filing that states the fact). Transcripts with no date: quarter end plus about 30 days. Unknown: 24 months | review D1 |
-| H | **3 months base [landing in league_v3]**, 6 months as the sensitivity (v2: 6) | D9 |
+| age_f | months from the **first public date** of the fact to `as_of` (`find.first_public`): the newest evidence filing that states it, and for financial-statement rows the earliest earnings release for that period filed on or before the filing (AMGN's Q2 rows date from the 2026-08-04 release, not the 10-Q of 08-05). Transcripts with no date: quarter end plus about 30 days. Unknown: 24 months | review D1, resolved toward first public date |
+| H | 3 months base (`H_MONTHS`), 6 months as the sensitivity (`H_MONTHS_SENSITIVITY`; v2 base) | D9 |
 
-Interpretation: each factor of D is the probability one channel has not priced the fact; channels are assumed independent (D8). A finding the company headlined, or that analysts ask about every quarter, cannot be the Sharpest Needle however large it is. Because c_f = 0.5 on an untestable type C row, such a row has D at most 0.5 and clears the needle floor only when h = a = s = 0 (stated so the pick is not a surprise).
+Interpretation: each factor of D is the probability one channel has not priced the fact; channels are assumed independent (D8). A finding the company headlined, or that analysts ask about every quarter, cannot be the Sharpest Needle however large it is. Because c_f = 0.5 on an untestable type C row, such a row has D at most 0.5 and clears the needle floor only when h = a = s = 0. Example: GILD's Biktarvy row has a = 0.2 and c = 0.5, so D = 0.40 and it is not a strict needle.
 
 ### 4.5 Evidence E: probability the documents say what we claim
 
@@ -324,7 +330,7 @@ Table and XBRL values re-read by code at run time count as `exact` (XBRL values 
 
 π_k is the **excess probability** that the adverse outcome assumed by the finding's channel occurs, over the base rate without the signal (`find.FAM`, constants in `weights.py`). Four routes, in this order:
 
-1. **Type C, statute-dated or booked** (IRA selection with a CMS effective date, company-stated or statutory LOE date, booked footnote amount): π = 1 (`PI_CONTRACTUAL`). The event is not a forecast; uncertainty is in the size (bull / base / bear ΔEPS). Label rows, trial stops and booked impairments keep the type C family name in code but have M = 0, so they never score. MFN is not type C in v3 (route 4).
+1. **Type C, statute-dated or booked** (IRA selection with a CMS effective date, company-stated or statutory LOE date, booked footnote amount): π = 1 (`PI_CONTRACTUAL`). The event is not a forecast; uncertainty is in the size (bull / base / bear ΔEPS). Label rows, trial stops and booked impairments keep the type C family name in code but have M = 0, so they never score. MFN is not type C (route 4).
 2. **Own backtest** (five accounting flags, 1,410 firm-quarters, 43 firms, 2012-2024, point-in-time), applied **only when the row meets the flag's backtest trigger** (`find.backtest_fired`): quarterly rows re-evaluate `backtest.signals_at` on the XBRL panel at the row's quarter; annual rows compare the row's own value with `ANNUAL_TRIGGER` (inventory gap 0.10, receivables gap 0.08, DIO growth 0.15, DSO growth 0.10; gross-margin drop 2 points). Peer-level DIO and DSO outliers never fire.
 
 ```
@@ -351,17 +357,17 @@ Table and XBRL values re-read by code at run time count as `exact` (XBRL values 
 | Receivables outpace revenue | A | `receivables_outpace_revenue`, `rec_gap_peer_outlier` | backtest, if fired | 22.8% vs 14.3%, lift 1.60, CI [1.00, 2.33] | 0.0629 | no | yes |
 | Days sales outstanding | A | `dso_rising`, `dso_peer_outlier` | backtest, if fired | 25.6% vs 14.1%, lift 1.81, CI [1.17, 2.60] | 0.0851 | yes | yes |
 | Gross margin drop | A | `gross_margin_drop` | backtest, min of outcomes | margin 28.5% vs 16.3%; hard 28.1% vs 22.4%; min excess 0.057 | 0.0422 | no | yes |
-| Backtest family, flag not fired | A | as above | v2: π_min; **v3: not quantified** | review A1, D5 | 0.0055 | no | yes |
+| Backtest family, flag not fired | A | as above | not quantified (v2: π_min with the anchor) | review A1, R2 | (0.0055 tier) | no | yes |
 | Misstatement score (Beneish M, Dechow F) | A | none | anchor | Beneish-Lee-Nichols "just below 1% a month", taken as 12%/yr (inference) | 0.0491 | yes | **no** |
-| Risk-factor change | T | `risk_*` | anchor; **v3: not quantified, tier shown** | Lazy Prices VW Q5-Q1 5-factor alpha 0.46%/month (t = 3.44) x 12 = 5.52% | 0.0226 | yes | yes |
-| Litigation-language change | T | drift row with "litigation" among its topics | anchor; **v3: not quantified, tier shown** | Lazy Prices 71 bps/month (t = 3.29) x 12 = 8.52% | 0.0349 | yes | yes |
-| MD&A change | T | `mdna_*` | anchor; **v3: not quantified, tier shown** | Lazy Prices Table VII 11-22 bps/month, midpoint x 12 = 1.98% | 0.0081 | no | yes |
+| Risk-factor change | T | `risk_*` | not quantified unless mapped to a channel; tier shown | Lazy Prices Table II (whole document) VW Q5-Q1 5-factor alpha 0.46%/month (t = 3.44) x 12 = 5.52% | 0.0226 | yes | yes |
+| Litigation-language change | T | drift row whose **only** topic is litigation | not quantified; tier shown | Table II, high-litigiousness subsample: 71 bps/month (t = 3.29) x 12 = 8.52% | 0.0349 | yes | yes |
+| MD&A change | T | `mdna_*` | not quantified; tier shown; undirected MD&A rows never a needle (guard 8) | same Table II alpha as risk factors (v2 used the section-level Table VII, 0.0081) | 0.0226 | no | yes |
 | Opportunistic insider sales | G | none | anchor | Cohen-Malloy-Pomorski 82 bps/month x 6 = 4.92% | 0.0201 | yes | **no** |
 | Negative 8-K item | T | none | anchor | Lerman-Livnat lower end 1.5% | 0.0061 | no | **no** |
 | Zero- or few-question call | C | none | anchor | Chen-Hollander-Law (WP) 1.34% over five days | 0.0055 | no | **no** |
-| Non-answer / deflection | C | `qa_deflection` | directional; **v3: not quantified** | Gow-Larcker-Zakolyukina 2021 (11% base rate) | 0.0055 | no | yes |
-| **MFN agreement** | P | `mfn_medicaid` (generator) | **v3: directional** (v2: type C, π = 1) | deal terms confidential (review R3, D2) | 0.0055 | no | yes |
-| No evidence: repeated deflection, topic surge, ETR or R&D shift or level outlier, FAERS rise, demand divergence, distributor commentary | C, A, X | `qa_repeated_deflection`, `call_topic_surge`, `tax_rate_shift`, `etr_peer_outlier`, `rnd_shift`, `rnd_pct_peer_outlier`, `faers_serious_rising`, `demand_divergence`, `distributor_commentary` | none; **v3: not quantified** | no study found | 0.0028 | no | yes |
+| Non-answer / deflection | C | `qa_deflection` | not quantified (directional tier) | Gow-Larcker-Zakolyukina 2021 (11% base rate) | 0.0055 | no | yes |
+| **MFN agreement** | P | `mfn_medicaid` (generator) | directional (v2: type C, π = 1) | deal terms confidential (review R3, D2) | 0.0055 | no | yes |
+| No evidence: repeated deflection, topic surge, ETR or R&D shift or level outlier, FAERS rise, demand divergence, distributor commentary | C, A, X | `qa_repeated_deflection`, `call_topic_surge`, `tax_rate_shift`, `etr_peer_outlier`, `rnd_shift`, `rnd_pct_peer_outlier`, `faers_serious_rising`, `demand_divergence`, `distributor_commentary` | none; not quantified | no study found | 0.0028 | no | yes |
 | IRA negotiation | P | `ira_selected` (generator); `ira_exposed` rows for drugs not in `IRA_DRUGS` are already effective (ΔEPS 0) | type C | CMS effective date | 1.0 | yes | yes |
 | Loss of exclusivity | P | `exclusivity_earlier` | type C | company-stated or statutory date | 1.0 | yes | yes |
 | Label fact | L | `label_*`, `boxed_warning_*`, `dosing_*`, `spend_per_claim_gap` | M = 0, product-table context | review B6 | (1.0, unused) | n/a | yes |
@@ -371,7 +377,7 @@ Table and XBRL values re-read by code at run time count as `exact` (XBRL values 
 
 Notes for the quant reviewer:
 - **Families with no detector** are listed in `find.MISSING_DETECTORS` (misstatement score, insider sales, negative 8-K items, zero-question calls, GTN widening, footnote extractor) and every row carries `has_detector`. The design covers more than the build (review B3).
-- **Litigation and text-table choice (review A5, open).** In code the litigation π applies whenever "litigation" is any one of a drift row's topics, and the risk-factor π uses the whole-document Lazy Prices result while MD&A uses the section-level Table VII. In v3 these rows are not quantified, so the choice changes only the tier label shown, not any S.
+- **One text table (review A5).** All text families use one Lazy Prices table, Table II (whole-document similarity; `TEXT_ALPHA_TABLE`), so MD&A moved from 0.0081 to 0.0226, and the litigation π applies only when litigation is the row's only topic. Applying a whole-document alpha to a section change is the stated approximation. These rows are not quantified, so the choice changes only the tier label shown, not any S.
 - The backtest tests only five flags with the engine's own thresholds, between firms. If the raw panel is re-fetched, π for these five rows and π_anchor update mechanically (Section 8.2).
 - π is small for statistical families and 1 for scheduled ones. That is correct: a scheduled event and a 3-in-100 excess chance are different things. Scheduled items are then disciplined by O (they are usually public) and by the starter-thread rule.
 
@@ -401,16 +407,26 @@ LOW     otherwise; also any row the courtroom trial rules "fails"
 Needle = argmax_f S_f   subject to   D_f ≥ 0.5 (NEEDLE_O),  E_f ≥ 0.90 (NEEDLE_E),  confidence ≠ LOW,  z_f = 0,  adverse or quantified,  S_f > 0
 ```
 
-- D ≥ 0.5: "more likely unpriced than priced" by the discussion channels, 0.5 being the midpoint of ICD 203's "roughly even chance" band (45-55%). **[landing in league_v3]** the floor is on D. In v2 it was on O = D · τ, so with a 6-month half-life every February 10-K item decayed below the floor and "least discussed" meant "recent" (review R1).
+- D ≥ 0.5: "more likely unpriced than priced" by the discussion channels, 0.5 being the midpoint of ICD 203's "roughly even chance" band (45-55%). The floor is on D, not on O. In v2 it was on O = D · τ, so with a 6-month half-life every February 10-K item decayed below the floor and "least discussed" meant "recent" (review R1). Because decay is outside the floor, the strict-needle count does not depend on H.
 - E ≥ 0.90: quoted (exact, substring or fuzzy) evidence only; a number found on its page without the quote verifying (0.745) cannot headline.
+- **Never a needle** (`needle_blocked`): MFN placeholder rows (4.3 c) and undirected MD&A drift rows (guard 8, 4.12).
 
 **Fallbacks, as coded (`league.sharpest_needle`), each labelled in the output:**
 1. **strict**: the rule above.
-2. **provisional**: if no row passes, the highest S among rows with z = 0, S > 0, confidence not LOW and O at or above the company's median O.
-3. **floor relaxed**: if that pool is empty, the highest S among rows with z = 0, S > 0 and O at or above the company's top-quartile O (no confidence condition).
+2. **provisional**: if no row passes, the highest S among rows with z = 0, S > 0, not needle-blocked, confidence not LOW and D at or above the company's median D.
+3. **floor relaxed**: if that pool is empty, the highest S among the same rows (no confidence condition) with D at or above the company's top-quartile D.
 4. **none**: "no finding clears the obscurity floor".
 
-v2: 5 of 10 companies had no strict needle (GILD, AZN, ABBV, BMY, NVO). v3: [v3: pending] (v2 5 of 10). The app and deck print the status word next to every needle.
+League_v3 needle status (identical at H = 3 and H = 6):
+
+| Status | Companies |
+|---|---|
+| strict | AMGN, AZN, MRK, NVO, ABBV (5 of 10) |
+| provisional | LLY |
+| floor relaxed | GILD, BMY, PFE |
+| none | JNJ (its only scored row is an MFN placeholder) |
+
+v2 also had 5 of 10 strict, but a different set (AMGN, JNJ, MRK, LLY, PFE). With c = 0.5 on anchor rows as well, NVO drops to floor relaxed (4 of 10). The app and deck print the status word next to every needle.
 
 ### 4.9 League score: why this company beat the other nine
 
@@ -421,10 +437,10 @@ N_eff,c = ( Σ_b S_b )² / Σ_b S_b²,   S_b = Σ_{f in top5, block b} S_f
 
 Blocks b: A accounting, T text and disclosure, C calls, G governance and insiders, P policy and scheduled (IRA, MFN, LOE), L label and product, X outside data, F footnote items.
 
-- **What the term does on these data.** N_eff never reaches 3 (v2 maximum 2.19), so min(1, ·) never binds and L = top-5 sum x N_eff / 3 for every company. It is a scaling by diversification, not a penalty with a threshold. N* is inert: ranks are identical for any N* at or above the largest N_eff (review A18).
-- **Why keep it.** It encodes one stated design choice: one dominant evidence block counts as one finding, so a company whose case rests on one row does not outrank one with several independent pieces. The cost is that it decides #1 in v2 (AMGN 0.543 on L; GILD 1.166 vs AMGN 0.745 on the raw sum).
-- **Required output.** For each company: L, the raw top-5 sum, N_eff, blocks, the share of the sum from its largest finding, the top-5 table and the Sharpest Needle with its status. All are in `league_v2.json` (`L`, `top5_sum`, `N_eff`, `blocks`, `largest_share`, `top`, `needle`, `needle_status`).
-- **Robustness table [landing in league_v3].** `league_v3.md` publishes the top five companies under: as computed; no N_eff term (raw top-5 sum); IRA rows at π 0.5; Biktarvy on the comparison formula; AMGN's receivables row (gap +8.0 pts, exactly on the 8-point trigger) at π_min; H = 6. The pick and the pitch's "why it beat the other nine" claim are made only from what survives every row (Section 10.5).
+- **What the term does on these data.** N_eff never reaches 3 (v2 maximum 2.19; v3 maximum 1.29), so min(1, ·) never binds and L = top-5 sum x N_eff / 3 for every company. It is a scaling by diversification, not a penalty with a threshold. N* is inert: ranks are identical for any N* at or above the largest N_eff (review A18).
+- **Why keep it.** It encodes one stated design choice: one dominant evidence block counts as one finding, so a company whose case rests on one block does not outrank one with several independent pieces. In v2 it decided #1 (AMGN on L, GILD on the raw sum). **In v3 it no longer does:** without it AMGN still leads (raw sum 0.2047 vs GILD 0.1532).
+- **Required output.** For each company: L, the raw top-5 sum, N_eff, blocks, the share of the sum from its largest finding, the top-5 table and the Sharpest Needle with its status, all in `league_v3.json` (`L`, `top5_sum`, `N_eff`, `blocks`, `largest_share`, `top`, `needle`, `needle_status`).
+- **Robustness table** (`out/league_v3_robustness.json`, printed in `league_v3.md`): the top five companies under eight variants: base; no N_eff term (raw sum); MFN at the v2 universal rate with π = 1; AMGN's receivables row at π_min with the anchor kept; that row treated as unfired (S = 0); H = 6; IRA on the draft formula; c = 0.5 on anchor rows too. The pick and the pitch's "why it beat the other nine" claim are made only from what survives (Section 10.5).
 
 ### 4.10 Output row (one per finding, `findings_v2.jsonl`)
 
@@ -435,15 +451,16 @@ Blocks b: A accounting, T text and disclosure, C calls, G governance and insider
   sentence_md        the sentence with [n] markers and footnotes (cite.render_markdown, up to 6 page citations)
   impact             { channel, formula (operands written out), d_rev, d_oi, d_eps {bull, base, bear}, cm, tax, shares,
                        fiscal_year, t_years, flags, adverse, quantified, citation_ids }
-  peer               { metric_value, peer_median, peer_z, rival }   or, for IRA rows, { analogs: [CMS quotes] }
-  vector             { M, sigma_EPS, sigma_currency, dEPS_base, t_years, O, z, h, headline_doc, a, a_source, c, s,
+  peer               { metric_value, peer_median, peer_z, rival }, for IRA rows { analogs: [CMS quotes] }, else { note: "no peer analogue" }
+  impact_channel, not_quantified (reason or null; impact is null when set), guard (drop | context | no_needle | null), fact_key
+  vector             { M, sigma_EPS, sigma_currency, dEPS_base, t_years, O, D, z, h, headline_doc, a, a_source, c, s,
                        age_months, H, disclosed, E, E_pages, n_ind, pi, pi_route, topics }
                      IRA rows add dRev_spec_formula, M_spec_formula, S_spec_formula (comparison only)
   S, confidence, confidence_reasons[], flags[], needle_eligible, old_S
   citations          [Citation.to_dict()]   key page citations first, then the impact constants' citations }
 ```
 
-**[landing in league_v3]** The vector carries D (discussion term) and τ (decay term) beside O. Where the peer column is empty the deck prints "no peer analogue" rather than a blank (review B7).
+τ is O / D. Where there is no peer comparison the row carries `{"note": "no peer analogue"}` and the deck prints that rather than a blank (review B7).
 
 ### 4.11 Product fine print (the Part 1 product comparison)
 
@@ -460,8 +477,8 @@ How a cell is cited:
 
 | Channel | Equation | Status |
 |---|---|---|
-| IRA, selected drug | **the one IRA formula, ΔRev = G · d · k, CM 1.00 (4.3 b)** | **[landing in league_v3]**. v2 used Part D claims x max(0, list30 x (1 - GTN) - MFP30) with GTN 50 / 60 / 70% and CM 0.70, a third formula that could print a different dollar figure for the same drug than its FIND row (review S3). That figure is kept only as a comparison field |
-| IRA, expected selection | ΔRev = G · d · k with d = the quartiles of the CMS cuts already set (q25 / median / q75) | **[landing in league_v3]** (v2: G x cut, no k) |
+| IRA, selected drug | **the one IRA formula, ΔRev = G · max(0, k · d - m_avoided), CM 1.00 (4.3 b)** | built (commits fccc85f, 2dc34d5). v2 used Part D claims x max(0, list30 x (1 - GTN) - MFP30) with GTN 50 / 60 / 70% and CM 0.70, a third formula that could print a different dollar figure for the same drug than its FIND row (review S3) |
+| IRA, expected selection | ΔRev = G · max(0, k · d - m_avoided) with d = the q25 / median / q75 of the CMS cuts already set | built (v2: G x cut, no k) |
 | LOE | ΔRev = Rev_US · (1 - pct_of_peak at t = 1 / 100), US curves by modality (`loe_curves.csv`); CM 1.00 biologic, 0.70 small molecule | built |
 | Label breadth (Medicare) | ΔRev = (rival claims - own claims) · capture · own gross per claim · (1 - GTN); capture 50 / 35 / 20% (**assumed**) | built; confidence capped at LOW, `assumed_parameters` |
 | Cash price / TrumpRx scenario | ΔRev = Rev · share moved · (1 - cash / list); share 40 / 25 / 10% (**assumed scenario**) | built; capped at LOW. Under the MFN rule (4.3 c) this is shown as a scenario, never as an estimate of MFN cost |
@@ -474,6 +491,26 @@ How a cell is cited:
 **Growth limiter and the priced-in call** (`product.growth_limiter`). The limiter is the highest-ranked channel (data-driven first, then by base abs(ΔRev)), written as one sentence with its base-case dollars a year. **Priced in** = (scorecard share of quarters asked about the consequence's topic ≥ 0.5 AND the case starter thread names the consequence) OR share ≥ 0.8. Consensus is reported as untested at product level (I/B/E/S revenue consensus is company-level only). If no channel has its inputs, the sentence says the data do not support a call and priced-in is false.
 
 Product limits (also in Section 9): true net price is unavailable; capture, cash-share and boxed-warning elasticities are assumptions; Part D data stop at 2024, so label changes after that are not in the claims; ex-US is out; rival makers' own statements are not yet in the table.
+
+### 4.12 Red-team guards and the nuggets ingest
+
+Parker's red team of the old scorer (agent-chat thread #19) produced nine guards. They run on detector signals before FIND scores them (`agent/needle/quant/guards.py`; tests `tests/needle/test_quant_guards.py`). Actions: **drop** (not a finding; goes to `rejected_v2.jsonl` with the reason), **context** (kept with S = 0 and the reason), **no_needle** (scored, never the Sharpest Needle).
+
+| Guard | Rule | Where | league_v3 effect |
+|---|---|---|---|
+| 1 | favourable outliers get π = 0 | `find.favorable_statistical` | already in v2 |
+| 2 | days-inventory **peer** comparison on revenue, not cost of sales (an 85% gross-margin company shows 469 days from its margin alone); own-history DIO change stays on cost of sales | guards.py | drop: LLY "Days inventory 469 days vs peers" (on revenue 67 days vs a peer median of 48, z +1.0) |
+| 3 | tax rate on trailing four quarters; no tax signal when the period's pre-tax income is under 5% of revenue (`PRETAX_MIN_SHARE`), shift threshold re-applied on TTM (`TAX_SHIFT_MIN` 0.04) | guards.py | drop: PFE 2, MRK 2, GILD 2, LLY 1, BMY 1 |
+| 4 | acquired IPR&D one-offs: R&D rows are context when the filing books an acquired IPR&D charge ≥ 25% of the period's R&D (`IPRD_MIN_SHARE`), R&D rose, and R&D without the charge is within 3 points of revenue of last year (`IPRD_RATIO_TOL`); a tax row in the window is a one-off only when the filing says the charge had no tax benefit | guards.py | context: MRK R&D shift and R&D-ratio outlier (Terns $5.7B, 59% of Q2 R&D) |
+| 5 | period consistency: a growth row's numbers must match operands re-derived for its own period (annual table for annual signals) within 0.5 pts (`PERIOD_TOL`) | `find.yoy_basis` | AZN and NVO annual rows re-derived; no mismatch today |
+| 6 | twin peer outlier dropped when its base signal fired with the same number | guards.py, `league.dedupe_facts` | drop: AZN `rec_gap_peer_outlier` |
+| 7 | label rows M = 0 | `impact.label_unquantified` | already in v2 |
+| 8 | undirected MD&A drift rows cannot be the Sharpest Needle | guards.py | no_needle: 158 MD&A rows |
+| 9 | paragraph filter: a drift or call row needs at least one evidence quote that is a sentence, not a table of contents or a parsed table | guards.py | drop: 76 rows (AZN 15, NVO 14) |
+
+No guard changes any L in league_v3: every guarded row already scored 0 under the not-quantified rule (4.3 a). They change which rows exist and which can be a needle.
+
+**Nuggets ingest.** `python -m agent.needle.quant.run --all --nuggets <file|dir>` loads Parker's nugget-miner rows (`docs/nuggets/<TICKER>.jsonl`: the Finding schema plus signal family and obscurity fields) as detector `nuggets` and sends them through the same scoring, guards and citation gate. Tested on a two-row sample; Parker's real files are on his unpushed branch, so no nugget row is in league_v3.
 
 ---
 
@@ -514,7 +551,7 @@ A finding feeds a parameter automatically only when its `impact` carries a dolla
 
 | DECIDE input | From FIND |
 |---|---|
-| Revenue at risk the move defends (M5) | LOE ΔRev (4.3 e) or IRA ΔRev (4.3 b, the one IRA formula) |
+| Revenue at risk the move defends (M5) | LOE ΔRev (4.3 e) or IRA ΔRev (4.3 b: DECIDE reads the FIND row's `impact`, computed by `impact.ira_class_rule`; Verzenio base 500.0) |
 | Baseline price step (M4) | IRA ΔRev (one formula); MFN is direction-only (4.3 c), so an MFN-driven M4 needs a team-stated, flagged dollar input |
 | Addressable gap (M3) | product-table label difference (4.11); the team states the uplift as an assumption |
 | Tariff exposure after 2029 (M7) | 4.3 d note |
@@ -547,7 +584,7 @@ A move that addresses no Part 1 finding gets strategic fit 0. Benchmarks whose s
 | **MCDA score** | Σ_j w_j x_j over strategic fit, capability, execution risk, stakeholder evidence; x_j ∈ [0,1]; w_j = 0.25 each (`MCDA_WEIGHTS`, **inference**: ISPOR's weighting text was not retrieved, so equal weights are our choice) |
 
 MCDA criteria:
-- **strategic fit [landing in league_v3]** = Σ (M · E) of the Part 1 findings the move addresses / Σ (M · E) of the company's top five findings by M · E, capped at 1. v2 used S, which contains O: a move addressing the most material known problem (z = 1, so S = 0) scored fit 0, which is backwards for a CEO decision (review A24). Materiality and evidence matter for the decision; novelty to the market does not.
+- **strategic fit** (`decide.finding_weight`, commit 9a1932c) = Σ (M · E) of the Part 1 findings the move addresses / Σ (M · E) of the company's top five findings by M · E, capped at 1. v2 used S, which contains O: a move addressing the most material known problem (z = 1, so S = 0) scored fit 0, which is backwards for a CEO decision (review A24). Materiality and evidence matter for the decision; novelty to the market does not.
 - capability = share of the move's required assets the company holds, each a cited fact;
 - execution risk = P_alive(end) x p-weighted multiplier / 1.2 (`COMMERCIAL_MULT_CAP`), so 1 means certain bull;
 - stakeholder evidence = share of the move's deciders (prescribers, patients, payers, regulators, investors) with documented evidence. The deck adds a hand-built decider-evidence table for the picked move (review B15), because a share alone does not say why the move will work.
@@ -561,12 +598,12 @@ Synthetic inputs, not a recommendation: label expansion of a marketed drug, two 
 | Output | 42-month ramp (v2 oracle, `LABEL_RAMP_MONTHS_ALT`, kept as its own test) | 60-month ramp, 40% of peak at month 24 (v3 default) |
 |---|---|---|
 | P(success from Phase III, non-NME) | 0.675 x 0.915 = 0.6176 | 0.6176 |
-| In-window PV (costs only) | -53.3 | [v3: pending] (v2 -53.3) |
-| EV bear / base / bull | 1,161.0 / 1,464.6 / 1,768.2 | [v3: pending] (v2 1,161.0 / 1,464.6 / 1,768.2) |
-| EV (p = 0.50 / 0.11 / 0.39) | 1,431.2 | [v3: pending] (v2 1,431.2) |
-| CaR | 57.6 | [v3: pending] (v2 57.6) |
-| Payback | month 51 | [v3: pending] (v2 month 51) |
-| Scenario spread | 607.2 | [v3: pending] (v2 607.2) |
+| In-window PV (costs only) | -53.3 | -53.3 (the ramp starts after month 24) |
+| EV bear / base / bull | 1,161.0 / 1,464.6 / 1,768.2 | 1,025.3 / 1,294.9 / 1,564.5 |
+| EV (p = 0.50 / 0.11 / 0.39) | 1,431.2 | **1,265.2** |
+| CaR | 57.6 | 57.6 |
+| Payback | month 51 | month 54 |
+| Scenario spread | 607.2 | 539.3 |
 
 
 ### 5.6 Kill signals and the revised EV (`kill.py`)
@@ -591,7 +628,7 @@ Stop if EV'_m < V_abandon = salvage - exit costs
 
 Example: one ZS breach at month 6 from p = (0.50, 0.11, 0.39) gives p' = (0.834, 0.101, 0.065). Medicare Part D Prescriber PUF lags about 18 months, so it can confirm but never trigger inside the window.
 
-**Run status.** DECIDE has been run only on old-shape LLY findings (`docs/examples/moves_LLY.json`). It must be re-run on the picked company's `findings_v3.jsonl` rows before its numbers go in the deck (Section 9; `docs/HANDOFF_quant.md`).
+**Run status.** DECIDE has been run only on old-shape LLY findings (`docs/examples/moves_LLY.json`). It must be re-run on the picked company's league_v3 rows (`out/<T>/findings_v2.jsonl` from the v3 run) before its numbers go in the deck (Section 9; `docs/HANDOFF_quant.md`).
 
 ---
 
@@ -641,7 +678,7 @@ Claim(text, citations)
 
 The fuzzy threshold is 90 because markdown-conversion noise scores 93-99 and real paraphrases 60-80; there is no published threshold (**inference**). The numeral guard exists because one altered digit in a long quote still scores about 98. For number claims whose quote does verify, the value must also appear in the matched span, else the citation is `unverified` (quote right, number wrong).
 
-**Transcript speaker check [landing in league_v3].** At ca12339 the package does not apply the speaker rule or the fool.com exclusion from `agent/findings.verify()` (the speaker's name must precede the quote; quotes from the LLM-written fool.com "takeaways" and summary sections are rejected). v3 ports both into `cite.verify`, so a transcript quote is shown only if the speaker check passes. Until it lands, the deck uses no transcript quote as evidence (review B12).
+**Transcript rules (commit 8a94bc0, review B12).** The earnings-call checks from `agent/findings.verify()` now run inside `cite.verify` for transcript citations: a quote before the fool.com "Full Conference Call Transcript" marker (the LLM-written takeaways and summary) is rejected; a named speaker must be the nearest `**Name (title):**` label within the 4,000 characters before the quote, else the citation is `unverified`; with no speaker named, the quote is attributed to that label and `Citation.speaker` is filled.
 
 ### 6.4 The gate
 
@@ -720,7 +757,7 @@ Every term that falls back writes a flag into the row's `flags`, and the league 
 
 ### 7.5 New-ticker path (demo)
 
-A live new-ticker run is not part of the demo. The demo shows a pre-recorded onboarding run for VRTX (`out/VRTX/`, onboarding commit 563097d): `python -m agent.needle.onboard VRTX`, then `python -m agent.needle.run --ticker VRTX` (detectors) and `python -m agent.needle.quant.run --ticker VRTX` (FIND). VRTX has no case starter thread, so z = 0 for all its rows, and it is not league-comparable if its σ falls back.
+A live new-ticker run is not part of the demo. The demo shows a pre-recorded onboarding run for VRTX (`out/VRTX/`, onboarding commit 563097d): `python -m agent.needle.onboard VRTX`, then `python -m agent.needle.run --ticker VRTX` (detectors) and `python -m agent.needle.quant.run --ticker VRTX` (FIND). A ticker off the shortlist must also be onboarded into the citation index before FIND can cite it (scraper side: `python -m agent.moat.onboard_company <TICKER>`, then `index.py --add`). VRTX has no case starter thread, so z = 0 for all its rows; its peer set is still the ten-company shortlist; and it is not league-comparable if its σ falls back.
 
 ---
 
@@ -728,9 +765,9 @@ A live new-ticker run is not part of the demo. The demo shows a pre-recorded onb
 
 ### 8.1 What is tested today (deterministic, no API key)
 
-1. **Reference answers** (`tests/needle/test_quant_find.py`): LLY σ_EPS 2.0294 within 2e-4 (2 x 1.01474); DIO 468.9 and finished-goods DIO 73.4; Verzenio S 0.0507 under the class rule and 0.0304 under the comparison formula; LLY DIO row S 0.00168 at π_min with confidence MEDIUM. **[landing in league_v3]** the H = 3 and c = 0.5 changes move the O-dependent reference values; the tests are updated with the v3 commit. `tests/needle/test_decide.py` pins the Section 5.5 oracle (42-month ramp).
+1. **Reference answers** (`tests/needle/test_quant_find.py`): LLY σ_EPS 2.0294 within 2e-4 (2 x 1.01474); DIO 468.9 and finished-goods DIO 73.4; the draft's DIO arithmetic (M 1.0089, O 0.3032, S 0.00973) at the component level; the end-to-end LLY run at H = 6, where the DIO peer row is not quantified (S = 0) and dropped by guard 2, and Verzenio has c = 0.5, base ΔRev 500.0, S 0.0178 and `S_spec_formula` 0.0152, HIGH with n_ind = 2. `tests/needle/test_decide.py` pins the Section 5.5 reference under both ramps (60-month default: EV 1,265.2; 42-month alternative: 1,431.2), strategic fit on M · E, and DECIDE taking IRA dollars from `impact.ira_class_rule`. `tests/needle/test_quant_guards.py` covers the guards.
 2. **Gate and verifier** (`test_trust.py`, `test_cite.py`): seeded errors are withheld (wrong page, altered number, foreign figure, invented quote), the ladder rungs, the numeral guard, the licence gate in public render, and deep-link rules (`test_product.py` asserts no DailyMed `#section` link).
-3. **League robustness [landing in league_v3]**: the robustness table in `league_v3.md` (4.9). The full rank-stability report (every Section 11 constant at x0.5 and x1.5) from the reviewed draft is **not built**; the robustness table is the shipped subset.
+3. **League robustness**: the eight-variant robustness table in `league_v3_robustness.json` and `league_v3.md` (4.9, 10.5). The full rank-stability report (every Section 11 constant at x0.5 and x1.5) from the reviewed draft is **not built**; the robustness table is the shipped subset.
 
 ### 8.2 What the backtest supports, and what it does not
 
@@ -765,7 +802,7 @@ Pitch-ready sentences with the proxy used for each: `docs/honest_limits.md`. The
 - **Ex-US volume and price.** IRA, MFN and LOE are modelled on US revenue; ex-US is out of the product table.
 - **Commercial formularies.** PBM formulary decisions and rebate contracts are private; coverage enters only through Part D data, company commentary and coverage-lag studies.
 - **Q3 2026 results.** FIND uses data through Q2 2026. Results arrive after judging; sealed calls turn this into a test (8.4).
-- **MFN (open disagreement D2).** "MFN deal terms are confidential. We score MFN as a direction, not a dollar amount, except where a company states its own effect." No company-stated term is built yet, so every MFN row is direction-only.
+- **MFN (open disagreement D2).** "MFN deal terms are confidential. We score MFN as a direction, not a dollar amount, except where a company states its own effect." NVO and BMY state theirs, but both took effect before our cut-off, so they are already in reported numbers and score 0.
 - **IRA for HIV.** No HIV drug has a published MFP. Biktarvy's discount is the cycle 1-2 range (38 / 65.5 / 85%) at the low-rebate rule, and the class rule is not calibrated to CMS's 22% cycle-1 net savings.
 - **Short interest, options, press.** Not collected (press only for MRK). s_f = 0 makes D optimistic for heavily shorted names.
 - **Licensed data.** "I/B/E/S numbers are licensed and shown only in the local app." Bloomberg text is cited, never shown publicly.
@@ -782,19 +819,19 @@ Pitch-ready sentences with the proxy used for each: `docs/honest_limits.md`. The
 - **Validation (A25).** "Q3 results arrive after judging. We sealed up to nine directional calls by hash; with ten companies no ranking can be statistically significant (minimum p = 0.10)."
 
 **Choices stated as choices (open disagreements, with the default named)**
-- **Age clock (D1).** Default: age runs from the latest filing that states the fact. Sensitivity: age from the first public date (Lazy Prices finds verbatim repeats are not news).
-- **Half-life (B-3).** Default: H = 3 months, with the needle floor on the discussion term only. Sensitivity: H = 6 (robustness table).
-- **Concentration (B-4, A18).** Default: one dominant evidence block counts as one finding (L = top-5 sum x N_eff / 3). The raw sum is printed beside L; GILD leads on the raw sum in v2.
-- **Scheduled events dominate (B-2).** π = 1 rows (IRA) can dominate a company's sum; the robustness table shows IRA at π 0.5.
+- **Age clock (D1).** Default: age runs from the first public date of the fact (for financial-statement rows, the earnings release). The latest-filing clock used in v2 is not a robustness row.
+- **Half-life (B-3).** Default: H = 3 months, with the needle floor on the discussion term only. Sensitivity: H = 6 (robustness table: same top three, same five strict needles).
+- **Concentration (B-4, A18).** Default: one dominant evidence block counts as one finding (L = top-5 sum x N_eff / 3). The raw sum is printed beside L. In v3 it does not change the order of the top five.
+- **Scheduled events dominate (B-2).** π = 1 rows (IRA) dominate the sums of GILD, BMY, ABBV, LLY and PFE. The robustness table shows IRA on the draft formula (GILD moves about 10%, order unchanged).
 - **How S is shown (D6).** ΔEPS in dollars and π as a tier; the ranking slide carries the robustness table.
-- **AMGN's receivables row.** In v2 the #1 row in the league, at a gap of +8.0 pts, exactly on the 8-point backtest trigger. Shown at π_min in the robustness table; the 10-Q should be checked for an acquisition, timing or Part D redesign billing cause before calling it channel stuffing.
+- **AMGN's lead is one row on a trigger edge.** AMGN's L is 87% one row: receivables growth beat revenue growth by +8.01 pts against an 8.00-pt backtest trigger. At π_min or treated as unfired, GILD leads (robustness table). The 10-Q should be checked for an acquisition, timing or Part D redesign billing cause before calling it channel stuffing; the wholesaler-language half of the test is not automated.
 
 **Coverage**
-- **Needle.** "Five of ten companies have no finding that clears every needle condition; for those we name a provisional needle and label it." v3 count: [v3: pending] (v2 5 of 10).
+- **Needle.** "Five of ten companies have no finding that clears every needle condition; for those we name a provisional or floor-relaxed needle and label it." (league_v3: strict for AMGN, AZN, MRK, NVO, ABBV; the same at H = 6.)
 - **Detectors (B3, B14).** "Several signal families in the design (insider sales, 8-K items, misstatement scores, gross-to-net, footnotes) have no detector yet; LOE inputs are thin for four companies (NVO, AZN, ABBV, JNJ)."
 - **Foreign filers (R4).** "AstraZeneca and Novo Nordisk have no earnings release in our index, so their headline term is imputed from the other eight; Novo's dollar-based policy channels are not converted."
 - **Attention.** a_f outside the nine scorecard topics is a regex over analyst turns, and the attention bucket is thin (up to 10 quarters, fewer for some companies).
-- **Transcripts.** Until the speaker check lands in the citation package, no transcript quote is used as evidence in the deck.
+- **Transcripts.** A transcript quote is shown only if its speaker check passes and it is not from the fool.com LLM-written summary (6.3).
 - **Viewer.** There is no public page viewer; external readers get source deep links only, and DailyMed and EDGAR have no page anchors.
 
 **DECIDE**
@@ -808,7 +845,7 @@ Pitch-ready sentences with the proxy used for each: `docs/honest_limits.md`. The
 
 ## 10. Worked example: Eli Lilly (LLY), as of 2026-10-17
 
-LLY is the worked example because the reviewed draft used it and because its old first place was the scorer bug (D5); it is 8th in league_v2. Inputs are local (gap-data `data/moat`, the citation index at 704741d). The component arithmetic is pinned in `tests/needle/test_quant_find.py`.
+LLY is the worked example because the reviewed draft used it and because its old first place was the scorer bug (D5); it is 8th in both league_v2 (L 0.069) and league_v3 (L 0.0051). Inputs are local (gap-data `data/moat`, the citation index at 704741d). The component arithmetic is pinned in `tests/needle/test_quant_find.py`.
 
 ### 10.1 Company constants
 
@@ -819,7 +856,7 @@ LLY is the worked example because the reviewed draft used it and because its old
 | D | 893.7M | Q2 2026 diluted weighted shares | "Diluted 893.7 899.8" on `LLY:10q_2026Q2.md#p5` |
 | σ_EPS | 2.0295 | 2 x sd (1.01474) of the last 8 quarterly surprises: -0.25, -0.10, -0.71, +0.80, +0.89, +0.43, +1.60, +2.37 (2024Q3 to 2026Q2) | `ibes_actuals.csv`, `ibes_eps_quarterly.csv` (WRDS, licensed: internal only) |
 | r | 0.0785 | | Damodaran Jan 2026 |
-| H | 3 months **[landing in league_v3]** (v2: 6) | | D9 |
+| H | 3 months (v2: 6) | | D9 |
 
 ### 10.2 Finding A (the old #1 driver): "Gross margin 85.8% (Q2 2026) vs peers; peer median 74.1%, z +1.8"
 
@@ -827,32 +864,29 @@ LLY is the worked example because the reviewed draft used it and because its old
 - Why it was wrong: `score._impact` routed every `gross_margin*` kind to abs(value) x TTM revenue, so the margin level 0.858 was treated as a change (about $68B), capped at 1. Fixed in 4009a40.
 - FIND: a margin above the peer median is favourable with no adverse scenario: favourable family, π = 0, **S = 0**. It appears only as context in the peer column.
 
-### 10.3 Finding B: "Days inventory 469 days (Q2 2026) vs peers; peer median 187 days, z +2.9"
+### 10.3 Finding B: "Days inventory 469 days (Q2 2026) vs peers; peer median 187 days, z +2.9": removed by guard 2, S = 0
+
+**league_v3: dropped by guard 2** (4.12). On revenue, which is how the peer comparison is now made, LLY's days inventory is 67 days against a peer median of 48 (z +1.0), not a peer outlier: the 469 days came from an 85% gross margin, not from the inventory. The row is in `rejected_v2.jsonl` with S = 0. It would also have been "not quantified": its backtest flag did not fire (DIO growth +14.2% YoY vs the 15% `dio_rising` trigger). The v2 arithmetic is kept below for the record.
 
 Inputs (each verified `exact`):
 - Inventories $16,793M at June 30, 2026, note on `LLY:10q_2026Q2.md#p15`: "Finished products $ 2,630 ... Work in process 9,997 ... Raw materials and supplies 4,128 ... Inventories $ 16,793".
 - Cost of sales Q2 2026 $3,268M: `LLY:10q_2026Q2.md#p5` ("Cost of sales 3,268 2,448").
 - Prior-year inventories $11,013.8M: `LLY:companies/LLY/10q_2025Q2.md#p7`; prior-year revenue $15,558M: `LLY:10q_2026Q2.md#p5`.
 
-| Step | Formula | Value |
+| Step | Formula | Value (v2, for the record) |
 |---|---|---|
-| DIO | 16,793 / 3,268 x 91.25 | 468.9 days |
-| Finished-goods DIO (stage split) | 2,630 / 3,268 x 91.25 | **73.4 days**; finished share 15.7% < 0.5: flag "capacity build, not channel stuffing", non-diagnostic |
+| DIO on cost of sales | 16,793 / 3,268 x 91.25 | 468.9 days |
+| Finished-goods DIO (stage split) | 2,630 / 3,268 x 91.25 | 73.4 days; finished share 15.7% < 0.5: "capacity build, not channel stuffing", non-diagnostic |
 | Inventory YoY, revenue YoY | 16,793 / 11,013.8 - 1; 22,974 / 15,558 - 1 | +52.47%, +47.67% (gap +4.8 pts, below the 10-pt inventory trigger) |
-| Backtest flag fired? | DIO growth +14.2% YoY vs the 15% `dio_rising` trigger | **no** |
-| Excess inventory (exposure, not scored) | 16,793 - 11,013.8 x 1.4767 | 529.3 |
-| ΔEPS_anchor (for reference) | 0.03 x 79,665.0 x (1 - 0.2049) / 893.7 | $2.1263 |
-| M (for reference) | 2.1263 x 1.0785^-0.5 / 2.0295 | 1.0089 |
-| D | z = 0, h = 0 ("inventor" absent from page 1 of the 2026-08-05 release), a = 0.6 (scorecard `inventory_channel`, 6 of 10 quarters), c = 0 (n/a), s = 0 (flag) | **0.40** |
-| τ | age 2.40 months (10-Q filed 2026-08-05) | [v3: pending] (v2 0.7580 at H = 6; 0.5743 at H = 3) |
-| O | D x τ | [v3: pending] (v2 0.3032) |
-| E | operands all `exact`, derived by code | **1.0** |
-| π | flag not fired | v2: π_min 0.0055. **v3: not quantified** (anchor only for fired flags) |
-| **S** | | [v3: pending] (v2 0.00168; the reviewed draft printed 0.00973 using the DIO backtest π, which the row does not earn) |
-| Confidence | E = 1.0, n_ind = 1, family not diagnostic, stage split fails | **MEDIUM** |
-| Needle eligible? | D = 0.40 < 0.5 | **no** |
+| Backtest flag fired? | DIO growth +14.2% YoY vs the 15% trigger | no |
+| ΔEPS_anchor | 0.03 x 79,665.0 x (1 - 0.2049) / 893.7 | $2.1263 |
+| M | 2.1263 x 1.0785^-0.5 / 2.0295 | 1.0089 |
+| D | z = 0, h = 0, a = 0.6 (scorecard `inventory_channel`), c = 0 (n/a), s = 0 | 0.40 |
+| τ, O | age 2.40 months at H = 6 | 0.7580; O 0.3032 |
+| π, S | v2: π_min 0.0055 | S 0.00168 (the reviewed draft printed 0.00973 with the DIO backtest π, which the row does not earn) |
+| **league_v3** | guard 2 drop; not quantified | **S = 0** |
 
-Plain-English line for the deck: "Lilly holds 469 days of inventory against a peer median of 187, but 84% of it is work in process and raw materials; finished goods cover 73 days, which reads as GLP-1 capacity build rather than channel stuffing."
+Deck line, if the inventory build is mentioned at all, as context: "Lilly's inventory is mostly work in process and raw materials (84%); finished goods cover 73 days of cost of sales, which reads as GLP-1 capacity build, and on revenue its days of inventory are not unusual against peers."
 
 ### 10.4 Finding C: "Verzenio's Medicare price is set by negotiation from January 2028"
 
@@ -862,83 +896,78 @@ Inputs:
 - Analog discounts (CMS, verified): Imbruvica 38% (IPAY 2026), Ibrance 50% ($7,871 vs $15,741, IPAY 2027, same CDK4/6 class), Pomalyst 60% (IPAY 2027).
 - Verzenio FY2025 revenue: US 3,464, outside US 2,259, total 5,723 (`LLY:10k_FY2025.md#p49`).
 
-| Step | Formula | Value |
-|---|---|---|
-| Channel | IRA, the one formula (4.3 b); oncology is low-rebate, k = 1.0 | |
-| ΔRev 2028 bull / base / bear | 1,428.714 x d x 1.0, d = 0.38 / 0.50 / 0.60 | 542.9 / **714.4** / 857.2 |
-| ΔEPS 2028 bull / base / bear | ΔRev x 1.00 x (1 - 0.2049) / 893.7 | $0.4830 / **$0.6355** / $0.7627 |
-| Timing | 2026-10-17 to 2028-07-01 = 1.706 years; 1.0785^-1.706 | 0.8791 |
-| **M** | 0.6355 x 0.8791 / 2.0295 | **0.2753** |
-| z, h | not LLY's starter thread; IRA terms absent from the release page 1 | 0, 0 |
-| a | scorecard LLY `IRA_negotiation`: 5 of 10 quarters | 0.5 |
-| c | FY2028 consensus first appears at statpers 2026-02-19, after the 2026-01-27 selection: untestable | v2: 0. **v3: 0.5** |
-| s | no data | 0 (flag) |
-| D | (1 - 0.5)(1 - c) | v2 0.50; **v3 0.25** |
-| τ | age 8.64 months | [v3: pending] (v2 0.3685 at H = 6) |
-| **O** | D x τ | [v3: pending] (v2 0.1843) |
-| **E** | both key facts `exact`; CMS and Lilly are independent issuers (n_ind = 2) | **1.0** |
-| **π** | type C (statutory effective date) | **1.0** |
-| **S** | M x O x E x π | [v3: pending] (v2 0.0507) |
-| Comparison field | G x (d - 0.20): ΔRev 428.6, M 0.1652 | S_spec_formula [v3: pending] (v2 0.0304) |
-| Confidence | quoted, two independent primary sources, type C | **HIGH** |
-| Needle eligible? | v3: D = 0.25 < 0.5 (v2: O 0.18 < 0.5) | **no** |
+Values from `out/LLY/findings_v2.jsonl` (league_v3 run):
 
-Peer line: Pfizer's Ibrance, the same class, took a 50% list cut at its January 2027 MFP. At the same cut and the low-rebate rule, Verzenio loses about $714M of 2028 Medicare revenue (12.5% of its FY2025 sales); under the draft formula, which nets out the 20% catastrophic-phase discount Lilly already pays, about $429M.
+| Step | Formula | Value (v3) | v2 |
+|---|---|---|---|
+| Channel | the one IRA formula (4.3 b); oncology: k = 1.0, Part D: m_avoided 0.20 / 0.15 / 0.10 | | k = 1.0, no m_avoided |
+| ΔRev 2028 bull / base / bear | 1,428.714 x max(0, 1.0 x d - m), d = 0.38 / 0.50 / 0.60 | 257.2 / **500.0** / 714.4 | 542.9 / 714.4 / 857.2 |
+| ΔEPS 2028 bull / base / bear | ΔRev x 1.00 x (1 - 0.2049) / 893.7 | $0.2288 / **$0.4449** / $0.6355 | base $0.6355 |
+| Timing | 2026-10-17 to 2028-07-01 = 1.706 years; 1.0785^-1.706 | 0.8791 | same |
+| **M** | 0.4449 x 0.8791 / 2.0295 | **0.1927** | 0.2753 |
+| z, h | not LLY's starter thread; IRA terms absent from the release page 1 | 0, 0 | same |
+| a | scorecard LLY `IRA_negotiation`: 5 of 10 quarters | 0.5 | same |
+| c | FY2028 consensus first appears at statpers 2026-02-19, after the 2026-01-27 selection: untestable | **0.5** | 0 |
+| s | no data | 0 (flag) | same |
+| D | (1 - 0.5)(1 - 0.5) | **0.25** | 0.50 |
+| τ | age 8.64 months; 2^(-8.64 / 3) | **0.1358** | 0.3685 (H = 6) |
+| **O** | D x τ | **0.0340** | 0.1843 |
+| **E** | both key facts `exact`; CMS and Lilly are independent issuers (n_ind = 2) | **1.0** | same |
+| **π** | type C (statutory effective date) | **1.0** | same |
+| **S** | M x O x E x π | **0.00654** (0.0178 at H = 6) | 0.0507 |
+| Comparison field | G x (d - 0.20): ΔRev 428.6, M 0.1652 | `S_spec_formula` **0.00561** (0.0152 at H = 6) | 0.0304 |
+| Confidence | quoted, two independent primary sources, type C | **HIGH** | same |
+| Needle eligible? | D = 0.25 < 0.5 | **no** | no (O 0.18 < 0.5) |
 
-### 10.5 The league: v2 as committed, and the robustness table
+Peer line: Pfizer's Ibrance, the same class, took a 50% list cut at its January 2027 MFP. At the same cut, Verzenio loses about $500M of 2028 Medicare revenue (8.7% of its FY2025 sales of $5,723M): the 50% cut less the 15% discount-program liability Lilly no longer pays.
 
-League v2 (`out/league_v2.json`, ca12339; H = 6, MFN at π = 1, drift and call rows on the placeholder anchor):
+### 10.5 The league: v3, v2 for comparison, and the robustness table
 
-| Rank | Ticker | L | Raw top-5 sum | N_eff | Blocks | Largest share | Needle status | L v3 |
-|---|---|---|---|---|---|---|---|---|
-| 1 | AMGN | 0.543 | 0.745 | 2.19 | A, P, T | 32% | strict | [v3: pending] (v2 0.543) |
-| 2 | GILD | 0.407 | 1.166 | 1.05 | P, T | 92% | provisional | [v3: pending] (v2 0.407) |
-| 3 | JNJ | 0.195 | 0.326 | 1.79 | A, P, T | 71% | strict | [v3: pending] (v2 0.195) |
-| 4 | AZN | 0.113 | 0.219 | 1.55 | A, P | 26% | provisional | [v3: pending] (v2 0.113) |
-| 5 | MRK | 0.097 | 0.147 | 1.98 | A, T | 55% | strict | [v3: pending] (v2 0.097) |
-| 6 | ABBV | 0.088 | 0.232 | 1.14 | P, T | 32% | provisional | [v3: pending] (v2 0.088) |
-| 7 | BMY | 0.070 | 0.183 | 1.14 | P, T | 43% | provisional | [v3: pending] (v2 0.070) |
-| 8 | LLY | 0.069 | 0.186 | 1.11 | P, T | 53% | strict | [v3: pending] (v2 0.069) |
-| 9 | PFE | 0.038 | 0.078 | 1.48 | P, T | 32% | strict | [v3: pending] (v2 0.038) |
-| 10 | NVO | 0.028 | 0.070 | 1.20 | A, T, X | 52% | provisional | [v3: pending] (v2 0.028) |
+League v3 (`out/league_v3.json`, ee7846c) beside v2 (`out/league_v2.json`, ca12339). The v3 scale is lower for every company (H = 3, c = 0.5 when untestable, MFN at π_min, text and call rows not quantified), so compare ranks, not values, across versions.
 
-v2 top rows: AMGN receivables +17.5% vs revenue +9.5% (S 0.238, gap +8.0 pts on the 8-pt trigger), AMGN MFN (0.222) and Otezla IRA 2027 (0.217); GILD Biktarvy IRA 2028 (1.078); JNJ MFN (0.232). In v3 the MFN rows drop to π_min and every drift (T) row leaves the top five, so every company's top five changes.
+| v3 rank | Ticker | L v3 | Raw top-5 sum v3 | N_eff v3 | Top finding v3 (S) | Needle v3 | L v2 (rank) |
+|---|---|---|---|---|---|---|---|
+| 1 | AMGN | 0.0877 | 0.2047 | 1.29 | receivables +17.5% vs revenue +9.5%, Q2 2026, gap +8.01 pts (0.1787, MEDIUM) | same row, strict | 0.543 (1) |
+| 2 | GILD | 0.0511 | 0.1532 | 1.00 | Biktarvy IRA 2028, assumed base discount 65.5% (0.1531, HIGH) | Biktarvy, floor relaxed | 0.407 (2) |
+| 3 | AZN | 0.0290 | 0.0674 | 1.29 | DSO 64 vs 56 days, FY2025 (0.0237, MEDIUM) | same row, strict | 0.113 (4) |
+| 4 | MRK | 0.0199 | 0.0597 | 1.00 | gross margin 73.5% vs 77.5%, Q2 2026 (0.0597, MEDIUM) | same row, strict | 0.097 (5) |
+| 5 | BMY | 0.0086 | 0.0257 | 1.00 | Pomalyst IRA 2027 (0.0165, HIGH) | Pomalyst, floor relaxed | 0.070 (7) |
+| 6 | NVO | 0.0081 | 0.0243 | 1.00 | gross margin 81.0% vs 84.7%, FY2025 (0.0140, MEDIUM) | same row, strict | 0.028 (10) |
+| 7 | ABBV | 0.0066 | 0.0197 | 1.00 | Linzess IRA 2027 (0.0101, HIGH) | same row, strict | 0.088 (6) |
+| 8 | LLY | 0.0051 | 0.0152 | 1.00 | Trulicity IRA 2028 (0.0086, HIGH) | Trulicity, provisional | 0.069 (8) |
+| 9 | PFE | 0.0007 | 0.0020 | 1.00 | Xeljanz IRA 2028 (0.0020, HIGH) | Xeljanz, floor relaxed | 0.038 (9) |
+| 10 | JNJ | 0.0001 | 0.0004 | 1.00 | Medicaid MFN, direction only (0.0004, MEDIUM) | none | 0.195 (3) |
 
-Robustness on v2 (lower bounds computed by the review on the committed top-5 rows, no backfill from a sixth row):
+Robustness table, league_v3 (`out/league_v3_robustness.json`):
 
-| Variant | Rank 1-5 |
-|---|---|
-| As committed | AMGN 0.543, GILD 0.407, JNJ 0.195, AZN 0.113, MRK 0.097 |
-| No N_eff term (raw top-5 sum) | GILD 1.166, AMGN 0.745, JNJ 0.326, ABBV 0.232, AZN 0.219 |
-| MFN rows at π_min | AMGN 0.442, GILD 0.386, AZN 0.113, MRK 0.097, ABBV 0.064 |
-| MFN at π_min, IRA rows at π 0.5 | AMGN 0.328, GILD 0.207, MRK 0.097, AZN 0.083, JNJ 0.053 |
-| MFN at π_min, Biktarvy on the comparison formula (d - 0.20) | AMGN 0.442, GILD 0.277, AZN 0.113, MRK 0.097, ABBV 0.064 |
-| MFN at π_min, AMGN receivables row at π_min | GILD 0.386, AMGN 0.184, AZN 0.113, MRK 0.097, ABBV 0.064 |
+| Variant | #1 | #2 | #3 | #4 | #5 | Strict needles |
+|---|---|---|---|---|---|---|
+| Base (v3 rules) | AMGN 0.0877 | GILD 0.0511 | AZN 0.0290 | MRK 0.0199 | BMY 0.0086 | 5 of 10 |
+| No N_eff term (raw top-5 sum) | AMGN 0.2047 | GILD 0.1532 | AZN 0.0674 | MRK 0.0597 | BMY 0.0257 | 5 of 10 |
+| MFN at the universal 0.65% with π = 1 (v2 rule) | AMGN 0.1681 | GILD 0.0576 | AZN 0.0290 | JNJ 0.0265 | MRK 0.0199 | 10 of 10 |
+| AMGN receivables row at π_min, anchor kept | GILD 0.0511 | AZN 0.0290 | AMGN 0.0261 | MRK 0.0199 | BMY 0.0086 | 5 of 10 |
+| AMGN receivables row as unfired (S = 0) | GILD 0.0511 | AZN 0.0290 | MRK 0.0199 | AMGN 0.0087 | BMY 0.0086 | 5 of 10 |
+| H = 6 months | AMGN 0.1847 | GILD 0.1386 | AZN 0.0825 | BMY 0.0280 | MRK 0.0264 | 5 of 10 |
+| IRA on the draft formula G x max(0, d - g_pre) | AMGN 0.0785 | GILD 0.0460 | AZN 0.0270 | MRK 0.0199 | ABBV 0.0118 | 5 of 10 |
+| c = 0.5 on anchor rows too | AMGN 0.0591 | GILD 0.0511 | AZN 0.0197 | MRK 0.0100 | BMY 0.0086 | 4 of 10 |
 
-What v2 shows: AMGN and GILD are the top two in every variant; which is first depends on the concentration rule and on one row at a trigger edge; JNJ's third place was entirely its MFN row.
+What the table settles, and what it does not:
+- **AMGN leads in 6 of 8 variants; GILD leads in the other 2**, and both are about one row: AMGN's receivables gap of +8.01 pts against an 8.00-pt trigger. **First place is unsettled between AMGN and GILD** until a human reads AMGN's 10-Q for a benign cause of the receivables build.
+- Second place: GILD in 6 variants, AZN in 2. Third: AZN in 6. AZN at third is the most stable place below the top two.
+- The N_eff term no longer decides #1 (it did in v2). The MFN rule no longer decides anything at the top; the v2 rule only puts JNJ back at 4th. The IRA formula moves GILD by about 10% and does not change the order.
+- The reviewed draft's v2 robustness (lower bounds, top-5 rows only) had AMGN and GILD as the top two in every variant and JNJ's third place entirely from its MFN row; v3 confirms that reading.
 
-League v3 robustness table (`out/league_v3.md`, **[landing in league_v3]**; rows as published there):
-
-| Variant | Rank 1-5 |
-|---|---|
-| As computed (v3 rules, H = 3) | [v3: pending] |
-| No N_eff term (raw top-5 sum) | [v3: pending] |
-| IRA rows at π 0.5 | [v3: pending] |
-| Biktarvy on the comparison formula | [v3: pending] |
-| AMGN receivables row at π_min | [v3: pending] |
-| H = 6 | [v3: pending] |
-
-The pick is made only from what survives every row of this table, and the pitch's "why it beat the other nine" sentence names rank, diversity (N_eff and the raw sum) and needle status, each with its number.
+The pick is made only from what survives this table, and the pitch's "why it beat the other nine" sentence names rank, the raw sum beside L, N_eff and needle status, each with its number.
 
 ### 10.6 Sensitivity of the worked rows
 
-The reviewed draft's ±50% table was computed on superseded values (DIO at the backtest π, Verzenio on the draft formula, H = 6) and is withdrawn. On the v3 values: H = 6 vs 3 for Verzenio S [v3: pending] (v2 0.0507 at H = 6); Verzenio at d = 0.38 / 0.60 scales S linearly with ΔRev (bull and bear rows of 10.4); r ±50% moves S by under 7% on both rows (reviewed draft, unchanged by v3). The league-level sensitivities are the robustness table in 10.5.
+The reviewed draft's ±50% table was computed on superseded values (DIO at the backtest π, Verzenio on the draft formula, H = 6) and is withdrawn. On the v3 values: Verzenio S is 0.00654 at H = 3 and 0.0178 at H = 6 (v2 0.0507 at H = 6 with c = 0 and no m_avoided); at d = 0.38 / 0.60 S scales with the bull and bear ΔRev of 10.4 (257.2 / 714.4); r ±50% moves S by under 7%. The DIO row is out (guard 2). The league-level sensitivities are the robustness table in 10.5.
 
 ---
 
 ## 11. Weight derivation table (every constant, by code name)
 
-Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` block of `moves.py` has a row, under its code name; every row names its constant. "Used" says whether a scoring path reads the constant at ca12339 ("defined" means the family or channel it belongs to has no caller yet). Sensitivity is stated where it was computed; "inference" marks our derivations.
+Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` block of `moves.py` has a row, under its code name; every row names its constant. "Used" says whether a scoring path reads the constant at ee7846c ("defined" means the family or channel it belongs to has no caller yet). Sensitivity is stated where it was computed; "inference" marks our derivations.
 
 ### 11.1 FIND (`weights.py` unless another module is named)
 
@@ -954,12 +983,13 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 | `CM_PRICE` | 1.00 | flow-through of price, rebate, MFP, MFN | pharma_impact_math KQ7 inference; Drug Channels | yes | linear; 0.75 alternative (A16) not run |
 | `CM_VOLUME` | 0.70 | flow-through of volume changes | KQ7 inference | yes | linear; 0.65 alternative not run |
 | `ANCHOR` | 0.03 | margin-event size for fired accounting flags | backtest `margin_drop` threshold | yes | linear for anchor rows; reorders them against channel rows |
-| `H_MONTHS` | v2 6.0; **3.0 [landing in league_v3]** | obscurity half-life | Lazy Prices; priced_in KQ5 "3 to 6 months" | yes | H = 6 is the sensitivity row of the robustness table |
+| `H_MONTHS` | 3.0 (v2: 6.0) | obscurity half-life, base | low end of priced_in KQ5 "3 to 6 months" (review A11) | yes | strict-needle count unchanged at 6 |
+| `H_MONTHS_SENSITIVITY` | 6.0 | half-life sensitivity | Lazy Prices (persists to 6 months, accrues to 18); the v2 base | robustness row | H = 6: same top three |
 | `H_VALUE` | 0.9 | headline-page coverage | materiality_spec §3 team rule | yes | at 0.45 headline topics can return to the top 5 |
 | `Z_VALUE` | 1.0 | starter thread | case appendix; binary | defined (code uses the literal 1.0 in `obscurity.starter_thread`) | binary |
 | `ATTENTION_QUARTERS` | 10 | quarters in a_f | priced_in_scorecard window | yes | |
 | `LOE_AGE_MONTHS_DEFAULT` | 24.0 | age when disclosure date unknown | inference: patent dates are long public | yes | |
-| `C_UNTESTABLE` (name to confirm in the v3 commit) | **0.5 [landing in league_v3]** (v2: 0) | c_f when the consensus test cannot run | inference: an even chance analysts priced it (review A12) | v3 | halves D on untestable type C rows |
+| `C_UNTESTABLE` | 0.5 (v2: 0) | c_f when the consensus test cannot run (type C and MFN rows) | inference: uninformative, an even chance analysts priced it (review A12) | yes | halves D on untestable rows (Biktarvy, Trulicity, Verzenio, Xeljanz, Orencia, Botox) |
 | `G_EXACT` | 1.00 | grade, exact and substring | deterministic check | yes | |
 | `G_FUZZY` | 0.90 | grade, fuzzy | citation note KQ4 inference | yes | only non-exact rows move |
 | `G_LLM` | 0.85 | grade, LLM-derived arithmetic | FinanceBench oracle-page accuracy (Islam et al. 2023) | defined | |
@@ -974,13 +1004,14 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 | `PI_DSO` | 0.0851 | (25.6% - 14.1%) x 0.74 | backtest | yes, if fired | linear |
 | `PI_GROSS_MARGIN_DROP` | 0.0422 | min(margin, hard) excess 0.057 x 0.74 | backtest; gate 2 | yes, if fired | linear |
 | `PI_MISSTATEMENT` | 0.0491 | anchor x 12 / 11.39 | Beneish-Lee-Nichols 2013 (12%/yr rounded up, inference) | defined (no detector) | |
-| `PI_RISK_FACTOR` | 0.0226 | anchor x 5.52 / 11.39 | Lazy Prices VW 0.46%/month | yes (v3: tier only) | |
-| `PI_LITIGATION_TEXT` | 0.0349 | anchor x 8.52 / 11.39 | Lazy Prices 71 bps/month | yes (v3: tier only) | |
-| `PI_MDNA` | 0.0081 | anchor x 1.98 / 11.39 | Lazy Prices Table VII | yes (v3: tier only) | |
+| `PI_RISK_FACTOR` | 0.0226 | anchor x 5.52 / 11.39 | Lazy Prices VW 0.46%/month | tier only (not quantified) | |
+| `TEXT_ALPHA_TABLE` | "Lazy Prices Table II (whole document)" | the one table for all text families | review A5 | yes | |
+| `PI_LITIGATION_TEXT` | 0.0349 | anchor x 8.52 / 11.39 | Table II, high-litigiousness subsample, 71 bps/month; only when litigation is the row's only topic | tier only (not quantified) | |
+| `PI_MDNA` | 0.0226 (v2: 0.0081 from Table VII) | anchor x 5.52 / 11.39 | Table II, same as risk factors | tier only (not quantified) | |
 | `PI_INSIDER` | 0.0201 | anchor x 4.92 / 11.39 | Cohen-Malloy-Pomorski | defined (no detector) | |
 | `PI_8K` | 0.0061 | anchor x 1.5 / 11.39 | Lerman-Livnat 2010 | defined (no detector) | |
-| `PI_MIN` | 0.0055 | anchor x 1.34 / 11.39 | Chen-Hollander-Law (WP) | yes: directional rows, MFN (v3) | floor for directional families |
-| `PI_NONE` | 0.0028 | π_min / 2 | forensic note tier halving (inference) | yes (v3: tier only) | |
+| `PI_MIN` | 0.0055 | anchor x 1.34 / 11.39 | Chen-Hollander-Law (WP) | yes: MFN rows; tier for directional rows | floor for directional families |
+| `PI_NONE` | 0.0028 | π_min / 2 | forensic note tier halving (inference) | tier only (not quantified) | |
 | `PI_CONTRACTUAL` | 1.0 | statute-dated or booked | by definition | yes: IRA, LOE | IRA at 0.5 in the robustness table |
 | `PI_REASONABLY_POSSIBLE` | 0.5 | ASC 450 midpoint | inference | defined (no extractor) | |
 | `PI_FAVORABLE_LEVEL` | 0.0 | favourable row, no scenario | 4.1 | yes | |
@@ -991,13 +1022,18 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 | `G_PRE_INSULIN` | 0.75 | insulin | inference | defined | |
 | `G_PRE_IMMUNOLOGY` | 0.50 / 0.575 / 0.65 | immunology | inference | comparison field only | |
 | `IRA_HEADLINE_RANGE` | 0.38 to 0.85 | cycle 1-2 discount range | CMS | defined | |
-| `find.K_NET` | 0.3 / 0.4 / 0.5 | IRA net hit / list discount, rebated classes | pharma_impact_math KQ2 inference | yes (the IRA formula) | IRA rows linear in k |
-| `find.LOW_REBATE` | Verzenio, Erleada, Pomalyst, Ibrance, Calquence, Biktarvy | k = 1.0 classes (oncology, HIV) | KQ2 "near 1.0x for low-rebate oncology"; HIV by inference | yes | Biktarvy on the comparison formula in the robustness table |
+| `K_LOW_REBATE` | 1.0 / 1.0 / 1.0 | IRA k, oncology and HIV | pharma_impact_math KQ2 "near 1.0x for low-rebate oncology"; HIV by inference | yes (`impact.ira_class_rule`) | |
+| `K_NET` (also `find.K_NET`) | 0.3 / 0.4 / 0.5 | IRA k, rebated classes | KQ2 inference | yes | IRA rows linear in k |
+| `M_MDP_AVOIDED` | 0.20 / 0.15 / 0.10 | Part D discount-program liability avoided once the MFP applies (bull / base / bear) | CMS MDP guidance (20% catastrophic, 10% initial); KQ2 "roughly 10-15%" | yes | Verzenio base 500.0 vs 714.4 without it |
+| `impact.LOW_REBATE`, `impact.LOW_REBATE_WORDS` | Verzenio, Erleada, Pomalyst, Ibrance, Calquence, Biktarvy; or an indication naming a cancer or HIV | k = 1.0 classes | KQ2; HIV by inference | yes | |
+| `impact.PART_B` | Botox, Orencia | no Part D discount-program liability to avoid (m_avoided 0) | physician-administered | yes | |
 | `find.ALL_CUTS` | 0.38 / 0.655 / 0.85 | d with no same-class analog | `ira_cut_check.csv` smallest / median of 16 / largest | yes (Biktarvy, Botox) | |
 | `find.IMM` | 0.65 / 0.66 / 0.67 | immunology analog d | CMS (Otezla, Stelara, Enbrel) | yes | |
 | `find.DIAB` | 0.66 / 0.71 / 0.85 | diabetes analog d | CMS (Jardiance, Ozempic, Janumet) | yes | |
 | `find.ANNUAL_TRIGGER` | inventory 0.10, receivables 0.08, DIO 0.15, DSO 0.10 | backtest flag triggers for annual rows | `backtest.signals_at` thresholds | yes | AMGN's 8.0-pt row sits on the 0.08 edge |
-| `S_MFN` | 0.003 / 0.0065 / 0.010 | Medicaid MFN share of US revenue | Pfizer "<1% of US net"; midpoint inference | v2 dollars; **v3 internal M only, never printed** | |
+| `S_MFN` | 0.003 / 0.0065 / 0.010 | Medicaid MFN share of US revenue | Pfizer "<1% of US net"; midpoint inference | internal placeholder M only, never printed (v2: printed dollars) | v2 rule is the `MFN_UNIVERSAL` robustness row |
+| `find.SDUD_MEDICAID_BASIC_REBATE` | 0.231 | statutory Medicaid basic rebate (23.1% of AMP), for BMY's Eliquis-to-Medicaid size | 42 USC 1396r-8 | context only (term already effective) | |
+| `find.MFN_UNIVERSAL`, `find.FORCE_PI_MIN`, `find.IRA_MODE`, `find.C_ANCHOR_UNINFORMATIVE` | False, {}, "class", False | robustness knobs (v2 MFN rule; AMGN row at π_min or unfired; draft IRA formula; c = 0.5 on anchor rows) | league_v3 robustness table | variants only | 10.5 |
 | `R_BIOLOGIC` | 0.65 / 0.35 / 0.20 | LOE retention years 1-3 | Humira, Stelara, IQVIA (KQ4) | yes | linear in (1 - R) |
 | `R_SMALL_MOLECULE` | 0.30 / 0.15 / 0.10 | LOE retention years 1-3 | KQ4; IQVIA | yes | linear |
 | `impact.loe` inline | 0.8 / 1.2 x base | LOE bull / bear band | inference | yes | |
@@ -1017,6 +1053,12 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 | `data.company` ETR band | [0, 0.40] -> peer median 0.185 | ETR fallback | our rule | yes (MRK, PFE, GILD) | company-level scale |
 | `find.stage_split` cut-off | finished share < 0.5 | "capacity build" | inference | yes | |
 | `cite.verify.FUZZY_THRESHOLD` | 90 | fuzzy rung | inference (noise 93-99, paraphrase 60-80) | yes | |
+| `guards.PRETAX_MIN_SHARE` | 0.05 | guard 3: no tax row below this pre-tax share of revenue | red team #19 | yes | |
+| `guards.TAX_SHIFT_MIN` | 0.04 | guard 3: TTM tax shift threshold | forensics threshold | yes | |
+| `guards.PEER_Z` | 1.5 | guard 2: peer-outlier threshold on the revenue basis | forensics threshold | yes | |
+| `guards.IPRD_MIN_SHARE` | 0.25 | guard 4: IPR&D charge share of period R&D | red team #19 | yes | |
+| `guards.IPRD_RATIO_TOL` | 0.03 | guard 4: R&D-to-revenue tolerance ex-charge | red team #19 | yes | |
+| `guards.PERIOD_TOL` | 0.005 | guard 5: period-consistency tolerance (0.5 pts) | red team #19 | yes | |
 
 ### 11.2 DECIDE (`moves.py` `decide_weights` and the other `moves.py` / `kill.py` constants)
 
@@ -1052,6 +1094,7 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 | `MFN_SHARE` | 0.0065 | Medicaid MFN share (registered; no template reads it) | Pfizer base rate, inference | none; MFN is direction-only in FIND |
 | `TARIFF_RATE` | 0.15 | tariff on imported cost | Proclamation 11020; Crowell | M7 benefit |
 | `MCDA_WEIGHTS` | 0.25 each | MCDA criteria | inference (ISPOR weighting text not retrieved; 1/N) | matters only when EV intervals overlap |
+| `decide.finding_weight` | M x E | strategic-fit weight of a finding (not S) | review A24 | a well-known material problem still counts |
 | `COMMERCIAL_MULT_CAP` | 1.2 | execution-risk divisor | spec 5.4 | |
 | `DTC_TV_LOW`, `DTC_TV_HIGH` | 260, 440 ($M/yr) | DTC TV spend | iSpot via Fierce Pharma | M6 cost |
 | `PLANT_CAPEX_LOW` | 1,000 | plant capex low | DCAT 2025 | |
@@ -1076,8 +1119,8 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 
 | Constant | Value | Meaning | Source |
 |---|---|---|---|
-| `GTN_BAND` | bear 0.50 / base 0.60 / bull 0.70 | v2 IRA-MFP channel GTN (comparison field after v3) | inference from company GTN anchors |
-| `CM_DEFAULT` | 0.70 | product-channel CM (volume channels); the IRA channel uses `CM_PRICE` 1.00 after v3 | KQ7 |
+| `GTN_BAND` | bear 0.50 / base 0.60 / bull 0.70 | v2 IRA-MFP channel GTN, now a comparison field only | inference from company GTN anchors |
+| `CM_DEFAULT` | 0.70 | product-channel CM for volume channels; the IRA channel uses `CM_PRICE` 1.00 (commit 2dc34d5) | KQ7 |
 | inline capture | 0.50 / 0.35 / 0.20 | label-breadth capture | assumed |
 | inline share moved | 0.40 / 0.25 / 0.10 | cash-price scenario | assumed |
 | inline boxed-warning share | 0.25 / 0.10 / 0 | boxed-warning channel | inference |
@@ -1169,24 +1212,25 @@ Citations and LLM reliability
 
 ## 14. Changes from the reviewed draft
 
-Finding ids are from the adversarial review (synthesis.md). "Code" means the change is in ca12339; "v3" means it is landing in league_v3; "spec" means text only.
+Finding ids are from the adversarial review (synthesis.md). "Code" names the quant-model commit that made the change (all in league_v3, ee7846c, unless marked ca12339); "spec" means text only.
 
-1. **A1, D5.** Backtest π only when the row meets the flag's trigger (code); unfired rows not quantified (v3). LLY DIO S 0.00973 withdrawn (10.3).
-2. **R3, A9, B6, B9, S2, D2.** π = 1 reserved for statute-dated or booked amounts (spec); label rows and trial stops M = 0 (code); MFN direction-only at π_min with no dollar figure (v3).
-3. **A15, S3.** One IRA formula, ΔRev = G · d · k (code in FIND; v3 in product and DECIDE); the draft's G · (d - g_pre) kept only as `S_spec_formula`.
-4. **R1, A11, B5, B-3.** O split into discussion D and decay τ; needle floor on D; H = 3 base, 6 sensitivity (v3). "Does not silently relax" deleted; the coded fallbacks (provisional, floor relaxed) stated (spec).
-5. **R2, A20, B4, B7.** Anchor only for fired backtest flags; everything else "not quantified" and out of the top five (v3); "no peer analogue" in the deck (spec).
-6. **A12.** c_f = 0.5 when untestable (v3).
-7. **A18, B-4, B21.** League term described as N_eff / 3 scaling; raw sum shown; robustness table (v3).
-8. **S1.** Same-fact de-duplication; AZN duplicate receivables row removed (v3).
-9. **B10, B11, B12, B13.** Section 6 rewritten to match `agent/needle/cite` and `docs/citations.md`: five statuses, fuzzy 90, number_match graded 0.745, gate rule, deep links per document type with plain DailyMed setid pages, Bloomberg licence gate, no public viewer (spec); transcript speaker check ported (v3).
-10. **A2, A3, R4, B8.** AZN per-share σ (code); fallbacks "not league-comparable" (code); 2x labelled inference; imputed headline for 20-F filers (code); NVO USD channels not converted (code).
-11. **A16, A17, A26, A27.** CM conflict disclosed; σ_LLY 2.0295; source attributions corrected (DeMiguel by analogy, Novo 69% from its 20-F, Lazy Prices paraphrase, ICD 203 midpoint, MFN range as inference, label elasticities as inference, "four routes", 10-pt inventory trigger, CFO quote); every code constant in Section 11 by name (spec).
-12. **A21, A22, A23, A24, B15, B16.** DECIDE: 7.85% stated as the team's choice; scenario-basis bias stated; 60-month label ramp, 40% of peak at month 24 (commit 9a1932c), with the 42-month v2 oracle kept and the reference case labelled by ramp; strategic fit on M · E (v3); decider-evidence table in the deck (spec); DECIDE to run on the picked company's v3 findings (open).
+1. **A1, D5.** Backtest π only when the row meets the flag's trigger (code, ca12339); unfired rows not quantified (09ba938). LLY DIO S 0.00973 withdrawn; the row is now dropped by guard 2 (10.3).
+2. **R3, A9, B6, B9, S2, D2.** π = 1 reserved for statute-dated or booked amounts (spec); label rows and trial stops M = 0 (ca12339); MFN direction-only at π_min, sized only from company-stated terms, NVO and BMY at M = 0 under the timing rule (01f9814).
+3. **A15, S3.** One IRA formula, ΔRev = G · max(0, k · d - m_avoided), in `impact.ira_class_rule`, used by FIND, product and DECIDE (fccc85f, 2dc34d5); the draft's G · (d - g_pre) kept only as `S_spec_formula` and as a robustness row.
+4. **R1, A11, B5, B-3, D1.** O split into discussion D and decay τ; needle floor on D; H = 3 base, 6 sensitivity; age from the first public date (f515bce). "Does not silently relax" deleted; the fallbacks (provisional, floor relaxed, on D) stated.
+5. **R2, A20, B4, B7, A5.** Anchor only for fired backtest flags; text and call rows mapped to a channel or "not quantified" and out of the top five; one Lazy Prices table (09ba938); "no peer analogue" on the row.
+6. **A12.** c_f = 0.5 when untestable (2d4543d).
+7. **A18, B-4, B21.** League term described as N_eff / 3 scaling; raw sum shown; eight-variant robustness table (188dd66, ee7846c).
+8. **S1.** One underlying fact, one top-5 row; AZN duplicate receivables row removed (ac4aa7d; guard 6).
+9. **B10, B11, B12, B13.** Section 6 rewritten to match `agent/needle/cite` and `docs/citations.md` (spec); transcript speaker and fool.com rules in the verify ladder (8a94bc0).
+10. **A2, A3, R4, B8.** AZN per-share σ, fallbacks "not league-comparable", imputed headline for 20-F filers, NVO USD channels not converted (ca12339); 2x labelled inference (spec).
+11. **A16, A17, A26, A27.** CM conflict disclosed; σ_LLY 2.0295; source attributions corrected; every code constant in Section 11 by name (spec). Citation fixes D1, D4, D11: AMGN's receivables row re-derived and fully cited, IRA discounts cited or labelled as assumptions, Q4 values as derived citations (c889dcd, 280bad8).
+12. **A21, A22, A23, A24, B15, B16.** DECIDE: 7.85% stated as the team's choice; scenario-basis bias stated (spec); 60-month label ramp, 40% of peak at month 24, with the 42-month v2 oracle kept as `LABEL_RAMP_MONTHS_ALT`; strategic fit on M · E (9a1932c); decider-evidence table in the deck (spec); DECIDE to run on the picked company's v3 rows (open).
 13. **A25, A10, D5.** Validation: N ≤ 9 sealed calls, base-rate null, backtest panel absent and what that blocks (spec).
-14. **B1.** Product fine print integrated as Section 4.11 with the one IRA formula (spec; v3 for the formula import).
+14. **B1.** Product fine print integrated as Section 4.11 with the one IRA formula (spec; fccc85f, 2dc34d5).
 15. **B2.** "Where AI is in the build" in `docs/ai_in_the_build.md`, summarized in Section 9 (spec).
 16. **B3, B14.** Built / not-built column in the π table from `MISSING_DETECTORS` (spec).
-17. **B17.** New-ticker path as a recorded VRTX run (spec).
-18. **B19, B20.** Honest limits replaced by the review's limit sentences plus the open disagreements (spec; also `docs/honest_limits.md`); facts count 69,553 total, 10,963 verified.
+17. **B17.** New-ticker path as a recorded VRTX run, with citation-index onboarding stated (spec).
+18. **B19, B20, B22.** Honest limits replaced by the review's limit sentences plus the open disagreements (spec; `docs/honest_limits.md`); facts count 69,553 total, 10,963 verified; the app reads `league_v3.json` first (1b38ead).
+18a. **Red team #19.** Nine guards and the `--nuggets` ingest, Section 4.12 (651ee1d).
 19. The reviewed draft's "Implementation notes" appendix is folded into the body and removed; its "Product fine print (appended)" section is now Section 4.11.
