@@ -92,13 +92,33 @@ League order: AMGN, GILD, JNJ, AZN, MRK, ABBV, BMY, LLY, PFE, NVO; `meta.default
   tooltip); unchecked or absent = muted "numbers not yet page-checked". Shown on the hero, grid rows, memo
   points and Ask answers.
 
+## v3 league (Sat Oct 17, late)
+
+`meta.engine` is "v3". League order: AMGN, GILD, AZN, MRK, BMY, NVO, ABBV, LLY, PFE, JNJ (the subtitle shows
+each company's change vs its v2 rank, e.g. JNJ ▼7 vs v2 #3). Needle status: AMGN, AZN, MRK, NVO, ABBV strict;
+LLY provisional; GILD, BMY, PFE floor_relaxed; **JNJ none**: the hero says "No row qualifies as the Sharpest
+Needle" and shows the top-scored finding labelled "Highest-scored finding" with a muted pill (no row is ever
+promoted to needle; `needle_id` is null).
+
+- **Robustness**: `meta.league_robustness` (out/league_v3_robustness.json, 8 variants) renders as a
+  rank-by-variant table on the Briefing (under the charts) and on Proof (with the v2 rank column), the selected
+  company highlighted, ∅ where no needle qualifies, and the reading "AMGN leads in 6 of 8 variants; GILD leads
+  in 2 of 8".
+- **Finding flags** (`flags`: needle_eligible, provisional, one_off, not_quantified, not_league_comparable) are
+  labelled pills on grid rows and the hero. The selected-row strip under the grid shows the not-quantified
+  reason, `guard_reason`, "corroborates <id>" (click jumps to that row), `fact_key` and `impact_channel`.
+  Rejected rows show their guard text as the reason.
+- Stance options exclude not_quantified rows; options with no dollar figure read "no quantified $".
+- `numeric_check` is still null on every row (the uncited-claim gate is not committed yet), so every finding
+  shows "numbers not yet page-checked".
+
 ## Known data gaps (stated, not hidden)
 
-- **Numbers are not yet page-checked.** The verifier checks that each quote is on its page; it does not yet
+- **Numbers are not yet page-checked** (still true under v3: `numeric_check` is null until the gate commit). The verifier checks that each quote is on its page; it does not yet
   check the numbers in the finding sentence. The skeptic pass found about 58% of numeric tokens in v2 finding
   sentences sit on pages that do not contain them. Until league_v3 fills `numeric_check`, every finding shows
-  "numbers not yet page-checked". AMGN's needle (receivables +17.5% YoY) is disputed pending v3: the cited
-  balance sheet compares June 2026 with December 2025, which is 6.9%.
+  "numbers not yet page-checked". AMGN's needle (receivables +17.5% YoY) was disputed: v3 now states it as 10,227 vs
+  8,701 a year earlier (2026Q2 vs 2025Q2), but the numbers are still not page-checked.
 - Company-stated exclusivity / LOE dates are not in the v1 export; v2 product tables carry the 10-K date where found.
 - 11 finding citations are withheld under the public rule (quote not confirmed on the page); all 17 decide
   footnotes for LLY are external benchmarks or team inputs with quotes withheld, and several move inputs

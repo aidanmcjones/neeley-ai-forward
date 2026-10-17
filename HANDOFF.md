@@ -83,8 +83,16 @@ sentences on pages that do not contain them. Until league_v3 fills `numeric_chec
 numbers as page-verified. **AMGN's needle (receivables +17.5% YoY) is disputed pending v3:** the cited balance
 sheet compares June 2026 with December 2025, which is 6.9%.
 
+**v3 data (third pass).** `meta.engine` v3. League order AMGN, GILD, AZN, MRK, BMY, NVO, ABBV, LLY, PFE, JNJ;
+rank change vs v2 shown next to the rank. JNJ has needle status none: the hero says no row qualifies and shows
+the highest-scored finding as such. Robustness table (8 variants; AMGN leads in 6, GILD in 2) on the Briefing
+and Proof. Finding flags as pills; guard reason, corroborates link, fact key and impact channel in the
+selected-row strip. `numeric_check` is still unchecked everywhere pending the gate commit. Re-swept: 70 routes,
+102 sub-states, 10 printed memos clean; hero above the fold for all 10 (headline drops to 32 px for very long
+sentences); dark mode and static build clean.
+
 **Open.**
-- league_v3 / `numeric_check` and token-level assumption tags (for "[assumption]" markers) not in the export yet.
+- `numeric_check` and token-level assumption tags (for "[assumption]" markers) not in the export yet.
 - stance.decide for the nine companies other than LLY; AMGN product v2 tables.
 - VRTX is onboarding-pending (no findings, no company file, not in the picker).
 - The JS bundle is about 800 kB (about 230 kB gzip); fine for a local demo, not code-split.
