@@ -7,3 +7,5 @@ agent/cache/
 data/sec/
 data/external/
 .streamlit/secrets.toml
+out/
+data/backtest/
