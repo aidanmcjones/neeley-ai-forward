@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corpus downloads</title>
+<style>
+  :root { --bg:#fff; --fg:#1d1d1f; --mute:#6e6e73; --line:#e3e3e6; --accent:#4b2e83; --chip:#f2eff8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161618; --fg:#ececf0; --mute:#a0a0a8; --line:#2c2c30; --accent:#b9a3ec; --chip:#25212f; } }
+  body { background:var(--bg); color:var(--fg); font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif; margin:0; padding:24px 16px 64px; }
+  main { max-width:920px; margin:0 auto; }
+  h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:17px; margin:28px 0 8px; color:var(--accent); }
+  p, li { color:var(--fg); } .mute { color:var(--mute); }
+  code { background:var(--chip); padding:1px 5px; border-radius:4px; font-size:13px; word-break:break-all; }
+  table { width:100%; border-collapse:collapse; margin:6px 0 4px; }
+  th, td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; font-size:14px; }
+  th { color:var(--mute); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  a { color:var(--accent); }
+  .box { border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:12px 0; }
+  @media (max-width:640px) { th:nth-child(3), td:nth-child(3) { display:none; } }
+</style></head>
+<body><main>
+<h1>Corpus downloads</h1>
+<p class="mute">Documents the scripts could not fetch because the sites block automated downloads. Open each link in your browser and save the file.</p>
+
+<div class="box">
+<b>How it works</b>
+<ol>
+  <li>Save every file into this folder: <code>C:\Users\parke\OneDrive\Desktop\Hackathon\neeley-ai-forward\data\corpus\_inbox\</code></li>
+  <li>Format: <b>PDF</b>. If a page has no PDF, save the web page as <b>.html</b> (Ctrl+S, "Webpage, HTML only").</li>
+  <li>Rename it to the exact name in the "Save as" column.</li>
+  <li>Tell Claude "ingest the inbox". It runs <code>python -m agent.ingest_inbox</code>, adds page markers, files each document in the right folder, and refreshes the gap report.</li>
+</ol>
+<p class="mute">If a link goes to a page that no longer exists, go to the company's investor site, then <i>Events &amp; Presentations</i> or <i>Quarterly Results</i>, and find the quarter.</p>
+</div>
+
+<h2>Tier 1: fill the holes now (any company)</h2>
+<table>
+<tr><th>Save as</th><th>What</th><th>Where to find it</th></tr>
+<tr><td><code>AMGN_transcript_2025Q3.pdf</code></td><td>Amgen Q3 2025 call transcript (Nov 2025)</td><td>Bloomberg / FactSet, or <a href="https://investors.amgen.com/events-presentations">Amgen IR events</a></td></tr>
+<tr><td><code>NVO_transcript_2026Q1.pdf</code></td><td>Novo Nordisk Q1 2026 call transcript (May 2026)</td><td>Bloomberg / FactSet (Novo posts recordings only)</td></tr>
+<tr><td><code>NVS_transcript_2026Q1.pdf</code></td><td>Novartis Q1 2026 call transcript</td><td>Bloomberg / FactSet</td></tr>
+<tr><td><code>GSK_transcript_2026Q2.pdf</code></td><td>GSK Q2 2026 call transcript</td><td>Bloomberg / FactSet, or <a href="https://www.gsk.com/en-gb/investors/quarterly-results/">GSK quarterly results</a></td></tr>
+</table>
+
+<h2>Tier 2: earnings slides (blocked investor sites)</h2>
+<table>
+<tr><th>Save as</th><th>What</th><th>Where to find it</th></tr>
+<tr><td><code>BMY_slides_2025Q3.pdf</code> ... <code>BMY_slides_2026Q2.pdf</code></td><td>BMS earnings decks, 4 quarters</td><td><a href="https://www.bms.com/investors/events-and-presentations.html">BMS events &amp; presentations</a></td></tr>
+<tr><td><code>ABBV_slides_2025Q3.pdf</code> ... <code>ABBV_slides_2026Q2.pdf</code></td><td>AbbVie earnings decks, 4 quarters</td><td><a href="https://investors.abbvie.com/events-and-presentations">AbbVie events &amp; presentations</a></td></tr>
+<tr><td><code>LLY_slides_2025Q3.pdf</code> ... <code>LLY_slides_2026Q2.pdf</code></td><td>Lilly earnings decks, 4 quarters</td><td><a href="https://investor.lilly.com/events-and-presentations">Lilly events &amp; presentations</a></td></tr>
+<tr><td><code>LLY_presentation_2026-01-jpm.pdf</code></td><td>Lilly JPM Jan 2026 deck</td><td><a href="https://investor.lilly.com/node/53546">Lilly JPM event page</a></td></tr>
+<tr><td><code>AMGN_slides_2026Q2.pdf</code></td><td>Amgen Q2 2026 deck (direct link found)</td><td><a href="https://investors.amgen.com/static-files/6214ad8a-4a21-4f66-8571-165e8cbb4681">Direct PDF</a></td></tr>
+<tr><td><code>AMGN_slides_2025Q3.pdf</code> ... <code>AMGN_slides_2026Q1.pdf</code></td><td>Amgen earnings decks, other 3 quarters</td><td><a href="https://investors.amgen.com/events-presentations">Amgen IR events</a></td></tr>
+<tr><td><code>AMGN_presentation_2026-01-jpm.pdf</code></td><td>Amgen JPM Jan 2026 deck</td><td><a href="https://investors.amgen.com/events-presentations">Amgen IR events</a></td></tr>
+<tr><td><code>NVO_slides_2025Q3.pdf</code></td><td>Novo Q3 2025 investor presentation</td><td><a href="https://www.novonordisk.com/investors/financial-results.html">Novo financial results</a></td></tr>
+<tr><td><code>JNJ_slides_2025Q3.pdf</code>, <code>JNJ_slides_2026Q3.pdf</code></td><td>J&amp;J Q3 2025 and Q3 2026 decks</td><td><a href="https://www.investor.jnj.com/financials/quarterly-results/default.aspx">J&amp;J quarterly results</a></td></tr>
+<tr><td><code>REGN_slides_2026Q2.pdf</code>, <code>ALNY_slides_2026Q2.pdf</code></td><td>Regeneron and Alnylam Q2 2026 decks</td><td>Each company's investor site, Events &amp; Presentations</td></tr>
+</table>
+
+<h2>Tier 3: only if it matters for our pick</h2>
+<table>
+<tr><th>Save as</th><th>What</th><th>Where to find it</th></tr>
+<tr><td><code>BOEHRINGER_report_annual-2025.pdf</code></td><td>Boehringer Annual Report 2025 (Jardiance; only if we pick Merck/Januvia or AstraZeneca/Farxiga)</td><td><a href="https://www.boehringer-ingelheim.com/annual-report">Boehringer annual report</a></td></tr>
+<tr><td><code>LLY_press_2025-11-06-us-govt-agreement.pdf</code></td><td>Lilly's own copy of its US government (MFN) agreement release</td><td>investor.lilly.com news releases</td></tr>
+<tr><td><code>BMY_presentation_2025-12-hematology.pdf</code></td><td>BMS Dec 2025 hematology investor event deck</td><td><a href="https://www.bms.com/investors/events-and-presentations.html">BMS events &amp; presentations</a></td></tr>
+</table>
+
+<h2>After we pick a company: official transcripts</h2>
+<p>Pull the official transcripts for <b>our company's last 4 calls</b> from Bloomberg / FactSet / Capital IQ and add a source tag so they replace the free-site copies. The old copy is kept as <code>..._thirdparty.md</code>.</p>
+<p>Example: <code>BMY_transcript_2026Q2_bloomberg.pdf</code>. Source tags: <code>bloomberg</code>, <code>factset</code>, <code>capiq</code>, <code>refinitiv</code>.</p>
+<p class="mute">Already official, no action needed: Merck, Pfizer, J&amp;J (all quarters); Sanofi Q1/Q2 2026; GSK Q2 2025, Q3 2025, Q1 2026.</p>
+
+<h2>Naming rule</h2>
+<p><code>TICKER_kind_period[_source].pdf</code>. <b>kind</b> is one of transcript, slides, presentation, report or press. <b>period</b> looks like 2026Q2, or a short label such as 2026-01-jpm. Tickers: MRK BMY PFE LLY NVO ABBV JNJ AZN AMGN GILD NVS GSK SNY TAK REGN ALNY BBIO ROCHE BOEHRINGER.</p>
+</main></body></html>
