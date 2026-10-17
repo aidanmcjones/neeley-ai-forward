@@ -286,3 +286,48 @@ def dose_counts(sentence, assumptions):
                "doses per year implied by the cited label frequency (unit conversion by code: once daily = 365, "
                "weekly = 52, every N weeks = 52 / N)")
     return assumptions
+
+
+# ------------------------------------------------------------------ label indication counts (count operands)
+INDICATION_MAP = "epi/indication_map.csv"
+
+
+def indication_rows(drug):
+    """[(row_key, sub_indication, Citation)] for one drug's epi/indication_map.csv rows, each cited on its DailyMed
+    label line (agent.needle.cite.facts.apply_locator: label-section rows resolve to the label page). One entry per
+    distinct sub_indication."""
+    import json as _json
+    try:
+        rows = data.db().execute('SELECT row_key, row_json FROM facts WHERE "table" = ? AND lower(drug) = ?',
+                                 (INDICATION_MAP, str(drug).lower())).fetchall()
+    except Exception:
+        return []
+    out, seen = [], set()
+    for rk, rj in rows:
+        if rk in seen:
+            continue
+        seen.add(rk)
+        try:
+            sub = _json.loads(rj or "{}").get("sub_indication") or ""
+        except ValueError:
+            sub = ""
+        c = data.fact_row_citation(INDICATION_MAP, "indication", None, row_key=rk)
+        out.append((rk, sub, c))
+    uniq, keys = [], set()
+    for rk, sub, c in out:
+        k = re.sub(r"\W+", " ", sub.lower()).strip()
+        if k in keys:
+            continue
+        keys.add(k)
+        uniq.append((rk, sub, c))
+    return uniq
+
+
+def indication_count(drug):
+    """(n, {operand name: count operand}, [Citation]) for the number of indication rows of a drug, or None when the
+    drug has no rows. Every row is an operand (a row whose citation does not pass makes the derivation fail)."""
+    rows = indication_rows(drug)
+    if not rows:
+        return None
+    ops = {f"r{i}": {"value": 1, "citation": c, "count": True} for i, (_, _, c) in enumerate(rows)}
+    return len(rows), ops, [c for _, _, c in rows if c.verification.ok]

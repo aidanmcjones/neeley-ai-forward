@@ -80,6 +80,14 @@ def fact_citation(table, source_row, fld, value=None, license=""):
     return _fact_row_citation(table, r, source_row, fld, value, license)
 
 
+def clean_source_url(src):
+    """A facts.source as a link: the scraper writes some sources as "<url>, p. 9" or "<url>, p. p1" (review verify2:
+    the suffix was linked and returned 404). The page goes to the footnote location, never into the URL."""
+    import re as _re
+    s = str(src or "").strip()
+    return _re.sub(r",\s*(?:p\.|page)\s*p?\d+\s*$", "", s, flags=_re.I).strip()
+
+
 def _fact_row_citation(table, r, source_row, fld, value=None, license=""):
     from agent.needle.cite.facts import fact_citation_status, fact_status_grade
     reread = value is not None and _num_eq(r["value"], value)
@@ -91,7 +99,7 @@ def _fact_row_citation(table, r, source_row, fld, value=None, license=""):
     if value is not None and not reread:
         note += f"; cited value {value} differs from the row value {r['value']}"
     lic = license or ("wrds_licensed" if r["verify_status"] == "no_verified_copy" else "")
-    src = r["source"] or ""
+    src = clean_source_url(r["source"])
     return _located(r, Citation(canonical_id=table, page=None, quote=f"{r['row_key']} [{source_row}] {fld} = {r['value']}",
                     claim_type="number", value=str(r["value"]), unit=r["unit"] or "", doc_title=f"moat table {table}",
                     location=f"row {r['row_key']}", source_url=src if src.startswith("http") else "",
@@ -151,7 +159,7 @@ def fact_row_citation(table, fld, value, ticker=None, row_key=None, where=None, 
         note = f"facts row {r['row_key']} field {fld} re-read from row_json ({r['verify_status']}: {label})"
         if value is not None and not reread:
             note += f"; cited value {value} differs from the row value {rj[fld]}"
-        src = r["source"] or ""
+        src = clean_source_url(r["source"])
         return _located(r, Citation(canonical_id=table, page=None, quote=f"{r['row_key']} {fld} = {rj[fld]}",
                         claim_type="number", value=str(rj[fld]), unit=r["unit"] if r["field"] == fld else ("%" if fld.endswith("_pct") else ""),
                         ticker=ticker or "", doc_title=f"moat table {table}", location=f"row {r['row_key']}",

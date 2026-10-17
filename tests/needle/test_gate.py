@@ -270,3 +270,17 @@ def test_verify2_assumption_label_follows_the_printed_symbol(idx):
                        assumptions=dict(am, x={"value": "0.3", "label": "x"}, y={"value": "0.1", "label": "y"}), index=idx)
     lab = {(n["value"], n["start"]): n["label"] for n in r.numbers}
     assert lab[("0.2", 2)] == "effective tax rate t" and lab[("0.2", 26)].startswith("constant: M_MDP_AVOIDED")
+
+
+def test_count_operands_and_median(idx, good, full_year, bad):
+    two = G.derived_entry(2, "a + b", {"a": {"value": 1, "citation": good, "count": True},
+                                       "b": {"value": 1, "citation": full_year, "count": True}})
+    r = G.numeric_gate("lists 2 indications", [], derived={"n": two}, index=idx)
+    assert r.passed and r.numeric_check["derived"] == 1
+    dup = G.derived_entry(2, "a + b", {"a": {"value": 1, "citation": good, "count": True},
+                                       "b": {"value": 1, "citation": good, "count": True}})
+    assert not G.numeric_gate("lists 2 indications", [], derived={"n": dup}, index=idx).passed
+    unv = G.derived_entry(1, "a", {"a": {"value": 1, "citation": bad, "count": True}})
+    assert not G.numeric_gate("lists 1 indication", [], derived={"n": unv}, index=idx).passed
+    med = G.derived_entry(1.5, "median(x, y)", {"x": {"derived": "n"}, "y": {"value": 1, "citation": good, "count": True}})
+    assert G.numeric_gate("rival median 1.5", [], derived={"n": two, "m": med}, index=idx).passed

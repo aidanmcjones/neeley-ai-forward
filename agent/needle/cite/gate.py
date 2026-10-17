@@ -49,7 +49,9 @@ Derived entry shape (keys are free labels; the number is matched by value):
                        "operands": {"a": cit_a, "b": {"value": 8701, "citation": cit_b},
                                     "c": {"value": 0.65, "assumption": "Pfizer MFN base rate"},
                                     "d": {"derived": "rev_ttm"}}}}
-  An operand given as a bare Citation uses its value / unit. `value` is in the units the text prints (pts, %,
+  An operand given as a bare Citation uses its value / unit. A count operand {"value": 1, "citation": c, "count": True}
+  stands for one cited item (an indication row on its label line, one warning heading): it is 1 when c passes, so
+  "2 indications" derives as "a + b" over two cited rows and a rival median as "median(x, y)" over such counts. `value` is in the units the text prints (pts, %,
   USD millions); `expr` may use + - * / ** parentheses and min, max, abs, round. derived_entry() builds one.
 Assumptions shape: {"0.65%": "Pfizer MFN base rate (weights constant)"} or {"k": {"value": 0.3, "label": "..."}}.
 """
@@ -235,11 +237,17 @@ def _supported_by(tok, cits, pages, use_page_text, claim_ctx=None):
 # ------------------------------------------------------------------ derived
 _OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul, ast.Div: operator.truediv,
         ast.Pow: operator.pow, ast.USub: operator.neg, ast.UAdd: operator.pos}
-_FUNCS = {"min": min, "max": max, "abs": abs, "round": round}
+def _median(*xs):
+    v = sorted(xs)
+    n = len(v)
+    return v[n // 2] if n % 2 else (v[n // 2 - 1] + v[n // 2]) / 2
+
+
+_FUNCS = {"min": min, "max": max, "abs": abs, "round": round, "median": _median}
 
 
 def safe_eval(expr, env):
-    """Arithmetic only: numbers, names from env, + - * / **, unary +/-, min/max/abs/round."""
+    """Arithmetic only: numbers, names from env, + - * / **, unary +/-, min/max/abs/round/median."""
     def ev(n):
         if isinstance(n, ast.Expression):
             return ev(n.body)
@@ -300,6 +308,14 @@ def _operand(name, o, derived, assumptions, pages, use_page_text, depth):
     c = as_citation(o.get("citation"))
     if c is None:
         return _num(o.get("value")), [], f"operand {name} has no citation, assumption or derivation"
+    if o.get("count"):
+        # a counted row: the operand is 1 for one cited item (an indication row on its label line, one warning
+        # heading); its citation must pass, the number 1 itself is the count, not a value on the page
+        if _num(o.get("value", 1)) != 1.0:
+            return None, [c.cite_id], f"operand {name}: a count operand is 1 per cited item"
+        if _status(c) not in PASSING:
+            return 1.0, [c.cite_id], f"operand {name}: counted item's citation did not pass verification ({_status(c) or 'none'})"
+        return 1.0, [c.cite_id], ""
     val = _num(o.get("value") if o.get("value") not in (None, "") else c.value)
     if _status(c) not in PASSING:
         return val, [c.cite_id], f"operand {name}: its citation did not pass verification ({_status(c) or 'none'})"
@@ -319,12 +335,16 @@ def _check_derived(e, derived, assumptions, pages, use_page_text, depth=0):
         return None, [], "derived entries nest too deep"
     if not e.get("expr"):
         return None, [], "derived entry has no expression to re-compute"
-    env, refs = {}, []
+    env, refs, counted = {}, [], set()
     for name, o in (e.get("operands") or {}).items():
         val, r, prob = _operand(name, o, derived, assumptions, pages, use_page_text, depth)
         refs += r
         if prob:
             return None, refs, prob
+        if isinstance(o, dict) and o.get("count"):
+            if r and r[0] in counted:
+                return None, refs, f"operand {name}: the same cited item is counted twice"
+            counted.update(r[:1])
         env[name] = val
     return safe_eval(e["expr"], env), refs, ""
 
@@ -588,3 +608,77 @@ def gate_document(sections, index=None):
     doc = merge_checks(checks)
     return {"passed": check_ok(doc), "numeric_check": doc, "items": items,
             "failed": [x["where"] for x in items if not x["passed"]]}
+
+
+# ------------------------------------------------------------------ dates and years in fact cells (review verify2 3)
+_DATE_TOKENS = __import__("re").compile(
+    r"\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}/\d{1,2}/\d{4}\b|\b(?:19|20)\d{2}\b|\b\d{1,2}y\b")
+_FULL_DATES = __import__("re").compile(r"\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}/\d{1,2}/\d{4}\b")
+
+
+def _date_forms(raw):
+    """Spellings of one date token that a quote may carry: '2028-05-18' also as '5/18/2028', 'May 18, 2028';
+    '8/27/2029' also as '2029-08-27'; '12y' also as '12 years', '12-year'."""
+    import re
+    from datetime import date
+    out = {raw}
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", raw) or None
+    n = re.fullmatch(r"(\d{1,2})/(\d{1,2})/(\d{4})", raw)
+    d = None
+    try:
+        if m:
+            d = date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+        elif n:
+            d = date(int(n.group(3)), int(n.group(1)), int(n.group(2)))
+    except ValueError:
+        d = None
+    if d is not None:
+        out |= {d.isoformat(), f"{d.month}/{d.day}/{d.year}", f"{d.month:02d}/{d.day:02d}/{d.year}",
+                d.strftime("%B ") + f"{d.day}, {d.year}", d.strftime("%b ") + f"{d.day}, {d.year}"}
+    y = re.fullmatch(r"(\d{1,2})y", raw)
+    if y:
+        out |= {f"{y.group(1)} years", f"{y.group(1)}-year", f"{y.group(1)} year"}
+    return out
+
+
+def date_check(where, text, cites, assumptions=None, years=True):
+    """Dates, bare years and 'Ny' durations in a fact cell (timeline, pricing): numbers.tokenize excludes them from
+    numeric_gate, but in a table cell they are the fact. Each must appear verbatim (or in an equivalent spelling,
+    _date_forms) in the quote or value of a passing citation, or equal the 'value' of a labelled assumption entry
+    (kind 'date'). years=False checks only full dates (a bare year in a pricing cell is a period label, "2026:").
+    Returns {"total", "verified", "assumed", "unsupported": [{value, where, reason}]}."""
+    import re
+    out = {"total": 0, "verified": 0, "assumed": 0, "unsupported": []}
+    passing = [c for c in citations_of(cites) if _status(c) in PASSING]
+    for m in (_DATE_TOKENS if years else _FULL_DATES).finditer(text or ""):
+        raw = m.group()
+        out["total"] += 1
+        forms = _date_forms(raw)
+        hay = [" ".join(str(x or "").split()) for c in passing for x in (c.quote, c.value)]
+        if any(re.search(r"(?<![\w/-])" + re.escape(f) + r"(?![\w/-])", h, re.I) for f in forms for h in hay):
+            out["verified"] += 1
+            continue
+        lab = next((str(a.get("label") or "").strip() for a in (assumptions or {}).values()
+                    if isinstance(a, dict) and a.get("kind") == "date" and str(a.get("value")) in forms
+                    and str(a.get("label") or "").strip()), None)
+        if lab:
+            out["assumed"] += 1
+            continue
+        out["unsupported"].append({"value": raw, "where": f"{where}@{m.start()}",
+                                   "reason": "date or year in a fact cell with no passing citation or labelled "
+                                             "table value carrying it"})
+    return out
+
+
+def merge_date_check(chk, dc):
+    """numeric_check with a date_check folded in (counts added; failed when a date is unsupported)."""
+    chk = dict(chk)
+    for k in ("total", "verified", "assumed"):
+        chk[k] = chk.get(k, 0) + dc[k]
+    chk["checked"] = chk.get("checked", 0) + dc["total"]
+    chk["unsupported"] = list(chk.get("unsupported", [])) + dc["unsupported"]
+    if chk["unsupported"]:
+        chk["status"] = "failed"
+    elif chk.get("total"):
+        chk["status"] = "passed"
+    return chk

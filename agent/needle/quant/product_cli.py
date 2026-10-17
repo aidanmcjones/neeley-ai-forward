@@ -98,11 +98,14 @@ def build(ticker, product, data_root=None, index=None, public=False):
     L += ["", "## Empty cells", ""] + ([f"- {r} / {n}: {line('empty', f'empty/{r}/{n}', why)}" for r, n, why in emp]
                                        or ["- none"])
     unc = cmp_.uncited()
+    wh = cmp_.withheld()
     tab = cmp_.table_only()
     L += ["", "## Cells with values but no verified page citation", "",
-          "Withheld (a number in the cell is not verified, derived or labelled):", ""]
+          "Withheld (a number or date in the cell is not verified, derived or labelled):", ""]
     L += [f"- {r} / {n}: " + "; ".join(f"{u['value']} ({u['reason']})" for u in
-                                         P.cell_gate(cmp_, r, n).numeric_check["unsupported"][:4]) for r, n in unc] or ["- none"]
+                                         P.cell_gate(cmp_, r, n).numeric_check["unsupported"][:4]) for r, n in wh] or ["- none"]
+    L += ["", "Shown with no citation at all (every number in them is a labelled table value or constant):", ""]
+    L += [f"- {r} / {n}" for r, n in unc if (r, n) not in wh] or ["- none"]
     L += ["", "Shown, with numbers labelled as unverified table values (file and key in the label and the JSON refs):", ""]
     L += [f"- {r} / {n}" for r, n in tab] or ["- none"]
     unq = cmp_.context.get("unquantified", [])

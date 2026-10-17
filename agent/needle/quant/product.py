@@ -241,16 +241,23 @@ class ProductComparison:
     def cell(self, row, name):
         return self.rows[row][name]
 
+    def withheld(self):
+        """Non-empty cells whose numbers the numeric gate does not pass (review C5, D9): every number (and, in a
+        timeline or pricing cell, every date) must be verified by one of its citations, derived, or a labelled
+        assumption. These cells are not printed."""
+        return [(r, n) for r, d in self.rows.items() for n, c in d.items()
+                if not c.empty and not cell_gate(self, r, n).passed]
+
     def uncited(self):
-        """Non-empty cells whose numbers the numeric gate does not pass (review C5, D9): every number in the cell must
-        be verified by one of its citations (page or verified facts row), derived, or a labelled assumption; a
-        cell with citations that do not carry its numbers is uncited."""
+        """Non-empty cells with no passing citation at all, plus the withheld cells (review verify2 3: a cell whose
+        numbers are all labelled table values or that has no numbers is still uncited when nothing cites it)."""
         out = []
         for r, d in self.rows.items():
             for n, c in d.items():
                 if c.empty:
                     continue
-                if not cell_gate(self, r, n).passed:
+                g = cell_gate(self, r, n)
+                if not g.passed or not g.citations:
                     out.append((r, n))
         return out
 
@@ -312,6 +319,20 @@ def _clip_chars(q, n=300):
     return cut
 
 
+def _warning_cite(idx, doc, sec5, title):
+    """Citation for one 5.x warning: its heading, else (a heading the index stored as an unclassified section) the
+    first sentence of the text under that heading in section 5."""
+    c = cite_quote(idx, doc, title.strip())
+    if _ok(c):
+        return c
+    m = re.search(r"^###\s*" + re.escape(title.strip()) + r"\s*\n+(.+)", sec5, re.M)
+    if m:
+        para = re.sub(r"\s+", " ", m.group(1)).strip()
+        sent = re.split(r"(?<=[.;])\s", para)[0]
+        return cite_quote(idx, doc, sent[:200])
+    return c
+
+
 def cite_quote(idx, doc, quote, claim_type="quote", value=None, unit="", page=None, hint=None):
     """Locate `quote` in `doc`, build a Citation and verify it. Returns the Citation or None when the doc or text is absent."""
     if doc not in idx:
@@ -334,7 +355,7 @@ def _ok(c):
 
 def cell_gate(cmp_, row, name):
     """GateResult for one table cell: its passing citations plus the facts-row citations and labels of product_gate."""
-    from agent.needle.cite.gate import numeric_gate
+    from agent.needle.cite.gate import date_check, merge_date_check, numeric_gate
     from .product_gate import cell_maps
     key = f"_gate|{row}|{name}"
     if key in cmp_.context:
@@ -344,6 +365,11 @@ def cell_gate(cmp_, row, name):
     xc, dm, am = cell_maps(cmp_, row, ent, cell)
     cites = [c for c in list(cell.citations) + xc if c.verification.ok]
     res = numeric_gate([(f"{row}/{name}", cell.value or "")], cites, dm, am)
+    # review verify2 3: dates, years and "12y" in a cell are the fact; numbers.tokenize excludes them, so they are
+    # checked here against the cell's passing citations or a labelled table value (gate.date_check)
+    dc = date_check(f"{row}/{name}", cell.value or "", cites, am, years=row == "timeline")
+    if dc["total"]:
+        res.numeric_check = merge_date_check(res.numeric_check, dc)
     res.citations, res.derived, res.assumptions = cites, dm, am
     cmp_.context[key] = res
     return res
@@ -440,8 +466,11 @@ def _label_cells(idx, data, ent):
         parts.append(f"{ci['value']} contraindication(s)")
         det["contraindications"] = ci["value"]
         c = cite_quote(idx, doc, ev["contraindications"].quote) if ev.get("contraindications") else None
+        if not _ok(c) and ci["value"] == 0:
+            c = cite_quote(idx, doc, "4 CONTRAINDICATIONS None.")       # section 4 reads "None."
         if _ok(c):
             cites.append(c)
+            det["contra_cite_id"] = c.cite_id
     if rems["value"] is not None:
         parts.append("REMS: yes" if rems["value"] else "REMS: none found in sections 1-5")
         det["rems"] = rems["value"]
@@ -454,6 +483,11 @@ def _label_cells(idx, data, ent):
         if titles:
             det[key] = titles
             parts.append(f"{len(titles)} warnings and precautions")
+            # each heading cited on its label page: the count derives from these cited items (review verify2 3)
+            wc = [_warning_cite(idx, doc, secs.get(5, ""), t) for t in titles]
+            if all(_ok(c) for c in wc):
+                cites += [c for c in wc if c.cite_id not in {x.cite_id for x in cites}]
+                det["warning_cite_ids"] = [c.cite_id for c in wc]
     out["safety"] = Cell("; ".join(parts) or None, det, cites, [], "" if parts else "label sections 4-5 not parsed")
 
     # dosing

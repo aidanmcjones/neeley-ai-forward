@@ -161,6 +161,13 @@ def match_line(text, row_json):
     return (best, n) if n >= MIN_SHARED_TERMS else (None, n)
 
 
+def _row_terms(row_json):
+    out = set()
+    for k in MATCH_FIELDS:
+        out |= _terms((row_json or {}).get(k))
+    return out
+
+
 def label_page(row, index):
     """(doc_id, page) for a label-section source_row (see the module notes), or None."""
     try:
@@ -203,6 +210,13 @@ def _page_citation(base, doc_id, page, row, row_json, index, how):
         ln, _n = match_line(got[2], row_json)
         if ln:
             cands.append((ln, "quote", None, ""))
+        elif how.startswith("source_row label section") and got[1] and _terms(got[1]) & _row_terms(row_json):
+            # the row names this subsection ("1.1 Melanoma"): the first line under that heading that names the row's
+            # indication is the verbatim evidence ("KEYTRUDA is indicated for ... melanoma.")
+            want = _row_terms(row_json)
+            ln = next((x for x in _lines(got[2]) if want & _terms(x)), None)
+            if ln:
+                cands.append((ln, "quote", None, ""))
     for q, ct, val, unit in cands:
         try:
             c = verify(Citation(canonical_id=doc_id, page=page, quote=q, claim_type=ct or "quote", value=val,
