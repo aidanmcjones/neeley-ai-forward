@@ -5,6 +5,7 @@ Run:  streamlit run app/needle_app.py
 
 import html
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -196,8 +197,10 @@ def load_findings(ticker):
 
 
 league = load_league()
-tickers = [r["ticker"] for r in league] or sorted(p.name for p in OUT.glob("*") if (p / "findings_v3.jsonl").exists()
-                                                  or (p / "findings.jsonl").exists())
+# the default company is no longer the league leader: NEEDLE_TICKER if set, else the first ticker alphabetically
+tickers = sorted({r["ticker"] for r in league}) or sorted(p.name for p in OUT.glob("*") if (p / "findings_v3.jsonl").exists()
+                                                          or (p / "findings.jsonl").exists())
+_default = os.environ.get("NEEDLE_TICKER", "").upper()
 total_verified = sum(r.get("n_verified", 0) for r in league)
 total_rejected = sum(r.get("n_rejected", 0) for r in league)
 
@@ -221,15 +224,17 @@ if not tickers:
     note("No engine output found in out/. Run the NEEDLE pipeline to produce out/league.json.")
     st.stop()
 
-selected = st.selectbox("Company (drives the Findings, Fine print and AI caught tabs)", tickers, key="company")
+selected = st.selectbox("Company (drives the Findings, Fine print and AI caught tabs)", tickers, key="company",
+                        index=tickers.index(_default) if _default in tickers else 0)
 
 tab_league, tab_find, tab_labels, tab_ai, tab_proof = st.tabs(
-    ["League table", "Findings", "Product fine print", "AI caught", "Proof"]
+    ["Internal triage", "Findings", "Product fine print", "AI caught", "Proof"]
 )
 
 # ----------------------------------------------------------------- tab 1
 with tab_league:
-    st.subheader("Which companies hide the most in their filings?")
+    st.subheader("Internal triage")
+    st.caption("Internal triage only: the league score orders candidates for review and is not the pitch or the company pick.")
     if not league:
         note("out/league.json is missing.")
     else:

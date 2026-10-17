@@ -30,25 +30,17 @@ So the model answers four quantitative questions on any pharma ticker:
 
 Model 1 (**FIND**) multiplies those four. Model 2 (**DECIDE**) values candidate CEO moves on one 24-month cash scale whose inputs are FIND findings. A citation contract (Section 6) makes every number and quote in either model's output carry a footnote to its source page, and withholds any claim whose citation does not verify.
 
-### The two equations
+The internal FIND score S orders candidate findings for review only; the pitch ranks findings by cited dollar impact (base-case |ΔEPS|, ties by ΔOI) and names the Sharpest Needle by one plain-English rule (Section 12).
+
+### The pitched quantities
 
 ```
-FIND    S_f = M_f · O_f · E_f · π_k(f)
-
-        M_f = |ΔEPS_f| · (1 + r)^(-t_f) / σ_EPS
-        O_f = D_f · τ_f
-        D_f = (1 - z_f)(1 - h_f)(1 - a_f)(1 - c_f)(1 - s_f)      discussion term: has anyone priced it?
-        τ_f = 2^(-age_f / H)                                     decay term: H = 3 months base, 6 as sensitivity
-        E_f = min over key claims j of [ 1 - Π_{i in cites(j)} (1 - g_i) ]
-        π_k = excess probability that signal family k is followed by its adverse outcome (Section 4.6)
-
-        Sharpest Needle = argmax_f S_f  subject to  D_f ≥ 0.5, E_f ≥ 0.90, confidence ≠ LOW, z_f = 0
-        League          L_c = ( Σ_{top 5} S_f ) · min(1, N_eff,c / 3)
-
+Impact  ΔEPS_f = ΔRev_f · CM · (1 - t) / D      per finding, bull / base / bear (Section 4.3); ranked on base-case |ΔEPS|
+Needle  the biggest-impact finding that analysts asked about least (Section 4.8)
 DECIDE  EV_m = Σ_s p_s [ Σ_{τ=1..24} ( P_alive(τ)·CF^in_{m,s,τ} - P_reach(τ)·CF^out_{m,τ} ) / (1 + r_mo)^τ  +  TV_{m,s,24} / (1 + r_mo)^24 ]
 ```
 
-In league_v2 (ca12339) O was one product with H = 6 and the needle floor sat on the whole O (O ≥ 0.5); league_v3 splits it as above (`obscurity.discussion`).
+The FIND score S, its factors and the league score L are in Appendix A (internal ranking, not pitched).
 
 ---
 
@@ -123,9 +115,7 @@ Code: `agent/needle/quant/` (`find.py`, `impact.py`, `obscurity.py`, `evidence.p
 
 ### 4.1 Equation and what counts as a finding
 
-```
-S_f = M_f · O_f · E_f · π_k(f)            (find.score; S = 0 if any factor ≤ 0)
-```
+The internal score S_f = M_f · O_f · E_f · π_k(f) (`find.score`) orders candidates for review (Appendix A); the pitch ranks by dollar impact (Section 12).
 
 A finding f is one candidate row: a sentence, at least one page citation, a signal family k(f), an impact channel and a direction. Candidates come from the five existing detectors plus two generators the old engine lacked: IRA (one row per CMS-selected shortlist drug with IPAY 2027 or 2028, `find.IRA_DRUGS`) and MFN (one row per company with a Medicaid MFN term in `policy_exposure.csv`).
 
@@ -326,60 +316,9 @@ The grade g comes from the citation package's verification status (Section 6.3):
 
 Table and XBRL values re-read by code at run time count as `exact` (XBRL values are cited as companyfacts concept plus frame; licensed WRDS rows carry `license = wrds_licensed`). `G_LLM` (0.85, FinanceBench oracle-page answer accuracy, Islam et al. 2023) is defined for LLM-derived arithmetic; no run path uses it today.
 
-### 4.6 Prior π_k: how often the signal family turns into its adverse outcome
+### 4.6 Prior π_k
 
-π_k is the **excess probability** that the adverse outcome assumed by the finding's channel occurs, over the base rate without the signal (`find.FAM`, constants in `weights.py`). Four routes, in this order:
-
-1. **Type C, statute-dated or booked** (IRA selection with a CMS effective date, company-stated or statutory LOE date, booked footnote amount): π = 1 (`PI_CONTRACTUAL`). The event is not a forecast; uncertainty is in the size (bull / base / bear ΔEPS). Label rows, trial stops and booked impairments keep the type C family name in code but have M = 0, so they never score. MFN is not type C (route 4).
-2. **Own backtest** (five accounting flags, 1,410 firm-quarters, 43 firms, 2012-2024, point-in-time), applied **only when the row meets the flag's backtest trigger** (`find.backtest_fired`): quarterly rows re-evaluate `backtest.signals_at` on the XBRL panel at the row's quarter; annual rows compare the row's own value with `ANNUAL_TRIGGER` (inventory gap 0.10, receivables gap 0.08, DIO growth 0.15, DSO growth 0.10; gross-margin drop 2 points). Peer-level DIO and DSO outliers never fire.
-
-```
-π_k = (h_fired - h_not) · (1 - 0.26)            (weights.backtest_pi; DELTA_OOS = 0.26)
-```
-
-   on the `margin_drop` outcome, haircut by McLean-Pontiff's 26% (D7). For `gross_margin_drop` the smaller of the margin and hard-event excess rates (gate 2 found margin-to-margin is partly persistence of one series).
-
-3. **Literature return evidence, converted through the anchor** (D6):
-
-```
-π_k = π_anchor · [ α_k (1 - d_k) ] / [ α_TZ (1 - d_TZ) ]        (weights.anchor_pi)
-π_anchor = π_inventory = 0.0466,  α_TZ = 11.39%,  d_k = d_TZ = 0.58 (cancels)
-```
-
-4. **Directional or no evidence.** Published direction but no usable magnitude: π_min = 0.0055 (`PI_MIN`). No published evidence: π_none = 0.0028 (`PI_NONE`, π_min / 2 rounded up, the forensic note's tier halving).
-
-**π tiers for display.** π is uncertain to about a factor of two (horizons and sidedness differ across the converted studies, review A4), so the pitch shows the tier, not four decimals: **Scheduled** (1.0); **Tested flag** (0.03 to 0.09, backtest); **Published return evidence** (0.006 to 0.05); **Direction only** (0.0055); **No evidence** (0.0028).
-
-| Family k | Block | Engine kinds | Route | Input | π_k | Diagnostic | Built |
-|---|---|---|---|---|---|---|---|
-| Inventory outpaces revenue | A | `inventory_outpaces_revenue`, `inv_gap_peer_outlier` | backtest, if fired | margin_drop 20.6% vs 14.3%, lift 1.44, CI [1.08, 1.90] | 0.0466 | yes | yes |
-| Days inventory | A | `dio_rising`, `dio_peer_outlier` | backtest, if fired | 21.7% vs 17.4%, lift 1.25, CI [0.88, 1.71] | 0.0318 | no | yes |
-| Receivables outpace revenue | A | `receivables_outpace_revenue`, `rec_gap_peer_outlier` | backtest, if fired | 22.8% vs 14.3%, lift 1.60, CI [1.00, 2.33] | 0.0629 | no | yes |
-| Days sales outstanding | A | `dso_rising`, `dso_peer_outlier` | backtest, if fired | 25.6% vs 14.1%, lift 1.81, CI [1.17, 2.60] | 0.0851 | yes | yes |
-| Gross margin drop | A | `gross_margin_drop` | backtest, min of outcomes | margin 28.5% vs 16.3%; hard 28.1% vs 22.4%; min excess 0.057 | 0.0422 | no | yes |
-| Backtest family, flag not fired | A | as above | not quantified (v2: π_min with the anchor) | review A1, R2 | (0.0055 tier) | no | yes |
-| Misstatement score (Beneish M, Dechow F) | A | none | anchor | Beneish-Lee-Nichols "just below 1% a month", taken as 12%/yr (inference) | 0.0491 | yes | **no** |
-| Risk-factor change | T | `risk_*` | not quantified unless mapped to a channel; tier shown | Lazy Prices Table II (whole document) VW Q5-Q1 5-factor alpha 0.46%/month (t = 3.44) x 12 = 5.52% | 0.0226 | yes | yes |
-| Litigation-language change | T | drift row whose **only** topic is litigation | not quantified; tier shown | Table II, high-litigiousness subsample: 71 bps/month (t = 3.29) x 12 = 8.52% | 0.0349 | yes | yes |
-| MD&A change | T | `mdna_*` | not quantified; tier shown; undirected MD&A rows never a needle (guard 8) | same Table II alpha as risk factors (v2 used the section-level Table VII, 0.0081) | 0.0226 | no | yes |
-| Opportunistic insider sales | G | none | anchor | Cohen-Malloy-Pomorski 82 bps/month x 6 = 4.92% | 0.0201 | yes | **no** |
-| Negative 8-K item | T | none | anchor | Lerman-Livnat lower end 1.5% | 0.0061 | no | **no** |
-| Zero- or few-question call | C | none | anchor | Chen-Hollander-Law (WP) 1.34% over five days | 0.0055 | no | **no** |
-| Non-answer / deflection | C | `qa_deflection` | not quantified (directional tier) | Gow-Larcker-Zakolyukina 2021 (11% base rate) | 0.0055 | no | yes |
-| **MFN agreement** | P | `mfn_medicaid` (generator) | directional (v2: type C, π = 1) | deal terms confidential (review R3, D2) | 0.0055 | no | yes |
-| No evidence: repeated deflection, topic surge, ETR or R&D shift or level outlier, FAERS rise, demand divergence, distributor commentary | C, A, X | `qa_repeated_deflection`, `call_topic_surge`, `tax_rate_shift`, `etr_peer_outlier`, `rnd_shift`, `rnd_pct_peer_outlier`, `faers_serious_rising`, `demand_divergence`, `distributor_commentary` | none; not quantified | no study found | 0.0028 | no | yes |
-| IRA negotiation | P | `ira_selected` (generator); `ira_exposed` rows for drugs not in `IRA_DRUGS` are already effective (ΔEPS 0) | type C | CMS effective date | 1.0 | yes | yes |
-| Loss of exclusivity | P | `exclusivity_earlier` | type C | company-stated or statutory date | 1.0 | yes | yes |
-| Label fact | L | `label_*`, `boxed_warning_*`, `dosing_*`, `spend_per_claim_gap` | M = 0, product-table context | review B6 | (1.0, unused) | n/a | yes |
-| Booked footnote item, business-reason trial stop | F | `impairment`, `trial_terminated` with business reason | M = 0 | already in reported numbers / no in-window revenue | (1.0, unused) | n/a | partial (no footnote extractor) |
-| Reasonably-possible litigation | F | none | type C, half | ASC 450 midpoint (inference) | 0.5 | no | **no** |
-| Favourable row with no scenario | A | `gross_margin_peer_outlier` above the peer median; any statistical row with a good sign | none | | 0 | n/a | yes |
-
-Notes for the quant reviewer:
-- **Families with no detector** are listed in `find.MISSING_DETECTORS` (misstatement score, insider sales, negative 8-K items, zero-question calls, GTN widening, footnote extractor) and every row carries `has_detector`. The design covers more than the build (review B3).
-- **One text table (review A5).** All text families use one Lazy Prices table, Table II (whole-document similarity; `TEXT_ALPHA_TABLE`), so MD&A moved from 0.0081 to 0.0226, and the litigation π applies only when litigation is the row's only topic. Applying a whole-document alpha to a section change is the stated approximation. These rows are not quantified, so the choice changes only the tier label shown, not any S.
-- The backtest tests only five flags with the engine's own thresholds, between firms. If the raw panel is re-fetched, π for these five rows and π_anchor update mechanically (Section 8.2).
-- π is small for statistical families and 1 for scheduled ones. That is correct: a scheduled event and a 3-in-100 excess chance are different things. Scheduled items are then disciplined by O (they are usually public) and by the starter-thread rule.
+Moved to Appendix A.2 (internal ranking, not pitched). The π tier word is still shown next to a finding as context.
 
 ### 4.7 Confidence (high, medium, low): deterministic, ICD 203 style
 
@@ -403,44 +342,13 @@ LOW     otherwise; also any row the courtroom trial rules "fails"
 
 ### 4.8 Sharpest Needle
 
-```
-Needle = argmax_f S_f   subject to   D_f ≥ 0.5 (NEEDLE_O),  E_f ≥ 0.90 (NEEDLE_E),  confidence ≠ LOW,  z_f = 0,  adverse or quantified,  S_f > 0
-```
+**Rule (pitched):** the biggest-impact finding that analysts asked about least. Among gated, quantified findings (base-case |ΔEPS| > 0), keep those with the lowest analyst-share-asked, the obscurity discussion term a of Section 4.4 (share of the last up-to-10 calls in which an analyst asked about the topic or product); among those, take the largest base-case |ΔEPS|. A row a guard marks as never-the-needle (MFN placeholder, undirected MD&A drift; Section 4.12) is skipped. Code: `findings_table.pick_needle`; output `out/<T>/findings_table.md` and `.json` (`needle_id`, `needle_rule`, `rank_basis: "impact"`).
 
-- D ≥ 0.5: "more likely unpriced than priced" by the discussion channels, 0.5 being the midpoint of ICD 203's "roughly even chance" band (45-55%). The floor is on D, not on O. In v2 it was on O = D · τ, so with a 6-month half-life every February 10-K item decayed below the floor and "least discussed" meant "recent" (review R1). Because decay is outside the floor, the strict-needle count does not depend on H.
-- E ≥ 0.90: quoted (exact, substring or fuzzy) evidence only; a number found on its page without the quote verifying (0.745) cannot headline.
-- **Never a needle** (`needle_blocked`): MFN placeholder rows (4.3 c) and undirected MD&A drift rows (guard 8, 4.12).
+The S-based needle with its D, E and confidence floors and fallbacks is still computed for internal triage (Appendix A.3).
 
-**Fallbacks, as coded (`league.sharpest_needle`), each labelled in the output:**
-1. **strict**: the rule above.
-2. **provisional**: if no row passes, the highest S among rows with z = 0, S > 0, not needle-blocked, confidence not LOW and D at or above the company's median D.
-3. **floor relaxed**: if that pool is empty, the highest S among the same rows (no confidence condition) with D at or above the company's top-quartile D.
-4. **none**: "no finding clears the obscurity floor".
+### 4.9 League score
 
-League_v3 needle status (identical at H = 3 and H = 6):
-
-| Status | Companies |
-|---|---|
-| strict | AMGN, AZN, MRK, NVO, ABBV (5 of 10) |
-| provisional | LLY |
-| floor relaxed | GILD, BMY, PFE |
-| none | JNJ (its only scored row is an MFN placeholder) |
-
-v2 also had 5 of 10 strict, but a different set (AMGN, JNJ, MRK, LLY, PFE). With c = 0.5 on anchor rows as well, NVO drops to floor relaxed (4 of 10). The app and deck print the status word next to every needle.
-
-### 4.9 League score: why this company beat the other nine
-
-```
-L_c = ( Σ_{f in top5(c)} S_f ) · min(1, N_eff,c / N*)        N* = 3 (N_STAR)        (league.league_score)
-N_eff,c = ( Σ_b S_b )² / Σ_b S_b²,   S_b = Σ_{f in top5, block b} S_f
-```
-
-Blocks b: A accounting, T text and disclosure, C calls, G governance and insiders, P policy and scheduled (IRA, MFN, LOE), L label and product, X outside data, F footnote items.
-
-- **What the term does on these data.** N_eff never reaches 3 (v2 maximum 2.19; v3 maximum 1.29), so min(1, ·) never binds and L = top-5 sum x N_eff / 3 for every company. It is a scaling by diversification, not a penalty with a threshold. N* is inert: ranks are identical for any N* at or above the largest N_eff (review A18).
-- **Why keep it.** It encodes one stated design choice: one dominant evidence block counts as one finding, so a company whose case rests on one block does not outrank one with several independent pieces. In v2 it decided #1 (AMGN on L, GILD on the raw sum). **In v3 it no longer does:** without it AMGN still leads (raw sum 0.2047 vs GILD 0.1532).
-- **Required output.** For each company: L, the raw top-5 sum, N_eff, blocks, the share of the sum from its largest finding, the top-5 table and the Sharpest Needle with its status, all in `league_v3.json` (`L`, `top5_sum`, `N_eff`, `blocks`, `largest_share`, `top`, `needle`, `needle_status`).
-- **Robustness table** (`out/league_v3_robustness.json`, printed in `league_v3.md`): the top five companies under eight variants: base; no N_eff term (raw sum); MFN at the v2 universal rate with π = 1; AMGN's receivables row at π_min with the anchor kept; that row treated as unfired (S = 0); H = 6; IRA on the draft formula; c = 0.5 on anchor rows too. The pick and the pitch's "why it beat the other nine" claim are made only from what survives (Section 10.5).
+Moved to Appendix A.4. league_v3 is internal triage only; the company choice is made by Parker's red-team read and a human read of the findings (docs/HANDOFF_quant.md).
 
 ### 4.10 Output row (one per finding, `findings_v2.jsonl`)
 
@@ -923,6 +831,8 @@ Peer line: Pfizer's Ibrance, the same class, took a 50% list cut at its January 
 
 ### 10.5 The league: v3, v2 for comparison, and the robustness table
 
+Internal triage only (Appendix A); not pitched and not the basis for the company pick.
+
 League v3 (`out/league_v3.json`, ee7846c) beside v2 (`out/league_v2.json`, ca12339). The v3 scale is lower for every company (H = 3, c = 0.5 when untestable, MFN at π_min, text and call rows not quantified), so compare ranks, not values, across versions.
 
 | v3 rank | Ticker | L v3 | Raw top-5 sum v3 | N_eff v3 | Top finding v3 (S) | Needle v3 | L v2 (rank) |
@@ -1130,23 +1040,12 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 
 ## 12. One-slide version
 
-```
-FIND    S = M · O · E · π        M = |ΔEPS| / σ_EPS (discounted)        O = D · 2^(-age/3mo),  D = Π (1 - known_i)
-DECIDE  EV = Σ_s p_s · rNPV_24m(move | s)      reported for every move: EV (in-window + TV), cash at risk, payback, spread, MCDA
-```
+The pitch shows four things. None of them prints the internal score S or the league.
 
-| S tier | Reads as |
-|---|---|
-| **High** | a scheduled or booked event, material against this company's usual EPS miss, quoted on two independent primary sources |
-| **Medium** | a tested accounting flag that fired, or a scheduled event the market already discusses |
-| **Low** | quantified but small, or heavily discussed |
-| **Not quantified** | real and cited, shown with its evidence tier, no dollar figure |
-
-1. **M, materiality:** the finding's EPS impact in dollars, divided by how much Wall Street usually misses this company's EPS by.
-2. **O, obscurity:** the chance nobody has priced it: not the case's starter thread, not on the press-release front page, not asked by analysts, not in consensus; fading with a 3-month half-life. The Sharpest Needle must clear the "not discussed" part on its own.
-3. **E, evidence:** the chance the documents say what we claim; every quote and number is re-checked on its cited page, and anything that fails is withheld.
-4. **π, track record:** how often this kind of signal turns into the bad outcome, shown as a tier (scheduled, tested flag, published evidence, direction only).
-5. **League and DECIDE:** a company's score is its top five findings, scaled down when one block of evidence carries it (L = sum x N_eff / 3); the pick survives a published robustness table. Every move is valued on one 24-month cash scale with numeric 6-to-12-month kill signals.
+1. **Findings table, ranked by dollar impact.** Every gated finding with its one-sentence claim, its impact math and its base-case |ΔEPS| (USD per share; ties by |ΔOI|, USD M), each number footnoted to its page or labelled derived or assumption. `out/<T>/findings_table.md` and `.json` (`rank_basis: "impact"`).
+2. **The Sharpest Needle, by one rule:** the biggest-impact finding that analysts asked about least (highest |ΔEPS| among the findings with the lowest analyst-share-asked; Section 4.8). Marked in the same table.
+3. **Product fine-print table.** The chosen product against its rivals, label by label, every cell cited (Section 4.11).
+4. **DECIDE comparison with kill signals.** Five numbers for the chosen move and the two rejected alternatives (EV with in-window PV and terminal value, cash at risk, payback, scenario spread, MCDA), the one-sentence selection rule, and the numeric 6-to-12-month kill signals (Section 5). A move with EV at or below zero is never recommended; the memo then says no candidate clears the hurdle and names the least-bad option.
 
 ---
 
@@ -1234,3 +1133,125 @@ Finding ids are from the adversarial review (synthesis.md). "Code" names the qua
 18. **B19, B20, B22.** Honest limits replaced by the review's limit sentences plus the open disagreements (spec; `docs/honest_limits.md`); facts count 69,553 total, 10,963 verified; the app reads `league_v3.json` first (1b38ead).
 18a. **Red team #19.** Nine guards and the `--nuggets` ingest, Section 4.12 (651ee1d).
 19. The reviewed draft's "Implementation notes" appendix is folded into the body and removed; its "Product fine print (appended)" section is now Section 4.11.
+
+---
+
+## Appendix A. How the internal ranking was generated (not pitched)
+
+The FIND score S, the prior π table, the S-based needle and the league score L order candidate findings and companies for internal review. They are still computed and written (`out/<T>/findings_v3.jsonl` field `S`, `out/league_v3.*`), and they are not pitched: the pitch ranks findings by cited dollar impact (Section 12).
+
+### A.1 FIND scoring equation and league (was Section 1, "The two equations")
+
+```
+FIND    S_f = M_f · O_f · E_f · π_k(f)
+
+        M_f = |ΔEPS_f| · (1 + r)^(-t_f) / σ_EPS
+        O_f = D_f · τ_f
+        D_f = (1 - z_f)(1 - h_f)(1 - a_f)(1 - c_f)(1 - s_f)      discussion term: has anyone priced it?
+        τ_f = 2^(-age_f / H)                                     decay term: H = 3 months base, 6 as sensitivity
+        E_f = min over key claims j of [ 1 - Π_{i in cites(j)} (1 - g_i) ]
+        π_k = excess probability that signal family k is followed by its adverse outcome (Section 4.6)
+
+        Sharpest Needle = argmax_f S_f  subject to  D_f ≥ 0.5, E_f ≥ 0.90, confidence ≠ LOW, z_f = 0
+        League          L_c = ( Σ_{top 5} S_f ) · min(1, N_eff,c / 3)
+
+DECIDE  EV_m = Σ_s p_s [ Σ_{τ=1..24} ( P_alive(τ)·CF^in_{m,s,τ} - P_reach(τ)·CF^out_{m,τ} ) / (1 + r_mo)^τ  +  TV_{m,s,24} / (1 + r_mo)^24 ]
+```
+
+In league_v2 (ca12339) O was one product with H = 6 and the needle floor sat on the whole O (O ≥ 0.5); league_v3 splits it as above (`obscurity.discussion`).
+
+### A.2 Prior π_k: how often the signal family turns into its adverse outcome (was Section 4.6)
+
+π_k is the **excess probability** that the adverse outcome assumed by the finding's channel occurs, over the base rate without the signal (`find.FAM`, constants in `weights.py`). Four routes, in this order:
+
+1. **Type C, statute-dated or booked** (IRA selection with a CMS effective date, company-stated or statutory LOE date, booked footnote amount): π = 1 (`PI_CONTRACTUAL`). The event is not a forecast; uncertainty is in the size (bull / base / bear ΔEPS). Label rows, trial stops and booked impairments keep the type C family name in code but have M = 0, so they never score. MFN is not type C (route 4).
+2. **Own backtest** (five accounting flags, 1,410 firm-quarters, 43 firms, 2012-2024, point-in-time), applied **only when the row meets the flag's backtest trigger** (`find.backtest_fired`): quarterly rows re-evaluate `backtest.signals_at` on the XBRL panel at the row's quarter; annual rows compare the row's own value with `ANNUAL_TRIGGER` (inventory gap 0.10, receivables gap 0.08, DIO growth 0.15, DSO growth 0.10; gross-margin drop 2 points). Peer-level DIO and DSO outliers never fire.
+
+```
+π_k = (h_fired - h_not) · (1 - 0.26)            (weights.backtest_pi; DELTA_OOS = 0.26)
+```
+
+   on the `margin_drop` outcome, haircut by McLean-Pontiff's 26% (D7). For `gross_margin_drop` the smaller of the margin and hard-event excess rates (gate 2 found margin-to-margin is partly persistence of one series).
+
+3. **Literature return evidence, converted through the anchor** (D6):
+
+```
+π_k = π_anchor · [ α_k (1 - d_k) ] / [ α_TZ (1 - d_TZ) ]        (weights.anchor_pi)
+π_anchor = π_inventory = 0.0466,  α_TZ = 11.39%,  d_k = d_TZ = 0.58 (cancels)
+```
+
+4. **Directional or no evidence.** Published direction but no usable magnitude: π_min = 0.0055 (`PI_MIN`). No published evidence: π_none = 0.0028 (`PI_NONE`, π_min / 2 rounded up, the forensic note's tier halving).
+
+**π tiers for display.** π is uncertain to about a factor of two (horizons and sidedness differ across the converted studies, review A4), so the pitch shows the tier, not four decimals: **Scheduled** (1.0); **Tested flag** (0.03 to 0.09, backtest); **Published return evidence** (0.006 to 0.05); **Direction only** (0.0055); **No evidence** (0.0028).
+
+| Family k | Block | Engine kinds | Route | Input | π_k | Diagnostic | Built |
+|---|---|---|---|---|---|---|---|
+| Inventory outpaces revenue | A | `inventory_outpaces_revenue`, `inv_gap_peer_outlier` | backtest, if fired | margin_drop 20.6% vs 14.3%, lift 1.44, CI [1.08, 1.90] | 0.0466 | yes | yes |
+| Days inventory | A | `dio_rising`, `dio_peer_outlier` | backtest, if fired | 21.7% vs 17.4%, lift 1.25, CI [0.88, 1.71] | 0.0318 | no | yes |
+| Receivables outpace revenue | A | `receivables_outpace_revenue`, `rec_gap_peer_outlier` | backtest, if fired | 22.8% vs 14.3%, lift 1.60, CI [1.00, 2.33] | 0.0629 | no | yes |
+| Days sales outstanding | A | `dso_rising`, `dso_peer_outlier` | backtest, if fired | 25.6% vs 14.1%, lift 1.81, CI [1.17, 2.60] | 0.0851 | yes | yes |
+| Gross margin drop | A | `gross_margin_drop` | backtest, min of outcomes | margin 28.5% vs 16.3%; hard 28.1% vs 22.4%; min excess 0.057 | 0.0422 | no | yes |
+| Backtest family, flag not fired | A | as above | not quantified (v2: π_min with the anchor) | review A1, R2 | (0.0055 tier) | no | yes |
+| Misstatement score (Beneish M, Dechow F) | A | none | anchor | Beneish-Lee-Nichols "just below 1% a month", taken as 12%/yr (inference) | 0.0491 | yes | **no** |
+| Risk-factor change | T | `risk_*` | not quantified unless mapped to a channel; tier shown | Lazy Prices Table II (whole document) VW Q5-Q1 5-factor alpha 0.46%/month (t = 3.44) x 12 = 5.52% | 0.0226 | yes | yes |
+| Litigation-language change | T | drift row whose **only** topic is litigation | not quantified; tier shown | Table II, high-litigiousness subsample: 71 bps/month (t = 3.29) x 12 = 8.52% | 0.0349 | yes | yes |
+| MD&A change | T | `mdna_*` | not quantified; tier shown; undirected MD&A rows never a needle (guard 8) | same Table II alpha as risk factors (v2 used the section-level Table VII, 0.0081) | 0.0226 | no | yes |
+| Opportunistic insider sales | G | none | anchor | Cohen-Malloy-Pomorski 82 bps/month x 6 = 4.92% | 0.0201 | yes | **no** |
+| Negative 8-K item | T | none | anchor | Lerman-Livnat lower end 1.5% | 0.0061 | no | **no** |
+| Zero- or few-question call | C | none | anchor | Chen-Hollander-Law (WP) 1.34% over five days | 0.0055 | no | **no** |
+| Non-answer / deflection | C | `qa_deflection` | not quantified (directional tier) | Gow-Larcker-Zakolyukina 2021 (11% base rate) | 0.0055 | no | yes |
+| **MFN agreement** | P | `mfn_medicaid` (generator) | directional (v2: type C, π = 1) | deal terms confidential (review R3, D2) | 0.0055 | no | yes |
+| No evidence: repeated deflection, topic surge, ETR or R&D shift or level outlier, FAERS rise, demand divergence, distributor commentary | C, A, X | `qa_repeated_deflection`, `call_topic_surge`, `tax_rate_shift`, `etr_peer_outlier`, `rnd_shift`, `rnd_pct_peer_outlier`, `faers_serious_rising`, `demand_divergence`, `distributor_commentary` | none; not quantified | no study found | 0.0028 | no | yes |
+| IRA negotiation | P | `ira_selected` (generator); `ira_exposed` rows for drugs not in `IRA_DRUGS` are already effective (ΔEPS 0) | type C | CMS effective date | 1.0 | yes | yes |
+| Loss of exclusivity | P | `exclusivity_earlier` | type C | company-stated or statutory date | 1.0 | yes | yes |
+| Label fact | L | `label_*`, `boxed_warning_*`, `dosing_*`, `spend_per_claim_gap` | M = 0, product-table context | review B6 | (1.0, unused) | n/a | yes |
+| Booked footnote item, business-reason trial stop | F | `impairment`, `trial_terminated` with business reason | M = 0 | already in reported numbers / no in-window revenue | (1.0, unused) | n/a | partial (no footnote extractor) |
+| Reasonably-possible litigation | F | none | type C, half | ASC 450 midpoint (inference) | 0.5 | no | **no** |
+| Favourable row with no scenario | A | `gross_margin_peer_outlier` above the peer median; any statistical row with a good sign | none | | 0 | n/a | yes |
+
+Notes for the quant reviewer:
+- **Families with no detector** are listed in `find.MISSING_DETECTORS` (misstatement score, insider sales, negative 8-K items, zero-question calls, GTN widening, footnote extractor) and every row carries `has_detector`. The design covers more than the build (review B3).
+- **One text table (review A5).** All text families use one Lazy Prices table, Table II (whole-document similarity; `TEXT_ALPHA_TABLE`), so MD&A moved from 0.0081 to 0.0226, and the litigation π applies only when litigation is the row's only topic. Applying a whole-document alpha to a section change is the stated approximation. These rows are not quantified, so the choice changes only the tier label shown, not any S.
+- The backtest tests only five flags with the engine's own thresholds, between firms. If the raw panel is re-fetched, π for these five rows and π_anchor update mechanically (Section 8.2).
+- π is small for statistical families and 1 for scheduled ones. That is correct: a scheduled event and a 3-in-100 excess chance are different things. Scheduled items are then disciplined by O (they are usually public) and by the starter-thread rule.
+
+### A.3 Internal needle by S (was Section 4.8)
+
+```
+Needle = argmax_f S_f   subject to   D_f ≥ 0.5 (NEEDLE_O),  E_f ≥ 0.90 (NEEDLE_E),  confidence ≠ LOW,  z_f = 0,  adverse or quantified,  S_f > 0
+```
+
+- D ≥ 0.5: "more likely unpriced than priced" by the discussion channels, 0.5 being the midpoint of ICD 203's "roughly even chance" band (45-55%). The floor is on D, not on O. In v2 it was on O = D · τ, so with a 6-month half-life every February 10-K item decayed below the floor and "least discussed" meant "recent" (review R1). Because decay is outside the floor, the strict-needle count does not depend on H.
+- E ≥ 0.90: quoted (exact, substring or fuzzy) evidence only; a number found on its page without the quote verifying (0.745) cannot headline.
+- **Never a needle** (`needle_blocked`): MFN placeholder rows (4.3 c) and undirected MD&A drift rows (guard 8, 4.12).
+
+**Fallbacks, as coded (`league.sharpest_needle`), each labelled in the output:**
+1. **strict**: the rule above.
+2. **provisional**: if no row passes, the highest S among rows with z = 0, S > 0, not needle-blocked, confidence not LOW and D at or above the company's median D.
+3. **floor relaxed**: if that pool is empty, the highest S among the same rows (no confidence condition) with D at or above the company's top-quartile D.
+4. **none**: "no finding clears the obscurity floor".
+
+League_v3 needle status (identical at H = 3 and H = 6):
+
+| Status | Companies |
+|---|---|
+| strict | AMGN, AZN, MRK, NVO, ABBV (5 of 10) |
+| provisional | LLY |
+| floor relaxed | GILD, BMY, PFE |
+| none | JNJ (its only scored row is an MFN placeholder) |
+
+v2 also had 5 of 10 strict, but a different set (AMGN, JNJ, MRK, LLY, PFE). With c = 0.5 on anchor rows as well, NVO drops to floor relaxed (4 of 10). The app and deck print the status word next to every needle.
+
+### A.4 League score (was Section 4.9)
+
+```
+L_c = ( Σ_{f in top5(c)} S_f ) · min(1, N_eff,c / N*)        N* = 3 (N_STAR)        (league.league_score)
+N_eff,c = ( Σ_b S_b )² / Σ_b S_b²,   S_b = Σ_{f in top5, block b} S_f
+```
+
+Blocks b: A accounting, T text and disclosure, C calls, G governance and insiders, P policy and scheduled (IRA, MFN, LOE), L label and product, X outside data, F footnote items.
+
+- **What the term does on these data.** N_eff never reaches 3 (v2 maximum 2.19; v3 maximum 1.29), so min(1, ·) never binds and L = top-5 sum x N_eff / 3 for every company. It is a scaling by diversification, not a penalty with a threshold. N* is inert: ranks are identical for any N* at or above the largest N_eff (review A18).
+- **Why keep it.** It encodes one stated design choice: one dominant evidence block counts as one finding, so a company whose case rests on one block does not outrank one with several independent pieces. In v2 it decided #1 (AMGN on L, GILD on the raw sum). **In v3 it no longer does:** without it AMGN still leads (raw sum 0.2047 vs GILD 0.1532).
+- **Required output.** For each company: L, the raw top-5 sum, N_eff, blocks, the share of the sum from its largest finding, the top-5 table and the Sharpest Needle with its status, all in `league_v3.json` (`L`, `top5_sum`, `N_eff`, `blocks`, `largest_share`, `top`, `needle`, `needle_status`).
+- **Robustness table** (`out/league_v3_robustness.json`, printed in `league_v3.md`): the top five companies under eight variants: base; no N_eff term (raw sum); MFN at the v2 universal rate with π = 1; AMGN's receivables row at π_min with the anchor kept; that row treated as unfired (S = 0); H = 6; IRA on the draft formula; c = 0.5 on anchor rows too. The pick and the pitch's "why it beat the other nine" claim are made only from what survives (Section 10.5).
