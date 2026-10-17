@@ -21,8 +21,24 @@ public=True (every entry point takes it) withholds the quote text and the viewer
 """
 
 import html
+import re
 
 from . import gate as _gate
+
+# Square brackets are reserved for markers: [n], [derived], [derived: ...], [assumption], [constant: NAME]. Any other
+# bracketed text in a claim (a label such as "[biologic; LOE 2031-01-01]") would read as a citation marker, so it is
+# rendered in parentheses. The swap keeps string length, so the gate's number offsets stay valid.
+MARKER_RE = re.compile(r"\[(?:\d+|derived(?:: [^\[\]]*)?|assumption|constant: [^\[\]]+)\]")
+_BRACKET_RE = re.compile(r"\[([^\[\]]*)\]")
+
+
+def is_marker(s):
+    return bool(MARKER_RE.fullmatch(s))
+
+
+def unbracket(text):
+    """Non-marker [x] -> (x), same length; marker forms are left alone."""
+    return _BRACKET_RE.sub(lambda m: m.group(0) if is_marker(m.group(0)) else f"({m.group(1)})", text)
 
 _SEP = " "
 
@@ -154,7 +170,7 @@ def claim_markup(claims, fmt="md", index=None):
     out = []
     for cl in claims:
         inserts, end = _plan(cl, num_of, index)
-        text = cl.text.rstrip()
+        text = unbracket(cl.text.rstrip())
         if fmt == "html":                     # escape segment by segment so the offsets stay valid
             pieces, last = [], 0
             for pos, ms in sorted(inserts, key=lambda x: x[0]):
@@ -178,7 +194,7 @@ def _where(c):
 
 def _quote(c, public):
     if public and c.license:
-        return "[licensed text withheld]"
+        return "(licensed text withheld)"
     q = " ".join((c.quote or "").split())
     return f"{c.speaker}: {q}" if c.speaker else q
 

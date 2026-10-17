@@ -466,7 +466,7 @@ def build_md(out, findings, public=False):
         L.append("- " + doc.cell("inputs", "cash_claim", out["cash_claim"].text, out["cash_claim"].citations))
     for r in [c] + sel.rejected:
         for i, cl in enumerate(r.claims):
-            L.append(f"- [{r.name}] " + doc.cell("inputs", f"claims/{r.name}[{i}]", cl.text, cl.citations,
+            L.append(f"- ({r.name}) " + doc.cell("inputs", f"claims/{r.name}[{i}]", cl.text, cl.citations,
                                                cl.derived, cl.assumptions))
     bench = {}
     for r in [c] + sel.rejected:
