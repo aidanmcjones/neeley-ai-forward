@@ -556,3 +556,46 @@ def test_fact_status_whitelist():
         assert g == 0.0 and "not checked" in label and fact_citation_status(s, True) == "unverified"
     for s in ("added", "pass", "unsampled", "dropped", "no", "False", "", None, "anything new"):
         assert fact_status_grade(s)[0] == 0.0 and fact_citation_status(s, True) == "unverified", s
+
+
+# ---------------------------------------------------------------- review C11, C12: cited LLM request and parser
+def test_llm_request_has_no_temperature_and_carries_rule(idx, monkeypatch):
+    import agent.needle.cite.llm as L
+    monkeypatch.setattr(L, "load_index", lambda *a, **k: idx)
+    body = build_cited_request("sys", "q", _pages(idx))
+    assert "temperature" not in body and CITATION_SYSTEM_RULE in body["system"][0]["text"]       # L4
+    assert build_cited_request("sys", "q", _pages(idx), temperature=0.2)["temperature"] == 0.2
+
+
+def test_llm_number_check_uses_only_passing_citations(idx):
+    src = "/viewer?doc=AAA%3A10k_FY2025.md&page=2&q=x"
+    loc = {"type": "search_result_location", "search_result_index": 0, "start_block_index": 0, "end_block_index": 1,
+           "source": src, "title": "t"}
+    # L1: a fabricated second citation that carries the number no longer rescues the claim
+    resp = {"content": [{"type": "text", "text": "Keytruda sales were $31,000 million.", "citations": [
+        dict(loc, cited_text=EXACT), dict(loc, cited_text="Keytruda sales in the year were $31,000 million overall")]}]}
+    out = parse_cited_response(resp, idx)
+    assert [c.verification.status for c in out[0].citations] == ["unverified", "unverified"]
+    assert not V.gate(out)[0]
+    # L2: a year-shaped number with a unit is a number
+    resp2 = {"content": [{"type": "text", "text": "Revenue was 2030 million.", "citations": [dict(loc, cited_text=EXACT)]}]}
+    out2 = parse_cited_response(resp2, idx)
+    assert out2[0].citations[0].verification.status == "unverified" and "2030 million" in out2[0].citations[0].confidence_note
+    # a bare year is not
+    resp3 = {"content": [{"type": "text", "text": "In 2025 Keytruda sold $29,482 million.", "citations": [dict(loc, cited_text=EXACT)]}]}
+    assert parse_cited_response(resp3, idx)[0].citations[0].verification.status == "exact"
+
+
+def test_llm_refusal_empty_and_truncation(idx):
+    from agent.needle.cite.llm import response_status
+    assert parse_cited_response({"stop_reason": "refusal", "content": [{"type": "text", "text": "I can't."}]}, idx) == []
+    assert parse_cited_response({"content": []}, idx) == []
+    assert parse_cited_response({"type": "error", "error": {"type": "overloaded_error"}}, idx) == []
+    fb = parse_cited_response({"content": []}, idx, fallback_text="not found in the provided sources")
+    assert fb[0].text == "not found in the provided sources" and fb[0].citations == []
+    src = "/viewer?doc=AAA%3A10k_FY2025.md&page=2&q=x"
+    resp = _resp(src, EXACT)
+    resp["stop_reason"] = "max_tokens"
+    assert response_status(resp) == "max_tokens"
+    out = parse_cited_response(resp, idx)
+    assert [c.text for c in out] == ["Keytruda sales were $29,482 million."]           # truncated tail dropped
