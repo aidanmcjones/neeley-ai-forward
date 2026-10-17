@@ -50,10 +50,11 @@ Assumptions shape: {"0.65%": "Pfizer MFN base rate (weights constant)"} or {"k":
 
 import ast
 import operator
+from functools import lru_cache
 from dataclasses import dataclass, field
 
 from .locator import Citation
-from .numbers import declared_scale, parse_value, same_number, tokenize, tolerance
+from .numbers import parse_value, same_number, scale_lookup, tokenize, tolerance
 
 PASSING = ("exact", "substring", "fuzzy", "number_match")
 DERIVED_REL_TOL = 0.005
@@ -141,6 +142,7 @@ class _Pages:
     def __init__(self, index):
         self._index = index
         self._cache = {}
+        self.src_cache = {}
 
     def idx(self):
         if self._index is None:
@@ -166,21 +168,32 @@ class _Pages:
         return self._cache[key]
 
 
+@lru_cache(maxsize=1024)
+def _page_tokens(page):
+    ps = scale_lookup(page)
+    return tuple((t, ps(t.start)) for t in tokenize(page, include_years=True))
+
+
 def _sources(c, pages, use_page_text):
-    """[(basis, NumTok list, ctx_fn)] for one passing citation."""
+    """[(basis, [(NumTok, declared scale)])] for one citation, computed once per gate call."""
+    key = (c.cite_id, c.canonical_id, c.page, c.quote, c.value, c.unit, c.char_start, bool(use_page_text))
+    hit = pages.src_cache.get(key)
+    if hit is not None:
+        return hit
     out = []
     page = pages.text(c) if use_page_text or c.char_start is not None else None
     q = c.quote or ""
     if q:
-        base = declared_scale(page, c.char_start) if page and c.char_start is not None else None
-        qctx = lambda pos, q=q, base=base: declared_scale(q, pos) or base      # noqa: E731
-        out.append(("quote", tokenize(q, include_years=True), qctx))
+        base = scale_lookup(page)(c.char_start) if page and c.char_start is not None else None
+        qs = scale_lookup(q)
+        out.append(("quote", [(t, qs(t.start) or base) for t in tokenize(q, include_years=True)]))
     if c.value not in (None, ""):
         t = parse_value(c.value, c.unit)
         if t is not None:
-            out.append(("value", [t], lambda pos: None))
+            out.append(("value", [(t, None)]))
     if use_page_text and page:
-        out.append(("page", tokenize(page, include_years=True), lambda pos, page=page: declared_scale(page, pos)))
+        out.append(("page", _page_tokens(page)))
+    pages.src_cache[key] = out
     return out
 
 
@@ -190,10 +203,10 @@ def _supported_by(tok, cits, pages, use_page_text, claim_ctx=None):
     for c in cits:
         if _status(c) not in PASSING:
             continue
-        for basis, toks, ctx in _sources(c, pages, use_page_text):
+        for basis, toks in _sources(c, pages, use_page_text):
             found = False
-            for s in toks:
-                ok, reason = same_number(tok, s, claim_ctx, ctx(s.start))
+            for s, sctx in toks:
+                ok, reason = same_number(tok, s, claim_ctx, sctx)
                 if ok:
                     hits.append((c.cite_id, basis))
                     found = True

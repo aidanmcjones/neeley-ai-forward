@@ -224,6 +224,18 @@ def declared_scale(text, pos=None):
     return SCALE[last.group(1).lower()] if last else None
 
 
+def scale_lookup(text):
+    """A fast declared_scale(text, pos) for many positions: one pass over text, then bisect per lookup."""
+    import bisect
+    marks = [(m.end(), SCALE[m.group(1).lower()]) for m in _DECL.finditer(text or "")]
+    ends = [e for e, _ in marks]
+
+    def at(pos):
+        i = bisect.bisect_right(ends, pos) - 1
+        return marks[i][1] if i >= 0 else None
+    return at
+
+
 def parse_value(value, unit=""):
     """An emitted value plus a unit string ('USD millions', 'percent', 'year') -> NumTok or None."""
     toks = tokenize(str(value), include_years=True, include_ids=True)
