@@ -90,6 +90,12 @@ G_PRE_GLP1 = (0.60, 0.675, 0.75)        # GLP-1 pre-MFP concession, low / mid / 
 G_PRE_INSULIN = 0.75                    # insulin pre-cut (inference)
 G_PRE_IMMUNOLOGY = (0.50, 0.575, 0.65)  # immunology (inference)
 IRA_HEADLINE_RANGE = (0.38, 0.85)       # headline list-discount range across cycles 1-2
+# The one IRA formula (impact.ira_class_rule; review S2/S3, A15), used by FIND, product.py and DECIDE:
+#   net hit share of G = max(0, k x d - m_avoided)
+K_LOW_REBATE = (1.0, 1.0, 1.0)          # oncology and HIV: net hit ~ 1.0 x list discount (KQ2 cross-check)
+K_NET = (0.3, 0.4, 0.5)                 # highly rebated classes: 0.3-0.5 x list discount (KQ2 cross-check)
+M_MDP_AVOIDED = (0.20, 0.15, 0.10)      # Part D Manufacturer Discount Program liability avoided once the MFP applies:
+                                        # 20% catastrophic (bull), 10% initial (bear), 15% midpoint (KQ2 "10-15%")
 
 # ---- MFN, LOE, label (sections 4.3 c, e, h) --------------------------------------------------------------------
 S_MFN = (0.003, 0.0065, 0.010)        # Medicaid MFN share of US revenue: Pfizer <1% of US net; midpoint inference

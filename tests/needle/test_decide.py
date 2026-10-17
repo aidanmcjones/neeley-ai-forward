@@ -83,6 +83,20 @@ def test_finding_citations_and_feed_into_pricing_baseline():
     assert r.ev != D.evaluate_move("M4", {"base_us_rev_annual": 5723.0}, []).ev
 
 
+def test_find_v2_ira_row_feeds_from_the_one_impact_channel():
+    """Review S3: DECIDE takes IRA dollars from FIND's impact (impact.ira_class_rule), not a formula of its own."""
+    from types import SimpleNamespace
+    from agent.needle.quant import impact as IM
+    co = SimpleNamespace(rev_ttm=79665.0, tax=0.2049, shares=893.7, citations={})
+    imp = IM.ira_class_rule(co, "Verzenio", 1428.714, (0.38, 0.50, 0.60), 2028)
+    assert round(imp.d_rev["base"], 1) == 500.0          # 1428.714 x (1.0 x 0.50 - 0.15)
+    finding = {"id": "v2-verz", "signal_kind": "ira_selected", "S": 0.0065, "vector": {"M": 0.2, "E": 1.0},
+               "impact": imp.to_dict(), "citations": []}
+    r = D.evaluate_move("M4", {"base_us_rev_annual": 5723.0}, [finding])
+    inp = {i.name: i for i in r.inputs}["baseline_delta_rev_annual"]
+    assert inp.finding_id == "v2-verz" and inp.value == pytest.approx(500.0, abs=0.1)
+
+
 def test_no_finding_means_strategic_fit_zero_and_flag():
     r = ref()
     assert r.mcda_parts["strategic_fit"] == 0.0

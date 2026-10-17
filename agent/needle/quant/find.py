@@ -278,9 +278,10 @@ IMM_QUOTES = [(NEG27, 2, "$1,650 $4,722 65%"), (NEG26, 2, "$4,695.00 $13,836.00 
 DIAB = (0.66, 0.71, 0.85)  # diabetes: smallest (Jardiance 66%), same class GLP-1 (Ozempic 71%), largest (Janumet 85%)
 DIAB_QUOTES = [(NEG27, 2, "$274 $959 71%")]
 ALL_CUTS = (0.38, 0.655, 0.85)  # no same-class analog: cycle 1-2 smallest, median of the 16 in ira_cut_check, largest
-K_NET = (0.3, 0.4, 0.5)         # KQ2 cross-check: net hit 0.3-0.5 x list discount for rebated classes
-
-LOW_REBATE = {"Verzenio", "Erleada", "Pomalyst", "Ibrance", "Calquence", "Biktarvy"}   # oncology, HIV
+K_NET = W.K_NET                 # KQ2 cross-check: net hit 0.3-0.5 x list discount for rebated classes
+LOW_REBATE = IM.LOW_REBATE      # oncology, HIV (the one IRA formula lives in impact.ira_class_rule)
+# Robustness knob: "spec" makes the spec formula G x max(0, d - g_pre) the league value (S_spec_formula otherwise).
+IRA_MODE = "class"
 
 IRA_DRUGS = [
     # ticker, drug, ipay, G (USD m), spend doc, page, spend quote, d, g_pre or None, k, analog quotes, disclosed
@@ -620,11 +621,9 @@ def ira_findings(ticker, co):
         # highly rebated classes.
         imp_spec = IM.ira(co, drug, G if cur_ok else 0.0, d, g_pre, ipay, k_factor=k, cites=cites) \
             if (g_pre is not None or k) else None
-        k_cross = (1.0, 1.0, 1.0) if drug in LOW_REBATE else K_NET
-        imp = IM.ira(co, drug, G if cur_ok else 0.0, d, None, ipay, k_factor=k_cross, cites=cites)
-        imp.flags = [x for x in imp.flags if "no g_pre prior" not in x]
-        imp.flags.append(f"IRA net hit = {k_cross} x list discount ({'low-rebate class' if drug in LOW_REBATE else 'rebated class'}; "
-                         "KQ2 cross-check, review A15)")
+        imp = IM.ira_class_rule(co, drug, G if cur_ok else 0.0, d, ipay, cites=cites)
+        if IRA_MODE == "spec" and imp_spec is not None:
+            imp, imp_spec = imp_spec, imp
         if k is None and isinstance(d, tuple) and d == ALL_CUTS:
             flags.append("no same-class MFP analog: d = cycle 1-2 smallest / median / largest (deviation, see notes)")
         if drug == "Trulicity":

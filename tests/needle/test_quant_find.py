@@ -125,7 +125,9 @@ def test_lly_end_to_end_matches_worked_example(monkeypatch):
     # review A12: FY2028 consensus first appears after the selection date, so c is untestable and set to 0.5
     # (uninformative) instead of 0: both values halve (v2 printed 0.0507 and 0.0304 with c = 0)
     assert v.vector["c"] == W.C_UNTESTABLE
-    assert round(v.S, 4) == 0.0254 and round(v.vector["S_spec_formula"], 4) == 0.0152
+    # review S3: one IRA formula, G x max(0, k x d - m_avoided): Verzenio base 1428.7 x (0.50 - 0.15) = 500.0
+    assert round(v.impact.d_rev["base"], 1) == 500.0
+    assert round(v.S, 4) == 0.0178 and round(v.vector["S_spec_formula"], 4) == 0.0152
     assert v.confidence == "HIGH" and v.vector["n_ind"] == 2
     assert all(f.S == 0 for f in fs if f.kind == "gross_margin_peer_outlier")
     assert not by["dio_peer_outlier"].needle_eligible

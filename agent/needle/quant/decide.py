@@ -124,6 +124,16 @@ class DecideInput:
 def _finding_value(f, fld):
     """Pull a $M number (or month) out of a finding's impact for a FeedRule; None when the finding has none."""
     imp = f.get("impact") or {}
+    if isinstance(imp.get("d_rev"), dict):
+        # FIND v2 row: d_rev comes from agent.needle.quant.impact (the one IRA / MFN / LOE implementation, review
+        # S3). FIND signs an adverse revenue change positive; the feeds use negative = loss for "base".
+        v = imp["d_rev"].get("base")
+        if v is None or (not imp.get("quantified", True) and not v):
+            return None
+        sign = 1.0 if imp.get("adverse", True) else -1.0
+        if fld == "month":
+            return None
+        return float(v) * sign * (1.0 if fld == "dollars" else -1.0)
     if fld == "dollars":
         v = imp.get("dollars")
         if v is None:

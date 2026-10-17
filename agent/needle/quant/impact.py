@@ -107,6 +107,53 @@ def ira(co, drug, G, d, g_pre, ipay, k_factor=None, cites=()):
     return _fill(imp, revs, W.CM_PRICE, co)
 
 
+# The one IRA formula (review S2/S3, A15). FIND, product.py and DECIDE all size an IRA hit here.
+LOW_REBATE = {"Verzenio", "Erleada", "Pomalyst", "Ibrance", "Calquence", "Biktarvy"}   # oncology, HIV
+LOW_REBATE_WORDS = ("cancer", "oncolog", "leukemia", "lymphoma", "myeloma", "carcinoma", "tumor", "hiv",
+                    "human immunodeficiency")
+PART_B = {"Botox", "Orencia"}   # mostly physician-administered: no Part D discount-program liability to avoid
+
+
+def ira_class_k(drug, indication=""):
+    """(k bull, base, bear): 1.0 for low-rebate classes (oncology, HIV), K_NET for rebated classes."""
+    low = drug in LOW_REBATE or any(w in str(indication).lower() for w in LOW_REBATE_WORDS)
+    return (W.K_LOW_REBATE if low else W.K_NET), low
+
+
+def ira_class_shares(d, k, part_d=True):
+    """Net-hit share of Medicare gross spend G per scenario: max(0, k x d - m_avoided). d, k are (bull, base, bear)
+    or scalars; bull pairs the smallest d and k with the largest avoided discount-program liability."""
+    dd = d if isinstance(d, tuple) else (d, d, d)
+    kk = k if isinstance(k, tuple) else (k, k, k)
+    mm = W.M_MDP_AVOIDED if part_d else (0.0, 0.0, 0.0)
+    return tuple(max(0.0, di * ki - mi) for di, ki, mi in zip(dd, kk, mm))
+
+
+def ira_class_dollars(G, d, drug, indication="", part_d=None):
+    """(bull, base, bear) revenue lost, in G's units, under the class rule. Used by product.py (review S3)."""
+    k, low = ira_class_k(drug, indication)
+    pd_ = (drug not in PART_B) if part_d is None else part_d
+    return tuple(G * x for x in ira_class_shares(d, k, pd_)), k, low, pd_
+
+
+def ira_class_rule(co, drug, G, d, ipay, cites=(), indication=""):
+    """IRA channel, league value: dRev = G x max(0, k x d - m_avoided), CM 1.00, step on 1 January of IPAY.
+    k = 1.0 for oncology and HIV, 0.3 / 0.4 / 0.5 for rebated classes (KQ2); m_avoided = Part D discount-program
+    liability no longer owed once the MFP applies (0 for Part B drugs). Timing rules as ira()."""
+    revs, k, low, part_d = ira_class_dollars(G, d, drug, indication)
+    imp = ira(co, drug, G, d, None, ipay, k_factor=k, cites=cites)
+    fx = getattr(co, "fx", 1.0)
+    dd = d if isinstance(d, tuple) else (d, d, d)
+    imp.formula = (f"G {G:,.3f} x max(0, k {k} x d {dd} - m_avoided "
+                   f"{W.M_MDP_AVOIDED if part_d else (0.0, 0.0, 0.0)}) (class rule: "
+                   f"{'low-rebate class' if low else 'rebated class'}{'' if part_d else ', Part B'})")
+    imp.flags = [x for x in imp.flags if not x.startswith("IRA: net hit = k")]
+    imp.flags.append(f"IRA class rule: net hit = {k} x list discount less avoided discount-program liability "
+                     f"({'Part D' if part_d else 'Part B: none'}); review A15, one formula (S3)")
+    zeroed = all(v == 0 for v in imp.d_rev.values())
+    return _fill(imp, (0.0, 0.0, 0.0) if zeroed else tuple(r * fx for r in revs), W.CM_PRICE, co)
+
+
 # ---------------------------------------------------------------- (c) MFN and (d) tariff
 def mfn(co, rev_us, s=W.S_MFN, cites=(), effective=None, formula=None):
     """dRev = s_MFN . Rev_US, s base 0.0065 (0.003-0.010), CM = 1.00 (section 4.3 c). TrumpRx modeled neutral.
