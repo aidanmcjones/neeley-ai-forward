@@ -1,14 +1,20 @@
 {
- "generated_at": "2026-10-17T23:12:54+00:00",
+ "generated_at": "2026-10-17T23:45:12+00:00",
  "mode": "cached",
  "engine": "sample",
  "default_ticker": "BMY",
+ "default_ticker_source": "pick",
  "as_of": "2026-10-17",
  "suggested": [
   "needle:BMY",
-  "ceo_memo:BMY",
-  "league:global"
+  "ceo_memo:BMY"
  ],
+ "suggested_by_ticker": {
+  "BMY": [
+   "needle:BMY",
+   "ceo_memo:BMY"
+  ]
+ },
  "memos": [
   {
    "id": "needle:BMY",
@@ -33,31 +39,21 @@
    "ticker": "BMY",
    "kind": "needle",
    "generated_by": "template",
-   "summary": "The label is narrower than rivals': BMY's needle, status strict, confidence high.",
+   "summary": "The label is narrower than rivals': BMY's needle, confidence high.",
    "blocks": [
     {
      "type": "p",
-     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle is this: eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller addressable patient pool [1][2]. How much the market already discusses it: only in filings / data, not in headlines or call Q&A [3]. Impact: Not quantified."
-    },
-    {
-     "type": "callout",
-     "tone": "muted",
-     "md": "Status strict: the row clears every test on its own (barely discussed, quote verified on the page, confidence not low, not the case's starter thread)."
+     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle is this: eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller addressable patient pool [1][2]. We pick the needle by a plain rule: the biggest cited impact that analysts asked about least. How rarely analysts asked: only in filings / data, not in headlines or call Q&A [3]. Impact: Not quantified."
     },
     {
      "type": "math",
-     "label": "Obscurity test, as computed",
+     "label": "Analyst-attention test, as computed",
      "text": "only in filings / data, not in headlines or call Q&A",
      "cite": 3
     },
     {
      "type": "kpi",
      "items": [
-      {
-       "label": "Needle status",
-       "value": "strict",
-       "cite": null
-      },
       {
        "label": "Confidence",
        "value": "high",
@@ -176,7 +172,9 @@
    },
    "ask_next": [
     "ceo_memo:BMY"
-   ]
+   ],
+   "demo": false,
+   "demo_note": null
   },
   {
    "id": "ceo_memo:BMY",
@@ -201,7 +199,7 @@
    "ticker": "BMY",
    "kind": "ceo_memo",
    "generated_by": "template",
-   "summary": "Recommend Defend for BMY: the label is narrower than rivals'; not priced in: the needle clears the strict obscurity floor.",
+   "summary": "Recommend Defend for BMY: the label is narrower than rivals'; not priced in.",
    "blocks": [
     {
      "type": "callout",
@@ -214,7 +212,11 @@
     },
     {
      "type": "p",
-     "md": "**Move: Defend.** Fix the exposure the filings reveal (channel, receivables, margin, disclosure) before the market prices it. No finding in this bucket states an impact formula, so the option is ranked by materiality score; no budget is valued yet."
+     "md": "**Move: Defend.** Fix the exposure the filings reveal (channel, receivables, margin, disclosure) before the market prices it. No finding in this bucket states an impact formula, so the option is ranked by the size of its cited findings; no budget is valued yet."
+    },
+    {
+     "type": "h",
+     "text": "Return math"
     },
     {
      "type": "kpi",
@@ -225,13 +227,18 @@
        "cite": null
       },
       {
-       "label": "Direction",
-       "value": "not quantified",
+       "label": "Budget",
+       "value": "not valued: no DECIDE run for this company",
        "cite": null
       },
       {
-       "label": "Needle status",
-       "value": "strict",
+       "label": "Expected value",
+       "value": "not valued",
+       "cite": null
+      },
+      {
+       "label": "Direction",
+       "value": "not quantified",
        "cite": null
       },
       {
@@ -247,11 +254,11 @@
     },
     {
      "type": "p",
-     "md": "The Sharpest Needle (row one below): the label is narrower than rivals' [1][2]. Impact: Not quantified. Why the market has not priced it: only in filings / data, not in headlines or call Q&A [3]."
+     "md": "The Sharpest Needle (the biggest cited impact that analysts asked about least): the label is narrower than rivals' [1][2]. Impact: Not quantified. How rarely analysts asked: only in filings / data, not in headlines or call Q&A [3]."
     },
     {
      "type": "math",
-     "label": "Obscurity test, as computed",
+     "label": "Analyst-attention test, as computed",
      "text": "only in filings / data, not in headlines or call Q&A",
      "cite": 3
     },
@@ -300,7 +307,7 @@
     },
     {
      "type": "h",
-     "text": "What would prove us wrong"
+     "text": "What would prove us wrong: kill signals, 6 to 12 months"
     },
     {
      "type": "list",
@@ -315,11 +322,19 @@
     },
     {
      "type": "h",
+     "text": "Why it lands with the deciders"
+    },
+    {
+     "type": "p",
+     "md": "Each audience named in the case can check the move on its own test: payers (CMS (Medicare negotiation) and Part D plan sponsors); investors (analysts and holders who will read the next 10-Q and earnings call); regulators (FDA (labels, exclusivity) and SEC (disclosure)). Payers see a price they can score, investors see the five numbers and the kill signals they can re-check at the next 10-Q, and regulators see label and disclosure facts cited to the page."
+    },
+    {
+     "type": "h",
      "text": "Priced in or not"
     },
     {
      "type": "p",
-     "md": "Not priced in: the needle clears the strict obscurity floor."
+     "md": "Not priced in: analysts rarely asked about the needle item."
     }
    ],
    "cites": [
@@ -547,9 +562,9 @@
    "numeric_check": {
     "status": "unchecked"
    },
-   "ask_next": [
-    "league:global"
-   ],
+   "ask_next": [],
+   "demo": false,
+   "demo_note": null,
    "memo_header": {
     "to": "CEO, BMY",
     "from": "NEEDLE desk",
@@ -560,57 +575,47 @@
   {
    "id": "league:global",
    "format": "chat",
-   "prompt": "Why does BMY beat the other nine?",
+   "prompt": "Internal triage: how we chose which company to look at first",
    "aliases": [
     "league",
     "league table",
-    "why bmy",
-    "why does bmy beat the other nine",
-    "who wins",
-    "ranking",
-    "which company",
-    "which company has the sharpest needle",
-    "which company has the sharpest needle and why",
-    "which company wins",
-    "best needle across companies",
-    "rank the needles",
-    "league overview",
-    "rank the ten companies"
+    "internal triage",
+    "how did you choose which company to look at first",
+    "triage order",
+    "reading order",
+    "which company did you read first",
+    "internal ranking"
    ],
    "ticker": null,
    "kind": "league",
    "generated_by": "data",
-   "summary": "The ten-company league: BMY leads, with the robustness check across scoring variants.",
+   "summary": "The internal reading order of the ten companies, ranks only; not a pitch output.",
    "blocks": [
     {
      "type": "p",
-     "md": "The score L is the sum of a company's top five finding scores, discounted when a single finding carries most of it; each finding score is dollars at risk times how little the market discusses it times evidence quality times the backtested chance the signal matters. Compare ranks, not raw values, across versions."
+     "md": "Before the pitch work started we ran an internal triage to decide which company to read first. It is not a pitch output and it did not choose the company: the company pick is a human decision informed by the red team, and the Part 1 case for it is the findings themselves. The triage order, ranks only:"
     },
     {
      "type": "table",
      "columns": [
-      "Rank",
+      "Triage rank",
       "Company",
-      "Score L",
-      "Needle",
-      "Rank vs v2",
+      "Sharpest Needle",
       "Findings"
      ],
      "rows": [
       [
        "",
-       "**BMY**",
-       "0.0508 [1]",
-       "n/a",
-       "n/a",
-       "36 verified / 0 rejected"
+       "BMY",
+       "The label is narrower than rivals'",
+       "36 verified / 0 rejected [1]"
       ]
      ]
     },
     {
      "type": "callout",
      "tone": "muted",
-     "md": "Strict means the needle clears the obscurity floor on its own; provisional and floor relaxed mean the best row was promoted with a lower floor; none means no row qualified."
+     "md": "Caveat: this order came from an internal ranking score that is not part of the pitch; it decided only which company we looked at first. Ask for a company's needle, findings or CEO memo to see the evidence."
     }
    ],
    "cites": [
@@ -638,10 +643,9 @@
    "numeric_check": {
     "status": "unchecked"
    },
-   "ask_next": [
-    "needle:BMY",
-    "ceo_memo:BMY"
-   ]
+   "ask_next": [],
+   "demo": false,
+   "demo_note": null
   }
  ],
  "note": "Cached answers assembled by agent/ui_memos.py from ui/public/data; no model call. whitelisted without a marker: years and fiscal periods, ISO dates, filing form names, Medicare Part B/D, Section 232, finding ids and R-row ids, horizon phrases such as 'next 6 to 12 months', page labels in Source cells, and kpi labels"

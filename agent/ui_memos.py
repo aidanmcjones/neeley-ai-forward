@@ -25,7 +25,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "ui" / "public" / "data"
 SAMPLE = DATA / "_sample"
 
-CHAT_KINDS = ("needle", "findings", "product", "peers", "priced_in", "league", "ai_wrong", "moat", "how_it_works")
+CHAT_KINDS = ("needle", "findings", "product", "peers", "priced_in", "why_company", "league", "needles", "products",
+              "decides", "ai_wrong", "moat", "how_it_works")
 MEMO_KINDS = ("ceo_memo", "prove_wrong")
 ROW_ORDER = ("approved_uses", "safety", "dosing", "timeline", "pricing")
 
@@ -79,15 +80,33 @@ OPTION_WHY = {
     "Partner-or-buy": "license or acquire to replace revenue at risk from earlier exclusivity loss, a narrower label or a dropped trial",
 }
 
-STATUS_TEXT = {
-    "strict": "Status strict: the row clears every test on its own (barely discussed, quote verified on the page, "
-              "confidence not low, not the case's starter thread).",
-    "provisional": "Status provisional: no row cleared the strict obscurity floor; this is the best eligible row with "
-                   "discussion at or above the company's median.",
-    "floor_relaxed": "Status floor relaxed: no row cleared the strict or provisional floors; this is the best row "
-                     "among the company's least-discussed quarter.",
-    "none": "Status none: no finding clears the obscurity floor, so the top-scored row is shown and labelled, not promoted.",
+NEEDLE_RULE = "the biggest cited impact that analysts asked about least"
+STATUS_TEXT = {  # muted caveat shown only when the needle did not qualify on its own
+    "provisional": "Caveat: analysts have asked about this item about as often as the company's other findings, so "
+                   "it is the needle only provisionally.",
+    "floor_relaxed": "Caveat: no finding at this company was rarely discussed; this is the best row from its "
+                     "least-discussed group.",
+    "none": "Caveat: no finding at this company was rarely discussed, so the largest cited impact is shown and "
+            "labelled, not promoted.",
 }
+PRICED_CALL = {  # needle status -> plain priced-in call, by the same rule (how rarely analysts asked)
+    "strict": "not priced in: analysts rarely asked about the needle item",
+    "provisional": "only partly priced in: analysts asked about it about as often as the company's other findings",
+    "floor_relaxed": "mostly priced in: no finding at this company was rarely discussed",
+    "none": "priced in: no finding at this company was rarely discussed",
+}
+ACTION_WORDS = {  # decide kill-signal action codes -> plain words
+    "bayes": "update the scenario weights with the observed signal",
+    "replace_bear": "replace the bear case with the observed path and re-run the valuation",
+    "review": "review the move at the next board cycle", "stop": "stop the move",
+}
+PITCH_FORBIDDEN = re.compile(r"\bscore L\b|\bS = |materiality score|robustness", re.I)
+PART2 = [  # case Part 2 elements a CEO memo must carry, as a heading or a kpi label
+    ("one CEO move", r"^Recommendation"), ("budget", r"^Budget"), ("return math", r"^Return math|^Expected value"),
+    ("two rejected alternatives", r"^Alternatives rejected"), ("6 to 12 month kill signals", r"prove us wrong|^Kill signals"),
+    ("why it lands with the deciders", r"deciders"),
+]
+PART1_COLUMNS = ("Impact", "Peer", "Confidence", "Source")
 
 DEMO_LABEL = ("Pipeline demonstration: this move was valued by rules on cited findings; the team's final "
               "recommendation is a separate decision.")
@@ -102,10 +121,11 @@ WHITELIST = [
     r"\bQ[1-4]\s?(?:19|20)\d{2}\b",               # Q2 2026
     r"\b(?:10-K|10-Q|20-F|8-K|6-K)\b",            # filing forms
     r"\bPart [BD]\b", r"\bSection 232\b",         # Medicare parts, tariff statute
+    r"\bPart [12]\b",                              # the case's Part 1 / Part 2
     r"\b[0-9a-f]{12}(?:-d\d)?\b",                 # finding ids
     r"\bR\d{3}\b",                                 # traceable moat row ids
     r"\b\d+(?: to \d+)? (?:months|quarters)\b",   # horizon phrases in prove-wrong rules
-    r"\bsha256\b", r"\bH = \d\b", r"\bS = M",      # method names
+    r"\bsha256\b", r"\bH = \d\b",                   # method names
     r"\bp\. ?[0-9A-Z-]+\b",                        # page labels inside a Source cell
 ]
 WHITELIST_NOTE = ("whitelisted without a marker: years and fiscal periods, ISO dates, filing form names, Medicare "
@@ -211,6 +231,106 @@ class Cites:
     @staticmethod
     def mark(*ns):
         return "".join(f"[{n}]" for n in dict.fromkeys(n for n in ns if n))
+
+    def after(self, text, *ns):
+        """text followed by its markers; nothing appended when the text already carries inline markers."""
+        marks = self.mark(*ns)
+        return f"{text} {marks}" if marks else text
+
+
+# ---------------------------------------------------------------- inline markers ([n], [derived: a, b], [constant: X], [assumption])
+MARK = re.compile(r"\[(\d+)\]|\[derived: ([^\]]+)\]|\[constant: ([A-Za-z0-9_]+)\]|\[assumption\]|\[licensed source\]")
+LICENSED = "[licensed source]"
+MAX_TAIL = 6  # a sentence's trailing run of blanket cites is capped at this many markers in a memo
+
+
+def strip_marks(text):
+    return MARK.sub("", text or "")
+
+
+def finding_cite_index(f):
+    """cite_id -> (evidence object, ev_cite index) over a finding's evidence and data citations."""
+    out = {}
+    for i, e in enumerate(f.get("evidence") or []):
+        out.setdefault(e.get("cite_id"), (e, i))
+    for i, e in enumerate(f.get("data_citations") or []):
+        out.setdefault(e.get("cite_id"), (e, 100 + i))
+    return out
+
+
+def _dedupe_runs(text):
+    def run(m):
+        toks = re.findall(r"\[[^\]]+\]", m.group(0))
+        return "".join(dict.fromkeys(toks))
+    return re.sub(r"(?:\[[^\]]+\])+", run, text)
+
+
+def _cap_tail(text, limit):
+    m = re.search(r"((?:\[\d+\]|\[licensed source\])+)\s*$", text)
+    if not m:
+        return text
+    toks = re.findall(r"\[[^\]]+\]", m.group(1))
+    nums = [x for x in toks if x != LICENSED][:limit]
+    keep = nums + ([LICENSED] if LICENSED in toks else [])
+    return text[:m.start(1)] + "".join(keep)
+
+
+def remark(text, f, C, t, limit=MAX_TAIL):
+    """Renumber a finding's marked text to this memo's cite numbers: [n] is the finding's footnote number, which
+    marker_map turns into a cite_id; [derived: a, b] operands are renumbered the same way; [constant: X] and
+    [assumption] pass through; a footnote on a licensed data row prints as [licensed source]."""
+    mm = f.get("marker_map") or {}
+    lic = {int(x) for x in f.get("marker_licensed") or []}
+    index = finding_cite_index(f)
+    cache = {}
+
+    def memo_n(n):
+        if n not in cache:
+            if n in lic:
+                cache[n] = "licensed"
+            else:
+                hit = index.get(mm.get(str(n))) if mm.get(str(n)) else None
+                cache[n] = C.add(ev_cite(hit[0], f.get("id"), t, hit[1])) if hit else None
+        return cache[n]
+
+    text = text or ""
+    tail = re.search(r"((?:\[\d+\])+)\s*$", text)
+    if tail:  # cap the trailing run of blanket cites before any cite is added to the memo
+        nums = [int(x) for x in re.findall(r"\[(\d+)\]", tail.group(1))]
+        keep = [n for n in nums if n not in lic][:limit] + [n for n in nums if n in lic][:1]
+        text = text[:tail.start(1)] + "".join(f"[{n}]" for n in nums if n in keep)
+
+    def sub(m):
+        if m.group(1):
+            r = memo_n(int(m.group(1)))
+            return LICENSED if r == "licensed" else (f"[{r}]" if r else "")
+        if m.group(2):
+            out, lic_hit = [], False
+            for x in (x.strip() for x in m.group(2).split(",")):
+                if x.isdigit():
+                    r = memo_n(int(x))
+                    if r == "licensed":
+                        lic_hit = True
+                    elif r:
+                        out.append(str(r))
+                elif x:
+                    out.append(x)
+            if out:
+                return f"[derived: {', '.join(dict.fromkeys(out))}]" + (LICENSED if lic_hit else "")
+            return LICENSED if lic_hit else ""
+        return m.group(0)
+    return _cap_tail(_dedupe_runs(MARK.sub(sub, text)), limit)
+
+
+def marked_sentence(f, C, t):
+    """The finding's sentence_marked renumbered for this memo, trailing period moved after the markers' run removed,
+    or None when the export carries no marked sentence."""
+    sm = f.get("sentence_marked")
+    if not isinstance(sm, str) or not sm.strip():
+        return None
+    s = remark(plain_sentence(sm.strip()), f, C, t)
+    s = re.sub(r"\.\s*((?:\[[^\]]+\])+)\s*$", r"\1", s)
+    return s.rstrip(".")
 
 
 GENERIC_TITLES = {"government document", "document", "source", ""}
@@ -388,23 +508,51 @@ class Ctx:
         tied = [p for p in prods if (p[1] or {}).get("findings")]
         return (tied or prods)[0][0]
 
+    def first_product(self, t):
+        """The first case product (meta.case_sets order), else the product with a tied finding."""
+        slugs = [p[0] for p in self.products(t)]
+        for slug in ((self.meta.get("case_sets") or {}).get(t) or {}):
+            if slug in slugs:
+                return slug
+        return self.top_product(t)
+
+    def flow(self, t):
+        prod = self.first_product(t)
+        return [f"needle:{t}", f"why_company:{t}", f"findings:{t}", f"product:{t}:{prod}" if prod else None,
+                f"priced_in:{t}", f"ceo_memo:{t}", f"prove_wrong:{t}"]
+
 
 # ---------------------------------------------------------------- finding renderers
-def sentence(f, C, t, n=2):
-    """Finding sentence plus markers for its first n evidence cites (the exporter's cites_of convention)."""
+def lead_cites(f, C, t, n=2):
+    """Cite numbers for a finding's first n evidence items (the exporter's cites_of convention)."""
     ns = [C.add(ev_cite(e, f["id"], t, i)) for i, e in list(enumerate(f.get("evidence") or []))[:n]]
     if not ns:
         ns = [C.add(ev_cite(e, f["id"], t, i)) for i, e in list(enumerate(f.get("data_citations") or []))[:1]]
-    text = plain_sentence((f.get("finding") or "").strip().rstrip("."))
-    return text, ns
+    return ns
+
+
+def sentence(f, C, t, n=2):
+    """(finding sentence, trailing cite numbers). With a sentence_marked the markers are inline, renumbered to this
+    memo, and the trailing list is empty; otherwise the plain sentence plus its first n evidence cites."""
+    marked = marked_sentence(f, C, t)
+    if marked:
+        return marked, []
+    return plain_sentence((f.get("finding") or "").strip().rstrip(".")), lead_cites(f, C, t, n)
 
 
 def impact_cites(f, C, t, n=3):
     data = [e for e in (f.get("data_citations") or []) if e.get("cite_id")][:n]
     ns = [C.add(ev_cite(e, f["id"], t, 100 + i)) for i, e in enumerate(data)]
     if not ns:
-        _, ns = sentence(f, C, t, 1)
+        ns = lead_cites(f, C, t, 1)
     return ns
+
+
+def impact_math(f, C, t, label, cite):
+    """Math block for a finding's impact: plain formula as text, the engine's formula_marked (renumbered) as text_marked."""
+    fm = f.get("formula_marked") or (f.get("impact") or {}).get("formula_marked")
+    marked = remark(fm, f, C, t, limit=MAX_TAIL) if isinstance(fm, str) and fm.strip() else None
+    return math_block(label, plain_formula(f), cite, marked)
 
 
 def short_nq(f):
@@ -437,10 +585,18 @@ def gated_impact_text(f):
     imp = f.get("impact") or {}
     for k in GATED_IMPACT_KEYS:
         if isinstance(imp.get(k), str) and imp[k].strip():
-            return imp[k].strip()
+            return strip_marks(imp[k]).strip()
     if isinstance(f.get("impact_gated"), str) and f["impact_gated"].strip():
-        return f["impact_gated"].strip()
-    return (imp.get("formula") or "").strip()
+        return strip_marks(f["impact_gated"]).strip()
+    return strip_marks(imp.get("formula") or "").strip()
+
+
+def plain_formula(f):
+    """The impact formula without markers (impact.formula, else the gated text stripped of markers)."""
+    imp = f.get("impact") or {}
+    if isinstance(imp.get("formula"), str) and imp["formula"].strip():
+        return strip_marks(imp["formula"]).strip()
+    return gated_impact_text(f)
 
 
 
@@ -569,8 +725,11 @@ def plain_peer(clause):
     return clause
 
 
-def math_block(label, text, cite):
-    return {"type": "math", "label": label, "text": text, "cite": cite}
+def math_block(label, text, cite, text_marked=None):
+    b = {"type": "math", "label": label, "text": text, "cite": cite}
+    if text_marked:
+        b["text_marked"] = text_marked
+    return b
 
 
 def impact_cell(f, C, t):
@@ -616,11 +775,11 @@ def findings_table(fs, C, t):
         s, ns = sentence(f, C, t)
         imp, formula, ins = impact_cell(f, C, t)
         peer, pns = peer_cell(f, C, t)
-        rows.append([f"{s} {C.mark(*ns)}", f"{imp} {C.mark(*ins)}".strip(), f"{peer} {C.mark(*pns)}".strip(),
+        rows.append([C.after(s, *ns), C.after(imp, *ins), C.after(peer, *pns),
                      f.get("confidence") or "n/a", source_cell(f, C, t)])
         if formula and ins:
             lead = match_rule(f.get("signal_kind"), LEADS) or "finding"
-            maths.append(math_block(f"Impact math, row {i} ({lead[0].lower() + lead[1:]})", formula, ins[0]))
+            maths.append(impact_math(f, C, t, f"Impact math, row {i} ({lead[0].lower() + lead[1:]})", ins[0]))
     return {"type": "table", "columns": ["Finding", "Impact", "Peer", "Confidence", "Source"], "rows": rows}, maths
 
 
@@ -702,10 +861,21 @@ ALIAS = {
                   "is the {n} needle priced in"],
     "ceo_memo": ["write the ceo memo for {n}", "{t} memo", "{n} memo", "ceo memo {n}", "what should {n}'s ceo do",
                  "{t} ceo memo", "{n} recommendation", "decide {t}", "what should {n} do", "{n} strategic move"],
-    "league": ["league", "league table", "why {n}", "why does {n} beat the other nine", "who wins", "ranking",
-               "which company", "which company has the sharpest needle", "which company has the sharpest needle and why",
-               "which company wins", "best needle across companies", "rank the needles", "league overview",
-               "rank the ten companies"],
+    "league": ["league", "league table", "internal triage", "how did you choose which company to look at first",
+               "triage order", "reading order", "which company did you read first", "internal ranking"],
+    "needles": ["which company has the sharpest needle", "which company has the sharpest needle and why",
+                "which company wins", "best needle across companies", "rank the needles", "who wins", "which company",
+                "sharpest needle across companies", "needles by company", "all needles", "every company's needle",
+                "compare the needles"],
+    "products": ["which product has the weakest fine print", "which product has the weakest fine print vs rivals",
+                 "weakest fine print", "products vs rivals", "fine print across products", "all products",
+                 "product table", "which product is weakest", "compare all products", "growth limiters"],
+    "decides": ["which companies have a valued ceo move", "valued ceo moves", "decide outputs", "which companies have a decide",
+                "ceo moves across companies", "all ceo moves", "valued moves", "which companies have a valued move",
+                "decide summary", "compare the ceo moves"],
+    "why_company": ["why {n}", "why did you pick {n}", "why {t} over the others", "why {n} over the other nine",
+                    "{n} over the other nine", "why choose {n}", "why {t}", "{n} company choice",
+                    "why does {n} beat the other nine", "why {t} over the other nine"],
     "ai_wrong": ["where was the ai wrong", "ai wrong", "where the ai was confidently wrong", "ai mistakes",
                  "what did the ai get wrong", "how did you catch ai errors", "confidently wrong", "hallucinations",
                  "verifier catches"],
@@ -738,18 +908,24 @@ def ask_next(kind, ctx, t):
     d = ctx.default
     prod = ctx.top_product(t) if t else None
     pid = f"product:{t}:{prod}" if prod else None
+    dec = next((x for x in ctx.tickers if ((ctx.companies[x].get("stance") or {}).get("decide") or {}).get("moves")
+                and not ((ctx.companies[x].get("stance") or {}).get("decide") or {}).get("demo")), None)
     table = {
-        "needle": [f"findings:{t}", pid, f"ceo_memo:{t}"],
+        "needle": [f"why_company:{t}", f"findings:{t}", f"ceo_memo:{t}"],
+        "why_company": [f"needle:{t}", f"findings:{t}", f"ceo_memo:{t}"],
         "findings": [pid, f"priced_in:{t}", f"ceo_memo:{t}"],
         "product": [f"priced_in:{t}", f"ceo_memo:{t}"],
         "priced_in": [f"ceo_memo:{t}", f"peers:{t}"],
-        "peers": [f"ceo_memo:{t}", "league:global"],
-        "ceo_memo": [f"prove_wrong:{t}", f"priced_in:{t}", "league:global"],
+        "peers": [f"ceo_memo:{t}", f"why_company:{t}"],
+        "ceo_memo": [f"prove_wrong:{t}", f"priced_in:{t}", "decides:global"],
         "prove_wrong": [f"ceo_memo:{t}", f"needle:{t}"],
-        "league": [f"needle:{d}", f"ceo_memo:{d}", "ai_wrong:global"],
-        "ai_wrong": ["how_it_works:global", "moat:global", f"ceo_memo:{d}"],
-        "moat": ["how_it_works:global", "ai_wrong:global", f"ceo_memo:{d}"],
-        "how_it_works": ["ai_wrong:global", "league:global"],
+        "league": ["needles:global", "how_it_works:global", "ai_wrong:global"],
+        "needles": ["products:global", "decides:global", "how_it_works:global"],
+        "products": ["needles:global", "decides:global", "ai_wrong:global"],
+        "decides": [f"ceo_memo:{dec}" if dec else None, "needles:global", "how_it_works:global"],
+        "ai_wrong": ["how_it_works:global", "moat:global", "needles:global"],
+        "moat": ["how_it_works:global", "ai_wrong:global", "needles:global"],
+        "how_it_works": ["ai_wrong:global", "needles:global", "decides:global"],
     }
     return [x for x in table[kind] if x][:3]
 
@@ -761,6 +937,9 @@ def record(kind, ctx, t, prompt, summary, blocks, C, generated_by, numeric_check
            "aliases": aliases(kind, ctx, t, product, rival), "ticker": t, "kind": kind, "generated_by": generated_by,
            "summary": summary, "blocks": blocks, "cites": C.items,
            "numeric_check": numeric_check or {"status": "unchecked"}, "ask_next": ask_next(kind, ctx, t)}
+    d = (((ctx.companies.get(t) or {}).get("stance") or {}).get("decide") or {}) if t else {}
+    rec["demo"] = bool(d.get("demo"))
+    rec["demo_note"] = (d.get("note") or None) if d.get("demo") else None
     if kind in MEMO_KINDS:
         rec["memo_header"] = memo_header
     return rec
@@ -779,20 +958,22 @@ def needle_memo(ctx, t):
         return record("needle", ctx, t, f"What is {name}'s Sharpest Needle?", f"No needle for {name}.", blocks, C, "data")
     lead = match_rule(f.get("signal_kind"), LEADS) or "The sharpest needle"
     s, ns = sentence(f, C, t)
-    p = f"**{lead}.** {poss(name)} Sharpest Needle is this: {s} {C.mark(*ns)}."
+    p = (f"**{lead}.** {poss(name)} Sharpest Needle is this: {C.after(s, *ns)}. We pick the needle by a plain rule: "
+         f"{NEEDLE_RULE}.")
     note, ons = obscurity_cite(f, C, t)
     if note:
-        p += f" How much the market already discusses it: {plain_obscurity(note)} {C.mark(*ons)}."
+        p += f" How rarely analysts asked: {plain_obscurity(note)} {C.mark(*ons)}."
     imp = f.get("impact") or {}
     itxt, formula, ins = impact_cell(f, C, t)
     p += f" Impact: {itxt} {C.mark(*ins)}." if ins else f" Impact: {itxt}."
-    blocks = [{"type": "p", "md": p}, {"type": "callout", "tone": "muted", "md": STATUS_TEXT.get(status, STATUS_TEXT["none"])}]
+    blocks = [{"type": "p", "md": p}]
+    if status in STATUS_TEXT:
+        blocks.append({"type": "callout", "tone": "muted", "md": STATUS_TEXT[status]})
     if formula and ins:
-        blocks.append(math_block("Impact math", formula, ins[0]))
+        blocks.append(impact_math(f, C, t, "Impact math", ins[0]))
     if note:
-        blocks.append(math_block("Obscurity test, as computed", note, ons[0]))
-    kpi = [{"label": "Needle status", "value": status.replace("_", " "), "cite": None},
-           {"label": "Confidence", "value": f.get("confidence") or "n/a", "cite": None},
+        blocks.append(math_block("Analyst-attention test, as computed", note, ons[0]))
+    kpi = [{"label": "Confidence", "value": f.get("confidence") or "n/a", "cite": None},
            {"label": "Direction", "value": ("adverse" if (imp.get("adverse") or f.get("direction") in ("adverse", "negative")) else (f.get("direction") or "n/a")), "cite": None},
            {"label": "Detector", "value": (f.get("signal_family") or f.get("signal_kind") or "n/a").replace("_", " "), "cite": None}]
     blocks.append({"type": "kpi", "items": kpi})
@@ -810,26 +991,40 @@ def needle_memo(ctx, t):
     else:
         blocks.append({"type": "callout", "tone": "muted",
                        "md": "The quote is located on the cited page; the per-number gate recorded no checked figures for this row."})
-    if status == "none":
-        blocks.append({"type": "callout", "tone": "warn",
-                       "md": f"No row qualifies as {poss(name)} Sharpest Needle, so the top-scored row is shown instead."})
-    summary = f"{lead}: {name}'s needle, status {status.replace('_', ' ')}, confidence {f.get('confidence') or 'n/a'}."
+    summary = f"{lead}: {name}'s needle, confidence {f.get('confidence') or 'n/a'}."
     return record("needle", ctx, t, f"What is {name}'s Sharpest Needle?", summary, blocks, C, "template", nc)
+
+
+def ranked_findings(ctx, t, n=5):
+    """(findings, rank basis sentence). The company's findings_table (cited findings ranked by dollar impact) when the
+    export carries one, else the engine's order with the needle first."""
+    c = ctx.companies[t]
+    needle, _ = ctx.needle(t)
+    ft = c.get("findings_table") or {}
+    rows = ft.get("rows") if isinstance(ft, dict) else ft
+    if rows:
+        ids = [r.get("finding_id") or r.get("id") for r in rows if isinstance(r, dict)]
+        pool = {f["id"]: f for f in ctx.usable(t)}
+        fs = [pool[i] for i in ids if i in pool]
+        basis = (ft.get("rank_basis") if isinstance(ft, dict) else None) or "dollar impact"
+        if fs:
+            return fs[:n], f"ranked by {basis} (the engine's findings table)"
+    fs = ctx.usable(t)
+    if needle and needle in fs:
+        fs.remove(needle)
+        fs.insert(0, needle)
+    return fs[:n], "in the engine's order, with the Sharpest Needle first"
 
 
 def findings_memo(ctx, t):
     name, C = ctx.name(t), Cites()
     needle, _ = ctx.needle(t)
-    fs = ctx.usable(t)
-    if needle and needle in fs:
-        fs.remove(needle)
-        fs.insert(0, needle)
-    fs = fs[:5]
-    lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the top-scored row"
-    p = (f"Here are {poss(name)} five strongest verified findings, ranked by materiality score: dollars at risk, scaled "
-         f"by how little the market discusses the item and how solid the page evidence is. The first row is the "
-         f"Sharpest Needle ({lead[0].lower() + lead[1:]}). Rows without a dollar channel are marked not quantified "
-         f"rather than guessed, and every row links to its filing page or label section.")
+    fs, basis = ranked_findings(ctx, t)
+    lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the first row"
+    p = (f"Here are {poss(name)} five verified findings, {basis}. Each row carries its source page, its impact "
+         f"math, its peer comparison and our confidence. The Sharpest Needle is {lead[0].lower() + lead[1:]}. Rows "
+         f"without a dollar channel are marked not quantified rather than guessed, and every row links to its "
+         f"filing page or label section.")
     table, maths = findings_table(fs, C, t)
     blocks = [{"type": "p", "md": p}, table, *maths]
     quant = sum(1 for f in fs if impact_cell(f, Cites(), t)[2])
@@ -838,11 +1033,12 @@ def findings_memo(ctx, t):
                           "medians are computed across the ten shortlist companies from SEC XBRL and are not page-cited."
                           if quant else "No row in this set states an impact formula; the table shows why.")})
     return record("findings", ctx, t, f"Show {name}'s five cited findings",
-                  f"Five cited findings for {name}, ranked by materiality; the needle is first.", blocks, C, "data",
-                  aggregate_nc(fs))
+                  f"Five cited findings for {name}, {basis}.", blocks, C, "data", aggregate_nc(fs))
 
 
 def cell_marks(cell, C, t, slug, rk, ent):
+    if cell.get("uncited"):
+        return [], False
     cites = cell.get("citations") or []
     ns = [C.add(ev_cite(e, None, t, i)) for i, e in list(enumerate(cites))[:3]]
     if ns:
@@ -896,7 +1092,7 @@ def product_memo(ctx, t, slug, v2, comp):
         else:
             p += f" Our call: {call}."
     blocks = [{"type": "p", "md": p}]
-    table_ref = False
+    table_ref = uncited = False
     if v2 and v2.get("rows"):
         cols = ["Row", pname] + rivals
         rows = []
@@ -907,8 +1103,11 @@ def product_memo(ctx, t, slug, v2, comp):
                 cell = row.get(ent) or {}
                 ns, ref = cell_marks(cell, C, t, slug, rk, ent)
                 table_ref = table_ref or ref
-                val = shorten(cell.get("value") or ("no data: " + (cell.get("empty_reason") or "not located")), 150)
-                out.append(f"{val} {C.mark(*ns)}".strip())
+                if cell.get("uncited"):
+                    val, uncited = "needs citation: no page located for this value", True
+                else:
+                    val = shorten(cell.get("value") or ("no data: " + (cell.get("empty_reason") or "not located")), 150)
+                out.append(C.after(val, *ns))
             rows.append(out)
         blocks.append({"type": "table", "columns": cols, "rows": rows})
     elif comp:
@@ -918,6 +1117,10 @@ def product_memo(ctx, t, slug, v2, comp):
             out = [r.get("label") or r.get("field")]
             for s in [slug] + (comp.get("rivals") or []):
                 v = (r.get("values") or {}).get(s) or {}
+                if v.get("uncited"):
+                    out.append("needs citation: no page located for this value")
+                    uncited = True
+                    continue
                 ns = [C.add(ev_cite(v["citation"], None, t))] if isinstance(v.get("citation"), dict) and v["citation"].get("cite_id") else []
                 val = v.get("value")
                 if not ns and val is not None and re.search(r"\d", str(val)):
@@ -928,10 +1131,13 @@ def product_memo(ctx, t, slug, v2, comp):
                 out.append(f"{shorten(str(val) if val is not None else 'n/a', 150)} {C.mark(*ns)}".strip())
             rows.append(out)
         blocks.append({"type": "table", "columns": cols, "rows": rows})
-    if table_ref:
+    if table_ref or uncited:
         blocks.append({"type": "callout", "tone": "muted",
-                       "md": "Cells marked table reference come from our verified tables where no page could be "
-                             "located for that date; every other cell cites the DailyMed label section or the filing page."})
+                       "md": ("Cells marked table reference come from our verified tables where no page could be "
+                              "located for that date; " if table_ref else "")
+                             + ("cells marked needs citation hold a value the engine could not tie to a page, so it is "
+                                "not printed as a fact; " if uncited else "")
+                             + "every other cell cites the DailyMed label section or the filing page."})
     nc = (v2 or {}).get("numeric_check") if isinstance((v2 or {}).get("numeric_check"), dict) else None
     summary = f"{pname} vs {', '.join(rivals)} on label, safety, dosing, exclusivity and pricing."
     return record("product", ctx, t, f"Compare {pname} with its rivals on the fine print", summary, blocks, C, "data",
@@ -956,7 +1162,7 @@ def peers_memo(ctx, t):
          f"negotiation, the MFN agreement and the tariff exemption that comes with it.")
     if needle and re.search(r"peer median", needle.get("finding") or ""):
         ptxt, _ = peer_cell(needle, C, t)
-        _, pns = sentence(needle, C, t)
+        pns = lead_cites(needle, C, t)
         lead = match_rule(needle.get("signal_kind"), LEADS) or "the needle"
         p += f" On its needle metric ({lead[0].lower() + lead[1:]}) the company sits at {ptxt} {C.mark(*pns)}."
     fr = ctx.companies[t].get("forces") or {}
@@ -1010,8 +1216,8 @@ def priced_in_memo(ctx, t):
         note, ons = obscurity_cite(needle, C, t)
         lead = match_rule(needle.get("signal_kind"), LEADS) or "the needle"
         if note:
-            p += f"Our test for {lead[0].lower() + lead[1:]}: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}. "
-            maths.append(math_block("Obscurity test, as computed", note, ons[0]))
+            p += f"How rarely analysts asked about {lead[0].lower() + lead[1:]}: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}. "
+            maths.append(math_block("Analyst-attention test, as computed", note, ons[0]))
     rows = sorted(c.get("priced_in") or [], key=lambda r: (r.get("share_of_quarters_asked") if r.get("share_of_quarters_asked") is not None else 9))
     never = [r for r in rows if (r.get("quarters_asked") or 0) == 0]
     if never:
@@ -1027,10 +1233,7 @@ def priced_in_memo(ctx, t):
         rel = cvg.get("consensus_vs_range") or "unknown"
         p += (f"Management guided: \"{cvg['guidance_quote'].strip()}\" [{n}]; Street consensus sits {rel} that range "
               f"(I/B/E/S figures are licensed, so we show the position, not the numbers). ")
-    call = {"strict": "not priced in: the needle clears the strict obscurity floor",
-            "provisional": "only partly priced in: the needle sits below the strict obscurity floor",
-            "floor_relaxed": "mostly priced in: no row cleared the strict or provisional floors",
-            "none": "priced in: no finding clears the obscurity floor"}.get(status, "not tested")
+    call = PRICED_CALL.get(status, "not tested")
     p += f"Our call: {call}."
     blocks = [{"type": "p", "md": p.strip()}, *maths]
     if rows:
@@ -1050,54 +1253,29 @@ def priced_in_memo(ctx, t):
 
 # ---------------------------------------------------------------- global chat answers
 def league_memo(ctx):
-    C, d = Cites(), ctx.default
-    dname = ctx.name(d) if d else "the leader"
-    rob = ctx.meta.get("league_robustness") or {}
-    leaders = Counter(v["ranking"][0][0] for v in rob.values() if v.get("ranking"))
-    nvar = len(rob)
-    p, maths = "", []
-    if leaders:
-        lead, cnt = leaders.most_common(1)[0]
-        others = [(k, v["ranking"][0][0]) for k, v in rob.items() if v["ranking"][0][0] != lead]
-        seconds = Counter(v["ranking"][1][0] for v in rob.values() if len(v.get("ranking") or []) > 1)
-        n = C.add(row_cite("row:robustness", "meta.json:league_robustness", "out/league_v3_robustness.json (eight scoring variants)",
-                           f"{nvar} variants; #1 counts: " + ", ".join(f"{k} {v} of {nvar}" for k, v in leaders.most_common())
-                           + f"; other leaders {len(others)}; #2 counts: " + ", ".join(f"{k} {v} of {nvar}" for k, v in seconds.most_common())
-                           + "; " + "; ".join(f"{k}: #1 {v['ranking'][0][0]} ({v['label']})" for k, v in rob.items()), "computed", ticker=None))
-        p = f"{ctx.name(lead)} leads in {cnt} of {nvar} scoring variants [{n}]"
-        maths = []
-        if others:
-            p += (f"; {', '.join(ctx.name(x) for x in dict.fromkeys(o for _, o in others))} leads the other "
-                  f"{len(others)} [{n}], under {' and '.join(VARIANT_PLAIN.get(k, 'an alternative scoring rule') for k, _ in others)} [{n}]")
-            maths.append(math_block("Robustness variants, as labelled in the engine",
-                                    "; ".join(f"{k}: {v['label']} (#1 {v['ranking'][0][0]})" for k, v in rob.items()), n))
-        p += ". "
-        if seconds:
-            s, sc = seconds.most_common(1)[0]
-            p += f"Second place goes to {ctx.name(s)} in {sc} of {nvar} variants [{n}]. "
-    p += ("The score L is the sum of a company's top five finding scores, discounted when a single finding carries "
-          "most of it; each finding score is dollars at risk times how little the market discusses it times evidence "
-          "quality times the backtested chance the signal matters. Compare ranks, not raw values, across versions.")
+    """Internal triage only: the order in which we read the companies, ranks and counts, no scores."""
+    C = Cites()
+    p = ("Before the pitch work started we ran an internal triage to decide which company to read first. It is not "
+         "a pitch output and it did not choose the company: the company pick is a human decision informed by the "
+         "red team, and the Part 1 case for it is the findings themselves. The triage order, ranks only:")
     rows = []
     for r in ctx.league:
         x = r["ticker"]
         if x not in ctx.companies:
             continue
         n = league_cite(x, ctx, C)
-        v2 = r.get("v2_rank")
-        move = (f"#{v2} to #{r.get('rank')}" if v2 is not None and r.get("rank") is not None else "n/a")
-        rows.append([f"{r.get('rank', '')}", f"**{ctx.name(x)}**" if x == d else ctx.name(x),
-                     f"{r.get('score', 0):.4f} [{n}]", (r.get("needle_status") or "n/a").replace("_", " "), move,
-                     f"{r.get('n_verified', 'n/a')} verified / {r.get('n_rejected', 'n/a')} rejected"])
-    blocks = [{"type": "p", "md": p}, *(maths if leaders else []),
-              {"type": "table", "columns": ["Rank", "Company", "Score L", "Needle", "Rank vs v2", "Findings"], "rows": rows},
+        f, _ = ctx.needle(x)
+        lead = (match_rule(f.get("signal_kind"), LEADS) if f else None) or "no needle"
+        rows.append([f"{r.get('rank', '')}", ctx.name(x), lead,
+                     f"{r.get('n_verified', 'n/a')} verified / {r.get('n_rejected', 'n/a')} rejected [{n}]"])
+    blocks = [{"type": "p", "md": p},
+              {"type": "table", "columns": ["Triage rank", "Company", "Sharpest Needle", "Findings"], "rows": rows},
               {"type": "callout", "tone": "muted",
-               "md": "Strict means the needle clears the obscurity floor on its own; provisional and floor relaxed "
-                     "mean the best row was promoted with a lower floor; none means no row qualified."}]
-    return record("league", ctx, None, f"Why does {dname} beat the other nine?",
-                  f"The ten-company league: {dname} leads, with the robustness check across scoring variants.",
-                  blocks, C, "data")
-
+               "md": "Caveat: this order came from an internal ranking score that is not part of the pitch; it "
+                     "decided only which company we looked at first. Ask for a company's needle, findings or CEO memo "
+                     "to see the evidence."}]
+    return record("league", ctx, None, "Internal triage: how we chose which company to look at first",
+                  "The internal reading order of the ten companies, ranks only; not a pitch output.", blocks, C, "data")
 
 AI_PICKS = [  # (stream, table-or-key substring) in display order; first five that exist are shown
     ("peers", "rival_product_statements"), ("peers", "peer_product_revenue"), ("pipeline", "entity_name_collision"),
@@ -1195,26 +1373,204 @@ def moat_memo(ctx):
                   "The corpus and verified tables behind every citation, bucket by bucket.", blocks, C, "data")
 
 
+def needle_line(ctx, t, C):
+    """One line for a company's Sharpest Needle: marked sentence, impact direction or gated figure, analyst attention."""
+    f, status = ctx.needle(t)
+    if not f:
+        return None, None
+    s, ns = sentence(f, C, t)
+    itxt, _, ins = impact_cell(f, C, t)
+    note, ons = obscurity_cite(f, C, t)
+    line = f"**{ctx.name(t)}**: {C.after(s, *ns)}. Impact: {C.after(itxt, *ins)}."
+    if note:
+        line += f" How rarely analysts asked: {C.after(plain_obscurity(note).rstrip('.'), *ons)}."
+    if status in STATUS_TEXT:
+        line += f" ({STATUS_TEXT[status].split(': ', 1)[1].rstrip('.')}.)"
+    return line, f
+
+
+def gated_dollars(f):
+    """A dollar impact the engine gated, for ordering only (never printed); None when the figure is ungated."""
+    imp = f.get("impact") or {}
+    if imp.get("suspect") or imp.get("dollars") is None or (imp.get("currency") or "USD") != "USD":
+        return None
+    if imp.get("gated") or (imp.get("quantified") and not imp.get("ungated_dropped")):
+        return abs(float(imp["dollars"]))
+    return None
+
+
+def needles_memo(ctx):
+    C = Cites()
+    lines = []
+    for i, t in enumerate(ctx.tickers):
+        line, f = needle_line(ctx, t, C)
+        if line:
+            g = gated_dollars(f)
+            lines.append((0 if g is not None else 1, -(g or 0), i, line))
+    lines.sort()
+    gated = sum(1 for x in lines if x[0] == 0)
+    order = ("ordered by gated dollar impact where the engine states one, then in the engine's needle order"
+             if gated else "in the engine's needle order (no needle carries a gated dollar total, so none is ranked by dollars)")
+    p = (f"Each company's Sharpest Needle by the same plain rule: {NEEDLE_RULE}. One line per company, {order}. "
+         f"Which company to pitch is a human decision informed by the red team; this list is the evidence, not the pick.")
+    blocks = [{"type": "p", "md": p}, {"type": "list", "items": [x[3] for x in lines]}]
+    return record("needles", ctx, None, "Which company has the sharpest needle?",
+                  "Every company's Sharpest Needle on one page, with its impact and how rarely analysts asked.",
+                  blocks, C, "data")
+
+
+def products_memo(ctx):
+    C = Cites()
+    items = []
+    for t in ctx.tickers:
+        for slug, v2, comp in ctx.products(t):
+            ents = (v2 or {}).get("entities") or []
+            pname = ents[0]["name"] if ents else slug.capitalize()
+            rivals = [e["name"] for e in ents[1:]] or [r.capitalize() for r in (comp or {}).get("rivals") or []]
+            gl = (v2 or {}).get("growth_limiter") or {}
+            tied = ((v2 or {}).get("findings") or [None])[0]
+            line = f"**{pname}** ({ctx.name(t)}) vs {', '.join(rivals) or 'no rival on file'}:"
+            if gl.get("sentence"):
+                gns = [C.add(ev_cite(e, None, t, i)) for i, e in list(enumerate(gl.get("citations") or []))[:2]]
+                if not gns and re.search(r"\d", gl["sentence"]):
+                    gns = [C.add(row_cite(f"row:gl:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter",
+                                          "product growth limiter (agent.needle.quant.product)", gl["sentence"], "computed", ticker=t))]
+                line += f" growth limiter: {C.after(gl['sentence'].rstrip('.'), *gns)}."
+            if isinstance(tied, dict) and (tied.get("sentence_marked") or tied.get("finding")):
+                s, ns = sentence(tied, C, t)
+                line += f" Tied finding: {C.after(s, *ns)}."
+                weight = 0
+            else:
+                line += " No label row ties to a financial finding yet."
+                weight = 1
+            if gl:
+                line += " Priced in: " + ("yes" if gl.get("priced_in") else "not clearly") + "."
+            items.append((weight, line))
+    items.sort(key=lambda x: x[0])
+    p = ("One line per case product: its growth limiter from the fine-print table, the financial finding it ties "
+         "to, and our priced-in call. Products with a tied finding come first; which product is weakest is a "
+         "judgment the table supports, not a score.")
+    blocks = [{"type": "p", "md": p}, {"type": "list", "items": [x[1] for x in items]}]
+    return record("products", ctx, None, "Which product has the weakest fine print vs rivals?",
+                  "Every case product's growth limiter, tied finding and priced-in call on one page.", blocks, C, "data")
+
+
+def decides_memo(ctx):
+    C = Cites()
+    items, have = [], []
+    for t in ctx.tickers:
+        st = ctx.companies[t].get("stance") or {}
+        d = st.get("decide") or {}
+        if not d.get("moves"):
+            continue
+        have.append(t)
+        mv, least_bad = decide_pick(d)
+        n = decide_cite(d, t, mv, C)
+        bud, _ = budget_total(mv)
+        flag = "pipeline demonstration, not the team's recommendation" if d.get("demo") else "valued move"
+        head = (f"no candidate clears the hurdle; least-bad option: {mv.get('name')}" if least_bad
+                else f"chosen move: {mv.get('name')}")
+        line = f"**{ctx.name(t)}** ({flag}): {head}, expected value {mny(mv.get('ev'))}"
+        if bud is not None:
+            line += f" on {mny(bud)} committed over 24 months"
+        pm = mv.get("payback_month")
+        line += f", payback month {pm} [{n}]." if pm is not None else f", no payback within the horizon [{n}]."
+        if d.get("selection_rule"):
+            line += f" {str(d['selection_rule']).strip().rstrip('.')} [{n}]."
+        items.append(line)
+    rest = [ctx.name(t) for t in ctx.tickers if t not in have]
+    lst = ((ctx.meta.get("v2_status") or {}).get("decide_v2")) or have
+    cn = C.add(row_cite("row:meta:decide_v2", "meta.json:v2_status.decide_v2" if (ctx.meta.get("v2_status") or {}).get("decide_v2") else "meta.json:companies",
+                        "meta.json v2_status.decide_v2 (companies with a DECIDE output)",
+                        f"{', '.join(lst)}: {len(have)} of {len(ctx.tickers)} companies", "counted at export"))
+    p = (f"{len(have)} of the {len(ctx.tickers)} companies carry a DECIDE output [{cn}]: one CEO move valued against two "
+         f"alternatives on the same five numbers (expected value, cash at risk, payback month, scenario spread, MCDA) "
+         f"with kill signals. Demo flags are stated per line.")
+    if rest:
+        p += f" The other {len(rest)} ({', '.join(rest)}) carry template stances with no valued move yet [{cn}]."
+    blocks = [{"type": "p", "md": p}, {"type": "list", "items": items or ["No DECIDE output in this export."]}]
+    return record("decides", ctx, None, "Which companies have a valued CEO move?",
+                  f"{len(have)} DECIDE outputs summarised with their chosen or least-bad move, EV and demo flag.",
+                  blocks, C, "data")
+
+
+def evidence_cite(t, ctx, C):
+    e = (ctx.meta.get("evidence_located") or {}).get(t) or {}
+    return C.add(row_cite(f"row:meta:evidence:{t}", f"meta.json:evidence_located.{t}",
+                          "meta.json evidence_located (per-company counts at export)",
+                          "; ".join(f"{k} {e.get(k)}" for k in ("findings", "verified", "high_confidence", "rejected", "evidence", "located")),
+                          "counted by agent/ui_export.py at export", ticker=t))
+
+
+def why_company_memo(ctx, t):
+    name, c, C = ctx.name(t), ctx.companies[t], Cites()
+    f, status = ctx.needle(t)
+    st = c.get("stance") or {}
+    d = st.get("decide") or {}
+    ev = (ctx.meta.get("evidence_located") or {}).get(t) or {}
+    p = f"Why {name} over the other nine, from the findings alone."
+    if ev.get("verified") is not None:
+        n = evidence_cite(t, ctx, C)
+        p += (f" {name} has {ev['verified']} page-verified findings, {ev.get('high_confidence', 0)} at high confidence, "
+              f"with {ev.get('rejected', 0)} candidate rows rejected by the verifier [{n}].")
+    if f:
+        lead = match_rule(f.get("signal_kind"), LEADS) or "the needle"
+        itxt, _, ins = impact_cell(f, C, t)
+        note, ons = obscurity_cite(f, C, t)
+        p += f" Its Sharpest Needle ({NEEDLE_RULE}) is {lead[0].lower() + lead[1:]} {C.mark(*lead_cites(f, C, t))}."
+        p += f" Impact: {C.after(itxt, *ins)}."
+        if note:
+            p += f" How rarely analysts asked: {C.after(plain_obscurity(note).rstrip('.'), *ons)}."
+    if d.get("moves"):
+        mv, least_bad = decide_pick(d)
+        n = decide_cite(d, t, mv, C)
+        p += (f" A valued CEO move exists ({'pipeline demonstration' if d.get('demo') else 'DECIDE output'}): "
+              f"{mv.get('name')}, expected value {mny(mv.get('ev'))} [{n}].")
+    else:
+        p += " No valued CEO move exists yet for this company; the stance is a template ranked by rules on the findings."
+    rows = []
+    for x in ctx.tickers:
+        e = (ctx.meta.get("evidence_located") or {}).get(x) or {}
+        fx, _ = ctx.needle(x)
+        lead = (match_rule(fx.get("signal_kind"), LEADS) if fx else None) or "no needle"
+        n = evidence_cite(x, ctx, C) if e.get("verified") is not None else None
+        dx = ((ctx.companies[x].get("stance") or {}).get("decide") or {})
+        rows.append([f"**{ctx.name(x)}**" if x == t else ctx.name(x),
+                     f"{e.get('verified', 'n/a')} ({e.get('high_confidence', 0)} high) [{n}]" if n else "n/a",
+                     lead, ("yes, demo" if dx.get("demo") else "yes") if dx.get("moves") else "no"])
+    blocks = [{"type": "p", "md": p},
+              {"type": "table", "columns": ["Company", "Verified findings", "Sharpest Needle", "Valued move"], "rows": rows},
+              {"type": "callout", "tone": "muted",
+               "md": "Caveat: the final company choice is a human decision informed by the red team; this answer "
+                     "shows the evidence behind it, not a score."}]
+    return record("why_company", ctx, t, f"Why {name} over the other nine?",
+                  f"The findings case for {name}: verified findings, its needle, its impact and whether a valued move exists.",
+                  blocks, C, "data")
+
+
 def how_it_works_memo(ctx):
     C, m, pr = Cites(), ctx.meta, ctx.proof
     tot, led = m.get("totals") or {}, m.get("ledger") or {}
-    s = ["**Detect.** Rule-based detectors read every filing, call and label in the corpus and flag candidates: "
-         "inventory or receivables outrunning revenue, margin and tax swings, wording drift, deflected questions, "
-         "label gaps, the three policy forces."]
-    v = "**Verify.** A finding survives only if its quote is on the cited page and every figure is found there or derived from figures that are"
+    s = ["**Four outputs.** First, a findings table: every verified finding with its source page, impact math, "
+         "peer comparison and confidence, ranked by dollar impact. Second, the Sharpest Needle, by a plain rule: "
+         f"{NEEDLE_RULE}. Third, the product fine-print table: approved uses, safety, dosing, exclusivity and pricing "
+         "for each case product against its rivals, with a growth limiter and a priced-in call. Fourth, DECIDE: one "
+         "CEO move with a budget, compared with two alternatives on the same five numbers (expected value, cash at "
+         "risk, payback month, scenario spread, MCDA), with kill signals for the first 6 to 12 months."]
+    v = ("**Verify to the page.** A finding survives only if its quote is on the cited page and every figure is "
+         "found there or derived from figures that are")
     if tot.get("rejected"):
         v += f"; the rest go to a rejected log ({tot['rejected']} rows so far [{meta_cite('totals.rejected', ctx, C)}])"
     s.append(v + ".")
-    s.append("**Score.** Each finding scores earnings at risk, times how little the market discusses it, times "
-             "evidence quality, times the backtested chance it matters; the league ranks each company on its top five.")
-    s.append("**Gate.** Every sentence here passed a per-number citation gate; failed rows are excluded, oversized impacts withheld.")
+    s.append("**Numeric gate.** Every number printed here carries a marker to its page, its derivation or its stated "
+             "assumption; rows that fail the gate are excluded, oversized impacts withheld, licensed data never printed.")
     sealed = (pr.get("sealed") or {})
     preds = ((sealed.get("file") or {}).get("predictions")) or []
     if preds:
         n = proof_cite("sealed.file_hash", ctx, C, "docs/needle_sealed.md and out/predictions/sealed_2026Q3.json",
                        quote=f"{len(preds)} predictions ({', '.join(p['ticker'] for p in preds)}); sha256 {sealed.get('file_hash')}")
-        s.append(f"**Seal.** Revenue forecasts for {len(preds)} companies were hashed (sha256) and committed before Q3 "
-                 f"results [{n}].")
+        s.append(f"**Sealed forecasts.** Revenue forecasts for {len(preds)} companies were hashed (sha256) and committed "
+                 f"before Q3 results [{n}].")
     cal = pr.get("calibration") or {}
     if cal.get("coverage"):
         n = proof_cite("calibration", ctx, C, "out/predictions/calibration.json")
@@ -1229,19 +1585,26 @@ def how_it_works_memo(ctx):
     if led.get("n"):
         s.append(f"**Ledger.** Every run appends to a hash-chained ledger ({led['n']} records, "
                  f"{'intact' if led.get('ok') else 'broken'} at export [{meta_cite('ledger.n', ctx, C)}]).")
-    s.append("**Honesty.** The CEO memo is drafted by rules from verified findings, not by a model, and says so.")
-    blocks = [{"type": "p", "md": " ".join(s)},
-              math_block("Score", "S = M x O x E x pi (M materiality in base-case EPS, O obscurity with a 3-month "
-                         "half-life, E evidence quality, pi backtested probability); league L = top-5 sum x min(1, N_eff / 3)",
-                         meta_cite("engine", ctx, C, title="engine version (docs/quant_model.md)"))]
+    s.append("**Honesty.** The CEO memo is drafted by rules from verified findings and the DECIDE numbers, not by a "
+             "model, and says so.")
+    blocks = [{"type": "p", "md": " ".join(s)}]
     return record("how_it_works", ctx, None, "How does NEEDLE work?",
-                  "Detect, verify to the page, score, gate, seal: the pipeline in plain words.", blocks, C, "data")
-
+                  "Four outputs: findings table, Sharpest Needle, product fine print, DECIDE; verified to the page, "
+                  "gated per number, sealed forecasts.", blocks, C, "data")
 
 # ---------------------------------------------------------------- Part 2 memos
+def demo_callout(d, label):
+    note = (d.get("note") or "").strip()
+    if note:
+        return note if note.lower().startswith(label.lower()) else f"{label}: {note}"
+    return label + ": " + DEMO_LABEL.split(": ", 1)[1]
+
+
 def decide_label(stance, ctx, t):
-    """Demo/disclaimer label on a DECIDE output, read generically so it works when the data lands."""
+    """Demo/disclaimer label on a DECIDE output: decide.demo when the export states it, else read generically."""
     d = stance.get("decide") or {}
+    if isinstance(d.get("demo"), bool):
+        return "Pipeline demonstration" if d["demo"] else None
     for src in (d, stance):
         for key in ("label", "demo_label", "demo", "disclaimer", "pipeline_demo", "status_label"):
             v = src.get(key)
@@ -1284,85 +1647,165 @@ def option_cites(st, ctx, t, C, name):
     return ns
 
 
+FIVE = ("ev", "cash_at_risk", "payback_month", "spread", "mcda")
+
+
+def mny(v):
+    v = float(v or 0)
+    return f"-${abs(v):,.1f}M" if v < 0 else f"${v:,.1f}M"
+
+
+def decide_pick(d):
+    """(move, least_bad). The chosen move; or, when decide says chosen is null, the least-bad move it names."""
+    moves = d.get("moves") or []
+
+    def find(x):
+        if isinstance(x, dict):
+            return x
+        if isinstance(x, str):
+            return next((m for m in moves if m.get("name") == x or m.get("code") == x), None)
+        return None
+    if "chosen" in d and d.get("chosen") is None and d.get("least_bad") is not None:
+        return find(d["least_bad"]) or (moves[0] if moves else None), True
+    mv = find(d.get("chosen")) or next((m for m in moves if m.get("status") == "chosen"), None) or (moves[0] if moves else None)
+    return mv, False
+
+
+def budget_total(mv):
+    b = mv.get("budget") if isinstance(mv.get("budget"), dict) else {}
+    for k, v in b.items():
+        if "total" in k.lower() and isinstance(v, (int, float)):
+            return v, k
+    return None, None
+
+
+def decide_cite(d, t, mv, C):
+    moves = d.get("moves") or []
+    i = next((k for k, m in enumerate(moves) if m is mv), 0)
+    bud, bk = budget_total(mv)
+    q = "; ".join(f"{k} {mv.get(k)}" for k in FIVE)
+    if bud is not None:
+        q += f"; {bk} {bud}"
+    return C.add(row_cite(f"row:decide:{t}:{i}", f"companies/{t}.json:stance.decide.moves[{i}]",
+                          f"out/{t}/decide.json (agent.needle.quant.decide): {mv.get('name')}", q,
+                          (mv.get("numeric_check") or {}).get("status") or "decide record", ticker=t))
+
+
+def five_kpi(mv, n):
+    pm = mv.get("payback_month")
+    return [{"label": "Expected value, $M", "value": f"{mv.get('ev') or 0:,.1f}", "cite": n},
+            {"label": "Cash at risk, $M", "value": f"{mv.get('cash_at_risk') or 0:,.1f}", "cite": n},
+            {"label": "Payback month", "value": f"{pm}" if pm is not None else "none within the horizon", "cite": n},
+            {"label": "Scenario spread, $M", "value": f"{mv.get('spread') or 0:,.1f}", "cite": n},
+            {"label": "MCDA", "value": f"{mv.get('mcda') or 0:.3f}", "cite": n}]
+
+
+def deciders_sentence(st):
+    ded = st.get("deciders") or ["Payers: CMS (Medicare negotiation) and Part D plan sponsors",
+                                 "Investors: analysts and holders who will read the next 10-Q and earnings call",
+                                 "Regulators: FDA (labels, exclusivity) and SEC (disclosure)"]
+    parts = []
+    for x in ded:
+        label, _, body = x.partition(":")
+        parts.append(f"{label.strip().lower()} ({body.strip()})" if body else x[0].lower() + x[1:])
+    return ("Each audience named in the case can check the move on its own test: " +
+            "; ".join(parts) + ". Payers see a price they can score, investors see the five numbers and the kill "
+            "signals they can re-check at the next 10-Q, and regulators see label and disclosure facts cited to the page.")
+
+
 def ceo_memo(ctx, t):
     name, c, C = ctx.name(t), ctx.companies[t], Cites()
     st = c.get("stance") or {}
+    d = st.get("decide") or {}
     needle, status = ctx.needle(t)
-    gen = st.get("generated_by") or "template"
-    gen = "decide_v2" if gen == "decide_v2" else "template"
+    gen = "decide_v2" if st.get("generated_by") == "decide_v2" and d.get("moves") else "template"
     label = decide_label(st, ctx, t)
-    rec = st.get("recommended") or "Defend"
-    lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the top-scored finding"
+    mv, least_bad = decide_pick(d) if gen == "decide_v2" else (None, False)
+    rec = (mv.get("name") if mv else None) or st.get("recommended") or "Defend"
+    lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the top finding"
     suffix = f" ({label.lower()})" if label else (" (template stance)" if gen == "template" else "")
-    header = {"to": f"CEO, {name}", "from": "NEEDLE desk", "re": f"{rec}: {lead[0].lower() + lead[1:]}{suffix}",
-              "date": as_of_date(ctx)}
-    blocks = [{"type": "callout", "tone": "muted", "md": (label + ": " + DEMO_LABEL.split(": ", 1)[1]) if label else TEMPLATE_LABEL}]
-    fs = ctx.usable(t)
-    if needle and needle in fs:
-        fs.remove(needle)
-        fs.insert(0, needle)
-    fs = fs[:5]
+    re_line = (f"No move clears the hurdle; least-bad option: {rec}{suffix}" if least_bad else
+               f"{rec}{suffix}" if mv else f"{rec}: {lead[0].lower() + lead[1:]}{suffix}")
+    header = {"to": f"CEO, {name}", "from": "NEEDLE desk", "re": re_line, "date": as_of_date(ctx)}
+    blocks = []
+    if label:
+        blocks.append({"type": "callout", "tone": "muted", "md": demo_callout(d, label)})
+    elif gen == "template":
+        blocks.append({"type": "callout", "tone": "muted", "md": TEMPLATE_LABEL})
+    fs, _ = ranked_findings(ctx, t)
     # Recommendation
     blocks.append({"type": "h", "text": "Recommendation"})
     opts = {o.get("name"): o for o in st.get("options") or []}
-    rns = option_cites(st, ctx, t, C, rec)
-    p = f"**Move: {rec}.** {OPTION_WHY.get(rec, '').capitalize() or st.get('headline', '')}."
-    if gen == "decide_v2" and (st.get("decide") or {}).get("moves"):
-        mv = st["decide"]["moves"][0]
-        n = C.add(row_cite(f"row:decide:{t}:{mv.get('code') or 0}", f"companies/{t}.json:stance.decide.moves[name={mv.get('name')}]",
-                           f"out/{t}/decide.json (agent.needle.quant.decide)",
-                           "; ".join(f"{k} {mv.get(k)}" for k in ("ev", "cash_at_risk", "payback_month", "spread", "mcda")),
-                           (mv.get("numeric_check") or {}).get("status") or "decide record", ticker=t))
-        bud = (mv.get("budget") or {}).get("total 24-month committed outflow") if isinstance(mv.get("budget"), dict) else None
-        p += f" {mv.get('name')}: expected value ${mv.get('ev') or 0:,.1f}M"
-        if bud is not None:
-            p += f" on ${bud:,.1f}M committed over 24 months"
-        p += f" [{n}]. Decision needed: {st.get('decision_needed') or 'approve the move before the next quarterly filing'} [{n}]."
-        kpi = [{"label": "Expected value, $M", "value": f"{mv.get('ev') or 0:,.1f}", "cite": n},
-               {"label": "Cash at risk, $M", "value": f"{mv.get('cash_at_risk') or 0:,.1f}", "cite": n},
-               {"label": "Payback month", "value": f"{mv.get('payback_month')}", "cite": n},
-               {"label": "Scenario spread, $M", "value": f"{mv.get('spread') or 0:,.1f}", "cite": n},
-               {"label": "MCDA", "value": f"{mv.get('mcda') or 0:.3f}", "cite": n}]
+    if mv:
+        n = decide_cite(d, t, mv, C)
+        bud, _ = budget_total(mv)
+        cash = d.get("cash_and_equivalents")
+        if least_bad:
+            p = f"**No candidate clears the hurdle; least-bad option: {rec} (EV {mny(mv.get('ev'))})** [{n}]."
+        else:
+            p = f"**Move: {rec}.**"
+        why = (mv.get("why") or st.get("headline") or "").strip().rstrip(".")
+        if why:
+            p += f" {why}."
+        if d.get("selection_rule"):
+            p += f" {str(d['selection_rule']).strip().rstrip('.')} [{n}]."
+        p += (f" Budget: {mny(bud)} committed over 24 months [{n}]; " if bud is not None else " ") + \
+             (f"expected value {mny(mv.get('ev'))}, payback month {mv.get('payback_month')} [{n}]."
+              if mv.get("payback_month") is not None else
+              f"expected value {mny(mv.get('ev'))}, no payback within the horizon [{n}].")
+        if cash is not None and bud is not None:
+            cn = C.add(row_cite(f"row:decide_cash:{t}", f"companies/{t}.json:stance.decide.cash_and_equivalents",
+                                f"out/{t}/decide.json cash and equivalents", f"cash_and_equivalents {cash}",
+                                "decide input", ticker=t))
+            p += f" Decision needed: approve {mny(bud)} over 24 months against {mny(cash)} of cash and equivalents [{cn}]."
+        kpi = [{"label": "Least-bad option" if least_bad else "Recommended", "value": rec, "cite": n},
+               {"label": "Budget, $M committed over 24 months", "value": f"{bud:,.1f}" if bud is not None else "not stated", "cite": n},
+               *five_kpi(mv, n)]
     else:
+        rns = option_cites(st, ctx, t, C, rec)
+        p = f"**Move: {rec}.** {OPTION_WHY.get(rec, '').capitalize() or st.get('headline', '')}."
         if rns:
             p += (f" The verified findings behind it point the same way: {lead[0].lower() + lead[1:]}, with operating "
                   f"income lower in the base case {C.mark(*rns)}. No budget is valued yet; the commitment is to act "
                   f"before the next quarterly filing.")
         else:
-            p += " No finding in this bucket states an impact formula, so the option is ranked by materiality score; no budget is valued yet."
+            p += " No finding in this bucket states an impact formula, so the option is ranked by the size of its cited findings; no budget is valued yet."
         kpi = [{"label": "Recommended", "value": rec, "cite": None},
+               {"label": "Budget", "value": "not valued: no DECIDE run for this company", "cite": None},
+               {"label": "Expected value", "value": "not valued", "cite": None},
                {"label": "Direction", "value": "operating income lower" if rns else "not quantified", "cite": rns[0] if rns else None},
-               {"label": "Needle status", "value": status.replace("_", " "), "cite": None},
                {"label": "Confidence", "value": (needle or {}).get("confidence") or "n/a", "cite": None}]
-    blocks += [{"type": "p", "md": p}, {"type": "kpi", "items": kpi}]
+    blocks += [{"type": "p", "md": p}, {"type": "h", "text": "Return math: the five numbers" if mv else "Return math"},
+               {"type": "kpi", "items": kpi}]
     # Why
     blocks.append({"type": "h", "text": "Why: the five findings that drive it"})
     if needle:
-        s, ns = sentence(needle, C, t)
+        ns = lead_cites(needle, C, t)
         itxt, formula, ins = impact_cell(needle, C, t)
         note, ons = obscurity_cite(needle, C, t)
-        why = f"The Sharpest Needle (row one below): {lead[0].lower() + lead[1:]} {C.mark(*ns)}."
+        why = f"The Sharpest Needle ({NEEDLE_RULE}): {lead[0].lower() + lead[1:]} {C.mark(*ns)}."
         why += f" Impact: {itxt} {C.mark(*ins)}." if ins else f" Impact: {itxt}."
         if note:
-            why += f" Why the market has not priced it: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}."
+            why += f" How rarely analysts asked: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}."
         blocks.append({"type": "p", "md": why})
         if note:
-            blocks.append(math_block("Obscurity test, as computed", note, ons[0]))
+            blocks.append(math_block("Analyst-attention test, as computed", note, ons[0]))
     table, maths = findings_table(fs, C, t)
     blocks += [table, *maths]
     # Alternatives
     blocks.append({"type": "h", "text": "Alternatives rejected"})
     items = []
-    if gen == "decide_v2" and len((st.get("decide") or {}).get("moves") or []) > 1:
-        for mv in st["decide"]["moves"][1:3]:
-            n = C.add(row_cite(f"row:decide:{t}:{mv.get('code') or mv.get('name')}", f"companies/{t}.json:stance.decide.moves[name={mv.get('name')}]",
-                               f"out/{t}/decide.json (agent.needle.quant.decide)",
-                               "; ".join(f"{k} {mv.get(k)}" for k in ("ev", "cash_at_risk", "payback_month", "spread", "mcda")),
-                               (mv.get("numeric_check") or {}).get("status") or "decide record", ticker=t))
-            items.append(f"**{mv.get('name')}**: expected value ${mv.get('ev') or 0:,.1f}M, cash at risk "
-                         f"${mv.get('cash_at_risk') or 0:,.1f}M, payback month {mv.get('payback_month')}, spread "
-                         f"${mv.get('spread') or 0:,.1f}M, MCDA {mv.get('mcda') or 0:.3f} [{n}]. "
-                         f"Not chosen: {mv.get('binding_reason') or 'lower expected value'}.")
+    if mv:
+        others = sorted([m for m in d.get("moves") or [] if m is not mv], key=lambda m: m.get("rank") or 99)
+        alts = {a.get("name"): a for a in st.get("alternatives") or []}
+        for m in others[:2]:
+            n = decide_cite(d, t, m, C)
+            reason = m.get("binding_reason") or (alts.get(m.get("name")) or {}).get("why_rejected") or "lower expected value"
+            reason = re.sub(r"\s*\(spec [\d.]+\)", "", reason).strip().rstrip(";. ")
+            pm = m.get("payback_month")
+            items.append(f"**{m.get('name')}**: expected value {mny(m.get('ev'))}, cash at risk "
+                         f"{mny(m.get('cash_at_risk'))}, payback month {pm if pm is not None else 'none within the horizon'}, spread "
+                         f"{mny(m.get('spread'))}, MCDA {m.get('mcda') or 0:.3f} [{n}]. Not chosen: {reason}.")
     else:
         for alt in (st.get("alternatives") or [])[:2]:
             an = alt.get("name")
@@ -1371,47 +1814,50 @@ def ceo_memo(ctx, t):
             behind = ""
             if top:
                 tl = match_rule(top.get("signal_kind"), LEADS) or "its top finding"
-                _, tns = sentence(top, C, t, 1)
+                tns = lead_cites(top, C, t, 1)
                 behind = f" ({tl[0].lower() + tl[1:]} {C.mark(*(tns + ans))})"
             items.append(f"**{an}**: would {OPTION_WHY.get(an, 'address a different finding')}. Its findings{behind} "
-                         f"carry less materiality than the needle; it is the fallback if the {rec} kill signals fire.")
+                         f"carry smaller cited impacts than the needle; it is the fallback if the {rec} kill signals fire.")
     blocks.append({"type": "list", "items": items or ["No alternative recorded."]})
     # Prove wrong
-    blocks.append({"type": "h", "text": "What would prove us wrong"})
+    blocks.append({"type": "h", "text": "What would prove us wrong: kill signals, 6 to 12 months"})
     blocks.append({"type": "list", "items": kill_signals(ctx, t, C, fs, st, gen, brief=True)[:4]})
     blocks.append({"type": "p", "md": "Two signals firing in one quarter pause the move and re-run the valuation."})
+    # Deciders
+    blocks.append({"type": "h", "text": "Why it lands with the deciders"})
+    blocks.append({"type": "p", "md": deciders_sentence(st)})
     # Priced in
     blocks.append({"type": "h", "text": "Priced in or not"})
-    pi = {"strict": "Not priced in: the needle clears the strict obscurity floor",
-          "provisional": "Only partly priced in: the needle sits below the strict obscurity floor",
-          "floor_relaxed": "Mostly priced in: no row cleared the strict or provisional floors",
-          "none": "Priced in: no finding clears the obscurity floor"}.get(status, "Not tested")
-    pp = pi + "."
+    pi = PRICED_CALL.get(status, "not tested")
+    pp = pi[0].upper() + pi[1:] + "."
     hit = scorecard_row(c, needle)
     if hit:
         n = priced_in_cite(t, hit, C)
         pp += (f" Analysts raised {topic_words(hit['topic'])} in {hit.get('quarters_asked')} of "
                f"{hit.get('quarters_covered')} quarters (tier: {hit.get('analyst_attention_tier')}) [{n}].")
-    ded = st.get("deciders") or []
-    if ded:
-        pp += " Who decides its fate: " + "; ".join(x[0].lower() + x[1:] for x in ded) + "."
     blocks.append({"type": "p", "md": pp})
-    summary = f"Recommend {rec} for {name}: {lead[0].lower() + lead[1:]}; {pi[0].lower() + pi[1:]}."
+    summary = (f"{'Least-bad option' if least_bad else 'Recommend'} {rec} for {name}"
+               + (f" (EV {mny(mv.get('ev'))})" if mv else f": {lead[0].lower() + lead[1:]}") + f"; {pi.split(':')[0]}.")
     nc = needle.get("numeric_check") if needle and isinstance(needle.get("numeric_check"), dict) else None
     if gen == "decide_v2":
-        nc = (st.get("decide") or {}).get("numeric_check") or nc
+        nc = d.get("numeric_check") or nc
     return record("ceo_memo", ctx, t, f"Write the CEO memo for {name}", summary, blocks, C, gen, nc, memo_header=header)
-
 
 def kill_signals(ctx, t, C, fs, st, gen, brief=False):
     items = []
     if gen == "decide_v2" and st.get("kill_signals"):
         for i, k in enumerate(st["kill_signals"]):
+            if k.get("threshold") == "context" or not k.get("signal"):
+                continue  # baseline context rows are inputs, not signals
+            if brief and len(items) >= 4:
+                break
             n = C.add(row_cite(f"row:kill:{t}:{i}", f"companies/{t}.json:stance.kill_signals[{i}]",
                                f"out/{t}/decide.json kill-signal table ({k.get('source')})",
-                               json.dumps(k, ensure_ascii=False), "decide record", ticker=t))
+                               "; ".join(f"{key} {k.get(key)}" for key in ("id", "signal", "threshold", "source", "lag", "check_month", "action", "basis") if k.get(key) not in (None, "")),
+                               "decide record", ticker=t))
+            act = ACTION_WORDS.get(k.get("action"), str(k.get("action") or "review").replace("_", " "))
             items.append(f"**{k.get('signal')}**: {k.get('threshold')} by month {k.get('check_month')} "
-                         f"({k.get('source')}; {k.get('lag')}); action: {k.get('action')} [{n}].")
+                         f"({k.get('source')}; {k.get('lag')}); action: {act} [{n}].")
         return items
     seen = set()
     for f in fs:
@@ -1421,8 +1867,8 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
         seen.add(rule)
         s, ns = sentence(f, C, t)
         lead = match_rule(f.get("signal_kind"), LEADS) or "the finding"
-        items.append(f"{rule} Baseline: {lead[0].lower() + lead[1:]} {C.mark(*ns)}." if brief
-                     else f"{rule} Baseline today: {s} {C.mark(*ns)}.")
+        items.append(f"{rule} Baseline: {lead[0].lower() + lead[1:]} {C.mark(*lead_cites(f, C, t))}." if brief
+                     else f"{rule} Baseline today: {C.after(s, *ns)}.")
         if len(items) == 3:
             break
     sf = ctx.companies[t].get("sealed_forecast") or {}
@@ -1444,18 +1890,18 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
 def prove_wrong_memo(ctx, t):
     name, c, C = ctx.name(t), ctx.companies[t], Cites()
     st = c.get("stance") or {}
-    gen = "decide_v2" if st.get("generated_by") == "decide_v2" else "template"
+    gen = "decide_v2" if st.get("generated_by") == "decide_v2" and (st.get("decide") or {}).get("moves") else "template"
     label = decide_label(st, ctx, t)
     needle, status = ctx.needle(t)
-    fs = ctx.usable(t)
-    if needle and needle in fs:
-        fs.remove(needle)
-        fs.insert(0, needle)
-    rec = st.get("recommended") or "Defend"
+    fs, _ = ranked_findings(ctx, t)
+    mv, least_bad = decide_pick(st.get("decide") or {}) if gen == "decide_v2" else (None, False)
+    rec = (mv.get("name") if mv else None) or st.get("recommended") or "Defend"
     suffix = f" ({label.lower()})" if label else (" (template stance)" if gen == "template" else "")
     header = {"to": f"CEO, {name}", "from": "NEEDLE desk", "re": f"What would prove us wrong on {rec}{suffix}",
               "date": as_of_date(ctx)}
-    blocks = [{"type": "callout", "tone": "muted", "md": (label + ": " + DEMO_LABEL.split(": ", 1)[1]) if label else TEMPLATE_LABEL},
+    d = st.get("decide") or {}
+    blocks = [*([{"type": "callout", "tone": "muted", "md": demo_callout(d, label)}] if label else
+               [{"type": "callout", "tone": "muted", "md": TEMPLATE_LABEL}] if gen == "template" else []),
               {"type": "h", "text": "Kill signals, first six to twelve months"},
               {"type": "p", "md": (f"The {rec} move for {name} rests on the findings below. Each signal names the filing or "
                                    f"data row we will re-read, and the baseline it must move from; if two fire in the same "
@@ -1484,6 +1930,8 @@ def build(ctx, kinds=None):
     for t in ctx.tickers:
         if ok("needle"):
             memos.append(needle_memo(ctx, t))
+        if ok("why_company"):
+            memos.append(why_company_memo(ctx, t))
         if ok("findings"):
             memos.append(findings_memo(ctx, t))
         if ok("product"):
@@ -1499,6 +1947,12 @@ def build(ctx, kinds=None):
             memos.append(prove_wrong_memo(ctx, t))
     if ok("league") and ctx.league:
         memos.append(league_memo(ctx))
+    if ok("needles") and len(ctx.tickers) > 1:
+        memos.append(needles_memo(ctx))
+    if ok("products") and any(ctx.products(t) for t in ctx.tickers):
+        memos.append(products_memo(ctx))
+    if ok("decides") and len(ctx.tickers) > 1:
+        memos.append(decides_memo(ctx))
     if ok("ai_wrong") and any(r.get("what_the_source_says") for r in ctx.proof.get("ai_wrong") or []):
         memos.append(ai_wrong_memo(ctx))
     if ok("moat") and (ctx.meta.get("corpus") or ctx.meta.get("moat")):
@@ -1509,18 +1963,18 @@ def build(ctx, kinds=None):
     for m in memos:
         m["ask_next"] = [x for x in m["ask_next"] if x in ids][:3]
     d = ctx.default
-    prod = ctx.top_product(d) if d else None
-    suggested = [f"needle:{d}", f"findings:{d}", f"product:{d}:{prod}" if prod else None, f"priced_in:{d}",
-                 f"ceo_memo:{d}", "ai_wrong:global"]
-    suggested = [s for s in suggested if s in ids]
-    for extra in ("league:global", f"prove_wrong:{d}", "how_it_works:global", "moat:global"):
-        if len(suggested) >= 6:
-            break
-        if extra in ids and extra not in suggested:
-            suggested.append(extra)
+    picked = (ctx.meta.get("default_ticker_source") or "unpicked") == "pick" and d
+    if picked:
+        suggested = [x for x in ctx.flow(d) if x and not x.startswith("prove_wrong:")] + ["ai_wrong:global"]
+    else:  # no pick made: company-agnostic entry points only
+        suggested = ["needles:global", "how_it_works:global", "ai_wrong:global", "moat:global", "products:global",
+                     "decides:global"]
+    suggested = [x for x in suggested if x in ids][:7]
+    by_ticker = {t: [x for x in ctx.flow(t) if x in ids] for t in ctx.tickers}
     return {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "mode": "cached",
             "engine": ctx.meta.get("engine") or ("sample" if ctx.sample else "unknown"), "default_ticker": d,
-            "as_of": ctx.meta.get("as_of"), "suggested": suggested, "memos": memos,
+            "default_ticker_source": ctx.meta.get("default_ticker_source") or "unpicked",
+            "as_of": ctx.meta.get("as_of"), "suggested": suggested, "suggested_by_ticker": by_ticker, "memos": memos,
             "note": "Cached answers assembled by agent/ui_memos.py from ui/public/data; no model call. " + WHITELIST_NOTE}
 
 
@@ -1580,8 +2034,20 @@ def token_ok(tok, allowed_floats):
 
 
 def unmarked_digits(text):
-    stripped = re.sub("|".join(WHITELIST), "", text)
+    stripped = re.sub("|".join(WHITELIST), "", strip_marks(text))
     return bool(re.search(r"\d", stripped))
+
+
+def seg_markers(seg):
+    """(cite numbers referenced by [n] and [derived: ...] operands, True when any marker kind is present)."""
+    ns, any_mark = [], False
+    for m in MARK.finditer(seg or ""):
+        any_mark = True
+        if m.group(1):
+            ns.append(int(m.group(1)))
+        elif m.group(2):
+            ns += [int(x) for x in (y.strip() for y in m.group(2).split(",")) if x.isdigit()]
+    return ns, any_mark
 
 
 GATED_FIELDS = ("finding", "finding_raw", "sentence", "sentence_marked", "impact_gated")
@@ -1596,7 +2062,8 @@ def gated_text(f):
     parts += [peer.get(k) for k in ("note", "named_peer_row") if isinstance(peer.get(k), str)]
     parts.append(((f.get("vector") or {}).get("obscurity_note")) or "")
     parts.append(f.get("obscurity_note") or "")
-    return " ".join(parts)
+    parts += [f.get(k) for k in ("formula_marked",) if isinstance(f.get(k), str)]
+    return strip_marks(" ".join(parts))
 
 
 def num_tokens(text):
@@ -1608,7 +2075,8 @@ def product_gated_text(ctx, t, slug):
     parts = []
     for row in (v2.get("rows") or {}).values():
         for cell in (row or {}).values():
-            parts.append(str((cell or {}).get("value") or ""))
+            if not (cell or {}).get("uncited"):
+                parts.append(str((cell or {}).get("value") or ""))
     gl = v2.get("growth_limiter") or {}
     parts += [gl.get("sentence") or "", gl.get("sentence_raw") or ""]
     for f in v2.get("findings") or []:
@@ -1617,7 +2085,8 @@ def product_gated_text(ctx, t, slug):
     comp = next((r for r in ((ctx.companies.get(t) or {}).get("labels") or {}).get("comparison") or [] if r.get("product") == slug), None)
     for r in (comp or {}).get("rows") or []:
         for v in (r.get("values") or {}).values():
-            parts.append(str((v or {}).get("value") or ""))
+            if not (v or {}).get("uncited"):
+                parts.append(str((v or {}).get("value") or ""))
     return " ".join(parts)
 
 
@@ -1638,11 +2107,23 @@ def allowed_tokens(m, ctx):
                 allowed |= num_tokens(json.dumps(obj, ensure_ascii=False))
     if m.get("kind") == "product" and t:
         allowed |= num_tokens(product_gated_text(ctx, t, m["id"].split(":")[-1]))
-    st = (ctx.companies.get(t) or {}).get("stance") or {} if t else {}
-    for mv in (st.get("decide") or {}).get("moves") or []:
-        for k in ("ev", "cash_at_risk", "payback_month", "spread", "mcda"):
-            if mv.get(k) is not None:
-                allowed |= num_tokens(f"{mv[k]} {mv[k]:,} {mv[k]:,.1f}" if isinstance(mv[k], (int, float)) else str(mv[k]))
+    if m.get("kind") == "products":
+        for tk in ctx.companies:
+            for slug, _, _ in ctx.products(tk):
+                allowed |= num_tokens(product_gated_text(ctx, tk, slug))
+    for tk in ([t] if t else [x for x in ctx.companies if m.get("kind") in ("decides", "why_company", "needles")]):
+        d = ((ctx.companies.get(tk) or {}).get("stance") or {}).get("decide") or {}
+        for mv in d.get("moves") or []:
+            vals = [mv.get(k) for k in FIVE] + list((mv.get("budget") or {}).values() if isinstance(mv.get("budget"), dict) else [])
+            for v in vals:
+                if isinstance(v, (int, float)):
+                    allowed |= num_tokens(f"{v} {v:,} {v:,.1f}")
+        if isinstance(d.get("cash_and_equivalents"), (int, float)):
+            v = d["cash_and_equivalents"]
+            allowed |= num_tokens(f"{v} {v:,} {v:,.1f}")
+        for it in d.get("numeric_items") or []:  # decide text that passed its own numeric check
+            if isinstance(it, dict) and it.get("passed"):
+                allowed |= num_tokens(it.get("text") or "")
     return allowed
 
 
@@ -1678,6 +2159,16 @@ def check(path, ctx):
     for s in doc.get("suggested") or []:
         if s not in idset:
             errors.append(f"suggested id {s} does not exist")
+        if s.startswith("league:"):
+            errors.append("league memo listed in suggested")
+    for tk, ids_ in (doc.get("suggested_by_ticker") or {}).items():
+        for s in ids_:
+            if s not in idset:
+                errors.append(f"suggested_by_ticker[{tk}] id {s} does not exist")
+    if (doc.get("default_ticker_source") or "unpicked") != "pick" and doc.get("suggested"):
+        for s in doc["suggested"]:
+            if not s.endswith(":global"):
+                errors.append(f"no company pick made, yet suggested carries the company answer {s}")
     seen_alias = {}
     stats = {"kinds": Counter(), "words": 0, "cites": 0, "row_cites": 0, "memos": len(memos), "words_by_format": Counter()}
     for m in memos:
@@ -1707,6 +2198,22 @@ def check(path, ctx):
         for x in m.get("ask_next") or []:
             if x not in idset:
                 errors.append(f"{mid}: ask_next {x} does not exist")
+            if x.startswith("league:"):
+                errors.append(f"{mid}: ask_next leads to the league memo")
+        if m.get("kind") == "ceo_memo":
+            labels = [b.get("text") or "" for b in m.get("blocks") or [] if b.get("type") == "h"]
+            labels += [i.get("label") or "" for b in m.get("blocks") or [] if b.get("type") == "kpi" for i in b.get("items") or []]
+            for what, pat in PART2:
+                if not any(re.search(pat, x) for x in labels):
+                    errors.append(f"{mid}: Part 2 element missing ({what}): no heading or kpi label matches {pat!r}")
+        if m.get("kind") == "findings":
+            tabs = [b for b in m.get("blocks") or [] if b.get("type") == "table"]
+            cols = tabs[0].get("columns") if tabs else []
+            missing = [c for c in PART1_COLUMNS if c not in (cols or [])]
+            if missing:
+                errors.append(f"{mid}: findings table lacks the per-finding column(s) {missing}")
+        if "demo" not in m or "demo_note" not in m:
+            errors.append(f"{mid}: demo / demo_note missing")
         cites = {c["n"]: c for c in m.get("cites") or []}
         stats["cites"] += len(cites)
         allowed = allowed_tokens(m, ctx)
@@ -1717,30 +2224,44 @@ def check(path, ctx):
                     errors.append(f"{mid}: math block '{b.get('label')}' cite {b.get('cite')} missing")
                 if not b.get("text"):
                     errors.append(f"{mid}: empty math block")
+                if b.get("text_marked"):
+                    for n in seg_markers(b["text_marked"])[0]:
+                        if n not in cites:
+                            errors.append(f"{mid}: math block marker [{n}] has no cite")
+                    if strip_marks(b["text_marked"]).replace(" ", "") != (b.get("text") or "").replace(" ", "") \
+                            and not b.get("text"):
+                        errors.append(f"{mid}: math block text_marked without plain text")
+            if PITCH_FORBIDDEN.search(b.get("label") or ""):
+                errors.append(f"{mid}: internal score language in math label {b.get('label')!r}")
+        if PITCH_FORBIDDEN.search(m.get("summary") or "") or PITCH_FORBIDDEN.search(m.get("prompt") or ""):
+            errors.append(f"{mid}: internal score language in summary or prompt")
         allowed_floats = {tok_float(x) for x in allowed if tok_float(x) is not None}
         used = set()
         wc = 0
         for b in m.get("blocks") or []:
             if b.get("type") == "math":
                 used.add(b.get("cite"))
+                used.update(seg_markers(b.get("text_marked") or "")[0])
                 continue
             if b.get("type") in ("p", "list", "callout"):
                 wc += words(b.get("md") or " ".join(b.get("items") or []))
             pending = []  # sentences with numbers waiting for the next marker in the same block
             for seg, kind in md_segments(b):
-                ns = [int(x) for x in re.findall(r"\[(\d+)\]", seg)]
+                ns, any_mark = seg_markers(seg)
                 for n in ns:
                     if n not in cites:
                         errors.append(f"{mid}: marker [{n}] has no cite")
                     used.add(n)
-                if ns:
+                if PITCH_FORBIDDEN.search(seg) and not (m.get("kind") == "league" and b.get("type") == "callout"):
+                    errors.append(f"{mid}: internal score language in {kind}: {seg[:100]!r}")
+                if any_mark:
                     pending = []
                 elif unmarked_digits(seg):
                     if kind == "sentence":
                         pending.append(seg)
                     else:
                         errors.append(f"{mid}: number without a cite marker in {kind}: {seg[:110]!r}")
-                stripped = re.sub("|".join(WHITELIST), "", seg)
+                stripped = re.sub("|".join(WHITELIST), "", strip_marks(seg))
                 bad = [x for x in num_tokens(stripped) if not token_ok(x, allowed_floats)]
                 if re.search(r"\{['\"]|\[\{|\(\{|': |\": ", seg) and not (m.get("kind") == "ai_wrong" and kind == "row"):
                     errors.append(f"{mid}: dict or list literal in {kind}: {seg[:100]!r}")
@@ -1836,7 +2357,8 @@ def main(argv=None):
                 d = ctx.default
                 ctx.tickers = [d] if d else []
                 doc = build(ctx, kinds=["needle", "league", "ceo_memo"])
-                doc["suggested"] = [m["id"] for m in doc["memos"]][:3]
+                doc["default_ticker_source"] = "pick"  # the sample fixture shows the company flow
+                doc["suggested"] = [m["id"] for m in doc["memos"] if m["kind"] != "league"][:3]
             else:
                 doc = build(ctx)
             size = write(out, doc)

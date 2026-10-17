@@ -15,16 +15,19 @@ are at that moment.
 ## File shape
 
 ```
-{ generated_at, mode: "cached", engine: meta.engine, default_ticker, as_of,
-  suggested: [6 memo ids: needle, findings, product, priced_in, ceo_memo for the default ticker, then ai_wrong],
+{ generated_at, mode: "cached", engine: meta.engine, default_ticker, default_ticker_source: "pick" | "unpicked", as_of,
+  suggested: [memo ids],                       # see "Suggested" below
+  suggested_by_ticker: { <T>: [needle:T, why_company:T, findings:T, product:T:<first case product>, priced_in:T,
+                               ceo_memo:T, prove_wrong:T] },
   memos: [ {
     id: "<kind>:<ticker>" | "<kind>:<ticker>:<product>" | "<kind>:global",
     format: "chat" | "memo",
-    prompt, aliases: [6 to 12], ticker | null, kind,
+    prompt, aliases: [6 to 14], ticker | null, kind,
     generated_by: "template" | "decide_v2" | "data",
+    demo: true | false, demo_note: <stance.decide.note> | null,   # from stance.decide.demo; false/null without a decide
     summary, blocks: [h | p | kpi | table | list | callout | math],
-      # math: {"type":"math","label":"Impact math","text":"<raw engine formula or note>","cite": n}, placed right
-      # after the block it supports; the UI renders it collapsed under "Show the math"
+      # math: {"type":"math","label","text":"<plain formula>","text_marked":"<formula_marked, renumbered>","cite": n},
+      # placed right after the block it supports; the UI renders it collapsed under "Show the math"
     cites: [{ n, cite_id, finding_id, finding_ids, ticker, doc_title, period, page, quote, excerpt, url,
               withheld, withheld_reason, verification, derived_from, derived_expr, numeric_check, ref? }],
     numeric_check, ask_next: [2 or 3 ids],
@@ -32,61 +35,87 @@ are at that moment.
   } ] }
 ```
 
-Kinds and formats:
+Suggested: when `meta.default_ticker_source` is `pick`, `suggested` is the picked company's flow (needle,
+why_company, findings, product, priced_in, ceo_memo) followed by `ai_wrong:global`. When it is `unpicked`
+(default_ticker is a routing default only), `suggested` is company-agnostic: `needles:global`,
+`how_it_works:global`, `ai_wrong:global`, `moat:global`, `products:global`, `decides:global`. The UI switches to
+`suggested_by_ticker[T]` when the company pill is set. The league memo is never in `suggested` or in any
+`ask_next`.
 
-| kind | format | per | generated_by | what it says |
-|---|---|---|---|---|
-| needle | chat | ticker | template | the Sharpest Needle, why it is sharp, impact math as gated, numeric-gate status, needle status explained |
-| findings | chat | ticker | data | top five verified findings: finding, impact, peer, confidence, source |
-| product | chat | ticker x product | data | the five case rows vs each rival, growth limiter, tied finding, priced-in call |
-| peers | chat | ticker | data | ten-company table on IRA share, MFN date, tariff exemption, sites outside the US, US revenue share |
-| priced_in | chat | ticker | data | obscurity test, least-asked topics, guidance quote vs consensus position, our call |
-| league | chat | global | data | the ten-company table with score, needle status, rank vs v2, and "X leads in N of 8 variants" |
-| ai_wrong | chat | global | data | five logged cases where the AI was confidently wrong and how the verifier caught each |
-| moat | chat | global | data | corpus counts, the ten buckets, and why the data mattered for the default needle |
-| how_it_works | chat | global | data | detect, verify, score S = M x O x E x pi, gate, seal, ledger, in plain words |
-| ceo_memo | memo | ticker | template or decide_v2 | Recommendation, Why (five findings), Alternatives rejected, What would prove us wrong, Priced in or not |
-| prove_wrong | memo | ticker | template or decide_v2 | kill signals with the cited baseline each must move from |
+Kinds and formats, mapped to the case wording:
 
-`generated_by` is set honestly: `decide_v2` when `stance.decide` exists (DECIDE output, five numbers per move),
-`template` when the stance is the exporter's rule-drafted one, `data` for tables and lists assembled from data.
-Teal marking of model-written text is the UI's job.
+| kind | format | per | generated_by | case element | what it says |
+|---|---|---|---|---|---|
+| why_company | chat | ticker | data | Part 1: company choice, why it beat nine | verified-finding counts, the needle with its impact and analyst attention, whether a valued move exists, a ten-company table; caveat that the pick is a human decision |
+| needle | chat | ticker | template | Part 1: Sharpest Needle | the needle by the plain rule (the biggest cited impact that analysts asked about least), impact as gated, how rarely analysts asked; status only as a muted caveat when provisional, floor relaxed or none |
+| findings | chat | ticker | data | Part 1: five findings | finding, impact math, peer comparison, confidence, source page; ranked by the company file's `findings_table` (`rank_basis` stated) when present, else the engine's order with the needle first |
+| product | chat | ticker x product | data | Part 1: product table | the five case rows vs each rival, growth limiter, tied finding, priced-in call; `uncited` cells print "needs citation", never a value |
+| priced_in | chat | ticker | data | Part 1: priced-in call | analyst-attention test, least-asked topics, guidance quote vs consensus position, our call |
+| peers | chat | ticker | data | context | ten-company table on IRA share, MFN date, tariff exemption, sites outside the US, US revenue share |
+| ceo_memo | memo | ticker | template or decide_v2 | Part 2 | Recommendation (move, budget), Return math (five numbers), Why (five findings), Alternatives rejected, What would prove us wrong (kill signals), Why it lands with the deciders, Priced in or not |
+| prove_wrong | memo | ticker | template or decide_v2 | Part 2: kill signals | kill signals with the cited baseline each must move from |
+| needles | chat | global | data | Part 1 across companies | one line per company: its needle sentence (marked), impact, analyst attention; ordered by gated dollar impact where the engine states one, else the engine's needle order |
+| products | chat | global | data | Part 1 across products | one line per case product: growth limiter, tied finding, priced-in call |
+| decides | chat | global | data | Part 2 across companies | every DECIDE output: chosen or least-bad move, EV, budget, payback, demo flag |
+| league | chat | global | data | internal triage only | reading order, ranks and counts only, with a caveat; no scores |
+| ai_wrong | chat | global | data | proof | five logged cases where the AI was confidently wrong and how the verifier caught each |
+| moat | chat | global | data | proof | corpus counts, the ten buckets, and why the data mattered for the default needle |
+| how_it_works | chat | global | data | method | the four pitch outputs, verify to the page, the numeric gate, sealed forecasts, ledger |
 
-Pipeline-demonstration label: when `stance.decide` (or the stance) carries `label`, `demo_label`, `demo`,
-`disclaimer`, `pipeline_demo` or `status_label`, or `generated_by` is `decide_v2` for a company not listed in
-`meta.team_pick`, the CEO memo header `re` gets that label as a suffix and a muted callout opens the memo
-("Pipeline demonstration: this move was valued by rules on cited findings; the team's final recommendation is a
-separate decision."). Template-stance companies get "Template stance, no valued move yet" instead.
+`generated_by` is set honestly: `decide_v2` when `stance.decide` carries moves (DECIDE output, five numbers per
+move), `template` when the stance is the exporter's rule-drafted one, `data` for tables and lists assembled
+from data. Teal marking of model-written text is the UI's job.
+
+DECIDE handling in ceo_memo and prove_wrong: the chosen move is `decide.chosen` (or the move with status
+`chosen`); when `decide.chosen` is null and `decide.least_bad` names a move, the Recommendation headline reads
+"No candidate clears the hurdle; least-bad option: <move> (EV x)" and the kpi label "Recommended" becomes
+"Least-bad option". `decide.selection_rule`, when present, prints as one sentence under the headline. Budget is
+the move's `budget` total row; alternatives are the other moves by rank with their five numbers and
+`binding_reason`. Kill signals come from `stance.kill_signals` (action codes translated to plain words; context
+rows skipped). `decide.demo: true` puts "(pipeline demonstration)" in the header `re` and opens the memo with
+`decide.note` as a muted callout; a real decide (LLY) carries no callout; template companies open with
+"Template stance, no valued move yet". Template companies have no budget or five numbers: the kpi says
+"not valued: no DECIDE run for this company" rather than inventing them.
+
+Pitch rule (Oct 17): no memo text mentions the internal league score, the S equation, "materiality score" or the
+robustness variants; `--check` fails on those words anywhere except the league memo's own caveat callout.
 
 ## Number rules
 
-- Every number printed in a memo carries a `[n]` marker. Evidence cites copy the evidence object from the
-  company file (quote, excerpt, url, verification, derived_from, derived_expr); the exporter's withholding is kept
-  (a withheld cite has quote, excerpt and url null and carries the reason).
-- Data that is not page evidence (league scores, robustness variants, priced-in scorecard rows, forces rows,
-  meta counts, proof rows, sealed forecasts, product cells with no located page) is cited with a row cite:
+- Every number printed in a memo carries a marker. Finding sentences are printed from `sentence_marked`: its
+  `[n]` markers are the finding's footnote numbers, which `marker_map` turns into cite ids and the generator
+  renumbers to the memo's cites; `[derived: a, b]` operands are renumbered the same way; `[constant: NAME]` and
+  `[assumption]` pass through; a footnote on a licensed data row (`marker_licensed`) prints as
+  `[licensed source]` and adds no cite. A sentence's trailing run of blanket cites is capped at six markers. The
+  engine's `formula_marked` goes into the impact math block as `text_marked` (renumbered), with the plain
+  formula as `text`. Evidence cites copy the evidence object from the company file (quote, excerpt, url,
+  verification, derived_from, derived_expr); the exporter's withholding is kept (a withheld cite has quote,
+  excerpt and url null and carries the reason).
+- Data that is not page evidence (triage rows, priced-in scorecard rows, forces rows, meta counts, proof rows,
+  sealed forecasts, decide moves, kill signals, product cells with no located page) is cited with a row cite:
   `cite_id` starts with `row:` and `ref` names the exact JSON path (`league.json:[ticker=AMGN]`,
-  `companies/AMGN.json:priced_in[topic=MFN]`, `meta.json:corpus.docs`, `proof.json:ai_wrong[12]`). The checker
-  resolves every ref.
-- Gated-number rule (engine re-check, Oct 17): the numeric gate checks only the finding sentence, the impact math
-  and the peer text, not `impact.dollars`. Memos therefore never print `impact.dollars`, bear or bull figures, EPS,
-  or any percentage or dollar the generator computes itself. Impact cells print the engine's gated impact text
-  (`impact.text_gated` / `impact_gated` when present, else `impact.formula`) with its direction ("operating income
-  lower"); peer cells reuse the peer clause of the finding sentence. KPI values carry no numbers unless they appear
-  verbatim in a gated field. The five DECIDE numbers (ev, cash at risk, payback month, spread, MCDA) are printed when
-  a decide exists.
+  `companies/AMGN.json:priced_in[topic=MFN]`, `companies/LLY.json:stance.decide.moves[0]`,
+  `meta.json:evidence_located.LLY`). The checker resolves every ref.
+- Gated-number rule: the numeric gate checks only the finding sentence, the impact math and the peer text, not
+  `impact.dollars`. Memos therefore never print `impact.dollars`, bear or bull figures, EPS, or any percentage or
+  dollar the generator computes itself. Impact cells print the engine's gated impact text (`impact.text_gated` /
+  `impact_gated` when present, else `impact.text` or `impact.formula`, markers stripped) with its direction;
+  peer cells reuse the peer clause of the finding sentence. KPI values carry no numbers unless they appear
+  verbatim in a gated field. The five DECIDE numbers, the budget rows, cash and equivalents, and decide text
+  lines that passed decide's own numeric check (`numeric_items`) are printed when a decide exists.
 - Plain-English rule: prose and table cells say what the gated math means, using only numbers that appear in it
   (a percent of a gated decimal counts: "taxed at 15%" for `t 0.1501`, "3% of trailing revenue" for `0.03`).
-  Every raw formula, obscurity note and robustness variant label lives in a `math` block; engine variable names
-  (Rev_TTM, D, t, G, k, d, m_avoided, s_MFN, qa_turns, pi_min, S = 0, any snake_case token) never appear in
-  p, list, callout, kpi or table text. Translators: the 3%-of-revenue anchor, the IRA class rule, the MFN scenario,
-  the label channel, and the two obscurity-note forms; unknown formulas print the direction and defer to the math.
+  Every raw formula and attention note lives in a `math` block; engine variable names (Rev_TTM, D, t, G, k, d,
+  m_avoided, s_MFN, qa_turns, pi_min, any snake_case token) never appear in p, list, callout, kpi or table text.
 - Findings whose `numeric_check.status` is `failed` are excluded from every memo; impacts flagged suspect are
-  printed as withheld, never as dollars; `not_quantified` rows say so.
+  printed as withheld, never as dollars; `not_quantified` rows say so; product cells flagged `uncited` print
+  "needs citation" and their values are not treated as gated.
 
 ## What `--check` verifies
 
-1. Every `[n]` marker in every block resolves to a cite; every cite is referenced (warning if not).
+1. Every `[n]` marker in every block resolves to a cite, including the operands of `[derived: a, b]` and the
+   markers inside a math block's `text_marked`; `[constant: X]`, `[assumption]` and `[licensed source]` are
+   accepted marker forms; every cite is referenced (warning if not).
 2. Every evidence `cite_id` exists somewhere in the company file (findings, data citations, product cells, growth
    limiter); every `row:` cite's `ref` resolves and its stated `value` appears in its quote.
 3. No withheld cite carries quote, excerpt or url.
@@ -101,17 +130,25 @@ separate decision."). Template-stance companies get "Template stance, no valued 
 5b. Plain-English rule: engine variable names and formula fragments are flagged in p, list, callout, kpi and
    table text; ai_wrong table cells quote the error log verbatim and are exempt.
 6. No memo cites a finding whose numeric check failed; no suspect impact is printed as dollars.
-7. Aliases unique across memos; `suggested` and `ask_next` ids exist; `format` matches the kind; memo format
-   carries a `memo_header`.
+7. Aliases unique across memos; `suggested`, `suggested_by_ticker` and `ask_next` ids exist; the league memo is
+   in neither; when no company pick was made, `suggested` holds only `:global` answers; needle aliases name the
+   company or ticker; `format` matches the kind; memo format carries a `memo_header`; every record carries
+   `demo` and `demo_note`.
+7b. Case mapping: every ceo_memo carries the six Part 2 elements as headings or kpi labels (Recommendation,
+   Budget, Return math, Alternatives rejected, kill signals, deciders); every findings table carries the Impact,
+   Peer, Confidence and Source columns.
+7c. Pitch language: "score L", "S =", "materiality score" and "robustness" fail anywhere except the league memo's
+   caveat callout.
 8. Word counts (prose blocks only: p, list, callout) against the targets: chat 60 to 160, memo 200 to 400; a
    miss is a warning.
 
 Whitelisted without a marker: years and fiscal periods (2026, FY2024, 2026Q2, Q2 2026), ISO dates, filing form
-names (10-K, 10-Q, 20-F, 8-K), Medicare Part B/D, Section 232, finding ids and R-row ids, horizon phrases such as
-"next 6 to 12 months", page labels inside Source cells, and kpi labels.
+names (10-K, 10-Q, 20-F, 8-K), Medicare Part B/D, Section 232, the case's Part 1 and Part 2, finding ids and
+R-row ids, horizon phrases such as "next 6 to 12 months", page labels inside Source cells, and kpi labels.
 
 ## Sample fallback
 
 `ui/public/data/_sample/memos.json` holds three small memos (needle, ceo_memo, league) built from the sample
-company file with the same generator and the same checks; sample evidence has no cite ids, so its cites use
-`ev:<finding_id>:<index>` and verification `sample`.
+company file with the same generator and the same checks; it is written as a `pick` fixture so `suggested` shows
+the company flow. Sample evidence has no cite ids, so its cites use `ev:<finding_id>:<index>` and verification
+`sample`.
