@@ -93,7 +93,7 @@ def score_ticker(ticker, write=True, extra_signals=None):
         for g in guards.check(sig, sigs):
             find.apply_guard(f, g)
             dropped = dropped or g[0] == "drop"
-        (shown if f.vector["E"] > 0 and not dropped else withheld).append(f)
+        (shown if f.vector["E"] > 0 and not dropped and f.guard != "drop" else withheld).append(f)
     for f in find.ira_findings(ticker, co) + find.mfn_findings(ticker, co):
         (shown if f.vector["E"] > 0 else withheld).append(f)
     # numeric gate (docs/gate_wiring.md 1): after scoring, before the league; failed rows never reach the top 5

@@ -19,6 +19,7 @@ that happens to round to it):
               supported (a passing citation that carries the operand value in its quote or value, an assumption, or
               another derived entry), to the printed number within DERIVED_REL_TOL (0.5% relative) or the printed
               precision of the number (half a unit of its last digit), whichever is larger.
+              A number that matches a derived entry whose derivation fails is unsupported (no fall-through).
   assumed     the number matches an `assumptions` entry with a non-empty label.
   verified    the number (after scale and sign normalization, numbers.same_number) is inside the cited_text (the
               citation's quoted span) or equals the citation's own value+unit, for a citation whose status is
@@ -327,6 +328,17 @@ def _operand(name, o, derived, assumptions, pages, use_page_text, depth):
         if _status(c) not in PASSING:
             return 1.0, [c.cite_id], f"operand {name}: counted item's citation did not pass verification ({_status(c) or 'none'})"
         return 1.0, [c.cite_id], ""
+    if o.get("year"):
+        # a calendar year taken from a cited date ("11/22/2028", "2028-11-22", "2028"): the year must stand in the
+        # citation's quote or value as a year (numbers.tokenize masks dates, so the year inside a date is read here)
+        import re as _re
+        y = int(_num(o.get("value")))
+        if _status(c) not in PASSING:
+            return float(y), [c.cite_id], f"operand {name}: its citation did not pass verification ({_status(c) or 'none'})"
+        hay = " ".join(str(x or "") for x in (c.quote, c.value))
+        if not _re.search(rf"(?<!\d){y}(?!\d)", hay):
+            return float(y), [c.cite_id], f"operand {name} = {y} is not a year in its citation"
+        return float(y), [c.cite_id], ""
     val = _num(o.get("value") if o.get("value") not in (None, "") else c.value)
     if _status(c) not in PASSING:
         return val, [c.cite_id], f"operand {name}: its citation did not pass verification ({_status(c) or 'none'})"
@@ -460,6 +472,10 @@ def numeric_gate(text_blocks, claims, derived=None, assumptions=None, index=None
                     rec.update(kind="assumed", label="arithmetic constant")
                 elif key is not None:
                     rec.update(kind="derived", derived=key, operands=refs)
+                elif refs:
+                    # the record names this number as derived and the derivation fails: it is unsupported, never
+                    # rescued by a citation whose value happens to round to it (an EPS of 5.32 is not a 5-year gap)
+                    rec["reason"] = refs
                 else:
                     dwhy = refs                                 # (None, reason) from _match_derived
                     label = _match_assumption(tok, assumptions, ctx, _symbol_before(text, tok.start))

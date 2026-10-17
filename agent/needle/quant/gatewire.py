@@ -333,3 +333,89 @@ def indication_count(drug):
         return None
     ops = {f"r{i}": {"value": 1, "citation": c, "count": True} for i, (_, _, c) in enumerate(rows)}
     return len(rows), ops, [c for _, _, c in rows if c.verification.ok]
+
+
+def label_count_maps(sig):
+    """Indication counts of a label_narrower / label_broader row rebuilt from epi/indication_map.csv rows, each row a
+    count operand cited on its DailyMed label line (review: the detector's counts had no citation). Returns None when
+    the product or every rival has no rows, else {sentence, derived, cites, flags, holds, why}. holds applies the
+    detector's own rule (narrower: product <= rival median - 2; broader: >= median + 2) to the recount."""
+    prod = str(sig.meta.get("product") or "").lower()
+    rivals = list(((sig.meta.get("data") or {}).get("rival_counts") or {}).keys())
+    pc = indication_count(prod) if prod else None
+    if not pc or not rivals:
+        return None
+    derived, cites, flags, counts = {}, list(pc[2]), [], {}
+    derived["n_product"] = derived_entry(pc[0], " + ".join(pc[1]), pc[1], label=f"{prod} indication_map rows")
+    for r in rivals:
+        rc = indication_count(str(r).lower())
+        if not rc:
+            flags.append(f"rival {r} has no indication_map rows: left out of the recount")
+            continue
+        counts[r] = rc[0]
+        derived[f"n_{r}"] = derived_entry(rc[0], " + ".join(rc[1]), rc[1], label=f"{r} indication_map rows")
+        cites += rc[2]
+    if not counts:
+        return None
+    vals = sorted(counts.values())
+    k = len(vals)
+    med = vals[k // 2] if k % 2 else (vals[k // 2 - 1] + vals[k // 2]) / 2
+    names = {f"x{i}": {"derived": f"n_{r}"} for i, r in enumerate(counts)}
+    derived["rival_median"] = derived_entry(med, f"median({', '.join(names)})", names, label="median of rival counts")
+    narrower = sig.kind == "label_narrower"
+    holds = pc[0] <= med - 2 if narrower else pc[0] >= med + 2
+    tail = ("narrower label should show up as a smaller addressable patient pool" if narrower else
+            "broader label supports more volume growth routes")
+    det = (sig.meta.get("data") or {}).get("rival_counts") or {}
+    sentence = (f"{prod} lists {pc[0]} indications vs rival median {med:g} "
+                f"({', '.join(f'{r} {n}' for r, n in counts.items())}), counting indication map rows, each cited to "
+                f"its label line; {tail}")
+    why = ""
+    if not holds:
+        why = (f"label recount from indication_map rows ({prod} {pc[0]} vs rival median {med:g}) does not meet the "
+               f"detector rule ({'<= median - 2' if narrower else '>= median + 2'}); the detector counted "
+               f"{sig.value} vs {', '.join(f'{r} {v}' for r, v in det.items())} from label bullets")
+    return {"sentence": sentence, "derived": derived, "cites": cites, "flags": flags, "holds": holds, "why": why}
+
+
+def exclusivity_maps(sig, loe_got):
+    """exclusivity_earlier rewritten on cited dates (review: the year gap was printed with no derivation). The
+    product side is its pipeline/loe_calendar.csv row (company-stated LOE, a 10-K page citation through
+    facts.locator); the rival side is the rival's own loe_calendar row when one exists, else the detector's
+    Orange/Purple Book date, which has no verified facts row and so carries an unverified table citation. The gap in
+    years is derived as rival year - product year; with an unverified operand the gate rejects the row (fail closed,
+    never labelled to pass). Returns {sentence, derived, cites, page_cites, flags} or None."""
+    from . import verified_tables as VT
+    if not loe_got:
+        return None
+    pdate, tv, row = loe_got
+    pc = tv.citations[0] if tv.citations else None
+    meta = sig.meta.get("data") or {}
+    prod, rival = str(sig.meta.get("product") or ""), str(sig.meta.get("rival") or "")
+    rgot = VT.loe_any(rival.split(" ")[0]) if rival else None
+    if rgot:
+        rdate, rtv, _ = rgot
+        rc, rsrc = rtv.citations[0], "company-stated, its own filing"
+    else:
+        rd = str(meta.get("rival_end") or "")
+        if not re.match(r"\d{4}", rd):
+            return None
+        from datetime import date as _d
+        rdate = _d(int(rd[:4]), int(rd[5:7] or 1), int(rd[8:10] or 1)) if len(rd) >= 10 else _d(int(rd[:4]), 1, 1)
+        rc = data.table_citation("orange_book_patents.csv / purple_book.csv", rival, "latest protection end", rd)
+        rsrc = "Orange/Purple Book latest listed protection, no verified facts row"
+    gap = rdate.year - pdate.year
+    if gap <= 0:
+        return None
+    derived = {"loe_gap_years": derived_entry(gap, "r - p", {"r": {"value": rdate.year, "citation": rc, "year": True},
+                                                             "p": {"value": pdate.year, "citation": pc, "year": True}},
+                                              "years",
+                                              label="rival LOE year - product LOE year")}
+    rd_txt = rdate.isoformat() if not rgot else str(rdate.year)
+    sentence = (f"{prod} US protection ends {pdate.year} (company-stated, {row.get('company', '') or 'company'} "
+                f"10-K), about {gap} years before {rival} ({rd_txt}, {rsrc}); earlier loss of exclusivity")
+    flags = [] if rgot else [f"rival date {rd_txt} is a table value with no verified facts row: the year gap cannot be "
+                             "derived from cited operands"]
+    cites = [c for c in (pc, rc) if c is not None]
+    return {"sentence": sentence, "derived": derived, "cites": cites,
+            "page_cites": [c for c in cites if c.page is not None and c.verification.ok], "flags": flags}

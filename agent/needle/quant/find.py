@@ -611,6 +611,7 @@ def score_signal(sig, co, panel=None):
         flags.append(age_note)
     generic = False
     nq_reason = ""
+    ex = None                     # exclusivity_earlier rewritten on its cited loe_calendar row (gatewire)
     if fam.route in ("backtest", "anchor", "directional", "none"):
         # Review R2 (A20, B4, A1): the 3%-of-revenue anchor is the size of a backtested margin event, so it applies
         # only to a backtested time-series flag that fired. hit_rates.json has a dose response only by the number of
@@ -649,6 +650,12 @@ def score_signal(sig, co, panel=None):
     elif fam is FAM["loe"]:
         imp, lflags, disclosed = _loe_impact(sig, co)
         flags += lflags
+        if sig.kind == "exclusivity_earlier":
+            from . import verified_tables as VT
+            prod_ = (sig.meta.get("product") or "").lower()
+            ex = GW.exclusivity_maps(sig, VT.loe(sig.ticker, prod_.split(" ")[0]) if prod_ else None)
+            if ex is not None:
+                page_cites += ex["page_cites"]    # the 10-K page of the company-stated LOE is page evidence
     elif fam is FAM["footnote"]:
         imp, _ = IM.footnote(co, "impairment_booked")
     elif fam is FAM["trial"]:
@@ -671,6 +678,11 @@ def score_signal(sig, co, panel=None):
             "rival": sig.meta.get("rival")}
     yb = yoy_basis(sig)
     sentence, extra_cites = sig.detail, []
+    lc = GW.label_count_maps(sig) if sig.kind in ("label_narrower", "label_broader") else None
+    if lc is not None:
+        sentence, extra_cites = lc["sentence"], list(lc["cites"])
+    if sig.kind == "exclusivity_earlier" and ex is not None:
+        sentence, extra_cites = ex["sentence"], list(ex["cites"])
     if yb is not None:
         sentence, extra_cites = yb["sentence"], yb["cites"]
         page_cites = [c for c in page_cites if not _is_stmt_vs_year_end(c)] + yb["page_cites"]
@@ -682,6 +694,15 @@ def score_signal(sig, co, panel=None):
     sc.citations += extra_cites
     if yb is not None:
         sc.derived.update(yb["derived"])
+    if ex is not None and sig.meta.get("rival"):      # one row per (product, rival): the product's LOE page is shared
+        sc.id = finding_id(sig.ticker, sig.kind, (page_cites[0].cite_id if page_cites else sig.kind)
+                           + "|" + str(sig.meta["rival"]).lower())
+    for got in (lc, ex):
+        if got is not None:
+            sc.derived.update(got["derived"])
+            sc.flags += got["flags"]
+    if lc is not None and not lc["holds"]:
+        apply_guard(sc, ("drop", lc["why"]))
     GW.forensics_maps(sig, sc.derived, sc.assumptions)
     GW.dose_counts(sc.sentence, sc.assumptions)
     GW.peer_stats(sc.assumptions, sig)

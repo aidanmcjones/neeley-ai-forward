@@ -294,3 +294,18 @@ def test_verify2_bare_formula_constants_are_arithmetic_and_k1_is_labelled(idx, g
     kinds = [(n["value"], n["kind"], n.get("label")) for n in r.numbers]
     assert kinds[0][2] == "arithmetic constant" and kinds[-1][2] == "arithmetic constant"
     assert all(k == "assumed" and lab.startswith("constant: K_LOW_REBATE") for v, k, lab in kinds[1:3])
+
+
+def test_failed_derivation_is_not_rescued_by_a_rounding_value_and_year_operands(idx, good):
+    from dataclasses import replace
+    eps = replace(good, quote="EPS value = 5.32", value="5.32")
+    loe_p = replace(good, quote="Enbrel U.S. 11/22/2028 core patent", value="11/22/2028")
+    loe_r = replace(good, quote="Skyrizi U.S. 2033", value="2033")
+    unv = replace(loe_r, verification=replace(loe_r.verification, status="unverified"))
+    bad = {"gap": G.derived_entry(5, "r - p", {"r": {"value": 2033, "citation": unv, "year": True},
+                                               "p": {"value": 2028, "citation": loe_p, "year": True}})}
+    r = G.numeric_gate("about 5 years before", [eps], derived=bad, index=idx)
+    assert not r.passed and "did not pass" in r.numeric_check["unsupported"][0]["reason"]
+    ok = {"gap": G.derived_entry(5, "r - p", {"r": {"value": 2033, "citation": loe_r, "year": True},
+                                              "p": {"value": 2028, "citation": loe_p, "year": True}})}
+    assert G.numeric_gate("about 5 years before", [], derived=ok, index=idx).passed

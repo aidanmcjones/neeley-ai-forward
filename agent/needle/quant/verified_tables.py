@@ -279,6 +279,15 @@ def loe(ticker, brand, territory="US"):
     return None
 
 
+def loe_any(brand, territory="US"):
+    """loe() for a brand of any company (a rival's own loe_calendar row), or None."""
+    for fld in ("company_stated_loe", "rule_output_loe"):
+        hit = cell(LOE, {"brand": str(brand).upper(), "territory": territory}, fld)
+        if hit:
+            return loe(hit[3].get("ticker"), brand, territory)
+    return None
+
+
 def months_to(d, as_of=None):
     a = as_of or DATA.AS_OF
     return (d.year - a.year) * 12 + (d.month - a.month)
