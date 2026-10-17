@@ -58,6 +58,9 @@ def gaps(df):
     for extra in sorted({p.parent.name for p in OUT.glob("peers/*/sources.jsonl")} - set(COMPANIES)):
         lines += [f"## {extra} (peers, non-SEC)", f"- {len(df[df['ticker'] == extra])} documents", ""]
     lines.append("## Drugs")
+    note = OUT / "drugs" / "GAPS.txt"
+    if note.exists():
+        lines += [f"- {x}" for x in note.read_text(encoding="utf-8").splitlines() if x.strip()]
     for slug in DRUGS:
         if not (OUT / "drugs" / slug / "label_sections.md").exists():
             lines.append(f"- {slug}: no FDA label")

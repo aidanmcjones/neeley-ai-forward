@@ -106,7 +106,7 @@ def find_setid(name, labeler):
     """The maker's own SPL (not a repackager's), newest first. Exact brand match before broader titles."""
     data = get(f"{DM}/services/v2/spls.json", params={"drug_name": name, "pagesize": 100}).json()["data"]
     mine = [d for d in data if re.search(labeler, d["title"].rsplit("[", 1)[-1], re.I)]
-    exact = [d for d in mine if re.match(rf"{re.escape(name)}\b(?! (QLEX|QVANTIG|FASPRO))", d["title"], re.I)]
+    exact = [d for d in mine if re.match(rf"{re.escape(name)}\b(?! (QLEX|QVANTIG|FASPRO|ESCENA|XR\b|\(ORAL))", d["title"], re.I)]
     pool = exact or mine
     pool.sort(key=lambda d: datetime.strptime(d["published_date"], "%b %d, %Y"), reverse=True)
     return pool[0] if pool else None

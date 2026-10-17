@@ -1,6 +1,6 @@
-<!-- source: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=27f15fac-7d98-4114-a2ec-92494a91da98
-     title: OZEMPIC (ORAL SEMAGLUTIDE) TABLET RYBELSUS (ORAL SEMAGLUTIDE) TABLET [NOVO NORDISK PHARMACEUTICAL INDUSTRIES, LP]
-     spl_version: 14  published: Aug 19, 2026  retrieved: 2026-10-17T15:43:29.645440+00:00 -->
+<!-- source: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79
+     title: OZEMPIC (SEMAGLUTIDE) INJECTION, SOLUTION [NOVO NORDISK PHARMACEUTICAL INDUSTRIES, LP]
+     spl_version: 20  published: Jun 10, 2026  retrieved: 2026-10-17T16:46:53.388461+00:00 -->
 
 ## SPL product data elements section
 
@@ -8,23 +8,27 @@
 
 ## WARNING: RISK OF THYROID C-CELL TUMORS
 
-- • In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures. It is unknown whether RYBELSUS and OZEMPIC tablets cause thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined [see Warnings and Precautions ( 5.1 ), Nonclinical Toxicology ( 13.1 )] .
+- • In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures. It is unknown whether OZEMPIC causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined [see Warnings and Precautions ( 5.1 ), Nonclinical Toxicology ( 13.1 )] .
 
 •
 
-- • RYBELSUS and OZEMPIC tablets are contraindicated in patients with a personal or family history of MTC or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2) [see Contraindications ( 4 )] . Counsel patients regarding the potential risk for MTC with the use of RYBELSUS or OZEMPIC tablets and inform them of symptoms of thyroid tumors (e.g., a mass in the neck, dysphagia, dyspnea, persistent hoarseness). Routine monitoring of serum calcitonin or using thyroid ultrasound is of uncertain value for early detection of MTC in patients treated with RYBELSUS or OZEMPIC tablets [see Contraindications ( 4 ), Warnings and Precautions ( 5.1 )].
+- • OZEMPIC is contraindicated in patients with a personal or family history of MTC or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2) [see Contraindications ( 4 )] . Counsel patients regarding the potential risk for MTC with the use of OZEMPIC and inform them of symptoms of thyroid tumors (e.g., a mass in the neck, dysphagia, dyspnea, persistent hoarseness). Routine monitoring of serum calcitonin or using thyroid ultrasound is of uncertain value for early detection of MTC in patients treated with OZEMPIC [see Contraindications ( 4 ), Warnings and Precautions ( 5.1 )] .
 
 •
 
 ## 1 INDICATIONS AND USAGE
 
-RYBELSUS and OZEMPIC tablets are indicated:
+OZEMPIC is indicated:
 
 - • as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.
 
 •
 
-- • to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events.
+- • to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.
+
+•
+
+- • to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease.
 
 •
 
@@ -32,183 +36,137 @@ RYBELSUS and OZEMPIC tablets are indicated:
 
 ### 2.1 Important Administration Instructions
 
-- • RYBELSUS and OZEMPIC tablets are not substitutable on a mg-to-mg basis.
+- • Inspect OZEMPIC visually before use. It should appear clear and colorless. Do not use OZEMPIC if particulate matter and coloration is seen.
 
 •
 
-- • Take one RYBELSUS or OZEMPIC tablet orally once daily on an empty stomach in the morning with water (up to 4 ounces of water). Do not take RYBELSUS or OZEMPIC tablets with other liquids besides water [see Clinical Pharmacology ( 12.3 )] .
+- • Administer OZEMPIC once weekly, on the same day each week, at any time of the day, with or without meals.
 
 •
 
-- • Do not take more than one tablet per day.
+- • Inject OZEMPIC subcutaneously in the abdomen, thigh, or upper arm. Instruct patients to use a different injection site each week when injecting in the same body region.
 
 •
 
-- • Swallow tablets whole. Do not split, crush, chew or dissolve in any solution.
+- • When using OZEMPIC with insulin, instruct patients to administer as separate injections and to never mix the products. It is acceptable to inject OZEMPIC and insulin in the same body region, but the injections should not be adjacent to each other.
 
 •
 
-- • After taking RYBELSUS or OZEMPIC tablets, wait at least 30 minutes before eating food, drinking beverages or taking other oral medications [see Clinical Pharmacology ( 12.3 )] .
+- • The day of weekly administration can be changed if necessary as long as the time between two doses is at least 2 days (>48 hours).
 
 •
 
-- • If a dose is missed, skip the missed dose and take the next dose the following day.
+- • If a dose is missed, administer OZEMPIC as soon as possible within 5 days after the missed dose. If more than 5 days have passed, skip the missed dose and administer the next dose on the regularly scheduled day. In each case, patients can then resume their regular once-weekly dosing schedule.
 
 •
 
-### 2.2 Recommended Starting, Escalation and Maintenance Dosage of RYBELSUS and OZEMPIC Tablets
+### 2.2 Recommended Dosage
 
-RYBELSUS: Recommended Dosage
+Recommended Initiation Dosage
 
-Follow the RYBELSUS starting, escalation, and maintenance dosage described below to reduce the risk of gastrointestinal (GI) adverse reactions [see Warnings and Precautions ( 5.6 ), Adverse Reactions ( 6.1 )] :
+Initiate OZEMPIC with a dosage of 0.25 mg injected subcutaneously once weekly for 4 weeks. Follow the dosage escalation below to reduce the risk of gastrointestinal adverse reactions [see Warnings and Precautions ( 5.7 ), Adverse Reactions ( 6.1 )].
 
-- • Starting Dosage (Initiation Phase) (Days 1 to 30) : The recommended starting dosage is 3 mg orally once daily (this dosage is not effective for glycemic control).
+After 4 weeks on the 0.25 mg dosage, increase the dosage to 0.5 mg once weekly.
 
-•
+Recommended Maintenance and Maximum Dosages for Glycemic Control
 
-- • Escalation and Maintenance Dosage (Days 31 and beyond) :
+The recommended maintenance dosage is 0.5 mg, 1 mg, or 2 mg, injected subcutaneously once weekly, based on glycemic control.
 
-•
+If additional glycemic control is needed after at least 4 weeks on the:
 
-- o Days 31 to 60: Increase the dosage to 7 mg orally once daily.
-
-o
-
-- o On Day 61 or thereafter, if:
-
-o
-
-- ▪ No additional glycemic control is needed, maintain the dosage at 7 mg orally once daily.
-
-▪
-
-- ▪ Additional glycemic control is needed, increase the dosage to 14 mg orally once daily.
-
-▪
-
-OZEMPIC Tablets: Recommended Dosage
-
-Follow the OZEMPIC tablets starting, escalation, and maintenance dosage described below to reduce the risk of GI adverse reactions [see Warnings and Precautions ( 5.6 ), Adverse Reactions ( 6.1 )] :
-
-- • Starting Dosage (Initiation Phase) (Days 1 through 30) : The recommended starting dosage is 1.5 mg orally once daily (this dosage is not effective for glycemic control).
+- • 0.5 mg dosage, the dosage may be increased to 1 mg once weekly.
 
 •
 
-- • Escalation and Maintenance Dosage (Days 31 and beyond) :
+- • 1 mg dosage, the dosage may be increased to 2 mg once weekly.
 
 •
 
-- o Days 31 to 60: Increase the dosage to 4 mg orally once daily.
+The maximum recommended dosage is 2 mg once weekly.
 
-o
+Recommended Maintenance Dosage in Patients with Type 2 Diabetes Mellitus and Chronic Kidney Disease
 
-- o On Day 61 or thereafter, if:
-
-o
-
-- ▪ No additional glycemic control is needed, maintain the dosage at 4 mg orally once daily.
-
-▪
-
-- ▪ Additional glycemic control is needed, increase the dosage to 9 mg orally once daily.
-
-▪
-
-### 2.3 Switching Between RYBELSUS and OZEMPIC Tablets
-
-- • Do not switch between RYBELSUS and OZEMPIC tablets during the initiation phase (Days 1 to 30) [see Dosage and Administration ( 2.2 )] .
-
-•
-
-- • After 30 days of RYBELSUS or OZEMPIC tablet treatment (after the initiation phase) [see Dosage and Administration ( 2.2 )] , patients may switch between RYBELSUS and OZEMPIC tablet products (see Table 1 ).
-
-•
-
-- • When switching between RYBELSUS and OZEMPIC tablets, initiate the other semaglutide tablet product the day after discontinuing the previous semaglutide tablet product.
-
-•
-
-Table 1. Switching Between Escalation or Maintenance Dosage of RYBELSUS and OZEMPIC Tablets
-
-RYBELSUS OZEMPIC Tablets
-
-RYBELSUS
-
-OZEMPIC Tablets
-
-7 mg orally once daily 4 mg orally once daily
-
-7 mg orally once daily
-
-4 mg orally once daily
-
-14 mg orally once daily 9 mg orally once daily
-
-14 mg orally once daily
-
-9 mg orally once daily
-
-### 2.4 Switching from OZEMPIC Injection to RYBELSUS or OZEMPIC Tablets
-
-Switching from OZEMPIC Injection to RYBELSUS Tablets
-
-- • Patients taking the 0.5 mg dose of OZEMPIC injection may switch to RYBELSUS tablets.
-
-•
-
-- • One week after discontinuing 0.5 mg of subcutaneous OZEMPIC injection, start 7 mg or 14 mg of RYBELSUS orally once daily.
-
-•
-
-Switching from OZEMPIC Injection to OZEMPIC Tablets
-
-- • Patients taking the 0.5 mg dose of OZEMPIC injection may switch to OZEMPIC tablets.
-
-•
-
-- • One week after discontinuing 0.5 mg of subcutaneous OZEMPIC injection, start 4 mg or 9 mg of OZEMPIC tablets orally once daily.
-
-•
+Increase the dosage to the maintenance dosage, 1 mg once weekly, after at least 4 weeks on the 0.5 mg dosage.
 
 ## 3 DOSAGE FORMS AND STRENGTHS
 
-RYBELSUS (semaglutide) tablets are available as:
+Injection: clear, colorless solution available as follows:
 
-- • 3 mg: white to light yellow, oval shaped debossed with “3” on one side and “novo” on the other side.
+Single-Patient-Use Pens (with multiple weekly doses)
 
-•
+Single-Patient-Use Pens (with multiple weekly doses)
 
-- • 7 mg: white to light yellow, oval shaped debossed with “7” on one side and “novo” on the other side.
+Dose per Injection Total Strength per Total Volume Strength per mL
 
-•
+Dose per Injection
 
-- • 14 mg: white to light yellow, oval shaped debossed with “14” on one side and “novo” on the other side.
+Total Strength per Total Volume
 
-•
+Strength per mL
 
-OZEMPIC (semaglutide) tablets are available as:
+0.25 mg 0.5 mg 2 mg / 3 mL 0.68 mg/mL
 
-- • 1.5 mg: white to light yellow, round shaped debossed with “1.5” on one side and “novo” on the other side.
+0.25 mg
 
-•
+0.5 mg
 
-- • 4 mg: white to light yellow, round shaped debossed with “4” on one side and “novo” on the other side.
+2 mg / 3 mL
 
-•
+0.68 mg/mL
 
-- • 9 mg: white to light yellow, round shaped debossed with “9” on one side and “novo” on the other side.
+1 mg 4 mg / 3 mL 1.34 mg/mL
 
-•
+1 mg
+
+4 mg / 3 mL
+
+1.34 mg/mL
+
+2 mg 8 mg / 3 mL 2.68 mg/mL
+
+2 mg
+
+8 mg / 3 mL
+
+2.68 mg/mL
+
+Single-Dose Prefilled Syringes
+
+Single-Dose Prefilled Syringes
+
+Dose per Injection Total Strength per Total Volume
+
+Dose per Injection
+
+Total Strength per Total Volume
+
+0.25 mg 0.25 mg / 0.5 mL
+
+0.25 mg
+
+0.25 mg / 0.5 mL
+
+0.5 mg 0.5 mg / 0.5 mL
+
+0.5 mg
+
+0.5 mg / 0.5 mL
+
+1 mg 1 mg / 0.5 mL
+
+1 mg
+
+1 mg / 0.5 mL
 
 ## 4 CONTRAINDICATIONS
 
-RYBELSUS and OZEMPIC tablets are contraindicated in patients with:
+OZEMPIC is contraindicated in patients with:
 
-- • A personal or family history of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2) [see Warnings and Precautions ( 5.1 )] .
+- • A personal or family history of MTC or in patients with MEN 2 [see Warnings and Precautions ( 5.1 )] .
 
 •
 
-- • A prior serious hypersensitivity reaction to semaglutide or to any of the excipients in RYBELSUS or OZEMPIC tablets. Serious hypersensitivity reactions including anaphylaxis and angioedema have been reported with semaglutide tablets [see Warnings and Precautions ( 5.7 )] .
+- • A serious hypersensitivity reaction to semaglutide or to any of the excipients in OZEMPIC. Serious hypersensitivity reactions including anaphylaxis and angioedema have been reported with OZEMPIC [see Warnings and Precautions ( 5.8 )] .
 
 •
 
@@ -216,59 +174,61 @@ RYBELSUS and OZEMPIC tablets are contraindicated in patients with:
 
 ### 5.1 Risk of Thyroid C-Cell Tumors
 
-In mice and rats, semaglutide caused a dose-dependent and treatment-duration-dependent increase in the incidence of thyroid C-cell tumors (adenomas and carcinomas) after lifetime exposure at clinically relevant plasma exposures [see Nonclinical Toxicology ( 13.1 )] . It is unknown whether RYBELSUS and OZEMPIC tablets cause thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined.
+In mice and rats, semaglutide caused a dose-dependent and treatment-duration-dependent increase in the incidence of thyroid C-cell tumors (adenomas and carcinomas) after lifetime exposure at clinically relevant plasma exposures [see Nonclinical Toxicology ( 13.1 )] . It is unknown whether OZEMPIC causes thyroid C-cell tumors, including MTC, in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined.
 
 Cases of MTC in patients treated with liraglutide, another GLP-1 receptor agonist, have been reported in the postmarketing period; the data in these reports are insufficient to establish or exclude a causal relationship between MTC and GLP-1 receptor agonist use in humans.
 
-RYBELSUS and OZEMPIC tablets are contraindicated in patients with a personal or family history of MTC or in patients with MEN 2. Counsel patients regarding the potential risk for MTC with the use of RYBELSUS or OZEMPIC tablets and inform them of symptoms of thyroid tumors (e.g., a mass in the neck, dysphagia, dyspnea, persistent hoarseness).
+OZEMPIC is contraindicated in patients with a personal or family history of MTC or in patients with MEN 2. Counsel patients regarding the potential risk for MTC with the use of OZEMPIC and inform them of symptoms of thyroid tumors (e.g., a mass in the neck, dysphagia, dyspnea, persistent hoarseness).
 
-Routine monitoring of serum calcitonin or using thyroid ultrasound is of uncertain value for early detection of MTC in patients treated with RYBELSUS or OZEMPIC tablets. Such monitoring may increase the risk of unnecessary procedures, due to the low-test specificity for serum calcitonin and a high background incidence of thyroid disease. Significantly elevated serum calcitonin value may indicate MTC and patients with MTC usually have calcitonin values >50 ng/L. If serum calcitonin is measured and found to be elevated, the patient should be further evaluated. Patients with thyroid nodules noted on physical examination or neck imaging should also be further evaluated.
+Routine monitoring of serum calcitonin or using thyroid ultrasound is of uncertain value for early detection of MTC in patients treated with OZEMPIC. Such monitoring may increase the risk of unnecessary procedures, due to the low-test specificity for serum calcitonin and a high background incidence of thyroid disease. Significantly elevated serum calcitonin value may indicate MTC and patients with MTC usually have calcitonin values >50 ng/L. If serum calcitonin is measured and found to be elevated, the patient should be further evaluated. Patients with thyroid nodules noted on physical examination or neck imaging should also be further evaluated.
 
 ### 5.2 Acute Pancreatitis
 
-Acute pancreatitis, including fatal and non-fatal hemorrhagic or necrotizing pancreatitis, has been observed in patients treated with GLP-1 receptor agonists, including semaglutide tablets [see Adverse Reactions ( 6 )] . After initiation of RYBELSUS or OZEMPIC tablets, observe patients carefully for signs and symptoms of acute pancreatitis, which may include persistent or severe abdominal pain (sometimes radiating to the back), and which may or may not be accompanied by nausea or vomiting. If pancreatitis is suspected, discontinue RYBELSUS or OZEMPIC tablets and initiate appropriate management.
+Acute pancreatitis, including fatal and non-fatal hemorrhagic or necrotizing pancreatitis, has been observed in patients treated with GLP-1 receptor agonists, including OZEMPIC [see Adverse Reactions ( 6 )].
+
+After initiation of OZEMPIC, observe patients carefully for signs and symptoms of acute pancreatitis, which may include persistent or severe abdominal pain (sometimes radiating to the back), and which may or may not be accompanied by nausea or vomiting. If pancreatitis is suspected, discontinue OZEMPIC and initiate appropriate management.
 
 ### 5.3 Diabetic Retinopathy Complications
 
-In a pooled analysis of glycemic control trials, patients reported diabetic retinopathy related adverse reactions during the trial (4.2% with semaglutide tablets and 3.8% with comparator) [see Adverse Reactions ( 6.1 )] .
+In a 2-year trial involving patients with type 2 diabetes and high cardiovascular risk, more events of diabetic retinopathy complications occurred in patients treated with OZEMPIC (3.0%) compared to placebo (1.8%). The absolute risk increase for diabetic retinopathy complications was larger among patients with a history of diabetic retinopathy at baseline (OZEMPIC 8.2%, placebo 5.2%) than among patients without a known history of diabetic retinopathy (OZEMPIC 0.7%, placebo 0.4%).
 
-In a 2-year CV outcomes trial with semaglutide injection involving patients with type 2 diabetes mellitus and high CV risk, diabetic retinopathy complications (which was a 4-component adjudicated endpoint) occurred in patients treated with semaglutide injection (3%) compared to placebo (1.8%). The absolute risk increase for diabetic retinopathy complications was larger among patients with a history of diabetic retinopathy at baseline (semaglutide injection 8.2%, placebo 5.2%) than among patients without a known history of diabetic retinopathy (semaglutide injection 0.7%, placebo 0.4%).
+Rapid improvement in glucose control has been associated with a temporary worsening of diabetic retinopathy. The effect of long-term glycemic control with semaglutide on diabetic retinopathy complications has not been studied. Patients with a history of diabetic retinopathy should be monitored for progression of diabetic retinopathy.
 
-Rapid improvement in glucose control has been associated with a temporary worsening of diabetic retinopathy. The effect of long-term glycemic control with RYBELSUS and OZEMPIC tablets on diabetic retinopathy complications has not been studied. Patients with a history of diabetic retinopathy should be monitored for progression of diabetic retinopathy.
+### 5.4 Never Share an OZEMPIC Pen Between Patients
 
-### 5.4 Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin
+OZEMPIC pens must never be shared between patients, even if the needle is changed. Pen-sharing poses a risk for transmission of blood-borne pathogens.
 
-Patients receiving RYBELSUS or OZEMPIC tablets in combination with an insulin secretagogue (e.g., sulfonylurea) or insulin may have an increased risk of hypoglycemia, including severe hypoglycemia [see Adverse Reactions ( 6.1 ), Drug Interactions ( 7 )] .
+### 5.5 Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin
 
-The risk of hypoglycemia may be lowered by a reduction in the dosage of sulfonylurea (or other concomitantly administered insulin secretagogue) or insulin. Inform patients using these concomitant medications of the risk of hypoglycemia and educate them on the signs and symptoms of hypoglycemia.
+Patients receiving OZEMPIC in combination with an insulin secretagogue (e.g., sulfonylurea) or insulin may have an increased risk of hypoglycemia, including severe hypoglycemia [see Adverse Reactions ( 6.1 ), Drug Interactions ( 7 )].
 
-### 5.5 Acute Kidney Injury Due to Volume Depletion
+The risk of hypoglycemia may be lowered by a reduction in the dose of sulfonylurea (or other concomitantly administered insulin secretagogue) or insulin. Inform patients using these concomitant medications of the risk of hypoglycemia and educate them on the signs and symptoms of hypoglycemia.
 
-There have been postmarketing reports of acute kidney injury in some cases requiring hemodialysis, in patients treated with semaglutide. The majority of the reported events occurred in patients who experienced gastrointestinal reactions leading to dehydration such as nausea, vomiting, or diarrhea [see Adverse Reactions ( 6 )] .
+### 5.6 Acute Kidney Injury Due to Volume Depletion
 
-Monitor renal function in patients reporting adverse reactions to RYBELSUS or OZEMPIC tablets that could lead to volume depletion, especially during dosage initiation and escalation of RYBELSUS or OZEMPIC tablets.
+There have been postmarketing reports of acute kidney injury, in some cases requiring hemodialysis, in patients treated with semaglutide. The majority of the reported events occurred in patients who experienced gastrointestinal reactions leading to dehydration such as nausea, vomiting, or diarrhea [see Adverse Reactions ( 6.1 )]. Monitor renal function in patients reporting adverse reactions to OZEMPIC that could lead to volume depletion, especially during dosage initiation and escalation of OZEMPIC.
 
-### 5.6 Severe Gastrointestinal Adverse Reactions
+### 5.7 Severe Gastrointestinal Adverse Reactions
 
-Use of semaglutide tablets has been associated with gastrointestinal adverse reactions, sometimes severe [see Adverse Reactions ( 6.1 )] . In clinical trials, severe gastrointestinal adverse reactions were reported more frequently among patients who received semaglutide tablets (7 mg 0.6%, 14 mg 2%) than placebo (0.3%). Severe gastrointestinal adverse reactions have also been reported postmarketing with GLP-1 receptor agonists.
+Use of OZEMPIC has been associated with gastrointestinal adverse reactions, sometimes severe [see Adverse Reactions ( 6 )] . In OZEMPIC clinical trials, severe gastrointestinal adverse reactions were reported more frequently among patients receiving OZEMPIC (0.5 mg 0.4%, 1 mg 0.8%) than placebo (0%). Severe gastrointestinal adverse reactions have also been reported postmarketing with GLP-1 receptor agonists.
 
-RYBELSUS and OZEMPIC tablets are not recommended in patients with severe gastroparesis.
+OZEMPIC is not recommended in patients with severe gastroparesis.
 
-### 5.7 Hypersensitivity Reactions
+### 5.8 Hypersensitivity Reactions
 
-Serious hypersensitivity reactions (e.g., anaphylaxis, angioedema) have been reported in patients treated with semaglutide tablets. If hypersensitivity reactions occur, discontinue use of RYBELSUS or OZEMPIC tablets; treat promptly per standard of care and monitor until signs and symptoms resolve. RYBELSUS and OZEMPIC tablets are contraindicated in patients with a prior serious hypersensitivity reaction to semaglutide or to any of the excipients in RYBELSUS or OZEMPIC tablets [see Adverse Reactions ( 6.2 )] .
+Serious hypersensitivity reactions (e.g., anaphylaxis, angioedema) have been reported in patients treated with OZEMPIC. If hypersensitivity reactions occur, discontinue use of OZEMPIC; treat promptly per standard of care, and monitor until signs and symptoms resolve. Do not use in patients with a previous hypersensitivity to OZEMPIC [see Contraindications ( 4 ), Adverse Reactions ( 6.2 )] .
 
-Anaphylaxis and angioedema have been reported with GLP-1 receptor agonists. Use caution in a patient with a history of angioedema or anaphylaxis with another GLP-1 receptor agonist because it is unknown whether such patients will be predisposed to anaphylaxis with RYBELSUS or OZEMPIC tablets.
+Anaphylaxis and angioedema have been reported with other GLP-1 receptor agonists. Use caution in a patient with a history of angioedema or anaphylaxis with another GLP-1 receptor agonist because it is unknown whether such patients will be predisposed to anaphylaxis with OZEMPIC.
 
-### 5.8 Acute Gallbladder Disease
+### 5.9 Acute Gallbladder Disease
 
-Acute events of gallbladder disease such as cholelithiasis or cholecystitis have been reported in GLP-1 receptor agonist trials and postmarketing. In placebo-controlled trials to improve glycemic control, cholelithiasis was reported in 1% of patients treated with semaglutide tablets (7 mg once daily). In a 4-year CV outcomes trial (Trial 7), cholelithiasis was reported in 1.1% of patients treated with semaglutide tablets (14 mg once daily) and in 0.9% of placebo-treated patients. In Trial 7, cholecystitis was reported in 1.1% of patients treated with semaglutide tablets (14 mg once daily) and in 0.7% of placebo-treated patients [see Adverse Reactions ( 6.1 )] . If cholelithiasis or cholecystitis is suspected, gallbladder studies and appropriate clinical follow-up are indicated [see Adverse Reactions ( 6.2 )] .
+Acute events of gallbladder disease such as cholelithiasis or cholecystitis have been reported in GLP-1 receptor agonist trials and postmarketing. In placebo-controlled trials, cholelithiasis was reported in 1.5% and 0.4% of patients-treated with OZEMPIC 0.5 mg and 1 mg, respectively. Cholelithiasis was not reported in placebo-treated patients. If cholelithiasis is suspected, gallbladder studies and appropriate clinical follow-up are indicated.
 
-### 5.9 Pulmonary Aspiration During General Anesthesia or Deep Sedation
+### 5.10 Pulmonary Aspiration During General Anesthesia or Deep Sedation
 
-RYBELSUS and OZEMPIC tablets delay gastric emptying [see Clinical Pharmacology ( 12.2 )] . There have been rare postmarketing reports of pulmonary aspiration in patients receiving GLP-1 receptor agonists undergoing elective surgeries or procedures requiring general anesthesia or deep sedation who had residual gastric contents despite reported adherence to preoperative fasting recommendations.
+OZEMPIC delays gastric emptying [see Clinical Pharmacology ( 12.2 )] . There have been rare postmarketing reports of pulmonary aspiration in patients receiving GLP-1 receptor agonists undergoing elective surgeries or procedures requiring general anesthesia or deep sedation who had residual gastric contents despite reported adherence to preoperative fasting recommendations.
 
-Available data are insufficient to inform recommendations to mitigate the risk of pulmonary aspiration during general anesthesia or deep sedation in patients taking RYBELSUS or OZEMPIC tablets, including whether modifying preoperative fasting recommendations or temporarily discontinuing RYBELSUS or OZEMPIC tablets could reduce the incidence of retained gastric contents. Instruct patients to inform healthcare providers prior to any planned surgeries or procedures if they are taking RYBELSUS or OZEMPIC tablets.
+Available data are insufficient to inform recommendations to mitigate the risk of pulmonary aspiration during general anesthesia or deep sedation in patients taking OZEMPIC, including whether modifying preoperative fasting recommendations or temporarily discontinuing OZEMPIC could reduce the incidence of retained gastric contents. Instruct patients to inform healthcare providers prior to any planned surgeries or procedures if they are taking OZEMPIC.
 
 ## 6 ADVERSE REACTIONS
 
@@ -278,7 +238,7 @@ The following serious adverse reactions are described below or elsewhere in the 
 
 •
 
-- • Acute Pancreatitis [see Warnings and Precautions ( 5.2 )]
+- • Acute Pancreatitis [see Warnings and Precautions ( 5.2) ]
 
 •
 
@@ -286,27 +246,27 @@ The following serious adverse reactions are described below or elsewhere in the 
 
 •
 
-- • Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin [see Warnings and Precautions ( 5.4 )]
+- • Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin [see Warnings and Precautions ( 5.5 )]
 
 •
 
-- • Acute Kidney Injury Due to Volume Depletion [see Warnings and Precautions ( 5.5 )]
+- • Acute Kidney Injury Due to Volume Depletion [see Warnings and Precautions ( 5.6 )]
 
 •
 
-- • Severe Gastrointestinal Adverse Reactions [see Warnings and Precautions ( 5.6 )]
+- • Severe Gastrointestinal Adverse Reactions [see Warnings and Precautions ( 5.7 )]
 
 •
 
-- • Hypersensitivity Reactions [see Warnings and Precautions ( 5.7 )]
+- • Hypersensitivity Reactions [see Warnings and Precautions ( 5.8 )]
 
 •
 
-- • Acute Gallbladder Disease [see Warnings and Precautions ( 5.8 )]
+- • Acute Gallbladder Disease [see Warnings and Precautions ( 5.9 )]
 
 •
 
-- • Pulmonary Aspiration During General Anesthesia or Deep Sedation [see Warnings and Precautions ( 5.9 )]
+- • Pulmonary Aspiration During General Anesthesia or Deep Sedation [see Warnings and Precautions ( 5.10 )]
 
 •
 
@@ -314,307 +274,271 @@ The following serious adverse reactions are described below or elsewhere in the 
 
 Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
 
-The safety of OZEMPIC tablets (1.5 mg, 4 mg and 9 mg strengths) [see Dosage and Administration ( 2.2 )] and RYBELSUS (3 mg, 7, mg and 14 mg strengths) [see Dosage and Administration ( 2.2 )] has been established as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus based on adequate and well-controlled studies of RYBELSUS in adult patients with type 2 diabetes mellitus [see Clinical Pharmacology ( 12.3 ), Clinical Studies ( 14 )] . Below is a display of the safety results of the adequate and well-controlled studies of RYBELSUS (referred to below as semaglutide tablets) in adult patients with type 2 diabetes mellitus.
-
 Pool of Placebo-Controlled Trials
 
-The data in Table 2 are derived from 2 placebo-controlled trials in adult patients with type 2 diabetes mellitus [see Clinical Studies ( 14 )] . These data reflect exposure of 1,071 patients to semaglutide tablets (3 mg, 7, mg or 14 mg orally once daily) with a mean duration of exposure of 41.8 weeks. The mean age of patients was 58 years, 3.9% were 75 years or older and 52% were male. In these trials, 63% were White, 6% were Black or African American and 27% were Asian; 19% identified as Hispanic or Latino ethnicity. At baseline, patients had type 2 mellitus diabetes for an average of 9.4 years and had a mean HbA 1c of 8.1%. At baseline, 20.1% of the population reported retinopathy. Baseline estimated renal function was normal (eGFR ≥90 mL/min/1.73m 2 ) in 66.2%, mildly impaired (eGFR 60 to 90 mL/min/1.73m 2 ) in 32.4% and moderately impaired (eGFR 30 to 60 mL/min/1.73m 2 ) in 1.4% of patients.
+The data in Table 1 are derived from 2 placebo-controlled trials (1 monotherapy trial and 1 trial in combination with basal insulin) in patients with type 2 diabetes [see Clinical Studies ( 14 )] . These data reflect exposure of 521 patients to OZEMPIC and a mean duration of exposure to OZEMPIC of 32.9 weeks. Across the treatment arms, the mean age of patients was 56 years, 3.4% were 75 years or older and 55% were male. In these trials 71% were White, 7% were Black or African American, and 19% were Asian; 21% identified as Hispanic or Latino ethnicity. At baseline, patients had type 2 diabetes for an average of 8.8 years and had a mean HbA 1c of 8.2%. At baseline, 8.9% of the population reported retinopathy. Baseline estimated renal function was normal (eGFR ≥90 mL/min/1.73m 2 ) in 57.2%, mildly impaired (eGFR 60 to 90 mL/min/1.73m 2 ) in 35.9% and moderately impaired (eGFR 30 to 60 mL/min/1.73m 2 ) in 6.9% of patients.
 
 Pool of Placebo- and Active-Controlled Trials
 
-The occurrence of adverse reactions was also evaluated in a larger pool of adult patients with type 2 diabetes mellitus participating in 9 placebo- and active-controlled trials [see Clinical Studies ( 14 )] . In this pool, 4,116 patients with type 2 diabetes mellitus were treated with semaglutide tablets for a mean duration of 59.8 weeks. The mean age of patients was 58 years, 5% were 75 years or older and 55% were male. In these trials, 65% were White, 6% were Black or African American and 24% were Asian; 15% identified as Hispanic or Latino ethnicity. At baseline, patients had type 2 diabetes mellitus for an average of 8.8 years and had a mean HbA 1c of 8.2%. At baseline, 16.6% of the population reported retinopathy. Baseline estimated renal function was normal (eGFR ≥90 mL/min/1.73m 2 ) in 65.9%, mildly impaired (eGFR 60 to 90 mL/min/1.73m 2 ) in 28.5% and moderately impaired (eGFR 30 to 60 mL/min/1.73m 2 ) in 5.4% of the patients.
+The occurrence of adverse reactions was also evaluated in a larger pool of patients with type 2 diabetes
+
+participating in 7 placebo- and active-controlled glycemic control trials [see Clinical Studies ( 14 )] including two trials in Japanese patients evaluating the use of OZEMPIC as monotherapy and add-on therapy to oral medications or insulin. In this pool, a total of 3150 patients with type 2 diabetes were treated with OZEMPIC for a mean duration of 44.9 weeks. Across the treatment arms, the mean age of patients was 57 years, 3.2% were 75 years or older and 57% were male. In these trials, 60% were White, 6% were Black or African American, and 31% were Asian; 16% identified as Hispanic or Latino ethnicity. At baseline, patients had type 2 diabetes for an average of 8.2 years and had a mean HbA 1c of 8.2%. At baseline, 7.8% of the population reported retinopathy. Baseline estimated renal function was normal (eGFR ≥90 mL/min/1.73m 2 ) in 63.1%, mildly impaired (eGFR 60 to 90 mL/min/1.73m 2 ) in 34.3%, and moderately impaired (eGFR 30 to 60 mL/min/1.73m 2 ) in 2.5% of the patients.
 
 Common Adverse Reactions
 
-Table 2 shows common adverse reactions, excluding hypoglycemia, associated with the use of semaglutide tablets in adult patients with type 2 diabetes mellitus in the pool of placebo-controlled trials. These adverse reactions occurred more commonly on semaglutide tablets than on placebo and occurred in at least 5% of patients treated with semaglutide tablets.
+Table 1 shows common adverse reactions, excluding hypoglycemia, associated with the use of OZEMPIC in the pool of placebo-controlled trials. These adverse reactions occurred more commonly on OZEMPIC than on placebo and occurred in at least 5% of patients treated with OZEMPIC.
 
-Table 2. Adverse Reactions in Placebo-Controlled Trials Reported in ≥5% of Semaglutide Tablets-Treated Patients with Type 2 Diabetes Mellitus
+Table 1. Adverse Reactions in Placebo-Controlled Trials Reported in ≥5% of OZEMPIC-Treated Patients with Type 2 Diabetes Mellitus
 
-Adverse Reaction Placebo (N=362) % Semaglutide Tablets 7 mg (N=356) % Semaglutide Tablets 14 mg (N=356) %
+Adverse Reaction Placebo (N=262) % OZEMPIC 0.5 mg (N=260) % OZEMPIC 1 mg (N=261) %
 
 Adverse Reaction
 
-Placebo
-
-(N=362)
+Placebo (N=262)
 
 %
 
-Semaglutide Tablets
+OZEMPIC 0.5 mg
 
-7 mg
-
-(N=356)
+(N=260)
 
 %
 
-Semaglutide Tablets
+OZEMPIC 1 mg
 
-14 mg
-
-(N=356)
+(N=261)
 
 %
 
-Nausea 6 11 20
+Nausea 6.1 15.8 20.3
 
 Nausea
 
-6
+6.1
 
-11
+15.8
 
-20
+20.3
 
-Abdominal Pain 4 10 11
-
-Abdominal Pain
-
-4
-
-10
-
-11
-
-Diarrhea 4 9 10
-
-Diarrhea
-
-4
-
-9
-
-10
-
-Decreased appetite 1 6 9
-
-Decreased appetite
-
-1
-
-6
-
-9
-
-Vomiting 3 6 8
+Vomiting 2.3 5 9.2
 
 Vomiting
 
-3
-
-6
-
-8
-
-Constipation 2 6 5
-
-Constipation
-
-2
-
-6
+2.3
 
 5
 
-In the pool of placebo- and active-controlled trials, the types and frequency of common adverse reactions, excluding hypoglycemia, were similar to those listed in Table 2 .
+9.2
 
-In a 4-year CV outcomes trial (Trial 7), 4,825 patients were randomized to semaglutide tablets for a median follow-up of 49.6 months and 4,825 patients were randomized to placebo for a median follow-up of 49.4 months [see Clinical Studies ( 14.4 )] . Safety data collection was limited to serious adverse events (including death), adverse events leading to discontinuation, and adverse events of special interest. Study drug was permanently discontinued due to an adverse event in 15.5% of semaglutide tablets-treated patients and 11.6% of placebo-treated patients.
+Diarrhea 1.9 8.5 8.8
 
-Additional information from this trial is included in subsequent sections below, when relevant.
+Diarrhea
+
+1.9
+
+8.5
+
+8.8
+
+Abdominal pain 4.6 7.3 5.7
+
+Abdominal pain
+
+4.6
+
+7.3
+
+5.7
+
+Constipation 1.5 5 3.1
+
+Constipation
+
+1.5
+
+5
+
+3.1
+
+In the pool of placebo- and active-controlled trials and in the 2-year cardiovascular outcomes trial, the types and frequency of common adverse reactions, excluding hypoglycemia, were similar to those listed in Table 1 .
+
+In a clinical trial with 959 patients treated with OZEMPIC 1 mg or OZEMPIC 2 mg as add-on to metformin with or without sulfonylurea treatment for 40 weeks, no new safety signals were identified.
+
+In the FLOW trial [see Clinical Studies ( 14.3 )] in patients with type 2 diabetes mellitus and chronic kidney disease, safety data collection was limited to serious adverse events and selected predefined categories of adverse events regardless of seriousness. There were no new serious or severe adverse reactions identified in this trial.
 
 Gastrointestinal Adverse Reactions
 
-In the pool of placebo-controlled trials, gastrointestinal adverse reactions occurred more frequently among patients who received semaglutide tablets than placebo: semaglutide tablets 14 mg once daily (41%), semaglutide tablets 7 mg once daily (32%) and placebo (21%), including severe reactions (semaglutide tablets 14 mg 2.0%, semaglutide tablets 7 mg 0.6%, placebo 0.3%). The majority of reports of nausea, vomiting and/or diarrhea occurred during dose escalation. A greater percentage of patients who received semaglutide tablets 14 mg once daily (8%) and semaglutide tablets 7 mg once daily (4%) discontinued treatment due to gastrointestinal adverse reactions than patients who received placebo (1%).
+In the pool of placebo-controlled trials, gastrointestinal adverse reactions occurred more frequently among patients receiving OZEMPIC than placebo (placebo 15.3%, OZEMPIC 0.5 mg 32.7%, OZEMPIC 1 mg 36.4%). The majority of reports of nausea, vomiting, and/or diarrhea occurred during dose escalation. More patients receiving OZEMPIC 0.5 mg (3.1%) and OZEMPIC 1 mg (3.8%) discontinued treatment due to gastrointestinal adverse reactions than patients receiving placebo (0.4%).
 
-In addition to the reactions in Table 2 , the following gastrointestinal adverse reactions with a frequency of <5% occurred in semaglutide tablets -treated patients (frequencies listed, respectively, as 14 mg once daily, 7 mg once daily and placebo): abdominal distension (3%, 2% and 1%), dyspepsia (0.6%, 3%, 0.6%), eructation (2%, 0.6%, 0%,), flatulence (1%, 2%, 0%), gastroesophageal reflux disease (2%, 2%, 0.3%) and gastritis (2%, 2%, 0.8%).
+In the trial with OZEMPIC 1 mg and 2 mg, gastrointestinal adverse reactions occurred more frequently among patients receiving OZEMPIC 2 mg (34%) vs OZEMPIC 1 mg (30.8%).
+
+- In addition to the reactions in Table 1 , the following gastrointestinal adverse reactions with a frequency of <5% were associated with OZEMPIC (frequencies listed, respectively, as: placebo; 0.5 mg; 1 mg): dyspepsia (1.9%, 3.5%, 2.7%), eructation (0%, 2.7%, 1.1%), flatulence (0.8%, 0.4%, 1.5%), gastroesophageal reflux disease (0%, 1.9%, 1.5%), and gastritis (0.8%, 0.8%, 0.4%).
 
 Other Adverse Reactions
 
-Pancreatitis : In the pool of placebo- and active-controlled trials with semaglutide tablets, pancreatitis was reported as a serious adverse event in 6 semaglutide tablets -treated patients (0.1 events per 100 patient years) versus 1 in comparator-treated patients (<0.1 events per 100 patient years).
+Hypoglycemia
 
-Diabetic Retinopathy Complications : In the pool of placebo- and active-controlled trials with semaglutide tablets, patients reported diabetic retinopathy related adverse reactions during the trial (4.2% with semaglutide tablets and 3.8% with comparator).
+Table 2 summarizes the incidence of events related to hypoglycemia by various definitions in the placebo-controlled trials.
 
-Hypoglycemia : Table 3 summarizes the incidence of hypoglycemia by various definitions in the placebo-controlled trials.
+Table 2. Hypoglycemia Adverse Reactions in Placebo-Controlled Trials in Patients with Type 2 Diabetes Mellitus
 
-Table 3. Hypoglycemia Adverse Reactions in Placebo-Controlled Trials in Patients with Type 2 Diabetes Mellitus
-
-Placebo Semaglutide Tablets 7 mg Semaglutide Tablets 14 mg
+Placebo OZEMPIC 0.5 mg OZEMPIC 1 mg
 
 Placebo
 
-Semaglutide Tablets
+OZEMPIC 0.5 mg
 
-7 mg
-
-Semaglutide Tablets
-
-14 mg
+OZEMPIC 1 mg
 
 Monotherapy
 
 Monotherapy
 
-(26 weeks) N=178 N=175 N=175
+(30 weeks) N=129 N=127 N=130
 
-(26 weeks)
+- (30 weeks)
 
-N=178
+N=129
 
-N=175
+N=127
 
-N=175
+N=130
 
-Severe* 0% 1% 0%
+Severe † 0% 0% 0%
 
-Severe*
-
-0%
-
-1%
-
-0%
-
-Plasma glucose <54 mg/dL 1% 0% 0%
-
-- Plasma glucose
-
-- <54 mg/dL
-
-1%
+- Severe †
 
 0%
 
 0%
 
-Add-on to metformin and/or sulfonylurea, basal insulin alone or metformin in combination with basal insulin in patients with moderate renal impairment
+0%
 
-Add-on to metformin and/or sulfonylurea, basal insulin alone or metformin in combination with basal insulin in patients with moderate renal impairment
+Documented symptomatic (≤70 mg/dL glucose threshold) 0% 1.6% 3.8%
 
-(26 weeks) N=161 - N=163
-
-- (26 weeks)
-
-N=161
-
--
-
-N=163
-
-Severe* 0% - 0%
-
-Severe*
+- Documented symptomatic (≤70 mg/dL glucose threshold)
 
 0%
 
--
+1.6%
+
+3.8%
+
+Severe † or Blood Glucose Confirmed Symptomatic (≤56 mg/dL glucose threshold) 1.6% 0% 0%
+
+- Severe † or Blood Glucose Confirmed Symptomatic (≤56 mg/dL glucose threshold)
+
+1.6%
 
 0%
 
-Plasma glucose <54 mg/dL 3% - 6%
+0%
 
-- Plasma glucose
+Add-on to Basal Insulin with or without Metformin
 
-- <54 mg/dL
+Add-on to Basal Insulin with or without Metformin
 
-3%
+(30 weeks) N=132 N=132 N=131
 
--
+- (30 weeks)
 
-6%
+N=132
 
-Add-on to insulin with or without metformin
+N=132
 
-Add-on to insulin with or without metformin
+N=131
 
-(52 weeks) N=184 N=181 N=181
+Severe † 0% 0% 1.5%
 
-- (52 weeks)
-
-N=184
-
-N=181
-
-N=181
-
-Severe* 1% 0% 1%
-
-- Severe*
-
-1%
+- Severe †
 
 0%
 
-1%
+0%
 
-Plasma glucose <54 mg/dL 32% 26% 30%
+1.5%
 
-- Plasma glucose
+Documented symptomatic (≤70 mg/dL glucose threshold) 15.2% 16.7% 29.8%
 
-- <54 mg/dL
+- Documented symptomatic (≤70 mg/dL glucose threshold)
 
-32%
+15.2%
 
-26%
+16.7%
 
-30%
+29.8%
 
-* “Severe” hypoglycemia adverse reactions are episodes requiring the assistance of another person.
+Severe † or Blood Glucose Confirmed Symptomatic (≤56 mg/dL glucose threshold) 5.3% 8.3% 10.7%
 
-Hypoglycemia was more frequent when semaglutide tablets were used in combination with insulin secretagogues (e.g., sulfonylureas) or insulin.
+- Severe † or Blood Glucose Confirmed Symptomatic (≤56 mg/dL glucose threshold)
 
-Increases in Amylase and Lipase : In placebo-controlled trials, patients exposed to semaglutide tablets 7 mg and 14 mg tablets had a mean increase from baseline in amylase of 10% and 13%, respectively and lipase of 30% and 34%, respectively. These changes were not observed in placebo-treated patients.
+5.3%
 
-Cholelithiasis : In placebo-controlled trials to improve glycemic control, cholelithiasis was reported in 1% of patients treated with semaglutide tablets 7 mg.
+8.3%
 
-In a 4-year CV outcomes trial (Trial 7), cholelithiasis was reported in 1.1% of patients treated with semaglutide 14 mg tablets and in 0.9% of placebo-treated patients. In Trial 7, cholecystitis was reported in 1.1% of patients treated with semaglutide14 mg tablets and in 0.7% of placebo-treated patients.
+10.7%
 
-Increases in Heart Rate : In placebo-controlled trials, semaglutide tablets 7 mg and 14 mg tablets resulted in a mean increase in heart rate of 1 to 3 beats per minute. There was no change in heart rate in placebo-treated patients.
+† “Severe” hypoglycemia adverse reactions are episodes requiring the assistance of another person.
+
+† “Severe” hypoglycemia adverse reactions are episodes requiring the assistance of another person.
+
+Hypoglycemia was more frequent when OZEMPIC was used in combination with a sulfonylurea [see Warnings and Precautions ( 5.5 ), Clinical Studies ( 14 )]. Severe hypoglycemia occurred in 0.8% and 1.2% of patients when OZEMPIC 0.5 mg and 1 mg, respectively, was coadministered with a sulfonylurea.
+
+Documented symptomatic hypoglycemia occurred in 17.3% and 24.4% of patients when OZEMPIC 0.5 mg and 1 mg, respectively, was coadministered with a sulfonylurea. Severe or blood glucose confirmed symptomatic hypoglycemia occurred in 6.5% and 10.4% of patients when OZEMPIC 0.5 mg and 1 mg, respectively, was coadministered with a sulfonylurea.
+
+Injection Site Reactions
+
+In placebo-controlled trials, injection site reactions (e.g., injection-site discomfort, erythema) were reported in 0.2% of OZEMPIC-treated patients.
+
+Increases in Amylase and Lipase
+
+In placebo-controlled trials, patients exposed to OZEMPIC had a mean increase from baseline in amylase of 13% and lipase of 22%. These changes were not observed in placebo-treated patients.
+
+Acute Pancreatitis
+
+In glycemic control trials, acute pancreatitis was confirmed by adjudication in 7 OZEMPIC-treated patients (0.3 cases per 100 patient years) versus 3 in comparator-treated patients (0.2 cases per 100 patient years).
+
+Cholelithiasis
+
+In placebo-controlled trials, cholelithiasis was reported in 1.5% and 0.4% of patients-treated with OZEMPIC 0.5 mg and 1 mg, respectively. Cholelithiasis was not reported in placebo-treated patients.
+
+Increases in Heart Rate
+
+In placebo-controlled trials, OZEMPIC 0.5 mg and 1 mg resulted in a mean increase in heart rate of 2 to 3 beats per minute. There was a mean decrease in heart rate of 0.3 beats per minute in placebo-treated patients.
+
+Fatigue, Dysgeusia and Dizziness
+
+Other adverse reactions with a frequency of >0.4% were associated with OZEMPIC include fatigue, dysgeusia and dizziness.
 
 ### 6.2 Postmarketing Experience
 
-The following adverse reactions have been reported during post-approval use of semaglutide, the active ingredient in RYBELSUS and OZEMPIC tablets. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.
+The following adverse reactions have been reported during post-approval use of semaglutide, the active ingredient of OZEMPIC. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.
 
-- • Gastrointestinal : acute pancreatitis and necrotizing pancreatitis, sometimes resulting in death; ileus, intestinal obstruction, severe constipation including fecal impaction
+Gastrointestinal : acute pancreatitis and necrotizing pancreatitis, sometimes resulting in death; ileus, intestinal obstruction, severe constipation including fecal impaction
 
-•
+Hypersensitivity : anaphylaxis, angioedema, rash, urticaria
 
-- • Hypersensitivity : anaphylaxis, angioedema, rash, urticaria
+Hepatobiliary : cholecystitis, cholecystectomy
 
-•
+Neurologic : dysesthesia, headache
 
-- • Hepatobiliary : cholecystitis, cholelithiasis requiring cholecystectomy
+Pulmonary : Pulmonary aspiration has occurred in patients receiving GLP-1 receptor agonists undergoing elective surgeries or procedures requiring general anesthesia or deep sedation.
 
-•
+Renal : acute kidney injury
 
-- • Nervous system disorders : dizziness, dysesthesia, dysgeusia, headache
-
-•
-
-- • Pulmonary : Pulmonary aspiration has occurred in patients receiving GLP-1 receptor agonists undergoing elective surgeries or procedures requiring general anesthesia or deep sedation
-
-•
-
-- • Renal : acute kidney injury
-
-•
-
-- • Skin and Subcutaneous Tissue : alopecia
-
-•
+Skin and Subcutaneous Tissue : alopecia
 
 ## 7 DRUG INTERACTIONS
 
 ### 7.1 Concomitant Use with an Insulin Secretagogue (e.g., Sulfonylurea) or with Insulin
 
-Semaglutide stimulates insulin release in the presence of elevated blood glucose concentrations. Patients receiving RYBELSUS or OZEMPIC tablets in combination with an insulin secretagogue (e.g., sulfonylurea) or insulin may have an increased risk of hypoglycemia, including severe hypoglycemia.
+OZEMPIC stimulates insulin release in the presence of elevated blood glucose concentrations. Patients receiving OZEMPIC in combination with an insulin secretagogue (e.g., sulfonylurea) or insulin may have an increased risk of hypoglycemia, including severe hypoglycemia.
 
-When initiating RYBELSUS or OZEMPIC tablets, consider reducing the dosage of concomitantly administered insulin secretagogue (such as sulfonylureas) or insulin to reduce the risk of hypoglycemia [see Warnings and Precautions ( 5.4 ), Adverse Reactions ( 6.1 )] .
+When initiating OZEMPIC, consider reducing the dose of concomitantly administered insulin secretagogue (such as sulfonylureas) or insulin to reduce the risk of hypoglycemia [see Warnings and Precautions ( 5.5 ), Adverse Reactions ( 6 )] .
 
-### 7.2 Other Oral Drugs
+### 7.2 Oral Medications
 
-Semaglutide cause a delay of gastric emptying and thereby has the potential to impact the absorption of other oral drugs. Levothyroxine exposure was increased 33% (90% CI: 1.25 to 1.42) when administered with semaglutide tablets in a drug interaction study [see Clinical Pharmacology ( 12.3 )] .
-
-When using RYBELSUS or OZEMPIC tablets concomitantly with other oral drugs that have a narrow therapeutic index or that require clinical monitoring, consider increased clinical or laboratory monitoring [see Dosage and Administration ( 2 )] .
+OZEMPIC causes a delay of gastric emptying, and thereby has the potential to impact the absorption of concomitantly administered oral medications. In clinical pharmacology trials, semaglutide did not affect the absorption of orally administered medications to any clinically relevant degree [see Clinical Pharmacology ( 12.3 )] . Nonetheless, caution should be exercised when oral medications are concomitantly administered with OZEMPIC.
 
 ## 8 USE IN SPECIFIC POPULATIONS
 
@@ -622,75 +546,75 @@ When using RYBELSUS or OZEMPIC tablets concomitantly with other oral drugs that 
 
 Risk Summary
 
-Available data with semaglutide use in pregnant women are insufficient to evaluate for a drug-associated risk of major birth defects, miscarriage or other adverse maternal or fetal outcomes. There are clinical considerations regarding the risks of poorly controlled diabetes in pregnancy (see Clinical Considerations ). Based on animal reproduction studies, there may be potential risks to the fetus from exposure to semaglutide during pregnancy. RYBELSUS or OZEMPIC tablets should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.
+There are limited data with semaglutide use in pregnant women to inform a drug-associated risk for adverse developmental outcomes. There are clinical considerations regarding the risks of poorly controlled diabetes in pregnancy (see Clinical Considerations ). Based on animal reproduction studies, there may be potential risks to the fetus from exposure to semaglutide during pregnancy. OZEMPIC should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.
 
-In pregnant rats administered semaglutide during organogenesis, embryofetal mortality, structural abnormalities and alterations to growth occurred at maternal exposures below the maximum recommended human dose (MRHD) based on AUC. In rabbits and cynomolgus monkeys administered semaglutide during organogenesis, early pregnancy losses and structural abnormalities were observed at exposure below the MRHD (rabbit) and ≥10-fold the MRHD (monkey). These findings coincided with a marked maternal body weight loss in both animal species (see Data ).
+In pregnant rats administered semaglutide during organogenesis, embryofetal mortality, structural abnormalities and alterations to growth occurred at maternal clinical exposure based on AUC. In rabbits and cynomolgus monkeys administered semaglutide during organogenesis, early pregnancy losses or structural abnormalities were observed at clinical exposure (rabbit) and ≥2-fold the MRHD (monkey). These findings coincided with a marked maternal body weight loss in both animal species (see Data ).
 
-The estimated background risk of major birth defects is 6% to 10% in women with pre-gestational diabetes with an HbA 1c >7 and has been reported to be as high as 20% to 25% in women with an HbA 1c >10. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.
+In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively. The estimated background risk of major birth defects is 6 to 10% in women with pre-gestational diabetes with a peri-conceptional HbA 1c >7 and has been reported to be as high as 20 to 25% in women with a peri-conceptional HbA 1c >10. The estimated background risk of miscarriage for the indicated population is unknown.
 
 Clinical Considerations
 
-Disease Associated Maternal and Fetal Risk : Poorly controlled diabetes during pregnancy increases the maternal risk for diabetic ketoacidosis, preeclampsia, spontaneous abortions, preterm delivery and delivery complications. Poorly controlled diabetes increases the fetal risk for major birth defects, stillbirth and macrosomia related morbidity.
+Disease-Associated Maternal and/or Embryo/fetal Risk
+
+Hypoglycemia and hyperglycemia occur more frequently during pregnancy in patients with pre-gestational diabetes. Poorly controlled diabetes during pregnancy increases the maternal risk for diabetic ketoacidosis, pre- eclampsia, spontaneous abortions, preterm delivery, and delivery complications. Poorly controlled diabetes increases the fetal risk for major birth defects, stillbirth, and macrosomia related morbidity.
 
 Data
 
-Animal Data : In a combined fertility and embryofetal development study in rats, subcutaneous doses of 0.01, 0.03 and 0.09 mg/kg/day (0.2-, 0.7- and 2.1-fold the MRHD) were administered to males for 4 weeks prior to and throughout mating and to females for 2 weeks prior to mating, and throughout organogenesis to Gestation Day 17. In parental animals, pharmacologically mediated reductions in body weight gain and food consumption were observed at all dose levels. In the offspring, reduced growth and fetuses with visceral (heart blood vessels) and skeletal (cranial bones, vertebra, ribs) abnormalities were observed at the human exposure.
+Animal Data
 
-In an embryofetal development study in pregnant rabbits, subcutaneous doses of 0.0010, 0.0025 or 0.0075 mg/kg/day (0.06-, 0.6- and 4.4-fold the MRHD) were administered throughout organogenesis from Gestation Day 6 to 19. Pharmacologically mediated reductions in maternal body weight gain and food consumption were observed at all dose levels. Early pregnancy losses and increased incidences of minor visceral (kidney, liver) and skeletal (sternebra) fetal abnormalities were observed at ≥0.0025 mg/kg/day, at clinically relevant exposures.
+In a combined fertility and embryofetal development study in rats, subcutaneous doses of 0.01, 0.03 and 0.09 mg/kg/day (0.06-, 0.2-, and 0.6-fold the MRHD) were administered to males for 4 weeks prior to and throughout mating and to females for 2 weeks prior to mating, and throughout organogenesis to Gestation Day 17. In parental animals, pharmacologically mediated reductions in body weight gain and food consumption were observed at all dose levels. In the offspring, reduced growth and fetuses with visceral (heart blood vessels) and skeletal (cranial bones, vertebra, ribs) abnormalities were observed at the human exposure.
 
-In an embryofetal development study in pregnant cynomolgus monkeys, subcutaneous doses of 0.015, 0.075 and 0.15 mg/kg twice weekly (1.9-, 9.9- and 29-fold the MRHD) were administered throughout organogenesis, from Gestation Day 16 to 50. Pharmacologically mediated, marked initial maternal body weight loss and reductions in body weight gain and food consumption coincided with the occurrence of sporadic abnormalities (vertebra, sternebra, ribs) at ≥0.075 mg/kg twice weekly (≥9X human exposure).
+In an embryofetal development study in pregnant rabbits, subcutaneous doses of 0.0010, 0.0025 or 0.0075 mg/kg/day (0.02-, 0.2-, and 1.2-fold the MRHD) were administered throughout organogenesis from Gestation Day 6 to 19. Pharmacologically mediated reductions in maternal body weight gain and food consumption were observed at all dose levels. Early pregnancy losses and increased incidences of minor visceral (kidney, liver) and skeletal (sternebra) fetal abnormalities were observed at ≥0.0025 mg/kg/day, at clinically relevant exposures.
 
-In a pre- and postnatal development study in pregnant cynomolgus monkeys, subcutaneous doses of 0.015, 0.075 and 0.15 mg/kg twice weekly (1.3-, 6.4- and 14-fold the MRHD) were administered from Gestation Day 16 to 140. Pharmacologically mediated marked initial maternal body weight loss and reductions in body weight gain and food consumption coincided with an increase in early pregnancy losses and led to delivery of slightly smaller offspring at ≥0.075 mg/kg twice weekly (≥6X human exposure).
+In an embryofetal development study in pregnant cynomolgus monkeys, subcutaneous doses of 0.015, 0.075, and 0.15 mg/kg twice weekly (0.5-, 3-, and 8-fold the MRHD) were administered throughout organogenesis, from Gestation Day 16 to 50. Pharmacologically mediated, marked initial maternal body weight loss and reductions in body weight gain and food consumption coincided with the occurrence of sporadic abnormalities (vertebra, sternebra, ribs) at ≥0.075 mg/kg twice weekly (≥3X human exposure).
 
-Salcaprozate sodium (SNAC), an absorption enhancer in RYBELSUS and OZEMPIC tablets, crosses the placenta and reaches fetal tissues in rats. In a pre- and postnatal development study in pregnant Sprague Dawley rats, SNAC was administered orally at 1,000 mg/kg/day (exposure levels were not measured) on Gestation Day 7 through Lactation Day 20. An increase in gestation length, an increase in the number of stillbirths and a decrease in pup viability were observed.
+In a pre- and postnatal development study in pregnant cynomolgus monkeys, subcutaneous doses of 0.015, 0.075, and 0.15 mg/kg twice weekly (0.3-, 2-, and 4-fold the MRHD) were administered from Gestation Day 16 to 140. Pharmacologically mediated marked initial maternal body weight loss and reductions in body weight gain and food consumption coincided with an increase in early pregnancy losses and led to delivery of slightly smaller offspring at ≥0.075 mg/kg twice weekly (≥2X human exposure).
 
 ### 8.2 Lactation
 
 Risk Summary
 
-A clinical lactation study reported semaglutide concentrations below the lower limit of quantification in human breast milk. However, SNAC and/or its metabolites are present in human milk. Since the activity of enzymes involved in SNAC clearance may be lower in infants compared to adults, higher SNAC plasma levels may occur in neonates and infants. Because of the unknown potential for serious adverse reactions in the breastfed infant due to the possible accumulation of SNAC, and because there are alternative semaglutide products that do not contain SNAC that can be used during lactation, advise patients that breastfeeding is not recommended during treatment with RYBELSUS or OZEMPIC tablets.
+There are no data on the presence of semaglutide in human milk, the effects on the breastfed infant, or the effects on milk production. Semaglutide was present in the milk of lactating rats, however, due to species-specific differences in lactation physiology, the clinical relevance of these data are not clear (see Data ). The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for OZEMPIC and any potential adverse effects on the breastfed infant from OZEMPIC or from the underlying maternal condition.
+
+Data
+
+In lactating rats, semaglutide was detected in milk at levels 3- to 12-fold lower than in maternal plasma.
 
 ### 8.3 Females and Males of Reproductive Potential
 
-Discontinue RYBELSUS or OZEMPIC tablets in women at least 2 months before a planned pregnancy due to the long washout period for semaglutide [see Use in Specific Populations ( 8.1 )] .
+Discontinue OZEMPIC in women at least 2 months before a planned pregnancy due to the long washout period for semaglutide [see Use in Specific Populations ( 8.1 )] .
 
 ### 8.4 Pediatric Use
 
-The safety and effectiveness of RYBELSUS and OZEMPIC tablets have not been established in pediatric patients.
+Safety and efficacy of OZEMPIC have not been established in pediatric patients.
 
 ### 8.5 Geriatric Use
 
-In the pool of glycemic control trials, 1,229 (30%) patients treated with semaglutide tablets were 65 years of age and over and 199 (5%) patients treated with semaglutide tablets were 75 years of age and over [see Clinical Studies ( 14 )] . In Trial 8, one of the CV outcomes trials, 891 (56%) patients treated with semaglutide tablets were 65 years of age and over and 200 (13%) patients treated with semaglutide tablets were 75 years of age and over.
+In the pool of placebo- and active-controlled glycemic control trials, 744 (23.6%) OZEMPIC-treated patients were 65 years of age and over and 102 OZEMPIC-treated patients (3.2%) patients were 75 years of age and over. In SUSTAIN 6, the cardiovascular outcome trial, 788 (48%) OZEMPIC-treated patients were 65 years of age and over and 157 OZEMPIC-treated patients (9.6%) patients were 75 years of age and over.
 
-No overall differences in safety or effectiveness for semaglutide tablets have been observed between patients 65 years of age and older and younger adult patients.
+No overall differences in safety or efficacy were detected between these patients and younger patients, but greater sensitivity of some older individuals cannot be ruled out.
 
 ### 8.6 Renal Impairment
 
-The recommended dosage of RYBELSUS and OZEMPIC tablets in patients with renal impairment is the same as those with normal renal function.
-
-The safety and effectiveness of semaglutide tablets was evaluated in a 26-week clinical study that included 324 patients with moderate renal impairment (eGFR 30 to 59 mL/min/1.73 m 2 ) [see Clinical Studies ( 14.1 )] . In patients with renal impairment including end-stage renal disease (ESRD), no clinically relevant change in semaglutide pharmacokinetics was observed [see Clinical Pharmacology ( 12.3 )] .
+No dose adjustment of OZEMPIC is recommended for patients with renal impairment. In subjects with renal impairment including kidney failure, no clinically relevant change in semaglutide pharmacokinetics (PK) was observed [see Clinical Pharmacology ( 12.3 )] .
 
 ### 8.7 Hepatic Impairment
 
-The recommended dosage in patients with hepatic impairment is the same as those with normal hepatic function.
-
-In a study in subjects with different degrees of hepatic impairment, no clinically relevant change in semaglutide pharmacokinetics was observed [see Clinical Pharmacology ( 12.3 )] .
+No dose adjustment of OZEMPIC is recommended for patients with hepatic impairment. In a study in subjects with different degrees of hepatic impairment, no clinically relevant change in semaglutide pharmacokinetics (PK) was observed [see Clinical Pharmacology ( 12.3 )] .
 
 ## 10 OVERDOSAGE
 
-In the event of overdose, appropriate supportive treatment should be initiated according to the patient’s clinical signs and symptoms. Consider contacting the Poison Help line (1-800-222-1222) or a medical toxicologist for additional overdosage management recommendations. A prolonged period of observation and treatment for these symptoms may be necessary, taking into account the long half-life of semaglutide of approximately 1 week.
+In the event of overdose, appropriate supportive treatment should be initiated according to the patient’s clinical signs and symptoms. Consider contacting the Poison Help line (1-800-222-1222) or a medical toxicologist for additional overdosage management recommendations. A prolonged period of observation and treatment for these symptoms may be necessary, taking into account the long half-life of OZEMPIC of approximately 1 week.
 
 ## 11 DESCRIPTION
 
-RYBELSUS and OZEMPIC tablets, for oral use, contain semaglutide, a GLP-1 receptor agonist. The peptide backbone is produced by yeast fermentation. The main protraction mechanism of semaglutide is albumin binding, facilitated by modification of position 26 lysine with a hydrophilic spacer and a C18 fatty di-acid. Furthermore, semaglutide is modified in position 8 to provide stabilization against degradation by the enzyme dipeptidyl-peptidase 4 (DPP-4). A minor modification was made in position 34 to ensure the attachment of only one fatty di-acid. The molecular formula is C 187 H 291 N 45 O 59 and the molecular weight is 4113.58 g/mol.
+OZEMPIC (semaglutide) injection, for subcutaneous use, contains semaglutide, a human GLP-1 receptor agonist (or GLP-1 analog). The peptide backbone is produced by yeast fermentation. The main protraction mechanism of semaglutide is albumin binding, facilitated by modification of position 26 lysine with a hydrophilic spacer and a C18 fatty di-acid. Furthermore, semaglutide is modified in position 8 to provide stabilization against degradation by the enzyme dipeptidyl-peptidase 4 (DPP-4). A minor modification was made in position 34 to ensure the attachment of only one fatty di-acid. The molecular formula is C 187 H 291 N 45 O 59 and the molecular weight is 4113.58 g/mol.
 
 Structural formula:
 
-Semaglutide is a white to almost white hygroscopic powder.
+OZEMPIC is a sterile, aqueous, clear, colorless solution. Each 3 mL prefilled, single-patient-use pen contains semaglutide 2 mg (0.68 mg/mL), 4 mg (1.34 mg/mL), or 8 mg (2.68 mg/mL). Each 1 mL of OZEMPIC solution also contains the following inactive ingredients: disodium phosphate dihydrate, 1.42 mg; propylene glycol, 14 mg; phenol, 5.5 mg; and water for injections. OZEMPIC has a pH of approximately 7.4. Hydrochloric acid or sodium hydroxide may be added to adjust pH.
 
-RYBELSUS tablets contain 3 mg, 7 mg or 14 mg of semaglutide and the following inactive ingredients: magnesium stearate, microcrystalline cellulose, povidone and salcaprozate sodium (SNAC).
-
-OZEMPIC tablets contain 1.5 mg, 4 mg or 9 mg of semaglutide and the following inactive ingredients: magnesium stearate and SNAC.
+Each 0.5 mL single-dose syringe contains a solution of OZEMPIC containing 0.25 mg, 0.5 mg or 1 mg of semaglutide. Each 1 mL of OZEMPIC contains the following inactive ingredients: disodium phosphate dihydrate, 1.42 mg; sodium chloride, 8.25 mg; and water for injection. OZEMPIC has a pH of approximately 7.4. Hydrochloric acid or sodium hydroxide may be added to adjust pH.
 
 ## 12 CLINICAL PHARMACOLOGY
 
@@ -702,301 +626,313 @@ GLP-1 is a physiological hormone that has multiple actions on glucose, mediated 
 
 The principal mechanism of protraction resulting in the long half-life of semaglutide is albumin binding, which results in decreased renal clearance and protection from metabolic degradation. Furthermore, semaglutide is stabilized against degradation by the DPP-4 enzyme.
 
-Semaglutide reduces blood glucose through a mechanism where it stimulates insulin secretion and lowers glucagon secretion, both in a glucose-dependent manner. Thus, when blood glucose is high, insulin secretion is stimulated and glucagon secretion is inhibited. The mechanism of blood glucose lowering also involves a minor delay in gastric emptying in the early postprandial phase.
+Semaglutide reduces blood glucose through a mechanism where it stimulates insulin secretion and lowers glucagon secretion, both in a glucose-dependent manner. Thus, when blood glucose is high, insulin secretion is stimulated, and glucagon secretion is inhibited. The mechanism of blood glucose lowering also involves a minor delay in gastric emptying in the early postprandial phase.
+
+The mechanism of kidney-related risk reduction has not been established.
 
 ### 12.2 Pharmacodynamics
 
-The pharmacodynamic evaluations described below were in patients with type 2 diabetes mellitus who received once-weekly subcutaneous injections of placebo or semaglutide injection over 12 weeks (semaglutide injection-treated patients were started on lower dosages and then titrated up to 1 mg once weekly). RYBELSUS and OZEMPIC tablets are not approved for subcutaneous use.
+Semaglutide lowers fasting and postprandial blood glucose and reduces body weight. All pharmacodynamic evaluations were performed after 12 weeks of treatment (including dose escalation) at steady state with semaglutide 1 mg.
 
 Fasting and Postprandial Glucose
 
-Semaglutide reduces fasting and postprandial glucose concentrations. In patients with type 2 diabetes mellitus, treatment with semaglutide injection 1 mg resulted in reductions in glucose in terms of absolute change from baseline and relative reduction compared to placebo of 29 mg/dL (22%) for fasting glucose, 74 mg/dL (36%) for 2-hour postprandial glucose and 30 mg/dL (22%) for mean 24-hour glucose concentration.
+Semaglutide reduces fasting and postprandial glucose concentrations. In patients with type 2 diabetes, treatment with semaglutide 1 mg resulted in reductions in glucose in terms of absolute change from baseline and relative reduction compared to placebo of 29 mg/dL (22%) for fasting glucose, 74 mg/dL (36%) for 2-hour postprandial glucose, and 30 mg/dL (22%) for mean 24-hour glucose concentration (see Figure 1 ).
+
+Figure 1. Mean 24-hour Plasma Glucose Profiles (standardized meals) in Patients with Type 2 Diabetes before (Baseline) and after 12 Weeks of Treatment with Semaglutide or Placebo
 
 Insulin Secretion
 
-Both first- and second-phase insulin secretion are increased in patients with type 2 diabetes mellitus treated with semaglutide compared with placebo.
+Both first-and second-phase insulin secretion are increased in patients with type 2 diabetes treated with OZEMPIC compared with placebo.
 
 Glucagon Secretion
 
-Semaglutide lowers the fasting and postprandial glucagon concentrations.
+Semaglutide lowers the fasting and postprandial glucagon concentrations. In patients with type 2 diabetes, treatment with semaglutide resulted in the following relative reductions in glucagon compared to placebo, fasting glucagon (8%), postprandial glucagon response (14 to 15%), and mean 24-hour glucagon concentration (12%).
 
 Glucose dependent insulin and glucagon secretion
 
-Semaglutide lowers high blood glucose concentrations by stimulating insulin secretion and lowering glucagon secretion in a glucose-dependent manner.
+Semaglutide lowers high blood glucose concentrations by stimulating insulin secretion and lowering glucagon secretion in a glucose-dependent manner. With semaglutide, the insulin secretion rate in patients with type 2 diabetes was similar to that of healthy subjects (see Figure 2 ).
 
-During induced hypoglycemia, semaglutide did not alter the counter regulatory responses of increased glucagon compared to placebo and did not impair the decrease of C-peptide in patients with type 2 diabetes mellitus.
+Figure 2. Mean Insulin Secretion Rate Versus Glucose Concentration in Patients with Type 2 Diabetes during Graded Glucose Infusion before (Baseline) and after 12 Weeks of Treatment with Semaglutide or Placebo and in Untreated Healthy Subjects
+
+During induced hypoglycemia, semaglutide did not alter the counter regulatory responses of increased glucagon compared to placebo and did not impair the decrease of C-peptide in patients with type 2 diabetes.
 
 Gastric emptying
 
 Semaglutide causes a delay of early postprandial gastric emptying, thereby reducing the rate at which glucose appears in the circulation postprandially.
 
-Cardiac Electrophysiology
+Cardiac electrophysiology (QTc)
 
-The effect of subcutaneously administered semaglutide on cardiac repolarization was tested in a thorough QTc trial. At an average exposure level 4-fold higher than that of the maximum recommended dose of semaglutide tablets, semaglutide does not prolong QTc intervals to any clinically relevant extent.
+The effect of semaglutide on cardiac repolarization was tested in a thorough QTc trial. Semaglutide does not prolong QTc intervals at doses up to 1.5 mg at steady-state.
 
 ### 12.3 Pharmacokinetics
 
-Semaglutide estimated mean steady-state concentration was 6.7 nmol/L and 14.6 nmol/L following once daily oral administration of 7 mg and 14 mg of RYBELSUS, respectively, in patients with type 2 diabetes mellitus.
-
-Semaglutide exposures increased in a dose-proportional manner. Steady-state exposure was achieved following 4 to 5 weeks of semaglutide tablets oral administration.
-
 Absorption
 
-RYBELSUS and OZEMPIC tablets are co-formulated with SNAC which facilitates the absorption of semaglutide after oral administration. The absorption of semaglutide predominantly occurs in the stomach.
+Absolute bioavailability of semaglutide is 89%. Maximum concentration of semaglutide is reached 1 to 3 days post dose.
 
-Semaglutide estimated absolute bioavailability was approximately:
+Similar exposure is achieved with subcutaneous administration of semaglutide in the abdomen, thigh, or upper arm.
 
-- • 0.4% to 1% after oral administration of 3 mg, 7 mg and 14 mg of RYBELSUS.
-
-•
-
-- • 1% to 2% after oral administration of 1.5 mg, 4 mg and 9 mg of OZEMPIC tablets.
-
-•
-
-Semaglutide maximum concentration was reached approximately 1-hour after oral administration of semaglutide tablets.
-
-Effect of Semaglutide Tablet Formulations : There were no clinically significant differences observed in the mean steady state AUC 0-24h,SS and C max,SS between the 3 mg, 7 mg and 14 mg doses of RYBELSUS and the 1.5 mg, 4 mg and 9 mg doses of OZEMPIC tablets, respectively, in a clinical study conducted in healthy subjects.
-
-Effect of Volume and Timing of Water Consumption : Single oral doses of semaglutide tablets were administered with 50 mL or 240 mL of water after an 8-hour overnight fast and a continued fast of 4 hours post-dose in healthy subjects. Semaglutide absorption (i.e., area under the curve (AUC) and peak concentrations (C max ) were higher following dosing with 50 mL water compared to that of 240 mL water.
-
-For 10 days, healthy subjects received semaglutide tablets once daily doses orally with 50 mL or 120 mL of water under fasting conditions with post-dose fasting period of 15, 30, 60 or 120 minutes. In this study, semaglutide absorption (i.e., AUC and C max ) was higher after a longer post-dose fasting period. There were no clinically significant differences in semaglutide absorption with administration of 50 mL or 120 mL of water.
+In patients with type 2 diabetes, semaglutide exposure increases in a dose-proportional manner for once-weekly doses of 0.5 mg, 1 mg and 2 mg. Steady-state exposure is achieved following 4 to 5 weeks of once-weekly administration. In patients with type 2 diabetes, the mean population-PK estimated steady-state concentrations following once-weekly subcutaneous administration of 0.5 mg and 1 mg semaglutide were approximately 65 ng/mL and 123 ng/mL, respectively. In the trial comparing semaglutide 1 mg and 2 mg, the mean steady state concentrations were 111.1 ng/mL and 222.1 ng/mL, respectively.
 
 Distribution
 
-Semaglutide absolute volume of distribution is approximately 8 L in patients with type 2 diabetes. Semaglutide is >99% bound to plasma albumin.
+The mean apparent volume of distribution of semaglutide following subcutaneous administration in patients with type 2 diabetes is approximately 12.5 L. Semaglutide is extensively bound to plasma albumin (>99%).
 
 Elimination
 
-Semaglutide elimination half-life is approximately one week with an absolute clearance of approximately 0.04 L/hour in patients with type 2 diabetes. Semaglutide is present in the circulation for about five weeks after the last semaglutide tablet dose.
+The apparent clearance of semaglutide in patients with type 2 diabetes is approximately 0.05 L/h. With an elimination half-life of approximately 1 week, semaglutide will be present in the circulation for about 5 weeks after the last dose.
 
-Metabolism : The primary route of elimination for semaglutide is metabolism following proteolytic cleavage of the peptide backbone and sequential beta-oxidation of the fatty acid side chain.
+Metabolism
 
-Excretion : The primary excretion routes of semaglutide-related material are via the urine and feces. Approximately 3% of the absorbed dose is excreted in the urine as intact semaglutide.
+The primary route of elimination for semaglutide is metabolism following proteolytic cleavage of the peptide backbone and sequential beta-oxidation of the fatty acid sidechain.
+
+Excretion
+
+The primary excretion routes of semaglutide-related material are via the urine and feces. Approximately 3% of the dose is excreted in the urine as intact semaglutide.
 
 Specific Populations
 
-No clinically significant differences in semaglutide pharmacokinetics were observed based on age (≥18 years old), sex, race (White, Asian or Black or African American), ethnicity, body weight (40 to 188 kg), upper GI disease (i.e., chronic gastritis and/or gastroesophageal reflux disease), hepatic impairment (i.e., mild, moderate, severe based on the Child-Pugh system) and renal impairment (i.e., mild, moderate, severe, end staged renal disease).
+Based on a population pharmacokinetic analysis, age, sex, race, and ethnicity, and renal impairment do not have a clinically meaningful effect on the pharmacokinetics of semaglutide. The exposure of semaglutide decreases with an increase in body weight. However, semaglutide doses of 0.5 mg and 1 mg provide adequate systemic exposure over the body weight range of 40 to 198 kg evaluated in the clinical trials. The effects of intrinsic factors on the pharmacokinetics of semaglutide are shown in Figure 3 .
+
+Figure 3. Impact of Intrinsic Factors on Semaglutide Exposure
+
+Semaglutide exposure (C avg ) relative to reference subject profile: non-Hispanic/non-Latino, White, female below 65 years, body weight 85 kg, with normal renal function. Population PK model also included maintenance dose and injection site as covariates. Body weight test categories (55 and 127 kg) represent the 5% and 95% percentiles in the dataset. Abbreviations: C avg : average semaglutide concentration. CI: Confidence interval.
+
+Patients with Renal impairment - Renal impairment does not impact the pharmacokinetics of semaglutide in a clinically relevant manner. This was shown in a study with a single dose of 0.5 mg semaglutide in patients with different degrees of renal impairment (mild, moderate, severe, or kidney failure) compared with subjects with normal renal function. This was also shown for subjects with both type 2 diabetes and renal impairment based on data from clinical studies ( Figure 3 ).
+
+Patients with Hepatic impairment - Hepatic impairment does not have any impact on the exposure of semaglutide. The pharmacokinetics of semaglutide were evaluated in patients with different degrees of hepatic impairment (mild, moderate, severe) compared with subjects with normal hepatic function in a study with a single-dose of 0.5 mg semaglutide.
+
+Pediatric Patients - Semaglutide has not been studied in pediatric patients.
 
 Drug Interaction Studies
 
-Clinical Studies and Model-Informed Approaches : The delay of gastric emptying with semaglutide may influence the absorption of concomitantly administered oral drugs. Trials were conducted to study the potential effect of semaglutide on the absorption of oral drugs taken with semaglutide administered orally at steady-state exposure.
+In vitro studies have shown very low potential for semaglutide to inhibit or induce CYP enzymes, and to inhibit drug transporters.
 
-- Levothyroxine : Total thyroxine (i.e., adjusted for endogenous levels) AUC was increased by 33% following administration of a single dose of levothyroxine 600 mcg concomitantly administered with semaglutide tablets. Maximum exposure (C max ) was unchanged.
+The delay of gastric emptying with semaglutide may influence the absorption of concomitantly administered oral medicinal products [see Drug Interactions ( 7.2 )] . The potential effect of semaglutide on the absorption of co-administered oral medications was studied in trials at semaglutide 1 mg steady-state exposure.
 
-- Other Drugs : No clinically significant differences in semaglutide pharmacokinetics were observed when used concomitantly with omeprazole. No clinically significant differences in the pharmacokinetics of the following drugs were observed when used concomitantly with semaglutide: lisinopril, S-warfarin, R-warfarin, metformin, digoxin, ethinyl estradiol, levonorgestrel, furosemide or rosuvastatin.
+No clinically relevant drug-drug interaction with semaglutide ( Figure 4 ) was observed based on the evaluated medications; therefore, no dose adjustment is required when co-administered with semaglutide. In a separate study, no apparent effect on the rate of gastric emptying was observed with semaglutide 2.4 mg.
 
-In Vitro Studies : Semaglutide has very low potential to inhibit or induce CYP enzymes, and to inhibit drug transporters.
+Figure 4. Impact of Semaglutide on the Exposure of Coadministered Oral Medications
+
+Relative exposure in terms of AUC and C max for each medication when given with semaglutide compared to without semaglutide. Metformin and oral contraceptive drug (ethinylestradiol/levonorgestrel) were assessed at steady state. Warfarin (S-warfarin/R-warfarin), digoxin and atorvastatin were assessed after a single dose.
+
+Abbreviations: AUC: area under the curve. C max : maximum concentration. CI: confidence interval.
 
 ### 12.6 Immunogenicity
 
-The observed incidence of anti-drug antibodies is highly dependent on the sensitivity and specificity of the assay. Differences in assay methods preclude meaningful comparisons of the incidence of anti-drug antibodies in the studies described below with the incidence of anti-drug antibodies in other studies, including those of semaglutide or of other semaglutide products.
+The observed incidence of anti-drug antibodies is highly dependent on the sensitivity and specificity of the assay. Differences in assay methods preclude meaningful comparisons of the incidence of anti-drug antibodies (ADAs) in the studies described below with the incidence of ADAs in other studies, including those of semaglutide or of other semaglutide products.
 
-During the 26- to 78-week treatment periods in 5 clinical trials in adults with type 2 diabetes mellitus [see Clinical Studies ( 14.2 , 14.3 )] and 1 clinical trial in Japanese adults with type 2 diabetes mellitus, 14/2,924 (0.5%) of semaglutide tablet-treated patients developed anti-semaglutide antibodies. Of these 14 semaglutide tablet -treated patients, 7 patients (0.2% of the total semaglutide tablet-treated study population) developed antibodies that cross-reacted with native GLP-1. No identified clinically significant effect of anti-semaglutide antibodies on pharmacokinetics of semaglutide tablets was observed. There is insufficient information to characterize the effects of anti-semaglutide antibodies on pharmacodynamics, safety or effectiveness of semaglutide.
+Across the placebo- and active-controlled glycemic control trials, 32 out of 3,150 (1%) OZEMPIC-treated patients developed ADAs to the active ingredient in OZEMPIC (i.e., semaglutide). Of the 32 semaglutide- treated patients that developed semaglutide ADAs, 19 patients (0.6% of the overall population) developed antibodies cross-reacting with native GLP-1. The in vitro neutralizing activity of the antibodies is uncertain at this time.
 
 ## 13 NONCLINICAL TOXICOLOGY
 
 ### 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
 
-In a 2-year carcinogenicity study in CD-1 mice, subcutaneous doses of 0.3, 1 and 3 mg/kg/day [9-, 33- and 113- fold the maximum recommended human dose (MRHD) of semaglutide tablet 14 mg, based on AUC] were administered to the males, and 0.1, 0.3 and 1 mg/kg/day (3-, 9- and 33-fold MRHD) were administered to the females. A statistically significant increase in thyroid C-cell adenomas and a numerical increase in C-cell carcinomas were observed in males and females at all dose levels (>3 times human exposure).
+In a 2-year carcinogenicity study in CD-1 mice, subcutaneous doses of 0.3, 1 and 3 mg/kg/day [2-, 11-, and 30-fold the maximum recommended human dose (MRHD) of 2 mg/week, based on AUC] were administered to the males, and 0.1, 0.3 and 1 mg/kg/day (1-, 2-, and 7-fold MRHD) were administered to the females. A statistically significant increase in thyroid C-cell adenomas and a numerical increase in C-cell carcinomas were observed in males and females at clinically relevant exposures.
 
-In a 2-year carcinogenicity study in Sprague Dawley rats, subcutaneous doses of 0.0025, 0.01, 0.025 and 0.1 mg/kg/day were administered (below quantification, 0.8-, 1.8- and 11-fold the exposure at the MRHD). A statistically significant increase in thyroid C-cell adenomas was observed in males and females at all dose levels, and a statistically significant increase in thyroid C-cell carcinomas was observed in males at ≥0.01 mg/kg/day, at clinically relevant exposures.
+- In a 2-year carcinogenicity study in Sprague Dawley rats, subcutaneous doses of 0.0025, 0.01, 0.025 and 0.1 mg/kg/day were administered (below quantification, 0.2-, 0.5-, and 3-fold the exposure at the MRHD). A statistically significant increase in thyroid C-cell adenomas was observed in males and females at all dose levels, and a statistically significant increase in thyroid C-cell carcinomas was observed in males at ≥0.01 mg/kg/day, at clinically relevant exposures.
 
 Human relevance of thyroid C-cell tumors in rats is unknown and could not be determined by clinical studies or nonclinical studies [see Boxed Warning, Warnings and Precautions ( 5.1 )] .
 
 Semaglutide was not mutagenic or clastogenic in a standard battery of genotoxicity tests (bacterial mutagenicity (Ames), human lymphocyte chromosome aberration, rat bone marrow micronucleus).
 
-In a combined fertility and embryo-fetal development study in rats, subcutaneous doses of 0.01, 0.03 and 0.09 mg/kg/day (0.2-, 0.7- and 2.1-fold the MRHD) were administered to male and female rats. Males were dosed for 4 weeks prior to mating, and females were dosed for 2 weeks prior to mating and throughout organogenesis until Gestation Day 17. No effects were observed on male fertility. In females, an increase in estrus cycle length was observed at all dose levels, together with a small reduction in numbers of corpora lutea at ≥0.03 mg/kg/day. These effects were likely an adaptive response secondary to the pharmacological effect of semaglutide on food consumption and body weight.
-
-### 13.2 Animal Toxicology and/or Pharmacology
-
-RYBELSUS and OZEMPIC tablets contain SNAC as an absorption enhancer. Increase in lactate levels and decrease in glucose levels in the plasma and cerebrospinal fluid (CSF) were observed in mechanistic studies with SNAC in rats. Small but statistically significant increases in lactate levels (up to 2-fold) were observed in a few animals at approximately the clinical exposure. At higher exposures these findings were associated with moderate to marked adverse clinical signs (lethargy, abnormal respiration, ataxia, reduced activity, body tone and reflexes) and marked decreases in plasma and CSF glucose levels. These findings are consistent with inhibition of cellular respiration and lead to mortality at SNAC concentrations ≥100-times the clinical C max .
+In a combined fertility and embryo-fetal development study in rats, subcutaneous doses of 0.01, 0.03 and 0.09 mg/kg/day (0.06-, 0.2-, and 0.6-fold the MRHD) were administered to male and female rats. Males were dosed for 4 weeks prior to mating, and females were dosed for 2 weeks prior to mating and throughout organogenesis until Gestation Day 17. No effects were observed on male fertility. In females, an increase in estrus cycle length was observed at all dose levels, together with a small reduction in numbers of corpora lutea at ≥0.03 mg/kg/day. These effects were likely an adaptive response secondary to the pharmacological effect of semaglutide on food consumption and body weight.
 
 ## 14 CLINICAL STUDIES
 
-### 14.1 Overview of Clinical Studies
+### 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus
 
-The effectiveness of OZEMPIC tablets (1.5 mg, 4 mg and 9 mg strengths) [see Dosage and Administration ( 2.2 )] and RYBELSUS (3 mg, 7, mg and 14 mg strengths) [see Dosage and Administration ( 2.3 )] has been established as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus based on adequate and well-controlled studies of RYBELSUS in adult patients with type 2 diabetes mellitus [see Clinical Pharmacology ( 12.3 )] . Below is a display of the efficacy results of the adequate and well-controlled studies of RYBELSUS, referred to below as semaglutide tablets, in adult patients with type 2 diabetes mellitus.
+OZEMPIC has been studied as monotherapy and in combination with metformin, metformin and sulfonylureas, metformin and/or thiazolidinedione, and basal insulin in patients with type 2 diabetes mellitus. The efficacy of OZEMPIC was compared with placebo, sitagliptin, exenatide extended-release (ER), and insulin glargine.
 
-Semaglutide tablets have been studied as monotherapy and in combination with metformin, sulfonylureas, sodium-glucose co-transporter-2 (SGLT-2) inhibitors, insulins, and thiazolidinediones in patients with type 2 diabetes mellitus. The efficacy of semaglutide tablets was compared with placebo, empagliflozin, sitagliptin and liraglutide. Semaglutide tablets have also been studied in patients with type 2 diabetes mellitus with mild and moderate renal impairment.
+Most trials evaluated the use of OZEMPIC 0.5 mg, and 1 mg, with the exception of the trial comparing OZEMPIC and exenatide ER where only the 1 mg dose was studied. One trial evaluated the use of OZEMPIC 2 mg once weekly.
 
-In patients with type 2 diabetes mellitus, semaglutide tablets produced clinically significant reduction from baseline in HbA 1c compared with placebo.
+In patients with type 2 diabetes mellitus, OZEMPIC produced clinically relevant reduction from baseline in HbA 1c compared with placebo.
 
-The efficacy of semaglutide tablets was not impacted by baseline age, sex, race, ethnicity, BMI, body weight, duration of diabetes and degree of renal impairment.
+The efficacy of OZEMPIC was not impacted by age, gender, race, ethnicity, BMI at baseline, body weight (kg) at baseline, diabetes duration and level of renal function impairment.
 
-### 14.2 Monotherapy Use of Semaglutide Tablets in Patients with Type 2 Diabetes Mellitus
+Monotherapy Use of OZEMPIC in Adults with Type 2 Diabetes Mellitus
 
-In a 26-week double-blind trial (Trial 1, NCT02906930), 703 adult patients with type 2 diabetes mellitus inadequately controlled with diet and exercise were randomized to semaglutide tablets 3 mg, semaglutide tablets 7 mg or semaglutide tablets14 mg orally once daily or placebo. Patients had a mean age of 55 years and 51% were men. The mean duration of type 2 diabetes mellitus was 3.5 years, and the mean BMI was 32 kg/m 2 . Overall, 75% were White, 5% were Black or African American and 17% were Asian; 26% identified as Hispanic or Latino ethnicity.
+In a 30-week double-blind trial (NCT02054897), 388 patients with type 2 diabetes mellitus inadequately controlled with diet and exercise were randomized to OZEMPIC 0.5 mg or OZEMPIC 1 mg once weekly or placebo. Patients had a mean age of 54 years and 54% were men. The mean duration of type 2 diabetes was 4.2 years, and the mean BMI was 33 kg/m 2 . Overall, 64% were White, 8% were Black or African American, and 21% were Asian; 30% identified as Hispanic or Latino ethnicity.
 
-Monotherapy with semaglutide tablets7 mg and semaglutide tablets 14 mg tablets once daily for 26 weeks resulted in a statistically significant reduction in HbA 1c compared with placebo (see Table 4 ).
+Monotherapy with OZEMPIC 0.5 mg and 1 mg once weekly for 30 weeks resulted in a statistically significant reduction in HbA1c compared with placebo (see Table 3 ).
 
-Table 4. Trial 1 Results at Week 26 in a Monotherapy Trial of Semaglutide Tablets in Adult Patients with Type 2 Diabetes Mellitus Inadequately Controlled with Diet and Exercise
+Table 3. Results at Week 30 in a Trial of OZEMPIC as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus Inadequately Controlled with Diet and Exercise
 
-Placebo Semaglutide Tablets 7 mg Semaglutide Tablets 14 mg
+Placebo OZEMPIC 0.5 mg OZEMPIC 1 mg
 
-Placebo
+- Placebo
 
-Semaglutide Tablets
+- OZEMPIC
 
-7 mg
+- 0.5 mg
 
-Semaglutide Tablets
+- OZEMPIC
 
-14 mg
+- 1 mg
 
-Intent-to-Treat (ITT) Population (N) a 178 175 175
+Intent-to-Treat (ITT) Population (N) a 129 128 130
 
-Intent-to-Treat (ITT) Population (N) a
+- Intent-to-Treat (ITT) Population (N) a
 
-178
+- 129
 
-175
+- 128
 
-175
-
-HbA 1c (%)
+- 130
 
 HbA 1c (%)
 
-Baseline (mean) 7.9 8 8
+- HbA 1c (%)
+
+Baseline (mean) 8 8.1 8.1
 
 - Baseline (mean)
 
-7.9
+- 8
+
+- 8.1
+
+- 8.1
+
+Change at week 30 b -0.1 -1.4 -1.6
+
+- Change at week 30 b
+
+- -0.1
+
+- -1.4
+
+- -1.6
+
+Difference from placebo b [95% CI] -1.2 [-1.5, -0.9] c -1.4 [-1.7, -1.1] c
+
+- Difference from placebo b [95%
+
+- CI]
+
+- -1.2 [-1.5, -0.9] c
+
+- -1.4 [-1.7, -1.1] c
+
+Patients (%) achieving HbA 1c <7% 28 73 70
+
+- Patients (%) achieving HbA 1c <7%
+
+- 28
+
+- 73
+
+- 70
+
+FPG (mg/dL)
+
+- FPG (mg/dL)
+
+Baseline (mean) 174 174 179
+
+- Baseline (mean)
+
+- 174
+
+- 174
+
+- 179
+
+Change at week 30 b -15 -41 -44
+
+- Change at week 30 b
+
+- -15
+
+- -41
+
+- -44
+
+- a The intent-to-treat population includes all randomized and exposed patients. At week 30 the primary HbA 1c endpoint was missing for 10%, 7% and 7% of patients and during the trial rescue medication was initiated by 20%, 5% and 4% of patients randomized to placebo, OZEMPIC 0.5 mg and OZEMPIC 1 mg, respectively. Missing data were imputed using multiple imputation based on retrieved dropouts.
+
+- b Intent-to-treat analysis using ANCOVA adjusted for baseline value and country.
+
+- c p <0.0001 (2-sided) for superiority, adjusted for multiplicity.
+
+The mean baseline body weight was 89.1 kg, 89.8 kg, 96.9 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively. The mean changes from baseline to week 30 were -1.2 kg, -3.8 kg and -4.7 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively. The difference from placebo (95% CI) for OZEMPIC 0.5 mg was -2.6 kg (-3.8, -1.5), and for OZEMPIC 1 mg was -3.5 kg (-4.8, -2.2).
+
+Combination Therapy Use of OZEMPIC in Adults with Type 2 Diabetes Mellitus
+
+Combination with metformin and/or thiazolidinediones
+
+In a 56-week, double-blind trial (NCT01930188), 1231 patients with type 2 diabetes mellitus were randomized to OZEMPIC 0.5 mg once weekly, OZEMPIC 1 mg once weekly, or sitagliptin 100 mg once daily, all in combination with metformin (94%) and/or thiazolidinediones (6%). Patients had a mean age of 55 years and 51% were men. The mean duration of type 2 diabetes was 6.6 years, and the mean BMI was 32 kg/m 2 . Overall, 68% were White, 5% were Black or African American, and 25% were Asian; 17% identified as Hispanic or Latino ethnicity.
+
+Treatment with OZEMPIC 0.5 mg and 1 mg once weekly for 56 weeks resulted in a statistically significant reduction in HbA1c compared to sitagliptin (see Table 4 and Figure 5 ).
+
+Table 4. Results at Week 56 in a Trial of OZEMPIC Compared to Sitagliptin in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin and/or Thiazolidinediones
+
+OZEMPIC 0.5 mg OZEMPIC 1 mg Sitagliptin
+
+OZEMPIC
+
+0.5 mg
+
+OZEMPIC
+
+1 mg
+
+Sitagliptin
+
+Intent-to-Treat (ITT) Population (N) a 409 409 407
+
+Intent-to-Treat (ITT) Population (N) a
+
+409
+
+409
+
+407
+
+HbA 1c (%)
+
+HbA 1c (%)
+
+Baseline (mean) 8 8 8.2
+
+- Baseline (mean)
 
 8
 
 8
 
-Change at Week 26 b -0.3 -1.2 -1.4
+8.2
 
-- Change at Week 26 b
+Change at week 56 b -1.3 -1.5 -0.7
 
--0.3
-
--1.2
-
--1.4
-
-Difference from placebo b [95% CI] -0.9 [-1.1; -0.6] c -1.1 [-1.3; -0.9] c
-
-- Difference from placebo b
-
-- [95% CI]
-
--0.9
-
-[-1.1; -0.6] c
-
--1.1
-
-[-1.3; -0.9] c
-
-Patients (%) achieving HbA 1c <7% 31 69 77
-
-Patients (%) achieving HbA 1c <7%
-
-31
-
-69
-
-77
-
-FPG (mg/dL)
-
-FPG (mg/dL)
-
-Baseline (mean) 160 162 158
-
-- Baseline (mean)
-
-160
-
-162
-
-158
-
-Change at Week 26 b -3 -28 -33
-
-- Change at Week 26 b
-
--3
-
--28
-
--33
-
-a The intent-to-treat population includes all randomized patients. At Week 26, the primary HbA 1c endpoint was missing for 5.6%, 8.6% and 8.6% of patients randomized to placebo, semaglutide tablets 7 mg and semaglutide tablets14 mg, respectively. Missing data were imputed by a pattern mixture model using multiple imputation (MI). Pattern was defined by randomized treatment and treatment status at Week 26. During the trial, additional anti-diabetic medication was initiated as an add on to randomized treatment by 15%, 2% and 1% of patients randomized to placebo, semaglutide tablets 7 mg and semaglutide tablets 14 mg, respectively.
-
-b Estimated using an ANCOVA model based on data irrespectively of discontinuation of trial product or initiation of rescue medication adjusted for baseline value and region.
-
-c p<0.001 (unadjusted 2-sided) for superiority, controlled for multiplicity.
-
-The mean baseline body weight was 88.6 kg, 89 kg and 88.1 kg in the placebo, semaglutide tablets 7 mg, and semaglutide tablets 14 mg arms, respectively. The mean changes from baseline to week 26 were -1.4 kg, -2.3 kg and -3.7 kg in the placebo, semaglutide tablets7 mg and semaglutide tablets 14 mg arms, respectively. The difference from placebo (95% CI) for semaglutide tablets 7 mg was -0.9 kg (-1.9, 0.1) and for semaglutide tablets 14 mg was -2.3 kg (-3.1, -1.5).
-
-### 14.3 Combination Therapy Use of Semaglutide Tablets in Patients with Type 2 Diabetes Mellitus
-
-Combination with Metformin
-
-In a 26-week trial (Trial 2, NCT02863328), 822 adult patients with type 2 mellitus diabetes were randomized to semaglutide tablets 14 mg orally once daily or empagliflozin 25 mg orally once daily, all in combination with metformin. Patients had a mean age of 58 years and 50% were men. The mean duration of type 2 diabetes mellitus was 7.4 years and the mean BMI was 33 kg/m 2 . Overall, 86% were White, 7% were Black or African American and 6% were Asian; 24% identified as Hispanic or Latino ethnicity.
-
-Treatment with semaglutide tablets 14 mg once daily for 26 weeks resulted in a statistically significant reduction in HbA 1c compared to empagliflozin 25 mg once daily (see Table 5 ).
-
-Table 5. Trial 2 Results at Week 26 in a Trial of Semaglutide Tablets Compared to Empagliflozin in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin
-
-Semaglutide Tablets 14 mg Empagliflozin 25 mg
-
-Semaglutide Tablets
-
-14 mg
-
-Empagliflozin
-
-25 mg
-
-Intent-to-Treat (ITT) Population (N) a 411 410
-
-Intent-to-Treat (ITT) Population (N) a
-
-411
-
-410
-
-HbA 1c (%)
-
-HbA 1c (%)
-
-Baseline (mean) 8.1 8.1
-
-- Baseline (mean)
-
-8.1
-
-8.1
-
-Change at Week 26 b -1.3 -0.9
-
-- Change at Week 26 b
+- Change at week 56 b
 
 -1.3
 
--0.9
+-1.5
 
-Difference from empagliflozin b [95% CI] -0.4 [-0.6, -0.3] c
+-0.7
 
-- Difference from empagliflozin b
+Difference from sitagliptin b [95% CI] -0.6 [-0.7, -0.4] c -0.8 [-0.9, -0.6] c
+
+- Difference from sitagliptin b
 
 - [95% CI]
 
--0.4
+-0.6
 
-[-0.6, -0.3] c
+[-0.7, -0.4] c
 
-Patients (%) achieving HbA 1c <7% 67 40
+-0.8
+
+[-0.9, -0.6] c
+
+Patients (%) achieving HbA 1c <7% 66 73 40
 
 Patients (%) achieving HbA 1c <7%
 
-67
+66
+
+73
 
 40
 
@@ -1004,67 +940,65 @@ FPG (mg/dL)
 
 FPG (mg/dL)
 
-Baseline (mean) 172 174
+Baseline (mean) 168 167 173
 
 - Baseline (mean)
 
-172
+168
 
-174
+167
 
-Change at Week 26 b -36 -36
+173
 
-- Change at Week 26 b
+Change at week 56 b -35 -43 -23
 
--36
+- Change at week 56 b
 
--36
+-35
 
-a The intent-to-treat population includes all randomized patients. At Week 26, the primary HbA 1c endpoint was missing for 4.6% and 3.7% of patients randomized to semaglutide tablets 14 mg and empagliflozin 25 mg, respectively. Missing data were imputed by a pattern mixture model using multiple imputation (MI). Pattern was defined by randomized treatment and treatment status at Week 26. During the trial, additional anti-diabetic medication was initiated as an add on to randomized treatment by 1.9% and 1.2% of patients randomized to semaglutide tablets 14 mg and empagliflozin 25 mg, respectively.
+-43
 
-b Estimated using an ANCOVA based on data irrespectively of discontinuation of trial product or initiation of rescue medication adjusted for baseline value and region.
+-23
 
-c p<0.001 (unadjusted 2-sided) for superiority, controlled for multiplicity.
+- a The intent-to-treat population includes all randomized and exposed patients. At week 56 the primary HbA 1c endpoint was missing for 7%, 5% and 6% of patients and during the trial rescue medication was initiated by 5%, 2% and 19% of patients randomized to OZEMPIC 0.5 mg, OZEMPIC 1 mg and sitagliptin, respectively. Missing data were imputed using multiple imputation based on retrieved dropouts.
 
-The mean baseline body weight was 91.9 kg and 91.3 kg in the semaglutide tablets 14 mg and empagliflozin 25 mg arms, respectively. The mean changes from baseline to Week 26 were -3.8 kg and -3.7 kg in the semaglutide tablets 14 mg and empagliflozin 25 mg arms, respectively. The difference from empagliflozin (95% CI) for semaglutide tablets 14 mg was -0.1 kg (-0.7, 0.5).
+- b Intent-to-treat analysis using ANCOVA adjusted for baseline value and country.
 
-Combination with Metformin or Metformin with Sulfonylurea
+- c p <0.0001 (2-sided) for superiority, adjusted for multiplicity.
 
-In a 26-week, double-blind trial (Trial 3, NCT02607865), 1864 adult patients with type 2 mellitus diabetes on metformin alone or metformin with sulfonylurea were randomized to semaglutide tablets 3 mg, semaglutide tablets 7 mg, semaglutide tablets 14 mg orally once daily or sitagliptin 100 mg once daily. Patients had a mean age of 58 years and 53% were men. The mean duration of type 2 diabetes mellitus was 8.6 years, and the mean BMI was 32 kg/m 2 . Overall, 71% were White, 9% were Black or African American and 13% were Asian; 17% identified as Hispanic or Latino ethnicity.
+The mean baseline body weight was 89.9 kg, 89.2 kg, 89.3 kg in the OZEMPIC 0.5 mg, OZEMPIC 1 mg, and sitagliptin arms, respectively. The mean changes from baseline to week 56 were -4.2 kg, -5.5 kg, and -1.7 kg for the OZEMPIC 0.5 mg, OZEMPIC 1 mg, and sitagliptin arms, respectively. The difference from sitagliptin (95% CI) for OZEMPIC 0.5 mg was -2.5 kg (-3.2, -1.8), and for OZEMPIC 1 mg was -3.8 kg (-4.5, -3.1).
 
-Treatment with semaglutide tablets 7 mg and semaglutide tablets 14 mg once daily for 26 weeks resulted in a statistically significant reduction in HbA 1c compared to sitagliptin 100 mg once daily (see Table 6 ).
+Figure 5. Mean HbA 1c (%) Over Time - Baseline to Week 56
 
-Table 6. Trial 3 Results at Week 26 in a Trial of Semaglutide Tablets Compared to Sitagliptin 100 mg Once Daily in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin or Metformin with Sulfonylurea
+Combination with metformin or metformin with sulfonylurea
 
-Semaglutide Tablets 7 mg Semaglutide Tablets 14 mg Sitagliptin 100 mg
+In a 56-week, open-label trial (NCT01885208), 813 patients with type 2 diabetes mellitus on metformin alone (49%), metformin with sulfonylurea (45%), or other (6%) were randomized to OZEMPIC 1 mg once weekly or exenatide 2 mg once weekly. Patients had a mean age of 57 years and 55% were men. The mean duration of type 2 diabetes was 9 years, and the mean BMI was 34 kg/m 2 . Overall, 84% were White, 7% were Black or African American, and 2% were Asian; 24% identified as Hispanic or Latino ethnicity.
 
-Semaglutide Tablets
+Treatment with OZEMPIC 1 mg once weekly for 56 weeks resulted in a statistically significant reduction in HbA1c compared to exenatide 2 mg once weekly (see Table 5 ).
 
-7 mg
+Table 5. Results at Week 56 in a Trial of OZEMPIC Compared to Exenatide 2 mg Once Weekly in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin or Metformin with Sulfonylurea
 
-Semaglutide Tablets
+OZEMPIC 1 mg Exenatide ER 2 mg
 
-14 mg
+- OZEMPIC
 
-Sitagliptin
+- 1 mg
 
-100 mg
+- Exenatide ER 2 mg
 
-Intent-to-Treat (ITT) Population (N) a 465 465 467
+Intent-to-Treat (ITT) Population (N) a 404 405
 
-Intent-to-Treat (ITT) Population (N) a
+- Intent-to-Treat (ITT) Population (N) a
 
-465
+- 404
 
-465
-
-467
+- 405
 
 HbA 1c (%)
 
-HbA 1c (%)
+- HbA 1c (%)
 
-Baseline (mean) 8.4 8.3 8.3
+Baseline (mean) 8.4 8.3
 
 - Baseline (mean)
 
@@ -1072,641 +1006,867 @@ Baseline (mean) 8.4 8.3 8.3
 
 8.3
 
-8.3
+Change at week 56 b -1.4 -0.9
 
-Change at Week 26 b -1 -1.3 -0.8
+- Change at week 56 b
 
-- Change at Week 26 b
+-1.4
 
--1
+-0.9
 
--1.3
+Difference from exenatide b [95% CI] -0.5 [-0.7, -0.3] c
 
--0.8
-
-Difference from sitagliptin b [95% CI] -0.3 [-0.4; -0.1] c -0.5 [-0.6; -0.4] c
-
-- Difference from sitagliptin b
-
-- [95% CI]
-
--0.3
-
-[-0.4; -0.1] c
+- Difference from exenatide b [95% CI]
 
 -0.5
 
-[-0.6; -0.4] c
+[-0.7, -0.3] c
 
-Patients (%) achieving HbA 1c <7% 44 56 32
+Patients (%) achieving HbA 1c <7% 62 40
 
-Patients (%) achieving HbA 1c <7%
-
-44
-
-56
-
-32
-
-FPG (mg/dL)
-
-FPG (mg/dL)
-
-Baseline (mean) 170 168 172
-
-- Baseline (mean)
-
-170
-
-168
-
-172
-
-Change at Week 26 b -21 -31 -15
-
-- Change at Week 26 b
-
--21
-
--31
-
--15
-
-a The intent-to-treat population includes all randomized patients. At Week 26, the primary HbA 1c endpoint was missing for 5.8%, 6.2% and 4.5% of patients randomized to semaglutide tablets 7 mg, semaglutide tablets 14 mg and sitagliptin 100 mg, respectively. Missing values were imputed by a pattern mixture model using multiple imputation (MI). Pattern was defined by randomized treatment and treatment status at Week 26. During the trial, additional anti-diabetic medication was initiated as an add on to randomized treatment by 2.4%, 1.1% and 2.8% of patients randomized to semaglutide tablets 7 mg, semaglutide tablets 14 mg and sitagliptin 100 mg, respectively.
-
-b Estimated using an ANCOVA based on data irrespectively of discontinuation of trial product or initiation of rescue medication adjusted for baseline value, background medication and region.
-
-c p<0.001 (unadjusted 2-sided) for superiority, controlled for multiplicity.
-
-The mean baseline body weight was 91.3 kg, 91.2 kg and 90.9 kg in the semaglutide tablets 7 mg, semaglutide tablets 14 mg and sitagliptin 100 mg arms, respectively. The mean changes from baseline to Week 26 were -2.2 kg, -3.1 kg and -0.6 kg in the semaglutide tablets 7 mg, semaglutide tablets 14 mg and sitagliptin 100 mg arms, respectively. The difference from sitagliptin (95% CI) for semaglutide tablets 7 mg was -1.6 kg (-2.0, -1.1) and semaglutide tablets 14 mg was -2.5 kg (-3.0, -2.0).
-
-Combination with Metformin or Metformin with SGLT-2 Inhibitors
-
-In a 26-week, double-blind, double-dummy trial (Trial 4, NCT02863419), 711 adult patients with type 2 diabetes mellitus on metformin alone or metformin with SGLT-2 inhibitors were randomized to semaglutide tablets 14 mg orally once daily, liraglutide 1.8 mg subcutaneous injection once daily or placebo. Patients had a mean age of 56 years and 52% were men. The mean duration of type 2 diabetes mellitus was 7.6 years and the mean BMI was 33 kg/m 2 . Overall, 73% were White, 4% were Black or African American and 13% were Asian; 6% identified as Hispanic or Latino ethnicity.
-
-Treatment with semaglutide tablets 14 mg once daily for 26 weeks resulted in statistically significant reductions in HbA 1c compared to placebo. Treatment with semaglutide tablets 14 mg once daily for 26 weeks resulted in non-inferior reductions in HbA 1c compared to liraglutide 1.8 mg (see Table 7 ).
-
-Table 7. Trial 4 Results at Week 26 in a Trial of Semaglutide Tablets Compared to Liraglutide and Placebo in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin or Metformin with SGLT-2i
-
-Placebo Semaglutide Tablets 14 mg Liraglutide 1.8 mg
-
-Placebo
-
-Semaglutide Tablets
-
-14 mg
-
-Liraglutide
-
-1.8 mg
-
-Intent-to-Treat (ITT) Population (N) a 142 285 284
-
-Intent-to-Treat (ITT) Population (N) a
-
-142
-
-285
-
-284
-
-HbA 1c (%)
-
-HbA 1c (%)
-
-Baseline (mean) 7.9 8 8
-
-- Baseline (mean)
-
-7.9
-
-8
-
-8
-
-Change at Week 26 b -0.2 -1.2 -1.1
-
-- Change at Week 26 b
-
--0.2
-
--1.2
-
--1.1
-
-Difference from placebo b [95% CI] -1.1 [-1.2; -0.9] c
-
-- Difference from placebo b
-
-- [95% CI]
-
--1.1
-
-[-1.2; -0.9] c
-
-Difference from liraglutide b [95% CI] -0.1 [-0.3; 0]
-
-- Difference from liraglutide b
-
-- [95% CI]
-
--0.1
-
-[-0.3; 0]
-
-Patients (%) achieving HbA 1c <7% 14 68 62
-
-Patients (%) achieving HbA 1c <7%
-
-14
-
-68
+- Patients (%) achieving HbA 1c <7%
 
 62
 
-FPG (mg/dL)
+40
 
 FPG (mg/dL)
 
-Baseline (mean) 167 167 168
+- FPG (mg/dL)
+
+Baseline (mean) 191 188
 
 - Baseline (mean)
 
-167
+191
 
-167
+188
 
-168
+Change at week 56 b -44 -34
 
-Change at Week 26 b -7 -36 -34
+- Change at week 56 b
 
-- Change at Week 26 b
-
--7
-
--36
+-44
 
 -34
 
-a The intent-to-treat population includes all randomized patients. At Week 26, the primary HbA 1c endpoint was missing for 5.6%, 4.2% and 2.5% of patients randomized to placebo, liraglutide 1.8 mg and semaglutide tablets 14 mg, respectively. Missing values were imputed by a pattern mixture model using multiple imputation (MI). Pattern was defined by randomized treatment and treatment status at Week 26. During the trial, additional anti-diabetic medication was initiated as an add on to randomized treatment by 7.7%, 3.2% and 3.5% of patients randomized to placebo, liraglutide 1.8 mg and semaglutide tablets 14 mg respectively.
+- a The intent-to-treat population includes all randomized and exposed patients. At week 56 the primary HbA 1c endpoint was missing for 9% and 11% of patients and during the trial rescue medication was initiated by 5% and 10% of patients randomized to OZEMPIC 1 mg and exenatide ER 2 mg, respectively. Missing data were imputed using multiple imputation based on retrieved dropouts.
 
-b Estimated using an ANCOVA based on data irrespectively of discontinuation of trial product or initiation of rescue medication adjusted for baseline value, background medication and region.
+- b Intent-to-treat analysis using ANCOVA adjusted for baseline value and country.
 
-c p<0.001 (unadjusted 2-sided) for superiority, controlled for multiplicity.
+- c p <0.0001 (2-sided) for superiority, adjusted for multiplicity.
 
-The mean baseline body weight was 93.2 kg, 95.5 kg and 92.9 kg in the placebo, liraglutide 1.8 mg and semaglutide tablets 14 mg arms, respectively. The mean changes from baseline to Week 26 were -0.5 kg, -3.1 kg and -4.4 kg in the placebo, liraglutide 1.8 mg and semaglutide tablets 14 mg arms, respectively. The difference from placebo (95% CI) for semaglutide tablets 14 mg was -3.8 kg (-4.7, -3). The difference from liraglutide 1.8 mg for semaglutide tablets 14 mg was -1.2 (-1.9, -0.6).
+The mean baseline body weight was 96.2 kg and 95.4 kg in the OZEMPIC 1 mg and exenatide ER arms, respectively. The mean changes from baseline to week 56 were -4.8 kg and -2 kg in the OZEMPIC 1 mg and exenatide ER arms, respectively. The difference from exenatide ER (95% CI) for OZEMPIC 1 mg was -2.9 kg (-3.6, -2.1).
 
-Combination in patients with Type 2 Diabetes Mellitus and Moderate Renal Impairment with Metformin alone, Sulfonylurea alone, Basal Insulin alone or Metformin in Combination with either Sulfonylurea or Basal Insulin
+Combination with metformin or metformin with sulfonylurea
 
-In a 26-week, double-blind trial (Trial 5, NCT02827708), 324 adult patients with moderate renal impairment (eGFR CKD-EPI 30 to 59 mL/min/1.73 m 2 ) were randomized to semaglutide tablets 14 mg orally once daily or placebo once daily. Semaglutide tablets were added to the patient’s stable pre-trial antidiabetic regimen. The insulin dose was reduced by 20% at randomization for patients on basal insulin. Dose reduction of insulin and sulfonylurea was allowed in case of hypoglycemia; up titration of insulin was allowed but not beyond the pre-trial dose.
+In a 30-week, open-label trial (NCT02128932), 1089 patients with type 2 diabetes mellitus were randomized to OZEMPIC 0.5 mg once weekly, OZEMPIC 1 mg once weekly, or insulin glargine once daily on a background of metformin (48%) or metformin and sulfonylurea (51%). Patients had a mean age of 57 years and 53% were men. The mean duration of type 2 diabetes was 8.6 years, and the mean BMI was 33 kg/m 2 . Overall, 77% were White, 9% were Black or African American, and 11% were Asian; 20% identified as Hispanic or Latino ethnicity.
 
-Patients had a mean age of 70 years and 48% were men. The mean duration of type 2 diabetes mellitus was 14 years and the mean BMI was 32 kg/m 2 . Overall, 96% were White, 4% were Black or African American and 0.3% were Asian; 6.5% identified as Hispanic or Latino ethnicity. 39.5% of patients had an eGFR value of 30 to 44 mL/min/1.73 m 2 .
+Patients assigned to insulin glargine had a baseline mean HbA1c of 8.1% and were started on a dose of 10 U once daily. Insulin glargine dose adjustments occurred throughout the trial period based on self-measured fasting plasma glucose before breakfast, targeting 71 to <100 mg/dL. In addition, investigators could titrate insulin glargine at their discretion between study visits. Only 26% of patients had been titrated to goal by the primary endpoint at week 30, at which time the mean daily insulin dose was 29 U per day.
 
-Treatment with semaglutide tablets 14 mg once daily for 26 weeks resulted in a statistically significant reduction in HbA 1c from baseline compared to placebo (see Table 8 ).
+Treatment with OZEMPIC 0.5 mg and 1 mg once weekly for 30 weeks resulted in a statistically significant reduction in HbA1c compared with the insulin glargine titration implemented in this study protocol (see Table 6 ).
 
-Table 8. Trial 5 Results at Week 26 in a Trial of Semaglutide Tablets Compared to Placebo in Patients with Moderate Renal Impairment
+Table 6. Results at Week 30 in a Trial of OZEMPIC Compared to Insulin Glargine in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin or Metformin with Sulfonylurea
 
-Placebo Semaglutide Tablets 14 mg
+OZEMPIC 0.5 mg OZEMPIC 1 mg Insulin Glargine
 
-Placebo
+- OZEMPIC
 
-Semaglutide Tablets
+- 0.5 mg
 
-14 mg
+- OZEMPIC
 
-Intent-to-Treat (ITT) Population (N) a 161 163
+- 1 mg
 
-Intent-to-Treat (ITT) Population (N) a
+- Insulin Glargine
 
-161
+Intent-to-Treat (ITT) Population (N) a 362 360 360
 
-163
+- Intent-to-Treat (ITT) Population (N) a
+
+- 362
+
+- 360
+
+- 360
 
 HbA 1c (%)
 
-HbA 1c (%)
+- HbA 1c (%)
 
-Baseline (mean) 7.9 8
+Baseline (mean) 8.1 8.2 8.1
 
 - Baseline (mean)
 
-7.9
+- 8.1
 
-8
+- 8.2
 
-Change at Week 26 b -0.2 -1
+- 8.1
 
-- Change at Week 26 b
+Change at week 30 b -1.2 -1.5 -0.9
 
--0.2
+- Change at week 30 b
 
--1
+- -1.2
 
-Difference from placebo b [95% CI] -0.8 [-1.0; -0.6] c
+- -1.5
+
+- -0.9
+
+Difference from insulin glargine b [95% CI] -0.3 [-0.5, -0.1] c -0.6 [-0.8, -0.4] c
+
+- Difference from insulin glargine b [95% CI]
+
+- -0.3
+
+- [-0.5, -0.1] c
+
+- -0.6
+
+- [-0.8, -0.4] c
+
+Patients (%) achieving HbA 1c <7% 55 66 40
+
+- Patients (%) achieving HbA 1c <7%
+
+- 55
+
+- 66
+
+- 40
+
+FPG (mg/dL)
+
+- FPG (mg/dL)
+
+Baseline (mean) 172 179 174
+
+- Baseline (mean)
+
+- 172
+
+- 179
+
+- 174
+
+Change at week 30 b -35 -46 -37
+
+- Change at week 30 b
+
+- -35
+
+- -46
+
+- -37
+
+- a The intent-to-treat population includes all randomized and exposed patients. At week 30 the primary HbA 1c endpoint was missing for 8%, 6% and 6% of patients and during the trial rescue medication was initiated by 4%, 3% and 1% of patients randomized to OZEMPIC 0.5 mg, OZEMPIC 1 mg and insulin glargine, respectively. Missing data were imputed using multiple imputation based on retrieved dropouts.
+
+- b Intent-to-treat analysis using ANCOVA adjusted for baseline value, country and stratification factors.
+
+- c p <0.0001 (2-sided) for superiority, adjusted for multiplicity.
+
+- The mean baseline body weight was 93.7 kg, 94 kg, 92.6 kg in the OZEMPIC 0.5 mg, OZEMPIC 1 mg, and insulin glargine arms, respectively. The mean changes from baseline to week 30 were -3.2 kg, -4.7 kg and 0.9 kg in the OZEMPIC 0.5 mg, OZEMPIC 1 mg, and insulin glargine arms, respectively. The difference from insulin glargine (95% CI) for OZEMPIC 0.5 mg was -4.1 kg (-4.9, -3.3) and for OZEMPIC 1 mg was -5.6 kg (-6.4, -4.8).
+
+- Combination with metformin or metformin with sulfonylurea
+
+- In a 40-week, double-blind trial (NCT03989232), 961 patients with type 2 diabetes currently treated with metformin with or without sulfonylurea treatment were randomized to OZEMPIC 2 mg or OZEMPIC 1 mg once weekly. Patients had a mean age of 58 years and 58.6% were men. The mean duration of type 2 diabetes was 9.5 years and the mean BMI was 34.6 kg/m 2 . At randomization, 53.3% of patients were treated with sulfonylurea and metformin. Overall, 88.1% were White, 4.5% were Black or African American, and 7.2% were Asian; 11.6% identified as Hispanic or Latino ethnicity. Treatment with OZEMPIC 2 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA 1c compared with OZEMPIC 1 mg (see Table 7 ). Patients were stratified by region (Japan/outside Japan) at randomization.
+
+Table 7. Results at Week 40 in a Trial of OZEMPIC 2 mg Compared to OZEMPIC 1 mg in Adult Patients with Type 2 Diabetes Mellitus in Combination With Metformin or Metformin with Sulfonylurea
+
+OZEMPIC 1 mg OZEMPIC 2 mg
+
+- OZEMPIC 1 mg
+
+- OZEMPIC 2 mg
+
+Intent-to-Treat (ITT) Population (N) a 481 480
+
+- Intent-to-Treat (ITT) Population (N) a
+
+- 481
+
+- 480
+
+HbA 1c (%)
+
+- HbA 1c (%)
+
+Baseline (mean) 8.8 8.9
+
+- Baseline (mean)
+
+- 8.8
+
+- 8.9
+
+Change at week 40 b -1.9 -2.1
+
+- Change at week 40 b
+
+- -1.9
+
+- -2.1
+
+Difference from OZEMPIC 1 mg [95% CI] -0.2 [-0.31 ; -0.04] c
+
+- Difference from OZEMPIC 1 mg
+
+- [95% CI]
+
+- -0.2
+
+- [-0.31 ; -0.04] c
+
+Patients (%) achieving HbA 1c <7% a 56 64
+
+- Patients (%) achieving HbA 1c <7% a
+
+- 56
+
+- 64
+
+FPG (mg/dL)
+
+- FPG (mg/dL)
+
+Baseline (mean) 196 193
+
+- Baseline (mean)
+
+- 196
+
+- 193
+
+Change at week 40 b -55 -59
+
+- Change at week 40 b
+
+- -55
+
+- -59
+
+- a The intent-to-treat population includes all randomized subjects. At week 40 the primary HbA 1c endpoint was missing for 3% and 5% of patients randomized to OZEMPIC 1 mg and OZEMPIC 2 mg, respectively. Missing data were imputed using multiple imputation based on retrieved dropouts. For calculation of proportions, imputed values are dichotomized and the denominator is the number of all randomized subjects.
+
+- b Intent-to-treat analysis using ANCOVA adjusted for baseline value and stratification factor.
+
+- c p <0.01 (2-sided) for superiority, adjusted for multiplicity.
+
+The mean baseline body weight was 98.6 kg and 100.1 kg in the OZEMPIC 1 mg and OZEMPIC 2 mg arms, respectively. The mean changes from baseline to week 40 were -5.6 kg and -6.4 kg in the OZEMPIC 1 mg and OZEMPIC 2 mg arms, respectively. The difference between treatment arms in body weight change from baseline at week 40 was not statistically significant.
+
+Combination with basal insulin
+
+In a 30-week, double-blind trial (NCT02305381), 397 patients with type 2 diabetes mellitus inadequately controlled with basal insulin, with or without metformin, were randomized to OZEMPIC 0.5 mg once weekly, OZEMPIC 1 mg once weekly, or placebo. Patients with HbA 1c ≤8.0% at screening reduced their insulin dose by 20% at start of the trial to reduce the risk of hypoglycemia. Patients had a mean age of 59 years and 56% were men. The mean duration of type 2 diabetes was 13 years, and the mean BMI was 32 kg/m 2 . Overall, 78% were White, 5% were Black or African American, and 17% were Asian; 12% identified as Hispanic or Latino ethnicity.
+
+Treatment with OZEMPIC resulted in a statistically significant reduction in HbA 1c after 30 weeks of treatment compared to placebo (see Table 8 ).
+
+Table 8. Results at Week 30 in a Trial of OZEMPIC in Adult Patients with Type 2 Diabetes Mellitus in Combination with Basal Insulin with or without Metformin
+
+Placebo OZEMPIC 0.5 mg OZEMPIC 1 mg
+
+- Placebo
+
+- OZEMPIC
+
+- 0.5 mg
+
+- OZEMPIC
+
+- 1 mg
+
+Intent-to-Treat (ITT) Population (N) a 133 132 131
+
+- Intent-to-Treat (ITT) Population (N) a
+
+- 133
+
+- 132
+
+- 131
+
+HbA 1c (%)
+
+- HbA 1c (%)
+
+Baseline (mean) 8.4 8.4 8.3
+
+- Baseline (mean)
+
+- 8.4
+
+- 8.4
+
+- 8.3
+
+Change at week 30 b -0.2 -1.3 -1.7
+
+- Change at week 30 b
+
+- -0.2
+
+- -1.3
+
+- -1.7
+
+Difference from placebo b [95% CI] -1.1 [-1.4, -0.8] c -1.6 [-1.8, -1.3] c
 
 - Difference from placebo b
 
 - [95% CI]
 
--0.8
+- -1.1
 
-[-1.0; -0.6] c
+- [-1.4, -0.8] c
 
-Patients (%) achieving HbA 1c <7% 23 58
+- -1.6
 
-Patients (%) achieving HbA 1c <7%
+- [-1.8, -1.3] c
 
-23
+Patients (%) achieving HbA 1c <7% 13 56 73
 
-58
+- Patients (%) achieving HbA 1c <7%
+
+- 13
+
+- 56
+
+- 73
 
 FPG (mg/dL)
 
-FPG (mg/dL)
+- FPG (mg/dL)
 
-Baseline (mean) 164 164
+Baseline (mean) 154 161 153
 
 - Baseline (mean)
 
-164
+- 154
 
-164
+- 161
 
-Change at Week 26 b -7 -28
+- 153
 
-- Change at Week 26 b
+Change at week 30 b -8 -28 -39
 
--7
+- Change at week 30 b
 
--28
+- -8
 
-a The intent-to-treat population includes all randomized patients including patients on rescue medication. At Week 26, the primary HbA 1c endpoint was missing for 3.7% and 5.5% of patients randomized to placebo and semaglutide tablets 14 mg, respectively. Missing values were imputed by a pattern mixture model using multiple imputation (MI). Pattern was defined by randomized treatment and treatment status at Week 26. During the trial, additional anti-diabetic medication was initiated as an add on to randomized treatment by 10% and 4.3% of patients randomized to placebo and semaglutide tablets 14 mg, respectively.
+- -28
 
-b Estimated using an ANCOVA based on data irrespectively of discontinuation of trial product or initiation of rescue medication adjusted for baseline value, background medication, renal status and region.
+- -39
 
-c p<0.001 (unadjusted 2-sided) for superiority, controlled for multiplicity.
+- a The intent-to-treat population includes all randomized and exposed patients. At week 30 the primary HbA 1c endpoint was missing for 7%, 5% and 5% of patients and during the trial rescue medication was initiated by 14%, 2% and 1% of patients randomized to placebo, OZEMPIC 0.5 mg and OZEMPIC 1 mg, respectively. Missing data were imputed using multiple imputation based on retrieved dropouts.
 
-The mean baseline body weight was 90.4 kg and 91.3 kg in the placebo and semaglutide tablets 14 mg arms, respectively. The mean changes from baseline to Week 26 were -0.9 kg and -3.4 kg in the placebo and semaglutide tablets 14 mg arms, respectively. The difference from placebo (95% CI) for semaglutide tablets 14 mg was -2.5 kg (-3.2, -1.8).
+- b Intent-to-treat analysis using ANCOVA adjusted for baseline value, country and stratification factors.
 
-Combination with Insulin with or without Metformin
+- c p <0.0001 (2-sided) for superiority, adjusted for multiplicity.
 
-In a 26-week double blind trial (Trial 6, NCT03021187), 731 adult patients with type 2 diabetes mellitus inadequately controlled on insulin (basal, basal/bolus or premixed) with or without metformin, were randomized to semaglutide tablets 3 mg, 7 mg and 14 mg orally once daily or placebo once daily. All patients reduced their insulin dose by 20% at randomization to reduce the risk of hypoglycemia. Patients were allowed to increase the insulin dose only up to the starting insulin dose prior to randomization.
+The mean baseline body weight was 89.9 kg, 92.7 kg, and 92.5 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively. The mean changes from baseline to week 30 were -1.2 kg, -3.5 kg, and -6 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively. The difference from placebo (95% CI) for OZEMPIC 0.5 mg was -2.2 kg (-3.4, -1.1), and for OZEMPIC 1 mg was -4.7 kg (-5.8, -3.6).
 
-Patients had a mean age of 61 years and 54% were men. The mean duration of type 2 diabetes mellitus was 15 years and the mean BMI was 31 kg/m 2 . Overall, 51% were White, 7% were Black or African American and 36% were Asian; 13% identified as Hispanic or Latino ethnicity.
+### 14.2 Cardiovascular Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Cardiovascular Disease
 
-Treatment with semaglutide tablets 7 mg and 14 mg once daily for 26 weeks resulted in a statistically significant reduction in HbA 1c from baseline compared to placebo once daily (see Table 9 ).
+SUSTAIN 6 (NCT01720446) was a multi-center, multi-national, placebo-controlled, double-blind cardiovascular outcomes trial. In this trial, 3,297 patients with inadequately controlled type 2 diabetes and atherosclerotic cardiovascular disease were randomized to OZEMPIC (0.5 mg or 1 mg) once weekly or placebo for a minimum observation time of 2 years. The trial compared the risk of Major Adverse Cardiovascular Event (MACE) between semaglutide and placebo when these were added to and used concomitantly with standard of care treatments for diabetes and cardiovascular disease. The primary endpoint, MACE, was the time to first occurrence of a three-part composite outcome which included cardiovascular death, non-fatal myocardial infarction and non-fatal stroke.
 
-Table 9. Trial 6 Results at Week 26 in a Trial of Semaglutide Tablets Compared to Placebo in Adult Patients with Type 2 Diabetes Mellitus in Combination with Insulin alone or with Metformin
+Patients eligible to enter the trial were 50 years of age or older and had established, stable, cardiovascular, cerebrovascular, peripheral artery disease, chronic kidney disease or NYHA class II and III heart failure or were 60 years of age or older and had other specified risk factors for cardiovascular disease. In total, 1,940 patients (58.8%) had established cardiovascular disease without chronic kidney disease, 353 (10.7%) had chronic kidney disease only, and 442 (13.4%) had both cardiovascular disease and kidney disease; 562 patients (17%) had cardiovascular risk factors without established cardiovascular disease or chronic kidney disease. In the trial 453 patients (13.7%) had peripheral artery disease. The mean age at baseline was 65 years, and 61% were men. The mean duration of diabetes was 13.9 years, and mean BMI was 33 kg/m 2 . Overall, 83% were White, 7% were Black or African American, and 8% were Asian; 16% identified as Hispanic or Latino ethnicity. Concomitant diseases of patients in this trial included, but were not limited to, heart failure (24%), hypertension (93%), history of ischemic stroke (12%) and history of a myocardial infarction (33%). In total, 98.0% of the patients completed the trial and the vital status was known at the end of the trial for 99.6%.
 
-Placebo Semaglutide Tablets 7 mg Semaglutide Tablets 14 mg
+For the primary analysis, a Cox proportional hazards model was used to test for non-inferiority of OZEMPIC to placebo for time to first MACE using a risk margin of 1.3. The statistical analysis plan pre specified that the 0.5 mg and 1 mg doses would be combined. Type-1 error was controlled across multiple tests using a hierarchical testing strategy.
 
-Placebo
+OZEMPIC significantly reduced the occurrence of MACE. The estimated hazard ratio for time to first MACE was 0.74 (95% CI: 0.58, 0.95). Refer to Figure 6 and Table 9 .
 
-Semaglutide Tablets
+Figure 6. Kaplan-Meier: Time to First Occurrence of a MACE in the SUSTAIN 6 Trial
 
-7 mg
+The treatment effect for the primary composite endpoint and its components in the SUSTAIN 6 trial is shown in Table 9 .
 
-Semaglutide Tablets
+Table 9. Treatment Effect for MACE and its Components, Median Study Observation Time of 2.1 Years
 
-14 mg
+Placebo N=1649 (%) OZEMPIC N=1648 (%) Hazard ratio vs Placebo (95% CI) a
 
-Intent-to-Treat (ITT) Population (N) a 184 182 181
+- Placebo N=1649 (%)
 
-Intent-to-Treat (ITT) Population (N) a
+- OZEMPIC N=1648 (%)
 
-184
+- Hazard ratio vs Placebo (95% CI) a
 
-182
+Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal stroke (time to first occurrence) 146 (8.9) 108 (6.6) 0.74 (0.58, 0.95)
 
-181
+- Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal
 
-HbA 1c (%)
+- stroke (time to first occurrence)
 
-HbA 1c (%)
+- 146 (8.9)
 
-Baseline (mean) 8.2 8.2 8.2
+- 108 (6.6)
 
-- Baseline (mean)
+- 0.74 (0.58, 0.95)
 
-8.2
+Non-fatal Myocardial Infarction 64 (3.9) 47 (2.9) 0.74 (0.51, 1.08)
 
-8.2
+- Non-fatal Myocardial Infarction
 
-8.2
+- 64 (3.9)
 
-Change at Week 26 b -0.1 -0.9 -1.3
+- 47 (2.9)
 
-- Change at Week 26 b
+- 0.74 (0.51, 1.08)
 
--0.1
+Non-fatal Stroke 44 (2.7) 27 (1.6) 0.61 (0.38, 0.99)
 
--0.9
+- Non-fatal Stroke
 
--1.3
+- 44 (2.7)
 
-Difference from placebo b [95% CI] -0.9 [-1.1; -0.7] c -1.2 [-1.4; -1] c
+- 27 (1.6)
 
-- Difference from placebo b
+- 0.61 (0.38, 0.99)
 
-- [95% CI]
+Cardiovascular Death 46 (2.8) 44 (2.7) 0.98 (0.65, 1.48)
 
--0.9
+- Cardiovascular Death
 
-[-1.1; -0.7] c
+- 46 (2.8)
 
--1.2
+- 44 (2.7)
 
-[-1.4; -1] c
+- 0.98 (0.65, 1.48)
 
-Patients (%) achieving HbA 1c <7% 7 43 58
+Fatal or Non-fatal Myocardial Infarction 67 (4.1) 54 (3.3) 0.81 (0.57, 1.16)
 
-Patients (%) achieving HbA 1c <7%
+- Fatal or Non-fatal Myocardial Infarction
 
-7
+- 67 (4.1)
 
-43
+- 54 (3.3)
 
-58
+- 0.81 (0.57, 1.16)
 
-FPG (mg/dL)
+Fatal or Non-fatal Stroke 46 (2.8) 30 (1.8) 0.65 (0.41, 1.03)
 
-FPG (mg/dL)
+- Fatal or Non-fatal Stroke
 
-Baseline (mean) 150 153 150
+- 46 (2.8)
 
-- Baseline (mean)
+- 30 (1.8)
 
-150
+- 0.65 (0.41, 1.03)
 
-153
+a Cox-proportional hazards models with treatment as factor and stratified by evidence of cardiovascular disease, insulin treatment and renal impairment.
 
-150
+### 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease
 
-Change at Week 26 b 5 -20 -24
+FLOW (NCT03819153) was a randomized, double-blind, placebo-controlled, event driven trial in adults with type 2 diabetes mellitus and chronic kidney disease (eGFR 25 to 75 mL/min/1.73m 2 with urine albumin-to- creatinine ratio [UACR] >100 mg/g and <5000 mg/g). All patients needed to have an HbA 1c ≤10% at screening and be receiving standard of care background therapy, including a maximum tolerated labeled dose of a renin- angiotensin-aldosterone system (RAAS) blocking agent including an angiotensin converting enzyme (ACE) inhibitor or an angiotensin II receptor blocker (ARB), unless such treatment was contraindicated or not tolerated. The trial excluded patients with congenital or hereditary kidney diseases including polycystic kidney disease, autoimmune kidney diseases including glomerulonephritis or congenital urinary tract malformations.
 
-- Change at Week 26 b
+A total of 3,533 patients were randomized to receive OZEMPIC 1 mg once weekly or placebo and were followed for a median of 41 months. The mean age of the study population was 67 years, and 70% of patients were male. Approximately 66% of the trial population was White, 24% Asian, and 5% Black or African American. At baseline, the mean eGFR was 47 mL/min/1.73m 2 , with 11% of patients having an eGFR <30 mL/min/1.73m 2 . Median baseline UACR was 568 mg/g with 69% of patients with a UACR >300 mg/g. At baseline, 95% of patients were treated with an ACE inhibitor or ARB, 16% were on sodium-glucose cotransporter 2 (SGLT2) inhibitors, 76% were on a statin, and 50% were on an antiplatelet agent.
 
-5
+OZEMPIC was superior to placebo in reducing the incidence of the primary composite endpoint of a sustained decline in eGFR of ≥50%, sustained eGFR <15 mL/min/1.73m 2 , chronic renal replacement therapy, renal death, CV death (HR 0.76 [95% CI 0.66, 0.88], p=0.0003) as shown in Table 10 and Figure 7 . The treatment effect reflected a reduction in a sustained decline in eGFR of ≥50%, progression to kidney failure and CV death. There were few renal deaths during the trial.
 
--20
+OZEMPIC also reduced the annual rate of change in eGFR ( Figure 9 ), the incidence of a composite cardiovascular endpoint, consisting of non-fatal myocardial infarction (MI), non-fatal stroke, and cardiovascular death, and the incidence of all-cause death ( Table 10 and Figure 8 ).
 
--24
+The treatment effect on the primary composite endpoint was generally consistent across the pre-specified subgroups examined, including age, biological sex, eGFR and UACR. The treatment benefit on the primary composite endpoint was not evident in patients taking SGLT2 inhibitors at baseline, but there were few events in these patients.
 
-a The intent-to-treat population includes all randomized patients. At Week 26, the primary HbA 1c endpoint was missing for 4.3%, 4.4% and 4.4% of patients randomized to placebo, semaglutide tablets 7 mg and semaglutide tablets 14 mg, respectively. Missing values were imputed by a pattern mixture model using multiple imputation (MI). Pattern was defined by randomized treatment and treatment status at Week 26. During the trial, additional anti-diabetic medication was initiated as an add on to randomized treatment by 4.9%, 1.1 % and 2.2% of patients randomized to placebo, semaglutide tablets 7 mg and semaglutide tablets 14 mg, respectively.
+Table 10: Analyses of the Primary and Secondary Endpoints and their Individual Components in FLOW Trial
 
-b Estimated using an ANCOVA based on data irrespectively of discontinuation of trial product or initiation of rescue medication adjusted for baseline value, background medication and region.
+Placebo N=1766 (%) OZEMPIC 1 mg N=1767 (%) Hazard Ratio vs Placebo (95% CI) 1 p-value 2
 
-c p<0.001 (unadjusted 2-sided) for superiority, controlled for multiplicity.
+- Placebo
 
-The mean baseline body weight was 86 kg, 87.1 kg and 84.6 kg in the placebo, semaglutide tablets7 mg and semaglutide tablets 14 mg arms, respectively. The mean changes from baseline to Week 26 were -0.4 kg, -2.4 kg and -3.7 kg in the placebo, semaglutide tablets 7 mg and semaglutide tablets 14 mg arms, respectively. The difference from placebo (95% CI) for semaglutide tablets 7 mg was -2 kg (-3, -1) and for semaglutide tablets 14 mg was -3.3 kg (-4.2, -2.3).
+- N=1766 (%)
 
-### 14.4 Cardiovascular Outcomes Trial of Semaglutide Tablets in Adult Patients with Type 2 Diabetes Mellitus and High Risk of Having a Cardiovascular Event
+- OZEMPIC 1 mg N=1767 (%)
 
-Trial 7 (NCT03914326) was a randomized, double-blind, parallel-group, placebo-controlled trial. In this trial, 9,650 patients with type 2 diabetes mellitus and established cardiovascular (CV) disease and/or chronic kidney disease (CKD) (defined as eGFR <60 mL/min/1.73 m 2 ), were randomized to either once daily semaglutide tablets 14 mg or placebo, in addition to standard of care. The primary endpoint, major adverse cardiovascular events (MACE), was the time to first occurrence of a three-part composite outcome which included CV death, non-fatal myocardial infarction (MI) and non-fatal stroke.
+- Hazard Ratio vs Placebo (95% CI) 1
 
-Patients eligible to enter the trial were: 50 years of age or older and with established CV disease or CKD. In total, 5,468 patients (56.7%) had established CV disease without CKD, 1,241 (13%) had CKD only, and 2,620 (27%) had both CV disease and CKD. Most patients (97%) were treated with one or more glucose lowering medications at baseline: metformin (76%), insulin (51%), SGLT-2 inhibitor (27%), sulfonylurea (29%), and DPP-4 inhibitor (23%). At baseline, CV disease and risk factors were managed with lipid-lowering medications (89%), platelet-aggregation inhibitors including aspirin (77%), angiotensin converting enzyme inhibitors or angiotensin II receptor blockers (79%), and beta blockers (64%).
+- p-value 2
 
-The mean age at baseline was 66.1 years, and 71% of the patients were men. Overall, 69% were White, 3% were Black or African American, and 23% were Asian; 14% identified as Hispanic or Latino ethnicity.
+Number of Patients (%)
 
-The mean duration of diabetes was 15.4 years, the mean BMI was 31.1 kg/m 2 , the mean HbA 1c was 8%, and the mean eGFR was 73.8 mL/min/1.73 m 2 . Concomitant diseases included heart failure (23%), hypertension (91%), previous ischemic stroke (12%), previous MI (40%), and peripheral artery disease (16%). In total, 98.4% patients completed the trial, and the vital status was known at the end of the trial for 99.5%.
+- Number of Patients
 
-Semaglutide tablets significantly reduced the occurrence of MACE. The estimated hazard ratio for time to first MACE was 0.86 (95% CI: 0.77, 0.96) over the median follow-up duration of 49.6 months and 49.4 months for patients randomized to RYBELSUS and placebo, respectively. Refer to Table 10 and Figure 1 . The treatment effect for the primary composite endpoint and its components in Trial 7 are shown in Table 10 .
+- (%)
 
-Table 10. Trial 7 Treatment Effect for MACE and its Components
+Composite Endpoint (≥50% sustained eGFR decline, sustained eGFR <15 mL/min/1.73m 2 , chronic renal replacement therapy, or renal or cardiovascular death (time to first occurrence) 3 410 (23.2) 331 (18.7) 0.76 (0.66, 0.88) 0.0003
 
-Placebo N=4,825 Semaglutide Tablets 14 mg N=4,825 Hazard Ratio vs Placebo (95% CI)
+- Composite Endpoint (≥50% sustained eGFR decline, sustained eGFR <15 mL/min/1.73m 2 , chronic renal replacement therapy, or renal or cardiovascular death (time to first occurrence) 3
 
-Placebo
+- 410 (23.2)
 
-N=4,825
+- 331 (18.7)
 
-Semaglutide Tablets 14 mg
+- 0.76 (0.66, 0.88)
 
-N=4,825
+- 0.0003
 
-Hazard Ratio
+≥50% sustained eGFR decline 3 213 (12.1) 165 (9.3) 0.73 (0.59, 0.89)
 
-vs Placebo
+- ≥50% sustained eGFR decline 3
 
-(95% CI)
+- 213 (12.1)
 
-Primary composite endpoint
+- 165 (9.3)
 
-Primary composite endpoint
+- 0.73 (0.59, 0.89)
 
-MACE: Composite of CV death, non-fatal MI, non-fatal stroke (time to first occurrence) 668 (13.8%) 579 (12%) 0.86 (0.77, 0.96)
+Sustained eGFR <15mL/min/1.73m 2 3 110 (6.2) 92 (5.2) 0.8 (0.61, 1.06)
 
-MACE: Composite of CV death,
+- Sustained eGFR
 
-non-fatal MI, non-fatal stroke (time to first occurrence)
+- <15mL/min/1.73m 2 3
 
-668 (13.8%)
+- 110 (6.2)
 
-579 (12%)
+- 92 (5.2)
 
-0.86 (0.77, 0.96)
+- 0.8 (0.61, 1.06)
 
-CV death 320 (6.6%) 301 (6.2%) 0.93 (0.8, 1.09)
+Chronic renal replacement therapy 100 (5.7) 87 (4.9) 0.84 (0.63, 1.12)
 
-CV death
+- Chronic renal replacement therapy
 
-320 (6.6%)
+- 100 (5.7)
 
-301 (6.2%)
+- 87 (4.9)
 
-0.93 (0.8, 1.09)
+- 0.84 (0.63, 1.12)
 
-Non-fatal MI 253 (5.2%) 191 (4%) 0.74 (0.61, 0.89)
+Renal death 5 (0.3) 5 (0.3) 0.97 (0.27, 3.49)
 
-Non-fatal MI
+- Renal death
 
-253 (5.2%)
+- 5 (0.3)
 
-191 (4%)
+- 5 (0.3)
 
-0.74 (0.61, 0.89)
+- 0.97 (0.27, 3.49)
 
-Non-fatal stroke 161 (3.3%) 144 (3%) 0.88 (0.7, 1.11)
+Cardiovascular death 169 (9.6) 123 (7) 0.71 (0.56, 0.89)
 
-Non-fatal stroke
+- Cardiovascular death
 
-161 (3.3%)
+- 169 (9.6)
 
-144 (3%)
+- 123 (7)
 
-0.88 (0.7, 1.11)
+- 0.71 (0.56, 0.89)
 
-- Note: Data from the in-trial period based on full analysis set defined as all randomized patients.
+Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal stroke (time to first occurrence) 254 (14.4) 212 (12) 0.82 (0.68, 0.98) 0.0289
 
-- Time from randomization to each endpoint was analyzed using a Cox proportional hazards model with treatment as categorical fixed factor. Subjects without events of interest were censored at the end of their in-trial period. For the primary endpoint the hazard ratio and CI were adjusted for the group sequential design using likelihood ratio ordering. CV death, non-fatal MI and non-fatal stroke are listed descriptively for supportive purpose. CV death includes both CV death and undetermined cause of death.
+- Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal stroke (time to first occurrence)
 
-- N=number of patients; %: percentage of participants in the full analysis set with at least one event; CI: confidence interval
+- 254 (14.4)
 
-Figure 1: Time to First Occurrence of a MACE in Trial 7
+- 212 (12)
 
-Data from the in-trial period based on full analysis set defined as all randomized patients. Cumulative incidence estimates are based on time from randomization to first EAC-confirmed MACE with non-CV death modeled as competing risk using the Aalen-Johansen estimator. Patients without events of interest were censored at the end of their in-trial observation period. Time from randomization to first MACE was analyzed using a Cox proportional hazards model with treatment as categorical fixed factor. The hazard ratio and confidence interval are adjusted for the group sequential design using the likelihood ratio ordering. HR: Hazard ratio; CI: confidence interval.
+- 0.82 (0.68, 0.98)
 
-Cardiovascular Outcomes Trial in Patients with Type 2 Diabetes Mellitus and Cardiovascular Disease
+0.0289
 
-Trial 8 (NCT02692716) was a multi-center, multi-national, placebo-controlled, double-blind trial. In this trial, 3,183 adult patients with inadequately controlled type 2 diabetes mellitus and atherosclerotic CV disease were randomized to semaglutide tablets 14 mg orally once daily or placebo for a median observation time of 16 months. The trial compared the risk of a MACE between semaglutide tablets 14 mg and placebo when added to current standard of care treatments for diabetes and cardiovascular CV disease. The primary endpoint, MACE, was the time to first occurrence of a three-part composite outcome which included cardiovascular death, non-fatal MI and non-fatal stroke.
+All-cause death 279 (15.8) 227 (12.8) 0.8 (0.67, 0.95) 0.0104
 
-Patients eligible to enter the trial were 50 years of age or older and had established, stable, CV, cerebrovascular, peripheral artery disease, CKD or NYHA class II and III heart failure or were 60 years of age or older and had other specified risk factors for CV disease. In total, 1,797 patients (56.5%) had established CV disease without CKD, 354 patients (11.1%) had CKD only, and 544 patients (17.1%) had both CV disease and CKD; 488 patients (15.3%) had CV risk factors without established CV disease or CKD. The mean age at baseline was 66 years and 68% were men. The mean duration of diabetes was 14.9 years and mean BMI was 32 kg/m 2 . Overall, 72% were White, 6% were Black or African American and 20% were Asian; 16% identified as Hispanic or Latino ethnicity. Concomitant diseases of patients in this trial included, but were not limited to, heart failure (12%), history of ischemic stroke (8%) and history of a MI (36%). In total, 99.7% of the patients completed the trial and the vital status was known at the end of the trial for 100%.
+- All-cause death
 
-For the primary analysis, a Cox proportional hazards model was used to test for non-inferiority of semaglutide tablets 14 mg to placebo for time to first MACE using a risk margin of 1.3. Type-1 error was controlled across multiple tests using a hierarchical testing strategy. Non‑inferiority to placebo was established, with a hazard ratio equal to 0.79 (95% CI: 0.57, 1.11) over the median observation time of 16-months. The proportion of patients who experienced at least one MACE was 3.8% (61/1591) for semaglutide tablets14 mg and 4.8% (76/1592) for placebo.
+- 279 (15.8)
+
+- 227 (12.8)
+
+- 0.8 (0.67, 0.95)
+
+0.0104
+
+1 Cox proportional hazards model with treatment as factor and stratified by baseline use of SGLT2-inhibitor at baseline (yes or no).
+
+2 Two-sided p-value for the test of no difference. The significance level was 0.03224.
+
+3 Sustained was defined as having 2 consecutive measurements ≥28 days apart fulfilling the criteria.
+
+Figure 7. Cumulative Incidence: Time to First Occurrence of the Primary Composite Endpoint - Sustained Decline in eGFR ≥50%, Sustained eGFR<15 mL/min/1.73m 2 , Chronic Renal Replacement Therapy, Renal Death or CV Death
+
+Cumulative incidence estimates are based on time from randomization to first composite renal event with non-CV and non-renal death modelled as competing risk. The x-axis is truncated at 52 months where approximately 5% of the population was in the trial.
+
+Sustained was defined as having 2 consecutive measurements ≥28 days apart fulfilling the criteria.
+
+Figure 8. Cumulative incidence: Time to First Occurrence of MACE in FLOW Trial
+
+- Cumulative incidence estimates are based on time from randomization to first EAC-confirmed MACE with non-CV death modelled as competing risk. The x-axis is truncated at 52 months where approximately 5% of the population was in the trial.
+
+Figure 9. Observed Mean Plot: eGFR (mL/min/1.73m 2 ) by Week in FLOW Trial
+
+- Observed data from the in-trial period until week 104. Error bars are +/- 1.96 *standard error of the mean eGFR, which was calculated using the CKD-EPI 2009 formula.
+
+- CKD-EPI: Chronic Kidney Disease Epidemiology Collaboration, eGFR: estimated glomerular filtration rate.
 
 ## 16 HOW SUPPLIED/STORAGE AND HANDLING
 
-How Supplied
+How Supplied Single-patient-use pens (with multiple weekly doses): Injection: clear, colorless solution of 0.68 mg/mL, 1.34 mg/mL or 2.68 mg/mL of semaglutide available in the following packaging configurations:
 
-RYBELSUS strengths are available as follows:
+Single-Patient-Use Pens (with multiple weekly doses)
 
-Tablet Strength Description Package Configuration NDC Number
+Single-Patient-Use Pens (with multiple weekly doses)
 
-Tablet Strength
+Dose per Injection Use For Total Strength per Total Volume Doses per Pen Carton Contents NDC
 
-Description
+Dose per Injection
 
-Package Configuration
+Use For
 
-NDC Number
+Total Strength per Total Volume
 
-3 mg White to light yellow, oval shaped debossed with “3” on one side and “novo” on the other side Bottle of 30 tablets 0169-4303-30
+Doses per Pen
 
-3 mg
+Carton Contents
 
-White to light yellow, oval shaped debossed with “3” on one side and “novo” on the other side
+NDC
 
-Bottle of 30 tablets
+0.25 mg 0.5 mg Initiation Maintenance 2 mg/3 mL 4 doses of 0.25 mg and 2 doses of 0.5 mg or 4 doses of 0.5 mg 1 pen 6 NovoFine ® Plus needles 0169-4181-13
 
-0169-4303-30
+0.25 mg
 
-7 mg White to light yellow, oval shaped debossed with “7” on one side and “novo” on the other side Bottle of 30 tablets 0169-4307-30
+0.5 mg
 
-7 mg
+Initiation
 
-White to light yellow, oval shaped debossed with “7” on one side and “novo” on the other side
+Maintenance
 
-Bottle of 30 tablets
+2 mg/3 mL
 
-0169-4307-30
+4 doses of 0.25 mg and
 
-14 mg White to light yellow, oval shaped debossed with “14” on one side and “novo” on the other side Bottle of 30 tablets 0169-4314-30
+2 doses of 0.5 mg
 
-14 mg
+or
 
-White to light yellow, oval shaped debossed with “14” on one side and “novo” on the other side
+4 doses of 0.5 mg
 
-Bottle of 30 tablets
+1 pen
 
-0169-4314-30
+6 NovoFine ® Plus needles
 
-OZEMPIC tablet strengths are available as follows:
+0169-4181-13
 
-Tablet Strength Description Package Configuration NDC Number
+1 mg Maintenance 4 mg/3 mL 4 doses of 1 mg 1 pen 4 NovoFine ® Plus needles 0169-4130-13
 
-Tablet Strength
+1 mg
 
-Description
+Maintenance
 
-Package Configuration
+4 mg/3 mL
 
-NDC Number
+4 doses of 1 mg
 
-1.5 mg White to light yellow, round shaped debossed with “1.5” on one side and “novo” on the other side Bottle of 30 tablets 0169-1715-30
+1 pen
 
-1.5 mg
+4 NovoFine ® Plus needles
 
-White to light yellow, round shaped debossed with “1.5” on one side and “novo” on the other side
+0169-4130-13
 
-Bottle of 30 tablets
+2 mg Maintenance 8 mg/3 mL 4 doses of 2 mg 1 pen 4 NovoFine ® Plus needles 0169-4772-12
 
-0169-1715-30
+2 mg
 
-4 mg White to light yellow, round shaped debossed with “4” on one side and “novo” on the other side Bottle of 30 tablets 0169-1704-30
+Maintenance
 
-4 mg
+8 mg/3 mL
 
-White to light yellow, round shaped debossed with “4” on one side and “novo” on the other side
+4 doses of 2 mg
 
-Bottle of 30 tablets
+1 pen
 
-0169-1704-30
+4 NovoFine ® Plus needles
 
-9 mg White to light yellow, round shaped debossed with “9” on one side and “novo” on the other side Bottle of 30 tablets 0169-1709-30
+0169-4772-12
 
-9 mg
+Each OZEMPIC multi-dose pen is for use by a single patient. An OZEMPIC pen must never be shared between patients, even if the needle is changed [see Warnings and Precautions ( 5.4 )] .
 
-White to light yellow, round shaped debossed with “9” on one side and “novo” on the other side
+Single-dose prefilled syringes:
 
-Bottle of 30 tablets
+Injection: clear, colorless solution of 0.5 mg/mL, 1 mg/mL, 2 mg/mL of semaglutide available in the following packaging configurations:
 
-0169-1709-30
+Single-Dose Prefilled Syringes
 
-Storage and Handling
+Single-Dose Prefilled Syringes
 
-Store RYBELSUS and OZEMPIC tablets at 20°C to 25°C (68°F to 77°F); excursions permitted to 15°C to 30°C (59°F to 86°F) [see USP Controlled Room Temperature]. Store and dispense in the original bottle.
+Dose per Injection Use For Total Strength per Total Volume Doses per Syringe Carton Contents NDC
 
-Store tablets in the original bottle until use to protect tablets from moisture. Store product in a dry place away from moisture.
+Dose per Injection
+
+Use For
+
+Total Strength per Total Volume
+
+Doses per Syringe
+
+Carton Contents
+
+NDC
+
+0.25 mg Initiation 0.25 mg / 0.5 mL Single-dose 4 Prefilled Syringes 0169-1302-14
+
+0.25 mg
+
+Initiation
+
+0.25 mg / 0.5 mL
+
+Single-dose
+
+4 Prefilled Syringes
+
+0169-1302-14
+
+0.5 mg Maintenance 0.5 mg / 0.5 mL Single-dose 4 Prefilled Syringes 0169-1305-14
+
+0.5 mg
+
+Maintenance
+
+0.5 mg / 0.5 mL
+
+Single-dose
+
+4 Prefilled Syringes
+
+0169-1305-14
+
+1 mg Maintenance 1 mg / 0.5 mL Single-dose 4 Prefilled Syringes 0169-1310-14
+
+1 mg
+
+Maintenance
+
+1 mg / 0.5 mL
+
+Single-dose
+
+4 Prefilled Syringes
+
+0169-1310-14
+
+Recommended Storage Conditions for OZEMPIC
+
+Single-patient-use pens (with multiple weekly doses):
+
+Prior to first use, the OZEMPIC pen should be stored in a refrigerator between 2°C to 8°C (36°F to 46°F). Do not store in the freezer or directly adjacent to the refrigerator cooling element. Do not freeze OZEMPIC and do not use OZEMPIC if it has been frozen. OZEMPIC must be kept in the original carton until time of administration.
+
+After first use of the OZEMPIC pen, the pen can be stored for 56 days at controlled room temperature 15°C to 30°C (59°F to 86°F) or in a refrigerator 2°C to 8°C (36°F to 46°F). Do not freeze. Keep the pen cap on when not in use. OZEMPIC should be protected from excessive heat and sunlight.
+
+Always remove and safely discard the needle after each injection and store the OZEMPIC pen without an injection needle attached. Always use a new needle for each injection.
+
+Single-Patient-Use Pens (with multiple weekly doses)
+
+Single-Patient-Use Pens (with multiple weekly doses)
+
+Prior to first use After first use
+
+Prior to first use
+
+After first use
+
+Refrigerated 2°C to 8°C (36°F to 46°F) Room Temperature 15°C to 30°C (59°F to 86°F) Refrigerated 2°C to 8°C (36°F to 46°F)
+
+Refrigerated
+
+2°C to 8°C
+
+(36°F to 46°F)
+
+Room Temperature
+
+15°C to 30°C
+
+(59°F to 86°F)
+
+Refrigerated
+
+2°C to 8°C
+
+(36°F to 46°F)
+
+Until expiration date 56 days
+
+Until expiration date
+
+56 days
+
+Single-dose prefilled syringes: Store the OZEMPIC prefilled syringe refrigerated at 2°C to 8°C (36°F to 46°F). If needed, the syringe can be kept from 8°C to 30°C (46°F to 86°F) up to 28 days. Do not freeze OZEMPIC and do not use OZEMPIC if it has been frozen. Protect OZEMPIC from light. OZEMPIC must be kept in the original carton until time of administration. Discard the OZEMPIC syringe after use.
+
+Single-Dose Prefilled Syringes
+
+Single-Dose Prefilled Syringes
+
+Refrigerated 2°C to 8°C (36°F to 46°F) Room Temperature 8°C to 30°C (46°F to 86°F)
+
+Refrigerated
+
+2°C to 8°C
+
+(36°F to 46°F)
+
+Room Temperature
+
+8°C to 30°C
+
+(46°F to 86°F)
+
+Until expiration date 28 days
+
+Until expiration date
+
+28 days
 
 ## 17 PATIENT COUNSELING INFORMATION
 
-Advise the patient to read the FDA-approved patient labeling (Medication Guide).
+Advise the patient to read the FDA-approved patient labeling (Medication Guide and Instructions for Use).
 
 Risk of Thyroid C-cell Tumors
 
-Inform patients that semaglutide causes thyroid C-cell tumors in rodents and that the human relevance of this finding has not been determined. Counsel patients to report symptoms of thyroid tumors (e.g., a lump in the neck, hoarseness, dysphagia or dyspnea) to their physician [see Boxed Warning, Warnings and Precautions ( 5.1 )] .
+Inform patients that semaglutide causes thyroid C-cell tumors in rodents and that the human relevance of this finding has not been determined. Counsel patients to report symptoms of thyroid tumors (e.g., a lump in the neck, hoarseness, dysphagia, or dyspnea) to their physician [see Boxed Warning, Warnings and Precautions ( 5.1 )] .
 
 Acute Pancreatitis
 
-Inform patients of the potential risk for acute pancreatitis and its symptoms: severe abdominal pain that may radiate to the back, and which may or may not be accompanied by nausea or vomiting. Instruct patients to discontinue RYBELSUS or OZEMPIC tablets promptly and contact their physician if pancreatitis is suspected [see Warnings and Precautions ( 5.2 )] .
+Inform patients of the potential risk for acute pancreatitis and its symptoms: severe abdominal pain that may radiate to the back, and which may or may not be accompanied by nausea or vomiting. Instruct patients to discontinue OZEMPIC promptly and contact their physician if pancreatitis is suspected [see Warnings and Precautions ( 5.2 )].
 
 Diabetic Retinopathy Complications
 
-Inform patients to contact their physician if changes in vision are experienced during treatment with RYBELSUS or OZEMPIC tablets [see Warnings and Precautions ( 5.3 )] .
+Inform patients to contact their physician if changes in vision are experienced during treatment with OZEMPIC [see Warnings and Precautions ( 5.3 )].
+
+Never Share an OZEMPIC Pen Between Patients
+
+Advise patients that they must never share an OZEMPIC pen with another person, even if the needle is changed, because doing so carries a risk for transmission of blood-borne pathogens [see Warnings and Precautions ( 5.4 )] .
 
 Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin
 
-Inform patients that the risk of hypoglycemia is increased when RYBELSUS or OZEMPIC tablets are used with an insulin secretagogue (such as a sulfonylurea) or insulin. Educate patients on the signs and symptoms of hypoglycemia [see Warnings and Precautions ( 5.4 )].
+Inform patients that the risk of hypoglycemia is increased when OZEMPIC is used with an insulin secretagogue (such as a sulfonylurea) or insulin. Educate patients on the signs and symptoms of hypoglycemia [see Warnings and Precautions ( 5.5 )].
 
 Acute Kidney Injury Due to Volume Depletion
 
-Inform patients of the potential risk of acute kidney injury due to dehydration associated with gastrointestinal adverse reactions. Advise patients to take precautions to avoid fluid depletion. Inform patients of the signs and symptoms of acute kidney injury and instruct them to promptly report any of these signs or symptoms or persistent (or extended) nausea, vomiting, and diarrhea to their healthcare provider [see Warnings and Precautions ( 5.5 )] .
+Inform patients of the potential risk of acute kidney injury due to dehydration associated with gastrointestinal adverse reactions. Advise patients to take precautions to avoid fluid depletion. Inform patients of the signs and symptoms of acute kidney injury and instruct them to promptly report any of these signs or symptoms or persistent (or extended) nausea, vomiting, and diarrhea to their healthcare provider [see Warnings and Precautions ( 5.6 )] .
 
 Severe Gastrointestinal Adverse Reactions
 
-Inform patients of the potential risk of severe gastrointestinal adverse reactions. Instruct patients to contact their healthcare provider if they have severe or persistent gastrointestinal symptoms [see Warnings and Precautions ( 5.6 )].
+Inform patients of the potential risk of severe gastrointestinal adverse reactions. Instruct patients to contact their healthcare provider if they have severe or persistent gastrointestinal symptoms [see Warnings and Precautions ( 5.7 )]
 
 Hypersensitivity Reactions
 
-Inform patients that serious hypersensitivity reactions have been reported during postmarketing use of semaglutide tablets. Advise patients on the symptoms of hypersensitivity reactions and instruct them to stop taking RYBELSUS or OZEMPIC tablets and seek medical advice promptly if such symptoms occur [see Warnings and Precautions ( 5.7 )] .
+Inform patients that serious hypersensitivity reactions have been reported during postmarketing use of OZEMPIC. Advise patients on the symptoms of hypersensitivity reactions and instruct them to stop taking OZEMPIC and seek medical advice promptly if such symptoms occur [see Warnings and Precautions ( 5.8 )] .
 
 Acute Gallbladder Disease
 
-Inform patients of the potential risk for cholelithiasis or cholecystitis. Instruct patients to contact their physician if cholelithiasis or cholecystitis is suspected for appropriate clinical follow-up [see Warnings and Precautions ( 5.8 )] .
+Inform patients of the potential risk for cholelithiasis or cholecystitis. Instruct patients to contact their physician if cholelithiasis or cholecystitis is suspected for appropriate clinical follow-up [see Warnings and Precautions ( 5.9 )].
 
-Pulmonary Aspiration During General Anesthesia or Deep Sedation :
+Pulmonary Aspiration During General Anesthesia or Deep Sedation
 
-Inform patients that RYBELSUS or OZEMPIC tablets may cause their stomach to empty more slowly which may lead to complications with anesthesia or deep sedation during planned surgeries or procedures. Instruct patients to inform healthcare providers prior to any planned surgeries or procedures if they are taking RYBELSUS or OZEMPIC tablets [see Warnings and Precautions ( 5.9 )].
+Inform patients that OZEMPIC may cause their stomach to empty more slowly which may lead to complications with anesthesia or deep sedation during planned surgeries or procedures. Instruct patients to inform healthcare providers prior to any planned surgeries or procedures if they are taking OZEMPIC [see Warnings and Precautions ( 5.10 )].
 
 Pregnancy
 
-Advise a pregnant woman of the potential risk to a fetus. Advise women to inform their healthcare provider if they are pregnant or intend to become pregnant [see Use in Specific Populations ( 8.1 , 8.3 )] .
+Advise a pregnant woman of the potential risk to a fetus. Advise women to inform their healthcare provider if they are pregnant or intend to become pregnant [ see Use in Specific Populations ( 8.1 , 8.3 )].
 
-Lactation
+Missed doses
 
-RYBELSUS and OZEMPIC tablets pass into breast milk, and it is not known how it affects your baby. Advise females not to breastfeed during treatment with RYBELSUS or OZEMPIC tablets [see Use in Specific Populations ( 8.2 )] .
+Inform patients if a dose is missed, it should be administered as soon as possible within 5 days after the missed dose. If more than 5 days have passed, the missed dose should be skipped and the next dose should be administered on the regularly scheduled day. In each case, inform patients to resume their regular once-weekly dosing schedule [see Dosage and Administration ( 2.1 )] .
 
-Females and Males of Reproductive Potential
+Marketed by: Novo Nordisk Inc., Plainsboro, NJ 08536
 
-Discontinue RYBELSUS or OZEMPIC tablets at least 2 months before a planned pregnancy due to the long washout period for semaglutide [see Use in Specific Populations ( 8.3 )] .
-
-Marketed by:
-
-Novo Nordisk Inc.
-
-Plainsboro, NJ 08536
-
-For additional information about RYBELSUS and OZEMPIC tablets contact:
+For information about OZEMPIC contact:
 
 Novo Nordisk Inc.
 
@@ -1714,9 +1874,9 @@ Novo Nordisk Inc.
 
 Plainsboro, NJ 08536
 
-1-833-457-7455
+1-888-693-6742
 
-RYBELSUS ® and OZEMPIC ® are registered trademarks of Novo Nordisk A/S.
+OZEMPIC ® and NovoFine ® are registered trademarks of Novo Nordisk A/S.
 
 Patent Information: http://www.novonordisk-us.com/products/product-patents.html
 
@@ -1724,79 +1884,83 @@ Patent Information: http://www.novonordisk-us.com/products/product-patents.html
 
 ## Medication Guide
 
-MEDICATION GUIDE
+Medication Guide OZEMPIC ® (oh-ZEM-pick) (semaglutide) injection, for subcutaneous use
 
-MEDICATION GUIDE
-
-RYBELSUS ® (reb-EL-sus) (semaglutide) tablets, for oral use OZEMPIC ® (oh-ZEM-pick) (semaglutide) tablets, for oral use
-
-RYBELSUS ® (reb-EL-sus)
-
-(semaglutide)
-
-tablets, for oral use
+Medication Guide
 
 OZEMPIC ® (oh-ZEM-pick)
 
 (semaglutide)
 
-tablets, for oral use
+injection, for subcutaneous use
 
-Read this Medication Guide before you start using RYBELSUS or OZEMPIC tablets and each time you get a refill. There may be new information. This information does not take the place of talking to your healthcare provider about your medical condition or your treatment.
+Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them.
 
-Read this Medication Guide before you start using RYBELSUS or OZEMPIC tablets and each time you get a refill. There may be new information. This information does not take the place of talking to your healthcare provider about your medical condition or your treatment.
+Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them.
 
-What is the most important information I should know about RYBELSUS and OZEMPIC tablets? RYBELSUS and OZEMPIC tablets may cause serious side effects, including: • Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rodents, RYBELSUS and OZEMPIC tablets and other medicines that work like RYBELSUS and OZEMPIC tablets caused thyroid tumors, including thyroid cancer. It is not known if RYBELSUS and OZEMPIC tablets will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people. • Do not use RYBELSUS or OZEMPIC tablets if you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC), or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).
+Read this Medication Guide before you start using OZEMPIC and each time you get a refill. There may be new information. This information does not take the place of talking to your healthcare provider about your medical condition or your treatment.
 
-What is the most important information I should know about RYBELSUS and OZEMPIC tablets?
+Read this Medication Guide before you start using OZEMPIC and each time you get a refill. There may be new information. This information does not take the place of talking to your healthcare provider about your medical condition or your treatment.
 
-RYBELSUS and OZEMPIC tablets may cause serious side effects, including:
+What is the most important information I should know about OZEMPIC? OZEMPIC may cause serious side effects, including: • Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rodents, OZEMPIC and medicines that work like OZEMPIC caused thyroid tumors, including thyroid cancer. It is not known if OZEMPIC will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people. • Do not use OZEMPIC if you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC), or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).
 
-- • Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rodents, RYBELSUS and OZEMPIC tablets and other medicines that work like RYBELSUS and OZEMPIC tablets caused thyroid tumors, including thyroid cancer. It is not known if RYBELSUS and OZEMPIC tablets will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people.
+What is the most important information I should know about OZEMPIC?
+
+OZEMPIC may cause serious side effects, including:
+
+- • Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rodents, OZEMPIC and medicines that work like OZEMPIC caused thyroid tumors, including thyroid cancer. It is not known if OZEMPIC will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people.
 
 •
 
-- • Do not use RYBELSUS or OZEMPIC tablets if you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC), or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).
+- • Do not use OZEMPIC if you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC), or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).
 
 •
 
-What are RYBELSUS and OZEMPIC tablets? RYBELSUS and OZEMPIC tablets are prescription medicines used: • along with diet and exercise to improve blood sugar (glucose) in adults with type 2 diabetes mellitus. • to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus who are at high risk for these events. It is not known if RYBELSUS and OZEMPIC tablets are safe and effective for use in children.
+What is OZEMPIC? OZEMPIC is an injectable prescription medicine used: • along with diet and exercise to improve blood sugar (glucose) in adults with type 2 diabetes mellitus. • to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus with known heart disease. • to reduce the risk of kidney disease worsening, kidney failure (end-stage kidney disease), and death due to cardiovascular disease in adults with type 2 diabetes mellitus and chronic kidney disease. It is not known if OZEMPIC is safe and effective for use in children.
 
-What are RYBELSUS and OZEMPIC tablets?
+What is OZEMPIC?
 
-RYBELSUS and OZEMPIC tablets are prescription medicines used:
+OZEMPIC is an injectable prescription medicine used:
 
 - • along with diet and exercise to improve blood sugar (glucose) in adults with type 2 diabetes mellitus.
 
 •
 
-- • to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus who are at high risk for these events.
+- • to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus with known heart disease.
 
 •
 
-It is not known if RYBELSUS and OZEMPIC tablets are safe and effective for use in children.
+- • to reduce the risk of kidney disease worsening, kidney failure (end-stage kidney disease), and death due to cardiovascular disease in adults with type 2 diabetes mellitus and chronic kidney disease.
 
-Do not use RYBELSUS or OZEMPIC tablets if: • you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2). • you have had a serious allergic reaction to semaglutide or any of the ingredients in RYBELSUS or OZEMPIC tablets. See the end of this Medication Guide for a complete list of ingredients in RYBELSUS and OZEMPIC tablets. See “What are the possible side effects of RYBELSUS and OZEMPIC tablets?” for symptoms of a serious allergic reaction .
+•
 
-Do not use RYBELSUS or OZEMPIC tablets if:
+It is not known if OZEMPIC is safe and effective for use in children.
+
+Do not use OZEMPIC if: • you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2). • you have had a serious allergic reaction to semaglutide or any of the ingredients in OZEMPIC. See the end of this Medication Guide for a complete list of ingredients in OZEMPIC. See “What are the possible side effects of OZEMPIC?” for symptoms of a serious allergic reaction.
+
+Do not use OZEMPIC if:
 
 - • you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).
 
 •
 
-- • you have had a serious allergic reaction to semaglutide or any of the ingredients in RYBELSUS or OZEMPIC tablets. See the end of this Medication Guide for a complete list of ingredients in RYBELSUS and OZEMPIC tablets. See “What are the possible side effects of RYBELSUS and OZEMPIC tablets?” for symptoms of a serious allergic reaction .
+- • you have had a serious allergic reaction to semaglutide or any of the ingredients in OZEMPIC. See the end of this Medication Guide for a complete list of ingredients in OZEMPIC. See “What are the possible side effects of OZEMPIC?” for symptoms of a serious allergic reaction.
 
 •
 
-Before using RYBELSUS or OZEMPIC tablets, tell your healthcare provider if you have any other medical conditions, including if you: • have or have had problems with your pancreas or kidneys. • have a history of vision problems related to your diabetes. • are scheduled to have surgery or other procedures that use anesthesia or deep sleepiness (deep sedation). • are pregnant or plan to become pregnant. It is not known if RYBELSUS and OZEMPIC tablets will harm your unborn baby. You should stop using RYBELSUS or OZEMPIC tablets 2 months before you plan to become pregnant. Talk to your healthcare provider about the best way to control your blood sugar if you plan to become pregnant or while you are pregnant. • are breastfeeding or plan to breastfeed. Breastfeeding is not recommended during treatment with RYBELSUS or OZEMPIC tablets. Tell your healthcare provider about all the medicines you take , including prescription and over-the-counter medicines, vitamins, and herbal supplements. RYBELSUS and OZEMPIC tablets may affect the way some medicines work, and some medicines may affect the way RYBELSUS and OZEMPIC tablets work. Before using RYBELSUS or OZEMPIC tablets, talk to your healthcare provider about low blood sugar and how to manage it. Tell your healthcare provider if you are taking other medicines to treat diabetes, including insulin or sulfonylureas. Know the medicines you take. Keep a list of them to show your healthcare provider and pharmacist when you get a new medicine.
+Before using OZEMPIC, tell your healthcare provider if you have any other medical conditions, including if you: • have or have had problems with your pancreas. • have a history of diabetic retinopathy. • have severe problems with your stomach, such as slowed emptying of your stomach (gastroparesis) or problems with digesting food. • are scheduled to have surgery or other procedures that use anesthesia or deep sleepiness (deep sedation). • are pregnant or plan to become pregnant. It is not known if OZEMPIC will harm your unborn baby. You should stop using OZEMPIC at least 2 months before you plan to become pregnant. Talk to your healthcare provider about the best way to control your blood sugar if you plan to become pregnant or while you are pregnant. • are breastfeeding or plan to breastfeed. It is not known if OZEMPIC passes into your breast milk. You should talk with your healthcare provider about the best way to feed your baby while using OZEMPIC. Tell your healthcare provider about all the medicines you take, including prescription and over-the-counter medicines, vitamins, and herbal supplements. OZEMPIC may affect the way some medicines work and some medicines may affect the way OZEMPIC works. Before using OZEMPIC, talk to your healthcare provider about low blood sugar and how to manage it. Tell your healthcare provider if you are taking other medicines to treat diabetes, including insulin or sulfonylureas. Know the medicines you take. Keep a list of them to show your healthcare provider and pharmacist when you get a new medicine.
 
-Before using RYBELSUS or OZEMPIC tablets, tell your healthcare provider if you have any other medical conditions, including if you:
+Before using OZEMPIC, tell your healthcare provider if you have any other medical conditions, including if you:
 
-- • have or have had problems with your pancreas or kidneys.
+- • have or have had problems with your pancreas.
 
 •
 
-- • have a history of vision problems related to your diabetes.
+- • have a history of diabetic retinopathy.
+
+•
+
+- • have severe problems with your stomach, such as slowed emptying of your stomach (gastroparesis) or problems with digesting food.
 
 •
 
@@ -1804,75 +1968,95 @@ Before using RYBELSUS or OZEMPIC tablets, tell your healthcare provider if you h
 
 •
 
-- • are pregnant or plan to become pregnant. It is not known if RYBELSUS and OZEMPIC tablets will harm your unborn baby. You should stop using RYBELSUS or OZEMPIC tablets 2 months before you plan to become pregnant. Talk to your healthcare provider about the best way to control your blood sugar if you plan to become pregnant or while you are pregnant.
+- • are pregnant or plan to become pregnant. It is not known if OZEMPIC will harm your unborn baby. You should stop using OZEMPIC at least 2 months before you plan to become pregnant. Talk to your healthcare provider about the best way to control your blood sugar if you plan to become pregnant or while you are pregnant.
 
 •
 
-- • are breastfeeding or plan to breastfeed. Breastfeeding is not recommended during treatment with RYBELSUS or OZEMPIC tablets.
+- • are breastfeeding or plan to breastfeed. It is not known if OZEMPIC passes into your breast milk. You should talk with your healthcare provider about the best way to feed your baby while using OZEMPIC.
 
 •
 
-Tell your healthcare provider about all the medicines you take , including prescription and over-the-counter medicines, vitamins, and herbal supplements. RYBELSUS and OZEMPIC tablets may affect the way some medicines work, and some medicines may affect the way RYBELSUS and OZEMPIC tablets work.
+- Tell your healthcare provider about all the medicines you take, including prescription and over-the-counter medicines, vitamins, and herbal supplements. OZEMPIC may affect the way some medicines work and some medicines may affect the way OZEMPIC works.
 
-Before using RYBELSUS or OZEMPIC tablets, talk to your healthcare provider about low blood sugar and how to manage it. Tell your healthcare provider if you are taking other medicines to treat diabetes, including insulin or sulfonylureas.
+- Before using OZEMPIC, talk to your healthcare provider about low blood sugar and how to manage it. Tell your healthcare provider if you are taking other medicines to treat diabetes, including insulin or sulfonylureas.
 
 Know the medicines you take. Keep a list of them to show your healthcare provider and pharmacist when you get a new medicine.
 
-How should I take RYBELSUS or OZEMPIC tablets? • Take RYBELSUS or OZEMPIC tablets exactly as your healthcare provider tells you to. • Take 1 RYBELSUS or OZEMPIC tablet by mouth on an empty stomach in the morning with water (no more than 4 ounces). Do not take RYBELSUS or OZEMPIC tablets with any other liquids besides water. • Do not split, crush, chew, or dissolve RYBELSUS or OZEMPIC tablets. Swallow RYBELSUS or OZEMPIC tablets whole. • After 30 minutes, you can eat, drink, or take other oral medicines. • Do not take more than 1 RYBELSUS or OZEMPIC tablet each day. • If you miss a dose of RYBELSUS or OZEMPIC tablets, skip the missed dose and go back to your regular schedule. • If you take too much RYBELSUS or OZEMPIC tablets, call your healthcare provider or Poison Help line at 1-800-222-1222, or go to the nearest hospital emergency room right away. Advice is also available online at poisonhelp.org. Your dose of RYBELSUS or OZEMPIC tablets and other diabetes medicines may need to change because of: change in level of physical activity or exercise, weight gain or loss, increased stress, illness, change in diet, fever, trauma, infection, surgery or because of other medicines you take.
+How should I use OZEMPIC? • Read the Instructions for Use that comes with OZEMPIC. • Use OZEMPIC exactly as your healthcare provider tells you to. • Your healthcare provider should show you how to use OZEMPIC before you use it for the first time. • OZEMPIC is injected under the skin (subcutaneously) of your stomach (abdomen), thigh, or upper arm. Do not inject OZEMPIC into a muscle (intramuscularly) or vein (intravenously). • Use OZEMPIC 1 time each week, on the same day each week, at any time of the day. • You may change the day of the week you use OZEMPIC as long as your last dose was given 2 or more days before. • If you miss a dose of OZEMPIC, take the missed dose as soon as possible within 5 days after the missed dose. If more than 5 days have passed, skip the missed dose and take your next dose on the regularly scheduled day. • OZEMPIC may be taken with or without food. • Do not mix insulin and OZEMPIC together in the same injection. • You may give an injection of OZEMPIC and insulin in the same body area (such as your stomach area), but not right next to each other. • Change (rotate) your injection site with each injection. Do not use the same site for each injection. • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them. • If you take too much OZEMPIC, call your healthcare provider or Poison Help line at 1-800-222-1222 or go to the nearest hospital emergency room right away.
 
-How should I take RYBELSUS or OZEMPIC tablets?
+How should I use OZEMPIC?
 
-- • Take RYBELSUS or OZEMPIC tablets exactly as your healthcare provider tells you to.
-
-•
-
-- • Take 1 RYBELSUS or OZEMPIC tablet by mouth on an empty stomach in the morning with water (no more than 4 ounces). Do not take RYBELSUS or OZEMPIC tablets with any other liquids besides water.
+- • Read the Instructions for Use that comes with OZEMPIC.
 
 •
 
-- • Do not split, crush, chew, or dissolve RYBELSUS or OZEMPIC tablets. Swallow RYBELSUS or OZEMPIC tablets whole.
+- • Use OZEMPIC exactly as your healthcare provider tells you to.
 
 •
 
-- • After 30 minutes, you can eat, drink, or take other oral medicines.
+- • Your healthcare provider should show you how to use OZEMPIC before you use it for the first time.
 
 •
 
-- • Do not take more than 1 RYBELSUS or OZEMPIC tablet each day.
+- • OZEMPIC is injected under the skin (subcutaneously) of your stomach (abdomen), thigh, or upper arm. Do not inject OZEMPIC into a muscle (intramuscularly) or vein (intravenously).
 
 •
 
-- • If you miss a dose of RYBELSUS or OZEMPIC tablets, skip the missed dose and go back to your regular schedule.
+- • Use OZEMPIC 1 time each week, on the same day each week, at any time of the day.
 
 •
 
-- • If you take too much RYBELSUS or OZEMPIC tablets, call your healthcare provider or Poison Help line at 1-800-222-1222, or go to the nearest hospital emergency room right away. Advice is also available online at poisonhelp.org.
+- • You may change the day of the week you use OZEMPIC as long as your last dose was given 2 or more days before.
 
 •
 
-Your dose of RYBELSUS or OZEMPIC tablets and other diabetes medicines may need to change because of:
-
-change in level of physical activity or exercise, weight gain or loss, increased stress, illness, change in diet, fever, trauma, infection, surgery or because of other medicines you take.
-
-What are the possible side effects of RYBELSUS and OZEMPIC tablets? RYBELSUS and OZEMPIC tablets may cause serious side effects, including: • See “What is the most important information I should know about RYBELSUS and OZEMPIC tablets?” • inflammation of your pancreas (pancreatitis). Stop using RYBELSUS or OZEMPIC tablets and call your healthcare provider right away if you have severe pain in your stomach area (abdomen) that will not go away, with or without nausea or vomiting. Sometimes you may feel the pain from your abdomen to your back. • changes in vision. Tell your healthcare provider if you have changes in vision during treatment with RYBELSUS or OZEMPIC tablets. • low blood sugar (hypoglycemia). Your risk for getting low blood sugar may be higher if you use RYBELSUS or OZEMPIC tablets with another medicine that can cause low blood sugar, such as a sulfonylurea or insulin. Signs and symptoms of low blood sugar may include:
-
-What are the possible side effects of RYBELSUS and OZEMPIC tablets?
-
-RYBELSUS and OZEMPIC tablets may cause serious side effects, including:
-
-- • See “What is the most important information I should know about RYBELSUS and OZEMPIC tablets?”
+- • If you miss a dose of OZEMPIC, take the missed dose as soon as possible within 5 days after the missed dose. If more than 5 days have passed, skip the missed dose and take your next dose on the regularly scheduled day.
 
 •
 
-- • inflammation of your pancreas (pancreatitis). Stop using RYBELSUS or OZEMPIC tablets and call your healthcare provider right away if you have severe pain in your stomach area (abdomen) that will not go away, with or without nausea or vomiting. Sometimes you may feel the pain from your abdomen to your back.
+- • OZEMPIC may be taken with or without food.
 
 •
 
-- • changes in vision. Tell your healthcare provider if you have changes in vision during treatment with RYBELSUS or OZEMPIC tablets.
+- • Do not mix insulin and OZEMPIC together in the same injection.
 
 •
 
-- • low blood sugar (hypoglycemia). Your risk for getting low blood sugar may be higher if you use RYBELSUS or OZEMPIC tablets with another medicine that can cause low blood sugar, such as a sulfonylurea or insulin. Signs and symptoms of low blood sugar may include:
+- • You may give an injection of OZEMPIC and insulin in the same body area (such as your stomach area), but not right next to each other.
+
+•
+
+- • Change (rotate) your injection site with each injection. Do not use the same site for each injection.
+
+•
+
+- • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them.
+
+•
+
+- • If you take too much OZEMPIC, call your healthcare provider or Poison Help line at 1-800-222-1222 or go to the nearest hospital emergency room right away.
+
+•
+
+What are the possible side effects of OZEMPIC? OZEMPIC may cause serious side effects, including: • See “What is the most important information I should know about OZEMPIC?” • inflammation of your pancreas (pancreatitis). Stop using OZEMPIC and call your healthcare provider right away if you have severe pain in your stomach area (abdomen) that will not go away, with or without vomiting. You may feel the pain from your abdomen to your back. • changes in vision. Tell your healthcare provider if you have changes in vision during treatment with OZEMPIC. • low blood sugar (hypoglycemia). Your risk for getting low blood sugar may be higher if you use OZEMPIC with another medicine that can cause low blood sugar, such as a sulfonylurea or insulin. Signs and symptoms of low blood sugar may include:
+
+What are the possible side effects of OZEMPIC?
+
+OZEMPIC may cause serious side effects, including:
+
+- • See “What is the most important information I should know about OZEMPIC?”
+
+•
+
+- • inflammation of your pancreas (pancreatitis). Stop using OZEMPIC and call your healthcare provider right away if you have severe pain in your stomach area (abdomen) that will not go away, with or without vomiting. You may feel the pain from your abdomen to your back.
+
+•
+
+- • changes in vision. Tell your healthcare provider if you have changes in vision during treatment with OZEMPIC.
+
+•
+
+- • low blood sugar (hypoglycemia). Your risk for getting low blood sugar may be higher if you use OZEMPIC with another medicine that can cause low blood sugar, such as a sulfonylurea or insulin. Signs and symptoms of low blood sugar may include:
 
 •
 
@@ -1932,17 +2116,17 @@ o
 
 o
 
-• dehydration leading to kidney problems. Diarrhea, nausea, and vomiting may cause a loss of fluids (dehydration) which may cause kidney problems. It is important for you to drink fluids to help reduce your chance of dehydration. Tell your healthcare provider right away if you have nausea, vomiting, or diarrhea that does not go away. • severe stomach problems. Stomach problems, sometimes severe, have been reported in people who use RYBELSUS or OZEMPIC tablets. Tell your healthcare provider if you have stomach problems that are severe or will not go away. • serious allergic reactions. Stop using RYBELSUS or OZEMPIC tablets and get medical help right away, if you have any symptoms of a serious allergic reaction including: o swelling of your face, lips, tongue or throat o problems breathing or swallowing o severe rash or itching o fainting or feeling dizzy o very rapid heartbeat • gallbladder problems. Gallbladder problems have happened in some people who take RYBELSUS and OZEMPIC tablets. Tell your healthcare provider right away if you get symptoms of gallbladder problems, which may include:
+• Dehydration leading to kidney problems. Diarrhea, nausea, and vomiting may cause a loss of fluids (dehydration) which may cause kidney problems. It is important for you to drink fluids to help reduce your chance of dehydration. Tell your healthcare provider right away if you have nausea, vomiting, or diarrhea that does not go away. • Severe stomach problems. Stomach problems, sometimes severe, have been reported in people who use OZEMPIC. Tell your healthcare provider if you have stomach problems that are severe or will not go away. • serious allergic reactions. Stop using OZEMPIC and get medical help right away, if you have any symptoms of a serious allergic reaction including: o swelling of your face, lips, tongue or throat o problems breathing or swallowing o severe rash or itching o fainting or feeling dizzy o very rapid heartbeat • gallbladder problems. Gallbladder problems have happened in some people who take OZEMPIC. Tell your healthcare provider right away if you get symptoms of gallbladder problems which may include:
 
-- • dehydration leading to kidney problems. Diarrhea, nausea, and vomiting may cause a loss of fluids (dehydration) which may cause kidney problems. It is important for you to drink fluids to help reduce your chance of dehydration. Tell your healthcare provider right away if you have nausea, vomiting, or diarrhea that does not go away.
-
-•
-
-- • severe stomach problems. Stomach problems, sometimes severe, have been reported in people who use RYBELSUS or OZEMPIC tablets. Tell your healthcare provider if you have stomach problems that are severe or will not go away.
+- • Dehydration leading to kidney problems. Diarrhea, nausea, and vomiting may cause a loss of fluids (dehydration) which may cause kidney problems. It is important for you to drink fluids to help reduce your chance of dehydration. Tell your healthcare provider right away if you have nausea, vomiting, or diarrhea that does not go away.
 
 •
 
-- • serious allergic reactions. Stop using RYBELSUS or OZEMPIC tablets and get medical help right away, if you have any symptoms of a serious allergic reaction including:
+- • Severe stomach problems. Stomach problems, sometimes severe, have been reported in people who use OZEMPIC. Tell your healthcare provider if you have stomach problems that are severe or will not go away.
+
+•
+
+- • serious allergic reactions. Stop using OZEMPIC and get medical help right away, if you have any symptoms of a serious allergic reaction including: o swelling of your face, lips, tongue or throat o problems breathing or swallowing o severe rash or itching o fainting or feeling dizzy o very rapid heartbeat
 
 •
 
@@ -1966,7 +2150,7 @@ o
 
 o
 
-- • gallbladder problems. Gallbladder problems have happened in some people who take RYBELSUS and OZEMPIC tablets. Tell your healthcare provider right away if you get symptoms of gallbladder problems, which may include:
+- • gallbladder problems. Gallbladder problems have happened in some people who take OZEMPIC. Tell your healthcare provider right away if you get symptoms of gallbladder problems which may include:
 
 •
 
@@ -1990,320 +2174,2068 @@ o
 
 o
 
-• food or liquid getting into the lungs during surgery or other procedures that use anesthesia or deep sleepiness (deep sedation). RYBELSUS and OZEMPIC tablets may increase the chance of food getting into your lungs during surgery or other procedures. Tell all your healthcare providers that you are taking RYBELSUS or OZEMPIC tablets before you are scheduled to have surgery or other procedures. The most common side effects of RYBELSUS and OZEMPIC tablets may include nausea, stomach (abdominal) pain, diarrhea, decreased appetite, vomiting and constipation. Nausea, vomiting and diarrhea are most common when you first start RYBELSUS or OZEMPIC tablets. Talk to your healthcare provider about any side effect that bothers you or does not go away. These are not all the possible side effects of RYBELSUS and OZEMPIC tablets. Call your doctor for medical advice about side effects. You may report side effects to FDA at 1‑800‑FDA‑1088.
+• food or liquid getting into the lungs during surgery or other procedures that use anesthesia or deep sleepiness (deep sedation). OZEMPIC may increase the chance of food getting into your lungs during surgery or other procedures. Tell all your healthcare providers that you are taking OZEMPIC before you are scheduled to have surgery or other procedures. The most common side effects of OZEMPIC may include nausea, vomiting, diarrhea, stomach (abdominal) pain, and constipation. Talk to your healthcare provider about any side effect that bothers you or does not go away. These are not all the possible side effects of OZEMPIC. Call your doctor for medical advice about side effects. You may report side effects to FDA at 1‑800‑FDA‑1088.
 
-- • food or liquid getting into the lungs during surgery or other procedures that use anesthesia or deep sleepiness (deep sedation). RYBELSUS and OZEMPIC tablets may increase the chance of food getting into your lungs during surgery or other procedures. Tell all your healthcare providers that you are taking RYBELSUS or OZEMPIC tablets before you are scheduled to have surgery or other procedures.
+- • food or liquid getting into the lungs during surgery or other procedures that use anesthesia or deep sleepiness (deep sedation). OZEMPIC may increase the chance of food getting into your lungs during surgery or other procedures. Tell all your healthcare providers that you are taking OZEMPIC before you are scheduled to have surgery or other procedures.
 
 •
 
-The most common side effects of RYBELSUS and OZEMPIC tablets may include nausea, stomach (abdominal) pain, diarrhea, decreased appetite, vomiting and constipation. Nausea, vomiting and diarrhea are most common when you first start RYBELSUS or OZEMPIC tablets.
+The most common side effects of OZEMPIC may include nausea, vomiting, diarrhea, stomach (abdominal) pain, and constipation.
 
-Talk to your healthcare provider about any side effect that bothers you or does not go away. These are not all the possible side effects of RYBELSUS and OZEMPIC tablets.
+Talk to your healthcare provider about any side effect that bothers you or does not go away. These are not all the possible side effects of OZEMPIC.
 
 Call your doctor for medical advice about side effects. You may report side effects to FDA at 1‑800‑FDA‑1088.
 
-How should I store RYBELSUS and OZEMPIC tablets? • Store RYBELSUS or OZEMPIC tablets at room temperature between 68°F and 77°F (20°C to 25°C). • Store in a dry place away from moisture. • Store tablets in the original closed RYBELSUS or OZEMPIC bottle until you are ready to take one. Do not store in any other container. • Keep RYBELSUS, OZEMPIC tablets and all medicines out of the reach of children.
+General information about the safe and effective use of OZEMPIC. Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use OZEMPIC for a condition for which it was not prescribed. Do not give OZEMPIC to other people, even if they have the same symptoms that you have. It may harm them. You can ask your pharmacist or healthcare provider for information about OZEMPIC that is written for health professionals.
 
-How should I store RYBELSUS and OZEMPIC tablets?
+General information about the safe and effective use of OZEMPIC.
 
-- • Store RYBELSUS or OZEMPIC tablets at room temperature between 68°F and 77°F (20°C to 25°C).
+Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use OZEMPIC for a condition for which it was not prescribed. Do not give OZEMPIC to other people, even if they have the same symptoms that you have. It may harm them.
+
+You can ask your pharmacist or healthcare provider for information about OZEMPIC that is written for health professionals.
+
+What are the ingredients in OZEMPIC? Active Ingredient: semaglutide Inactive Ingredients: disodium phosphate dihydrate, propylene glycol, phenol and water for injection. Hydrochloric acid or sodium hydroxide may be added to adjust pH.
+
+What are the ingredients in OZEMPIC?
+
+Active Ingredient: semaglutide
+
+Inactive Ingredients: disodium phosphate dihydrate, propylene glycol, phenol and water for injection. Hydrochloric acid or sodium hydroxide may be added to adjust pH.
+
+Manufactured by: Novo Nordisk A/S, DK-2880 Bagsvaerd, Denmark OZEMPIC ® is a registered trademark of Novo Nordisk A/S. PATENT Information: http://novonordisk-us.com/products/product-patents.html © 2025 Novo Nordisk For more information, go to OZEMPIC.com or call 1-888-693-6742.
+
+Manufactured by: Novo Nordisk A/S, DK-2880 Bagsvaerd, Denmark
+
+OZEMPIC ® is a registered trademark of Novo Nordisk A/S.
+
+PATENT Information: http://novonordisk-us.com/products/product-patents.html
+
+© 2025 Novo Nordisk
+
+For more information, go to OZEMPIC.com or call 1-888-693-6742.
+
+- This Medication Guide has been approved by the U.S. Food and Drug Administration. Revised: 01/2025
+
+## Instructions for Use - 0.25 mg or 0.5 mg doses, 2 mg/3 mL pen
+
+INSTRUCTIONS FOR USE OZEMPIC ® [oh-ZEM-pick] (semaglutide) injection, for subcutaneous use 0.25 mg or 0.5 mg doses (pen delivers doses in 0.25 mg or 0.5 mg increments only)
+
+INSTRUCTIONS FOR USE
+
+OZEMPIC ® [oh-ZEM-pick]
+
+(semaglutide)
+
+injection, for subcutaneous use
+
+0.25 mg or 0.5 mg doses
+
+(pen delivers doses in 0.25 mg or 0.5 mg increments only)
+
+• Read these instructions carefully before using your OZEMPIC ® pen. • Do not use your pen without proper training from your healthcare provider. Make sure that you know how to give yourself an injection with the pen before you start your treatment. • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them. If you are blind or have poor eyesight and cannot read the dose counter on the pen, do not use this pen without help . Get help from a person with good eyesight who is trained to use the OZEMPIC pen. • Start by checking your pen to make sure that it contains OZEMPIC, then look at the pictures below to get to know the different parts of your pen and needle. • Your pen is a prefilled, single-patient-use, dial-a-dose pen. It contains 2 mg of semaglutide, and you can select doses of 0.25 mg or 0.5 mg. Each prefilled pen contains 4 doses of 0.25 mg and 2 doses of 0.5 mg or contains 4 doses of 0.5 mg. • NovoFine ® Plus 32G 4 mm disposable needles are included with your OZEMPIC pen. • Always use a new needle for each injection. • If you need additional needles, NovoFine® Plus, NovoFine® or other compatible disposable needles with a length up to 8 mm can be used. For needle compatibility information, talk to your healthcare professional. Supplies you will need to give your OZEMPIC injection: • OZEMPIC pen • a new NovoFine Plus, NovoFine, or other compatible needle • 1 alcohol swab • 1 gauze pad or cotton ball • 1 sharps disposal container for throwing away used OZEMPIC pens and needles. See “Disposing of used OZEMPIC pens and needles” at the end of these instructions.
+
+- • Read these instructions carefully before using your OZEMPIC ® pen.
 
 •
 
-- • Store in a dry place away from moisture.
+- • Do not use your pen without proper training from your healthcare provider. Make sure that you know how to give yourself an injection with the pen before you start your treatment.
 
 •
 
-- • Store tablets in the original closed RYBELSUS or OZEMPIC bottle until you are ready to take one. Do not store in any other container.
+- • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them.
 
 •
 
-- • Keep RYBELSUS, OZEMPIC tablets and all medicines out of the reach of children.
+- If you are blind or have poor eyesight and cannot read the dose counter on the pen, do not use this pen without help . Get help from a person with good eyesight who is trained to use the OZEMPIC pen.
+
+- • Start by checking your pen to make sure that it contains OZEMPIC, then look at the pictures below to get to know the different parts of your pen and needle.
 
 •
 
-General information about the safe and effective use of RYBELSUS and OZEMPIC tablets. Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use RYBELSUS or OZEMPIC tablets for a condition for which it was not prescribed. Do not give RYBELSUS or OZEMPIC tablets to other people, even if they have the same symptoms that you have. It may harm them. You can ask your pharmacist or healthcare provider for information about RYBELSUS or OZEMPIC tablets that is written for health professionals.
+- • Your pen is a prefilled, single-patient-use, dial-a-dose pen. It contains 2 mg of semaglutide, and you can select doses of 0.25 mg or 0.5 mg. Each prefilled pen contains 4 doses of 0.25 mg and 2 doses of 0.5 mg or contains 4 doses of 0.5 mg.
 
-General information about the safe and effective use of RYBELSUS and OZEMPIC tablets.
+•
 
-Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use RYBELSUS or OZEMPIC tablets for a condition for which it was not prescribed. Do not give RYBELSUS or OZEMPIC tablets to other people, even if they have the same symptoms that you have. It may harm them. You can ask your pharmacist or healthcare provider for information about RYBELSUS or OZEMPIC tablets that is written for health professionals.
+- • NovoFine ® Plus 32G 4 mm disposable needles are included with your OZEMPIC pen.
 
-What are the ingredients in RYBELSUS and OZEMPIC tablets? Active Ingredient in RYBELSUS and OZEMPIC : semaglutide Inactive Ingredients in RYBELSUS: magnesium stearate, microcrystalline cellulose, povidone and salcaprozate sodium Inactive ingredients in OZEMPIC : magnesium stearate and salcaprozate sodium Marketed by: Novo Nordisk Inc., Plainsboro, NJ 08536 RYBELSUS ® and OZEMPIC ® are registered trademarks of Novo Nordisk A/S. Patent Information: http://www.novonordisk-us.com/products/product-patents.html © 2026 Novo Nordisk For more information, go to www.RYBELSUS.com, www.OZEMPIC.com or call 1-833-GLP-PILL.
+•
 
-What are the ingredients in RYBELSUS and OZEMPIC tablets?
+- • Always use a new needle for each injection.
 
-Active Ingredient in RYBELSUS and OZEMPIC : semaglutide
+•
 
-Inactive Ingredients in RYBELSUS: magnesium stearate, microcrystalline cellulose, povidone and salcaprozate sodium
+- • If you need additional needles, NovoFine® Plus, NovoFine® or other compatible disposable needles with a length up to 8 mm can be used. For needle compatibility information, talk to your healthcare professional.
 
-Inactive ingredients in OZEMPIC : magnesium stearate and salcaprozate sodium
+•
 
-Marketed by: Novo Nordisk Inc., Plainsboro, NJ 08536
+Supplies you will need to give your OZEMPIC injection:
 
-RYBELSUS ® and OZEMPIC ® are registered trademarks of Novo Nordisk A/S.
+- • OZEMPIC pen
 
-Patent Information: http://www.novonordisk-us.com/products/product-patents.html
+•
+
+- • a new NovoFine Plus, NovoFine, or other compatible needle
+
+•
+
+- • 1 alcohol swab
+
+•
+
+- • 1 gauze pad or cotton ball
+
+•
+
+- • 1 sharps disposal container for throwing away used OZEMPIC pens and needles. See “Disposing of used OZEMPIC pens and needles” at the end of these instructions.
+
+•
+
+Step 1. Prepare your pen with a new needle
+
+Step 1.
+
+Prepare your pen with a new needle
+
+• Wash your hands with soap and water. • Check the name and colored label of your pen, to make sure that it contains OZEMPIC. This is especially important if you take more than 1 type of medicine. • Pull off the pen cap.
+
+- • Wash your hands with soap and water.
+
+•
+
+- • Check the name and colored label of your pen, to make sure that it contains OZEMPIC.
+
+•
+
+- This is especially important if you take more than 1 type of medicine.
+
+- • Pull off the pen cap.
+
+•
+
+• Check that the OZEMPIC medicine in your pen is clear and colorless . Look through the pen window. If OZEMPIC looks cloudy or contains particles, do not use the pen.
+
+- • Check that the OZEMPIC medicine in your pen is clear and colorless .
+
+•
+
+- Look through the pen window. If OZEMPIC looks cloudy or contains particles, do not use the pen.
+
+• Take a new needle, and tear off the paper tab. Do not attach a new needle to your pen until you are ready to give your injection.
+
+- • Take a new needle, and tear off the paper tab. Do not attach a new needle to your pen until you are ready to give your injection.
+
+•
+
+• Push the needle straight onto the pen. Turn until it is on tight.
+
+- • Push the needle straight onto the pen. Turn until it is on tight.
+
+•
+
+• The needle is covered by 2 caps. You must remove both caps. If you forget to remove both caps, you will not inject any medicine. • Pull off the outer needle cap. Do not throw it away.
+
+- • The needle is covered by 2 caps. You must remove both caps. If you forget to remove both caps, you will not inject any medicine.
+
+•
+
+- • Pull off the outer needle cap. Do not throw it away.
+
+•
+
+• Pull off the inner needle cap and throw it away. A drop of OZEMPIC may appear at the needle tip. This is normal, but you must still check the OZEMPIC flow if you use a new pen for the first time.
+
+- • Pull off the inner needle cap and throw it away.
+
+•
+
+- A drop of OZEMPIC may appear at the needle tip. This is normal, but you must still check the OZEMPIC flow if you use a new pen for the first time.
+
+Always use a new needle for each injection. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. Do not reuse or share your needles with other people. You may give other people a serious infection, or get a serious infection from them. Never use a bent or damaged needle.
+
+Always use a new needle for each injection. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose.
+
+Do not reuse or share your needles with other people. You may give other people a serious infection, or get a serious infection from them.
+
+Never use a bent or damaged needle.
+
+Step 2. First Time Use for Each New Pen: Check the OZEMPIC flow
+
+Step 2.
+
+First Time Use for Each New Pen: Check the OZEMPIC flow
+
+• Check the OZEMPIC flow before the first injection with each new pen only. If your OZEMPIC pen is already in use, go to Step 3 “Select your dose”. • Turn the dose selector until the dose counter shows the flow check symbol ( ).
+
+- • Check the OZEMPIC flow before the first injection with each new pen only.
+
+•
+
+- If your OZEMPIC pen is already in use, go to Step 3 “Select your dose”.
+
+- • Turn the dose selector until the dose counter shows the flow check symbol ( ).
+
+•
+
+• Hold the pen with the needle pointing up. Press and hold in the dose button until the dose counter shows 0. The 0 must line up with the dose pointer. A drop of OZEMPIC will appear at the needle tip. • If no drop appears , repeat Step 2 above as shown in Figure G and Figure H up to 6 times. If there is still no drop, change the needle and repeat Step 2 as shown in Figure G and Figure H 1 more time. Do not use the pen if a drop of OZEMPIC still does not appear. Contact Novo Nordisk at 1-888-693-6742.
+
+- • Hold the pen with the needle pointing up.
+
+•
+
+- Press and hold in the dose button until the dose counter shows 0. The 0 must line up with the dose pointer.
+
+- A drop of OZEMPIC will appear at the needle tip.
+
+- • If no drop appears , repeat Step 2 above as shown in Figure G and Figure H up to 6 times. If there is still no drop, change the needle and repeat Step 2 as shown in Figure G and Figure H 1 more time.
+
+•
+
+- Do not use the pen if a drop of OZEMPIC still does not appear.
+
+- Contact Novo Nordisk at 1-888-693-6742.
+
+Always make sure that a drop appears at the needle tip before you use a new pen for the first time. This makes sure that OZEMPIC flows. If no drop appears, you will not inject any OZEMPIC, even though the dose counter may move. This may mean that there is a blocked or damaged needle. A small drop may remain at the needle tip, but it will not be injected. Only check the OZEMPIC flow before your first injection with each new pen.
+
+Always make sure that a drop appears at the needle tip before you use a new pen for the first time. This makes sure that OZEMPIC flows.
+
+If no drop appears, you will not inject any OZEMPIC, even though the dose counter may move. This may mean that there is a blocked or damaged needle.
+
+A small drop may remain at the needle tip, but it will not be injected.
+
+Only check the OZEMPIC flow before your first injection with each new pen.
+
+Step 3. Select your dose
+
+Step 3.
+
+Select your dose
+
+• Turn the dose selector until the dose counter stops and shows your dose (0.25 mg or 0.5 mg). The dashed line in the dose counter will guide you to your dose. Make sure you know the dose of OZEMPIC you should use. If you select the wrong dose, you can turn the dose selector forward or backwards to the correct dose.
+
+- • Turn the dose selector until the dose counter stops and shows your dose (0.25 mg or 0.5 mg).
+
+•
+
+- The dashed line in the dose counter will guide
+
+- you to your dose.
+
+- Make sure you know the dose of OZEMPIC you should use. If you select the wrong dose, you can turn the dose selector forward or backwards to the correct dose.
+
+Always use the dose counter and the dose pointer to see how many mg you select. You will hear a “click” every time you turn the dose selector. Do not set the dose by counting the number of clicks you hear. Only doses of 0.25 mg or 0.5 mg can be selected with the dose selector. The selected dose must line up exactly with the dose pointer to make sure that you get a correct dose. The dose selector changes the dose. Only the dose counter and dose pointer will show how many mg you select for each dose. You can select 0.25 mg or 0.5 mg for each dose. When your pen contains less than 0.5 or 0.25 mg, the dose counter stops before 0.5 mg or 0.25 mg is shown. The dose selector clicks differently when turned forward or backward. Do not count the pen clicks.
+
+Always use the dose counter and the dose pointer to see how many mg you select.
+
+You will hear a “click” every time you turn the dose selector. Do not set the dose by counting the number of clicks you hear.
+
+Only doses of 0.25 mg or 0.5 mg can be selected with the dose selector. The selected dose must line up exactly with the dose pointer to make sure that you get a correct dose.
+
+The dose selector changes the dose. Only the dose counter and dose pointer will show how many mg you select for each dose.
+
+You can select 0.25 mg or 0.5 mg for each dose. When your pen contains less than 0.5 or 0.25 mg, the dose counter stops before 0.5 mg or 0.25 mg is shown.
+
+The dose selector clicks differently when turned forward or backward. Do not count the pen clicks.
+
+How much OZEMPIC is left?
+
+How much OZEMPIC is left?
+
+• To see how much OZEMPIC is left in your pen, use the dose counter: Turn the dose selector until the dose counter stops. • If it shows 0.5, at least 0.5 mg is left in your pen. If the dose counter stops before 0.5 mg, there is not enough OZEMPIC left for a full dose of 0.5 mg. • If it shows 0.25, at least 0.25 mg is left in your pen. If the dose counter stops before 0.25 mg , there is not enough OZEMPIC left for a full dose of 0.25 mg. If there is not enough OZEMPIC left in your pen for a full dose, do not use it. Use a new OZEMPIC pen.
+
+- • To see how much OZEMPIC is left in your pen, use the dose counter:
+
+•
+
+- Turn the dose selector until the dose counter stops.
+
+- • If it shows 0.5, at least 0.5 mg is left in your pen. If the dose counter stops before 0.5 mg, there is not enough OZEMPIC left for a full dose of 0.5 mg.
+
+•
+
+- • If it shows 0.25, at least 0.25 mg is left in your pen. If the dose counter stops before 0.25 mg , there is not enough OZEMPIC left for a full dose of 0.25 mg.
+
+•
+
+- If there is not enough OZEMPIC left in your pen for a full dose, do not use it. Use a new OZEMPIC pen.
+
+Step 4. Inject your dose
+
+Step 4.
+
+Inject your dose
+
+• Choose your injection site and wipe the skin with an alcohol swab. Let the injection site dry before you inject your dose (See Figure K ).
+
+- • Choose your injection site and wipe the skin with an alcohol swab. Let the injection site dry before you inject your dose (See Figure K ).
+
+•
+
+• Insert the needle into your skin as your healthcare provider has shown you. • Make sure you can see the dose counter. Do not cover it with your fingers. This could stop the injection.
+
+- • Insert the needle into your skin as your healthcare provider has shown you.
+
+•
+
+- • Make sure you can see the dose counter. Do not cover it with your fingers. This could stop the injection.
+
+•
+
+• Press and hold down the dose button until the dose counter shows 0. The 0 must line up with the dose pointer. You may then hear or feel a click. Continue pressing the dose button while keeping the needle in your skin.
+
+- • Press and hold down the dose button until the dose counter shows 0.
+
+•
+
+- The 0 must line up with the dose pointer. You may then hear or feel a click.
+
+- Continue pressing the dose button while keeping the needle in your skin.
+
+• Count 6 seconds while keeping the dose button pressed. • If the needle is removed earlier, you may see a stream of OZEMPIC coming from the needle tip. If this happens, the full dose will not be delivered.
+
+- • Count 6 seconds while keeping the dose button pressed.
+
+•
+
+- • If the needle is removed earlier, you may see a stream of OZEMPIC coming from the needle tip. If this happens, the full dose will not be delivered.
+
+•
+
+• Remove the needle from your skin. You can then release the dose button. If blood appears at the injection site, press lightly with a gauze pad or cotton ball. Do not rub the area.
+
+- • Remove the needle from your skin. You can then release the dose button.
+
+•
+
+- If blood appears at the injection site, press lightly with a gauze pad or cotton ball. Do not rub the area.
+
+Always watch the dose counter to make sure you have injected your complete dose. Hold the dose button down until the dose counter shows 0. How to identify a blocked or damaged needle? • If 0 does not appear in the dose counter after continuously pressing the dose button, you may have used a blocked or damaged needle. • If this happens you have not received any OZEMPIC even though the dose counter has moved from the original dose that you have set. How to handle a blocked needle? Change the needle as described in Step 5, and repeat all steps starting with Step 1: “Prepare your pen with a new needle”. Never touch the dose counter when you inject. This can stop the injection. You may see a drop of OZEMPIC at the needle tip after injecting. This is normal and does not affect your dose.
+
+Always watch the dose counter to make sure you have injected your complete dose. Hold the dose button down until the dose counter shows 0.
+
+How to identify a blocked or damaged needle?
+
+- • If 0 does not appear in the dose counter after continuously pressing the dose button, you may have used a blocked or damaged needle.
+
+•
+
+- • If this happens you have not received any OZEMPIC even though the dose counter has moved from the original dose that you have set.
+
+•
+
+How to handle a blocked needle?
+
+Change the needle as described in Step 5, and repeat all steps starting with Step 1: “Prepare your pen with a new needle”.
+
+Never touch the dose counter when you inject. This can stop the injection.
+
+You may see a drop of OZEMPIC at the needle tip after injecting. This is normal and does not affect your dose.
+
+Step 5. After your injection
+
+Step 5.
+
+After your injection
+
+• Carefully remove the needle from the pen. Do not put the needle caps back on the needle to avoid needle sticks.
+
+- • Carefully remove the needle from the pen. Do not put the needle caps back on the needle to avoid needle sticks.
+
+•
+
+• Place the needle in a sharps disposal container right away to reduce the risk of needle sticks. See “Disposing of used OZEMPIC pens and needles” below for more information about how to dispose of used pens and needles the right way.
+
+- • Place the needle in a sharps disposal container right away to reduce the risk of needle sticks. See “Disposing of used OZEMPIC pens and needles” below for more information about how to dispose of used pens and needles the right way.
+
+•
+
+• Put the pen cap on your pen after each use to protect OZEMPIC from light.
+
+- • Put the pen cap on your pen after each use to protect OZEMPIC from light.
+
+•
+
+• If you do not have a sharps disposal container, follow a 1-handed needle recapping method. Carefully slip the needle into the outer needle cap. Dispose of the needle in a sharps disposal container as soon as possible.
+
+- • If you do not have a sharps disposal container, follow a 1-handed needle recapping method. Carefully slip the needle into the outer needle cap. Dispose of the needle in a sharps disposal container as soon as possible.
+
+•
+
+Never try to put the inner needle cap back on the needle. You may stick yourself with the needle. Always remove the needle from your pen. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. If the needle is blocked, you will not inject any OZEMPIC. Always dispose of the needle after each injection.
+
+Never try to put the inner needle cap back on the needle. You may stick yourself with the needle.
+
+Always remove the needle from your pen.
+
+This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. If the needle is blocked, you will not inject any OZEMPIC.
+
+Always dispose of the needle after each injection.
+
+Disposing of used OZEMPIC pens and needles: • Put your used OZEMPIC pen and needle in a FDA-cleared sharps disposal container right away after use. • If you do not have a FDA-cleared sharps disposal container, you may use a household container that is: o made of a heavy-duty plastic o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out o upright and stable during use o leak-resistant o properly labeled to warn of hazardous waste inside the container • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about the safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container. • Safely dispose of OZEMPIC that is out of date or no longer needed.
+
+Disposing of used OZEMPIC pens and needles:
+
+- • Put your used OZEMPIC pen and needle in a FDA-cleared sharps disposal container right away after use.
+
+•
+
+- • If you do not have a FDA-cleared sharps disposal container, you may use a household container that is: o made of a heavy-duty plastic o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out o upright and stable during use o leak-resistant o properly labeled to warn of hazardous waste inside the container
+
+•
+
+- o made of a heavy-duty plastic
+
+o
+
+- o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out
+
+o
+
+- o upright and stable during use
+
+o
+
+- o leak-resistant
+
+o
+
+- o properly labeled to warn of hazardous waste inside the container
+
+o
+
+- • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about the safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal
+
+•
+
+- • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container.
+
+•
+
+- • Safely dispose of OZEMPIC that is out of date or no longer needed.
+
+•
+
+Important
+
+Important
+
+• Caregivers must be very careful when handling used needles to prevent accidental needle stick injuries and prevent passing (transmission) of infection. • Never use a syringe to withdraw OZEMPIC from your pen. • Always carry an extra pen and new needles with you, in case of loss or damage. • Always keep your pen and needles out of reach of others, especially children. • Always keep your pen with you. Do not leave it in a car or other place where it can get too hot or too cold.
+
+- • Caregivers must be very careful when handling used needles to prevent accidental needle stick injuries and prevent passing (transmission) of infection.
+
+•
+
+- • Never use a syringe to withdraw OZEMPIC from your pen.
+
+•
+
+- • Always carry an extra pen and new needles with you, in case of loss or damage.
+
+•
+
+- • Always keep your pen and needles out of reach of others, especially children.
+
+•
+
+- • Always keep your pen with you. Do not leave it in a car or other place where it can get too hot or too cold.
+
+•
+
+Caring for your pen
+
+Caring for your pen
+
+• Do not drop your pen or knock it against hard surfaces. If you drop it or suspect a problem, attach a new needle and check the OZEMPIC flow before you inject. • Do not try to repair your pen or pull it apart. • Do not expose your pen to dust, dirt or liquid. • Do not wash, soak, or lubricate your pen. If necessary, clean it with mild detergent on a moistened cloth. How should I store my OZEMPIC pen? • Store your new, unused OZEMPIC pens in the refrigerator between 36°F to 46°F (2°C to 8°C). • Store your pen in use for 56 days at room temperature between 59ºF to 86ºF (15ºC to 30ºC) or in a refrigerator between 36°F to 46°F (2°C to 8°C). • The OZEMPIC pen you are using should be disposed of (thrown away) after 56 days, even if it still has OZEMPIC left in it. Write the disposal date on your calendar. • Do not freeze OZEMPIC. Do not use OZEMPIC if it has been frozen. • Unused OZEMPIC pens may be used until the expiration date (“EXP”) printed on the label, if kept in the refrigerator. • When stored in the refrigerator, do not store OZEMPIC pens directly next to the cooling element. • Keep OZEMPIC away from heat and out of the light. • Keep the pen cap on when not in use. • Keep OZEMPIC and all medicines out of the reach of children. For more information go to www.OZEMPIC.com Marketed by: Novo Nordisk, Inc. Plainsboro, NJ 08536 For information about OZEMPIC contact: Novo Nordisk Inc. 800 Scudders Mill Road Plainsboro, NJ 08536 1-888-693-6742 OZEMPIC ® and NovoFine ® are registered trademarks of Novo Nordisk A/S. Patent Information: https://novonordisk-us.com/products/product-patents.html © 2026 Novo Nordisk This Instructions for Use has been approved by the U.S. Food and Drug Administration. Revised: June/2026
+
+- • Do not drop your pen or knock it against hard surfaces. If you drop it or suspect a problem, attach a new needle and check the OZEMPIC flow before you inject.
+
+•
+
+- • Do not try to repair your pen or pull it apart.
+
+•
+
+- • Do not expose your pen to dust, dirt or liquid.
+
+•
+
+- • Do not wash, soak, or lubricate your pen. If necessary, clean it with mild detergent on a moistened cloth.
+
+•
+
+How should I store my OZEMPIC pen?
+
+- • Store your new, unused OZEMPIC pens in the refrigerator between 36°F to 46°F (2°C to 8°C).
+
+•
+
+- • Store your pen in use for 56 days at room temperature between 59ºF to 86ºF (15ºC to 30ºC) or in a refrigerator between 36°F to 46°F (2°C to 8°C).
+
+•
+
+- • The OZEMPIC pen you are using should be disposed of (thrown away) after 56 days, even if it still has OZEMPIC left in it. Write the disposal date on your calendar.
+
+•
+
+- • Do not freeze OZEMPIC. Do not use OZEMPIC if it has been frozen.
+
+•
+
+- • Unused OZEMPIC pens may be used until the expiration date (“EXP”) printed on the label, if kept in the refrigerator.
+
+•
+
+- • When stored in the refrigerator, do not store OZEMPIC pens directly next to the cooling element.
+
+•
+
+- • Keep OZEMPIC away from heat and out of the light.
+
+•
+
+- • Keep the pen cap on when not in use.
+
+•
+
+- • Keep OZEMPIC and all medicines out of the reach of children.
+
+•
+
+For more information go to www.OZEMPIC.com
+
+Marketed by:
+
+Novo Nordisk, Inc.
+
+Plainsboro, NJ
+
+08536
+
+For information about OZEMPIC contact:
+
+Novo Nordisk Inc.
+
+800 Scudders Mill Road
+
+Plainsboro, NJ 08536
+
+1-888-693-6742
+
+OZEMPIC ® and NovoFine ® are registered trademarks of Novo Nordisk A/S.
+
+Patent Information: https://novonordisk-us.com/products/product-patents.html
 
 © 2026 Novo Nordisk
 
-For more information, go to www.RYBELSUS.com, www.OZEMPIC.com or call 1-833-GLP-PILL.
+This Instructions for Use has been approved by the U.S. Food and Drug Administration.
 
-- This Medication Guide has been approved by the U.S. Food and Drug Administration. Revised: 1/2026
+Revised: June/2026
 
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – OZEMPIC 1.5 mg tablets
+## Instructions for Use – 1 mg dose, 3 mL pen
 
-- NDC 0169-1715-30List 171530
+INSTRUCTIONS FOR USE OZEMPIC ® [oh-ZEM-pick] (semaglutide) injection, for subcutaneous use 1 mg dose (pen delivers doses in 1 mg increments only)
 
-- OZEMPIC ® 1.5 mg
+INSTRUCTIONS FOR USE
 
-(semaglutide) Tablets
+OZEMPIC ® [oh-ZEM-pick]
 
-1.5 mg
+(semaglutide)
+
+injection, for subcutaneous use
+
+1 mg dose
+
+(pen delivers doses in 1 mg increments only)
+
+• Read these instructions carefully before using your OZEMPIC ® pen. • Do not use your pen without proper training from your healthcare provider. Make sure that you know how to give yourself an injection with the pen before you start your treatment. • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them. If you are blind or have poor eyesight and cannot read the dose counter on the pen, do not use this pen without help. Get help from a person with good eyesight who is trained to use the OZEMPIC pen. • Start by checking your pen to make sure that it contains OZEMPIC, then look at the pictures below to get to know the different parts of your pen and needle. • Your pen is a prefilled, single-patient-use, dial-a-dose pen. It contains 4 mg of semaglutide, and you can only select doses of 1 mg. Each prefilled pen contains 4 doses of 1 mg. • NovoFine ® Plus 32G 4 mm disposable needles are included with your OZEMPIC pen. • Always use a new needle for each injection. • If you need additional needles, NovoFine® Plus, NovoFine® or other compatible disposable needles with a length up to 8 mm can be used. For needle compatibility information, talk to your healthcare professional. Supplies you will need to give your OZEMPIC injection: • OZEMPIC pen 1 mg dose • a new NovoFine Plus, NovoFine, or other compatible needle • 1 alcohol swab • 1 gauze pad or cotton ball • 1 sharps disposal container for throwing away used OZEMPIC pens and needles. See “Disposing of used OZEMPIC pens and needles” at the end of these instructions.
+
+- • Read these instructions carefully before using your OZEMPIC ® pen.
+
+•
+
+- • Do not use your pen without proper training from your healthcare provider. Make sure that you know how to give yourself an injection with the pen before you start your treatment.
+
+•
+
+- • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them.
+
+•
+
+- If you are blind or have poor eyesight and cannot read the dose counter on the pen, do not use this pen without help. Get help from a person with good eyesight who is trained to use the OZEMPIC pen.
+
+- • Start by checking your pen to make sure that it contains OZEMPIC, then look at the pictures below to get to know the different parts of your pen and needle.
+
+•
+
+- • Your pen is a prefilled, single-patient-use, dial-a-dose pen. It contains 4 mg of semaglutide, and you can only select doses of 1 mg. Each prefilled pen contains 4 doses of 1 mg.
+
+•
+
+- • NovoFine ® Plus 32G 4 mm disposable needles are included with your OZEMPIC pen.
+
+•
+
+- • Always use a new needle for each injection.
+
+•
+
+- • If you need additional needles, NovoFine® Plus, NovoFine® or other compatible disposable needles with a length up to 8 mm can be used. For needle compatibility information, talk to your healthcare professional.
+
+•
+
+Supplies you will need to give your OZEMPIC injection:
+
+- • OZEMPIC pen 1 mg dose
+
+•
+
+- • a new NovoFine Plus, NovoFine, or other compatible needle
+
+•
+
+- • 1 alcohol swab
+
+•
+
+- • 1 gauze pad or cotton ball
+
+•
+
+- • 1 sharps disposal container for throwing away used OZEMPIC pens and needles.
+
+•
+
+- See “Disposing of used OZEMPIC pens and needles” at the end of these instructions.
+
+Step 1. Prepare your pen with a new needle
+
+Step 1.
+
+Prepare your pen with a new needle
+
+• Wash your hands with soap and water. • Check the name and colored label of your pen, to make sure that it contains OZEMPIC. This is especially important if you take more than 1 type of medicine. • Pull off the pen cap.
+
+- • Wash your hands with soap and water.
+
+•
+
+- • Check the name and colored label of your pen, to make sure that it contains OZEMPIC.
+
+•
+
+- This is especially important if you take more than 1 type of medicine.
+
+- • Pull off the pen cap.
+
+•
+
+• Check that the OZEMPIC medicine in your pen is clear and colorless . Look through the pen window. If OZEMPIC looks cloudy or contains particles, do not use the pen.
+
+- • Check that the OZEMPIC medicine in your pen is clear and colorless .
+
+•
+
+- Look through the pen window. If OZEMPIC looks cloudy or contains particles, do not use the pen.
+
+• Take a new needle, and tear off the paper tab. Do not attach a new needle to your pen until you are ready to give your injection.
+
+- • Take a new needle, and tear off the paper tab.
+
+•
+
+- Do not attach a new needle to your pen until you are ready to give your injection.
+
+• Push the needle straight onto the pen. Turn until it is on tight.
+
+- • Push the needle straight onto the pen. Turn until it is on tight.
+
+•
+
+• The needle is covered by 2 caps. You must remove both caps. If you forget to remove both caps, you will not inject any medicine. • Pull off the outer needle cap. Do not throw it away.
+
+- • The needle is covered by 2 caps. You must remove both caps. If you forget to remove both caps, you will not inject any medicine.
+
+•
+
+- • Pull off the outer needle cap. Do not throw it away.
+
+•
+
+• Pull off the inner needle cap and throw it away. A drop of OZEMPIC may appear at the needle tip. This is normal, but you must still check the OZEMPIC flow if you use a new pen for the first time.
+
+- • Pull off the inner needle cap and throw it away.
+
+•
+
+- A drop of OZEMPIC may appear at the needle tip. This is normal, but you must still check the OZEMPIC flow if you use a new pen for the first time.
+
+Always use a new needle for each injection. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. Do not reuse or share your needles with other people. You may give other people a serious infection, or get a serious infection from them. Never use a bent or damaged needle.
+
+- Always use a new needle for each injection. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose.
+
+Do not reuse or share your needles with other people. You may give other people a serious infection, or get a serious infection from them.
+
+Never use a bent or damaged needle.
+
+Step 2. First Time Use for Each New Pen: Check the OZEMPIC flow
+
+Step 2.
+
+First Time Use for Each New Pen: Check the OZEMPIC flow
+
+• Check the OZEMPIC flow before the first injection with each new pen only. If your OZEMPIC pen is already in use, go to Step 3 “Select your dose”. • Turn the dose selector until the dose counter shows the flow check symbol ( ).
+
+- • Check the OZEMPIC flow before the first injection with each new pen only.
+
+•
+
+- If your OZEMPIC pen is already in use, go to Step 3 “Select your dose”.
+
+- • Turn the dose selector until the dose counter shows the flow check symbol ( ).
+
+•
+
+• Hold the pen with the needle pointing up. Press and hold in the dose button until the dose counter shows 0. The 0 must line up with the dose pointer. A drop of OZEMPIC will appear at the needle tip. • If no drop appears , repeat Step 2 above as shown in Figure G and Figure H up to 6 times. If there is still no drop, change the needle and repeat Step 2 as shown in Figure G and Figure H 1 more time. Do not use the pen if a drop of OZEMPIC still does not appear. Contact Novo Nordisk at 1-888-693-6742.
+
+- • Hold the pen with the needle pointing up.
+
+•
+
+- Press and hold in the dose button until the dose counter shows 0. The 0 must line up with the dose pointer.
+
+- A drop of OZEMPIC will appear at the needle tip.
+
+- • If no drop appears , repeat Step 2 above as shown in Figure G and Figure H up to 6 times. If there is still no drop, change the needle and repeat Step 2 as shown in Figure G and Figure H 1 more time.
+
+•
+
+- Do not use the pen if a drop of OZEMPIC still does not appear.
+
+- Contact Novo Nordisk at 1-888-693-6742.
+
+Always make sure that a drop appears at the needle tip before you use a new pen for the first time. This makes sure that OZEMPIC flows. If no drop appears, you will not inject any OZEMPIC, even though the dose counter may move. This may mean that there is a blocked or damaged needle. A small drop may remain at the needle tip, but it will not be injected. Only check the OZEMPIC flow before your first injection with each new pen.
+
+- Always make sure that a drop appears at the needle tip before you use a new pen for the first time. This makes sure that OZEMPIC flows.
+
+If no drop appears, you will not inject any OZEMPIC, even though the dose counter may move. This may mean that there is a blocked or damaged needle.
+
+A small drop may remain at the needle tip, but it will not be injected.
+
+Only check the OZEMPIC flow before your first injection with each new pen.
+
+Step 3. Select your dose
+
+Step 3.
+
+Select your dose
+
+• Turn the dose selector until the dose counter stops and shows your 1 mg dose. The dashed line in the dose counter will guide you to 1 mg.
+
+- • Turn the dose selector until the dose counter stops and shows your 1 mg dose.
+
+•
+
+- The dashed line in the dose counter will guide you to 1 mg.
+
+Always use the dose counter and the dose pointer to see that 1 mg has been selected. You will hear a “click” every time you turn the dose selector. Do not set the dose by counting the number of clicks you hear. Only doses of 1 mg can be selected with the dose selector. 1 mg must line up exactly with the dose pointer to make sure that you get a correct dose. The dose selector changes the dose. Only the dose counter and dose pointer will show that 1 mg has been selected. You can only select 1 mg for each dose. When your pen contains less than 1 mg, the dose counter stops before 1 mg is shown. The dose selector clicks differently when turned forward or backward. Do not count the pen clicks.
+
+Always use the dose counter and the dose pointer to see that 1 mg has been selected.
+
+You will hear a “click” every time you turn the dose selector. Do not set the dose by counting the number of clicks you hear.
+
+Only doses of 1 mg can be selected with the dose selector. 1 mg must line up exactly with the dose pointer to make sure that you get a correct dose.
+
+The dose selector changes the dose. Only the dose counter and dose pointer will show that 1 mg has been selected.
+
+You can only select 1 mg for each dose. When your pen contains less than 1 mg, the dose counter stops before 1 mg is shown.
+
+The dose selector clicks differently when turned forward or backward. Do not count the pen clicks.
+
+How much OZEMPIC is left?
+
+How much OZEMPIC is left?
+
+• To see how much OZEMPIC is left in your pen, use the dose counter: Turn the dose selector until the dose counter stops. • If it shows 1, at least 1 mg is left in your pen. If the dose counter stops before 1 mg, there is not enough OZEMPIC left for a full dose of 1 mg. If there is not enough OZEMPIC left in your pen for a full dose, do not use it. Use a new OZEMPIC pen.
+
+- • To see how much OZEMPIC is left in your pen, use the dose counter:
+
+•
+
+- Turn the dose selector until the dose counter stops.
+
+- • If it shows 1, at least 1 mg is left in your pen. If the dose counter stops before 1 mg, there is not enough OZEMPIC left for a full dose of 1 mg.
+
+•
+
+- If there is not enough OZEMPIC left in your pen for a full dose, do not use it. Use a new OZEMPIC pen.
+
+Step 4. Inject your dose
+
+Step 4.
+
+Inject your dose
+
+• Choose your injection site and wipe the skin with an alcohol swab. Let the injection site dry before you inject your dose (See Figure K ).
+
+- • Choose your injection site and wipe the skin with an alcohol swab. Let the injection site dry before you inject your dose (See Figure K ).
+
+•
+
+• Insert the needle into your skin as your healthcare provider has shown you. • Make sure you can see the dose counter. Do not cover it with your fingers. This could stop the injection.
+
+- • Insert the needle into your skin as your healthcare provider has shown you.
+
+•
+
+- • Make sure you can see the dose counter. Do not cover it with your fingers. This could stop the injection.
+
+•
+
+• Press and hold down the dose button until the dose counter shows 0. The 0 must line up with the dose pointer. You may then hear or feel a click. Continue pressing the dose button while keeping the needle in your skin.
+
+- • Press and hold down the dose button until the dose counter shows 0.
+
+•
+
+- The 0 must line up with the dose pointer. You may then hear or feel a click.
+
+- Continue pressing the dose button while keeping the needle in your skin.
+
+• Count 6 seconds while keeping the dose button pressed. • If the needle is removed earlier, you may see a stream of OZEMPIC coming from the needle tip. If this happens, the full dose will not be delivered.
+
+- • Count 6 seconds while keeping the dose button pressed.
+
+•
+
+- • If the needle is removed earlier, you may see a stream of OZEMPIC coming from the needle tip. If this happens, the full dose will not be delivered.
+
+•
+
+• Remove the needle from your skin. You can then release the dose button. If blood appears at the injection site, press lightly with a gauze pad or cotton ball. Do not rub the area.
+
+- • Remove the needle from your skin. You can then release the dose button.
+
+•
+
+- If blood appears at the injection site, press lightly with a gauze pad or cotton ball. Do not rub the area.
+
+Always watch the dose counter to make sure you have injected your complete dose. Hold the dose button down until the dose counter shows 0. How to identify a blocked or damaged needle? • If 0 does not appear in the dose counter after continuously pressing the dose button, you may have used a blocked or damaged needle. • If this happens you have not received any OZEMPIC even though the dose counter has moved from the original dose that you have set. How to handle a blocked needle? Change the needle as described in Step 5, and repeat all steps starting with Step 1: “Prepare your pen with a new needle”. Never touch the dose counter when you inject. This can stop the injection. You may see a drop of OZEMPIC at the needle tip after injecting. This is normal and does not affect your dose.
+
+Always watch the dose counter to make sure you have injected your complete dose. Hold the dose button down until the dose counter shows 0.
+
+How to identify a blocked or damaged needle?
+
+- • If 0 does not appear in the dose counter after continuously pressing the dose button, you may have used a blocked or damaged needle.
+
+•
+
+- • If this happens you have not received any OZEMPIC even though the dose counter has moved from the original dose that you have set.
+
+•
+
+How to handle a blocked needle?
+
+Change the needle as described in Step 5, and repeat all steps starting with Step 1: “Prepare your pen with a new needle”.
+
+Never touch the dose counter when you inject. This can stop the injection.
+
+You may see a drop of OZEMPIC at the needle tip after injecting. This is normal and does not affect your dose.
+
+Step 5. After your injection
+
+Step 5.
+
+After your injection
+
+• Carefully remove the needle from the pen. Do not put the needle caps back on the needle to avoid needle sticks.
+
+- • Carefully remove the needle from the pen. Do not put the needle caps back on the needle to avoid needle sticks.
+
+•
+
+• Place the needle in a sharps disposal container right away to reduce the risk of needle sticks. See “Disposing of used OZEMPIC pens and needles” below for more information about how to dispose of used pens and needles the right way.
+
+- • Place the needle in a sharps disposal container right away to reduce the risk of needle sticks. See “Disposing of used OZEMPIC pens and needles” below for more information about how to dispose of used pens and needles the right way.
+
+•
+
+• Put the pen cap on your pen after each use to protect OZEMPIC from light.
+
+- • Put the pen cap on your pen after each use to protect OZEMPIC from light.
+
+•
+
+• If you do not have a sharps disposal container, follow a 1-handed needle recapping method. Carefully slip the needle into the outer needle cap. Dispose of the needle in a sharps disposal container as soon as possible.
+
+- • If you do not have a sharps disposal container, follow a 1-handed needle recapping method. Carefully slip the needle into the outer needle cap. Dispose of the needle in a sharps disposal container as soon as possible.
+
+•
+
+Never try to put the inner needle cap back on the needle. You may stick yourself with the needle. Always remove the needle from your pen. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. If the needle is blocked, you will not inject any OZEMPIC. Always dispose of the needle after each injection.
+
+Never try to put the inner needle cap back on the needle. You may stick yourself with the needle.
+
+Always remove the needle from your pen.
+
+This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. If the needle is blocked, you will not inject any OZEMPIC.
+
+Always dispose of the needle after each injection.
+
+Disposing of used OZEMPIC pens and needles: • Put your used OZEMPIC pen and needle in a FDA-cleared sharps disposal container right away after use. • If you do not have a FDA-cleared sharps disposal container, you may use a household container that is: o made of a heavy-duty plastic o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out o upright and stable during use o leak-resistant o properly labeled to warn of hazardous waste inside the container • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about the safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container. • Safely dispose of OZEMPIC that is out of date or no longer needed.
+
+Disposing of used OZEMPIC pens and needles:
+
+- • Put your used OZEMPIC pen and needle in a FDA-cleared sharps disposal container right away after use.
+
+•
+
+- • If you do not have a FDA-cleared sharps disposal container, you may use a household container that is: o made of a heavy-duty plastic o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out o upright and stable during use o leak-resistant o properly labeled to warn of hazardous waste inside the container
+
+•
+
+- o made of a heavy-duty plastic
+
+o
+
+- o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out
+
+o
+
+- o upright and stable during use
+
+o
+
+- o leak-resistant
+
+o
+
+- o properly labeled to warn of hazardous waste inside the container
+
+o
+
+- • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about the safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal
+
+•
+
+- • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container.
+
+•
+
+- • Safely dispose of OZEMPIC that is out of date or no longer needed.
+
+•
+
+Important
+
+Important
+
+• Caregivers must be very careful when handling used needles to prevent accidental needle stick injuries and prevent passing (transmission) of infection. • Never use a syringe to withdraw OZEMPIC from your pen. • Always carry an extra pen and new needles with you, in case of loss or damage. • Always keep your pen and needles out of reach of others, especially children. • Always keep your pen with you. Do not leave it in a car or other place where it can get too hot or too cold.
+
+- • Caregivers must be very careful when handling used needles to prevent accidental needle stick injuries and prevent passing (transmission) of infection.
+
+•
+
+- • Never use a syringe to withdraw OZEMPIC from your pen.
+
+•
+
+- • Always carry an extra pen and new needles with you, in case of loss or damage.
+
+•
+
+- • Always keep your pen and needles out of reach of others, especially children.
+
+•
+
+- • Always keep your pen with you. Do not leave it in a car or other place where it can get too hot or too cold.
+
+•
+
+Caring for your pen
+
+Caring for your pen
+
+• Do not drop your pen or knock it against hard surfaces. If you drop it or suspect a problem, attach a new needle and check the OZEMPIC flow before you inject. • Do not try to repair your pen or pull it apart. • Do not expose your pen to dust, dirt or liquid. • Do not wash, soak, or lubricate your pen. If necessary, clean it with mild detergent on a moistened cloth. How should I store my OZEMPIC pen? • Store your new, unused OZEMPIC pens in the refrigerator between 36°F to 46°F (2°C to 8°C). • Store your pen in use for 56 days at room temperature between 59ºF to 86ºF (15ºC to 30ºC) or in a refrigerator between 36°F to 46°F (2°C to 8°C). • The OZEMPIC pen you are using should be disposed of (thrown away) after 56 days, even if it still has OZEMPIC left in it. Write the disposal date on your calendar. • Do not freeze OZEMPIC. Do not use OZEMPIC if it has been frozen. • Unused OZEMPIC pens may be used until the expiration date (“EXP”) printed on the label, if kept in the refrigerator. • When stored in the refrigerator, do not store OZEMPIC pens directly next to the cooling element. • Keep OZEMPIC away from heat and out of the light. • Keep the pen cap on when not in use. • Keep OZEMPIC and all medicines out of the reach of children. For more information go to www.OZEMPIC.com Marketed by: Novo Nordisk, Inc. Plainsboro, NJ 08536 For information about OZEMPIC contact: Novo Nordisk Inc. 800 Scudders Mill Road Plainsboro, NJ 08536 1-888-693-6742 OZEMPIC ® and NovoFine ® are registered trademarks of Novo Nordisk A/S. Patent Information: https://novonordisk-us.com/products/product-patents.html © 2026 Novo Nordisk This Instructions for Use has been approved by the U.S. Food and Drug Administration. Revised: June/2026
+
+- • Do not drop your pen or knock it against hard surfaces. If you drop it or suspect a problem, attach a new needle and check the OZEMPIC flow before you inject.
+
+•
+
+- • Do not try to repair your pen or pull it apart.
+
+•
+
+- • Do not expose your pen to dust, dirt or liquid.
+
+•
+
+- • Do not wash, soak, or lubricate your pen. If necessary, clean it with mild detergent on a moistened cloth.
+
+•
+
+How should I store my OZEMPIC pen?
+
+- • Store your new, unused OZEMPIC pens in the refrigerator between 36°F to 46°F (2°C to 8°C).
+
+•
+
+- • Store your pen in use for 56 days at room temperature between 59ºF to 86ºF (15ºC to 30ºC) or in a refrigerator between 36°F to 46°F (2°C to 8°C).
+
+•
+
+- • The OZEMPIC pen you are using should be disposed of (thrown away) after 56 days, even if it still has OZEMPIC left in it. Write the disposal date on your calendar.
+
+•
+
+- • Do not freeze OZEMPIC. Do not use OZEMPIC if it has been frozen.
+
+•
+
+- • Unused OZEMPIC pens may be used until the expiration date (“EXP”) printed on the label, if kept in the refrigerator.
+
+•
+
+- • When stored in the refrigerator, do not store OZEMPIC pens directly next to the cooling element.
+
+•
+
+- • Keep OZEMPIC away from heat and out of the light.
+
+•
+
+- • Keep the pen cap on when not in use.
+
+•
+
+- • Keep OZEMPIC and all medicines out of the reach of children.
+
+•
+
+For more information go to www.OZEMPIC.com
+
+Marketed by:
+
+Novo Nordisk, Inc.
+
+Plainsboro, NJ
+
+08536
+
+For information about OZEMPIC contact:
+
+Novo Nordisk Inc.
+
+800 Scudders Mill Road
+
+Plainsboro, NJ 08536
+
+1-888-693-6742
+
+OZEMPIC ® and NovoFine ® are registered trademarks of Novo Nordisk A/S.
+
+Patent Information: https://novonordisk-us.com/products/product-patents.html
+
+© 2026 Novo Nordisk
+
+This Instructions for Use has been approved by the U.S. Food and Drug Administration.
+
+Revised: June/2026
+
+## Instructions for Use – 2 mg dose, 3 mL pen
+
+INSTRUCTIONS FOR USE OZEMPIC ® [oh-ZEM-pick] (semaglutide) injection, for subcutaneous use 2 mg dose (pen delivers doses in 2 mg increments only)
+
+INSTRUCTIONS FOR USE
+
+OZEMPIC ® [oh-ZEM-pick]
+
+(semaglutide)
+
+injection, for subcutaneous use
+
+2 mg dose
+
+(pen delivers doses in 2 mg increments only)
+
+• Read these instructions carefully before using your OZEMPIC ® pen. • Do not use your pen without proper training from your healthcare provider. Make sure that you know how to give yourself an injection with the pen before you start your treatment. • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them. If you are blind or have poor eyesight and cannot read the dose counter on the pen, do not use this pen without help. Get help from a person with good eyesight who is trained to use the OZEMPIC pen. • Start by checking your pen to make sure that it contains OZEMPIC, then look at the pictures below to get to know the different parts of your pen and needle. • Your pen is a prefilled, single-patient-use, dial-a-dose pen. It contains 8 mg of semaglutide, and you can only select doses of 2 mg. Each prefilled pen contains 4 doses of 2 mg. • NovoFine ® Plus 32G 4 mm disposable needles are included with your OZEMPIC pen. • Always use a new needle for each injection. • If you need additional needles, NovoFine® Plus, NovoFine® or other compatible disposable needles with a length up to 8 mm can be used. For needle compatibility information, talk to your healthcare professional. Supplies you will need to give your OZEMPIC injection: • OZEMPIC pen 2 mg dose • a new NovoFine Plus, NovoFine, or other compatible needle • 1 alcohol swab • 1 gauze pad or cotton ball • 1 sharps disposal container for throwing away used OZEMPIC pens and needles. See “Disposing of used OZEMPIC pens and needles” at the end of these instructions.
+
+- • Read these instructions carefully before using your OZEMPIC ® pen.
+
+•
+
+- • Do not use your pen without proper training from your healthcare provider. Make sure that you know how to give yourself an injection with the pen before you start your treatment.
+
+•
+
+- • Do not share your OZEMPIC pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them.
+
+•
+
+- If you are blind or have poor eyesight and cannot read the dose counter on the pen, do not use this pen without help. Get help from a person with good eyesight who is trained to use the OZEMPIC pen.
+
+- • Start by checking your pen to make sure that it contains OZEMPIC, then look at the pictures below to get to know the different parts of your pen and needle.
+
+•
+
+- • Your pen is a prefilled, single-patient-use, dial-a-dose pen. It contains 8 mg of semaglutide, and you can only select doses of 2 mg. Each prefilled pen contains 4 doses of 2 mg.
+
+•
+
+- • NovoFine ® Plus 32G 4 mm disposable needles are included with your OZEMPIC pen.
+
+•
+
+- • Always use a new needle for each injection.
+
+•
+
+- • If you need additional needles, NovoFine® Plus, NovoFine® or other compatible disposable needles with a length up to 8 mm can be used. For needle compatibility information, talk to your healthcare professional.
+
+•
+
+Supplies you will need to give your OZEMPIC injection:
+
+- • OZEMPIC pen 2 mg dose
+
+•
+
+- • a new NovoFine Plus, NovoFine, or other compatible needle
+
+•
+
+- • 1 alcohol swab
+
+•
+
+- • 1 gauze pad or cotton ball
+
+•
+
+- • 1 sharps disposal container for throwing away used OZEMPIC pens and needles.
+
+•
+
+- See “Disposing of used OZEMPIC pens and needles” at the end of these instructions.
+
+Step 1. Prepare your pen with a new needle
+
+Step 1.
+
+Prepare your pen with a new needle
+
+• Wash your hands with soap and water. • Check the name and colored label of your pen, to make sure that it contains OZEMPIC. This is especially important if you take more than 1 type of medicine. • Pull off the pen cap.
+
+- • Wash your hands with soap and water.
+
+•
+
+- • Check the name and colored label of your pen, to make sure that it contains OZEMPIC.
+
+•
+
+- This is especially important if you take more than 1 type of medicine.
+
+- • Pull off the pen cap.
+
+•
+
+• Check that the OZEMPIC medicine in your pen is clear and colorless . Look through the pen window. If OZEMPIC looks cloudy or contains particles, do not use the pen.
+
+- • Check that the OZEMPIC medicine in your pen is clear and colorless .
+
+•
+
+- Look through the pen window. If OZEMPIC looks cloudy or contains particles, do not use the pen.
+
+• Take a new needle, and tear off the paper tab. Do not attach a new needle to your pen until you are ready to give your injection.
+
+- • Take a new needle, and tear off the paper tab.
+
+•
+
+- Do not attach a new needle to your pen until you are ready to give your injection.
+
+• Push the needle straight onto the pen. Turn until it is on tight.
+
+- • Push the needle straight onto the pen. Turn until it is on tight.
+
+•
+
+• The needle is covered by 2 caps. You must remove both caps. If you forget to remove both caps, you will not inject any medicine. • Pull off the outer needle cap. Do not throw it away.
+
+- • The needle is covered by 2 caps. You must remove both caps. If you forget to remove both caps, you will not inject any medicine.
+
+•
+
+- • Pull off the outer needle cap. Do not throw it away.
+
+•
+
+• Pull off the inner needle cap and throw it away. A drop of OZEMPIC may appear at the needle tip. This is normal, but you must still check the OZEMPIC flow if you use a new pen for the first time.
+
+- • Pull off the inner needle cap and throw it away.
+
+•
+
+- A drop of OZEMPIC may appear at the needle tip. This is normal, but you must still check the OZEMPIC flow if you use a new pen for the first time.
+
+Always use a new needle for each injection. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. Do not reuse or share your needles with other people. You may give other people a serious infection, or get a serious infection from them. Never use a bent or damaged needle.
+
+Always use a new needle for each injection. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose.
+
+Do not reuse or share your needles with other people. You may give other people a serious infection, or get a serious infection from them.
+
+Never use a bent or damaged needle.
+
+Step 2. First Time Use for Each New Pen: Check the OZEMPIC flow
+
+Step 2.
+
+First Time Use for Each New Pen: Check the OZEMPIC flow
+
+• Check the OZEMPIC flow before the first injection with each new pen only. If your OZEMPIC pen is already in use, go to Step 3 “Select your dose”. • Turn the dose selector until the dose counter shows the flow check symbol ( ).
+
+- • Check the OZEMPIC flow before the first injection with each new pen only.
+
+•
+
+- If your OZEMPIC pen is already in use, go to Step 3 “Select your dose”.
+
+- • Turn the dose selector until the dose counter shows the flow check symbol ( ).
+
+•
+
+• Hold the pen with the needle pointing up. Press and hold in the dose button until the dose counter shows 0. The 0 must line up with the dose pointer. A drop of OZEMPIC will appear at the needle tip. • If no drop appears , repeat Step 2 above as shown in Figure G and Figure H up to 6 times. If there is still no drop, change the needle and repeat Step 2 as shown in Figure G and Figure H 1 more time. Do not use the pen if a drop of OZEMPIC still does not appear. Contact Novo Nordisk at 1-888-693-6742.
+
+- • Hold the pen with the needle pointing up.
+
+•
+
+- Press and hold in the dose button until the dose counter shows 0. The 0 must line up with the dose pointer.
+
+- A drop of OZEMPIC will appear at the needle tip.
+
+- • If no drop appears , repeat Step 2 above as shown in Figure G and Figure H up to 6 times. If there is still no drop, change the needle and repeat Step 2 as shown in Figure G and Figure H 1 more time.
+
+•
+
+- Do not use the pen if a drop of OZEMPIC still does not appear.
+
+- Contact Novo Nordisk at 1-888-693-6742.
+
+Always make sure that a drop appears at the needle tip before you use a new pen for the first time. This makes sure that OZEMPIC flows. If no drop appears, you will not inject any OZEMPIC, even though the dose counter may move. This may mean that there is a blocked or damaged needle. A small drop may remain at the needle tip, but it will not be injected. Only check the OZEMPIC flow before your first injection with each new pen.
+
+Always make sure that a drop appears at the needle tip before you use a new pen for the first time. This makes sure that OZEMPIC flows.
+
+If no drop appears, you will not inject any OZEMPIC, even though the dose counter may move. This may mean that there is a blocked or damaged needle.
+
+A small drop may remain at the needle tip, but it will not be injected.
+
+Only check the OZEMPIC flow before your first injection with each new pen.
+
+Step 3. Select your dose
+
+Step 3.
+
+Select your dose
+
+• Turn the dose selector until the dose counter stops and shows your 2 mg dose. The dashed line in the dose counter will guide you to 2 mg.
+
+- • Turn the dose selector until the dose counter stops and shows your 2 mg dose.
+
+•
+
+The dashed line in the dose counter will guide you to 2 mg.
+
+Always use the dose counter and the dose pointer to see that 2 mg has been selected. You will hear a “click” every time you turn the dose selector. Do not set the dose by counting the number of clicks you hear. Only doses of 2 mg can be selected with the dose selector. 2 mg must line up exactly with the dose pointer to make sure that you get a correct dose. The dose selector changes the dose. Only the dose counter and dose pointer will show that 2 mg has been selected. You can only select 2 mg for each dose. When your pen contains less than 2 mg, the dose counter stops before 2 mg is shown. The dose selector clicks differently when turned forward or backward. Do not count the pen clicks.
+
+Always use the dose counter and the dose pointer to see that 2 mg has been selected.
+
+You will hear a “click” every time you turn the dose selector. Do not set the dose by counting the number of clicks you hear.
+
+Only doses of 2 mg can be selected with the dose selector. 2 mg must line up exactly with the dose pointer to make sure that you get a correct dose.
+
+The dose selector changes the dose. Only the dose counter and dose pointer will show that 2 mg has been selected.
+
+You can only select 2 mg for each dose. When your pen contains less than 2 mg, the dose counter stops before 2 mg is shown.
+
+The dose selector clicks differently when turned forward or backward. Do not count the pen clicks.
+
+How much OZEMPIC is left?
+
+How much OZEMPIC is left?
+
+• To see how much OZEMPIC is left in your pen, use the dose counter: Turn the dose selector until the dose counter stops. • If it shows 2, at least 2 mg is left in your pen. If the dose counter stops before 2 mg, there is not enough OZEMPIC left for a full dose of 2 mg. If there is not enough OZEMPIC left in your pen for a full dose, do not use it. Use a new OZEMPIC pen.
+
+- • To see how much OZEMPIC is left in your pen, use the dose counter:
+
+•
+
+- Turn the dose selector until the dose counter stops.
+
+- • If it shows 2, at least 2 mg is left in your pen. If the dose counter stops before 2 mg, there is not enough OZEMPIC left for a full dose of 2 mg.
+
+•
+
+- If there is not enough OZEMPIC left in your pen for a full dose, do not use it. Use a new OZEMPIC pen.
+
+Step 4. Inject your dose
+
+Step 4.
+
+Inject your dose
+
+• Choose your injection site and wipe the skin with an alcohol swab. Let the injection site dry before you inject your dose (See Figure K ).
+
+- • Choose your injection site and wipe the skin with an alcohol swab. Let the injection site dry before you inject your dose (See Figure K ).
+
+•
+
+• Insert the needle into your skin as your healthcare provider has shown you. • Make sure you can see the dose counter. Do not cover it with your fingers. This could stop the injection.
+
+- • Insert the needle into your skin as your healthcare provider has shown you.
+
+•
+
+- • Make sure you can see the dose counter. Do not cover it with your fingers. This could stop the injection.
+
+•
+
+• Press and hold down the dose button until the dose counter shows 0. The 0 must line up with the dose pointer. You may then hear or feel a click. Continue pressing the dose button while keeping the needle in your skin.
+
+- • Press and hold down the dose button until the dose counter shows 0.
+
+•
+
+- The 0 must line up with the dose pointer. You may then hear or feel a click.
+
+- Continue pressing the dose button while keeping the needle in your skin.
+
+• Count 6 seconds while keeping the dose button pressed. • If the needle is removed earlier, you may see a stream of OZEMPIC coming from the needle tip. If this happens, the full dose will not be delivered.
+
+- • Count 6 seconds while keeping the dose button pressed.
+
+•
+
+- • If the needle is removed earlier, you may see a stream of OZEMPIC coming from the needle tip. If this happens, the full dose will not be delivered.
+
+•
+
+• Remove the needle from your skin. You can then release the dose button. If blood appears at the injection site, press lightly with a gauze pad or cotton ball. Do not rub the area.
+
+- • Remove the needle from your skin. You can then release the dose button.
+
+•
+
+- If blood appears at the injection site, press lightly with a gauze pad or cotton ball. Do not rub the area.
+
+Always watch the dose counter to make sure you have injected your complete dose. Hold the dose button down until the dose counter shows 0. How to identify a blocked or damaged needle? • If 0 does not appear in the dose counter after continuously pressing the dose button, you may have used a blocked or damaged needle. • If this happens you have not received any OZEMPIC even though the dose counter has moved from the original dose that you have set. How to handle a blocked needle? Change the needle as described in Step 5, and repeat all steps starting with Step 1: “Prepare your pen with a new needle”. Never touch the dose counter when you inject. This can stop the injection. You may see a drop of OZEMPIC at the needle tip after injecting. This is normal and does not affect your dose.
+
+Always watch the dose counter to make sure you have injected your complete dose. Hold the dose button down until the dose counter shows 0.
+
+How to identify a blocked or damaged needle?
+
+- • If 0 does not appear in the dose counter after continuously pressing the dose button, you may have used a blocked or damaged needle.
+
+•
+
+- • If this happens you have not received any OZEMPIC even though the dose counter has moved from the original dose that you have set.
+
+•
+
+How to handle a blocked needle?
+
+Change the needle as described in Step 5, and repeat all steps starting with Step 1: “Prepare your pen with a new needle”.
+
+Never touch the dose counter when you inject. This can stop the injection.
+
+You may see a drop of OZEMPIC at the needle tip after injecting. This is normal and does not affect your dose.
+
+Step 5. After your injection
+
+Step 5.
+
+After your injection
+
+• Carefully remove the needle from the pen. Do not put the needle caps back on the needle to avoid needle sticks.
+
+- • Carefully remove the needle from the pen. Do not put the needle caps back on the needle to avoid needle sticks.
+
+•
+
+• Place the needle in a sharps disposal container right away to reduce the risk of needle sticks. See “Disposing of used OZEMPIC pens and needles” below for more information about how to dispose of used pens and needles the right way.
+
+- • Place the needle in a sharps disposal container right away to reduce the risk of needle sticks. See “Disposing of used OZEMPIC pens and needles” below for more information about how to dispose of used pens and needles the right way.
+
+•
+
+• Put the pen cap on your pen after each use to protect OZEMPIC from light.
+
+- • Put the pen cap on your pen after each use to protect OZEMPIC from light.
+
+•
+
+• If you do not have a sharps disposal container, follow a 1-handed needle recapping method. Carefully slip the needle into the outer needle cap. Dispose of the needle in a sharps disposal container as soon as possible.
+
+- • If you do not have a sharps disposal container, follow a 1-handed needle recapping method. Carefully slip the needle into the outer needle cap. Dispose of the needle in a sharps disposal container as soon as possible.
+
+•
+
+Never try to put the inner needle cap back on the needle. You may stick yourself with the needle. Always remove the needle from your pen. This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. If the needle is blocked, you will not inject any OZEMPIC. Always dispose of the needle after each injection.
+
+Never try to put the inner needle cap back on the needle. You may stick yourself with the needle.
+
+Always remove the needle from your pen.
+
+This will reduce the risk of contamination, infection, leakage of OZEMPIC, and blocked needles leading to the wrong dose. If the needle is blocked, you will not inject any OZEMPIC.
+
+Always dispose of the needle after each injection.
+
+Disposing of used OZEMPIC pens and needles: • Put your used OZEMPIC pen and needle in a FDA-cleared sharps disposal container right away after use. • If you do not have a FDA-cleared sharps disposal container, you may use a household container that is: o made of a heavy-duty plastic o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out o upright and stable during use o leak-resistant o properly labeled to warn of hazardous waste inside the container • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about the safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container. • Safely dispose of OZEMPIC that is out of date or no longer needed.
+
+Disposing of used OZEMPIC pens and needles:
+
+- • Put your used OZEMPIC pen and needle in a FDA-cleared sharps disposal container right away after use.
+
+•
+
+- • If you do not have a FDA-cleared sharps disposal container, you may use a household container that is: o made of a heavy-duty plastic o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out o upright and stable during use o leak-resistant o properly labeled to warn of hazardous waste inside the container
+
+•
+
+- o made of a heavy-duty plastic
+
+o
+
+- o can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out
+
+o
+
+- o upright and stable during use
+
+o
+
+- o leak-resistant
+
+o
+
+- o properly labeled to warn of hazardous waste inside the container
+
+o
+
+- • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about the safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal
+
+•
+
+- • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container.
+
+•
+
+- • Safely dispose of OZEMPIC that is out of date or no longer needed.
+
+•
+
+Important
+
+Important
+
+• Caregivers must be very careful when handling used needles to prevent accidental needle stick injuries and prevent passing (transmission) of infection. • Never use a syringe to withdraw OZEMPIC from your pen. • Always carry an extra pen and new needles with you, in case of loss or damage. • Always keep your pen and needles out of reach of others, especially children. • Always keep your pen with you. Do not leave it in a car or other place where it can get too hot or too cold.
+
+- • Caregivers must be very careful when handling used needles to prevent accidental needle stick injuries and prevent passing (transmission) of infection.
+
+•
+
+- • Never use a syringe to withdraw OZEMPIC from your pen.
+
+•
+
+- • Always carry an extra pen and new needles with you, in case of loss or damage.
+
+•
+
+- • Always keep your pen and needles out of reach of others, especially children.
+
+•
+
+- • Always keep your pen with you. Do not leave it in a car or other place where it can get too hot or too cold.
+
+•
+
+Caring for your pen
+
+Caring for your pen
+
+• Do not drop your pen or knock it against hard surfaces. If you drop it or suspect a problem, attach a new needle and check the OZEMPIC flow before you inject. • Do not try to repair your pen or pull it apart. • Do not expose your pen to dust, dirt or liquid. • Do not wash, soak, or lubricate your pen. If necessary, clean it with mild detergent on a moistened cloth. How should I store my OZEMPIC pen? • Store your new, unused OZEMPIC pens in the refrigerator between 36°F to 46°F (2°C to 8°C). • Store your pen in use for 56 days at room temperature between 59ºF to 86ºF (15ºC to 30ºC) or in a refrigerator between 36°F to 46°F (2°C to 8°C). • The OZEMPIC pen you are using should be disposed of (thrown away) after 56 days, even if it still has OZEMPIC left in it. Write the disposal date on your calendar. • Do not freeze OZEMPIC. Do not use OZEMPIC if it has been frozen. • Unused OZEMPIC pens may be used until the expiration date (“EXP”) printed on the label, if kept in the refrigerator. • When stored in the refrigerator, do not store OZEMPIC pens directly next to the cooling element. • Keep OZEMPIC away from heat and out of the light. • Keep the pen cap on when not in use. • Keep OZEMPIC and all medicines out of the reach of children.
+
+- • Do not drop your pen or knock it against hard surfaces. If you drop it or suspect a problem, attach a new needle and check the OZEMPIC flow before you inject.
+
+•
+
+- • Do not try to repair your pen or pull it apart.
+
+•
+
+- • Do not expose your pen to dust, dirt or liquid.
+
+•
+
+- • Do not wash, soak, or lubricate your pen. If necessary, clean it with mild detergent on a moistened cloth.
+
+•
+
+How should I store my OZEMPIC pen?
+
+- • Store your new, unused OZEMPIC pens in the refrigerator between 36°F to 46°F (2°C to 8°C).
+
+•
+
+- • Store your pen in use for 56 days at room temperature between 59ºF to 86ºF (15ºC to 30ºC) or in a refrigerator between 36°F to 46°F (2°C to 8°C).
+
+•
+
+- • The OZEMPIC pen you are using should be disposed of (thrown away) after 56 days, even if it still has OZEMPIC left in it. Write the disposal date on your calendar.
+
+•
+
+- • Do not freeze OZEMPIC. Do not use OZEMPIC if it has been frozen.
+
+•
+
+- • Unused OZEMPIC pens may be used until the expiration date (“EXP”) printed on the label, if kept in the refrigerator.
+
+•
+
+- • When stored in the refrigerator, do not store OZEMPIC pens directly next to the cooling element.
+
+•
+
+- • Keep OZEMPIC away from heat and out of the light.
+
+•
+
+- • Keep the pen cap on when not in use.
+
+•
+
+- • Keep OZEMPIC and all medicines out of the reach of children.
+
+•
+
+For more information go to www.OZEMPIC.com
+
+Marketed by:
+
+Novo Nordisk, Inc.
+
+Plainsboro, NJ
+
+08536
+
+For information about OZEMPIC contact:
+
+Novo Nordisk Inc.
+
+800 Scudders Mill Road
+
+Plainsboro, NJ 08536
+
+1-888-693-6742
+
+OZEMPIC ® and NovoFine ® are registered trademarks of Novo Nordisk A/S.
+
+Patent Information: https://novonordisk-us.com/products/product-patents.html
+
+© 2026 Novo Nordisk
+
+This Instructions for Use has been approved by the U.S. Food and Drug Administration.
+
+Revised: June/2026
+
+## Instructions for Use – 0.25 mg, 0.5 mg, 1 mg single-dose prefilled syringe
+
+OZEMPIC ® [oh-ZEM-pick] (semaglutide) Injection, subcutaneous only 0.25 mg, 0.5 mg, 1 mg single-dose prefilled syringe
+
+OZEMPIC ® [oh-ZEM-pick]
+
+(semaglutide)
+
+Injection, subcutaneous only
+
+0.25 mg, 0.5 mg, 1 mg
+
+single-dose prefilled syringe
+
+Before using your prefilled syringe always read these instructions carefully. This leaflet instructs how to perform an injection under the skin (subcutaneous). The prefilled syringe might be different than any other device you have used previously. Before you use your prefilled syringe, talk to your healthcare provider about how to inject your prefilled syringe correctly.
+
+Before using your prefilled syringe always read these instructions carefully.
+
+This leaflet instructs how to perform an injection under the skin (subcutaneous).
+
+The prefilled syringe might be different than any other device you have used previously.
+
+Before you use your prefilled syringe, talk to your healthcare provider about how to inject your prefilled syringe correctly.
+
+Get to Know Your Prefilled Syringe You should check the label on the carton and prefilled syringe to ensure it contains the correct medicine. Please make sure you have the correct dose prescribed by your healthcare provider.
+
+Get to Know Your Prefilled Syringe
+
+You should check the label on the carton and prefilled syringe to ensure it contains the correct medicine. Please make sure you have the correct dose prescribed by your healthcare provider.
+
+Important Information You Need to Know Before Injecting with your Prefilled Syringe • Use the prefilled syringe exactly the way your healthcare provider tells you to. • The prefilled syringe contains 1 complete dose. It is for one-time use only. • Do not use the prefilled syringe if the carton is damaged or if the tamper-evident is broken. • Do not warm the prefilled syringe using any heat sources such as hot water or a microwave. • Do not use the prefilled syringes if the expiration date on the label or carton has expired. • Do not use the prefilled syringe if it has been frozen or thawed. People who are blind or have vision problems should not use the prefilled syringe without help from a person who knows how to use the prefilled syringe.
+
+Important Information You Need to Know Before Injecting with your Prefilled Syringe
+
+- • Use the prefilled syringe exactly the way your healthcare provider tells you to. • The prefilled syringe contains 1 complete dose. It is for one-time use only. • Do not use the prefilled syringe if the carton is damaged or if the tamper-evident is broken. • Do not warm the prefilled syringe using any heat sources such as hot water or a microwave. • Do not use the prefilled syringes if the expiration date on the label or carton has expired.
+
+- • The prefilled syringe contains 1 complete dose. It is for one-time use only. • Do not use the prefilled syringe if the carton is damaged or if the tamper-evident is broken. • Do not warm the prefilled syringe using any heat sources such as hot water or a microwave. • Do not use the prefilled syringes if the expiration date on the label or carton has expired.
+
+- • Do not use the prefilled syringe if the carton is damaged or if the tamper-evident is broken.
+
+- • Do not warm the prefilled syringe using any heat sources such as hot water or a microwave.
+
+- • Do not use the prefilled syringes if the expiration date on the label or carton has expired.
+
+- • Do not use the prefilled syringe if it has been frozen or thawed.
+
+People who are blind or have vision problems should not use the prefilled syringe without help from a person who knows how to use the prefilled syringe.
+
+Gather the Following Materials Before Your Injection • 1 OZEMPIC prefilled syringe. • Alcohol wipe. • Cotton ball or gauze. • Sharps disposal container for used prefilled syringes. Not Included in Your Carton
+
+Gather the Following Materials Before Your Injection
+
+- • 1 OZEMPIC prefilled syringe.
+
+- • Alcohol wipe.
+
+- • Cotton ball or gauze.
+
+- • Sharps disposal container for used prefilled syringes.
+
+Not Included in Your Carton
+
+Frequently Asked Questions Do I inject the full volume of the prefilled syringe? Yes, the prefilled syringe is for one-time (single) use and contains one complete dose. What if the prefilled syringe is damaged? Do not use a dropped, damaged or broken prefilled syringe. Take a new prefilled syringe for your injection. What if the needle is broken? Do not use a needle that appears to be bent, dropped, damaged or broken. Take a new prefilled syringe for your injection. If you have any questions about OZEMPIC, go to OZEMPIC.com or call Novo Nordisk Inc.at 1-888-OZEMPIC.
+
+Frequently Asked Questions
+
+Do I inject the full volume of the prefilled syringe?
+
+Yes, the prefilled syringe is for one-time (single) use and contains one complete dose.
+
+What if the prefilled syringe is damaged?
+
+Do not use a dropped, damaged or broken prefilled syringe. Take a new prefilled syringe for your injection.
+
+What if the needle is broken?
+
+Do not use a needle that appears to be bent, dropped, damaged or broken. Take a new prefilled syringe for your injection.
+
+If you have any questions about OZEMPIC, go to OZEMPIC.com or call Novo Nordisk Inc.at 1-888-OZEMPIC.
+
+Prepare Your Prefilled Syringe
+
+Prepare Your Prefilled Syringe
+
+1. Take One Prefilled Syringe • Wash and dry your hands. • Open the carton. • Gently take out one prefilled syringe by holding the glass barrel. • Check the syringe label. Confirm you have the dose prescribed by your healthcare provider. Do not hold or touch the prefilled syringe by the plunger rod or needle cap. Keep the needle cap on, until you are ready to inject.
+
+- 1. Take One Prefilled Syringe
+
+- • Wash and dry your hands.
+
+- • Open the carton.
+
+- • Gently take out one prefilled syringe by holding the glass barrel.
+
+- • Check the syringe label. Confirm you have the dose prescribed by your healthcare provider.
+
+Do not hold or touch the prefilled syringe by the plunger rod or needle cap.
+
+Keep the needle cap on, until you are ready to inject.
+
+2. Inspect your Prefilled Syringe • Check the expiration date (EXP) on the label has not passed. • Check that the medicine in the prefilled syringe is clear and colorless. If the medicine looks cloudy or contains particles, do not use the prefilled syringe. It is normal to see air bubbles, they do not affect your dose. Do not try to remove bubbles. Do not use the prefilled syringe if it appears to have been used, dropped, damaged or broken.
+
+- 2. Inspect your Prefilled Syringe
+
+- • Check the expiration date (EXP) on the label has not passed.
+
+- • Check that the medicine in the prefilled syringe is clear and colorless. If the medicine looks cloudy or contains particles, do not use the prefilled syringe.
+
+It is normal to see air bubbles, they do not affect your dose. Do not try to remove bubbles.
+
+Do not use the prefilled syringe if it appears to have been used, dropped, damaged or broken.
+
+3. Choose Your Injection Site • Inject into the skin of: • Stomach area (abdomen) at least 2 inches from the belly button. • Thighs. o Back of upper arm (only with help from someone else) Clean the injection site with an alcohol wipe and allow to dry. Your healthcare provider can help you choose the injection site that is best for you. Avoid using the exact same spot as the last time between injections.
+
+- 3. Choose Your Injection Site
+
+- • Inject into the skin of: • Stomach area (abdomen) at least 2 inches from the belly button. • Thighs.
+
+•
+
+- • Stomach area (abdomen) at least 2 inches from the belly button.
+
+•
+
+- • Thighs.
+
+•
+
+- o Back of upper arm (only with help from someone else)
+
+o
+
+Clean the injection site with an alcohol wipe and allow to dry. Your healthcare provider can help you choose the injection site that is best for you.
+
+Avoid using the exact same spot as the last time between injections.
+
+Inject Your Dose
+
+Inject Your Dose
+
+4. Pull Off the Needle Cap • Pull the needle cap straight off and throw it in a sharps disposal container. You might see drops of medicine from the needle tip. This is normal and does not affect your dose. Continue with your injection right away. Do not put the needle cap back on, to avoid needle stick injuries.
+
+- 4. Pull Off the Needle Cap
+
+- • Pull the needle cap straight off and throw it in a sharps disposal container.
+
+•
+
+You might see drops of medicine from the needle tip. This is normal and does not affect your dose. Continue with your injection right away.
+
+Do not put the needle cap back on, to avoid
+
+needle stick injuries.
+
+5. Insert Your Prefilled Syringe • Pinch and hold a fold of skin at the injection site between your thumb and fingers. Hold the pinch throughout the injection. • Fully insert the needle into the pinched skin at a 45-degree angle. This is to inject under the skin (subcutaneous) and not the muscle.
+
+- 5. Insert Your Prefilled Syringe
+
+- • Pinch and hold a fold of skin at the injection site between your thumb and fingers. Hold the pinch throughout the injection. • Fully insert the needle into the pinched skin at a 45-degree angle.
+
+- • Pinch and hold a fold of skin at the injection site between your thumb and fingers. Hold the pinch throughout the injection.
+
+•
+
+- • Fully insert the needle into the pinched skin at a 45-degree angle.
+
+•
+
+This is to inject under the skin (subcutaneous) and not the muscle.
+
+6. Inject Your Dose • Keep a 45-degree angle. With a constant pressure, gently push the plunger rod all the way down, until the plunger stops. When the plunger is at the bottom and the prefilled syringe is empty, your dose is complete.
+
+- 6. Inject Your Dose
+
+- • Keep a 45-degree angle. With a constant pressure, gently push the plunger rod all the way down, until the plunger stops.
+
+- • Keep a 45-degree angle. With a constant pressure, gently push the plunger rod all the way down, until the plunger stops.
+
+•
+
+When the plunger is at the bottom and the prefilled syringe is empty, your dose is complete.
+
+7. Remove Your Syringe • Pull out the empty syringe at a 45-degree angle. Your injection is complete. If blood appears at the injection site, lightly press with a cotton ball or gauze over it, without rubbing. Do not put the needle cap back on the syringe.
+
+- 7. Remove Your Syringe
+
+- • Pull out the empty syringe at a 45-degree angle. Your injection is complete.
+
+•
+
+If blood appears at the injection site, lightly press with a cotton ball or gauze over it, without rubbing.
+
+Do not put the needle cap back on the syringe.
+
+After Injection
+
+After Injection
+
+8. Dispose of (Throw Away) Your Used Syringe • Put the used syringe in an FDA-cleared sharp disposal container right away after use. • If you do not have an FDA-cleared sharps disposal container, you may use a household container that is: ⸰ made of a heavy-duty plastic, ⸰ can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out, ⸰ upright and stable during use, ⸰ leak-resistant, and, ⸰ properly labeled to warn of hazardous waste inside the container. • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container. Safely dispose of your syringe that is out of date or no longer needed Keep your syringe and all medicines out of the reach of children.
+
+- 8. Dispose of (Throw Away) Your Used Syringe
+
+- • Put the used syringe in an FDA-cleared sharp disposal container right away after use.
+
+•
+
+- • If you do not have an FDA-cleared sharps
+
+•
+
+- disposal container, you may use a household container that is:
+
+- ⸰ made of a heavy-duty plastic,
+
+- ⸰ can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out,
+
+- ⸰ upright and stable during use,
+
+- ⸰ leak-resistant, and,
+
+- ⸰ properly labeled to warn of hazardous waste inside the container.
+
+- • When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used needles and syringes. For more information about safe sharps disposal, and for specific information about sharps disposal in the state that you live in, go to the FDA’s website at: http://www.fda.gov/safesharpsdisposal
+
+•
+
+- • Do not dispose of your used sharps disposal container in your household trash unless your community guidelines permit this. Do not recycle your used sharps disposal container.
+
+•
+
+Safely dispose of your syringe that is out of date or no longer needed
+
+Keep your syringe and all medicines out of the reach of children.
+
+How Should I Store My OZEMPIC Prefilled Syringe? • Store the unused OZEMPIC prefilled syringes in the refrigerator between 36°F to 46°F (2°C to 8°C). • If needed, the prefilled syringes can be stored out of the refrigerator between 46°F to 86°F (8°C to 30°C) for up to 28 days. Record the date your prefilled syringe was removed from the refrigerator and dispose of it, if not used within 28 days. • Do not freeze. • Always keep the prefilled syringes in the original carton to protect from light. Keep the prefilled syringe and all medicines out of the reach of children.
+
+How Should I Store My OZEMPIC Prefilled Syringe?
+
+- • Store the unused OZEMPIC prefilled syringes in the refrigerator between 36°F to 46°F (2°C to 8°C).
+
+•
+
+- • If needed, the prefilled syringes can be stored out of the refrigerator between 46°F to 86°F (8°C to 30°C) for up to 28 days. Record the date your prefilled syringe was removed from the refrigerator and dispose of it, if not used within 28 days.
+
+•
+
+- • Do not freeze.
+
+•
+
+- • Always keep the prefilled syringes in the original carton to protect from light.
+
+•
+
+Keep the prefilled syringe and all medicines out of the reach of children.
+
+Marketed by: Novo Nordisk Inc. Plainsboro, NJ 08536 For information about OZEMPIC, contact: Novo Nordisk Inc. 800 Scudders Mill Road Plainsboro, NJ 08536 1-888-OZEMPIC OZEMPIC ® is a registered trademark of Novo Nordisk A/S. Patent Information: http://www.novonordisk-us.com/products/product-patents.html ©2026 Novo Nordisk
+
+Marketed by:
+
+Novo Nordisk Inc.
+
+Plainsboro, NJ 08536
+
+For information about OZEMPIC,
+
+contact:
+
+Novo Nordisk Inc.
+
+800 Scudders Mill Road
+
+Plainsboro, NJ 08536
+
+1-888-OZEMPIC
+
+OZEMPIC ® is a registered trademark of Novo Nordisk A/S.
+
+Patent Information:
+
+http://www.novonordisk-us.com/products/product-patents.html
+
+©2026 Novo Nordisk
+
+The Instructions for Use has been approved by the U.S Food and Drug Administration. Approved: 05/2026
+
+- The Instructions for Use has been approved by the U.S Food and Drug Administration. Approved: 05/2026
+
+## PRINCIPAL DISPLAY PANEL – 0.25 mg or 0.5 mg doses, 2 mg/3mL – Pen
+
+0.25 mg
+
+0.5 mg
+
+NDC 0169-4181- 13 List 418113
+
+OZEMPIC ®
+
+(semaglutide) injection
+
+For Single Patient Use Only
+
+2 mg/3 mL (0.68 mg/mL) Prefilled pen
+
+Pen delivers doses in 0.25 mg or 0.5 mg increments only
+
+For subcutaneous use only
+
+Use OZEMPIC once weekly
+
+Contains: 1 OZEMPIC pen, 6 NovoFine ® Plus 32G needles, Product Literature.
+
+Dispense the enclosed Medication Guide to each patient.
+
+## PRINCIPAL DISPLAY PANEL – 1 mg dose, 4 mg/3 mL – Pen
+
+1 mg
+
+NDC 0169-4130- 13 List 413013
+
+OZEMPIC ®
+
+(semaglutide) injection
+
+For Single Patient Use Only
+
+4 mg/3 mL (1.34 mg/mL) Prefilled pen
+
+Pen delivers doses in 1 mg increments only
+
+For subcutaneous use only
+
+Use OZEMPIC once weekly
+
+Contains: 1 OZEMPIC pen, 4 NovoFine ® Plus 32G needles, Product Literature.
+
+Dispense the enclosed Medication Guide to each patient.
+
+## PRINCIPAL DISPLAY PANEL – 2 mg dose, 8mg/3 mL – Pen
+
+2 mg
+
+NDC 0169-4772- 12 List 477212
+
+OZEMPIC ®
+
+(semaglutide) injection
+
+For Single Patient Use Only
+
+8 mg/3 mL (2.68 mg/mL) Prefilled pen
+
+Pen delivers 4 doses of 2 mg only
+
+For subcutaneous use only
+
+Use OZEMPIC once weekly
+
+Contains: 1 OZEMPIC pen, 4 NovoFine ® Plus 32G needles, Product Literature.
+
+Dispense the enclosed Medication Guide to each patient.
+
+## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – 0.25 mg and 0/5 mg, 1.5 mL – Pen
+
+0.25 mg
+
+0.5 mg
+
+NDC 0169-4132- 12 List 413212
+
+OZEMPIC ®
+
+(semaglutide) injection
+
+For Single Patient Use Only
+
+2 mg/1.5 mL (1.34 mg/mL) Prefilled pen
+
+Pen delivers doses in 0.25 mg or 0.5 mg increments only
+
+For subcutaneous use only
+
+Use OZEMPIC once weekly
+
+Contains: 1 OZEMPIC pen, 6 NovoFine ® Plus 32G needles, Product Literature.
+
+Dispense the enclosed Medication Guide to each patient.
+
+## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – 1 mg, 1.5 mL – Pen
+
+1 mg
+
+NDC 0169-4136- 02 List 413602
+
+OZEMPIC ®
+
+(semaglutide) injection
+
+For Single Patient Use Only
+
+2 mg/1.5 mL (1.34 mg/mL) Prefilled pen
+
+Pen delivers doses in 1 mg increments only
+
+For subcutaneous use only
+
+Use OZEMPIC once weekly
+
+Contains: 2 OZEMPIC pens, 4 NovoFine ® Plus 32G needles, Product Literature.
+
+Dispense the enclosed Medication Guide to each patient.
+
+## Package/Label Display Panel – 0.25 mg/0.5 mL – Syringe
+
+- NDC XXXX-XXXX-XX List XXXXXX
+
+- Ozempic ® 0.25 mg
+
+(semaglutide) injection
+
+0.25 mg/0.5 mL
+
+Use Ozempic 1 time a week
+
+For subcutaneous use only
+
+Each prefilled syringe delivers 0.25 mg semaglutide
 
 Rx only
 
-DISPENSE WITH MEDICATION GUIDE
+Dispense the enclosed Medication Guide to each patient.
 
-Note to Pharmacist: Individual strengths of semaglutide are not substitutable on a mg-to-mg basis
+Dispense in this sealed carton.
 
-New Formulation of semaglutide
+Contains: 4 x 0.5 mL Single-dose Prefilled Syringes
 
-30 tablets
+Push to open
 
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – OZEMPIC 4 mg tablets
+## Package/Label Display Panel – 0.5 mg/0.5 mL – Syringe
 
-- NDC 0169-1704-30List 170430
+- NDC XXXX-XXXX-XX List XXXXXX
 
-- OZEMPIC ® 4 mg
+- Ozempic ® 0.5 mg
 
-(semaglutide) Tablets
+(semaglutide) injection
 
-4 mg
+0.5 mg/0.5 mL
 
-Rx only
+Use Ozempic 1 time a week
 
-DISPENSE WITH MEDICATION GUIDE
+For subcutaneous use only
 
-Note to Pharmacist: Individual strengths of semaglutide are not substitutable on a mg-to-mg basis
-
-New Formulation of semaglutide
-
-30 tablets
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – OZEMPIC 9 mg tablets
-
-- NDC 0169-1709-30List 170930
-
-- OZEMPIC ® 9 mg
-
-(semaglutide) Tablets
-
-9 mg
+Each prefilled syringe delivers 0.5 mg semaglutide
 
 Rx only
 
-DISPENSE WITH MEDICATION GUIDE
+Dispense the enclosed Medication Guide to each patient.
 
-Note to Pharmacist: Individual strengths of semaglutide are not substitutable on a mg-to-mg basis
+Dispense in this sealed carton.
 
-New Formulation of semaglutide
+Contains: 4 x 0.5 mL Single-dose Prefilled Syringes
 
-30 tablets
+Push to open
 
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – RYBELSUS 3 mg bottle
+## Package/Label Display Panel – 1 mg/0.5 mL – Syringe
 
-- NDC 0169 -4303- 30 List 430330
+- NDC XXXX-XXXX-XX List XXXXXX
 
-- RYBELSUS ® 3 mg
+- Ozempic ® 1 mg
 
-(semaglutide) Tablets
+(semaglutide) injection
 
-3 mg
+1 mg/0.5 mL
 
-Once daily
+Use Ozempic 1 time a week
 
-Oral use only
+For subcutaneous use only
 
-Rx only
-
-DISPENSE WITH MEDICATION GUIDE
-
-30 tablets
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – RYBELSUS 7 mg bottle
-
-- NDC 0169 -4307- 30 List 430730
-
-- RYBELSUS ® 7 mg
-
-(semaglutide) Tablets
-
-7 mg
-
-Once daily
-
-Oral use only
+Each prefilled syringe delivers 1 mg semaglutide
 
 Rx only
 
-DISPENSE WITH MEDICATION GUIDE
+Dispense the enclosed Medication Guide to each patient.
 
-30 tablets
+Dispense in this sealed carton.
 
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – RYBELSUS 14 mg bottle
+Contains: 4 x 0.5 mL Single-dose Prefilled Syringes
 
-- NDC 0169 -4314- 30 List 431430
-
-- RYBELSUS ® 14 mg
-
-(semaglutide) Tablets
-
-14 mg
-
-Once daily
-
-Oral use only
-
-Rx only
-
-DISPENSE WITH MEDICATION GUIDE
-
-30 tablets
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – RYBELSUS 3 mg blister
-
-- NDC 0169 -4303- 13 List 430313
-
-- RYBELSUS ® 3 mg
-
-(semaglutide) Tablets
-
-3 mg
-
-Once daily
-
-Each tablet contains 3 mg semaglutide
-
-Oral use only
-
-Rx only
-
-Dispense the Enclosed Medication Guide to Each Patient
-
-30 tablets
-
-3 blister packs. Each pack contains 10 tablets.
-
-Open Here
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – RYBELSUS 7 mg blister
-
-- NDC 0169 -4307- 13 List 430713
-
-- RYBELSUS ® 7 mg
-
-(semaglutide) Tablets
-
-7 mg
-
-Once daily
-
-Each tablet contains 7 mg semaglutide
-
-Oral use only
-
-Rx only
-
-Dispense the Enclosed Medication Guide to Each Patient
-
-30 tablets
-
-3 blister packs. Each pack contains 10 tablets.
-
-Open Here
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – RYBELSUS 14 mg blister
-
-- NDC 0169 -4314- 13 List 431413
-
-- RYBELSUS ® 14 mg
-
-(semaglutide) Tablets
-
-14 mg
-
-Once daily
-
-Each tablet contains 14 mg semaglutide
-
-Oral use only
-
-Rx only
-
-Dispense the Enclosed Medication Guide to Each Patient
-
-30 tablets
-
-3 blister packs. Each pack contains 10 tablets.
-
-Open Here
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – R2 1.5 mg bottle
-
-- NDC 0169- 4815 -30List 481530
-
-- RYBELSUS ® 1.5 mg
-
-(semaglutide) Tablets
-
-1.5 mg
-
-Rx only
-
-DISPENSE WITH MEDICATION GUIDE
-
-Note to Pharmacist: Individual strengths of Rybelsus are not substitutable on a mg-to-mg basis
-
-New Formulation (Formulation R2)
-
-30 tablets
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – R2 4 mg bottle
-
-- NDC 0169- 4804 -30List 480430
-
-- RYBELSUS ® 4 mg
-
-(semaglutide) Tablets
-
-4 mg
-
-Rx only
-
-DISPENSE WITH MEDICATION GUIDE
-
-Note to Pharmacist: Individual strengths of Rybelsus are not substitutable on a mg-to-mg basis
-
-New Formulation (Formulation R2)
-
-30 tablets
-
-## PACKAGE/LABEL PRINCIPAL DISPLAY PANEL – R2 9 mg bottle
-
-- NDC 0169- 4809 -30List 480930
-
-- RYBELSUS ® 9 mg
-
-(semaglutide) Tablets
-
-9 mg
-
-Rx only
-
-DISPENSE WITH MEDICATION GUIDE
-
-Note to Pharmacist: Individual strengths of Rybelsus are not substitutable on a mg-to-mg basis
-
-New Formulation (Formulation R2)
-
-30 tablets
+Push to open
