@@ -116,14 +116,16 @@ def test_verzenio_reference():
 def test_lly_end_to_end_matches_worked_example(monkeypatch):
     from agent.needle.quant.run import score_ticker
     monkeypatch.setattr(W, "H_MONTHS", 6.0)     # the worked example's half-life (now the sensitivity, review A11)
-    _, fs, _ = score_ticker("LLY", write=False)
-    by = {f.kind: f for f in fs}
+    _, fs, wh = score_ticker("LLY", write=False)
+    by = {f.kind: f for f in fs + wh}
     # review A1: LLY's DIO rose +14.2% YoY, below the backtest dio_rising trigger (+15%), so pi = pi_min; review R2:
     # an unfired flag does not get the anchor event size either, so the row is "not quantified" with S = 0 (v2 printed
     # 0.00168 = 1.0089 x 0.3032 x 1.0 x 0.0055; spec 10.3 printed 0.00973 with the backtest pi)
     dio = by["dio_peer_outlier"]
     assert dio.S == 0 and dio.not_quantified.startswith("not quantified") and dio.to_dict()["impact"] is None
     assert dio.pi_downgraded and dio.vector["pi"] == W.PI_MIN
+    # guard 2 (agent-chat #19): on revenue, LLY's days inventory is not a peer outlier, so the row is withheld
+    assert dio.guard == "drop" and dio in wh
     assert "capacity build, not channel stuffing" in by["dio_peer_outlier"].flags
     v = [f for f in fs if f.kind == "ira_selected" and f.product == "Verzenio"][0]
     # league value uses the KQ2 class rule (1.0 x list discount, review A15); spec formula kept alongside

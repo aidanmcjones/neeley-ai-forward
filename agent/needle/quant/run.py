@@ -3,6 +3,7 @@
   python -m agent.needle.quant.run --all            all 10 shortlist companies + out/league_v2.json and .md
   python -m agent.needle.quant.run --ticker LLY     one company (out/LLY/findings_v2.jsonl)
   python -m agent.needle.quant.run --all --detect   re-run the detectors first (agent.needle.run.detect)
+  python -m agent.needle.quant.run --all --nuggets docs/nuggets   add nugget-miner rows as candidates
 
 Inputs: out/<T>/signals_<detector>.jsonl (the existing engine's candidates), the moat (env NEEDLE_MOAT), the
 citation index (env CITATIONS_DB). Output per finding: every FIND component, citations, confidence, old S.
@@ -16,7 +17,7 @@ import time
 from agent.needle.detect import OUT, SHORTLIST
 from agent.needle.schema import Signal, read_jsonl
 
-from . import data, find, league
+from . import data, find, guards, league
 
 DETECTORS = ["forensics", "drift", "calls", "labels", "supply"]
 
@@ -40,24 +41,29 @@ def _old_league():
     return {r["ticker"]: (r["score"], i + 1, r.get("sharpest_needle")) for i, r in enumerate(rows)}
 
 
-def score_ticker(ticker, write=True):
+def score_ticker(ticker, write=True, extra_signals=None):
     co = data.company(ticker)
     old = _old_scores(ticker)
     shown, withheld, seen = [], [], set()
     ira_products = {d[1].split("/")[0].lower() for d in find.IRA_DRUGS if d[0] == ticker}
-    for det in DETECTORS:
-        for sig in read_jsonl(OUT / ticker / f"signals_{det}.jsonl", Signal):
-            if sig.kind == "trial_terminated" and not sig.meta.get("business_reason"):
-                continue
-            if sig.kind == "ira_exposed" and (sig.meta.get("product") or "").lower() in ira_products:
-                continue   # the IRA generator scores this drug with the full channel
-            key = (sig.kind, sig.detail, sig.evidence[0].source() if sig.evidence else "")
-            if key in seen:
-                continue
-            seen.add(key)
-            f = find.score_signal(sig, co)
-            f.old_S = old.get((sig.kind, sig.detail))
-            (shown if f.vector["E"] > 0 else withheld).append(f)
+    sigs = [s for det in DETECTORS for s in read_jsonl(OUT / ticker / f"signals_{det}.jsonl", Signal)]
+    sigs += [s for s in (extra_signals or []) if s.ticker == ticker]
+    for sig in sigs:
+        if sig.kind == "trial_terminated" and not sig.meta.get("business_reason"):
+            continue
+        if sig.kind == "ira_exposed" and (sig.meta.get("product") or "").lower() in ira_products:
+            continue   # the IRA generator scores this drug with the full channel
+        key = (sig.kind, sig.detail, sig.evidence[0].source() if sig.evidence else "")
+        if key in seen:
+            continue
+        seen.add(key)
+        f = find.score_signal(sig, co)
+        f.old_S = old.get((sig.kind, sig.detail))
+        dropped = False
+        for g in guards.check(sig, sigs):
+            find.apply_guard(f, g)
+            dropped = dropped or g[0] == "drop"
+        (shown if f.vector["E"] > 0 and not dropped else withheld).append(f)
     for f in find.ira_findings(ticker, co) + find.mfn_findings(ticker, co):
         (shown if f.vector["E"] > 0 else withheld).append(f)
     shown.sort(key=lambda f: -f.S)
@@ -80,15 +86,43 @@ def score_ticker(ticker, write=True):
     return co, shown, withheld
 
 
+def load_nuggets(path):
+    """Parker's nugget-miner rows (docs/nuggets/<TICKER>.jsonl: the Finding schema plus signal_family, obscurity
+    rung, case_fit, part2_hook) as candidate Signals. They go through the same scoring, guards and citation gate as
+    detector signals; a nugget whose kind maps to no impact channel is kept as "not quantified". `path` is a file or
+    a directory of *.jsonl files."""
+    from pathlib import Path
+    from agent.needle.schema import Evidence
+    p = Path(path)
+    files = sorted(p.glob("*.jsonl")) if p.is_dir() else [p]
+    out = []
+    for fp in files:
+        for line in fp.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            evs = [Evidence(doc_id=e.get("doc_id", ""), page=e.get("page"), quote=e.get("quote", ""),
+                            speaker=e.get("speaker", "")) for e in r.get("evidence") or []]
+            peer = r.get("peer") or {}
+            meta = {k: r.get(k) for k in ("signal_family", "obscurity_rung", "case_fit", "part2_hook", "topics",
+                                          "product", "id") if r.get(k) is not None}
+            meta["source"] = f"nuggets:{fp.name}"
+            out.append(Signal(ticker=str(r["ticker"]).upper(), detector="nuggets", kind=r.get("signal_kind") or "nugget",
+                              period=str(r.get("period") or ""), value=peer.get("metric_value"),
+                              peer_median=peer.get("peer_median"), peer_z=peer.get("z"),
+                              detail=r.get("finding") or r.get("sentence") or "", evidence=evs, meta=meta))
+    return out
+
+
 def _one(f, n=110):
     return (f.sentence if len(f.sentence) <= n else f.sentence[:n - 3] + "...").replace("|", "/")
 
 
-def league_table(tickers):
+def league_table(tickers, extra_signals=None):
     old = _old_league()
     rows = []
     for t in tickers:
-        co, fs, wh = score_ticker(t)
+        co, fs, wh = score_ticker(t, extra_signals=extra_signals)
         L, top, ne, blocks = league.league_score(fs)
         needle, status = league.sharpest_needle(fs)
         raw = sum(f.S for f in top)
@@ -172,7 +206,9 @@ def main():
     ap.add_argument("--ticker")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--detect", action="store_true", help="re-run the detectors and the old scorer first")
+    ap.add_argument("--nuggets", help="nugget-miner JSONL file or directory (docs/nuggets): extra candidate findings")
     a = ap.parse_args()
+    extra = load_nuggets(a.nuggets) if a.nuggets else None
     tickers = SHORTLIST if a.all or not a.ticker else [a.ticker.upper()]
     t0 = time.time()
     if a.detect:
@@ -182,13 +218,13 @@ def main():
             detect(t)
             old_score.score_ticker(t)
     if len(tickers) > 1:
-        for r in league_table(tickers):
+        for r in league_table(tickers, extra_signals=extra):
             nd = r["needle"]
             print(f"{r['rank']:2d} {r['ticker']:5s} L {r['L']:.4f}  top5 {r['top5_sum']:.4f}  N_eff {r['N_eff']:.2f}  "
                   f"old {r['old_score']} (#{r['old_rank']})  needle[{r['needle_status']}]: "
                   f"{(nd['sentence'][:70] if nd else 'none')}")
     else:
-        co, fs, wh = score_ticker(tickers[0])
+        co, fs, wh = score_ticker(tickers[0], extra_signals=extra)
         for f in fs[:10]:
             print(f"{f.S:.5f} M {f.vector['M']:.3f} O {f.vector['O']:.3f} E {f.vector['E']:.2f} pi {f.vector['pi']:.4f} "
                   f"{f.confidence:6s} {f.sentence[:90]}")

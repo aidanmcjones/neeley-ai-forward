@@ -294,25 +294,34 @@ def yoy_basis(sig):
     from agent.needle import xbrl
     spec = YOY_METRIC.get(sig.kind)
     per = str(sig.period or "")
-    if spec is None or not re.fullmatch(r"\d{4}Q[1-4]", per):
+    if spec is None or not re.fullmatch(r"\d{4}(Q[1-4])?", per):
         return None
     col, label, line = spec
-    prev = f"{int(per[:4]) - 1}Q{per[-1]}"
+    annual = bool(re.fullmatch(r"\d{4}", per))
+    prev = f"{int(per[:4]) - 1}" + ("" if annual else f"Q{per[-1]}")
     try:
         p = xbrl.panel(sig.ticker)
-        m_now, m_prev = float(p.at[per, col]), float(p.at[prev, col])
-        r_now, r_prev = float(p.at[per, "revenue"]), float(p.at[prev, "revenue"])
+        t = xbrl.annual(sig.ticker) if annual else p
+        m_now, m_prev = float(t.at[per, col]), float(t.at[prev, col])
+        r_now, r_prev = float(t.at[per, "revenue"]), float(t.at[prev, "revenue"])
     except Exception:
         return None
     cur = p.attrs.get("units", {}).get("revenue", ["USD"])[0]
-    ops = [data.xbrl_citation(sig.ticker, data._concept(p, col, per), f"CY{per}I", m_now / 1e6, f"{cur} millions"),
-           data.xbrl_citation(sig.ticker, data._concept(p, col, prev), f"CY{prev}I", m_prev / 1e6, f"{cur} millions"),
-           data.flow_citation(sig.ticker, p, "revenue", per, r_now / 1e6, f"{cur} millions"),
-           data.flow_citation(sig.ticker, p, "revenue", prev, r_prev / 1e6, f"{cur} millions")]
+    if annual:   # guard 5: an annual signal reads the annual table (FY flows, year-end stocks), never half-year data
+        ops = [data.xbrl_citation(sig.ticker, data._concept(p, col, per), f"CY{per}Q4I", m_now / 1e6, f"{cur} millions"),
+               data.xbrl_citation(sig.ticker, data._concept(p, col, prev), f"CY{prev}Q4I", m_prev / 1e6, f"{cur} millions"),
+               data.xbrl_citation(sig.ticker, data._concept(p, "revenue", per), f"CY{per}", r_now / 1e6, f"{cur} millions"),
+               data.xbrl_citation(sig.ticker, data._concept(p, "revenue", prev), f"CY{prev}", r_prev / 1e6, f"{cur} millions")]
+    else:
+        ops = [data.xbrl_citation(sig.ticker, data._concept(p, col, per), f"CY{per}I", m_now / 1e6, f"{cur} millions"),
+               data.xbrl_citation(sig.ticker, data._concept(p, col, prev), f"CY{prev}I", m_prev / 1e6, f"{cur} millions"),
+               data.flow_citation(sig.ticker, p, "revenue", per, r_now / 1e6, f"{cur} millions"),
+               data.flow_citation(sig.ticker, p, "revenue", prev, r_prev / 1e6, f"{cur} millions")]
     g_m, g_r = m_now / m_prev - 1, r_now / r_prev - 1
     gap = g_m - g_r
     derived = data.derived_citation(f"({col} CY{per}I / CY{prev}I - 1) - (revenue CY{per} / CY{prev} - 1)", gap, ops)
-    d_now, d_prev = _filing_for(sig.ticker, _q_end(per)), _filing_for(sig.ticker, _q_end(prev))
+    end = (lambda x: date(int(x), 12, 31)) if annual else _q_end
+    d_now, d_prev = _filing_for(sig.ticker, end(per)), _filing_for(sig.ticker, end(prev))
     pages = [c for c in (_value_page_cite(d_now, line, m_now / 1e6), _value_page_cite(d_prev, line, m_prev / 1e6),
                          _value_page_cite(d_now, REV_LABEL, r_now / 1e6), _value_page_cite(d_prev, REV_LABEL, r_prev / 1e6))
              if c is not None]
@@ -321,13 +330,18 @@ def yoy_basis(sig):
         peer = (f"; peer median {sig.peer_median * 100:+.1f} pts, z {sig.peer_z:+.1f} (derived from the shortlist peer "
                 "panel, not page-cited)")
     sentence = (f"{label} {m_now / 1e6:,.0f} vs {m_prev / 1e6:,.0f} a year earlier ({g_m:+.1%}, {per} vs {prev}) "
-                f"against quarterly revenue {r_now / 1e6:,.0f} vs {r_prev / 1e6:,.0f} ({g_r:+.1%}); gap "
+                f"against {'annual' if annual else 'quarterly'} revenue {r_now / 1e6:,.0f} vs {r_prev / 1e6:,.0f} "
+                f"({g_r:+.1%}); gap "
                 f"{gap * 100:+.1f} pts (derived){peer}.")
     flags = [f"YoY re-derived from XBRL on one basis (review D1): {col} {g_m:+.2%}, revenue {g_r:+.2%}, gap "
              f"{gap * 100:+.2f} pts; {len(pages)} of 4 operands also page-cited"]
+    mismatch = ""
     if sig.value is not None and abs(sig.value - gap) > 0.005:
-        flags.append(f"detector gap {sig.value * 100:+.1f} pts differs from the re-derived {gap * 100:+.1f} pts")
-    return {"sentence": sentence, "page_cites": pages, "cites": ops + [derived], "flags": flags, "gap": gap}
+        mismatch = (f"guard 5: period mismatch: the row states a gap of {sig.value * 100:+.1f} pts but the operands of "
+                    f"its own period {per} give {gap * 100:+.1f} pts")
+        flags.append(mismatch)
+    return {"sentence": sentence, "page_cites": pages, "cites": ops + [derived], "flags": flags, "gap": gap,
+            "mismatch": mismatch}
 
 
 def stage_split(cites):
@@ -455,6 +469,7 @@ class Scored:
     pi_downgraded: bool = False
     fact_key: str = ""            # one underlying fact = one key (review S1); league keeps one row per key
     not_quantified: str = ""      # reason when the row has no impact channel (review R2): impact None, S = 0
+    guard: str = ""               # guards.py action applied to the row (drop | context | no_needle)
 
     def to_dict(self):
         body = render_markdown([Claim(self.sentence, [c for c in self.citations if c.page is not None][:6])])
@@ -464,6 +479,7 @@ class Scored:
             "channel": self.channel, "direction": self.direction, "sentence": self.sentence, "sentence_md": body,
             "impact": None if self.not_quantified else self.impact.to_dict(),
             "impact_channel": self.impact.channel, "not_quantified": self.not_quantified or None,
+            "guard": self.guard or None,
             "peer": self.peer or {"note": "no peer analogue"}, "vector": self.vector, "S": self.S,
             "confidence": self.confidence, "confidence_reasons": self.confidence_reasons, "flags": self.flags,
             "needle_eligible": self.needle_eligible, "old_S": self.old_S, "fact_key": self.fact_key,
@@ -562,7 +578,7 @@ def score_signal(sig, co, panel=None):
             imp = IM.anchor(co)
             imp.flags.append("anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)")
         else:
-            ch = topic_channel(topics) if sig.detector in ("drift", "calls") else None
+            ch = topic_channel(topics) if sig.detector in ("drift", "calls", "nuggets") else None
             if ch:
                 nq_reason = (f"mapped to the {ch} channel: that channel's own row carries the dollars; this row "
                              "corroborates it and is not scored separately (one fact, one row)")
@@ -623,6 +639,8 @@ def score_signal(sig, co, panel=None):
                    detector=sig.detector)
     sc.fact_key = fact_key(sig)
     sc.citations += extra_cites
+    if yb is not None and yb["mismatch"]:
+        apply_guard(sc, ("context", yb["mismatch"]))
     sc.not_quantified = nq_reason
     if pi_downgrade:
         sc.flags.append(f"pi downgraded to pi_min: row does not satisfy the backtest flag "
@@ -630,6 +648,19 @@ def score_signal(sig, co, panel=None):
         sc.pi_downgraded = True
     if not sig.evidence:
         sc.flags.append("no page evidence from the detector: E = 0, withheld by the gate")
+    return sc
+
+
+def apply_guard(sc, guard):
+    """Apply one guards.py result to a scored row: "context"/"drop" -> not quantified, S = 0, never the needle;
+    "no_needle" -> scored but not needle-eligible."""
+    action, reason = guard
+    sc.flags.append(reason)
+    sc.needle_eligible = False
+    if action in ("context", "drop"):
+        sc.not_quantified = sc.not_quantified or reason
+        sc.S = 0.0
+    sc.guard = action
     return sc
 
 
