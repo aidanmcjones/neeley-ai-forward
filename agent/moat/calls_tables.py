@@ -280,7 +280,7 @@ def main():
     cols = ["ticker", "quarter", "call_date", "source_quality", "source_url", "has_speaker_names", "has_qa", "chars", "path",
             "format", "n_qa_turns", "supersedes"]
     out = sorted(idx.values(), key=lambda r: (r["ticker"], r["quarter"]))
-    tdir = ROOT / "tables"
+    tdir = ROOT / "data" / "moat" / "tables"
     tdir.mkdir(exist_ok=True)
     with (tdir / "transcripts_index.csv").open("w", newline="") as f:
         w = csv.DictWriter(f, cols, extrasaction="ignore")
