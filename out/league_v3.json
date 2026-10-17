@@ -10,10 +10,91 @@
     },
     "largest_share": 0.8728589245481506,
     "n_blocks": 2,
-    "n_findings": 47,
-    "n_withheld": 29,
+    "n_findings": 43,
+    "n_withheld": 33,
+    "n_gate_rejected": 4,
+    "gate_failed": [
+      {
+        "id": "8c63b397bcb1",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "12",
+            "where": "sentence@101",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "31",
+            "where": "sentence@111",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@115",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "d414a2be7b82",
+        "kind": "mdna_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "1",
+            "where": "sentence@88",
+            "reason": "a cited source shows 10 %: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "fb02d6ee44c1",
+        "kind": "call_topic_surge",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "4.0x",
+            "where": "sentence@81",
+            "reason": "a cited source shows 340B: unit differs (x vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "54027019b116",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "5",
+            "where": "sentence@14",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "3",
+            "where": "sentence@44",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "5",
+            "where": "sentence@60",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "3",
+            "where": "sentence@73",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "1",
+            "where": "sentence@89",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 3,
-    "n_not_quantified": 37,
+    "n_not_quantified": 34,
     "n_guarded": 22,
     "comparable": true,
     "company_flags": [],
@@ -136,10 +217,37 @@
     },
     "largest_share": 0.9992937701599609,
     "n_blocks": 1,
-    "n_findings": 30,
-    "n_withheld": 20,
+    "n_findings": 28,
+    "n_withheld": 22,
+    "n_gate_rejected": 2,
+    "gate_failed": [
+      {
+        "id": "545f2fa901b7",
+        "kind": "call_topic_surge",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "4.0x",
+            "where": "sentence@84",
+            "reason": "a cited source shows 80%: unit differs (x vs %)"
+          }
+        ]
+      },
+      {
+        "id": "cf9d0c82406a",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "3",
+            "where": "sentence@15",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 2,
-    "n_not_quantified": 22,
+    "n_not_quantified": 21,
     "n_guarded": 18,
     "comparable": true,
     "company_flags": [
@@ -153,7 +261,7 @@
         "family": "contractual: IRA negotiation",
         "block": "P",
         "confidence": "HIGH",
-        "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the 16 cycle 1-2 negotiated discounts; cited range 38% to 85%; no same-class MFP published).",
+        "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published).",
         "M": 2.817967301723481,
         "O": 0.05432849441962145,
         "D": 0.4,
@@ -196,7 +304,7 @@
     "needle": {
       "id": "49af018377a3",
       "S": 0.15309592082635987,
-      "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the 16 cycle 1-2 negotiated discounts; cited range 38% to 85%; no same-class MFP published).",
+      "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published).",
       "O": 0.05432849441962145,
       "D": 0.4,
       "E": 1.0,
@@ -246,10 +354,101 @@
     },
     "largest_share": 0.3514361113199759,
     "n_blocks": 2,
-    "n_findings": 36,
-    "n_withheld": 27,
+    "n_findings": 32,
+    "n_withheld": 31,
+    "n_gate_rejected": 4,
+    "gate_failed": [
+      {
+        "id": "521da920d64e",
+        "kind": "call_topic_surge",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "19",
+            "where": "sentence@14",
+            "reason": "a cited source shows 6%: unit differs (plain vs %)"
+          },
+          {
+            "value": "3.2x",
+            "where": "sentence@81",
+            "reason": "a cited source shows 2026: unit differs (x vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "7c7b1e815ae1",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "5",
+            "where": "sentence@15",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "2.5",
+            "where": "sentence@45",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@64",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "1",
+            "where": "sentence@79",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "0859c8746a30",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "7",
+            "where": "sentence@14",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@44",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@61",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "d81ba19db011",
+        "kind": "label_narrower",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "6",
+            "where": "sentence@14",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "21",
+            "where": "sentence@44",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "21",
+            "where": "sentence@61",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 6,
-    "n_not_quantified": 26,
+    "n_not_quantified": 25,
     "n_guarded": 40,
     "comparable": true,
     "company_flags": [
@@ -297,7 +496,7 @@
         "c": 0.0,
         "flags": [
           "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
-          "YoY re-derived from XBRL on one basis (review D1): receivables +23.31%, revenue +8.63%, gap +14.68 pts; 2 of 4 operands also page-cited",
+          "YoY re-derived from XBRL on one basis (review D1): receivables +23.31%, revenue +8.63%, gap +14.68 pts; 0 of 4 operands also page-cited",
           "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
           "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
@@ -322,7 +521,7 @@
         "c": 0.0,
         "flags": [
           "stage split: inventory note with a stage split not found",
-          "YoY re-derived from XBRL on one basis (review D1): inventory +24.00%, revenue +8.63%, gap +15.37 pts; 4 of 4 operands also page-cited",
+          "YoY re-derived from XBRL on one basis (review D1): inventory +24.00%, revenue +8.63%, gap +15.37 pts; 0 of 4 operands also page-cited",
           "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
           "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
@@ -433,10 +632,101 @@
     },
     "largest_share": 1.0,
     "n_blocks": 1,
-    "n_findings": 41,
-    "n_withheld": 35,
+    "n_findings": 37,
+    "n_withheld": 39,
+    "n_gate_rejected": 4,
+    "gate_failed": [
+      {
+        "id": "ef2a8ff47bc9",
+        "kind": "qa_repeated_deflection",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "2",
+            "where": "sentence@38",
+            "reason": "a cited source shows 25%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "d9e62f2a809b",
+        "kind": "call_topic_surge",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "6",
+            "where": "sentence@14",
+            "reason": "a cited source shows 60%: unit differs (plain vs %)"
+          },
+          {
+            "value": "6.0x",
+            "where": "sentence@80",
+            "reason": "a cited source shows 60%: unit differs (x vs %)"
+          }
+        ]
+      },
+      {
+        "id": "3f39dd0d23f0",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "21",
+            "where": "sentence@15",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "7",
+            "where": "sentence@46",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "14",
+            "where": "sentence@60",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "6",
+            "where": "sentence@75",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "7",
+            "where": "sentence@91",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "fc96c4e7ed6a",
+        "kind": "label_narrower",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "1",
+            "where": "sentence@14",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "3.5",
+            "where": "sentence@44",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "3",
+            "where": "sentence@61",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@77",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 1,
-    "n_not_quantified": 34,
+    "n_not_quantified": 32,
     "n_guarded": 30,
     "comparable": true,
     "company_flags": [
@@ -517,10 +807,47 @@
     },
     "largest_share": 0.6408500977831786,
     "n_blocks": 1,
-    "n_findings": 30,
-    "n_withheld": 22,
+    "n_findings": 28,
+    "n_withheld": 24,
+    "n_gate_rejected": 2,
+    "gate_failed": [
+      {
+        "id": "14bc46a1b6b7",
+        "kind": "risk_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "1",
+            "where": "sentence@127",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "6b6086c7cd08",
+        "kind": "label_narrower",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "6",
+            "where": "sentence@14",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "10",
+            "where": "sentence@44",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "10",
+            "where": "sentence@60",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 2,
-    "n_not_quantified": 24,
+    "n_not_quantified": 23,
     "n_guarded": 27,
     "comparable": true,
     "company_flags": [],
@@ -615,10 +942,57 @@
     },
     "largest_share": 0.5759781619654232,
     "n_blocks": 1,
-    "n_findings": 38,
-    "n_withheld": 19,
+    "n_findings": 36,
+    "n_withheld": 21,
+    "n_gate_rejected": 2,
+    "gate_failed": [
+      {
+        "id": "5a6a821bfd4d",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "1",
+            "where": "sentence@118",
+            "reason": "a cited source shows -5%: unit differs (plain vs %)"
+          },
+          {
+            "value": "13%",
+            "where": "sentence@121",
+            "reason": "a cited source shows -13%: sign differs"
+          }
+        ]
+      },
+      {
+        "id": "fea12cba1257",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "5",
+            "where": "sentence@13",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "1.5",
+            "where": "sentence@43",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "2",
+            "where": "sentence@61",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "1",
+            "where": "sentence@76",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 2,
-    "n_not_quantified": 31,
+    "n_not_quantified": 30,
     "n_guarded": 27,
     "comparable": true,
     "company_flags": [
@@ -723,8 +1097,38 @@
     },
     "largest_share": 0.5148416628652434,
     "n_blocks": 1,
-    "n_findings": 32,
-    "n_withheld": 19,
+    "n_findings": 31,
+    "n_withheld": 20,
+    "n_gate_rejected": 1,
+    "gate_failed": [
+      {
+        "id": "e05128d03e28",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "7",
+            "where": "sentence@13",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@43",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@58",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "2",
+            "where": "sentence@87",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 4,
     "n_not_quantified": 18,
     "n_guarded": 12,
@@ -758,7 +1162,7 @@
         "family": "contractual: IRA negotiation",
         "block": "P",
         "confidence": "HIGH",
-        "sentence": "Botox's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,143.1M; assumed base list discount 65.5% (median of the 16 cycle 1-2 negotiated discounts; cited range 38% to 85%; no same-class MFP published).",
+        "sentence": "Botox's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,143.1M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published).",
         "M": 0.206475038357315,
         "O": 0.04074637081471608,
         "D": 0.3,
@@ -863,8 +1267,33 @@
     },
     "largest_share": 0.5660855622905984,
     "n_blocks": 1,
-    "n_findings": 39,
-    "n_withheld": 23,
+    "n_findings": 38,
+    "n_withheld": 24,
+    "n_gate_rejected": 1,
+    "gate_failed": [
+      {
+        "id": "d2aae6b94153",
+        "kind": "label_narrower",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "2",
+            "where": "sentence@15",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "5",
+            "where": "sentence@45",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "5",
+            "where": "sentence@59",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 3,
     "n_not_quantified": 34,
     "n_guarded": 26,
@@ -986,10 +1415,49 @@
     },
     "largest_share": 0.9898973988083578,
     "n_blocks": 1,
-    "n_findings": 41,
-    "n_withheld": 25,
+    "n_findings": 38,
+    "n_withheld": 28,
+    "n_gate_rejected": 3,
+    "gate_failed": [
+      {
+        "id": "e9f06e6978c3",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "232",
+            "where": "sentence@95",
+            "reason": "a cited source shows 41%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "0e2dfbe2b4ab",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "27",
+            "where": "sentence@87",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "9ab26f56cac1",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "4",
+            "where": "sentence@107",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 2,
-    "n_not_quantified": 36,
+    "n_not_quantified": 33,
     "n_guarded": 22,
     "comparable": true,
     "company_flags": [
@@ -1091,8 +1559,23 @@
     },
     "largest_share": 1.0,
     "n_blocks": 1,
-    "n_findings": 38,
-    "n_withheld": 28,
+    "n_findings": 37,
+    "n_withheld": 29,
+    "n_gate_rejected": 1,
+    "gate_failed": [
+      {
+        "id": "534615ae84f3",
+        "kind": "label_broader",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "7",
+            "where": "sentence@15",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
     "n_scored": 1,
     "n_not_quantified": 32,
     "n_guarded": 22,

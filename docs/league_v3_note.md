@@ -1,6 +1,6 @@
 # League v3: what survived the review, and what to read before the pick
 
-Source: `out/league_v3.md`, `out/league_v3.json` and `out/league_v3_robustness.json`, from `python -m agent.needle.quant.run --all` on branch quant-model (FIND after the two-round adversarial review, `scratchpad/review/synthesis.md`). The score itself is computed by code with no model call. Every row, with its components, citations, guard and "not quantified" reason, is in `out/<T>/findings_v2.jsonl` (rows that failed the citation gate or a drop guard are in `rejected_v2.jsonl`).
+Source: `out/league_v3.md`, `out/league_v3.json` and `out/league_v3_robustness.json`, from `python -m agent.needle.quant.run --all` on branch quant-model (FIND after the two-round adversarial review, `scratchpad/review/synthesis.md`). The score itself is computed by code with no model call. Every row, with its components, citations, guard, "not quantified" reason and `numeric_check`, is in `out/<T>/findings_v3.jsonl` (rows that failed the per-number citation gate, had no page evidence or hit a drop guard are in `rejected_v3.jsonl` with `rejected_by`).
 
 ## The table
 
@@ -90,11 +90,32 @@ Guard 1 (favourable outliers at pi = 0) and guard 7 (label rows M = 0) were alre
 
 **Against Parker's needle-branch league (AZN 0.133, MRK 0.099, NVO 0.099, GILD 0.081, AMGN 0.069).** The two scales are not comparable, but the orderings can be compared. Both tables put AZN and MRK in the top four and GILD in the top four. They differ on AMGN and NVO. Parker's scorer has AMGN last of its five. FIND puts AMGN first, but only because of one receivables row that clears its trigger by 0.01 pts. When that row is treated as unfired, FIND's order (GILD, AZN, MRK, AMGN, BMY) is close to Parker's apart from NVO. NVO is 6th here for three reasons: its USD policy channels are not converted (no cited FX), its semaglutide IRA row restates the starter thread (z = 1), and guard 9 removed 14 table-of-contents drift rows. Parker's NVO score may rest partly on rows of that kind.
 
+## The per-number citation gate (docs/gate_wiring.md)
+
+The gate now runs on every scored row before the league: each number in the sentence (with its peer comparison) and in the impact formula must be verified by a passing citation, derived from cited operands, or a labelled assumption (`constant: <name>` for weights.py constants). L, the ranking, every robustness variant and every Sharpest Needle status are unchanged, because every row with S > 0 passes: the derived and assumption maps cover Rev_TTM, t, D, the YoY growth and gap, the forensic ratios, IRA G and list discounts (the 65.5% median derives from the two middle rows of `policy/ira_cut_check.csv`), Rev_US and the MFN sizes.
+
+Rows that failed the gate (all S = 0, context rows; written to `rejected_v3.jsonl` with `rejected_by: numeric_gate`):
+
+| Company | Failed | Kinds | Why |
+|---|---|---|---|
+| ABBV | 1 | label_broader | indication counts per rival are counted by code, not printed on the cited label page |
+| AMGN | 4 | risk_modified, mdna_modified, call_topic_surge, label_broader | "new figures" not on the cited paragraph page; topic-count ratio (4.0x) from transcript counts with no cited operand; label counts |
+| AZN | 4 | call_topic_surge, label_broader x2, label_narrower | topic-count ratio; label counts |
+| BMY | 2 | risk_intensified, label_narrower | a figure not on the cited page; label counts |
+| GILD | 2 | call_topic_surge, label_broader | topic-count ratio; label counts |
+| JNJ | 1 | label_broader | label counts |
+| LLY | 1 | label_narrower | label counts (Zepbound 2 vs Wegovy 5: the product table shows 3 Wegovy uses, review D8) |
+| MRK | 4 | qa_repeated_deflection, call_topic_surge, label_broader, label_narrower | deflection count; topic-count ratio; label counts |
+| NVO | 2 | mdna_intensified, label_broader | a figure whose sign differs from the cited page (13% vs -13%); label counts |
+| PFE | 3 | risk_modified x3 | "new figures" not on the cited paragraph page |
+
+24 rows fail in all, none scored. The dosing rows' "(N/yr)" dose counts pass as labelled unit conversions of the cited label frequency.
+
 ## Caveats a human must read before the pick
 
 1. **AMGN's lead is one row on a trigger edge.** Before pitching it, read the Q2 2026 10-Q for a timing, acquisition or Part D redesign billing cause of the receivables build. The wholesaler-language half of the channel-stuffing test is not automated. If there is a benign cause, GILD leads.
 2. **GILD's value rests on an assumption.** No HIV MFP has been published. The 65.5% discount is the median of the cycle 1-2 negotiated discounts, and the cited range is 38% to 85%. The row also sits next to GILD's starter thread (HIV durability), so a human check is needed.
-3. **The top-5 tables are thin.** Most companies have 1 to 4 scored rows, because text, call and unfired peer rows are "not quantified" (R2). The case's five-findings deliverable should draw on the not-quantified rows in findings_v2 as qualitative findings, with their reason shown.
+3. **The top-5 tables are thin.** Most companies have 1 to 4 scored rows, because text, call and unfired peer rows are "not quantified" (R2). The case's five-findings deliverable should draw on the not-quantified rows in findings_v3 as qualitative findings, with their reason shown.
 4. **MFN is a direction.** The internal placeholder M (0.65% of US revenue) is never printed and cannot be a needle. NVO and BMY have company-specific sizes, but those are already in reported numbers.
 5. **20-F filers.** AZN and NVO have imputed headline terms. NVO's USD channels are zeroed.
 6. **The consensus term.** c = 0.5 applies only where the test is defined but cannot run (type C and MFN rows). Anchor rows keep c = 0. The variant row shows the effect of giving them 0.5 as well.

@@ -537,6 +537,9 @@ def gate_document(sections, index=None):
             res = numeric_gate([(str(where), str(text), unit)], cits, der, ass, index=index)
             chk = res.numeric_check
             nums = res.numbers
+            miss = operands_missing(cits)        # a derived citation's operands must sit in the same item
+            if miss:
+                chk = dict(chk, unsupported=list(chk["unsupported"]) + miss, status="failed")
         except Exception as e:                                  # fail closed
             where = where or (f"{sec}[{i}]" if sec else f"item{i}")
             chk = dict(_empty_check("failed"), unsupported=[{"value": None, "where": str(where),

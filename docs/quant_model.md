@@ -682,7 +682,7 @@ The fuzzy threshold is 90 because markdown-conversion noise scores 93-99 and rea
 
 ### 6.4 The gate
 
-`gate(claims) -> (passed, rejected)`. A claim passes only if at least one of its citations is not `unverified`; passed claims keep only their verified citations. Claims with no citations are rejected. FIND puts rows with E = 0 in `rejected_v2.jsonl`. A `number_match` citation passes the gate but grades 0.745 in E, so it can support a MEDIUM row and can never be the Sharpest Needle (E ≥ 0.90).
+Every output path runs the per-number gate (`agent/needle/cite/gate.py`, `docs/citations.md`): each number in a finding's sentence and impact formula, in every decide.md cell and in every product cell or line must be verified by a passing citation, derived from cited or labelled operands, or a labelled assumption, and each record carries `numeric_check`. FIND writes passing rows to `findings_v3.jsonl` and failed rows, with E = 0 and drop-guard rows, to `rejected_v3.jsonl`; failed rows never reach the top 5, L or the Sharpest Needle. A `number_match` citation (machine data such as I/B/E/S, or an XBRL frame re-read) passes the gate but grades 0.745 in E, so it can support a MEDIUM row and can never be the Sharpest Needle (E ≥ 0.90).
 
 ### 6.5 Deep links by document type (`deeplink.py`)
 

@@ -169,8 +169,35 @@ def load_league():
     return old
 
 
+def load_findings(ticker):
+    """Gated FIND rows (out/<T>/findings_v3.jsonl, every row passed the numeric gate) in the shape this page renders;
+    the old engine's findings.jsonl only when no v3 file exists. Rows in rejected_v3.jsonl are never shown."""
+    v3 = read_jsonl(f"out/{ticker}/findings_v3.jsonl")
+    if not v3:
+        return read_jsonl(f"out/{ticker}/findings.jsonl")
+    out = []
+    for r in v3:
+        if (r.get("numeric_check") or {}).get("status") != "passed":
+            continue                       # fail closed: only rows the numeric gate passed
+        imp = r.get("impact") or {}
+        out.append({"finding": r.get("sentence_md") or r.get("sentence", ""), "score": r.get("S", 0),
+                    "confidence": str(r.get("confidence", "")).lower(),
+                    "verdict": "numeric gate: " + r["numeric_check"]["status"],
+                    "impact": {"formula": imp.get("formula", ""), "dollars": ((imp.get("d_rev") or {}).get("base") or 0) * 1e6},
+                    "peer": {"metric_value": (r.get("peer") or {}).get("metric_value"),
+                             "peer_median": (r.get("peer") or {}).get("peer_median"), "z": (r.get("peer") or {}).get("peer_z")},
+                    "vector": r.get("vector") or {},
+                    "evidence": [{"doc_id": c["canonical_id"], "page": c.get("page"), "quote": c.get("quote", ""),
+                                  "citation": c.get("doc_title", ""), "speaker": c.get("speaker", "")}
+                                 for c in r.get("citations", []) if c.get("page") is not None
+                                 and (c.get("verification") or {}).get("status") in ("exact", "substring", "fuzzy",
+                                                                                      "number_match")]})
+    return out
+
+
 league = load_league()
-tickers = [r["ticker"] for r in league] or sorted(p.name for p in OUT.glob("*") if (p / "findings.jsonl").exists())
+tickers = [r["ticker"] for r in league] or sorted(p.name for p in OUT.glob("*") if (p / "findings_v3.jsonl").exists()
+                                                  or (p / "findings.jsonl").exists())
 total_verified = sum(r.get("n_verified", 0) for r in league)
 total_rejected = sum(r.get("n_rejected", 0) for r in league)
 
@@ -238,7 +265,7 @@ with tab_league:
 # ----------------------------------------------------------------- tab 2
 with tab_find:
     st.subheader(f"{selected}: findings ranked by score")
-    rows = read_jsonl(f"out/{selected}/findings.jsonl")
+    rows = load_findings(selected)
     if not rows:
         note(f"No findings file for {selected}.")
     else:
