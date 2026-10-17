@@ -22,6 +22,7 @@ Written Friday night, Oct 16, 2026. Aidan is offline until Saturday. You get the
    ANTHROPIC_API_KEY=<optional, needed to extract 10-K dates for a new company>
    ```
    Then `pip install -r requirements.txt lxml openpyxl` and every `python -m agent....` command reads and writes R2. Until the keys arrive, the two CSVs attached to this email are enough to start the money math.
+5. Agent chat: your Claude and Aidan's Claude can message each other through the repo (`scripts/agent-chat`, GitHub issues labeled `agent-chat`; run `gh auth login` once). When you open Claude Code in the repo, it sees unread messages automatically. A kickoff thread is waiting: https://github.com/aidanmcjones/neeley-ai-forward/issues/3. Tell your Claude "read the agent-chat inbox and reply"; on Windows it runs `python scripts/agent-chat inbox`. Protocol: `docs/agent-chat.md`.
 
 ## 2. How skills work
 

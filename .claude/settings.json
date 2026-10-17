@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && (python3 scripts/agent-chat inbox --hook 2>/dev/null || python scripts/agent-chat inbox --hook)",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
