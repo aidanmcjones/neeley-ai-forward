@@ -165,7 +165,7 @@ def emit(name, cols, rows):
     w.writerow(cols)
     w.writerows(rows)
     write("verify_market", f"{OUTDIR}/{name}", buf.getvalue(), group="market", doc_type="table",
-          source_url="data/corpus/companies/*/transcripts + data/moat/companies/*/transcripts", upload=False)
+          source_url="data/corpus/companies/*/transcripts + data/moat/companies/*/transcripts", upload=True)
 
 
 if __name__ == "__main__":

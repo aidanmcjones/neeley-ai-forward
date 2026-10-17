@@ -195,7 +195,7 @@ def participants(text, tk):
 
 QA_RX = re.compile(r"first\s?question|open\s?(up\s?)?the\s?(call|line|lines|floor)\s?(up\s?)?(for|to)\s?(questions|q&a)|"
                    r"ready\s?(for|to\s?take)\s?(the\s?)?(q&a|questions|first)|move\s?to\s?(the\s?)?q&a|begin\s?the\s?question|"
-                   r"operator\s?instructions|question-and-answer session|take\s?your\s?questions", re.I)
+                   r"operator\s?instructions|question-and-answer session|take\s?your\s?questions|invite\s?your\s?questions|would\s?like\s?to\s?ask\s?a\s?question|(first|next)\s?question\s?(comes|is|will)", re.I)
 
 
 def qa_start(turns, text=None, strict=False):
@@ -207,6 +207,9 @@ def qa_start(turns, text=None, strict=False):
     for k, t in enumerate(turns):
         if k > 2 and QA_RX.search(t[3]) and not re.search(r"after the speaker", t[3], re.I):
             # the analyst cannot be before this turn; start at the turn itself
+            return k
+    for k, t in enumerate(turns):
+        if k > 2 and t[1].lower() == "operator" and INTRO.search(t[3]):
             return k
     return None if strict else len(turns) // 2
 

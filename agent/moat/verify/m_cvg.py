@@ -53,7 +53,7 @@ def main():
     w.writerow(cols)
     w.writerows(rows)
     write("verify_market", "verified/market/consensus_vs_guidance.csv", buf.getvalue(), group="market", doc_type="table",
-          source_url="WRDS IBES + company releases", upload=False)
+          source_url="WRDS IBES + company releases", upload=True)
     for r in rows:
         print(r[0], r[3], r[4], r[5], r[9], "guide", r[10], r[11], "gap", r[16], f"{r[17]}%", r[18])
 

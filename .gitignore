@@ -15,3 +15,6 @@ data/moat/*
 !data/moat/README.md
 !data/moat/GAPS.md
 !data/moat/manifest.csv
+
+# Bloomberg terminal exports (licensed, never commit)
+data/corpus/_inbox/bloomberg/

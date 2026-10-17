@@ -17,7 +17,7 @@ STATUS = {
     "annual": ("collected", "verified"), "quarterly": ("collected", "verified"),
     "calls": ("collected", "verified"), "product_revenue": ("collected", "verified"),
     "policy": ("collected", "verified"), "pricing": ("collected", "verifying"),
-    "consensus": ("collected", "verifying"), "attention": ("collected", "verifying"),
+    "consensus": ("collected", "verified"), "attention": ("collected", "verified"),
     "fine_print": ("collected", "verifying"), "product_evidence": ("collected", "verified"),
 }
 STAGES = [

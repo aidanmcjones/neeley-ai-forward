@@ -60,7 +60,7 @@ def main():
     w.writerow(cols)
     w.writerows(out)
     write("verify_market", "verified/market/event_returns.csv", buf.getvalue(), group="market", doc_type="table",
-          source_url="data/moat/tables/event_returns.csv + prices_daily.csv", upload=False)
+          source_url="data/moat/tables/event_returns.csv + prices_daily.csv", upload=True)
     print("events", len(ev), "groups", len(groups), "multi-doc groups", sum(1 for g in groups.values() if len(g) > 1),
           "dup rows", sum(len(g) - 1 for g in groups.values()), "recompute ok", n_ok, "bad", n_bad, bad[:5])
 
