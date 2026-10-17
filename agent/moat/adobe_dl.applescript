@@ -12,7 +12,16 @@ on run argv
 		set r1 to execute t javascript js1
 		delay 2
 		set js2 to "(function(){var els=[...document.querySelectorAll('[role=menuitem],button,a,li,div[role=option]')];var hit=els.find(e=>/^\\s*download/i.test((e.getAttribute('aria-label')||'')+(e.textContent||'').trim())||/download/i.test(e.getAttribute('data-testid')||''));if(!hit)return 'nodl';hit.click();return 'dl';})()"
-		set r2 to execute t javascript js2
+		set r2 to "nodl"
+		set j to 0
+		repeat while (r2 is "nodl") and j < 10
+			set r2 to execute t javascript js2
+			if r2 is "nodl" then
+				execute t javascript js1
+				delay 1.5
+			end if
+			set j to j + 1
+		end repeat
 		set js3 to "(function(){var b=[...document.querySelectorAll('[role=dialog] button,[role=alertdialog] button')].find(x=>/original pdf/i.test(x.getAttribute('aria-label')||x.textContent));if(!b)return 'noconfirm';b.click();return 'confirmed';})()"
 		set r3 to "noconfirm"
 		set k to 0
