@@ -38,7 +38,7 @@ are at that moment.
 Suggested: when `meta.default_ticker_source` is `pick`, `suggested` is the picked company's flow (needle,
 why_company, findings, product, priced_in, ceo_memo) followed by `ai_wrong:global`. When it is `unpicked`
 (default_ticker is a routing default only), `suggested` is company-agnostic: `needles:global`,
-`how_it_works:global`, `ai_wrong:global`, `moat:global`, `products:global`, `decides:global`. The UI switches to
+`how_it_works:global`, `ai_wrong:global`, `moat:global`, `products:global`, `limits:global`. The UI switches to
 `suggested_by_ticker[T]` when the company pill is set. The league memo is never in `suggested` or in any
 `ask_next`.
 
@@ -47,8 +47,8 @@ Kinds and formats, mapped to the case wording:
 | kind | format | per | generated_by | case element | what it says |
 |---|---|---|---|---|---|
 | why_company | chat | ticker | data | Part 1: company choice, why it beat nine | verified-finding counts, the needle with its impact and analyst attention, whether a valued move exists, a ten-company table; caveat that the pick is a human decision |
-| needle | chat | ticker | template | Part 1: Sharpest Needle | the needle by the plain rule (the biggest cited impact that analysts asked about least), impact as gated, how rarely analysts asked; status only as a muted caveat when provisional, floor relaxed or none |
-| findings | chat | ticker | data | Part 1: five findings | finding, impact math, peer comparison, confidence, source page; ranked by the company file's `findings_table` (`rank_basis` stated) when present, else the engine's order with the needle first |
+| needle | chat | ticker | template | Part 1: Sharpest Needle | the needle is `needle_id_rule` (the plain rule: the biggest cited impact that analysts asked about least; the engine's `needle_rule` text sits in a math block), impact as gated, how rarely analysts asked; the league status is a muted caveat only when the rule needle is also the league needle, and nothing is said about the league where they differ (ABBV, PFE, JNJ) |
+| findings | chat | ticker | data | Part 1: five findings | finding, impact math, peer comparison, confidence, source page; ranked by the company file's `findings_table` (`rank_basis` impact, stated) with the needle first, else the engine's order; the row's `sentence_marked` and `impact_marked` are resolved through the table's own `marker_map`, markers in `marker_unresolved` are dropped (the number stays, as it is in the gated sentence) |
 | product | chat | ticker x product | data | Part 1: product table | the five case rows vs each rival, growth limiter, tied finding, priced-in call; `uncited` cells print "needs citation", never a value |
 | priced_in | chat | ticker | data | Part 1: priced-in call | analyst-attention test, least-asked topics, guidance quote vs consensus position, our call |
 | peers | chat | ticker | data | context | ten-company table on IRA share, MFN date, tariff exemption, sites outside the US, US revenue share |
@@ -56,20 +56,22 @@ Kinds and formats, mapped to the case wording:
 | prove_wrong | memo | ticker | template or decide_v2 | Part 2: kill signals | kill signals with the cited baseline each must move from |
 | needles | chat | global | data | Part 1 across companies | one line per company: its needle sentence (marked), impact, analyst attention; ordered by gated dollar impact where the engine states one, else the engine's needle order |
 | products | chat | global | data | Part 1 across products | one line per case product: growth limiter, tied finding, priced-in call |
-| decides | chat | global | data | Part 2 across companies | every DECIDE output: chosen or least-bad move, EV, budget, payback, demo flag |
+| decides | chat | global | data | Part 2 across companies | every DECIDE output: chosen or least-bad move, EV, budget, payback, selection rule, demo flag (reached from ceo_memo ask_next) |
+| limits | chat | global | data | honest limits | `meta.honest_limits` sentences grouped into data we lack (with the proxy) and limits of the method; limits that describe the internal league are not shown |
 | league | chat | global | data | internal triage only | reading order, ranks and counts only, with a caveat; no scores |
-| ai_wrong | chat | global | data | proof | five logged cases where the AI was confidently wrong and how the verifier caught each |
+| ai_wrong | chat | global | data | proof | `proof.ai_wrong_cases` (26 rows): the count plus eight instructive cases (date, AI claim, caught by, fix), each a row cite to its evidence refs; falls back to `proof.ai_wrong` when the cases list is absent |
 | moat | chat | global | data | proof | corpus counts, the ten buckets, and why the data mattered for the default needle |
-| how_it_works | chat | global | data | method | the four pitch outputs, verify to the page, the numeric gate, sealed forecasts, ledger |
+| how_it_works | chat | global | data | method | the four pitch outputs, verify to the page, the numeric gate, sealed forecasts, ledger; cites sections of `proof.how_we_did_it_md` as row cites |
 
 `generated_by` is set honestly: `decide_v2` when `stance.decide` carries moves (DECIDE output, five numbers per
 move), `template` when the stance is the exporter's rule-drafted one, `data` for tables and lists assembled
 from data. Teal marking of model-written text is the UI's job.
 
 DECIDE handling in ceo_memo and prove_wrong: the chosen move is `decide.chosen` (or the move with status
-`chosen`); when `decide.chosen` is null and `decide.least_bad` names a move, the Recommendation headline reads
-"No candidate clears the hurdle; least-bad option: <move> (EV x)" and the kpi label "Recommended" becomes
-"Least-bad option". `decide.selection_rule`, when present, prints as one sentence under the headline. Budget is
+`chosen`); when `decide.chosen` is null and `decide.least_bad` (or `least_bad_move`) names a move (AMGN), the
+Recommendation headline reads "No candidate clears the hurdle; least-bad option: <move> (EV x)" and the kpi label
+"Recommended" becomes "Least-bad option". `decide.selection_rule` prints as one sentence under every decide
+headline. Budget is
 the move's `budget` total row; alternatives are the other moves by rank with their five numbers and
 `binding_reason`. Kill signals come from `stance.kill_signals` (action codes translated to plain words; context
 rows skipped). `decide.demo: true` puts "(pipeline demonstration)" in the header `re` and opens the memo with
@@ -107,6 +109,8 @@ robustness variants; `--check` fails on those words anywhere except the league m
   (a percent of a gated decimal counts: "taxed at 15%" for `t 0.1501`, "3% of trailing revenue" for `0.03`).
   Every raw formula and attention note lives in a `math` block; engine variable names (Rev_TTM, D, t, G, k, d,
   m_avoided, s_MFN, qa_turns, pi_min, any snake_case token) never appear in p, list, callout, kpi or table text.
+- Priced-in call: by league status when the rule needle is the league needle; otherwise from the analyst-attention
+  scorecard row for the needle's topic (never asked / minority / most of the calls), cited.
 - Findings whose `numeric_check.status` is `failed` are excluded from every memo; impacts flagged suspect are
   printed as withheld, never as dollars; `not_quantified` rows say so; product cells flagged `uncited` print
   "needs citation" and their values are not treated as gated.

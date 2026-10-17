@@ -26,7 +26,7 @@ DATA = ROOT / "ui" / "public" / "data"
 SAMPLE = DATA / "_sample"
 
 CHAT_KINDS = ("needle", "findings", "product", "peers", "priced_in", "why_company", "league", "needles", "products",
-              "decides", "ai_wrong", "moat", "how_it_works")
+              "decides", "ai_wrong", "limits", "moat", "how_it_works")
 MEMO_KINDS = ("ceo_memo", "prove_wrong")
 ROW_ORDER = ("approved_uses", "safety", "dosing", "timeline", "pricing")
 
@@ -275,12 +275,15 @@ def _cap_tail(text, limit):
     return text[:m.start(1)] + "".join(keep)
 
 
-def remark(text, f, C, t, limit=MAX_TAIL):
+def remark(text, f, C, t, limit=MAX_TAIL, mm=None, lic=None, unresolved=()):
     """Renumber a finding's marked text to this memo's cite numbers: [n] is the finding's footnote number, which
     marker_map turns into a cite_id; [derived: a, b] operands are renumbered the same way; [constant: X] and
-    [assumption] pass through; a footnote on a licensed data row prints as [licensed source]."""
-    mm = f.get("marker_map") or {}
-    lic = {int(x) for x in f.get("marker_licensed") or []}
+    [assumption] pass through; a footnote on a licensed data row prints as [licensed source]; an unresolved
+    footnote is dropped (the number stays, as it is also in the gated sentence). `mm` and `lic` default to the
+    finding's own maps; a findings_table row passes its own."""
+    mm = mm if mm is not None else (f.get("marker_map") or {})
+    lic = {int(x) for x in (lic if lic is not None else (f.get("marker_licensed") or []))}
+    unresolved = {int(x) for x in unresolved}
     index = finding_cite_index(f)
     cache = {}
 
@@ -288,6 +291,8 @@ def remark(text, f, C, t, limit=MAX_TAIL):
         if n not in cache:
             if n in lic:
                 cache[n] = "licensed"
+            elif n in unresolved:
+                cache[n] = None
             else:
                 hit = index.get(mm.get(str(n))) if mm.get(str(n)) else None
                 cache[n] = C.add(ev_cite(hit[0], f.get("id"), t, hit[1])) if hit else None
@@ -322,13 +327,15 @@ def remark(text, f, C, t, limit=MAX_TAIL):
     return _cap_tail(_dedupe_runs(MARK.sub(sub, text)), limit)
 
 
-def marked_sentence(f, C, t):
-    """The finding's sentence_marked renumbered for this memo, trailing period moved after the markers' run removed,
-    or None when the export carries no marked sentence."""
-    sm = f.get("sentence_marked")
+def marked_sentence(f, C, t, row=None, unresolved=()):
+    """The finding's sentence_marked (or the findings_table row's, resolved through the row's marker_map)
+    renumbered for this memo, or None when the export carries no marked sentence."""
+    src = row if isinstance(row, dict) and row.get("sentence_marked") else f
+    sm = src.get("sentence_marked")
     if not isinstance(sm, str) or not sm.strip():
         return None
-    s = remark(plain_sentence(sm.strip()), f, C, t)
+    s = remark(plain_sentence(sm.strip()), f, C, t, mm=src.get("marker_map") or {}, lic=src.get("marker_licensed") or [],
+               unresolved=unresolved if src is row else ())
     s = re.sub(r"\.\s*((?:\[[^\]]+\])+)\s*$", r"\1", s)
     return s.rstrip(".")
 
@@ -486,15 +493,30 @@ class Ctx:
         return sorted(fs, key=key)
 
     def needle(self, t):
+        """(finding, status). The pitch-facing needle is needle_id_rule (the plain rule); status is the league
+        status only when the rule needle is the league needle, else None (nothing is said about the league)."""
         c = self.companies[t]
-        nid = c.get("needle_id") or (self.league_by.get(t) or {}).get("needle_id")
+        lid = c.get("needle_id") or (self.league_by.get(t) or {}).get("needle_id")
+        rid = c.get("needle_id_rule") or (((c.get("findings_table") or {}).get("needle_id")) if isinstance(c.get("findings_table"), dict) else None)
+        nid = rid or lid
         f = self.finding(t, nid) if nid else None
         status = c.get("needle_status") or (self.league_by.get(t) or {}).get("needle_status") or ("strict" if f else "none")
         if f is None or nc_status(f) == "failed" or not f.get("evidence"):
             pool = self.usable(t)
             f = pool[0] if pool else None
             status = "none" if nid is None else status
+            return f, (status or "none").replace(" ", "_")
+        if rid and rid != lid:
+            return f, None
         return f, (status or "none").replace(" ", "_")
+
+    def table_rows(self, t):
+        """findings_table rows by finding id, plus the table's unresolved marker list."""
+        ft = self.companies[t].get("findings_table") or {}
+        rows = ft.get("rows") if isinstance(ft, dict) else ft
+        by = {r.get("finding_id") or r.get("id"): r for r in rows or [] if isinstance(r, dict)}
+        unres = set(int(x) for x in (ft.get("marker_unresolved") or [])) if isinstance(ft, dict) else set()
+        return by, unres
 
     def products(self, t):
         lab = self.companies[t].get("labels") or {}
@@ -531,10 +553,10 @@ def lead_cites(f, C, t, n=2):
     return ns
 
 
-def sentence(f, C, t, n=2):
+def sentence(f, C, t, n=2, row=None, unresolved=()):
     """(finding sentence, trailing cite numbers). With a sentence_marked the markers are inline, renumbered to this
     memo, and the trailing list is empty; otherwise the plain sentence plus its first n evidence cites."""
-    marked = marked_sentence(f, C, t)
+    marked = marked_sentence(f, C, t, row, unresolved)
     if marked:
         return marked, []
     return plain_sentence((f.get("finding") or "").strip().rstrip(".")), lead_cites(f, C, t, n)
@@ -548,10 +570,15 @@ def impact_cites(f, C, t, n=3):
     return ns
 
 
-def impact_math(f, C, t, label, cite):
-    """Math block for a finding's impact: plain formula as text, the engine's formula_marked (renumbered) as text_marked."""
-    fm = f.get("formula_marked") or (f.get("impact") or {}).get("formula_marked")
-    marked = remark(fm, f, C, t, limit=MAX_TAIL) if isinstance(fm, str) and fm.strip() else None
+def impact_math(f, C, t, label, cite, row=None, unresolved=()):
+    """Math block for a finding's impact: plain formula as text, the engine's formula_marked (or the findings_table
+    row's impact_marked, resolved through the row's marker_map), renumbered, as text_marked."""
+    if isinstance(row, dict) and isinstance(row.get("impact_marked"), str) and row["impact_marked"].strip():
+        marked = remark(row["impact_marked"], f, C, t, mm=row.get("marker_map") or {}, lic=row.get("marker_licensed") or [],
+                        unresolved=unresolved)
+    else:
+        fm = f.get("formula_marked") or (f.get("impact") or {}).get("formula_marked")
+        marked = remark(fm, f, C, t) if isinstance(fm, str) and fm.strip() else None
     return math_block(label, plain_formula(f), cite, marked)
 
 
@@ -769,17 +796,19 @@ def source_cell(f, C, t):
     return "; ".join(labels)
 
 
-def findings_table(fs, C, t):
+def findings_table(fs, C, t, ctx=None):
     rows, maths = [], []
+    by, unres = ctx.table_rows(t) if ctx else ({}, set())
     for i, f in enumerate(fs, 1):
-        s, ns = sentence(f, C, t)
+        row = by.get(f.get("id"))
+        s, ns = sentence(f, C, t, row=row, unresolved=unres)
         imp, formula, ins = impact_cell(f, C, t)
         peer, pns = peer_cell(f, C, t)
         rows.append([C.after(s, *ns), C.after(imp, *ins), C.after(peer, *pns),
                      f.get("confidence") or "n/a", source_cell(f, C, t)])
         if formula and ins:
             lead = match_rule(f.get("signal_kind"), LEADS) or "finding"
-            maths.append(impact_math(f, C, t, f"Impact math, row {i} ({lead[0].lower() + lead[1:]})", ins[0]))
+            maths.append(impact_math(f, C, t, f"Impact math, row {i} ({lead[0].lower() + lead[1:]})", ins[0], row, unres))
     return {"type": "table", "columns": ["Finding", "Impact", "Peer", "Confidence", "Source"], "rows": rows}, maths
 
 
@@ -876,6 +905,9 @@ ALIAS = {
     "why_company": ["why {n}", "why did you pick {n}", "why {t} over the others", "why {n} over the other nine",
                     "{n} over the other nine", "why choose {n}", "why {t}", "{n} company choice",
                     "why does {n} beat the other nine", "why {t} over the other nine"],
+    "limits": ["what are the honest limits of this analysis", "honest limits", "limits", "limitations",
+               "what are the limits", "what do you not know", "what can't you claim", "caveats", "what is missing",
+               "weaknesses of the analysis", "what data do you lack"],
     "ai_wrong": ["where was the ai wrong", "ai wrong", "where the ai was confidently wrong", "ai mistakes",
                  "what did the ai get wrong", "how did you catch ai errors", "confidently wrong", "hallucinations",
                  "verifier catches"],
@@ -923,9 +955,10 @@ def ask_next(kind, ctx, t):
         "needles": ["products:global", "decides:global", "how_it_works:global"],
         "products": ["needles:global", "decides:global", "ai_wrong:global"],
         "decides": [f"ceo_memo:{dec}" if dec else None, "needles:global", "how_it_works:global"],
-        "ai_wrong": ["how_it_works:global", "moat:global", "needles:global"],
-        "moat": ["how_it_works:global", "ai_wrong:global", "needles:global"],
-        "how_it_works": ["ai_wrong:global", "needles:global", "decides:global"],
+        "ai_wrong": ["limits:global", "how_it_works:global", "needles:global"],
+        "limits": ["ai_wrong:global", "how_it_works:global", "needles:global"],
+        "moat": ["how_it_works:global", "ai_wrong:global", "limits:global"],
+        "how_it_works": ["ai_wrong:global", "limits:global", "needles:global"],
     }
     return [x for x in table[kind] if x][:3]
 
@@ -957,7 +990,8 @@ def needle_memo(ctx, t):
         blocks = [{"type": "callout", "tone": "warn", "md": f"No verified finding with page evidence for {name}, so there is no needle to show."}]
         return record("needle", ctx, t, f"What is {name}'s Sharpest Needle?", f"No needle for {name}.", blocks, C, "data")
     lead = match_rule(f.get("signal_kind"), LEADS) or "The sharpest needle"
-    s, ns = sentence(f, C, t)
+    by0, unres0 = ctx.table_rows(t)
+    s, ns = sentence(f, C, t, row=by0.get(f.get("id")), unresolved=unres0)
     p = (f"**{lead}.** {poss(name)} Sharpest Needle is this: {C.after(s, *ns)}. We pick the needle by a plain rule: "
          f"{NEEDLE_RULE}.")
     note, ons = obscurity_cite(f, C, t)
@@ -969,8 +1003,14 @@ def needle_memo(ctx, t):
     blocks = [{"type": "p", "md": p}]
     if status in STATUS_TEXT:
         blocks.append({"type": "callout", "tone": "muted", "md": STATUS_TEXT[status]})
+    rule = c.get("needle_rule") or ((c.get("findings_table") or {}).get("needle_rule") if isinstance(c.get("findings_table"), dict) else None)
+    if rule:
+        rn = C.add(row_cite(f"row:needle_rule:{t}", f"companies/{t}.json:needle_rule" if c.get("needle_rule") else f"companies/{t}.json:findings_table.needle_rule",
+                            "needle rule as stated by the engine (out/<T>/findings_table.json)", rule, "engine rule", ticker=t))
+        blocks.append(math_block("Needle rule, as the engine states it", rule, rn))
+    by, unres = ctx.table_rows(t)
     if formula and ins:
-        blocks.append(impact_math(f, C, t, "Impact math", ins[0]))
+        blocks.append(impact_math(f, C, t, "Impact math", ins[0], by.get(f.get("id")), unres))
     if note:
         blocks.append(math_block("Analyst-attention test, as computed", note, ons[0]))
     kpi = [{"label": "Confidence", "value": f.get("confidence") or "n/a", "cite": None},
@@ -1007,8 +1047,11 @@ def ranked_findings(ctx, t, n=5):
         pool = {f["id"]: f for f in ctx.usable(t)}
         fs = [pool[i] for i in ids if i in pool]
         basis = (ft.get("rank_basis") if isinstance(ft, dict) else None) or "dollar impact"
+        if needle and needle in fs:
+            fs.remove(needle)
+            fs.insert(0, needle)
         if fs:
-            return fs[:n], f"ranked by {basis} (the engine's findings table)"
+            return fs[:n], f"ranked by {basis} (the engine's findings table), with the Sharpest Needle first"
     fs = ctx.usable(t)
     if needle and needle in fs:
         fs.remove(needle)
@@ -1025,7 +1068,7 @@ def findings_memo(ctx, t):
          f"math, its peer comparison and our confidence. The Sharpest Needle is {lead[0].lower() + lead[1:]}. Rows "
          f"without a dollar channel are marked not quantified rather than guessed, and every row links to its "
          f"filing page or label section.")
-    table, maths = findings_table(fs, C, t)
+    table, maths = findings_table(fs, C, t, ctx)
     blocks = [{"type": "p", "md": p}, table, *maths]
     quant = sum(1 for f in fs if impact_cell(f, Cites(), t)[2])
     blocks.append({"type": "callout", "tone": "muted",
@@ -1207,6 +1250,23 @@ def priced_in_cite(t, row, C):
                           q, "verified table row", ticker=t, page=page))
 
 
+def priced_call(ctx, t, C):
+    """(plain priced-in call, cites). By league status when the rule needle is the league needle; otherwise from the
+    analyst-attention scorecard row for the needle's topic."""
+    needle, status = ctx.needle(t)
+    if status in PRICED_CALL:
+        return PRICED_CALL[status], []
+    hit = scorecard_row(ctx.companies[t], needle)
+    if hit and hit.get("quarters_covered"):
+        n = priced_in_cite(t, hit, C)
+        asked, cov = hit.get("quarters_asked") or 0, hit.get("quarters_covered")
+        call = ("not priced in: analysts never asked about the needle topic in the calls we read" if asked == 0 else
+                "only partly priced in: analysts asked about the needle topic in a minority of the calls we read" if asked * 2 < cov else
+                "mostly priced in: analysts asked about the needle topic in most of the calls we read")
+        return f"{call} ({asked} of {cov} quarters)", [n]
+    return "not tested: no analyst-attention row matches the needle topic", []
+
+
 def priced_in_memo(ctx, t):
     name, c, C = ctx.name(t), ctx.companies[t], Cites()
     needle, status = ctx.needle(t)
@@ -1233,8 +1293,8 @@ def priced_in_memo(ctx, t):
         rel = cvg.get("consensus_vs_range") or "unknown"
         p += (f"Management guided: \"{cvg['guidance_quote'].strip()}\" [{n}]; Street consensus sits {rel} that range "
               f"(I/B/E/S figures are licensed, so we show the position, not the numbers). ")
-    call = PRICED_CALL.get(status, "not tested")
-    p += f"Our call: {call}."
+    call, cns = priced_call(ctx, t, C)
+    p += f"Our call: {C.after(call, *cns)}."
     blocks = [{"type": "p", "md": p.strip()}, *maths]
     if rows:
         trs = []
@@ -1283,7 +1343,70 @@ AI_PICKS = [  # (stream, table-or-key substring) in display order; first five th
 ]
 
 
+AI_CASE_PICKS = [1, 3, 4, 7, 11, 17, 22, 26]  # case numbers shown (backtest, gate, needle reads, transcripts, red team, challenger, verifier, data layer)
+
+
+def ai_cases_memo(ctx):
+    C = Cites()
+    cases = [c for c in ctx.proof.get("ai_wrong_cases") or [] if isinstance(c, dict)]
+    total = len(cases)
+    ct = C.add(row_cite("row:proof:ai_wrong_cases", "proof.json:ai_wrong_cases",
+                        "docs/ai_in_the_build.md, the logged cases where the AI was confidently wrong",
+                        f"{total} cases; dates {cases[0].get('date')} to {cases[-1].get('date')}" if cases else "0 cases",
+                        "counted at export"))
+    picks = [c for c in cases if c.get("n") in AI_CASE_PICKS] or cases[:8]
+    trs = []
+    for c in picks[:8]:
+        refs = c.get("evidence_refs") or ([c["evidence"]] if c.get("evidence") else [])
+        n = C.add(row_cite(f"row:proof:ai_case:{c.get('n')}", f"proof.json:ai_wrong_cases[n={c.get('n')}]",
+                           ("evidence: " + ", ".join(refs)) if refs else "docs/ai_in_the_build.md (no file reference logged)",
+                           f"{c.get('date')}: AI claimed {c.get('ai_claimed')} | caught by {c.get('caught_by')} | fix: {c.get('fix')}",
+                           "logged case", url=None))
+        trs.append([f"{c.get('date')}", f"{shorten(c.get('ai_claimed') or '', 170)} [{n}]",
+                    f"{shorten(c.get('caught_by') or '', 90)} [{n}]", f"{shorten(c.get('fix') or '', 190)} [{n}]"])
+    kinds = Counter((c.get("caught_by") or "").split(" (")[0].split(",")[0].strip() for c in cases)
+    p = (f"Yes, {total} times that we logged [{ct}]. Each case records what the model claimed, who or what caught it "
+         f"and the fix; none was caught by asking the model again. Here are {len(trs)} of the {total} [{ct}], from "
+         f"the first backtest to the data layer.")
+    blocks = [{"type": "p", "md": p},
+              {"type": "table", "columns": ["Date", "What the AI claimed", "Caught by", "Fix"], "rows": trs},
+              {"type": "callout", "tone": "ok",
+               "md": "Every case cites its evidence file or commit; the full log is docs/ai_in_the_build.md. Only "
+                     "verified rows are citable anywhere in this app."}]
+    return record("ai_wrong", ctx, None, "Where was the AI confidently wrong?",
+                  f"{total} logged cases where the AI was confidently wrong, with how each was caught and fixed.",
+                  blocks, C, "data")
+
+
+def limits_memo(ctx):
+    C = Cites()
+    lims = [x for x in ctx.meta.get("honest_limits") or [] if isinstance(x, dict) and x.get("sentence")
+            and not PITCH_FORBIDDEN.search(f"{x.get('sentence')} {x.get('proxy')}")
+            and not var_tokens(f"{x.get('sentence')} {x.get('proxy')}")]  # limits about the internal league are not pitched
+    data, method = [], []
+    for x in lims:
+        n = C.add(row_cite(f"row:meta:limit:{norm_alias(x.get('limit') or '')[:40]}", f"meta.json:honest_limits[limit={x.get('limit')}]",
+                           f"{x.get('source') or 'docs/honest_limits.md'}: {x.get('limit')}",
+                           f"{x.get('sentence')} Proxy: {x.get('proxy')}", "stated limit"))
+        has_proxy = x.get("proxy") not in (None, "", "None")
+        (data if has_proxy else method).append((x, n))
+    blocks = [{"type": "p", "md": ("These are the limits we state in the pitch, grouped into data we do not have (with the "
+                                    "proxy we use instead) and limits of the method itself. Every sentence is the one in "
+                                    "docs/honest_limits.md.")}]
+    if data:
+        blocks.append({"type": "h", "text": "Data we do not have, and the proxy we use"})
+        blocks.append({"type": "table", "columns": ["Limit", "What we do not claim", "Proxy"],
+                       "rows": [[x.get("limit"), f"{x.get('sentence')} [{n}]", f"{shorten(x.get('proxy'), 200)} [{n}]"] for x, n in data]})
+    if method:
+        blocks.append({"type": "h", "text": "Limits of the method"})
+        blocks.append({"type": "list", "items": [f"**{x.get('limit')}**: {x.get('sentence')} [{n}]" for x, n in method]})
+    return record("limits", ctx, None, "What are the honest limits of this analysis?",
+                  f"{len(lims)} stated limits: data we lack and the proxy we use, and limits of the method.", blocks, C, "data")
+
+
 def ai_wrong_memo(ctx):
+    if ctx.proof.get("ai_wrong_cases"):
+        return ai_cases_memo(ctx)
     C = Cites()
     rows = ctx.proof.get("ai_wrong") or []
     rows = [r for r in rows if r.get("what_the_source_says")]
@@ -1378,7 +1501,8 @@ def needle_line(ctx, t, C):
     f, status = ctx.needle(t)
     if not f:
         return None, None
-    s, ns = sentence(f, C, t)
+    by, unres = ctx.table_rows(t)
+    s, ns = sentence(f, C, t, row=by.get(f.get("id")), unresolved=unres)
     itxt, _, ins = impact_cell(f, C, t)
     note, ons = obscurity_cite(f, C, t)
     line = f"**{ctx.name(t)}**: {C.after(s, *ns)}. Impact: {C.after(itxt, *ins)}."
@@ -1548,9 +1672,25 @@ def why_company_memo(ctx, t):
                   blocks, C, "data")
 
 
+def howto_cite(ctx, C, needle_word):
+    """Row cite to the section of proof.how_we_did_it_md whose heading contains needle_word, else None."""
+    md = ctx.proof.get("how_we_did_it_md")
+    if not isinstance(md, str):
+        return None
+    parts = re.split(r"(?m)^(?=## )", md)
+    sec = next((x for x in parts if x.startswith("## ") and needle_word.lower() in x.splitlines()[0].lower()), None)
+    if not sec:
+        return None
+    head = sec.splitlines()[0][3:].strip()
+    body = " ".join(l.strip() for l in sec.splitlines()[1:] if l.strip() and not l.startswith("|"))[:240]
+    return C.add(row_cite(f"row:proof:how:{norm_alias(head)[:30]}", "proof.json:how_we_did_it_md",
+                          f"docs/how_we_did_it_quant.md, section {head}", f"{head}: {body}", "team report section"))
+
+
 def how_it_works_memo(ctx):
     C, m, pr = Cites(), ctx.meta, ctx.proof
     tot, led = m.get("totals") or {}, m.get("ledger") or {}
+    wf, wrong = howto_cite(ctx, C, "Workflow"), howto_cite(ctx, C, "wrong")
     s = ["**Four outputs.** First, a findings table: every verified finding with its source page, impact math, "
          "peer comparison and confidence, ranked by dollar impact. Second, the Sharpest Needle, by a plain rule: "
          f"{NEEDLE_RULE}. Third, the product fine-print table: approved uses, safety, dosing, exclusivity and pricing "
@@ -1561,9 +1701,10 @@ def how_it_works_memo(ctx):
          "found there or derived from figures that are")
     if tot.get("rejected"):
         v += f"; the rest go to a rejected log ({tot['rejected']} rows so far [{meta_cite('totals.rejected', ctx, C)}])"
-    s.append(v + ".")
+    s.append(v + (f" [{wf}]." if wf else "."))
     s.append("**Numeric gate.** Every number printed here carries a marker to its page, its derivation or its stated "
-             "assumption; rows that fail the gate are excluded, oversized impacts withheld, licensed data never printed.")
+             "assumption; rows that fail the gate are excluded, oversized impacts withheld, licensed data never printed"
+             + (f" [{wf}]." if wf else "."))
     sealed = (pr.get("sealed") or {})
     preds = ((sealed.get("file") or {}).get("predictions")) or []
     if preds:
@@ -1586,7 +1727,8 @@ def how_it_works_memo(ctx):
         s.append(f"**Ledger.** Every run appends to a hash-chained ledger ({led['n']} records, "
                  f"{'intact' if led.get('ok') else 'broken'} at export [{meta_cite('ledger.n', ctx, C)}]).")
     s.append("**Honesty.** The CEO memo is drafted by rules from verified findings and the DECIDE numbers, not by a "
-             "model, and says so.")
+             "model, and says so; the cases where the AI was confidently wrong are logged with their fixes"
+             + (f" [{wrong}]." if wrong else "."))
     blocks = [{"type": "p", "md": " ".join(s)}]
     return record("how_it_works", ctx, None, "How does NEEDLE work?",
                   "Four outputs: findings table, Sharpest Needle, product fine print, DECIDE; verified to the page, "
@@ -1790,7 +1932,7 @@ def ceo_memo(ctx, t):
         blocks.append({"type": "p", "md": why})
         if note:
             blocks.append(math_block("Analyst-attention test, as computed", note, ons[0]))
-    table, maths = findings_table(fs, C, t)
+    table, maths = findings_table(fs, C, t, ctx)
     blocks += [table, *maths]
     # Alternatives
     blocks.append({"type": "h", "text": "Alternatives rejected"})
@@ -1828,8 +1970,8 @@ def ceo_memo(ctx, t):
     blocks.append({"type": "p", "md": deciders_sentence(st)})
     # Priced in
     blocks.append({"type": "h", "text": "Priced in or not"})
-    pi = PRICED_CALL.get(status, "not tested")
-    pp = pi[0].upper() + pi[1:] + "."
+    pi, pns = priced_call(ctx, t, C)
+    pp = C.after(pi[0].upper() + pi[1:], *pns) + "."
     hit = scorecard_row(c, needle)
     if hit:
         n = priced_in_cite(t, hit, C)
@@ -1865,10 +2007,12 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
         if not rule or rule in seen:
             continue
         seen.add(rule)
-        s, ns = sentence(f, C, t)
         lead = match_rule(f.get("signal_kind"), LEADS) or "the finding"
-        items.append(f"{rule} Baseline: {lead[0].lower() + lead[1:]} {C.mark(*lead_cites(f, C, t))}." if brief
-                     else f"{rule} Baseline today: {C.after(s, *ns)}.")
+        if brief:
+            items.append(f"{rule} Baseline: {lead[0].lower() + lead[1:]} {C.mark(*lead_cites(f, C, t))}.")
+        else:
+            s, ns = sentence(f, C, t)
+            items.append(f"{rule} Baseline today: {C.after(s, *ns)}.")
         if len(items) == 3:
             break
     sf = ctx.companies[t].get("sealed_forecast") or {}
@@ -1953,8 +2097,10 @@ def build(ctx, kinds=None):
         memos.append(products_memo(ctx))
     if ok("decides") and len(ctx.tickers) > 1:
         memos.append(decides_memo(ctx))
-    if ok("ai_wrong") and any(r.get("what_the_source_says") for r in ctx.proof.get("ai_wrong") or []):
+    if ok("ai_wrong") and (ctx.proof.get("ai_wrong_cases") or any(r.get("what_the_source_says") for r in ctx.proof.get("ai_wrong") or [])):
         memos.append(ai_wrong_memo(ctx))
+    if ok("limits") and ctx.meta.get("honest_limits"):
+        memos.append(limits_memo(ctx))
     if ok("moat") and (ctx.meta.get("corpus") or ctx.meta.get("moat")):
         memos.append(moat_memo(ctx))
     if ok("how_it_works") and ctx.meta.get("totals"):
@@ -1968,7 +2114,7 @@ def build(ctx, kinds=None):
         suggested = [x for x in ctx.flow(d) if x and not x.startswith("prove_wrong:")] + ["ai_wrong:global"]
     else:  # no pick made: company-agnostic entry points only
         suggested = ["needles:global", "how_it_works:global", "ai_wrong:global", "moat:global", "products:global",
-                     "decides:global"]
+                     "limits:global"]
     suggested = [x for x in suggested if x in ids][:7]
     by_ticker = {t: [x for x in ctx.flow(t) if x in ids] for t in ctx.tickers}
     return {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "mode": "cached",
