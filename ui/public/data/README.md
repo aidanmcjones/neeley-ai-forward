@@ -10,21 +10,21 @@ PYTHONPATH=. python -m agent.ui_export
 
 | File | Size | Contents |
 |---|---|---|
-| meta.json | 40 KB | totals (348 findings, 348 verified, 271 rejected), ledger (110 records, ok=True), corpus (836 docs), moat coverage + 70 tables, case sets, verifier rules, 11 limits |
+| meta.json | 40 KB | totals (348 findings, 348 verified, 271 rejected), ledger (110 records, ok=True), corpus (836 docs), moat coverage + 72 tables, case sets, verifier rules, 11 limits |
 | league.json | 12 KB | 10 companies ranked by score |
-| proof.json | 309 KB | backtest (hit rates, gate-2 text, examples), calibration, J&J blind test, sealed forecasts with the canonical string and hashes, 486 ai_wrong rows |
-| companies/MRK.json | 1.13 MB | 37 findings (37 verified), 39 rejected, 55 evidence items (55 quotes located on the page), stance, questions, labels, price series |
+| proof.json | 318 KB | backtest (hit rates, gate-2 text, examples), calibration, J&J blind test, sealed forecasts with the canonical string and hashes, 499 ai_wrong rows |
+| companies/MRK.json | 1.14 MB | 37 findings (37 verified), 39 rejected, 55 evidence items (55 quotes located on the page), stance, questions, labels, price series |
 | companies/BMY.json | 1.39 MB | 28 findings (28 verified), 24 rejected, 47 evidence items (47 quotes located on the page), stance, questions, labels, price series |
-| companies/PFE.json | 1.07 MB | 38 findings (38 verified), 28 rejected, 58 evidence items (58 quotes located on the page), stance, questions, labels, price series |
+| companies/PFE.json | 1.08 MB | 38 findings (38 verified), 28 rejected, 58 evidence items (58 quotes located on the page), stance, questions, labels, price series |
 | companies/LLY.json | 1.93 MB | 38 findings (38 verified), 24 rejected, 52 evidence items (52 quotes located on the page), stance, questions, labels, price series |
 | companies/NVO.json | 0.80 MB | 36 findings (36 verified), 21 rejected, 44 evidence items (43 quotes located on the page), stance, questions, labels, price series |
-| companies/ABBV.json | 1.48 MB | 31 findings (31 verified), 20 rejected, 51 evidence items (51 quotes located on the page), stance, questions, labels, price series |
-| companies/JNJ.json | 1.73 MB | 37 findings (37 verified), 29 rejected, 61 evidence items (61 quotes located on the page), stance, questions, labels, price series |
-| companies/AZN.json | 0.79 MB | 32 findings (32 verified), 31 rejected, 39 evidence items (39 quotes located on the page), stance, questions, labels, price series |
+| companies/ABBV.json | 1.49 MB | 31 findings (31 verified), 20 rejected, 51 evidence items (51 quotes located on the page), stance, questions, labels, price series |
+| companies/JNJ.json | 1.74 MB | 37 findings (37 verified), 29 rejected, 61 evidence items (61 quotes located on the page), stance, questions, labels, price series |
+| companies/AZN.json | 0.80 MB | 32 findings (32 verified), 31 rejected, 39 evidence items (39 quotes located on the page), stance, questions, labels, price series |
 | companies/AMGN.json | 1.99 MB | 43 findings (43 verified), 33 rejected, 64 evidence items (64 quotes located on the page), stance, questions, labels, price series |
-| companies/GILD.json | 0.83 MB | 28 findings (28 verified), 22 rejected, 39 evidence items (39 quotes located on the page), stance, questions, labels, price series |
+| companies/GILD.json | 0.84 MB | 28 findings (28 verified), 22 rejected, 39 evidence items (39 quotes located on the page), stance, questions, labels, price series |
 
-Total: 13.52 MB.
+Total: 13.55 MB.
 
 Notes: `stance.generated_by` is `template` (no ANTHROPIC_API_KEY at export). Excerpts are about 900 characters either side of the quote (600 if a company file would exceed 4 MB). Onboarded tickers without findings are listed in meta.onboarding_pending and get no company file.
 

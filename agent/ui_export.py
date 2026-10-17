@@ -717,6 +717,58 @@ def compact_derived(dmap):
             for k, e in (dmap or {}).items()}
 
 
+def text_states(text, amount, money=True, forms=None):
+    """Does text print `amount` (or one of `forms`)? money=True needs a currency sign or scale word on the token and
+    compares absolute values within the printed precision or 0.5%, whichever is larger."""
+    if amount is None or not text:
+        return False
+    from agent.needle.cite.numbers import tokenize, tolerance
+    targets = [abs(x) for x in (forms or [amount]) if x is not None]
+    for t in tokenize(text):
+        if t.kind != "number" or (money and not (t.currency or t.scale)):
+            continue
+        v = abs(t.value())
+        for a in targets:
+            if abs(v - a) <= max(tolerance(t, t.scale or 1.0), 0.005 * a):
+                return True
+    return False
+
+
+def gate_figures(row, raw):
+    """Export impact dollars and the peer metric only when gated text states them (review: no ungated numbers).
+    Gated impact text (engine field impact.text / impact_text) wins; until the engine writes it, the finding sentence
+    is the only gated text. Otherwise dollars, bear/base/bull and the raw d_* paths are nulled, impact.direction keeps
+    the sign and impact.gated is false. peer.metric_value is nulled when the sentence does not print it."""
+    imp = row["impact"]
+    rimp = raw.get("impact") or {}
+    gtext = rimp.get("text") or raw.get("impact_text")
+    if gtext:
+        imp["text"] = plain(gtext)
+    src = gtext or raw.get("sentence") or ""
+    amount = imp.get("dollars")
+    stated = bool(amount) and text_states(src, amount)
+    base = imp.get("base")
+    imp["direction"] = None if not base else ("negative" if base < 0 else "positive")
+    imp["gated_by"] = "impact.text" if gtext else "sentence"
+    if amount and not stated:
+        imp["ungated_dropped"] = True
+        for k in ("dollars", "base", "bear", "bull", "eps"):
+            imp[k] = None
+        for k in ("d_rev", "d_oi", "d_eps"):
+            imp[k] = None
+    imp["gated"] = bool(stated)
+    pr = row["peer"]
+    mv = pr.get("metric_value")
+    if mv is not None:
+        forms = [mv, mv * 100]
+        if not text_states(raw.get("sentence") or "", mv, money=False, forms=forms):
+            pr["metric_value"] = None
+            pr["metric_value_gated"] = False
+        else:
+            pr["metric_value_gated"] = True
+    return row
+
+
 def build_findings_v2(raw, side, ticker, lg, v1):
     """v2 rows -> the same finding shape the v1 path exports, plus v2 keys."""
     top = max([f.get("S") or 0 for f in raw] or [0])
@@ -801,6 +853,7 @@ def build_findings_v2(raw, side, ticker, lg, v1):
             "external_sources": [],
             **gexp,
         })
+        gate_figures(out[-1], f)
     out.sort(key=lambda x: -(x["score"] or 0))
     return out
 
