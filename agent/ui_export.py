@@ -531,7 +531,11 @@ PAGE_PASS = {"exact", "substring", "fuzzy", "number_match"}   # statuses that ma
 
 
 def derived_operands(c):
-    """Operand cite_ids of a derived citation, parsed from its verification detail ('... (c_0103942818), ...')."""
+    """Operand cite_ids of a derived citation: the structured `operands` list when the engine writes it, else parsed
+    from the verification detail ('... (c_0103942818), ...'). Either way the caller checks them against the record."""
+    ops = c.get("operands")
+    if isinstance(ops, list) and ops:
+        return [o if isinstance(o, str) else (o or {}).get("cite_id") for o in ops]
     text = (c.get("verification") or {}).get("detail") or c.get("confidence_note") or ""
     return re.findall(r"\((c_[0-9a-f]{6,})\)", text)
 NC_KEYS = ("checked", "total", "verified", "derived", "assumed")
