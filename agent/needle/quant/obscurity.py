@@ -1,6 +1,9 @@
 """Obscurity O: probability the finding is not priced in (docs/quant_model.md section 4.4).
 
-O_f = (1 - z_f)(1 - h_f)(1 - a_f)(1 - c_f)(1 - s_f) . 2^(-age_f / H)
+O_f = D_f . 2^(-age_f / H),   D_f = (1 - z_f)(1 - h_f)(1 - a_f)(1 - c_f)(1 - s_f)
+
+D is the discussion term (has the market discussed it); the decay term is how long it has been public. The Sharpest
+Needle floor applies to D only; decay stays inside S (review R1). Age runs from the first public date of the fact.
 
 z  starter thread (case appendix): 1 if the finding restates it, else 0
 h  0.9 if a topic pattern of the finding matches page 1 of the latest earnings release, else 0
@@ -9,7 +12,7 @@ a  share of the last up-to-10 calls in which analysts asked about the topic: pri
 c  consensus embedding: clip(dcons_dir / |dEPS|, 0, 1) over the I/B/E/S FY mean around the first public date;
    0 and flagged "untestable" when that fiscal year's consensus first appears after the disclosure
 s  short sellers: 0 with a flag on every row (no FINRA data in the moat)
-H  6 months
+H  3 months base, 6 months as the reported sensitivity (review A11)
 Each factor is the probability one channel has not priced the fact; channels are assumed independent (D8).
 """
 
@@ -141,18 +144,24 @@ def consensus_embedding(ticker, fiscal_year, disclosed, d_eps, adverse=True):
     return max(0.0, min(1.0, dirn / abs(d_eps))), flags
 
 
-def decay(age_months, H=W.H_MONTHS):
-    """2^(-age / H)."""
+def decay(age_months, H=None):
+    """2^(-age / H). H defaults to weights.H_MONTHS read at call time (so a sensitivity run can change it)."""
+    H = W.H_MONTHS if H is None else H
     return 2 ** (-max(age_months, 0.0) / H)
+
+
+def discussion(z, h, a, c, s):
+    """D_f = (1 - z)(1 - h)(1 - a)(1 - c)(1 - s): the non-decay part of O, where the Needle floor applies (R1)."""
+    return (1 - z) * (1 - h) * (1 - a) * (1 - c) * (1 - s)
 
 
 def months_between(a, b):
     return (b - a).days / 30.4375
 
 
-def obscurity(z, h, a, c, s, age_months, H=W.H_MONTHS):
-    """O_f (section 4.4)."""
-    return (1 - z) * (1 - h) * (1 - a) * (1 - c) * (1 - s) * decay(age_months, H)
+def obscurity(z, h, a, c, s, age_months, H=None):
+    """O_f = D_f . decay (section 4.4)."""
+    return discussion(z, h, a, c, s) * decay(age_months, H)
 
 
 def to_date(s):

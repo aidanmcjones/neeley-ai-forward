@@ -1,7 +1,7 @@
 """FIND: S_f = M_f . O_f . E_f . pi_k(f)   (docs/quant_model.md section 4).
 
 M_f = |dEPS_f| . (1 + r)^(-t_f) / sigma_EPS                  section 4.2
-O_f = (1 - z)(1 - h)(1 - a)(1 - c)(1 - s) . 2^(-age / H)      section 4.4   (obscurity.py)
+O_f = D_f . 2^(-age / H), D_f = (1-z)(1-h)(1-a)(1-c)(1-s)     section 4.4   (obscurity.py; Needle floor on D)
 E_f = min_j [ 1 - prod_i (1 - g_i) ]                          section 4.5   (evidence.py)
 pi_k  excess probability of the family's adverse outcome       section 4.6   (FAMILIES below)
 
@@ -205,6 +205,31 @@ def _filed(doc_id):
     return None
 
 
+def first_public(sig):
+    """(date, note): the first public date of the fact, not a later filing that repeats it (review R1, D1 resolved
+    toward A). The filing that states the fact is the newest evidence document (an older one is the comparison base,
+    e.g. last year's 10-K for a drift row). For financial-statement rows (forensics) the same numbers were public
+    earlier in the earnings release for that period, so the earliest release filed after the period end and on or
+    before the filing is used when the index has one."""
+    dated = [(d, ev.doc_id) for d, ev in ((_filed(ev.doc_id), ev) for ev in sig.evidence) if d]
+    if not dated:
+        return None, ""
+    filed, doc_id = max(dated)
+    if sig.detector != "forensics":
+        return filed, ""
+    r = data.doc_row(doc_id)
+    pend = OB.to_date(r["period"]) if r is not None and r["period"] else None
+    if pend is None:
+        return filed, ""
+    rel = data.db().execute("SELECT doc_id, filed FROM docs WHERE ticker = ? AND doc_type = 'earnings_release' AND "
+                            "filed > ? AND filed <= ? ORDER BY filed LIMIT 1",
+                            (sig.ticker, pend.isoformat(), filed.isoformat())).fetchone()
+    if rel is None:
+        return filed, ""
+    d = OB.to_date(rel[1])
+    return d, f"age from first public date {d.isoformat()} (earnings release {rel[0]}), not the filing {filed.isoformat()}"
+
+
 def stage_split(cites):
     """Inventory stage split (section 4.3 g i): finished-goods share from the inventory note of the cited filing.
     Returns (fg_share or None, detail, citation or None)."""
@@ -367,7 +392,9 @@ def _assemble(co, ticker, kind, sentence, fam, imp, page_cites, topics, disclose
         flags.append(f"age unknown: set to {W.LOE_AGE_MONTHS_DEFAULT:.0f} months")
     else:
         age = OB.months_between(disclosed, data.AS_OF)
-    O = OB.obscurity(z, h, a, c, s, age)
+    Dd = OB.discussion(z, h, a, c, s)
+    dec = OB.decay(age)
+    O = Dd * dec
     # E
     claims = [[c_] for c_ in page_cites]
     impact_cites = [c_ for c_ in imp.citations]
@@ -387,13 +414,13 @@ def _assemble(co, ticker, kind, sentence, fam, imp, page_cites, topics, disclose
     direction = "adverse" if adverse else ("favorable" if fam.route == "favorable" or not imp.quantified else "favorable-quantified")
     vector = {"M": M, "sigma_EPS": co.sigma, "sigma_currency": co.currency, "dEPS_base": imp.d_eps.get("base"),
               "t_years": imp.t_years, "O": O, "z": z, "h": h, "headline_doc": rel_doc, "a": a, "a_source": a_note,
-              "c": c, "s": s, "age_months": age, "H": W.H_MONTHS, "disclosed": disclosed.isoformat() if disclosed else None,
+              "c": c, "s": s, "D": Dd, "decay": dec, "age_months": age, "H": W.H_MONTHS, "disclosed": disclosed.isoformat() if disclosed else None,
               "E": E, "E_pages": E_pages, "n_ind": n_ind, "pi": pi, "pi_route": fam.route, "topics": topics}
     first = page_cites[0].cite_id if page_cites else kind
     sc = Scored(ticker, finding_id(ticker, kind, first), kind, sentence, fam, imp.channel, direction, imp,
                 peer or {}, vector, S, conf, reasons, flags, list(page_cites) + impact_cites, claims,
                 detector=detector, product=product or "")
-    sc.needle_eligible = (O >= W.NEEDLE_O and E >= W.NEEDLE_E and conf != "LOW" and z == 0
+    sc.needle_eligible = (Dd >= W.NEEDLE_O and E >= W.NEEDLE_E and conf != "LOW" and z == 0
                           and (adverse or imp.quantified) and S > 0)
     return sc
 
@@ -411,7 +438,9 @@ def score_signal(sig, co, panel=None):
     page_cites = [EV.from_evidence(ev) for ev in sig.evidence]
     flags, diag = [], True
     product = sig.meta.get("product")
-    disclosed = max((d for d in (_filed(ev.doc_id) for ev in sig.evidence) if d), default=None)
+    disclosed, age_note = first_public(sig)
+    if age_note:
+        flags.append(age_note)
     generic = False
     if fam.route in ("backtest", "anchor", "directional", "none"):
         imp = IM.anchor(co)

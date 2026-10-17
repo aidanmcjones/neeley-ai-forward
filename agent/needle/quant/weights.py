@@ -25,7 +25,9 @@ CM_VOLUME = 0.70     # volume change. KQ7 (COGS 15-25%, variable selling 5-15%)
 ANCHOR = 0.03        # margin-compression size for statistical flags: backtest margin_drop >= 3 pts
 
 # ---- obscurity (section 4.4) -----------------------------------------------------------------------------------
-H_MONTHS = 6.0       # obscurity half-life. Lazy Prices (persists to 6 months, accrues to 18); priced_in KQ5 3-6
+H_MONTHS = 3.0       # obscurity half-life, base. Low end of priced_in KQ5 3-6: mega-caps are read by many, so faster
+                     # absorption (review A11; Martineau: large-cap PEAD gone since 2006). 6 months is the sensitivity
+H_MONTHS_SENSITIVITY = 6.0   # Lazy Prices (persists to 6 months, accrues to 18); the v2 base, reported as a sensitivity
 H_VALUE = 0.9        # headline-page coverage. materiality_spec section 3 team rule; case "press-release skim"
 Z_VALUE = 1.0        # starter thread. case appendix; binary by design
 ATTENTION_QUARTERS = 10   # a_f = share of the last up-to-10 calls in which analysts asked (priced_in_scorecard)
@@ -95,7 +97,8 @@ DSO_STAR = 7.0                        # days of DSO excess that switch receivabl
 # ---- confidence, Needle, league (sections 4.7-4.9) -------------------------------------------------------------
 E_HIGH = 0.95        # between fuzzy (0.90) and exact (1.00)
 E_MED = 0.745        # the entailed grade
-NEEDLE_O = 0.5       # "roughly even chance" midpoint (ICD 203 bands)
+NEEDLE_O = 0.5       # "roughly even chance" midpoint (ICD 203 bands). Applied to the discussion term D, not to O:
+                     # decay stays inside S only (review R1, A11, B5)
 NEEDLE_E = 0.90      # quoted evidence only
 N_STAR = 3           # blocks for full league credit. Lazy Prices A-9; Beneish-Lee-Nichols; inference
 TOP_N = 5            # findings summed: the case minimum of five findings

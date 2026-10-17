@@ -31,7 +31,8 @@ def test_weights_match_table():
     assert (W.PI_MISSTATEMENT, W.PI_RISK_FACTOR, W.PI_LITIGATION_TEXT, W.PI_MDNA, W.PI_INSIDER, W.PI_8K, W.PI_MIN,
             W.PI_NONE) == (0.0491, 0.0226, 0.0349, 0.0081, 0.0201, 0.0061, 0.0055, 0.0028)
     assert (W.R, W.H_MONTHS, W.ANCHOR, W.H_VALUE, W.N_STAR, W.NEEDLE_O, W.NEEDLE_E, W.E_HIGH, W.E_MED) == \
-        (0.0785, 6.0, 0.03, 0.9, 3, 0.5, 0.90, 0.95, 0.745)
+        (0.0785, 3.0, 0.03, 0.9, 3, 0.5, 0.90, 0.95, 0.745)
+    assert W.H_MONTHS_SENSITIVITY == 6.0     # review A11: H = 3 base, 6 the sensitivity
     assert (W.CM_PRICE, W.CM_VOLUME, W.DELTA_OOS, W.M_MDP_CATASTROPHIC) == (1.0, 0.7, 0.26, 0.20)
 
 
@@ -57,7 +58,7 @@ def test_gross_margin_level_outlier_scores_zero():
 
 
 # ---------------------------------------------------------------- Finding B: DIO
-def dio_S(H=W.H_MONTHS, r=W.R, hc=W.DELTA_OOS, anchor=W.ANCHOR):
+def dio_S(H=6.0, r=W.R, hc=W.DELTA_OOS, anchor=W.ANCHOR):
     d_eps = anchor * REV * (1 - TAX) / D
     M = find.materiality(d_eps, 0.5, SIGMA, r)
     O = OB.obscurity(0, 0, 0.6, 0, 0, OB.months_between(date(2026, 8, 5), AS_OF), H)
@@ -85,7 +86,7 @@ def test_dio_reference():
 
 
 # ---------------------------------------------------------------- Finding C: Verzenio IRA
-def verz_S(H=W.H_MONTHS, r=W.R, m=W.M_MDP_CATASTROPHIC):
+def verz_S(H=6.0, r=W.R, m=W.M_MDP_CATASTROPHIC):
     imp = IM.ira(co(), "Verzenio", 1428.714, find.ONC, m, 2028)
     M = find.materiality(imp.d_eps["base"], imp.t_years, SIGMA, r)
     O = OB.obscurity(0, 0, 0.5, 0, 0, OB.months_between(date(2026, 1, 27), AS_OF), H)
@@ -107,8 +108,9 @@ def test_verzenio_reference():
 
 
 @need_moat
-def test_lly_end_to_end_matches_worked_example():
+def test_lly_end_to_end_matches_worked_example(monkeypatch):
     from agent.needle.quant.run import score_ticker
+    monkeypatch.setattr(W, "H_MONTHS", 6.0)     # the worked example's half-life (now the sensitivity, review A11)
     _, fs, _ = score_ticker("LLY", write=False)
     by = {f.kind: f for f in fs}
     # review A1: LLY's DIO rose +14.2% YoY, below the backtest dio_rising trigger (+15%), so pi = pi_min and
@@ -121,7 +123,9 @@ def test_lly_end_to_end_matches_worked_example():
     assert round(v.S, 4) == 0.0507 and round(v.vector["S_spec_formula"], 4) == 0.0304
     assert v.confidence == "HIGH" and v.vector["n_ind"] == 2
     assert all(f.S == 0 for f in fs if f.kind == "gross_margin_peer_outlier")
-    assert not by["dio_peer_outlier"].needle_eligible and not v.needle_eligible
+    assert not by["dio_peer_outlier"].needle_eligible
+    # review R1: the Needle floor is on the discussion term D, not on O (Verzenio O 0.18 but D = 1 - a)
+    assert v.needle_eligible == (v.vector["D"] >= W.NEEDLE_O) and v.vector["O"] < W.NEEDLE_O
 
 
 # ---------------------------------------------------------------- sensitivity: order C > B kept at x0.5 / x1.5
@@ -165,6 +169,17 @@ def test_same_fact_counts_once_in_league():
     L, top, _, _ = league.league_score([a, b, c])
     assert len(top) == 2 and {f.id for f in top} == {"a", "c"}
     assert any(x.startswith("same fact as a") for x in b.flags)
+
+
+def test_needle_floor_on_discussion_term_not_decay():
+    """Review R1: an old fact with D >= 0.5 keeps its Needle eligibility; decay only lowers S."""
+    assert OB.discussion(0, 0, 0.2, 0, 0) == pytest.approx(0.8)
+    O = OB.obscurity(0, 0, 0.2, 0, 0, 12.0)
+    assert O == pytest.approx(0.8 * 2 ** (-12 / W.H_MONTHS)) and O < W.NEEDLE_O
+    fs = [F(0.5, "A", O=0.05, D=0.8), F(0.1, "T", O=0.6, D=0.4)]
+    fs[0].needle_eligible, fs[1].needle_eligible = True, False
+    n, st = league.sharpest_needle(fs)
+    assert st == "strict" and n.S == 0.5
 
 
 def test_needle_rule_and_fallbacks():

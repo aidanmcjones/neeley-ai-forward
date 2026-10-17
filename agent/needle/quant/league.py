@@ -1,10 +1,11 @@
 """League score and Sharpest Needle (docs/quant_model.md sections 4.8 and 4.9).
 
 L_c = (sum of top-5 S_f, one row per underlying fact) . min(1, N_eff,c / N*),  N_eff = (sum_b S_b)^2 / sum_b S_b^2,  N* = 3
-Needle = argmax S_f subject to O >= 0.5, E >= 0.90, confidence != LOW, z = 0, adverse or quantified.
-If none passes: the argmax of S among findings with O at or above the company's median O, labelled provisional.
-If that pool is also empty of positive S, a documented fallback relaxes the O floor to the company's top-quartile O
-and flags "floor relaxed" (coordinator review item B5: a 6-month half-life puts every February 10-K item below 0.5).
+Needle = argmax S_f subject to D >= 0.5 (the discussion term of O; decay stays in S, review R1), E >= 0.90,
+confidence != LOW, z = 0, adverse or quantified.
+If none passes: the argmax of S among findings with D at or above the company's median D, labelled provisional.
+If that pool is also empty of positive S, a documented fallback relaxes the floor to the company's top-quartile D
+and flags "floor relaxed" (review B5).
 """
 
 from . import weights as W
@@ -61,6 +62,11 @@ def _quantile(xs, q):
     return xs[min(len(xs) - 1, int(q * (len(xs) - 1) + 0.5))]
 
 
+def _D(f):
+    """Discussion term D (vector "D"); objects without it fall back to O."""
+    return f.vector.get("D", f.vector["O"])
+
+
 def sharpest_needle(findings):
     """(finding or None, status) where status is "strict", "provisional", "floor relaxed" or "none"."""
     pool = [f for f in findings if f.needle_eligible and f.S > 0]
@@ -69,10 +75,10 @@ def sharpest_needle(findings):
     scored = [f for f in findings if f.S > 0 and f.vector["z"] == 0]
     if not scored:
         return None, "none"
-    med = _median([f.vector["O"] for f in findings])
-    prov = [f for f in scored if f.vector["O"] >= med and f.confidence != "LOW"]
+    med = _median([_D(f) for f in findings])
+    prov = [f for f in scored if _D(f) >= med and f.confidence != "LOW"]
     if prov:
         return max(prov, key=lambda f: f.S), "provisional"
-    q75 = _quantile([f.vector["O"] for f in scored], 0.75)
-    relaxed = [f for f in scored if f.vector["O"] >= q75]
+    q75 = _quantile([_D(f) for f in scored], 0.75)
+    relaxed = [f for f in scored if _D(f) >= q75]
     return (max(relaxed, key=lambda f: f.S), "floor relaxed") if relaxed else (None, "none")
