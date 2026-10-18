@@ -719,7 +719,7 @@ def compact_derived(dmap):
             for k, e in (dmap or {}).items()}
 
 
-_MARK = re.compile(r"\[(\d+)\]|\[derived: ([^\]]+)\]|\[constant: ([A-Z0-9_]+)\]|\[assumption\]")
+_MARK = re.compile(r"\[(\d+)\]|\[derived: ([^\]]+)\]|\[constant: ([A-Z0-9_]+)\]|\[assumption(?:: [^\]]*)?\]")
 _FOOT = re.compile(r"^\[(\d+)\] (.*?) -- (\"(?:.*)\"|\[licensed text withheld\]|[^-]*?)(?: -- .*?)?(?: · verified: (\w+))?$")
 
 
@@ -766,6 +766,8 @@ def marker_kinds(text):
             kinds["constant"] += 1
         elif tok == "[assumption]":
             kinds["assumption"] += 1
+        elif tok.startswith("[assumption: "):
+            kinds["assumption_reason"] += 1
         else:
             unknown.append(tok)
     return dict(kinds), unknown
@@ -909,6 +911,14 @@ def build_findings_v2(raw, side, ticker, lg, v1):
             **gexp,
         })
         gate_figures(out[-1], f)
+        fr = next((x for x in notes if x.startswith("footnote read:")), None)
+        out[-1]["explained_by_footnote"] = bool(fr and "explained by footnote" in fr)
+        out[-1]["explained_by_footnote_note"] = fr
+        out[-1]["footnote_read"] = f.get("footnote_read") or ({"status": "explained by footnote" if "explained by footnote" in fr
+                                                                else "terms found", "text": fr} if fr else None)
+        for k in ("nugget", "corroborated_by", "merged_into"):
+            if f.get(k):
+                out[-1][k] = f[k]
         if f.get("sentence_md") or f.get("formula_md"):
             st_, notes = split_md(f.get("sentence_md"))
             fo_, fnotes = split_md(f.get("formula_md"))
@@ -1011,8 +1021,12 @@ def product_v2(ticker, slug):
         fnd.append({"numeric_check": numeric_check(f.get("numeric_check")), "id": f.get("id"), "finding": plain(f.get("sentence")), "finding_raw": f.get("sentence"),
                     "channel": f.get("channel"), "direction": f.get("direction"),
                     "confidence": (f.get("confidence") or "").lower(), "confidence_reasons": f.get("confidence_reasons"),
-                    "impact": {"formula": imp.get("formula"), "dRev": imp.get("dRev"), "dOI": imp.get("dOI"),
-                               "units": "USD", "CM": imp.get("CM")},
+                    "impact": ({"formula": imp.get("formula"), "dRev": imp.get("dRev"), "dOI": imp.get("dOI"),
+                                "units": "USD", "CM": imp.get("CM"), "gated": True}
+                               if numeric_check(f.get("numeric_check")).get("status") == "passed" else
+                               {"formula": imp.get("formula"), "dRev": None, "dOI": None, "units": "USD",
+                                "CM": imp.get("CM"), "gated": False,
+                                "note": "dollar figures withheld: the finding did not pass the numeric gate"}),
                     "peer": f.get("peer"), "flags": f.get("flags"), "obscurity_note": f.get("obscurity_note"),
                     "evidence": [cell_cite(c, pool={x.get("cite_id"): x for x in f.get("citations") or []})
                                  for c in f.get("citations") or []]})
@@ -1104,6 +1118,61 @@ def _move_row(m):
             "notes": m.get("notes") or [], "units": "USD millions", "numeric_check": numeric_check(m.get("numeric_check"))}
 
 
+def footnote_cite(n, line):
+    """Evidence-shaped citation built from a rendered footnote line when decide.json does not carry the Citation
+    ('<title>, <location> -- "<quote>" -- [open](url) · ... · verified: <status>'). Public rule applied."""
+    head = line.split(" -- ")[0]
+    qm = re.search(r' -- "(.*)" -- ', line + " -- ")
+    status = (re.search(r"verified: (\w+)\s*$", line) or [None, None])[1]
+    url = (re.search(r"\[open\]\((http[^)]+)\)", line) or [None, None])[1]
+    licensed = "[licensed text withheld]" in line
+    why = ("Bloomberg/licensed source: quote and links withheld from the public export" if licensed else
+           None if status in PAGE_PASS else f"citation status {status or 'missing'} is not public: quote and links withheld")
+    title, _, loc = head.partition(", ")
+    page = (re.search(r"file page (\d+)", head) or [None, None])[1]
+    return {"n": n, "cite_id": None, "doc_title": title, "location": loc, "page": int(page) if page else None,
+            "quote": "" if why else (qm.group(1) if qm else ""), "url": None if why else url,
+            "deep_link": "" if why else (url or ""), "viewer_link": "", "verification": {"status": status},
+            "withheld": bool(why), "withheld_reason": why, "from_footnote": True}
+
+
+def why_it_works(ticker, d):
+    """'Why it will work' table from out/<T>/decide.md: one dict per decider row (plain-language column names) with
+    the cited evidence for the data column (decide.md's footnotes matched to decide.json's citations, public rule)."""
+    p = OUT / ticker / "decide.md"
+    if not p.exists():
+        return []
+    text = p.read_text(encoding="utf-8")
+    rows = md_table(text, "## Why it will work")
+    _, notes = split_md(text)
+    pool, seen = [], set()
+
+    def collect(o):
+        if isinstance(o, dict):
+            if o.get("cite_id") and "verification" in o and o["cite_id"] not in seen:
+                seen.add(o["cite_id"])
+                pool.append(o)
+            for v in o.values():
+                collect(v)
+        elif isinstance(o, list):
+            for v in o:
+                collect(v)
+    collect(d)
+    mmap = marker_map(notes, pool)
+    byid = {c["cite_id"]: c for c in pool}
+    out = []
+    for r in rows:
+        data = r.get("What our data shows (cited)") or ""
+        nums = sorted({int(n) for n in re.findall(r"\[(\d+)\]", data)} |
+                      {int(n) for m in re.findall(r"\[derived: ([^\]]+)\]", data) for n in re.findall(r"\d+", m)})
+        cites = [cell_cite(byid[mmap[n]], pool=byid) if mmap.get(n) in byid else footnote_cite(n, notes.get(n))
+                 for n in nums if notes.get(n) or mmap.get(n) in byid]
+        out.append({"decider": r.get("Decider"), "what_the_move_needs": r.get("What the move needs"),
+                    "what_our_data_shows": data, "what_only_interviews_can_show": r.get("What only interviews can show"),
+                    "cites": cites, "markers_unresolved": [n for n in nums if mmap.get(n) not in byid and not notes.get(n)]})
+    return out
+
+
 def apply_decide(ticker, stance, findings, v1=()):
     d = read_json(OUT / ticker / "decide.json")
     moves_file = ROOT / "docs" / "examples" / f"moves_{ticker}.json"
@@ -1158,7 +1227,11 @@ def apply_decide(ticker, stance, findings, v1=()):
                                         f"MCDA {m.get('mcda'):.3f}. Dollars = expected value from agent.needle.quant.decide."
                                         + (f" Not chosen: {m['binding_reason']}." if m.get("binding_reason") else "")).strip(),
                           "status": m.get("status"), "code": m.get("code")} for m in moves]
+    items = {it.get("where"): it for it in d.get("numeric_items") or []}
     stance["alternatives"] = [{"name": m["name"], "why_rejected": m.get("binding_reason") or "lower expected value",
+                               "why_passed": (items.get(f"passed/{m['name']}") or {}).get("text"),
+                               **({"cash_at_risk_note": "cash at risk is zero: no committed outflow is unrecovered in the bear case"}
+                                  if m.get("car") == 0 else {}),
                                **{k: m.get(k) for k in FIVE}} for m in rej[:2]]
     ks = d.get("kill_signals") or []
     stance["kill_signals"] = ks
@@ -1170,6 +1243,8 @@ def apply_decide(ticker, stance, findings, v1=()):
     stance["decide"] = {"as_of": d.get("as_of"), "cash_and_equivalents": d.get("cash_and_equivalents"),
                         "demo": bool(d.get("demo")), "note": d.get("header_note"),
                         "selection_rule": d.get("selection_rule"),
+                        "why_it_works_rows": why_it_works(ticker, d),
+                        "cash_at_risk_note": (items.get("car_why") or items.get("budget/car_why") or {}).get("text"),
                         "chosen": None if d.get("_least_bad") else ch.get("name"),
                         "least_bad": d.get("least_bad"), "least_bad_move": ch.get("name") if d.get("_least_bad") else None,
                         "numeric_items": [{**it, "numeric_check": numeric_check(it.get("numeric_check"))}
@@ -1181,6 +1256,8 @@ def apply_decide(ticker, stance, findings, v1=()):
                         "footnotes": foot, "finding_cites": cites,
                         "unmapped_finding_ids": [i for i in ch.get("finding_ids") or [] if i not in ids],
                         "source_files": [f"out/{ticker}/decide.json", f"docs/examples/moves_{ticker}.json"]}
+    if stance["decide"]["moves"]:
+        stance["decide"]["moves"][0]["cash_at_risk_note"] = stance["decide"]["cash_at_risk_note"]
     stance["generated_by"] = "decide_v2"
     if d.get("demo"):
         stance["headline"] = f"[Demo] {stance['headline']}"
@@ -1618,6 +1695,11 @@ def build_questions(ticker, findings, needle, stance, rejected, cset, forces_row
     return qs
 
 
+def _uid(findings, sid):
+    """Exported id of the finding whose engine id is sid (ids may carry a -dN suffix), else sid."""
+    return next((f["id"] for f in findings if (f.get("source_id") or f["id"]) == sid), sid) if sid else None
+
+
 def mark_no_needle(qs, no_needle):
     if no_needle and qs:
         a = qs[0]["answer"]
@@ -1704,8 +1786,13 @@ def company(ticker, league_row, sealed, side, lg2=None):
         "sealed_forecast": next((p for p in sealed if p["ticker"] == ticker), None),
         "findings_table": (ft := findings_table(ticker, raw2 or v1, side, findings)),
         **({"needle_rule": ft.get("needle_rule"),
-            "needle_id_rule": next((f["id"] for f in findings if (f.get("source_id") or f["id"]) == ft.get("needle_id")),
-                                   ft.get("needle_id"))} if ft and ft.get("needle_rule") else
+            "needle_id_rule": _uid(findings, ft.get("needle_id")),
+            "needle_source": {"plain_rule": "rule", "rule": "rule", "red_team": "red_team"}.get(ft.get("needle_source"),
+                                                                                              ft.get("needle_source")),
+            "needle_reason": ft.get("needle_reason"),
+            "plain_rule_needle_id": _uid(findings, ft.get("plain_rule_needle_id")),
+            "red_team_needle_id": _uid(findings, ft.get("red_team_needle_id")),
+            "red_team_nugget_id": ft.get("red_team_nugget_id")} if ft and ft.get("needle_rule") else
            {"needle_rule": (lg2 or {}).get("needle_rule")} if (lg2 or {}).get("needle_rule") else {}),
     }
 
@@ -2024,11 +2111,22 @@ def findings_table(ticker, raw_findings, side, exported=()):
                     "assumption_fields": ["d_eps_base_abs", "d_oi_base_abs", "analyst_share_asked"],
                     "confidence": (r.get("confidence") or "").lower(), "not_quantified": r.get("not_quantified"),
                     "needle": r.get("needle"), "needle_blocked": r.get("needle_blocked"),
+                    "peer_text": r.get("peer_comparison_marked") or r.get("peer_comparison"),
+                    "peer_comparison": r.get("peer_comparison"),
+                    "nugget": r.get("nugget"), "corroborated_by": r.get("corroborated_by"), "merged": r.get("merged"),
+                    **{k: v for k, v in (lambda f: {"explained_by_footnote": f["explained_by_footnote"],
+                                                     "explained_by_footnote_note": f["explained_by_footnote_note"],
+                                                     "footnote_read": f["footnote_read"]})(
+                        next((x for x in exported if (x.get("source_id") or x["id"]) == fid),
+                             {"explained_by_footnote": False, "explained_by_footnote_note": None,
+                              "footnote_read": None})).items()},
                     "marker_map": {n: mmap.get(n) for n in nums},
                     "marker_licensed": [n for n in nums if mmap.get(n) in lic],
                     "marker_kinds": {"sentence": k1, "formula": k2},
                     "numeric_check": numeric_check(r.get("numeric_check") or src.get("numeric_check"))})
     return {"rank_basis": d.get("rank_basis"), "needle_rule": d.get("needle_rule"), "needle_id": d.get("needle_id"),
+            **{k: d.get(k) for k in ("needle_source", "plain_rule_needle_id", "red_team_needle_id",
+                                     "red_team_nugget_id", "needle_reason", "merged_rows")},
             "note": d.get("note"), "numeric_check": numeric_check(d.get("numeric_check")),
             "failed": d.get("failed") or [], "rows": out, "footnotes_n": len(notes),
             "marker_unresolved": sorted(n for n, c in mmap.items() if not c),
