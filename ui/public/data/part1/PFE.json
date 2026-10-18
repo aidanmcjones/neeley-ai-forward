@@ -2871,7 +2871,9 @@
      "note": "facts row tables/ibes_eps_consensus.csv#1270 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_a0f75284cc",
@@ -2890,7 +2892,9 @@
      "note": "facts row tables/ibes_eps_consensus.csv#1271 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_cf891e6c94",
@@ -2909,7 +2913,9 @@
      "note": "facts row tables/ibes_revenue_consensus.csv#5205 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_2fa2bacdd6",
@@ -2928,7 +2934,9 @@
      "note": "facts row tables/ibes_revenue_consensus.csv#5206 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     }
    ],
    "derived": {
@@ -2952,16 +2960,18 @@
       "c_859ea374a0",
       "c_19c0ed57e6",
       "c_7aec28db79"
-     ]
+     ],
+     "figures_withheld": 0
     },
     {
      "source": "press attention (GDELT, tables/news_mentions.csv)",
-     "finding": "No Vyndaqel-only query exists; the proxy \"Pfizer\" (Ibrance OR Vyndaqel) stayed low around the Q2 10-Q (2026-07: 28, 2026-08: 20, 2026-09: 8 articles). Raw table, not re-verified; context only.",
+     "finding": "No Vyndaqel-only query exists; the proxy \"Pfizer\" (Ibrance OR Vyndaqel) stayed low around the Q2 10-Q (2026-07: [figure withheld: not gated], 2026-08: [figure withheld: not gated], 2026-09: 8 articles). Raw table, not re-verified; context only.",
      "cites": [
       "gdelt:doc:timelinevolraw:PFE:top_products:202607",
       "gdelt:doc:timelinevolraw:PFE:top_products:202608",
       "gdelt:doc:timelinevolraw:PFE:top_products:202609"
-     ]
+     ],
+     "figures_withheld": 2
     },
     {
      "source": "consensus revisions (I/B/E/S; licensed, machine_data)",
@@ -2971,14 +2981,16 @@
       "c_a0f75284cc",
       "c_cf891e6c94",
       "c_2fa2bacdd6"
-     ]
+     ],
+     "figures_withheld": 0
     },
     {
      "source": "event returns (verified/market/event_returns.csv)",
      "finding": "The Q2 10-Q was filed with the pre-market Q2 release on 2026-08-04; the day-0 abnormal return over XLV was positive (+1.6%), so the disclosure did not move the stock down.",
      "cites": [
       "c_99ff2779a0"
-     ]
+     ],
+     "figures_withheld": 0
     }
    ],
    "limit": "No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.",

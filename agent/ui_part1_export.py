@@ -621,7 +621,70 @@ def build_company(rec):
             f["verdict_inferred"] = ("on_the_record" if f.get("obviousness") == "high" and f.get("on_the_record")
                                      else "narrowed")
     walk_marked(rec, fix=True)
+    gate_priced_evidence(rec)
     return rec
+
+
+SMALL_COUNT = 12
+
+
+def _small_count(tok):
+    return tok.unit == "" and not tok.currency and tok.scale is None and not tok.neg and tok.decimals == 0 \
+        and tok.num <= SMALL_COUNT
+
+
+def gate_priced_evidence(rec):
+    """priced_in.evidence[].finding carries no numeric check of its own: figures outside the company's gated set
+    (which includes the passed priced_in.text) are withheld; plain counts up to twelve, quarters, years and dates
+    stay. I/B/E/S machine-data cites show direction only (no value)."""
+    pi = (rec.get("product_table") or {}).get("priced_in")
+    if not isinstance(pi, dict):
+        return
+    for c in pi.get("cites") or []:
+        if isinstance(c, dict) and withhold_kind(c) == "machine_data":
+            c["value"] = None
+            c["shown"] = "direction only"
+    gated = gated_figures(rec)
+    for e in pi.get("evidence") or []:
+        if not isinstance(e, dict):
+            continue
+        n = 0
+        for k in ("finding", "source"):
+            if isinstance(e.get(k), str):
+                e[k], m = withhold_ungated(e[k], gated, keep=_small_count)
+                n += m
+        e["figures_withheld"] = n
+
+
+def priced_evidence_problems(rec, t):
+    errs = []
+    pi = (rec.get("product_table") or {}).get("priced_in") or {}
+    gated = gated_figures(rec)
+    ids = {c.get("cite_id"): c for c in pi.get("cites") or [] if isinstance(c, dict)}
+    for c in ids.values():
+        if withhold_kind(c) == "machine_data" and c.get("value") not in (None, ""):
+            errs.append(f"{t}.priced_in cite {c.get('cite_id')}: machine-data (I/B/E/S) cite shows a value, not direction only")
+    for i, e in enumerate(pi.get("evidence") or []):
+        p = f"{t}.priced_in.evidence[{i}]"
+        if not isinstance(e, dict):
+            errs.append(f"{p} is not a record")
+            continue
+        for k in ("finding", "source"):
+            v = e.get(k)
+            if isinstance(v, str):
+                bad = [x.raw for x in figures(v) if fig_key(x) not in gated and not _small_count(x)]
+                if bad:
+                    errs.append(f"{p}.{k} prints figures the gate did not pass: {bad[:4]}")
+                if re.search(re.escape(WITHHELD_FIGURE) + r"[\s,;/-]*" + re.escape(WITHHELD_FIGURE), v):
+                    errs.append(f"{p}.{k} shows two withheld markers in a row")
+        if "figures_withheld" not in e:
+            errs.append(f"{p} carries no figures_withheld count")
+        for cid in e.get("cites") or []:
+            if isinstance(cid, dict):
+                continue  # an inline cite object: checked by the withholding walk
+            if cid not in ids and not str(cid).startswith(("gdelt:", "row:")):
+                errs.append(f"{p} cite {cid} is not a cite on priced_in")
+    return errs
 
 
 def company_problems(rec, t, sample=False):
@@ -662,6 +725,7 @@ def company_problems(rec, t, sample=False):
         for c in cols:
             if c.get("key") not in (r.get("cells") or {}):
                 errs.append(f"{t}.product_table row '{r.get('row')}' has no cell for column {c.get('key')}")
+    errs += priced_evidence_problems(rec, t)
     extra = sorted(set(rec) - CONTRACT_TOP)
     if extra:
         errs.append(f"{t}.json carries top-level keys outside the contract: {extra}")
@@ -722,12 +786,12 @@ def _collapse(text):
     return re.sub(re.escape(WITHHELD_FIGURE) + "(?:" + sep + re.escape(WITHHELD_FIGURE) + ")+", WITHHELD_FIGURE, text)
 
 
-def withhold_ungated(text, gated):
+def withhold_ungated(text, gated, keep=None):
     """(text, n): every figure not in the gated set replaced by the withheld placeholder (a leading ~ or 'about'
     sign goes with it), runs collapsed so two placeholders never stand together."""
     if not isinstance(text, str) or not text:
         return text, 0
-    toks = [x for x in figures(text) if fig_key(x) not in gated]
+    toks = [x for x in figures(text) if fig_key(x) not in gated and not (keep and keep(x))]
     if not toks:
         return text, 0
     for x in sorted(toks, key=lambda x: x.start, reverse=True):

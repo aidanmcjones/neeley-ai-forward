@@ -7206,7 +7206,9 @@
      "note": "facts row tables/ibes_eps_consensus.csv#214 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_75455adfc9",
@@ -7225,7 +7227,9 @@
      "note": "facts row tables/ibes_eps_consensus.csv#215 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_25744656ae",
@@ -7244,7 +7248,9 @@
      "note": "facts row tables/ibes_revenue_consensus.csv#1006 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_0735f85ed3",
@@ -7263,7 +7269,9 @@
      "note": "facts row tables/ibes_revenue_consensus.csv#1007 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     }
    ],
    "derived": {
@@ -7286,7 +7294,8 @@
      "cites": [
       "c_6695ac0967",
       "c_efbdff6ecf"
-     ]
+     ],
+     "figures_withheld": 0
     },
     {
      "source": "analyst attention, growth limiter (verified/market/priced_in_scorecard.csv)",
@@ -7294,16 +7303,18 @@
      "cites": [
       "c_f64cb762ea",
       "c_efbdff6ecf"
-     ]
+     ],
+     "figures_withheld": 0
     },
     {
      "source": "press attention (GDELT, tables/news_mentions.csv)",
-     "finding": "No item-level GDELT query exists for TAVNEOS. Nearest proxy, the limiter's topic query \"Amgen\" (rebates OR \"net price\" OR \"gross-to-net\" OR \"price cuts\"), stayed low around the Q2 10-Q (2026-07: 5, 2026-08: 13, 2026-09: 2 articles). Raw table, not re-verified; context only.",
+     "finding": "No item-level GDELT query exists for TAVNEOS. Nearest proxy, the limiter's topic query \"Amgen\" (rebates OR \"net price\" OR \"gross-to-net\" OR \"price cuts\"), stayed low around the Q2 10-Q (2026-07: 5, 2026-08: [figure withheld: not gated], 2026-09: 2 articles). Raw table, not re-verified; context only.",
      "cites": [
       "gdelt:doc:timelinevolraw:AMGN:gross_to_net_price:202607",
       "gdelt:doc:timelinevolraw:AMGN:gross_to_net_price:202608",
       "gdelt:doc:timelinevolraw:AMGN:gross_to_net_price:202609"
-     ]
+     ],
+     "figures_withheld": 1
     },
     {
      "source": "consensus revisions (I/B/E/S, tables/ibes_eps_consensus.csv and ibes_revenue_consensus.csv; licensed, machine_data)",
@@ -7313,14 +7324,16 @@
       "c_75455adfc9",
       "c_25744656ae",
       "c_0735f85ed3"
-     ]
+     ],
+     "figures_withheld": 0
     },
     {
      "source": "event returns (verified/market/event_returns.csv)",
      "finding": "Abnormal return over XLV, close(-1) to close(+1), around the Q2 10-Q filing (day 0 2026-08-05) was positive (+2.4%). Confounded: the Q2 earnings release came after the close on 2026-08-04 and falls inside the window.",
      "cites": [
       "c_d16871b494"
-     ]
+     ],
+     "figures_withheld": 0
     }
    ],
    "limit": "No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.",

@@ -2868,7 +2868,9 @@
      "note": "facts row tables/ibes_eps_consensus.csv#1006 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_9200c6039d",
@@ -2887,7 +2889,9 @@
      "note": "facts row tables/ibes_eps_consensus.csv#1007 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_5ae6c398d4",
@@ -2906,7 +2910,9 @@
      "note": "facts row tables/ibes_revenue_consensus.csv#4149 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     },
     {
      "cite_id": "c_3fbe09d6fa",
@@ -2925,7 +2931,9 @@
      "note": "facts row tables/ibes_revenue_consensus.csv#4150 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
      "excerpt": null,
      "deep_link": null,
-     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown",
+     "value": null,
+     "shown": "direction only"
     }
    ],
    "derived": {
@@ -2947,16 +2955,18 @@
      "finding": "Zero analyst turns name the NOPAs, the transition tax, TCJA or the IRS across the 10 covered calls (2024Q1 to 2026Q2), and a full-text search of every indexed MRK transcript, release and slide deck finds no mention by management either. Limiter: Qlex or subcutaneous Keytruda was raised by analysts on calls from 2024Q1 to 2025Q4 but on neither 2026 call (topic top_products is asked every quarter).",
      "cites": [
       "c_5f00e62035"
-     ]
+     ],
+     "figures_withheld": 0
     },
     {
      "source": "press attention (GDELT, tables/news_mentions.csv)",
-     "finding": "No item-level GDELT query exists for the IRS NOPAs or for Qlex. Nearest proxy \"Merck\" (Keytruda OR Januvia) spiked in the Q2 reporting month (2026-07: 88, 2026-08: 396, 2026-09: 63 articles), which reflects Keytruda news generally, not the tax item. Raw table, not re-verified; context only.",
+     "finding": "No item-level GDELT query exists for the IRS NOPAs or for Qlex. Nearest proxy \"Merck\" (Keytruda OR Januvia) spiked in the Q2 reporting month (2026-07: [figure withheld: not gated], 2026-08: [figure withheld: not gated], 2026-09: [figure withheld: not gated] articles), which reflects Keytruda news generally, not the tax item. Raw table, not re-verified; context only.",
      "cites": [
       "gdelt:doc:timelinevolraw:MRK:top_products:202607",
       "gdelt:doc:timelinevolraw:MRK:top_products:202608",
       "gdelt:doc:timelinevolraw:MRK:top_products:202609"
-     ]
+     ],
+     "figures_withheld": 3
     },
     {
      "source": "consensus revisions (I/B/E/S; licensed, machine_data)",
@@ -2966,15 +2976,17 @@
       "c_9200c6039d",
       "c_5ae6c398d4",
       "c_3fbe09d6fa"
-     ]
+     ],
+     "figures_withheld": 0
     },
     {
      "source": "event returns (verified/market/event_returns.csv)",
-     "finding": "Two-day abnormal returns were small and negative on both disclosures carrying the item: the FY2025 10-K (-0.7%) and the Q2 2026 10-Q (-0.4%), each filed apart from the earnings release.",
+     "finding": "Two-day abnormal returns were small and negative on both disclosures carrying the item: the FY2025 10-K ([figure withheld: not gated]) and the Q2 2026 10-Q (-0.4%), each filed apart from the earnings release.",
      "cites": [
       "c_39b3c087e5",
       "c_f8ca640711"
-     ]
+     ],
+     "figures_withheld": 1
     }
    ],
    "limit": "No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.",

@@ -127,6 +127,13 @@ Exporter transforms:
   stand together. Killed candidates keep the stricter rule: every digit-bearing chunk goes (years included)
   unless all the figures it overlaps are in the gated set. Each step records `figures_withheld: n`. `--check`
   fails any trace text figure outside the set, two markers in a row, or a step without the count.
+- Priced-in evidence: `product_table.priced_in` passes through `confidence`, `derived`, `limit` and `evidence`.
+  Each `evidence[]` entry (`{source, finding, cites}`) has no numeric check of its own, so its `finding` and
+  `source` go through the trace rule against the company's gated set (which includes the passed priced_in.text);
+  plain counts up to twelve (no unit, currency, scale, sign or decimals), quarters, years and dates stay. Each
+  entry records `figures_withheld`. Evidence cite ids must be cites on priced_in (or `gdelt:` / `row:` table-row
+  ids, which are raw context rows with no page). I/B/E/S machine-data cites are withheld and show direction only:
+  quote, excerpt, links and value are null, `shown: "direction only"`. `--check` enforces all of this.
 - Finding verdicts: a finding's `verdict` passes through when present; when absent the exporter sets
   `verdict_inferred`: "on_the_record" when `obviousness` is "high" and `on_the_record` is non-empty, else
   "narrowed". The UI reads `verdict` and falls back to `verdict_inferred`. The sample's findings carry
