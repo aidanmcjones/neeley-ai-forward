@@ -1,70 +1,77 @@
 {
- "picked": [
-  "AMGN",
-  "MRK",
-  "PFE"
- ],
- "reasons": {
-  "AMGN": "Only company with two survivors graded high materiality, low obviousness, high confidence: AMGN-c06 ($2.4B TAVNEOS intangible at about 5.2x FY2025 sales under an FDA withdrawal proposal, recoverability wording weakened Q1 to Q2 2026, unsaid; about $4.2/share pre-tax if written off) and AMGN-c02 (deductions 52.5% to 54.4% of gross, accrual build giving 2025 operating cash flow about $1.07B more support than 2024). Third survivor AMGN-c03; five-row table fills with cited, sized killed rows; Repatha edge over Praluent, Leqvio and Lipfendra holds on label text and ties to the 2026 net-price guide.",
-  "MRK": "Most narrowed rows (four) with two material, non-obvious survivors and grade-A calls behind the obviousness test: MRK-c03 IRS transition-tax NOPA (about $1.56B plus interest, gross GAAP ceiling about $0.63/share, zero mentions anywhere) and MRK-c01 long-dated inventory pool growing to $5.9B after its tariff rationale lapsed. Below AMGN because both are medium materiality and the ceiling overlaps an undisclosed reserve; product leg weak (Keytruda is the starter thread, rival-maker statements thin).",
-  "PFE": "Meets both legs: PFE-c01 high materiality, high confidence (U.S. ATTR-CM class +47% in H1 2026 while U.S. Vyndaqel flat, revenue share about 75% to about 51%, unquantified by any company) though medium obviousness, plus PFE-c04 ($842M Q2 2026 legal charge, unexplained). Beats NVO on the tie-break: the Vyndaqel vs Attruby and Amvuttra comparison is the strongest product tie on the slate, built from three filers' 10-Qs and three labels."
- },
- "eliminated": {
-  "NVO": "Closest miss: NVO-c01 DKK 91.0bn contract-manufacturer commitments is a strong needle at medium confidence, but it is the only material survivor and the unvoiced product edge favors rival Foundayo.",
-  "AZN": "Two medium survivors (chargebacks 8.4% to 10.8% of U.S. gross; recurring tax credits), three narrowed rows, and a Tagrisso edge that loses on OS and IV convenience; one quotable call.",
-  "BMY": "One survivor (Keytruda/Tecentriq royalty end, about $0.25-0.27 EPS) a strict judge could read as an exclusivity loss; Eliquis edge list-level and unsized.",
-  "ABBV": "One medium survivor (2044 Skyrizi-combination royalty tail, about $1.0-1.5B PV, bounded not disclosed); every large theme already on the record.",
-  "GILD": "One survivor, a contingent and shrinking $568M pre-commercial Trodelvy inventory (about $0.36-0.37/share if written down); Biktarvy edge unsized.",
-  "JNJ": "One conditional survivor (plant drift, $0.29-0.54 EPS a year only if the tariff exemption ends in 2029); product edge is management's talking point; four rows short of five.",
-  "LLY": "Most-covered name; one material survivor is a cash-only inventory-days build (about 410 to 469 days, about $2.1B); others are a ceiling and an unsized label gap."
- },
- "survivors": {
-  "ABBV": [
-   "ABBV-c04",
-   "ABBV-c05"
+  "picked": [
+    "AMGN",
+    "MRK",
+    "PFE"
   ],
-  "AMGN": [
-   "AMGN-c02",
-   "AMGN-c03",
-   "AMGN-c06"
-  ],
-  "AZN": [
-   "AZN-c04",
-   "AZN-c05",
-   "AZN-c08"
-  ],
-  "BMY": [
-   "BMY-c01",
-   "BMY-c03",
-   "BMY-c07"
-  ],
-  "GILD": [
-   "GILD-c04"
-  ],
-  "JNJ": [
-   "JNJ-c03",
-   "JNJ-c04"
-  ],
-  "LLY": [
-   "LLY-c03",
-   "LLY-c06",
-   "LLY-c09"
-  ],
-  "MRK": [
-   "MRK-c01",
-   "MRK-c03",
-   "MRK-c04",
-   "MRK-c10"
-  ],
-  "NVO": [
-   "NVO-c01",
-   "NVO-c10"
-  ],
-  "PFE": [
-   "PFE-c01",
-   "PFE-c04"
-  ]
- },
- "sealed_at": "2026-10-18T04:12:05Z",
- "sha256": "903fc656fa7a1d1b2bdf303d8d8f9321d5f1f7b741f6b751c4cdf4f9c40c8fa7"
+  "reasons": {
+    "AMGN": "Only company with two survivors graded high materiality, low obviousness, high confidence: AMGN-c06 ($2.4B TAVNEOS intangible at about 5.2x FY2025 sales under an FDA withdrawal proposal, recoverability wording weakened Q1 to Q2 2026, unsaid; about $4.2/share pre-tax if written off) and AMGN-c02 (deductions 52.5% to 54.4% of gross, accrual build giving 2025 operating cash flow about $1.07B more support than 2024). Third survivor AMGN-c03; five-row table fills with cited, sized killed rows; Repatha edge over Praluent, Leqvio and Lipfendra holds on label text and ties to the 2026 net-price guide.",
+    "MRK": "Most narrowed rows (four) with two material, non-obvious survivors and grade-A calls behind the obviousness test: MRK-c03 IRS transition-tax NOPA (about $1.56B plus interest, gross GAAP ceiling about $0.63/share, zero mentions anywhere) and MRK-c01 long-dated inventory pool growing to $5.9B after its tariff rationale lapsed. Below AMGN because both are medium materiality and the ceiling overlaps an undisclosed reserve; product leg weak (Keytruda is the starter thread, rival-maker statements thin).",
+    "PFE": "Meets both legs: PFE-c01 high materiality, high confidence (U.S. ATTR-CM class +47% in H1 2026 while U.S. Vyndaqel flat, revenue share about 75% to about 51%, unquantified by any company) though medium obviousness, plus PFE-c04 ($842M Q2 2026 legal charge, unexplained). Beats NVO on the tie-break: the Vyndaqel vs Attruby and Amvuttra comparison is the strongest product tie on the slate, built from three filers' 10-Qs and three labels."
+  },
+  "eliminated": {
+    "NVO": "Closest miss: NVO-c01 DKK 91.0bn contract-manufacturer commitments is a strong needle at medium confidence, but it is the only material survivor and the unvoiced product edge favors rival Foundayo.",
+    "AZN": "Two medium survivors (chargebacks 8.4% to 10.8% of U.S. gross; recurring tax credits), three narrowed rows, and a Tagrisso edge that loses on OS and IV convenience; one quotable call.",
+    "BMY": "One survivor (Keytruda/Tecentriq royalty end, about $0.25-0.27 EPS) a strict judge could read as an exclusivity loss; Eliquis edge list-level and unsized.",
+    "ABBV": "One medium survivor (2044 Skyrizi-combination royalty tail, about $1.0-1.5B PV, bounded not disclosed); every large theme already on the record.",
+    "GILD": "One survivor, a contingent and shrinking $568M pre-commercial Trodelvy inventory (about $0.36-0.37/share if written down); Biktarvy edge unsized.",
+    "JNJ": "One conditional survivor (plant drift, $0.29-0.54 EPS a year only if the tariff exemption ends in 2029); product edge is management's talking point; four rows short of five.",
+    "LLY": "Most-covered name; one material survivor is a cash-only inventory-days build (about 410 to 469 days, about $2.1B); others are a ceiling and an unsized label gap."
+  },
+  "survivors": {
+    "ABBV": [
+      "ABBV-c04",
+      "ABBV-c05"
+    ],
+    "AMGN": [
+      "AMGN-c02",
+      "AMGN-c03",
+      "AMGN-c06"
+    ],
+    "AZN": [
+      "AZN-c04",
+      "AZN-c05",
+      "AZN-c08"
+    ],
+    "BMY": [
+      "BMY-c01",
+      "BMY-c03",
+      "BMY-c07"
+    ],
+    "GILD": [
+      "GILD-c04"
+    ],
+    "JNJ": [
+      "JNJ-c03",
+      "JNJ-c04"
+    ],
+    "LLY": [
+      "LLY-c03",
+      "LLY-c06",
+      "LLY-c09"
+    ],
+    "MRK": [
+      "MRK-c01",
+      "MRK-c03",
+      "MRK-c04",
+      "MRK-c10"
+    ],
+    "NVO": [
+      "NVO-c01",
+      "NVO-c10"
+    ],
+    "PFE": [
+      "PFE-c01",
+      "PFE-c04"
+    ]
+  },
+  "sealed_at": "2026-10-18T04:12:05Z",
+  "sha256": "903fc656fa7a1d1b2bdf303d8d8f9321d5f1f7b741f6b751c4cdf4f9c40c8fa7",
+  "seal_procedure": {
+    "covers": "every byte of selection.md before the final line that starts with 'sha256: ', with trailing newline characters removed",
+    "excludes": "the 'sha256: <hex>' line itself and the newline(s) before it",
+    "verify_shell": "sed '$d' out/part1/selection.md | perl -0pe 's/\\n+\\z//' | shasum -a 256",
+    "verify_python": "import hashlib; t=open('out/part1/selection.md','rb').read(); i=t.rfind(b'sha256: '); print(hashlib.sha256(t[:i].rstrip(b'\\n')).hexdigest())",
+    "note": "Hashing the whole file (including the hash line) cannot match by construction; that gives 6df19bb2... on the committed file."
+  }
 }
