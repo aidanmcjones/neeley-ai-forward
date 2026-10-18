@@ -121,7 +121,20 @@ Math: Vyndaqel share $1,975M[1] / ($1,975M[1] + $1,511.6M[2] + $403.0M[3]) = 50.
 
 Vyndaqel's U.S. growth is limited by price rather than demand: Pfizer is giving up net price in payer contracts to hold access while Amvuttra and Attruby take the class's growth, and generic Vyndamax can launch on June 1, 2031.[1][2][3]
 
-Priced in: **untestable**. No consensus figure for Vyndaqel's U.S. revenue share is in the index (the priced-in scorecard tracks call topics, not this product line), so whether the share loss is priced in cannot be tested.
+### Priced in: priced in (confidence medium)
+
+Likely priced in: analysts asked about Vyndaqel on every call from 2024Q1 to 2026Q1 and management has described the share loss, FY2026 revenue and EPS consensus were revised up, not down, after the Q2 10-Q and call, and the day-0 abnormal return on the filing was +1.6%[derived: 3]; the net-price concession behind the limiter drew gross-to-net questions on 3[2] of 10[1] calls, most recently 2026Q2.[4][5][6][7][8]
+
+Limit: No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.
+
+[1] moat table market/priced_in_scorecard.csv, row market/priced_in_scorecard.csv#86 -- quote withheld (table or machine data, cited by locator); locator market/priced_in_scorecard.csv#86 quarters_covered = 10 -- verified: exact
+[2] moat table market/priced_in_scorecard.csv, row market/priced_in_scorecard.csv#86 -- quote withheld (table or machine data, cited by locator); locator market/priced_in_scorecard.csv#86 quarters_asked = 3 -- verified: exact
+[3] moat table market/event_returns.csv, row market/event_returns.csv#178 -- quote withheld (table or machine data, cited by locator); locator market/event_returns.csv#178 abn_day0 = 0.01604 -- verified: exact
+[4] Pfizer 2026Q1 earnings call (official), p. 11 (file page 11) -- quote withheld (grade A transcript, cited by label); locator PFE:transcripts/2026Q1_transcript.md#p11 -- verified: substring
+[5] moat table tables/ibes_eps_consensus.csv, row tables/ibes_eps_consensus.csv#1270 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_eps_consensus.csv#1270 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[6] moat table tables/ibes_eps_consensus.csv, row tables/ibes_eps_consensus.csv#1271 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_eps_consensus.csv#1271 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[7] moat table tables/ibes_revenue_consensus.csv, row tables/ibes_revenue_consensus.csv#5205 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_revenue_consensus.csv#5205 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[8] moat table tables/ibes_revenue_consensus.csv, row tables/ibes_revenue_consensus.csv#5206 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_revenue_consensus.csv#5206 (I/B/E/S, licensed; value withheld) -- verified: machine_data
 
 ## Notes
 

@@ -237,9 +237,20 @@ Math: 0.01[assumption] x 1,663[1] = 17[derived: 1][assumption]; 0.05[assumption]
 
 Repatha's growth is limited by price, not label: its outcomes label (with coronary revascularization) and HoFH coverage are broader than all three rivals, yet Amgen itself guides net price down mid-single digits in 2026 just as Merck's oral Lipfendra launches with a direct-to-patient cash channel.[1][2][3]
 
-### Priced in: untestable
+### Priced in: not priced in (confidence medium)
 
-No consensus Repatha net-price or sales estimate is in the index, and analysts last asked Amgen about gross-to-net on the 2024Q3 call (priced_in_scorecard row AMGN|gross_to_net_price), so whether the mid-single-digit price guide is priced in cannot be tested.[1]
+Likely not priced in: analysts asked about TAVNEOS once in 10[1] calls (2025Q4) and not after the FDA's formal withdrawal proposal, no call states the carrying value, FY2026 consensus was revised up, not down, after the Q2 10-Q, and the two-day abnormal return on the filing was +2.4%[derived: 3]; the Repatha net-price guide drew gross-to-net questions on 1[2] of 10[1] calls.[4][5][6][7][8]
+
+Limit: No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.
+
+[1] moat table market/priced_in_scorecard.csv, row market/priced_in_scorecard.csv#14 -- quote withheld (table or machine data, cited by locator); locator market/priced_in_scorecard.csv#14 quarters_covered = 10 -- verified: exact
+[2] moat table market/priced_in_scorecard.csv, row market/priced_in_scorecard.csv#14 -- quote withheld (table or machine data, cited by locator); locator market/priced_in_scorecard.csv#14 quarters_asked = 1 -- verified: exact
+[3] moat table market/event_returns.csv, row market/event_returns.csv#38 -- quote withheld (table or machine data, cited by locator); locator market/event_returns.csv#38 abn_0_to_1 = 0.02353 -- verified: exact
+[4] Amgen 2025Q4 earnings call (third_party), file page 1 (no printed page number) -- quote withheld (grade C transcript, cited by label); locator AMGN:transcripts/2025Q4_transcript.md#p1 -- verified: exact
+[5] moat table tables/ibes_eps_consensus.csv, row tables/ibes_eps_consensus.csv#214 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_eps_consensus.csv#214 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[6] moat table tables/ibes_eps_consensus.csv, row tables/ibes_eps_consensus.csv#215 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_eps_consensus.csv#215 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[7] moat table tables/ibes_revenue_consensus.csv, row tables/ibes_revenue_consensus.csv#1006 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_revenue_consensus.csv#1006 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[8] moat table tables/ibes_revenue_consensus.csv, row tables/ibes_revenue_consensus.csv#1007 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_revenue_consensus.csv#1007 (I/B/E/S, licensed; value withheld) -- verified: machine_data
 
 ## Could not source
 

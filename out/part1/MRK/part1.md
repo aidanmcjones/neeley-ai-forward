@@ -133,12 +133,19 @@ What limits growth is the pace of Qlex conversion: Qlex was 7.9%[derived: 1, 2] 
 [4] Merck 10-Q 2026-06-30, p. 22 (file page 22) -- "The Company has appealed the preliminary injunction decision, and the appeal hearing is set for November 19, 2026" -- [open](https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%2C) verified: exact
 [5] Merck 10-K FY2025, p. 14 (file page 16) -- "Keytruda 2028 (10) 2031 2032-2033 2028" -- [open](https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm) verified: substring
 
-### Priced in: untestable
+### Priced in: not priced in (confidence medium)
 
-Untestable: no consensus figure for Qlex adoption or U.S. Keytruda-family sales is in the sources, so whether the 30%[1] to 40%[1] path is priced in cannot be tested; analysts asked about top products in every covered quarter (share of quarters asked 1.0)[2], which shows attention, not a consensus number.
+Likely not priced in: no analyst asked about the IRS transition-tax NOPAs on any of 10[1] calls and no call, release or slide mentions them, FY2026 EPS consensus did not move after the Q2 10-Q (the item sits outside non-GAAP EPS), and the two-day abnormal return on the filing was -0.4%[derived: 2]; Qlex conversion, the growth limiter, drew no analyst question on either 2026 call.[3][4][5][6][7]
 
-[1] Merck 2025Q4 earnings call (official), p. 11 (file page 11) -- Robert Davis: "we continue to think we're going to see 30% to 40% adoption as you get out to 2028" -- [open](https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf#page=11) verified: exact
-[2] moat table market/priced_in_scorecard.csv, row market/priced_in_scorecard.csv#73 -- quote withheld (table or machine data, cited by locator); locator market/priced_in_scorecard.csv#73 [MRK|top_products] share_of_quarters_asked = 1.0 -- verified: exact
+Limit: No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.
+
+[1] moat table market/priced_in_scorecard.csv, row market/priced_in_scorecard.csv#73 -- quote withheld (table or machine data, cited by locator); locator market/priced_in_scorecard.csv#73 quarters_covered = 10 -- verified: exact
+[2] moat table market/event_returns.csv, row market/event_returns.csv#138 -- quote withheld (table or machine data, cited by locator); locator market/event_returns.csv#138 abn_0_to_1 = -0.0044 -- verified: exact
+[3] moat table market/event_returns.csv, row market/event_returns.csv#121 -- quote withheld (table or machine data, cited by locator); locator market/event_returns.csv#121 abn_0_to_1 = -0.00651 -- verified: exact
+[4] moat table tables/ibes_eps_consensus.csv, row tables/ibes_eps_consensus.csv#1006 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_eps_consensus.csv#1006 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[5] moat table tables/ibes_eps_consensus.csv, row tables/ibes_eps_consensus.csv#1007 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_eps_consensus.csv#1007 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[6] moat table tables/ibes_revenue_consensus.csv, row tables/ibes_revenue_consensus.csv#4149 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_revenue_consensus.csv#4149 (I/B/E/S, licensed; value withheld) -- verified: machine_data
+[7] moat table tables/ibes_revenue_consensus.csv, row tables/ibes_revenue_consensus.csv#4150 -- quote withheld (table or machine data, cited by locator); locator fact:tables/ibes_revenue_consensus.csv#4150 (I/B/E/S, licensed; value withheld) -- verified: machine_data
 
 ## Writer notes
 

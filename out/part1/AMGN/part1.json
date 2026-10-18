@@ -7093,35 +7093,214 @@
    }
   },
   "priced_in": {
-   "call": "untestable",
-   "text": "No consensus Repatha net-price or sales estimate is in the index, and analysts last asked Amgen about gross-to-net on the 2024Q3 call (priced_in_scorecard row AMGN|gross_to_net_price), so whether the mid-single-digit price guide is priced in cannot be tested.",
-   "text_marked": "No consensus Repatha net-price or sales estimate is in the index, and analysts last asked Amgen about gross-to-net on the 2024Q3 call (priced_in_scorecard row AMGN|gross_to_net_price), so whether the mid-single-digit price guide is priced in cannot be tested.[1]",
+   "call": "not priced in",
+   "confidence": "medium",
+   "text": "Likely not priced in: analysts asked about TAVNEOS once in 10 calls (2025Q4) and not after the FDA's formal withdrawal proposal, no call states the carrying value, FY2026 consensus was revised up, not down, after the Q2 10-Q, and the two-day abnormal return on the filing was +2.4%; the Repatha net-price guide drew gross-to-net questions on 1 of 10 calls.",
+   "text_marked": "Likely not priced in: analysts asked about TAVNEOS once in 10[1] calls (2025Q4) and not after the FDA's formal withdrawal proposal, no call states the carrying value, FY2026 consensus was revised up, not down, after the Q2 10-Q, and the two-day abnormal return on the filing was +2.4%[derived: 3]; the Repatha net-price guide drew gross-to-net questions on 1[2] of 10[1] calls.[4][5][6][7][8]",
    "marker_map": {
-    "1": "c_3de71cfce3"
+    "1": "c_efbdff6ecf",
+    "2": "c_f64cb762ea",
+    "3": "c_d16871b494",
+    "4": "c_6695ac0967",
+    "5": "c_60d06b642c",
+    "6": "c_75455adfc9",
+    "7": "c_25744656ae",
+    "8": "c_0735f85ed3"
    },
    "cites": [
     {
-     "cite_id": "c_3de71cfce3",
-     "doc_id": "AMGN:10k_FY2025.md",
-     "doc_title": "Amgen 10-K FY2025",
-     "location": "p. 65",
-     "page": 71,
-     "quote": "Additionally, for 2026, we expect net selling price to decline by approximately mid-single digits.",
-     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Additionally%2C%20for%202026%2C%20we%20expect%20net%20selling%20price",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=71&q=Additionally%2C%20for%202026%2C%20we%20expect%20net%20selling%20price%20to%20decline%20by%20approximately%20mid-single%20digits.",
+     "cite_id": "c_6695ac0967",
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1,
+     "quote": "",
+     "url": "",
      "verify_status": "exact",
-     "withheld": false,
-     "grade": "filing",
-     "speaker": null
+     "withheld": true,
+     "grade": "C",
+     "doc_title": "Amgen 2025Q4 earnings call (third_party)",
+     "location": "file page 1 (no printed page number)",
+     "speaker": "Umer Raffat",
+     "locator": "AMGN:transcripts/2025Q4_transcript.md#p1",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Atranscripts%2F2025Q4_transcript.md&page=1&q=Why%20did%20FDA%20decide%20to%20ask%20you%20to%20pull%20the%20ChemoCentryx%20drug%3F",
+     "note": "speaker attributed from transcript label: Umer Raffat"
+    },
+    {
+     "cite_id": "c_efbdff6ecf",
+     "doc_id": "market/priced_in_scorecard.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/priced_in_scorecard.csv",
+     "location": "row market/priced_in_scorecard.csv#14",
+     "speaker": null,
+     "locator": "market/priced_in_scorecard.csv#14 quarters_covered = 10",
+     "viewer_link": "",
+     "note": "facts row market/priced_in_scorecard.csv#14 field quarters_covered re-read from row_json (verified: verified)"
+    },
+    {
+     "cite_id": "c_f64cb762ea",
+     "doc_id": "market/priced_in_scorecard.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/priced_in_scorecard.csv",
+     "location": "row market/priced_in_scorecard.csv#14",
+     "speaker": null,
+     "locator": "market/priced_in_scorecard.csv#14 quarters_asked = 1",
+     "viewer_link": "",
+     "note": "facts row market/priced_in_scorecard.csv#14 field quarters_asked re-read from row_json (verified: verified)"
+    },
+    {
+     "cite_id": "c_d16871b494",
+     "doc_id": "market/event_returns.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/event_returns.csv",
+     "location": "row market/event_returns.csv#38",
+     "speaker": null,
+     "locator": "market/event_returns.csv#38 abn_0_to_1 = 0.02353",
+     "viewer_link": "",
+     "note": "facts row market/event_returns.csv#38 field abn_0_to_1 re-read from row_json (verified: verified)"
+    },
+    {
+     "cite_id": "c_60d06b642c",
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_eps_consensus.csv",
+     "location": "row tables/ibes_eps_consensus.csv#214",
+     "speaker": null,
+     "locator": "fact:tables/ibes_eps_consensus.csv#214 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_eps_consensus.csv#214 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    },
+    {
+     "cite_id": "c_75455adfc9",
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_eps_consensus.csv",
+     "location": "row tables/ibes_eps_consensus.csv#215",
+     "speaker": null,
+     "locator": "fact:tables/ibes_eps_consensus.csv#215 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_eps_consensus.csv#215 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    },
+    {
+     "cite_id": "c_25744656ae",
+     "doc_id": "tables/ibes_revenue_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_revenue_consensus.csv",
+     "location": "row tables/ibes_revenue_consensus.csv#1006",
+     "speaker": null,
+     "locator": "fact:tables/ibes_revenue_consensus.csv#1006 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_revenue_consensus.csv#1006 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    },
+    {
+     "cite_id": "c_0735f85ed3",
+     "doc_id": "tables/ibes_revenue_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_revenue_consensus.csv",
+     "location": "row tables/ibes_revenue_consensus.csv#1007",
+     "speaker": null,
+     "locator": "fact:tables/ibes_revenue_consensus.csv#1007 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_revenue_consensus.csv#1007 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
     }
    ],
-   "locator": "fact:market/priced_in_scorecard.csv#AMGN|gross_to_net_price",
+   "derived": {
+    "er": {
+     "value": 2.4,
+     "expr": "a * 100",
+     "operands": {
+      "a": {
+       "value": 0.02353,
+       "text": "0.02353",
+       "cite_id": "c_d16871b494"
+      }
+     }
+    }
+   },
+   "evidence": [
+    {
+     "source": "analyst attention (verified/calls/qa_turns.csv; index transcripts)",
+     "finding": "One analyst question named TAVNEOS (Umer Raffat, 2025Q4 call, right after the FDA's voluntary-withdrawal request); no analyst named TAVNEOS, avacopan or the intangible on the 2026Q1 or 2026Q2 calls, which followed the formal withdrawal proposal and the change in the recoverability wording. Grade C transcript: cited by label, not quoted.",
+     "cites": [
+      "c_6695ac0967",
+      "c_efbdff6ecf"
+     ]
+    },
+    {
+     "source": "analyst attention, growth limiter (verified/market/priced_in_scorecard.csv)",
+     "finding": "Topic gross_to_net_price: asked in 1 of 10 covered quarters, last 2024Q3, tier 'rarely asked'.",
+     "cites": [
+      "c_f64cb762ea",
+      "c_efbdff6ecf"
+     ]
+    },
+    {
+     "source": "press attention (GDELT, tables/news_mentions.csv)",
+     "finding": "No item-level GDELT query exists for TAVNEOS. Nearest proxy, the limiter's topic query \"Amgen\" (rebates OR \"net price\" OR \"gross-to-net\" OR \"price cuts\"), stayed low around the Q2 10-Q (2026-07: 5, 2026-08: 13, 2026-09: 2 articles). Raw table, not re-verified; context only.",
+     "cites": [
+      "gdelt:doc:timelinevolraw:AMGN:gross_to_net_price:202607",
+      "gdelt:doc:timelinevolraw:AMGN:gross_to_net_price:202608",
+      "gdelt:doc:timelinevolraw:AMGN:gross_to_net_price:202609"
+     ]
+    },
+    {
+     "source": "consensus revisions (I/B/E/S, tables/ibes_eps_consensus.csv and ibes_revenue_consensus.csv; licensed, machine_data)",
+     "finding": "Company-level FY2026 mean EPS and revenue consensus both moved up between the last snapshot before and the first snapshot after the Q2 10-Q (2026-07-16 to 2026-08-20). Direction only. Street EPS is non-GAAP, which excludes intangible impairments, so the absence of a cut is weak evidence for this item.",
+     "cites": [
+      "c_60d06b642c",
+      "c_75455adfc9",
+      "c_25744656ae",
+      "c_0735f85ed3"
+     ]
+    },
+    {
+     "source": "event returns (verified/market/event_returns.csv)",
+     "finding": "Abnormal return over XLV, close(-1) to close(+1), around the Q2 10-Q filing (day 0 2026-08-05) was positive (+2.4%). Confounded: the Q2 earnings release came after the close on 2026-08-04 and falls inside the window.",
+     "cites": [
+      "c_d16871b494"
+     ]
+    }
+   ],
+   "limit": "No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.",
    "numeric_check": {
-    "status": "no_numbers",
-    "checked": 0,
-    "total": 0,
-    "verified": 0,
-    "derived": 0,
+    "status": "passed",
+    "checked": 4,
+    "total": 4,
+    "verified": 3,
+    "derived": 1,
     "assumed": 0,
     "unsupported": []
    }
