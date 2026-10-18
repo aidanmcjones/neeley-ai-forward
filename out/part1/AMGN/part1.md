@@ -10,7 +10,7 @@ Generated 2026-10-18T04:24:10.331821+00:00. Every number carries a marker: [n] i
 | 2 | Gross-to-net | Amgen's sales deductions took 54%[derived: 1, 2] of gross product sales in 2025, up from 52%[derived: 1, 3] in 2024, and the year-end deduction reserve grew $2,201M[derived: 4, 5] in 2025 versus $1,134M[derived: 5, 6] in 2024, a build the 10-K now attributes partly to "timing of payments"; that excess build gave 2025 operating cash flow about $1.07B[derived: 4, 5, 6] more support than 2024's and reverses if payment timing normalizes.[7] | Amgen 10-K FY2025, p. 77 | Each further point of deduction rate is about $771M[derived: 1, 2][assumption] of net revenue, or about $1.42[derived: 1, 2, 8][assumption] per share pre-tax; the excess reserve build is about 10.7%[derived: 4, 5, 6, 9] of 2025 operating cash flow of $9,958M[9]. The rate rise itself is mix on a growing base, not lost revenue. | Gilead's gross-to-net deductions were 41%[10] of gross product sales in 2025, up 250 bps[10], attributed to Part D redesign; Amgen's rate is about 13 points[derived: 11, 10] higher and its explanation adds "timing of payments".[7] | high | low |
 | 3 | Inventory and receivables growing faster than revenue | In Q1 2026 a 22%[1] inventory impact sat inside TEPEZZA's 29%[2] growth (about $84M[derived: 1, 2] of stocking on a $381M[2] base), about 1.1 points[derived: 1, 2, 3] of Amgen's 4.4 points[derived: 3] of Q1 product-sales growth; U.S. TEPEZZA grew only 16%[4] ($424M[4] vs $365M[4]), while the Q1 call described the $490M[2] global figure as U.S. sales and credited demand. The stocking was limited to Q1: about $20M[derived: 5, 6] unwound in Q2 and about $62M[derived: 7, 6] was still in the channel at the end of Q2.[8] | Amgen 10-Q 2026-03-31, p. 33 | The Q1 stocking is about 24%[derived: 1, 2, 3] of Amgen's $345M[derived: 3] of Q1 product-sales growth, a growth-quality issue for the quarter rather than an annual earnings issue; the reader's "U.S. demand flat to down" read is dropped because Q2 volume grew. | Eli Lilly quantified the same pattern on the face of its 10-Q, saying higher wholesaler inventory at the end of Q2 2024 cut the next quarter's U.S. Mounjaro and Zepbound sales; Amgen's 10-Q gives the inventory driver, but its call did not.[9] | medium | low |
 | 4 | Footnotes | Amgen's IRS Puerto Rico profit-allocation case seeks about $3.6B[1] of tax for 2010 to 2012 and $5.1B[2] plus $2.0B[2] of penalties for 2013 to 2015, before interest, which is at least $7.6B[derived: 1, 2, 3, 4] net of "up to" repatriation credits of $900M[3] and $2.2B[4], against gross unrecognized tax benefits of $4,371M[5] that cover all tax positions. | Amgen 10-K FY2025, p. 79 | At least $7.6B[derived: 1, 2, 3, 4] before interest is about 76%[derived: 1, 2, 3, 4, 6] of 2025 operating cash flow of $9,958M[6] and about $13.97[derived: 1, 2, 3, 4, 7] per share in cash; the EPS hit on a loss is only the excess over an undisclosed case-specific reserve. | Merck's IRS NOPAs on its transition tax total about $1.3B[8] plus about $260M[8] of penalties, before interest, roughly a fifth of Amgen's net exposure. | high | high |
-| 5 | Footnotes | Profit-share payments to UCB on EVENITY and to AstraZeneca on TEZSPIRE rose $349M[derived: 1, 2] to $1,308M[derived: 1, 2] in 2025 ($721M[1] + $587M[2] vs $547M[1] + $412M[2]), about a third of the two brands' $1,043M[derived: 3, 4] of incremental Amgen-booked sales. | Amgen 10-K FY2025, p. F-29 | Profit share rose to 3.7%[derived: 1, 2, 5] of product sales from 3.0%[derived: 1, 2, 5]; the increment is about 0.99%[derived: 1, 2, 5] of product sales, a cost-of-sales drag that management already guides. | AstraZeneca books its side of the U.S. TEZSPIRE split as Alliance Revenue: 673[6] in 2025 vs 436[6] in 2024 in its 20-F table (USD millions, printed as $m), the same split seen from the partner. | high | high |
+| 5 | Footnotes | Profit-share payments to UCB on EVENITY and to AstraZeneca on TEZSPIRE rose $349M[derived: 1, 2] to $1,308M[derived: 1, 2] in 2025 ($721M[1] + $587M[2] vs $547M[1] + $412M[2]). | Amgen 10-K FY2025, p. F-29 | Profit share rose to 3.7%[derived: 1, 2, 5] of product sales from 3.0%[derived: 1, 2, 5]; the increment is about 0.99%[derived: 1, 2, 5] of product sales, a cost-of-sales drag that management already guides. | AstraZeneca books its side of the U.S. TEZSPIRE split as Alliance Revenue: 673[6] in 2025 vs 436[6] in 2024 in its 20-F table (USD millions, printed as $m), the same split seen from the partner. | high | high |
 
 ### 1. Footnotes (AMGN-c06)
 
@@ -143,13 +143,13 @@ Sources:
 
 ### 5. Footnotes (AMGN-c07)
 
-**Finding.** Profit-share payments to UCB on EVENITY and to AstraZeneca on TEZSPIRE rose $349M[derived: 1, 2] to $1,308M[derived: 1, 2] in 2025 ($721M[1] + $587M[2] vs $547M[1] + $412M[2]), about a third of the two brands' $1,043M[derived: 3, 4] of incremental Amgen-booked sales.
+**Finding.** Profit-share payments to UCB on EVENITY and to AstraZeneca on TEZSPIRE rose $349M[derived: 1, 2] to $1,308M[derived: 1, 2] in 2025 ($721M[1] + $587M[2] vs $547M[1] + $412M[2]).
 
 **Source.** Amgen 10-K FY2025, p. F-29: "global profit and loss share expenses were $ 721 million, $ 547 million and $ 396 million, respectively"
 
 **Impact (operating margin, down).** Profit share rose to 3.7%[derived: 1, 2, 5] of product sales from 3.0%[derived: 1, 2, 5]; the increment is about 0.99%[derived: 1, 2, 5] of product sales, a cost-of-sales drag that management already guides.
 
-**Math.** 721[1] + 587[2] = 1,308[derived: 1, 2] vs 547[1] + 412[2] = 959[derived: 1, 2]; 1,308[derived: 1, 2] - 959[derived: 1, 2] = 349[derived: 1, 2]. EVENITY 2,100[3] - 1,563[3] = 537[derived: 3]; TEZSPIRE 1,478[4] - 972[4] = 506[derived: 4]; 537[derived: 3] + 506[derived: 4] = 1,043[derived: 3, 4]; 349[derived: 1, 2] / 1,043[derived: 3, 4] = 33%[derived: 1, 2, 3, 4]. 1,308[derived: 1, 2] / 35,148[5] = 3.7%[derived: 1, 2, 5]; 959[derived: 1, 2] / 32,026[5] = 3.0%[derived: 1, 2, 5].
+**Math.** 721[1] + 587[2] = 1,308[derived: 1, 2] vs 547[1] + 412[2] = 959[derived: 1, 2]; 1,308[derived: 1, 2] - 959[derived: 1, 2] = 349[derived: 1, 2]. 1,308[derived: 1, 2] / 35,148[5] = 3.7%[derived: 1, 2, 5]; 959[derived: 1, 2] / 32,026[5] = 3.0%[derived: 1, 2, 5].
 
 **Peer.** AstraZeneca books its side of the U.S. TEZSPIRE split as Alliance Revenue: 673[6] in 2025 vs 436[6] in 2024 in its 20-F table (USD millions, printed as $m), the same split seen from the partner.
 
@@ -159,7 +159,7 @@ Sources:
 
 **On the record: on the Q1 2026 call the CFO said cost of sales was "driven by higher profit share and royalty expenses and changes in our sales mix" and that these factors will keep pressuring it, so the drag sits inside guided cost of sales; only the dollar split by partner is footnote-only.[7]**
 
-Gate: passed (39 numbers: 16 verified, 23 derived, 0 assumed).
+Gate: passed (26 numbers: 12 verified, 14 derived, 0 assumed).
 
 Sources:
 
@@ -177,7 +177,23 @@ Beyfortus 422 237" [open](https://www.sec.gov/Archives/edgar/data/901832/0001104
 
 ## Sharpest Needle
 
-Finding 1 (AMGN-c06). It is the only surviving ruling that both skeptics held through both rounds with materiality high and obviousness low: a $2.3B[1] U.S. intangible at about 5.2x[derived: 1, 2][assumption] sales under an FDA withdrawal proposal, with a write-off worth about $4.23[derived: 1, 3] per share pre-tax. Its signal, the Q1-to-Q2 change in the recoverability wording, sits only in the 10-Q intangible note, and no call, slide or release states the carrying value.
+Finding 1 (AMGN-c06). AMGN-c06 and AMGN-c02 both survived both skeptic rounds with materiality high and obviousness low; c06 is the pick because it is the larger and the less discussed of the two. Larger: a full write-off of the $2.3B[1] U.S. intangible, carried at about 5.2x[derived: 1, 2, assumption] FY2025 TAVNEOS sales of $459M[derived: 2, assumption] under an FDA withdrawal proposal, is about $4.23[derived: 1, 3] per share pre-tax, against about $1.42[derived: assumption, 5, 6, 3] per share for each further point of c02's deduction rate. Less discussed: c06's signal, the Q1-to-Q2 change in the recoverability wording, sits only in the 10-Q intangible note and no call, slide or release states the carrying value, while c02's 54%[4] deduction rate is printed in the 10-K's own MD&A.[7][8][9]
+
+Gate: passed (6 numbers: 2 verified, 4 derived, 0 assumed).
+
+Sources:
+
+- [1] Amgen 10-Q 2026-06-30, p. 16 (file page 21): "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market." [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS) verified: exact
+- [2] Amgen 10-K FY2025, p. 69 (file page 75): "TAVNEOS - U.S. 
+ 423 65 % 256" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm) verified: exact
+- [3] Amgen 10-Q 2026-06-30, p. 32 (file page 37): "Diluted shares 544 541 1 % 544 541 1 %" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm) verified: exact
+- [4] Amgen 10-K FY2025, p. 77 (file page 83): "total sales deductions were 54%, 52% and 53% of gross product sales, respectively" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=total%20sales%20deductions%20were%2054%25%2C) verified: exact
+- [5] Amgen 10-K FY2025, p. 64 (file page 70): "Total product sales $ 35,148 10 % $ 32,026 19 %" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm) verified: exact
+- [6] Amgen 10-K FY2025, p. 77 (file page 83): "Amounts charged against product sales 21,697 16,988 3,298 41,983" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Amounts%20charged%20against%20product%20sales) verified: exact
+- [7] Amgen 10-Q 2026-03-31, p. 14 (file page 18): "did not result in significant changes to the estimated future cash flows for TAVNEOS as of March 31, 2026" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000057/amgn-20260331.htm#:~:text=did%20not%20result%20in%20significant%20changes%20to%20the) verified: exact
+- [8] Amgen 10-Q 2026-06-30, p. 16 (file page 21): "The Company evaluated these developments, as well as observations with respect to new U.S. patient interest, during the second quarter of 2026." [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20Company%20evaluated%20these%20developments%2C%20as%20well%20as) verified: exact
+- [9] Amgen 10-K FY2025, p. 69 (file page 75): "TAVNEOS - ROW 
+ 36 33 % 27" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm) verified: exact
 
 ## Product fine print: Repatha (evolocumab) vs Regeneron Praluent, Novartis Leqvio, Merck Lipfendra
 
@@ -187,7 +203,7 @@ Finding 1 (AMGN-c06). It is the only surviving ruling that both skeptics held th
 | boxed warnings and safety | No boxed warning; the listed warning is hypersensitivity, including angioedema.[1] | No boxed warning; the listed warning is hypersensitivity, including hypersensitivity vasculitis and reactions requiring hospitalization.[1] | No boxed warning; the listed warning is hypersensitivity, including anaphylaxis and angioedema.[1] | No boxed warning and no contraindications; the label says to discontinue when pregnancy is recognized unless benefits outweigh fetal risk.[1][2] |
 | dosing and convenience | 140[1] mg every 2[1] weeks or 420[1] mg once monthly, subcutaneous injection. | 75[1] mg every 2[1] weeks or 300[1] mg every 4[1] weeks, subcutaneous injection. | 284[1] mg subcutaneous injection at start, again at 3[1] months, then every 6[1] months. | One 20[1] mg tablet once daily, oral, but the patient must wait at least 30[2] minutes before eating or drinking anything other than water, black coffee or plain tea. |
 | patent and exclusivity timeline | U.S. antibody patent expires 8/27/2029, with U.S. methods-of-treatment patents to 5/10/2032 (Amgen 10-K).[1][2] | No exclusivity date is in the case LOE table or Regeneron's indexed filings; not sourced. | Novartis lists U.S. loss of exclusivity in 2034 and EU in 2035 in its 20-F.[1] | FDA-approved in July 2026, the first oral PCSK9 inhibitor; Merck states no LOE date in the indexed filings.[1] |
-| pricing and gross-to-net | Amgen guides 2026 Repatha net selling price down by about mid-single digits; in Q1 2026 net price fell 7%[1], more than offset by 8%[1] favorable changes to estimated sales deductions, with volume up 35%[1].[2] | Regeneron books U.S. Praluent net sales of $262.5M[1] in 2025 vs $241.7M[1] in 2024 and gives no net-price figure. | No net-price disclosure in the indexed Novartis filings; Part B ASP rows exist only as machine data and are not quoted here. | Merck will add Lipfendra to its direct-to-patient program at affordable prices for eligible U.S. patients, a cash-price channel at launch; no price disclosed.[1] |
+| pricing and gross-to-net | Amgen guides 2026 Repatha net selling price down by about mid-single digits; in Q1 2026 net price fell 7%[1], more than offset by 8%[1] favorable changes to estimated sales deductions, with volume up 35%[1].[2] | Regeneron books U.S. Praluent net sales of $262.5M[1] in 2025 vs $241.7M[1] in 2024 and gives no net-price figure. | No net-price disclosure in the indexed Novartis filings; Part B ASP rows exist only as machine data and are not quoted here. | Merck says it will expand its U.S. direct-to-patient program to include Lipfendra in the future; no price or launch channel is disclosed.[1] |
 
 Cell sources:
 
@@ -223,19 +239,19 @@ None." [open](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=100ec543-
 
 ### Financial tie
 
-Ties to the gross-to-net finding: Amgen's 10-K guides Repatha net selling price down by about mid-single digits in 2026. On 2025 U.S. Repatha sales of $1,663M[1], each point of net price is about $17M[derived: 1][assumption], so a 5%[assumption] decline is about $83M[derived: 1][assumption], about 0.11 points[derived: 1, 2, 3][assumption] of company-wide deduction rate on $77,131M[derived: 2, 3] of 2025 gross sales: Repatha alone moves the deduction rate little, and its volume growth carries it.[4]
+Ties to the gross-to-net finding: Amgen's 10-K guides Repatha net selling price down by about mid-single digits in 2026, in its paragraph on global Repatha sales. On 2025 global Repatha sales of $3,016M[1], each point of net price is about $30M[derived: assumption, 1], so a 5%[assumption] decline is about $151M[derived: assumption, 1], about 0.20 points[derived: assumption, 1, 2, 3] of company-wide deduction rate on $77,131M[derived: 2, 3] of 2025 gross sales: Repatha alone moves the deduction rate little, and its volume growth carries it.[4][5]
 
-Math: 0.01[assumption] x 1,663[1] = 17[derived: 1][assumption]; 0.05[assumption] x 1,663[1] = 83[derived: 1][assumption]; 83[derived: 1][assumption] / 77,131[derived: 2, 3] x 100 = 0.11 points[derived: 1, 2, 3][assumption] (77,131[derived: 2, 3] = 35,148[2] + 41,983)[3].
+Math: 0.01[assumption] x 3,016[1] = 30[derived: assumption, 1]; 0.05[assumption] x 3,016[1] = 151[derived: assumption, 1]; 151[derived: assumption, 1] / 77,131[derived: 2, 3] x 100 = 0.20 points[derived: assumption, 1, 2, 3] (77,131[derived: 2, 3] = 35,148[2] + 41,983)[3].
 
-- [?] Amgen 10-K FY2025, p. 65 (file page 71): "Additionally, for 2026, we expect net selling price to decline by approximately mid-single digits." [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Additionally%2C%20for%202026%2C%20we%20expect%20net%20selling%20price) verified: exact
-- [?] Amgen 10-K FY2025, p. 65 (file page 71): "Repatha - U.S. 
- $ 1,663 46 % $ 1,139" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm) verified: exact
-- [?] Amgen 10-K FY2025, p. 64 (file page 70): "Total product sales $ 35,148 10 % $ 32,026 19 %" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm) verified: exact
-- [?] Amgen 10-K FY2025, p. 77 (file page 83): "Amounts charged against product sales 21,697 16,988 3,298 41,983" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Amounts%20charged%20against%20product%20sales) verified: exact
+- [1] Amgen 10-K FY2025, p. 65 (file page 71): "Total Repatha $ 3,016 36 % $ 2,222 36 % $ 1,635" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm) verified: exact
+- [2] Amgen 10-K FY2025, p. 64 (file page 70): "Total product sales $ 35,148 10 % $ 32,026 19 %" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm) verified: exact
+- [3] Amgen 10-K FY2025, p. 77 (file page 83): "Amounts charged against product sales 21,697 16,988 3,298 41,983" [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Amounts%20charged%20against%20product%20sales) verified: exact
+- [4] Amgen 10-K FY2025, p. 65 (file page 71): "Additionally, for 2026, we expect net selling price to decline by approximately mid-single digits." [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Additionally%2C%20for%202026%2C%20we%20expect%20net%20selling%20price) verified: exact
+- [5] Amgen 10-K FY2025, p. 65 (file page 71): "The increase in global Repatha sales for 2025 was driven by volume growth." [open](https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=The%20increase%20in%20global%20Repatha%20sales%20for%202025) verified: exact
 
 ### What limits growth
 
-Repatha's growth is limited by price, not label: its outcomes label (with coronary revascularization) and HoFH coverage are broader than all three rivals, yet Amgen itself guides net price down mid-single digits in 2026 just as Merck's oral Lipfendra launches with a direct-to-patient cash channel.[1][2][3]
+Repatha's growth is limited by price, not label: its outcomes label (with coronary revascularization) and HoFH coverage are broader than all three rivals, yet Amgen itself guides net price down mid-single digits in 2026; Merck says only that it will add oral Lipfendra to its direct-to-patient program in the future, so no Lipfendra price pressure is shown yet.[1][2][3]
 
 ### Priced in: not priced in (confidence medium)
 
@@ -257,5 +273,5 @@ Limit: No product-level or item-level consensus exists in the index: I/B/E/S her
 - Praluent patent/exclusivity date (loe_calendar row 172 has none; no Regeneron filing date in the index)
 - Lipfendra LOE date (not in the index)
 - Leqvio net price (only unverified machine-data ASP rows)
-- Consensus Repatha estimate (priced-in call untestable)
+- Consensus Repatha estimate (product-level consensus absent; priced-in call is an inference)
 - U.S. vs ROW split of the Q1 2026 TEPEZZA inventory effect (10-Q gives global only)
