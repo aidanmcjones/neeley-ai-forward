@@ -111,9 +111,10 @@ Exporter transforms:
   fails and every row has exactly len(rivals) + 1 cells in the same order, columns map by position; otherwise the
   company fails the checks.
 - Pass-through: extra keys on findings (blind_id, category, verdict, confidence_reason, obviousness,
-  on_the_record, derived), on financial_tie (math_numeric_check) and at the top level of part1.json (derived,
-  assumptions, not_sourced, dash_note, notes, generated_at) are copied unchanged; unknown top-level keys are a
-  `--check` warning, not an error. Any `numeric_check` key, wherever it sits, still has to pass.
+  on_the_record, derived), on financial_tie (math_numeric_check) are copied unchanged. At the top level of part1.json
+  only the contract keys (ticker, name, findings, sharpest_needle, product_table; the fixture's sample and
+  rank_basis) and generated_at are kept: company_score, not_sourced, dash_note, notes, assumptions and derived
+  carry ungated sizing and are dropped from the public record, and any other top-level key fails the checks. Any `numeric_check` key, wherever it sits, still has to pass.
 - Trace figures: no number the gate has not passed is printed in the trace. Per company the exporter builds a
   gated-figure set: every number token (the engine tokenizer, kind "number", read by value with its inline scale
   and its unit) in the company record's text whose numeric check passed: each finding's finding, impact.text,

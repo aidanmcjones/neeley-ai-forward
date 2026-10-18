@@ -7153,13 +7153,5 @@
     "full": "Merck Lipfendra"
    }
   ]
- },
- "not_sourced": [
-  "Praluent patent/exclusivity date (loe_calendar row 172 has none; no Regeneron filing date in the index)",
-  "Lipfendra LOE date (not in the index)",
-  "Leqvio net price (only unverified machine-data ASP rows)",
-  "Consensus Repatha estimate (priced-in call untestable)",
-  "U.S. vs ROW split of the Q1 2026 TEPEZZA inventory effect (10-Q gives global only)"
- ],
- "dash_note": "Em dashes in verbatim table-row quotes (e.g. \"TAVNEOS - U.S.\") are printed as hyphens; the verifier treats dashes as equal (substring rung)."
+ }
 }

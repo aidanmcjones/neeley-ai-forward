@@ -2856,16 +2856,5 @@
     "full": "Roche's Tecentriq"
    }
   ]
- },
- "company_score": {
-  "material_non_obvious_survivors": 2,
-  "best_candidate_id": "MRK-c03",
-  "one_line": "Middling pick: Merck's only material, non-obvious survivors are balance-sheet footnotes (the unmentioned IRS transition-tax NOPA, ~$1.56B cash and a gross ~$0.63/share GAAP ceiling, and a $5.9B long-dated inventory pool that kept growing after its tariff rationale lapsed), while the product story (Keytruda/Qlex) is the starter thread and its label fine print carries no sized edge."
- },
- "notes": [
-  "MRK-c10 is used in the product section only (pricing row and financial tie), per the synthesizer.",
-  "The MRK-c10 ruling text in synthesis.json and trace_part.jsonl carried an unfilled template placeholder ({prem[...]}); the matched-quarter premiums were recomputed from the CMS rows (Q2 2026 +3.6%, Q3 2026 +4.0%, Oct 2026 +2.5%) and substituted in trace.jsonl.",
-  "Inventory days for 2024 recompute to 247.5 (10,302 / 15,193 x 365), printed as 247; the synthesizer's 248 rounded up.",
-  "Rows 4 and 5 are killed-as-obvious candidates kept as on-the-record rows (obviousness high)."
- ]
+ }
 }

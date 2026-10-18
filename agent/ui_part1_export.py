@@ -550,7 +550,10 @@ def selection_problems(sel):
 
 
 # ---------------------------------------------------------------- company record
-CONTRACT_TOP = {"ticker", "name", "findings", "sharpest_needle", "product_table", "sample", "rank_basis"}
+CONTRACT_TOP = {"ticker", "name", "findings", "sharpest_needle", "product_table", "sample", "rank_basis", "generated_at"}
+# top-level keys the writers add that carry ungated sizing: dropped from the public record (finding-level `derived`
+# is kept); any other unknown top-level key fails the checks
+DROP_TOP = {"company_score", "not_sourced", "dash_note", "notes", "assumptions", "derived"}
 
 
 def _norm_words(s, drop_possessor=True):
@@ -606,6 +609,8 @@ def resolve_columns(pt):
 
 def build_company(rec):
     rec = copy.deepcopy(rec)
+    for k in DROP_TOP:
+        rec.pop(k, None)
     pt = rec.get("product_table")
     if isinstance(pt, dict) and pt.get("rows"):
         pt["columns"] = resolve_columns(pt)
@@ -659,7 +664,7 @@ def company_problems(rec, t, sample=False):
                 errs.append(f"{t}.product_table row '{r.get('row')}' has no cell for column {c.get('key')}")
     extra = sorted(set(rec) - CONTRACT_TOP)
     if extra:
-        warns.append(f"{t}.json carries top-level keys beyond the contract (passed through): {extra}")
+        errs.append(f"{t}.json carries top-level keys outside the contract: {extra}")
     for k in ("financial_tie", "growth_limiter", "priced_in"):
         if not isinstance(pt.get(k), dict):
             errs.append(f"{t}.product_table.{k} missing")
