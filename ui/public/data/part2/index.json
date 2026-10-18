@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T05:36:03Z",
+ "generated_at": "2026-10-18T05:37:36Z",
  "prompt": "recommend one strategic move for the next 24 months, with a specific budget or commitment of people behind it.",
  "picked": [
   "AMGN",
@@ -8,17 +8,10 @@
  ],
  "available": [
   "AMGN",
-  "MRK"
+  "MRK",
+  "PFE"
  ],
- "missing": [
-  {
-   "ticker": "PFE",
-   "reason": "writing",
-   "absent": [
-    "part2.json"
-   ]
-  }
- ],
+ "missing": [],
  "sample": false,
  "contract": "docs/part2/UI_CONTRACT.md",
  "source": "out/part2"

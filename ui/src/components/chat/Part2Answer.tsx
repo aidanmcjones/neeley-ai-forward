@@ -137,7 +137,7 @@ export function Part2Answer({ part2, part1, instant, nameOf, startTicker, onPart
   const budgetOk = !!budget && !failed(budget.numeric_check) && (budget.numeric_check?.status === "passed");
   const budgetLine = budgetOk ? [
     typeof budget?.amount_usd === "number" && Number.isFinite(budget.amount_usd) ? `$${budget.amount_usd.toLocaleString("en-US")}` : "",
-    budget?.people != null && budget.people !== "" ? `${budget.people} people` : "",
+    budget?.people != null && budget.people !== "" && Number(budget.people) !== 0 ? `${budget.people} people` : "",
     budget?.period ? scrub(String(budget.period)) : "",
   ].filter(Boolean).join(" · ") : "";
 
