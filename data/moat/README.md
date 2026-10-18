@@ -28,7 +28,11 @@ Sonnet agent and then re-verified by an Opus agent against the primary source. B
 `data/moat/index/citations.sqlite` (R2 `moat/index/citations.sqlite.gz`): 6,649 docs, 71,706 pages, 106,230 facts,
 FTS5 search, transcript grades, `verify_quote`. API in `agent/moat/cite.py`; docs in `docs/research/citation_index.md`.
 Facts carry `verify_status`: use `verified`/`corrected`/`fixed`/`yes`/`True`; `unverified_onboard` means an onboarded
-table no verifier has checked; `no_verified_copy` is machine data (prices, I/B/E/S). `*_dropped.csv` files are never indexed.
+table no verifier has checked; `no_verified_copy` and `machine_data` are machine data pulled by code from an official
+dataset (prices, I/B/E/S, CMS spend) and are citable by locator; `none_found`, `not_public` and `none_disclosed` are
+explicit negatives (the row records the query, so "no public source" is itself citable); `unverified_secondary` is a
+figure the note already calls secondary; `quote_mismatch` and `unverified` rows are leads only. `*_dropped.csv` files are
+never indexed.
 New material is registered with `python -m agent.moat.index --add` (ids stable, idempotent).
 
 ```

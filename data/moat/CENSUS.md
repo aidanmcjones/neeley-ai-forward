@@ -1,6 +1,6 @@
 # Moat database census
 
-As of 2026-10-18T00:35:16. Index file 766 MB. Page id convention: doc_id#p<page_no>, page_no = first number of the [[page N | printed M]] marker.
+As of 2026-10-18T00:37:36. Index file 766 MB. Page id convention: doc_id#p<page_no>, page_no = first number of the [[page N | printed M]] marker.
 
 ## Totals
 
@@ -9,8 +9,8 @@ As of 2026-10-18T00:35:16. Index file 766 MB. Page id convention: doc_id#p<page_
 | Documents | 7,003 |
 | Pages (full-text searchable) | 78,392 |
 | Speaker turns (earnings calls) | 15,463 |
-| Fact rows (full-text searchable) | 117,659 |
-| Fact tables | 301 |
+| Fact rows (full-text searchable) | 117,904 |
+| Fact tables | 302 |
 | Verified CSV files | 123 |
 | Fact rows naming a drug | 45,304 (3,628 distinct drug names) |
 | Licensed (Bloomberg) documents, cite only | 5 |
@@ -22,8 +22,8 @@ As of 2026-10-18T00:35:16. Index file 766 MB. Page id convention: doc_id#p<page_
 | Status | Rows |
 |---|---|
 | rejected, kept for the report only | 6,211 |
-| checked by a verifier | 37,427 |
-| other status values | 5,504 |
+| checked by a verifier | 37,655 |
+| other status values | 5,521 |
 | machine data (prices, I/B/E/S, CMS) | 47,754 |
 | collected, not individually checked | 3,450 |
 | onboarded, awaiting a verifier | 17,313 |
@@ -32,9 +32,9 @@ As of 2026-10-18T00:35:16. Index file 766 MB. Page id convention: doc_id#p<page_
 
 | Locator | Rows |
 |---|---|
-| document page (doc_id#p<page>) | 12,408 |
-| dataset or API url | 45,373 |
-| row key only | 59,878 |
+| document page (doc_id#p<page>) | 12,579 |
+| dataset or API url | 45,442 |
+| row key only | 59,883 |
 
 ## Documents by type
 
@@ -170,8 +170,8 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | market | 3,015 |
 | costs | 2,353 |
 | peers | 2,304 |
-| deals | 2,044 |
-| filings | 1,783 |
+| deals | 2,054 |
+| filings | 2,018 |
 | pricing | 1,202 |
 | secx | 576 |
 | epi | 560 |
@@ -205,7 +205,7 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | pipeline/pipeline_assets.csv | 2,188 |
 | rx/partd_prescribers_by_specialty.csv | 1,951 |
 | rx/formulary_history.csv | 1,780 |
-| deals/deal_comps.csv | 1,640 |
+| deals/deal_comps.csv | 1,645 |
 | product/label_changes.csv | 1,602 |
 | onboard/NVS/nadac_history.csv | 1,599 |
 | onboard/NVS/product_revenue_quarterly.csv | 1,556 |
@@ -249,6 +249,7 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | policy/policy_exposure.csv | 273 |
 | deals/duplicates.csv | 269 |
 | costs/launch_and_marketing_benchmarks.csv | 265 |
+| filings/part2_fills_AMGN.csv | 235 |
 | rx/partd_prescribers_by_drug.csv | 229 |
 | rx/prescriber_concentration.csv | 223 |
 | onboard/drug_orkambi/orange_book_patents.csv | 220 |
@@ -341,9 +342,9 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | onboard/REGN/ibes_recommendations.csv | 44 |
 | onboard/VRTX/ibes_recommendations.csv | 44 |
 | onboard/drug_promacta/head_to_head_pubmed.csv | 44 |
+| deals/part2_comp_sets.csv | 42 |
 | policy/ira_selected_drugs.csv | 41 |
 | onboard/drug_eylea/label_versions.csv | 38 |
-| deals/part2_comp_sets.csv | 37 |
 | epi/attr_cm_prevalence_sources.csv | 37 |
 | pricing/company_list_vs_net.csv | 37 |
 | product/h2h_by_pair.csv | 37 |
@@ -395,4 +396,3 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | policy/icer_reports.csv | 16 |
 | policy/ira_cut_check.csv | 16 |
 | secx/insider_summary.csv | 16 |
-| onboard/drug_symdeko/label_versions.csv | 15 |
