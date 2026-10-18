@@ -8,7 +8,7 @@ const {
 } = require("docx");
 
 const DIR = __dirname;
-const OUT = path.join(DIR, "NEEDLE_How_We_Did_It.docx");
+const OUT = path.join(DIR, "Needle_in_the_Haystack_How_We_Did_It.docx");
 
 // Palette (warm, understated)
 const INK = "141413";
@@ -233,11 +233,11 @@ add(
   }),
   new Paragraph({
     spacing: { after: 200, line: 300 },
-    children: [new TextRun({ text: "NEEDLE reads ten drugmakers' fine print, argues with itself, and shows judges the page behind every number.", font: SERIF, size: 27, color: MUTED })],
+    children: [new TextRun({ text: "Needle in the Haystack reads ten drugmakers' fine print, argues with itself, and shows judges the page behind every number.", font: SERIF, size: 27, color: MUTED })],
   }),
   new Paragraph({
     spacing: { after: 60 },
-    children: [muted("Team NEEDLE: Aidan Jones and Parker Kingsbury  ·  TCU Neeley School of Business  ·  October 18, 2026", 18)],
+    children: [muted("Team Needle in the Haystack: Aidan Jones and Parker Kingsbury  ·  TCU Neeley School of Business  ·  October 18, 2026", 18)],
   }),
   rule(CLAY, 280, 160)
 );
@@ -245,7 +245,7 @@ add(
 // Lede
 add(
   bodyRuns([
-    run("Over thirty hours we built NEEDLE, a system that finds material, non-obvious facts in pharmaceutical filings and turns them into one defensible CEO decision. It reads ten companies blind. Two skeptics who assume each candidate finding is wrong argue over it. The company pick is sealed with a hash before anyone can influence it, and no number reaches the screen unless it traces to a page a judge can open."),
+    run("Over thirty hours we built Needle in the Haystack, a system that finds material, non-obvious facts in pharmaceutical filings and turns them into one defensible CEO decision. It reads ten companies blind. Two skeptics who assume each candidate finding is wrong argue over it. The company pick is sealed with a hash before anyone can influence it, and no number reaches the screen unless it traces to a page a judge can open."),
   ]),
   body("The deliverable is a chat page with two prompts, both taken verbatim from the case. The first returns a five-finding table, a Sharpest Needle and a product fine-print comparison for Amgen, Merck or Pfizer. The second returns one strategic move for the next 24 months with a budget, the math, two rejected alternatives and the signals that would prove it wrong. Every figure on the page carries a footnote that opens the source document at the cited page."),
   body("This report covers the tools we used and what each was for, how documents reached the AI and how the work was split between people and tools, the prompts that mattered most, the cases where the AI was confidently wrong, and what we would do differently. We logged 542 of those wrong cases. A person reading a page caught the ones that taught us the most.")
@@ -465,7 +465,7 @@ add(
 
 // ---------- document ----------
 const doc = new Document({
-  creator: "Team NEEDLE",
+  creator: "Team Needle in the Haystack",
   title: "How we did it",
   description: "Neeley AI Forward 2026, The Fine Print: tools, workflow, prompts, where the AI was wrong, what we would change.",
   styles: {
@@ -490,7 +490,7 @@ const doc = new Document({
             new Paragraph({
               tabStops: [{ type: TabStopType.RIGHT, position: TEXT_W }],
               children: [
-                muted("NEEDLE  ·  How we did it  ·  Neeley AI Forward 2026", 15),
+                muted("Needle in the Haystack  ·  How we did it  ·  Neeley AI Forward 2026", 15),
                 new TextRun({ text: "\t", font: SANS, size: 15 }),
                 new TextRun({ children: [PageNumber.CURRENT], font: SANS, size: 15, color: MUTED }),
               ],
