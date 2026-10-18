@@ -1,0 +1,177 @@
+{
+ "ticker": "MRK",
+ "lens": "cfo",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "MRK-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Opened every return operand. Arithmetic checks: U.S. Q2 2026 Keytruda 4,611 plus Qlex 395 = 5,006 [MRK:10q_2026Q2.md p.28]; x4 = 20,024; 10% = 2,002; Stelara U.S. 3,847 vs 6,720 [JNJ:10k_FY2025.md p.89] is a 42.75% fall (the page prints 42.7, the candidate uses 42.8); 2,002 x 42.8% = 856. Cost 150 / (2 x 2.3B A&P [MRK:10k_FY2025.md p.85]) = 3.3% checks. Four problems sink the return. (1) Baseline mis-stated: the cited ASCO page says 30% to 40% peak adoption 'by end of 2027' [MRK:presentations/2026-06_asco_investor_event.md p.25], a year earlier than the candidate's December 2028 anchor, and management says it will 'drive that as high as we can' [MRK:transcripts/2025Q4_transcript.md p.11]. So the 10 points above the 30% low end are inside management's own guided range by end 2027; the $150M program has no cited evidence that it causes any of them. Adoption on that page is a patient measure averaged across markets, not U.S. dollar share. (2) The Stelara transfer is not legitimate as a pure biosimilar-erosion rate: J&J attributes the 2025 decline to 'biosimilar competition and Medicare Part D redesign' [JNJ:10k_FY2025.md p.31], so 42.7% overstates the biosimilar-only effect, and Stelara is a self-injected immunology drug in the pharmacy/Part D channel while IV Keytruda is physician-administered Part B buy-and-bill oncology. (3) The 2029 base is not flat: Merck expects IRA price setting on Keytruda effective January 1, 2029 and says U.S. Keytruda sales 'will decline materially after that time' [MRK:10k_FY2025.md p.33]; whether Qlex escapes it is not in the index, and biosimilar entry in December 2028 is only 'could begin' given two compound-family patents running to 2029 [MRK:10k_FY2025.md p.31]. (4) The return is 2029 revenue, outside the 24-month window (the candidate says so), measured as revenue against a cash cost, and the same 10-point lift and the same $856M are counted again in MRK-m03. Halving test: lift 5 points gives $428M; erosion halved gives $428M; both halved gives $214M, which discounted two years at 8% [assumption] is about $183M against $150M, a thin margin that disappears if attribution is under half. Also the Q2 run-rate may carry part of the $250M year-to-date wholesaler timing benefit [MRK:10q_2026Q2.md p.33]. Hurdle used: 8% annual cost of capital [assumption: no WACC is disclosed in the index]; floor is Merck's own marginal debt cost of 4.30% to 5.85% on the May 2026 notes [MRK:10q_2026Q2.md p.19].",
+   "correction": "Narrower and honest version: a $50M to $75M pilot aimed at monotherapy and oral-combination practices (where the 2026Q2 call says early use clusters [MRK:transcripts/2026Q2_transcript.md p.4]), judged on Qlex share above management's own end-2027 30% guide, not above an end-2028 baseline. Restate the return as a 2029 avoided loss of roughly $214M to $428M (lift 5 to 10 points, erosion halved for the Part D redesign confound), label it beyond the 24-month window, net of IRA uncertainty, and do not reuse it in MRK-m03.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 16
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 85
+    }
+   ]
+  },
+  {
+   "id": "MRK-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Arithmetic checks (3,293 x4 = 13,172; x35% = 4,610; x15% x2 = 1,383; x5% = 69; +15 = 84) but nearly every operand is invented. (1) The deal comps do not transfer. The Halozyme 8-K page [deals:deals/2026-08-06_0001159036-26-000103.md p.2] shows the 'mid-single digit' royalty is Oruka's voluntary license to Hypercon for ORKA-001, a psoriasis product in development, and the $15M upfront is Vertex's access fee to Hypercon for up to three targets, with no royalty rate disclosed. Neither is an MDASE patent, neither is a litigation settlement, and neither covers a marketed blockbuster under injunction; a settlement royalty would be set by Halozyme's leverage, not by a pre-clinical platform price, so the $84M cost has no anchor. (2) The 35% country share is made up; Part 1 finding 3 already said Germany and the counterclaim markets 'cannot be sized' and Merck does not report country sales. Total international Qlex/SC was only $68M in Q2 2026, about 2% of international IV of $3,293M [MRK:10q_2026Q2.md p.28], so 15% average SC adoption over 24 months is far above the observed base. (3) The royalty is paid on SC sales in all nine markets, but only Germany is under an injunction [MRK:10q_2026Q2.md p.22]; the other eight would pay a royalty on sales Merck may make anyway. (4) The return is load-bearing on one uncited 10% assumption: halve it and the gross return is $69M against $84M cost, negative. Merck's own record argues it may not need to pay at all: Halozyme consented to UK revocation of the '622 patent and the PTAB found every challenged claim unpatentable in four decisions [MRK:10q_2026Q2.md p.22]. The return also arrives as revenue and the cost as royalty cash, so even the headline $54M net is not profit. Hurdle used: 8% annual cost of capital [assumption: no WACC is disclosed in the index]; floor is Merck's own marginal debt cost of 4.30% to 5.85% on the May 2026 notes [MRK:10q_2026Q2.md p.19].",
+   "correction": "None possible at the stated size: no royalty or settlement comp for MDASE exists in the index. The defensible narrower move is to hold off any license until the November 19, 2026 German appeal and the Dutch ruling, and size exposure only on Germany, with the cost left as an unsized range rather than $84M.",
+   "pages_checked": [
+    {
+     "doc_id": "deals:deals/2026-08-06_0001159036-26-000103.md",
+     "page": 2
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 16
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "id": "MRK-m03",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Checked the Part B rows by locator (machine data, not quoted): J9277 2026Q2 at 32.129 per mg x 395 mg = $12,691 and J9271 2026Q2 at 61.251 per mg x 200 mg = $12,250, a 3.6% Qlex premium [tables/partb_asp_quarterly.csv#388, #385]; correct. The gap is not stable: the same table gives about 4.0% in 2026Q3 and about 2.5% in 2026Q4 (rows #386/#389 and #387/#390), so the 8.3% cut is sized to one quarter. Cut math 1 - 0.95/1.036 = 8.3% checks; 20,024 x 23.9% x 2 = 9,571 (candidate 9,590 from 23.95%); x 8.3% = $796M. Fatal on its own numbers: $796M of certain forgone revenue inside the window buys a 2029 net of $191M, so cumulative through 2029 is about -$605M and it never clears an 8% hurdle within any horizon the index supports. The $856M benefit is the same 10-point lift and the same Stelara proxy already claimed by MRK-m01 (double count), with the Stelara figure confounded by Part D redesign [JNJ:10k_FY2025.md p.31]. A lower ASP also cuts the ASP-based add-on practices earn on Qlex, working against conversion, and lowers the base going into IRA price setting effective January 1, 2029 [MRK:10k_FY2025.md p.33]. After December 2028 IV biosimilar prices fall, so 'Qlex 5% below IV' cannot hold without further cuts. Hurdle used: 8% annual cost of capital [assumption: no WACC is disclosed in the index]; floor is Merck's own marginal debt cost of 4.30% to 5.85% on the May 2026 notes [MRK:10q_2026Q2.md p.19].",
+   "correction": "None possible: the cost is certain and inside the window, the benefit is borrowed from MRK-m01 and lands after it, and the net is negative through 2029 even before discounting.",
+   "pages_checked": [
+    {
+     "doc_id": "tables/partb_asp_quarterly.csv",
+     "page": null
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "id": "MRK-m04",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Operands trace: $5.9B long-dated pool at June 30, 2026 [MRK:10q_2026Q2.md p.19] and $3.8B at December 31, 2024 [MRK:10k_FY2025.md p.107]; release 2.1B; straight-line average 1.05B x 4.32% x 2 = $90.7M; run-rate 2.1B x 4.32% = $90.7M/yr. Interest expense 1,004 vs 618 [MRK:10q_2026Q2.md p.25] checks. Errors: (1) The 4.32% is the 2025 weighted-average commercial paper rate, but the same page says there were no commercial paper borrowings outstanding at December 31, 2025 [MRK:10k_FY2025.md p.108], so there is no CP to repay; the debt actually on the books is the May 2026 notes at 4.30% (2028) to 5.85% (2056) [MRK:10q_2026Q2.md p.19]. Using 4.30% gives $90.3M, so the number barely moves. (2) Interest saved is below operating income and is pre-tax; the metric label is wrong. (3) Unpriced: any write-down from drawing the pool down, and the 10-Q ties the Section 232 delay to 'investments in the U.S. to reshore manufacturing' [MRK:10q_2026Q2.md p.32], which may need bridge stock, so the full $2.1B is not proven excess. The pool grew $0.4B in H1 2026, so the trend is against the target. Hurdle: this is a balance-sheet release, so the hurdle is the debt rate it retires (4.30% cited) and it clears it by construction. Halving test: a $1.05B release gives about $45M over 24 months against $7.5M cost, still about 6x. The money lands inside 24 months. Hurdle used: 8% annual cost of capital [assumption: no WACC is disclosed in the index]; floor is Merck's own marginal debt cost of 4.30% to 5.85% on the May 2026 notes [MRK:10q_2026Q2.md p.19].",
+   "correction": "Keep the move, re-cite the rate to the 4.30% 2028 notes [MRK:10q_2026Q2.md p.19] instead of commercial paper, relabel the return as pre-tax interest saved (about $90M over 24 months on a full $2.1B release), and set a narrower first-year target of $1.0B released with the rest conditional on a product-level review of what the pool holds.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 108
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "id": "MRK-m05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Operands trace: $1.3B NOPA tax and $260M penalties [MRK:10k_FY2025.md p.131; MRK:10q_2026Q2.md p.25]; 2,470M diluted shares [MRK:10q_2026Q2.md p.25]; 130 / 2,470 = $0.053. Problems: (1) Not incremental: Merck is already 'vigorously contesting the NOPAs through available administrative proceedings' [MRK:10q_2026Q2.md p.25], so the move's return is only the uplift in penalty-removal probability over that baseline, not 50% of $260M; the 50% is uncited and carries the whole return. (2) Timing: the 10-K says 'It may take a number of years to reach resolution of this matter' [MRK:10k_FY2025.md p.131], which contradicts a 24-month return. (3) Cash direction: 'settle' means conceding some of the $1.3B tax now; that payment is excluded from cost but is far larger than the penalty saved, and it accelerates cash Merck might otherwise win or defer. (4) Partly reserved: Merck carries $546M of accrued interest and penalties and a $2.53B unrecognized-tax-benefit reserve [MRK:10k_FY2025.md p.131]; if the penalty is reserved, removal is a non-cash reserve release, not an avoided cash loss. (5) The $260M is a slice of the Part 1 finding 1 exposure re-labelled as a return. Halving the probability still gives $65M vs $26M on paper, but with the baseline uplift unknown and a multi-year timeline the 8% hurdle test cannot be passed on cited evidence. Hurdle used: 8% annual cost of capital [assumption: no WACC is disclosed in the index]; floor is Merck's own marginal debt cost of 4.30% to 5.85% on the May 2026 notes [MRK:10q_2026Q2.md p.19].",
+   "correction": "Narrower: keep the existing contest and drop the settlement-first stance; state the return as an unsized reduction in a $260M penalty exposure, outside the 24-month window per the 10-K, and the cost as the $26M team plus any tax conceded, which must be shown.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    }
+   ]
+  }
+ ],
+ "overall": "Four of five MRK moves fail the CFO test: m01 and m03 rest on the same assumed 10-point Qlex lift and a Stelara erosion rate that J&J itself blames partly on Part D redesign, both land in 2029 past IRA price setting, and m03 is negative through 2029; m02 borrows a pre-clinical Hypercon royalty and m05 claims a probability it cannot cite on a multi-year timeline. Only m04, the long-dated inventory release, has cited operands, lands inside 24 months and survives halving, once its rate is re-cited from the non-existent commercial paper to the 4.30% 2028 notes."
+}

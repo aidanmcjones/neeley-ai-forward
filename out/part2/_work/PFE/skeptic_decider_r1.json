@@ -1,0 +1,176 @@
+{
+ "ticker": "PFE",
+ "lens": "decider",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "PFE-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "ALREADY ANNOUNCED AND RUNNING. Pfizer's 2026 proxy (PFE:companies/PFE/proxy_2026.md p.81, printed p.73) lists as a 2025 achievement: 'Launched industry leading, data driven approach to bring awareness to clinical gaps in patient care and provided medical education to activate healthcare providers to take action such as earlier diagnosis and treatment to guidelines' naming ATTR-CM. Management said the same on calls: 'we focused on expanding our HCP base that we're targeting, as well as really investing in diagnosing and identifying patients' (Aamir Malik, 2024Q2 call, grade A, PFE:companies/PFE/transcripts/2024Q2_transcript.md p.17) and 'Our team remains committed to addressing high unmet patient need by helping to improve diagnosis' (2025Q1 official call, PFE:verified/calls/src/PFE_2025Q1_official.pdf p.5). The strategist marked this 'partly'; on these pages the move as framed (HCP education, disease awareness, diagnosis) is the existing program, so the $200M is at best incremental spend on a running campaign, and nothing in the index shows the marginal response of a second campaign. DECIDER (doctor): cardiologists already prescribe tafamidis, but the evidence does not show that newly diagnosed patients go to tafamidis: Malik says competition is 'taking some first-line share from treatment-naive patients' (2025Q3 official call p.9, grade A), and Part 1 finding 1 says Vyndaqel took none of H1 2026 class growth. A class-expanding campaign hands a share of every found patient to Attruby and Amvuttra. PROMO: (1) approved use only: the indication text matches section 1 (label_sections p.1; current label vyndaqel:drugs/vyndaqel/label_v15.md p.1, 2026-05-13, same wording). Pass. (2) fair balance: fetal harm (p.8), discontinuation rates (p.6) and no contraindications (p.5) are present, but the ISI omits the BCRP substrate interaction in section 7.1 (p.7: coadministration 'may increase the exposure of substrates... and the risk of the substrate-related toxicities'), the lactation advice that breastfeeding is not recommended (p.10), and the dosing note that 'VYNDAMAX and VYNDAQEL are not substitutable on a per mg basis' (p.2), while the efficacy claims come from the 20 mg and 80 mg VYNDAQEL arms placed next to a VYNDAMAX 61 mg dosing line. Partial fail. (3) comparisons: no tafamidis vs acoramidis or vutrisiran row in verified/product/head_to_head.csv has true_head_to_head=y (NCT07196839, NCT07766135, NCT06075823, NCT07298044, NCT05635045 are all 'mentioned_not_compared'), and the piece makes no comparison. Pass. (4) no testimonials or likenesses. Pass. (5) the student-concept label is on both pieces. Pass. (6) claims map: all eight cited quotes verify on label_sections pages 1, 2, 5, 6, 8, 29; but the body also states n=441, HR 0.70 (95% CI 0.51 to 0.96) and 'consistently favored... across subgroups', which are on p.29 but have no claims-map row. Minor fail. KILL SIGNALS: signal 1 (U.S. Vyndaqel family growth in the Q3 2027 10-Q, below +5%) is measurable from the 10-Q product table (PFE:10q_2026Q2.md p.38 shows 1,064 vs 990, +7%) but month 12 lands after most of the spend and cannot separate campaign lift from price erosion. Signal 2 has no reporting source: the scraper reply (out/part2/_work/PFE/data_replies.md item 3) states CMS Part D claims data ends at data year 2024 and there is no public quarterly series, and the 2025 and 2026 Q1 rows in tables/medicare_market.csv carry a dy24 file URL that cannot hold those periods. Signal 3 (class share from three 10-Qs) is measurable.",
+   "correction": "Narrow to an incremental $50M over 24 months that funds only what the running program lacks: referral support for scintigraphy in sites with high heart-failure volume and low ATTR-CM testing, measured against those sites' own baseline. Drop the Part D quarterly kill signal and replace it with Pfizer-reported U.S. Vyndaqel family revenue in the Q1 2027 10-Q below $911M (Q1 2026 = $1,975M H1 less $1,064M Q2, PFE:10q_2026Q2.md p.38). Add BCRP interaction (section 7.1), breastfeeding not recommended (lactation section), and the per-mg non-substitutability line (section 2.1) to the ISI at equal size, and add claims-map rows for n=441, HR 0.70 (CI 0.51 to 0.96) and the subgroup statement, all to label_sections p.29. Frame the move as a scale-up of the program in the 2026 proxy, not a new campaign.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:companies/PFE/proxy_2026.md",
+     "page": 81
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2024Q2_transcript.md",
+     "page": 17
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2024Q1_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "PFE:verified/calls/src/PFE_2025Q1_official.pdf",
+     "page": 5
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 1
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 2
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 5
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 6
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 7
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 8
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 10
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 29
+    },
+    {
+     "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+     "page": 1
+    },
+    {
+     "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "PFE-m02",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "MANAGEMENT HAS STATED THE OPPOSITE STRATEGY, deliberately: 'contracting to maintain access for Vynda, both in Medicare and commercial, where we've maintained 90% access for the brand' (Malik, 2025Q2 call, grade A, PFE:companies/PFE/transcripts/2025Q2_transcript.md p.10), 'We've got 90% access for Vyndamax across the US' and the GTN hit from 'payer contracting that took place in the third quarter' (2025Q3 official call p.9). Being contrarian is allowed, but the evidence offered for it does not say what the strategist claims. THE EVIDENCE DOES NOT SHOW 'LISTINGS BOUGHT NO VOLUME'. (a) The listing jump is mostly a product switch: in verified/rx/formulary_history.csv Vyndaqel 20 mg went from 67 formularies (2025Q4 file) to 0 (2026Q3 file) while Vyndamax went from 84 to 192; Attruby also rose from 89 to 145, so the whole class gained listings during the 2026 contract year, and Vyndamax was on 170 of 383 in the 2024Q4 file, so 84 was a trough, not a baseline. (b) The claims comparison is out of time order: the only 2026 claims row is Q1, before most of the listing gain shows in the 2026Q3 file. (c) The scraper reply (data_replies.md item 3) says CMS Part D claims end at data year 2024 and anything labelled Part D claims 2026 Q1 is non-CMS and must be re-sourced or dropped, and the 2025 and 2026 rows in tables/medicare_market.csv carry a dy24 source URL. (d) Formulary counts are plan counts, not enrollment weighted (data_replies.md item 4), so 58.5% of formularies and management's 90% access are different measures and cannot be compared. DECIDER (payer): payers already manage this class with prior authorization on about 99% of listing formularies for both Vyndamax (0.9896) and Attruby (0.9862), so a payer offered no further rebate has a ready alternative and a reason to exclude; nothing in the index shows a payer accepting a flat-rebate offer. The strategist's own 'cannot_tell' concedes no counterfactual. KILL SIGNALS: signal 1 (Part D claims Q2 2027 vs Q2 2026) has no reporting source by month 12 (no public quarterly CMS series). Signal 2 (contract year 2027 formulary file below 145) is measurable from the CMS SPUF. Signal 3 (Q1 2027 U.S. Vyndaqel revenue below $866M) is measurable but mixes price and volume, which is the very thing the move trades. No promo material, so promo rules do not apply.",
+   "correction": "none possible as framed: the payer has an equivalent-access alternative and management's stated 90% access strategy rests on the same contracts. The narrowest testable version is a pilot that holds rebate depth flat in commercial contracts only, where Part D redesign does not apply, with the CMS 2027 formulary file and the Q1 2027 10-Q U.S. revenue line as kill signals; even this needs an enrollment-weighted access source that the index does not have.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 10
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 35
+    }
+   ]
+  },
+  {
+   "id": "PFE-m03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "WRONG DECIDER. The candidate names the regulator, but the FDA has nothing to accept inside 24 months; the decider for this move is Intellia's board (and Regeneron, which holds 25% of nex-z costs and profits per REGN:10k_FY2025.md p.20, printed p.19). Nothing indexed shows Intellia would sell its 75% stake: no Intellia filing pages are indexed (the NTLA doc NTLA:pipeline/NTLA/10k_NTLA_2001.md has zero pages), and $200M upfront is about 12.5% of the $1.6B market cap in target_profiles for what is Intellia's lead Phase 3 asset. THE TIMELINE EVIDENCE IS WEAKER THAN CITED. Regeneron's 10-K FY2025 records 'Phase 3 ATTR-CM trial enrollment on FDA clinical hold' (REGN:10k_FY2025.md p.12); the Q2 2026 10-Q shows the hold removed (REGN:10q_2026Q2.md p.33). The 2027-12 primary completion in pipeline_landscape row NCT06128629 is a registry date that predates or ignores the enrollment pause, so the strategist's month-9 kill threshold (primary completion past 2028-06) is likely already breached once the registry updates. NOT ANNOUNCED, BUT CONSISTENT WITH STATED POLICY: management lists 'bolt-on business development' as a priority for post-2028 growth (2025Q4 official call p.4, grade A), and searches for Intellia, nex-z and next-generation ATTR on PFE pages return nothing, so the specific deal is not obvious. That is the one point in its favour. KILL SIGNALS: signal 2 (no signed term sheet at or below $200M within 6 months) is measurable only internally, so it is a decision gate, not a public signal; signal 3 (Intellia cash below $300M) depends on Intellia 10-Qs that are not indexed. No promo material.",
+   "correction": "Re-name the decider as Intellia's board with Regeneron's consent, and narrow to a paid option: a small option fee [assumption: sized well under the $200M upfront] for an exclusive right to negotiate for Intellia's 75% stake, exercisable on MAGNITUDE topline data. Replace the primary-completion kill signal with 'MAGNITUDE registry completion date or Regeneron 10-Q status after the hold' read from REGN 10-Qs, which are indexed (REGN:10q_2026Q2.md p.33).",
+   "pages_checked": [
+    {
+     "doc_id": "REGN:10k_FY2025.md",
+     "page": 12
+    },
+    {
+     "doc_id": "REGN:10k_FY2025.md",
+     "page": 20
+    },
+    {
+     "doc_id": "REGN:10q_2026Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "deals:deals/2021-12-07_0001140361-21-040536.md",
+     "page": 2
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "PFE-m04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "ALREADY ANNOUNCED IN SUBSTANCE. On August 4, 2026 Pfizer announced $1 billion of additional net savings whose 'additional net savings are expected to further reduce costs in SI&A and be realized from 2027 through 2029', from 'commercial, R&D and enabling functions' (PFE:10q_2026Q2.md p.52), on top of $5.7B by end 2026. The 2026 proxy adds that Pfizer formed the 'Portfolio Acceleration Value Enablement (PAVE) team that take agile and fit-for-purpose approaches to expand and capture value for these critical and legacy product lines' (PFE:companies/PFE/proxy_2026.md p.81). Cutting promotion on a brand losing exclusivity in 2027 is what that program does. The redeployment targets are also already funded: the atirmociclib adjuvant study 'should start by the end of 2026' (2026Q2 official call p.13, grade A), before the January 2027 reallocation, so the move does not cause that start. Ibrance's 2027 events are confirmed (MFP 2027, PFE:10q_2026Q2.md p.35; U.S. basic patent 2027, PFE:10k_FY2025.md p.13) and the CEO calls the hit 'very small' (2025Q2 call p.13). DECIDER (investor): an $80M a year assumed shift is about 1% of the $6.7B announced cost program and is not separately reported, so an investor cannot see or reward it; Ibrance brand-level promotion is not disclosed (data_replies.md item 7). KILL SIGNALS: signal 1 depends on management attributing the Ibrance decline between MFP and lost promotion, which the 10-Q commentary column does not do by amount; not measurable. Signal 2 tests management's own announced timeline, not this move. No promo material.",
+   "correction": "none possible as a standalone move: it duplicates the announced Realigning Our Cost Base Program and PAVE. At most fold it into PFE-m01 as the funding note for the narrowed $50M incremental ATTR-CM spend, with no separate return claimed.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 52
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:companies/PFE/proxy_2026.md",
+     "page": 81
+    },
+    {
+     "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 13
+    }
+   ]
+  }
+ ],
+ "overall": "All four PFE moves fail the decider test as written: m01 and m04 restate programs Pfizer already announced in its 2026 proxy and August 2026 cost update, m02 contradicts management's stated access strategy on evidence that is out of time order and partly unsourced, and m03 names the regulator when Intellia's board is the decider. The strongest survivor after correction is a narrowed, incremental m01 with a fixed ISI and a 10-Q revenue kill signal, since its claims map is otherwise label-verified and it makes no comparative claim."
+}

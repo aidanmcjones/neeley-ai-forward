@@ -1,0 +1,196 @@
+{
+ "ticker": "PFE",
+ "lens": "cfo",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "PFE-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Operands trace: advertising expense about $2.7B in 2025 (PFE:10k_FY2025.md file p.67, printed 61); deductions total $36,374M and product revenues $51,663M (file p.43 printed 37, file p.58 printed 52), so 36,374 / 88,037 = 41.3% is correct; H1 2026 cost of sales 25.9% of total revenues (PFE:10q_2026Q2.md p.39); June 1, 2031 Vyndamax generic date (PFE:10q_2026Q2.md p.29); Part D Vyndamax 2025 spend $3,915.3M and benes floor 19,958 match tables/medicare_market.csv drug=vyndamax|period=2025 (Q1-Q4), so $196,179 per beneficiary is arithmetically right on the row. Provenance problem (coordinator scraper note, checked): the cited row's label points to the CMS annual Part D dashboard (R2 public/partd_spending_dy24.csv, data year 2024), and partd_by_year.csv traces the '2025 (Q1-Q4)' and '2026 (Q1)' rows to a different quarterly file (QDD_PTD_RQ2603...csv) that the scraper says is not a public CMS quarterly claims series; CMS Part D claims are annual and end at data year 2024 (out/part2/_work/PFE/data_replies.md item 3). Every 2025 and 2026 Q1 Part D operand is therefore refuted as cited. On the verified 2024 annual row (Vyndamax spend $2,830.8M, beneficiaries 13,925, claims 109,373, spend per claim $25,882) the per-beneficiary gross is $203,289, x 0.587 = $119,331 net, x 0.741 = $88,424 contribution, so the conclusions below hold within 4% on a sourced base. The return math fails on three counts. (1) Step 4 credits 1.5 patient-years per added patient inside a 24-month window; with starts spread evenly across 24 months the average time on drug inside the window is 1.0 year at most, and less once diagnosis, scintigraphy and the prior authorization that 98.96% of listing formularies impose (rx/formulary_history.csv row 1399) delay starts. At 1.0 the strategist's own unit gives 2,000 x $115,157 = $230.3M revenue, x 0.741 = $170.7M contribution, less $200M = minus $29.3M. (2) Step 3 computes break-even on revenue ($200M / $115,157 = 1,737); break-even must be on contribution: $200M / ($115,157 x 0.741 = $85,331) = 2,344 incremental patient-years, 35% more than stated. (3) The 2,000-patient response is an unsourced assumption and capture is assumed at 100% while Part 1 finding 1 shows Vyndaqel took none of the $1,246M H1 2026 class growth and holds 50.8% of class revenue (PFE:10q_2026Q2.md p.38). Halving: 1,000 patients at 1.5 patient-years gives $172.7M revenue, $128.0M contribution, minus $72.0M; at 50.8% capture the result is about the same. Unit caveat that cuts the other way: Part D gross spend per claim is $25,867 and 2025 claims per beneficiary are 7.6 (151,364 / 19,958), so a full 12-fill patient-year is about $310,400 gross, x 0.587 = $182,200 net; at 1.0 patient-year the case is $364.4M revenue, $270.0M contribution, plus $70.0M. The sign of the return therefore hinges on an unit choice and two assumptions, not on a cited fact. The 41.3% company-wide deduction rate also understates tafamidis-specific deductions: the 10-K Vyndaqel commentary (file p.44, printed 38) names IRA Part D redesign manufacturer discounts and new payer contracts with reduced pricing as U.S. net price drags. Hurdle used: 8% a year pre-tax cost of capital [assumption]; the PFE 10-K FY2025 (file pp. 40 to 41, printed 34 to 35) says Pfizer applies asset-specific discount rates in its income approach but discloses no number, and no WACC is in the index. Base case $256.0M contribution on $200M clears 8% over two years ($216M needed at a one-year average hold); every halved or corrected case fails. Timing: revenue lands inside 24 months by construction; the post-2028 tail to 2031 is real (10-Q p.29) but is not part of the 24-month return and should not be used to rescue it. No double count inside m01 itself, but PFE-m04 routes its freed Ibrance budget into this program and books that budget as its own return (see PFE-m04). Already-announced: the 2024Q1 call (grade A, Aamir Malik, p.23) says diagnosis is 'where we're concentrating our commercial efforts', so part of any lift is baseline, not incremental, and the kill signals measure total growth, not campaign-attributable growth, so the return cannot be audited.",
+   "correction": "Narrow to a $100M, 12-month pilot in a defined set of cardiology referral regions with a matched control region, scaled to the full $200M only if attributable new Vyndamax starts in pilot regions exceed control by at least 1,200 in the first 12 months (the run rate needed for 2,344 contribution patient-years over 24 months at 1.0 patient-year each, using $85,331 contribution per patient-year). Re-source the per-patient value to the 2024 CMS annual row ($203,289 gross per beneficiary, $119,331 net, break-even 2,262 contribution patient-years) and drop the 2025 and 2026 Q1 Part D rows and the Part D claims kill signal, which has no public quarterly source. On the strategist's original figures the 24-month case restates as: 2,000 incremental patients x 1.0 patient-year x $115,157 = $230.3M revenue, $170.7M contribution, minus $29.3M operating income (strategist's unit) or plus $70.0M (per-claim unit); break-even 2,344 patient-years, not 1,737. Drop the 1.5 patient-year assumption.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 67
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 43
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 40
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 41
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 29
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2024Q1_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "tables/medicare_market.csv",
+     "page": null
+    },
+    {
+     "doc_id": "rx:verified/rx/formulary_history.csv",
+     "page": null
+    }
+   ]
+  },
+  {
+   "id": "PFE-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Operands trace: U.S. Vyndaqel family FY2025 revenue $3,834M (PFE:10k_FY2025.md file p.44, printed 38), so 1 point = $38.3M a year is right; formulary rows 954, 1399 and 1774 in rx/formulary_history.csv match (84 of 331; 192 of 328; Attruby 145 of 328); H1 2026 U.S. $1,975M vs $1,976M (PFE:10q_2026Q2.md p.38). The return itself, 3 points a year of avoided erosion = $230.0M, is a pure assumption: Pfizer discloses no product gross-to-net, so neither the 3 points nor the break-even 3% volume loss traces to any page. Halving it gives $115.0M over 24 months and a 1.5% volume break-even. The supporting evidence is misread. (1) Both formulary rows the strategist compares are contract year 2026 (the 2025Q4 file and the 2026Q3 file), and the full history shows Vyndamax on 201 of 420 (CY2024), 170 of 383 (CY2025), 84 of 331 (CY2026 initial) and 192 of 328 (CY2026 Q3); Attruby rose in the same window from 89 to 145. A mid-year jump shared by both rivals is a file-level shift, not proof that Pfizer concessions bought listings; and the payer contracting management described took place in Q3 2025 (2025Q3 call p.9, grade A), which is when the CY2026 initial listing fell to its low. (2) Provenance problem (coordinator scraper note, checked): the cited row's label points to the CMS annual Part D dashboard (R2 public/partd_spending_dy24.csv, data year 2024), and partd_by_year.csv traces the '2025 (Q1-Q4)' and '2026 (Q1)' rows to a different quarterly file (QDD_PTD_RQ2603...csv) that the scraper says is not a public CMS quarterly claims series; CMS Part D claims are annual and end at data year 2024 (out/part2/_work/PFE/data_replies.md item 3). The 44,532 vs 46,381 claims comparison, the 'down 4.0%' and every 2025 and 2026 Q1 Part D operand is therefore refuted as cited. Even taken at face value, 'claims down 4.0%' compares Q1 2026 (44,532) to the average quarter of 2025 (46,381), a growing year, and claims count is distorted by fill length; on spend, Q1 2026 Vyndamax plus Vyndaqel Part D spend is $1,184.1M vs a 2025 quarterly average of $1,170.3M, up 1.2%, and Q1 2026 Vyndamax beneficiaries alone were 18,288 in one quarter vs 19,958 for all of 2025. The 'concessions bought no volume' claim does not survive on either reading. The only cited volume-adjacent number that does trace is U.S. Vyndaqel family revenue: Q2 2026 $1,064M vs $990M, H1 $1,975M vs $1,976M (PFE:10q_2026Q2.md p.38; Q2 growth also described on PFE:earnings/2026-08-04_pfe-6282026xex99.md p.4 and 10-Q p.35), which nets price and volume and cannot separate them. IRA check: neither Vyndaqel nor Vyndamax is in any published negotiation cohort for 2026 to 2028 (data_replies.md item 8), so no MFP truncates the 2027 to 2028 window; 2029 status is unknown. Hurdle used: 8% a year pre-tax cost of capital [assumption]; the PFE 10-K FY2025 (file pp. 40 to 41, printed 34 to 35) says Pfizer applies asset-specific discount rates in its income approach but discloses no number, and no WACC is in the index. No cash outlay, so the hurdle is not binding; the binding question is whether lost volume stays under the assumed price gain, and neither side is on a page. Timing: contract years 2027 and 2028 fall inside 24 months. Unit mismatch: $3,834M is all U.S. channels while the volume evidence is Part D only; a Medicare-only rebate cap moves only the Part D slice of the base. Management states the opposite strategy (2025Q2 call p.10, grade A: contracting to maintain '90% access for the brand').",
+   "correction": "Restate the return as an unquantified bet: avoided erosion per point of U.S. net price = $38.3M a year, break-even volume loss = the points of price held, with no cited figure for either. If kept, narrow to a Medicare Part D CY2028 bid test (one contract year, not two) and drop the Part D 2025 and 2026 Q1 claims operands and the Q2 2027 Part D claims kill signal, which have no public quarterly CMS source; use the U.S. Vyndaqel family line in the 10-Q product table (p.38) and the CY2027 and CY2028 formulary files instead; drop the 'listings rose because of 2026 concessions' argument, which the CY2024 to CY2026 formulary history and Attruby's parallel rise contradict.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 10
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "rx:verified/rx/formulary_history.csv",
+     "page": null
+    },
+    {
+     "doc_id": "tables/medicare_market.csv",
+     "page": null
+    },
+    {
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "page": 4
+    },
+    {
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "page": 24
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 35
+    }
+   ]
+  },
+  {
+   "id": "PFE-m03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The deal comp is real but misapplied. The Ionis 8-K (deals:deals/2021-12-07_0001140361-21-040536.md p.2) gives $200M upfront, up to $485M development and approval milestones, up to $2.9B sales milestones, and royalties from low double digits to mid-20s percent, with territory-specific cost sharing. The candidate copies the first two terms and drops the $2.9B and the royalties, so it is not 'the eplontersen deal terms'; it is a lower offer. The comp is also not comparable: a 2021 antisense licence with PN as first indication and shared commercialization, vs a 2026 purchase of the whole 75% economic stake in a one-time CRISPR therapy that has already had an FDA clinical hold (REGN:10q_2026Q2.md file p.33 records the hold removed). Cost math: Intellia FY2025 operating cash burn $394.7M and June 2026 cash $106.1M plus securities $331.6M = $437.8M match pipeline/target_profiles.csv row 119; $200M + 2 x $197.4M = $594.7M is arithmetically right, but the 50% nex-z allocation is an assumption (Intellia filings are not in the index); halving it to 25% gives $397.4M. Ceiling check is wrong in direction: Intellia's whole enterprise value is $1,162M (row 119), while the stake deal's 24-month cash plus the $485M milestones is $1,079.7M, so the stake is about 93% of the price of the entire company at pre-premium EV, which includes Intellia's other programs and its cash. Return: $3,834M x 25% x 50% = $479.3M a year is arithmetically right but is revenue, not Pfizer profit; Regeneron keeps 25% of profits or losses (REGN:10k_FY2025.md file p.20, printed 19), so Pfizer's revenue-equivalent share is $359.4M before costs, sales milestones and royalties if comp terms apply. The base is wrong in kind: a one-time therapy earns a per-patient bolus, not a recurring share of tafamidis revenue, and the base ignores that Vyndaqel already holds only 50.8% of U.S. class revenue (Part 1 finding 1). Halving retention or probability halves the figure to $239.6M a year. Hurdle used: 8% a year pre-tax cost of capital [assumption]; the PFE 10-K FY2025 (file pp. 40 to 41, printed 34 to 35) says Pfizer applies asset-specific discount rates in its income approach but discloses no number, and no WACC is in the index. Discounting a 2031 start at 8% for about five years gives a factor of 0.68, so $479.3M a year of expected revenue is worth about $326M a year in today's money before any cost; no NPV is shown, so the move cannot be shown to clear the hurdle. Timing: the candidate says nothing arrives inside 24 months, which is honest, but the move fails the 24-month frame outright; MAGNITUDE primary completion is 2027-12 in pipeline_landscape.csv row 380 but 2027-07 in target_profiles.csv row 119, so even the readout date is inconsistent across the two tables.",
+   "correction": "Recast as an option, not a buyout: a time-limited right of first negotiation on Intellia's nex-z stake exercisable after MAGNITUDE data (primary completion 2027-12), paid with a small option fee [assumption, size not supported by any indexed comp], so cash at risk inside 24 months falls from $594.7M to the fee. If a buyout is kept, state the full comp ($200M upfront, $485M development and approval milestones, up to $2.9B sales milestones, low double-digit to mid-20s royalties) and compare the $1,079.7M stake outlay against Intellia's $1,162M enterprise value plus a control premium. Report the return as Pfizer's 75% profit share, discounted at a stated hurdle, and label it outside the 24-month window.",
+   "pages_checked": [
+    {
+     "doc_id": "deals:deals/2021-12-07_0001140361-21-040536.md",
+     "page": 2
+    },
+    {
+     "doc_id": "REGN:10k_FY2025.md",
+     "page": 20
+    },
+    {
+     "doc_id": "REGN:10q_2026Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 29
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "pipeline:verified/pipeline/target_profiles.csv",
+     "page": null
+    },
+    {
+     "doc_id": "pipeline:verified/pipeline/pipeline_landscape.csv",
+     "page": null
+    }
+   ]
+  },
+  {
+   "id": "PFE-m04",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Operands trace: U.S. Ibrance H1 2026 $1,339M and Q2 $707M (PFE:10q_2026Q2.md p.38); 2027 U.S. basic product patent (PFE:10k_FY2025.md file p.13, printed 7); negotiated prices for Ibrance effective 2027 (PFE:10q_2026Q2.md p.35); the CMS IPAY 2027 fact sheet p.2 row shows Ibrance negotiated price 50% below list; 25.9% cost of sales (10-Q p.39). The CEO's 'The NPV is very small because it's really a few months of exclusivity' is on the 2025Q2 call p.13 (grade A, Albert Bourla). Fatal double count: the move says the $80.3M a year is moved into the atirmociclib adjuvant start and the PFE-m01 detection program, yet the return books the same $160.6M as operating income freed. Money that is re-spent is not freed; if redeployed, the 24-month operating income effect of m04 alone is minus $39.7M (the lost Ibrance contribution), and the $160.6M is a funding source for m01's $200M cost, not a second return. Assumption 3 ('not double counted with PFE-m01') contradicts the move text. The size is also unsourced: 3% promotional share of revenue is an assumption (Pfizer does not disclose brand-level SI&A; total SI&A $13,794M on 10-K file p.58), and it is applied to annualized 2026 revenue of $2,678M although 2027 U.S. Ibrance revenue falls on both the Medicare price and generic entry; 3% of a halved base is about $40M a year. The counterfactual is weak: a brand facing generics within months is normally de-promoted anyway, and the CEO's 'few months of exclusivity' remark implies Pfizer already plans to harvest, so the incremental saving vs Pfizer's own plan is likely near zero. Halving the 3% assumption gives $80.3M budget over two years minus $39.7M = $40.6M; halving the 1% revenue-loss assumption raises it only to $140.7M. Hurdle used: 8% a year pre-tax cost of capital [assumption]; the PFE 10-K FY2025 (file pp. 40 to 41, printed 34 to 35) says Pfizer applies asset-specific discount rates in its income approach but discloses no number, and no WACC is in the index. A cost cut needs no hurdle, but the redeployed money must earn its own return, and the atirmociclib half lands outside 24 months (an adjuvant Phase 3 start, 2026Q2 call p.13) with no return stated.",
+   "correction": "Split the move. As a pure harvest (end U.S. Ibrance promotion in 2027 and do not redeploy), the 24-month figure is $160.6M saved minus $39.7M lost contribution = $120.9M at most, and only if Pfizer's base plan kept promotion running, which no page supports; restate on the 2027 revenue base. If the budget funds m01, delete m04's return and show it only as m01's funding source, so the two moves together carry one $200M cost and one return.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "page": 2
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+     "page": 13
+    }
+   ]
+  }
+ ],
+ "overall": "Every cited operand on PFE's four candidates traces to its page, but each return rests on an unsourced load-bearing assumption (patients found, price points held, retention and probability, promotional share), and the two near-term moves fail when that assumption is halved or a step error is fixed (m01 patient-years and break-even, m02 misread formulary history and Part D 2025 and 2026 Q1 rows with no public CMS source). m04 double counts money it also routes into m01 and m03 pays off only after 2031, so the only candidate with a defensible 24-month cash case is m01, and only as a gated pilot with break-even at 2,344 contribution patient-years."
+}
