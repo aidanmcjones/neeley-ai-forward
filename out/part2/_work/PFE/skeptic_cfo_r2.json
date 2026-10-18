@@ -1,0 +1,260 @@
+{
+ "ticker": "PFE",
+ "lens": "cfo",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "PFE-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2 after reading the decider file against the pages. Verified: the 2026 proxy (PFE:companies/PFE/proxy_2026.md p.81) lists a 2025 data-driven HCP awareness and medical education approach for earlier diagnosis naming ATTR-CM; Malik on the 2024Q2 call (grade A, p.17) says Pfizer is 'really investing in diagnosing and identifying patients'; the 2025Q1 official call p.5 repeats it; the 2025Q3 call p.9 (grade A) has Malik saying 'We are seeing competition that previews taking some first-line share from treatment-naive patients'. So the $200M is incremental spend on a running program, and the strategist's 2,000-patient lift has no baseline-adjusted support. My round 1 math stands: 1.5 patient-years in a 24-month window is impossible with spread starts (1.0 maximum); break-even must be on contribution; and the 2025 and 2026 Q1 Part D rows have no public CMS source (data_replies.md item 3). On the verified 2024 CMS annual row (Vyndamax spend $2,830.8M, 13,925 beneficiaries) the value is $203,289 gross, $119,331 net at a 41.3% deduction rate (10-K file pp.43, 58), $88,424 contribution at 25.9% cost of sales (10-Q p.39). Comparing the two narrowed versions on that base: the decider's $50M over 24 months breaks even at $50M / $88,424 = 565 incremental patient-years (611 at the 8% hurdle), about 4.1% of 2024 Vyndamax Part D beneficiaries, or about 1,113 class-wide found patients if Pfizer keeps only its 50.8% revenue share (Part 1 finding 1). My $100M pilot needs 1,131 patient-years (1,222 at hurdle), twice the bar. The decider's version has the better math: half the cash at risk, half the break-even, and the right frame for marginal spend on a running program. Its weakness is measurement: 'against those sites' own baseline' cannot separate the campaign from organic growth when Vyndamax Part D beneficiaries rose from 7,589 (2023) to 13,925 (2024) on the verified annual rows, an 83% organic rise; and its replacement kill signal (Q1 2027 U.S. Vyndaqel family revenue below $911M, which is $1,975M less $1,064M on 10-Q p.38) mixes price and volume, the same flaw it found in the strategist's signals. Hurdle: 8% a year [assumption]; no Pfizer cost of capital figure is in the index (PFE:10k_FY2025.md file pp.40 to 41 name asset-specific discount rates without a number).",
+   "correction": "Combined move: $50M over 24 months for scintigraphy referral support in high heart-failure, low-testing sites (the decider's scope, framed as a scale-up of the program in the 2026 proxy), released in two tranches of $25M. Tranche 1 runs in randomly or matched-assigned sites with held-out control sites (my control design). Release tranche 2 only if tranche-1 sites show at least 380 attributable new tafamidis starts over control by month 12; patients started in year 1 average 1.5 patient-years inside the 24 months, so 380 x 1.5 = 570 patient-years covers the 565 break-even ($50M / $88,424 contribution per patient-year on the 2024 CMS row). Keep the decider's ISI and claims-map fixes and its 10-Q revenue signal as a backstop, but make the site-level attributable-starts count the primary kill signal. Break-even and value on the 2024 CMS annual row, not the 2025 or 2026 Q1 rows.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 67
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 43
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 40
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 41
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 29
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2024Q1_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "tables/medicare_market.csv",
+     "page": null
+    },
+    {
+     "doc_id": "rx:verified/rx/formulary_history.csv",
+     "page": null
+    },
+    {
+     "doc_id": "PFE:companies/PFE/proxy_2026.md",
+     "page": 81
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2024Q2_transcript.md",
+     "page": 17
+    },
+    {
+     "doc_id": "PFE:verified/calls/src/PFE_2025Q1_official.pdf",
+     "page": 5
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 2
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 7
+    },
+    {
+     "doc_id": "drug:vyndaqel:label_sections.md",
+     "page": 10
+    }
+   ],
+   "round2": {
+    "conceded": "The move is a scale-up of a running program (proxy p.81, 2024Q2 call p.17, 2025Q1 call p.5), not a new campaign, which weakens the 2,000-patient lift further; competition is taking first-line share from treatment-naive patients (2025Q3 call p.9), so capture under 100% is now cited, not just inferred; the Part D quarterly kill signal has no source. Their ISI omissions (BCRP 7.1 on p.7, breastfeeding on p.10, per-mg non-substitutability on p.2) are on the pages. Their $50M version has better math than my $100M pilot: 565 vs 1,131 break-even patient-years.",
+    "held": "The return arithmetic errors (1.5 patient-years impossible, revenue-based break-even of 1,737 vs contribution-based 2,344, or 2,262 on the 2024 row) stand and are independent of the announced-program point. Own-baseline measurement cannot attribute lift when organic Part D beneficiaries grew 83% in 2024, and a 10-Q revenue line mixes price with volume, so a control-site design is still required.",
+    "narrowed": "From my $100M, 12-month controlled pilot to a combined $50M two-tranche version: the decider's scope and budget, my control design and a month-12 gate of 380 attributable starts."
+   }
+  },
+  {
+   "id": "PFE-m02",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Round 2. Verified the decider's points: management's stated strategy is the opposite (2025Q2 call p.10, grade A, 'contracting to maintain access for Vynda ... where we've maintained 90% access for the brand'; 2025Q3 call p.9, 'payer contracting that took place in the third quarter'); in rx/formulary_history.csv the Vyndaqel 20 mg brand row went from 186 (2023Q4) to 147 (2024Q4) to 67 (2025Q4), and its 2026Q3 row (line 1397) has a blank formulary count, not a recorded zero, so the product-switch reading is likely but not proven by a cited 0. Combined tafamidis listings in the CY2026 initial file were 84 Vyndamax plus 67 Vyndaqel, so the '84 to 192' jump overstates any gain. Formulary counts are plan counts, not enrollment weighted (data_replies.md item 4). With the claims operand unsourced (item 3) and the listings comparison a class-wide, within-year shift, nothing on any page supports the return, and the avoided-erosion figure ($38.3M per point on $3,834M, 10-K file p.44) has no cited number of points. Hurdle: 8% a year [assumption]; no Pfizer cost of capital figure is in the index (PFE:10k_FY2025.md file pp.40 to 41 name asset-specific discount rates without a number). No cash cost, so the hurdle does not bind; the volume risk is unbounded on the evidence.",
+   "correction": "None possible as framed for Medicare. The only testable remainder is the decider's commercial-only rebate hold, but the index has no commercial volume or enrollment-weighted access data, so its return cannot be sized; state it as a one-contract-year test with the CY2027 CMS formulary file and the 10-Q U.S. Vyndaqel line as signals and no dollar return claimed.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 10
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "rx:verified/rx/formulary_history.csv",
+     "page": null
+    },
+    {
+     "doc_id": "tables/medicare_market.csv",
+     "page": null
+    },
+    {
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "page": 4
+    },
+    {
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "page": 24
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 35
+    }
+   ],
+   "round2": {
+    "conceded": "Severity raised from major to fatal: management states the opposite strategy on grade A pages, the claims operand has no public source, and the listing jump is class-wide and partly a Vyndaqel to Vyndamax switch. Their commercial-only pilot is the narrowest testable form.",
+    "held": "Their Vyndaqel '67 to 0' is a blank in the 2026Q3 row (formulary_history.csv line 1397), not a recorded zero; the switch reading is likely but should be cited as missing data. My spend-based point (Part D spend up, not down) is also void because it used the same unsourced 2026 Q1 rows, which I withdraw.",
+    "narrowed": "Withdrew my own Q1 2026 spend counter-figures; the verdict now rests only on sourced pages (calls, formulary history, 10-K)."
+   }
+  },
+  {
+   "id": "PFE-m03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2. Verified: REGN:10k_FY2025.md file p.12 records 'Phase 3 ATTR-CM trial enrollment on FDA clinical hold' and REGN:10q_2026Q2.md p.33 records the hold removed; 2025Q4 official call p.4 names 'bolt-on business development' for post-2028 growth; no Intellia filing pages are indexed. The decider is Intellia's board with Regeneron (25% of costs and profits, REGN 10-K file p.20), not the FDA. My CFO findings stand: the comp drops $2.9B of sales milestones and royalties (8-K p.2); the stake's $1,079.7M of 24-month cash plus milestones is about 93% of Intellia's $1,162M enterprise value (target_profiles row 119); the $479M a year is undiscounted revenue starting 2031. An enrollment hold during 2025 to 2026 makes the 2027-12 primary completion optimistic, which further pushes value outside 24 months. Hurdle: 8% a year [assumption]; no Pfizer cost of capital figure is in the index (PFE:10k_FY2025.md file pp.40 to 41 name asset-specific discount rates without a number).",
+   "correction": "Paid option for an exclusive right to negotiate for Intellia's 75% stake, exercisable on MAGNITUDE topline, decided by Intellia's board with Regeneron's consent; option fee [assumption] well under $200M; cash at risk inside 24 months is the fee only. Report any later buyout against the full comp terms and against Intellia's enterprise value plus a control premium, with returns as Pfizer's discounted 75% profit share outside the 24-month window.",
+   "pages_checked": [
+    {
+     "doc_id": "deals:deals/2021-12-07_0001140361-21-040536.md",
+     "page": 2
+    },
+    {
+     "doc_id": "REGN:10k_FY2025.md",
+     "page": 20
+    },
+    {
+     "doc_id": "REGN:10q_2026Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 29
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "pipeline:verified/pipeline/target_profiles.csv",
+     "page": null
+    },
+    {
+     "doc_id": "pipeline:verified/pipeline/pipeline_landscape.csv",
+     "page": null
+    },
+    {
+     "doc_id": "REGN:10k_FY2025.md",
+     "page": 12
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "page": 4
+    }
+   ],
+   "round2": {
+    "conceded": "Wrong decider (Intellia's board and Regeneron, not the regulator); the enrollment hold on REGN 10-K p.12 weakens the timeline; the term-sheet signal is an internal gate, and the Intellia cash signal relies on unindexed 10-Qs. The option structure we both proposed is the same move.",
+    "held": "Their claim that the month-9 kill threshold 'is likely already breached' is not shown on any page: pipeline_landscape row 380 carries 2027-12 with stale_registry_date 0, and target_profiles row 119 says 2027-07; the slip is plausible, not proven. The CFO objections (comp missing $2.9B and royalties, stake near the whole-company EV, undiscounted post-2031 revenue) are independent of the decider point.",
+    "narrowed": "None needed beyond round 1; both lenses converge on a paid option."
+   }
+  },
+  {
+   "id": "PFE-m04",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Round 2. Verified: PFE:10q_2026Q2.md p.52 records the August 4, 2026 $1 billion of additional net savings expected to reduce SI&A from 2027 through 2029 (total about $6.7B through 2029, one-time cost about $2B); the 2026 proxy p.81 names the PAVE team for mature brands; the 2026Q2 call p.13 (grade A) says the atirmociclib adjuvant study should start by the end of 2026, before the move's January 2027 reallocation. So the saving is inside an announced program and the redeployment target is already funded. My double-count finding stands: the move spends the $160.6M it books as freed operating income. The assumed $80.3M a year is 8% of the $1B incremental savings and 1.2% of $6.7B, so it is not separately visible to an investor. Hurdle: 8% a year [assumption]; no Pfizer cost of capital figure is in the index (PFE:10k_FY2025.md file pp.40 to 41 name asset-specific discount rates without a number).",
+   "correction": "None possible as a standalone move. Fold it into PFE-m01 as a funding note for the combined $50M: Ibrance de-promotion can fund it, with no separate return claimed and no Ibrance revenue loss booked against m01.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "page": 2
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 52
+    },
+    {
+     "doc_id": "PFE:companies/PFE/proxy_2026.md",
+     "page": 81
+    }
+   ],
+   "round2": {
+    "conceded": "Already announced in substance ($1B program, 10-Q p.52; PAVE, proxy p.81); the atirmociclib start precedes the reallocation, so the move does not cause it; the Ibrance kill signal is not measurable because the 10-Q does not split the decline by amount. I adopt their correction (fold into m01, no separate return).",
+    "held": "Severity stays fatal, not major: the return is the redeployed budget counted as income, an arithmetic error that kills the move even if it had not been announced.",
+    "narrowed": "Correction changed from 'split into harvest vs redeploy' to the decider's 'funding note for m01 only'."
+   }
+  }
+ ],
+ "overall": "Both lenses refute all four PFE candidates and converge on the same survivors: a $50M, two-tranche, control-site version of m01 funded by Ibrance de-promotion (m04 folded in), and an option rather than a buyout for m03; m02 is fatal for both. Unresolved disagreements: m04 severity (fatal for me on the double count, major for the decider); m02's Vyndaqel '0 formularies' (a blank row, not a recorded zero); whether MAGNITUDE's primary completion has already slipped past 2028-06 (plausible, not on any page); and how to measure m01 (I hold that own-site baselines and the 10-Q revenue line cannot attribute lift, so a control-site starts count must be the primary kill signal)."
+}

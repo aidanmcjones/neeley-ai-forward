@@ -1,0 +1,290 @@
+{
+ "ticker": "MRK",
+ "lens": "decider",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "MRK-m01",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Round 2 holds round 1. The CFO skeptic and I read MRK:presentations/2026-06_asco_investor_event.md p.25 the same way: 30% to 40% peak adoption 'by end of 2027', a year before the move's December 2028 anchor. Their framing (the 10-point lift above 30% sits inside guidance, so the $150M program has no attributable return) and mine (the move is management's announced plan with a later deadline) are the same finding seen from cost and from novelty; together they leave nothing incremental. I re-opened JNJ:10k_FY2025.md p.31: the Immunology paragraph says the Stelara decline was 'driven by the impact of biosimilar competition and Medicare Part D redesign', so the 42.7% proxy is confounded, as they say. I also confirmed MRK:10q_2026Q2.md p.33 'an approximate $250 million favorable impact due to the timing of wholesaler purchases' in the year-to-date period, which inflates the run-rate base. One caution on their reading: p.25 is a scrambled two-column slide; the end-2027 line sits under the U.S. launch panel, while 'Anticipate 30% to 40% peak adoption on average, Peak penetration will vary by market' sits under global launch, so the end-2027 target is most likely a U.S. figure, which makes the move's 2028 goal even more clearly inside guidance. Promo findings stand independently of the CFO lens: section 5.2 administration-related reactions (drug:keytruda-qlex:label_sections.md p.28) is missing from the ISI, the D77 790 mg every-6-week chemotherapy context for the 39% and 10% rates (p.34) is missing, the IV-preference reason (p.62) is dropped, and claims-map row 1 cites MRK:10k_FY2025.md p.4 instead of label section 1.",
+   "correction": "No campaign at the stated goal. If a pilot is funded, aim it at IV-chemotherapy combination regimens (the segment the 2026Q2 call p.4 and ASCO p.25 say lags) rather than at monotherapy and oral-combination practices, where baseline adoption already clusters; judge it on Qlex share in the 10-Q against management's end-2027 30% floor; fix the piece (add 5.2 and one line each for 5.3 to 5.5, state the D77 dose and chemotherapy context, add the IV-preference reason, repoint row 1 to label section 1).",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q1_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 4
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 21
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 27
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 28
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 29
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 31
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 32
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 34
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 62
+    },
+    {
+     "doc_id": "keytruda-qlex:drugs/keytruda-qlex/label_v18.md",
+     "page": 3
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 33
+    }
+   ],
+   "round2": {
+    "conceded": "The CFO skeptic is right that the 10-point lift is inside management's end-2027 range and so has no attributable return, that the Stelara 42.7% is confounded by Part D redesign (JNJ p.31 confirmed), that the Q2 base carries part of the $250M wholesaler timing benefit (10-Q p.33 confirmed), and that the same lift and $856M are double counted in m03. I did not test the return arithmetic in round 1; theirs checks.",
+    "held": "Fatal, not major: the move restates an announced, funded strategy (2025Q3 call p.15 contracting strategy, 2026Q1 call p.6 launch SG&A) with a later deadline, and the promo piece fails fair balance and the claims-map rule. I also hold against their narrowed pilot's target segment: monotherapy and oral-combination practices are where management already converts, so a pilot there cannot show causation.",
+    "narrowed": "I no longer argue the conversion goal is wrong in direction; only that no new move exists at the stated scope. The surviving form is a chemotherapy-combination pilot with a corrected piece, which the CFO lens would still need to size."
+   }
+  },
+  {
+   "id": "MRK-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2 holds. Both lenses refute. I re-opened deals:deals/2026-08-06_0001159036-26-000103.md p.2: the mid-single-digit royalty is Oruka's voluntary Hypercon license for ORKA-001 and the $15 million is Vertex's Hypercon access fee, neither MDASE nor a litigation settlement, so the CFO skeptic's point that the cost has no anchor is correct. That strengthens my decider point: with no comparable price, neither Halozyme (escalating litigation costs, deals 8-K p.10, in thousands, three months ended June 30) nor Merck (four PTAB unpatentability decisions, UK consent to revocation, MRK:10q_2026Q2.md p.22) has a reason to accept a Europe-wide royalty. MRK:10q_2026Q2.md p.28 shows 68 of international Qlex/SC sales in Q2 2026, about 2% of 3,293 international IV, which both of us read as SC already selling outside Germany.",
+   "correction": "Converged with the CFO skeptic: no license before the November 19, 2026 German appeal and the Dutch ruling; if the German injunction is upheld, a Germany-only settlement mandate with cost left as an unsized range.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "deals:deals/2026-08-06_0001159036-26-000103.md",
+     "page": 2
+    },
+    {
+     "doc_id": "deals:deals/2026-08-06_0001159036-26-000103.md",
+     "page": 10
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q1_transcript.md",
+     "page": 4
+    }
+   ],
+   "round2": {
+    "conceded": "The CFO skeptic is right that the Hypercon comps do not transfer to an MDASE settlement and that the 35% country share and 15% adoption are invented against a 2% observed base; a royalty on eight non-enjoined markets pays for sales Merck may make anyway.",
+    "held": "The decider is Halozyme and Merck management, not the payer, and neither has a reason to accept on the cited pages.",
+    "narrowed": "My round 1 correction and theirs are the same Germany-only, wait-for-the-appeal option; I drop any claim that a settlement is never worth considering."
+   }
+  },
+  {
+   "id": "MRK-m03",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Round 2 raises severity to fatal. The CFO skeptic shows on the move's own numbers that $796M of certain forgone revenue inside the window buys a 2029 net of $191M, cumulative about minus $605M through 2029, and that the $856M benefit is borrowed from m01. I did not open the CMS rows beyond their locators (machine data, never quoted), so I take their observation that the Qlex premium moves across quarters (about 4.0% and 2.5% in later rows) as a reason the 8.3% cut is sized to one quarter, not as a quoted fact. My decider findings stand and point the same way: the practice under buy-and-bill decides, a lower ASP cuts its add-on, adoption is limited by regimen type (MRK:transcripts/2026Q2_transcript.md p.4), and IRA price setting from January 1, 2029 (MRK:10k_FY2025.md p.33) overrides the price relationship in the payoff year.",
+   "correction": "None possible: negative through 2029 on its own math, borrows m01's benefit, and works against the practice that actually chooses the route.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 31
+    }
+   ],
+   "round2": {
+    "conceded": "Their fatal severity; I rated it major in round 1 and the net-negative cumulative math makes it fatal.",
+    "held": "The decider mismatch (practice, not payer) and the IRA override stand as independent reasons.",
+    "narrowed": "I withdraw my round 1 suggestion of a site-of-care commercial contracting test as a fallback, since management already runs that strategy (2025Q3 call p.15) and it would not be a new move."
+   }
+  },
+  {
+   "id": "MRK-m04",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Round 2 flips to not refuted, narrowed. I opened the CFO skeptic's pages. MRK:10k_FY2025.md p.108 says 'There were no commercial paper borrowings outstanding at December 31, 2025 or 2024', so the 4.32% CP rate repays nothing; MRK:10q_2026Q2.md p.19 lists the May 2026 issue including '$ 1.0 billion of 4.30 % notes due 2028' and $500 million of floating rate notes due 2028, so a 4.30% cost of debt is the right cited rate. MRK:10q_2026Q2.md p.45 adds the decider evidence I lacked in round 1: cash and investments fell from 15,521 to 8,363 and total debt to total liabilities and equity rose from 36.0% to 41.5% in six months after the Cidara and Terns deals. An investor facing that balance sheet has a cited reason to want cash released from working capital. Would management and investors accept a $1.0B release with the 10-Q inventory-note kill signals? Yes, under two conditions, and not the full $2.1B. (1) Management: the pool grew from 5.5 to 5.9 in H1 2026 (p.19), after the December 2025 tariff agreement, and the delay was given 'enabling the Company to make investments in the U.S. to reshore manufacturing' (p.32). So management is choosing to build, most plausibly reshoring bridge stock and pre-2028 Keytruda drug substance; it would accept a $1.0B target only on the portion outside those, which takes the pool to about 4.9, still above the 3.8 December 2024 level. (2) Investors: they cannot verify any target on an undisclosed pool, and the 2026Q2 call p.5 and slides p.18 cut gross margin for 'higher inventory reserves' while MRK:10k_FY2025.md p.75 warns 'inventory write-downs may be required'. A release that arrives as reserve charges rather than cash would read as a write-down. Disclosure needed first: a split of the long-dated pool in the 10-Q inventory note (Keytruda drug substance, reshoring transfer stock, vaccines, launch stock, other) and a statement of how much of the 2026 reserve increase relates to this pool. Without that the target is unverifiable. Repayment mechanics: the 4.30% 2028 notes are fixed-rate and not prepayable at par on any cited page, so the realistic saving is avoided new borrowing at about that rate, which the CFO correction already labels as pre-tax interest saved.",
+   "correction": "A $1.0B first-year release target on the non-reshoring, non-pre-LOE slice, preceded by a 10-Q disclosure of the pool split; return stated as about $43M pre-tax interest avoided per year at 4.30% (1.0B x 4.30%), counted net of any reserve charge on the released stock; keep the 10-Q kill signals (long-dated pool above 5.5 in the Q1 2027 10-Q, above 5.0 in the Q3 2027 10-Q) and add one: any gross-margin guidance cut citing inventory reserves in the same period.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 75
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18
+    },
+    {
+     "doc_id": "MRK:earnings/2026-02-03_tm264564d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 108
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 45
+    }
+   ],
+   "round2": {
+    "conceded": "The CFO skeptic is right that the operands trace, that the rate should be the 4.30% 2028 notes because no commercial paper is outstanding (10-K p.108), that the return is pre-tax interest saved not operating income, and that a halved release still covers the $7.5M cost several times. Their balance-sheet evidence I then found on 10-Q p.45 (cash 15,521 to 8,363; debt ratio 36.0% to 41.5%) gives the investor a real reason to accept. My round 1 refutation of the narrowed form was too broad.",
+    "held": "The full $2.1B is not supported: the pool grew after the tariff deal, the deal is tied to reshoring, and reserves are rising, so part of the pool is either deliberate bridge stock or write-down risk. The tariff-staging reason itself still rests only on grade C 2025Q1 call pages and cannot be quoted.",
+    "narrowed": "From refuted/major to not refuted/minor for a $1.0B first-year target, conditional on prior disclosure of the pool split and on counting the release net of reserve charges."
+   }
+  },
+  {
+   "id": "MRK-m05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2 holds. I re-opened MRK:10k_FY2025.md p.131: 'Liabilities for accrued interest and penalties were $ 546 million and $ 437 million as of December 31, 2025 and 2024', so the CFO skeptic is right that a penalty already reserved would come back as a non-cash reserve release, and 'It may take a number of years to reach resolution of this matter' puts the return outside 24 months. Both lenses find the administrative contest already under way (MRK:10q_2026Q2.md p.25). My decider point is separate: disclosing reserve coverage publicly would give the IRS Merck's own settlement estimate.",
+   "correction": "Converged: keep the existing contest, drop the settlement-first stance and the public reserve disclosure; if anything, a private settlement range for the audit committee. No new move remains.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 5
+    }
+   ],
+   "round2": {
+    "conceded": "Their points that the return is the uplift over an existing contest, not 50% of $260M; that settling means conceding tax cash excluded from cost; and that a reserved penalty is a non-cash release.",
+    "held": "The public reserve disclosure undercuts the negotiation with the decider, the IRS.",
+    "narrowed": "I no longer suggest the 10-Q kill signal as useful; the 'still uncertain' wording test is boilerplate that can persist for years."
+   }
+  }
+ ],
+ "overall": "After round 2 the two lenses agree on four refutations (m01, m02, m03 now fatal, m05) and converge on m04 as the only survivor, narrowed to a $1.0B first-year release at the 4.30% 2028 notes rate, stated as pre-tax interest saved. Unresolved: whether that release arrives as cash or as reserve charges, and so whether Merck must first disclose the pool's split (I hold yes, before any target); and for m01, whether a salvage pilot should target monotherapy and oral-combination practices (CFO) or IV-chemotherapy combination regimens (me), plus my fatal versus their major severity given the failed promo piece."
+}

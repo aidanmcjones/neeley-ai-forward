@@ -1,0 +1,245 @@
+{
+ "ticker": "MRK",
+ "lens": "decider",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "MRK-m01",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "ALREADY ANNOUNCED AND LESS AMBITIOUS THAN MANAGEMENT. The move's 'hard goal' of Qlex at 40% by December 2028 sits inside, and a year behind, what management already committed to. MRK:presentations/2026-06_asco_investor_event.md p.25 says 'On track to achieve 30% to 40% peak adoption of KEYTRUDA QLEX by end of 2027', with the highest adoption in monotherapy or oral combinations. In the grade A 2025Q3 call (MRK:transcripts/2025Q3_transcript.md p.15) Robert Davis said 'that will take us out to 18 to 24 months to achieve that' and that Merck has 'put in place, I believe, a commercial contracting strategy that really will make it frictionless to convert patients over'. 2025Q4 call p.11 (grade A): 'we will drive that as high as we can' and 'we have priced this to drive for the adoption from KEYTRUDA IV to QLEX'. 2026Q1 call p.6 (grade A): 'we expect SG&A expenses to increase over the remainder of the year as we invest to maximize the impact of our recent and upcoming launches'; 2026Q2 call p.5 says opex grew 7% 'reflecting increased investments in support of our launches'. So the field conversion effort is announced and funded; the strategist's 'partly' understates it, and its own 40%-by-Dec-2028 target is weaker than the end-2027 slide. Management's metric is patient adoption, not share of U.S. family dollar sales, so the move also changes the yardstick without saying so. DECIDER (doctor): the label 14.2 data (drug:keytruda-qlex:label_sections.md p.62) are real (65% of 118, 68% of 122 stayed on SC) but come from an open-label crossover in 147 patients with mostly adjuvant melanoma/RCC and first-line PD-L1-high NSCLC monotherapy; they say nothing about IV-chemotherapy combination regimens, where the patient is already in the IV chair, and the ASCO slide p.25 confirms adoption concentrates outside those. PROMO RULES: (1) approved uses: piece stays in label, pass. (2) fair balance: FAIL as written. The ISI omits section 5.2 Hypersensitivity and Administration-Related Reactions (drug:keytruda-qlex:label_sections.md p.28, 3.2% of 251 in D77, 'severe or life-threatening'), the one risk specific to the route being promoted, plus 5.3 allogeneic HSCT complications (p.29), 5.4 multiple myeloma mortality (p.31) and 5.5 embryo-fetal toxicity (p.32); the 39%/10%/25% figures (p.34) are from D77 at 790 mg every 6 weeks with platinum chemotherapy while the piece shows only the 395 mg every-3-week dose with no study context; and it reports 32% preferred IV but drops the label's reason ('it felt more comfortable during administration', p.62) while keeping the SC reason. (3) comparison: only Qlex vs Merck's own IV pembrolizumab, taken from label 14.2; verified/product/head_to_head.csv has no row for NCT06099782 or any Qlex trial, but no competitor is compared and the piece says so, pass. (4) no testimonials or likenesses, pass. (5) student-concept label present, pass. (6) claims map: 10 of 11 rows open to the right label section and the quote is on the page (2.2 p.21, 2.3 p.22, 4 p.26, 6.1 p.34 x3, 14.2 p.62 x4; 5.1 via label_v18 p.3, also present in drug:keytruda-qlex:label_sections.md p.27). Row 1 (approved indications) is tied to MRK:10k_FY2025.md p.4, a 10-K, not a label section: FAIL on the rule, fixable. KILL SIGNALS: measurable from the 10-Q product table with thresholds at months 7 and 10, pass, but the 15% and 20% bars are below the path management's own end-2027 slide implies, so they would not kill a program that is merely matching baseline.",
+   "correction": "Drop the 40%-by-2028 campaign as a new move; it is management's plan. A narrower, non-announced version: a funded pilot only for IV-chemotherapy combination regimens (the segment the ASCO slide p.25 and 2026Q2 call p.4 say lags), sized at a fraction of the cost, with a kill signal tied to management's end-2027 30% floor (Qlex share of U.S. family sales below 20% in the Q2 2027 10-Q). Fix the piece: add section 5.2 administration-related reactions and one line each for 5.3 to 5.5, state that the 39%/10% rates are from D77 at 790 mg every 6 weeks with chemotherapy, add the IV-preference reason from 14.2, and repoint claims-map row 1 to label section 1 (pages 1 to 19 of drug:keytruda-qlex:label_sections.md).",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q1_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 4
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 21
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 27
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 28
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 29
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 31
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 32
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 34
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 62
+    },
+    {
+     "doc_id": "keytruda-qlex:drugs/keytruda-qlex/label_v18.md",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "MRK-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "WRONG DECIDER. The move names the payer, but the gate is Halozyme accepting a Europe-only license and Merck management choosing to pay. Neither is supported. Halozyme: it is suing Merck in New Jersey on 15 MDASE patents (MRK:10q_2026Q2.md p.22) and its own Q2 2026 release (deals:deals/2026-08-06_0001159036-26-000103.md p.10) shows the add-back for 'patent infringement litigation against Merck' rising from 2,561 to 6,936 (in thousands, three months ended June 30, 2026 vs 2025): it is escalating, and a Europe-only deal leaves its larger U.S. claim open, so it has little reason to carve Europe out cheaply. Merck: p.22 records four PTAB final decisions 'finding every challenged claim unpatentable', Director Review requests denied, and Halozyme consenting to revocation of the '622 patent in the UK. A company winning on validity does not pay a royalty on the same patent family; the strategist's own cannot_tell says the license 'overpays'. Premise check: the 10-Q product table (p.28) shows 68 of international Keytruda Qlex/SC sales in Q2 2026, so SC is already selling outside the U.S.; the only actual sales bar on the page is the German preliminary injunction. The Dutch counterclaim over seven markets is a claim, not an injunction. Payer side: p.33 names two gates, 'the completion of reimbursement procedures and the outcome of litigation'; removing litigation leaves country reimbursement, which no cited page sizes. Timing: the Dutch decision was 'expected within three months' of end-July 2026 (p.22), so it lands around now, before a license could be negotiated; the move is overtaken by events either way. Already announced: my own search of transcripts found no Halozyme mention in 2025Q4, 2026Q1 or 2026Q2 calls, consistent with 'not found'. Kill signals: international Qlex below 150 in the Q2 2027 10-Q table is measurable; the second signal is a disjunction of court events that the 10-Q litigation note will report, measurable but it fires on outcomes outside Merck's control within weeks, not months 6 to 12.",
+   "correction": "Narrow to a contingent, Germany-only option: authorize a settlement mandate only if the November 19, 2026 appeal fails, priced against German SC sales alone, and keep all PTAB and revocation actions running. If the appeal succeeds, no payment. Otherwise none possible: a Europe-wide license on a patent family Merck keeps invalidating has no willing decider on either side of the table.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "deals:deals/2026-08-06_0001159036-26-000103.md",
+     "page": 2
+    },
+    {
+     "doc_id": "deals:deals/2026-08-06_0001159036-26-000103.md",
+     "page": 10
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q1_transcript.md",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "MRK-m03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "WRONG DECIDER AND WRONG LEVER. The move says the payer decides, but under Part B buy-and-bill the payer does not pick the route; the oncology practice does, and a lower Qlex payment limit lowers the practice's percentage add-on per dose, which the strategist itself flags as possibly slowing conversion. The move pulls the price lever in the direction that hurts the decider who actually chooses. The cited reason conversion lags is clinical workflow, not price: the ASCO slide (MRK:presentations/2026-06_asco_investor_event.md p.25) and the grade A 2026Q2 call (MRK:transcripts/2026Q2_transcript.md p.4: 'early use has been predominantly in patients who are either on monotherapy or in combination with an oral agent') point to regimen type. A patient already sitting in the IV chair for chemotherapy saves little time on SC pembrolizumab, and a price cut does not change that. Already announced in direction: 2025Q4 call p.11 (grade A) 'we have priced this to drive for the adoption from KEYTRUDA IV to QLEX'; 2025Q3 call p.15 describes a commercial contracting strategy 'to make it frictionless to convert'. Commercial payer terms are therefore already being used; the only new piece is a list or ASP cut. The 3.6% per-dose premium rests on CMS machine-data rows (tables/partb_asp_quarterly.csv#385 and #388), which cannot be quoted, and coinsurance effects are unsupported by any page. IRA: MRK:10k_FY2025.md p.33 says a negotiated price takes effect January 1, 2029, so the payer's price relationship after 2028 is set by CMS, not by this cut; the payoff year the move needs (2029) is the year the lever is taken away. Kill signals: the CMS file comparison at month 9 and the 10-Q share at month 10 are measurable with thresholds, pass.",
+   "correction": "None possible as a broad list or ASP cut: it weakens the buy-and-bill practice, the real decider, and is overridden by IRA pricing in 2029. If anything, a narrower test: site-of-care contracting with a few large commercial payers that pay a per-administration fee, measured by Qlex share in the 10-Q, which is already within the contracting strategy management described on the 2025Q3 call p.15.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "id": "MRK-m04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "THE EVIDENCE DOES NOT SAY WHAT THE MOVE NEEDS IT TO SAY. The investor would accept a $2.1B release only if the long-dated pool is excess tariff staging that can be sold through; no Merck page says so. MRK:10q_2026Q2.md p.19 says only that Other Assets inventory is 'almost entirely raw materials and work in process' with 5.9 not expected to sell within a year; it gives no reason or product mix, and separately lists 490 of launch inventory. The tariff-staging rationale comes from grade C 2025Q1 call pages, which cannot be quoted. Two cited alternatives point the other way. (a) Tariff deal: p.32 says the Section 232 delay was agreed 'enabling the Company to make investments in the U.S. to reshore manufacturing', and the 2026-02-03 release p.1 and the 2025-12 press release p.1 tie it to more than $70 billion of U.S. capital and R&D; a reshoring tech transfer is a reason to hold bridging drug substance, not to run it down, so the delay does not remove the reason for the pool. (b) Write-down risk: the 2026Q2 grade A call p.5 cut gross margin guidance 'primarily due to higher inventory reserves', the 2026Q2 slides p.18 repeat it, and MRK:10k_FY2025.md p.75 says inventory is managed by stage to avoid expiry and 'inventory write-downs may be required'. If part of the pool is aged, drawing it down shows up as reserves, not cash. The Gardasil China shipment pause (10-K p.58) is a further unquantified candidate for slow-moving stock. Decider fit: the actual decider is the CFO and supply organization, not outside investors, and investors cannot verify a target on an undisclosed pool. Already announced: my own search of filings, releases and grade A calls found no target for the pool, consistent with 'not found'. Kill signals: the 10-Q inventory note reports the line every quarter, thresholds at months 7 and 12 are concrete, pass; the tariff signal is measurable from the 10-Q risk text.",
+   "correction": "Narrow the move: first require management to disclose the pool's split (Keytruda drug substance ahead of 2028, reshoring transfer stock, vaccines, launch stock), then set a release target only on the portion that is neither reshoring bridge nor pre-LOE build. Pending that, size the release at 0 to 1.0B rather than 2.1B and treat any vaccine portion as write-down risk, with the same 10-Q kill signals.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 75
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18
+    },
+    {
+     "doc_id": "MRK:earnings/2026-02-03_tm264564d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "MRK-m05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "ALREADY UNDERWAY AND SELF-DEFEATING WITH ITS DECIDER. The decider is the IRS (examination and Appeals). MRK:10q_2026Q2.md p.25 already says Merck 'is vigorously contesting the NOPAs through available administrative proceedings', and MRK:10k_FY2025.md p.131 says it will contest 'through all available administrative and, if necessary, judicial proceedings' and that 'It may take a number of years to reach resolution'. Pursuing the administrative route with a tax team and counsel is the status quo, not a new move. The two new elements fail the decider test. 'Penalty removal as the first ask': no page in the index shows how the IRS treats transition-tax penalties, and the 50% probability is an assumption. 'Disclose reserve coverage on the next earnings call': the counterparty in Appeals reads the same disclosure, so publishing how much of the 2,530 unrecognized-tax-benefit balance (10-K p.131) covers this matter hands the IRS Merck's own settlement estimate; the move undercuts its own negotiation. The 10-Q p.25 sentence 'it remains uncertain whether a resolution can be reached during this phase of the audit, and judicial proceedings may be necessary' is evidence that the administrative channel may not be available to settle in, which is the opposite of the window the strategist reads into it. Already announced: the strategist's 'partly' is right; transcripts for 2025Q4 to 2026Q2 have no mention (my scan found none). Kill signals: a notice of deficiency or Tax Court petition in the Q1 2027 10-Q is measurable; the month-10 signal ('still uncertain' wording) is a text test, measurable but weak since the boilerplate can persist for years.",
+   "correction": "Drop the public reserve-disclosure leg. What remains (keep contesting in Appeals) is already Merck's stated course, so none possible as a new move; at most, a governance step: brief the audit committee on a settlement range privately and keep the 10-Q kill signal on a notice of deficiency.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 5
+    }
+   ]
+  }
+ ],
+ "overall": "All five MRK candidates are refuted on the decider and compliance lens: the two Qlex moves (m01, m03) restate a conversion strategy management announced with an earlier end-2027 target, and m03 pulls the price lever against the practice that actually decides, while m02 and m05 lack a willing counterparty and m04 rests on a tariff-staging reason no quotable page supports. The best salvage is m04 narrowed to a disclosed, non-reshoring slice of the pool, or m01 narrowed to IV-chemotherapy combination regimens with a corrected promo piece (add section 5.2 and repoint the indications row to label section 1)."
+}

@@ -1,0 +1,196 @@
+{
+ "ticker": "AMGN",
+ "lens": "decider",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "AMGN-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Decider is CDER in a withdrawal proceeding. No indexed page shows the FDA accepting a new trial as a postmarketing commitment in lieu of withdrawal. The strategist's key page (AMGN:10q_2026Q2.md p.59, printed p. 54) is a risk-factor list of actions the FDA 'may require' in addition to or short of withdrawal; it is Amgen's own hedge, not evidence of an offer-for-approval path, and it says Amgen 'cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient'. Worse, the same page and AMGN:10q_2026Q2.md p.21 (printed p. 16) show the proposal rests on two grounds: lack of substantial evidence of effectiveness AND that the ChemoCentryx application 'contained untrue statements of material facts'. A new randomized trial does nothing for the second ground, and the trial cannot read out inside 24 months, so it cannot cure the first ground on the hearing timeline either. Safety is a third front: p.21 ties the proposal to the March 2026 Drug Safety Communication on fatal DILI cases, and p.59 records label updates on VBDS with fatal outcomes; the registry addresses monitoring, not the benefit side the FDA disputes. AMGN:10k_FY2025.md p.8 (printed p. 2) confirms the FDA's concern is the re-adjudication process for 9 of 331 patients plus hepatotoxicity in benefit-risk. The only indexed precedent of the FDA's response to a sponsor's confirmatory data is LUMAKRAS on p.59: a Complete Response Letter plus a new PMR for another confirmatory study, which is an accelerated-approval case and shows the FDA dictates the study, it is not bargained for. Already-announced check (my own search: 'TAVNEOS confirmatory trial', 'TAVNEOS new study', 'TAVNEOS withdrawal hearing' across AMGN filings, transcripts, slides): no new adult trial announced; Amgen's submissions are RWE plus blinded re-adjudication (p.21); the 2026Q2 slides p.11 list an ongoing TAVNEOS Phase 3 in ANCA vasculitis ages 6 to under 18, so a trial infrastructure exists but nothing for adults. The move is not announced but it is the obvious textbook sponsor response, which the 10-Q risk factor itself anticipates. Kill signals: hearing denial or summary judgment (Federal Register and 10-Q, measurable, month 9) is good; U.S. TAVNEOS below $120M a quarter from the 10-Q product table (p.44) is good; enrollment under 83 by month 12 is measurable on clinicaltrials.gov but cannot start until the FDA agrees a protocol, so it may trip on FDA delay rather than on the move failing. No promo material, so promo rules not engaged. All strategist quotes verified on their pages.",
+   "correction": "Narrow to a conditional remedy offer filed into the hearing record: a confirmatory adult trial protocol plus a U.S. hepatic monitoring program, offered as postmarketing requirements the FDA would set, with spend gated. Fund only protocol design, adjudication charter and registry setup (about $10M to $15M [assumption]) until the FDA grants a hearing or signals it would take PMRs in lieu of withdrawal; release the trial budget only then. State in the evidence that the move cannot answer the 'untrue statements of material facts' ground (AMGN:10q_2026Q2.md p.21) and that FDA acceptance is unknowable from indexed pages; the 15-point retention uplift must stay an explicit [assumption] with break-even at about 9.9 points.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 59
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 44
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 11
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "id": "AMGN-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Already announced: management is already running this exact push. AMGN:presentations/2026Q2_earnings_slides.md p.7 headlines Repatha as 'Expanding adoption across primary care and cardiology'; AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.15 (grade B), Murdo Gordon: 'the other half of our growth is coming from primary care physicians and expansion in the number of primary care physicians'; AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p.13 (grade A), Gordon on VESALIUS-CV: 'This is a call to action for primary care physicians everywhere.' The strategist's own cite (2026Q2 transcript p.13) is management saying education is needed, i.e. the plan, not a gap. So the $120M is incremental spend on top of an existing campaign and the 3% then 6% lift has no indexed baseline to separate it from the current trend (U.S. Repatha +41% in Q2 2026, AMGN:10q_2026Q2.md p.38). Doctor as decider: the evidence shows PCPs already adopting on VESALIUS data, which says the message is landing without this move; it cannot tell whether more exposure changes oral-versus-injection choice. Lipfendra 'direct-to-patient channel' is not on the cited MRK:10q_2026Q2.md p.37 (that page only has the July 2026 approval and label); it is on MRK:10q_2026Q2.md p.32 (Merck 'will be expanding the program in the future to include Lipfendra'). Promo rules, each checked against the piece: (1) FDA-approved uses only: PASS. Indication text matches repatha label_v30 p.1 section 1 verbatim; LDL-C indication truncated to adults with hypercholesterolemia, which is a subset, not off-label. (2) Risks as prominent as benefits: FAIL as written. The piece defers common adverse reactions to 'section 6 [section not indexed]'. That is false: section 6 is indexed as drug:repatha:label_sections.md page 8 (section 6), page 9 (section 6.1 Clinical Trials Experience) and page 10 (section 6.2). Section 6.1 gives FOURIER common adverse reactions, diabetes mellitus 8.8% vs 8.2% placebo, nasopharyngitis 7.8% vs 7.4%, upper respiratory tract infection 5.1% vs 4.8%, plus new-onset diabetes 8.1% vs 7.7%, and the 52-week Table 1 list. A benefit claim on MACE including revascularization with only hypersensitivity and latex in the safety block and no adverse-reaction frequencies is not fair balance; it cannot pass without section 6, and section 6 was available. (3) Comparisons only with head-to-head evidence: PASS for the piece (it states no comparison). verified/product/head_to_head_part2.csv row repatha_vs_lipfendra is none_found (34 enlicitide studies scanned, no PCSK9 mAb arm), so the campaign brief's 'before Lipfendra' positioning must never surface in the piece or rep talk. (4) No testimonials or likenesses: PASS. (5) Student-concept label: PASS, present verbatim. (6) Claims map: PASS for the six claims mapped; I opened label_v30 p.1 (section 1), p.4 (section 2.1, printed '2 DOSAGE AND ADMINISTRATION'), p.2 (section 4), p.3 (section 5.1) and every quote verifies; but the map has no row for adverse reactions because the piece omits them, so the map is incomplete once rule 2 is fixed. Also 'medical-education' plus a branded leave-behind blends two channels; any accredited education Amgen funds cannot be Amgen-controlled, so the measurable part is ordinary promotion. Kill signals: U.S. Repatha growth below 20% YoY from the 10-Q geographic table (month 9) and net price down more than 10% from 10-Q driver text are measurable with a reliable source; Lipfendra above $100M a quarter depends on Merck breaking it out, which a launch-year product may not get.",
+   "correction": "Rewrite the ISI to add section 6.1 common adverse reactions with rates (diabetes mellitus 8.8% vs 8.2%, nasopharyngitis 7.8% vs 7.4%, upper respiratory tract infection 5.1% vs 4.8%, cite drug:repatha:label_sections.md page 9, section 6.1) in the same type size and add that row to the claims map. Narrow the move to what is not already running: a smaller, measurable test (for example $20M to $30M [assumption]) aimed at PCP segments the 2026Q2 call does not name, with a holdout region so lift is attributable; fix the Lipfendra DTC cite to MRK:10q_2026Q2.md p.32.",
+   "pages_checked": [
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 1
+    },
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 2
+    },
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 3
+    },
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 4
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 8
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 9
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 10
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 7
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "id": "AMGN-m03",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Decider here is UCB as counterparty (the candidate labels it 'investor', which is the wrong decider: the deal fails or succeeds on UCB's yes). No UCB filing or statement is indexed, so nothing shows UCB would sell. The economics on Amgen's own pages say it would not at this price. AMGN:10k_FY2025.md p.132 (printed p. F-29): payments to UCB were $396M, $547M, $721M in 2023 to 2025; AMGN:10q_2026Q2.md p.39: EVENITY grew 38% in Q2 2026. The strategist's own return math projects UCB would receive $2,027.8M in just the next 24 months; the offer is $3,605M for a stream protected by U.S. formulation patents to 5/11/2031 (AMGN:10k_FY2025.md p.13). At the strategist's 25% growth, payments for 2026 to 2030 alone are 901.2 + 1,126.6 + 1,408.2 + 1,760.3 + 2,200.3 = $7,396.6M before discounting. A seller giving up roughly twice the offer in undiscounted near-term cash, from a partner (Amgen) that is visibly adding field force (2026Q1 call, grade B), will reject; the offer is below UCB's walk-away by a wide margin. Scope problem: AMGN:10k_FY2025.md p.30 (printed p. 24) says UCB leads commercialization in most of Europe; buying those rights means Amgen must stand up a European bone commercial operation that the cost line ignores. The 2026Q2 slides p.7 note Astellas is a partner in Japan, so '100% of the growth' is not true even after a UCB buyout. Already-announced check (own search 'UCB EVENITY' across transcripts and 10-Ks, and agreements): nothing announced; the only indexed UCB contract is a 2016 amendment (AMGN:companies/AMGN/agreements/2024_10_17_Amendment_No_2_to_Collaboration_and_License_Agree.md p.1, p.3) with no buyout or option term visible. Not obvious, but not supported either. Kill signals: 'UCB counter above 6x' has no public reporting source (private negotiation), so it is not externally measurable; EVENITY below 15% YoY from the 10-Q table and an aBLA disclosed in 10-Q contingencies are measurable. No promo material.",
+   "correction": "None possible at $3.6B: a price UCB could accept (at least the undiscounted 2026 to 2030 stream on the strategist's own growth path, about $7.4B, before any premium) makes the 24-month return negative. A narrower move that a counterparty could accept: renegotiate cost sharing so incremental U.S. field-force and DTC spend Amgen alone chooses is charged before the 50/50 split, or buy a right of first negotiation on UCB's share; name UCB, not investors, as the decider.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 132
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 30
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 7
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/agreements/2024_10_17_Amendment_No_2_to_Collaboration_and_License_Agree.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/agreements/2024_10_17_Amendment_No_2_to_Collaboration_and_License_Agree.md",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "AMGN-m04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Payer as decider: the strategist's own source cuts against acceptance. AMGN:companies/AMGN/10q_2025Q2.md p.55 (printed p. 50) says Amgen already 'reduced the net price of Repatha by providing greater discounts and rebates to payers (including PBMs that administer Medicare Part D prescription drug plans)' and then: 'despite these net and list price reductions, some payers have restricted, and may continue to restrict, patient access and may seek further discounts or rebates'. Rebates-for-access is the move management already ran, and PA survived it. AMGN:10k_FY2025.md p.17 (printed p. 11): 'payers are increasingly using stricter utilization management criteria, such as prior authorization and step therapy'. verified/rx/formulary_part2.csv (CMS SPUF, contract year 2026): Repatha on 318 of 328 formularies with prior_auth_share 0.7987 and quantity_limit_share 0.9182; Praluent on 42 with prior_auth_share 1.0. PA applies across the PCSK9 class regardless of which product wins the rebate, which says PA is a clinical-criteria policy, not a price term. The move is also internally contradictory: PA is the mechanism a plan uses to confirm a patient is 'inside the label's MACE-risk indication', so dropping PA only for in-indication patients still needs some PA-like check. Lipfendra has no Part D formulary listing yet (same table), and Merck will put it in a direct-to-patient program (MRK:10q_2026Q2.md p.32), giving payers a reason to keep gates while a cheaper oral arrives. Note the SPUF shares are unweighted by enrollment (table note), so 80% of formularies is not 80% of lives. Already-announced check (own search 'Repatha utilization management prior authorization' since 2025-10): the access-via-rebate approach is disclosed in 10-Q risk factors 2025Q2 and 2025Q3 (AMGN:companies/AMGN/10q_2025Q3.md p.54); AmgenNow at $239 a month (press release 2025-10-06 p.1) is the parallel route around payer gates. The move is obvious and partly done. Kill signals are the best in the set: SPUF prior_auth_share above 0.70 at the next quarterly release (CMS publishes quarterly), 10-Q driver text on net price and volume, FY2026 deductions above 56% from the 10-K. All have thresholds and real sources. No promo material.",
+   "correction": "Narrow to a pilot with one or two large PBMs: rebate tied to PA simplification (auto-approval on a documented ASCVD or diabetes diagnosis code, 12-month reauthorization) rather than full PA removal, budget scaled to their share (for example $30M to $50M over 24 months [assumption]), and measure with the step_therapy_share (0.1635) and prior_auth_share series in SPUF plus abandonment data Amgen already tracks. Present the 2025Q2 10-Q page as evidence that rebates alone did not move PA.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+     "page": 55
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q3.md",
+     "page": 54
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 17
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 36
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    }
+   ]
+  }
+ ],
+ "overall": "All four AMGN candidates fail the decider test as written: m02 and m04 repeat programs management already runs (PCP Repatha push, rebates for access), m03 prices UCB's half of a fast-growing stream below what UCB would receive in about three years, and m01 asks the FDA for a bargain no indexed page shows it grants and that cannot answer the untrue-statements ground. m04 survives best in narrowed form because its kill signals are measurable from CMS and 10-Q data, with m01 a close second as a gated, cheap remedy offer in the hearing record."
+}
