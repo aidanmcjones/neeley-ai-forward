@@ -1,0 +1,90 @@
+{
+  "_about": "Biologic patent dates as the company states them in its latest 10-K. The Orange Book does not list BLA biologics and the Purple Book has no patents, so labels.py reads this file when a product has no orange_book_patents.csv. Each quote is verbatim (whitespace collapsed) from the page named; tests/needle/test_labels_protection.py checks every quote against data/corpus. 'expiry' keeps the precision the filing uses (YYYY, YYYY-MM or YYYY-MM-DD).",
+  "keytruda": {
+    "ticker": "MRK", "doc": "data/corpus/companies/MRK/10k_FY2025.md",
+    "stated_us_loe": {"value": "2028-12", "page": "31 | printed 29",
+                      "quote": "biosimilar competition could begin in December 2028 when the primary compound patent expires"},
+    "patents": [
+      {"expiry": "2028-12", "subject": "primary compound patent (U.S.)", "page": "31 | printed 29",
+       "quote": "biosimilar competition could begin in December 2028 when the primary compound patent expires"},
+      {"expiry": "2029-11", "subject": "two compound-family patents with patent term adjustment, May and Nov 2029 (U.S.); company expects litigation",
+       "page": "31 | printed 29",
+       "quote": "while two patents in the Keytruda composition of matter patent family expire in May and November of 2029, respectively"}
+    ]
+  },
+  "keytruda-qlex": {
+    "ticker": "MRK", "doc": "data/corpus/companies/MRK/10k_FY2025.md",
+    "patents": [
+      {"expiry": "2043", "subject": "U.S. patent, 10-K patent table row (EU 2031)", "page": "16 | printed 14",
+       "quote": "Keytruda Qlex 2043 2031 (19)"}
+    ]
+  },
+  "opdivo": {
+    "ticker": "BMY", "doc": "data/corpus/companies/BMY/10k_FY2025.md",
+    "stated_us_loe": {"value": "2028", "page": "9 | printed 7", "quote": "Opdivo (nivolumab) 2028 2030 2031"},
+    "patents": [
+      {"expiry": "2028", "subject": "estimated minimum U.S. market exclusivity (table: U.S. 2028, EU 2030, Japan 2031)",
+       "page": "9 | printed 7", "quote": "Opdivo (nivolumab) 2028 2030 2031"}
+    ]
+  },
+  "opdivo-qvantig": {
+    "ticker": "BMY", "doc": "data/corpus/companies/BMY/10k_FY2025.md",
+    "stated_us_loe": {"value": "2028", "page": "9 | printed 7",
+                      "quote": "For Opdivo Qvantig, in the U.S. and EU, the estimated minimum market exclusivity dates are 2028 and 2030, respectively, based on the expiry of the COM patent for nivolumab"},
+    "patents": [
+      {"expiry": "2028", "subject": "nivolumab composition of matter patent (U.S.); pending Qvantig applications excluded",
+       "page": "9 | printed 7",
+       "quote": "For Opdivo Qvantig, in the U.S. and EU, the estimated minimum market exclusivity dates are 2028 and 2030, respectively, based on the expiry of the COM patent for nivolumab"}
+    ]
+  },
+  "enbrel": {
+    "ticker": "AMGN", "doc": "data/corpus/companies/AMGN/10k_FY2025.md",
+    "patents": [
+      {"expiry": "2028-11-22", "subject": "fusion protein and pharmaceutical compositions (U.S.)", "page": "13 | printed 7",
+       "quote": "U.S. Fusion protein and pharmaceutical compositions 11/22/2028"},
+      {"expiry": "2029-04-24", "subject": "DNA encoding fusion protein, methods of making (U.S.)", "page": "13 | printed 7",
+       "quote": "U.S. DNA encoding fusion protein and methods of making fusion protein 4/24/2029"},
+      {"expiry": "2037-10-19", "subject": "formulations (U.S.)", "page": "13 | printed 7",
+       "quote": "U.S. Formulations and methods of preparing formulations 10/19/2037"},
+      {"expiry": "2038-02-22", "subject": "methods of treatment using formulations (U.S.)", "page": "13 | printed 7",
+       "quote": "Methods of treatment using formulations 2/22/2038"}
+    ]
+  },
+  "repatha": {
+    "ticker": "AMGN", "doc": "data/corpus/companies/AMGN/10k_FY2025.md",
+    "patents": [
+      {"expiry": "2029-08-27", "subject": "antibodies (U.S.)", "page": "13 | printed 7",
+       "quote": "Repatha ® (evolocumab) U.S. Antibodies 8/27/2029"},
+      {"expiry": "2032-05-10", "subject": "methods of treatment (U.S.)", "page": "13 | printed 7",
+       "quote": "Antibodies 8/27/2029 U.S. Methods of treatment 5/10/2032"}
+    ]
+  },
+  "darzalex": {
+    "ticker": "JNJ", "doc": "data/corpus/companies/JNJ/10k_FY2025.md",
+    "patents": [
+      {"expiry": "2029", "subject": "two Genmab patent families licensed to Janssen (U.S.); EU to 2031/2032",
+       "page": "8 | printed 3", "quote": "The two patent families both expire in the United States in 2029"}
+    ]
+  },
+  "darzalex-faspro": {
+    "ticker": "JNJ", "doc": "data/corpus/companies/JNJ/10k_FY2025.md",
+    "patents": [
+      {"expiry": "2029", "subject": "two Genmab daratumumab patent families (U.S.); Janssen holds separate, undated FASPRO portfolios",
+       "page": "8 | printed 3", "quote": "The two patent families both expire in the United States in 2029"}
+    ]
+  },
+  "tremfya": {
+    "ticker": "JNJ", "doc": "data/corpus/companies/JNJ/10k_FY2025.md",
+    "patents": [
+      {"expiry": "2031", "subject": "composition patent family (U.S.)", "page": "8 | printed 3",
+       "quote": "including a composition patent family projected to expire in the United States in 2031"}
+    ]
+  },
+  "skyrizi": {
+    "ticker": "ABBV", "doc": "data/corpus/companies/ABBV/10k_FY2025.md",
+    "patents": [
+      {"expiry": "2033", "subject": "U.S. composition of matter patents (risankizumab)", "page": "9 | printed 7",
+       "quote": "The United States composition of matter patents covering risankizumab and upadacitinib are expected to expire in 2033"}
+    ]
+  }
+}

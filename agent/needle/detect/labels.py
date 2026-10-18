@@ -13,6 +13,7 @@ import json
 import re
 import statistics
 from functools import lru_cache
+from pathlib import Path
 
 import pandas as pd
 
@@ -212,6 +213,54 @@ def _iso(ts):
     return None if ts is None or pd.isna(ts) else ts.strftime("%Y-%m-%d")
 
 
+# ---------------------------------------------------------------- protection inputs
+ORPHAN_COL = "Orphan Exclusivity Exp. Date"
+TENK_PATENTS = Path(__file__).with_name("tenk_patents.json")
+# brand -> its subcutaneous form, a separate BLA and drug pack (route is per label; the franchise is not)
+SUBQ_FORM = {"darzalex": "darzalex-faspro", "keytruda": "keytruda-qlex", "opdivo": "opdivo-qvantig"}
+
+
+def _is_orphan_code(code):
+    return str(code or "").upper().startswith("ODE")
+
+
+@lru_cache(maxsize=None)
+def _tenk_table():
+    try:
+        return json.loads(TENK_PATENTS.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _tenk_patents(slug):
+    e = _tenk_table().get(slug)
+    return e if isinstance(e, dict) and e.get("patents") else None
+
+
+def _tenk_source(entry, item):
+    return f"{entry['ticker']} 10-K ({entry['doc'].rsplit('/', 1)[-1]}) page {item['page']}"
+
+
+def _period_end(s):
+    """Latest day of a YYYY, YYYY-MM or YYYY-MM-DD string (sort key; the value keeps the filing's precision)."""
+    s = str(s)
+    if re.fullmatch(r"\d{4}", s):
+        return pd.Timestamp(f"{s}-12-31")
+    if re.fullmatch(r"\d{4}-\d{2}", s):
+        return pd.Timestamp(f"{s}-01") + pd.offsets.MonthEnd(0)
+    return pd.Timestamp(s)
+
+
+def verify_tenk(entry, item):
+    """True if item['quote'] occurs (whitespace collapsed) on page item['page'] of entry['doc']."""
+    p = ROOT / entry["doc"]
+    if not p.exists():
+        return False
+    parts = re.split(r"\[\[page ([^\]]+)\]\]", p.read_text(encoding="utf-8", errors="replace"))
+    pages = {parts[i].strip(): parts[i + 1] for i in range(1, len(parts) - 1, 2)}
+    return item["page"] in pages and _norm(item["quote"]) in _norm(pages[item["page"]])
+
+
 # ---------------------------------------------------------------- dosing / route
 FREQS = [  # (key, regex, doses per year)
     ("three times daily", r"\b(three times (?:a day|daily)|3 times (?:a day|daily))\b", 1095),
@@ -355,7 +404,8 @@ def _profile(slug):
     # route, dosing
     s2, s3 = secs.get(2, ""), secs.get(3, "")
     rs, primary, rsrc = _routes(slug, s2, s3)
-    P["route"] = _f(primary, rsrc, all=rs)
+    sq = SUBQ_FORM.get(slug)
+    P["route"] = _f(primary, rsrc, all=rs, subcutaneous_form=sq if sq and (DRUGS / sq).exists() else None)
     dz = _dosing(s2) if s2.strip() else None
     if dz:
         P["dosing_frequency"] = _f(dz["frequency"], "label §2", doses_per_year=dz["doses_per_year"], all=dz["all"])
@@ -386,21 +436,39 @@ def _profile(slug):
             top = p2.sort_values("_d").iloc[-1]
             P["latest_patent_expiry"] = _f(_iso(top["_d"]), "orange_book_patents.csv", patent_no=top["Patent_No"])
             P["patent_count"] = _f(int(p2["Patent_No"].nunique()), "orange_book_patents.csv")
-            ends.append(top["_d"])
+            ends.append((top["_d"], _iso(top["_d"]), f"patent {top['Patent_No']} (Orange Book)"))
         else:
             P["latest_patent_expiry"] = _f(None, "orange_book_patents.csv (no dated rows)")
             P["patent_count"] = _f(0, "orange_book_patents.csv")
     else:
-        P["latest_patent_expiry"] = _f(None, "orange_book_patents.csv not in pack")
-        P["patent_count"] = _f(None, "orange_book_patents.csv not in pack")
+        tk = _tenk_patents(slug)
+        if tk:
+            # BLA biologics are not in the Orange Book: use the patent dates the company states in its 10-K
+            top = max(tk["patents"], key=lambda p: _period_end(p["expiry"]))
+            P["latest_patent_expiry"] = _f(top["expiry"], _tenk_source(tk, top), subject=top["subject"],
+                                           quote=top["quote"], all=tk["patents"])
+            P["patent_count"] = _f(None, "10-K lists patent families/rows, not an Orange Book count",
+                                   rows_listed=len(tk["patents"]))
+            ends.append((_period_end(top["expiry"]), top["expiry"], "patent (10-K)"))
+        else:
+            P["latest_patent_expiry"] = _f(None, "orange_book_patents.csv not in pack; no 10-K patent row curated")
+            P["patent_count"] = _f(None, "orange_book_patents.csv not in pack")
+    tk = _tenk_patents(slug)
+    st = (tk or {}).get("stated_us_loe")
+    P["stated_us_loe"] = (_f(st["value"], _tenk_source(tk, st), quote=st["quote"]) if st
+                          else _f(None, "no company-stated U.S. LOE curated"))
+    orphan = []
     ex = _csv(slug, "orange_book_exclusivity.csv")
     if ex is not None:
         ex = ex.assign(_d=pd.to_datetime(ex["Exclusivity_Date"], errors="coerce")).dropna(subset=["_d"])
         pairs = sorted({(r["Exclusivity_Code"], _iso(r["_d"])) for _, r in ex.iterrows()}, key=lambda x: x[1])
         P["exclusivity"] = _f([{"code": c, "date": d_} for c, d_ in pairs], "orange_book_exclusivity.csv",
                               latest=pairs[-1][1] if pairs else None)
-        if pairs:
-            ends.append(pd.Timestamp(pairs[-1][1]))
+        # orphan drug exclusivity (ODE) blocks generics for one orphan indication only: not product protection
+        prot = [p for p in pairs if not _is_orphan_code(p[0])]
+        orphan += [{"date": d_, "source": f"orange_book_exclusivity.csv {c}"} for c, d_ in pairs if _is_orphan_code(c)]
+        if prot:
+            ends.append((pd.Timestamp(prot[-1][1]), prot[-1][1], f"Orange Book exclusivity {prot[-1][0]}"))
     else:
         P["exclusivity"] = _f([], "orange_book_exclusivity.csv not in pack", latest=None)
 
@@ -422,7 +490,11 @@ def _profile(slug):
             ds = _dates(own[c]) if c in own else []
             if len(ds):
                 ed[c] = _iso(max(ds))
-        lic = own[own["Submission Type"].fillna("") == "Original"] if "Submission Type" in own else own
+        # 12-year reference exclusivity runs from first licensure of the molecule, so a later BLA for a new
+        # form of it (Darzalex Faspro, Keytruda Qlex) does not restart the clock: use the earliest originator
+        # (non-biosimilar) original licence in the pack, not just this brand's own rows
+        orig = pb[pb["Ref. Product Proprietary Name"].fillna("").str.strip() == ""]
+        lic = orig[orig["Submission Type"].fillna("") == "Original"] if "Submission Type" in orig else orig
         ap = _dates(lic["Approval Date"]) if len(lic) else []
         derived = None
         if len(ap):
@@ -430,13 +502,26 @@ def _profile(slug):
         P["purple_exclusivity"] = _f(ed, "purple_book.csv", derived_12y_reference_exclusivity=derived,
                                      first_licensed=_iso(min(ap)) if len(ap) else None)
         P["biosimilars_referencing"] = _f(len(bios_names), "purple_book.csv", names=bios_names)
-        for v in list(ed.values()) + ([derived] if derived else []):
-            ends.append(pd.Timestamp(v))
+        for c, v in ed.items():
+            if c == ORPHAN_COL:
+                orphan.append({"date": v, "source": "purple_book.csv Orphan Exclusivity Exp. Date"})
+            else:
+                ends.append((pd.Timestamp(v), v, f"Purple Book {c.replace(' Exp. Date', '')}"))
+        if derived and "Ref. Product Exclusivity Exp. Date" not in ed:
+            ends.append((pd.Timestamp(derived), derived, "12y reference exclusivity from first licensure (derived)"))
     else:
         P["purple_exclusivity"] = _f({}, "purple_book.csv not in pack", derived_12y_reference_exclusivity=None)
         P["biosimilars_referencing"] = _f(None, "purple_book.csv not in pack", names=[])
-    P["protection_end"] = _f(_iso(max(ends)) if ends else None,
-                             "max of orange_book_patents/exclusivity.csv, purple_book.csv (12y derived for biologics)")
+    orphan = sorted({(o["date"], o["source"]) for o in orphan})
+    P["orphan_exclusivity"] = _f(orphan[-1][0] if orphan else None,
+                                 "orphan exclusivity covers one orphan indication only; excluded from protection end",
+                                 all=[{"date": d_, "source": s} for d_, s in orphan])
+    if ends:
+        top = max(ends, key=lambda e: e[0])
+        P["protection_end"] = _f(top[1], f"latest of patents and non-orphan exclusivity; driven by {top[2]}",
+                                 date_for_compare=_iso(top[0]), basis=top[2])
+    else:
+        P["protection_end"] = _f(None, "no patent or non-orphan exclusivity source", date_for_compare=None, basis=None)
 
     # Paragraph IV
     pv = _csv(slug, "paragraph_iv.csv")
@@ -545,7 +630,16 @@ def _cell(P, field):
             s += f", MFP ${v['mfp_per_30_days']:,.2f}/30 days"
         return s
     if field == "route":
-        return "/".join(f["all"]) or None
+        s = "/".join(f["all"]) or None
+        if s and f.get("subcutaneous_form"):
+            s += f" (subcutaneous form is a separate product: {f['subcutaneous_form']})"
+        return s
+    if field == "latest_patent_expiry" and v and f.get("subject"):
+        return f"{v} ({f['subject']})"
+    if field == "orphan_exclusivity":
+        return "; ".join(f"{o['date']} ({o['source']})" for o in f["all"]) or None
+    if field == "protection_end" and v:
+        return f"{v} ({f['basis']})"
     if field == "medicare":
         if not v:
             return None
@@ -561,7 +655,10 @@ TABLE_FIELDS = [
     ("Dosing frequency", "dosing_frequency"), ("Latest patent expiry", "latest_patent_expiry"),
     ("Patent count", "patent_count"), ("Orange Book exclusivity", "exclusivity"),
     ("Purple Book exclusivity", "purple_exclusivity"), ("Biosimilars referencing", "biosimilars_referencing"),
-    ("Paragraph IV filings", "paragraph_iv"), ("Protection ends (latest)", "protection_end"),
+    ("Paragraph IV filings", "paragraph_iv"),
+    ("Orphan exclusivity (one indication only; not in protection end)", "orphan_exclusivity"),
+    ("Company-stated U.S. LOE (10-K)", "stated_us_loe"),
+    ("Protection ends (latest patent or non-orphan exclusivity)", "protection_end"),
     ("IRA negotiation", "ira"), ("Medicare spend (latest year)", "medicare"), ("Label source", "label_url"),
 ]
 
@@ -591,11 +688,15 @@ def _sig(ticker, kind, slug, detail, evs=None, value=None, peer=None, period="",
                   detail=detail, evidence=evs, meta=m)
 
 
+# subcutaneous forms compared in the labels table only (CASE_SETS also drives supply and outside detectors)
+LABELS_EXTRA = {"MRK": {"keytruda-qlex": ["opdivo-qvantig"]}, "JNJ": {"darzalex-faspro": ["sarclisa"]}}
+
+
 def compare(ticker):
     """-> {product_slug: {"rivals": [...], "table": rows, "signals": [Signal]}}"""
     ticker = ticker.upper()
     res = {}
-    for slug, rivals in CASE_SETS[ticker].items():
+    for slug, rivals in {**CASE_SETS[ticker], **LABELS_EXTRA.get(ticker, {})}.items():
         P = profile(slug)
         sigs = []
         S = lambda *a, **k: sigs.append(x) if (x := _sig(ticker, *a, **k)) else None
@@ -655,13 +756,16 @@ def compare(ticker):
 
             # exclusivity timeline
             pe, re_ = P["protection_end"]["value"], R["protection_end"]["value"]
-            if pe and re_:
-                gap = (pd.Timestamp(re_) - pd.Timestamp(pe)).days / 365.25
+            pc_, rc_ = P["protection_end"].get("date_for_compare"), R["protection_end"].get("date_for_compare")
+            if pc_ and rc_:
+                gap = (pd.Timestamp(rc_) - pd.Timestamp(pc_)).days / 365.25
                 if gap >= 1:
                     S("exclusivity_earlier", slug, f"{slug} protection ends {pe}, {gap:.1f} years before {r} ({re_}); "
                       "earlier loss of exclusivity", None, None, None,
                       meta={"rival": r, "data": {"product_end": pe, "rival_end": re_, "gap_years": round(gap, 2),
-                            "files": ["orange_book_patents.csv", "orange_book_exclusivity.csv", "purple_book.csv"],
+                            "files": ["orange_book_patents.csv", "orange_book_exclusivity.csv", "purple_book.csv",
+                                      "tenk_patents.json (10-K)"],
+                            "product_basis": P["protection_end"]["basis"], "rival_basis": R["protection_end"]["basis"],
                             "product_fields": {k: P[k]["value"] for k in ("latest_patent_expiry", "exclusivity", "purple_exclusivity")},
                             "rival_fields": {k: R[k]["value"] for k in ("latest_patent_expiry", "exclusivity", "purple_exclusivity")}}})
 
