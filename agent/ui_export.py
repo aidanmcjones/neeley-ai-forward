@@ -586,6 +586,8 @@ def withhold_reason(c, pool=None):
     st = (c.get("verification") or {}).get("status")
     if "bloomberg" in (c.get("license") or "").lower():
         return "Bloomberg-licensed source: quote and links withheld from the public export"
+    if "machine_data" in ((c.get("raw_doc_type") or "") + (c.get("doc_type") or "")):
+        return "machine-readable data row (no page copy): value shown, quote and links withheld"
     if st == "derived":
         ops = derived_operands(c)
         pool = pool or {}
@@ -1136,6 +1138,51 @@ def footnote_cite(n, line):
             "withheld": bool(why), "withheld_reason": why, "from_footnote": True}
 
 
+_CIT_FIELDS = ("canonical_id", "quote", "claim_type", "value", "unit", "ticker", "doc_type", "doc_title", "period",
+               "folio", "source_url", "deep_link", "viewer_link", "speaker", "location", "raw_doc_type", "page_scheme",
+               "license", "confidence_note", "cite_id")
+
+
+def citation_from_repr(r):
+    """decide.json kill baselines serialise Citation objects with str(); rebuild a dict so the public rule applies."""
+    if isinstance(r, dict):
+        return r
+    if not isinstance(r, str) or not r.startswith("Citation("):
+        return None
+    out = {}
+    for f in _CIT_FIELDS:
+        m = re.search(rf"\b{f}=(?:'((?:[^'\\]|\\.)*)'|\"((?:[^\"\\]|\\.)*)\"|None)", r)
+        if m:
+            out[f] = m.group(1) if m.group(1) is not None else m.group(2)
+    pm = re.search(r"\bpage=(\d+|None)", r)
+    out["page"] = int(pm.group(1)) if pm and pm.group(1).isdigit() else None
+    vm = re.search(r"Verification\(status='(\w+)', score=([\d.]+)", r)
+    out["verification"] = {"status": vm.group(1), "score": float(vm.group(2))} if vm else {"status": None}
+    return out
+
+
+def clean_kill(k):
+    """Kill-signal row with its baseline [value, [Citation...], text] turned into {value, text, cites}."""
+    def fix(o):  # any other str()-serialised Citation (e.g. context rows) becomes a public cite dict
+        if isinstance(o, str) and o.startswith("Citation("):
+            c = citation_from_repr(o)
+            return cell_cite(c, pool={c.get("cite_id"): c}) if c else None
+        if isinstance(o, list):
+            return [fix(x) for x in o]
+        if isinstance(o, dict):
+            return {kk: fix(v) for kk, v in o.items()}
+        return o
+    k = dict(k)
+    b = k.get("baseline")
+    if isinstance(b, (list, tuple)) and len(b) >= 2:
+        cits = [citation_from_repr(x) for x in (b[1] or [])]
+        cits = [c for c in cits if c]
+        pool = {c.get("cite_id"): c for c in cits}
+        k["baseline"] = {"value": b[0], "text": b[2] if len(b) > 2 else None,
+                         "cites": [cell_cite(c, pool=pool) for c in cits]}
+    return {kk: (v if kk == "baseline" else fix(v)) for kk, v in k.items()}
+
+
 def why_it_works(ticker, d):
     """'Why it will work' table from out/<T>/decide.md: one dict per decider row (plain-language column names) with
     the cited evidence for the data column (decide.md's footnotes matched to decide.json's citations, public rule)."""
@@ -1233,7 +1280,7 @@ def apply_decide(ticker, stance, findings, v1=()):
                                **({"cash_at_risk_note": "cash at risk is zero: no committed outflow is unrecovered in the bear case"}
                                   if m.get("car") == 0 else {}),
                                **{k: m.get(k) for k in FIVE}} for m in rej[:2]]
-    ks = d.get("kill_signals") or []
+    ks = [clean_kill(k) for k in d.get("kill_signals") or []]
     stance["kill_signals"] = ks
     pw = [f"{k.get('signal')}: {k.get('threshold')} by month {k.get('check_month')} ({k.get('source')}; {k.get('lag')}); "
           f"action: {k.get('action')}" for k in ks]
