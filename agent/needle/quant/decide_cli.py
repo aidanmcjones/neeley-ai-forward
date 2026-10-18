@@ -418,7 +418,7 @@ def build_md(out, findings, public=False):
     L += ["", "Inputs:", "", "| Input | Value | Unit | Kind |", "|---|---|---|---|"]
     for i in c.inputs:
         cl = [x for x in c.citations if x.cite_id in i.citation_ids]
-        L.append(f"| {i.name} | {cell('inputs', f'inputs/{i.name}', D._fmt_val(i.value), cl, dict(Dc, **(i.derived or {})), D.input_assumptions(i, cl))} "
+        L.append(f"| {i.name} | {cell('inputs', f'inputs/{i.name}', D._fmt_val(i.value), cl, dict(Dc, **(i.derived or {})), dict(Ac, **D.input_assumptions(i, cl)))} "
                  f"| {i.unit} | {i.kind}{' (' + i.finding_id + ')' if i.finding_id else ''} |")
     L += ["", "## Five numbers: " + ("chosen move" if sel.chosen is not None else "least-bad option")
           + " and the two rejected alternatives", "",

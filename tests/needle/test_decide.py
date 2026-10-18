@@ -319,3 +319,19 @@ def test_decide_md_has_why_it_will_work_why_we_passed_and_car_reason(tmp_path):
     assert md.count("Why we passed: EV") == 2
     assert "Cash at risk is zero although" in md or "Committed outflow before the first readout" in md
     assert "Keytruda: Year-one net sales" in md
+
+
+def test_gild_demo_fixture_exits_zero(tmp_path):
+    import json
+    from pathlib import Path
+    from agent.needle.quant import decide_cli
+    root = Path(__file__).resolve().parents[2]
+    f, m = root / "out" / "GILD" / "findings_v3.jsonl", root / "docs" / "examples" / "moves_GILD.json"
+    spec = json.loads(m.read_text())
+    assert spec["demo"] is True and spec["header_note"] and len(spec["moves"]) == 3
+    assert "April 1, 2036" in spec["moves"][0]["name"]
+    if not f.exists():
+        pytest.skip("out/GILD/findings_v3.jsonl not generated (gitignored)")
+    assert decide_cli.main(["--ticker", "GILD", "--findings", str(f), "--moves", str(m), "--out", str(tmp_path)]) == 0
+    md = (tmp_path / "decide.md").read_text()
+    assert "pipeline demonstration" in md.lower() and "## Why it will work" in md
