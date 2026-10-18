@@ -208,5 +208,4 @@ def gated(f):
     res = numeric_gate([("peer", text)], cites, derived, am)
     if res.passed or res.numeric_check["status"] in ("no_numbers", "unchecked"):
         return text, cites, derived, am, True
-    n = len(res.numeric_check["unsupported"])
-    return (NONE + f"the peer figures found ({n} number(s)) do not pass the citation gate", [], {}, {}, False)
+    return (NONE + "the peer figures found do not pass the citation gate", [], {}, {}, False)
