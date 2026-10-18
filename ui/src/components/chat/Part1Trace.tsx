@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { Evidence, Part1SkepticRounds, Part1Trace, Part1TraceStep } from "../../lib/types";
+import type { Evidence, Part1Finding, Part1SkepticRounds, Part1Trace, Part1TraceStep } from "../../lib/types";
 import { evidenceLabel, PART1_CATEGORIES, scrub } from "../../lib/part1";
 import { CiteChip } from "../CiteChip";
 
@@ -63,7 +63,10 @@ function Candidate({ s, onFinding }: { s: Part1TraceStep; onFinding?: (n: number
       </div>
       {reason && <p className="text-[12.5px] text-muted"><span className="font-semibold">Why: </span>{reason}</p>}
       {s.finding_n != null && (
-        <button type="button" onClick={() => onFinding?.(Number(s.finding_n))} className="text-[12px] font-semibold text-purple hover:underline">Became finding {s.finding_n}</button>
+        <button type="button" onClick={() => onFinding?.(Number(s.finding_n))} className="text-[12px] font-semibold text-purple hover:underline">
+          {(s.verdict ?? "").toLowerCase() === "killed" ? `Used as an on-the-record row (finding ${s.finding_n})`
+            : (s.verdict ?? "").toLowerCase() === "narrowed" ? `Narrowed into finding ${s.finding_n}` : `Became finding ${s.finding_n}`}
+        </button>
       )}
       {skeptics && (
         <details className="rounded border border-line bg-surface-2 px-2.5 py-1.5">
@@ -78,7 +81,7 @@ function Candidate({ s, onFinding }: { s: Part1TraceStep; onFinding?: (n: number
   );
 }
 
-export function Part1TraceView({ trace, sample, onFinding }: { trace: Part1Trace; sample: boolean; onFinding?: (n: number) => void }) {
+export function Part1TraceView({ trace, sample, onFinding, findings }: { trace: Part1Trace; sample: boolean; onFinding?: (n: number) => void; findings?: Part1Finding[] }) {
   const steps = useMemo(() => (trace.steps ?? []).filter((s) => s && s.category !== "header" && s.step !== 0), [trace]);
   const cats = trace.header?.categories?.length ? trace.header.categories : PART1_CATEGORIES;
   const byCat = useMemo(() => {
@@ -108,10 +111,24 @@ export function Part1TraceView({ trace, sample, onFinding }: { trace: Part1Trace
       <div className="flex flex-wrap gap-1.5" role="list" aria-label="Trace summary">
         {strip.map(([k, v]) => (
           <span key={k} role="listitem" className="inline-flex items-baseline gap-1 rounded-md border border-line bg-surface px-2.5 py-1 text-[12.5px]">
-            <span className="font-semibold tnum text-purple-deep dark:text-purple">{v}</span><span className="text-muted">{k}</span>
+            <span className={`font-semibold tnum ${v === 0 ? "text-muted" : "text-purple-deep dark:text-purple"}`}>{v}</span><span className="text-muted">{k}</span>
           </span>
         ))}
       </div>
+      {(() => {
+        // How the five rows relate to the verdicts: narrowed claims plus on-the-record rows (killed as obvious).
+        const fs = findings ?? [];
+        const narrowedN = new Set(steps.filter((s) => (s.verdict ?? "").toLowerCase() === "narrowed" && s.finding_n != null).map((s) => Number(s.finding_n)));
+        const isOtr = (f: Part1Finding) => String(f.verdict ?? "").toLowerCase() === "killed" || (String(f.obviousness ?? "").toLowerCase() === "high" && !!f.on_the_record);
+        const nOtr = fs.filter(isOtr).length;
+        const nNar = fs.filter((f) => !isOtr(f) && (String(f.verdict ?? "").toLowerCase() === "narrowed" || narrowedN.has(Number(f.n)))).length;
+        if (!fs.length || (!nNar && !nOtr)) return null;
+        return (
+          <p className="text-[12px] text-muted">
+            The {fs.length} findings: {nNar} narrowed by the skeptics{nOtr ? `, ${nOtr} on the record (killed as already said by management, kept to fill the table)` : ""}.
+          </p>
+        );
+      })()}
       {illustrative && <p className="text-[12px] text-muted">Illustrative trace from the engine's gate decisions; skeptic record not available.</p>}
       <ol className="space-y-1.5">
         {[...byCat.entries()].map(([cat, ss], i) => {
@@ -140,7 +157,7 @@ export function Part1TraceView({ trace, sample, onFinding }: { trace: Part1Trace
                     <div>
                       <div className="text-[10.5px] font-semibold uppercase tracking-wide text-muted">Documents read</div>
                       <ul className="mt-0.5 space-y-0.5 text-[12.5px]">
-                        {[...docs.values()].map((d, j) => <li key={j} className="break-words">{scrub(d.doc_title) || d.doc_id || "Untitled document"}{d.page != null && d.page !== "" ? <span className="text-muted">, p. {String(d.page)}</span> : null}</li>)}
+                        {[...docs.values()].map((d, j) => <li key={j} className="break-words">{scrub(d.doc_title) || d.doc_id || "Untitled document"}{d.page != null && d.page !== "" && !/\bp\. ?\d/.test(d.doc_title ?? "") ? <span className="text-muted">, p. {String(d.page)}</span> : null}</li>)}
                       </ul>
                     </div>
                   )}

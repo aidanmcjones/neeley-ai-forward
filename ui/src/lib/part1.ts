@@ -58,7 +58,7 @@ export function scrub(s: string | null | undefined): string {
 /* Cite resolution. Markers [n] resolve through the nearest marker_map (n -> cite_id) against every
    evidence object in the company file; without a map, [n] is the n-th entry of the local cites. */
 export function evidenceLabel(e: Evidence): Evidence {
-  const page = e.page != null && (e.page as unknown) !== "" ? `p. ${e.page}` : "";
+  const page = e.page != null && (e.page as unknown) !== "" ? (/^p/i.test(String(e.page)) ? String(e.page) : `p. ${e.page}`) : "";
   const period = e.period && !(e.doc_title ?? "").includes(e.period) ? e.period : null;
   const citation = e.citation ?? ([e.doc_title, period, page].filter(Boolean).join(", ") || e.cite_id || e.doc_id || "Source");
   return { ...e, citation, location: e.location ?? (page || undefined), quote: e.quote ?? "" };
@@ -123,9 +123,10 @@ const ALLOWED_DIGIT = [
   /^(19|20)\d\dQ[1-4]$|^Q[1-4]$|^(FY|H[12])\d{2,4}$|^[1-4]Q\d{2,4}$/i,  // quarters, fiscal years
   /^(10-K|10-Q|20-F|8-K|6-K|S-1|DEF14A)s?$/i,                 // filing forms
   /^[A-Z]{2,5}-[A-Za-z]*-?\d+[a-z]?$/,                    // candidate ids: AMGN-c06, LLY-nugget-002
+  /^c\d{1,3}$/,                                           // short candidate ids in a list: c03, c04
   /^([1-9]|1[0-2])$/,                                     // small word counts
 ];
-const tokenOf = (w: string) => w.replace(/^[("'\[]+|[)"',.;:!?\]]+$/g, "");
+const tokenOf = (w: string) => w.replace(/^[("'\[]+|[)"',.;:!?\]]+$/g, "").replace(/['’]s$/, "");
 export function disallowedFigures(s: string | null | undefined): string[] {
   if (!s) return [];
   return s.split(/\s+/).map(tokenOf).filter((w) => /\d/.test(w) && !ALLOWED_DIGIT.some((r) => r.test(w)));

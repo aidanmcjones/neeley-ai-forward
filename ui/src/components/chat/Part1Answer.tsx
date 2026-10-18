@@ -51,8 +51,9 @@ function FindingsTable({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }
   if (!rows.length) return <p className="text-[13px] text-muted">No findings exported for {c.ticker}.</p>;
   return (
     <div className="overflow-x-auto rounded-md border border-line">
-      <table className="w-full min-w-[720px] border-collapse text-[13px]">
-        <thead className="bg-surface-2"><tr><Th>#</Th><Th>Finding</Th><Th>Source</Th><Th>Impact</Th><Th>Peer comparison</Th><Th>Confidence</Th></tr></thead>
+      <table className="w-full min-w-[720px] table-fixed border-collapse text-[13px]">
+        <colgroup><col className="w-[11%]" /><col className="w-[24%]" /><col className="w-[17%]" /><col className="w-[20%]" /><col className="w-[16%]" /><col className="w-[12%]" /></colgroup>
+        <thead className="bg-surface-2"><tr><Th>#</Th><Th>Finding</Th><Th>Source</Th><Th>Impact</Th><Th>Peer comparison</Th><th scope="col" className="px-1.5 py-1.5 text-left text-[11px] font-semibold uppercase tracking-wide text-muted">Confidence</th></tr></thead>
         <tbody>{rows.map((f) => <FindingRow key={f.n} f={f} ix={ix} />)}</tbody>
       </table>
     </div>
@@ -62,31 +63,40 @@ function FindingsTable({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }
 function FindingRow({ f, ix }: { f: Part1Finding; ix: Map<string, Evidence> }) {
   const cite = resolver(ix, f.marker_map, f.cites);
   const s = f.source ?? {};
-  const where = [scrub(s.doc_title), s.period && !(s.doc_title ?? "").includes(s.period) ? s.period : "", s.page != null && s.page !== "" ? `p. ${s.page}` : ""].filter(Boolean).join(", ");
+  const where = [scrub(s.doc_title), s.period && !(s.doc_title ?? "").includes(s.period) ? s.period : "", s.page != null && s.page !== "" ? (/^p/i.test(String(s.page)) ? String(s.page) : `p. ${s.page}`) : ""].filter(Boolean).join(", ");
   // The quote's chip: the finding's cite on the same page, else its first cite.
   const srcEv = (s.cite != null ? cite(Number(s.cite)) : undefined) ?? (f.cites ?? []).find((e) => s.page != null && String(e.page) === String(s.page)) ?? f.cites?.[0];
   const srcChip = srcEv ? (srcEv.cite_id && ix.get(srcEv.cite_id)) || evidenceLabel(srcEv) : undefined;
   const speaker = s.speaker ? scrub(s.speaker) : "";
   const imp = f.impact ?? {};
+  const v = String(f.verdict ?? "").toLowerCase();
+  const otrText = scrub(f.on_the_record_marked ?? f.on_the_record);
+  const otr = v === "killed" || (String(f.obviousness ?? "").toLowerCase() === "high" && !!otrText);
+  const narrowed = v === "narrowed";
   return (
     <tr id={`p1-finding-${f.n}`} className="border-t border-line align-top">
-      <td className="px-2.5 py-2 text-muted">
+      <td className="px-2 py-2 text-muted">
         <div className="font-mono text-[12px]">{f.n}</div>
-        {f.category && scrub(f.category) && <div className="mt-1 w-[76px] text-[10px] leading-tight">{scrub(f.category)}</div>}
+        {f.category && scrub(f.category) && <div className="mt-1 text-[10px] leading-tight break-words">{scrub(f.category)}</div>}
+        {otr && <div className="mt-1 inline-block rounded border border-line px-1 text-[10px] leading-tight">on the record</div>}
+        {narrowed && <div className="mt-1 text-[10px] italic leading-tight">narrowed by the skeptics</div>}
       </td>
-      <td className="px-2.5 py-2 min-w-[180px] leading-snug"><Md md={scrub(f.finding_marked ?? f.finding)} cite={cite} /></td>
-      <td className="px-2.5 py-2 min-w-[150px]">
+      <td className="px-2.5 py-2 leading-snug break-words">
+        <Md md={scrub(f.finding_marked ?? f.finding)} cite={cite} />
+        {otr && otrText && <p className="mt-1 text-[12px] leading-snug text-muted"><span className="font-semibold">On the record: </span><Md md={otrText} cite={cite} /></p>}
+      </td>
+      <td className="px-2.5 py-2 break-words">
         <div className="font-semibold text-[12.5px]">{where || "Source not exported"}</div>
         {s.quote && !srcChip?.withheld && <p className="mt-0.5 text-[12px] italic text-muted break-words">{speaker ? `${speaker}: ` : ""}"{scrub(s.quote)}"</p>}
         {srcChip && <div className="mt-0.5"><CiteChip evidence={srcChip} label="source" /></div>}
       </td>
-      <td className="px-2.5 py-2 min-w-[150px]">
+      <td className="px-2.5 py-2 break-words">
         {passed(imp.numeric_check)
           ? <><Md md={scrub(imp.text_marked ?? imp.text) || "Not quantified"} cite={cite} /><Math_ math={imp.math_marked ?? imp.math} cite={cite} check={imp.numeric_check} /></>
           : <span className="text-muted">Withheld: failed the numeric gate</span>}
       </td>
-      <td className="px-2.5 py-2 min-w-[120px]">{f.peer_marked || f.peer ? <Md md={scrub(f.peer_marked ?? f.peer)} cite={cite} /> : <span className="text-muted">No peer comparison exported</span>}</td>
-      <td className="px-2.5 py-2"><span title={scrub(f.confidence_reason) || undefined} className="inline-block"><ConfPill level={f.confidence} short /></span></td>
+      <td className="px-2.5 py-2 break-words">{f.peer_marked || f.peer ? <Md md={scrub(f.peer_marked ?? f.peer)} cite={cite} /> : <span className="text-muted">No peer comparison exported</span>}</td>
+      <td className="px-1.5 py-2"><span title={scrub(f.confidence_reason) || undefined} className="inline-block"><ConfPill level={f.confidence} short /></span></td>
     </tr>
   );
 }
@@ -151,7 +161,7 @@ function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> })
             <div className="text-[14px] leading-relaxed">
               <Md md={scrub(tie.text_marked ?? tie.text)} cite={resolver(ix, tie.marker_map, tie.cites)} />
               {tie.numeric_check && <> <NumericPill check={tie.numeric_check} compact /></>}
-              <Math_ math={tie.math_marked ?? tie.math} cite={resolver(ix, tie.marker_map, tie.cites)} check={tie.math_numeric_check} />
+              <Math_ math={tie.math_marked ?? tie.math} cite={resolver(ix, tie.math_marker_map ?? tie.marker_map, tie.cites)} check={tie.math_numeric_check} />
             </div>
           ) : <p className="text-[13px] text-muted">Withheld: failed the numeric gate</p>}
         </div>
@@ -166,9 +176,48 @@ function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> })
             <span className={`mr-1.5 inline-block rounded-full border px-2 py-px align-middle text-[11px] font-bold uppercase tracking-wide ${call === "not priced in" ? "border-warn/50 bg-warn/10 text-warn" : "border-line bg-surface-2 text-fg"}`}>{call}</span>
           )}
           <Md md={scrub(pi.text_marked ?? pi.text) || (call === "untestable" ? "Not testable: no consensus estimate is cited." : "")} cite={resolver(ix, pi.marker_map, pi.cites)} />
+          {pi.confidence && <> <ConfPill level={String(pi.confidence)} /></>}
         </p>
       )}
+      {pi && <PricedEvidence evidence={pi.evidence} cite={resolver(ix, pi.marker_map, pi.cites)} ix={ix} />}
+      {pi && scrub(pi.limit_marked ?? pi.limit) && (
+        <p className="text-[12.5px] text-muted"><Md md={scrub(pi.limit_marked ?? pi.limit)} cite={resolver(ix, pi.marker_map, pi.cites)} /></p>
+      )}
     </section>
+  );
+}
+
+/** priced_in.evidence, shape not final: a list of signal records or an object keyed by signal. */
+function PricedEvidence({ evidence, cite, ix }: { evidence: unknown; cite: Cite; ix: Map<string, Evidence> }) {
+  if (!evidence || typeof evidence !== "object") return null;
+  const str = (x: unknown) => (typeof x === "string" || typeof x === "number" ? String(x) : "");
+  const pick = (o: Record<string, unknown>, ks: string[]) => { for (const k of ks) { const s = str(o[k]); if (s) return s; } return ""; };
+  type Row = { signal: string; showed: string; grade: string; cite: Cite };
+  const toRow = (signal: string, x: unknown): Row | null => {
+    if (typeof x === "string" || typeof x === "number") return { signal, showed: String(x), grade: "", cite };
+    if (!x || typeof x !== "object") return null;
+    const o = x as Record<string, unknown>;
+    const local = Array.isArray(o.cites) ? (o.cites as Evidence[]) : null;
+    const map = o.marker_map && typeof o.marker_map === "object" ? (o.marker_map as Record<string, string>) : null;
+    return {
+      signal: signal || pick(o, ["signal", "name", "label", "key", "kind"]),
+      showed: pick(o, ["text_marked", "showed_marked", "showed", "text", "finding", "summary", "value", "result", "direction"]),
+      grade: pick(o, ["grade", "strength", "confidence", "verdict"]),
+      cite: local || map ? resolver(ix, map, local) : cite,
+    };
+  };
+  const rows = (Array.isArray(evidence) ? evidence.map((x) => toRow("", x)) : Object.entries(evidence as Record<string, unknown>).map(([k, x]) => toRow(k.replace(/_/g, " "), x)))
+    .filter((r): r is Row => !!r && !!(r.signal || r.showed));
+  if (!rows.length) return null;
+  return (
+    <dl className="grid grid-cols-[minmax(0,10rem)_1fr] gap-x-3 gap-y-1 rounded-md border border-line bg-surface-2 px-3 py-2 text-[12.5px]">
+      {rows.map((r, i) => (
+        <div key={i} className="contents">
+          <dt className="font-semibold text-muted">{scrub(r.signal) || "signal"}{r.grade ? <span className="ml-1 font-normal italic">({scrub(r.grade)})</span> : null}</dt>
+          <dd className="min-w-0 break-words"><Md md={scrub(r.showed) || "not reported"} cite={r.cite} /></dd>
+        </div>
+      ))}
+    </dl>
   );
 }
 
@@ -273,7 +322,7 @@ export function Part1Answer({ part1, instant, nameOf, followFor, startTicker }: 
               <Needle c={company} ix={ix} />
               <ProductBlock c={company} ix={ix} />
               {trace
-                ? <Part1TraceView trace={trace} sample={part1.sample} onFinding={goFinding} />
+                ? <Part1TraceView trace={trace} sample={part1.sample} onFinding={goFinding} findings={company.findings} />
                 : tr instanceof Error ? <p className="text-[13px] text-muted">Reasoning trace not exported (data/part1/{active}_trace.json).</p> : null}
             </>
           ) : <button type="button" onClick={() => setStage(2)} className="no-print text-[11px] text-muted underline">Show all</button>}
