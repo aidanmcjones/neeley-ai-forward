@@ -377,3 +377,50 @@ export interface Part1Trace extends Loose {
   summary?: { candidates?: number; survived?: number; killed?: number; narrowed?: number; documents?: number } | null;
   sample?: boolean;
 }
+
+/* Part 2 deliverable (data/part2/, written by agent/ui_part2_export.py from out/part2/<T>/part2.json).
+   Shapes follow docs/part2/UI_CONTRACT.md on quant-model; every field beyond identifiers is optional so a
+   partial export still renders. A "block" is {text, text_marked, marker_map, cites, numeric_check}. */
+export interface Part2Block extends Loose {
+  text?: string | null; text_marked?: string | null; marker_map?: Record<string, string> | null; cites?: Evidence[];
+  numeric_check?: NumericCheck | null;
+}
+export interface Part2Budget extends Part2Block { amount_usd?: number | null; people?: number | string | null; period?: string | null }
+export interface Part2Move extends Part2Block { type?: string | null; budget?: Part2Budget | null }
+export interface Part2Driver extends Loose { finding_n?: number | string | null; why?: string | null; why_marked?: string | null; marker_map?: Record<string, string> | null; cites?: Evidence[] }
+export interface Part2Step extends Part2Block { step?: number | string | null }
+export interface Part2Case extends Loose { cost?: Part2Block | null; return?: Part2Block | null; math_steps?: Part2Step[]; net?: Part2Block | null }
+export interface Part2Rejected extends Loose { id?: string; move?: string | null; type?: string | null; why_passed?: Part2Block | null; skeptic_lens?: string | null }
+export interface Part2Kill extends Part2Block { signal?: string | null; threshold?: string | null; month_window?: string | null }
+export interface Part2Evidence extends Loose { decider?: string | null; lands_because?: Part2Block | null; can_tell?: Part2Block | null; cannot_tell?: Part2Block | null }
+export interface Part2Piece extends Loose { title?: string | null; body?: string | null; body_marked?: string | null; marker_map?: Record<string, string> | null; cites?: Evidence[]; numeric_check?: NumericCheck | null }
+export interface Part2Claim extends Loose { claim?: string | null; support_section?: string | null; cite?: Evidence | null; cites?: Evidence[] }
+export interface Part2RulesCheck extends Loose {
+  approved_uses_only?: boolean | null; risks_prominent?: boolean | null; h2h_only?: boolean | null;
+  no_testimonials?: boolean | null; labelled?: boolean | null; claims_map_present?: boolean | null;
+}
+export interface Part2Promo extends Loose { has_material?: boolean | null; label?: string | null; pieces?: Part2Piece[]; claims_map?: Part2Claim[]; rules_check?: Part2RulesCheck | null }
+export interface Part2Unresolved extends Loose { topic?: string | null; cfo_position?: string | null; decider_position?: string | null }
+export interface Part2Company extends Loose {
+  ticker: string; company?: string; generated_at?: string;
+  move?: Part2Move | null; drivers?: Part2Driver[]; case_for?: Part2Case | null; rejected?: Part2Rejected[];
+  kill_signals?: Part2Kill[]; evidence?: Part2Evidence | null; promo?: Part2Promo | null; unresolved?: Part2Unresolved[];
+  candidates_considered?: number | null; skeptic_summary?: { killed?: number; narrowed?: number; survived?: number } | null;
+  /** Written by the exporter: the sum of every block's numeric_check (status passed when all passed or no_numbers). */
+  numeric_summary?: NumericCheck | null;
+  /** Written by the exporter: how many figures the gate withheld from this record's prose. */
+  figures_withheld?: number | null;
+}
+export interface Part2TraceStep extends Loose {
+  step: number; candidate_id?: string; move?: string | null; type?: string | null;
+  skeptic_cfo?: Part1SkepticRounds | null; skeptic_decider?: Part1SkepticRounds | null;
+  verdict?: string | null; reason?: string | null; cites?: Evidence[]; figures_withheld?: number;
+}
+export interface Part2Trace extends Loose {
+  ticker?: string; generated_at?: string; lenses?: string[]; steps?: Part2TraceStep[];
+  summary?: { killed?: number; narrowed?: number; survived?: number; candidates?: number };
+}
+export interface Part2Index extends Loose {
+  generated_at?: string; prompt?: string; picked: string[]; available?: string[];
+  missing?: { ticker: string; reason?: string }[]; sample?: boolean; sample_note?: string; contract?: string;
+}

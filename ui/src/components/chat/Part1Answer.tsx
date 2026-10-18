@@ -27,7 +27,7 @@ const ROW_LABEL: Record<string, string> = {
 
 const passed = (c?: NumericCheck | null) => !c || c.status !== "failed";
 
-function Math_({ math, cite, check }: { math?: string | null; cite: Cite; check?: NumericCheck | null }) {
+export function Math_({ math, cite, check }: { math?: string | null; cite: Cite; check?: NumericCheck | null }) {
   const m = scrub(math);
   return (
     <>
@@ -238,11 +238,13 @@ function PricedEvidence({ evidence, ix }: { evidence: unknown; ix: Map<string, E
 
 export interface FollowChip { key: string; label: string; onClick: () => void }
 
-export function Part1Answer({ part1, instant, nameOf, followFor, startTicker }: {
+export function Part1Answer({ part1, instant, nameOf, followFor, startTicker, focusFinding }: {
   part1: Part1State; instant: boolean; nameOf: (t: string) => string;
   /** ask_next chips for a ticker (the memo prompts for that company). */
   followFor: (t: string) => FollowChip[];
   startTicker?: string;
+  /** Scroll to this finding once the answer has rendered (a Part 2 driver chip). */
+  focusFinding?: number;
 }) {
   const picked = part1.index?.picked ?? [];
   // A pick in index.missing (or absent from index.available) is still being written: shown, disabled.
@@ -289,6 +291,16 @@ export function Part1Answer({ part1, instant, nameOf, followFor, startTicker }: 
     el.classList.add("bg-chip");
     window.setTimeout(() => el.classList.remove("bg-chip"), 1400);
   };
+
+  // A driver chip from Part 2 lands on its finding once the table is on the page.
+  const focused = useRef(false);
+  useEffect(() => {
+    if (focused.current || focusFinding == null || !company || stage < 2) return;
+    focused.current = true;
+    const t = window.setTimeout(() => goFinding(focusFinding), 250);
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusFinding, company, stage]);
 
   const name = company?.name ?? nameOf(active);
   const follow = [

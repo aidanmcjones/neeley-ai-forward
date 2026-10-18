@@ -60,7 +60,7 @@ export function scrub(s: string | null | undefined): string {
 export function evidenceLabel(e: Evidence): Evidence {
   const page = e.page != null && (e.page as unknown) !== "" ? (/^p/i.test(String(e.page)) ? String(e.page) : `p. ${e.page}`) : "";
   const period = e.period && !(e.doc_title ?? "").includes(e.period) ? e.period : null;
-  const citation = e.citation ?? ([e.doc_title, period, page].filter(Boolean).join(", ") || e.cite_id || e.doc_id || "Source");
+  const citation = e.citation ?? (typeof e.label === "string" && e.label ? e.label : null) ?? ([e.doc_title, period, page].filter(Boolean).join(", ") || e.cite_id || e.doc_id || "Source");
   return { ...e, citation, location: e.location ?? (page || undefined), quote: e.quote ?? "" };
 }
 
