@@ -112,7 +112,7 @@ def finding_record(ctx, t, f, row, unres, n):
     direction = "adverse" if (imp.get("adverse") or f.get("direction") in ("adverse", "negative")) else (f.get("direction") or None)
     nc = copy.deepcopy((row or {}).get("numeric_check") or f.get("numeric_check"))
     return {
-        "n": n, "finding_id": f["id"], "signal_kind": f.get("signal_kind"),
+        "n": n, "finding_id": f["id"], "signal_kind": f.get("signal_kind"), "verdict": "survived",
         "finding": clean(finding_marked), "finding_marked": finding_marked,
         "marker_map": None,  # filled after every cite is added
         "source": source,
@@ -553,7 +553,7 @@ def main(argv=None):
     for t in PICKED:
         part1 = company_part1(ctx, t)
         records[t] = X.build_company(part1)
-        traces[t] = X.build_trace(trace_lines(ctx, t, part1, generated_at), t)
+        traces[t] = X.build_trace(trace_lines(ctx, t, part1, generated_at), t, X.gated_figures(records[t]))
     try:
         index = X.write_bundle(X.SAMPLE_DEST, selection, records, traces,
                                {"sample": True, "sample_note": SAMPLE_NOTE}, sealed_md)

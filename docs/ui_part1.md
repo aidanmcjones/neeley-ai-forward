@@ -114,6 +114,22 @@ Exporter transforms:
   on_the_record, derived), on financial_tie (math_numeric_check) and at the top level of part1.json (derived,
   assumptions, not_sourced, dash_note, notes, generated_at) are copied unchanged; unknown top-level keys are a
   `--check` warning, not an error. Any `numeric_check` key, wherever it sits, still has to pass.
+- Trace figures: no number the gate has not passed is printed in the trace. Per company the exporter builds a
+  gated-figure set: every number token (the engine tokenizer, kind "number", read by value with its inline scale
+  and its unit) in the company record's text whose numeric check passed: each finding's finding, impact.text,
+  impact.math and peer (its impact.numeric_check passed), product cells with status passed (the fixture's
+  "cited"), financial_tie text and math (numeric_check or math_numeric_check passed), the growth_limiter
+  sentence (numeric_check passed) and the priced_in text. Years, dates, period labels, form names, candidate ids
+  and row or survivor counts are not figures (the card rule's exemptions). In every trace text field
+  (candidate.text for all verdicts, verdict_reason, query, every string in both skeptic rounds) each figure not in
+  the set becomes "[figure withheld: not gated]" (a leading ~ goes with it), and runs collapse so two markers never
+  stand together. Killed candidates keep the stricter rule: every digit-bearing chunk goes (years included)
+  unless all the figures it overlaps are in the gated set. Each step records `figures_withheld: n`. `--check`
+  fails any trace text figure outside the set, two markers in a row, or a step without the count.
+- Finding verdicts: a finding's `verdict` passes through when present; when absent the exporter sets
+  `verdict_inferred`: "on_the_record" when `obviousness` is "high" and `on_the_record` is non-empty, else
+  "narrowed". The UI reads `verdict` and falls back to `verdict_inferred`. The sample's findings carry
+  `verdict: "survived"`.
 - Partial availability: every picked ticker with both `<T>/part1.json` and `<T>/trace.jsonl` is exported; the
   others are listed in `index.missing` with reason "writing". A company whose files fail any hard check is not
   written (a stale copy is deleted) and is listed with reason "failed checks" and its errors. selection.json,

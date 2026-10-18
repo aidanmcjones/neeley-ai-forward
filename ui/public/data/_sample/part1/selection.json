@@ -538,7 +538,7 @@
    ]
   }
  },
- "sealed_at": "2026-10-18T04:26:30Z",
+ "sealed_at": "2026-10-18T04:33:43Z",
  "sha256": "399fdf5d3e9119e111123bd93783295f42791d5d4c314719ab61d6c9bd3add9e",
  "sample": true,
  "sealed_note": "fixture hash of the illustrative selection text; not sealed by the model session",

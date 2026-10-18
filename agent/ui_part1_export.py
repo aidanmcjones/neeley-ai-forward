@@ -612,6 +612,9 @@ def build_company(rec):
     withhold_tree(rec)
     for f in rec.get("findings") or []:
         reconcile_source(f)
+        if "verdict" not in f:
+            f["verdict_inferred"] = ("on_the_record" if f.get("obviousness") == "high" and f.get("on_the_record")
+                                     else "narrowed")
     walk_marked(rec, fix=True)
     return rec
 
@@ -666,7 +669,160 @@ def company_problems(rec, t, sample=False):
 
 
 # ---------------------------------------------------------------- trace
-def build_trace(lines, ticker=None):
+# ---------------------------------------------------------------- gated figures (trace text)
+TRACE_TEXT_FIELDS = ("query", "verdict_reason")
+GATED_CELL_STATUS = ("passed", "cited")
+
+
+def fig_key(tok):
+    """A figure's identity for the gated set: value with its inline scale, and its unit (currency ignored)."""
+    return (round(tok.num * (tok.scale or 1.0), 6), tok.unit)
+
+
+def _nc_passed(x):
+    return isinstance(x, dict) and x.get("status") == "passed"
+
+
+def gated_figures(rec):
+    """Every figure in a company record's text whose numeric check passed: finding sentence, impact text and math,
+    peer (finding impact.numeric_check passed); product cells with status passed (or cited, the fixture's word);
+    financial_tie text and math, growth_limiter sentence (their numeric_check passed), priced_in text."""
+    texts = []
+    for f in rec.get("findings") or []:
+        if _nc_passed((f.get("impact") or {}).get("numeric_check")) or _nc_passed(f.get("numeric_check")):
+            imp = f.get("impact") or {}
+            texts += [f.get("finding"), MARK.sub("", f.get("finding_marked") or ""), imp.get("text"), imp.get("math"),
+                      f.get("peer")]
+    pt = rec.get("product_table") or {}
+    for r in pt.get("rows") or []:
+        for c in (r.get("cells") or {}).values():
+            if isinstance(c, dict) and (c.get("status") in GATED_CELL_STATUS or _nc_passed(c.get("numeric_check"))):
+                texts.append(c.get("text"))
+    ft = pt.get("financial_tie") or {}
+    if _nc_passed(ft.get("numeric_check")) or _nc_passed(ft.get("math_numeric_check")):
+        texts += [ft.get("text"), ft.get("math")]
+    gl = pt.get("growth_limiter") or {}
+    if _nc_passed(gl.get("numeric_check")):
+        texts.append(gl.get("sentence"))
+    texts.append((pt.get("priced_in") or {}).get("text"))
+    out = set()
+    for t in texts:
+        if isinstance(t, str):
+            out.update(fig_key(x) for x in figures(t))
+    return out
+
+
+def _collapse(text):
+    sep = r"(?:\s*(?:,|;|->|/|-|to|vs\.?|and|or|from)?\s*)"
+    return re.sub(re.escape(WITHHELD_FIGURE) + "(?:" + sep + re.escape(WITHHELD_FIGURE) + ")+", WITHHELD_FIGURE, text)
+
+
+def withhold_ungated(text, gated):
+    """(text, n): every figure not in the gated set replaced by the withheld placeholder (a leading ~ or 'about'
+    sign goes with it), runs collapsed so two placeholders never stand together."""
+    if not isinstance(text, str) or not text:
+        return text, 0
+    toks = [x for x in figures(text) if fig_key(x) not in gated]
+    if not toks:
+        return text, 0
+    for x in sorted(toks, key=lambda x: x.start, reverse=True):
+        a = x.start
+        while a > 0 and text[a - 1] in "~\u2248":
+            a -= 1
+        text = text[:a] + WITHHELD_FIGURE + text[x.end:]
+    return _collapse(text), len(toks)
+
+
+def strip_killed(text, gated):
+    """Killed candidates keep the stricter rule: every digit-bearing chunk goes unless all its figures are gated."""
+    if not text:
+        return text, 0
+    n = 0
+    text = text.replace(WITHHELD_FIGURE, "\0")
+    tok = re.compile(r"[^\s()\[\]{}\"']*\d[^\s()\[\]{}\"']*")
+    toks = figures(text)  # read on the whole text so units after a space ("20 points") count
+    bad = [(x.start, x.end) for x in toks if fig_key(x) not in gated]
+    good = [(x.start, x.end) for x in toks if fig_key(x) in gated]
+
+    def sub(m):
+        nonlocal n
+        chunk, a, b = m.group(0), m.start(), m.end()
+        over = lambda spans: any(x < b and y > a for x, y in spans)
+        if over(good) and not over(bad):
+            return chunk
+        n += 1
+        tail = re.search(r"[.,;:!?]+$", chunk)
+        return "\0" + (tail.group(0) if tail else "")
+    out = tok.sub(sub, text)
+    out = re.sub(r"\0(?:\s*(?:,|->|to|vs\.?|and|or|-)?\s*\0)+", "\0", out)
+    return out.replace("\0", WITHHELD_FIGURE), n
+
+
+def _skeptic_strings(obj, fn):
+    """Apply fn to every string inside a skeptic record; returns (new obj, count)."""
+    if isinstance(obj, str):
+        return fn(obj)
+    if isinstance(obj, dict):
+        n, out = 0, {}
+        for k, v in obj.items():
+            out[k], m = _skeptic_strings(v, fn)
+            n += m
+        return out, n
+    if isinstance(obj, list):
+        n, out = 0, []
+        for v in obj:
+            nv, m = _skeptic_strings(v, fn)
+            out.append(nv)
+            n += m
+        return out, n
+    return obj, 0
+
+
+def gate_step_text(s, gated):
+    """Withhold ungated figures in every trace text field of one step; sets figures_withheld."""
+    n = 0
+    fn = lambda x: withhold_ungated(x, gated)
+    cand = s.get("candidate") or {}
+    if isinstance(cand.get("text"), str):
+        if s.get("verdict") == "killed":
+            cand["text"], m = strip_killed(cand["text"], gated)
+        else:
+            cand["text"], m = fn(cand["text"])
+        n += m
+    for k in TRACE_TEXT_FIELDS:
+        if isinstance(s.get(k), str):
+            s[k], m = fn(s[k])
+            n += m
+    for k in ("skeptic_materiality", "skeptic_obviousness"):
+        if s.get(k) is not None:
+            s[k], m = _skeptic_strings(s[k], fn)
+            n += m
+    s["figures_withheld"] = n
+    return s
+
+
+def step_text_problems(s, gated, p):
+    errs = []
+
+    def chk(text, where):
+        if not isinstance(text, str):
+            return
+        bad = [x.raw for x in figures(text) if fig_key(x) not in gated]
+        if bad:
+            errs.append(f"{p}.{where} prints figures the gate did not pass: {bad[:4]}")
+        if re.search(re.escape(WITHHELD_FIGURE) + r"[\s,;/-]*" + re.escape(WITHHELD_FIGURE), text):
+            errs.append(f"{p}.{where} shows two withheld markers in a row")
+    chk((s.get("candidate") or {}).get("text"), "candidate.text")
+    for k in TRACE_TEXT_FIELDS:
+        chk(s.get(k), k)
+    for k in ("skeptic_materiality", "skeptic_obviousness"):
+        _skeptic_strings(s.get(k), lambda x, k=k: (chk(x, k), (x, 0))[1])
+    if "figures_withheld" not in s:
+        errs.append(f"{p} carries no figures_withheld count")
+    return errs
+
+
+def build_trace(lines, ticker=None, gated=frozenset()):
     if not lines:
         raise ExportError(f"{ticker}: trace is empty")
     header = copy.deepcopy(lines[0])
@@ -689,9 +845,8 @@ def build_trace(lines, ticker=None):
                 docs.append(d)
         s["documents"] = docs
         cand = s.get("candidate") if isinstance(s.get("candidate"), dict) else {"text": s.get("candidate")}
-        if s["verdict"] == "killed":
-            cand["text"] = strip_ungated_numbers(cand.get("text") or "")
         s["candidate"] = cand
+        gate_step_text(s, gated)
         s["_i"] = i
         steps.append(s)
     steps.sort(key=lambda s: (CATEGORIES.index(s["category"]), s["_i"]))
@@ -710,7 +865,7 @@ def trace_summary(steps):
             "documents": len({d.get("doc_id") for s in steps for d in s.get("documents") or [] if d.get("doc_id")})}
 
 
-def trace_problems(tr, t, sample=False):
+def trace_problems(tr, t, sample=False, gated=frozenset()):
     errs = []
     h = tr.get("header") or {}
     if h.get("categories") != CATEGORIES:
@@ -737,8 +892,14 @@ def trace_problems(tr, t, sample=False):
         keys = [(d.get("doc_id"), str(d.get("page"))) for d in s.get("documents") or []]
         if len(keys) != len(set(keys)):
             errs.append(f"{p} documents are not deduplicated")
-        if s.get("verdict") == "killed" and re.search(r"\d", ((s.get("candidate") or {}).get("text") or "").replace(WITHHELD_FIGURE, "")):
-            errs.append(f"{p} killed candidate prints an ungated number")
+        if s.get("verdict") == "killed":
+            left = ((s.get("candidate") or {}).get("text") or "").replace(WITHHELD_FIGURE, "")
+            for chunk in re.findall(r"[^\s()\[\]{}\"']*\d[^\s()\[\]{}\"']*", left):
+                figs = figures(chunk)
+                if not figs or not all(fig_key(x) in gated for x in figs):
+                    errs.append(f"{p} killed candidate prints an ungated number: {chunk}")
+                    break
+        errs += step_text_problems(s, gated, p)
     if tr.get("summary") != trace_summary(steps):
         errs.append(f"{t}_trace summary {tr.get('summary')} != recomputed {trace_summary(steps)}")
     return errs
@@ -802,7 +963,7 @@ def check_dir(d, sample=False):
         if tr is None:
             errs.append(f"{d}/{t}_trace.json missing")
         else:
-            errs += trace_problems(tr, t, sample)
+            errs += trace_problems(tr, t, sample, gated_figures(rec or {}))
             files[f"{t}_trace.json"] = tr
     for t in [m.get("ticker") for m in missing if isinstance(m, dict)]:
         if (d / f"{t}.json").exists() or (d / f"{t}_trace.json").exists():
@@ -824,7 +985,7 @@ def all_problems(objs):
 def company_bundle_problems(t, rec, tr, sample=False):
     """All hard-check errors for one company's two files (empty list = safe to write)."""
     errs, _ = company_problems(rec, t, sample)
-    errs += trace_problems(tr, t, sample)
+    errs += trace_problems(tr, t, sample, gated_figures(rec))
     errs += all_problems({f"{t}.json": rec, f"{t}_trace.json": tr})
     return errs
 
@@ -895,7 +1056,7 @@ def export(src=OUT, dest=DEST):
             continue
         try:
             records[t] = build_company(read_json(pj))
-            traces[t] = build_trace(read_jsonl(tj), t)
+            traces[t] = build_trace(read_jsonl(tj), t, gated_figures(records[t]))
         except (ExportError, ValueError) as e:
             records.pop(t, None)
             missing.append({"ticker": t, "reason": "failed checks", "errors": [str(e)]})

@@ -270,7 +270,8 @@
      }
     }
    },
-   "assumptions": {}
+   "assumptions": {},
+   "verdict_inferred": "narrowed"
   },
   {
    "n": 2,
@@ -577,7 +578,8 @@
    },
    "assumptions": {
     "365": "constant: days per year"
-   }
+   },
+   "verdict_inferred": "narrowed"
   },
   {
    "n": 3,
@@ -827,7 +829,8 @@
    },
    "assumptions": {
     "4": "constant: quarters per year"
-   }
+   },
+   "verdict_inferred": "narrowed"
   },
   {
    "n": 4,
@@ -1005,7 +1008,8 @@
    },
    "assumptions": {},
    "on_the_record": "On the record: the 10-K states the Januvia list-price cut, the CFO pre-announced it on the 2024Q4 call (grade C), and the about $2.5B 2026 headwind is in grade-A prepared remarks on the 2025Q4 call.",
-   "on_the_record_marked": "On the record: the 10-K states the Januvia list-price cut, the CFO pre-announced it on the 2024Q4 call (grade C), and the about $2.5B 2026 headwind is in grade-A prepared remarks on the 2025Q4 call.[2]"
+   "on_the_record_marked": "On the record: the 10-K states the Januvia list-price cut, the CFO pre-announced it on the 2024Q4 call (grade C), and the about $2.5B 2026 headwind is in grade-A prepared remarks on the 2025Q4 call.[2]",
+   "verdict_inferred": "on_the_record"
   },
   {
    "n": 5,
@@ -1203,7 +1207,8 @@
    },
    "assumptions": {},
    "on_the_record": "On the record: CEO Rob Davis said on the grade-A 2025Q2 call that Keytruda would be selected in 2027 for a negotiated price in 2029, and repeated on the grade-A 2025Q4 call that Merck faces the IRA as of the beginning of 2029.",
-   "on_the_record_marked": "On the record: CEO Rob Davis said on the grade-A 2025Q2 call that Keytruda would be selected in 2027 for a negotiated price in 2029, and repeated on the grade-A 2025Q4 call that Merck faces the IRA as of the beginning of 2029."
+   "on_the_record_marked": "On the record: CEO Rob Davis said on the grade-A 2025Q2 call that Keytruda would be selected in 2027 for a negotiated price in 2029, and repeated on the grade-A 2025Q4 call that Merck faces the IRA as of the beginning of 2029.",
+   "verdict_inferred": "on_the_record"
   }
  ],
  "sharpest_needle": {

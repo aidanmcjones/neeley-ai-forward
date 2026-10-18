@@ -680,7 +680,8 @@
     "0.21": "assumed tax rate on the charge (high end)",
     "0.17": "assumed tax rate on the charge (low end)",
     "4": "quarters per year (annualizing the Q2 2026 run rate)"
-   }
+   },
+   "verdict_inferred": "narrowed"
   },
   {
    "n": 2,
@@ -2043,7 +2044,8 @@
    },
    "assumptions": {
     "0.01": "one percentage point of deduction rate"
-   }
+   },
+   "verdict_inferred": "narrowed"
   },
   {
    "n": 3,
@@ -3186,7 +3188,8 @@
      }
     }
    },
-   "assumptions": {}
+   "assumptions": {},
+   "verdict_inferred": "narrowed"
   },
   {
    "n": 4,
@@ -4213,7 +4216,8 @@
    },
    "assumptions": {},
    "on_the_record": "On the record: the assessed amounts are in the 10-K tax note, and on the Q1 2026 call the CFO described the IRS audit team's harsher draft methodology and said \"our tax reserves are appropriate\"; the 2026 10-Q updates are a timing refresh with no new dollar figure.",
-   "on_the_record_marked": "On the record: the assessed amounts are in the 10-K tax note, and on the Q1 2026 call the CFO described the IRS audit team's harsher draft methodology and said \"our tax reserves are appropriate\"; the 2026 10-Q updates are a timing refresh with no new dollar figure.[9][10]"
+   "on_the_record_marked": "On the record: the assessed amounts are in the 10-K tax note, and on the Q1 2026 call the CFO described the IRS audit team's harsher draft methodology and said \"our tax reserves are appropriate\"; the 2026 10-Q updates are a timing refresh with no new dollar figure.[9][10]",
+   "verdict_inferred": "on_the_record"
   },
   {
    "n": 5,
@@ -5719,7 +5723,8 @@
    },
    "assumptions": {},
    "on_the_record": "On the record: on the Q1 2026 call the CFO said cost of sales was \"driven by higher profit share and royalty expenses and changes in our sales mix\" and that these factors will keep pressuring it, so the drag sits inside guided cost of sales; only the dollar split by partner is footnote-only.",
-   "on_the_record_marked": "On the record: on the Q1 2026 call the CFO said cost of sales was \"driven by higher profit share and royalty expenses and changes in our sales mix\" and that these factors will keep pressuring it, so the drag sits inside guided cost of sales; only the dollar split by partner is footnote-only.[7]"
+   "on_the_record_marked": "On the record: on the Q1 2026 call the CFO said cost of sales was \"driven by higher profit share and royalty expenses and changes in our sales mix\" and that these factors will keep pressuring it, so the drag sits inside guided cost of sales; only the dollar split by partner is footnote-only.[7]",
+   "verdict_inferred": "on_the_record"
   }
  ],
  "sharpest_needle": {

@@ -13,7 +13,7 @@
    "Peer contrast"
   ],
   "ticker": "GILD",
-  "generated_at": "2026-10-18T04:26:30Z",
+  "generated_at": "2026-10-18T04:33:43Z",
   "sample": true,
   "note": "Illustrative trace assembled from the engine's gate and red-team decisions; the blind skeptic pass has not run",
   "trimmed": {
@@ -93,7 +93,8 @@
    "obscurity_rung": "analyst_asked",
    "finding_n": 4,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 4
+   "step": 4,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -164,7 +165,8 @@
    "obscurity_rung": "footnote_only",
    "finding_n": 5,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 5
+   "step": 5,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -188,7 +190,8 @@
    "source_id": "d060d07d3608",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 9,
-   "step": 9
+   "step": 9,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -217,7 +220,8 @@
    "source_id": "b14f3db6e68b",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 10,
-   "step": 10
+   "step": 10,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -241,7 +245,8 @@
    "source_id": "573cebabc205",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 11,
-   "step": 11
+   "step": 11,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -265,7 +270,8 @@
    "source_id": "3a2209595561",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 12,
-   "step": 12
+   "step": 12,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -289,7 +295,8 @@
    "source_id": "94d5f3082a35",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 13,
-   "step": 13
+   "step": 13,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -313,7 +320,8 @@
    "source_id": "5d5279b36280",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 14,
-   "step": 14
+   "step": 14,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -337,7 +345,8 @@
    "source_id": "b16cc5d6adf9",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 15,
-   "step": 15
+   "step": 15,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -361,7 +370,8 @@
    "source_id": "918fc0789d72",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 16,
-   "step": 16
+   "step": 16,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -385,7 +395,8 @@
    "source_id": "112689841fc3",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 17,
-   "step": 17
+   "step": 17,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -409,7 +420,8 @@
    "source_id": "94d12b765c75",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 18,
-   "step": 18
+   "step": 18,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -433,7 +445,8 @@
    "source_id": "c36097d0a2f5",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 19,
-   "step": 19
+   "step": 19,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -462,7 +475,8 @@
    "source_id": "218c275ed6c4",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 20,
-   "step": 20
+   "step": 20,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -486,7 +500,8 @@
    "source_id": "6a60fbdc5b5e",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 21,
-   "step": 21
+   "step": 21,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -510,7 +525,8 @@
    "source_id": "2a7b1e0418a0",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 22,
-   "step": 22
+   "step": 22,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -534,7 +550,8 @@
    "source_id": "ab32aedd9986",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 23,
-   "step": 23
+   "step": 23,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -562,7 +579,8 @@
    "block": "T",
    "source_id": "64ad2bd37480",
    "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
-   "step": 31
+   "step": 31,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -585,7 +603,8 @@
    "block": "T",
    "source_id": "4a876b7a4db6",
    "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
-   "step": 32
+   "step": 32,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -608,7 +627,8 @@
    "block": "T",
    "source_id": "86c90dd3343c",
    "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
-   "step": 33
+   "step": 33,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -631,7 +651,8 @@
    "block": "T",
    "source_id": "8a894b4d859f",
    "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
-   "step": 34
+   "step": 34,
+   "figures_withheld": 0
   },
   {
    "category": "Gross-to-net",
@@ -695,7 +716,8 @@
    "source_id": "49af018377a3",
    "finding_n": 1,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown; the Sharpest Needle",
-   "step": 1
+   "step": 1,
+   "figures_withheld": 0
   },
   {
    "category": "Gross-to-net",
@@ -708,7 +730,7 @@
     }
    ],
    "candidate": {
-    "text": "GILD signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R025); US investment pledge $32bn; TrumpRx: Epclusa $24,920 -> $2,425 (R033). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given."
+    "text": "GILD signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R025); US investment pledge [figure withheld: not gated]; TrumpRx: Epclusa [figure withheld: not gated] (R033). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given."
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -719,7 +741,8 @@
    "source_id": "f87b31bee9cb",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 7,
-   "step": 7
+   "step": 7,
+   "figures_withheld": 3
   },
   {
    "category": "Gross-to-net",
@@ -774,7 +797,8 @@
    "nugget_id": "GILD-nugget-008",
    "obscurity_rung": "prepared_remarks",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 27
+   "step": 27,
+   "figures_withheld": 0
   },
   {
    "category": "Segment and product table changes",
@@ -791,7 +815,8 @@
    "block": "X",
    "source_id": "b69c7cb948dc",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 39
+   "step": 39,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -842,7 +867,8 @@
    "obscurity_rung": "footnote_only",
    "finding_n": 2,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 2
+   "step": 2,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -855,7 +881,7 @@
     }
    ],
    "candidate": {
-    "text": "Impairment 1,750M = 3.55% of assets (Q2 2026)"
+    "text": "Impairment 1,750M = [figure withheld: not gated] of assets (Q2 2026)"
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -866,7 +892,8 @@
    "source_id": "c5d73d50d14d",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 8,
-   "step": 8
+   "step": 8,
+   "figures_withheld": 1
   },
   {
    "category": "Footnotes",
@@ -890,7 +917,8 @@
    "source_id": "7b6827512a8f",
    "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
    "verdict_reason": "review guard: the pre-tax base is too small for a tax rate to mean anything",
-   "step": 28
+   "step": 28,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -907,7 +935,8 @@
    "block": "F",
    "source_id": "9f12e9002232",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 29
+   "step": 29,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -924,7 +953,8 @@
    "block": "F",
    "source_id": "22fbd516537f",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 40
+   "step": 40,
+   "figures_withheld": 0
   },
   {
    "category": "Earnings-call Q&A",
@@ -970,7 +1000,8 @@
    "obscurity_rung": "analyst_asked",
    "finding_n": 3,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 3
+   "step": 3,
+   "figures_withheld": 0
   },
   {
    "category": "Earnings-call Q&A",
@@ -1011,7 +1042,8 @@
    "obscurity_rung": "analyst_asked",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 6,
-   "step": 6
+   "step": 6,
+   "figures_withheld": 0
   },
   {
    "category": "Earnings-call Q&A",
@@ -1039,7 +1071,8 @@
    "block": "C",
    "source_id": "8000ae4904de",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 24
+   "step": 24,
+   "figures_withheld": 0
   },
   {
    "category": "Earnings-call Q&A",
@@ -1062,7 +1095,8 @@
    "block": "C",
    "source_id": "545f2fa901b7",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 25
+   "step": 25,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1117,7 +1151,8 @@
    "nugget_id": "GILD-nugget-005",
    "obscurity_rung": "footnote_only",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 26
+   "step": 26,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1150,7 +1185,8 @@
    "block": "L",
    "source_id": "cf9d0c82406a",
    "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
-   "step": 35
+   "step": 35,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1167,7 +1203,8 @@
    "block": "L",
    "source_id": "03cf4c388a03",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 36
+   "step": 36,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1195,7 +1232,8 @@
    "block": "L",
    "source_id": "e41204317cf4",
    "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
-   "step": 37
+   "step": 37,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1212,7 +1250,8 @@
    "block": "P",
    "source_id": "d41ca8c2cbd5",
    "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
-   "step": 38
+   "step": 38,
+   "figures_withheld": 0
   },
   {
    "category": "Peer contrast",
@@ -1235,7 +1274,8 @@
    "block": "A",
    "source_id": "108c36b7d3bf",
    "verdict_reason": "review guard: the pre-tax base is too small for a tax rate to mean anything",
-   "step": 30
+   "step": 30,
+   "figures_withheld": 0
   }
  ],
  "summary": {

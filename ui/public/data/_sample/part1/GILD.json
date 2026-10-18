@@ -8,6 +8,7 @@
    "n": 1,
    "finding_id": "49af018377a3",
    "signal_kind": "ira_selected",
+   "verdict": "survived",
    "finding": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class Medicare negotiated price (MFP) published). US generic entry no earlier than April 1, 2036 under the patent settlements (10-K), not the earlier 2033 projection, so the set price runs eight years before generics. Bear precedent for the first set-price year: Amgen's ENBREL net selling price fell 22% under Part D price setting; bull precedent: BMS cut the Eliquis list price and Eliquis revenue rose 22% in its first set-price year",
    "finding_marked": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M[1]; assumed base list discount 65.5%[derived: 2, 3] (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38%[4] to 85%[5]; no same-class Medicare negotiated price (MFP) published). US generic entry no earlier than April 1, 2036 under the patent settlements (10-K), not the earlier 2033 projection, so the set price runs eight years before generics. Bear precedent for the first set-price year: Amgen's ENBREL net selling price fell 22%[6][7] under Part D price setting; bull precedent: BMS cut the Eliquis list price and Eliquis revenue rose 22%[6][7] in its first set-price year[8][9][10][11][12][13][licensed source]",
    "marker_map": {
@@ -750,6 +751,7 @@
    "n": 2,
    "finding_id": "cdc443f73256",
    "signal_kind": "contingent_consideration_benchmark",
+   "verdict": "survived",
    "finding": "Gilead's own deal terms set a high bar for anito-cel: Arcellx holders get a $300M CVR only if anito-cel reaches $6.0B of cumulative sales from launch (revenue from early 2027) through 2029, about $2.0B a year, more than Gilead's whole shrinking cell therapy line and close to JNJ's Carvykti run-rate",
    "finding_marked": "Gilead's own deal terms set a high bar for anito-cel: Arcellx holders get a $300M[1] CVR only if anito-cel reaches $6.0B[1] of cumulative sales from launch (revenue from early 2027) through 2029, about $2.0B a year, more than Gilead's whole shrinking cell therapy line and close to JNJ's Carvykti run-rate[2][3][4][5][6]",
    "marker_map": {
@@ -1254,6 +1256,7 @@
    "n": 3,
    "finding_id": "9fd7bce5651f",
    "signal_kind": "collaboration_split_dodge",
+   "verdict": "survived",
    "finding": "Gilead's switch-market plan hands half of each switched patient to Merck: the once-weekly islatravir plus lenacapavir pill (launch targeted for 2027, non-inferior to Biktarvy in Phase 3) splits revenue 50/50 with Merck up to $2.0B a year while Gilead pays 60% of costs, and when an analyst asked whether migration from wholly owned Biktarvy is dilutive, management answered with 'switch leadership' and no economics",
    "finding_marked": "Gilead's switch-market plan hands half of each switched patient to Merck: the once-weekly islatravir plus lenacapavir pill (launch targeted for 2027, non-inferior to Biktarvy in Phase 3) splits revenue 50[1]/50[1] with Merck up to $2.0B[2] a year while Gilead pays 60%[3] of costs, and when an analyst asked whether migration from wholly owned Biktarvy is dilutive, management answered with 'switch leadership' and no economics[4][5]",
    "marker_map": {
@@ -1712,6 +1715,7 @@
    "n": 4,
    "finding_id": "e305d3c6d908",
    "signal_kind": "growth_driver_drift",
+   "verdict": "survived",
    "finding": "Gilead's HIV growth switched from volume to price in 2026: Biktarvy's stated drivers went from 'higher demand' (2024, 2025) to 'higher average realized price, favorable inventory dynamics and higher demand' (Q2 2026), credited on the call to channel mix, while the ACA risk factor moved from 'could substantially decrease' to 'has already contributed' and the Q2 HIV treatment market slowed",
    "finding_marked": "Gilead's HIV growth switched from volume to price in 2026: Biktarvy's stated drivers went from 'higher demand' (2024, 2025) to 'higher average realized price, favorable inventory dynamics and higher demand' (Q2 2026), credited on the call to channel mix, while the ACA risk factor moved from 'could substantially decrease' to 'has already contributed' and the Q2 HIV treatment market slowed[1][2][3][4][5][6]",
    "marker_map": {
@@ -2262,6 +2266,7 @@
    "n": 5,
    "finding_id": "ad5f7464bbbf",
    "signal_kind": "mfn_launch_scope_drift",
+   "verdict": "survived",
    "finding": "Between the February 2026 10-K and the May 2026 10-Q, Gilead's description of its MFN deal changed from MFN prices 'in Medicaid for select existing and future launched products' to 'MFN prices in the U.S. market for future launched products', and the tariff exemption became conditional on more US investment; the ~2% 2026 HIV policy headwind on the slides names only ACA and the pricing agreement, while at least five products launch inside the deal's three-year term",
    "finding_marked": "Between the February 2026 10-K and the May 2026 10-Q, Gilead's description of its MFN deal changed from MFN prices 'in Medicaid for select existing and future launched products' to 'MFN prices in the U.S. market for future launched products', and the tariff exemption became conditional on more US investment; the ~2% 2026 HIV policy headwind on the slides names only ACA and the pricing agreement, while at least five products launch inside the deal's three-year term[1][2][3][4][5]",
    "marker_map": {

@@ -8,6 +8,7 @@
    "n": 1,
    "finding_id": "eed81303c1d7",
    "signal_kind": "royalty_footnote",
+   "verdict": "survived",
    "finding": "Merck's 2.5% royalty on every dollar of Keytruda and Keytruda Qlex sales, paid to BMS and Ono under the PD-1 patent settlement, ends after December 31, 2026, so roughly $0.8B a year of cost of sales disappears in 2027 (about $0.54B to $0.79B net of Winrevair royalty growth and a possible European Qlex royalty). It is a one-year step, not a run-rate: the Keytruda compound patent ends in December 2028, and Lynparza generics could start taking part of it back as early as late 2027 (earliest approval date only; see MRK-nugget-012)",
    "finding_marked": "Merck's 2.5%[1][2][3] royalty on every dollar of Keytruda and Keytruda Qlex sales, paid to BMS and Ono under the PD-1 patent settlement, ends after December 31, 2026, so roughly $0.8B[assumption] a year of cost of sales disappears in 2027 (about $0.54B[assumption] to $0.79B[assumption] net of Winrevair royalty growth and a possible European Qlex royalty). It is a one-year step, not a run-rate: the Keytruda compound patent ends in December 2028, and Lynparza generics could start taking part of it back as early as late 2027 (earliest approval date only; see MRK-nugget-012)[4][5][6][7][8][9]",
    "marker_map": {
@@ -650,6 +651,7 @@
    "n": 2,
    "finding_id": "0591acf35698",
    "signal_kind": "gross_margin_drop",
+   "verdict": "survived",
    "finding": "Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1% (0.1 standard deviations below)",
    "finding_marked": "Gross margin 73.5%[derived: 1, 2] vs 77.5%[derived: 3, 4] a year earlier (-4.0 pts[derived: 1, 2, 3, 4]) (Q2 2026); peer median 74.1%[assumption] (0.1 standard deviations below)[assumption][5][6][7][8][9][10][licensed source]",
    "marker_map": {
@@ -1446,6 +1448,7 @@
    "n": 3,
    "finding_id": "85621c9fd772",
    "signal_kind": "exclusivity_earlier",
+   "verdict": "survived",
    "finding": "Januvia US protection ends 2026 (company-stated, Merck 10-K), about 3 years before Jardiance (2029, company-stated, its own filing); earlier loss of exclusivity",
    "finding_marked": "Januvia US protection ends 2026 (company-stated, Merck 10-K), about 3[derived: 1, 2] years before Jardiance (2029, company-stated, its own filing); earlier loss of exclusivity[3][4][5][6][7][8][licensed source]",
    "marker_map": {
@@ -1913,6 +1916,7 @@
    "n": 4,
    "finding_id": "19c4fde8d3a2",
    "signal_kind": "qa_deflection",
+   "verdict": "survived",
    "finding": "Asked in October 2025 how much of Merck's 50/50 US vs ex-US revenue split would shift through price equalization, CEO Robert Davis said he was 'not going to get into' it; seven weeks later Merck signed an MFN agreement that ties US prices of every product launched in the three-year term, Lipfendra first, to prices in MFN countries",
    "finding_marked": "Asked in October 2025 how much of Merck's 50/50 US vs ex-US revenue split would shift through price equalization, CEO Robert Davis said he was 'not going to get into' it; seven weeks later Merck signed an MFN agreement that ties US prices of every product launched in the three-year term, Lipfendra first, to prices in MFN countries[1][2]",
    "marker_map": {
@@ -2280,6 +2284,7 @@
    "n": 5,
    "finding_id": "796df46154cc",
    "signal_kind": "expense_offset_nonrecurring",
+   "verdict": "survived",
    "finding": "Merck's 2026 R&D line is flattered by $700M of Blackstone funding for sac-TMT, booked as a reduction of R&D through the year and paid in Q4 2026; nothing repeats in 2027, and Blackstone earns low-to-mid single-digit royalties on all sac-TMT sales once first-line TNBC is approved",
    "finding_marked": "Merck's 2026 R&D line is flattered by $700M of Blackstone funding for sac-TMT, booked as a reduction of R&D through the year and paid in Q4 2026; nothing repeats in 2027, and Blackstone earns low-to-mid single-digit royalties on all sac-TMT sales once first-line TNBC is approved[1][2][3][4][5][6]",
    "marker_map": {

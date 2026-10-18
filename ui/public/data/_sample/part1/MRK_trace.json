@@ -13,7 +13,7 @@
    "Peer contrast"
   ],
   "ticker": "MRK",
-  "generated_at": "2026-10-18T04:26:30Z",
+  "generated_at": "2026-10-18T04:33:43Z",
   "sample": true,
   "note": "Illustrative trace assembled from the engine's gate and red-team decisions; the blind skeptic pass has not run",
   "trimmed": {
@@ -88,7 +88,8 @@
    "obscurity_rung": "analyst_asked",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 6,
-   "step": 6
+   "step": 6,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -112,7 +113,8 @@
    "source_id": "e7cc1cd5deb9",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 14,
-   "step": 14
+   "step": 14,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -136,7 +138,8 @@
    "source_id": "e988d5182a0c",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 15,
-   "step": 15
+   "step": 15,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -160,7 +163,8 @@
    "source_id": "0ec2980ec276",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 16,
-   "step": 16
+   "step": 16,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -184,7 +188,8 @@
    "source_id": "3cd174c13697",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 17,
-   "step": 17
+   "step": 17,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -202,7 +207,7 @@
     }
    ],
    "candidate": {
-    "text": "Stronger wording in MD&A vs FY2024 (topics: supply, pricing); new risk vocabulary: decline; new figures: 1%"
+    "text": "Stronger wording in MD&A vs FY2024 (topics: supply, pricing); new risk vocabulary: decline; new figures: [figure withheld: not gated]"
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -213,7 +218,8 @@
    "source_id": "93297166c764",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 18,
-   "step": 18
+   "step": 18,
+   "figures_withheld": 1
   },
   {
    "category": "Language drift",
@@ -242,7 +248,8 @@
    "source_id": "fda35652a804",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 19,
-   "step": 19
+   "step": 19,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -266,7 +273,8 @@
    "source_id": "640fabda3aaa",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 20,
-   "step": 20
+   "step": 20,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -294,7 +302,8 @@
    "block": "T",
    "source_id": "3365b7def9ed",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 21
+   "step": 21,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -322,7 +331,8 @@
    "block": "T",
    "source_id": "ec376690d43f",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 22
+   "step": 22,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -350,7 +360,8 @@
    "block": "T",
    "source_id": "4cc5be7192d1",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 23
+   "step": 23,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -415,7 +426,8 @@
    "nugget_id": "MRK-nugget-006",
    "obscurity_rung": "footnote_only",
    "verdict_reason": "numeric gate: a number in the sentence has the opposite sign to the cited figure",
-   "step": 27
+   "step": 27,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -438,7 +450,8 @@
    "block": "T",
    "source_id": "0f6a98e13fa3",
    "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
-   "step": 32
+   "step": 32,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -466,7 +479,8 @@
    "block": "T",
    "source_id": "f34066e3bcec",
    "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
-   "step": 33
+   "step": 33,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -489,7 +503,8 @@
    "block": "T",
    "source_id": "5601f4e0f452",
    "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
-   "step": 34
+   "step": 34,
+   "figures_withheld": 0
   },
   {
    "category": "Language drift",
@@ -512,7 +527,8 @@
    "block": "T",
    "source_id": "c401886fa5d3",
    "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
-   "step": 35
+   "step": 35,
+   "figures_withheld": 0
   },
   {
    "category": "Gross-to-net",
@@ -555,7 +571,7 @@
     }
    ],
    "candidate": {
-    "text": "Merck's US sales before discounts rose only about 2% in 2025 while net US sales rose 13%: the US discount provision fell from $13.3B to $10.0B, so the gross-to-net rate dropped to about 21% from 29% (2024) and 30% (2023). The cut in Januvia's list price explains the drop mechanically, not stronger pricing, and $249M of 2025 revenue was a release of prior-year rebate accruals, up from $139M in 2024 and $70M in 2023."
+    "text": "Merck's US sales before discounts rose only about [figure withheld: not gated] in 2025 while net US sales rose [figure withheld: not gated]: the US discount provision fell from [figure withheld: not gated], so the gross-to-net rate dropped to about [figure withheld: not gated]. The cut in Januvia's list price explains the drop mechanically, not stronger pricing, and [figure withheld: not gated] of 2025 revenue was a release of prior-year rebate accruals, up from [figure withheld: not gated] in 2024 and [figure withheld: not gated] in 2023."
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -568,7 +584,8 @@
    "obscurity_rung": "footnote_only",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 8,
-   "step": 8
+   "step": 8,
+   "figures_withheld": 12
   },
   {
    "category": "Gross-to-net",
@@ -581,7 +598,7 @@
     }
    ],
    "candidate": {
-    "text": "MRK signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R019); US investment pledge $70bn; TrumpRx: Januvia $330 -> $100 (R026). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given."
+    "text": "MRK signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R019); US investment pledge [figure withheld: not gated]; TrumpRx: Januvia [figure withheld: not gated] -> $100 (R026). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given."
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -592,7 +609,8 @@
    "source_id": "055023d4eff6",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 9,
-   "step": 9
+   "step": 9,
+   "figures_withheld": 2
   },
   {
    "category": "Gross-to-net",
@@ -615,7 +633,7 @@
     }
    ],
    "candidate": {
-    "text": "Janumet's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,082.5M; base list discount 85% (CMS-published analog, cited)."
+    "text": "Janumet's Medicare price is set by negotiation from January 2027: CMS Part B+D spend [figure withheld: not gated]; base list discount [figure withheld: not gated] (CMS-published analog, cited)."
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -626,7 +644,8 @@
    "source_id": "dd2b47cc4d2b",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 10,
-   "step": 10
+   "step": 10,
+   "figures_withheld": 2
   },
   {
    "category": "Gross-to-net",
@@ -654,7 +673,7 @@
     }
    ],
    "candidate": {
-    "text": "Lenvima, Merck's $1.05B Eisai alliance, was picked in January 2026 for Medicare price setting effective January 1, 2028, with settled generics allowed in July 2030, so Merck's US Lenvima profit share takes a government price cut for about two and a half years before generics finish it."
+    "text": "Lenvima, Merck's [figure withheld: not gated] Eisai alliance, was picked in January 2026 for Medicare price setting effective January 1, 2028, with settled generics allowed in July 2030, so Merck's US Lenvima profit share takes a government price cut for about two and a half years before generics finish it."
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -667,7 +686,8 @@
    "obscurity_rung": "footnote_only",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 11,
-   "step": 11
+   "step": 11,
+   "figures_withheld": 1
   },
   {
    "category": "Gross-to-net",
@@ -684,7 +704,8 @@
    "block": "P",
    "source_id": "7a329dec1a36",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 38
+   "step": 38,
+   "figures_withheld": 0
   },
   {
    "category": "Segment and product table changes",
@@ -713,7 +734,8 @@
    "source_id": "0591acf35698",
    "finding_n": 2,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 2
+   "step": 2,
+   "figures_withheld": 0
   },
   {
    "category": "Segment and product table changes",
@@ -743,7 +765,8 @@
    "nugget_id": "MRK-nugget-009",
    "obscurity_rung": "prepared_remarks",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 28
+   "step": 28,
+   "figures_withheld": 0
   },
   {
    "category": "Segment and product table changes",
@@ -760,7 +783,8 @@
    "block": "X",
    "source_id": "0e6ce72a63db",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 39
+   "step": 39,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -831,7 +855,8 @@
    "obscurity_rung": "footnote_only",
    "finding_n": 1,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown; the Sharpest Needle",
-   "step": 1
+   "step": 1,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -862,7 +887,8 @@
    "obscurity_rung": "prepared_remarks",
    "finding_n": 5,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 5
+   "step": 5,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -885,7 +911,7 @@
     }
    ],
    "candidate": {
-    "text": "Behind the Keytruda roll-off sits a second royalty ladder: the 7.25% royalty on Capvaxive and Vaxneuvance falls to 2.5% from 2027, and the 7% royalty on US Gardasil sales ends in December 2028, together about $260M a year of cost of sales gone by 2029."
+    "text": "Behind the Keytruda roll-off sits a second royalty ladder: the [figure withheld: not gated] royalty on Capvaxive and Vaxneuvance falls to 2.5% from 2027, and the [figure withheld: not gated] royalty on US Gardasil sales ends in December 2028, together about [figure withheld: not gated] a year of cost of sales gone by 2029."
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -898,7 +924,8 @@
    "obscurity_rung": "footnote_only",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 7,
-   "step": 7
+   "step": 7,
+   "figures_withheld": 3
   },
   {
    "category": "Footnotes",
@@ -931,7 +958,7 @@
     }
    ],
    "candidate": {
-    "text": "Keytruda Qlex, Merck's defense against 2028 to 2029 IV biosimilars, is enjoined in Germany by Halozyme (appeal hearing Nov 19, 2026), faces a Dutch counterclaim covering seven more European countries with a ruling due about end October 2026, and Merck warns it may owe 'additional royalties' on Qlex. The risk is European: in the US the PTAB has found every challenged claim unpatentable in four decisions, and Halozyme consented to revocation in the UK. Qlex sold $463M in Q2 2026, of which only $68M was outside the US."
+    "text": "Keytruda Qlex, Merck's defense against 2028 to 2029 IV biosimilars, is enjoined in Germany by Halozyme (appeal hearing Nov 19, 2026), faces a Dutch counterclaim covering seven more European countries with a ruling due about end October 2026, and Merck warns it may owe 'additional royalties' on Qlex. The risk is European: in the US the PTAB has found every challenged claim unpatentable in four decisions, and Halozyme consented to revocation in the UK. Qlex sold [figure withheld: not gated] in Q2 2026, of which only [figure withheld: not gated] was outside the US."
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -944,7 +971,8 @@
    "obscurity_rung": "footnote_only",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 12,
-   "step": 12
+   "step": 12,
+   "figures_withheld": 2
   },
   {
    "category": "Footnotes",
@@ -957,7 +985,7 @@
     }
    ],
    "candidate": {
-    "text": "R&D 58.7% of revenue vs 25.6% a year earlier (+33.0 pts) (Q2 2026); peer median 18.6%, z +3.0"
+    "text": "R&D [figure withheld: not gated] of revenue vs [figure withheld: not gated] a year earlier ([figure withheld: not gated]) (Q2 2026); peer median [figure withheld: not gated], z +3.0"
    },
    "skeptic_materiality": null,
    "skeptic_obviousness": null,
@@ -969,7 +997,8 @@
    "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
    "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
    "table_rank": 13,
-   "step": 13
+   "step": 13,
+   "figures_withheld": 4
   },
   {
    "category": "Footnotes",
@@ -1014,7 +1043,8 @@
    "nugget_id": "MRK-nugget-003",
    "obscurity_rung": "footnote_only",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 26
+   "step": 26,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -1074,7 +1104,8 @@
    "nugget_id": "MRK-nugget-012",
    "obscurity_rung": "footnote_only",
    "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
-   "step": 29
+   "step": 29,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -1098,7 +1129,8 @@
    "source_id": "87cd6b955880",
    "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 30
+   "step": 30,
+   "figures_withheld": 0
   },
   {
    "category": "Footnotes",
@@ -1115,7 +1147,8 @@
    "block": "F",
    "source_id": "e3fb0233778c",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 40
+   "step": 40,
+   "figures_withheld": 0
   },
   {
    "category": "Earnings-call Q&A",
@@ -1161,7 +1194,8 @@
    "obscurity_rung": "analyst_asked",
    "finding_n": 4,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 4
+   "step": 4,
+   "figures_withheld": 0
   },
   {
    "category": "Earnings-call Q&A",
@@ -1189,7 +1223,8 @@
    "block": "C",
    "source_id": "ef2a8ff47bc9",
    "verdict_reason": "numeric gate: a number in the sentence is carried by no passing citation, derivation or assumption",
-   "step": 24
+   "step": 24,
+   "figures_withheld": 0
   },
   {
    "category": "Earnings-call Q&A",
@@ -1212,7 +1247,8 @@
    "block": "C",
    "source_id": "d9e62f2a809b",
    "verdict_reason": "numeric gate: a number in the sentence is carried by no passing citation, derivation or assumption; a number in the sentence matches a cited figure only in a different unit",
-   "step": 25
+   "step": 25,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1236,7 +1272,8 @@
    "source_id": "85621c9fd772",
    "finding_n": 3,
    "verdict_reason": "passed the citation and numeric gates; one of the five shown",
-   "step": 3
+   "step": 3,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1264,7 +1301,8 @@
    "block": "L",
    "source_id": "5ad818374c50",
    "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
-   "step": 36
+   "step": 36,
+   "figures_withheld": 0
   },
   {
    "category": "Product fine print",
@@ -1281,7 +1319,8 @@
    "block": "P",
    "source_id": "120f6c6bbdfe",
    "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
-   "step": 37
+   "step": 37,
+   "figures_withheld": 0
   },
   {
    "category": "Peer contrast",
@@ -1304,7 +1343,8 @@
    "block": "A",
    "source_id": "3f0a57bff484",
    "verdict_reason": "evidence gate: no page-verified citation backs it",
-   "step": 31
+   "step": 31,
+   "figures_withheld": 0
   }
  ],
  "summary": {
