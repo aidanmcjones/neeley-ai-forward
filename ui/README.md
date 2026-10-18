@@ -83,6 +83,14 @@ shrinks a long headline (40 / 32 / 28 px) so the hero stays above the fold at 12
 was confidently wrong" (`proof.ai_wrong_cases`) and "Honest limits" (`meta.honest_limits`). "Detector" labels
 read "Signal type".
 
+**Engine 1c789b6 shapes.** `[assumption: reason]` renders the amber pill with the reason as its tooltip (and as
+small text in print). Findings with `explained_by_footnote` (or `footnote_read.status` "explained by footnote")
+get a muted "explained by footnote" pill, the note in the selected-row detail, and are never the needle.
+`findings_table` rows' `peer_text` (or `peer_comparison`) fills a "Peer" column. `stance.decide.why_it_works_rows`
+renders as a cited "Why it will work" table (stance panel and memo); a move's `why_passed` reads "Why we passed"
+(decide table and memo alternatives); `cash_at_risk_note` sits beside a zero cash at risk. `needle_source`
+labels the hero pill "Needle: red-team read, gate-confirmed" or "Needle: plain rule".
+
 **Popover filter.** Outside `/cockpit/triage`, chip tooltips, drawers and live source cards drop any line or clause
 naming score L, S =, obscurity, robustness, league or the needle status words (strict / provisional /
 floor relaxed); a row cite whose title names them reads "Data row". League-selection flag pills (provisional,

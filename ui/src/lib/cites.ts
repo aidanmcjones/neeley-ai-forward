@@ -50,13 +50,13 @@ export type MarkToken =
   | { t: "text"; s: string }
   | { t: "cite"; n: number }
   | { t: "derived"; ns: (number | "assumption")[] }
-  | { t: "assumption" }
+  | { t: "assumption"; reason?: string }
   | { t: "constant"; name: string };
 
 /** Parse "[1]", "[1][2]", "[derived: 1, 3]", "[assumption]" markers; anything else stays text. */
 export function parseMarked(s: string): MarkToken[] {
   const out: MarkToken[] = [];
-  const re = /\[(\d+)\]|\[derived:\s*([^\]]+)\]|\[constant:\s*([^\]]+)\]|\[assumption\]/g;
+  const re = /\[(\d+)\]|\[derived:\s*([^\]]+)\]|\[constant:\s*([^\]]+)\]|\[assumption(?::\s*([^\]]+))?\]/g;
   let last = 0;
   let m: RegExpExecArray | null;
   while ((m = re.exec(s))) {
@@ -64,7 +64,7 @@ export function parseMarked(s: string): MarkToken[] {
     if (m[1]) out.push({ t: "cite", n: Number(m[1]) });
     else if (m[2]) out.push({ t: "derived", ns: m[2].split(",").map((x) => x.trim()).map((x) => (/^\d+$/.test(x) ? Number(x) : "assumption")) });
     else if (m[3]) out.push({ t: "constant", name: m[3].trim() });
-    else out.push({ t: "assumption" });
+    else out.push({ t: "assumption", reason: m[4]?.trim() || undefined });
     last = re.lastIndex;
   }
   if (last < s.length) out.push({ t: "text", s: s.slice(last) });
@@ -118,4 +118,18 @@ export function pitchEvidence(ev: Evidence): Evidence {
     excerpt: ex, verification: ver, withheld_reason: pitchLine(ev.withheld_reason ?? null), derived_expr: pitchLine(ev.derived_expr ?? null),
     confidence_note: L(ev.confidence_note),
   };
+}
+
+/** Explained-by-footnote rows: never the needle; the note says what explains the movement. */
+export function explainedByFootnote(f: Finding | null | undefined): boolean {
+  if (!f) return false;
+  if (f.explained_by_footnote === true) return true;
+  return /explained by footnote/i.test(String(f.footnote_read?.status ?? ""));
+}
+export function footnoteNote(f: Finding | null | undefined): string | null {
+  if (!f) return null;
+  const n = f.explained_by_footnote_note ?? f.footnote_note ?? (f as { note?: unknown }).note;
+  if (typeof n === "string" && n.trim()) return n;
+  const r = f.footnote_read;
+  return r ? [r.term && `term: ${r.term}`, r.doc && `source: ${r.doc}`, typeof r.net === "number" && `net movement ${r.net.toLocaleString("en-US")}`].filter(Boolean).join("; ") || null : null;
 }

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { AiMark, CiteChip, ConfPill, EmptyState, NumericSummary, Panel, ScoreBar, StanceBadge } from "..";
 import { BASIS_NOTE, CiteRegistry, citeLabel, weighOptions } from "../../lib/stance";
 import type { Company, Evidence, NumericCheck } from "../../lib/types";
-import { DecideTable, noneClears } from "../decide/Decide";
+import { DecideTable, WhyItWorks, noneClears } from "../decide/Decide";
 
 // Right-hand AI panel: the template-drafted stance, options, cited bullets, live source card.
 export function StancePanel({ company, preview, onPreview }: {
@@ -63,6 +63,12 @@ export function StancePanel({ company, preview, onPreview }: {
         <div>
           <h3 className="mb-1.5 flex items-center justify-between gap-2 text-[11px] font-semibold uppercase tracking-wide text-muted">Moves valued (stance.decide){decide.numeric_check ? <NumericSummary check={decide.numeric_check as NumericCheck} /> : null}</h3>
           <DecideTable company={company} decide={decide} compact onPreview={onPreview} />
+          {(decide.why_it_works_rows?.length ?? 0) > 0 && (
+            <div className="mt-3">
+              <h3 className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">Why it will work</h3>
+              <WhyItWorks company={company} decide={decide} compact onPreview={onPreview} />
+            </div>
+          )}
         </div>
       ) : (
       <div>

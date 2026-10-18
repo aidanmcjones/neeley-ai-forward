@@ -97,14 +97,14 @@ export function DecideTable({ company, decide, compact = false, onPreview }: {
                     <Foot fs={footnotesFor(decide, m.name)} onPreview={onPreview} />
                   </th>
                   <td className="px-1.5 pt-1.5 text-right font-mono" title={sc ? `bear ${usdM(sc.bear)} · base ${usdM(sc.base)} · bull ${usdM(sc.bull)}` : undefined}>{usdM(m.ev)}</td>
-                  <td className="px-1.5 pt-1.5 text-right font-mono">{usdM(m.cash_at_risk)}</td>
+                  <td className="px-1.5 pt-1.5 text-right font-mono" title={m.cash_at_risk === 0 && m.cash_at_risk_note ? m.cash_at_risk_note : undefined}>{usdM(m.cash_at_risk)}{m.cash_at_risk === 0 && m.cash_at_risk_note && <span className="block max-w-[160px] whitespace-normal text-left font-body text-[10px] leading-snug text-muted">{m.cash_at_risk_note}</span>}</td>
                   <td className="px-1.5 pt-1.5 text-right font-mono">{m.payback_month != null ? `mo ${m.payback_month}` : "n/a"}</td>
                   <td className="px-1.5 pt-1.5 text-right font-mono">{usdM(m.spread)}</td>
                   <td className="px-1.5 pt-1.5 text-right font-mono">{m.mcda != null ? m.mcda.toFixed(2) : "n/a"}</td>
                 </tr>
                 <tr className={`border-b border-line ${role === "chosen" ? "bg-teal-soft/40" : role === "least_bad" ? "bg-warn/10" : ""}`}>
                   <td colSpan={6} className="px-1.5 pb-1.5 text-[11px] leading-snug text-muted">
-                    {chosen ? m.why : <>Not chosen: {m.binding_reason || "lower rank"}.</>}{" "}
+                    {chosen ? m.why : m.why_passed ? <>Why we passed: {m.why_passed}</> : <>Not chosen: {m.binding_reason || "lower rank"}.</>}{" "}
                     <FindingChips company={company} ids={m.finding_ids} onPreview={onPreview} />
                     {!compact && (m.flags?.length ?? 0) > 0 && <span className="block text-warn">⚠ {m.flags!.length} assumption{m.flags!.length > 1 ? "s" : ""} flagged (team inputs or uncited defaults)</span>}
                   </td>
@@ -134,7 +134,7 @@ function DecideCards({ company, decide, moves, onPreview }: {
           const sc = m.ev_by_scenario;
           const nums: [string, string, string?][] = [
             ["EV", usdM(m.ev), sc ? `bear ${usdM(sc.bear)} · base ${usdM(sc.base)} · bull ${usdM(sc.bull)}` : undefined],
-            ["At risk", usdM(m.cash_at_risk), "cash at risk"],
+            ["At risk", usdM(m.cash_at_risk), m.cash_at_risk === 0 && m.cash_at_risk_note ? `cash at risk: ${m.cash_at_risk_note}` : "cash at risk"],
             ["Payback", m.payback_month != null ? `mo ${m.payback_month}` : "n/a"],
             ["Spread", usdM(m.spread), "bull EV minus bear EV"],
             ["MCDA", m.mcda != null ? m.mcda.toFixed(2) : "n/a", "multi-criteria score, used only when EV intervals overlap"],
@@ -155,7 +155,8 @@ function DecideCards({ company, decide, moves, onPreview }: {
                 ))}
               </dl>
               <p className="mt-1 text-[11px] leading-snug text-muted">
-                {chosen ? m.why : <>Not chosen: {m.binding_reason || "lower rank"}.</>}{" "}
+                {chosen ? m.why : m.why_passed ? <>Why we passed: {m.why_passed}</> : <>Not chosen: {m.binding_reason || "lower rank"}.</>}{" "}
+                {m.cash_at_risk === 0 && m.cash_at_risk_note ? <span className="block">Zero cash at risk: {m.cash_at_risk_note}</span> : null}
                 <FindingChips company={company} ids={m.finding_ids} onPreview={onPreview} />{" "}
                 <Foot fs={footnotesFor(decide, m.name)} onPreview={onPreview} />
               </p>
@@ -215,5 +216,49 @@ export function DecideFootnotes({ decide }: { decide: Decide }) {
         );
       })}
     </ol>
+  );
+}
+
+const CITE_KEYS = /^(cite|cites|footnote|footnotes|citation|citations|evidence|source_cite)$/i;
+
+/** stance.decide.why_it_works_rows: the evidence each decider needs, as a cited table (columns from the rows). */
+export function WhyItWorks({ company, decide, compact = false, onPreview }: { company: Company; decide: Decide; compact?: boolean; onPreview?: (e: Evidence | null) => void }) {
+  const rows = (decide.why_it_works_rows ?? []).filter((r) => r && typeof r === "object") as Record<string, unknown>[];
+  if (!rows.length) return null;
+  const cols = [...new Set(rows.flatMap((r) => Object.keys(r)))].filter((k) => !CITE_KEYS.test(k) && !/^(id|cite_id|finding_id|finding_ids)$/.test(k));
+  const fn = new Map((decide.footnotes ?? []).map((f) => [f.n, f]));
+  const chips = (r: Record<string, unknown>, i: number) => {
+    const out: JSX.Element[] = [];
+    for (const k of Object.keys(r).filter((k) => CITE_KEYS.test(k))) {
+      const v = r[k];
+      for (const x of Array.isArray(v) ? v : [v]) {
+        if (typeof x === "number" && fn.get(x)?.citation) out.push(<CiteChip key={`${k}${x}`} label={`f${x}`} evidence={fn.get(x)!.citation!} onPreview={onPreview} />);
+        else if (x && typeof x === "object" && ("citation" in (x as object) || "doc_id" in (x as object))) out.push(<CiteChip key={`${k}${out.length}`} n={out.length + 1} evidence={x as Evidence} onPreview={onPreview} />);
+        else if (x && typeof x === "object" && "finding_id" in (x as object)) { const ev = resolveCite(company, x as { finding_id: string; i?: number }).evidence; if (ev) out.push(<CiteChip key={`${k}${out.length}`} n={out.length + 1} evidence={ev} onPreview={onPreview} />); }
+      }
+    }
+    return out.length ? <span key={`c${i}`} className="inline-flex flex-wrap gap-0.5">{out}</span> : null;
+  };
+  const head = (k: string) => k.replace(/_/g, " ");
+  return (
+    <div className="overflow-x-auto">
+      <table className={`w-full border-collapse ${compact ? "text-[11.5px]" : "text-[12.5px]"}`}>
+        <caption className="sr-only">Why it will work: the evidence each decider needs</caption>
+        <thead><tr className="border-b border-line text-[10px] uppercase tracking-wide text-muted text-left">
+          {cols.map((k) => <th key={k} scope="col" className="px-1.5 py-1 font-semibold">{head(k)}</th>)}
+          <th scope="col" className="px-1.5 py-1 font-semibold">Source</th>
+        </tr></thead>
+        <tbody>{rows.map((r, i) => (
+          <tr key={i} className="border-b border-line align-top">
+            {cols.map((k, j) => {
+              const v = r[k];
+              const t = v == null ? "" : typeof v === "object" ? JSON.stringify(v) : String(v);
+              return j === 0 ? <th key={k} scope="row" className="px-1.5 py-1 text-left font-semibold">{t}</th> : <td key={k} className="px-1.5 py-1">{t}</td>;
+            })}
+            <td className="px-1.5 py-1">{chips(r, i)}</td>
+          </tr>
+        ))}</tbody>
+      </table>
+    </div>
   );
 }

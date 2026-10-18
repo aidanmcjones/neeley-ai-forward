@@ -37,7 +37,7 @@ export default function Briefing() {
         <div className="space-y-4">
           <KpiRow meta={meta} company={company} />
           {needle || top ? (
-            <NeedleHero needle={(needle ?? top)!} none={!needle} ticker={t} onPreview={setPreview} status={hasRule ? null : leagueRow?.needle_status ?? (company.needle_status as string | undefined)} rule={typeof company.needle_rule === "string" ? company.needle_rule : (company.findings_table as { needle_rule?: string } | undefined)?.needle_rule} v2={company.engine !== "v1" && !!(needle ?? top)!.vector?.v2} />
+            <NeedleHero needle={(needle ?? top)!} none={!needle} ticker={t} onPreview={setPreview} status={hasRule ? null : leagueRow?.needle_status ?? (company.needle_status as string | undefined)} rule={typeof company.needle_rule === "string" ? company.needle_rule : (company.findings_table as { needle_rule?: string } | undefined)?.needle_rule} source={typeof company.needle_source === "string" ? company.needle_source : null} v2={company.engine !== "v1" && !!(needle ?? top)!.vector?.v2} />
           ) : (
             <EmptyState file={`companies/${t}.json`} message="No Sharpest Needle: the company file has no findings" />
           )}

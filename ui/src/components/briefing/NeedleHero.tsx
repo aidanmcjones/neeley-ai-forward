@@ -7,7 +7,7 @@ import { citeLabel, externalSources, impactView, isShiftMetric, metricText } fro
 import type { Evidence, Finding } from "../../lib/types";
 
 // Full-width hero band: the Sharpest Needle as the engine's verdict.
-export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none = false, rule }: {
+export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none = false, rule, source }: {
   needle: Finding; ticker: string; onPreview?: (ev: Evidence | null) => void;
   /** league needle_status (strict / provisional / floor_relaxed). */
   status?: string | null;
@@ -17,6 +17,8 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
   none?: boolean;
   /** needle_rule: the plain-English rule that picked the pitch-facing needle. */
   rule?: string | null;
+  /** needle_source: "red_team" (Parker's red-team read, confirmed by the gate) or "rule" (the plain rule). */
+  source?: string | null;
 }) {
   const im = impactView(needle);
   const [showAll, setShowAll] = useState(false);
@@ -31,7 +33,11 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
         <div className="flex items-center gap-2.5">
           <AiMark label="Sharpest Needle · engine verdict" />
           <NeedleStatusPill status={status} />
-          {rule && <span tabIndex={0} title={`Needle rule: ${rule}`} aria-label={`Needle rule: ${rule}`} className="rounded-full border border-line px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-muted">Needle rule</span>}
+          {(rule || source) && (() => {
+            const label = source === "red_team" ? "Needle: red-team read, gate-confirmed" : source === "rule" ? "Needle: plain rule" : "Needle rule";
+            const tip = rule ? `Plain rule: ${rule}` : label;
+            return <span tabIndex={0} title={tip} aria-label={`${label}. ${tip}`} className="rounded-full border border-line px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-muted">{label}</span>;
+          })()}
         </div>
         <span className="text-[11px] text-muted font-mono">{rule ? "biggest impact, least asked about" : v2 ? "most material, least discussed, quote verified" : "most material, least discussed"} · companies/{ticker}.json</span>
       </div>

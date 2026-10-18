@@ -7,6 +7,7 @@
 import { createContext, createElement, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { CiteRef, Company, Evidence, Finding, LeagueRow, Meta, Proof } from "./types";
+import { explainedByFootnote } from "./cites";
 
 export type * from "./types";
 
@@ -90,10 +91,12 @@ export function resolveCite(company: Company | null | undefined, ref: CiteRef): 
 export function findNeedle(company: Company | null | undefined): Finding | undefined {
   if (!company) return undefined;
   // The pitch-facing needle (needle_id_rule) wins; the league needle (needle_id) is internal triage.
-  const rule = typeof company.needle_id_rule === "string" ? company.findings.find((f) => f.id === company.needle_id_rule) : undefined;
+  const ok = (f: Finding | undefined) => (f && !explainedByFootnote(f) ? f : undefined);
+  const rule = ok(typeof company.needle_id_rule === "string" ? company.findings.find((f) => f.id === company.needle_id_rule) : undefined);
   if (rule) return rule;
-  const byId = company.needle_id ? company.findings.find((f) => f.id === company.needle_id) : undefined;
+  const byId = ok(company.needle_id ? company.findings.find((f) => f.id === company.needle_id) : undefined);
   if (byId) return byId;
+  if (company.needle_id_rule || company.needle_id) return undefined;
   // v3: needle status "none" means no row qualifies; never promote another row to needle.
   if (needleNone(company)) return undefined;
   return company.findings[0];
@@ -107,7 +110,7 @@ export function needleNone(company: Company | null | undefined): boolean {
 /** Highest-scored finding (shown instead of a needle when none qualifies). */
 export function topFinding(company: Company | null | undefined): Finding | undefined {
   if (!company?.findings.length) return undefined;
-  return [...company.findings].sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
+  return [...company.findings].filter((f) => !explainedByFootnote(f)).sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
 }
 
 /* ------------------------------------------------------------- base context */

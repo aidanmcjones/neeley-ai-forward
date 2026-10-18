@@ -77,6 +77,8 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
       // The table's own marked sentence and footnote map (markers shared across the table).
       if (typeof o.sentence_marked === "string") {
         marked.set(id, { sentence_marked: o.sentence_marked, marker_map: o.marker_map as Record<string, string>, marker_licensed: o.marker_licensed as number[],
+          ...(typeof (o.peer_text ?? o.peer_comparison) === "string" ? { peer_text: String(o.peer_text ?? o.peer_comparison) } : {}),
+          ...(o.explained_by_footnote === true ? { explained_by_footnote: true, explained_by_footnote_note: (o.explained_by_footnote_note ?? o.footnote_note ?? o.note ?? null) as string | null } : {}),
           ...(o.numeric_check ? { numeric_check: o.numeric_check as Finding["numeric_check"] } : {}) });
       }
     });
@@ -104,6 +106,7 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
     put(n);
   };
 
+  const hasPeerText = [...marked.values()].some((m) => !!m.peer_text);
   const cols: Column<GridRow>[] = [
     {
       key: "finding", header: "Finding",
@@ -135,9 +138,13 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
       },
     },
     {
-      key: "z", header: "z", title: "Peer z", align: "right",
-      sortValue: (r) => (r.kind === "finding" ? r.f.peer?.z ?? null : null),
-      render: (r) => <span className="font-mono">{r.kind === "finding" && r.f.peer?.z != null ? z(r.f.peer.z).replace("z ", "") : <span className="text-muted">n/a</span>}</span>,
+      key: "z", header: hasPeerText ? "Peer" : "z", title: hasPeerText ? "Peer comparison (gated)" : "Peer z", align: hasPeerText ? undefined : "right",
+      sortValue: (r) => (r.kind === "finding" ? (hasPeerText ? r.f.peer_text ?? "" : r.f.peer?.z ?? null) : null),
+      render: (r) => {
+        if (r.kind !== "finding") return <span className="text-muted">n/a</span>;
+        if (hasPeerText) return r.f.peer_text ? <span className="block max-w-[180px] text-[11.5px] leading-snug line-clamp-3" title={r.f.peer_text}>{r.f.peer_text}</span> : <span className="text-muted">n/a</span>;
+        return <span className="font-mono">{r.f.peer?.z != null ? z(r.f.peer.z).replace("z ", "") : <span className="text-muted">n/a</span>}</span>;
+      },
     },
     {
       key: "conf", header: "Conf.", title: "Confidence",

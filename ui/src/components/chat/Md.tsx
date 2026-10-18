@@ -7,7 +7,7 @@ import { AssumptionPill, ConstantPill } from "../MarkedSentence";
 // Minimal inline markdown for memo blocks: **bold**, *italic*, `code`, and the citation markers
 // [n], [derived: a, b], [assumption]. Markers come only from the data.
 
-const TOKEN = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`|\[\d+\]|\[derived:\s*[^\]]+\]|\[constant:\s*[^\]]+\]|\[assumption\])/g;
+const TOKEN = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`|\[\d+\]|\[derived:\s*[^\]]+\]|\[constant:\s*[^\]]+\]|\[assumption(?::\s*[^\]]+)?\])/g;
 
 function Run({ ns, chip }: { ns: number[]; chip: (n: number, k: string) => ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -46,7 +46,7 @@ export function Md({ md, cite }: { md: string; cite: (n: number) => Evidence | u
     if (Array.isArray(p)) return <Run key={i} ns={p} chip={chip} />;
     let m: RegExpMatchArray | null;
     if ((m = p.match(/^\[(\d+)\]$/))) return chip(Number(m[1]), `c${i}`);
-    if (p === "[assumption]") return <Fragment key={i}>{" "}<AssumptionPill /></Fragment>;
+    if ((m = p.match(/^\[assumption(?::\s*([^\]]+))?\]$/))) return <Fragment key={i}>{" "}<AssumptionPill reason={m[1]?.trim()} /></Fragment>;
     if ((m = p.match(/^\[constant:\s*([^\]]+)\]$/))) return <Fragment key={i}>{" "}<ConstantPill name={m[1].trim()} /></Fragment>;
     if ((m = p.match(/^\[derived:\s*([^\]]+)\]$/))) {
       const ns = m[1].split(",").map((x) => x.trim());
@@ -66,4 +66,4 @@ export function Md({ md, cite }: { md: string; cite: (n: number) => Evidence | u
 }
 
 /** Plain text of a markdown string (markers and emphasis stripped), for the typewriter and copy. */
-export const plainMd = (md: string) => md.replace(/\[(\d+)\]|\[derived:[^\]]+\]|\[constant:[^\]]+\]|\[assumption\]/g, "").replace(/\*\*|`/g, "").replace(/\s+([.,;:])/g, "$1");
+export const plainMd = (md: string) => md.replace(/\[(\d+)\]|\[derived:[^\]]+\]|\[constant:[^\]]+\]|\[assumption(?::[^\]]+)?\]/g, "").replace(/\*\*|`/g, "").replace(/\s+([.,;:])/g, "$1");

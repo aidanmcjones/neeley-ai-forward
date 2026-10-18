@@ -2,12 +2,14 @@ import type React from "react";
 import type { Company, Finding } from "../../lib/types";
 import { FlagPills } from "../FindingFlags";
 import { NumericPill } from "../NumericCheck";
+import { explainedByFootnote, footnoteNote } from "../../lib/cites";
 
 // Detail strip for the selected grid row: flags, why it is not quantified, guard reason,
 // what it corroborates (jumps to that row), fact key and impact channel.
 export function FindingDetail({ company, finding: f, onSelect }: { company: Company; finding: Finding; onSelect: (id: string) => void }) {
   const corr = f.corroborates ? company.findings.find((x) => x.id === f.corroborates) : undefined;
   const rows: [string, React.ReactNode][] = [];
+  if (explainedByFootnote(f)) rows.push(["Explained by footnote", footnoteNote(f) ?? "a filing footnote explains this movement"]);
   if (f.not_quantified) rows.push(["Not quantified", f.not_quantified]);
   if (f.guard_reason) rows.push(["Guard", f.guard_reason]);
   if (f.corroborates) rows.push(["Corroborates", corr

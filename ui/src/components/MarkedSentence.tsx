@@ -8,10 +8,13 @@ import { CiteChip } from "./CiteChip";
 // [derived: a, b] -> operand chips, [assumption] -> amber pill. No sentence_marked -> the plain
 // sentence, unchanged. Markers are only ever read from the data, never added here.
 
-export function AssumptionPill() {
+export function AssumptionPill({ reason }: { reason?: string }) {
   return (
-    <span title="This number is an assumption (a stated input), not a sourced figure"
-      className="inline-block rounded border border-warn/60 bg-warn/10 px-1 py-px align-middle font-body text-[10px] font-semibold normal-case tracking-normal leading-tight text-warn">assumption</span>
+    <>
+      <span title={reason ? `Assumption: ${reason}` : "This number is an assumption (a stated input), not a sourced figure"}
+        className="inline-block rounded border border-warn/60 bg-warn/10 px-1 py-px align-middle font-body text-[10px] font-semibold normal-case tracking-normal leading-tight text-warn">assumption</span>
+      {reason && <span className="hidden print:inline font-body text-[9px] normal-case tracking-normal text-warn"> ({reason})</span>}
+    </>
   );
 }
 
@@ -33,7 +36,7 @@ export function LicensedMark({ count = 1 }: { count?: number }) {
   );
 }
 
-type Group = { t: "text"; s: string } | { t: "cites"; ns: number[] } | { t: "derived"; ns: (number | "assumption")[] } | { t: "assumption" } | { t: "constant"; name: string };
+type Group = { t: "text"; s: string } | { t: "cites"; ns: number[] } | { t: "derived"; ns: (number | "assumption")[] } | { t: "assumption"; reason?: string } | { t: "constant"; name: string };
 
 /** Merge adjacent [n] markers (whitespace between them is dropped) into one run. */
 function group(marked: string): Group[] {
@@ -98,7 +101,7 @@ export function MarkedSentence({ finding, text, onPreview, marked: markedIn, com
       {group(marked).map((tk, i) => {
         if (tk.t === "text") return <Fragment key={i}>{tk.s}</Fragment>;
         if (tk.t === "cites") return <CiteRun key={i} ns={tk.ns} chip={chip} licensed={licensed} />;
-        if (tk.t === "assumption") return <Fragment key={i}>{" "}<AssumptionPill /></Fragment>;
+        if (tk.t === "assumption") return <Fragment key={i}>{" "}<AssumptionPill reason={tk.reason} /></Fragment>;
         if (tk.t === "constant") return <Fragment key={i}>{" "}<ConstantPill name={tk.name} /></Fragment>;
         return <DerivedRun key={i} ns={tk.ns} chip={chip} />;
       })}

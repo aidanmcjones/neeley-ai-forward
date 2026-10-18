@@ -11,7 +11,7 @@ import { PinnedExhibits } from "../components/memo/PinnedExhibits";
 import { MarkedSentence, hasMarked } from "../components/MarkedSentence";
 import { derivedOperands, isDerived } from "../lib/cites";
 import type { Evidence } from "../lib/types";
-import { DecideFootnotes, DecideTable, KillSignalTable, noneClears } from "../components/decide/Decide";
+import { DecideFootnotes, DecideTable, KillSignalTable, WhyItWorks, noneClears } from "../components/decide/Decide";
 
 // CEO memo (/memo): one printable page drafted from company.stance. Text blocks are editable;
 // edits persist to localStorage needle.memo.<ticker> and "Reset to draft" restores the export.
@@ -171,7 +171,14 @@ export default function Memo() {
               <H>Moves valued: chosen move first{decide.numeric_check ? <> <NumericSummary check={decide.numeric_check as NumericCheck} /></> : null}</H>
               <DecideTable company={company} decide={decide} />
             </section>
-          ) : (
+          ) : null}
+          {decide && (decide.why_it_works_rows?.length ?? 0) > 0 ? (
+            <section className="memo-keep">
+              <H>Why it will work</H>
+              <WhyItWorks company={company} decide={decide} />
+            </section>
+          ) : null}
+          {!decide && (
           <section>
             <H>Options weighed</H>
             <ul className="space-y-1">
@@ -192,7 +199,10 @@ export default function Memo() {
               {(s.alternatives ?? []).length ? (
                 <ul className="space-y-1.5 text-[13px]">
                   {s.alternatives!.map((a, i) => (
-                    <li key={i}><span className="font-semibold">{a.name}: </span>{ed(`alt.${i}`, a.why_rejected ?? "")}</li>
+                    <li key={i}><span className="font-semibold">{a.name}: </span>{ed(`alt.${i}`, a.why_rejected ?? "")}{(() => {
+                      const wp = (a as { why_passed?: string }).why_passed ?? decide?.moves?.find((m) => m.name === a.name)?.why_passed;
+                      return wp ? <span className="block text-[12.5px] text-muted">Why we passed: {wp}</span> : null;
+                    })()}</li>
                   ))}
                 </ul>
               ) : <p className="text-muted">None exported.</p>}

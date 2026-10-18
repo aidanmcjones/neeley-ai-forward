@@ -129,6 +129,14 @@ export interface Finding extends Loose {
   /** Marker numbers that point at licensed sources: shown as a muted mark, never a chip. */
   marker_licensed?: number[] | null;
   guard_reason?: string | null;
+  /** Receivables-style row whose movement a filing footnote explains; never the needle. */
+  explained_by_footnote?: boolean | null;
+  explained_by_footnote_note?: string | null;
+  footnote_note?: string | null;
+  footnote_read?: { status?: string; doc?: string; net?: number; term?: string } | null;
+  /** Gated plain-language peer comparison (findings_table rows). */
+  peer_text?: string | null;
+  peer_comparison?: string | null;
   not_quantified?: string | null;
   corroborates?: string | null;
   fact_key?: string | null;
@@ -186,6 +194,7 @@ export interface DecideMove extends Loose {
   cash_at_risk?: number | null; payback_month?: number | null; spread?: number | null; mcda?: number | null;
   binding_reason?: string; why?: string; flags?: string[]; finding_ids?: string[]; kill_signal_ids?: string[];
   budget?: Record<string, number> | null; units?: string;
+  why_passed?: string | null; cash_at_risk_note?: string | null;
 }
 export interface DecideFootnote extends Loose { n: number; move?: string; claim?: string; citation?: Evidence }
 export interface Decide extends Loose {
@@ -195,6 +204,8 @@ export interface Decide extends Loose {
   chosen?: string | { name?: string; code?: string } | null;
   least_bad?: string | { name?: string; code?: string } | null;
   selection_rule?: string | null;
+  /** "Why it will work": the evidence each decider needs (cited rows). */
+  why_it_works_rows?: Loose[] | null;
   as_of?: string; cash_and_equivalents?: number; units?: string; moves?: DecideMove[];
   footnotes?: DecideFootnote[]; finding_cites?: CiteRef[]; source_files?: string[];
 }

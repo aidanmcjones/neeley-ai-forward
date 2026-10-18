@@ -1,4 +1,4 @@
-import { onTriage } from "../lib/cites";
+import { explainedByFootnote, onTriage } from "../lib/cites";
 import type { Finding } from "../lib/types";
 
 // v3 finding flags as small labelled pills (text plus color, never color alone).
@@ -7,6 +7,7 @@ const FLAG: Record<string, { label: string; tone: "good" | "warn" | "muted"; tip
   provisional: { label: "provisional", tone: "warn", tip: "Picked by the provisional rule: no row cleared the strict floor." },
   one_off: { label: "one-off", tone: "warn", tip: "One-off item: not expected to recur, so it is not scored as a run-rate change." },
   not_quantified: { label: "not quantified", tone: "muted", tip: "No dollar impact is computed for this row (see the reason in the detail)." },
+  explained_by_footnote: { label: "explained by footnote", tone: "muted", tip: "A filing footnote explains this movement (see the selected-row detail); it is never the needle." },
   not_league_comparable: { label: "not league-comparable", tone: "warn", tip: "Inputs are imputed for this company, so its score is not compared like-for-like in the league." },
 };
 
@@ -23,7 +24,8 @@ export function findingFlags(f: Finding | null | undefined): string[] {
 const LEAGUE_FLAGS = new Set(["provisional", "needle_eligible", "not_league_comparable"]);
 
 export function FlagPills({ finding, flags, className = "" }: { finding?: Finding | null; flags?: string[]; className?: string }) {
-  const all = flags ?? findingFlags(finding);
+  const all0 = (flags ?? findingFlags(finding)).filter((f) => FLAG[f] || f.length <= 28);
+  const all = explainedByFootnote(finding) && !all0.includes("explained_by_footnote") ? [...all0, "explained_by_footnote"] : all0;
   const list = onTriage() ? all : all.filter((f) => !LEAGUE_FLAGS.has(f));
   if (!list.length) return null;
   return (
