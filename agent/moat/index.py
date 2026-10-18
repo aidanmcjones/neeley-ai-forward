@@ -40,6 +40,15 @@ SUPERSEDED = {
         "AZN:companies/AZN/transcripts/2026Q1_transcript.md",
         "mislabeled: this file is actually the Q2 2026 call (duplicate of AZN:transcripts/2026Q2_transcript.md); "
         "the real Q1 2026 call is the moat copy"),
+    "LLY:transcripts/2026Q1_transcript.md": (
+        "LLY:companies/LLY/transcripts/2026Q1_transcript.md",
+        "14/43 Q&A rows unattributable; the complete MarketBeat moat copy supersedes it"),
+    "ABBV:transcripts/2026Q2_transcript.md": (
+        "ABBV:companies/ABBV/transcripts/2026Q2_transcript.md",
+        "truncated (11 turns, no executive turns recovered); the complete MarketBeat moat copy supersedes it"),
+    "AMGN:transcripts/2026Q2_transcript.md": (
+        "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+        "single-source corpus copy; the MarketBeat moat copy (cross-checked against it) supersedes it"),
 }
 
 SCHEMA = """
@@ -536,6 +545,22 @@ def add(out=OUT, only_tables=None):
     for doc_id, r in new.items():
         n_pages += insert_doc(db, doc_record(doc_id, r, ctx, stats))
     db.execute("INSERT INTO pages_fts(rowid, text) SELECT id, text FROM pages WHERE id > ?", (max_page,))
+    # Grades (transcript_grades.csv) and SUPERSEDED entries change between adds: refresh them on existing docs.
+    # Pages, facts and ids are still never touched.
+    grades = grade_map()
+    n_meta = 0
+    for doc_id, r in allrows.items():
+        if doc_id in new:
+            continue
+        if s(r.get("doc_type")) in ("transcript", "transcript_source") and r.get("stream") != "bloomberg":
+            g = grades.get(s(r.get("path")), "")
+            if g:
+                n_meta += db.execute("UPDATE docs SET quote_grade=? WHERE doc_id=? AND quote_grade<>?",
+                                     (g, doc_id, g)).rowcount
+        if doc_id in SUPERSEDED:
+            n_meta += db.execute("UPDATE docs SET superseded_by=? WHERE doc_id=? AND superseded_by<>?",
+                                 (SUPERSEDED[doc_id][0], doc_id, SUPERSEDED[doc_id][0])).rowcount
+    stats["docs_meta_refreshed"] = n_meta
 
     have_keys = {}
     max_fact = db.execute("SELECT COALESCE(MAX(id), 0) FROM facts").fetchone()[0]
@@ -568,7 +593,7 @@ def add(out=OUT, only_tables=None):
     db.commit()
     db.close()
     return {"mode": "add", "new_docs": len(new), "new_pages": n_pages, "new_facts": n_facts,
-            "new_tables": new_tables, "n_docs": upd["n_docs"], "n_pages": upd["n_pages"], "n_facts": upd["n_facts"],
+            "new_tables": new_tables, "docs_meta_refreshed": stats["docs_meta_refreshed"], "n_docs": upd["n_docs"], "n_pages": upd["n_pages"], "n_facts": upd["n_facts"],
             "seconds": round(time.time() - t0, 1)}
 
 

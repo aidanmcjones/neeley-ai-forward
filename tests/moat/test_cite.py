@@ -56,7 +56,9 @@ def test_azn_mislabeled_transcript_superseded():
 
 
 def test_grade_d_transcript_excluded_with_grade_min_b():
-    d_docs = [r["doc_id"] for r in q("SELECT doc_id FROM docs WHERE quote_grade='D' AND n_pages > 0")]
+    # a below-B transcript that is still live (D copies superseded by better moat copies are hidden by design)
+    d_docs = [r["doc_id"] for r in q("SELECT doc_id FROM docs WHERE quote_grade IN ('C', 'D') AND n_pages > 0 "
+                                     "AND superseded_by='' ORDER BY quote_grade DESC")]
     assert d_docs
     doc = d_docs[0]
     ticker = C._doc(doc)["ticker"]
