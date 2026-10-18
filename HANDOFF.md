@@ -4,6 +4,10 @@ Update this every hour and at the end of every task.
 
 **Last updated:** Sat Oct 17, ~12:00, corpus branch (Parker's agent)
 
+## Sat Oct 17 evening: why Merck
+- docs/how_we_picked_mrk.md: the 7 steps from case to MRK, the v3 scores and files used. All 110 MRK nugget
+  quotes re-verified (load BMY, PFE, JNJ, GSK, AZN docs alongside MRK).
+
 ## Sat Oct 17: the real case and the source corpus
 - The case is "The Fine Print" (Advanced track): pick 1 of 10 drugmakers, 5+ cited findings with page numbers and
   impact math, a Sharpest Needle, one product vs rivals, then one CEO move. Case and rubric PDFs are with Parker.
