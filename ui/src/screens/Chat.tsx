@@ -1,140 +1,57 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type React from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { loadMemo, matchMemo, useMemos } from "../lib/memos";
 import { useData } from "../lib/data";
-import type { MemoRecord, MemosFile } from "../lib/types";
-import { Answer } from "../components/chat/Answer";
 import { isPart1Query, isWhyCompanyQuery, PART1_PROMPT, usePart1 } from "../lib/part1";
 import { Part1Answer } from "../components/chat/Part1Answer";
 import type { FollowChip } from "../components/chat/Part1Answer";
 import { SelectionCard } from "../components/chat/Part1Selection";
 
-// The demo page (/): one column, a prompt box, cached answers. Part 1 (Find) questions answer as
-// chat; Part 2 (Decide) arrives as a memo card. No model, no network: answers come from memos.json.
+// The demo page (/): one column, one question. The only option is the case's Part 1 prompt, answered
+// from data/part1 (the sealed pick, findings, product fine print and the reasoning trace). No memos load
+// here; the cockpit keeps its own routes.
 
-// kind "part1": the cached Part 1 deliverable; "selection": the why-this-company card alone.
-interface Turn { id: number; prompt: string; memoId: string | null; kind?: "part1" | "selection"; ticker?: string }
+// kind "part1": the cached Part 1 deliverable; "selection": the why-this-company card alone; "other": anything else.
+interface Turn { id: number; prompt: string; kind: "part1" | "selection" | "other"; ticker?: string }
 
-// Generator kinds, in Part 1 (Find, chat) to Part 2 (Decide, memo) order.
-const KIND_ORDER = ["needles", "needle", "why_company", "findings", "products", "product", "peers", "priced_in", "decides", "ceo_memo", "prove_wrong", "ai_wrong", "moat", "how_it_works", "limits", "league"];
-const KIND_LABEL: Record<string, string> = {
-  needles: "Needles across the ten", why_company: "Why this company", products: "Products", decides: "CEO moves", limits: "Honest limits",
-  needle: "Sharpest Needle", findings: "Findings", product: "Product fine print", peers: "Peers", priced_in: "Priced in?",
-  league: "Ranking", ceo_memo: "CEO memo", prove_wrong: "What would prove us wrong", ai_wrong: "Where the AI was wrong",
-  moat: "Data moat", how_it_works: "How it works",
-};
-const kindRank = (k?: string) => { const i = KIND_ORDER.indexOf((k ?? "").toLowerCase()); return i < 0 ? 50 : i; };
-
-function suggestionsFor(file: MemosFile | null, ticker: string | null): MemoRecord[] {
-  if (!file) return [];
-  const byId = new Map(file.memos.map((m) => [m.id, m]));
-  // Company-agnostic flow when no company is picked; the company's own flow once one is.
-  const byTicker = (file.suggested_by_ticker as Record<string, string[]> | undefined)?.[ticker ?? ""];
-  if (!ticker || byTicker) {
-    const ids = ticker ? byTicker! : file.suggested ?? [];
-    return ids.map((id) => byId.get(id)).filter((m): m is MemoRecord => !!m).slice(0, 8);
-  }
-  const base = (file.suggested ?? []).map((id) => byId.get(id)).filter((m): m is MemoRecord => !!m);
-  const out: MemoRecord[] = [];
-  for (const s of base) {
-    if (!s.ticker || !ticker || s.ticker === ticker) { out.push(s); continue; }
-    const alt = file.memos.find((m) => m.ticker === ticker && m.kind === s.kind);
-    if (alt) out.push(alt);
-  }
-  if (out.length < 6 && ticker) {
-    for (const m of file.memos.filter((x) => x.ticker === ticker).sort((a, b) => kindRank(a.kind) - kindRank(b.kind))) {
-      if (out.length >= 6) break;
-      if (!out.includes(m)) out.push(m);
-    }
-  }
-  return out.slice(0, 6);
-}
+const noFollow = (): FollowChip[] => [];
 
 export default function Chat() {
-  const { file, sample, error, loading, prefix, indexOnly } = useMemos();
-  // Answers with blocks: fetched one by one when the file is the small index.
-  const [loaded, setLoaded] = useState<Map<string, MemoRecord>>(new Map());
-  const [failed, setFailed] = useState<Set<string>>(new Set());
-  const { meta, loading: metaLoading } = useData();
   const part1 = usePart1();
+  const { meta, loading: metaLoading } = useData();
   const nameOf = useCallback((t: string) => meta?.companies.find((c) => c.ticker === t)?.name ?? t, [meta]);
   const [params] = useSearchParams();
-  // undefined until the default rule has run; null = no company picked.
-  const [ticker, setTicker] = useState<string | null | undefined>(undefined);
   const [turns, setTurns] = useState<Turn[]>([]);
   const [text, setText] = useState("");
   const nextId = useRef(1);
   const endRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLTextAreaElement>(null);
   const sentQ = useRef<string | null>(null);
 
-  // Default company: only when the exporter says the team picked one (meta.default_ticker_source "pick").
-  // "unpicked" (or no rule exported) starts with no company; the league leader is never auto-selected.
-  const picked = meta?.default_ticker_source === "pick" ? (meta.default_ticker ?? null) : null;
-  useEffect(() => { if (file && ticker === undefined && !metaLoading) setTicker(picked); }, [file, ticker, metaLoading, picked]);
-
-  const tickers = useMemo(() => [...new Set((file?.memos ?? []).map((m) => m.ticker).filter((t): t is string => !!t))].sort(), [file]);
-  const suggested = useMemo(() => suggestionsFor(file, ticker ?? null), [file, ticker]);
-  const byId = useMemo(() => new Map((file?.memos ?? []).map((m) => [m.id, m])), [file]);
-  const answerOf = (id: string): MemoRecord | undefined => (indexOnly ? loaded.get(id) : byId.get(id));
-  const labelFor = useCallback((id: string) => byId.get(id)?.prompt ?? null, [byId]);
-
-  const send = useCallback((prompt: string, memo?: MemoRecord) => {
+  const send = useCallback((prompt: string) => {
     const p = prompt.trim();
     if (!p) return;
-    // The Part 1 prompt (and its aliases) answers with the sealed pick; "why <company>" with the selection card.
-    if (!memo && part1.index?.picked.length && isPart1Query(p)) {
-      setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memoId: null, kind: "part1" }]);
-      setText("");
-      return;
-    }
-    if (!memo && part1.selection?.picked?.length) {
+    let turn: Turn = { id: nextId.current++, prompt: p, kind: "other" };
+    if (part1.index?.picked.length && isPart1Query(p)) turn = { ...turn, kind: "part1" };
+    else if (part1.selection?.picked?.length) {
       const pk = part1.selection.picked;
       const names = (meta?.companies ?? []).flatMap((c) => [c.ticker, c.name ?? ""]);
       if (isWhyCompanyQuery(p, names)) {
         const lower = p.toLowerCase();
         const named = pk.find((t) => new RegExp(`\\b${t.toLowerCase()}\\b`).test(lower) || lower.includes(nameOf(t).toLowerCase()));
-        setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memoId: null, kind: "selection", ticker: named ?? pk[0] }]);
-        setText("");
-        return;
+        turn = { ...turn, kind: "selection", ticker: named ?? pk[0] };
       }
     }
-    const m = memo ?? matchMemo(file, p, ticker === undefined ? picked : ticker).memo;
-    setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memoId: m?.id ?? null }]);
+    setTurns((ts) => [...ts, turn]);
     setText("");
-  }, [file, ticker, picked, part1.index, part1.selection, meta, nameOf]);
-
-  // ask_next chips under the Part 1 answer: that company's memo flow (the selection card already says why).
-  const followFor = useCallback((t: string): FollowChip[] => {
-    const ids = (file?.suggested_by_ticker as Record<string, string[]> | undefined)?.[t] ?? [];
-    return ids.map((id) => byId.get(id)).filter((m): m is MemoRecord => !!m)
-      .filter((m) => !(part1.selection && m.kind === "why_company"))
-      .map((m) => ({ key: m.id, label: m.prompt, onClick: () => send(m.prompt, m) }));
-  }, [file, byId, send, part1.selection]);
-
-  const askId = useCallback((id: string) => { const m = byId.get(id); if (m) send(m.prompt, m); }, [byId, send]);
+  }, [part1.index, part1.selection, meta, nameOf]);
 
   // ?q= sends on load (judge links open on an answer).
   const q = params.get("q");
   useEffect(() => {
-    if ((!file && !part1.index) || !q || sentQ.current === q || metaLoading || part1.loading) return;
+    if (!q || sentQ.current === q || metaLoading || part1.loading) return;
     sentQ.current = q;
     send(q);
-  }, [file, q, send, metaLoading, part1.index, part1.loading]);
-
-  // Fetch each asked answer once (index mode).
-  useEffect(() => {
-    if (!indexOnly || !prefix) return;
-    for (const t of turns) {
-      const id = t.memoId;
-      if (!id || loaded.has(id) || failed.has(id)) continue;
-      loadMemo(prefix, id).then(
-        (m) => { if (m) setLoaded((x) => new Map(x).set(id, m)); else setFailed((x) => new Set(x).add(id)); },
-        () => setFailed((x) => new Set(x).add(id)),
-      );
-    }
-  }, [turns, indexOnly, prefix, loaded, failed]);
+  }, [q, send, metaLoading, part1.loading]);
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length]);
 
@@ -142,55 +59,28 @@ export default function Chat() {
     if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); send(text); }
   };
 
-  const chip = (m: MemoRecord) => (
-    <button key={m.id} type="button" onClick={() => send(m.prompt, m)}
-      className="rounded-full border border-line bg-surface px-3.5 py-2 text-left text-[14px] leading-snug hover:border-purple hover:text-purple shadow-card">
-      {m.format === "memo" && <span className="mr-1.5 text-[10px] font-bold uppercase tracking-wide text-purple">Memo</span>}{m.prompt}
+  const ready = !!part1.index?.picked.length;
+  const hero = (
+    <button type="button" onClick={() => send(PART1_PROMPT)} data-hero
+      className="rounded-2xl border-2 border-purple bg-purple dark:bg-purple-deep px-4 py-3 text-left text-[15.5px] font-semibold leading-snug text-white shadow-card hover:opacity-95">
+      <span className="mb-0.5 block text-[10.5px] font-bold uppercase tracking-[0.14em] text-white/80">Part 1</span>{PART1_PROMPT}
     </button>
   );
-
-  const grouped = useMemo(() => {
-    const g = new Map<string, MemoRecord[]>();
-    for (const m of file?.memos ?? []) { const k = m.kind ?? "other"; if (!g.has(k)) g.set(k, []); g.get(k)!.push(m); }
-    return [...g.entries()].sort((a, b) => kindRank(a[0]) - kindRank(b[0]));
-  }, [file]);
 
   return (
     <div className="chat-page min-h-screen flex flex-col bg-bg">
       <header data-chat-chrome className="no-print mx-auto w-full max-w-[760px] px-4 pt-8 sm:pt-12 pb-4">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <h1 className="font-display text-[40px] sm:text-[48px] leading-none tracking-wide text-purple" aria-label="NEEDLE">NEE<span className="text-teal">DLE</span></h1>
-            <p className="mt-2 text-[15px] text-muted">Ask for a memo. Every number is cited to the page.</p>
-          </div>
-          {tickers.length > 0 && (
-            <label className="shrink-0 mt-1 inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-[12px] font-semibold text-muted">
-              <span className="sr-only">Company</span>
-              <select value={ticker ?? ""} onChange={(e) => setTicker(e.target.value || null)} className="bg-transparent text-fg font-semibold outline-none">
-                <option value="">Pick a company</option>
-                {tickers.map((t) => <option key={t} value={t}>{t}</option>)}
-              </select>
-            </label>
-          )}
-        </div>
-        {sample && <p role="note" className="mt-3 rounded-md border border-warn/50 bg-warn/10 px-3 py-1.5 text-[12px] text-warn">Sample answers: ui/public/data/memos.json was not found, so this is the 3-memo fixture in public/data/_sample/.</p>}
+        <h1 className="font-display text-[40px] sm:text-[48px] leading-none tracking-wide text-purple" aria-label="NEEDLE">NEE<span className="text-teal">DLE</span></h1>
+        <p className="mt-2 text-[15px] text-muted">Every number is cited to the page.</p>
       </header>
 
       <main id="main" className="mx-auto w-full max-w-[760px] flex-1 px-4 pb-6">
-        {loading && <p role="status" className="text-sm text-muted">Loading…</p>}
-        {error && !file && <p role="alert" className="text-sm text-bad">{error}</p>}
-        {(file || part1.index) && turns.length === 0 && (
-          <section aria-label="Suggested questions" className="no-print pt-6">
-            <div className="mb-3 text-[12px] font-semibold uppercase tracking-wide text-muted">Start here: find, then decide</div>
-            <div className="flex flex-col items-start gap-2">
-              {part1.index && part1.index.picked.length > 0 && (
-                <button type="button" onClick={() => send(PART1_PROMPT)} data-hero
-                  className="rounded-2xl border-2 border-purple bg-purple dark:bg-purple-deep px-4 py-3 text-left text-[15.5px] font-semibold leading-snug text-white shadow-card hover:opacity-95">
-                  <span className="mb-0.5 block text-[10.5px] font-bold uppercase tracking-[0.14em] text-white/80">Part 1</span>{PART1_PROMPT}
-                </button>
-              )}
-              {suggested.map(chip)}
-            </div>
+        {part1.loading && <p role="status" className="text-sm text-muted">Loading…</p>}
+        {part1.error && !ready && <p role="alert" className="text-sm text-bad">{part1.error}</p>}
+        {ready && turns.length === 0 && (
+          <section aria-label="Suggested question" className="no-print pt-6">
+            <div className="mb-3 text-[12px] font-semibold uppercase tracking-wide text-muted">Start here</div>
+            <div className="flex flex-col items-start gap-2">{hero}</div>
           </section>
         )}
         <ol className="space-y-8 pt-4" aria-live="polite">
@@ -200,40 +90,17 @@ export default function Chat() {
                 <div className="max-w-[85%] rounded-2xl rounded-br-sm bg-purple dark:bg-purple-deep px-4 py-2.5 text-[15px] text-white">{t.prompt}</div>
               </div>
               {t.kind === "part1" ? (
-                <Part1Answer part1={part1} instant={i < turns.length - 1} nameOf={nameOf} followFor={followFor} />
+                <Part1Answer part1={part1} instant={i < turns.length - 1} nameOf={nameOf} followFor={noFollow} />
               ) : t.kind === "selection" && part1.selection ? (
                 <div className="space-y-2">
                   {part1.sample && <p role="note" className="text-[12px] text-muted">Sample data: the blind reasoning pass has not run yet</p>}
                   <SelectionCard selection={part1.selection} ticker={t.ticker ?? part1.selection.picked[0]} nameOf={nameOf} seal={part1.index?.sealed} prefix={part1.prefix} />
-                  <div className="no-print flex flex-wrap gap-2" aria-label="Ask next">
-                    <button type="button" onClick={() => send(PART1_PROMPT)} className="rounded-full border border-purple/40 bg-surface px-3 py-1.5 text-[13px] text-purple hover:bg-chip text-left">{PART1_PROMPT}</button>
-                  </div>
+                  {ready && <div className="no-print flex flex-col items-start gap-2">{hero}</div>}
                 </div>
-              ) : t.memoId ? (
-                answerOf(t.memoId)
-                  ? <Answer memo={answerOf(t.memoId)!} instant={i < turns.length - 1} onAsk={askId} labelFor={labelFor} />
-                  : failed.has(t.memoId)
-                    ? <p role="alert" className="text-[14px] text-bad">Could not load this answer (data/memos/{t.memoId}.json).</p>
-                    : <p role="status" className="text-[14px] text-muted">Loading the cited answer…</p>
               ) : (
-                <div className="space-y-3 text-[15px]">
-                  <p>I can write these memos:</p>
-                  <div className="flex flex-col items-start gap-2">{suggested.map(chip)}</div>
-                  <details className="no-print rounded-md border border-line bg-surface px-3 py-2">
-                    <summary className="cursor-pointer text-[13px] font-semibold">Show all prompts ({file?.memos.length ?? 0})</summary>
-                    <div className="mt-2 space-y-3">
-                      {grouped.map(([k, ms]) => (
-                        <div key={k}>
-                          <div className="text-[11px] font-semibold uppercase tracking-wide text-muted">{KIND_LABEL[k] ?? k.replace(/_/g, " ")}</div>
-                          <ul className="mt-1 space-y-1">
-                            {ms.map((m) => (
-                              <li key={m.id}><button type="button" onClick={() => send(m.prompt, m)} className="text-left text-[13px] text-purple hover:underline">{m.prompt}{m.ticker ? <span className="text-muted"> · {m.ticker}</span> : null}</button></li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </details>
+                <div className="space-y-3">
+                  <p className="text-[14px] text-muted">This demo answers the case's Part 1 prompt. Click the chip above.</p>
+                  {ready && <div className="no-print flex flex-col items-start gap-2">{hero}</div>}
                 </div>
               )}
             </li>
@@ -246,13 +113,13 @@ export default function Chat() {
         <form className="mx-auto w-full max-w-[760px] px-4 py-3" onSubmit={(e) => { e.preventDefault(); send(text); }}>
           <div className="flex items-end gap-2 rounded-xl border border-line bg-surface px-3 py-2 shadow-card focus-within:border-purple">
             <label htmlFor="chat-input" className="sr-only">Ask NEEDLE</label>
-            <textarea id="chat-input" ref={inputRef} value={text} onChange={(e) => setText(e.target.value)} onKeyDown={onKey} rows={1}
-              placeholder="Ask about a company, a finding, or for the CEO memo"
+            <textarea id="chat-input" value={text} onChange={(e) => setText(e.target.value)} onKeyDown={onKey} rows={1}
+              placeholder="Ask the Part 1 question"
               className="flex-1 resize-none bg-transparent py-1.5 text-[15px] outline-none placeholder:text-muted max-h-40" />
             <button type="submit" disabled={!text.trim()} className="rounded-lg bg-purple dark:bg-purple-deep px-3.5 py-1.5 text-[14px] font-semibold text-white disabled:opacity-40">Send</button>
           </div>
           <div className="mt-1.5 flex items-center justify-between text-[11px] text-muted">
-            <span>Cached answers{file?.generated_at ? ` · ${file.generated_at.slice(0, 10)}` : ""} · Enter to send, Shift+Enter for a new line</span>
+            <span>Cached answer{part1.index?.generated_at ? ` · ${part1.index.generated_at.slice(0, 10)}` : ""} · Enter to send, Shift+Enter for a new line</span>
             <Link to="/cockpit" className="underline hover:text-purple">Full cockpit</Link>
           </div>
         </form>
