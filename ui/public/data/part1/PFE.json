@@ -3110,6 +3110,63 @@
      "withheld_reason": "machine data, no page copy: quote withheld, value shown",
      "value": null,
      "shown": "direction only"
+    },
+    {
+     "cite_id": "gdelt:doc:timelinevolraw:PFE:top_products:202607",
+     "doc_title": "GDELT press-attention series",
+     "period": "July 2026",
+     "page": null,
+     "quote": null,
+     "excerpt": null,
+     "url": null,
+     "deep_link": null,
+     "viewer_link": null,
+     "value": null,
+     "withheld": true,
+     "withheld_reason": "machine data: press-mention count series",
+     "verification": {
+      "status": "machine_data"
+     },
+     "ref": "gdelt:doc:timelinevolraw:PFE:top_products:202607",
+     "shown": "count only"
+    },
+    {
+     "cite_id": "gdelt:doc:timelinevolraw:PFE:top_products:202608",
+     "doc_title": "GDELT press-attention series",
+     "period": "August 2026",
+     "page": null,
+     "quote": null,
+     "excerpt": null,
+     "url": null,
+     "deep_link": null,
+     "viewer_link": null,
+     "value": null,
+     "withheld": true,
+     "withheld_reason": "machine data: press-mention count series",
+     "verification": {
+      "status": "machine_data"
+     },
+     "ref": "gdelt:doc:timelinevolraw:PFE:top_products:202608",
+     "shown": "count only"
+    },
+    {
+     "cite_id": "gdelt:doc:timelinevolraw:PFE:top_products:202609",
+     "doc_title": "GDELT press-attention series",
+     "period": "September 2026",
+     "page": null,
+     "quote": null,
+     "excerpt": null,
+     "url": null,
+     "deep_link": null,
+     "viewer_link": null,
+     "value": null,
+     "withheld": true,
+     "withheld_reason": "machine data: press-mention count series",
+     "verification": {
+      "status": "machine_data"
+     },
+     "ref": "gdelt:doc:timelinevolraw:PFE:top_products:202609",
+     "shown": "count only"
     }
    ],
    "derived": {

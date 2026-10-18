@@ -641,9 +641,15 @@ def gate_priced_evidence(rec):
     if not isinstance(pi, dict):
         return
     for c in pi.get("cites") or []:
-        if isinstance(c, dict) and withhold_kind(c) == "machine_data":
+        if isinstance(c, dict) and withhold_kind(c) == "machine_data" and not str(c.get("cite_id")).startswith("gdelt:"):
             c["value"] = None
             c["shown"] = "direction only"
+    have = {c.get("cite_id") for c in pi.get("cites") or [] if isinstance(c, dict)}
+    for e in pi.get("evidence") or []:
+        for cid in (e.get("cites") or []) if isinstance(e, dict) else []:
+            if isinstance(cid, str) and cid.startswith("gdelt:") and cid not in have:
+                pi.setdefault("cites", []).append(gdelt_cite(cid))
+                have.add(cid)
     gated = gated_figures(rec)
     for e in pi.get("evidence") or []:
         if not isinstance(e, dict):
@@ -654,6 +660,20 @@ def gate_priced_evidence(rec):
                 e[k], m = withhold_ungated(e[k], gated, keep=_small_count)
                 n += m
         e["figures_withheld"] = n
+
+
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+          "November", "December"]
+
+
+def gdelt_cite(cid):
+    """A row-style, withheld machine-data cite for a GDELT press-mention series id (no evidence object exists)."""
+    m = re.search(r"(\d{4})(\d{2})$", cid)
+    period = f"{MONTHS[int(m.group(2)) - 1]} {m.group(1)}" if m and 1 <= int(m.group(2)) <= 12 else None
+    return {"cite_id": cid, "doc_title": "GDELT press-attention series", "period": period, "page": None,
+            "quote": None, "excerpt": None, "url": None, "deep_link": None, "viewer_link": None, "value": None,
+            "withheld": True, "withheld_reason": "machine data: press-mention count series",
+            "verification": {"status": "machine_data"}, "ref": cid, "shown": "count only"}
 
 
 def priced_evidence_problems(rec, t):
@@ -682,8 +702,8 @@ def priced_evidence_problems(rec, t):
         for cid in e.get("cites") or []:
             if isinstance(cid, dict):
                 continue  # an inline cite object: checked by the withholding walk
-            if cid not in ids and not str(cid).startswith(("gdelt:", "row:")):
-                errs.append(f"{p} cite {cid} is not a cite on priced_in")
+            if cid not in ids:
+                errs.append(f"{p} cite {cid} does not resolve to a cite on priced_in")
     return errs
 
 
