@@ -47,12 +47,15 @@ Each template is a cash-flow generator over the decision window plus a tail (hor
 | Signal | Threshold | Source and lag | Check month | Effect |
 |---|---|---|---|---|
 | ZS breadth, return-writing, depth | < 30% / < 50% / < 30% | paid claims (IQVIA, Symphony) | 6 | Bayes on scenarios, P(breach given bear, base, bull) = 1.0, 0.55, 0.10 |
+| Physician contact breadth | < 30% of baseline | Open Payments (CMS), annual, published about 6 months after year end | 6 | ZS likelihoods |
 | Year-one net sales | < 80% of forecast | company 10-Q, ~40 days after quarter end | 12 | p_bear set to at least 0.70 |
 | Commercial coverage | < 50% of lives | payer trackers (paid) or company commentary | 6 | Bayes, 1.0, 0.75, 0.50 |
 | Medicaid units | < 80% of plan | Medicaid SDUD, 60 days plus posting lag | 9 | same as year-one |
 | Self-pay share (DTC moves) | < 35% of new scripts | company disclosure | 6 | ZS likelihoods |
 | Safety | FAERS serious reports +50% YoY and above rivals | FAERS quarterly, ~1 quarter lag | 3 | human review, no EV change |
 | Trial enrollment | < 80% of plan | ClinicalTrials.gov | 6 | human review, no EV change |
+
+The physician contact breadth baseline is the latest program year's distinct physicians in `rx/open_payments_physicians.csv`, split into paid relationships (consulting, speaking, honoraria) and light-touch contact (food, travel, education), each cited by row with its `api_exact_distinct` status (read as machine data) in the note. It applies the same ZS month-6 rule (30% of baseline reached) as the other breadth signals and counts in the ZS evidence family; a drug with no row shows the research threshold alone, labelled as the fallback.
 
 Revised EV: p'_s = p_s L_s / sum(p_u L_u); EV' = sum p'_s x (PV of expected cash after the check month, sunk cost excluded); stop if EV' is below salvage less exit costs. With one ZS breach from (0.50, 0.11, 0.39) the posterior is (0.834, 0.101, 0.065), the spec's worked example. Medicare Part D PUF lags about 18 months, so it can confirm but never trigger inside the window.
 

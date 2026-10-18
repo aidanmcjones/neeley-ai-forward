@@ -50,6 +50,11 @@ KILL_SIGNALS = {s.id: s for s in (
     KillSignal("zs_breadth", "ZS breadth: priority-target prescribers with >= 1 new patient", "< 30%", 0.30, "below", "share",
                "paid claims (IQVIA / Symphony); no free equivalent", "claims weekly; visible by month 3", 6, "bayes", "zs",
                ZS_LIKELIHOOD, "ZS, 18 specialty biologic launches: ~90% of successes met each threshold, none of the failures did"),
+    KillSignal("physician_breadth", "Physician contact breadth (Open Payments)", "< 30% of baseline", 0.30, "below", "share",
+               "Open Payments (CMS) distinct physicians with any payment or transfer naming the product",
+               "annual file, published about 6 months after year end", 6, "bayes", "zs", ZS_LIKELIHOOD,
+               "ZS month-6 breadth rule (30% of baseline reached); baseline = latest program year's distinct physicians, "
+               "split into paid relationships (consulting, speaking, honoraria) and light-touch (food, travel, education)"),
     KillSignal("zs_return_writing", "ZS return-writing rate", "< 50%", 0.50, "below", "share", "paid claims", "claims weekly", 6,
                "bayes", "zs", ZS_LIKELIHOOD, "ZS: all three met = nine times more likely to succeed"),
     KillSignal("zs_depth", "ZS depth: writers with >= 3 patients", "< 30%", 0.30, "below", "share", "paid claims", "claims weekly", 6,

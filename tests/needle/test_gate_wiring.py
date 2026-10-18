@@ -216,7 +216,23 @@ def test_kill_table_baselines_from_rx_tables():
     rows = decide_cli.kill_table(r, {"product": "zepbound"})
     ctx = next(x for x in rows if x["id"] == "rx_context")
     assert any("Part D prescribers" in t for _, _, t in ctx["context"])
-    assert all(c.verification.ok for _, c, _ in ctx["context"] if c is not None)
+    assert all(c.verification.ok for _, cc, _ in ctx["context"] if cc is not None for c in (cc if isinstance(cc, list) else [cc]))
+
+
+@needs_real
+def test_physician_breadth_kill_signal_cited_with_fallback():
+    from agent.needle.quant import decide_cli, kill as K, moves as M, verified_tables as V
+    assert K.KILL_SIGNALS["physician_breadth"].value == 0.30 and "physician_breadth" in M.get_template("M1").kill_signals
+    n, cits, txt = V.physician_breadth("keytruda")["physician_breadth"]
+    assert n == 9230 and len(cits) == 3 and all(c.verification.ok for c in cits)
+    assert "PY2024" in txt and "paid relationships" in txt and "light-touch" in txt and "api_exact_distinct" in txt
+    assert all("api_exact_distinct" in (c.verification.detail or "") for c in cits)
+    r = D.evaluate_move("M1", {}, [])
+    rows = decide_cli.kill_table(r, {"product": "keytruda"})
+    assert next(x for x in rows if x["id"] == "physician_breadth")["baseline"][0] == 9230
+    assert V.physician_breadth("no_such_drug") == {}
+    rows = decide_cli.kill_table(r, {"product": "no_such_drug"})
+    assert next(x for x in rows if x["id"] == "physician_breadth")["baseline"] is None
 
 
 def test_wave3_caveat_columns_reach_the_note():
