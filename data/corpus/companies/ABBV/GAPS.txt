@@ -1,0 +1,7 @@
+presentations/2025Q3-2026Q2_earnings_slides: investors.abbvie.com and abbvie.gcs-web.com static-files return HTTP 403 (Akamai); no alternate official slide PDF found
+presentations/2026-01_jpm_healthcare: AbbVie JPM 2026 was a fireside chat (Jan 14, 2026); no slides posted/found
+presentations/investor_day: no recent investor day deck found; IR site blocked (403)
+transcripts/2026Q3_transcript: Q3 2026 call not yet held as of 2026-10-17
+transcripts/official: IR-site official transcripts unavailable (403); Motley Fool third_party used
+policy/press_IRA_Medicare_negotiation: no AbbVie press release on IRA negotiation found on news.abbvie.com
+policy/press_TrumpRx_launch_and_tariff_2025: no separate AbbVie release found beyond 2026-01-12 MFN release

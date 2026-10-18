@@ -1,0 +1,307 @@
+#!/usr/bin/env python3
+"""agent-chat: a message channel between the collaborators' Claude agents.
+
+Threads are GitHub issues labeled `agent-chat` in this repo; messages are the
+issue body and its comments. Each message carries a hidden header saying who
+sent it and who it is for. A message counts as read once it has an 'eyes'
+reaction, so the sender can see a read receipt on GitHub.
+
+Needs only python3 and an authenticated `gh`. See docs/agent-chat.md.
+
+  agent-chat inbox                     unread messages addressed to me
+  agent-chat threads [--state all]     list threads
+  agent-chat send --to LOGIN|all --title T [--kind K] [BODY | - | --body-file F]
+  agent-chat reply N [--kind K] [BODY | - | --body-file F]
+  agent-chat read N                    print a thread, mark its messages to me read
+  agent-chat close N [NOTE]
+  agent-chat watch [--interval 60]     print new unread messages as they arrive
+"""
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+
+LABEL = "agent-chat"
+HEADER_RE = re.compile(r"<!--\s*agent-chat\s+(.*?)\s*-->")
+KINDS = ("note", "question", "request", "handoff", "done", "blocked")
+
+
+def gh(*args, input_json=None, check=True):
+    cmd = ["gh", *args]
+    if input_json is not None:
+        cmd += ["--input", "-"]
+    res = subprocess.run(
+        cmd,
+        input=json.dumps(input_json) if input_json is not None else None,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    if check and res.returncode != 0:
+        sys.exit(f"agent-chat: gh {' '.join(args[:3])} failed: {res.stderr.strip()}")
+    return res
+
+
+def api(path, method="GET", body=None, paginate=False):
+    args = ["api", path, "-X", method]
+    if paginate:
+        args.append("--paginate")
+    out = gh(*args, input_json=body).stdout
+    if not out.strip():
+        return None
+    if not paginate:
+        return json.loads(out)
+    # --paginate prints one JSON array per page back to back
+    items, dec, i = [], json.JSONDecoder(), 0
+    while i < len(out):
+        if out[i].isspace():
+            i += 1
+            continue
+        page, i = dec.raw_decode(out, i)
+        items += page
+    return items
+
+
+def repo():
+    if os.environ.get("AGENT_CHAT_REPO"):
+        return os.environ["AGENT_CHAT_REPO"]
+    url = subprocess.run(
+        ["git", "remote", "get-url", "origin"], capture_output=True, text=True
+    ).stdout.strip()
+    m = re.search(r"github\.com[:/](.+?/.+?)(?:\.git)?$", url)
+    if not m:
+        sys.exit("agent-chat: no GitHub origin; set AGENT_CHAT_REPO=owner/name")
+    return m.group(1)
+
+
+_me = None
+
+
+def me():
+    global _me
+    if _me is None:
+        _me = gh("api", "user", "--jq", ".login").stdout.strip()
+    return _me
+
+
+def header(to, kind):
+    return (
+        f"<!-- agent-chat from={me()} to={to} kind={kind} -->\n"
+        f"**{kind}** from {me()}'s agent → {'everyone' if to == 'all' else to}\n\n"
+    )
+
+
+def parse(item, thread):
+    """Turn an issue or comment into a message dict."""
+    body = item.get("body") or ""
+    fields = {}
+    m = HEADER_RE.search(body)
+    if m:
+        fields = dict(kv.split("=", 1) for kv in m.group(1).split() if "=" in kv)
+        body = HEADER_RE.sub("", body, count=1).lstrip()
+        body = re.sub(r"^\*\*\w+\*\* from .*?\n\n", "", body, count=1)
+    author = item["user"]["login"]
+    return {
+        "thread": thread["number"],
+        "title": thread["title"],
+        "id": item["id"],
+        "is_issue": "number" in item,
+        "from": fields.get("from", author),
+        "agent": bool(m),
+        "to": fields.get("to", "all"),
+        "kind": fields.get("kind", "note"),
+        "at": item["created_at"],
+        "url": item["html_url"],
+        "read": (item.get("reactions") or {}).get("eyes", 0) > 0,
+        "body": body.strip(),
+    }
+
+
+def threads(state="open"):
+    return api(f"repos/{repo()}/issues?labels={LABEL}&state={state}&per_page=100", paginate=True) or []
+
+
+def messages(thread):
+    msgs = [parse(thread, thread)]
+    if thread.get("comments"):
+        for c in api(f"repos/{repo()}/issues/{thread['number']}/comments?per_page=100", paginate=True):
+            msgs.append(parse(c, thread))
+    return msgs
+
+
+def for_me(m):
+    return m["from"] != me() and m["to"] in ("all", me())
+
+
+def mark_read(m):
+    kind = "issues" if m["is_issue"] else "issues/comments"
+    target = m["thread"] if m["is_issue"] else m["id"]
+    api(f"repos/{repo()}/{kind}/{target}/reactions", "POST", {"content": "eyes"})
+
+
+def show(m, full=True):
+    flag = "" if m["read"] else " [unread]"
+    who = m["from"] + ("'s agent" if m["agent"] else "")
+    print(f"#{m['thread']} {m['title']} | {m['kind']} from {who} → {m['to']} | {m['at']}{flag}")
+    print(f"  {m['url']}")
+    if full and m["body"]:
+        print("  " + m["body"].replace("\n", "\n  "))
+    print()
+
+
+def read_body(args):
+    if args.body_file:
+        return open(args.body_file, encoding="utf-8").read()
+    if args.body == "-" or (args.body is None and not sys.stdin.isatty()):
+        return sys.stdin.read()
+    if args.body is None:
+        sys.exit("agent-chat: give a body, '-' for stdin, or --body-file")
+    return args.body
+
+
+def ensure_label():
+    r = gh("api", f"repos/{repo()}/labels/{LABEL}", check=False)
+    if r.returncode != 0:
+        api(f"repos/{repo()}/labels", "POST",
+            {"name": LABEL, "color": "5319e7", "description": "Agent-to-agent messages (scripts/agent-chat)"})
+
+
+def unread():
+    out = []
+    for t in threads():
+        out += [m for m in messages(t) if for_me(m) and not m["read"]]
+    return out
+
+
+def cmd_inbox(args):
+    try:
+        msgs = unread()
+    except SystemExit:
+        if args.hook:
+            return  # offline or no gh auth: never block a session start
+        raise
+    if args.hook:
+        if msgs:
+            print(f"agent-chat: {len(msgs)} unread message(s) from your collaborator's agent "
+                  f"(run `scripts/agent-chat read N` to read and acknowledge):")
+            for m in msgs:
+                print(f"- #{m['thread']} {m['title']} ({m['kind']} from {m['from']}, {m['at']})")
+        return
+    if args.json:
+        print(json.dumps(msgs, indent=2))
+        return
+    if not msgs:
+        print("agent-chat: inbox empty")
+    for m in msgs:
+        show(m)
+
+
+def cmd_threads(args):
+    for t in threads(args.state):
+        msgs = messages(t)
+        n_unread = sum(1 for m in msgs if for_me(m) and not m["read"])
+        print(f"#{t['number']} [{t['state']}] {t['title']} | {len(msgs)} msg"
+              f"{', %d unread' % n_unread if n_unread else ''} | {t['updated_at']}")
+
+
+def cmd_send(args):
+    ensure_label()
+    body = header(args.to, args.kind) + read_body(args)
+    issue = api(f"repos/{repo()}/issues", "POST",
+                {"title": args.title, "body": body, "labels": [LABEL]})
+    print(f"sent: #{issue['number']} {issue['html_url']}")
+
+
+def cmd_reply(args):
+    thread = api(f"repos/{repo()}/issues/{args.number}")
+    to = args.to
+    if to is None:  # default: whoever else is in the thread
+        others = [m["from"] for m in messages(thread) if m["from"] != me()]
+        to = others[-1] if others else "all"
+    body = header(to, args.kind) + read_body(args)
+    c = api(f"repos/{repo()}/issues/{args.number}/comments", "POST", {"body": body})
+    print(f"replied: {c['html_url']}")
+
+
+def cmd_read(args):
+    thread = api(f"repos/{repo()}/issues/{args.number}")
+    for m in messages(thread):
+        show(m)
+        if for_me(m) and not m["read"]:
+            mark_read(m)
+
+
+def cmd_close(args):
+    if args.note:
+        api(f"repos/{repo()}/issues/{args.number}/comments", "POST",
+            {"body": header("all", "done") + args.note})
+    api(f"repos/{repo()}/issues/{args.number}", "PATCH", {"state": "closed"})
+    print(f"closed #{args.number}")
+
+
+def cmd_watch(args):
+    seen = set()
+    while True:
+        try:
+            for m in unread():
+                if m["id"] not in seen:
+                    seen.add(m["id"])
+                    show(m, full=False)
+                    sys.stdout.flush()
+        except SystemExit as e:
+            print(f"agent-chat watch: {e}", file=sys.stderr)
+        time.sleep(args.interval)
+
+
+def main():
+    p = argparse.ArgumentParser(prog="agent-chat", description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    s = sub.add_parser("inbox")
+    s.add_argument("--json", action="store_true")
+    s.add_argument("--hook", action="store_true", help="terse, silent on errors (SessionStart)")
+    s.set_defaults(fn=cmd_inbox)
+
+    s = sub.add_parser("threads")
+    s.add_argument("--state", default="open", choices=["open", "closed", "all"])
+    s.set_defaults(fn=cmd_threads)
+
+    for name, fn in (("send", cmd_send), ("reply", cmd_reply)):
+        s = sub.add_parser(name)
+        if name == "reply":
+            s.add_argument("number", type=int)
+            s.add_argument("--to", default=None)
+        else:
+            s.add_argument("--to", required=True, help="GitHub login, or 'all'")
+            s.add_argument("--title", required=True)
+        s.add_argument("--kind", default="note", choices=KINDS)
+        s.add_argument("body", nargs="?")
+        s.add_argument("--body-file")
+        s.set_defaults(fn=fn)
+
+    s = sub.add_parser("read")
+    s.add_argument("number", type=int)
+    s.set_defaults(fn=cmd_read)
+
+    s = sub.add_parser("close")
+    s.add_argument("number", type=int)
+    s.add_argument("note", nargs="?")
+    s.set_defaults(fn=cmd_close)
+
+    s = sub.add_parser("watch")
+    s.add_argument("--interval", type=int, default=60)
+    s.set_defaults(fn=cmd_watch)
+
+    for stream in (sys.stdin, sys.stdout, sys.stderr):  # Windows consoles default to cp1252
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+    args = p.parse_args()
+    args.fn(args)
+
+
+if __name__ == "__main__":
+    main()

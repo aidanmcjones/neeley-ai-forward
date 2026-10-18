@@ -1,0 +1,3017 @@
+<!-- source: https://www.astrazeneca.com/content/dam/az/PDF/2025/9m-q3/9M-and-Q3-2025-results-announcement.pdf
+     ticker: AZN  type: interim_report  period: 2025Q3  quality: official  format: pdf
+     retrieved: 2026-10-17T15:46:22.462567+00:00
+     verbatim mechanical extraction; verify cited quotes against the source -->
+
+
+[[page 1 | printed 1]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+ 
+1 
+ 
+ 
+ 
+6 November 2025 
+AstraZeneca results: 9M and Q3 2025 
+Continued strong commercial performance and unprecedented pipeline delivery in the year to date 
+Revenue and EPS summary 
+ 9M 2025         % Change Q3 2025         % Change 
+ $m  Actual  CER1 $m  Actual  CER 
+ - Product Sales 41,035  9  9  14,365  11  9  
+ - Alliance Revenue 2,108  41  41  815  46  44  
+Product Revenue2 43,143  10  11  15,180  12  11  
+Collaboration Revenue 93  (14) (15) 11  (81) (82) 
+Total Revenue 43,236  10  11  15,191  12  10  
+Reported EPS ($) 5.10  43  42  1.64  77  70  
+Core3 EPS ($) 7.04  15  15  2.38  14  12  
+ 
+Key performance elements for 9M 2025 
+(Growth numbers at constant exchange rates) 
+ Total Revenue up 11% to $43,236m, driven by growth in 
+all Therapy Areas, including 16% growth in Oncology and 
+13% growth in R&I 
+ Growth in Total Revenue across all major geographic 
+regions 
+ Core Operating profit increased 13% 
+ Core EPS increased 15% to $7.04 
+ 16 positive Phase III readouts and 31 approvals in major 
+regions 
+ 
+Pascal Soriot, Chief Executive Officer, AstraZeneca, said: 
+“The strong underlying momentum across our business through the 
+first nine months of the year sets us up well to sustain growth through 
+2026 and has us on track to deliver our 2030 ambition. 
+Across our pipeline we have announced an unprecedented 16 
+positive Phase III trials this year, with four since our previous results 
+including high-impact readouts for baxdrostat in hypertension and 
+Enhertu and Datroway in breast cancer. 
+We are also delivering on our strategy to strengthen our operations in 
+the United States to power our growth. This includes a historic 
+agreement with the US government to lower the cost of medicines for 
+American patients, and broadening our US manufacturing footprint 
+having broken ground at our new $4.5bn Virginia manufacturing 
+facility in October.” 
+ 
+ 
+ 
+ 
+ 
+Guidance 
+AstraZeneca reiterates its Total Revenue and Core EPS guidance4 for FY 2025 at CER, based on the average foreign exchange rates 
+through 2024.  
+Total Revenue is expected to increase by a high single-digit percentage 
+Core EPS is expected to increase by a low double-digit percentage 
+ 
+The Core Tax rate is expected to be between 18-22% 
+ 
+ 
+If foreign exchange rates for October 2025 to December 2025 were to remain at the average rates seen in September 2025, it is 
+anticipated that FY 2025 Total Revenue growth and Core EPS growth would be broadly similar to the growth at CER (unchanged from 
+the previous guidance).
+
+[[page 2 | printed 2]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+2 
+ 
+ 
+Navigation tips 
+To navigate to a section or table, click the hyperlinked titles in this contents page, and in header at the top of every page.  
+To return to the previous location after using a hyperlink, press            +             (Windows) or             +             (MacOS) 
+Example: 
+- To see the definition of an acronym, click ‘Glossary’ at the top right of the page.  
+- After reading the definition, press            +            or             +             to return to the previous location. 
+Contents 
+Results highlights ...................................................................................................................................................................................... 3 
+Revenue drivers ........................................................................................................................................................................................ 7 
+R&D progress .......................................................................................................................................................................................... 12 
+Sustainability .......................................................................................................................................................................................... 16 
+Operating and financial review............................................................................................................................................................... 17 
+Financial performance ............................................................................................................................................................................ 18 
+Interim financial statements................................................................................................................................................................... 23 
+Notes to the Interim financial statements.............................................................................................................................................. 28 
+Other shareholder information .............................................................................................................................................................. 37 
+Glossary .................................................................................................................................................................................................. 39 
+ 
+Tables 
+Table 1. Milestones achieved since the prior results announcement ...................................................................................................... 3 
+Table 2: Key elements of financial performance: Q3 2025 ....................................................................................................................... 4 
+Table 3: Product Revenue by medicine .................................................................................................................................................... 7 
+Table 4: Collaboration Revenue................................................................................................................................................................ 8 
+Table 5: Total Revenue by Therapy Area .................................................................................................................................................. 8 
+Table 6: Total Revenue by region ............................................................................................................................................................. 8 
+Table 7: Reported Profit and Loss ........................................................................................................................................................... 18 
+Table 8: Reconciliation of Reported Profit before tax to EBITDA ........................................................................................................... 18 
+Table 9: Reconciliation of Reported to Core financial measures: 9M 2025............................................................................................ 18 
+Table 10: Reconciliation of Reported to Core financial measures: Q3 2025 .......................................................................................... 19 
+Table 11: Cash Flow summary: 9M 2025 ................................................................................................................................................ 20 
+Table 12: Net debt summary .................................................................................................................................................................. 20 
+Table 13: Obligor group summarised Statement of comprehensive income: 9M 2025 ......................................................................... 21 
+Table 14: Obligor group summarised Statement of financial position ................................................................................................... 21 
+Table 15: Currency sensitivities .............................................................................................................................................................. 22 
+Table 16: Condensed consolidated statement of comprehensive income: 9M 2025 ............................................................................ 23 
+Table 17: Condensed consolidated statement of comprehensive income: Q3 2025 ............................................................................. 24 
+Table 18: Condensed consolidated statement of financial position....................................................................................................... 25 
+Table 19: Condensed consolidated statement of changes in equity ...................................................................................................... 26 
+Table 20: Condensed consolidated statement of cash flows: 9M 2025 ................................................................................................. 27 
+Table 21: Net debt .................................................................................................................................................................................. 29 
+Table 22: Contingent consideration ....................................................................................................................................................... 30 
+Table 23: Patent litigation ...................................................................................................................................................................... 31 
+Table 24: Commercial litigation .............................................................................................................................................................. 32 
+Table 25: Government investigations and proceedings ......................................................................................................................... 32 
+Table 26: Product Sales year-on-year analysis: 9M 2025 ....................................................................................................................... 34 
+Table 27: Product Sales year-on-year analysis: Q3 2025 ........................................................................................................................ 35 
+Table 28: Alliance Revenue: 9M 2025 .................................................................................................................................................... 36 
+Table 29: Collaboration Revenue: 9M 2025 ........................................................................................................................................... 36 
+Table 30: Other operating income and expense: 9M 2025 .................................................................................................................... 36
+
+[[page 3 | printed 3]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+3 
+ 
+Table 1. Milestones achieved since the prior results announcement 
+Phase III and other registrational data readouts 
+Medicine Trial Indication Event 
+Enhertu DESTINY-Breast05 High-risk HER2+ early breast cancer (post-neoadjuvant) Primary endpoint met 
+Datroway TROPION-Breast02 1L TNBC for patients where IO is not an option Dual primary endpoints 
+met 
+Imfinzi MATTERHORN Resectable gastric/GEJ cancer Secondary endpoint met (OS) 
+baxdrostat Bax24 Treatment resistant hypertension Primary endpoint met 
+Fasenra RESOLUTE COPD Primary endpoint not met 
+Saphnelo TULIP-SC SLE (subcutaneous) Primary endpoint met 
+Regulatory approvals 
+Medicine Trial Indication Region 
+Calquence ECHO 1L MCL JP 
+Calquence ACE-LY-004 Relapsed/refractory MCL JP 
+Datroway TROPION-Breast01 HR+ HER2- mBC CN 
+Enhertu DESTINY-Breast06 CTx naïve HER2-low and -ultralow mBC JP 
+Imfinzi NIAGARA Bladder cancer JP 
+Imfinzi AEGEAN Resectable NSCLC JP 
+Lynparza PROpel BRCAm mCRPC CN 
+Tezspire WAYPOINT Chronic rhinosinusitis with nasal polyps US, EU 
+Koselugo KOMET Adult neurofibromatosis type 1  JP, EU 
+Ultomiris CHAMPION-NMOSD NMOSD CN 
+Regulatory submissions or acceptances* in major regions 
+Medicine Trial Indication Region 
+Enhertu DESTINY-
+PanTumour02 
+Previously treated HER2+ solid tumours EU 
+Enhertu DESTINY-Gastric04 2L HER2+ gastric/GEJ cancer EU 
+Enhertu DESTINY-Breast09 1L HER2+ mBC US, JP, CN 
+Enhertu DESTINY-Breast11 Neoadjuvant HER2+ Stage II or III breast cancer US, CN 
+Imfinzi MATTERHORN Resectable early-stage gastric and GEJ cancers  EU, JP 
+Imfinzi POTOMAC High-risk non-muscle invasive bladder cancer US, EU, JP 
+Truqap CAPItello-281 PTEN-deficient metastatic hormone-sensitive prostate cancer US, EU 
+Breztri KALOS/LOGOS Uncontrolled asthma  US, EU, JP, CN 
+Fasenra NATRON HES  US, EU, JP, CN 
+Saphnelo TULIP-SC SLE (subcutaneous) US, EU, JP 
+Saphnelo TULIP-1/2, AZALEA SLE CN 
+gefurulimab PREVAIL Generalised myasthenia gravis JP 
+* US, EU and China regulatory submissions denotes filing acceptance  
+ 
+Other pipeline updates 
+For recent trial starts and anticipated timings of key trial readouts, please refer to the Clinical Trials Appendix, available on 
+www.astrazeneca.com/investor-relations.html.
+Results highlights
+
+[[page 4 | printed 4]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+4 
+ 
+Table 2: Key elements of financial performance: Q3 2025 
+ 
+For the quarter  Reported      Change Core       Change  
+ended 30 September $m  Act CER $m  Act CER  
+Product Revenue 15,180  12  11  15,180  12  11   See Tables 3, 27 and 28 for medicine details of Product 
+Revenue, Product Sales and Alliance Revenue 
+Collaboration 
+Revenue 
+11  (81) (82) 11  (81) (82)  See Tables 4 and 29 for details of Collaboration 
+Revenue 
+Total Revenue 
+ 
+15,191  12  10  15,191  12  10   See Tables 5 and 6 for Total Revenue by Therapy Area 
+and by region 
+Gross Margin (%) 82  +4pp  +4pp  82  -  -   Variations in Gross Margin can be expected between 
+periods due to various factors, including fluctuations in 
+foreign exchange rates, product seasonality and 
+Collaboration Revenue 
+ See ‘Reporting changes’ below for the definition of 
+Gross Margin5 
+R&D expense 3,663  18  16  3,550  16  14   Core R&D: 23% of Total Revenue 
++ Accelerated recruitment year-to-date in ongoing trials 
++ Investments in transformative technologies such as 
+IO bispecifics, cell therapy and radioconjugates  
++ Positive data read-outs for high-value pipeline 
+opportunities that have ungated large late-stage trials 
++ Addition of R&D projects from business development  
+SG&A expense  5,085 (1) (3) 3,822  6  4   Core SG&A: 25% of Total Revenue 
+Other operating 
+income and expense6  
+89  >3x  >3x  96  >3x  >3x   
+Operating Profit 3,583  70  64  4,993  16  13   
+Operating Margin (%) 24  +8pp  +8pp  33  +1pp  +1pp   
+Net finance expense  349  27  25  305  (7)  (9) − Reduction in Core driven by lower short-term 
+borrowing during the quarter 
++ Reported expense in Q3 2024 included a favourable fair 
+value adjustment 
+Tax rate (%) 22  -  -  21  +2pp +2pp  Variations in the tax rate can be expected between 
+periods 
+EPS ($) 1.64  77  70  2.38  14  12   
+For monetary values the unit of change is percent. For Gross Margin, Operating Margin and Tax rate, the unit of change is percentage points (pp). 
+In the expense commentary above, the plus and minus symbols denote the directional impact of the item being discussed, e.g. a ‘+’ symbol beside an R&D expense 
+comment indicates that the item increased R&D expenditure relative to the prior year period.
+
+[[page 5 | printed 5]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+5 
+ 
+Corporate and business development  
+Listing harmonisation 
+As announced on 29 September 2025 and 
+approved by shareholders on 3 November 
+2025, AstraZeneca will harmonise its share 
+listing structure to deliver a global listing 
+for global investors in a global company. It 
+is expected that AstraZeneca shareholders 
+will be able to trade their interests in 
+AstraZeneca ordinary shares across the 
+London Stock Exchange, Nasdaq 
+Stockholm and the New York Stock 
+Exchange from 2 February 2026. For 
+further details, see the Circular containing 
+details of the Harmonised Listing 
+Structure. 
+US investment plans 
+In October 2025, AstraZeneca announced 
+having broken ground on its $4.5bn 
+manufacturing facility in Rivanna Futures, 
+Albemarle County, Virginia. This is part of 
+the Company’s plans to invest $50bn in US 
+manufacturing and R&D by 2030, 
+announced in July 2025. 
+The Virginia plant is expected to create 
+approximately 3,600 direct and indirect 
+jobs. It will produce drug substance for 
+AstraZeneca’s weight management and 
+metabolic portfolio, including oral GLP-1 
+(AZD5004), baxdrostat, oral PCSK9 
+(laroprovstat) and combination small 
+molecule products, and also antibody drug 
+conjugates for the Oncology portfolio.  
+Agreement with US Government 
+In October 2025, AstraZeneca announced 
+a historic agreement with the US 
+administration to lower the cost of 
+prescription medicines for American 
+patients. The Company voluntarily agreed 
+to a range of measures which will enable 
+American patients to access medicines at 
+prices that are equalised with those 
+available in wealthy countries. 
+As part of the agreement, AstraZeneca will 
+provide Direct-to-Consumer sales to 
+eligible patients with prescriptions for 
+select products for chronic diseases. 
+AstraZeneca has also reached an 
+agreement with the US Department of 
+Commerce to delay Section 232 tariffs for 
+three years, enabling the Company to fully 
+onshore medicines manufacturing so that 
+all of its medicines sold in America are 
+made in America. 
+SixPeaks 
+On 22 October 2025, AstraZeneca, by 
+exercise of an option, completed the 
+acquisition of the remaining share capital 
+of SixPeaks Bio AG (SixPeaks), following an 
+initial investment of $15m made in 
+Q2 2024. $170m was paid on closing, 
+$30m to be paid after two years and up to 
+a further $100m is payable on 
+achievement of regulatory milestones. 
+SixPeaks is investigating potential 
+therapies for weight-management with 
+the aim of preserving lean muscle mass. 
+Agreement with Merck on Koselugo 
+In August 2025, the contractual 
+arrangements between AstraZeneca and 
+Merck & Co., Inc., (Merck; known as MSD 
+outside of the US and Canada) were 
+updated and simplified relating to the 
+global development and 
+commercialisation of Koselugo, an oral, 
+selective MEK inhibitor. Under the 
+updated arrangements AstraZeneca will 
+fully recognise the costs, revenues and 
+profits of Koselugo globally. Merck 
+received an upfront payment of $150 
+million and will receive deferred payments 
+totalling up to $400m. In addition, Merck is 
+eligible to receive up to $175m in potential 
+approval milestones and up to $235m in 
+sales milestone payments, plus single-digit 
+royalties based on net sales. Prior to the 
+updated arrangements, AstraZeneca fully 
+recognised the revenues of Koselugo but 
+shared equally pre-tax profits and losses of 
+the product with Merck. 
+ 
+Sustainability highlights 
+For the third consecutive year, TIME 
+Magazine recognised AstraZeneca as one 
+of the World’s Best Companies with the 
+Company ranking at 43 out of 1,000 global 
+companies and as the top pharmaceutical 
+company in terms of sustainability 
+transparency. 
+Reporting calendar  
+The Company intends to publish its 
+FY and Q4 2025 results on 10 February 
+2026. 
+Conference call 
+A conference call and webcast for 
+investors and analysts will begin today, 
+6 November 2025, at 13:00 UK time. 
+Details can be accessed via 
+astrazeneca.com.
+
+[[page 6 | printed 6]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+6 
+ 
+Reporting changes since FY 2024  
+Product Revenue 
+Effective 1 January 2025, the Group has 
+updated the presentation of Total 
+Revenue on the face of the Statement of 
+Comprehensive Income to include a new 
+subtotal ‘Product Revenue’ representing 
+the summation of Product Sales and 
+Alliance Revenue.  
+Product Revenue and Collaboration 
+Revenue form Total Revenue. 
+Product Sales and Alliance Revenue will 
+continue to be presented separately, with 
+the new subtotal providing additional 
+aggregation of revenue types with similar 
+characteristics, reflecting the growing 
+importance of Alliance Revenue. 
+Full descriptions of Product Sales, Alliance 
+Revenue and Collaboration Revenue are 
+included from page 152 of the Group's 
+Annual Report and Form 20-F Information 
+2024. 
+Gross Margin 
+Effective 1 January 2025, the Group has 
+replaced the measure of ‘Product Sales 
+Gross Margin’ with the measure of ‘Gross 
+Margin’. Previously, the measure excluded 
+margin related to Alliance Revenue and 
+Collaboration Revenue. The new measure 
+is calculated using Gross profit as a 
+percentage of Total Revenue, thereby 
+encompassing all revenue categories, and 
+is intended to provide a more 
+comprehensive measure of total 
+performance. 
+Notes 
+1. Constant exchange rates. The 
+differences between Actual Change and 
+CER Change are due to foreign exchange 
+movements between periods in 2025 vs. 
+2024. CER financial measures are not 
+accounted for according to generally 
+accepted accounting principles (GAAP) 
+because they remove the effects of 
+currency movements from Reported 
+results.  
+2. Effective 1 January 2025, the Group has 
+updated its presentation of Total 
+Revenue, adding a new subtotal of 
+Product Revenue, the sum of Product 
+Sales and Alliance Revenue. For further 
+details, see Note 1: ‘Basis of preparation 
+and accounting policies’ in the Notes to 
+the Interim Financial Statements.  
+3. Core financial measures are adjusted to 
+exclude certain items. The differences 
+between Reported and Core measures 
+are primarily due to costs relating to the 
+amortisation of intangibles, 
+impairments, legal settlements and 
+restructuring charges. A full 
+reconciliation between Reported EPS 
+and Core EPS is provided in Tables 9 and 
+10 in the Financial Performance section 
+of this document. 
+4. The Company is unable to provide 
+guidance on a Reported basis because it 
+cannot reliably forecast material 
+elements of the Reported results, 
+including any fair value adjustments 
+arising on acquisition-related liabilities, 
+intangible asset impairment charges and 
+legal settlement provisions. Please refer 
+to the cautionary statements section 
+regarding forward-looking statements at 
+the end of this announcement. 
+5. Effective 1 January 2025, the Group has 
+updated its presentation of Gross 
+Margin. For further details, see Note 1: 
+‘Basis of preparation and accounting 
+policies’ in the Notes to the Interim 
+Financial Statements. 
+6. Income from disposals of assets and 
+businesses, where the Group does not 
+retain a significant ongoing economic 
+interest, is recorded in Other operating 
+income and expense in the Group’s 
+financial statements.
+
+[[page 7 | printed 7]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+7 
+ 
+Table 3: Product Revenue by medicine 
+  9M 2025          % Change Q3 2025          % Change 
+ 
+   $m  % Total  Actual  CER  $m  % Total  Actual  CER  
+Tagrisso 5,352  12  10  10  1,864  12  11  10  
+Imfinzi 4,317  10  25  25  1,601  11  33  31  
+Calquence 2,551  6  10  10  916  6  13  11  
+Lynparza 2,401  6  8  7  837  6  7  5  
+Enhertu 1,976  5  37  38  714  5  40  39  
+Zoladex 884  2  5  6  296  2  7  6  
+Truqap 495  1  85  85  193  1  55  54  
+Imjudo 253  1  22  21  84  1  16  14  
+Datroway 38  -  n/m  n/m  24  -  n/m  n/m  
+Other Oncology 323  1  (10) (9) 107  1  (9) (10) 
+Oncology Product Revenue 18,590  43  16  16  6,636  44  19  18  
+Farxiga 6,345  15  11  11  2,135  14  10  8  
+Crestor 942  2  5  6  306  2  1  (1) 
+Brilinta 665  2  (33) (33) 146  1  (55) (56) 
+Lokelma 517  1  32  31  189  1  32  30  
+Seloken 469  1  1  3  160  1  6  6  
+roxadustat 229  1  (12) (12) 77  1  (18) (19) 
+Wainua 143  -  >3x  >3x  59  -  >2x  >2x  
+Other CVRM 418  1  (24) (24) 144  1  (18) (19) 
+CVRM Product Revenue 9,728  23  4  5  3,216  21  2  -  
+Symbicort 2,180  5  (1) -  742  5  5  4  
+Fasenra 1,451  3  19  19  530  3  22  20  
+Breztri 906  2  26  26  323  2  21  20  
+Tezspire 770  2  64  63  287  2  50  47  
+Pulmicort 357  1  (31) (30) 93  1  (33) (35) 
+Saphnelo 483  1  48  47  180  1  45  44  
+Airsupra 115  -  >2x  >2x  45  -  >2x  >2x  
+Other R&I 231  1  (11) (11) 59  -  (24) (24) 
+R&I Product Revenue 6,493  15  13  13  2,259  15  15  14  
+Beyfortus 474  1  80  78  236  2  29  29  
+Synagis 220  1  (36) (35) 58  -  (37) (40) 
+FluMist 132  -  21  19  122  1  21  20  
+Other V&I -   -  n/m  n/m   -   -  n/m  n/m  
+V&I Product Revenue 826  2  9  9  416  3  3  2  
+Ultomiris 3,453  8  22  21  1,225  8  19  17  
+Soliris 1,436  3  (30) (28) 462  3  (24) (24) 
+Strensiq 1,188  3  19  19  441  3  29  28  
+Koselugo 498  1  36  34  224  1  88  79  
+Other Rare Disease 177  -  18  18  64  -  31  26  
+Rare Disease Product Revenue 6,752  16  6  6  2,416  16  12  11  
+Nexium 638  1  (7) (5) 204  1  (6) (5) 
+Others 116  -  (27) (26) 33  -  (39) (39) 
+Other Medicines Product Revenue 754  2  (11) (9) 237  2  (12) (12) 
+Product Revenue 43,143  100  10  11  15,180  100  12  11  
+         
+Alliance Revenue included above:         
+Enhertu 1,291  3  24  24  457  3  26  24  
+Tezspire 453  1  50  50  168  1  37  37  
+Beyfortus 252  1  >3x  >3x  142  1  >2x  >2x  
+Datroway 38  -  n/m  n/m  24  -  n/m  n/m  
+Other Alliance Revenue 74  -  (2) (2) 24  -  (8) (8) 
+Alliance Revenue 2,108  5  41  41  815  5  46  44  
+  
+Revenue drivers
+
+[[page 8 | printed 8]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+8 
+ 
+Table 4: Collaboration Revenue 
+ 9M 2025              % Change Q3 2025              % Change 
+ 
+$m    Actual  CER  $m    Actual  CER  
+Farxiga: sales milestones 81  56  56  5   51  43  
+Others 12  (79) (80) 6   (90) (90) 
+Collaboration Revenue 93  (14) (15) 11   (81) (82) 
+Table 5: Total Revenue by Therapy Area 
+ 9M 2025              % Change Q3 2025   % Change 
+ 
+$m   % Total Actual  CER  $m   % Total Actual  CER  
+Oncology 18,591  43  16  16  6,636  44  19  18  
+CVRM 9,809  23  5  5  3,221  21  2  -  
+R&I 6,493  15  13  13  2,259  15  15  14  
+V&I 826  2  2  2  416  3  (10) (11) 
+BioPharmaceuticals 17,129  40  7  8  5,896  39  6  4  
+Rare Disease 6,752  16  6  6  2,416  16  12  11  
+Other Medicines 764  2  (9) (8) 242  2  (10) (10) 
+Total Revenue 43,236  100  10  11  15,191  100  12  10  
+Table 6: Total Revenue by region 
+ 9M 2025              % Change Q3 2025   % Change 
+ $m   % Total Actual  CER  $m   % Total Actual  CER  
+US 18,517  43  11  11  6,548  43  9  9  
+Emerging Markets ex. China 6,378  15  16  21  2,196  14  25  25  
+China 5,279  12  5  5  1,764  12  6  5  
+Emerging Markets 11,657  27  11  13  3,960  26  16  15  
+Europe 9,160  21  11  9  3,334  22  16  10  
+Established ROW 3,902  9  6  5  1,349  9  7  5  
+Total Revenue 43,236  100  10  11  15,191  100  12  10  
+Total Revenue by Medicine 
+Oncology 
+Tagrisso  
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Strong demand growth across all indications and key regions, leading 
+combination in 1L NSCLC (FLAURA2) 
+US 2,222  11  11    Underlying demand growth more than offset Medicare Part D redesign 
+Emerging Markets 1,509  11  13    Favourable tender order timings in Q3 2025 
+Europe 1,030  8  5    Demand growth partially offset by pricing pressure in certain major markets  
+Established RoW 591  5  5    
+Total 5,352  10  10    
+Imfinzi 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Strong growth from new launch indications in bladder cancer (NIAGARA) and lung 
+cancer (ADRIATIC, AEGEAN) 
+US 2,484  32  32    Demand growth across all indications, particularly new launches 
+Emerging Markets 463  27  33    Increased demand in GI (HIMALAYA, TOPAZ-1) and new launches in lung cancer  
+Europe 879  26  24    Growth from GI indications and continued momentum from lung cancer launches 
+Established RoW 491  (6) (7)   Mandatory price reductions in Japan in Feb 2024 (25%), and Aug 2024 (11%), increased competition in BTC (TOPAZ-1) 
+Total 4,317  25  25
+
+[[page 9 | printed 9]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+9 
+ 
+Calquence  
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Growth from sustained BTKi leadership in front-line CLL (ELEVATE-TN) 
+US 1,702  5  5  
+ 
+ Growth in new starts in CLL, 1L MCL (ECHO) launch and improved affordability 
+offsetting Medicare Part D redesign and formulary discounts to secure 
+preferential formulary placement 
+Emerging Markets 164  41  48    
+Europe 569  16  14    Early launch momentum in fixed duration 1L CLL (AMPLIFY) 
+Established RoW 116  18  20    
+Total 2,551  10  10    
+Lynparza 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Sustained global PARP inhibitor market leadership across four tumour types 
+(ovarian, breast, prostate, pancreatic) 
+US 1,054  10  10    Share gains across ovarian, breast and prostate indications 
+Emerging Markets 487  2  4    Affected by generic launches in China in Q4 2024 
+Europe 667  9  7    Launches in breast and prostate cancers (OlympiA and PROpel) 
+Established RoW 193  3  3    Gains in 1L ovarian cancer, increasing share of pMMR endometrial cancer 
+Total 2,401  8  7    
+Enhertu 
+Combined sales of Enhertu, recorded by Daiichi Sankyo and AstraZeneca, amounted to $3,575m in 9M 2025 (9M 2024: $2,729m). US 
+in-market sales, recorded by Daiichi Sankyo, amounted to $1,734m in 9M 2025 (9M 2024: $1,342m). AstraZeneca's European revenue 
+includes a mid-single-digit percentage royalty on Daiichi Sankyo's sales in Japan, recorded as Alliance Revenue. 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Standard of care in HER2-positive (DESTINY-Breast03) and HER2-low (DESTINY-
+Breast04) metastatic breast cancer, early uptake in other cancers 
+  US  834  30  30    Accelerated uptake in chemotherapy naïve HER2-low and -ultralow breast cancer (DESTINY-Breast06) 
+Emerging Markets 590  67  75    Rapid adoption post-NRDL enlistment of HER2-positive and HER2-low breast cancer from 1 January 2025 
+Europe 489  22  20    Early launch uptake in chemotherapy naïve HER2-low breast cancer 
+Established RoW 63  34  38    
+Total 1,976  37  38    
+Other Oncology medicines 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ 
+Zoladex 884  5  6    Growth across Emerging Markets 
+Truqap 495  85  85    Demand growth in second-line biomarker-altered metastatic breast cancer 
+Imjudo  253  22  21    Continued growth driven by lung (POSEIDON) and HCC (HIMALAYA)  
+Datroway 38  n/m n/m   Continued uptake in breast cancer; initial use in lung cancer following US launch 
+Other Oncology 323  (10) (9)   Faslodex generic erosion across markets 
+Other Oncology includes $23m of Total Revenue from Orpathys, partnered with HUTCHMED. 
+BioPharmaceuticals - CVRM 
+Farxiga 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Growth driven by HF and CKD indications, SGLT2 class growth supported by 
+cardiorenal guidelines  
+US 1,244  (3) (3)   Prior year period benefitted from launch of authorised generic 
+Emerging Markets 2,623  18  21    Continued strong growth despite generic competition in some markets  
+Europe 2,147  13  10    Demand growth, impact from generic entry in the UK in Q3 2025 
+Established RoW 413  11  11    
+Total 6,426  11  12
+
+[[page 10 | printed 10]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+10 
+ 
+Other CVRM medicines 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ 
+Crestor 942  5  6    Continued sales growth driven by Emerging Markets 
+Brilinta 665  (33) (33)   Decline driven by generic entry in the US and Europe in Q2 2025 
+Seloken 469  1  3    Vast majority of revenue growth driven by Emerging Markets 
+Lokelma 517  32  31    Strong growth in all major regions with continued launches in new markets 
+roxadustat 229  (12) (12)   Decline driven by generic competition 
+Wainua 143  >3x  >3x    Majority of revenue from US, first launches in ex-US markets in Q2 2025 
+Other CVRM 418  (24) (24)   
+BioPharmaceuticals - R&I 
+Symbicort  
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Sustained market leader in a stable ICS/LABA class, treating COPD and asthma 
+US 903  2  2    Demand for authorised generic partially offsetting brand price pressures 
+Emerging Markets 624  (4) (3)   China affected by ICS/LABA class erosion in COPD in favour of FDC triple therapy 
+Europe 406  (2) (4)   Continued generic erosion  
+Established RoW 247  3  5    
+Total 2,180  (1) -    
+Fasenra 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Expanded severe eosinophilic asthma market share leadership in IL-5 class, 
+further fuelled by first wave market launches for EGPA indication  
+US 886  18  18    Sustained double-digit volume growth with expanded class leadership 
+Emerging Markets 81  18  22    Asthma launch momentum across key markets  
+Europe 351  19  17    Sustained leadership in severe eosinophilic asthma 
+Established RoW 133  26  27    Strong growth supported by recent EGPA launch in Japan 
+Total 1,451  19  19    
+Breztri 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Fastest growing medicine within the expanding FDC triple class (ICS/LABA/LAMA), 
+treating COPD 
+US 462  26  26    Consistent share growth within expanding FDC triple class  
+Emerging Markets 239  20  21    Market share leadership in China with strong FDC triple class penetration 
+Europe 136  34  31    Sustained growth from market share gain and new launches 
+Established RoW 69  31  31    Increasing market share in Japan 
+Total 906  26  26    
+Tezspire 
+Combined sales of Tezspire, recorded by Amgen and AstraZeneca, amounted to $1,321m in 9M 2025 (9M 2024: $843m). 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Sustained demand growth in severe asthma with launch momentum across 
+multiple markets 
+US 453  50  50    Continued strong demand growth with increasing new patient share volumes in biologics segment 
+Emerging Markets 24  >3x  >3x    Strong continued launch uptake 
+Europe 207  98  93    Maintained new-to-brand leadership across multiple markets and new launches 
+Established RoW 86  55  55    Strong growth driven by Japan 
+Total 770  64  63    
+Other R&I medicines 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ 
+Pulmicort 357  (31) (30)   Generic competition in Emerging Markets (~80% of revenue)  
+Saphnelo 483  48  47    Strong US demand growth, ongoing launches in Europe and Established RoW 
+Airsupra 115  >2x  >2x    Strong US launch momentum and volume uptake 
+Other R&I 231  (11) (11)
+
+[[page 11 | printed 11]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+11 
+ 
+BioPharmaceuticals - V&I 
+Beyfortus Total Revenue reflects the sum of Product Sales from AstraZeneca’s sales of manufactured Beyfortus product to Sanofi and 
+Alliance Revenue from AstraZeneca’s share of gross profits and royalties on sales of Beyfortus in major markets outside the US. 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ 
+Beyfortus 474  49  47    Increased capacity and strong demand  
+Synagis 220  (36) (35)   Competition from Beyfortus 
+FluMist 132  21  19    
+Other V&I 0  n/m n/m   
+Rare Disease 
+Ultomiris 
+Ultomiris Total Revenue includes sales of Voydeya, which is approved as an add on treatment to Ultomiris and Soliris for the ~20-30% of 
+PNH patients who experience clinically significant EVH. 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Growth due to patient demand, both naïve to branded medicines and conversion 
+from Soliris in all indications (gMG, NMOSD, aHUS and PNH)  
+US 1,961  20  20    Demand growth across indications, including within the competitive gMG and PNH landscapes, minimal impact from Medicare Part D redesign 
+Emerging Markets 177  92  >2x    Expansion into new markets and growth in patient demand 
+Europe 769  18  16    Strong demand growth following recent launches; competition in gMG and PNH 
+Established RoW 546  17  16    Continued conversion and strong demand following new launches 
+Total 3,453  22  21    
+Soliris 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Decline driven by conversion of patients to Ultomiris in all indications (gMG, 
+NMOSD, aHUS, PNH), competition, and biosimilar pressure in Europe 
+US 844  (28) (28)   Competition in gMG and PNH, biosimilars launched in April 2025 
+Emerging Markets 327  (11) (2)    
+Europe 159  (54) (55)   Biosimilar competition in PNH and aHUS  
+Established RoW 106  (35) (34)  • Driven by conversion to Ultomiris  
+Total 1,436  (30) (28)   
+Strensiq 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ Growth driven by continued patient demand and geographic expansion  
+US 953  17  17    Demand growth, offset by Medicare Part D redesign 
+Emerging Markets 61  58  61    
+Europe 89  22  19    
+Established RoW 85  23  21    
+Total 1,188  19  19    
+Other Rare Disease medicines 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ 
+Koselugo 498 36 34   Growth driven by continued patient demand and geographic expansion. Q3 2025 benefitted from favourable timing of tender orders in Emerging Markets 
+Other Rare Disease  177 18 18   Other Rare Disease medicines include Kanuma and Beyonttra (JP only)  
+Other Medicines 
+9M 2025 
+$m 
+Total  
+Revenue  
+% Change        
+Actual        CER  
+ 
+ 
+Nexium 638 (7) (5)   Growth in Emerging Markets, generic erosion elsewhere 
+Others 126 (20) (20)   Generic erosion
+
+[[page 12 | printed 12]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+12 
+ 
+This section covers R&D events and milestones that occurred between 29 July 2025 and 5 November 2025. A comprehensive view of 
+AstraZeneca's pipeline of medicines in human trials can be found in the latest Clinical Trials Appendix, available on AstraZeneca’s 
+investor relations webpage. The Clinical Trials Appendix includes tables with details of the ongoing clinical trials for AstraZeneca 
+medicines and new molecular entities in the pipeline. 
+Oncology 
+AstraZeneca presented new data across its diverse portfolio of cancer medicines at two major medical congresses since the prior 
+results announcement: the IASLC 2025 World Conference on Lung Cancer (WCLC) and the European Society of Medical Oncology 
+Congress 2025 (ESMO). Across the two meetings, more than 160 abstracts were presented featuring 20 approved and potential new 
+medicines including 35 oral presentations. 
+Calquence 
+Approval 
+JP 
+ECHO 
+August 2025 
+New disclosure 
+ For mantle cell lymphoma in previously untreated diseases: in combination with 
+bendamustine hydrochloride and rituximab (genetical recombination). 
+Approval 
+JP 
+ACE-LY-004 
+August 2025 
+New disclosure 
+ For mantle cell lymphoma in relapsed or refractory diseases.  
+Datroway 
+Approval 
+CN 
+TROPION-Breast01 
+August 2025 
+New disclosure 
+ For the treatment of adult patients with unresectable or metastatic HR-positive, 
+HER2-negative (IHC 0, IHC 1+ or IHC 2+/ISH-) breast cancer who have received prior 
+endocrine therapy and at least one line of chemotherapy in the advanced setting. 
+Data presentation 
+ESMO 
+TROPION-Breast02 
+October 2025 
+ Positive results from the TROPION-Breast02 Phase III trial showed Datroway 
+demonstrated a 5.0-month improvement in median OS (HR 0.79; 95% CI 0.64-0.98; 
+p=0.0291) and reduced the risk of disease progression or death by 43% (HR 0.57; 95% 
+CI 0.47-0.69; p<0.0001) compared to chemotherapy as 1st-line treatment for patients 
+with locally recurrent inoperable or metastatic TNBC for whom immunotherapy was 
+not an option. 
+Enhertu 
+Approval 
+JP 
+DESTINY-Breast06 
+August 2025 
+ For the treatment of adult patients with HR-positive, HER2-low (IHC 1+ or IHC 2+/ISH-
+) or HER2-ultralow (IHC 0 with membrane staining) unresectable or recurrent breast 
+cancer.  
+Priority Review 
+US 
+DESTINY-Breast09 
+September 2025 
+ In combination with pertuzumab for the 1st-line treatment of adult patients with 
+unresectable or metastatic HER2-positive breast cancer. 
+Data presentation 
+ESMO 
+DESTINY-Breast11 
+October 2025 
+ Positive results from the DESTINY-Breast11 Phase III trial showed Enhertu followed by 
+THP resulted in a pCR rate of 67.3% compared with 56.3% for ddAC-THP, representing 
+a pCR rate improvement of 11.2%, in patients with high-risk, locally advanced HER2-
+positive early-stage breast cancer. 
+Data presentation  
+ESMO 
+DESTINY-Breast05 
+October 2025 
+ Positive results from the DESTINY-Breast05 Phase III trial showed Enhertu significantly 
+reduced the risk of invasive disease recurrence or death by 53% compared with T-
+DM1 as a post-neoadjuvant treatment (HR 0.47, 95% CI 0.34-0.66, p<0.0001) in 
+patients with HER2-positive early breast cancer with residual invasive disease in the 
+breast and/or axillary lymph nodes after neoadjuvant treatment. At three years, 
+92.4% of patients in the Enhertu arm were alive and free of invasive disease, 
+compared with 83.7% of those in the T-DM1 arm. 
+ 
+  
+R&D progress
+
+[[page 13 | printed 13]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+13 
+ 
+Imfinzi 
+Approval 
+JP 
+NIAGARA 
+September 2025 
+New disclosure 
+ Neoadjuvant and adjuvant therapy in bladder cancer. 
+Approval 
+JP 
+AEGEAN 
+September 2025 
+New disclosure 
+ Neoadjuvant and adjuvant treatment in non-small cell lung cancer. 
+Data presentation 
+ESMO 
+MATTERHORN 
+October 2025 
+ Positive results from the final OS analysis of the MATTERHORN Phase III trial showed 
+perioperative treatment with Imfinzi in combination with standard-of-care FLOT 
+chemotherapy reduced the risk of death by 22% compared with chemotherapy alone 
+(HR 0.78; 95% CI 0.63-0.96; p=0.021) in patients with resectable, early-stage and 
+locally advanced and GEJ cancers. 
+Data presentation 
+ESMO 
+POTOMAC 
+October 2025 
+ Positive results from the POTOMAC Phase III trial showed adding one year of 
+treatment with Imfinzi to BCG induction and maintenance therapy demonstrated a 
+32% reduction in the risk of high-risk disease recurrence or death versus the 
+comparator arm (HR 0.68; 95% CI 0.50-0.93; p=0.0154) in patients with BCG-naïve, 
+high-risk non-muscle invasive bladder cancer. 
+Lynparza 
+Approval 
+CN 
+PROpel 
+July 2025 
+New disclosure 
+ In combination with abiraterone and prednisone or prednisolone for the treatment of 
+adult patients with g/sBRCAm mCRPC. 
+ 
+Tagrisso 
+Data presentation 
+WCLC 
+ 
+FLAURA2 
+September 2025 
+ Positive results from the final OS analysis of the FLAURA2 Phase III trial showed 
+Tagrisso with the addition of pemetrexed and platinum-based chemotherapy 
+demonstrated a median OS of nearly four years (47.5 months) compared to 
+approximately three years (37.6 months) for Tagrisso monotherapy in the 1st-line 
+treatment of patients with locally advanced or metastatic EGFRm NSCLC. 
+BioPharmaceuticals – CVRM 
+AstraZeneca presented 32 abstracts and 13 posters alongside two hot-line oral presentations at the European Society of Cardiology 
+(ESC) in Madrid, Spain. 
+baxdrostat 
+Data presentation 
+ESC 
+BaxHTN 
+August 2025 
+ Positive results from the BaxHTN Phase III trial showed that baxdrostat met the 
+primary and all secondary endpoints, delivering meaningful and sustained blood 
+pressure reductions in patients with hard-to-control hypertension. At week 12, the 
+absolute reduction from baseline in mean seated SBP was 15.7 mmHg (95% CI, -17.6 
+to -13.7) and placebo-adjusted reduction was 9.8 mmHg (95% CI, -12.6 to -7.0; 
+p<0.001) for the 2mg dose. Results were consistent across both uncontrolled and 
+treatment-resistant subgroups. 
+Phase III readout Bax24 
+October 2025 
+ Positive high-level results from the Bax24 Phase III trial showed baxdrostat 
+demonstrated a statistically significant and highly clinically meaningful reduction in 
+ambulatory 24-hour average systolic blood pressure compared with placebo at 12 
+weeks. Efficacy was observed throughout the 24-hour period, including early 
+morning, when patients with hypertension are at a higher risk of cardiovascular 
+events.
+
+[[page 14 | printed 14]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+14 
+ 
+BioPharmaceuticals – R&I 
+Airsupra 
+Approval 
+US 
+ 
+BATURA 
+October 2025 
+ 
+ US Prescribing Information now includes clinically meaningful evidence in reducing 
+severe exacerbations from the BATURA study in patients with mild asthma.  
+Fasenra 
+Phase III readout 
+ 
+RESOLUTE 
+September 2025 
+ 
+ The RESOLUTE Phase III trial despite showing numerical improvement, did not 
+achieve statistical significance in the primary endpoint in patients with chronic 
+obstructive pulmonary disease. 
+Saphnelo 
+Phase III readout 
+ 
+TULIP-SC 
+September 2025 
+ 
+ Positive high-level results from a pre-specified interim analysis of the Phase III TULIP-
+SC trial in patients with systemic lupus erythematosus showed that the subcutaneous 
+administration of Saphnelo demonstrated a statistically significant and clinically 
+meaningful reduction in disease activity compared to placebo. The TULIP-SC interim 
+results were presented at the American College of Rheumatology annual meeting in 
+October 2025. 
+CHMP opinion 
+EU 
+TULIP-SC 
+October 2025 
+ Recommended for approval as a self-administered once-weekly pre-filled pen for 
+adult patients with systemic lupus erythematosus on top of standard therapy. 
+Tezspire 
+Approval 
+EU 
+WAYPOINT 
+October 2025 
+ As an add-on therapy with intranasal corticosteroids for the treatment of adult 
+patients with severe CRSwNP who have not adequately responded to standard 
+therapy (systemic corticosteroids and/or surgery). 
+Approval 
+US 
+WAYPOINT 
+October 2025 
+ As an add-on maintenance treatment of adult and paediatric patients aged 12 years 
+and older with inadequately controlled CRSwNP.
+
+[[page 15 | printed 15]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+15 
+ 
+Rare Disease  
+Alexion, AstraZeneca Rare Disease, delivered 18 presentations, including four oral presentations, from its leading rare neurology 
+portfolio at the American Association of Neuromuscular & Electrodiagnostic Medicine (AANEM) Annual Meeting and the Myasthenia 
+Gravis Foundation of America (MGFA) Scientific Session in San Francisco, California.  
+Koselugo 
+Approval 
+Japan 
+ 
+KOMET 
+August 2025  
+ For the treatment of adult patients with symptomatic, inoperable plexiform 
+neurofibromas in neurofibromatosis type 1. 
+Approval 
+EU 
+KOMET 
+October 2025 
+ For the treatment of adult patients with symptomatic, inoperable plexiform 
+neurofibromas in neurofibromatosis type 1. 
+ 
+Approval 
+Japan  
+SPRINKLE 
+September 2025 
+ Granule formulation for paediatric patients one year of age and older with 
+neurofibromatosis type 1 who have symptomatic, inoperable plexiform 
+neurofibromas. 
+ 
+Approval 
+US 
+SPRINKLE 
+September 2025 
+ Granule formulation for paediatric patients one year of age and older with 
+neurofibromatosis type 1 who have symptomatic, inoperable plexiform 
+neurofibromas. 
+ 
+Ultomiris 
+Approval 
+China 
+ 
+CHAMPION-NMOSD  
+August 2025 
+ 
+ For the treatment of adult patients with neuromyelitis optica spectrum disorder who 
+are anti-aquaporin-4 antibody positive. 
+gefurulimab 
+Data presentation 
+AANEM/MGFA 
+PREVAIL 
+October 2025 
+ Positive results from the PREVAIL Phase III trial demonstrated an improvement from 
+baseline in MG-ADL total score at week 26 compared to placebo (treatment 
+difference: -1.6 [95% CI: -2.4, -0.8], p<0.0001). A clinically meaningful improvement 
+was observed as early as week one, and was sustained through week 26. Additionally, 
+a clinically meaningful improvement in key secondary endpoint, QMG total score, 
+was seen as early as week four (treatment difference: -1.8 [ 95% CI: -2.5, -1.1], 
+p<0.0001) and was sustained through week 26 (treatment difference: -2.1 [95% CI: -
+3.1, -1.1], p<0.0001).
+
+[[page 16 | printed 16]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+16 
+ 
+Sustainability highlights  
+For the third consecutive year, TIME 
+Magazine recognised AstraZeneca as one 
+of the World’s Best Companies with the 
+Company ranking at 43 out of 1,000 global 
+companies and as the top pharmaceutical 
+company in terms of sustainability 
+transparency. AstraZeneca also secured 
+fifth place in Sustainability Magazine’s Top 
+250 World's Most Sustainable Companies 
+2025, affirming its status as a global leader 
+in responsible business and 
+pharmaceutical innovation.  
+AstraZeneca engaged on climate action, 
+health systems resilience and health equity 
+at the United Nations (UN) General 
+Assembly High-Level Meeting on non-
+communicable diseases (NCDs) and 
+Climate Week NYC in September through 
+over 100 engagements. EVP Global 
+Operations, IT and Chief Sustainability 
+Officer Pam Cheng represented the private 
+sector at the UN alongside governments, 
+NGOs and academia, focusing on the need 
+to tackle NCDs.   
+Chair Michel Demaré also joined a group 
+of 25 global health leaders, including 
+former heads of state and ministers, 
+calling for action on this topic through an 
+Open Letter in POLITICO, with a focus on 
+the human, social and financial impacts of 
+chronic disease and targeted solutions. 
+ 
+Sustainability impact 
+Climate and nature 
+–  The Company focused on sustainable 
+respiratory care at the European 
+Respiratory Society (ERS), hosting a 
+sustainability symposium, key 
+engagements and running a sustainable 
+booth with a living lung installation.   
+– The Company won a 2025 Freezer 
+Challenge Award for the fourth time 
+from My Green Lab and the 
+International Institute for Sustainable 
+Laboratories, recognised as the Top 
+Organization in the biotech and 
+pharmaceutical sector for energy 
+savings and best-in-class cold storage 
+management. 
+Health equity  
+–  At EXPO 2025, the Company advanced 
+priorities to transform lung health in 
+Japan and Asia-Pacific through best 
+practice sharing on screening and 
+integrated disease management. The 
+Company convened national and 
+international government and clinical 
+experts in lung cancer and COPD to 
+further collaboration for high-risk 
+patients and reduce mortality in Japan. 
+–  AstraZeneca's Young Health 
+Programme (YHP) received the ACE 
+Award for Workforce Innovation and 
+Global Impact at the Healthcare 
+Businesswomen's Association's (HBA) 
+annual conference, recognising how the 
+programme supports employee 
+engagement, advances health equity 
+and strengthens health systems 
+through youth empowerment. YHP was 
+also recognised with the Third Sector 
+Award for Large Corporate Partnership 
+of the Year with Plan International UK.  
+– The Company expanded its Healthy 
+Heart Africa (HHA) programme in the 
+Côte d’Ivoire, in partnership with the 
+Ministry of Health, to include chronic 
+kidney disease (CKD) care in addition to 
+hypertension. The programme also 
+expanded in Rwanda, where it will 
+develop a protocol for CKD care in 
+primary health, with training to be 
+cascaded to healthcare providers, in 
+collaboration with PATH. 
+Health systems resilience  
+– The Partnership for Health System 
+Sustainability and Resilience (PHSSR) 
+published its summary report on Acting 
+Early on NCDs which captures highlights 
+from research conducted in eight 
+countries on health systems’ capability 
+to act early on cancers, chronic 
+respiratory diseases and CVRM. 
+AstraZeneca engaged on its findings 
+with the World Economic Forum 
+Sustainable Development Impact 
+Meetings in New York.
+Sustainability
+
+[[page 17 | printed 17]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+17 
+ 
+Reporting currency 
+All narrative on growth and results in this 
+section is based on actual exchange rates, 
+and financial figures are in US$ millions 
+($m), unless stated otherwise. 
+Reporting period 
+The performance shown in this 
+announcement covers the nine-month 
+period to 30 September 2025 (‘the period’ 
+or ‘9M 2025’) compared to the nine-
+month period to 30 September 2024 (‘9M 
+2024’), or the three-month period to 30 
+September 2025 (‘the quarter’ or ‘Q3 
+2025’) compared to the three-month 
+period to 30 September 2024 (‘Q3 2024’), 
+unless stated otherwise. 
+Core financial measures 
+Core financial measures, EBITDA, Net debt, 
+Gross Margin, Operating Margin and CER 
+are non-GAAP financial measures because 
+they cannot be derived directly from the 
+Group's Condensed consolidated interim 
+financial statements. 
+Management believes that these non-
+GAAP financial measures, when provided 
+in combination with Reported results, 
+provide investors and analysts with helpful 
+supplementary information to understand 
+better the financial performance and 
+position of the Group on a comparable 
+basis from period to period. 
+These non-GAAP financial measures are 
+not a substitute for, or superior to, 
+financial measures prepared in accordance 
+with GAAP. 
+Core financial measures (cont.) 
+Core financial measures are adjusted to 
+exclude certain significant items:  
+– Charges and provisions related to our 
+global restructuring programmes, which 
+includes charges that relate to the 
+impact of restructuring programmes on 
+our capitalised manufacturing assets 
+and IT assets 
+– Amortisation and impairment of 
+intangible assets, including impairment 
+reversals but excluding any charges 
+relating to IT assets 
+– Other specified items, principally 
+comprising acquisition-related costs 
+and credits, which include the imputed 
+finance charges and fair value 
+movements relating to contingent 
+consideration on business 
+combinations, imputed finance charges 
+and remeasurement adjustments on 
+certain Other payables arising from 
+intangible asset acquisitions, 
+remeasurement adjustments relating to 
+certain Other payables and debt items 
+assumed from the Alexion acquisition 
+and legal settlements 
+– The tax effects of the adjustments 
+above are excluded from the Core Tax 
+charge 
+Details on the nature of Core financial 
+measures are provided on page 70 of the 
+Annual Report and Form 20-F Information 
+2024. 
+Reference should be made to the 
+Reconciliation of Reported to Core 
+financial measures table included in the 
+Financial Performance section in this 
+announcement. 
+Definitions 
+Gross Margin is defined as Gross Profit as a 
+percentage of Total Revenue.  
+EBITDA is defined as Reported Profit 
+before tax after adding back Net finance 
+expense, results from Joint ventures and 
+associates and charges for Depreciation, 
+amortisation and impairment. Reference 
+should be made to the Reconciliation of 
+Reported Profit before tax to EBITDA 
+included in the Financial Performance 
+section in this announcement. 
+Operating margin is defined as Operating 
+profit as a percentage of Total Revenue. 
+Net debt is defined as Interest-bearing 
+loans and borrowings and Lease liabilities, 
+net of Cash and cash equivalents, Other 
+investments, and Net derivative financial 
+instruments. Reference should be made to 
+Note 3 'Net debt', included in the Notes to 
+the interim financial statements in this 
+announcement. 
+The Company strongly encourages 
+investors and analysts not to rely on any 
+single financial measure, but to review 
+AstraZeneca's financial statements, 
+including the Notes thereto, and other 
+available Company reports, carefully and 
+in their entirety. 
+Due to rounding, the sum of a number of 
+dollar values and percentages in this 
+announcement may not agree to totals. 
+  
+Operating and financial review
+
+[[page 18 | printed 18]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+18 
+ 
+Table 7: Reported Profit and Loss 
+ 9M 2025  9M 2024            % Change Q3 2025  Q3 2024            % Change 
+ $m  $m  Actual  CER  $m  $m  Actual  CER  
+  - Product Sales 41,035  37,576  9  9  14,365  12,947  11  9  
+  - Alliance Revenue 2,108  1,498  41  41  815  559  46  44  
+Product Revenue 43,143  39,074  10  11  15,180  13,506  12  11  
+Collaboration Revenue 93  108  (14) (15) 11  59  (81) (82) 
+Total Revenue 43,236  39,182  10  11  15,191  13,565  12  10  
+Cost of sales (7,515) (7,482) -  2  (2,801) (3,081) (9) (10) 
+Gross profit 35,721  31,700  13  13  12,390  10,484  18  16  
+Distribution expense (426) (412) 3  4  (148) (145) 2  -  
+R&D expense (10,370) (8,906) 16  16  (3,663) (3,115) 18  16  
+SG&A expense (14,441) (14,567) (1) (1) (5,085) (5,143) (1) (3) 
+Other operating income & expense 281  152  85  87  89  25  >3x >3x 
+Operating profit 10,765  7,967  35  35  3,583  2,106  70  64  
+Net finance expense (985) (919) 7  7  (349) (274) 27  25  
+Joint ventures and associates (7) (23) (68) (70) 10  (4) n/m n/m 
+Profit before tax 9,773  7,025  39  38  3,244  1,828  77  70  
+Taxation (1,869) (1,484) 26  25  (709) (395) 79  72  
+Tax rate 19%  21%    22%  22%    
+Profit after tax 7,904  5,541  43  42  2,535  1,433  77  70  
+Earnings per share $5.10  $3.57  43  42  $1.64  $0.92  77  70  
+Table 8: Reconciliation of Reported Profit before tax to EBITDA 
+ 9M 2025  9M 2024            % Change Q3 2025  Q3 2024            % Change 
+ $m  $m  Actual  CER  $m  $m  Actual  CER  
+Reported Profit before tax  9,773  7,025  39  38  3,244  1,828  77  70  
+Net finance expense  985  919  7  7  349  274  27  25  
+Joint ventures and associates  7  23  (68) (70) (10) 4  n/m n/m 
+Depreciation, amortisation and impairment  4,222  4,351  (3) (4) 1,549  1,817  (15) (16) 
+EBITDA  14,987  12,318  22  21  5,132  3,923  31  28  
+Table 9: Reconciliation of Reported to Core financial measures: 9M 2025 
+For the nine months ended 30 September 
+ 
+Reported Restructuring Intangible Asset 
+Amortisation & 
+Impairments 
+Other Core % Change 
+ $m  $m  $m  $m  $m  Actual  CER  
+Gross profit 35,721  (61) 24  12  35,696  10  10  
+ - Gross Margin 83%     83%  -  -  
+Distribution expense (426) -  -  -  (426) 3  4  
+R&D expense (10,370) 134  141  4  (10,091) 17  16  
+- R&D % of Total Revenue 24%     23%  -1pp  -1pp  
+SG&A expense (14,441) 113  3,038  209  (11,081) 3  3  
+- SG&A % of Total Revenue 33%     26%  +2pp  +2pp  
+Total operating expense (25,237) 247  3,179  213  (21,598) 9  9  
+Other operating income & expense 281  (6) -  7  282  88  91  
+Operating profit 10,765  180  3,203  232  14,380  13  13  
+- Operating Margin 25%        33%  +1pp  +1pp  
+Net finance expense (985) -  -  162  (823) (4) (4) 
+Taxation (1,869) (49) (611) (98) (2,627) 11  11  
+EPS $5.10  $0.08  $1.68  $0.18  $7.04  15  15  
+  
+Financial performance
+
+[[page 19 | printed 19]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+19 
+ 
+Table 10: Reconciliation of Reported to Core financial measures: Q3 2025 
+For the quarter ended 30 September 
+ 
+Reported Restructuring Intangible Asset 
+Amortisation & 
+Impairments 
+Other Core % Change 
+ $m  $m  $m  $m  $m  Actual  CER  
+Gross profit 12,390  9  7  11  12,417  12  10  
+ - Gross Margin 82%     82%  -  -  
+Distribution expense (148) -  -  -  (148) 2  -  
+R&D expense (3,663) 33  79  1  (3,550) 16  14  
+- R&D % of Total Revenue 24%     23%  -1pp  -1pp  
+SG&A expense (5,085) 37  1,095  131  (3,822) 6  4  
+- SG&A % of Total Revenue 33%     25%  +1pp  +1pp  
+Total operating expense (8,896) 70  1,174  132  (7,520) 10  9  
+Other operating income & expense 89  -  -  7  96  >3x >3x 
+Operating profit 3,583  79  1,181  150  4,993  16  13  
+- Operating Margin 24%        33%  +1pp  +1pp  
+Net finance expense (349) -  -  44  (305) (7) (9) 
+Taxation (709) (19) (225) (49) (1,002) 33  30  
+EPS $1.64  $0.03  $0.62  $0.09  $2.38  14  12  
+ 
+Profit and Loss drivers 
+Gross profit 
+The stable Gross Margin (Reported and 
+Core) in 9M 2025 was a result of: 
+– Positive effects from geographic mix 
+– Negative effects from product mix. The 
+rising contribution of Product Sales 
+with profit sharing arrangements 
+(Lynparza, Enhertu, Tezspire, Koselugo) 
+has a negative impact on Gross Margin 
+because AstraZeneca records Product 
+Sales in certain markets and pays away 
+a share of the gross profits to its 
+collaboration partners. The profit 
+share paid to partners is recorded in 
+AstraZeneca’s Cost of sales line 
+– Pricing adjustments, for example to 
+sales reimbursed by the Medicare 
+Part D programme in the US, diluted 
+the Gross Margin 
+Variations in Gross Margin performance 
+between periods can continue to be 
+expected due to product seasonality, 
+foreign exchange fluctuations, and other 
+effects. 
+R&D expense 
+The change in R&D expense (Reported 
+and Core) in the period was impacted by: 
+– Positive data read-outs for high-value 
+pipeline opportunities that have 
+ungated late-stage trials 
+– Investment in platforms, new 
+technology and capabilities to enhance 
+R&D capabilities 
+– Addition of R&D projects following 
+completion of previously announced 
+business development activity 
+SG&A expense 
+– The change in SG&A expense 
+(Reported and Core) in the period was 
+driven primarily by market 
+development activities for launches 
+and to support continued growth in 
+existing brands 
+Other operating income and expense 
+– Other operating income in 9M 2025 
+consisted primarily of royalties and an 
+upfront fee on a divestment 
+Net finance expense 
+Core Net finance expense decreased 4% 
+(4% at CER) in 9M 2025, mainly driven by 
+an adjustment of interest on tax, due to a 
+reduction of tax liabilities relating to prior 
+periods, recognised in the first quarter, 
+and also a reduction in short-term 
+borrowings. 
+Core Net finance expense decreased 7% 
+(9% at CER) in Q3 2025, mainly driven by 
+a reduction in short-term borrowings. 
+Taxation 
+The effective Reported and Core tax rates 
+for the nine months to 30 September 
+2025 were 19% (9M 2024: 21% and 20% 
+respectively).  
+The cash tax paid for the nine months 
+ended 30 September 2025 was $2,193m 
+(9M 2024: $1,978m), representing 22% of 
+Reported Profit before tax (9M 2024: 
+28%).
+
+[[page 20 | printed 20]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+20 
+ 
+Cash Flow 
+Table 11: Cash Flow summary: 9M 2025 
+For the nine months ended 30 September 
+ 
+2025  
+$m  
+2024  
+$m  
+Change 
+$m  
+Reported Operating profit  10,765  7,967  2,798  
+Depreciation, amortisation and impairment  4,222  4,351  (129) 
+Movement in working capital and short-term provisions  64  (543) 607  
+Gains on disposal of intangible assets  (118) (34) (84) 
+Fair value movements on contingent consideration arising from business combinations (29) 251  (280) 
+Non-cash and other movements  591  15  576  
+Interest paid  (1,069) (1,075) 6  
+Taxation paid  (2,193) (1,978) (215) 
+Net cash inflow from operating activities  12,233  8,954  3,279  
+Net cash inflow before financing activities  6,871  2,155  4,716  
+Net cash (outflow) from financing activities  (4,262) (3,325) (937) 
+Net cash flow 
+The change in Net cash inflow from 
+operating activities of $3,279m is 
+primarily driven by the increased 
+operating profit in 2025. 
+The change in Net cash inflow before 
+financing activities of $4,716m is primarily 
+driven by the reduction in cash outflow 
+relating to the Acquisitions of 
+subsidiaries, net of cash acquired of 
+$2,771m, which in 2024 related to the 
+acquisition of Gracell Biotechnologies Inc. 
+and the acquisition of Fusion 
+Pharmaceuticals Inc. 
+The change in Net cash outflow from 
+financing activities of $937m is primarily 
+driven by the issue of new long-term 
+loans of $6,492m in 2024, with no 
+issuance in 2025, and offset by the 
+repayment of loans of $4,647m in 2024, 
+with no repayment in 2025. 
+Capital expenditure 
+Capital expenditure on tangible assets 
+and Software-related intangible assets 
+amounted to $2,091m in 9M 2025 (9M 
+2024: $1,415m). The increase of capital 
+expenditure in 2025 was driven by 
+investment in several major 
+manufacturing projects and continued 
+investment in technology upgrades. 
+Net debt 
+Net debt decreased by $605m in the nine 
+months to 30 September 2025 to 
+$23,965m. Details of the committed 
+undrawn bank facilities are disclosed 
+within the going concern section of Note 
+1. Details of the Company's solicited 
+credit ratings and further details on Net 
+debt are disclosed in Note 3. 
+Net debt 
+Table 12: Net debt summary 
+ At 30 Sep  
+2025  
+$m  
+At 31 Dec  
+2024  
+$m  
+At 30 Sep  
+2024  
+$m  
+Cash and cash equivalents 8,143  5,488  4,797  
+Other investments 39  166  133  
+Cash and investments 8,182  5,654  4,930  
+Overdrafts and short-term borrowings (622) (330) (769) 
+Commercial paper (1,091) -  (472) 
+Lease liabilities (1,758) (1,452) (1,422) 
+Current instalments of loans (4,461) (2,007) (12) 
+Non-current instalments of loans (24,700) (26,506) (28,887) 
+Interest-bearing loans and borrowings (Gross debt) (32,632) (30,295) (31,562) 
+Net derivatives 485  71  284  
+Net debt (23,965) (24,570) (26,348)
+
+[[page 21 | printed 21]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+21 
+ 
+Summarised financial information for guarantee of securities of subsidiaries
+AstraZeneca Finance LLC ("AstraZeneca 
+Finance") is the issuer of 1.2% Notes due 
+2026, 4.8% Notes due 2027, 4.875% Notes 
+due 2028, 1.75% Notes due 2028, 4.85% 
+Notes due 2029, 4.9% Notes due 2030, 
+4.9% Notes due 2031, 2.25% Notes due 
+2031, 4.875% Notes due 2033 and 5% 
+Notes due 2034 (the "AstraZeneca Finance 
+USD Notes"). Each series of AstraZeneca 
+Finance USD Notes has been fully and 
+unconditionally guaranteed by 
+AstraZeneca PLC. AstraZeneca Finance is 
+100% owned by AstraZeneca PLC and each 
+of the guarantees issued by AstraZeneca 
+PLC is full and unconditional and joint and 
+several. 
+The AstraZeneca Finance USD Notes are 
+senior unsecured obligations of 
+AstraZeneca Finance and rank equally with 
+all of AstraZeneca Finance's existing and 
+future senior unsecured and 
+unsubordinated indebtedness. The 
+guarantee by AstraZeneca PLC of the 
+AstraZeneca Finance USD Notes is the 
+senior unsecured obligation of 
+AstraZeneca PLC and ranks equally with all 
+of AstraZeneca PLC's existing and future 
+senior unsecured and unsubordinated 
+indebtedness. Each guarantee by 
+AstraZeneca PLC is effectively 
+subordinated to any secured  
+indebtedness of AstraZeneca PLC to the 
+extent of the value of the assets securing 
+such indebtedness. The AstraZeneca 
+Finance USD Notes are structurally 
+subordinated to indebtedness and other 
+liabilities of the subsidiaries of AstraZeneca 
+PLC, none of which guarantee the 
+AstraZeneca Finance USD Notes.  
+AstraZeneca PLC manages substantially all 
+of its operations through divisions, 
+branches and/or investments in 
+subsidiaries and affiliates. Accordingly, the 
+ability of AstraZeneca PLC to service its 
+debt and guarantee obligations is also 
+dependent upon the earnings of its 
+subsidiaries, affiliates, branches and 
+divisions, whether by dividends, 
+distributions, loans or otherwise. Please 
+refer to the Consolidated financial 
+statements of AstraZeneca PLC in our 
+Annual Report on Form 20-F as filed with 
+the SEC and information contained herein 
+for further financial information regarding 
+AstraZeneca PLC and its consolidated 
+subsidiaries. For further details, terms and 
+conditions of the AstraZeneca Finance USD 
+Notes please refer to AstraZeneca PLC's 
+reports on Form 6-K furnished to the SEC 
+on 22 February 2024, 3 March 2023 and 28 
+May 2021. 
+Pursuant to Rule 13-01 and Rule 3-10 of 
+Regulation S-X under the Securities Act of 
+1933, as amended (the "Securities Act"), 
+we present below the summary financial 
+information for AstraZeneca PLC, as 
+Guarantor, excluding its consolidated 
+subsidiaries, and AstraZeneca Finance, as 
+the issuer, excluding its consolidated 
+subsidiaries. The following summary 
+financial information of AstraZeneca PLC 
+and AstraZeneca Finance is presented on a 
+combined basis and transactions between 
+the combining entities have been 
+eliminated. Financial information for non-
+guarantor entities has been excluded. 
+Intercompany balances and transactions 
+between the obligor group and the non-
+obligor subsidiaries are presented on 
+separate lines. 
+Obligor group summarised statements 
+Table 13: Obligor group summarised Statement of comprehensive income: 9M 2025 
+For the nine months ended 30 September 
+ 
+2025  
+$m  
+2024  
+$m  
+Total Revenue -  -  
+Gross profit  -  -  
+Operating loss -  -  
+Loss for the period (957) (894) 
+Transactions with subsidiaries that are not issuers or guarantors 6,509  1,342  
+ 
+Table 14: Obligor group summarised Statement of financial position 
+ At 30 Sep 
+2025  
+$m  
+At 30 Sep 
+2024  
+$m  
+Current assets 13  10  
+Non-current assets 141  84  
+Current liabilities (5,976) (801) 
+Non-current liabilities (24,704) (28,906) 
+Amounts due from subsidiaries that are not issuers or guarantors 21,519  16,705  
+Amounts due to subsidiaries that are not issuers or guarantors -  -
+
+[[page 22 | printed 22]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+22 
+ 
+Capital allocation 
+The Group’s capital allocation priorities 
+include: investing in the business and 
+pipeline; maintaining a strong, investment-
+grade credit rating; potential value-
+enhancing business development 
+opportunities; and supporting the 
+progressive dividend policy. 
+In approving the declaration of dividends, 
+the Board considers both the liquidity of 
+the Company and the level of reserves 
+legally available for distribution. 
+In FY 2025, the Company intends to 
+increase the annual dividend per share 
+declared to $3.20 per share. 
+Dividends are paid to shareholders from 
+AstraZeneca PLC, a Group holding 
+company with no direct operations. The 
+ability of AstraZeneca PLC to make 
+shareholder distributions is dependent on 
+the creation of profits for distribution and 
+the receipt of funds from subsidiary 
+companies. 
+The consolidated Group reserves set out in 
+the Condensed consolidated statement of 
+financial position do not reflect the profit 
+available for distribution to the 
+shareholders of AstraZeneca PLC. 
+In FY 2024, capital expenditure on tangible 
+assets and Software-related intangible 
+assets amounted to $2,218m. In FY 2025 
+the Group expects to increase expenditure 
+on tangible assets and Software-related 
+intangible assets by approximately 50%, 
+driven by manufacturing expansion 
+projects and investments in systems and 
+technology.
+Foreign exchange 
+The Company's transactional currency 
+exposures on working capital balances, 
+which typically extend for up to three 
+months, are hedged where practicable 
+using forward foreign exchange contracts 
+against the individual companies' reporting 
+currency.
+Foreign exchange gains and losses on 
+forward contracts transacted for 
+transactional hedging are taken to profit or 
+to Other comprehensive income if the 
+contract is in a designated cashflow hedge. 
+In addition, the Company's external 
+dividend payments, paid principally in 
+pound sterling and Swedish krona, are fully 
+hedged from the time of their 
+announcement to the payment date. 
+ 
+Table 15: Currency sensitivities 
+Currency Primary Relevance Exchange rate vs USD (average rate in period) Annual impact of 5% weakening vs USD1 ($m) 
+  FY   
+20242 
+YTD   
+20253 
+Change  
+ (%) 
+September   
+ 20254 
+Change 
+ (%) 
+Total 
+Revenue 
+Core Operating 
+Profit 
+EUR Total Revenue 0.92  0.89 3   0.85 8 (461) (232) 
+CNY Total Revenue 7.21  7.22 - 7.12 1  (313) (171) 
+JPY Total Revenue 151.46  148.10 2   147.87 2 (179) (121) 
+GBP Operating expense 0.78  0.76 3   0.74 6 (68) 124  
+SEK Operating expense 10.57  9.94 6   9.37 13 (9) 69  
+Other        (557) (289) 
+1. Assumes the average exchange rate vs USD in FY 2025 is 5% lower than the average rate in FY 2024. The impact data are estimates, based on best prevailing 
+assumptions around currency profiles. 
+2. Based on average daily spot rates 1 January 2024 to 31 December 2024. 
+3. Based on average daily spot rates 1 January 2025 to 30 September 2025. 
+4. Based on average daily spot rates 1 September 2025 to 30 September 2025.
+
+[[page 23 | printed 23]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+23 
+ 
+Table 16: Condensed consolidated statement of comprehensive income: 9M 2025 
+For the nine months ended 30 September  2025  
+$m  
+2024  
+$m  
+- Product Sales 41,035  37,576  
+- Alliance Revenue 2,108  1,498  
+Product Revenue 43,143  39,074  
+Collaboration Revenue 93  108  
+Total Revenue 43,236  39,182  
+Cost of sales (7,515) (7,482) 
+Gross profit 35,721  31,700  
+Distribution expense (426) (412) 
+Research and development expense (10,370) (8,906) 
+Selling, general and administrative expense (14,441) (14,567) 
+Other operating income and expense 281  152  
+Operating profit 10,765  7,967  
+Finance income 225  394  
+Finance expense (1,210) (1,313) 
+Share of after tax losses in associates and joint ventures (7) (23) 
+Profit before tax 9,773  7,025  
+Taxation (1,869) (1,484) 
+Profit for the period 7,904  5,541  
+   
+Other comprehensive income   
+Items that will not be reclassified to profit or loss:   
+Remeasurement of the defined benefit pension liability 116  136  
+Net (losses)/gains on equity investments measured at fair value through other comprehensive income (21) 264  
+Fair value movements related to own credit risk on bonds designated as fair value through profit or loss -  12  
+Tax on items that will not be reclassified to profit or loss (13) (50) 
+ 82  362  
+Items that may be reclassified subsequently to profit or loss:   
+Foreign exchange arising on consolidation 2,266  543  
+Foreign exchange arising on designated liabilities in net investment hedges 15  (84) 
+Fair value movements on cash flow hedges 256  (42) 
+Fair value movements on cash flow hedges transferred to profit and loss (318) 1  
+Fair value movements on derivatives designated in net investment hedges (7) 13  
+Gains of hedging 8  2  
+Tax on items that may be reclassified subsequently to profit or loss (50) 16  
+ 2,170  449  
+Other comprehensive income, net of tax 2,252  811  
+     
+Total comprehensive income for the period 10,156  6,352  
+   
+Profit attributable to:   
+Owners of the Parent 7,899  5,535  
+Non-controlling interests 5  6  
+ 7,904  5,541  
+   
+Total comprehensive income attributable to:   
+Owners of the Parent 10,149  6,346  
+Non-controlling interests 7  6  
+ 10,156  6,352  
+Earnings per share   
+Basic earnings per $0.25 Ordinary Share $5.10  $3.57  
+Diluted earnings per $0.25 Ordinary Share $5.06  $3.54  
+Weighted average number of Ordinary Shares in issue (millions) 1,550  1,550  
+Diluted weighted average number of Ordinary Shares in issue (millions) 1,561  1,562  
+  
+Interim financial statements
+
+[[page 24 | printed 24]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+24 
+ 
+Table 17: Condensed consolidated statement of comprehensive income: Q3 2025 
+For the quarter ended 30 September 
+ 
+2025  
+$m  
+2024  
+$m  
+- Product Sales 14,365  12,947  
+- Alliance Revenue 815  559  
+Product Revenue 15,180  13,506  
+Collaboration Revenue 11  59  
+Total Revenue 15,191  13,565  
+Cost of sales (2,801) (3,081) 
+Gross profit 12,390  10,484  
+Distribution expense (148) (145) 
+Research and development expense (3,663) (3,115) 
+Selling, general and administrative expense (5,085) (5,143) 
+Other operating income and expense 89  25  
+Operating profit 3,583  2,106  
+Finance income 85  183  
+Finance expense (434) (457) 
+Share of after tax losses in associates and joint ventures 10  (4) 
+Profit before tax 3,244  1,828  
+Taxation (709) (395) 
+Profit for the period 2,535  1,433  
+   
+Other comprehensive income   
+Items that will not be reclassified to profit or loss:   
+Remeasurement of the defined benefit pension liability 146  35  
+Net gains on equity investments measured at fair value through other comprehensive income 104  175  
+Fair value movements related to own credit risk on bonds designated as fair value through profit or loss -  -  
+Tax on items that will not be reclassified to profit or loss (10) (23) 
+ 240  187  
+Items that may be reclassified subsequently to profit or loss:   
+Foreign exchange arising on consolidation (198) 1,097  
+Foreign exchange arising on designated liabilities in net investment hedges 5  12  
+Fair value movements on cash flow hedges (17) 96  
+Fair value movements on cash flow hedges transferred to profit and loss (3) (101) 
+Fair value movements on derivatives designated in net investment hedges 13  (32) 
+Costs of hedging (2) (12) 
+Tax on items that may be reclassified subsequently to profit or loss 2  (22) 
+ (200) 1,038  
+Other comprehensive income, net of tax 40  1,225  
+     
+Total comprehensive income for the period 2,575  2,658  
+   
+Profit attributable to:   
+Owners of the Parent 2,533  1,429  
+Non-controlling interests 2  4  
+ 2,535  1,433  
+   
+Total comprehensive income attributable to:   
+Owners of the Parent 2,575  2,654  
+Non-controlling interests -  4  
+ 2,575  2,658  
+Earnings per share   
+Basic earnings per $0.25 Ordinary Share $1.64  $0.92  
+Diluted earnings per $0.25 Ordinary Share $1.62  $0.91  
+Weighted average number of Ordinary Shares in issue (millions) 1,551  1,550  
+Diluted weighted average number of Ordinary Shares in issue (millions) 1,561  1,562
+
+[[page 25 | printed 25]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+25 
+ 
+Table 18: Condensed consolidated statement of financial position 
+ At 
+30 Sep 2025 
+At 
+31 Dec 2024 
+At 
+30 Sep 2024 
+Assets  $m  $m  $m  
+Non-current assets    
+Property, plant and equipment 12,083  10,252  10,135  
+Right-of-use assets 1,700  1,395  1,378  
+Goodwill 21,219  21,025  21,139  
+Intangible assets 38,191  37,177  39,394  
+Investments in associates and joint ventures 296  268  290  
+Other investments 1,990  1,632  1,855  
+Derivative financial instruments 502  182  319  
+Other receivables 1,159  930  915  
+Income tax receivable 1,247  -  -  
+Deferred tax assets 6,129  5,347  5,342  
+ 84,516  78,208  80,767  
+Current assets    
+Inventories 6,593  5,288  5,662  
+Trade and other receivables 14,338  12,972  11,879  
+Other investments 39  166  133  
+Derivative financial instruments 12  54  16  
+Income tax receivable 815  1,859  1,668  
+Cash and cash equivalents 8,143  5,488  4,797  
+ 29,940  25,827  24,155  
+Total assets 114,456  104,035  104,922  
+    
+Liabilities    
+Current liabilities    
+Interest-bearing loans and borrowings (6,174) (2,337) (1,253) 
+Lease liabilities (379) (339) (317) 
+Trade and other payables (25,028) (22,465) (21,684) 
+Derivative financial instruments (29) (50) (17) 
+Provisions (1,176) (1,269) (1,187) 
+Income tax payable (1,268) (1,406) (1,468) 
+ (34,054) (27,866) (25,926) 
+Non-current liabilities    
+Interest-bearing loans and borrowings (24,700) (26,506) (28,887) 
+Lease liabilities (1,379) (1,113) (1,105) 
+Derivative financial instruments -  (115) (34) 
+Deferred tax liabilities (3,604) (3,305) (3,568) 
+Retirement benefit obligations (1,271) (1,330) (1,361) 
+Provisions (929) (921) (1,063) 
+Income tax payable (535) (238) (174) 
+Other payables (2,013) (1,770) (1,999) 
+ (34,431) (35,298) (38,191) 
+Total liabilities (68,485) (63,164) (64,117) 
+    
+Net assets 45,971  40,871  40,805  
+    
+Equity    
+Share capital 388  388  388  
+Share premium account 35,243  35,226  35,203  
+Other reserves 2,044  2,012  1,990  
+Retained earnings 8,213  3,160  3,138  
+Capital and reserves attributable to equity holders of the Parent 45,888  40,786  40,719  
+Non-controlling interests 83  85  86  
+Total equity 45,971  40,871  40,805
+
+[[page 26 | printed 26]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+26 
+ 
+Table 19: Condensed consolidated statement of changes in equity 
+ Share 
+capital 
+Share 
+premium 
+account 
+Other 
+reserves 
+Retained 
+earnings 
+Total 
+attributable 
+to owners of 
+the parent 
+Non-
+controlling 
+interests 
+Total equity 
+ $m  $m  $m  $m  $m  $m  $m 
+At 1 Jan 2024 388  35,188  2,065  1,502  39,143  23  39,166  
+Profit for the period -  -  -  5,535  5,535  6  5,541  
+Other comprehensive income   -  -  -  811  811  -  811  
+Transfer to other reserves -  -  1  (1) -  -  -  
+Transactions with owners        
+Dividends -  -  -  (4,602) (4,602) -  (4,602) 
+Dividends paid to non-controlling interests -  -  -  -  -  (4) (4) 
+Issue of Ordinary Shares -  15  -  -  15  -  15  
+Changes in non-controlling interests -  -  -  -  -  61  61  
+Movement in shares held by Employee 
+Benefit Trusts -  -  (76) -  (76) -  (76) 
+Share-based payments charge for the period -  -  -  487  487  -  487  
+Settlement of share plan awards -  -  -  (594) (594) -  (594) 
+Net movement -  15  (75) 1,636  1,576  63  1,639  
+At 30 September 2024 388  35,203  1,990  3,138  40,719  86  40,805  
+        
+At 1 Jan 2025 388  35,226  2,012  3,160  40,786  85  40,871  
+Profit for the period -  -  -  7,899  7,899  5  7,904  
+Other comprehensive (expense)/income   -  -  (61) 2,311  2,250  2  2,252  
+Transfer to other reserves -  -  48  (48) -  -  -  
+Transactions with owners        
+Dividends -  -  -  (4,846) (4,846) -  (4,846) 
+Dividends paid to non-controlling interests -  -  -  -  -  (2) (2) 
+Issue of Ordinary Shares -  17  -  -  17  -  17  
+Changes in non-controlling interests -  -  -  8  8  (7) 1  
+Movement in shares held by Employee 
+Benefit Trusts -  -  45  -  45  -  45  
+Share-based payments charge for the period -  -  -  529  529  -  529  
+Settlement of share plan awards -  -  -  (800) (800) -  (800) 
+Net movement -  17  32  5,053  5,102  (2) 5,100  
+At 30 September 2025 388  35,243  2,044  8,213  45,888  83  45,971  
+Transfer to other reserves includes $70m in respect of the opening balance on the Cash flow hedge reserve. The cash flow hedge 
+reserve was previously disclosed within Retained earnings but from 2025 is disclosed within Other reserves.
+
+[[page 27 | printed 27]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+27 
+ 
+Table 20: Condensed consolidated statement of cash flows: 9M 2025 
+For the nine months ended 30 September 
+ 
+2025  
+$m  
+2024  
+$m  
+Cash flows from operating activities   
+Profit before tax 9,773  7,025  
+Finance income and expense 985  919  
+Share of after tax losses of associates and joint ventures 7  23  
+Depreciation, amortisation and impairment 4,222  4,351  
+Movement in working capital and short-term provisions 64  (543) 
+Gains on disposal of intangible assets (118) (34) 
+Fair value movements on contingent consideration arising from business combinations (29) 251  
+Non-cash and other movements 591  15  
+Cash generated from operations 15,495  12,007  
+Interest paid (1,069) (1,075) 
+Tax paid (2,193) (1,978) 
+Net cash inflow from operating activities 12,233  8,954  
+   
+Cash flows from investing activities   
+Acquisition of subsidiaries, net of cash acquired (60) (2,771) 
+Payment of contingent consideration from business combinations (897) (737) 
+Purchase of property, plant and equipment (1,774) (1,216) 
+Disposal of property, plant and equipment 10  53  
+Purchase of intangible assets (2,844) (2,415) 
+Disposal of intangible assets 96  107  
+Purchase of non-current asset investments (218) (96) 
+Disposal of non-current asset investments -  73  
+Movement in short-term investments, fixed deposits and other investing instruments 122  67  
+Payments to associates and joint ventures (10) (158) 
+Disposal of investments in associates and joint ventures -  13  
+Interest received 213  281  
+Net cash outflow from investing activities (5,362) (6,799) 
+Net cash inflow before financing activities 6,871  2,155  
+   
+Cash flows from financing activities   
+Proceeds from issue of share capital 17  15  
+Own shares purchased by Employee Benefit Trust (508) (81) 
+Payments to acquire non-controlling interests (14) -  
+Issue of loans and borrowings  9  6,492  
+Repayment of loans and borrowings (20) (4,647) 
+Dividends paid (4,968) (4,626) 
+Hedge contracts relating to dividend payments 113  16  
+Repayment of obligations under leases (273) (233) 
+Movement in short-term borrowings 1,382  572  
+Payment of Acerta Pharma share purchase liability -  (833) 
+Net cash outflow from financing activities (4,262) (3,325) 
+   
+Net increase/(decrease) in Cash and cash equivalents in the period 2,609  (1,170) 
+Cash and cash equivalents at the beginning of the period 5,429  5,637  
+Exchange rate effects 42  (32) 
+Cash and cash equivalents at the end of the period 8,080  4,435  
+   
+Cash and cash equivalents consist of:   
+Cash and cash equivalents 8,143  4,797  
+Overdrafts (63) (362) 
+ 8,080  4,435
+
+[[page 28 | printed 28]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+28 
+ 
+Note 1: Basis of preparation and accounting policies
+These unaudited Interim financial 
+statements for the nine months ended 30 
+September 2025 have been prepared in 
+accordance with International Accounting 
+Standard 34, ‘Interim Financial Reporting’ 
+(IAS 34), as issued by the International 
+Accounting Standards Board (IASB), IAS 34 
+as adopted by the European Union, UK-
+adopted IAS 34 and the Disclosure 
+Guidance and Transparency Rules 
+sourcebook of the United Kingdom’s 
+Financial Conduct Authority and with the 
+requirements of the Companies Act 2006 
+as applicable to companies reporting 
+under those standards.  
+The unaudited Interim financial 
+statements for the nine months ended 30 
+September 2025 were approved by the 
+Board of Directors for publication on 
+6 November 2025. 
+This results announcement does not 
+constitute statutory accounts of the Group 
+within the meaning of sections 434(3) and 
+435(3) of the Companies Act 2006. The 
+annual financial statements of the Group 
+for the year ended 31 December 2024 
+were prepared in accordance with UK-
+adopted international accounting 
+standards and with the requirements of 
+the Companies Act 2006. The annual 
+financial statements also comply fully with 
+IFRS Accounting Standards as issued by the 
+IASB and International Accounting 
+Standards as adopted by the European 
+Union. Except for the estimation of the 
+interim income tax charge, the Interim 
+financial statements have been prepared 
+applying the accounting policies that were 
+applied in the preparation of the Group’s 
+published consolidated financial 
+statements for the year ended 31 
+December 2024. 
+The comparative figures for the financial 
+year ended 31 December 2024 are not the 
+Group’s statutory accounts for that 
+financial year. Those accounts have been 
+reported on by the Group’s auditors and 
+have been delivered to the Registrar of 
+Companies; their report was (i) 
+unqualified, (ii) did not include a reference 
+to any matters to which the auditors drew 
+attention by way of emphasis without 
+qualifying their report, and (iii) did not 
+contain a statement under section 498(2) 
+or (3) of the Companies Act 2006. 
+Product Revenue 
+Effective 1 January 2025, the Group has 
+updated the presentation of Total 
+Revenue on the face of the Statement of 
+Comprehensive Income to include a new 
+subtotal ‘Product Revenue’ representing 
+the summation of Product Sales and 
+Alliance Revenue. 
+Product Revenue and Collaboration 
+Revenue form Total Revenue. 
+Product Sales and Alliance Revenue will 
+continue to be presented separately, with 
+the new subtotal providing additional 
+aggregation of revenue types with similar 
+characteristics, reflecting the growing 
+importance of Alliance Revenue. 
+Full descriptions of Product Sales, Alliance 
+Revenue and Collaboration Revenue are 
+included from page 152 of the Group's 
+Annual Report and Form 20-F Information 
+2024. 
+There are no changes to the Revenue 
+accounting policy regarding the types of 
+transactions recorded in each revenue 
+category. The comparative period has 
+been retrospectively adjusted to reflect 
+the additional subtotal, resulting in total 
+Product Revenue being reported for the 
+nine months ended 30 September 2024 of 
+$39,074m. 
+Going concern 
+The Group has considerable financial 
+resources available. As at 30 September 
+2025, the Group has $13.0bn in financial 
+resources (cash and cash equivalent 
+balances of $8.1bn and undrawn 
+committed bank facilities of $4.9bn that 
+are available until April 2030), with $6.6bn 
+of borrowings due within one year. These 
+facilities contain no financial covenants.  
+The Group has assessed the prospects of 
+the Group over a period longer than the 
+required 12 months from the date of 
+Board approval of these consolidated 
+financial statements, with no deterioration 
+noted requiring a further extension of this 
+review. The Group's revenues are largely 
+derived from sales of medicines covered 
+by patents, which provide a relatively high 
+level of resilience and predictability to cash 
+inflows, although government price 
+interventions in response to budgetary 
+constraints are expected to continue to 
+adversely affect revenues in some of our 
+significant markets. The Group, however, 
+anticipates new revenue streams from 
+both recently launched medicines and 
+those in development, and the Group has 
+a wide diversity of customers and suppliers 
+across different geographic areas. 
+Consequently, the Directors believe that, 
+overall, the Group is well placed to 
+manage its business risks successfully. 
+Accordingly, they continue to adopt the 
+going concern basis in preparing the 
+Interim financial statements. 
+Legal proceedings 
+The information contained in Note 5 
+updates the disclosures concerning legal 
+proceedings and contingent liabilities in 
+the Group's Annual Report and Form 20-F 
+Information 2024. 
+ 
+  
+Notes to the Interim financial statements
+
+[[page 29 | printed 29]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+29 
+ 
+Note 2: Intangible assets 
+The acquisition of EsoBiotec completed on 
+19 May 2025. The transaction is recorded 
+as an asset acquisition based upon the 
+concentration test permitted under IFRS 3 
+‘Business Combinations’, with 
+consideration and net assets acquired of 
+$403m, which included intangible assets 
+acquired of $426m, current payables of 
+$29m, $4m of cash and cash equivalents 
+and current receivables of $2m. 
+Contingent consideration of up to $575m 
+could be paid on achievement of 
+regulatory milestones, those liabilities will 
+be recorded when the relevant regulatory 
+milestone is achieved. 
+Intangible asset additions of $536m in the 
+quarter relate to the total of net upfront 
+payment made, the present value of non-
+contingent future payments and a sales-
+related payment due to Merck in 
+connection with the restructuring of 
+arrangements relating to Koselugo, 
+recorded as an asset acquisition. A 
+regulatory milestone of $50m, and sales-
+related payment of $35m additionally fell 
+due and were capitalised in the quarter. 
+Further contingent payments of up to 
+$300m could be paid on achievement of 
+regulatory milestones or on achievement 
+of sales-related thresholds. Those liabilities 
+will be recorded when milestones are 
+triggered, or performance conditions have 
+been satisfied. Sales-related payments are 
+accrued and capitalised when considered 
+probable with reference to the latest 
+Group sales forecasts for approved 
+indications at the present value of 
+expected future cash flows. 
+Note 3: Net debt 
+Table 21: Net debt 
+ 
+ At 1 Jan  
+2025  
+Cash flow  Acquisitions Non-cash  
+ and other  
+Exchange  
+ movements  
+At 30 Sep  
+2025  
+ $m  $m  $m $m  $m  $m  
+Non-current instalments of loans (26,506) -  -  2,433  (627) (24,700) 
+Non-current instalments of leases (1,113) -  -  (217) (49) (1,379) 
+Total long-term debt (27,619) -  -  2,216  (676) (26,079) 
+Current instalments of loans (2,007) 11  -  (2,465) -  (4,461) 
+Current instalments of leases (339) 326  (1) (346) (19) (379) 
+Commercial paper -  (1,091) -  -  -  (1,091) 
+Collateral received from derivative counterparties (181) (232) -  -  -  (413) 
+Other short-term borrowings excluding overdrafts (90) (59) -  -  3  (146) 
+Overdrafts (59) (3) -  -  (1) (63) 
+Total current debt (2,676) (1,048) (1) (2,811) (17) (6,553) 
+Gross borrowings (30,295) (1,048) (1) (595) (693) (32,632) 
+Net derivative financial instruments 71  (385) -  799  -  485  
+Net borrowings (30,224) (1,433) (1) 204  (693) (32,147) 
+Cash and cash equivalents 5,488  2,492  120  -  43  8,143  
+Other investments - current 166  (122) -  -  (5) 39  
+Cash and investments 5,654  2,370  120  -  38  8,182  
+Net debt (24,570) 937  119  204  (655) (23,965) 
+ 
+The table above provides an analysis of 
+Net debt and a reconciliation of Net cash 
+flow to the movement in Net debt. The 
+Group monitors Net debt as part of its 
+capital management policy as described in 
+Note 28 of the Annual Report and Form 
+20-F Information 2024. Net debt is a non-
+GAAP financial measure. 
+Net debt decreased by $605m in the nine 
+months to 30 September 2025 to 
+$23,965m. 
+Details of the committed undrawn bank 
+facilities are disclosed within the going 
+concern section of Note 1. Non-cash 
+movements in the period include fair value 
+adjustments under IFRS 9 'Financial 
+Instruments'. 
+The Group has agreements with some 
+bank counterparties whereby the parties 
+agree to post cash collateral on financial 
+derivatives, for the benefit of the other, 
+equivalent to the market valuation of the 
+derivative positions above a 
+predetermined threshold. The carrying 
+value of such cash collateral held by the 
+Group at 30 September 2025 was $413m 
+(31 December 2024: $181m) and the 
+carrying value of such cash collateral 
+posted by the Group at 30 September 
+2025 was $25m (31 December 2024: 
+$129m). 
+The equivalent GAAP measure to Net debt 
+is 'liabilities arising from financing 
+activities', which excludes the amounts for 
+cash and overdrafts, other investments 
+and non-financing derivatives shown. 
+During the nine months ended 30 
+September 2025, Moody’s upgraded the 
+Group’s solicited long term credit rating to 
+A1 from A2, which occurred during Q1 
+2025. The short-term rating remained at P-
+1. There were no changes to Standard and 
+Poor’s credit ratings (long term: A+; short 
+term: A-1).
+
+[[page 30 | printed 30]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+30 
+ 
+Note 4: Financial Instruments
+As detailed in the Group's most recent 
+annual financial statements, the principal 
+financial instruments consist of derivative 
+financial instruments, other investments, 
+trade and other receivables, cash and cash 
+equivalents, trade and other payables, 
+lease liabilities and interest-bearing loans 
+and borrowings. 
+The Group has certain equity investments 
+that are categorised as Level 3 in the fair 
+value hierarchy that are held at $539m 
+(31 December 2024: $353m) and for which 
+a fair value loss of $47m has been 
+recognised in the nine months ended 30 
+September 2025 (9M 2024: $nil). In the 
+absence of specific market data, these 
+unlisted investments are held at fair value 
+based on the cost of investment and 
+adjusted as necessary for impairments and 
+revaluations on new funding rounds, 
+which are seen to approximate the fair 
+value. All other fair value gains and/or 
+losses that are presented in Net 
+gains/(losses) on equity investments 
+measured at fair value through other 
+comprehensive income, in the Condensed 
+consolidated statement of comprehensive 
+income for the nine months ended 30 
+September 2025 are Level 1 fair value 
+measurements, valued based on quoted 
+prices in active markets. 
+Financial instruments measured at fair 
+value include $2,004m of other 
+investments, $6,732m held in money-
+market funds and $485m of derivatives as 
+at 30 September 2025. With the exception 
+of derivatives being Level 2 fair valued, and 
+certain equity instruments of $539m 
+categorised as Level 3, the 
+aforementioned balances are Level 1 fair 
+valued. Financial instruments measured at 
+amortised cost include $25m of cash 
+collateral pledged to counterparties. The 
+total fair value of Interest-bearing loans 
+and borrowings as at 30 September 2025, 
+which have a carrying value of $32,632m 
+in the Condensed consolidated statement 
+of financial position, was $32,275m. 
+Contingent consideration arising from 
+business combinations is fair valued using 
+decision-tree analysis, with key inputs 
+including the probability of success, 
+consideration of potential delays and the 
+expected levels of future revenues. 
+The contingent consideration balance 
+relating to BMS's share of the global 
+diabetes alliance of $523m (31 December 
+2024: $1,309m) would increase/decrease 
+by $52m with an increase/decrease in 
+sales of 10%, as compared with the current 
+estimates. 
+ 
+ 
+ 
+Table 22: Contingent consideration 
+ 2025 2024  
+ Diabetes alliance  $m  Other  $m  Total  $m  Total  $m  
+At 1 January 1,309 442 1,751 2,137 
+Additions through business combinations -  -  -  198  
+Settlements (787) (110) (897) (737) 
+Revaluations (30) 1  (29) 252  
+Discount unwind 31  15  46  85  
+At 30 September 523 348 871 1,935 
+ 
+Note 5: Legal proceedings and contingent liabilities
+AstraZeneca is involved in various legal 
+proceedings considered typical to its 
+business, including litigation and 
+investigations, including Government 
+investigations, relating to product liability, 
+commercial disputes, infringement of 
+intellectual property (IP) rights, the validity 
+of certain patents, anti-trust law and sales 
+and marketing practices. 
+The matters discussed below constitute 
+the more significant developments since 
+publication of the disclosures concerning 
+legal proceedings in the Company's Annual 
+Report and Form 20-F Information 2024 
+and the Interim Financial Statements for 
+the six months ended 30 June 2025 (the 
+Disclosures). Information about the nature 
+and facts of the cases is disclosed in 
+accordance with IAS 37 ‘Provisions, 
+Contingent Liabilities and Contingent 
+Assets’. 
+As discussed in the Disclosures, the 
+majority of claims involve highly complex 
+issues. Often these issues are subject to 
+substantial uncertainties and, therefore, 
+the probability of a loss, if any, being 
+sustained and/or an estimate of the 
+amount of any loss is difficult to ascertain. 
+In cases that have been settled or 
+adjudicated, or where quantifiable fines 
+and penalties have been assessed and 
+which are not subject to appeal, or where 
+a loss is probable and we are able to make 
+a reasonable estimate of the loss, 
+AstraZeneca records the loss absorbed or 
+makes a provision for its best estimate of 
+the expected loss. The position could 
+change over time and the estimates that 
+the Company made, and upon which the 
+Company have relied in calculating these 
+provisions are inherently imprecise. There 
+can, therefore, be no assurance that any 
+losses that result from the outcome of any 
+legal proceedings will not exceed the 
+amount of the provisions that have been 
+booked in the accounts. The major factors 
+causing this uncertainty are described 
+more fully in the Disclosures and herein. 
+AstraZeneca has full confidence in, and will 
+vigorously defend and enforce, its IP.
+
+[[page 31 | printed 31]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+31 
+ 
+Matters disclosed in respect of the third quarter of 2025 and to 6 November 2025 
+Table 23: Patent litigation 
+Legal proceedings brought against AstraZeneca 
+Factor Bioscience patent 
+proceedings, US 
+ 
+Considered to be a contingent liability 
+ In September 2025, Factor Bioscience Inc. (Factor) filed a complaint against AstraZeneca, and 
+others in the U.S. District Court for the District of Delaware, alleging infringement of several 
+Factor patents related to technology for producing gene-edited cells using synthetic messenger 
+ribonucleic acid (mRNA) molecules encoding transcription activator-like effector nuclease (TALEN) 
+gene-editing proteins.  
+ The complaint alleges that certain drug research, design and development activities by 
+AstraZeneca and others infringe Factor’s patents.  
+Forxiga patent proceedings, UK 
+ 
+Matter concluded 
+ In the UK, one of AstraZeneca’s patents relating to Forxiga was challenged by Generics (UK) 
+Limited, Teva Pharmaceutical Industries Limited, and Glenmark Pharmaceuticals Europe Limited. 
+ Trial regarding patent validity occurred in March 2025. In April 2025, the UK Patents Court held 
+the patent invalid. AstraZeneca appealed the decision. In July 2025, the UK Court of Appeal 
+dismissed AstraZeneca’s appeal and upheld the lower court’s invalidity decision. AstraZeneca's 
+application for permission to appeal to the UK Supreme Court was denied. 
+ In March 2025 and onward, AstraZeneca obtained injunctions against generic manufacturers' at-
+risk sales of dapagliflozin products in the UK. All injunctions have since been lifted. 
+ This matter has concluded. 
+Legal proceedings brought by AstraZeneca 
+Lynparza patent proceedings, 
+Canada 
+Considered to be a contingent asset 
+ In July 2025, AstraZeneca was served with a Notice of Allegation from Cipla Ltd. challenging a 
+patent relating to Lynparza. 
+ AstraZeneca commenced an action in response in August 2025. Trial is scheduled to begin in April 
+2027. 
+ In August 2025, AstraZeneca was served with a Notice of Allegation from Natco Pharma (Canada) 
+Inc. challenging a patent relating to Lynparza. 
+ AstraZeneca commenced an action in response in October 2025. No trial date has been set. 
+Soliris patent proceedings, UK 
+ 
+Considered to be a contingent asset 
+ In May 2024, AstraZeneca initiated patent infringement proceedings against Amgen Ltd. and 
+Samsung Bioepis UK Limited (Samsung) in the UK High Court of Justice alleging that their 
+respective biosimilar eculizumab products infringe an AstraZeneca patent; on the same day, 
+Samsung initiated a revocation action for the same patent. 
+ Trial was held in March 2025. In May 2025, the UK court issued a decision finding AstraZeneca's 
+patent invalid and not infringed. 
+ In August 2025, AstraZeneca appealed. 
+Tagrisso patent proceedings, 
+Russia 
+ 
+Considered to be a contingent asset 
+ In August 2023, AstraZeneca filed lawsuits in the Arbitration Court of the Moscow region (Court) 
+against the Russian Ministry of Health (MOH) and Axelpharm LLC (Axelpharm) for improper use of 
+AstraZeneca’s information in the authorisation of a generic version of Tagrisso. The suit against 
+the MOH was dismissed in July 2024, after two appeals. The case against Axelpharm was 
+dismissed in September 2024, and AstraZeneca has appealed. 
+  In November 2023, Axelpharm sought a compulsory licence under a patent related to Tagrisso; 
+the action remains pending. The Axelpharm patent on which the compulsory licensing action was 
+based was held invalid by the Russian Patent and Trademark Office (PTO) in August 2024 
+following a challenge by AstraZeneca. The PTO’s decision was upheld in June 2025, following an 
+appeal by Axelpharm. In August 2025, Axelpharm filed a further appeal before the Presidium of 
+the Intellectual Property Court and that appeal will be heard in November 2025. 
+ In July 2024, AstraZeneca filed a patent infringement claim against Axelpharm in relation to a 
+generic version of Tagrisso. The action was stayed by the Court pending resolution of the 
+compulsory licensing action. 
+ In August 2024, after AstraZeneca filed a complaint, the Federal Anti-Monopoly Service of Russia 
+(FAS) initiated a case against Axelpharm and OncoTarget LLC (OncoTarget). In November 2024, 
+the FAS found Axelpharm to have committed unfair competition, but not OncoTarget. 
+Axelpharm’s appeal against the FAS’s finding was upheld in June 2025. AstraZeneca appealed 
+against the ruling in June 2025 and a hearing has been scheduled before the Ninth Arbitration 
+Appellate Court in December 2025.
+
+[[page 32 | printed 32]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+32 
+ 
+Table 24: Commercial litigation 
+Legal proceedings brought against AstraZeneca 
+340B Antitrust litigation, US 
+ 
+Considered to be a contingent liability 
+ In September 2021, AstraZeneca was served with a class-action antitrust complaint filed in the US 
+District Court for the Western District of New York (District Court) by Mosaic Health alleging a 
+conspiracy to restrict access to 340B discounts in the diabetes market through contract 
+pharmacies.  
+ In September 2022, the District Court granted AstraZeneca’s motion to dismiss the complaint. In 
+February 2024, the District Court denied Plaintiffs’ request to file an amended complaint and 
+entered an order closing the matter. In March 2024, Plaintiffs filed an appeal.  
+ In August 2025, the US Court of Appeals for the Second Circuit reversed the District Court's 
+decision.  
+ AstraZeneca and the other defendants have filed a motion for reconsideration. 
+Seroquel XR Antitrust Litigation, 
+US 
+ 
+Matter concluded 
+ In 2019, AstraZeneca was named in several related complaints now proceeding in US District 
+Court in Delaware (District Court), including several putative class action lawsuits that were 
+purportedly brought on behalf of classes of direct purchasers or end payors of Seroquel XR, that 
+allege AstraZeneca and generic drug manufacturers violated US antitrust laws when settling 
+patent litigation related to Seroquel XR. 
+ In July 2022, the District Court dismissed claims relating to one of the generic manufacturers 
+while allowing claims relating to the second generic manufacturer to proceed. 
+ In September 2024, AstraZeneca reached a settlement agreement with one of the plaintiff classes 
+which the court approved. 
+ In May 2025, AstraZeneca resolved the matter with all remaining plaintiffs for a total payment of 
+$97m. In September of 2025, the Court approved the class-related portion of the settlement.  
+ The matter is now concluded. 
+Table 25: Government investigations and proceedings 
+Legal proceedings brought against AstraZeneca 
+ 
+Shenzhen Bay Customs Office, 
+China 
+ 
+Considered to be a contingent liability  
+ 
+ 
+ In relation to the alleged unpaid importation taxes, in October 2025, AstraZeneca received a final 
+appraisal notice, which supersedes the previously-disclosed appraisal notices, from the Shenzhen 
+Bay Customs Office stating that the total amount of unpaid tax, inclusive of the previously-
+disclosed amounts, is RMB 24 million (approximately $3.5m).  
+ To the best of AstraZeneca’s knowledge, the importation taxes referred to in the appraisal notice 
+relate to Enhertu, Imfinzi and Imjudo. 
+ AstraZeneca has since prepaid the full amount as voluntary compensation to the State.   
+ A fine of between one and five times the amount of these paid importation taxes may also be 
+levied if AstraZeneca is found liable. 
+Legal proceedings brought by AstraZeneca 
+340B State litigation, US 
+ 
+Considered to be a contingent asset 
+ AstraZeneca has filed lawsuits against Arkansas, Colorado, Hawaii, Kansas, Louisiana, Maine, 
+Maryland, Minnesota, Mississippi, Missouri, Nebraska, North Dakota, Oklahoma, South Dakota, 
+Tennessee, Utah, and West Virginia challenging the constitutionality of each state’s 340B statute. 
+ In Arkansas, AstraZeneca moved for summary judgment in August 2025, and the Court denied the 
+intervenor's motion to dismiss in September 2025 finding AstraZeneca's claims were distinct from 
+the claims in the prior PhRMA litigation. Trial is scheduled for February 2026. 
+ In Colorado, AstraZeneca filed a complaint in August 2025 and a motion for a preliminary 
+injunction in October 2025. 
+ In Hawaii, AstraZeneca filed a complaint in August 2025 and a motion for a preliminary injunction 
+in September 2025. 
+ In Louisiana, the Louisiana Department of Justice sent AstraZeneca a Civil Investigative Demand in 
+September 2025 for alleged non-compliance with Louisiana’s 340B Statute. 
+ In Maine, AstraZeneca filed a complaint in September 2025.  
+ In North Dakota, AstraZeneca filed a complaint in August 2025.  
+ In Oklahoma, AstraZeneca filed a complaint and a motion for a preliminary injunction in October 
+2025. Later in October, the court granted AstraZeneca's motion for a preliminary injunction. 
+ In South Dakota, AstraZeneca filed a complaint in August 2025.  
+ In Tennessee, AstraZeneca filed a complaint in August 2025.
+
+[[page 33 | printed 33]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+33 
+ 
+Inflation Reduction Act Litigation, 
+US 
+ 
+Considered to be a contingent asset 
+ In August 2023, AstraZeneca filed a lawsuit in the US District Court for the District of Delaware 
+(District Court) against the US Department of Health and Human Services (HHS) challenging 
+aspects of the drug price negotiation provisions of the Inflation Reduction Act and the 
+implementing guidance and regulations. In March 2024, the District Court granted HHS’ motions 
+and dismissed AstraZeneca’s lawsuit. 
+ In May 2025, the US Court of Appeals for the Third Circuit affirmed the District Court's dismissal 
+of AstraZeneca's challenge. 
+ In September 2025, AstraZeneca sought review by the US Supreme Court. 
+Other 
+Additional government inquiries 
+As is true for most, if not all, major prescription pharmaceutical companies, AstraZeneca is currently involved in multiple inquiries into 
+drug marketing and pricing practices. In addition to the investigations described above, various law enforcement offices have, from 
+time to time, requested information from the Group. There have been no material developments in those matters. 
+Note 6: Subsequent events 
+On 22 October 2025, AstraZeneca, by exercise of an option, completed the acquisition of the remaining share capital of SixPeaks Bio AG 
+(SixPeaks), following an initial investment of $15m made in Q2 2024. $170m was paid on closing, $30m to be paid after two years and 
+up to a further $100m is payable on achievement of regulatory milestones, which will be accrued for at its present value. These 
+payments will be recognised in equity as SixPeaks has been consolidated as a subsidiary due to AstraZeneca's control since the initial 
+equity investment in Q2 2024.
+
+[[page 34 | printed 34]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+34 
+ 
+Note 7: Analysis of Revenue and Other operating income and expense 
+Table 26: Product Sales year-on-year analysis: 9M 2025 
+For the nine months  World US Emerging Markets Europe Established RoW 
+ended 30 September  Change  Change  Change  Change  Change 
+ 
+$m   Act %  CER %  $m   Act %  $m   Act %  CER %  $m   Act %  CER %  $m   Act %  CER %  
+Tagrisso 5,352  10  10  2,222  11  1,509  11  13  1,030  8  5  591  5  5  
+Imfinzi 4,317  25  25  2,484  32  463  27  33  879  26  24  491  (6) (7) 
+Calquence 2,551  10  10  1,702  5  164  41  48  569  16  14  116  18  20  
+Lynparza 2,401  8  7  1,054  10  487  2  4  667  9  7  193  3  3  
+Enhertu 685  73  76  -  -  476  84  90  146  59  56  63  34  38  
+Zoladex 852  4  6  13  17  661  6  9  112  1  (1) 66  (10) (9) 
+Truqap 495  85 85 413  59  16  n/m n/m 45  n/m n/m 21  n/m n/m 
+Imjudo 253  22  21  165  23  17  56  60  36  37  35  35  (5) (6) 
+Other Oncology 322  (10) (9) 6  (60) 215  (7) (5) 15  (13) (15) 86  (7) (9) 
+Oncology 17,228  15  15  8,059  17  4,008  16  19  3,499  17  14  1,662  3  2  
+Farxiga 6,341  11  11  1,244  (3) 2,623  18  21  2,147  13  10  327  3  3  
+Crestor 941  5  6  36  9  808  11  12  1  (98) (98) 96  (5) (6) 
+Brilinta 665  (33) (33) 326  (40) 203  (13) (12) 129  (36) (37) 7  (46) (44) 
+Lokelma 517  32  31  226  25  99  47  49  91  37  34  101  30  28  
+Seloken 468  1  3  -  n/m 451  -  3  14  44  41  3  (5) (2) 
+Roxadustat 227  (12) (11) -  -  227  (12) (11) -  -  -  -  -  -  
+Wainua 143  n/m n/m 137  n/m 4  -  -  2  -  -  -  -  -  
+Other CVRM 418  (24) (24) 44  (69) 208  12  13  119  (31) (31) 47  (9) (10) 
+CVRM 9,720  4  5  2,013  (9) 4,623  12  14  2,503  5  3  581  3  2  
+Symbicort 2,180  (1) -  903  2  624  (4) (3) 406  (2) (4) 247  3  5  
+Fasenra 1,451  19  19  886  18  81  18  22  351  19  17  133  26  27  
+Breztri 906  26  26  462  26  239  20  21  136  34  31  69  31  31  
+Tezspire 317  89  87  -  -  24  n/m n/m 207  98  93  86  55  55  
+Pulmicort 357  (31) (30) 4  (74) 280  (34) (33) 46  (10) (11) 27  3  5  
+Saphnelo 483  48  47  421  43  10  98  99  34  97  92  18  61  58  
+Airsupra 115  n/m n/m 113  n/m 2  n/m n/m -  -  -  -  -  -  
+Other R&I 211  (13) (13) 67  -  95  (26) (25) 44  3  1  5  (5) (3) 
+R&I 6,020  11  11  2,856  18  1,355  (9) (7) 1,224  19  17  585  18  19  
+Beyfortus 222  18  19  137  (8) -  -  -  83  n/m n/m 2  n/m n/m 
+Synagis 220  (36) (35) (2) 9  160  (5) (1) 37  (54) (54) 25  (75) (75) 
+FluMist 132  21  19  20  (23) 1  n/m n/m 82  34  30  29  34  35  
+Other V&I -  n/m n/m -  -  -  n/m n/m -  n/m n/m -  n/m n/m 
+V&I 574  (16) (15) 155  (23) 161  (4) -  202  7  5  56  (54) (54) 
+Ultomiris 3,453  22  21  1,961  20  177  92  n/m 769  18  16  546  17  16  
+Soliris 1,436  (30) (28) 844  (28) 327  (11) (2) 159  (54) (55) 106  (35) (34) 
+Strensiq 1,188  19  19  953  17  61  58  61  89  22  19  85  23  21  
+Koselugo 498  36  34  157  -  188  75  70  115  56  53  38  36  35  
+Other Rare Disease 177  18  18  83  15  37  54  57  50  6  4  7  13  12  
+Rare Disease 6,752  6  6  3,998  4  790  26  32  1,182  (1) (3) 782  7  6  
+Nexium 626  (7) (5) 53  (30) 476  4  6  31  (22) (24) 66  (31) (31) 
+Other 115  (26) (25) (4) n/m 88  (17) (16) 27  (23) (22) 4  37  28  
+Other Medicines 741  (10) (9) 49  (43) 564  -  2  58  (23) (23) 70  (29) (29) 
+Total Medicines 41,035  9  9  17,130  10  11,501  10  13  8,668  10  8  3,736  3  3  
+The table provides an analysis of year-on-year Product Sales, with Actual and CER growth rates reflecting year-on-year growth.
+
+[[page 35 | printed 35]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+35 
+ 
+Table 27: Product Sales year-on-year analysis: Q3 2025 
+For the quarter  World US Emerging Markets Europe Established RoW 
+ended 30 September  Change  Change  Change  Change  Change 
+ $m   Act %  CER %  $m   Act %  $m   Act %  CER %  $m   Act %  CER %  $m   Act %  CER %  
+Tagrisso 1,864  11  10  784  10  501  12  12  372  13  7  207  11  8  
+Imfinzi 1,601  33  31  912  34  169  41  44  342  45  37  178  6  3  
+Calquence 916  13  11  612  7  61  49  45  200  19  12  43  29  30  
+Lynparza 837  7  5  365  5  164  6  4  242  13  7  66  7  5  
+Enhertu 257  73  75  -  -  184  89  94  52  50  44  21  30  32  
+Zoladex 285  7  6  4  21  219  6  7  40  20  13  22  (8) (9) 
+Truqap 193  55  54  159  33  7  n/m n/m 18  n/m n/m 9  n/m n/m 
+Imjudo 84  16  14  55  18  6  52  45  13  29  21  10  (13) (16) 
+Other Oncology 106  (9) (10) 2  (52) 69  (7) (7) 5  (6) (11) 30  (9) (12) 
+Oncology 6,143  18  17  2,893  16  1,380  21  21  1,284  24  17  586  9  7  
+Farxiga 2,134  10  8  441  7  893  19  18  698  4  (2) 102  (4) (5) 
+Crestor 305  1  (1) 12  5  262  4  3  -  n/m n/m 31  2  (1) 
+Brilinta 146  (55) (56) 55  (71) 66  -  (1) 23  (66) (68) 2  (59) (62) 
+Lokelma 189  32  30  82  25  36  42  41  35  39  31  36  37  32  
+Seloken 160  6  6  -  n/m 153  5  5  6  62  47  1  3  5  
+Roxadustat 77  (17) (18) -  -  77  (17) (18) -  -  -  -  -  -  
+Wainua 59  n/m n/m 55  n/m 3  -  -  1  -  -  -  -  -  
+Other CVRM 144  (18) (19) 17  (56) 69  8  8  43  (15) (18) 15  (32) (34) 
+CVRM 3,214  2  -  662  (10) 1,559  12  11  806  (2) (8) 187  (2) (4) 
+Symbicort 742  5  4  305  5  224  10  10  135  4  (2) 78  (5) (4) 
+Fasenra 530  22  20  330  21  28  5  7  122  20  13  50  41  39  
+Breztri 323  21  20  167  17  83  22  20  49  33  25  24  24  23  
+Tezspire 119  75  66  -  -  8  n/m n/m 79  82  70  32  47  43  
+Pulmicort 93  (33) (35) -  n/m 72  (34) (36) 12  (15) (19) 9  (6) (6) 
+Saphnelo 180  45  44  156  42  4  8  5  13  83  72  7  94  83  
+Airsupra 45  n/m n/m 43  n/m 2  n/m n/m -  -  -  -  -  -  
+Other R&I 53  (26) (26) 12  (12) 24  (43) (42) 15  15  9  2  (8) (8) 
+R&I 2,085  14  12  1,013  19  445  (3) (3) 425  23  16  202  16  15  
+Beyfortus 94  (30) (29) 35  (63) -  -  -  59  53  53  -  -  -  
+Synagis 58  (37) (40) (1) n/m 39  6  4  11  (14) (24) 9  (80) (80) 
+FluMist 122  21  20  20  (12) 1  n/m n/m 82  46  42  19  (12) (11) 
+Other V&I -  n/m n/m -  n/m -  -  -  -  n/m n/m -  -  -  
+V&I 274  (23) (24) 54  (63) 40  7  7  152  41  37  28  (57) (57) 
+Ultomiris 1,225  19  17  690  16  64  n/m n/m 271  14  8  200  18  15  
+Soliris 462  (24) (24) 276  (24) 102  (8) (5) 47  (46) (49) 37  (24) (24) 
+Strensiq 441  29  28  369  29  11  45  38  32  26  18  29  21  17  
+Koselugo 224  88  79  51  (7) 113  n/m n/m 44  53  44  16  55  52  
+Other Rare Disease 64  31  26  29  14  17  n/m n/m 16  (5) (10) 2  20  16  
+Rare Disease 2,416  12  11  1,415  7  307  76  73  410  4  (2) 284  12  9  
+Nexium 200  (5) (5) 16  (45) 143  2  3  14  1  (3) 27  (4) (6) 
+Other 33  (39) (38) (7) n/m 29  (26) (26) 9  7  13  2  n/m n/m 
+Other Medicines 233  (12) (12) 9  (73) 172  (4) (3) 23  4  3  29  -  (4) 
+Total Medicines 14,365  11  9  6,046  8  3,903  15  15  3,100  14  7  1,316  5  3  
+The table provides an analysis of year-on-year Product Sales, with Actual and CER growth rates reflecting year-on-year growth.
+
+[[page 36 | printed 36]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+36 
+ 
+Table 28: Alliance Revenue: 9M 2025  
+For the nine months ended 30 September 2025  
+$m  
+2024  
+$m  
+Enhertu 1,291  1,045  
+Tezspire 453  303  
+Beyfortus 252  75  
+Datroway 38  -  
+Other Alliance Revenue 74  75  
+Total 2,108  1,498  
+Table 29: Collaboration Revenue: 9M 2025 
+For the nine months ended 30 September 2025  
+$m  
+2024  
+$m  
+Farxiga: sales milestones 81  52  
+Beyfortus: sales milestones -  56  
+Other Collaboration Revenue 12  -  
+Total 93  108  
+Table 30: Other operating income and expense: 9M 2025 
+For the nine months ended 30 September 2025  
+$m  
+2024  
+$m  
+Total 281  152
+
+[[page 37 | printed 37]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+37 
+ 
+ 
+Financial calendar 
+Announcement of FY and Q4 2025 results: 10 February 2026 
+Dividend payment dates  
+Dividends are normally paid as follows: 
+First interim:  Announced with the half year results and paid in September 
+Second interim: Announced with the full year results and paid in March 
+Contact details 
+For Investor Relations contacts, click here. For Media contacts, click here. 
+Addresses for correspondence  
+Registered office Registrar and  
+transfer office* 
+Swedish Central Securities 
+Depository 
+US depositary  
+1 Francis Crick Avenue 
+Cambridge Biomedical Campus 
+Cambridge 
+CB2 0AA 
+Equiniti Limited 
+Aspect House 
+Spencer Road 
+Lancing 
+West Sussex 
+BN99 6DA 
+Euroclear Sweden AB 
+PO Box 191 
+SE-101 23 Stockholm 
+J.P. Morgan Chase Bank N.A. 
+EQ Shareowner Services 
+P.O. Box 64504 
+St. Paul 
+MN 55164-0504 
+ 
+UK UK Sweden US 
++44 (0) 20 3749 5000 0800 389 1580 (UK only) +46 (0) 8 402 9000 +1 (888) 697 8018 (US only) 
+ +44 (0) 121 415 7033  +1 (651) 453 2128 
+* A change of registrar will take effect on Monday, 17th November 2025. Computershare Investor Services PLC will be appointed as the 
+new registrar, replacing Equiniti Limited. Shareholders can contact Computershare by phone on 0370 707 1682 (from inside the UK) 
+or +44 (0) 370 707 1682 (from outside the UK) between 8:30 a.m. to 5:30 p.m. (GMT), Monday to Friday (excluding public holidays in 
+England and Wales) alternatively, via email web.queries@computershare.co.uk . 
+Trademarks 
+Trademarks of the AstraZeneca group of companies appear throughout this document in italics. Medical publications also appear 
+throughout the document in italics. AstraZeneca, the AstraZeneca logotype and the AstraZeneca symbol are all trademarks of the 
+AstraZeneca group of companies. Trademarks of companies other than AstraZeneca that appear in this document include: Beyfortus, a 
+trademark of Sanofi Pasteur Inc.; Enhertu and Datroway, trademarks of Daiichi Sankyo; Seloken, owned by AstraZeneca or Taiyo 
+Pharma Co., Ltd (depending on geography); Synagis, owned by AstraZeneca or Sobi aka Swedish Orphan Biovitrum AB (publ). 
+(depending on geography); and Tezspire, a trademark of Amgen, Inc. 
+Information on or accessible through AstraZeneca's websites, including astrazeneca.com, does not form part of and is not incorporated 
+into this announcement.  
+Other shareholder information
+
+[[page 38 | printed 38]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+38 
+ 
+AstraZeneca 
+AstraZeneca (LSE/STO/Nasdaq: AZN) is a global, science-led biopharmaceutical company that focuses on the discovery, development, 
+and commercialisation of prescription medicines in Oncology, Rare Disease, and BioPharmaceuticals, including Cardiovascular, Renal & 
+Metabolism, and Respiratory & Immunology. Based in Cambridge, UK, AstraZeneca operates in over 100 countries and its innovative 
+medicines are used by millions of patients worldwide. Please visit astrazeneca.com and follow the Company on Social Media 
+@AstraZeneca. 
+Cautionary statements regarding forward-looking statements 
+In order, among other things, to utilise the 'safe harbour' provisions of the US Private Securities Litigation Reform Act of 1995, 
+AstraZeneca (hereafter 'the Group') provides the following cautionary statement: 
+This document contains certain forward-looking statements with respect to the operations, performance and financial condition of the 
+Group, including, among other things, statements about expected revenues, margins, earnings per share or other financial or other 
+measures. Although the Group believes its expectations are based on reasonable assumptions, any forward-looking statements, by their 
+very nature, involve risks and uncertainties and may be influenced by factors that could cause actual outcomes and results to be 
+materially different from those predicted. The forward-looking statements reflect knowledge and information available at the date of 
+preparation of this document and the Group undertakes no obligation to update these forward-looking statements. The Group identifies 
+the forward-looking statements by using the words 'anticipates', 'believes', 'expects', 'intends' and similar expressions in such 
+statements. Important factors that could cause actual results to differ materially from those contained in forward-looking statements, 
+certain of which are beyond the Group's control, include, among other things: 
+– the risk of failure or delay in delivery of pipeline or launch of new medicines;  
+– the risk of failure to meet regulatory or ethical requirements for medicine development or approval;  
+– the risk of failures or delays in the quality or execution of the Group's commercial strategies;  
+– the risk of pricing, affordability, access and competitive pressures;  
+– the risk of failure to maintain supply of compliant, quality medicines;  
+– the risk of illegal trade in the Group's medicines;  
+– the impact of reliance on third-party goods and services;  
+– the risk of failure in information technology or cybersecurity; 
+– the risk of failure of critical processes;  
+– the risk of failure to collect and manage data and artificial intelligence in line with legal and regulatory requirements and strategic 
+objectives;  
+– the risk of failure to attract, develop, engage and retain a diverse, talented and capable workforce;  
+– the risk of failure to meet our sustainability targets, regulatory requirements and stakeholder expectations with respect to the 
+environment;  
+– the risk of the safety and efficacy of marketed medicines being questioned;  
+– the risk of adverse outcome of litigation and/or governmental investigations;  
+– intellectual property risks related to the Group's products;  
+– the risk of failure to achieve strategic plans or meet targets or expectations;  
+– the risk of geopolitical and/or macroeconomic volatility disrupting the operation of our global business;  
+– the risk of failure in internal control, financial reporting or the occurrence of fraud; and  
+– the risk of unexpected deterioration in the Group's financial position.
+
+[[page 39 | printed 39]]
+
+Summary  Revenue Drivers  R&D Progress  Sustainability  Financial Performance  Financial Statements  Glossary  
+ 
+39 
+ 
+1L, 2L, etc first line, second line, etc 
+aHUS Atypical haemolytic uraemic syndrome 
+BCG Bacillus Calmette-Guérin therapy 
+BRCA / m Breast cancer gene / mutation 
+BTC Biliary tract cancer 
+BTKi Bruton tyrosine kinase inhibitor 
+CER Constant exchange rates 
+CHMP Committee for Medicinal Products for Human 
+Use (EU) 
+CI Confidence interval 
+CKD Chronic kidney disease 
+CLL Chronic lymphocytic leukaemia 
+CN China 
+COPD Chronic obstructive pulmonary disease 
+CRSwNP Chronic rhinosinusitis with nasal polyps 
+CTx Chemotherapy 
+CVRM Cardiovascular, Renal and Metabolism 
+EBITDA Earnings before interest, tax, depreciation and 
+amortisation 
+EGFR / m Epidermal growth factor receptor gene / 
+mutation 
+EGPA Eosinophilic granulomatosis with polyangiitis 
+EPS Earnings per share 
+ESC European Society of Cardiology 
+ESMO European Society for Medical Oncology 
+EVH Extravascular haemolysis 
+FDC Fixed dose combination 
+FLOT Fluorouracil, oxaliplatin and docetaxel  
+GEJ Gastro oesophageal junction 
+GI Gastrointestinal 
+GLP-1 glucagon-like peptide-1 receptor  
+gMG Generalised myasthenia gravis 
+HCC Hepatocellular carcinoma 
+HER2 / +/- /low /m Human epidermal growth factor receptor 2 gene 
+/ positive / negative / low expression / gene 
+mutant 
+HES Hyper-eosinophilic syndrome 
+HF/ pEF / rEF  Heart failure / with preserved ejection fraction / 
+with reduced ejection fraction 
+HR / + / - Hormone receptor / positive / negative 
+IASLC International Association for the Study of Lung 
+Cancer 
+ICS Inhaled corticosteroid 
+IHC Immunohistochemistry 
+IL-5 Interleukin-5 
+IO Immuno-oncology 
+ISH In situ hybridization 
+JP Japan 
+LABA Long-acting beta-agonist 
+LAMA Long-acting muscarinic-agonist 
+mBC Metastatic breast cancer 
+MCL Mantle cell lymphoma 
+mCRPC Metastatic castration-resistant prostate cancer 
+MEK An enzyme that drives NF1-PN disease 
+MG-ADL Myasthenia Gravis Activities of Daily Living 
+n/m Growth rate not meaningful 
+NF1-PN Neurofibromatosis type 1 plexiform 
+neurofibromas 
+NMOSD Neuromyelitis optica spectrum disorder 
+NRDL National reimbursement drug list 
+NSCLC Non-small cell lung cancer 
+OS Overall survival 
+PARP Poly ADP ribose polymerase 
+pCR Pathologic complete response 
+PCSK9 Proprotein convertase subtilisin/kexin type 9 
+pMMR proficient mismatch repair 
+PNH Paroxysmal nocturnal haemoglobinuria 
+PTEN Phosphatase and tensin homologue gene 
+QMG Quantitative Myasthenia Gravis 
+ROW Rest of world 
+SBP systolic blood pressure 
+sBRCAm Somatic breast cancer gene mutation 
+SGLT2 Sodium-glucose cotransporter 2 
+SLE Systemic lupus erythematosus 
+T-DM1 Ado-trastuzumab emtansine 
+THP A treatment regimen: docetaxel, trastuzumab 
+and pertuzumab 
+TNBC Triple negative breast cancer 
+WCLC World Conference on Lung Cancer 
+ 
+Glossary

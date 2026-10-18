@@ -1,0 +1,9 @@
+Appl_Type,Appl_No,Product_No,Patent_No,Patent_Expire_Date_Text,Drug_Substance_Flag,Drug_Product_Flag,Patent_Use_Code,Delist_Flag,Submission_Date
+N,220020,001,9951043,"Feb 28, 2034",Y,Y,U-4190,,"Jul 11, 2025"
+N,220018,001,11807625,"Nov 25, 2040",,,U-4190,,"Jul 11, 2025"
+N,220018,001,9951043,"Feb 28, 2034",Y,Y,U-4190,,"Jul 11, 2025"
+N,220020,001,10071985,"Aug 17, 2037",Y,Y,,,"Jul 11, 2025"
+N,220018,001,12594267,"Jul 15, 2039",,Y,,,"Apr 16, 2026"
+N,220018,001,11267799,"Aug 16, 2038",Y,,,,"Jul 11, 2025"
+N,220018,001,10071985,"Aug 17, 2037",Y,Y,,,"Jul 11, 2025"
+N,220020,001,11267799,"Aug 16, 2038",Y,,,,"Jul 11, 2025"

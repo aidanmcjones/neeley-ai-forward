@@ -1,0 +1,9 @@
+presentations/2025Q3_earnings_slides: investor.bms.com / bristolmyers2016ir.q4web.com return HTTP 403 to scripted fetch; no PDF URL found via search
+presentations/2025Q4_earnings_slides: same as above
+presentations/2026Q1_earnings_slides: same as above
+presentations/2026Q2_earnings_slides: same as above
+transcripts: no official (company IR) transcripts; all four are third_party fool.com (IR site 403)
+transcripts/2026Q3_transcript: call scheduled Oct 29 2026, not yet happened
+presentations investor day / strategy: no standalone investor day deck found (Dec 11 2025 hematology event replay only on blocked IR site)
+policy: Eliquis/Cost Plus Drug press release 2026-04-23 (businesswire.com HTTP 403); no BMS press release found on IRA Medicare negotiation or TrumpRx specifically
+note: JPM Jan 2026 deck already present as policy/2026-01-12_ef20062582_ex99-1.md (SEC 8-K ex99.1)

@@ -88,7 +88,8 @@ def call(prompt, context=None, system=DEFAULT_SYSTEM, effort="medium", use_cache
             text += "\n\n[truncated: hit max_tokens]"
 
     out = {"text": text, "model": response.model, "cached": False}
-    if response.stop_reason != "refusal":
+    # Refusals and truncated answers are not cached, so a retry gets a fresh full answer.
+    if response.stop_reason not in ("refusal", "max_tokens"):
         path.write_text(json.dumps(out))
     return out
 
