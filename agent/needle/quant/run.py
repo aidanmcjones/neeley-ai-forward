@@ -83,7 +83,11 @@ def score_ticker(ticker, write=True, extra_signals=None):
     ira_products = {d[1].split("/")[0].lower() for d in find.IRA_DRUGS if d[0] == ticker}
     sigs = [s for det in DETECTORS for s in read_jsonl(OUT / ticker / f"signals_{det}.jsonl", Signal)]
     sigs += [s for s in (extra_signals or []) if s.ticker == ticker]
+    nid_map, nug_sigs = {}, []
     for sig in sigs:
+        if sig.detector == "nuggets":
+            nug_sigs.append(sig)
+            continue
         if sig.kind == "trial_terminated" and not sig.meta.get("business_reason"):
             continue
         if sig.kind == "ira_exposed" and (sig.meta.get("product") or "").lower() in ira_products:
@@ -93,6 +97,9 @@ def score_ticker(ticker, write=True, extra_signals=None):
             continue
         seen.add(key)
         f = find.score_signal(sig, co)
+        nid_map[needle_branch_id(sig)] = f
+        if sig.kind in guards.RECEIVABLE_KINDS:      # thread #19 (c): footnote read before needle eligibility
+            find.apply_receivables_read(f, guards.receivables_read(sig, [e.doc_id for e in sig.evidence]), co)
         f.old_S = old.get((sig.kind, sig.detail))
         dropped = False
         for g in guards.check(sig, sigs):
@@ -101,10 +108,26 @@ def score_ticker(ticker, write=True, extra_signals=None):
         (shown if f.vector["E"] > 0 and not dropped and f.guard != "drop" else withheld).append(f)
     for f in find.ira_findings(ticker, co) + find.mfn_findings(ticker, co):
         (shown if f.vector["E"] > 0 else withheld).append(f)
+    # nugget-miner rows (docs/nuggets): same ladder, impact math and gate; matched to the row they enrich
+    nug_rows = []
+    for sig in nug_sigs:
+        f = find.score_nugget(sig, co)
+        nug_rows.append(f)
+        dropped = False
+        for g in guards.check(sig, sigs):          # the detector guards apply to nugget rows by kind
+            find.apply_guard(f, g)
+            dropped = dropped or g[0] == "drop"
+        (shown if f.vector["E"] > 0 and not dropped else withheld).append(f)
+    NUGGET_LOG[ticker] = enrich(nug_rows, nid_map, shown + withheld)
     # numeric gate (docs/gate_wiring.md 1): after scoring, before the league; failed rows never reach the top 5
     passed, failed = gate_findings(shown)
     shown = [f for f, _ in passed]
     gated = failed
+    if nug_rows:
+        ok_ids = {f.id for f in shown}
+        NUGGET_LOG[ticker].update({"rows": len(nug_rows), "shown_pass_gate": sum(f.id in ok_ids for f in nug_rows),
+                                   "failed_gate": sum(f.id in {g.id for g, _ in failed} for f in nug_rows),
+                                   "no_page_evidence": sum(any(f is w for w in withheld) for f in nug_rows)})
     GATE_LOG[ticker] = {"passed": len(passed), "total": len(passed) + len(failed),
                         "unsupported": sum(len(r["numeric_check"]["unsupported"]) for _, r in failed),
                         "failed": [{"id": f.id, "kind": f.kind, "S": f.S, "unsupported": r["numeric_check"]["unsupported"]}
@@ -151,6 +174,8 @@ def load_nuggets(path):
     from agent.needle.schema import Evidence
     p = Path(path)
     files = sorted(p.glob("*.jsonl")) if p.is_dir() else [p]
+    bn_file = (p if p.is_dir() else p.parent) / "best_needle.json"
+    best = json.loads(bn_file.read_text())["best_needle"] if bn_file.exists() else {}
     out = []
     for fp in files:
         for line in fp.read_text(encoding="utf-8").splitlines():
@@ -158,16 +183,79 @@ def load_nuggets(path):
                 continue
             r = json.loads(line)
             evs = [Evidence(doc_id=e.get("doc_id", ""), page=e.get("page"), quote=e.get("quote", ""),
-                            speaker=e.get("speaker", "")) for e in r.get("evidence") or []]
+                            speaker=e.get("speaker", ""), figures=list(e.get("figures") or [])) for e in r.get("evidence") or []]
             peer = r.get("peer") or {}
             meta = {k: r.get(k) for k in ("signal_family", "obscurity_rung", "case_fit", "part2_hook", "topics",
                                           "product", "id") if r.get(k) is not None}
             meta["source"] = f"nuggets:{fp.name}"
+            if r.get("best_needle") is None and best:
+                r["best_needle"] = best.get(str(r["ticker"]).upper()) == r.get("id")
+            meta["nugget"] = r
             out.append(Signal(ticker=str(r["ticker"]).upper(), detector="nuggets", kind=r.get("signal_kind") or "nugget",
                               period=str(r.get("period") or ""), value=peer.get("metric_value"),
                               peer_median=peer.get("peer_median"), peer_z=peer.get("z"),
                               detail=r.get("finding") or r.get("sentence") or "", evidence=evs, meta=meta))
     return out
+
+
+NUGGET_LOG = {}                               # ticker -> nugget ingest counts (last run)
+
+
+def needle_branch_id(sig):
+    """The needle branch's finding id for a detector Signal (agent/needle/score.py on origin/needle: ticker,
+    detector and six digits of sha256(kind|detail)); nugget rows name the row they enrich by this id."""
+    import hashlib
+    six = int(hashlib.sha256("|".join((sig.kind, sig.detail)).encode()).hexdigest(), 16) % 10 ** 6
+    return f"{sig.ticker}-{sig.detector}-{six:06d}"
+
+
+def _page_match(nf, rows):
+    """A detector row sharing a cited (document, page) with the nugget and printing one of its quoted figures."""
+    ev = getattr(nf, "nugget_evidence", None) or []
+    for f in rows:
+        if f.detector == "nuggets":
+            continue
+        for c in f.citations:
+            if c.page is None or not c.verification.ok:
+                continue
+            for e in ev:
+                if e["page"] == c.page and e["doc"].split(":")[-1].split("/")[-1] == \
+                        str(c.canonical_id).split(":")[-1].split("/")[-1] and \
+                        any(str(x) in (c.quote or "") for x in e["figures"] if len(str(x)) >= 3):
+                    return f
+    return None
+
+
+def enrich(nug_rows, nid_map, rows):
+    """Match each nugget's `enriches` id to our row (needle-branch id, else the cited page and value). A match shares
+    one fact key (one fact, one row in the league and the findings table) and the nugget's verified quotes are added
+    to our row as corroboration. Returns counts."""
+    by_nid = {(f.nugget or {}).get("id"): f for f in nug_rows}
+    log = {"enriches": 0, "matched_by_id": 0, "matched_by_page": 0, "unmatched": []}
+    for nf in nug_rows:
+        tid = (nf.nugget or {}).get("enriches")
+        if not tid:
+            continue
+        log["enriches"] += 1
+        tgt = nid_map.get(tid) or by_nid.get(tid)
+        how = "id"
+        if tgt is None:
+            tgt, how = _page_match(nf, rows), "page and value"
+        if tgt is None or tgt is nf:
+            log["unmatched"].append(tid)
+            nf.flags.append(f"enriches {tid}: no matching row on this branch")
+            continue
+        log["matched_by_id" if how == "id" else "matched_by_page"] += 1
+        key = tgt.fact_key or f"enrich:{tgt.id}"
+        tgt.fact_key = nf.fact_key = key
+        have = {c.cite_id for c in tgt.citations}
+        add = [c for c in nf.citations if c.verification.ok and c.page is not None and c.cite_id not in have][:3]
+        tgt.citations += add
+        tgt.corroborated_by.append(nf.nugget.get("id"))
+        tgt.flags.append(f"corroborated by nugget {nf.nugget.get('id')} ({len(add)} verified quote(s) added; "
+                         f"matched by {how})")
+        nf.flags.append(f"enriches {tgt.id} (needle-branch id {tid}, matched by {how}): one fact, counted once")
+    return log
 
 
 def _one(f, n=110):

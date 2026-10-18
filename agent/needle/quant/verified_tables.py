@@ -308,6 +308,9 @@ _MONTHS = {m: i for i, m in enumerate(("jan", "feb", "mar", "apr", "may", "jun",
 def _parse_loe(v):
     """A loe_calendar date: '2028', '2028-11-22', '11/22/2028', 'May 2026' (month kept), else None."""
     s = str(v or "")
+    m = re.search(r"\b([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),\s*(\d{4})", s)
+    if m and m.group(1).lower() in _MONTHS:
+        return date(int(m.group(3)), _MONTHS[m.group(1).lower()], int(m.group(2)))
     m = re.search(r"(\d{4})-(\d{2})-(\d{2})", s)
     if m:
         return date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
@@ -321,9 +324,61 @@ def _parse_loe(v):
     return date(int(m.group(1)), 1, 1) if m else None
 
 
+_DATE_RX = r"(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, 20\d\d"
+
+
+def settlement(ticker, brand, territory="US"):
+    """(date, TableValue, row) for a patent-settlement generic entry date: a loe_calendar settlement row for the brand
+    (adult or full dose, not the pediatric strength), else a sentence in the company's latest 10-Q or 10-K that says
+    generics may launch the brand on a dated day under a settlement (Vyndamax: June 1, 2031, PFE 10-Q Q2 2026).
+    Settlement dates are company-stated contract dates, read before the patent table year. None when not found."""
+    b = str(brand or "").lower().split(" ")[0]
+    if not b:
+        return None
+    for rk, vs, r in find_rows(LOE, {"ticker": ticker, "territory": territory}):
+        name = str(r.get("brand") or "").lower()
+        if not name.startswith(b) or "settlement" not in name or "pediatric" in name:
+            continue
+        v = r.get("company_stated_loe")
+        if not re.search(_DATE_RX, str(v or "")):
+            continue
+        c = DATA.fact_row_citation(LOE, "company_stated_loe", v, row_key=rk)
+        if c.verification.ok:
+            d = _parse_loe(v)
+            return d, TableValue(float(d.year), [c], _label(LOE, rk, f"settlement entry date {v}"), LOE, rk), r
+    from agent.needle.cite.locator import Citation
+    from agent.needle.cite.verify import verify as _verify
+    idx = DATA.index()
+    rows = DATA.db().execute("SELECT doc_id FROM docs WHERE ticker = ? AND doc_type IN ('quarterly_report', "
+                             "'annual_report') ORDER BY filed DESC LIMIT 3", (ticker,)).fetchall()
+    for (doc_id,) in rows:
+        for n, (_, text) in idx.pages(doc_id).items():
+            flat = " ".join(text.replace("\u200b", " ").split())
+            for sent in re.split(r"(?<=[.;])\s+", flat):
+                if not re.search(r"\b" + re.escape(b) + r"\b", sent, re.I) or not re.search(r"generic", sent, re.I):
+                    continue
+                if not re.search(r"settle|terms of the settlements|under the agreements", sent, re.I):
+                    continue
+                m = re.search(r"(?:launch|market|entry)[^.]{0,120}?(" + _DATE_RX + ")", sent)
+                if not m or len(sent) > 500:
+                    continue
+                c = _verify(Citation(canonical_id=doc_id, page=n, quote=sent, claim_type="quote"), idx)
+                if c.verification.ok:
+                    d = _parse_loe(m.group(1))
+                    return d, TableValue(float(d.year), [c], f"company filing {doc_id} p. {n}: settlement generic "
+                                         f"entry {m.group(1)}", "filing", f"{doc_id}#p{n}"), {"ticker": ticker,
+                                         "brand": brand, "company_stated_loe": m.group(1), "tenk_page": n}
+    return None
+
+
 def loe(ticker, brand, territory="US"):
-    """(date, TableValue for the year, row) from pipeline/loe_calendar.csv: company_stated_loe first (10-K page in
-    tenk_page), else rule_output_loe. None when no passing row."""
+    """(date, TableValue for the year, row): a settlement generic entry date first (settlement()), then
+    pipeline/loe_calendar.csv company_stated_loe (10-K page in tenk_page; a bare year takes the Orange/Purple Book
+    rule date when that date falls in the same year), else rule_output_loe. Never a labels_table (Orange/Purple
+    Book max incl. orphan exclusivity) date. None when no passing row."""
+    got = settlement(ticker, brand, territory) if territory == "US" else None
+    if got:
+        return got
     for fld in ("company_stated_loe", "rule_output_loe"):
         hit = cell(LOE, {"ticker": ticker, "brand": str(brand).upper(), "territory": territory}, fld)
         if not hit:
@@ -332,10 +387,16 @@ def loe(ticker, brand, territory="US"):
         d = _parse_loe(v)
         if d is None:
             continue
+        rule = _parse_loe(r.get("rule_output_loe")) if fld == "company_stated_loe" else None
+        extra_c = []
+        if rule and re.fullmatch(r"\s*\d{4}\s*", str(v)) and rule.year == d.year:
+            rc = DATA.fact_row_citation(LOE, "rule_output_loe", r.get("rule_output_loe"), row_key=rk)
+            if rc.verification.ok:   # company year 2027 + Orange Book rule date 2027-09-05: keep the dated day
+                d, extra_c = rule, [rc]
         page = r.get("tenk_page")
         extra = (f"{fld} {v}" + (f", 10-K page {int(float(page))}" if _num(page) else "")
                  + (f"; rule {r.get('rule_output_loe')} ({r.get('rule_method')})" if r.get("rule_output_loe") else ""))
-        return d, TableValue(float(d.year), [c], _label(LOE, rk, extra), LOE, rk), r
+        return d, TableValue(float(d.year), [c] + extra_c, _label(LOE, rk, extra), LOE, rk), r
     return None
 
 

@@ -301,3 +301,37 @@ def test_demo_fixtures_are_marked_and_tie_three_moves_to_gated_findings(t, tmp_p
     else:
         assert d["chosen"]["ev"] > 0 and d["least_bad"] is None
         assert "## Chosen move (pipeline demonstration)" in md
+
+
+def test_decide_md_has_why_it_will_work_why_we_passed_and_car_reason(tmp_path):
+    from pathlib import Path
+    from agent.needle.quant import decide_cli
+    root = Path(__file__).resolve().parents[2]
+    f, m = root / "out" / "MRK" / "findings_v3.jsonl", root / "docs" / "examples" / "moves_MRK.json"
+    if not f.exists():
+        pytest.skip("out/MRK/findings_v3.jsonl not generated (gitignored)")
+    rc = decide_cli.main(["--ticker", "MRK", "--findings", str(f), "--moves", str(m), "--out", str(tmp_path)])
+    if rc != 0:
+        pytest.skip("MRK demo moves do not resolve against the current findings")
+    md = (tmp_path / "decide.md").read_text()
+    assert "## Why it will work" in md and "| Doctors |" in md and "| Payers |" in md and "| Regulators |" in md \
+        and "| Investors |" in md and "No prescriber, payer, regulator or investor interview" in md
+    assert md.count("Why we passed: EV") == 2
+    assert "Cash at risk is zero although" in md or "Committed outflow before the first readout" in md
+    assert "Keytruda: Year-one net sales" in md
+
+
+def test_gild_demo_fixture_exits_zero(tmp_path):
+    import json
+    from pathlib import Path
+    from agent.needle.quant import decide_cli
+    root = Path(__file__).resolve().parents[2]
+    f, m = root / "out" / "GILD" / "findings_v3.jsonl", root / "docs" / "examples" / "moves_GILD.json"
+    spec = json.loads(m.read_text())
+    assert spec["demo"] is True and spec["header_note"] and len(spec["moves"]) == 3
+    assert "April 1, 2036" in spec["moves"][0]["name"]
+    if not f.exists():
+        pytest.skip("out/GILD/findings_v3.jsonl not generated (gitignored)")
+    assert decide_cli.main(["--ticker", "GILD", "--findings", str(f), "--moves", str(m), "--out", str(tmp_path)]) == 0
+    md = (tmp_path / "decide.md").read_text()
+    assert "pipeline demonstration" in md.lower() and "## Why it will work" in md

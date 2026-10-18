@@ -393,17 +393,11 @@ def exclusivity_maps(sig, loe_got):
     meta = sig.meta.get("data") or {}
     prod, rival = str(sig.meta.get("product") or ""), str(sig.meta.get("rival") or "")
     rgot = VT.loe_any(rival.split(" ")[0]) if rival else None
-    if rgot:
-        rdate, rtv, _ = rgot
-        rc, rsrc = rtv.citations[0], "company-stated, its own filing"
-    else:
-        rd = str(meta.get("rival_end") or "")
-        if not re.match(r"\d{4}", rd):
-            return None
-        from datetime import date as _d
-        rdate = _d(int(rd[:4]), int(rd[5:7] or 1), int(rd[8:10] or 1)) if len(rd) >= 10 else _d(int(rd[:4]), 1, 1)
-        rc = data.table_citation("orange_book_patents.csv / purple_book.csv", rival, "latest protection end", rd)
-        rsrc = "Orange/Purple Book latest listed protection, no verified facts row"
+    if not rgot:
+        # thread #19 (d): the rival's labels_table date (Orange/Purple Book max incl. orphan exclusivity) is not used
+        return None
+    rdate, rtv, _ = rgot
+    rc, rsrc = rtv.citations[0], "company-stated, its own filing"
     gap = rdate.year - pdate.year
     if gap <= 0:
         return None
@@ -419,3 +413,182 @@ def exclusivity_maps(sig, loe_got):
     cites = [c for c in (pc, rc) if c is not None]
     return {"sentence": sentence, "derived": derived, "cites": cites,
             "page_cites": [c for c in cites if c.page is not None and c.verification.ok], "flags": flags}
+
+
+# ------------------------------------------------------------------ nugget sentences: derivations over quoted figures
+AUTO_LABEL = "derived by code from two figures in the row's own verified quotes"
+
+
+def _sig_digits(raw):
+    d = re.sub(r"\D", "", raw or "").lstrip("0")
+    return len(d)
+
+
+def _norm_m(t):
+    """A quote or sentence number in printed units, with an inline scale word turned into millions."""
+    v = t.num * (t.scale / 1e6 if t.scale else 1.0)
+    return -v if t.neg else v
+
+
+def _page_lines(cites, idx):
+    """[(line text, doc, page)] for the pages the passing quotes sit on: lines and sentences of at most 300 chars."""
+    out, seen = [], set()
+    for c in cites:
+        key = (c.canonical_id, c.page)
+        if c.page is None or key in seen:
+            continue
+        seen.add(key)
+        try:
+            got = idx.get_page(c.canonical_id, c.page)
+        except Exception:
+            got = None
+        if not got:
+            continue
+        from agent.needle.cite.numbers import declared_scale
+        page_text = got[2]
+        pos = 0
+        for ln in re.split(r"\n+|(?<=[.;])\s+(?=[A-Z(])", page_text):
+            at = page_text.find(ln, pos)
+            pos = at if at >= 0 else pos
+            ln = " ".join(ln.replace("\u200b", " ").split())
+            if 12 <= len(ln) <= 300 and re.search(r"\d", ln):
+                out.append((ln, c.canonical_id, c.page, declared_scale(page_text, pos)))
+    return out
+
+
+def page_line_support(text, cites, idx):
+    """Verified page-line citations for sentence numbers printed on a page the row already cites (the quote is the
+    line itself, so the number stands inside the quoted span; page text outside a quote never supports a number).
+    Returns the new citations."""
+    from agent.needle.cite.locator import Citation
+    from agent.needle.cite.numbers import same_number, tokenize
+    from agent.needle.cite.verify import verify as _verify
+    ok = [c for c in cites if c is not None and c.verification.ok]
+    lines = _page_lines(ok, idx)
+    have = " ".join((c.quote or "") for c in ok)
+    covered = [t for t in tokenize(have) if t.kind == "number"]
+    new = []
+    for tok in tokenize(text):
+        if tok.kind != "number" or _sig_digits(tok.raw) < 2 or any(same_number(tok, t)[0] for t in covered):
+            continue
+        for ln, doc, page, sc in lines:
+            if any(same_number(tok, t, None, sc)[0] for t in tokenize(ln) if t.kind == "number"):
+                c = _verify(Citation(canonical_id=doc, page=page, quote=ln, claim_type="quote"), idx)
+                if c.verification.ok:
+                    new.append(c)
+                    covered += [t for t in tokenize(ln) if t.kind == "number"]
+                    break
+    return new
+
+
+def auto_derive(text, cites, derived, tag="auto"):
+    """Derived entries for numbers in `text` that are simple functions of two figures printed in the row's own
+    passing quotes: a - b, a + b, (a / b - 1) x 100, a / b x 100, a / (a + b) x 100, a percent difference in points,
+    and a change of scale (10,606 printed as $10.6B). The gate re-computes every entry from the cited operands, so an
+    entry can only pass when both figures stand in their quotes. Guards against chance matches: operands are figures
+    of at least two digits (or with decimals), a target needs two significant digits for a change of scale and three
+    for any other relation unless both figures sit in the same quote. Returns the number of entries added."""
+    from agent.needle.cite.numbers import same_number, tokenize, tolerance
+    ok = [c for c in cites if c is not None and c.verification.ok and (c.quote or "").strip()]
+    pool = []
+    for qi, c in enumerate(ok):
+        for t in tokenize(c.quote):
+            if t.kind != "number" or (t.num < 10 and not t.decimals and t.unit != "%"):
+                continue
+            pool.append((t, c, qi))
+    if len(pool) < 1:
+        return 0
+    added = 0
+    for tok in tokenize(text):
+        if tok.kind != "number" or any(same_number(tok, p[0])[0] for p in pool):
+            continue
+        sig = _sig_digits(tok.raw)
+        if sig < 2:
+            continue
+        tol = tolerance(tok) * (tok.scale / 1e6 if tok.scale else 1.0)
+        target = _norm_m(tok)
+        cands = []
+        pct = [p for p in pool if p[0].unit == "%"]
+        lvl = [p for p in pool if p[0].unit == ""]
+        if tok.unit == "%":
+            for a in lvl:
+                for b in lvl:
+                    if a is b:
+                        continue
+                    va, vb = _norm_m(a[0]), _norm_m(b[0])
+                    same = a[2] == b[2]
+                    if vb:
+                        cands.append(((va / vb - 1) * 100, "(a / b - 1) * 100", a, b, same))
+                        cands.append((va / vb * 100, "a / b * 100", a, b, same))
+                    if va + vb:
+                        cands.append((va / (va + vb) * 100, "a / (a + b) * 100", a, b, same))
+            for a in pct:
+                for b in pct:
+                    if a is not b:
+                        cands.append((_norm_m(a[0]) - _norm_m(b[0]), "a - b", a, b, a[2] == b[2]))
+            unit = "%"
+        elif tok.unit == "pts":
+            for a in pct:
+                for b in pct:
+                    if a is not b:
+                        cands.append((_norm_m(a[0]) - _norm_m(b[0]), "a - b", a, b, a[2] == b[2]))
+            unit = "pts"
+        elif tok.unit == "":
+            for a in lvl:
+                va = _norm_m(a[0])
+                if tok.scale and not a[0].scale:
+                    cands.append((va, "a", a, None, True))
+                for b in lvl:
+                    if a is b:
+                        continue
+                    vb = _norm_m(b[0])
+                    cands.append((va - vb, "a - b", a, b, a[2] == b[2]))
+                    cands.append((va + vb, "a + b", a, b, a[2] == b[2]))
+            unit = "USD millions" if (tok.scale and tok.currency == "$") else ("millions" if tok.scale else "")
+        else:
+            continue
+        cands.sort(key=lambda x: (not x[4], x[1] != "a"))
+        for val, expr, a, b, same in cands:
+            scaled_alike = b is not None and a[0].scale and a[0].scale == b[0].scale == tok.scale
+            if expr != "a" and sig < 3 and not same and not scaled_alike:
+                continue
+            if abs(val - (-target if False else target)) > tol + 1e-9:
+                continue
+            ops = {"a": {"value": _norm_m(a[0]), "citation": a[1], "text": a[0].raw, "unit": a[0].unit}}
+            if b is not None:
+                ops["b"] = {"value": _norm_m(b[0]), "citation": b[1], "text": b[0].raw, "unit": b[0].unit}
+            derived[f"{tag}_{tok.start}"] = derived_entry(val, expr, ops, unit, label=f"{AUTO_LABEL}: {expr}")
+            added += 1
+            break
+    return added
+
+
+def nugget_estimates(text, cites, derived, assumptions, values, eps, label, formula=""):
+    """Sentence numbers that restate the nugget's own dollar estimate (impact bull / base / bear in millions, or its
+    per-share figure) print as a labelled assumption, never as a verified figure. Only numbers no passing quote
+    carries and no derived entry covers are labelled. Returns the count."""
+    from agent.needle.cite.numbers import same_number, tokenize, tolerance
+    ok = [c for c in cites if c is not None and c.verification.ok]
+    covered = [t for c in ok for t in tokenize(c.quote or "") if t.kind == "number"]
+    dkeys = {k for k in (derived or {}) if k.startswith("nug_")}
+    taken = {int(k.rsplit("_", 1)[1]) for k in dkeys if k.rsplit("_", 1)[1].isdigit()}
+    vals = [abs(float(v)) for v in values if v is not None]
+    n = 0
+    for tok in tokenize(text):
+        if tok.kind != "number" or tok.start in taken or any(same_number(tok, t)[0] for t in covered):
+            continue
+        m = tok.num * (tok.scale / 1e6 if tok.scale else 1.0)
+        tol = tolerance(tok) * (tok.scale / 1e6 if tok.scale else 1.0)
+        hit = not tok.unit and any(abs(m - v) <= tol + 1e-9 for v in vals) and bool(tok.scale or m >= 10)
+        if not hit and eps is not None and not tok.unit and not tok.scale and tok.decimals >= 2:
+            hit = abs(tok.num - abs(float(eps))) <= tolerance(tok) + 1e-9
+        lab = label
+        if not hit and formula:
+            ftoks = [t for t in tokenize(formula) if t.kind == "number"]
+            hit = any(same_number(tok, t)[0] or (t.unit == tok.unit and abs(m - t.num * (t.scale / 1e6 if t.scale
+                      else 1.0)) <= tol + 1e-9 and (tok.scale or t.scale)) for t in ftoks)
+            lab = label + "; number printed in the nugget's impact derivation"
+        if hit:
+            assumptions[f"nugget_est_{tok.start}"] = {"value": tok.raw, "label": lab}
+            n += 1
+    return n

@@ -265,6 +265,9 @@ def channel_maps(cmp_, ch):
         rv = {"value": i["revenue"], "assumption": TABLE.format(file="product_revenue_quarterly.csv / IP table",
                                                                 key="annual product revenue")}
         rc = cmp_.context.get("_revenue_cite")
+        if rc is not None and getattr(rc, "verification", None) is not None and rc.verification.ok and rc.value:
+            # case audit H3: the revenue operand is the cited product-sales line (value in USD millions on the page)
+            rv = {"value": i["revenue"], "citation": rc, "text": str(rc.value), "unit": ""}
         band = i["band"]
         lab = TABLE.format(file="agent/cache/loe_curves.csv", key=f"{i['modality']} US t=1 pct_of_peak quantiles")
         qv = {"bull": band["q75"], "base": band["median"], "bear": band["q25"]}

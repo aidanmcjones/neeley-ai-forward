@@ -208,7 +208,7 @@ def test_render_footnote_page_and_quotes_and_public(idx):
                     doc_title="moat table x", location="row MRK-2025", license="wrds_licensed")
     fact.verification.status = "exact"
     md = render.render_markdown([Claim("Keytruda US sales 29,482.", [fact])])
-    assert "file page None" not in md and "moat table x, row MRK-2025 --" in md
+    assert "file page None" not in md and "moat table x, row MRK-2025; no page (machine-readable data row) --" in md
     assert '"Keytruda "US" sales = 29,482"' in md                      # double quotes kept verbatim
     pub = render.render_markdown([Claim("Keytruda US sales 29,482.", [fact])], public=True)
     assert "licensed text withheld" in pub and "Keytruda \"US\"" not in pub

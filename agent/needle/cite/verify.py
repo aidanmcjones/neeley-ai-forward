@@ -254,7 +254,27 @@ def verify(citation, index=None):
 
 
 _SPEAKER = re.compile(r"\*\*([^*\n]{2,80}?)(?:\s*\([^)\n]*\))?:\*\*")
-SPEAKER_WINDOW = 4000     # same window as agent.findings.verify
+SPEAKER_WINDOW = 4000     # fallback only: transcripts whose turn labels cannot be read
+_NAME = r"[A-Z][A-Za-z.'\-]+(?: (?:[A-Z][A-Za-z.'\-]*\.?|de|van|von|da))"
+# Turn labels by transcript source: markdown (**Name (title):**), Refinitiv/LSEG (Name - Company - Title), roic.ai
+# (a role letter on its own line, then the name line), Benzinga (Name, Title), fool.com plain (Name: text), Operator.
+TURN_LABELS = [
+    re.compile(r"^\*\*([^*\n]{2,80}?)(?:\s*\([^)\n]*\))?:\*\*", re.M),
+    re.compile(r"^[ \t]*(" + _NAME + r"{1,4}) - [^\n]{2,80} - [^\n]{2,80}$", re.M),
+    re.compile(r"^[ \t]*[A-Z][ \t]*\n[ \t]*\n[ \t]*(" + _NAME + r"{0,4})[ \t]*$", re.M),
+    re.compile(r"^[ \t]*(" + _NAME + r"{1,4}), [A-Z][^\n.]{1,60}[ \t]*\n[ \t]*\n", re.M),
+    re.compile(r"^[ \t]*(" + _NAME + r"{1,4})[ \t]?:[ \t]", re.M),
+    re.compile(r"^[ \t]*(Operator)[ \t]*:?[ \t]*$", re.M),
+]
+
+
+def turn_labels(flat):
+    """[(offset, speaker)] for every speaker label found in a transcript's text, in order."""
+    out = {}
+    for rx in TURN_LABELS:
+        for m in rx.finditer(flat):
+            out.setdefault(m.start(), m.group(1).strip())
+    return sorted(out.items())
 
 
 def transcript_rule(c, idx, page, span, status, score, note):
@@ -275,18 +295,24 @@ def transcript_rule(c, idx, page, span, status, score, note):
     if start != -1 and pos < start:
         return "unverified", 0.0, "quote comes from the LLM-written fool.com takeaways, not the call", c.speaker
     before = flat[max(0, pos - SPEAKER_WINDOW):pos]
-    labels = list(_SPEAKER.finditer(flat[:pos]))
+    # the turn that contains the quote: the last speaker label at or before it, however long the turn runs
+    # (prepared remarks run past any fixed window); a name in an operator introduction is not that turn's speaker
+    turns = [(o, w) for o, w in turn_labels(flat) if o <= pos]
     if c.speaker:
         surname = _norm(c.speaker.split()[-1])
+        if turns:
+            who = turns[-1][1]
+            if surname and surname not in _norm(who):
+                return ("unverified", 0.0, f"quote is spoken by {who!r}, not {c.speaker!r} (speaker label of the turn "
+                        "that contains the quote)", c.speaker)
+            return status, score, note, c.speaker
         if surname and surname not in _norm(before):
             return "unverified", 0.0, f"speaker {c.speaker!r} not found just before the quote", c.speaker
-        if labels and surname and surname not in _norm(labels[-1].group(1)):
-            return ("unverified", 0.0, f"quote is spoken by {labels[-1].group(1).strip()!r}, not {c.speaker!r}",
-                    c.speaker)
-        return status, score, note, c.speaker
-    if not labels:
+        return status, score, (note + "; " if note else "") + "no turn labels read: speaker checked by window", \
+            c.speaker
+    if not turns:
         return status, score, (note + "; " if note else "") + "speaker not identified", ""
-    who = labels[-1].group(1).strip()
+    who = turns[-1][1]
     return status, score, (note + "; " if note else "") + f"speaker attributed from transcript label: {who}", who
 
 

@@ -728,14 +728,14 @@ Pitch-ready sentences with the proxy used for each: `docs/honest_limits.md`. The
 
 **Choices stated as choices (open disagreements, with the default named)**
 - **Age clock (D1).** Default: age runs from the first public date of the fact (for financial-statement rows, the earnings release). The latest-filing clock used in v2 is not a robustness row.
-- **Half-life (B-3).** Default: H = 3 months, with the needle floor on the discussion term only. Sensitivity: H = 6 (robustness table: same top three, same five strict needles).
+- **Half-life (B-3).** Default: H = 3 months, with the needle floor on the discussion term only. Sensitivity: H = 6 (an internal check, not pitched).
 - **Concentration (B-4, A18).** Default: one dominant evidence block counts as one finding (L = top-5 sum x N_eff / 3). The raw sum is printed beside L. In v3 it does not change the order of the top five.
-- **Scheduled events dominate (B-2).** π = 1 rows (IRA) dominate the sums of GILD, BMY, ABBV, LLY and PFE. The robustness table shows IRA on the draft formula (GILD moves about 10%, order unchanged).
-- **How S is shown (D6).** ΔEPS in dollars and π as a tier; the ranking slide carries the robustness table.
-- **AMGN's lead is one row on a trigger edge.** AMGN's L is 87% one row: receivables growth beat revenue growth by +8.01 pts against an 8.00-pt backtest trigger. At π_min or treated as unfired, GILD leads (robustness table). The 10-Q should be checked for an acquisition, timing or Part D redesign billing cause before calling it channel stuffing; the wholesaler-language half of the test is not automated.
+- **Scheduled events dominate (B-2).** π = 1 rows (IRA) dominate the sums of GILD, BMY, ABBV, LLY and PFE. An internal check runs IRA on the draft formula (GILD moves about 10%); it is not pitched.
+- **How S is shown (D6).** ΔEPS in dollars and π as a tier; the internal score S, the league and its robustness table are not pitched; the pick rests on the cited findings table and a human red-team read.
+- **AMGN's receivables row is explained by footnote.** Amgen bills wholesalers at gross price and books a separate sales-deduction liability, which rose $2.2B to $10.6B in FY2025 against a $2.8B rise in receivables (10-K FY2025, file pages 83 and 109): the row is not eligible as the Sharpest Needle and its impact is the net $0.6B movement. AZN's receivables row is explained the same way (FVOCI receivables it can factor and China bank acceptance drafts, 20-F FY2025 p. F-29).
 
 **Coverage**
-- **Needle.** "Five of ten companies have no finding that clears every needle condition; for those we name a provisional or floor-relaxed needle and label it." (league_v3: strict for AMGN, AZN, MRK, NVO, ABBV; the same at H = 6.)
+- **Needle.** "Five of ten companies have no finding that clears every needle condition; for those we name a provisional or floor-relaxed needle and label it."
 - **Detectors (B3, B14).** "Several signal families in the design (insider sales, 8-K items, misstatement scores, gross-to-net, footnotes) have no detector yet; LOE inputs are thin for four companies (NVO, AZN, ABBV, JNJ)."
 - **Foreign filers (R4).** "AstraZeneca and Novo Nordisk have no earnings release in our index, so their headline term is imputed from the other eight; Novo's dollar-based policy channels are not converted."
 - **Attention.** a_f outside the nine scorecard topics is a regex over analyst turns, and the attention bucket is thin (up to 10 quarters, fewer for some companies).
@@ -1042,7 +1042,7 @@ Every constant in `agent/needle/quant/weights.py` and in the `decide_weights` bl
 
 The pitch shows four things. None of them prints the internal score S or the league.
 
-1. **Findings table, ranked by dollar impact.** Every gated finding with its one-sentence claim, its impact math and its base-case |ΔEPS| (USD per share; ties by |ΔOI|, USD M), each number footnoted to its page or labelled derived or assumption. `out/<T>/findings_table.md` and `.json` (`rank_basis: "impact"`).
+1. **Findings table, ranked by dollar impact.** Every gated finding with its one-sentence claim, its impact math and its base-case |ΔEPS| (per share in the reporting currency, DKK for NVO; ties by |ΔOI|, millions), each number footnoted to its page or labelled derived or assumption. `out/<T>/findings_table.md` and `.json` (`rank_basis: "impact"`).
 2. **The Sharpest Needle, by one rule:** the biggest-impact finding that analysts asked about least (highest |ΔEPS| among the findings with the lowest analyst-share-asked; Section 4.8). Marked in the same table.
 3. **Product fine-print table.** The chosen product against its rivals, label by label, every cell cited (Section 4.11).
 4. **DECIDE comparison with kill signals.** Five numbers for the chosen move and the two rejected alternatives (EV with in-window PV and terminal value, cash at risk, payback, scenario spread, MCDA), the one-sentence selection rule, and the numeric 6-to-12-month kill signals (Section 5). A move with EV at or below zero is never recommended; the memo then says no candidate clears the hurdle and names the least-bad option.

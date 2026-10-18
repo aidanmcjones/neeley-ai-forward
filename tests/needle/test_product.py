@@ -126,7 +126,7 @@ def test_synthetic_table_five_rows_and_label_citations(fake):
     # generic rival: every cell empty with a reason, nothing invented
     assert all(c.rows[r]["Generic fooxide"].empty and c.rows[r]["Generic fooxide"].empty_reason for r in c.rows)
     gl = P.growth_limiter(c)
-    assert gl[1] is False and gl[0].count(".") == 1                  # no revenue: honest non-answer, still one sentence
+    assert gl[1] is None and "not testable with our data" in gl[0]     # no revenue: honest non-answer, no priced-in verdict
     assert gate(me["safety"].citations and [__import__("agent.needle.cite.locator", fromlist=["Claim"]).Claim("x", me["safety"].citations)])[0]
 
 
@@ -148,8 +148,9 @@ def test_real_table_has_five_rows_and_cited_label_cells(lly):
                 assert ct.page and ct.verification.status != "unverified"
                 assert ct.doc_type == "label" and "dailymed.nlm.nih.gov" in ct.deep_link and "#section" not in ct.deep_link
     assert lly.rows["dosing"]["Wegovy pill"].detail["route"] == "oral"
-    assert lly.rows["timeline"]["Zepbound"].detail["company_stated"]["us_loe"] == "2036"
-    assert "discrepancy" in lly.rows["timeline"]["Zepbound"].detail
+    assert str(lly.rows["timeline"]["Zepbound"].detail["company_stated"]["us_loe"]).startswith("2036")
+    det = lly.rows["timeline"]["Zepbound"].detail   # thread #19 (d): no labels-profile protection date is compared
+    assert "discrepancy" not in det and "protection_end_labels_profile_not_used" in det
 
 
 @needs_real
@@ -194,3 +195,29 @@ def test_cli_runs_and_writes_json_and_markdown(tmp_path):
     assert d["growth_limiter"]["sentence"] and data["findings"]
     md = m.read_text()
     assert "| Row |" in md and "**Sources**" in md and "verified:" in md and "\u2014" not in md
+
+
+def test_loe_dates_come_from_loe_calendar_and_filings_not_labels():
+    """Parker (red team v3 (d)): Keytruda 2028 patent not the 2031 orphan date; Ibrance Sep 5 2027; Vyndamax settlement
+    entry June 1 2031; Enbrel around 2029 (core patent 11/22/2028); Darzalex 2029 per the 10-K; Biktarvy April 1 2036."""
+    from datetime import date
+    from agent.needle.quant import verified_tables as VT
+    try:
+        got = VT.loe("MRK", "keytruda")
+    except Exception:
+        pytest.skip("moat tables not available")
+    if got is None:
+        pytest.skip("loe_calendar not available")
+    want = {("MRK", "keytruda"): date(2028, 1, 1), ("PFE", "ibrance"): date(2027, 9, 5),
+            ("PFE", "vyndamax"): date(2031, 6, 1), ("AMGN", "enbrel"): date(2028, 11, 22),
+            ("JNJ", "darzalex"): date(2029, 1, 1), ("GILD", "biktarvy"): date(2036, 4, 1)}
+    for (t, b), d in want.items():
+        g = VT.loe(t, b)
+        assert g is not None and g[0] == d, (t, b, g and g[0])
+        assert all(c.verification.ok for c in g[1].citations)
+
+
+def test_regimens_keep_every_label_option():
+    assert P.regimens("either 140 mg every 2 weeks OR 420 mg once monthly") == ["every 2 weeks", "once monthly"]
+    assert P.regimens("CABENUVA can be injected monthly or every 2 months") == ["monthly", "every 2 months"]
+    assert P.regimens("200 mg every 3 weeks or 400 mg every 6 weeks") == ["every 3 weeks", "every 6 weeks"]
