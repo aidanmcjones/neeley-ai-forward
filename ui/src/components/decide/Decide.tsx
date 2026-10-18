@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { CiteChip } from "../CiteChip";
 import { NumericPill } from "../NumericCheck";
+import { Md } from "../chat/Md";
 import { resolveCite } from "../../lib/data";
 import { money } from "../../lib/format";
 import type { Company, Decide, DecideFootnote, DecideMove, Evidence, KillSignal, NumericCheck } from "../../lib/types";
@@ -9,6 +10,12 @@ import type { Company, Decide, DecideFootnote, DecideMove, Evidence, KillSignal,
 // five numbers, chosen move first, footnote cites, and the kill-signal table.
 
 const usdM = (x: number | null | undefined) => (typeof x === "number" && Number.isFinite(x) ? money(x * 1e6) : "n/a");
+
+/** Moves with why_passed filled from stance.alternatives (the exporter puts it there). */
+export function withAlternatives(d: Decide, alts?: { name?: string; why_passed?: string | null }[] | null): Decide {
+  if (!alts?.length || !d.moves) return d;
+  return { ...d, moves: d.moves.map((m) => (m.why_passed ? m : { ...m, why_passed: alts.find((a) => a.name === m.name)?.why_passed ?? null })) };
+}
 
 /** True when DECIDE found no move that clears the hurdle (chosen: null with a least-bad move). */
 export function noneClears(d: Decide | null | undefined): boolean {
@@ -104,7 +111,7 @@ export function DecideTable({ company, decide, compact = false, onPreview }: {
                 </tr>
                 <tr className={`border-b border-line ${role === "chosen" ? "bg-teal-soft/40" : role === "least_bad" ? "bg-warn/10" : ""}`}>
                   <td colSpan={6} className="px-1.5 pb-1.5 text-[11px] leading-snug text-muted">
-                    {chosen ? m.why : m.why_passed ? <>Why we passed: {m.why_passed}</> : <>Not chosen: {m.binding_reason || "lower rank"}.</>}{" "}
+                    {chosen ? m.why : <>Not chosen: {m.binding_reason || "lower rank"}.</>}{" "}
                     <FindingChips company={company} ids={m.finding_ids} onPreview={onPreview} />
                     {!compact && (m.flags?.length ?? 0) > 0 && <span className="block text-warn">⚠ {m.flags!.length} assumption{m.flags!.length > 1 ? "s" : ""} flagged (team inputs or uncited defaults)</span>}
                   </td>
@@ -219,25 +226,24 @@ export function DecideFootnotes({ decide }: { decide: Decide }) {
   );
 }
 
-const CITE_KEYS = /^(cite|cites|footnote|footnotes|citation|citations|evidence|source_cite)$/i;
 
-/** stance.decide.why_it_works_rows: the evidence each decider needs, as a cited table (columns from the rows). */
-export function WhyItWorks({ company, decide, compact = false, onPreview }: { company: Company; decide: Decide; compact?: boolean; onPreview?: (e: Evidence | null) => void }) {
+/** stance.decide.why_it_works_rows: the evidence each decider needs. Cells carry [n] / [derived: ...] /
+ * [assumption] markers; [n] resolves to the row's own cites (footnotes, shown as f-chips). */
+export function WhyItWorks({ company, decide, compact = false }: { company: Company; decide: Decide; compact?: boolean; onPreview?: (e: Evidence | null) => void }) {
+  void company;
   const rows = (decide.why_it_works_rows ?? []).filter((r) => r && typeof r === "object") as Record<string, unknown>[];
   if (!rows.length) return null;
-  const cols = [...new Set(rows.flatMap((r) => Object.keys(r)))].filter((k) => !CITE_KEYS.test(k) && !/^(id|cite_id|finding_id|finding_ids)$/.test(k));
+  const cols = [...new Set(rows.flatMap((r) => Object.keys(r)))].filter((k) => !/^(cites?|footnotes?|citations?|evidence|markers?_unresolved|id|cite_id|finding_ids?)$/.test(k));
   const fn = new Map((decide.footnotes ?? []).map((f) => [f.n, f]));
-  const chips = (r: Record<string, unknown>, i: number) => {
-    const out: JSX.Element[] = [];
-    for (const k of Object.keys(r).filter((k) => CITE_KEYS.test(k))) {
-      const v = r[k];
-      for (const x of Array.isArray(v) ? v : [v]) {
-        if (typeof x === "number" && fn.get(x)?.citation) out.push(<CiteChip key={`${k}${x}`} label={`f${x}`} evidence={fn.get(x)!.citation!} onPreview={onPreview} />);
-        else if (x && typeof x === "object" && ("citation" in (x as object) || "doc_id" in (x as object))) out.push(<CiteChip key={`${k}${out.length}`} n={out.length + 1} evidence={x as Evidence} onPreview={onPreview} />);
-        else if (x && typeof x === "object" && "finding_id" in (x as object)) { const ev = resolveCite(company, x as { finding_id: string; i?: number }).evidence; if (ev) out.push(<CiteChip key={`${k}${out.length}`} n={out.length + 1} evidence={ev} onPreview={onPreview} />); }
-      }
+  const evOf = (r: Record<string, unknown>) => (n: number): Evidence | undefined => {
+    const c = (Array.isArray(r.cites) ? (r.cites as Record<string, unknown>[]) : []).find((x) => x?.n === n);
+    if (c) {
+      const page = c.page != null ? `p. ${String(c.page)}` : String(c.location ?? "");
+      return { doc_id: String(c.doc_title ?? `footnote ${n}`), citation: [c.doc_title, page].filter(Boolean).join(", ") || `footnote ${n}`, doc_title: c.doc_title as string,
+        location: c.location as string, quote: (c.quote as string) ?? "", url: (c.url as string) ?? undefined, withheld: c.withheld === true, withheld_reason: (c.withheld_reason as string) ?? null,
+        verification: (typeof c.verification === "string" ? { status: c.verification } : c.verification) as Evidence["verification"], verdict: "verified" };
     }
-    return out.length ? <span key={`c${i}`} className="inline-flex flex-wrap gap-0.5">{out}</span> : null;
+    return fn.get(n)?.citation;
   };
   const head = (k: string) => k.replace(/_/g, " ");
   return (
@@ -246,16 +252,15 @@ export function WhyItWorks({ company, decide, compact = false, onPreview }: { co
         <caption className="sr-only">Why it will work: the evidence each decider needs</caption>
         <thead><tr className="border-b border-line text-[10px] uppercase tracking-wide text-muted text-left">
           {cols.map((k) => <th key={k} scope="col" className="px-1.5 py-1 font-semibold">{head(k)}</th>)}
-          <th scope="col" className="px-1.5 py-1 font-semibold">Source</th>
         </tr></thead>
         <tbody>{rows.map((r, i) => (
           <tr key={i} className="border-b border-line align-top">
             {cols.map((k, j) => {
               const v = r[k];
               const t = v == null ? "" : typeof v === "object" ? JSON.stringify(v) : String(v);
-              return j === 0 ? <th key={k} scope="row" className="px-1.5 py-1 text-left font-semibold">{t}</th> : <td key={k} className="px-1.5 py-1">{t}</td>;
+              const cell = <Md md={t} cite={evOf(r)} prefix="f" />;
+              return j === 0 ? <th key={k} scope="row" className="px-1.5 py-1 text-left font-semibold">{cell}</th> : <td key={k} className="px-1.5 py-1">{cell}</td>;
             })}
-            <td className="px-1.5 py-1">{chips(r, i)}</td>
           </tr>
         ))}</tbody>
       </table>

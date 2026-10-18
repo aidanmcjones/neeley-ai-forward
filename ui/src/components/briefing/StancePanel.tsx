@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { AiMark, CiteChip, ConfPill, EmptyState, NumericSummary, Panel, ScoreBar, StanceBadge } from "..";
 import { BASIS_NOTE, CiteRegistry, citeLabel, weighOptions } from "../../lib/stance";
 import type { Company, Evidence, NumericCheck } from "../../lib/types";
-import { DecideTable, WhyItWorks, noneClears } from "../decide/Decide";
+import { DecideTable, WhyItWorks, noneClears, withAlternatives } from "../decide/Decide";
 
 // Right-hand AI panel: the template-drafted stance, options, cited bullets, live source card.
 export function StancePanel({ company, preview, onPreview }: {
@@ -35,7 +35,7 @@ export function StancePanel({ company, preview, onPreview }: {
     : noneClears(s.decide) ? "Moves valued by rules; none clears the hurdle (no model)"
     : s.decide?.moves?.length ? "Move valued and chosen by rules (quant.decide, no model)" : "Drafted from verified findings by rules (template, no model)";
   const hover = rows.find((r) => r.name === hoverOpt);
-  const decide = s.decide?.moves?.length ? s.decide : null;
+  const decide = s.decide?.moves?.length ? withAlternatives(s.decide, s.alternatives as { name?: string; why_passed?: string }[]) : null;
 
   return (
     <Panel ai className="border-t-4 border-t-teal" bodyClassName="p-4 space-y-4"

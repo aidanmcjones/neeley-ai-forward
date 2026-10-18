@@ -1,13 +1,20 @@
 import { useState } from "react";
-import { formulaMarkedOf } from "../../lib/cites";
+import { formulaMarkedOf, markedOf } from "../../lib/cites";
 import { MarkedSentence } from "../MarkedSentence";
 import { AiMark, CiteChip, ConfPill, FlagPills, NeedleStatusPill, NumericPill } from "..";
 import { money, z } from "../../lib/format";
 import { citeLabel, externalSources, impactView, isShiftMetric, metricText } from "../../lib/stance";
 import type { Evidence, Finding } from "../../lib/types";
 
+/** Index just past the first sentence end (". " before a capital), skipping trailing markers; -1 if none. */
+function firstSentenceEnd(s: string): number {
+  const re = /[.!?](\[[^\]]*\])*\s+(?=[A-Z"(])/g;
+  const m = re.exec(s);
+  return m && m.index > 40 ? m.index + m[0].length : -1;
+}
+
 // Full-width hero band: the Sharpest Needle as the engine's verdict.
-export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none = false, rule, source }: {
+export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none = false, rule, source, reason }: {
   needle: Finding; ticker: string; onPreview?: (ev: Evidence | null) => void;
   /** league needle_status (strict / provisional / floor_relaxed). */
   status?: string | null;
@@ -19,6 +26,8 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
   rule?: string | null;
   /** needle_source: "red_team" (Parker's red-team read, confirmed by the gate) or "rule" (the plain rule). */
   source?: string | null;
+  /** needle_reason: one line on why this row is the needle. */
+  reason?: string | null;
 }) {
   const im = impactView(needle);
   const [showAll, setShowAll] = useState(false);
@@ -50,10 +59,26 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
           </p>
         </>
       ) : (
-        <h2 id="needle-h" className={`mt-1.5 font-display leading-[1.02] tracking-wide text-fg ${needle.finding.length > 170 ? "text-[28px]" : needle.finding.length > 100 ? "text-[32px]" : "text-[40px]"}`}>
-          <MarkedSentence finding={needle} onPreview={onPreview} />
-        </h2>
+        (() => {
+          // A paragraph-length needle: its first sentence is the headline, the rest reads as body text.
+          const plain = needle.finding;
+          const marked = markedOf(needle);
+          const src = marked ?? plain;
+          const cut = plain.length > 220 ? firstSentenceEnd(src) : -1;
+          const head = cut > 0 ? src.slice(0, cut) : src;
+          const rest = cut > 0 ? src.slice(cut).trim() : "";
+          const headLen = cut > 0 ? head.replace(/\[[^\]]*\]/g, "").length : plain.length;
+          return (
+            <>
+              <h2 id="needle-h" className={`mt-1.5 font-display leading-[1.02] tracking-wide text-fg ${headLen > 170 ? "text-[28px]" : headLen > 100 ? "text-[32px]" : "text-[40px]"}`}>
+                {marked ? <MarkedSentence finding={needle} marked={head} onPreview={onPreview} /> : head}
+              </h2>
+              {rest && <p className="mt-1.5 text-[14px] leading-snug line-clamp-3" title={plain}>{marked ? <MarkedSentence finding={needle} marked={rest} onPreview={onPreview} /> : rest}</p>}
+            </>
+          );
+        })()
       )}
+      {!none && reason && <p className="mt-1 text-[12.5px] leading-snug text-muted line-clamp-2" title={reason}>{reason}</p>}
       <div className="mt-2.5 grid grid-cols-[auto_1fr_auto] items-start gap-x-6 gap-y-2 text-sm">
         <div className="flex flex-col items-start gap-1.5 pt-0.5">
           <div className="flex items-center gap-2">
@@ -68,7 +93,7 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
           <dd>{needle.vector?.obscurity_note ?? "no obscurity note exported"}</dd>
           <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted pt-0.5">Impact</dt>
           <dd className="min-w-0">
-            {im.kind === "dollars" && <span className="font-display text-[22px] leading-none text-purple mr-2 tnum">{money(im.dollars)}</span>}
+            {im.kind === "dollars" && (im.dollars ? <span className="font-display text-[22px] leading-none text-purple mr-2 tnum">{money(im.dollars)}</span> : <span className="mr-2 rounded bg-chip px-1.5 py-0.5 text-[11px] font-semibold text-muted">no EPS dollar figure</span>)}
             {im.kind === "suspect" && (
               <span className="mr-2"><s className="font-display text-[22px] leading-none text-muted tnum">{money(im.dollars)}</s> <span className="text-warn font-semibold text-xs">suspect: {im.note}</span></span>
             )}
@@ -99,7 +124,7 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
           <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">Proof on the page</span>
           {ev.length > 0 ? (
             <div className="flex flex-wrap justify-end gap-1.5">
-              {(showAll ? ev : ev.slice(0, 3)).map((e, i) => <CiteChip key={i} evidence={{ ...e, verdict: e.verdict ?? needle.verdict }} label={`[${i + 1}] ${citeLabel(e).replace(/\s*\(file page \d+\)$/, "")}`} onPreview={onPreview} />)}
+              {(showAll ? ev : ev.slice(0, 3)).map((e, i) => <CiteChip key={i} evidence={{ ...e, verdict: e.verdict ?? needle.verdict }} label={`[${i + 1}] ${citeLabel(e).replace(/,?\s*\(?file page \d+\)?(\s*\(no printed page number\))?/g, "").replace(/\s*\(no printed page number\)/g, "")}`} onPreview={onPreview} />)}
               {!showAll && ev.length > 3 && <button type="button" onClick={() => setShowAll(true)} className="rounded border border-line px-1.5 py-px font-mono text-[11px] text-muted hover:text-purple hover:border-purple">+{ev.length - 3} more</button>}
             </div>
           ) : (

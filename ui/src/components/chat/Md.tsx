@@ -23,12 +23,12 @@ function Run({ ns, chip }: { ns: number[]; chip: (n: number, k: string) => React
   );
 }
 
-export function Md({ md, cite }: { md: string; cite: (n: number) => Evidence | undefined }) {
+export function Md({ md, cite, prefix }: { md: string; cite: (n: number) => Evidence | undefined; prefix?: string }) {
   const parts = md.split(TOKEN).filter((x) => x !== "");
   const chip = (n: number, k: string) => {
     const ev = cite(n);
     return ev
-      ? <span key={k} className="inline-block align-baseline leading-none"><CiteChip evidence={ev} n={n} /></span>
+      ? <span key={k} className="inline-block align-baseline leading-none">{prefix ? <CiteChip evidence={ev} label={`${prefix}${n}`} /> : <CiteChip evidence={ev} n={n} />}</span>
       : <span key={k} className="font-mono text-[11px] text-muted" title="No source exported for this marker">[{n}]</span>;
   };
   // Runs of adjacent [n] markers collapse to three chips and "+N" (expand on click).

@@ -11,7 +11,7 @@ import { PinnedExhibits } from "../components/memo/PinnedExhibits";
 import { MarkedSentence, hasMarked } from "../components/MarkedSentence";
 import { derivedOperands, isDerived } from "../lib/cites";
 import type { Evidence } from "../lib/types";
-import { DecideFootnotes, DecideTable, KillSignalTable, WhyItWorks, noneClears } from "../components/decide/Decide";
+import { DecideFootnotes, DecideTable, KillSignalTable, WhyItWorks, noneClears, withAlternatives } from "../components/decide/Decide";
 
 // CEO memo (/memo): one printable page drafted from company.stance. Text blocks are editable;
 // edits persist to localStorage needle.memo.<ticker> and "Reset to draft" restores the export.
@@ -103,7 +103,7 @@ export default function Memo() {
     <Editable key={`${id}-${version}`} id={id} text={v(id, draft)} editing={editing} onCommit={commit} onDraft={saveDraft} as={as} className={className} />
   );
   const nEdits = Object.keys(edits).length;
-  const decide = s?.decide?.moves?.length ? s.decide : null;
+  const decide = s?.decide?.moves?.length ? withAlternatives(s.decide, s.alternatives as { name?: string; why_passed?: string }[]) : null;
   const kills = s?.kill_signals ?? [];
   // Prove-wrong lines already shown in the kill-signal table are not repeated as bullets.
   const restProveWrong = (s?.prove_wrong ?? []).map((x, i) => ({ x, i }))
