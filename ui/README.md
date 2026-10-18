@@ -78,6 +78,16 @@ Part 1 deliverable instead of a memo; the company pill does not apply (the pick 
   priced in ("untestable" reads as a plain statement). Markers render through `Md` with the existing CiteChip and
   SourceDrawer: `[n]` resolves via the nearest `marker_map` against every cite in the company file, else the
   local `cites` entry with that `n`.
+- **Selection card prose** comes only from `selection.reasons_card` / `eliminated_card` (figure-free). The
+  verbatim `reasons` / `eliminated` carry ungated figures and never render as prose; while the card fields are
+  absent they are a fallback with every sentence carrying a figure dropped (years, dates, 10-K / 10-Q / 20-F,
+  candidate ids like AMGN-c06 and counts up to 12 are allowed). `checkCardFigures` in `src/lib/part1.ts`
+  console.warns, naming the ticker, if a rendered card string still carries any other figure.
+  "Read the sealed selection" opens `data/<selection.sealed_doc_path>` (else `selection_md`) in a side
+  drawer, under a muted note with sealed_at and the sha256 short form.
+- **Missing picks**: `index.available` / `index.missing` keep all three picks in the switcher; a missing pick is
+  disabled with a "writing" hint, the answer opens on the first available pick, and a muted line says so when
+  the number one pick is still being written.
 - **Reasoning trace** ("How the answer was found"): a summary strip (candidates, survived, killed, narrowed,
   documents read), then the eight "Where findings hide" categories in the case's order, collapsed; each opens to
   its queries, distinct documents (title, page) and candidate cards with a verdict badge, the reason, a link to

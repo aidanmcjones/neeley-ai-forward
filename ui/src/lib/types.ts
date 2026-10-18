@@ -304,11 +304,17 @@ export interface MemosFile extends Loose {
 export interface Part1Index extends Loose {
   generated_at?: string; engine?: string; picked: string[]; tickers?: string[];
   sealed?: { sha256?: string; sealed_at?: string } | null; sample?: boolean; sample_note?: string;
+  /** Picks whose answer files are written; `missing` picks are still being written. */
+  available?: string[]; missing?: string[];
 }
 
 export interface Part1Selection extends Loose {
   picked: string[]; reasons?: Record<string, string>; eliminated?: Record<string, string>;
   sealed_at?: string; sha256?: string; selection_md?: string;
+  /** Figure-free card text. `reasons` / `eliminated` are verbatim and ungated: never rendered as prose. */
+  reasons_card?: Record<string, string>; eliminated_card?: Record<string, string>;
+  /** The sealed markdown, relative to the data root (e.g. "part1/selection.md"). */
+  sealed_doc_path?: string;
   names?: Record<string, string>;
 }
 

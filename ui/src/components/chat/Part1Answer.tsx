@@ -175,7 +175,10 @@ export function Part1Answer({ part1, instant, nameOf, followFor, startTicker }: 
   startTicker?: string;
 }) {
   const picked = part1.index?.picked ?? [];
-  const [active, setActive] = useState<string>(startTicker && picked.includes(startTicker) ? startTicker : picked[0] ?? "");
+  // A pick in index.missing (or absent from index.available) is still being written: shown, disabled.
+  const missing = new Set([...(part1.index?.missing ?? []), ...(Array.isArray(part1.index?.available) ? picked.filter((t) => !part1.index!.available!.includes(t)) : [])]);
+  const ready = picked.filter((t) => !missing.has(t));
+  const [active, setActive] = useState<string>(startTicker && ready.includes(startTicker) ? startTicker : ready[0] ?? picked[0] ?? "");
   const [cos, setCos] = useState<Map<string, Part1Company | Error>>(new Map());
   const [trs, setTrs] = useState<Map<string, Part1Trace | Error>>(new Map());
   const reduce = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
@@ -187,13 +190,13 @@ export function Part1Answer({ part1, instant, nameOf, followFor, startTicker }: 
     const prefix = part1.prefix;
     if (!prefix) return;
     let live = true;
-    for (const t of picked) {
+    for (const t of ready) {
       loadPart1Company(prefix, t).then((c) => live && setCos((m) => new Map(m).set(t, { ...c, ticker: c?.ticker ?? t })), (e) => live && setCos((m) => new Map(m).set(t, e as Error)));
       loadPart1Trace(prefix, t).then((x) => live && setTrs((m) => new Map(m).set(t, x)), (e) => live && setTrs((m) => new Map(m).set(t, e as Error)));
     }
     return () => { live = false; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [part1.prefix, picked.join(",")]);
+  }, [part1.prefix, ready.join(",")]);
 
   const co = cos.get(active);
   const company = co && !(co instanceof Error) ? co : null;
@@ -219,7 +222,7 @@ export function Part1Answer({ part1, instant, nameOf, followFor, startTicker }: 
 
   const name = company?.name ?? nameOf(active);
   const follow = [
-    ...picked.filter((t) => t !== active).map((t) => ({ key: `co:${t}`, label: `Show pick ${picked.indexOf(t) + 1}: ${nameOf(t)} (${t})`, onClick: () => { setActive(t); topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); } })),
+    ...ready.filter((t) => t !== active).map((t) => ({ key: `co:${t}`, label: `Show pick ${picked.indexOf(t) + 1}: ${nameOf(t)} (${t})`, onClick: () => { setActive(t); topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); } })),
     ...followFor(active),
   ];
 
@@ -233,22 +236,28 @@ export function Part1Answer({ part1, instant, nameOf, followFor, startTicker }: 
         {picked.length > 1 && (
           <div role="tablist" aria-label="Picked companies" className="ml-auto inline-flex rounded-full border border-line bg-surface p-0.5">
             {picked.map((t, i) => (
-              <button key={t} type="button" role="tab" aria-selected={t === active} onClick={(e) => { e.stopPropagation(); setActive(t); }}
-                className={`rounded-full px-3 py-1 text-[12.5px] font-semibold ${t === active ? "bg-purple text-white dark:bg-purple-deep" : "text-muted hover:text-purple"}`}>
-                {i + 1} <span className="font-mono">{t}</span>
+              <button key={t} type="button" role="tab" aria-selected={t === active} disabled={missing.has(t)}
+                title={missing.has(t) ? `Pick ${i + 1} (${t}) is still being written` : undefined}
+                onClick={(e) => { e.stopPropagation(); setActive(t); }}
+                className={`rounded-full px-3 py-1 text-[12.5px] font-semibold ${t === active ? "bg-purple text-white dark:bg-purple-deep" : missing.has(t) ? "cursor-not-allowed text-muted/60" : "text-muted hover:text-purple"}`}>
+                {i + 1} <span className="font-mono">{t}</span>{missing.has(t) && <span className="ml-1 text-[10px] font-normal italic">writing</span>}
               </button>
             ))}
           </div>
         )}
+        {picked[0] && missing.has(picked[0]) && ready.length > 0 && (
+          <p role="note" className="w-full text-[12px] text-muted">Number one pick still being written; showing number {["one", "two", "three"][picked.indexOf(active)] ?? picked.indexOf(active) + 1}.</p>
+        )}
+        {!ready.length && <p role="note" className="w-full text-[12px] text-muted">All three picks are still being written.</p>}
         {part1.sample && <p role="note" title={part1.index?.sample_note} className="w-full text-[12px] text-muted">Sample data: the blind reasoning pass has not run yet</p>}
       </header>
 
       {co instanceof Error && <p role="alert" className="text-[14px] text-bad">Could not load data/part1/{active}.json.</p>}
-      {!co && <p role="status" className="text-[14px] text-muted">Loading the cited answer…</p>}
+      {!co && ready.length > 0 && <p role="status" className="text-[14px] text-muted">Loading the cited answer…</p>}
 
       {company && (
         <>
-          {part1.selection && <SelectionCard selection={part1.selection} ticker={active} nameOf={nameOf} seal={part1.index?.sealed} />}
+          {part1.selection && <SelectionCard selection={part1.selection} ticker={active} nameOf={nameOf} seal={part1.index?.sealed} prefix={part1.prefix} />}
           <section aria-label="Findings" className="space-y-2">
             <h3 className="text-[16px] font-semibold">Findings</h3>
             <FindingsTable c={company} ix={ix} />

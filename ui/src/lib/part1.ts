@@ -114,3 +114,55 @@ export function isWhyCompanyQuery(q: string, names: string[]): boolean {
   if (/\bwhy (this|that|the) (company|pick)\b|\bbeat the other nine\b|\bwhy did (it|they|this company) (win|beat)\b|\bwhy (was|did) .* (picked|chosen|win|beat)\b/.test(n)) return true;
   return names.some((x) => x && new RegExp(`^why (did |was |is )?${norm(x).replace(/ /g, " ")}\\b`).test(n));
 }
+
+/* Figures on the selection card. The card prints only reasons_card / eliminated_card (figure-free). The
+   fallback to the verbatim reasons / eliminated drops every clause carrying a figure the gate never saw. */
+const ALLOWED_DIGIT = [
+  /^(19|20)\d\d(s)?$/,                                  // years, 2020s
+  /^(19|20)\d\d-\d\d(-\d\d)?(T[\d:.]+Z?)?$/,                // dates, timestamps
+  /^(19|20)\d\dQ[1-4]$|^Q[1-4]$|^(FY|H[12])\d{2,4}$|^[1-4]Q\d{2,4}$/i,  // quarters, fiscal years
+  /^(10-K|10-Q|20-F|8-K|6-K|S-1|DEF14A)s?$/i,                 // filing forms
+  /^[A-Z]{2,5}-[A-Za-z]*-?\d+[a-z]?$/,                    // candidate ids: AMGN-c06, LLY-nugget-002
+  /^([1-9]|1[0-2])$/,                                     // small word counts
+];
+const tokenOf = (w: string) => w.replace(/^[("'\[]+|[)"',.;:!?\]]+$/g, "");
+export function disallowedFigures(s: string | null | undefined): string[] {
+  if (!s) return [];
+  return s.split(/\s+/).map(tokenOf).filter((w) => /\d/.test(w) && !ALLOWED_DIGIT.some((r) => r.test(w)));
+}
+/** Text with every sentence that carries a disallowed figure removed. */
+export function stripFigures(s: string | null | undefined): string {
+  const t = scrub(s);
+  return splitSentences(t).filter((x) => x.trim() && !disallowedFigures(x).length).join(" ");
+}
+/** Card prose for a ticker: the figure-free card field, else the stripped verbatim field. */
+export function cardText(card: Record<string, string> | undefined, raw: Record<string, string> | undefined, t: string): string {
+  const c = card?.[t];
+  if (typeof c === "string") return scrub(c);
+  return stripFigures(raw?.[t]);
+}
+/** Cheap checker: warn when a rendered selection-card string carries a figure outside the allowed forms. */
+const warned = new Set<string>();
+export function checkCardFigures(ticker: string, strings: string[]) {
+  const bad = strings.flatMap(disallowedFigures);
+  const k = `${ticker}:${bad.join(",")}`;
+  if (bad.length && !warned.has(k)) {
+    warned.add(k);
+    console.warn(`[part1] selection card for ${ticker} prints figures outside the allowed forms: ${bad.join(", ")}`);
+  }
+}
+
+/** The sealed selection markdown: data/<sealed_doc_path> next to the part1 folder in use. */
+export async function loadSealedDoc(prefix: string, path: string): Promise<string> {
+  const base = prefix.replace(/part1\/?$/, "");
+  const res = await fetch(base + path.replace(/^\/+/, ""));
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const text = await res.text();
+  if (/^\s*<!doctype html|^\s*<html/i.test(text)) throw new Error("not markdown");
+  return text;
+}
+
+/** Sentence split that keeps "Merck & Co.", "U.S.", "e.g." and similar abbreviations whole. */
+export function splitSentences(s: string): string[] {
+  return s.split(/(?<!\b(?:Co|Inc|Corp|Ltd|vs|No|St|U\.S|e\.g|i\.e)\.)(?<=[.!?])\s+(?=[A-Z("'])/);
+}

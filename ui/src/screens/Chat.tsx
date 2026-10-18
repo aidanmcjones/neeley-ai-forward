@@ -204,7 +204,7 @@ export default function Chat() {
               ) : t.kind === "selection" && part1.selection ? (
                 <div className="space-y-2">
                   {part1.sample && <p role="note" className="text-[12px] text-muted">Sample data: the blind reasoning pass has not run yet</p>}
-                  <SelectionCard selection={part1.selection} ticker={t.ticker ?? part1.selection.picked[0]} nameOf={nameOf} seal={part1.index?.sealed} />
+                  <SelectionCard selection={part1.selection} ticker={t.ticker ?? part1.selection.picked[0]} nameOf={nameOf} seal={part1.index?.sealed} prefix={part1.prefix} />
                   <div className="no-print flex flex-wrap gap-2" aria-label="Ask next">
                     <button type="button" onClick={() => send(PART1_PROMPT)} className="rounded-full border border-purple/40 bg-surface px-3 py-1.5 text-[13px] text-purple hover:bg-chip text-left">{PART1_PROMPT}</button>
                   </div>
