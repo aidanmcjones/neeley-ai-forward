@@ -38,10 +38,47 @@
     if (ta && ta.getAttribute("placeholder") === "Ask anything") ta.setAttribute("placeholder", "Search the haystack");
   }
 
+  /* "Part 2" is never shown: the section is "The CEO Move" everywhere (tab, chips, eyebrow, pre-filled prompt, notes). */
+  var RENAMES = [
+    [/Part 2: CEO move for/g, "The CEO Move for"],
+    [/Part 2: CEO move/g, "The CEO Move"],
+    [/Part 2: the CEO move/g, "The CEO Move"],
+    [/Part 2: As CEO of/g, "The CEO Move: As CEO of"],
+    [/Part 2/g, "The CEO Move"]
+  ];
+  function renamed(t) {
+    if (t.indexOf("Part 2") < 0) return t;
+    for (var i = 0; i < RENAMES.length; i++) t = t.replace(RENAMES[i][0], RENAMES[i][1]);
+    return t;
+  }
+  var ATTRS = ["aria-label", "title", "placeholder"];
+  function rename() {
+    var root = document.getElementById("root");
+    if (!root) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    for (var n = walker.nextNode(); n; n = walker.nextNode()) {
+      var v = n.nodeValue;
+      if (v && v.indexOf("Part 2") >= 0) n.nodeValue = renamed(v);
+    }
+    var els = root.querySelectorAll("[aria-label*='Part 2'],[title*='Part 2'],[placeholder*='Part 2']");
+    for (var i = 0; i < els.length; i++) {
+      for (var a = 0; a < ATTRS.length; a++) {
+        var cur = els[i].getAttribute(ATTRS[a]);
+        if (cur && cur.indexOf("Part 2") >= 0) els[i].setAttribute(ATTRS[a], renamed(cur));
+      }
+    }
+    var ta = document.getElementById("chat-input");
+    if (ta && ta.value.indexOf("Part 2") >= 0) {
+      var set = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set;
+      set.call(ta, renamed(ta.value));
+      ta.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+  }
+
   var queued = false;
   function apply() {
     queued = false;
-    try { wordmark(); copy(); } catch (e) { /* never break Parker's page */ }
+    try { wordmark(); copy(); rename(); } catch (e) { /* never break Parker's page */ }
   }
   function schedule() {
     if (queued) return;
@@ -53,6 +90,7 @@
     apply();
     new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true, characterData: true });
     window.addEventListener("hashchange", schedule);
+    window.setInterval(function () { var ta = document.getElementById("chat-input"); if (ta && ta.value.indexOf("Part 2") >= 0) schedule(); }, 250);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();

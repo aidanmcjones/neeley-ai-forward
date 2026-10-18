@@ -359,7 +359,7 @@ function renderAnswer(co: Rec, trace: Rec | null, t: string, ctx: Ctx): { root: 
   const name = scrub(co.company) || ctx.nameOf(t);
   const root = h("div", { class: "min-w-0 space-y-5 text-[15px] leading-relaxed p2-answer" });
 
-  root.append(h("header", null, h("div", { class: "p2-eyebrow", text: "Part 2: the CEO move" }), h("h2", { class: "p2-h2" }, `${name} `, h("span", { class: "font-mono", text: t }))));
+  root.append(h("header", null, h("div", { class: "p2-eyebrow", text: "The CEO Move" }), h("h2", { class: "p2-h2" }, `${name} `, h("span", { class: "font-mono", text: t }))));
 
   // 1. The move, in the lead position Parker gives the Sharpest Needle.
   const move = (co.move ?? null) as Rec | null;
@@ -519,7 +519,7 @@ function renderAnswer(co: Rec, trace: Rec | null, t: string, ctx: Ctx): { root: 
 
   // Ask next: the other picks' moves, and the way back to the Part 1 findings.
   const next = h("div", { class: "no-print flex flex-wrap gap-2", "aria-label": "Ask next" });
-  for (const o of ctx.ready) if (o !== t) next.append(h("button", { type: "button", class: CHIP_CLS, text: `Part 2: CEO move for ${ctx.nameOf(o)} (${o})`, onclick: () => ctx.open(o) }));
+  for (const o of ctx.ready) if (o !== t) next.append(h("button", { type: "button", class: CHIP_CLS, text: `The CEO Move for ${ctx.nameOf(o)} (${o})`, onclick: () => ctx.open(o) }));
   next.append(h("button", { type: "button", class: CHIP_CLS, text: `Part 1 findings for ${name}`, onclick: () => ctx.part1(t) }));
   root.append(next);
   return { root, notes };
@@ -549,7 +549,7 @@ const parkerList = () => document.querySelector<HTMLElement>("main#main > ol:not
 function ownList(): HTMLElement | null {
   const his = parkerList();
   if (!his) return null;
-  if (!state.list) state.list = h("ol", { class: "space-y-8 pt-4 p2-turns", "aria-label": "Part 2" });
+  if (!state.list) state.list = h("ol", { class: "space-y-8 pt-4 p2-turns", "aria-label": "The CEO Move" });
   if (!state.list.isConnected) his.insertAdjacentElement("afterend", state.list);
   return state.list;
 }
@@ -650,7 +650,7 @@ function placeChips() {
     }
     if (chip.dataset.p2Chip !== cur.t) {
       chip.dataset.p2Chip = cur.t;
-      chip.replaceChildren(h("span", { class: "font-semibold", text: "Part 2: CEO move" }), ` for ${cur.name || nameOf(cur.t)} (${cur.t})`);
+      chip.replaceChildren(h("span", { class: "font-semibold", text: "The CEO Move" }), ` for ${cur.name || nameOf(cur.t)} (${cur.t})`);
       chip.title = PROMPT.charAt(0).toUpperCase() + PROMPT.slice(1);
     }
   }
