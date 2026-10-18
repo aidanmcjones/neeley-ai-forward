@@ -1,0 +1,130 @@
+{
+ "ticker": "AZN",
+ "company": "AstraZeneca PLC (USD, IFRS; per ordinary share)",
+ "rulings": [
+  {
+   "id": "AZN-c01",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "The FY2025 20-F adds a principal risk on anti-bribery/anti-fraud naming exclusion from reimbursement programmes; the China indictment itself is already in the FY2025 results release and carries no sized exposure beyond a $3.5m-$17.5m customs claim.",
+   "reason": "Obviousness (r1, r2) showed the indictment, the RMB 24m customs appraisal and the EVP charge are printed in the FY2025 results release legal table (AZN:reports/2025Q4_results_announcement.md p.33) and were raised on 2024 calls. Materiality conceded this in r2 and flipped to refuted, adding that the only quantified exposure is the $3.5m prepaid tax plus a 1-5x fine (AZN:20f_FY2025.md p.F-57, page 116), under 0.03% of revenue; the $664m figure is the reader's own 10% scenario. Both agree 'already shrinking' is a 2026 fact (FY2025 China +3.4%, p.F-22 page 81). The only non-headline residue is risk-factor wording (p.10), which is unsized. Both lenses refute; confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AZN-c02",
+   "category": "Inventory and receivables growing faster than revenue",
+   "verdict": "killed",
+   "claim": "No material, non-obvious version survives: on a cash basis FY2025 inventories and receivables grew 14.3% and 13.3% (vs 24% and 23% on the FX-inflated balance sheet), in line with 2023-2024 builds, and the 4x 'factorable' pool is measured from an anomalous 2024 base.",
+   "reason": "Materiality r2 showed translation inflated the balance-sheet growth (cash flow statement AZN:20f_FY2025.md p.F-5 page 64: receivables +1,728, inventories +755), that the FVOCI pool was $1.9-2.5bn in 2021-2023 so 2024's $667m is the outlier (p.F-29 page 88; FY2024 20-F page 89), and that ex-FVOCI receivables fell 0.8% in 2025. Obviousness conceded all four math points in r2 and flipped to refuted; the 2026 destocking is a results-release bullet (2026Q1 results p.8-9) and the CFO tied the H1 2026 outflow to the Farxiga LOE. Both lenses refute; confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": "Whether the FVOCI line's China bank-acceptance-draft component grew under VBP pressure; the 20-F does not split it (p.F-29, page 88)."
+  },
+  {
+   "id": "AZN-c03",
+   "category": "Peer contrast",
+   "verdict": "killed",
+   "claim": "The $440m Americas figure is legal-entity operating profit after transfer pricing, not a margin, and management said most US-sold product is made domestically, so no tariff exposure follows from it.",
+   "reason": "Materiality held from r1 that entity profit over external revenue is not a margin (AZN:20f_FY2025.md p.F-22, page 81). Obviousness conceded that and showed management said the vast majority of US medicines are made in the US (2025Q1 transcript p.2; 2025Q2 p.20, grade C), which materiality accepted in r2. Both refute the candidate as written. Obviousness raised a residue (89% of entity profit and a $655m IP-regime tax benefit in UK/European entities, p.F-19 page 78, at risk from onshoring); it is unsized, nobody has asked it, and it is not the reader's claim, so it is recorded as unresolved rather than ruled a finding.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": "Tax-rate consequence of US onshoring for the $655m IP-incentive benefit (p.F-19, page 78) is plausible and unasked but unsized."
+  },
+  {
+   "id": "AZN-c04",
+   "category": "Footnotes",
+   "verdict": "narrowed",
+   "claim": "AstraZeneca's tax charge has been cut by below-statutory 'Other items' plus prior-period credits in every year 2023-2025 ($413m, $284m and $467m; 6.0%, 3.3% and 3.8% of profit before tax), driven by internal transfers of IP and assets and provision releases, and Q2 2026's deferred-tax-asset benefit from internal legal entity changes (about $0.09 per ordinary share at an 18% normalising rate, up to $0.18) continues the pattern while each item is presented as one-off. FY2025 alone was $467m, about $0.30 per ordinary share.",
+   "reason": "I opened AZN:20f_FY2025.md p.F-19 (page 78): Other items (360)/(200)/(406) and prior-period adjustments (107)/(84)/(7) for 2025/2024/2023 on PBT 12,402/8,691/6,899; footnote 4 attributes them to provision releases, internal transfers of assets (2024, 2025) and an $828m intragroup IP purchase deferred-tax credit net of a $422m charge (2023). Materiality held the size throughout ($0.30 FY2025, $0.09-$0.18 Q2 2026, verified 1,550m shares). Obviousness refuted the single-quarter items (each is labelled in the release, 2026Q2 results p.4, and in CFO remarks, grade C) but in r2 conceded the multi-year recurrence is not said in any release or call it searched. Ruling: the recurrence pattern is a finding, not a skeptic's invention, because the reader's own sentence was 'the headline tax rate leans on repeated one-offs'; the skeptics stripped the wrong support (the 31% cash tax contrast uses a different base and is dropped) and kept the core. Recurrence is confirmed on the page; 'never said by management' is unrefuted, not confirmed, because only 2025Q3 has a grade-B transcript. Materiality is medium: 3.3-6.0% of PBT a year, roughly 3-4pp of ETR, but these are Reported items and part of the 2023 credit was one IP transaction.",
+   "materiality": "medium",
+   "obviousness": "medium",
+   "confidence": "medium",
+   "unresolved": "How much of each year's credit is inside Core tax (Core ETR guidance 18-22%) versus Reported only; the Q2 2026 DTA amount is undisclosed, so $0.09-$0.18 is a range."
+  },
+  {
+   "id": "AZN-c05",
+   "category": "Gross-to-net",
+   "verdict": "narrowed",
+   "claim": "US chargebacks rose from 8.4% to 9.8% to 10.8% of US gross Product Sales over 2023-2025 ($3,075m, $3,969m, $5,113m), costing about $0.48bn of 2025 net sales versus the 2024 rate and $1.14bn versus the 2023 rate (0.8%-1.9% of Total Revenue, about 3.5% of operating profit year on year). The Part D redesign the company cites runs through managed-care and Medicare rebates, not chargebacks, the driver (340B, GPO or oncology mix) is not disclosed, and the overall gross-to-net rate (50.5%) merely returned to 2023's 50.9%.",
+   "reason": "I opened AZN:20f_FY2025.md p.34: gross 47,385/40,641/36,568; chargebacks (5,113)/(3,969)/(3,075); net 23,444/21,655/17,961. Both skeptics converged in r2: materiality narrowed to the chargeback line (absorbing c09's math to avoid double counting) and dropped 'highest on the shortlist' (peer rates mix years and definitions); obviousness agreed the headline rate is a reversion and held that the chargeback trend is the least obvious AZN item because the table appears only in the 20-F/annual report and analyst_topics.csv shows no gross-to-net analyst turn on AZN calls 2025Q3-2026Q1. Numbers confirmed on the page. 'Never mentioned on a call' is unrefuted rather than confirmed given thin transcript coverage (only 2025Q3 grade B). The 1.0pp year-on-year effect is borderline on revenue (0.8%) but clears on operating profit and on the two-year view, so materiality is medium.",
+   "materiality": "medium",
+   "obviousness": "low",
+   "confidence": "high",
+   "unresolved": "P&L chargebacks (5,113) exceed the accrual-table provision (4,651 + 4 prior-year) on the same page by about $458m, so part of the line bypasses the accrual; the split between 340B, GPO price erosion and hospital-oncology mix is not disclosed."
+  },
+  {
+   "id": "AZN-c06",
+   "category": "Earnings-call Q&A",
+   "verdict": "killed",
+   "claim": "Management's Q3 2025 'absolutely consistent' remark referred to the anticipated Calquence IRA selection, so the later HHS lawsuit is not a contradiction, and the net price impact is unsized.",
+   "reason": "Both skeptics read AZN:companies/AZN/transcripts/2025Q3_transcript.md p.21 (grade B, Fredrickson) the same way in r2: the remark concerns selection, not price, and suing over statutory interpretation is AZN's standard practice (Farxiga suit in every release legal table, AZN:reports/2025Q3_results_announcement.md p.33). Materiality adds that the $0.37-0.56bn range rests on an assumed Medicare share against a list price while US deductions already average 50.5% of gross (p.34). Both refute; confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AZN-c07",
+   "category": "Product fine print",
+   "verdict": "killed",
+   "claim": "The MARIPOSA overall-survival win of amivantamab plus lazertinib over Tagrisso (HR 0.75) is verbatim on the Lazcluze label but is discussed on every recent AZN call, and the reader's $0.1-0.3bn impact is below the materiality bar; FLAURA2 lengthens Tagrisso use.",
+   "reason": "Both skeptics verified the label quotes (drug:lazcluze:label_sections.md p.45; drug:tagrisso:label_sections.md p.44). Obviousness showed MARIPOSA OS was asked on 2024Q4 (p.22) and discussed on 2026Q1 (p.23) and 2026Q2 calls; materiality found the sized impact under 0.5% of revenue and the FLAURA2 half positive for AZN, and flipped to refuted in r2. Both refute; confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AZN-c08",
+   "category": "Segment and product table changes",
+   "verdict": "narrowed",
+   "claim": "Nexium, $831m of FY2025 Product Revenue (1.4% of Total Revenue, -5% at CER), was folded into Other Medicines in the 2026 quarterly tables without a reconciliation or comment; Andexxa and Kanuma are disclosed elsewhere and drop out of the claim.",
+   "reason": "Materiality verified Nexium's absence from 2026Q2 results pp.5-7 and 23-25 and its FY2025 size (AZN:reports/2025Q4_results_announcement.md p.7); obviousness found no release or call noting the change. Both narrowed to Nexium. On the disputed Andexxa reversal I opened the source: AZN:20f_FY2025.md p.F-29 (page 88) reports 'partial reversals of $407m Andexxa provisions previously recognised in 2024'; p.F-18 (page 77) shows the 2024 $480m Andexxa inventory and product provision was booked as a restructuring cost ('Other' restructuring, Cost of sales 569 in 2024), and the 2025 restructuring line is a net (138) credit to Cost of sales 'primarily due to the reversal'. Ruling: the reversal is not a valid sub-candidate. The charge sat in restructuring, which Core excludes, and the company attributes the reversal to the same restructuring Cost of sales line, so the $407m gross reversal is most plausibly netted there against other restructuring cost-of-sales charges; the obviousness skeptic's 'up to $269m in Core' has no page support. The net P&L effect the filing shows is $138m, about 1% of Reported operating profit ($13,743m) and zero on Core. Obviousness is right that it is unsaid; materiality is right that it does not move the investor metric. The Nexium change is a disclosure change with no earnings effect, so materiality is low even though the line is 1.4% of revenue.",
+   "materiality": "low",
+   "obviousness": "low",
+   "confidence": "medium",
+   "unresolved": "Exact allocation of the $407m gross Andexxa reversal between restructuring and Core cost of sales is not disclosed (p.F-18 page 77, p.F-29 page 88). Note 16's net write-downs fell to $314m from $664m only because of the reversal; ex-Andexxa write-downs look higher in 2025, but the $480m 2024 charge also covered 'related product provisions', so the like-for-like is not computable."
+  },
+  {
+   "id": "AZN-c09",
+   "category": "Footnotes",
+   "verdict": "killed",
+   "claim": "The 340B state litigation (8 to 21 states) is printed in every results release and is industry-wide; its only number, the chargeback increase, cannot be attributed to 340B and is carried in AZN-c05.",
+   "reason": "Both skeptics refuted in r2: the 21-state list and rulings are in AZN:reports/2025Q4_results_announcement.md p.33; chargebacks are not split by programme on AZN:20f_FY2025.md p.34, so the $0.47bn is not attributable to 340B and would double-count c05. Confirmed killed; numeric content moved to c05.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AZN-c10",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "The 20-F wording shift from IRA 'first round' to 'health equalisation' matches what the CEO said on the 2025Q2 and 2025Q3 calls, and the 59% non-USD figure is the wrong base; the MFN basket is confidential, so no exposure can be sized.",
+   "reason": "Materiality held in r1 that 59% is currency denomination (AZN:20f_FY2025.md p.F-45, page 104), not reference-market revenue; obviousness supplied Soriot's grade-B remark on rebalancing (2025Q3 transcript p.18) and the press release's 'equalized' language; materiality flipped to refuted in r2. Correct base is about $21.4bn (36%) of UK, Europe and Japan revenue (p.F-22 page 81), but a correct size for a stated mechanism is still obvious. Confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  }
+ ],
+ "product": {
+  "verdict": "narrowed",
+  "product": "Tagrisso (osimertinib)",
+  "rivals": [
+   "Johnson & Johnson Rybrevant (amivantamab, IV) plus Lazcluze (lazertinib)",
+   "Johnson & Johnson Rybrevant Faspro (subcutaneous amivantamab and hyaluronidase-lpuj) plus Lazcluze"
+  ],
+  "reason": "Material by size: Tagrisso is $7,254m, 12.3% of FY2025 revenue (AZN:20f_FY2025.md p.F-16, page 75); both skeptics accept that. The edge as written fails on one point: the subcutaneous amivantamab launch is real, not just a grade-C call remark. J&J's FY2025 10-K lists RYBREVANT FASPRO as a subcutaneous NSCLC therapy (JNJ:10k_FY2025.md p.1, page 6) and its Q4 2025 release reports the FDA approval (JNJ:earnings/2026-01-21_a2025q4exhibit991.md file p.4), and on the 2026Q1 call (AZN:companies/AZN/transcripts/2026Q1_transcript.md p.23, grade C, context only) AZN said the subcutaneous launch is cannibalising IV amivantamab rather than Tagrisso share. So 'requires IV infusions' is dropped. What survives from the labels: Tagrisso is one 80 mg oral tablet daily with no contraindications and five indications including adjuvant and unresectable stage III (Tagrisso label 1.1-1.5, 2.3, 4), while the amivantamab plus lazertinib combination carries prophylactic anticoagulation for the first four months and dermatologic prophylaxis, with VTE in 36% (Lazcluze label 2.3, 5.1) and is first-line metastatic only, against an OS hazard ratio of 0.75 (0.61, 0.92) in the rival's favour (Lazcluze label section 14, p.45). Narrowed: Tagrisso compares well on convenience, safety burden and label breadth, not on survival; the comparison is call-discussed (obviousness) and unquantified, and the tie to a financial finding is only the Q1 2026 US destocking (2026Q1 results p.8), not c05. Unresolved: whether the subcutaneous formulation changes the prophylaxis requirement; the Rybrevant Faspro label is not in the index."
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 2,
+  "best_candidate_id": "AZN-c05",
+  "one_line": "Middling pick: one clean filing-only nugget (US chargebacks up from 8.4% to 10.8% of gross over 2023-2025, about $1.1bn, unexplained by the Part D story) plus a recurring 'one-off' tax-credit pattern, but only three narrowed rows toward the five needed, and a Tagrisso edge that is call-discussed and now loses the IV-infusion argument to subcutaneous amivantamab."
+ }
+}

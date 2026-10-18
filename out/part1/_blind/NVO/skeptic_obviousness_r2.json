@@ -1,0 +1,518 @@
+{
+ "ticker": "NVO",
+ "lens": "obviousness",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "NVO-c01",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Rechecked against the other skeptic's 2023-2024-2025 path. AR2024 p130 carries the DKK 33,107m comparative, AR2025 p110 the 2025 figure of DKK 91,031m (current 15,746m), and the other skeptic's 2024 figure of 71,061m fits that series, so most of the build was signed in 2024, during the supply shortage. I searched the 2024Q3, 2024Q4, 2025Q1 and 2025Q2 calls for whether that build was discussed. It was, but only as strategy. In 2024Q3 prepared remarks Novo is 'investing in internal and external capacity to increase supply both short and long term' (NVO:companies/NVO/transcripts/2024Q3_transcript.md p8). In 2024Q3 Q&A Mattias Häggblom (Handelsbanken) asked about external CDMO sourcing for cagrilintide and the plan B if Catalent were blocked, and the CFO answered 'continue to contract external capacity' (p18). In 2024Q4 Camilla Sylvest said Catalent would add supply 'beyond our pre-existing CMO contracts' (NVO:companies/NVO/transcripts/2024Q4_transcript.md p2). So the market was told plainly that Novo was locking in contract capacity. No call in 2024-2026, the 6-Ks, or the CMD gives the size of the commitment or asks whether it now exceeds demand. The 2026 right-sizing charge is disclosed (6-K p13), but only as a flow, never set against the stock.",
+   "correction": "Novo's 2024 strategy of contracting external fill-finish capacity was openly stated on the 2024Q3-2024Q4 calls. The non-obvious part is only this: the off-balance-sheet stock that strategy left behind (DKK 71bn at end-2024, DKK 91bn at end-2025, of which DKK 15.7bn falls due within a year) has never been sized on a call or set against the DKK ~3bn right-sizing charge of 2026, and consensus at the guidance midpoint shows no further exit cost priced.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 110
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2024.md",
+     "page": 130
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 13
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 14
+    },
+    {
+     "doc_id": "NVO:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:presentations/2026-03_cmd.md",
+     "page": 5
+    },
+    {
+     "doc_id": "NVO:presentations/2026-03_cmd_manufacturing.md",
+     "page": 10
+    },
+    {
+     "doc_id": "NVO:_inbox/bloomberg/NVO_2026Q1_transcript_bbg.pdf",
+     "page": 8
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q4_transcript.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q3_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q3_transcript.md",
+     "page": 18
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q4_transcript.md",
+     "page": 2
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded on the facts. The rise mostly came in 2024 (+115%), so 'just as growth turned negative' is wrong timing. Only DKK 15.7bn is due within a year. The 2024 contracting was not hidden: management said on the 2024Q3 and 2024Q4 calls that it was contracting external capacity. My round 1 phrase 'no source discusses' was too broad for the build itself. I am raising my severity from minor to major.",
+    "held": "Held as not refuted. Discussion of the build was always about adding supply (shortage era). No call, release or CMD page gives the DKK 71-91bn stock or asks about a surplus, even after the 2026 right-sizing charge. That gap between a stated strategy and an unsized liability is still the least obvious item on NVO.",
+    "narrowed": "Narrowed from 'commitments never discussed' to 'the size of the commitment stock and its overhang relative to the first right-sizing charge was never discussed'. The 2023-only comparison is replaced by the 2023-2024-2025 path."
+   }
+  },
+  {
+   "id": "NVO-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "I checked the other skeptic's three points against the pages. (1) AR2025 p89: 'Wholesaler charge-backs remain netted against trade receivable balances'. Other US rebates sit in 'Sales deductions and product returns', a separate liability, which on 6-K Q2 2026 p29 is DKK 140,201m current + 1,529m non-current = 141,730m, up from 134,400m at end-2025 even after the DKK 26.8bn 340B release. So receivables are near-gross while sales are net, and a wider gross-to-net raises 'DSO' mechanically. (2) Q1 2026 6-K p27 shows trade receivables of DKK 82,565m at 31 Mar 2026 against 70,856m at Dec 2025. The step is in Q1, not in the Q2 pipeline-fill quarter. (3) The working-capital change was DKK -33,231m in Q1 (NVO:6k/2026-05-06_caq12026.md p26) and -19,912m for H1 (6-K Q2 p28), so Q2 released about DKK 13.3bn. Management also explained H1 FCF as 'timing of US rebate payments' (p15). Under my lens, what I held in round 1 was exactly the residual beyond the disclosed pipeline fill. That residual is now plausibly a disclosed, mechanical effect, the gross receivables and the rebate liability growing together, and its timing does not match the candidate's story. What is left is a ratio anyone can compute from the face of the balance sheet and cash-flow statement, with an innocent explanation in the company's own accounting-policy note.",
+   "correction": "Downgrade to a monitoring item. Gross-basis receivables and the separate sales-deduction liability both rose in Q1 2026 alongside price erosion and the 340B release. Q2 released working capital. This is not a non-obvious channel-stuffing signal.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 29
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 10
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 28
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 26
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:_inbox/bloomberg/NVO_2026Q1_transcript_bbg.pdf",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 27
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded all three points. The DSO rests on gross-basis receivables over net sales (AR2025 p89). The jump was Q1 (DKK 70.9bn to 82.6bn, Q1 6-K p27), not Q2. Q2 released about DKK 13.3bn of working capital. I also concede that the identical DKK 51,352m inventory at Mar and Jun 2026 is in both filed balance sheets (Q1 p27, Q2 p29) and is not an index slip, so it cannot support a 'build' reading either way.",
+    "held": "Nothing held. Round 1 held c02 only on the residual beyond the disclosed pipeline fill. That residual now has a disclosed mechanical explanation, so my held verdict does not survive.",
+    "narrowed": "Flipped from held (major narrowing) to refuted (major)."
+   }
+  },
+  {
+   "id": "NVO-c03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 1 refutation stands. Management voiced the capacity overshoot (2025Q3 CFO on production-asset impairments and 'adjustments to expansion plans'; 6-K Q2 2026 p13 right-sizing; CMD p5). The other skeptic adds that part of the write-down growth is pre-launch stock charged to R&D under the AR2025 p97 policy, which further weakens the one piece I had left standing.",
+   "correction": "If anything survives, it is the COGS-booked PP&E impairment (DKK 2.7bn, AR2025 p96). That impairment is the quantified form of what the CFO already said on the 2025Q3 call.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2024.md",
+     "page": 40
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 42
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 96
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 13
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:presentations/2026-03_cmd.md",
+     "page": 5
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded the other skeptic's point (AR2025 p97) that prelaunch inventory is written down to R&D. That removes the inventory write-down growth as a clean 'unvoiced overcapacity' residual, which was my round 1 correction.",
+    "held": "Held refuted: the overcapacity theme is management-voiced.",
+    "narrowed": "Dropped my round 1 suggestion to keep the inventory write-down acceleration."
+   }
+  },
+  {
+   "id": "NVO-c04",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Round 1 stands: the cash-channel price effect was asked and answered on the 2026Q2 call, and the -22% decline and the self-pay share are printed in the 6-K. The other skeptic's point that US obesity sales grew +4% CER once the pill is included (6-K p6, p31) makes the item less material, not less obvious.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "NVO:20f_FY2024.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:20f_FY2025.md",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 7
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 6
+    },
+    {
+     "doc_id": "NVO:policy/press_2025-11-06_us_administration_agreement.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the 39% self-pay figure is a single week ending 17 July (6-K p7), not a quarter average.",
+    "held": "Held fatal on obviousness. The other skeptic held this on materiality, but nothing in their file shows the clause or its price effect was absent from calls or releases.",
+    "narrowed": "No change."
+   }
+  },
+  {
+   "id": "NVO-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 1 stands: the Q2 true-up is a 6-K page-2 bullet and was sized at DKK 2bn in Q&A (grade C). The other skeptic's ex-340B recalculation (deduction liability 34.8% of sales, 5% sensitivity 1.7% vs Lilly 1.4%) narrows the one residual I had offered, the note 2.1 sensitivity, to a thin peer gap.",
+   "correction": "Residual, if kept: Medicaid rebates +17.7% vs US net sales +3.4% in 2025 (AR2025 p88-89). This is a computed trend that nobody on a call has cited. Drop the liability-size sensitivity: ex-340B it is close to Lilly's.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 6
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    },
+    {
+     "doc_id": "NVO:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 88
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the 43.5% includes the 340B provision, which is a legal item and not a rebate estimate. I also concede that the grade-C '$5 billion' H2 2025 figure is almost certainly DKK. That figure appeared in my round 1 quotation of the 2026Q2 call, and I should not have repeated the currency unflagged.",
+    "held": "Held refuted: the contradiction at the centre of the candidate is a headline that was answered in Q&A.",
+    "narrowed": "Residual narrowed to the Medicaid-rebate growth rate only."
+   }
+  },
+  {
+   "id": "NVO-c06",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Round 1 stands. The reversal and the Seventh Circuit risk are management-voiced (2024Q2 call p8, p15; Q4 2025 6-K p29). The Mosaic remand (AR2025 p99 vs AR2024 p117) appears on no call. The other skeptic notes that AR2025 p98 says the Seventh Circuit case involves 'another pharmaceutical manufacturer', and that p99 says Novo does not expect Mosaic to be material.",
+   "correction": "Narrow to: the Second Circuit revived the Mosaic antitrust claim during 2025, the same year Novo moved to recognise the full USD 4.2bn. No call has raised this, but Novo's own footnote calls it not expected to be material, so the point is a disclosure-reading observation with an explicit management view against it.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 98
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 99
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2024.md",
+     "page": 117
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-02-03_caq42025.md",
+     "page": 29
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q2_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q2_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 99
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the Seventh Circuit case is not Novo's own case. That supports my round 1 view that the Seventh Circuit piece is not the non-obvious part. I also concede that the company states its view on Mosaic in the same footnote.",
+    "held": "Held, because Mosaic has not been discussed anywhere in Q&A.",
+    "narrowed": "Narrowed to Mosaic only, with management's 'not material' view stated alongside."
+   }
+  },
+  {
+   "id": "NVO-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 1 stands: the re-brand and the adjusted-measure definitions were announced in prepared remarks. The other skeptic's finding that the DKK 6.3bn Q2 carve-out is mostly the one-off monlunabant impairment, named on 6-K p2, means even the carve-out is a front-page item.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 90
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 118
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 4
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 17
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the Q2 impairment is named on the 6-K front page (monlunabant DKK 4.0bn). That reinforces my refutation.",
+    "held": "Held refuted.",
+    "narrowed": "No change."
+   }
+  },
+  {
+   "id": "NVO-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 1 stands. The other skeptic reached the same view independently: the company sized the MFN drag in its own release the next day, so any information gap lasted about one day.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:policy/press_2025-11-06_us_administration_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 6
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the H1 US decline has several causes (6-K p11), so the causal chain in the candidate is weaker still.",
+    "held": "Held refuted.",
+    "narrowed": "No change."
+   }
+  },
+  {
+   "id": "NVO-c09",
+   "refuted": true,
+   "severity": "major",
+   "argument": "In round 1 I held c09 at minor severity because the T2D caveat in section 8.6 is unasked on calls. The other skeptic's argument changes the obviousness reading too. Section 8.6 on the same page (drug:wegovy:label_sections.md p31) also says the Wegovy injection gives less weight loss in T2D. T2D patients are on-label for Novo's own oral semaglutide (drug:rybelsus:label_sections.md p2), now sold as the Ozempic pill (6-K Q2 2026 p11). The OASIS 4 diabetes exclusion is printed in the approval press release (NVO:policy/press_2025-12-22_wegovy_pill_us.md p1). The most likely reason no analyst asked is that the gap mostly shifts patients within Novo's portfolio, a point an analyst would treat as known class labelling rather than a share risk. The candidate's 'fenced out of a Medicare-heavy slice' claim needs that substitution not to happen, and nothing in the sources supports that.",
+   "correction": "The section 8.6 T2D wording is real label fine print. It belongs in the product write-up as a qualitative Foundayo edge, not as a standalone nugget.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:wegovy:label_sections.md",
+     "page": 31
+    },
+    {
+     "doc_id": "drug:wegovy:label_sections.md",
+     "page": 3
+    },
+    {
+     "doc_id": "drug:foundayo:label_sections.md",
+     "page": 4
+    },
+    {
+     "doc_id": "NVO:presentations/2026Q2_earnings_slides.md",
+     "page": 29
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "NVO:_inbox/bloomberg/NVO_2026Q1_transcript_bbg.pdf",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:policy/press_2025-12-22_wegovy_pill_us.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    },
+    {
+     "doc_id": "drug:rybelsus:label_sections.md",
+     "page": 2
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the gap is small (about 0.41% of sales even on the candidate's own stack) and that Novo's Ozempic pill and the Wegovy injection both cover the T2D population. I had noted the Ozempic pill caveat in round 1 but still held the item. With the substitution path confirmed on the Rybelsus label, the 'unasked' status no longer shows an overlooked risk.",
+    "held": "Nothing held as a standalone candidate.",
+    "narrowed": "Flipped from held (minor) to refuted (major). The label point moves into the product verdict."
+   }
+  },
+  {
+   "id": "NVO-c10",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Round 1 stands. The exemption is a press-release headline and tariffs are a sector-wide theme, but the Denmark-heavy footprint against an identical 2029 expiry is not discussed after 2025Q1. The other skeptic shows the US asset base grew from DKK 49,305m to 77,394m in 2025 (AR2025 p89) and that fill-finish was bought in the US via Catalent (p110). That suggests Novo is already partly onshoring, and management has spoken about its US sites in prepared remarks (2025Q1 call p2: Bloomington and Clayton).",
+   "correction": "Keep only the relative-footprint contrast (61% of PP&E and intangibles in Denmark vs 56% of sales in the US, and a USD 10bn vs 27bn+ US pledge). Drop the IRA 80% vs 15% contrast, which measures global brand concentration rather than Medicare exposure.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:policy/press_2025-11-06_us_administration_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 41
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2025Q1_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/tariff/wh_proclamation_11020_2026-04-02_section232_pharma.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2025Q1_transcript.md",
+     "page": 2
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the duty size is an assumption stack, that US assets grew 57% in 2025, and that the IRA comparison uses global brand sales.",
+    "held": "Held: a 2029 tariff cliff tied to footprint has not been raised on any call since the exemption, and consensus sits at 2026 guidance, which does not reach 2029.",
+    "narrowed": "Narrowed to the footprint contrast only."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Round 1 stands. Wegovy is the right product. The MACE and DDI edges are Novo's own slide (Q2 2026 slides p29), and food/water dosing was asked on the 2026Q1 call. With c09 refuted as a standalone, the section 8.6 T2D caveat stays here as the one fine-print item Novo's slide omits, framed qualitatively.",
+   "correction": "Present the section 8.6 T2D caveat as a qualitative Foundayo edge. Note that it also applies in weaker form to the Wegovy injection, and that Novo's Ozempic pill covers T2D.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:presentations/2026Q2_earnings_slides.md",
+     "page": 29
+    },
+    {
+     "doc_id": "drug:wegovy:label_sections.md",
+     "page": 31
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 14
+    }
+   ],
+   "round2": {
+    "conceded": "Conceded that the T2D contrast with the injection is weaker than stated, since section 8.6 notes reduced weight loss in T2D for the injection too.",
+    "held": "Held Wegovy as the product pick.",
+    "narrowed": "The fine-print edge is reframed as qualitative."
+   }
+  }
+ ],
+ "overall": "After round 2, NVO has 7 refuted candidates and 3 held, all narrowed. The held items are the DKK 71-91bn CMO commitment stock (the strategy was voiced in 2024, the size and overhang never were), the Mosaic remand next to the full 340B recognition, and the Denmark-heavy 2029 tariff footprint. Everything that touches the US price, MFN, GTN or launch-inventory story is either a release headline or answered in Q&A, or, for receivables, has a disclosed mechanical explanation."
+}

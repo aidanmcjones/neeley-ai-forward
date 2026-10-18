@@ -1,0 +1,131 @@
+{
+ "ticker": "AMGN",
+ "company": "Amgen Inc.",
+ "rulings": [
+  {
+   "id": "AMGN-c01",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "FY2025 risk factors add that foreign prices included in MFN calculations 'may affect our strategy' in those jurisdictions (AMGN:10k_FY2025.md p46); no economic effect is established.",
+   "reason": "Both skeptics refuted it in both rounds. Materiality: the ~$0.85B 'ROW growth at risk' is a scenario with no filing number, and ROW kept growing (+7% H1 2026, AMGN:10q_2026Q2.md p37) with the Q2 slowdown tied to Otezla European generics (p40). Obviousness: the MFN launch-pricing risk is industry-wide and stated more plainly by Merck, BMY and Regeneron (MRK:10k_FY2025.md p33; BMY:10k_FY2025.md p21; REGN:10k_FY2025.md p43). The wording change is real but carries no number. Confirmed refutation, not just unsupported.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AMGN-c02",
+   "category": "Gross-to-net",
+   "verdict": "narrowed",
+   "claim": "Amgen's company-wide sales deductions rose from 52.5% to 54.4% of gross product sales in 2025 (41,983/77,131 vs 35,346/67,372), with rebates charged up 24.7% against net product sales up ~10%; the deduction accrual grew $2,201M in 2025 vs $1,134M in 2024 (rebate accrual +29.7% to $8,839M), which the 10-K newly attributes in part to 'timing of payments', so the 2025 accrual build gave operating cash flow about $1.07B more support than 2024's (~11% of $9,958M 2025 operating cash flow) and reverses if payment timing normalizes. Each further point of deduction rate is ~$0.77B of net revenue, ~$1.42/share pre-tax. The 1.9-point rise is a mix-driven rate on a growing base, not lost revenue.",
+   "reason": "Neither skeptic refuted it; both narrowed it to the same core. Conceded by materiality: the Enbrel net-price and 340B legs are guided and said on calls (AMGN:transcripts/2026Q2_transcript.md p1; AMGN:transcripts/2025Q4_transcript.md p1), so they do not lead. Conceded by obviousness: the EPS label fix ($1.42 pre-tax, not $1.2), NADAC is an acquisition-cost benchmark not list price, and the $1.5B is a counterfactual. Materiality added the cash-flow sizing in round 2. I re-opened AMGN:10k_FY2025.md p83 (roll-forward: 7,271 -> 8,405 -> 10,606; rebates 6,817 -> 8,839; '54%, 52% and 53%'; 'timing of payments') and p81 (operating cash flow $9,958M vs $11,490M); all operands confirm. The $1.07B is the excess of 2025's accrual build over 2024's, not the whole $2.2B build. Obviousness is unrefuted rather than proven: both skeptics searched the 2025Q3 (A) and 2025Q4/2026Q1/2026Q2 (C) calls and found no deduction-rate or accrual figure, and gross-to-net was last asked in 2024Q3 (fact:market/never_asked.csv#14). Dropped: the Enbrel list-price hook.",
+   "materiality": "high",
+   "obviousness": "low",
+   "confidence": "high",
+   "unresolved": "Whether the 'timing of payments' build reverses in 2026 cannot be tested until the FY2026 roll-forward; the 2026 10-Qs do not carry the table."
+  },
+  {
+   "id": "AMGN-c03",
+   "category": "Inventory and receivables growing faster than revenue",
+   "verdict": "narrowed",
+   "claim": "In Q1 2026, 22 of TEPEZZA's 29 growth points came from higher inventory (~$84M on a $381M base), which was ~1.1 of Amgen's 4.4 points of Q1 product-sales growth (8,218 vs 7,873), or about a quarter of the company's Q1 product growth; U.S. TEPEZZA grew only 16% ($424M vs $365M), yet the Q1 call described the $490M global figure as 'U.S.' growth of 29% and credited demand. Only ~$20M of the stocking unwound in Q2 (-4% inventory on $505M), leaving a net ~$62M (7% of H1 base $886M) still in the channel at June 30. The reader's 'underlying U.S. demand flat to down' is dropped.",
+   "reason": "The skeptics split. Materiality moved to held in round 2 on the quarterly growth-rate test; obviousness moved to refuted, calling it small and reversed within one quarter. I settled the facts at source. AMGN:10q_2026Q1.md p37 confirms U.S. $424M (+16%), ROW $66M, total $490M (+29%), and the 22% inventory driver; p35-36 confirm Q1 product sales 8,218 vs 7,873 (+4%), so ~$84M is 24% of the $345M product growth and ~1.1 points. AMGN:transcripts/2026Q1_transcript.md p1 twice says '$490 million in the U.S.', which the 10-Q shows is the global figure: materiality's correction is confirmed. AMGN:10q_2026Q2.md p39-40 shows Q2 inventory -4% on $505M (~$20M) and H1 inventory still +7% on $886M (~$62M). So obviousness's 'reversed within one quarter' is factually wrong: about a quarter reversed, three quarters remained at June 30. Ruling: the annual size is small (~0.2% of revenue), but the brief's quarterly growth test is met and the call-vs-10-Q gap is not said anywhere (inventory never asked, fact:market/never_asked.csv#16). Survives narrowed to Q1 2026; the demand read-through stays refuted (Q2 volume +6%, H1 +3%).",
+   "materiality": "medium",
+   "obviousness": "low",
+   "confidence": "medium",
+   "unresolved": "The 10-Q does not split the 22% inventory effect between U.S. and ROW; ROW went from $16M to $66M, so part may be ex-U.S. launch fill. The '$490 million in the U.S.' wording is from a grade C transcript and may be a transcription error rather than the speaker's."
+  },
+  {
+   "id": "AMGN-c04",
+   "category": "Segment and product table changes",
+   "verdict": "killed",
+   "claim": "No surviving claim. 'Other products' is itemized in the 10-K's 'Other product sales by geographic region' table, including TAVNEOS.",
+   "reason": "Both skeptics killed it as fatal. Materiality found AMGN:10k_FY2025.md p75, which itemizes PAVBLU, UPLIZNA, IMDELLTRA, TAVNEOS (U.S. 423, ROW 36) and leaves a residual of only $1,098M; TAVNEOS is also in AMGN:10q_2026Q1.md p42 and AMGN:10q_2026Q2.md p44. Obviousness confirmed p75 in round 2 and conceded its own fallback ('TAVNEOS only on calls') was false. Confirmed refutation. The reader's data-gap note that TAVNEOS sales are in no filing table is also wrong and must not be carried forward.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AMGN-c05",
+   "category": "Footnotes",
+   "verdict": "killed",
+   "claim": "Material but obvious: 2010-2015 assessed tax plus penalties is at least $7.6B net of 'up to' repatriation credits, before interest (~$14/share in cash), against $4.4B of gross UTBs covering all positions; the 2026 filing updates are a timing refresh with no new dollar figure.",
+   "reason": "Both skeptics ended at refuted. Materiality conceded in round 2 that the supplemental-brief order (March 16, 2026) was already in AMGN:10q_2026Q1.md p14, that the harsher audit method and reserve adequacy were said on the 2026Q1 call (AMGN:transcripts/2026Q1_transcript.md p1), and that the remaining Q2-only items (decision slip to 'late 2026 or early 2027', AMGN:10q_2026Q2.md p17; two NOPA reissues 'in substantially the same form'; 2019-2022 audit start, p18) carry no new number. Obviousness showed the 2019-2022 audit start was pre-announced (AMGN:10q_2026Q1.md p15). Materiality also corrected the market check: event_returns #35 and #37 overlap on May 1 and coincide with the TAVNEOS Federal Register notice, so they are one reaction and cannot be credited to the NOPA. The exposure is large (~76% of 2025 operating cash flow) but disclosed and discussed by management, so it fails the non-obvious test. Confirmed refutation of the 'escalation' framing.",
+   "materiality": "high",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": "The case-specific share of the $4.4B UTB balance is undisclosed, so the excess EPS hit on a loss cannot be sized."
+  },
+  {
+   "id": "AMGN-c06",
+   "category": "Footnotes",
+   "verdict": "narrowed",
+   "claim": "Amgen carries a $2.4B TAVNEOS intangible ($2.3B U.S.) at June 30, 2026, about 5.2x FY2025 TAVNEOS sales of $459M (U.S. $423M + ROW $36M, 10-K p75) and ~4x the Q2 2026 run rate (~$600M), against a product the FDA asked to be voluntarily withdrawn (January 16, 2026, declined January 28) and then formally proposed to withdraw (April 27, 2026). Between the Q1 and Q2 10-Qs the recoverability sentence changed from 'did not result in significant changes to the estimated future cash flows' to an evaluation that includes 'observations with respect to new U.S. patient interest'. A full U.S. write-off is ~$4.2/share pre-tax (~$3.3-3.5 after tax), non-cash, GAAP-only and outside non-GAAP EPS; ~$0.46-0.60B a year of revenue is at risk. No call, slide or release states the carrying value.",
+   "reason": "Both skeptics held it through both rounds. Conceded on both sides: ~5.2x (not the reader's 5.6x, which used 4 x a Q3 call figure), sales sourced from AMGN:10k_FY2025.md p75 not a call, pre-tax not GAAP EPS, GAAP-only. Obviousness added the Q1-to-Q2 wording change; I confirmed it at source: AMGN:10q_2026Q1.md p18 reads 'did not result in significant changes to the estimated future cash flows for TAVNEOS as of March 31, 2026' and AMGN:10q_2026Q2.md p21 reads 'evaluated these developments, as well as observations with respect to new U.S. patient interest ... remains recoverable'. Disputed fact settled: materiality's chronology correction is right. AMGN:10k_FY2025.md p137 states 'On January 16, 2026, the FDA requested that ChemoCentryx voluntarily withdraw TAVNEOS' and Amgen declined on January 28; the CDER withdrawal proposal is April 27, 2026 (AMGN:10q_2026Q1.md p18). So the grade C 2026Q2 call reference to a voluntary-withdrawal request is the January step, not an escalation after the proposal, and obviousness's 'moved from proposal to request' add-on is dropped. Non-obvious status is unrefuted (both searched calls, slides and letters for 'carrying value'/'impair' next to TAVNEOS and found none); market reaction on April 27 was only ~-1.3% (fact:tables/prices_daily.csv#15243-15244). Tension kept: U.S. Q2 sales rose 39% (AMGN:10q_2026Q2.md p44), so the caveat signals forward risk, not a realized decline.",
+   "materiality": "high",
+   "obviousness": "low",
+   "confidence": "high",
+   "unresolved": "What 'observations with respect to new U.S. patient interest' means (new-patient starts slowing after the March 2026 liver-injury communication, or not) is not quantified; the after-tax rate is an assumption."
+  },
+  {
+   "id": "AMGN-c07",
+   "category": "Footnotes",
+   "verdict": "killed",
+   "claim": "At most a footnote quantification of a guided headwind: EVENITY and TEZSPIRE profit share rose $349M to $1.31B in 2025.",
+   "reason": "Both ended at refuted. Obviousness showed the CFO named profit share as a cost-of-sales driver and guided it on 2024Q2, 2024Q4 and 2026Q1 calls (AMGN:companies/AMGN/transcripts/2024Q2_transcript.md p8; AMGN:companies/AMGN/transcripts/2024Q4_transcript.md p8; AMGN:transcripts/2026Q1_transcript.md p1). Materiality conceded the drag is in guided cost of sales, the increment is ~1% of revenue, the 'third of incremental sales' ratio mixes global profit share with Amgen-booked sales, and the AZ royalty partly offsets it (AMGN:10k_FY2025.md p131-132). Math confirmed, finding refuted.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AMGN-c08",
+   "category": "Earnings-call Q&A",
+   "verdict": "killed",
+   "claim": "Disclosure history only: after the April 2024 SEC comment, product price/volume detail on calls thinned from 2024Q4 while 10-Q MD&A carries it. The Q3 2026 lap of the ~$250M Q3 2025 deduction benefit (~2.6 points) is real but was called 'discrete' by the CFO on the call.",
+   "reason": "The skeptics split in round 2: materiality held a ≤$132M unflagged Q2 2026 benefit plus the Q3 2026 $250M lap; obviousness refuted it as a comparison effect. Settled from source: AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p3 (grade A) has the CFO saying the quarter 'benefited from discrete items, including roughly $250 million from favorable changes to U.S. estimated sales deductions' on $9.6B revenue, so the Q3 2026 lap is arithmetic any analyst can do from a call: material but obvious. AMGN:10q_2026Q2.md p40 confirms Otezla's 'unfavorable changes to estimated sales deductions' in the same quarter, unquantified, so $132M is a gross upper bound, and Amgen's 'changes to estimated sales deductions' are year-over-year comparisons: ENBREL's +16% laps an unfavorable 20% in Q2 2025 (AMGN:companies/AMGN/10q_2025Q2.md p41), and the 10-K calls prior-year adjustments immaterial (AMGN:10k_FY2025.md p83). That leaves the unflagged Q2 piece as a net figure that cannot be sized and is mostly the absence of a prior-year hit, not a non-recurring release. The SEC-letter link is weak on timing (2024Q1-Q3 calls after the April 2024 reply still had 5-6 mentions) and is a pre-built verified-table row (fact:secx/comment_letter_findings.csv#6). Killed: the material part is obvious and the non-obvious part is not established as material.",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "medium",
+   "unresolved": "Net Q2 2026 deduction benefit after the Otezla offset is not disclosed."
+  },
+  {
+   "id": "AMGN-c09",
+   "category": "Product fine print",
+   "verdict": "killed",
+   "claim": "Repatha net price is guided down mid-single digits for 2026 (~$150M on $3.0B global); no evidence yet that Lipfendra is pressuring price.",
+   "reason": "Both ended at refuted. Obviousness: label breadth (primary and secondary prevention outcomes) is management's own prepared-remarks message (AMGN:transcripts/2025Q4_transcript.md p1; AMGN:transcripts/2026Q2_transcript.md p1), and AmgenNow's price is a press-release headline. Materiality: the -7% Q1 2026 price is global but was applied to U.S. sales, it was more than offset by +8% favorable deduction changes in the same sentence (AMGN:10q_2026Q1.md p36), Q2 growth was volume-driven (AMGN:10q_2026Q2.md p38), and the guided price impact is ~0.4% of revenue. Confirmed refutation.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "AMGN-c10",
+   "category": "Peer contrast",
+   "verdict": "killed",
+   "claim": "Relative policy exposure only: 12.2% of revenue in IRA-selected drugs; tariff relief is tied to announced U.S. capex.",
+   "reason": "Both ended at refuted. AMGN:policy/press_2025-12-19_mfn_agreement.md p1 and AMGN:10k_FY2025.md p68 tie the tariff relief to $2.5B of U.S. manufacturing capex (Ohio, North Carolina), so 'without a forward investment pledge' overstates the contrast and the Puerto Rico 'one asset' link has no basis or number. The 12.2% IRA share recomputes but is a level with no dollar effect. Confirmed refutation.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  }
+ ],
+ "product": {
+  "verdict": "narrowed",
+  "product": "Repatha (evolocumab)",
+  "rivals": [
+   "Regeneron Praluent",
+   "Novartis Leqvio",
+   "Merck Lipfendra"
+  ],
+  "reason": "The pick stands: Repatha is $3,016M in 2025, +36% (AMGN:10k_FY2025.md p70), and both skeptics agree it is material. The stated edge (CV outcomes in primary and secondary prevention vs LDL-only rivals) is management's own message on the 2025Q4 and 2026Q2 calls, so it is replaced. The edge that holds, from label section 1 text I re-opened: (1) Repatha's MACE indication lists 'coronary revascularization' among the events reduced, while Praluent's list stops at 'unstable angina requiring hospitalization' (drug:repatha:label_sections.md p1; drug:praluent:label_sections.md p1); (2) Repatha covers HoFH from age 10, versus Leqvio from 12 and Praluent adults only (drug:leqvio:label_sections.md p1); (3) Leqvio and Lipfendra carry only an LDL-C indication with a class statement on outcomes, and Lipfendra requires a 30-minute fast after dosing (drug:lipfendra:label_sections.md p3). Caveat against the reader's 'broadest label': Praluent reaches younger HeFH patients (from 8 vs Repatha's 10). Tie to price through the 10-K's mid-single-digit 2026 net-price guide (p71), not the Q1 -7%, which +8% favorable deductions offset (AMGN:10q_2026Q1.md p36)."
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 3,
+  "best_candidate_id": "AMGN-c06",
+  "one_line": "A fair pick on the case's test, carried by footnote-only items: a $2.3B U.S. TAVNEOS intangible at ~5x sales whose recoverability wording weakened from Q1 to Q2 2026 under an FDA withdrawal proposal, and a 54% deduction rate whose accrual build gave 2025 operating cash flow ~$1.1B more support than 2024; the headline IRS case is material but already priced as known."
+ }
+}

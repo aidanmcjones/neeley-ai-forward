@@ -2,7 +2,18 @@
 
 Update this every hour and at the end of every task.
 
-**Last updated:** Sat Oct 17, ~12:00, corpus branch (Parker's agent)
+**Last updated:** Sat Oct 17, ~5:00 pm, needle branch (Parker's agent)
+
+## Sat Oct 17 ~5 pm: audit and fixes (needle branch, uncommitted until Parker OKs)
+- Scorer and detector fixes from docs/red_team_v1.md: no more level-as-change margin impact, favorable outliers,
+  COGS-based peer days inventory, single-quarter tax rates, IPR&D one-offs, duplicate peer rows, label or
+  undirected-MD&A needles, table-of-contents paragraphs, or half-year figures in annual impact math. 6 new
+  regression tests; 48 pass. `python -m agent.needle.run --all` reruns in about 50 s; ledger intact.
+- New agents: .claude/agents/nugget-miner.md (cited nuggets mapped to case and rubric, scorer-compatible JSONL in
+  docs/nuggets/) and .claude/agents/red-team.md (rubric judge).
+- New docs: docs/red_team_v1.md, docs/part2.md, docs/how_we_did_it.md, deck/outline.md; PLAN.md and
+  demo_script.md filled.
+- Open: company pick (after nuggets), API key, mirror the guards into Aidan's quant-model scorer.
 
 ## Sat Oct 17: the real case and the source corpus
 - The case is "The Fine Print" (Advanced track): pick 1 of 10 drugmakers, 5+ cited findings with page numbers and
@@ -42,3 +53,46 @@ cp .env.example .env   # paste the API key
 python -m agent.llm    # should print: scaffold OK
 streamlit run app/main.py
 ```
+
+## NEEDLE UI (branch `ui`, PR #22 at 7723625, artifact version 6)
+
+**What it is.** `ui/` is a static app (Vite + React + TypeScript + Tailwind + Recharts) over precomputed JSON
+in `ui/public/data/`. No API key, no live model, no network at runtime. The demo is a chat page at `/#/`;
+the seven cockpit screens are the depth at `/#/cockpit` (one small "Full cockpit" link). Full details:
+`ui/README.md`.
+
+**Regenerate and publish** (repo root):
+```
+NEEDLE_TICKER=XXX PYTHONPATH=. python -m agent.ui_export   # NEEDLE_TICKER optional: the team's pick
+PYTHONPATH=. python -m agent.ui_memos
+PYTHONPATH=. python -m agent.ui_memos --check
+cd ui && npm run build                                     # then publish the root of ui/dist/
+```
+Local: `cd ui && npm run dev -- --port 5173` or `python3 -m http.server 8090 -d ui/dist`.
+
+**What works.**
+- Chat: per-answer loading (`ui/vite.memos-index.js` derives `memos_index.json` and `memos/<id>.json`, with a
+  full-file fallback; chips in 0.6 s and first answer in 0.9 s at 20 Mbps). With no pick
+  (`default_ticker_source: "unpicked"`) it starts at "Pick a company" with six global questions; picking a
+  company runs its 7-step `suggested_by_ticker` flow from needle to CEO memo. Part 1 answers as chat, Part 2
+  as a memo card with Copy and Print.
+- Needle: red-team read or plain rule (`needle_source`, shown on the pill), `needle_reason` under the
+  headline; explained-by-footnote rows are never the needle. Findings grid ranked by impact with a Peer column.
+- DECIDE: AMGN, MRK and GILD as pipeline demonstrations, LLY as the real valued move; why it will work, why we
+  passed, cash-at-risk notes, least-bad option when nothing clears the hurdle, and the kill table with the
+  physician-breadth row (Open Payments baseline, withheld machine-data chips).
+- Every number carries a chip (page, withheld, derived, data row) and the numbers-check pill; assumption
+  markers show their reason. Score L, S, robustness and needle-status words appear only on `/cockpit/triage`
+  (unlinked, "Internal triage view, not part of the pitch"); tooltips and drawers filter them out elsewhere.
+- Parker's trim layer on cockpit routes with a "Full detail" pill; the chat page is untouched by it.
+- Last sweeps (this commit's data): chat 16 of 17 clean (the one flag is honest-limits prose saying "no
+  detector yet"), cockpit 80 pages, 102 sub-states and 10 printed memos clean, hero above the fold at
+  1280 x 800 for all ten, drawer term filter clean.
+
+**Known gaps.**
+- AZN and NVO needles come from the plain rule, not the red-team read.
+- 6 companies (ABBV, AZN, BMY, JNJ, NVO, PFE) have a template stance, not a valued move.
+- VRTX products are missing (onboarding pending, no findings or company file).
+- The JS bundle is about 800 kB (230 kB gzip).
+- Needle answers run over 160 words for AMGN (184), ABBV (195) and GILD (197).
+- `meta.honest_limits` still mentions "a published robustness table".

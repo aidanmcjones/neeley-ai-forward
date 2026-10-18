@@ -1,0 +1,707 @@
+{
+ "ticker": "AMGN",
+ "generated_at": "2026-10-18T05:47:07.839759+00:00",
+ "lenses": [
+  "CFO/math",
+  "Decider/compliance"
+ ],
+ "steps": [
+  {
+   "step": 1,
+   "candidate_id": "AMGN-m01",
+   "move": "Offer the FDA a new randomized, independently adjudicated confirmatory TAVNEOS trial plus a U.S. liver-safety registry as postmarketing commitments in exchange for keeping TAVNEOS approved.",
+   "type": "other:regulatory_evidence",
+   "skeptic_cfo": {
+    "round1": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Operands trace: 331 pivotal patients is on AMGN:10k_FY2025.md p.8 (printed p. 2); R&D $7,272M and cost of sales [figure withheld: not gated] of product sales on p.76 (printed p. 70); TAVNEOS U.S. Q2 2026 $143M and H1 $257M on AMGN:10q_2026Q2.md p.44 (printed p. 39); $2.3B U.S. intangible and 'remain on the market during the pendency' on p.21 (printed p. 16). Arithmetic is right as written ([figure withheld: not gated] x 2 x [figure withheld: not gated] x [figure withheld: not gated] = [figure withheld: not gated]. Problems: (1) Run-rate: Q2 x 4 = [figure withheld: not gated] annualizes the peak quarter; Q1 was only $114M ([figure withheld: not gated] - 143), so H1 x 2 = $514M is the defensible base. (2) Timing: p.21 says TAVNEOS stays on the market while the hearing process runs, so the full 24 months of contribution is only at risk if withdrawal happens on day 1; the candidate itself concedes the loss 'only arises after a withdrawal'. If a decision lands at month 12 [assumption], only 12 months are exposed inside the window and the break-even uplift doubles. (3) The [figure withheld: not gated]-point probability shift is the whole return and is unsourced; halved to [figure withheld: not gated] it falls below the candidate's own [figure withheld: not gated]-point break-even, so the move is negative. (4) Cost period: a randomized, adjudicated 331-patient AAV trial cannot enroll and read out inside 24 months, so the [figure withheld: not gated] is a 24-month slice of a longer commitment, and [figure withheld: not gated] a patient and the $25M registry are both unsourced. [figure withheld: not gated] Margin cuts the other way: [figure withheld: not gated] GAAP cost of sales includes acquisition amortization (p.76 says the 2025 decline was driven by lower amortization), and non-GAAP cost of sales was [figure withheld: not gated] of product sales in Q1 2026 [AMGN:transcripts/2026Q1_transcript.md p.1, grade B], so incremental contribution is closer to [figure withheld: not gated]. (6) The $345M 'impairment avoided' is the capitalized value of the same TAVNEOS cash flows; adding it to the operating-income return would double count. The candidate keeps it out of the [figure withheld: not gated] headline, which is correct, but it should not be presented as a second return. (7) Most of the value (to the 1/6/2034 compound patent) lands after month 24. Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February 2026 senior notes carry [figure withheld: not gated] coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-[figure withheld: not gated]-059490_d106293d8k.md p.2].",
+     "correction": "Narrowed number: H1 2026 run-rate $514M a year x 2 = [figure withheld: not gated] x [figure withheld: not gated] non-GAAP margin = [figure withheld: not gated] exposed if withdrawal were immediate; at [figure withheld: not gated], expected avoided loss = [figure withheld: not gated] over 24 months, break-even [figure withheld: not gated]. If withdrawal could only bite from month 12 [assumption], exposure = [figure withheld: not gated], return = [figure withheld: not gated], below the [figure withheld: not gated] cost (break-even [figure withheld: not gated]). Restate the move as option value whose payoff mostly lands after month 24 (through 2034), with the 24-month return stated as roughly break-even; keep the $345M impairment as a balance-sheet risk note, not a return."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Re-read the decider's pages. AMGN:10q_2026Q2.md p.21 (printed p. 16) confirms the proposal alleges both lack of substantial evidence of effectiveness and that the application 'contained untrue statements of material facts'; a new trial addresses neither on the hearing timeline. p.59 (printed p. 54) confirms 'We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient', and the LUMAKRAS example there is a Complete Response Letter plus an FDA-imposed postmarketing requirement in an accelerated-approval case. AMGN:presentations/2026Q2_earnings_slides.md p.11 lists only a pediatric (6 to under [figure withheld: not gated] TAVNEOS Phase 3. Inside-24-month math for the decider's gated offer: cost $10M to $15M (midpoint $12.5M) [assumption]. Exposure inside the window, using the H1 2026 run-rate $514M a year [AMGN:10q_2026Q2.md p.44] x [figure withheld: not gated] non-GAAP margin [AMGN:transcripts/2026Q1_transcript.md p.1, grade B] = [figure withheld: not gated] a year, with withdrawal able to bite only from about month 12 [assumption]. Break-even shift in the probability of keeping approval: [figure withheld: not gated] = 3.0 points ([figure withheld: not gated] across the range); to clear the [figure withheld: not gated] two-year hurdle, [figure withheld: not gated] ([figure withheld: not gated]. At a [figure withheld: not gated]-point shift [assumption] the expected avoided loss is $20.7M, a [figure withheld: not gated] two-year return; at [figure withheld: not gated] it is $10.3M, a loss. If the FDA does signal acceptance, the trial budget (about $62M on r1 inputs) follows in that good-news state, so the gated structure caps the downside at the $12.5M. Hurdle: 8% a year [assumption], [figure withheld: not gated] over 24 months; Amgen WACC is not indexed, debt floor [figure withheld: not gated] coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-[figure withheld: not gated]-059490_d106293d8k.md p.2].",
+     "correction": "Gated offer as the decider proposes: $10M to $15M inside 24 months, break-even [figure withheld: not gated] to 3.6 points of retention probability ([figure withheld: not gated] at midpoint to clear an 8% hurdle). The move must state it cannot answer the untrue-statements ground (AMGN:10q_2026Q2.md p.21) and that its return is an unpriceable option, not a forecast.",
+     "round2": {
+      "conceded": "The decider is right on the pages: the proposal's untrue-statements ground (p.21) cannot be cured by a new trial, and the only indexed precedent (LUMAKRAS, p.59) shows the FDA imposing a study, not bargaining. My r1 call that m01 was the strongest survivor leaned on its cheapness and lopsided payoff, but the probability shift that carries the return is weaker than I allowed. I withdraw 'strongest survivor' for the [figure withheld: not gated] version.",
+      "held": "The CFO case for some spend still holds because the exposure is large relative to cost: [figure withheld: not gated] a year of contribution plus a $2.3B U.S. intangible (p.21). At $12.5M the break-even is only about 3 points, so the gated offer is a defensible option purchase even though the shift is unknowable. I also hold my r1 corrections: H1 run-rate not Q2 x 4, impairment avoided is not a second return, and most of the value lands after month 24.",
+      "narrowed": "Adopt the decider's $10M to $15M gated hearing-record offer. Inside 24 months: break-even 3.0 points ([figure withheld: not gated] against the 8% hurdle). The return is an option whose probability no page can price, so it does not pass a cost-of-capital test on evidence; it is justified only as cheap downside protection."
+     }
+    }
+   },
+   "skeptic_decider": {
+    "round1": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Decider is CDER in a withdrawal proceeding. No indexed page shows the FDA accepting a new trial as a postmarketing commitment in lieu of withdrawal. The strategist's key page (AMGN:10q_2026Q2.md p.59, printed p. 54) is a risk-factor list of actions the FDA 'may require' in addition to or short of withdrawal; it is Amgen's own hedge, not evidence of an offer-for-approval path, and it says Amgen 'cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient'. Worse, the same page and AMGN:10q_2026Q2.md p.21 (printed p. 16) show the proposal rests on two grounds: lack of substantial evidence of effectiveness AND that the ChemoCentryx application 'contained untrue statements of material facts'. A new randomized trial does nothing for the second ground, and the trial cannot read out inside 24 months, so it cannot cure the first ground on the hearing timeline either. Safety is a third front: p.21 ties the proposal to the March 2026 Drug Safety Communication on fatal DILI cases, and p.59 records label updates on VBDS with fatal outcomes; the registry addresses monitoring, not the benefit side the FDA disputes. AMGN:10k_FY2025.md p.8 (printed p. 2) confirms the FDA's concern is the re-adjudication process for [figure withheld: not gated] of 331 patients plus hepatotoxicity in benefit-risk. The only indexed precedent of the FDA's response to a sponsor's confirmatory data is LUMAKRAS on p.59: a Complete Response Letter plus a new PMR for another confirmatory study, which is an accelerated-approval case and shows the FDA dictates the study, it is not bargained for. Already-announced check (my own search: 'TAVNEOS confirmatory trial', 'TAVNEOS new study', 'TAVNEOS withdrawal hearing' across AMGN filings, transcripts, slides): no new adult trial announced; Amgen's submissions are RWE plus blinded re-adjudication (p.21); the 2026Q2 slides p.11 list an ongoing TAVNEOS Phase 3 in ANCA vasculitis ages 6 to under [figure withheld: not gated], so a trial infrastructure exists but nothing for adults. The move is not announced but it is the obvious textbook sponsor response, which the 10-Q risk factor itself anticipates. Kill signals: hearing denial or summary judgment (Federal Register and 10-Q, measurable, month [figure withheld: not gated] is good; U.S. TAVNEOS below [figure withheld: not gated] a quarter from the 10-Q product table (p.44) is good; enrollment under [figure withheld: not gated] by month 12 is measurable on clinicaltrials.gov but cannot start until the FDA agrees a protocol, so it may trip on FDA delay rather than on the move failing. No promo material, so promo rules not engaged. All strategist quotes verified on their pages.",
+     "correction": "Narrow to a conditional remedy offer filed into the hearing record: a confirmatory adult trial protocol plus a U.S. hepatic monitoring program, offered as postmarketing requirements the FDA would set, with spend gated. Fund only protocol design, adjudication charter and registry setup (about $10M to $15M [assumption]) until the FDA grants a hearing or signals it would take PMRs in lieu of withdrawal; release the trial budget only then. State in the evidence that the move cannot answer the 'untrue statements of material facts' ground (AMGN:10q_2026Q2.md p.21) and that FDA acceptance is unknowable from indexed pages; the [figure withheld: not gated]-point retention uplift must stay an explicit [assumption] with break-even at about [figure withheld: not gated]."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "As written ([figure withheld: not gated] committed, a trial offered 'in exchange for keeping TAVNEOS approved') the move is still refuted on the decider: no indexed page shows the FDA trading approval for a new trial, and the proposal's second ground, that the application 'contained untrue statements of material facts' (AMGN:10q_2026Q2.md p.21, printed p. 16), is untouched by any new study. Does the FDA give the gated offer any chance? Some, and I now say so: AMGN:10q_2026Q2.md p.59 (printed p. 54) lists 'postmarketing commitments or studies' among actions the FDA may require and then speaks of 'any such action or any withdrawal of regulatory approval', which presents PMRs as an alternative outcome to withdrawal, not only an add-on. The same page refutes any quantification: Amgen 'cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient'. The first gate is also on p.21: 'If a hearing is not granted, the FDA may enter summary judgment'. So the chance is real but unsourced in size, and it is zero on the untrue-statements ground if that ground alone carries the case. CFO points checked against pages: H1 TAVNEOS U.S. $257M and Q2 $143M are on AMGN:10q_2026Q2.md p.44 (printed p. 39), so Q1 was $114M and H1 x 2 = $514M is the right base; 'remain on the market during the pendency' is on p.21, so exposure inside 24 months starts only at withdrawal. Margin cite check: the CFO's [figure withheld: not gated] is on AMGN:transcripts/2026Q1_transcript.md p.1 (grade B) and verifies, but it is the Motley Fool summary bullet, not a management quote. Better pages: Peter Griffith, CFO, on AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.8 (grade B): 'Our non-GAAP cost of sales as a percentage of product sales was 19.6%' (80.4% margin), and the FY2025 reconciliation on AMGN:companies/AMGN/proxy_2026.md p.137: GAAP [figure withheld: not gated] less [figure withheld: not gated] of acquisition-related expenses gives non-GAAP 18.3% (81.7% margin). The [figure withheld: not gated] figure is confirmed to within about a point; it is a company average that includes EVENITY and TEZSPIRE profit share, so it is a proxy, not a product margin. Combining both lenses: with the gated cost (about $12.5M [assumption], midpoint of my $10M to $15M) against the CFO's month-12 exposure of [figure withheld: not gated], break-even is [figure withheld: not gated] = 3.0 points of retention probability, versus [figure withheld: not gated] for the full [figure withheld: not gated]. The gated version is cheap enough that a small, unsourced FDA probability can carry it; the full commitment cannot.",
+     "correction": "Gated remedy offer in the hearing record: propose a confirmatory adult trial protocol and a U.S. hepatic monitoring program as PMRs the FDA would set; spend about $10M to $15M [assumption] on protocol, adjudication charter and registry setup; release the trial budget only if the FDA grants a hearing or signals PMRs in lieu of withdrawal. Return stated as option value: break-even about 3.0 points on [figure withheld: not gated] of month-12 exposure (H1 run-rate $514M a year at about 80.4% non-GAAP margin, AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.8); most of the payoff runs after month 24 toward the 1/6/2034 patent. The $345M impairment stays a balance-sheet note, not a second return. Kill: hearing denied or summary judgment entered.",
+     "round2": {
+      "conceded": "The CFO is right that the H1 run-rate ($514M a year, p.44) replaces Q2 x 4, that exposure inside 24 months starts only at withdrawal (p.21), that the $345M impairment would double count if used as a return, and that the move is option value with most payoff after month 24. I also concede the FDA gives a gated PMR offer a nonzero chance: p.59 frames PMRs as an alternative to withdrawal. On their framing m01 is the strongest survivor once gated.",
+      "held": "The FDA's acceptance is not on any page and Amgen itself says it cannot predict it (p.59); the untrue-statements ground (p.21) cannot be answered by a trial; so the candidate as written ([figure withheld: not gated] committed in exchange for approval) stays refuted. The [figure withheld: not gated]-point shift remains a pure assumption.",
+      "narrowed": "From 'refute the regulatory bargain' to 'support only the gated version': about $12.5M [assumption] at risk, break-even about 3.0 points on the CFO's month-12 exposure, with the trial budget released only on an FDA hearing grant or PMR signal."
+     }
+    }
+   },
+   "verdict": "narrowed",
+   "reason": "Both lenses refuted the move as written. The decider showed no indexed page in which the FDA trades approval for a new trial, and that the proposal's untrue-statements ground cannot be cured by any study (AMGN:10q_2026Q2.md p. 21). The CFO showed the run-rate annualized the peak quarter, the full commitment needs a retention gain far above anything sourced, and the impairment avoided double counts the same cash flows. In round two each conceded the other's pages: the CFO accepted the untrue-statements ground and the LUMAKRAS precedent (p. 59); the decider accepted the first-half run-rate, the timing and the non-GAAP margin, and that p. 59 frames postmarketing commitments as an alternative to withdrawal. Both named the same narrowed survivor: a gated hearing-record offer with the trial budget released only on an FDA signal. Still disagreeing: how much probability that path carries. I opened AMGN:10q_2026Q2.md p. 21, p. 44 and p. 59, the CFO line on the 2026Q2 call (p. 8) and the proxy reconciliation (p. 137) and confirmed every operand. Ruled narrowed and picked: unrefuted in gated form, not confirmed, because no page prices the FDA response.",
+   "cites": [
+    {
+     "cite_id": "c_2c635b78fc",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 8,
+     "quote": "re-adjudicate primary endpoint results for 9 of the 331 patients in its pivotal clinical trial",
+     "label": "Amgen 10-K FY2025, p. 2",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=patients%20in%20its%20pivotal%20clinical%20trial",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_48afc5fc27",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 76,
+     "quote": "Research and development $ 7,272",
+     "label": "Amgen 10-K FY2025, p. 70",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_4dc3d624fe",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 44,
+     "quote": "TAVNEOS - U.S. 143 103 39 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 39",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_e95ed358db",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 76,
+     "quote": "% of product sales 34.2 %",
+     "label": "Amgen 10-K FY2025, p. 70",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=of%20product%20sales%2034.2",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_526146ff94",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21,
+     "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_133da21cc2",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21,
+     "quote": "TAVNEOS will remain on the market during the pendency of this process",
+     "label": "Amgen 10-Q 2026-06-30, p. 16",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "tbl_verified_table_pipeline_loe_calendar_csv",
+     "doc_id": "verified/pipeline/loe_calendar.csv",
+     "page": null,
+     "quote": null,
+     "label": "Verified table pipeline/loe_calendar.csv, row AMGN Tavneos US (company-stated compound patent 1/6/2034, from Amgen 10-K FY2025 p. 7)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "unverified",
+     "withheld": true,
+     "grade": "table",
+     "note": "verified-table row with no page copy; cited by locator, not quoted",
+     "excerpt": null,
+     "deep_link": null,
+     "viewer_link": null,
+     "withheld_reason": "citation status unverified is not public: quote and links withheld"
+    },
+    {
+     "cite_id": "c_bf6ebbad8b",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 59,
+     "quote": "the FDA may require additional actions, including further labeling changes, warnings, monitoring, restrictions on use, postmarketing commitments or studies",
+     "label": "Amgen 10-Q 2026-06-30, p. 54",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_8a49ecea39",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21,
+     "quote": "including additional real world evidence data and data from an independent, blinded re-adjudication of certain study data",
+     "label": "Amgen 10-Q 2026-06-30, p. 16",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=including%20additional%20real%20world%20evidence%20data%20and%20data",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_5708b85898",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21,
+     "quote": "On June 1, 2026, we requested a hearing on this proposal",
+     "label": "Amgen 10-Q 2026-06-30, p. 16",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=we%20requested%20a%20hearing%20on%20this%20proposal",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_97f5494de3",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 59,
+     "quote": "such as a recent recommendation by the Committee for Medicinal Products for Human Use (CHMP)",
+     "label": "Amgen 10-Q 2026-06-30, p. 54",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=such%20as%20a%20recent%20recommendation%20by%20the%20Committee",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_9e751d5b1f",
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1,
+     "quote": "We remain confident that Tavneos is an important and effective medicine",
+     "label": "Amgen 2025Q4 earnings call (third_party), file page 1 (no printed page number)",
+     "url": "https://www.fool.com/earnings/call-transcripts/2026/02/03/amgen-amgn-q4-2025-earnings-call-transcript/",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B"
+    }
+   ],
+   "figures_withheld": 75
+  },
+  {
+   "step": 2,
+   "candidate_id": "AMGN-m02",
+   "move": "Fund a U.S. medical-education and HCP campaign on Repatha's cardiovascular outcomes indication before Merck's oral Lipfendra scales, with no comparative claims.",
+   "type": "campaign",
+   "skeptic_cfo": {
+    "round1": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Operands trace: SG&A [figure withheld: not gated] on AMGN:10k_FY2025.md p.76; Repatha U.S. Q2 [figure withheld: not gated] and H1 $975M on AMGN:10q_2026Q2.md p.38 (printed p. 33); [figure withheld: not gated] AmgenNow monthly price on AMGN:policy/press_2025-10-06_amgennow_repatha.md p.1; Lipfendra July 2026 approval on MRK:10q_2026Q2.md p.37. Arithmetic is right ([figure withheld: not gated] + [figure withheld: not gated] = [figure withheld: not gated]; x [figure withheld: not gated] = [figure withheld: not gated]. But by the candidate's own math the move loses [figure withheld: not gated] inside 24 months, so it fails any positive hurdle as written. The 3% and [figure withheld: not gated] lifts are unsourced and carry the entire return; the cost ([figure withheld: not gated]) is also unsourced. The base is overstated: management guided Repatha net selling price down about mid-single digits for 2026 [AMGN:10k_FY2025.md p.71, verified], so a flat $1,950M base for two years is high. The [figure withheld: not gated] cash price is not a net-price floor (it is a direct-to-patient channel price), so the [figure withheld: not gated] patient-years figure is not evidence of anything. Double counting risk: m02 and m04 both claim incremental U.S. Repatha volume on the same $1,950M base; they cannot both be added to a plan without netting. Correcting the margin to the [figure withheld: not gated] non-GAAP cost of sales [AMGN:transcripts/2026Q1_transcript.md p.1, grade B] helps: contribution = [figure withheld: not gated] cost, a [figure withheld: not gated] two-year return, roughly the [figure withheld: not gated] two-year hurdle at 8% [assumption]. Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February 2026 senior notes carry [figure withheld: not gated] coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-[figure withheld: not gated]-059490_d106293d8k.md p.2].",
+     "correction": "Corrected number: at [figure withheld: not gated] non-GAAP margin the 24-month contribution is [figure withheld: not gated] on [figure withheld: not gated], about break-even against an 8% hurdle [assumption]; halve the lifts to [figure withheld: not gated] and 3% and contribution is [figure withheld: not gated], a [figure withheld: not gated] loss. Narrow to a pilot of about $30M [assumption] in a few regions with a measured lift before committing [figure withheld: not gated], and do not stack its volume with m04."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Opened the decider's pages: AMGN:presentations/2026Q2_earnings_slides.md p.7 headlines Repatha 'Expanding adoption across primary care and cardiology', so the campaign is incremental to one already running and the 3% and [figure withheld: not gated] lifts cannot be separated from trend (U.S. +41% in Q2 2026, AMGN:10q_2026Q2.md p.38). MRK:10q_2026Q2.md p.32 confirms Merck 'will be expanding the program in the future to include Lipfendra'; the strategist's p.37 cite does not carry the direct-to-patient claim. Math for the decider's $20M to $30M holdout test: at $25M and [figure withheld: not gated] non-GAAP margin, break-even requires [figure withheld: not gated] of incremental U.S. Repatha revenue over 24 months attributable against the holdout; that is about [figure withheld: not gated] of one year's $1,950M U.S. base if run nationally, but a regional test only covers part of the base, so the required regional lift is higher. The r1 full-scale numbers stand: [figure withheld: not gated] contribution on [figure withheld: not gated], and a [figure withheld: not gated] loss if lifts halve. Hurdle: 8% a year [assumption], [figure withheld: not gated] over 24 months; Amgen WACC is not indexed, debt floor [figure withheld: not gated] coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-[figure withheld: not gated]-059490_d106293d8k.md p.2].",
+     "correction": "A $20M to $30M test with a holdout region, budget justified as the cost of measuring promotion elasticity rather than as a 24-month return; do not stack its volume with m04. Fix the Lipfendra direct-to-patient cite to MRK:10q_2026Q2.md p.32.",
+     "round2": {
+      "conceded": "The decider is right that management already runs a primary-care push (slides p.7), so the [figure withheld: not gated] buys only the increment above an existing program; this weakens the lift assumption further than my r1 margin math allowed. The direct-to-patient cite is on MRK p.32, not p.37.",
+      "held": "My r1 arithmetic stands: break-even within 24 months only at the [figure withheld: not gated] margin and only at the unsourced lifts, and m02 and m04 share the Repatha base. The promo fair-balance failure is outside my lens and I take no position on it.",
+      "narrowed": "Accept the decider's $20M to $30M holdout test; break-even at $25M is [figure withheld: not gated] of attributable incremental revenue over 24 months. It is a measurement buy, not a hurdle-clearing investment."
+     }
+    }
+   },
+   "skeptic_decider": {
+    "round1": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Already announced: management is already running this exact push. AMGN:presentations/2026Q2_earnings_slides.md p.7 headlines Repatha as 'Expanding adoption across primary care and cardiology'; AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.15 (grade B), Murdo Gordon: 'the other half of our growth is coming from primary care physicians and expansion in the number of primary care physicians'; AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p.13 (grade A), Gordon on VESALIUS-CV: 'This is a call to action for primary care physicians everywhere.' The strategist's own cite (2026Q2 transcript p.13) is management saying education is needed, i.e. the plan, not a gap. So the [figure withheld: not gated] is incremental spend on top of an existing campaign and the 3% then [figure withheld: not gated] lift has no indexed baseline to separate it from the current trend (U.S. Repatha +41% in Q2 2026, AMGN:10q_2026Q2.md p.38). Doctor as decider: the evidence shows PCPs already adopting on VESALIUS data, which says the message is landing without this move; it cannot tell whether more exposure changes oral-versus-injection choice. Lipfendra 'direct-to-patient channel' is not on the cited MRK:10q_2026Q2.md p.37 (that page only has the July 2026 approval and label); it is on MRK:10q_2026Q2.md p.32 (Merck 'will be expanding the program in the future to include Lipfendra'). Promo rules, each checked against the piece: (1) FDA-approved uses only: PASS. Indication text matches repatha label_v30 p.1 section 1 verbatim; LDL-C indication truncated to adults with hypercholesterolemia, which is a subset, not off-label. (2) Risks as prominent as benefits: FAIL as written. The piece defers common adverse reactions to 'section 6 [section not indexed]'. That is false: section 6 is indexed as drug:repatha:label_sections.md page 8 (section 6), page 9 (section 6.1 Clinical Trials Experience) and page 10 (section 6.2). Section 6.1 gives FOURIER common adverse reactions, diabetes mellitus [figure withheld: not gated] placebo, nasopharyngitis [figure withheld: not gated], upper respiratory tract infection [figure withheld: not gated], plus new-onset diabetes [figure withheld: not gated], and the [figure withheld: not gated]-week Table 1 list. A benefit claim on MACE including revascularization with only hypersensitivity and latex in the safety block and no adverse-reaction frequencies is not fair balance; it cannot pass without section 6, and section 6 was available. (3) Comparisons only with head-to-head evidence: PASS for the piece (it states no comparison). verified/product/head_to_head_part2.csv row repatha_vs_lipfendra is none_found ([figure withheld: not gated] enlicitide studies scanned, no PCSK9 mAb arm), so the campaign brief's 'before Lipfendra' positioning must never surface in the piece or rep talk. (4) No testimonials or likenesses: PASS. [figure withheld: not gated] Student-concept label: PASS, present verbatim. (6) Claims map: PASS for the six claims mapped; I opened label_v30 p.1 (section 1), p.4 (section 2.1, printed '2 DOSAGE AND ADMINISTRATION'), p.2 (section 4), p.3 (section 5.1) and every quote verifies; but the map has no row for adverse reactions because the piece omits them, so the map is incomplete once rule 2 is fixed. Also 'medical-education' plus a branded leave-behind blends two channels; any accredited education Amgen funds cannot be Amgen-controlled, so the measurable part is ordinary promotion. Kill signals: U.S. Repatha growth below [figure withheld: not gated] YoY from the 10-Q geographic table (month [figure withheld: not gated] and net price down more than [figure withheld: not gated] from 10-Q driver text are measurable with a reliable source; Lipfendra above [figure withheld: not gated] a quarter depends on Merck breaking it out, which a launch-year product may not get.",
+     "correction": "Rewrite the ISI to add section 6.1 common adverse reactions with rates (diabetes mellitus [figure withheld: not gated], nasopharyngitis [figure withheld: not gated], upper respiratory tract infection [figure withheld: not gated], cite drug:repatha:label_sections.md page 9, section 6.1) in the same type size and add that row to the claims map. Narrow the move to what is not already running: a smaller, measurable test (for example $20M to $30M [assumption]) aimed at PCP segments the 2026Q2 call does not name, with a holdout region so lift is attributable; fix the Lipfendra DTC cite to MRK:10q_2026Q2.md p.32."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Held from round 1 and still on the pages: the primary-care push is already management's program (AMGN:presentations/2026Q2_earnings_slides.md p.7; AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.15, grade B; AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p.13, grade A), and the HCP piece fails promo rule 2 because it omits section 6.1 adverse reactions that are indexed (drug:repatha:label_sections.md page 9). CFO points checked: 'expect net selling price to decline by approximately mid-single digits' is on AMGN:10k_FY2025.md p.71, so a flat $1,950M base is high; the [figure withheld: not gated] AmgenNow price on the press release p.1 is a cash channel price, not a net floor. Margin cite check: the CFO's [figure withheld: not gated] is on AMGN:transcripts/2026Q1_transcript.md p.1 (grade B) and verifies, but it is the Motley Fool summary bullet, not a management quote. Better pages: Peter Griffith, CFO, on AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.8 (grade B): 'Our non-GAAP cost of sales as a percentage of product sales was 19.6%' (80.4% margin), and the FY2025 reconciliation on AMGN:companies/AMGN/proxy_2026.md p.137: GAAP [figure withheld: not gated] less [figure withheld: not gated] of acquisition-related expenses gives non-GAAP 18.3% (81.7% margin). The [figure withheld: not gated] figure is confirmed to within about a point; it is a company average that includes EVENITY and TEZSPIRE profit share, so it is a proxy, not a product margin. At about 80.4% the contribution is about [figure withheld: not gated] on [figure withheld: not gated], near the CFO's 8% two-year hurdle [assumption], but the 3% and [figure withheld: not gated] lifts are not separable from a trend management is already driving, which is the decider problem: the doctor is already moving, so the lift cannot be credited to this spend.",
+     "correction": "Fix the ISI (add section 6.1 common adverse reactions and rates, claims-map row to drug:repatha:label_sections.md page 9). Shrink to a roughly $30M [assumption] holdout-region pilot in PCP segments the 2026Q2 call does not already name, so lift is measured against a control; do not stack its volume with m04 on the same $1,950M base; cite Lipfendra's direct-to-patient plan on MRK:10q_2026Q2.md p.32.",
+     "round2": {
+      "conceded": "The CFO's corrections stand: mid-single-digit net price decline (p.71) lowers the base, the [figure withheld: not gated] price is not a net floor, the margin should be non-GAAP (about [figure withheld: not gated], not [figure withheld: not gated]), and m02 and m04 cannot both claim incremental volume on the same base. Their $30M pilot and mine converge.",
+      "held": "Already announced and promo rule 2 failure, both independent of the math. The CFO treats the lift as merely unsourced; I hold that it is unattributable because the PCP push is already running (slides p.7, call p.15).",
+      "narrowed": "Severity stays major, but the narrowed holdout pilot with a corrected ISI is acceptable to both lenses."
+     }
+    }
+   },
+   "verdict": "narrowed",
+   "reason": "Both lenses refuted the campaign as written. The decider showed management already runs the primary-care push (AMGN:presentations/2026Q2_earnings_slides.md p. 7; 2026Q2 call p. 15) and that the drafted piece left out the indexed Section 6.1 adverse reactions (drug:repatha:label_sections.md p. 9), so it fails fair balance; the CFO showed the return rests on unsourced lifts and loses money if they halve. In round two the CFO conceded the existing program and the Lipfendra cite fix; the decider conceded the CFO's base, price and margin corrections. Both accept only a small holdout pilot with a corrected safety section, a measurement buy. Still disagreeing: whether the lift is unsourced or unattributable. Ruled narrowed but not picked: the narrowed form claims no return and does not touch the Sharpest Needle.",
+   "cites": [
+    {
+     "cite_id": "c_51d91971ec",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 76,
+     "quote": "Selling, general and administrative $ 7,050",
+     "label": "Amgen 10-K FY2025, p. 70",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Selling%2C%20general%20and%20administrative",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_6dd97740fe",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38,
+     "quote": "Repatha - U.S. $ 510 $ 361 41 % $ 975 $ 704 38 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 33",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_e95ed358db",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 76,
+     "quote": "% of product sales 34.2 %",
+     "label": "Amgen 10-K FY2025, p. 70",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=of%20product%20sales%2034.2",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_908814f54b",
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1,
+     "quote": "Repatha will be available through AmgenNow at a monthly price of $239 , nearly 60% lower than the current U.S. list price",
+     "label": "Amgen press release 2025-10, file page 1 (no printed page number)",
+     "url": "https://www.amgen.com/newsroom/press-releases/2025/10/amgen-makes-repatha-available-through-amgennow-a-directtopatient-program-in-the-us",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_d613bada18",
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 1,
+     "quote": "To reduce the risk of major adverse cardiovascular (CV) events (CV death, myocardial infarction, stroke, unstable angina requiring hospitalization, or coronary revascularization) in adults at increased risk for these events.",
+     "label": "Repatha label v30 (2026-07-28), p. 1 INDICATIONS",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=cd61e902-166d-4aa6-9f3c-a18c1008d07e",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "label"
+    },
+    {
+     "cite_id": "c_0c653fff40",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 37,
+     "quote": "In July 2026, the FDA approved Lipfendra tablets",
+     "label": "Merck 10-Q 2026-06-30, p. 37",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=In%20July%202026%2C%20the%20FDA%20approved%20Lipfendra%20tablets",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_ad795284f4",
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 13,
+     "quote": "Obviously, the two labels really just don't compare.",
+     "label": "Amgen 2026Q2 earnings call (third_party), p. 13",
+     "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B"
+    },
+    {
+     "cite_id": "c_eecdd430e2",
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 13,
+     "quote": "We think there's a lot of education that still needs to be done.",
+     "label": "Amgen 2026Q2 earnings call (third_party), p. 13",
+     "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B"
+    },
+    {
+     "cite_id": "c_3de71cfce3",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 71,
+     "quote": "Additionally, for 2026, we expect net selling price to decline by approximately mid-single digits.",
+     "label": "Amgen 10-K FY2025, p. 65",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Additionally%2C%20for%202026%2C%20we%20expect%20net%20selling%20price",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_8ec30fddc3",
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 36,
+     "quote": "driven by volume growth of 35% and favorable changes to estimated sales deductions of 8%, partially offset by lower net selling price of 7%",
+     "label": "Amgen 10-Q 2026-03-31, p. 32",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000057/amgn-20260331.htm#:~:text=and%20favorable%20changes%20to%20estimated%20sales%20deductions%20of",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    }
+   ],
+   "figures_withheld": 78
+  },
+  {
+   "step": 3,
+   "candidate_id": "AMGN-m03",
+   "move": "Buy out UCB's equal share of EVENITY global profits and its European commercialization rights for cash.",
+   "type": "license_or_acquire",
+   "skeptic_cfo": {
+    "round1": {
+     "refuted": true,
+     "severity": "fatal",
+     "argument": "Payment stream traces: $721M, $547M, [figure withheld: not gated] profit and loss share expense on [figure withheld: not gated] (printed p. [figure withheld: not gated]), recorded primarily in cost of sales; equal sharing and UCB's European commercialization lead on [figure withheld: not gated]; EVENITY U.S. antibody patent [figure withheld: not gated] and formulation [figure withheld: not gated] on [figure withheld: not gated]; EVENITY [figure withheld: not gated] on [figure withheld: not gated]. Arithmetic is right (721 x [figure withheld: not gated] = [figure withheld: not gated]; x [figure withheld: not gated] = [figure withheld: not gated]; sum [figure withheld: not gated]; [figure withheld: not gated] x [figure withheld: not gated] x 2 = [figure withheld: not gated]). Fatal: the price is invented. [figure withheld: not gated] trailing payments has no comp on any page. The ChemoCentryx [figure withheld: not gated] enterprise value [[figure withheld: not gated]] is a whole-company acquisition, not a profit-share buyout; the royalty monetization rows in verified/deals/deal_comps.csv (for example [figure withheld: not gated] Sagard and AnaptysBio, [figure withheld: not gated] Royalty Pharma) are financier purchases of sales royalties with no trailing-payment multiple, a different structure. The price is also inconsistent with the candidate's own growth case: [figure withheld: not gated] growth to [figure withheld: not gated] then flat to [figure withheld: not gated], discounted at 8% [assumption], values UCB's stream at about [figure withheld: not gated], or [figure withheld: not gated] trailing. A seller who believes the strategist's growth will not take [figure withheld: not gated]; at a fair price the deal is near zero NPV and the 'return' is just the yield on cash paid out. Return framing: [figure withheld: not gated] of avoided payments inside 24 months is below the [figure withheld: not gated] outlay, so there is no cash payback in the window (simple payback is about [figure withheld: not gated] years); the [figure withheld: not gated] 'net' treats the principal as never spent and omits amortization of the purchased intangible (about $721M a year if amortized to the [figure withheld: not gated] formulation patent, derived). Period mismatch: 721 x [figure withheld: not gated] is a [figure withheld: not gated] level labelled '[figure withheld: not gated]', and with closing up to 12 months out only 12 to 24 months of savings fall inside the window. The [figure withheld: not gated] cost of cash is near Amgen's [figure withheld: not gated] coupon but a $3.6B equity-like use should clear WACC, not the debt rate. Whether $721M already nets UCB's European profits is not stated on [figure withheld: not gated] ('net costs recovered from and due to UCB ... were not material' does not resolve it). Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February [figure withheld: not gated] senior notes carry [figure withheld: not gated] ([figure withheld: not gated]) to [figure withheld: not gated] ([figure withheld: not gated]) coupons [[figure withheld: not gated]].",
+     "correction": "none possible as a priced move: no indexed comp supports any multiple, and at the fair value implied by the candidate's own growth (about [figure withheld: not gated]) the 24-month benefit is [figure withheld: not gated] less [figure withheld: not gated] carrying cost at 8% = [figure withheld: not gated] with zero NPV. Narrow to 'open talks with UCB, bid capped at the NPV of the stream at Amgen's cost of capital', with no return claimed inside 24 months."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "fatal",
+     "argument": "Checked the decider's arithmetic: on the strategist's [figure withheld: not gated] growth, [figure withheld: not gated] payments are [figure withheld: not gated] + [figure withheld: not gated] + [figure withheld: not gated] + [figure withheld: not gated] + [figure withheld: not gated] = [figure withheld: not gated] undiscounted, correct. [figure withheld: not gated] (printed p. [figure withheld: not gated]) confirms UCB leads commercialization in most of Europe, so buying those rights adds a European commercial cost line the candidate omits; [figure withheld: not gated] confirms Astellas is a partner in Japan, so '[figure withheld: not gated] of the growth' is false. My [figure withheld: not gated] fair value of about [figure withheld: not gated] ([figure withheld: not gated]) assumed growth stops after [figure withheld: not gated] because the U.S. antibody patent expired [figure withheld: not gated] [[figure withheld: not gated]]; the decider's [figure withheld: not gated] assumes [figure withheld: not gated] growth runs to [figure withheld: not gated] and is undiscounted. Either way [figure withheld: not gated] is below UCB's walk-away. Hurdle: 8% a year [assumption], [figure withheld: not gated] over 24 months; Amgen WACC is not indexed, debt floor [figure withheld: not gated] coupons [[figure withheld: not gated]].",
+     "correction": "none possible at $3.6B: UCB's walk-away is at least the NPV of its stream (about [figure withheld: not gated] at 8% with growth stopping in [figure withheld: not gated], more if growth runs to [figure withheld: not gated]), and at that price the deal is about zero NPV with no cash payback inside 24 months. The decider's narrower option (charge Amgen-only incremental U.S. spend before the [figure withheld: not gated] split, or buy a right of first negotiation) has no indexed contract term to price it, so I cannot give it a number.",
+     "round2": {
+      "conceded": "The decider is right that the decider here is UCB, not investors; that the European commercialization cost is missing from the cost line ([figure withheld: not gated]); and that Astellas in Japan (slides [figure withheld: not gated]) makes '[figure withheld: not gated] of the growth' untrue.",
+      "held": "I hold that the right floor for UCB's price is a discounted value, not the [figure withheld: not gated] undiscounted sum: the antibody patent expired [figure withheld: not gated] ([figure withheld: not gated]), so [figure withheld: not gated] growth through [figure withheld: not gated] is not supported, and undiscounted cash overstates a seller's walk-away. The conclusion is the same: fatal.",
+      "narrowed": "UCB's walk-away is somewhere above about [figure withheld: not gated] ([figure withheld: not gated]), not a single number; the disagreement with the decider is only on how far above."
+     }
+    }
+   },
+   "skeptic_decider": {
+    "round1": {
+     "refuted": true,
+     "severity": "fatal",
+     "argument": "Decider here is UCB as counterparty (the candidate labels it 'investor', which is the wrong decider: the deal fails or succeeds on UCB's yes). No UCB filing or statement is indexed, so nothing shows UCB would sell. The economics on Amgen's own pages say it would not at this price. [figure withheld: not gated] (printed p. [figure withheld: not gated]): payments to UCB were [figure withheld: not gated], $547M, $721M in [figure withheld: not gated]; [figure withheld: not gated]: EVENITY grew [figure withheld: not gated] in [figure withheld: not gated]. The strategist's own return math projects UCB would receive [figure withheld: not gated] in just the next 24 months; the offer is [figure withheld: not gated] for a stream protected by U.S. formulation patents to [figure withheld: not gated] ([figure withheld: not gated]). At the strategist's [figure withheld: not gated] growth, payments for [figure withheld: not gated] alone are [figure withheld: not gated] + [figure withheld: not gated] + [figure withheld: not gated] + [figure withheld: not gated] + [figure withheld: not gated] = [figure withheld: not gated] before discounting. A seller giving up roughly twice the offer in undiscounted near-term cash, from a partner (Amgen) that is visibly adding field force ([figure withheld: not gated] call, grade B), will reject; the offer is below UCB's walk-away by a wide margin. Scope problem: [figure withheld: not gated] (printed p. [figure withheld: not gated]) says UCB leads commercialization in most of Europe; buying those rights means Amgen must stand up a European bone commercial operation that the cost line ignores. The [figure withheld: not gated] slides [figure withheld: not gated] note Astellas is a partner in Japan, so '[figure withheld: not gated] of the growth' is not true even after a UCB buyout. Already-announced check (own search 'UCB EVENITY' across transcripts and [figure withheld: not gated], and agreements): nothing announced; the only indexed UCB contract is a [figure withheld: not gated] amendment ([figure withheld: not gated]) with no buyout or option term visible. Not obvious, but not supported either. Kill signals: 'UCB counter above [figure withheld: not gated]' has no public reporting source (private negotiation), so it is not externally measurable; EVENITY below [figure withheld: not gated] YoY from the [figure withheld: not gated] table and an aBLA disclosed in [figure withheld: not gated] contingencies are measurable. No promo material.",
+     "correction": "None possible at $3.6B: a price UCB could accept (at least the undiscounted [figure withheld: not gated] stream on the strategist's own growth path, about [figure withheld: not gated], before any premium) makes the 24-month return negative. A narrower move that a counterparty could accept: renegotiate cost sharing so incremental U.S. field-force and DTC spend Amgen alone chooses is charged before the [figure withheld: not gated] split, or buy a right of first negotiation on UCB's share; name UCB, not investors, as the decider."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "fatal",
+     "argument": "Both lenses agree fatal. CFO checks against pages: profit-share $721M, $547M, [figure withheld: not gated] on [figure withheld: not gated]; the ChemoCentryx [figure withheld: not gated] EV on [figure withheld: not gated] is a whole-company deal, not a profit-share buyout comp; no indexed buyout comp exists. Their fair value of about [figure withheld: not gated] ([figure withheld: not gated] trailing; [figure withheld: not gated] growth to [figure withheld: not gated] then flat to [figure withheld: not gated], 8% discount [assumption]) is more defensible than my undiscounted [figure withheld: not gated] for [figure withheld: not gated], and both put UCB's reservation price well above $3.6B. Their payback point (24-month avoided payments of [figure withheld: not gated] below the [figure withheld: not gated] outlay) strengthens the decider case: even Amgen's investors get no in-window payback.",
+     "correction": "None possible as a priced move: at a price UCB could accept (about [figure withheld: not gated] on the CFO's discounted basis) NPV is about zero and no return lands inside 24 months. Narrow to renegotiating cost sharing on Amgen-only U.S. spend, or opening talks with a bid capped at NPV at Amgen's cost of capital; name UCB as the decider.",
+     "round2": {
+      "conceded": "The CFO's discounted fair value (about [figure withheld: not gated]) replaces my undiscounted [figure withheld: not gated] as the reference number; the missing amortization and the no-payback-in-window point are right.",
+      "held": "The decider is UCB, not investors, and nothing indexed shows UCB would sell; European commercialization and the Astellas Japan partnership (slides [figure withheld: not gated]) mean '[figure withheld: not gated] of growth' is false even after a buyout.",
+      "narrowed": "No change to the verdict; only the reference price moves to the CFO's discounted figure."
+     }
+    }
+   },
+   "verdict": "killed",
+   "reason": "Both lenses ruled it fatal and held that through round two. The price is invented: no profit-share buyout comp is indexed, the ChemoCentryx deal is a whole-company acquisition, and on the strategist's own growth path the offer sits well below UCB's walk-away ([figure withheld: not gated] p. [figure withheld: not gated]). The decider added that UCB, not investors, decides, that UCB leads Europe (p. [figure withheld: not gated]) and that Astellas shares Japan ([figure withheld: not gated] p. [figure withheld: not gated]), so the full-growth claim is false. The CFO conceded those points; the decider adopted the CFO's discounted reference value. Still disagreeing only on how far above that floor UCB's price sits. Confirmed refutation, killed.",
+   "cites": [
+    {
+     "cite_id": "c_dee7ee2018",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 132,
+     "quote": "global profit and loss share expenses were $ 721 million, $ 547 million and $ 396 million, respectively",
+     "label": "Amgen 10-K FY2025, p. F-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=global%20profit%20and%20loss%20share%20expenses%20were",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_4afcec1cdf",
+     "doc_id": "deals:deals/2022-08-04_0001193125-22-211860.md",
+     "page": 1,
+     "quote": "representing an enterprise value of approximately $3.7 billion",
+     "label": "8-K 2022-08-04, file page 1 (no printed page number)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000119312522211860/d346334dex991.htm#:~:text=representing%20an%20enterprise%20value%20of%20approximately%20%243.7%20billion",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_38a35d2a8b",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 30,
+     "quote": "Global development costs and commercialization profits and losses related to the collaboration are shared equally.",
+     "label": "Amgen 10-K FY2025, p. 24",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Global%20development%20costs%20and%20commercialization%20profits%20and%20losses",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_c6428938f5",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 13,
+     "quote": "EVENITY ® (romosozumab-aqqg) U.S. Antibodies 4/25/2026",
+     "label": "Amgen 10-K FY2025, p. 7",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_95a18eb5c9",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 13,
+     "quote": "U.S. Formulation and methods of using formulation 5/11/2031",
+     "label": "Amgen 10-K FY2025, p. 7",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=U.S.%20Formulation%20and%20methods%20of%20using%20formulation%205%2F11%2F2031",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_8e009f321a",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 39,
+     "quote": "Total EVENITY $ 714 $ 518 38 % $ 1,276 $ 960 33 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 34",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_9230cc8495",
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1,
+     "quote": "driven by higher profit share and royalty expenses and changes in our sales mix",
+     "label": "Amgen 2026Q1 earnings call (third_party), file page 1 (no printed page number)",
+     "url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/amgen-amgn-q1-2026-earnings-transcript/",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B"
+    },
+    {
+     "cite_id": "c_c487e64e73",
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1,
+     "quote": "more than 90% of the 2 million women at very high fracture risk remaining untreated",
+     "label": "Amgen 2026Q1 earnings call (third_party), file page 1 (no printed page number)",
+     "url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/amgen-amgn-q1-2026-earnings-transcript/",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B"
+    },
+    {
+     "cite_id": "c_0a6c86228b",
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1,
+     "quote": "increased investment and an expanded field force",
+     "label": "Amgen 2026Q1 earnings call (third_party), file page 1 (no printed page number)",
+     "url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/amgen-amgn-q1-2026-earnings-transcript/",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B"
+    }
+   ],
+   "figures_withheld": 176
+  },
+  {
+   "step": 4,
+   "candidate_id": "AMGN-m04",
+   "move": "Offer U.S. payers extra Repatha rebate points only in exchange for removing prior authorization inside the label's cardiovascular-risk indication.",
+   "type": "pricing_or_coverage",
+   "skeptic_cfo": {
+    "round1": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Operands trace: Repatha U.S. [figure withheld: not gated] $975M on [figure withheld: not gated]; 54% total sales deductions of gross product sales on [figure withheld: not gated] (printed p. [figure withheld: not gated]); [figure withheld: not gated] repatha [figure withheld: not gated] auto-injector row: [figure withheld: not gated] of [figure withheld: not gated] formularies, prior_auth_share [figure withheld: not gated] (unweighted by enrollees); [figure withheld: not gated] volume +35%, net price -7% on [figure withheld: not gated]; past rebates for access on [figure withheld: not gated]. Math errors: (1) Revenue mixed with profit: the [figure withheld: not gated] rebate is a pure margin loss, but it is netted against [figure withheld: not gated] of incremental revenue that carries cost of sales. At [figure withheld: not gated] margin the net is [figure withheld: not gated], not [figure withheld: not gated]; at the [figure withheld: not gated] non-GAAP margin [[figure withheld: not gated], grade B] it is [figure withheld: not gated]. The break-even lift is [figure withheld: not gated] to 8.0%, not [figure withheld: not gated]. (2) Unit: rebate points and the 54% deduction rate on [figure withheld: not gated] are percentages of gross sales, but the candidate applies 5 points to net sales. Using the company 54% deduction rate as a proxy for Repatha [assumption], gross is about $1,950M / [figure withheld: not gated] = $4,239M a year, so [figure withheld: not gated] gross points cost about $423.9M over 24 months and the move is negative at either margin. (3) The [figure withheld: not gated] lift is applied to all U.S. Repatha although PA removal reaches only payers that sign; commercial PA is unknown and Medicare share is a stated data gap. (4) No ramp: the lift is booked from month [figure withheld: not gated]. Halving the lift to 5% gives [figure withheld: not gated] contribution against [figure withheld: not gated], a [figure withheld: not gated] loss. ([figure withheld: not gated]) Same Repatha base as [figure withheld: not gated]; volumes cannot be stacked. Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February [figure withheld: not gated] senior notes carry [figure withheld: not gated] ([figure withheld: not gated]) to [figure withheld: not gated] ([figure withheld: not gated]) coupons [[figure withheld: not gated]].",
+     "correction": "Corrected number on the candidate's own net-price basis: 24-month contribution [figure withheld: not gated] at [figure withheld: not gated] less [figure withheld: not gated] rebate = [figure withheld: not gated] (or [figure withheld: not gated] at [figure withheld: not gated] GAAP margin), break-even lift [figure withheld: not gated]. If the 5 points are of gross price, cost is about $423.9M and no lift under about [figure withheld: not gated] clears it ([figure withheld: not gated] / ([figure withheld: not gated] x [figure withheld: not gated] x 2 x [figure withheld: not gated])). Narrow to a single large Part D sponsor with rebate paid only on new-to-brand scripts above a baseline, so the rebate is not given away on existing volume."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Opened the decider's pages. [figure withheld: not gated] (printed p. [figure withheld: not gated]): 'despite these net and list price reductions, some payers have restricted, and may continue to restrict, patient access and may seek further discounts or rebates', so rebates-for-access has been run and PA survived it. [figure withheld: not gated] (printed p. [figure withheld: not gated]): payers are 'increasingly using stricter utilization management criteria, such as prior authorization and step therapy'. [figure withheld: not gated]: Praluent prior_auth_share 1.0 on [figure withheld: not gated] formularies, so PA is class-wide. [figure withheld: not gated] math for the decider's pilot: $30M to [figure withheld: not gated] (midpoint [figure withheld: not gated]) [assumption]. At [figure withheld: not gated] rebate points of net, [figure withheld: not gated] over 2 years covers [figure withheld: not gated] a year of net Repatha sales, about [figure withheld: not gated] of the $1,950M U.S. base [[figure withheld: not gated]]. Contribution per point of volume lift on covered business = [figure withheld: not gated] x [figure withheld: not gated] x [figure withheld: not gated] x 2 = [figure withheld: not gated]. Break-even lift [figure withheld: not gated]; [figure withheld: not gated] to clear the [figure withheld: not gated] two-year hurdle; [figure withheld: not gated] if the lift takes six months to start [assumption]. At the strategist's [figure withheld: not gated] lift: [figure withheld: not gated] ([figure withheld: not gated] two-year return), or [figure withheld: not gated] with the ramp; at 5%: a [figure withheld: not gated] loss. If the 5 points are of gross price ([figure withheld: not gated] states deductions as a share of gross), [figure withheld: not gated] covers only about [figure withheld: not gated] of net sales a year and a [figure withheld: not gated] lift loses [figure withheld: not gated]. PA simplification rather than removal likely yields less than the [figure withheld: not gated] the strategist assumed for full removal. Hurdle: 8% a year [assumption], [figure withheld: not gated] over 24 months; Amgen WACC is not indexed, debt floor [figure withheld: not gated] coupons [[figure withheld: not gated]].",
+     "correction": "$30M to [figure withheld: not gated] pilot with one or two PBMs: break-even [figure withheld: not gated] volume lift on covered business ([figure withheld: not gated] at the 8% hurdle, [figure withheld: not gated] with a six-month ramp), on a net-points basis. Write the contract so rebate applies only above a new-to-brand baseline, which removes the giveaway on existing volume and makes any measured lift accretive; state whether points are of gross or net.",
+     "round2": {
+      "conceded": "The decider is right that rebates for access were already run and PA persisted ([figure withheld: not gated]), that utilization management is tightening ([figure withheld: not gated]), and that PA is class-wide (Praluent at 1.0), which lowers the odds a rebate buys PA removal. Their kill signals (CMS SPUF prior_auth_share, [figure withheld: not gated] driver text, [figure withheld: not gated] deduction rate) are the most measurable in the set, which matters for a pilot.",
+      "held": "My [figure withheld: not gated] math errors stand and also apply to the pilot: rebate cost must be netted against contribution not revenue, and the gross-versus-net unit for rebate points is unresolved and can flip the sign.",
+      "narrowed": "Accept the $30M to [figure withheld: not gated] pilot. On net points it clears the 8% hurdle only with a [figure withheld: not gated] or better lift on covered volume; on gross points it does not clear at [figure withheld: not gated]."
+     }
+    }
+   },
+   "skeptic_decider": {
+    "round1": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Payer as decider: the strategist's own source cuts against acceptance. [figure withheld: not gated] (printed p. [figure withheld: not gated]) says Amgen already 'reduced the net price of Repatha by providing greater discounts and rebates to payers (including PBMs that administer Medicare Part D prescription drug plans)' and then: 'despite these net and list price reductions, some payers have restricted, and may continue to restrict, patient access and may seek further discounts or rebates'. Rebates-for-access is the move management already ran, and PA survived it. [figure withheld: not gated] (printed p. [figure withheld: not gated]): 'payers are increasingly using stricter utilization management criteria, such as prior authorization and step therapy'. [figure withheld: not gated] (CMS SPUF, contract year [figure withheld: not gated]): Repatha on [figure withheld: not gated] of [figure withheld: not gated] formularies with prior_auth_share [figure withheld: not gated] and quantity_limit_share [figure withheld: not gated]; Praluent on [figure withheld: not gated] with prior_auth_share 1.0. PA applies across the [figure withheld: not gated] class regardless of which product wins the rebate, which says PA is a clinical-criteria policy, not a price term. The move is also internally contradictory: PA is the mechanism a plan uses to confirm a patient is 'inside the label's MACE-risk indication', so dropping PA only for in-indication patients still needs some PA-like check. Lipfendra has no Part D formulary listing yet (same table), and Merck will put it in a direct-to-patient program ([figure withheld: not gated]), giving payers a reason to keep gates while a cheaper oral arrives. Note the SPUF shares are unweighted by enrollment (table note), so [figure withheld: not gated] of formularies is not [figure withheld: not gated] of lives. Already-announced check (own search 'Repatha utilization management prior authorization' since 2025-10): the access-via-rebate approach is disclosed in [figure withheld: not gated] risk factors [figure withheld: not gated] ([figure withheld: not gated]); AmgenNow at [figure withheld: not gated] a month (press release [figure withheld: not gated]) is the parallel route around payer gates. The move is obvious and partly done. Kill signals are the best in the set: SPUF prior_auth_share above [figure withheld: not gated] at the next quarterly release (CMS publishes quarterly), [figure withheld: not gated] driver text on net price and volume, [figure withheld: not gated] deductions above [figure withheld: not gated] from the [figure withheld: not gated]. All have thresholds and real sources. No promo material.",
+     "correction": "Narrow to a pilot with one or two large PBMs: rebate tied to PA simplification (auto-approval on a documented ASCVD or diabetes diagnosis code, 12-month reauthorization) rather than full PA removal, budget scaled to their share (for example $30M to [figure withheld: not gated] over 24 months [assumption]), and measure with the step_therapy_share ([figure withheld: not gated]) and prior_auth_share series in SPUF plus abandonment data Amgen already tracks. Present the [figure withheld: not gated] page as evidence that rebates alone did not move PA."
+    },
+    "round2": {
+     "refuted": true,
+     "severity": "major",
+     "argument": "Unit correction checked: [figure withheld: not gated] (printed p. [figure withheld: not gated]) states 'total sales deductions were 54%, 52% and [figure withheld: not gated] of gross product sales', so deduction rates, and rebate points by the same convention, are percentages of gross. With the company 54% as a Repatha proxy [assumption], gross is $1,950M / [figure withheld: not gated] = $4,239M a year and 5 points cost $423.9M over 24 months; the CFO's break-even lift of about [figure withheld: not gated] ([figure withheld: not gated] / ([figure withheld: not gated] x [figure withheld: not gated] x 2 x [figure withheld: not gated])) is right. Even on the candidate's own net basis the best case is [figure withheld: not gated] at about [figure withheld: not gated] margin. Repatha's own deduction rate is not disclosed and is plausibly above the company average given the access rebates on [figure withheld: not gated], which would make gross, and the cost, larger. Margin cite check: the CFO's [figure withheld: not gated] is on [figure withheld: not gated] (grade B) and verifies, but it is the Motley Fool summary bullet, not a management quote. Better pages: Peter Griffith, CFO, on [figure withheld: not gated] (grade B): 'Our non-GAAP cost of sales as a percentage of product sales was 19.6%' (80.4% margin), and the [figure withheld: not gated] reconciliation on [figure withheld: not gated]: GAAP [figure withheld: not gated] less [figure withheld: not gated] points of acquisition-related expenses gives non-GAAP 18.3% (81.7% margin). The [figure withheld: not gated] figure is confirmed to within about a point; it is a company average that includes EVENITY and TEZSPIRE profit share, so it is a proxy, not a product margin. My round 1 pilot does not survive this as a priced proposal: $30M to [figure withheld: not gated] was sized to net points and never tested against a lift. Combined with the decider evidence (payers kept PA 'despite these net and list price reductions', [figure withheld: not gated]; Praluent PA share 1.0 in [figure withheld: not gated]), there is no page showing a lift large enough. What remains valid is only the measurement design (SPUF prior_auth_share and step_therapy_share, quarterly).",
+     "correction": "Restate cost in gross points ($423.9M for 5 points over 24 months on a 54% proxy). The only version left is the CFO's: one large Part D sponsor, rebate paid only on new-to-brand scripts above a baseline, in exchange for PA simplification (auto-approval on a documented diagnosis), with cost capped and a kill if that sponsor's SPUF prior_auth_flag does not change at the next quarterly release. No return should be claimed until a lift is measured; break-even on full rollout is about [figure withheld: not gated].",
+     "round2": {
+      "conceded": "The gross-versus-net unit error is real ([figure withheld: not gated]) and kills the candidate's [figure withheld: not gated]; the CFO's [figure withheld: not gated] is the ceiling on the net basis and about [figure withheld: not gated] break-even on the gross basis. My [figure withheld: not gated] pilot was not priced on gross points, so I withdraw [figure withheld: not gated] as my strongest survivor.",
+      "held": "The decider objection stands independently of the math: rebates already failed to remove PA ([figure withheld: not gated]) and PA is class-wide (Praluent 1.0), so payer acceptance is unproven. The kill signals remain the best measured in the set.",
+      "narrowed": "From 'pilot $30M to [figure withheld: not gated]' to 'new-to-brand-only rebate with one sponsor, no return claimed until measured'; [figure withheld: not gated] gated replaces [figure withheld: not gated] as my strongest survivor."
+     }
+    }
+   },
+   "verdict": "killed",
+   "reason": "Both lenses refuted it. The CFO found the return netted a margin loss against revenue and applied rebate points to net sales when the [figure withheld: not gated] states deductions as a share of gross ([figure withheld: not gated] p. [figure withheld: not gated]); on gross points the cost roughly doubles and no plausible lift clears it. The decider showed rebates for access were already run and payers kept prior authorization ([figure withheld: not gated] p. [figure withheld: not gated]), and that prior authorization is class-wide. In round two the decider conceded the gross-points correction and withdrew its own pilot; the CFO conceded the payer precedent but held that the gross-or-net unit is unresolved. What remains is a measurement design with no return claimed, not a move. The CFO math was not answered on the gross basis, so it is killed.",
+   "cites": [
+    {
+     "cite_id": "c_6dd97740fe",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38,
+     "quote": "Repatha - U.S. $ 510 $ 361 41 % $ 975 $ 704 38 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 33",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_8c9c856499",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83,
+     "quote": "total sales deductions were 54%, 52% and 53% of gross product sales, respectively",
+     "label": "Amgen 10-K FY2025, p. 77",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=total%20sales%20deductions%20were%2054%25%2C",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "tbl_verified_table_rx_formulary_part2_csv_ro",
+     "doc_id": "verified/rx/formulary_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "Verified table rx/formulary_part2.csv, row repatha|1665900|2026Q3 (CMS Part D SPUF 2026Q3; formularies 318 of 328, prior_auth_share 0.7987, step_therapy_share 0.1635)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "unverified",
+     "withheld": true,
+     "grade": "table",
+     "note": "verified-table row with no page copy; cited by locator, not quoted",
+     "excerpt": null,
+     "deep_link": null,
+     "viewer_link": null,
+     "withheld_reason": "citation status unverified is not public: quote and links withheld"
+    },
+    {
+     "cite_id": "c_0ddbdef4de",
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+     "page": 55,
+     "quote": "these requirements have served to limit patient access to Repatha treatment",
+     "label": "Amgen 10-Q 2025-06-30, p. 50",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815425000056/amgn-20250630.htm#:~:text=these%20requirements%20have%20served%20to%20limit%20patient%20access",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_4b6f31a501",
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+     "page": 55,
+     "quote": "In an effort to reduce barriers to access, we reduced the net price of Repatha by providing greater discounts and rebates to payers",
+     "label": "Amgen 10-Q 2025-06-30, p. 50",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815425000056/amgn-20250630.htm#:~:text=In%20an%20effort%20to%20reduce%20barriers%20to%20access%2C",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "tbl_verified_table_rx_formulary_part2_csv_ro",
+     "doc_id": "verified/rx/formulary_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "Verified table rx/formulary_part2.csv, row praluent|1659161|2026Q3 (formularies 42 of 328, prior_auth_share 1.0)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "unverified",
+     "withheld": true,
+     "grade": "table",
+     "note": "verified-table row with no page copy; cited by locator, not quoted",
+     "excerpt": null,
+     "deep_link": null,
+     "viewer_link": null,
+     "withheld_reason": "citation status unverified is not public: quote and links withheld"
+    },
+    {
+     "cite_id": "c_8ec30fddc3",
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 36,
+     "quote": "driven by volume growth of 35% and favorable changes to estimated sales deductions of 8%, partially offset by lower net selling price of 7%",
+     "label": "Amgen 10-Q 2026-03-31, p. 32",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000057/amgn-20260331.htm#:~:text=and%20favorable%20changes%20to%20estimated%20sales%20deductions%20of",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_3de71cfce3",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 71,
+     "quote": "Additionally, for 2026, we expect net selling price to decline by approximately mid-single digits.",
+     "label": "Amgen 10-K FY2025, p. 65",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=Additionally%2C%20for%202026%2C%20we%20expect%20net%20selling%20price",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    },
+    {
+     "cite_id": "c_908814f54b",
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1,
+     "quote": "Repatha will be available through AmgenNow at a monthly price of $239 , nearly 60% lower than the current U.S. list price",
+     "label": "Amgen press release 2025-10, file page 1 (no printed page number)",
+     "url": "https://www.amgen.com/newsroom/press-releases/2025/10/amgen-makes-repatha-available-through-amgennow-a-directtopatient-program-in-the-us",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing"
+    }
+   ],
+   "figures_withheld": 194
+  }
+ ],
+ "summary": {
+  "survived": 0,
+  "narrowed": 2,
+  "killed": 2,
+  "candidates": 4
+ }
+}

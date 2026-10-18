@@ -1,0 +1,1945 @@
+{
+ "header": {
+  "step": 0,
+  "category": "header",
+  "categories": [
+   "Language drift",
+   "Gross-to-net",
+   "Inventory and receivables growing faster than revenue",
+   "Segment and product table changes",
+   "Footnotes",
+   "Earnings-call Q&A",
+   "Product fine print",
+   "Peer contrast"
+  ],
+  "ticker": "PFE",
+  "generated_at": "2026-10-18T04:23:48Z"
+ },
+ "steps": [
+  {
+   "step": 6,
+   "category": "Language drift",
+   "query": "located 'PRICING AND REIMBURSEMENT' risk factor in 10-K FY2024 (file p.24) and 10-K FY2025 (file p.25-26) and diffed; scanned both 10-Ks for 'moderate impact|significant reduction of revenue' LOE wording",
+   "documents": [
+    {
+     "doc_id": "PFE:10k_FY2024.md",
+     "doc_title": "Pfizer 10-K FY2024, p. 18",
+     "page": 24,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 19",
+     "page": 25,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 20",
+     "page": 26,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:policy/press_2025-09-30_mfn_landmark_agreement.md",
+     "doc_title": "Pfizer press release 2025-09-30, p. 1",
+     "page": 1,
+     "url": "https://s206.q4cdn.com/795948973/files/doc_news/Pfizer-Reaches-Landmark-Agreement-with-U-S--Government-to-Lower-Drug-Costs-for-American-Patients-2025.pdf"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 9",
+     "page": 15,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2024.md",
+     "doc_title": "Pfizer 10-K FY2024, p. 9",
+     "page": 15,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Pfizer's pricing risk factor moved from a generic IRA warning in the [figure withheld: not gated] to naming MFN, mandatory CMMI pilots, ACA subsidy and Medicaid cuts, and TrumpRx discounts that 'may adversely affect revenue' in [figure withheld: not gated], and it dropped the qualifier that IRA selection would cut revenue only 'prior to expiry of intellectual property protections'.",
+    "cites": [
+     {
+      "doc_id": "PFE:10k_FY2024.md",
+      "page": 24,
+      "quote": "Our future results could be adversely affected by changes in U.S. and international governmental regulations that mandate price controls, create coverage criteria, or limit patient access to our products.",
+      "label": "Pfizer 10-K FY2024, p. 18",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2024.md#p24"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 25,
+      "quote": "use international reference pricing, including MFN, increase required rebates, establish mandatory CMMI pilots",
+      "label": "Pfizer 10-K FY2025, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p25"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 25,
+      "quote": "government cuts to Affordable Care Act (ACA) subsidies and state Medicaid funding could have a material impact on the pricing and demand for our products",
+      "label": "Pfizer 10-K FY2025, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p25"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 25,
+      "quote": "These discounts may adversely affect revenue generated from participating drugs.",
+      "label": "Pfizer 10-K FY2025, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p25"
+     },
+     {
+      "doc_id": "PFE:10k_FY2024.md",
+      "page": 24,
+      "quote": "It is possible that more of our products could be selected in future years, which could, among other things, lead to lower revenues prior to expiry of intellectual property protections.",
+      "label": "Pfizer 10-K FY2024, p. 18",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2024.md#p24"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 26,
+      "quote": "It is possible that more of our products could be selected in future years, which could, among other things, lead to lower revenues.",
+      "label": "Pfizer 10-K FY2025, p. 20",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p26"
+     },
+     {
+      "doc_id": "PFE:policy/press_2025-09-30_mfn_landmark_agreement.md",
+      "page": 1,
+      "quote": "savings that will range as high as 85% and on average 50%",
+      "label": "Pfizer press release 2025-09-30, p. 1",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_news/Pfizer-Reaches-Landmark-Agreement-with-U-S--Government-to-Lower-Drug-Costs-for-American-Patients-2025.pdf",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:policy/press_2025-09-30_mfn_landmark_agreement.md#p1"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=False, major: Opened PFE:10k_FY2024.md p.24, PFE:10k_FY2025.md p.25-26 and p.42 (printed [figure withheld: not gated], PFE:policy/press_2025-[figure withheld: not gated]-30_mfn_landmark_agreement.md p.1. All quotes verified, and the dropped 'prior to expiry of intellectual property protections' clause is real. U.S. revenue [figure withheld: not gated] is on 10-K file p.42 (printed [figure withheld: not gated]. The impact math is wrong-basis: the TrumpRx risk factor says discounts are 'to current retail prices' (p.25) and the press release's 50%/[figure withheld: not gated] are off list, but the candidate applies the 50% to net U.S. revenue ([figure withheld: not gated] x [figure withheld: not gated] x 50% = [figure withheld: not gated]). Pfizer's U.S. net is already well below list, so a list-based 50% discount takes far less than 50% of net revenue, and only on participating drugs bought through the cash channel. The [figure withheld: not gated] per [figure withheld: not gated] sensitivity therefore overstates. No figure is disclosed. Risk-factor wording is not by itself a revenue or EPS change. Correction: The FY2025 pricing risk factor adds MFN, CMMI pilots, ACA/Medicaid cuts and TrumpRx, and drops the IP-expiry qualifier on IRA selection. The dollar effect is unquantified; TrumpRx discounts are off list/retail, so a net-revenue sensitivity needs Pfizer's list-to-net gap and is well under 50% of shifted net sales.",
+    "round2": "refuted=True, major. Conceded: MFN and TrumpRx are in the guidance bullet, so the drift is priced. I flip to refuted. Held: The [figure withheld: not gated] per [figure withheld: not gated] sensitivity was wrong-basis, as in round [figure withheld: not gated]. Narrowed: Down to the single deleted clause. Correction: The only residue is the deleted IP-expiry clause, a wording note with no number."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, fatal: Each new item in the risk factor is an earnings-release headline or a press release. The FY2025 guidance bullet says 'The company's guidance reflects the anticipated unfavorable impact of Most-Favored-Nation drug pricing and TrumpRx' (PFE:earnings/2026-[figure withheld: not gated]-03_pfe-12312025xex99.md p3). Pfizer issued a standalone TrumpRx launch press release (PFE:policy/press_2026-[figure withheld: not gated]-05_trumprx_launch.md p1) and the MFN landmark-agreement release with 'on average 50%' savings (PFE:policy/press_2025-[figure withheld: not gated]-30_mfn_landmark_agreement.md p1). The ACA-subsidy cut language is in every 2026 release's forward-looking statements (2026-02-03 release p26). MFN was asked about on 2025Q2 and 2025Q3 calls (priced_in_scorecard MFN row: [figure withheld: not gated] analyst turns), and all shortlist companies signed MFN deals (case PDF p.1 per reader). So the drift is common to the group and already in guidance. Correction: Only the deleted clause 'prior to expiry of intellectual property protections' in the IRA selection sentence (10-K FY2024 p24 vs FY2025 p26) is not covered elsewhere. On its own it is a wording note with no number attached.",
+    "round2": "refuted=True, fatal. Conceded: Materiality is right that the TrumpRx sensitivity uses a list-basis discount on net revenue. Held: Fatal: the FY2026 guidance bullet names MFN and TrumpRx (2026-02-03 release p3). Narrowed: Only the deleted IP-expiry clause remains. Correction: Only the deleted clause 'prior to expiry of intellectual property protections' in the IRA selection sentence (10-K FY2024 p24 vs FY2025 p26) is not covered elsewhere. On its own it is a wording note with no number attached."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Obviousness fatal both rounds (PFE:earnings/2026-02-03 p.3 guidance bullet; TrumpRx and MFN press releases). Materiality flipped to refuted in round [figure withheld: not gated] and showed the [figure withheld: not gated] per [figure withheld: not gated] sensitivity applies a list-basis discount to net revenue. Confirmed refuted.",
+   "candidate_id": "PFE-c06",
+   "figures_withheld": 23
+  },
+  {
+   "step": 2,
+   "category": "Gross-to-net",
+   "query": "search_pages('Medicare rebates Chargebacks Sales allowances', PFE, annual_report+quarterly_report); deduction tables in 10-K FY2024 p.35, 10-K FY2025 p.37, 10-Q 2026Q1 p.34, 10-Q 2026Q2 p.37",
+   "documents": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 37",
+     "page": 43,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 52",
+     "page": 58,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 37",
+     "page": 37,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 5",
+     "page": 5,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 38",
+     "page": 38,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2024.md",
+     "doc_title": "Pfizer 10-K FY2024, p. 35",
+     "page": 41,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q1.md",
+     "doc_title": "Pfizer 10-Q 2026-03-29, p. 34",
+     "page": 34,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000054/pfe-20260329.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Pfizer's product revenue deductions keep growing faster than product sales: [figure withheld: not gated] deductions rose [figure withheld: not gated] while product revenues fell [figure withheld: not gated], taking deductions from 38.6% to 41.3% of gross sales, and in [figure withheld: not gated] the rate widened again to [figure withheld: not gated], led by chargebacks ([figure withheld: not gated] in [figure withheld: not gated]) and a doubling of returns.",
+    "cites": [
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p43"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Chargebacks 13,973 12,698 9,828",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p43"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p58"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 37,
+      "quote": "Total $ 9,022 $ 8,436 $ 17,280 $ 16,569",
+      "label": "Pfizer 10-Q 2026-06-28, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p37"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 37,
+      "quote": "Chargebacks 3,581 3,204 6,782 6,143",
+      "label": "Pfizer 10-Q 2026-06-28, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p37"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 37,
+      "quote": "Sales returns and cash discounts 594 304 919 639",
+      "label": "Pfizer 10-Q 2026-06-28, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p37"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 5,
+      "quote": "Product revenues $ 11,863 $ 11,954 $ 23,578 $ 23,248",
+      "label": "Pfizer 10-Q 2026-06-28, p. 5",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p5"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 38,
+      "quote": "offset by lower net price in the U.S. primarily due to chargebacks",
+      "label": "Pfizer 10-Q 2026-06-28, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p38"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=True, major: Opened PFE:10q_2026Q2.md p.37 and p.5, PFE:10k_FY2025.md p.43 (printed [figure withheld: not gated] and p.58. Every input line is on page and the reader's ratios reproduce: 2024 [figure withheld: not gated]/([figure withheld: not gated]+[figure withheld: not gated]=38.6%; 2025 [figure withheld: not gated]=41.3%; H1'25 [figure withheld: not gated]=[figure withheld: not gated]; H1'26 [figure withheld: not gated]=[figure withheld: not gated]. But the H1 2026 widening is not 'led by chargebacks'. Line by line H1'26 vs H1'25: chargebacks [figure withheld: not gated], but Medicare rebates [figure withheld: not gated] and sales allowances [figure withheld: not gated] offset most of it; sales returns and cash discounts [figure withheld: not gated] ([figure withheld: not gated]. Excluding returns/cash discounts the rate is flat: ([figure withheld: not gated]=40.04% vs ([figure withheld: not gated]=40.01%. So the whole [figure withheld: not gated]-pt H1 widening is the returns line, which p.38 ties at least partly to Comirnaty ('a lower favorable adjustment to the returns provision') and Nurtec ('higher returns'), i.e., lumpy, not a run-rate. The '[figure withheld: not gated]/yr, [figure withheld: not gated] pre-tax EPS ongoing' estimate annualizes a non-recurring returns swing and is unsupported. The 2025 step-up ([figure withheld: not gated]) is real arithmetic but the denominator lost [figure withheld: not gated] of Paxlovid and [figure withheld: not gated] of Comirnaty (10-K p.43 revenue bridge), so mix inflates it; the reader concedes this. Also the deduction table covers all gross product revenue (U.S. and international), so the ratio is a blended proxy, not a U.S. GTN rate. Correction: 2025 deductions rose to 41.3% of gross product sales from 38.6% (partly COVID mix). In H1 2026 the ex-returns deduction rate was flat at ~40.0%; the headline widening to [figure withheld: not gated] came from returns/cash discounts ([figure withheld: not gated]), with chargebacks up $639M but offset by lower Medicare rebates and sales allowances. No supported ongoing GTN drag estimate.",
+    "round2": "refuted=True, major. Conceded: The 2025 38.6% to 41.3% step should be dropped, because it was guided on the 2024Q4 call (verified p.7). And c11's chargeback evidence belongs here, not as a separate finding. Held: The other skeptic kept the 'H1 2026 chargeback-led widening' as non-obvious, but it fails on math: H1 ex-returns rate is flat, Q1 narrowed and Q2 widened, and chargeback growth is offset line for line. Being unasked does not make a non-move material. Narrowed: From 'widening is a lumpy returns move' to 'no 2026 trend at all'. Q1'26 narrowed [figure withheld: not gated], which round [figure withheld: not gated] did not show. Correction: No material finding. At most a composition note: in H1 2026, chargebacks ([figure withheld: not gated] in Q2) replaced Medicare rebates and sales allowances inside a flat ex-returns deduction rate (~40.0%). The 2025 step-up was guided (~$1B Part D, 2024Q4 call p.7) and partly COVID mix."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=False, minor: Mostly holds on obviousness, but only for the 2026 part. The 2025 step-up was pre-announced: on the 2024Q4 call the CFO said the IRA Part D redesign would be a net headwind of about $1 billion and would cause 'a higher gross to net impact on our revenues for all drugs' in 2025 (PFE:companies/PFE/transcripts/2024Q4_transcript.md p7). The reader's own footnote also attributes part of 2025 to the Paxlovid/Comirnaty commercial transition. The H1 2026 widening ([figure withheld: not gated]), Q2 chargebacks [figure withheld: not gated] and returns [figure withheld: not gated] appear only in the 10-Q MD&A deduction table (10-Q 2026Q2 p37), not in the earnings release. The verified analyst_topics table shows gross_to_net_price asked [figure withheld: not gated] times on the 2025Q1-2026Q1 calls and once in 2026Q2, and that one turn (Tewari) was about [figure withheld: not gated] and CDK4, not Pfizer's deduction rate (market/priced_in_scorecard.csv, gross_to_net_price row). 'Chargeback' appears in no 2025Q3-2026Q2 call or release I searched. Risk: rising deductions under the Part D redesign may be common to every shortlist company. I did not run a peer deduction-rate comparison, so non-obviousness relative to peers is unproven. Correction: Drop the 2025 38.6%->41.3% step as evidence, since it was guided (~$1B Part D headwind) and partly COVID mix. Keep the claim that in H1 2026 deductions widened again ([figure withheld: not gated]), led by chargebacks and returns that no analyst has asked about. It becomes clearly non-obvious only if shown to exceed peers' 2026 deduction trend.",
+    "round2": "refuted=True, major. Conceded: Materiality's decomposition is correct on the page: H1 ex-returns is flat at 40.0%, and the widening is returns and cash discounts tied to Comirnaty and Nurtec on p38. My held c02 does not survive. Held: Nothing for c02. My round [figure withheld: not gated] that the 2025 step-up was pre-guided still stands and agrees with them. Narrowed: Withdrawn. The peer check shows no shortlist-wide widening (BMY narrowed sharply on an Eliquis list-price cut; GILD's allowances fell), so there is no cross-company story to rescue it. Correction: No finding on deductions in 2026. At most: Q2 2026 ex-returns deductions rose [figure withheld: not gated] ([figure withheld: not gated]=[figure withheld: not gated]=[figure withheld: not gated]), one quarter, offsetting moves within the table. The 2025 step-up was guided."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Both skeptics refuted in round [figure withheld: not gated]. On PFE:10q_2026Q2.md p.37 and p.5: ex-returns rate ([figure withheld: not gated]=40.04% vs ([figure withheld: not gated]=40.01%; the H1 widening is the returns line, which p.38 ties to Comirnaty and Nurtec. Q1'26 narrowed [figure withheld: not gated], Q2 widened [figure withheld: not gated], so no trend. The 2025 38.6%->41.3% step was guided as ~$1B Part D headwind (PFE 2024Q4 call p.7, grade A) and partly COVID mix. Obviousness's peer check found no shortlist-wide widening (BMY:10q_2026Q2.md p.31 narrowed). Confirmed refuted.",
+   "candidate_id": "PFE-c02",
+   "finding_n": 4,
+   "figures_withheld": 69
+  },
+  {
+   "step": 8,
+   "category": "Inventory and receivables growing faster than revenue",
+   "query": "balance sheets in 10-K FY2025 file p.60, 10-K FY2024 file p.59, 10-Q 2025Q2 p.7, 10-Q 2025Q3 p.7, 10-Q 2026Q1 p.7, 10-Q 2026Q2 p.7; search_pages('wholesaler distribution model transition')",
+   "documents": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 54",
+     "page": 60,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 52",
+     "page": 58,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 102",
+     "page": 108,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 7",
+     "page": 7,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "doc_title": "Pfizer 10-Q 2025-06-29, p. 7",
+     "page": 7,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 5",
+     "page": 5,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 38",
+     "page": 44,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2024.md",
+     "doc_title": "Pfizer 10-K FY2024, p. 53",
+     "page": 59,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q1.md",
+     "doc_title": "Pfizer 10-Q 2026-03-29, p. 7",
+     "page": 7,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000054/pfe-20260329.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Receivables grew [figure withheld: not gated] in [figure withheld: not gated] while revenue fell 1.6%, and the share of receivables owed by the three big U.S. wholesalers jumped from [figure withheld: not gated] to 40% (McKesson alone rose to [figure withheld: not gated] of revenue), consistent with the Seagen products' one-time shift to wholesaler stocking, but inventory is falling and [figure withheld: not gated] receivables track revenue, so there is no sign of ongoing channel stuffing.",
+    "cites": [
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 60,
+      "quote": "11,874 11,463",
+      "label": "Pfizer 10-K FY2025, p. 54",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p60"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 60,
+      "quote": "Inventories 10,654 10,851",
+      "label": "Pfizer 10-K FY2025, p. 54",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p60"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Total revenues 62,579 63,627 59,553",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p58"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 108,
+      "quote": "Collectively, our three largest U.S. wholesaler customers represented 40 % and 34 % of total trade accounts receivable as of December 31, 2025 and December 31, 2024, respectively.",
+      "label": "Pfizer 10-K FY2025, p. 102",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p108"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 108,
+      "quote": "McKesson, Inc. 25 % 23 % 16 %",
+      "label": "Pfizer 10-K FY2025, p. 102",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p108"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 7,
+      "quote": "12,490 11,874",
+      "label": "Pfizer 10-Q 2026-06-28, p. 7",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p7"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 7,
+      "quote": "Inventories 9,945 10,654",
+      "label": "Pfizer 10-Q 2026-06-28, p. 7",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p7"
+     },
+     {
+      "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+      "page": 7,
+      "quote": "12,078 11,463",
+      "label": "Pfizer 10-Q 2025-06-29, p. 7",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:companies/PFE/10q_2025Q2.md#p7"
+     },
+     {
+      "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+      "page": 7,
+      "quote": "Inventories 11,669 10,851",
+      "label": "Pfizer 10-Q 2025-06-29, p. 7",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:companies/PFE/10q_2025Q2.md#p7"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 5,
+      "quote": "Total revenues 15,034 14,653 29,484 28,367",
+      "label": "Pfizer 10-Q 2026-06-28, p. 5",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p5"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 44,
+      "quote": "as well as by a one-time favorable impact associated with transition to a wholesaler distribution model in the U.S.",
+      "label": "Pfizer 10-K FY2025, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p44"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=True, minor: Opened PFE:10k_FY2025.md p.58, p.60, p.108, p.44; PFE:10q_2026Q2.md p.5, p.7; PFE:companies/PFE/10q_2025Q2.md p.7. All ratios reproduce (AR [figure withheld: not gated] vs revenue -1.6%; June AR [figure withheld: not gated] vs Q2 revenue [figure withheld: not gated]; AR/annualized Q2 revenue [figure withheld: not gated]; June inventory [figure withheld: not gated]). McKesson [figure withheld: not gated] is of total revenues, as stated (p.108). The candidate itself concludes there is no ongoing channel stuffing and that the 2025 gap is explained by the disclosed wholesaler transition (10-K p.44). A [figure withheld: not gated] receivables gap with no P&L effect and a disclosed cause is not material; it is a documented null. Correction: Null result: receivables and inventory are in line with revenue by mid-2026; only the wholesaler-concentration rise ([figure withheld: not gated] to 40% of trade AR) is new, a credit-concentration note, not an earnings item.",
+    "round2": "refuted=True, minor. Conceded: The wholesaler transition was stated in prepared remarks and in a release bullet. Held: The ratios reproduce, but nothing is anomalous. Narrowed: None. Correction: Recast as no_finding."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, fatal: The candidate's own conclusion is a null ('no sign of ongoing channel stuffing'), and the one explanation it offers was said plainly by management. The CFO in prepared remarks cited 'a onetime favorable impact in Q2 for Seagen products transitioning to a wholesale distribution model in the US' (PFE:transcripts/2025Q3_transcript.md p6). The Q2 2026 release bullet repeats it (PFE:earnings/2026-[figure withheld: not gated]-04_pfe-6282026xex99.md p4). Wholesaler concentration (McKesson [figure withheld: not gated]) is a standard 10-K customer-concentration note. The verified never_asked table shows inventory_channel unasked in the last [figure withheld: not gated] quarters, but with nothing anomalous left there is nothing to ask. Correction: Recast as a no_finding.",
+    "round2": "refuted=True, fatal. Conceded: We agree; materiality calls it minor. Held: Null finding; the one-time transition was stated by management. Narrowed: None. Correction: Recast as a no_finding."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Both refuted; the candidate itself is a null, and the transition was stated in prepared remarks (2025Q3 call p.6). Confirmed refuted.",
+   "candidate_id": "PFE-c08",
+   "figures_withheld": 18
+  },
+  {
+   "step": 7,
+   "category": "Segment and product table changes",
+   "query": "compared product list in 10-K FY2025 Note 17C (file p.108-109) with 10-Q 2026Q2 Note 13C (p.31-32); searched 'Aromasin' across 10-Q 2025Q3, 10-Q 2026Q1, 10-Q 2026Q2, 10-K FY2025; compared original 10-Q 2025Q2 category totals with recast prior-year column",
+   "documents": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 103",
+     "page": 109,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "doc_title": "Pfizer 10-Q 2025-06-29, p. 33",
+     "page": 33,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 102",
+     "page": 108,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "doc_title": "Pfizer 10-Q 2025-06-29, p. 32",
+     "page": 32,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 31",
+     "page": 31,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 32",
+     "page": 32,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q1.md",
+     "doc_title": "Pfizer 10-Q 2026-03-29, p. 30",
+     "page": 30,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000054/pfe-20260329.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 29",
+     "page": 29,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    }
+   ],
+   "candidate": {
+    "text": "From [figure withheld: not gated] Pfizer recast its product table: [figure withheld: not gated] of oncology biosimilars moved out of Oncology into a new Hospital and Biosimilars line ([figure withheld: not gated] Oncology restated from [figure withheld: not gated]), and Aromasin, a [figure withheld: not gated] product that grew [figure withheld: not gated] in [figure withheld: not gated], is no longer broken out at all.",
+    "cites": [
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 109,
+      "quote": "Aromasin Post-menopausal early and advanced breast cancer 450 347 301",
+      "label": "Pfizer 10-K FY2025, p. 103",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p109"
+     },
+     {
+      "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+      "page": 33,
+      "quote": "Aromasin Post-menopausal early and advanced breast cancer 111 87 219 170",
+      "label": "Pfizer 10-Q 2025-06-29, p. 33",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:companies/PFE/10q_2025Q2.md#p33"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 108,
+      "quote": "Oncology biosimilars (d) Various 1,301 1,037 1,407",
+      "label": "Pfizer 10-K FY2025, p. 102",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p108"
+     },
+     {
+      "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+      "page": 32,
+      "quote": "Oncology $ 4,387 $ 3,956 $ 8,145 $ 7,505",
+      "label": "Pfizer 10-Q 2025-06-29, p. 32",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:companies/PFE/10q_2025Q2.md#p32"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 31,
+      "quote": "Oncology $ 4,165 $ 4,034 $ 7,991 $ 7,528",
+      "label": "Pfizer 10-Q 2026-06-28, p. 31",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p31"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 32,
+      "quote": "Oncology biosimilars (g) Various 359 353 768 617",
+      "label": "Pfizer 10-Q 2026-06-28, p. 32",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p32"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 32,
+      "quote": "We reclassified prior period amounts to conform to the current period presentation",
+      "label": "Pfizer 10-Q 2026-06-28, p. 32",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p32"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=True, major: Opened PFE:companies/PFE/10q_2025Q2.md p.32-33, PFE:10q_2026Q2.md p.31-32, PFE:10k_FY2025.md p.108-109. Arithmetic checks: [figure withheld: not gated] = [figure withheld: not gated] = Q2'25 oncology biosimilars; Aromasin [figure withheld: not gated] = [figure withheld: not gated]. Text scan of 10-Q 2026Q1 and 2026Q2 finds no 'Aromasin'. But on materiality it fails: the recast moves no revenue and no earnings (p.32 'reclassified prior period amounts'), and Aromasin is [figure withheld: not gated] of [figure withheld: not gated] total revenue, under the [figure withheld: not gated] threshold. The reader's own confidence is low for the same reason. Nothing here changes revenue, operating income, EPS or a reported growth rate except Oncology's sub-total presentation. Correction: Presentation change only: oncology biosimilars ([figure withheld: not gated] in 2025) moved out of Oncology into a new line, and Aromasin (<[figure withheld: not gated] of revenue) is no longer broken out. Not a material finding.",
+    "round2": "refuted=True, major. Conceded: The recast was disclosed and asked about (2025Q4 call p.14, per the other skeptic). Held: Materiality kills the Aromasin residue. Narrowed: None. Correction: No finding. Aromasin is no longer broken out (<[figure withheld: not gated] of revenue)."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, major: The recast was announced, and an analyst asked about it: on the 2025Q4 call (PFE:transcripts/2025Q4_transcript.md p14) an analyst cited 'a new reorganization incorporating your global Hospital and biosimilars business'. The 10-Q 2026Q1 spells out the new Global Hospital and Biosimilars Division (PFE:10q_2026Q1.md p28) and shows the new line (p30). The prior-year column is restated on its face, so the oncology growth rate is still visible on a comparable basis. Only the Aromasin removal is unremarked: it was broken out through the FY2025 release, at [figure withheld: not gated] YTD in the Q3 2025 release (2025-11-04 release p22). I found no mention of Aromasin in any 2026 call or release. Correction: Narrow it to this: Aromasin ([figure withheld: not gated] in 2025) is no longer broken out from Q1 2026. That is non-obvious but small, at about [figure withheld: not gated] of revenue, so materiality decides it.",
+    "round2": "refuted=True, major. Conceded: We agree on refuted. Held: The recast was announced and asked about (2025Q4 call p14). Narrowed: Aromasin non-disclosure only. Correction: Narrow it to this: Aromasin ([figure withheld: not gated] in 2025) is no longer broken out from Q1 2026. That is non-obvious but small, at about [figure withheld: not gated] of revenue, so materiality decides it."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Both refuted both rounds. Recast asked on 2025Q4 call p.14 and described in 10-Q 2026Q1 p.28; Aromasin [figure withheld: not gated] = [figure withheld: not gated] of [figure withheld: not gated] (10-K FY2025 p.109). Confirmed refuted.",
+   "candidate_id": "PFE-c07",
+   "figures_withheld": 33
+  },
+  {
+   "step": 4,
+   "category": "Footnotes",
+   "query": "search_pages('certain legal matters charges', PFE, quarterly_report, since 2026); Note 4 and Note 12 of 10-Q 2026Q2; keyword scan legal|litigation|Depo over 2025Q3-2026Q2 calls",
+   "documents": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 14",
+     "page": 14,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 27",
+     "page": 27,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 5",
+     "page": 5,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 31",
+     "page": 31,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Pfizer booked $842M of 'certain legal matters' charges in Q2 2026 (double the $422M a year earlier, [figure withheld: not gated] for H1), coinciding with a June 2026 agreement-in-principle to settle most of the Depo-Provera meningioma MDL that the 10-Q calls not material to 'liquidity or financial condition', wording that leaves out results of operations; the charge and the settlement were not mentioned on the Q2 call.",
+    "cites": [
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 14,
+      "quote": "Certain legal matters, net (a) 842 422 1,033 564",
+      "label": "Pfizer 10-Q 2026-06-28, p. 14",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p14"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 14,
+      "quote": "primarily include certain product liability and other legal expenses",
+      "label": "Pfizer 10-Q 2026-06-28, p. 14",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p14"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 27,
+      "quote": "we reached an agreement-in-principle with plaintiff leadership in the Depo-Provera MDL that we expect to resolve a substantial majority of the pending MDL cases on terms that are not material to the Company’s liquidity or financial condition",
+      "label": "Pfizer 10-Q 2026-06-28, p. 27",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p27"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 5,
+      "quote": "Weighted-average shares––diluted 5,699 5,706 5,733 5,708",
+      "label": "Pfizer 10-Q 2026-06-28, p. 5",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p5"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=False, major: Opened PFE:10q_2026Q2.md p.14, p.27, p.31, p.46, p.5. Note 4 shows Certain legal matters, net [figure withheld: not gated]; footnote (a) says only 'primarily include certain product liability and other legal expenses'. No page of the 10-Q ties the charge to Depo-Provera; the link is timing only. Timing does not single out Depo: p.27 also discloses a March 2026 agreement in principle to resolve the Chantix MDL, and Depo state-court cases continue. p.46 gives $867M (not $842M) for Q2 legal matters in the non-GAAP reconciliation, a small inconsistency the candidate does not note. EPS math checks: [figure withheld: not gated] = $0.148 pre-tax; H1 incremental [figure withheld: not gated] = [figure withheld: not gated]. It hits GAAP Other (income)/deductions and is excluded from adjusted EPS (p.31, p.46), so it is a one-time GAAP item; not recurring. Size clears the few-cents bar for GAAP but does not move adjusted EPS, which is what consensus tracks. The 'liquidity or financial condition' wording on p.27 is quoted correctly; the omission of 'results of operations' is a fair reading. Correction: Pfizer took $842M of product-liability and other legal charges in Q2 2026 ([figure withheld: not gated] pre-tax GAAP EPS, excluded from adjusted EPS); the filing does not name the matter. The Depo-Provera MDL agreement-in-principle (June 2026) and the Chantix MDL agreement (March 2026) fall in the same half; attributing the Q2 charge to Depo is an inference.",
+    "round2": "refuted=False, minor. Conceded: The charge size is public in the release reconciliation (p.16). The 'unsaid' part is only the explanation and the Depo-Provera settlement. Held: Still only partly established: Chantix also settled in H1, so timing does not single out Depo. The $867M vs $842M gap is real but small. Narrowed: Reframed materiality around cash and GAAP, not adjusted EPS, and dropped any claim that the dollar amount was hidden. Correction: Pfizer's legal charges doubled to $842M in Q2 2026 ([figure withheld: not gated] H1), shown in the release but never explained on the call. The quarter coincides with an undisclosed-size Depo-Provera MDL agreement-in-principle, assured only as 'not material to liquidity or financial condition', with state-court cases outside it. Material to GAAP EPS and cash, not to adjusted EPS. The Depo attribution is inferred."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=False, minor: Holds narrowly. The $842M Q2 and $1,033M H1 'certain legal matters, net' amounts are not hidden: they are a line in the earnings-release reconciliation (PFE:earnings/2026-[figure withheld: not gated]-04_pfe-6282026xex99.md p16), with the same generic footnote '(a) ... certain product liability and other legal expenses'. Depo-Provera litigation has been in the 10-K since FY2024 (PFE:10k_FY2024.md p103). However, I found no 8-K or press release on the June 2026 MDL agreement-in-principle. The only 2026 8-Ks in the index are the annual-meeting vote (2026-04-27) and the CFO departure (2026-06-18). Searches of the 2025Q3-2026Q2 calls and releases for 'Depo|legal matters|litigation|product liability' found no Q&A or prepared-remarks mention. So the Depo link and the narrower 'liquidity or financial condition' assurance (10-Q 2026Q2 p27) were not discussed. Caveat: the charge is excluded from adjusted EPS, so consensus (adjusted) does not price it either way. Sell-side usually treats such charges as noise unless a tail is shown. Correction: Present the charge size as public (release p16). Keep as the non-obvious part only the unexplained doubling, the inferred Depo-Provera link, and the 'not material to liquidity or financial condition' wording, which omits results of operations. Present the state-court cases outside the MDL as an open tail.",
+    "round2": "refuted=False, minor. Conceded: The Depo attribution is an inference, and the two figures ($842M vs $867M) differ; I should have stated both. Held: Non-obvious. The release shows only the generic footnote, and no call, release or 8-K mentions the agreement. The Chantix timing (Q1) does not compete for the Q2 charge. Narrowed: The non-obvious core is the different materiality wording for Depo vs Chantix on 10-Q p27, plus the unexplained Q2 doubling, not the size of the charge. Correction: Q2 2026 legal charges of $842M (Note 4; $867M in the non-GAAP reconciliation, p46) coincide with the June Depo-Provera MDL agreement, the only MDL resolution dated in Q2 (Chantix was March). On the same page, Pfizer calls Chantix 'not material to Pfizer' but Depo only 'not material to liquidity or financial condition'. The attribution to Depo is an inference. GAAP-only, outside adjusted EPS."
+   },
+   "verdict": "narrowed",
+   "verdict_reason": "Pfizer's 'certain legal matters' charge doubled to $842M in Q2 2026 ($1,033M H1 vs $564M; $867M in the non-GAAP reconciliation), with no explanation on the call; the only MDL resolution dated in Q2 is the June 2026 Depo-Provera agreement-in-principle, which the 10-Q calls 'not material to the Company's liquidity or financial condition' while describing the March 2026 Chantix resolution a paragraph earlier as 'not material to Pfizer', and state-court Depo cases sit outside the deal; the Depo attribution is an inference. | Both skeptics held in round [figure withheld: not gated]. Conceded by both: the charge size is public in the release reconciliation (PFE:earnings/2026-08-04 p.16), the 10-Q never names the matter (Note 4, PFE:10q_2026Q2.md p.14), and the charge is outside adjusted EPS (p.31, p.46). Materiality reframed around GAAP EPS ([figure withheld: not gated]=$0.148 pre-tax) and cash. Disagreement was whether Chantix competes for the Q2 charge; obviousness showed Chantix settled in March (Q1, when the legal charge was [figure withheld: not gated] per the 2026-05-05 release p.14). I opened PFE:10q_2026Q2.md p.27 and confirmed both wordings verbatim: Chantix 'on terms not material to Pfizer'; Depo-Provera 'on terms that are not material to the Company's liquidity or financial condition', with California, Connecticut, Delaware and New York coordinated proceedings outside the MDL. Settled: the wording contrast is confirmed on the page; the Depo-to-charge link is unrefuted but inferred.",
+   "candidate_id": "PFE-c04",
+   "finding_n": 2,
+   "figures_withheld": 17
+  },
+  {
+   "step": 5,
+   "category": "Footnotes",
+   "query": "search_pages('contingent consideration fair value', PFE, quarterly_report, since 2026); Note 2A, Note 4, Note 7A of 10-Q 2026Q2",
+   "documents": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 14",
+     "page": 14,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 17",
+     "page": 17,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 11",
+     "page": 11,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 5",
+     "page": 5,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Payments Pfizer may owe on the Metsera deal are repricing upward fast: contingent consideration liabilities rose from $1.79B to [figure withheld: not gated] in [figure withheld: not gated] after a $550M fair-value increase (vs [figure withheld: not gated] a year earlier), on top of the $632M of CVRs paid in the purchase price, and the increase runs through GAAP other deductions.",
+    "cites": [
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 14,
+      "quote": "Changes in fair value of contingent consideration liabilities (d) 255 34 550 42",
+      "label": "Pfizer 10-Q 2026-06-28, p. 14",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p14"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 17,
+      "quote": "Fair value, beginning $ 1,790 $ 517",
+      "label": "Pfizer 10-Q 2026-06-28, p. 17",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p17"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 17,
+      "quote": "Fair value, ending $ 2,259 $ 508",
+      "label": "Pfizer 10-Q 2026-06-28, p. 17",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p17"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 17,
+      "quote": "The amount in the first six months of 2026 is primarily related to our acquisition of Metsera.",
+      "label": "Pfizer 10-Q 2026-06-28, p. 17",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p17"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 11,
+      "quote": "$ 643 million of contingent consideration liability assumed from Metsera",
+      "label": "Pfizer 10-Q 2026-06-28, p. 11",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p11"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 11,
+      "quote": "which includes the fair value of $ 632 million for the CVRs",
+      "label": "Pfizer 10-Q 2026-06-28, p. 11",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p11"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 5,
+      "quote": "Weighted-average shares––diluted 5,699 5,706 5,733 5,708",
+      "label": "Pfizer 10-Q 2026-06-28, p. 5",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p5"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=False, major: Opened PFE:10q_2026Q2.md p.11, p.14, p.17, p.44, and PFE:10k_FY2025.md p.70, p.84, p.105. Note 7A rollforward: [figure withheld: not gated] + [figure withheld: not gated] change - [figure withheld: not gated] settlements = [figure withheld: not gated]; the [figure withheld: not gated] is reported in Other (income)/deductions (p.17 footnote a) and is 'primarily', not entirely, Metsera. It does hit GAAP pre-tax income: [figure withheld: not gated] = $0.096 H1, [figure withheld: not gated] = [figure withheld: not gated] in Q2; p.44 says fair value changes for contingent consideration are excluded from adjusted income, so adjusted EPS is untouched. Math error: the candidate says the increase is 'on top of the $632M of CVRs paid in the purchase price'. The CVRs are inside the liability. 10-K FY2025 p.84 shows 2025 additions of [figure withheld: not gated] = CVR [figure withheld: not gated] (p.70) + Zihipp assumed liability [figure withheld: not gated] (p.70); p.105 says the Dec 2025 balance increase is 'primarily due to a CVR and another assumed contingent consideration liability' from Metsera. Adding the [figure withheld: not gated] again double counts. The CVRs were not 'paid'; they are noncash and unpaid (10-K p.70 'noncash CVRs'). Direction: a fair-value increase in milestone-linked consideration generally reflects higher probability of the obesity milestones, which raises the value of the acquired IPR&D. Calling it simply 'down' overstates the negative. Non-cash, one-time per remeasurement, excluded from adjusted EPS. Correction: Metsera-related contingent consideration (CVRs up to [figure withheld: not gated] plus the assumed Zihipp milestone/royalty liability) rose from $1.79B to [figure withheld: not gated] in H1 2026, driven by a $550M fair-value increase ([figure withheld: not gated] pre-tax GAAP EPS, excluded from adjusted EPS). The $632M CVR fair value is already in the $1.79B opening balance. The increase likely signals higher milestone probability, not just higher cost.",
+    "round2": "refuted=True, major. Conceded: It is printed in the release and follows pipeline events Pfizer promoted. I flip my round [figure withheld: not gated] 'held' to refuted. Held: The candidate's 'on top of $632M CVRs' double counts. The 10-K FY2025 p.84 additions of [figure withheld: not gated] include the CVRs. Narrowed: Reduced to a valuation note. Correction: Not a finding. The liability ([figure withheld: not gated]) is a modest input to valuing the obesity program, not an unpriced risk."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, major: The fair-value charge is a printed line in both 2026 earnings-release reconciliations: 'Changes in fair value of contingent consideration liabilities [figure withheld: not gated]' (PFE:earnings/2026-[figure withheld: not gated]-05_pfe-3292026xex99.md p14) and '[figure withheld: not gated]' (2026-08-04 release p16). The CVR terms (up to [figure withheld: not gated]/share on three clinical and regulatory milestones) are in the release narrative (2026-02-03 release p10). The step-up follows events Pfizer itself promoted. Berobenatide (PF-08653944/MET-097i) moved to Phase 3 in the 2026Q1 pipeline slides (PFE:presentations/2026Q1_earnings_slides.md p22), and the CVR's first milestone is the Phase 3 start (2025-11-04 release p10). The 2026Q2 call spent prepared remarks on VESPER results (2026Q2 call p9). Anyone following the obesity program knows that higher success odds raise the CVR liability. It is a non-cash GAAP item excluded from adjusted EPS, so it moves neither consensus nor guidance. Correction: Narrow it to the cumulative $1.79B->[figure withheld: not gated] liability (10-Q 2026Q2 p17) as a measure of future cash milestones and royalties owed on the obesity program. That is a modest valuation input, not an unpriced risk.",
+    "round2": "refuted=True, major. Conceded: The CVR double count and the 'paid' wording are errors, as materiality says (10-K p84, p70). Size clears a few cents of GAAP EPS. Held: Obvious. The line is in both 2026 release reconciliation tables, and its driver is milestone progress Pfizer announced. Narrowed: The direction should be called mixed or positive (higher success odds), not 'down', which makes it even less of a finding. Correction: At most a valuation footnote: Metsera milestone and royalty liabilities are [figure withheld: not gated] (10-Q p17), up $469M net in H1 on the obesity program's progress. Not an unpriced negative."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Both flipped or held to refuted in round [figure withheld: not gated]. The candidate double counts the $632M CVR, which is inside the $1.79B opening balance (10-K FY2025 p.84, p.70). The line is in both 2026 releases (2026-05-05 p.14; 2026-08-04 p.16). The rise signals higher obesity-milestone probability, so 'down' is the wrong direction. Confirmed refuted.",
+   "candidate_id": "PFE-c05",
+   "finding_n": 3,
+   "figures_withheld": 34
+  },
+  {
+   "step": 12,
+   "category": "Footnotes",
+   "query": "10-K FY2025 MD&A tax provision (file p.47) and Note 5; 10-Q 2026Q2 Note 5 (p.14); looked for tax-rate changes, Pillar [figure withheld: not gated] and OBBBA effects",
+   "documents": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 41",
+     "page": 47,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 14",
+     "page": 14,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    }
+   ],
+   "candidate": {
+    "text": "GAAP effective tax rates are distorted ([figure withheld: not gated] in [figure withheld: not gated] in [figure withheld: not gated]) but the filings tie them to jurisdictional mix around impairments and discrete resolutions, and no change to the guided adjusted rate or new tax exposure was found; not a material hidden item on this read.",
+    "cites": [
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 47,
+      "quote": "Effective tax rate on continuing operations (3.5) % (0.4) %",
+      "label": "Pfizer 10-K FY2025, p. 41",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p47"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 14,
+      "quote": "Our effective tax rate for continuing operations was 62.4 % for the second quarter of 2026, compared to 4.6 % for the second quarter of 2025",
+      "label": "Pfizer 10-Q 2026-06-28, p. 14",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p14"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": null,
+    "round2": null
+   },
+   "skeptic_obviousness": {
+    "round1": null,
+    "round2": null
+   },
+   "verdict": "killed",
+   "verdict_reason": "no finding: PFE:10k_FY2025.md p.47; PFE:10q_2026Q2.md p.14",
+   "candidate_id": "PFE-n01",
+   "figures_withheld": 6
+  },
+  {
+   "step": 3,
+   "category": "Earnings-call Q&A",
+   "query": "regex Vyndaqel|tafamidis|ATTR over PFE transcripts 2025Q3, 2025Q4, 2026Q1, 2026Q2; Vyndaqel rows in 10-Q 2025Q1-2026Q2 and 10-K FY2025",
+   "documents": [
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "doc_title": "Pfizer 2025Q3 earnings call (official), p. 9",
+     "page": 9,
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q3/PFE-USQ_Transcript_2025-11-04.pdf"
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "doc_title": "Pfizer 2025Q3 earnings call (official), p. 4",
+     "page": 4,
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q3/PFE-USQ_Transcript_2025-11-04.pdf"
+    },
+    {
+     "doc_id": "PFE:transcripts/2026Q1_transcript.md",
+     "doc_title": "Pfizer 2026Q1 earnings call (official), p. 5",
+     "page": 5,
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2026/q1/PFE-USQ_Transcript_2026-05-05.pdf"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q1.md",
+     "doc_title": "Pfizer 10-Q 2026-03-29, p. 35",
+     "page": 35,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000054/pfe-20260329.htm"
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "doc_title": "Pfizer 10-Q 2025-06-29, p. 39",
+     "page": 39,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm"
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q3.md",
+     "doc_title": "Pfizer 10-Q 2025-09-28, p. 42",
+     "page": 42,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000150/pfe-20250928.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 38",
+     "page": 44,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+     "doc_title": "Pfizer 2025Q4 earnings call (official), p. 11",
+     "page": 11,
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q4/PFE-USQ_Transcript_2026-02-03.pdf"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 29",
+     "page": 29,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    }
+   ],
+   "candidate": {
+    "text": "U.S. Vyndaqel revenue has declined in three of the last four quarters ([figure withheld: not gated]'[figure withheld: not gated]'[figure withheld: not gated]'[figure withheld: not gated]) as the [figure withheld: not gated] driver language switched from 'IRA Part D Redesign' to 'new payer contracts', yet the CFO listed Vyndaqel among 'solid contributions' on the [figure withheld: not gated] call and no executive has quantified the U.S. price concession.",
+    "cites": [
+     {
+      "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+      "page": 9,
+      "quote": "the second is what we alluded to last quarter, which is payer contracting that took place in the third quarter",
+      "label": "Pfizer 2025Q3 earnings call (official), p. 9",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q3/PFE-USQ_Transcript_2025-11-04.pdf",
+      "quote_grade": "A",
+      "speaker": "Aamir Malik",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2025Q3_transcript.md#p9"
+     },
+     {
+      "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+      "page": 9,
+      "quote": "We are seeing competition that previews taking some first-line share from treatment-naive patients",
+      "label": "Pfizer 2025Q3 earnings call (official), p. 9",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q3/PFE-USQ_Transcript_2025-11-04.pdf",
+      "quote_grade": "A",
+      "speaker": "Aamir Malik",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2025Q3_transcript.md#p9"
+     },
+     {
+      "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+      "page": 4,
+      "quote": "In the US, our continued double-digit demand growth reflects strong diagnostic efforts, broad access, and favorable affordability dynamics.",
+      "label": "Pfizer 2025Q3 earnings call (official), p. 4",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q3/PFE-USQ_Transcript_2025-11-04.pdf",
+      "quote_grade": "A",
+      "speaker": "Albert Bourla",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2025Q3_transcript.md#p4"
+     },
+     {
+      "doc_id": "PFE:transcripts/2026Q1_transcript.md",
+      "page": 5,
+      "quote": "We saw solid contributions across our product portfolio, primarily driven by Padcev, Eliquis, Nurtec, Lorbrena and the Vyndaqel family",
+      "label": "Pfizer 2026Q1 earnings call (official), p. 5",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2026/q1/PFE-USQ_Transcript_2026-05-05.pdf",
+      "quote_grade": "A",
+      "speaker": "David Denton",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2026Q1_transcript.md#p5"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q1.md",
+      "page": 35,
+      "quote": "U.S. $ 911 $ 986 (8)",
+      "label": "Pfizer 10-Q 2026-03-29, p. 35",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000054/pfe-20260329.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q1.md#p35"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q1.md",
+      "page": 35,
+      "quote": "decline in the U.S. primarily due to net price erosion as a result of new payer contracts, partially offset by continued market expansion",
+      "label": "Pfizer 10-Q 2026-03-29, p. 35",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000054/pfe-20260329.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q1.md#p35"
+     },
+     {
+      "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+      "page": 39,
+      "quote": "lower net price in the U.S. mostly due to the impact of higher manufacturer discounts resulting from the IRA Medicare Part D Redesign",
+      "label": "Pfizer 10-Q 2025-06-29, p. 39",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:companies/PFE/10q_2025Q2.md#p39"
+     },
+     {
+      "doc_id": "PFE:companies/PFE/10q_2025Q3.md",
+      "page": 42,
+      "quote": "U.S. $ 948 $ 960 (1)",
+      "label": "Pfizer 10-Q 2025-09-28, p. 42",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000150/pfe-20250928.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:companies/PFE/10q_2025Q3.md#p42"
+     },
+     {
+      "doc_id": "PFE:companies/PFE/10q_2025Q3.md",
+      "page": 42,
+      "quote": "U.S. $ 2,924 $ 2,572 14",
+      "label": "Pfizer 10-Q 2025-09-28, p. 42",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000150/pfe-20250928.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:companies/PFE/10q_2025Q3.md#p42"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 44,
+      "quote": "U.S. $ 3,834 $ 3,547 8",
+      "label": "Pfizer 10-K FY2025, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p44"
+     },
+     {
+      "doc_id": "PFE:transcripts/2025Q4_transcript.md",
+      "page": 11,
+      "quote": "Right now, we are assuming that the patent will be lost at the end of 2028. And I don't have any other comments to make on that.",
+      "label": "Pfizer 2025Q4 earnings call (official), p. 11",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q4/PFE-USQ_Transcript_2026-02-03.pdf",
+      "quote_grade": "A",
+      "speaker": "Albert Bourla",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2025Q4_transcript.md#p11"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 29,
+      "quote": "the generic companies will be permitted to launch generic versions of Vyndamax capsules on June 1, 2031",
+      "label": "Pfizer 10-Q 2026-06-28, p. 29",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p29"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=False, major: Opened PFE:companies/PFE/10q_2025Q3.md p.42, PFE:10k_FY2025.md p.44, PFE:10q_2026Q1.md p.35, PFE:10q_2026Q2.md p.38, and transcripts 2025Q3 p.4 and p.9, 2026Q1 p.5 (all grade A; speakers Bourla p.4, Malik p.9, Denton p.5 confirmed). Quarterly math reproduces: Q4'25 [figure withheld: not gated] ([figure withheld: not gated]), Q3'25 [figure withheld: not gated], Q1'26 [figure withheld: not gated], Q2'26 [figure withheld: not gated]; trailing four quarters [figure withheld: not gated] ([figure withheld: not gated]). Problems: [figure withheld: not gated] Denton's 'solid contributions' on 2026Q1 p.5 is said in a global context (Vyndaqel worldwide [figure withheld: not gated] operationally in Q1, 10-Q 2026Q1 p.35), so it is not a misstatement of U.S. results. [figure withheld: not gated] Malik on 2025Q3 p.9 explicitly said volume growth 'was offset by two gross-to-net headwinds', IRA rebates and Q3 payer contracting, and that both would continue into Q4; so the U.S. price concession was disclosed qualitatively, only not sized. (3) The 10-[figure withheld: not gated] implied price erosion extends Bourla's Q3'25 'double-digit demand growth' (said once, p.4) to all four quarters; it is an inference. [figure withheld: not gated] The 'switch' in driver language is gradual: 10-Q 2025Q3 p.42 and 10-K p.44 already name both IRA Part D Redesign and new payer contracts. [figure withheld: not gated] Most recent quarter is [figure withheld: not gated] U.S., so 'declined three of four' is accurate but the trend line is ambiguous. Dollar size: the realized four-quarter decline is [figure withheld: not gated] ([figure withheld: not gated] of revenue); the [figure withheld: not gated] figure is foregone growth versus a counterfactual, not a decline. Correction: U.S. Vyndaqel fell in Q3'25, Q4'25 and Q1'26 and rose [figure withheld: not gated] in Q2'26, netting [figure withheld: not gated] ([figure withheld: not gated]) over four quarters; management told the 2025Q3 call (Malik p.9) that payer contracting and IRA rebates were offsetting volume but has never sized the net price cut. Implied price erosion is an estimate.",
+    "round2": "refuted=True, major. Conceded: Obvious: the driver language and the U.S. declines are in release bullets, and Malik named both GTN headwinds on 2025Q3 p.9. I flip my round [figure withheld: not gated] 'held' to refuted. Held: My round [figure withheld: not gated] math stands: [figure withheld: not gated] four-quarter decline, and Q2'26 [figure withheld: not gated]. Narrowed: The only material piece (a U.S. stall that has not been sized) is carried by c01. Correction: Fold into c01; no separate finding."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, fatal: Answered directly in Q&A and stated in earnings-release bullets. The U.S. Vyndaqel declines are in each quarter's release product table. The driver language the candidate calls a 'switch' is printed in the release headline bullets: 'lower net price ... IRA Medicare Part D Redesign, as well as new payer contracts' (PFE:earnings/2025-[figure withheld: not gated]-04_pfe-09282025xex99.md p4); 'to a lesser extent, new payer contracts with reduced pricing' (2026-02-03 release p5); 'In the U.S., revenues declined primarily due to net price erosion as a result of new payer contracts' (2026-05-05 release p4). Management pre-flagged the contracting on 2025Q2 call p10 (Malik: 'GTM pressure on U.S. performance ... a result of contracting to maintain access for Vynda'). When Divan asked about Vyndamax pricing on 2025Q3 p8, Malik named the two GTN headwinds (IRA rebates and Q3 payer contracting) and said they would continue into Q4 (p9, grade A). The CFO's 'solid contributions' line (2026Q1 p5, Denton, grade A, verified) refers to global, which grew. The only unanswered element is the dollar size of the concession, and Pfizer never discloses that for any product. Correction: At most: Pfizer has not sized the Vyndaqel U.S. price concession. That is a routine non-disclosure, not a finding.",
+    "round2": "refuted=True, fatal. Conceded: Materiality's 'held, major' stands for the numbers, which are accurate. Held: Obvious: the release bullets carry the 'new payer contracts' language (2025-11-04 p4, 2026-05-05 p4), and it was answered on the 2025Q3 call p9. Narrowed: None. Correction: At most: Pfizer has not sized the Vyndaqel U.S. price concession. That is a routine non-disclosure, not a finding."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Obviousness held fatal in both rounds: driver language is in release bullets (PFE:earnings/2025-11-04 p.4, 2026-05-05 p.4) and Malik named both gross-to-net headwinds when Divan asked (2025Q3 call p.8-9, grade A); Denton's 'solid contributions' (2026Q1 p.5) referred to global Vyndaqel, which grew. Materiality flipped to refuted in round [figure withheld: not gated]: realized four-quarter U.S. move is [figure withheld: not gated] ([figure withheld: not gated], and the [figure withheld: not gated] price-erosion figure is inferred. The only material residue (unsized U.S. stall) is carried by c01. Confirmed refuted.",
+   "candidate_id": "PFE-c03",
+   "figures_withheld": 49
+  },
+  {
+   "step": 11,
+   "category": "Earnings-call Q&A",
+   "query": "keyword count [figure withheld: not gated]|chargeback|gross-to-net|TrumpRx|MFN over PFE 2025Q3-2026Q2 calls; read 2026Q2 p.13-15 Q&A",
+   "documents": [
+    {
+     "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+     "doc_title": "Pfizer 2026Q2 earnings call (official), p. 13",
+     "page": 13,
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2026/q2/PFE-USQ_Transcript_2026-08-04.pdf"
+    },
+    {
+     "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+     "doc_title": "Pfizer 2026Q2 earnings call (official), p. 15",
+     "page": 15,
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2026/q2/PFE-USQ_Transcript_2026-08-04.pdf"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 37",
+     "page": 37,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 38",
+     "page": 38,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Asked on the [figure withheld: not gated] call how a CMS proposal to cut [figure withheld: not gated] hospital payment from [figure withheld: not gated] would hit Pfizer's oncology portfolio, Bourla declined to size it, and asked whether the final MFN agreement changed, he said only that it was 'very consistent' with others, while the [figure withheld: not gated] shows chargebacks (the deduction line that carries [figure withheld: not gated] and contract pricing) up [figure withheld: not gated] in the same quarter.",
+    "cites": [
+     {
+      "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+      "page": 13,
+      "quote": "There's been a proposal from the CMS to cut reimbursement for 340B hospital payments from ASP plus 6 to ASP minus 33%. How would that affect your oncology portfolio?",
+      "label": "Pfizer 2026Q2 earnings call (official), p. 13",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2026/q2/PFE-USQ_Transcript_2026-08-04.pdf",
+      "quote_grade": "A",
+      "speaker": "Akash Tewari",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2026Q2_transcript.md#p13"
+     },
+     {
+      "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+      "page": 13,
+      "quote": "But I don't think it's for me appropriate at this stage to comment because we don't really know what will be the shape and form of all of that.",
+      "label": "Pfizer 2026Q2 earnings call (official), p. 13",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2026/q2/PFE-USQ_Transcript_2026-08-04.pdf",
+      "quote_grade": "A",
+      "speaker": "Albert Bourla",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2026Q2_transcript.md#p13"
+     },
+     {
+      "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+      "page": 15,
+      "quote": "No, the agreements are very consistent with what you have seen for other companies and for us, and we are very pleased with the agreements.",
+      "label": "Pfizer 2026Q2 earnings call (official), p. 15",
+      "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2026/q2/PFE-USQ_Transcript_2026-08-04.pdf",
+      "quote_grade": "A",
+      "speaker": "Albert Bourla",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "cite_id": "PFE:transcripts/2026Q2_transcript.md#p15"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 37,
+      "quote": "Chargebacks 3,581 3,204 6,782 6,143",
+      "label": "Pfizer 10-Q 2026-06-28, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p37"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 38,
+      "quote": "offset by lower net price in the U.S. primarily due to chargebacks",
+      "label": "Pfizer 10-Q 2026-06-28, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p38"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=True, major: Opened PFE:transcripts/2026Q2_transcript.md p.13 and p.15 (grade A; Tewari question, Bourla answers confirmed) and PFE:10q_2026Q2.md p.37, p.38, p.5. Quotes stand. The math does not. [figure withheld: not gated] It annualizes the gross chargeback increase ([figure withheld: not gated] x [figure withheld: not gated] = [figure withheld: not gated] EPS) and ignores offsets on the same table: in Q2 Medicare rebates fell [figure withheld: not gated] and sales allowances fell [figure withheld: not gated]. Excluding the lumpy returns line, the Q2 deduction rate moved from [figure withheld: not gated] = [figure withheld: not gated] = [figure withheld: not gated], about [figure withheld: not gated] per quarter, roughly a quarter of the claimed [figure withheld: not gated]/yr. For H1 the ex-returns rate is flat (40.0% both years). [figure withheld: not gated] Wrong metric: the CMS proposal Tewari asked about cuts hospitals' Part B payment for [figure withheld: not gated]-acquired drugs (ASP+6% to ASP-33%), a hospital-margin change; it does not change the [figure withheld: not gated] ceiling-price discount Pfizer pays through chargebacks. Chargeback growth is not evidence of exposure to that proposal. Chargebacks also carry non-340B wholesaler contract pricing (reader concedes). Correction: Bourla declined to size the CMS [figure withheld: not gated] hospital-payment proposal on the Q2 2026 call. Pfizer's chargebacks rose [figure withheld: not gated] in Q2 but were mostly offset by lower Medicare rebates and sales allowances; the net non-returns deduction rate rose [figure withheld: not gated] in Q2 and was flat for H1. No supported EPS figure.",
+    "round2": "refuted=True, major. Conceded: The deflection was heard by every listener, and Bourla has stated Pfizer's [figure withheld: not gated] position before (2025Q2 p.10). Held: The [figure withheld: not gated] per year and [figure withheld: not gated] EPS figures are gross of offsets and the wrong metric. Narrowed: None. Correction: Fold into c02, which itself has no material residue."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, major: The exchange is on the record, so the deflection is something every listener heard. Tewari asked about the CMS [figure withheld: not gated] proposal and Bourla declined (PFE:transcripts/2026Q2_transcript.md p13, grade A, quote verified). Bourla has stated Pfizer's [figure withheld: not gated] position repeatedly, calling it 'a major, major problem ... expected to exceed [figure withheld: not gated]' on 2025Q2 call p10, and naming it in 2025Q1 (p10, p17). The MFN 'very consistent' answer (2026Q2 p15) adds nothing new. The link from the deflection to the chargeback line is the reader's inference. The 10-Q 2026Q2 p38 uses 'lower net price in the U.S. primarily due to chargebacks' to describe Ibrance YTD, not [figure withheld: not gated]. The chargeback growth itself is the same fact as c02 and should not be counted twice. Correction: Fold the chargeback evidence into c02. As a stand-alone Q&A finding, all that remains is 'Pfizer would not size [figure withheld: not gated] reimbursement-cut exposure', and that deflection is visible to everyone.",
+    "round2": "refuted=True, major. Conceded: Materiality's metric point is correct: hospital Part B reimbursement is not the chargeback line. Held: Obvious: the question and the deflection are on the transcript, and Pfizer's [figure withheld: not gated] view has been stated repeatedly (2025Q2 p10). Narrowed: No residual. I had suggested folding it into c02, and c02 is also gone. Correction: Bourla declined to size the CMS [figure withheld: not gated] hospital-payment proposal (2026Q2 p13). That deflection is public and is not a finding."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Both refuted both rounds. The CMS proposal cuts hospital Part B payment, not Pfizer's [figure withheld: not gated] ceiling discount; Q2 chargebacks are offset by Medicare rebates ([figure withheld: not gated] and sales allowances ([figure withheld: not gated] on 10-Q 2026Q2 p.37; [figure withheld: not gated]/yr is gross of offsets. Confirmed refuted.",
+   "candidate_id": "PFE-c11",
+   "figures_withheld": 47
+  },
+  {
+   "step": 10,
+   "category": "Product fine print",
+   "query": "get_page on drug:vyndamax, drug:attruby, drug:amvuttra label_sections (indications, dosage, administration, W&P, contraindications); verified/product/rems.csv; verified/pricing/gtn_exposure.csv rows vyndamax, amvuttra, attruby",
+   "documents": [
+    {
+     "doc_id": "drug:vyndamax:label_sections.md",
+     "doc_title": "Vyndamax label, section 1. INDICATIONS AND USAGE",
+     "page": 1,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839"
+    },
+    {
+     "doc_id": "drug:vyndamax:label_sections.md",
+     "doc_title": "Vyndamax label, section 2.1 Recommended Dosage",
+     "page": 2,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839"
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "doc_title": "Amvuttra label, section 1.2 Cardiomyopathy of Wild-type or Hereditary Transthyretin-mediated Amyloidosis",
+     "page": 2,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3"
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "doc_title": "Amvuttra label, section 1.1 Polyneuropathy of Hereditary Transthyretin-mediated Amyloidosis",
+     "page": 1,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3"
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "doc_title": "Amvuttra label, section 2.1 Recommended Dosage",
+     "page": 3,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3"
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "doc_title": "Amvuttra label, section 2.2 Administration Instructions",
+     "page": 5,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3"
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "doc_title": "Amvuttra label, section 5.1 Reduced Serum Vitamin A Levels and Recommended Supplementation",
+     "page": 10,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3"
+    },
+    {
+     "doc_id": "drug:attruby:label_sections.md",
+     "doc_title": "Attruby label, section 1 INDICATIONS AND USAGE",
+     "page": 1,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38"
+    },
+    {
+     "doc_id": "drug:attruby:label_sections.md",
+     "doc_title": "Attruby label, section 2.1 Recommended Dosage",
+     "page": 2,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 38",
+     "page": 44,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Amvuttra's label is wider than Vyndamax's (it adds polyneuropathy and 'urgent heart failure visits' to the cardiomyopathy claim) and, because it is a quarterly injection given by a healthcare professional, it is paid under Medicare Part B, so it escapes the Part D redesign discounts that Pfizer names as the main drag on Vyndaqel's U.S. net price.",
+    "cites": [
+     {
+      "doc_id": "drug:vyndamax:label_sections.md",
+      "page": 1,
+      "quote": "VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+      "label": "Vyndamax label, section 1. INDICATIONS AND USAGE",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:vyndamax:label_sections.md#p1"
+     },
+     {
+      "doc_id": "drug:vyndamax:label_sections.md",
+      "page": 2,
+      "quote": "VYNDAMAX 61 mg (one 61-mg tafamidis capsule) orally once daily",
+      "label": "Vyndamax label, section 2.1 Recommended Dosage",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:vyndamax:label_sections.md#p2"
+     },
+     {
+      "doc_id": "drug:amvuttra:label_sections.md",
+      "page": 2,
+      "quote": "to reduce cardiovascular mortality, cardiovascular hospitalizations and urgent heart failure visits",
+      "label": "Amvuttra label, section 1.2 Cardiomyopathy of Wild-type or Hereditary Transthyretin-mediated Amyloidosis",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:amvuttra:label_sections.md#p2"
+     },
+     {
+      "doc_id": "drug:amvuttra:label_sections.md",
+      "page": 1,
+      "quote": "AMVUTTRA is indicated for the treatment of the polyneuropathy of hereditary transthyretin-mediated amyloidosis (hATTR-PN) in adults.",
+      "label": "Amvuttra label, section 1.1 Polyneuropathy of Hereditary Transthyretin-mediated Amyloidosis",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:amvuttra:label_sections.md#p1"
+     },
+     {
+      "doc_id": "drug:amvuttra:label_sections.md",
+      "page": 3,
+      "quote": "The recommended dosage of AMVUTTRA is 25 mg administered by subcutaneous injection once every 3 months",
+      "label": "Amvuttra label, section 2.1 Recommended Dosage",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:amvuttra:label_sections.md#p3"
+     },
+     {
+      "doc_id": "drug:amvuttra:label_sections.md",
+      "page": 5,
+      "quote": "AMVUTTRA is for subcutaneous use only and should be administered by a healthcare professional.",
+      "label": "Amvuttra label, section 2.2 Administration Instructions",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:amvuttra:label_sections.md#p5"
+     },
+     {
+      "doc_id": "drug:amvuttra:label_sections.md",
+      "page": 10,
+      "quote": "Supplementation at the recommended daily allowance of vitamin A is advised for patients taking",
+      "label": "Amvuttra label, section 5.1 Reduced Serum Vitamin A Levels and Recommended Supplementation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:amvuttra:label_sections.md#p10"
+     },
+     {
+      "doc_id": "drug:attruby:label_sections.md",
+      "page": 1,
+      "quote": "to reduce cardiovascular death and cardiovascular-related hospitalization",
+      "label": "Attruby label, section 1 INDICATIONS AND USAGE",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:attruby:label_sections.md#p1"
+     },
+     {
+      "doc_id": "drug:attruby:label_sections.md",
+      "page": 2,
+      "quote": "The recommended dosage of ATTRUBY is 712 mg orally twice daily (with or without food).",
+      "label": "Attruby label, section 2.1 Recommended Dosage",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:attruby:label_sections.md#p2"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 44,
+      "quote": "lower net price in the U.S. mostly due to the impact of higher manufacturer discounts resulting from the IRA Medicare Part D Redesign as well as new payer contracts with reduced pricing",
+      "label": "Pfizer 10-K FY2025, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p44"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=False, minor: Opened drug:vyndamax:label_sections.md p.1-2, drug:amvuttra:label_sections.md p.1-3, p.5, p.10, drug:attruby:label_sections.md p.1-2, PFE:10k_FY2025.md p.44. Label quotes verified: Amvuttra adds hATTR-PN and 'urgent heart failure visits', quarterly SC 'administered by a healthcare professional'; Vyndamax oral once daily; Attruby oral twice daily. Part B status is inferred from HCP administration and a verified ASP table row, not from a company statement. The candidate's link is directionally right, but Pfizer's own driver language has shifted: FY2025 (10-K p.44) cites Part D Redesign 'as well as new payer contracts', and 2026 10-Q driver text (10-Q 2026Q1 p.35, 2026Q2 p.38) cites only new payer contracts. So the Part D redesign is not the current main drag. No number is computed, so there is no math to fail; it is a structural explanation, not a sized impact. Correction: Amvuttra's HCP-administered injection puts it under Part B, outside the Part D redesign manufacturer discounts that Vyndamax and Attruby bear. Pfizer cited that redesign for 2025 but cites new payer contracts for 2026, so it explains part of the 2025 U.S. net price hit, not the current one.",
+    "round2": "refuted=True, major. Conceded: Widely known. I flip my round [figure withheld: not gated] 'held' to refuted. Held: Pfizer's 2026 filings attribute U.S. pressure to payer contracts (10-Q 2026Q1 p.35, 2026Q2 p.38). Narrowed: Use as context for c01, not as a finding. Correction: Background context for c01 only."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, fatal: The Part B vs Part D dynamic between Amvuttra and the oral stabilizers is a stock sell-side question. Gary Nachman (Raymond James) asked Alnylam 'how are the dynamics playing out as a Part B drug versus the stabilizers that are Part D drugs?' and the CCO answered (ALNY:companies/ALNY/transcripts/2025Q1_transcript.md p12). BridgeBio's CEO discussed Amvuttra's buy-and-bill economics on its 2025Q1 call (BBIO:companies/BBIO/transcripts/2025Q1_transcript.md p17). BridgeBio's 2025Q2 call framed IRA Part D out-of-pocket caps as favoring orals (BBIO 2025Q2 call p2). Pfizer itself sized the Part D redesign at ~$1B (2024Q4 call p7). Amvuttra's CM label (HELIOS-B, including urgent HF visits) was the headline of its 2025 approval. Correction: None. The candidate is widely known.",
+    "round2": "refuted=True, fatal. Conceded: Materiality held it as minor on accuracy. The label facts are right. Held: Obvious: the Part B vs Part D question was asked on the ALNY 2025Q1 call p12. Narrowed: None. Correction: None. The candidate is widely known."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Obviousness fatal both rounds (asked on ALNY 2025Q1 call p.12; BBIO 2025Q1 call p.17). Materiality flipped to refuted in round [figure withheld: not gated], noting 10-Q 2026Q1 p.35 and 2026Q2 p.38 cite only new payer contracts. Label facts are accurate (drug:amvuttra label [figure withheld: not gated]; drug:vyndamax label [figure withheld: not gated] and feed the product side-by-side. Confirmed refuted as a finding.",
+   "candidate_id": "PFE-c10",
+   "figures_withheld": 4
+  },
+  {
+   "step": 13,
+   "category": "Product fine print",
+   "query": "get_page on drug:ibrance, drug:verzenio, drug:kisqali label_sections sections 1-2",
+   "documents": [
+    {
+     "doc_id": "drug:ibrance:label_sections.md",
+     "doc_title": "Ibrance label, section 1.2 HER2-Positive Metastatic Breast Cancer",
+     "page": 2,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e0e6412f-50b4-4fd4-9364-62818d121a07"
+    },
+    {
+     "doc_id": "drug:verzenio:label_sections.md",
+     "doc_title": "Verzenio label, section 1.1 Early Breast Cancer",
+     "page": 1,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be4bc0de-0fdc-4d46-8d25-be43c79e6a06"
+    },
+    {
+     "doc_id": "drug:kisqali:label_sections.md",
+     "doc_title": "Kisqali label, section 1.1 Early Breast Cancer",
+     "page": 1,
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+    }
+   ],
+   "candidate": {
+    "text": "Ibrance alone has a [figure withheld: not gated] maintenance indication, while Verzenio and Kisqali both carry adjuvant early-breast-cancer labels Ibrance lacks; the gap is real but long known (Ibrance's adjuvant miss predates the case), so it is recorded as context rather than a new finding.",
+    "cites": [
+     {
+      "doc_id": "drug:ibrance:label_sections.md",
+      "page": 2,
+      "quote": "for the maintenance treatment of adult patients with HR-positive, HER2-positive locally advanced or metastatic breast cancer following induction treatment",
+      "label": "Ibrance label, section 1.2 HER2-Positive Metastatic Breast Cancer",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e0e6412f-50b4-4fd4-9364-62818d121a07",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:ibrance:label_sections.md#p2"
+     },
+     {
+      "doc_id": "drug:verzenio:label_sections.md",
+      "page": 1,
+      "quote": "for the adjuvant treatment of adults with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative, node-positive, early breast cancer at high risk of recurrence",
+      "label": "Verzenio label, section 1.1 Early Breast Cancer",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be4bc0de-0fdc-4d46-8d25-be43c79e6a06",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:verzenio:label_sections.md#p1"
+     },
+     {
+      "doc_id": "drug:kisqali:label_sections.md",
+      "page": 1,
+      "quote": "for the adjuvant treatment of adults with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative stage II and III early breast cancer at high risk of recurrence",
+      "label": "Kisqali label, section 1.1 Early Breast Cancer",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "drug:kisqali:label_sections.md#p1"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": null,
+    "round2": null
+   },
+   "skeptic_obviousness": {
+    "round1": null,
+    "round2": null
+   },
+   "verdict": "killed",
+   "verdict_reason": "no finding: drug:ibrance:label_sections.md p.2; drug:verzenio:label_sections.md p.1; drug:kisqali:label_sections.md p.1",
+   "candidate_id": "PFE-n02",
+   "figures_withheld": 1
+  },
+  {
+   "step": 1,
+   "category": "Peer contrast",
+   "query": "search_pages('Attruby net product revenue', ticker=BBIO, quarterly_report); search_pages('Amvuttra net product revenues', ticker=ALNY, quarterly_report); Vyndaqel family rows in PFE 10-Q 2026Q2 p.38",
+   "documents": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 38",
+     "page": 38,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "doc_title": "Alnylam 10-Q 2026-06-30, p. 38",
+     "page": 38,
+     "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm"
+    },
+    {
+     "doc_id": "BBIO:10q_2026Q2.md",
+     "doc_title": "BridgeBio 10-Q 2026-06-30, p. 52",
+     "page": 56,
+     "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Pfizer's Vyndaqel family has lost roughly [figure withheld: not gated] of U.S. ATTR-CM revenue share in one year: in Q2 2026 its U.S. sales grew [figure withheld: not gated] while Alnylam's Amvuttra grew [figure withheld: not gated] in the U.S. and BridgeBio's Attruby grew [figure withheld: not gated], leaving Vyndaqel at about [figure withheld: not gated] of combined U.S. class revenue versus about [figure withheld: not gated] a year earlier.",
+    "cites": [
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 38,
+      "quote": "U.S. $ 1,064 $ 990 7",
+      "label": "Pfizer 10-Q 2026-06-28, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p38"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 38,
+      "quote": "U.S. $ 1,975 $ 1,976",
+      "label": "Pfizer 10-Q 2026-06-28, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p38"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 38,
+      "quote": "net price erosion in the U.S. as a result of new payer contracts",
+      "label": "Pfizer 10-Q 2026-06-28, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p38"
+     },
+     {
+      "doc_id": "ALNY:10q_2026Q2.md",
+      "page": 38,
+      "quote": "AMVUTTRA United States $ 809,079 $ 361,346",
+      "label": "Alnylam 10-Q 2026-06-30, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "ALNY:10q_2026Q2.md#p38"
+     },
+     {
+      "doc_id": "ALNY:10q_2026Q2.md",
+      "page": 38,
+      "quote": "mainly in patients with ATTR-CM in the U.S.",
+      "label": "Alnylam 10-Q 2026-06-30, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "ALNY:10q_2026Q2.md#p38"
+     },
+     {
+      "doc_id": "BBIO:10q_2026Q2.md",
+      "page": 56,
+      "quote": "Net product revenue $ 222,440 $ 71,501",
+      "label": "BridgeBio 10-Q 2026-06-30, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "BBIO:10q_2026Q2.md#p56"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=False, minor: Opened PFE:10q_2026Q2.md p.38, ALNY:10q_2026Q2.md p.38, BBIO:10q_2026Q2.md p.56. All three figures are on page, same calendar quarter (PFE quarter ends June [figure withheld: not gated], rivals June [figure withheld: not gated], immaterial), all USD, units converted correctly (ALNY/BBIO in thousands). Vyndaqel family U.S. [figure withheld: not gated]; Amvuttra United States [figure withheld: not gated] (a U.S.-only row, not global); BBIO net product revenue [figure withheld: not gated], which p.56 attributes to Attruby, and BBIO commercializes only in the U.S. (ex-U.S. Beyonttra comes in as royalty revenue, a separate line), so it is effectively U.S. Arithmetic re-done: [figure withheld: not gated]+[figure withheld: not gated]+[figure withheld: not gated]=[figure withheld: not gated], share 50.8%; [figure withheld: not gated]+[figure withheld: not gated]+[figure withheld: not gated]=[figure withheld: not gated], share [figure withheld: not gated]. H1 U.S. [figure withheld: not gated] and the [figure withheld: not gated] H1 shortfall vs [figure withheld: not gated] FY2025 growth (PFE:10k_FY2025.md p.44: [figure withheld: not gated] also check. Weaknesses are definitional, not arithmetic: [figure withheld: not gated] it is revenue share, not patient share, and Amvuttra carries a much higher per-patient price, so revenue share overstates rival patient share; [figure withheld: not gated] Amvuttra U.S. includes hATTR-PN in both periods, and its ATTR-CM label was new in the base quarter, so the year-ago rival base is a launch-curve trough; (3) Vyndaqel's own revenue share loss partly reflects its own net price cuts (p.38 'net price erosion ... new payer contracts'), not only lost patients; [figure withheld: not gated] the latest quarter shows U.S. Vyndaqel [figure withheld: not gated], so the stall is H1, not Q2. Materiality passes: [figure withheld: not gated]/yr shortfall is [figure withheld: not gated] of [figure withheld: not gated] revenue, but the 10-pt sensitivity ([figure withheld: not gated]) and Vyndaqel's [figure withheld: not gated] of revenue ([figure withheld: not gated], 10-K p.44) clear the bar. Correction: Say 'U.S. ATTR-CM-class revenue share (approximate; Amvuttra U.S. includes hATTR-PN; revenue not patients)' fell from [figure withheld: not gated] Q2'25 to Q2'26, with Vyndaqel U.S. flat in H1 2026 despite [figure withheld: not gated] in Q2; part of the share loss is Pfizer's own payer-contract price cuts.",
+    "round2": "refuted=False, minor. Conceded: Share loss and its causes (first-line share to Attruby, payer contracting) were said on the 2025Q2 and 2025Q3 calls, and rivals publish share forecasts. The existence of share loss is not new. Held: The quantification is material and unsaid. Vyndaqel took [figure withheld: not gated] of [figure withheld: not gated] of H1 U.S. class growth on a [figure withheld: not gated] U.S. product, and no Pfizer source sizes it. Narrowed: Dropped the 'vs TRx leadership' contrast as a contradiction, because revenue share and TRx share can both be true. Moved the headline from a single quarter (Q2 69[figure withheld: not gated] to 50.8%) to H1 (74.8% to 50.8%) with class growth captured. Correction: Narrowed finding: in H1 2026 the U.S. ATTR-CM class (Vyndaqel + Amvuttra U.S. + Attruby) grew [figure withheld: not gated] (+47%) while U.S. Vyndaqel revenue was flat. Vyndaqel's revenue share fell from [figure withheld: not gated]. This is revenue share, shaped by price and by Amvuttra's PN use, so it does not contradict Pfizer's TRx-share leadership claim. Pfizer has disclosed share pressure and contracting qualitatively but never sized either."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, major: The competitive share shift is the most-discussed PFE commercial topic, not a hidden one. Analyst Vamil Divan (Guggenheim) asked directly about 'pricing and market share dynamics' for Vyndamax with the new competitors on the 2025Q3 call (PFE:transcripts/2025Q3_transcript.md p8, grade A). Aamir Malik answered on p9: competition is 'taking some first-line share from treatment-naive patients' and Amvuttra has driven 'minimal switching'. A quarter earlier he said 'Attruby is taking some first-line share' and flagged GTN pressure on U.S. Vyndaqel (2025Q2 call p10). Steve Scala asked in 2024Q2 whether competitors would 'take majority share before' LOE (2024Q2 call p17). The rivals publish their own share claims: Alnylam's CCO cites >[figure withheld: not gated] new-patient share in PN and plans to 'replicate' it in CM (ALNY 2026Q1 call p1), and BridgeBio's Jan 2026 deck projects [figure withheld: not gated]-40%+ Attruby share (BBIO:earnings/2026-[figure withheld: not gated]-12_ef20062706_ex99-[figure withheld: not gated].md p29). The three revenue lines come from the three companies' own 10-Qs and earnings releases (Vyndaqel U.S. by quarter is in the PFE release product table, PFE:earnings/2026-[figure withheld: not gated]-04_pfe-6282026xex99.md p22-23), and ATTR-CM analysts stack them as a matter of course. What is new is only the arithmetic: a revenue-share number of [figure withheld: not gated]. It is also partly a price effect that Pfizer already disclosed ('net price erosion... new payer contracts', 10-Q 2026Q2 p38 and release p4), not a pure volume loss. I/B/E/S in the index has no product-level Vyndaqel consensus, so I cannot show the share loss is in numbers. FY2026 revenue consensus ([figure withheld: not gated]) sits inside raised guidance (market/consensus_vs_guidance.csv), so the market is not surprised at the company level. Correction: Narrow it to the gap between Pfizer's 'continued market share leadership' (2025Q3 p9, on a TRx basis) and the revenue view, where the U.S. class lead is down to [figure withheld: not gated]. The non-obvious part is the size of the revenue-share drop and that management never quantified it, not the existence of share loss.",
+    "round2": "refuted=False, minor. Conceded: Materiality is right that the arithmetic is like for like and that part of the drop is Pfizer's own net price. My round [figure withheld: not gated] 'major, refuted' overweighted the fact that the direction is known; the size is unsaid anywhere I searched. Held: The underlying story (competitors take first-line share, payer contracting cuts net price) is said and answered. Alnylam's 2026Q2 remarks say openly that it is contesting Vyndaqel's leadership. The candidate cannot be sold as a hidden share loss. Narrowed: From 'refuted' to 'held, minor': the only non-obvious content is the [figure withheld: not gated] revenue-share figure and its [figure withheld: not gated]-pt drop. Correction: Vyndaqel's share of U.S. ATTR-CM class revenue fell [figure withheld: not gated] in a year (approximate: Amvuttra U.S. includes hATTR-PN, and this is revenue, not patients). No company or analyst in the index has quantified this. Management and rivals have said the direction of share loss and the payer-contract price cuts. Credit it as a quantification, not a discovery."
+   },
+   "verdict": "narrowed",
+   "verdict_reason": "In H1 2026 the U.S. ATTR-CM class (Vyndaqel family U.S. + Amvuttra U.S. + Attruby net product revenue) grew about [figure withheld: not gated] (+47%) while U.S. Vyndaqel revenue was flat ($1,975M vs $1,976M), so Vyndaqel's share of U.S. class revenue fell from about [figure withheld: not gated] to about [figure withheld: not gated] (Q2 alone: [figure withheld: not gated]); this is revenue share, shaped by Pfizer's own payer-contract price cuts and by Amvuttra's hATTR-PN use, and Pfizer has never sized it. | Both skeptics re-derived the figures from PFE:10q_2026Q2.md p.38 (U.S. QTD [figure withheld: not gated]; YTD [figure withheld: not gated], ALNY:10q_2026Q2.md p.38 (Amvuttra United States QTD [figure withheld: not gated]; YTD [figure withheld: not gated] and BBIO:10q_2026Q2.md p.56 (net product revenue QTD [figure withheld: not gated]; YTD [figure withheld: not gated]; I opened all three pages and confirmed them. H1: [figure withheld: not gated]+[figure withheld: not gated]+[figure withheld: not gated]=[figure withheld: not gated]+[figure withheld: not gated]+[figure withheld: not gated]=[figure withheld: not gated] ([figure withheld: not gated]); share [figure withheld: not gated]=50.8% vs [figure withheld: not gated]=74.8%. Obviousness conceded in round [figure withheld: not gated] that no PFE, ALNY or BBIO call, release or deck in the index quantifies class revenue share (every share figure is TRx or new-patient starts), after round [figure withheld: not gated] refuted on the ground that the direction of share loss was said on PFE 2025Q2 call p.10 and 2025Q3 call p.8-9. Materiality conceded the direction is said and dropped the 'contradicts TRx leadership' framing (revenue share and TRx share can both be true). Settled: confirmed as arithmetic, credited as a quantification of a known story, not a discovery. The Q2'25 rival base is a launch trough (Amvuttra's CM label was new), which inflates the swing; the [figure withheld: not gated]/yr shortfall vs FY2025's [figure withheld: not gated] growth (10-K FY2025 p.44: [figure withheld: not gated] is a counterfactual, not a decline.",
+   "candidate_id": "PFE-c01",
+   "finding_n": 1,
+   "figures_withheld": 102
+  },
+  {
+   "step": 9,
+   "category": "Peer contrast",
+   "query": "search_pages('Ibrance 7,871', doc_type=cms_fact_sheet); search_pages('Kisqali Verzenio', doc_type=cms_fact_sheet); verified/pricing/gtn_exposure.csv rows ibrance, verzenio, kisqali; keyword count 'Ibrance|palbociclib' over PFE calls 2025Q3-2026Q2",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "doc_title": "CMS fact sheet, p. 2",
+     "page": 2,
+     "url": "https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf"
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+     "doc_title": "CMS fact sheet, p. 1",
+     "page": 1,
+     "url": "https://www.cms.gov/files/document/factsheet-medicare-negotiation-selected-drug-list-ipay-2028.pdf"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 19",
+     "page": 25,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28, p. 35",
+     "page": 35,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025, p. 38",
+     "page": 44,
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm"
+    }
+   ],
+   "candidate": {
+    "text": "Ibrance takes its Medicare negotiated price (50% below [figure withheld: not gated] list) on January [figure withheld: not gated], a full year before rivals Kisqali and Verzenio, which were only selected for [figure withheld: not gated], so for all of [figure withheld: not gated] Ibrance competes in Medicare at half price against full-price rivals, while Pfizer has not mentioned Ibrance once on its last four earnings calls.",
+    "cites": [
+     {
+      "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+      "page": 2,
+      "quote": "Ibrance Pfizer Inc. Breast cancer $7,871 $15,741 50% $2,036,178,000",
+      "label": "CMS fact sheet, p. 2",
+      "url": "https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md#p2"
+     },
+     {
+      "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+      "page": 1,
+      "quote": "Kisqali Breast cancer $1,578,679,000",
+      "label": "CMS fact sheet, p. 1",
+      "url": "https://www.cms.gov/files/document/factsheet-medicare-negotiation-selected-drug-list-ipay-2028.pdf",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md#p1"
+     },
+     {
+      "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+      "page": 1,
+      "quote": "Verzenio Breast cancer $1,428,714,000",
+      "label": "CMS fact sheet, p. 1",
+      "url": "https://www.cms.gov/files/document/factsheet-medicare-negotiation-selected-drug-list-ipay-2028.pdf",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md#p1"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 25,
+      "quote": "Ibrance and Xtandi were included in the list of 15 drugs selected.",
+      "label": "Pfizer 10-K FY2025, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p25"
+     },
+     {
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 35,
+      "quote": "Negotiated prices for Ibrance and Xtandi are effective in 2027.",
+      "label": "Pfizer 10-Q 2026-06-28, p. 35",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10q_2026Q2.md#p35"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 44,
+      "quote": "U.S. $ 2,710 $ 2,849 (5)",
+      "label": "Pfizer 10-K FY2025, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p44"
+     },
+     {
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 44,
+      "quote": "Declines primarily driven by lower net price in the U.S. largely due to the impact of higher manufacturer discounts resulting from the IRA Medicare Part D Redesign",
+      "label": "Pfizer 10-K FY2025, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "speaker": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "cite_id": "PFE:10k_FY2025.md#p44"
+     }
+    ]
+   },
+   "skeptic_materiality": {
+    "round1": "refuted=True, major: Opened policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md p.2, cms_fact_sheet_selected_list_ipay2028.md p.1, PFE:10k_FY2025.md p.13, p.25, p.44, PFE:10q_2026Q2.md p.35. The CMS figures are on page: MFP $7,871 vs list $15,741 = 50.0%; [figure withheld: not gated] x 50% = [figure withheld: not gated]. Two math/materiality failures. [figure withheld: not gated] The 'Medicare = [figure withheld: not gated] of U.S. net revenue' ratio divides Part D gross covered cost (list basis, before rebates, includes beneficiary cost-sharing) by Pfizer's net U.S. revenue for a different year; it is not a comparable item. The 50% cut is off list, and Ibrance already pays Part D rebates and redesign discounts (10-K p.44), so the net hit is unknown and the [figure withheld: not gated] range has no anchor. [figure withheld: not gated] The 10-K patent table (file p.13) lists Ibrance's U.S. basic product patent expiration as 2027, the same year the MFP takes effect. In 2027 Ibrance faces U.S. generic palbociclib, which dwarfs the MFP-vs-rival asymmetry; the 'full year at half price against full-price rivals' framing ignores the larger 2027 event. The selection-date fact stands; the investor-relevant impact does not. Correction: Ibrance's Medicare MFP (50% off list) starts 1 Jan 2027, a year before Kisqali/Verzenio MFPs, but 2027 is also Ibrance's U.S. basic patent expiry year (10-K p.13), so the incremental MFP effect is small next to LOE and cannot be sized from the cited data.",
+    "round2": "refuted=True, fatal. Conceded: Asked and answered on the 2025Q2 call, so severity is raised to fatal. Held: The round [figure withheld: not gated] basis error (Part D gross cost vs net revenue) stands. Narrowed: None left. Correction: Ibrance's 50% Medicare MFP starts 1 Jan 2027, months before expected U.S. generics. Pfizer has called the NPV hit 'very small'. Not a finding."
+   },
+   "skeptic_obviousness": {
+    "round1": "refuted=True, fatal: Analysts asked this and management answered it directly, and at bottom it is a patent-cliff item. Tim Anderson (BofA) asked on the 2025Q2 call about the Ibrance/Xtandi negotiations for '[figure withheld: not gated] (PFE:companies/PFE/transcripts/2025Q2_transcript.md p13, grade A). Bourla replied: 'Both of them are losing patent on '[figure withheld: not gated] ... the hit on us is very small. The NPV is very small because it's really a few months of exclusivity.' He made the same point in 2024Q1 (call p19: Ibrance and Xtandi 'are approaching their LOE ... the NPV risk ... is not that big'). Pfizer's 10-K lists Ibrance U.S. basic-product expiry as 2027, and the verified LOE calendar has 2027-09-05 (pipeline/loe_calendar.csv IBRANCE US). So the 2027 MFP overlaps U.S. generic entry within the same year. The 'year ahead of Kisqali/Verzenio' asymmetry is mostly moot after September 2027. The MFP itself is a CMS headline (ira_cut_check: 50% verified). 'Zero mentions of Ibrance on the last four calls' is wrong in spirit: Ibrance was discussed in the 2026Q2 release (new HER2+ approval, 2026-08-04 release p7), and Tewari's 2026Q2 CDK4/[figure withheld: not gated] question touched the franchise. Correction: At most: Ibrance's Medicare price drops 50% from 1 Jan 2027, about [figure withheld: not gated] months before U.S. generics. That is the known, small IRA-before-LOE overlap Bourla already sized as 'very small'.",
+    "round2": "refuted=True, fatal. Conceded: We agree on refuted; they add that list-basis math overstates the impact. Held: Bourla answered it (2025Q2 p13), and LOE is in 2027. Narrowed: None. Correction: At most: Ibrance's Medicare price drops 50% from 1 Jan 2027, about [figure withheld: not gated] months before U.S. generics. That is the known, small IRA-before-LOE overlap Bourla already sized as 'very small'."
+   },
+   "verdict": "killed",
+   "verdict_reason": "Both fatal in round [figure withheld: not gated]. Bourla answered it on the 2025Q2 call p.13 (grade A); Ibrance U.S. basic patent expires 2027 (10-K FY2025 p.13), making it a patent-cliff item the case excludes; the [figure withheld: not gated] ratio divides list-basis Part D cost by net revenue. Confirmed refuted.",
+   "candidate_id": "PFE-c09",
+   "finding_n": 5,
+   "figures_withheld": 20
+  }
+ ],
+ "summary": {
+  "candidates": 13,
+  "survived": 0,
+  "killed": 11,
+  "narrowed": 2,
+  "documents": 21
+ }
+}

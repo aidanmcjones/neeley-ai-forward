@@ -1,0 +1,2956 @@
+{
+ "ticker": "MRK",
+ "name": "Merck & Co., Inc.",
+ "generated_at": "2026-10-18T04:25:11+00:00",
+ "findings": [
+  {
+   "n": 1,
+   "candidate_id": "MRK-c03",
+   "category": "Footnotes",
+   "finding": "IRS Notices of Proposed Adjustment received in April 2025 seek about $1.3B of extra TCJA transition tax plus about $260M of penalties before interest, and the Q2 2026 10-Q now says it is uncertain whether the administrative phase of the audit can resolve them, which points to litigation; Merck has not mentioned the matter on any earnings call, release or slide deck.",
+   "finding_marked": "IRS Notices of Proposed Adjustment received in April 2025 seek about $1.3B[1] of extra TCJA transition tax plus about $260M[2] of penalties before interest, and the Q2 2026 10-Q now says it is uncertain whether the administrative phase of the audit can resolve them, which points to litigation; Merck has not mentioned the matter on any earnings call, release or slide deck.",
+   "marker_map": {
+    "1": "c_7baff5b517",
+    "2": "c_0609fc92c6",
+    "3": "c_e0b56e8e34",
+    "4": "c_177aceb366",
+    "5": "c_4bed25dd85",
+    "6": "c_7b243417dc",
+    "7": "c_92c1d01055",
+    "8": "c_1dd7fb4a48",
+    "9": "c_33c05c1266",
+    "10": "c_df91b689dc"
+   },
+   "source": {
+    "doc_title": "Merck 10-K FY2025",
+    "period": "2025-12-31",
+    "page": "p. 129",
+    "quote": "In April 2025, Merck received Notices of Proposed Adjustment (NOPAs) that would increase the amount of the one-time transition tax on certain undistributed earnings of foreign subsidiaries by approximately $ 1.3 billion",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=In%20April%202025%2C%20Merck%20received%20Notices%20of%20Proposed"
+   },
+   "cites": [
+    {
+     "cite_id": "c_7baff5b517",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131,
+     "quote": "In April 2025, Merck received Notices of Proposed Adjustment (NOPAs) that would increase the amount of the one-time transition tax on certain undistributed earnings of foreign subsidiaries by approximately $ 1.3 billion",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=In%20April%202025%2C%20Merck%20received%20Notices%20of%20Proposed",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 129",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p131",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=In%20April%202025%2C%20Merck%20received%20Notices%20of%20Proposed%20Adjustment%20%28NOPAs%29%20that%20would%20increase%20the%20amount%20of%20the%20one-time%20transition%20tax%20on%20certain%20undistributed%20earnings%20of%20foreign%20subsidiaries%20by%20approximately%20%24%201.3%20billion",
+     "note": ""
+    },
+    {
+     "cite_id": "c_0609fc92c6",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "In addition, the NOPAs included penalties of approximately $ 260 million. These amounts are exclusive of any interest that may be due",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=In%20addition%2C%20the%20NOPAs%20included%20penalties%20of%20approximately",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=In%20addition%2C%20the%20NOPAs%20included%20penalties%20of%20approximately%20%24%20260%20million.%20These%20amounts%20are%20exclusive%20of%20any%20interest%20that%20may%20be%20due",
+     "note": ""
+    },
+    {
+     "cite_id": "c_92c1d01055",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "is vigorously contesting the NOPAs through available administrative proceedings. However, it remains uncertain whether a resolution can be reached during this phase of the audit, and judicial proceedings may be necessary",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative%20proceedings.%20However%2C%20it%20remains%20uncertain%20whether%20a%20resolution%20can%20be%20reached%20during%20this%20phase%20of%20the%20audit%2C%20and%20judicial%20proceedings%20may%20be%20necessary",
+     "note": ""
+    },
+    {
+     "cite_id": "c_1dd7fb4a48",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 65,
+     "quote": "will vigorously contest the NOPAs through all available administrative and, if necessary, judicial proceedings",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=will%20vigorously%20contest%20the%20NOPAs%20through%20all%20available",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 63",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p65",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=65&q=will%20vigorously%20contest%20the%20NOPAs%20through%20all%20available%20administrative%20and%2C%20if%20necessary%2C%20judicial%20proceedings",
+     "note": ""
+    },
+    {
+     "cite_id": "c_e0b56e8e34",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "Average common shares outstanding assuming dilution 2,470 2,513 2,471 2,522",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=Average%20common%20shares%20outstanding%20assuming%20dilution",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=Average%20common%20shares%20outstanding%20assuming%20dilution%202%2C470%202%2C513%202%2C471%202%2C522",
+     "note": ""
+    },
+    {
+     "cite_id": "c_4bed25dd85",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 3,
+     "quote": "Total Sales $ 65,011 $ 64,168 $ 60,115",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 1",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p3",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=3&q=Total%20Sales%20%24%2065%2C011%20%24%2064%2C168%20%24%2060%2C115",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_177aceb366",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131,
+     "quote": "Balance December 31 $ 2,530 $ 2,261 $ 2,384",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 129",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p131",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=Balance%20December%2031%20%24%202%2C530%20%24%202%2C261%20%24%202%2C384",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_33c05c1266",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131,
+     "quote": "If the Company is ultimately unsuccessful in defending its position, the impact could be material to its financial statements",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=If%20the%20Company%20is%20ultimately%20unsuccessful%20in%20defending",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 129",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p131",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=If%20the%20Company%20is%20ultimately%20unsuccessful%20in%20defending%20its%20position%2C%20the%20impact%20could%20be%20material%20to%20its%20financial%20statements",
+     "note": ""
+    },
+    {
+     "cite_id": "c_df91b689dc",
+     "doc_id": "MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md",
+     "page": 1,
+     "quote": "Non-GAAP EPS in the third quarter of 2025 also excludes tax expense relating to audit reserve adjustments",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000110465925103974/tm2529620d1_ex99-1.htm#:~:text=Non%2DGAAP%20EPS%20in%20the%20third%20quarter%20of%202025",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck earnings release (8-K) 2025-10-30",
+     "location": "file page 1 (no printed page number)",
+     "speaker": null,
+     "locator": "MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md#p1",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Aearnings%2F2025-10-30_tm2529620d1_ex99-1.md&page=1&q=Non-GAAP%20EPS%20in%20the%20third%20quarter%20of%202025%20also%20excludes%20tax%20expense%20relating%20to%20audit%20reserve%20adjustments",
+     "note": ""
+    },
+    {
+     "cite_id": "c_7b243417dc",
+     "doc_id": "ABBV:10k_FY2025.md",
+     "page": 48,
+     "quote": "The one-time transition tax liability was $1.1 billion",
+     "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/abbv-20251231.htm#:~:text=The%20one%2Dtime%20transition%20tax%20liability%20was",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "AbbVie 10-K FY2025",
+     "location": "p. 46",
+     "speaker": null,
+     "locator": "ABBV:10k_FY2025.md#p48",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=ABBV%3A10k_FY2025.md&page=48&q=The%20one-time%20transition%20tax%20liability%20was%20%241.1%20billion",
+     "note": ""
+    }
+   ],
+   "impact": {
+    "text": "A cash exposure of about $1.56B plus interest, about 2.4% of 2025 sales, and a gross GAAP-EPS ceiling of about $0.63/share on 2,470M diluted shares, shown beside Merck's $2.53B unrecognized-tax-benefit reserve, whose split by matter is not disclosed, so some or all of the exposure may already be reserved. Merck excludes audit-reserve tax items from non-GAAP EPS, so the consensus EPS line would not show a loss; it would land in GAAP EPS and cash.",
+    "text_marked": "A cash exposure of about $1.56B[derived: 1, 2] plus interest, about 2.4%[derived: 1, 2, 5] of 2025 sales, and a gross GAAP-EPS ceiling of about $0.63[derived: 1, 2, 3]/share on 2,470M[3] diluted shares, shown beside Merck's $2.53B[derived: 4] unrecognized-tax-benefit reserve, whose split by matter is not disclosed, so some or all of the exposure may already be reserved. Merck excludes audit-reserve tax items from non-GAAP EPS, so the consensus EPS line would not show a loss; it would land in GAAP EPS and cash.",
+    "math": "Exposure = $1.3B tax + $260M penalties = $1.56B before interest. Per share = $1.56B / 2,470M diluted shares = $0.63 (gross GAAP ceiling, not an expected hit). Share of 2025 sales = $1.56B / $65,011M = 2.4%. Reserve context, not netted: unrecognized tax benefits 2,530 ($ millions) = $2.53B at Dec 31, 2025, no split by matter.",
+    "math_marked": "Exposure = $1.3B[1] tax + $260M[2] penalties = $1.56B[derived: 1, 2] before interest. Per share = $1.56B[derived: 1, 2] / 2,470M[3] diluted shares = $0.63[derived: 1, 2, 3] (gross GAAP ceiling, not an expected hit). Share of 2025 sales = $1.56B[derived: 1, 2] / $65,011M[5] = 2.4%[derived: 1, 2, 5]. Reserve context, not netted: unrecognized tax benefits 2,530[4] ($ millions) = $2.53B[derived: 4] at Dec 31, 2025, no split by matter.",
+    "direction": "down",
+    "metric": "EPS",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 19,
+     "total": 19,
+     "verified": 9,
+     "derived": 10,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "AbbVie's transition tax appears only as a scheduled liability (\"The one-time transition tax liability was $1.1 billion\"), a known installment rather than a contested IRS proposal with penalties, so the open dispute is Merck's alone against the one shortlist peer checked.",
+   "peer_marked": "AbbVie's transition tax appears only as a scheduled liability (\"The one-time transition tax liability was $1.1 billion\"), a known installment rather than a contested IRS proposal with penalties, so the open dispute is Merck's alone against the one shortlist peer checked.[6]",
+   "confidence": "high",
+   "confidence_reason": "Every amount is verbatim from the 10-K FY2025 tax note and the Q2 2026 10-Q; the only open question is how much of the exposure already sits in the unrecognized-tax-benefit reserve, which is why the EPS figure is a gross ceiling.",
+   "obviousness": "low",
+   "materiality": "medium",
+   "derived": {
+    "exposure": {
+     "value": 1.56,
+     "expr": "a + b",
+     "operands": {
+      "a": {
+       "value": 1.3,
+       "text": "$1.3 billion",
+       "cite_id": "c_7baff5b517"
+      },
+      "b": {
+       "value": 0.26,
+       "text": "$260 million",
+       "cite_id": "c_0609fc92c6"
+      }
+     }
+    },
+    "per_share": {
+     "value": 0.63,
+     "expr": "e / s * 1000",
+     "operands": {
+      "e": {
+       "derived": "exposure"
+      },
+      "s": {
+       "value": 2470,
+       "text": "2,470",
+       "cite_id": "c_e0b56e8e34"
+      }
+     }
+    },
+    "utb_b": {
+     "value": 2.53,
+     "expr": "a / 1000",
+     "operands": {
+      "a": {
+       "value": 2530,
+       "text": "2,530",
+       "cite_id": "c_177aceb366"
+      }
+     }
+    },
+    "pct_sales": {
+     "value": 2.4,
+     "expr": "e / s * 100000",
+     "operands": {
+      "e": {
+       "derived": "exposure"
+      },
+      "s": {
+       "value": 65011,
+       "text": "65,011",
+       "cite_id": "c_4bed25dd85"
+      }
+     }
+    }
+   },
+   "assumptions": {}
+  },
+  {
+   "n": 2,
+   "candidate_id": "MRK-c01",
+   "category": "Inventory and receivables growing faster than revenue",
+   "finding": "Merck's inventory not expected to sell within a year rose from $3.8B at Dec 2024 to $5.5B at Dec 2025 to $5.9B at Jun 2026, and it kept growing after the December 2025 agreement that delayed Section 232 tariffs for three years, the risk management had cited in April 2025 for staging drug substance and drug product; the inventory write-downs now in guidance are 'primarily vaccines', so they do not cover this pool.",
+   "finding_marked": "Merck's inventory not expected to sell within a year rose from $3.8B[1] at Dec 2024 to $5.5B[1][2] at Dec 2025 to $5.9B[2] at Jun 2026, and it kept growing after the December 2025 agreement that delayed Section 232 tariffs for three years, the risk management had cited in April 2025 for staging drug substance and drug product; the inventory write-downs now in guidance are 'primarily vaccines', so they do not cover this pool.",
+   "marker_map": {
+    "1": "c_cf73b71bcd",
+    "2": "c_1027131b6d",
+    "3": "c_fc2a7e5057",
+    "4": "c_46eb88cfdf",
+    "5": "c_7a7b12b5ee",
+    "6": "c_ba2c6e78db",
+    "7": "c_3a8ea2872b",
+    "8": "c_870690831e",
+    "9": "c_46418cc35f",
+    "10": "c_197ad7a559"
+   },
+   "source": {
+    "doc_title": "Merck 10-Q 2026-06-30",
+    "period": "2026-06-30",
+    "page": "p. 19",
+    "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be"
+   },
+   "cites": [
+    {
+     "cite_id": "c_cf73b71bcd",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107,
+     "quote": "these amounts included $ 5.5 billion and $ 3.8 billion, respectively, of inventories not expected to be sold within one year",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 105",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p107",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=107&q=these%20amounts%20included%20%24%205.5%20billion%20and%20%24%203.8%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "note": ""
+    },
+    {
+     "cite_id": "c_1027131b6d",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "note": ""
+    },
+    {
+     "cite_id": "c_fc2a7e5057",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107,
+     "quote": "Decrease to LIFO cost ( 912 ) ( 840 ) $ 12,339 $ 10,302",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=to%20LIFO%20cost%20%28%20912%20%29%20%28%20840",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 105",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p107",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=107&q=Decrease%20to%20LIFO%20cost%20%28%20912%20%29%20%28%20840%20%29%20%24%2012%2C339%20%24%2010%2C302",
+     "note": ""
+    },
+    {
+     "cite_id": "c_46eb88cfdf",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 79,
+     "quote": "Cost of sales 16,382 15,193 16,126",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 77",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p79",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=79&q=Cost%20of%20sales%2016%2C382%2015%2C193%2016%2C126",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_ba2c6e78db",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "Raw materials and work in process 11,194 10,645",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=Raw%20materials%20and%20work%20in%20process",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=Raw%20materials%20and%20work%20in%20process%2011%2C194%2010%2C645",
+     "note": ""
+    },
+    {
+     "cite_id": "c_870690831e",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 39,
+     "quote": "higher inventory write-downs (primarily vaccines)",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=higher%20inventory%20write%2Ddowns%20%28primarily%20vaccines%29",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 39",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p39",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=39&q=higher%20inventory%20write-downs%20%28primarily%20vaccines%29",
+     "note": ""
+    },
+    {
+     "cite_id": "c_46418cc35f",
+     "doc_id": "MRK:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1,
+     "quote": "reached an understanding with the U.S. Department of Commerce to delay Section 232 tariffs for three years",
+     "url": "https://www.merck.com/news/merck-reaches-agreement-with-u-s-government-to-expand-access-to-medicines-and-lower-costs-for-americans/",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck press release 2025-12",
+     "location": "file page 1 (no printed page number)",
+     "speaker": null,
+     "locator": "MRK:policy/press_2025-12-19_mfn_agreement.md#p1",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apolicy%2Fpress_2025-12-19_mfn_agreement.md&page=1&q=reached%20an%20understanding%20with%20the%20U.S.%20Department%20of%20Commerce%20to%20delay%20Section%20232%20tariffs%20for%20three%20years",
+     "note": ""
+    },
+    {
+     "cite_id": "c_197ad7a559",
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 14,
+     "quote": "",
+     "url": "https://www.marketbeat.com/earnings/reports/2025-4-24-merck-co-inc-stock/",
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": "C",
+     "doc_title": "Merck 2025Q1 earnings call (third_party)",
+     "location": "p. 14",
+     "speaker": "Rob Davis",
+     "locator": "MRK:companies/MRK/transcripts/2025Q1_transcript.md#p14",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Acompanies%2FMRK%2Ftranscripts%2F2025Q1_transcript.md&page=14&q=we%27ve%20taken%20steps%20to%20be%20prepared%20both%20from%20a%20drug%20substance%20and%20a%20drug%20product%20as%20we%20move%20into%202026%20and%202027",
+     "note": "speaker attributed from transcript label: Rob Davis"
+    },
+    {
+     "cite_id": "c_3a8ea2872b",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 89,
+     "quote": "inventories of $ 522 million (including $ 498 million of step-up to fair value)",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=inventories%20of%20%24%20522%20million%20%28including%20%24%20498",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 87",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p89",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=89&q=inventories%20of%20%24%20522%20million%20%28including%20%24%20498%20million%20of%20step-up%20to%20fair%20value%29",
+     "note": ""
+    },
+    {
+     "cite_id": "c_7a7b12b5ee",
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 108,
+     "quote": "Total inventories $ 4,340 $ 4,126",
+     "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Bristol Myers Squibb 10-K FY2025",
+     "location": "p. 106",
+     "speaker": null,
+     "locator": "BMY:10k_FY2025.md#p108",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3A10k_FY2025.md&page=108&q=Total%20inventories%20%24%204%2C340%20%24%204%2C126",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ],
+   "impact": {
+    "text": "The long-dated pool is up $2.1B since Dec 2024 and inventory days on cost of sales rose from 247 to 275 in 2025; raw materials and work in process reached $11,194M at Jun 2026. Verona's acquired inventory ($522M, $498M of it fair-value step-up) explains part of the total rise but not the long-dated pool. The earnings risk beyond reserves already guided is unsized, so no per-share figure is carried.",
+    "text_marked": "The long-dated pool is up $2.1B[derived: 2, 1] since Dec 2024 and inventory days on cost of sales rose from 247[derived: 3, 4, assumption] to 275[derived: 3, 4, assumption] in 2025; raw materials and work in process reached $11,194M[6] at Jun 2026. Verona's acquired inventory ($522M[7], $498M[7] of it fair-value step-up) explains part of the total rise but not the long-dated pool. The earnings risk beyond reserves already guided is unsized, so no per-share figure is carried.",
+    "math": "Long-dated pool: $5.9B - $3.8B = $2.1B. Inventory days 2025 = 12,339 / 16,382 x 365 = 275; 2024 = 10,302 / 15,193 x 365 = 247. Raw materials and WIP: $10,645M (Dec 2025) to $11,194M (Jun 2026).",
+    "math_marked": "Long-dated pool: $5.9B[2] - $3.8B[1] = $2.1B[derived: 2, 1]. Inventory days 2025 = 12,339[3] / 16,382[4] x 365[constant: days per year] = 275[derived: 3, 4, assumption]; 2024 = 10,302[3] / 15,193[4] x 365[constant: days per year] = 247[derived: 3, 4, assumption]. Raw materials and WIP: $10,645M[6] (Dec 2025) to $11,194M[6] (Jun 2026).",
+    "direction": "down",
+    "metric": "cash flow and working capital",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 28,
+     "total": 28,
+     "verified": 18,
+     "derived": 8,
+     "assumed": 2,
+     "unsupported": []
+    }
+   },
+   "peer": "Bristol Myers Squibb's total inventories rose 5.2% in 2025 (4,340 vs 4,126, $M) against Merck's 19.8% (12,339 vs 10,302, $M).",
+   "peer_marked": "Bristol Myers Squibb's total inventories rose 5.2%[derived: 5] in 2025 (4,340[5] vs 4,126[5], $M) against Merck's 19.8%[derived: 3] (12,339[3] vs 10,302[3], $M).",
+   "confidence": "medium",
+   "confidence_reason": "The balances are audited note figures; the tariff rationale comes from a grade-C transcript and is stated as context, not quoted, and no filing says whether the pool is Keytruda drug substance or whether any of it needs reserves beyond the vaccine-led ones guided.",
+   "obviousness": "low",
+   "materiality": "medium",
+   "derived": {
+    "pool_up": {
+     "value": 2.1,
+     "expr": "a - b",
+     "operands": {
+      "a": {
+       "value": 5.9,
+       "text": "$5.9 billion",
+       "cite_id": "c_1027131b6d"
+      },
+      "b": {
+       "value": 3.8,
+       "text": "$3.8 billion",
+       "cite_id": "c_cf73b71bcd"
+      }
+     }
+    },
+    "dio25": {
+     "value": 275,
+     "expr": "a / b * d",
+     "operands": {
+      "a": {
+       "value": 12339,
+       "text": "12,339",
+       "cite_id": "c_fc2a7e5057"
+      },
+      "b": {
+       "value": 16382,
+       "text": "16,382",
+       "cite_id": "c_46eb88cfdf"
+      },
+      "d": {
+       "value": 365,
+       "assumption": "constant: days per year"
+      }
+     }
+    },
+    "dio24": {
+     "value": 247,
+     "expr": "a / b * d",
+     "operands": {
+      "a": {
+       "value": 10302,
+       "text": "10,302",
+       "cite_id": "c_fc2a7e5057"
+      },
+      "b": {
+       "value": 15193,
+       "text": "15,193",
+       "cite_id": "c_46eb88cfdf"
+      },
+      "d": {
+       "value": 365,
+       "assumption": "constant: days per year"
+      }
+     }
+    },
+    "bmy_g": {
+     "value": 5.2,
+     "expr": "(a / b - 1) * 100",
+     "operands": {
+      "a": {
+       "value": 4340,
+       "text": "4,340",
+       "cite_id": "c_7a7b12b5ee"
+      },
+      "b": {
+       "value": 4126,
+       "text": "4,126",
+       "cite_id": "c_7a7b12b5ee"
+      }
+     }
+    },
+    "mrk_g": {
+     "value": 19.8,
+     "expr": "(a / b - 1) * 100",
+     "operands": {
+      "a": {
+       "value": 12339,
+       "text": "12,339",
+       "cite_id": "c_fc2a7e5057"
+      },
+      "b": {
+       "value": 10302,
+       "text": "10,302",
+       "cite_id": "c_fc2a7e5057"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "365": "constant: days per year"
+   }
+  },
+  {
+   "n": 3,
+   "candidate_id": "MRK-c04",
+   "category": "Footnotes",
+   "finding": "Subcutaneous Keytruda has been barred from sale in Germany since December 2025 by a Halozyme preliminary injunction; the expected appeal date slipped twice across three filings to a November 19, 2026 hearing, and a Dutch ruling on Halozyme's counterclaim covering seven more European markets is due about end-October 2026, while management has never raised it and its June 2026 investor deck promised major-market launches starting in 2026.",
+   "finding_marked": "Subcutaneous Keytruda has been barred from sale in Germany since December 2025 by a Halozyme preliminary injunction; the expected appeal date slipped twice across three filings to a November 19, 2026 hearing, and a Dutch ruling on Halozyme's counterclaim covering seven more European markets is due about end-October 2026, while management has never raised it and its June 2026 investor deck promised major-market launches starting in 2026.[1]",
+   "marker_map": {
+    "1": "c_7e97f3a730",
+    "2": "c_3f590007df",
+    "3": "c_4bed25dd85",
+    "4": "c_6d8f7223a0",
+    "5": "c_bc113d8d51",
+    "6": "c_4c2b7394cc",
+    "7": "c_4fda7defa1",
+    "8": "c_d0efa3bf9d",
+    "9": "c_69cbff55a4"
+   },
+   "source": {
+    "doc_title": "Merck 10-Q 2026-06-30",
+    "period": "2026-06-30",
+    "page": "p. 22",
+    "quote": "The Company has appealed the preliminary injunction decision, and the appeal hearing is set for November 19, 2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%2C"
+   },
+   "cites": [
+    {
+     "cite_id": "c_7e97f3a730",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 118,
+     "quote": "a preliminary injunction was awarded against the Company prohibiting sales in Germany. The Company has appealed the preliminary injunction decision and expects a decision on the appeal in the second quarter of 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=a%20preliminary%20injunction%20was%20awarded%20against%20the%20Company",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 116",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p118",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=118&q=a%20preliminary%20injunction%20was%20awarded%20against%20the%20Company%20prohibiting%20sales%20in%20Germany.%20The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%20and%20expects%20a%20decision%20on%20the%20appeal%20in%20the%20second%20quarter%20of%202026",
+     "note": ""
+    },
+    {
+     "cite_id": "c_6d8f7223a0",
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 22,
+     "quote": "The Company has appealed the preliminary injunction decision and expects a decision on the appeal in the second or third quarter of 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000162828026029802/mrk-20260331.htm#:~:text=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-03-31",
+     "location": "p. 22",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q1.md#p22",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q1.md&page=22&q=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%20and%20expects%20a%20decision%20on%20the%20appeal%20in%20the%20second%20or%20third%20quarter%20of%202026",
+     "note": ""
+    },
+    {
+     "cite_id": "c_bc113d8d51",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22,
+     "quote": "The Company has appealed the preliminary injunction decision, and the appeal hearing is set for November 19, 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%2C",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 22",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p22",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=22&q=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%2C%20and%20the%20appeal%20hearing%20is%20set%20for%20November%2019%2C%202026",
+     "note": ""
+    },
+    {
+     "cite_id": "c_4c2b7394cc",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22,
+     "quote": "In the Dutch action, in February 2026, Halozyme counterclaimed for infringement including also Belgium, Denmark, France, Ireland, Italy, Sweden and Switzerland",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=Halozyme%20counterclaimed%20for%20infringement%20including%20also%20Belgium%2C%20Denmark%2C",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 22",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p22",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=22&q=In%20the%20Dutch%20action%2C%20in%20February%202026%2C%20Halozyme%20counterclaimed%20for%20infringement%20including%20also%20Belgium%2C%20Denmark%2C%20France%2C%20Ireland%2C%20Italy%2C%20Sweden%20and%20Switzerland",
+     "note": ""
+    },
+    {
+     "cite_id": "c_4fda7defa1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22,
+     "quote": "The Dutch action was heard at the end of July 2026 with a decision expected within three months thereof",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=The%20Dutch%20action%20was%20heard%20at%20the%20end",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 22",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p22",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=22&q=The%20Dutch%20action%20was%20heard%20at%20the%20end%20of%20July%202026%20with%20a%20decision%20expected%20within%20three%20months%20thereof",
+     "note": ""
+    },
+    {
+     "cite_id": "c_3f590007df",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28,
+     "quote": "Keytruda Qlex 395 68 463",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 28",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p28",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=28&q=Keytruda%20Qlex%20395%2068%20463",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_d0efa3bf9d",
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25,
+     "quote": "EMA and UK approvals achieved; expect launches in major",
+     "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jun/01/MRK-ASCO-2026-Investor-Event-Presentation_Updated_6-17-26.pdf#page=25",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck investor presentation 2026-06",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:presentations/2026-06_asco_investor_event.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026-06_asco_investor_event.md&page=25&q=EMA%20and%20UK%20approvals%20achieved%3B%20expect%20launches%20in%20major",
+     "note": ""
+    },
+    {
+     "cite_id": "c_4bed25dd85",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 3,
+     "quote": "Total Sales $ 65,011 $ 64,168 $ 60,115",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 1",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p3",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=3&q=Total%20Sales%20%24%2065%2C011%20%24%2064%2C168%20%24%2060%2C115",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_69cbff55a4",
+     "doc_id": "BMY:companies/BMY/10k_FY2023.md",
+     "page": 67,
+     "quote": "subcutaneous nivolumab co-formulated with Halozyme’s proprietary recombinant human hyaluronidase",
+     "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427224000044/bmy-20231231.htm#:~:text=subcutaneous%20nivolumab%20co%2Dformulated%20with%20Halozyme%E2%80%99s%20proprietary%20recombinant%20human",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Bristol Myers Squibb 10-K FY2023",
+     "location": "p. 65",
+     "speaker": null,
+     "locator": "BMY:companies/BMY/10k_FY2023.md#p67",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3Acompanies%2FBMY%2F10k_FY2023.md&page=67&q=subcutaneous%20nivolumab%20co-formulated%20with%20Halozyme%E2%80%99s%20proprietary%20recombinant%20human%20hyaluronidase",
+     "note": ""
+    }
+   ],
+   "impact": {
+    "text": "Near-term revenue at stake is small: ex-U.S. Keytruda Qlex sales were $68M in Q2 2026, out of $463M worldwide. This is a near-dated binary legal catalyst and disclosure gap below the materiality bar, not a sized revenue hit; Merck does not report country sales, so Germany and the seven counterclaim markets cannot be sized.",
+    "text_marked": "Near-term revenue at stake is small: ex-U.S. Keytruda Qlex sales were $68M in Q2 2026, out of $463M worldwide. This is a near-dated binary legal catalyst and disclosure gap below the materiality bar, not a sized revenue hit; Merck does not report country sales, so Germany and the seven counterclaim markets cannot be sized.[2]",
+    "math": "Ex-U.S. share of Qlex sales, Q2 2026 = 68 / 463 = 14.7%. Ex-U.S. Qlex annualized = $68M x 4 = $272M, about 0.4% of 2025 sales of $65,011M.",
+    "math_marked": "Ex-U.S. share of Qlex sales, Q2 2026 = 68[2] / 463[2] = 14.7%[derived: 2]. Ex-U.S. Qlex annualized = $68M[2] x 4[constant: quarters per year] = $272M[derived: 2, assumption], about 0.4%[derived: 2, assumption, 3] of 2025 sales of $65,011M[3].",
+    "direction": "down",
+    "metric": "revenue",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 10,
+     "total": 10,
+     "verified": 6,
+     "derived": 3,
+     "assumed": 1,
+     "unsupported": []
+    }
+   },
+   "peer": "Bristol Myers Squibb's subcutaneous nivolumab (Opdivo Qvantig) is co-formulated with Halozyme's hyaluronidase under a Halozyme partnership, so the main rival's subcutaneous product is a Halozyme partner, not a defendant.",
+   "peer_marked": "Bristol Myers Squibb's subcutaneous nivolumab (Opdivo Qvantig) is co-formulated with Halozyme's hyaluronidase under a Halozyme partnership, so the main rival's subcutaneous product is a Halozyme partner, not a defendant.",
+   "confidence": "high",
+   "confidence_reason": "The litigation dates are verbatim from three consecutive filings and the sales from the Q2 2026 10-Q; the effect on Merck's European biosimilar defense cannot be sized from the sources.",
+   "obviousness": "low",
+   "materiality": "low",
+   "derived": {
+    "exus_share": {
+     "value": 14.7,
+     "expr": "a / b * 100",
+     "operands": {
+      "a": {
+       "value": 68,
+       "text": "68",
+       "cite_id": "c_3f590007df"
+      },
+      "b": {
+       "value": 463,
+       "text": "463",
+       "cite_id": "c_3f590007df"
+      }
+     }
+    },
+    "annual": {
+     "value": 272,
+     "expr": "a * q",
+     "operands": {
+      "a": {
+       "value": 68,
+       "text": "68",
+       "cite_id": "c_3f590007df"
+      },
+      "q": {
+       "value": 4,
+       "assumption": "constant: quarters per year"
+      }
+     }
+    },
+    "pct": {
+     "value": 0.4,
+     "expr": "a * q / s * 100",
+     "operands": {
+      "a": {
+       "value": 68,
+       "text": "68",
+       "cite_id": "c_3f590007df"
+      },
+      "q": {
+       "value": 4,
+       "assumption": "constant: quarters per year"
+      },
+      "s": {
+       "value": 65011,
+       "text": "65,011",
+       "cite_id": "c_4bed25dd85"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "4": "constant: quarters per year"
+   }
+  },
+  {
+   "n": 4,
+   "candidate_id": "MRK-c02",
+   "category": "Gross-to-net",
+   "finding": "Merck's U.S. chargeback and rebate provision fell from $13.3B in 2024 to $10.0B in 2025, largely through the early-2025 Januvia list-price cut, which shrinks gross sales and rebates together, and the unwind sits inside the about $2.5B 2026 headwind management has guided.",
+   "finding_marked": "Merck's U.S. chargeback and rebate provision fell from $13.3B[1] in 2024 to $10.0B[1] in 2025, largely through the early-2025 Januvia list-price cut, which shrinks gross sales and rebates together, and the unwind sits inside the about $2.5B[2] 2026 headwind management has guided.",
+   "marker_map": {
+    "1": "c_49ae629e1d",
+    "2": "c_5c6847bf55",
+    "3": "c_4bed25dd85",
+    "4": "c_4f01fa1bc8",
+    "5": "c_3809f2ac27",
+    "6": "c_0094da4db2"
+   },
+   "source": {
+    "doc_title": "Merck 10-K FY2025",
+    "period": "2025-12-31",
+    "page": "p. 83",
+    "quote": "The U.S. provision for aggregate customer discounts covering chargebacks and rebates was $ 10.0 billion in 2025, $ 13.3 billion in 2024 and $ 12.5 billion in 2023",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=The%20U.S.%20provision%20for%20aggregate%20customer%20discounts%20covering"
+   },
+   "cites": [
+    {
+     "cite_id": "c_49ae629e1d",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 85,
+     "quote": "The U.S. provision for aggregate customer discounts covering chargebacks and rebates was $ 10.0 billion in 2025, $ 13.3 billion in 2024 and $ 12.5 billion in 2023",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=The%20U.S.%20provision%20for%20aggregate%20customer%20discounts%20covering",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 83",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p85",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=85&q=The%20U.S.%20provision%20for%20aggregate%20customer%20discounts%20covering%20chargebacks%20and%20rebates%20was%20%24%2010.0%20billion%20in%202025%2C%20%24%2013.3%20billion%20in%202024%20and%20%24%2012.5%20billion%20in%202023",
+     "note": ""
+    },
+    {
+     "cite_id": "c_0094da4db2",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 61,
+     "quote": "In early 2025, Merck lowered the list price of the Januvia family of products to more closely align them with net prices. The lower list price has reduced the rebate amount Merck pays to Medicaid, resulting in higher realized net pricing",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=In%20early%202025%2C%20Merck%20lowered%20the%20list%20price",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 59",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p61",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=61&q=In%20early%202025%2C%20Merck%20lowered%20the%20list%20price%20of%20the%20Januvia%20family%20of%20products%20to%20more%20closely%20align%20them%20with%20net%20prices.%20The%20lower%20list%20price%20has%20reduced%20the%20rebate%20amount%20Merck%20pays%20to%20Medicaid%2C%20resulting%20in%20higher%20realized%20net%20pricing",
+     "note": ""
+    },
+    {
+     "cite_id": "c_5c6847bf55",
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 6,
+     "quote": "despite a headwind of approximately $2.5 billion from generic competition, IRA price setting, and the restructured",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf#page=6",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "doc_title": "Merck 2025Q4 earnings call (official)",
+     "location": "p. 6",
+     "speaker": "Caroline Litchfield",
+     "locator": "MRK:transcripts/2025Q4_transcript.md#p6",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Atranscripts%2F2025Q4_transcript.md&page=6&q=despite%20a%20headwind%20of%20approximately%20%242.5%20billion%20from%20generic%20competition%2C%20IRA%20price%20setting%2C%20and%20the%20restructured",
+     "note": "speaker attributed from transcript label: Caroline Litchfield"
+    },
+    {
+     "cite_id": "c_4f01fa1bc8",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134,
+     "quote": "$ 36,510 $ 28,501 $ 65,011 $ 32,277 $ 31,891 $ 64,168",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 132",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p134",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=134&q=%24%2036%2C510%20%24%2028%2C501%20%24%2065%2C011%20%24%2032%2C277%20%24%2031%2C891%20%24%2064%2C168",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_4bed25dd85",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 3,
+     "quote": "Total Sales $ 65,011 $ 64,168 $ 60,115",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 1",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p3",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=3&q=Total%20Sales%20%24%2065%2C011%20%24%2064%2C168%20%24%2060%2C115",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_3809f2ac27",
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 49,
+     "quote": "GTN adjustments percentage 47 % 44 % 3 % U.S. 53 % 49 % 4 %",
+     "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm#:~:text=GTN%20adjustments%20percentage%2047%20%25%2044%20%25%203",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Bristol Myers Squibb 10-K FY2025",
+     "location": "p. 47",
+     "speaker": null,
+     "locator": "BMY:10k_FY2025.md#p49",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3A10k_FY2025.md&page=49&q=GTN%20adjustments%20percentage%2047%20%25%2044%20%25%203%20%25%20U.S.%2053%20%25%2049%20%25%204%20%25",
+     "note": ""
+    }
+   ],
+   "impact": {
+    "text": "The $3.3B provision fall equals about 5.1% of 2025 sales, but how much of it was a net-price gain rather than a list-price reset cannot be computed from the filings; U.S. net sales were 36,510 in 2025 against 32,277 in 2024 ($ millions).",
+    "text_marked": "The $3.3B[derived: 1] provision fall equals about 5.1%[derived: 1, 3] of 2025 sales, but how much of it was a net-price gain rather than a list-price reset cannot be computed from the filings; U.S. net sales were 36,510[4] in 2025 against 32,277[4] in 2024 ($ millions).",
+    "math": "Provision change = $13.3B - $10.0B = $3.3B decline. $3.3B / $65,011M = 5.1% of 2025 sales.",
+    "math_marked": "Provision change = $13.3B[1] - $10.0B[1] = $3.3B[derived: 1] decline. $3.3B[derived: 1] / $65,011M[3] = 5.1%[derived: 1, 3] of 2025 sales.",
+    "direction": "down",
+    "metric": "revenue",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 16,
+     "total": 16,
+     "verified": 11,
+     "derived": 5,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "Bristol Myers Squibb's U.S. gross-to-net adjustment rate widened from 49% to 53% in 2025, the opposite direction, though BMS reports a full gross-to-net rate and Merck only chargebacks and rebates, so the contrast is direction-only.",
+   "peer_marked": "Bristol Myers Squibb's U.S. gross-to-net adjustment rate widened from 49% to 53% in 2025, the opposite direction, though BMS reports a full gross-to-net rate and Merck only chargebacks and rebates, so the contrast is direction-only.[5]",
+   "confidence": "high",
+   "confidence_reason": "The provision and sales figures are audited; the mechanism is management's own statement, which is why the row is on the record rather than hidden.",
+   "obviousness": "high",
+   "materiality": "low",
+   "derived": {
+    "chg": {
+     "value": 3.3,
+     "expr": "a - b",
+     "operands": {
+      "a": {
+       "value": 13.3,
+       "text": "$13.3 billion",
+       "cite_id": "c_49ae629e1d"
+      },
+      "b": {
+       "value": 10.0,
+       "text": "$10.0 billion",
+       "cite_id": "c_49ae629e1d"
+      }
+     }
+    },
+    "pct": {
+     "value": 5.1,
+     "expr": "c / s * 100000",
+     "operands": {
+      "c": {
+       "derived": "chg"
+      },
+      "s": {
+       "value": 65011,
+       "text": "65,011",
+       "cite_id": "c_4bed25dd85"
+      }
+     }
+    }
+   },
+   "assumptions": {},
+   "on_the_record": "On the record: the 10-K states the Januvia list-price cut, the CFO pre-announced it on the 2024Q4 call (grade C), and the about $2.5B 2026 headwind is in grade-A prepared remarks on the 2025Q4 call.",
+   "on_the_record_marked": "On the record: the 10-K states the Januvia list-price cut, the CFO pre-announced it on the 2024Q4 call (grade C), and the about $2.5B 2026 headwind is in grade-A prepared remarks on the 2025Q4 call.[2]"
+  },
+  {
+   "n": 5,
+   "candidate_id": "MRK-c09",
+   "category": "Language drift",
+   "finding": "Between its FY2024 and FY2025 annual reports Merck moved the expected Keytruda IRA price date from January 1, 2028 to January 1, 2029 and now says U.S. Keytruda sales will 'decline materially' after that, which stacks IRA pricing on top of the December 2028 compound-patent expiry in one window.",
+   "finding_marked": "Between its FY2024 and FY2025 annual reports Merck moved the expected Keytruda IRA price date from January 1, 2028 to January 1, 2029 and now says U.S. Keytruda sales will 'decline materially' after that, which stacks IRA pricing on top of the December 2028 compound-patent expiry in one window.[1]",
+   "marker_map": {
+    "1": "c_3408404b46",
+    "2": "c_b2b301deca",
+    "3": "c_4bed25dd85",
+    "4": "c_d0e9c8cd02",
+    "5": "c_d463d52e4d",
+    "6": "c_8b8d315204",
+    "7": "c_32a3eb4775",
+    "8": "c_8e8a219b11"
+   },
+   "source": {
+    "doc_title": "Merck 10-K FY2025",
+    "period": "2025-12-31",
+    "page": "p. 31",
+    "quote": "Furthermore, the Company expects that in 2027 HHS will include Keytruda in a subsequent selection of products to undergo IRA price setting, with such price to become effective on January 1, 2029 and the Company expects that, as a result, U.S. sales of Keytruda will decline materially after that time",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=HHS%20will%20include%20Keytruda%20in%20a%20subsequent%20selection"
+   },
+   "cites": [
+    {
+     "cite_id": "c_3408404b46",
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 32,
+     "quote": "Furthermore, the Company expects that in 2026 HHS will include Keytruda in a subsequent selection of products to undergo IRA price setting, with such price to become effective on January 1, 2028",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000162828025007732/mrk-20241231.htm#:~:text=HHS%20will%20include%20Keytruda%20in%20a%20subsequent%20selection",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2024",
+     "location": "p. 30",
+     "speaker": null,
+     "locator": "MRK:10k_FY2024.md#p32",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2024.md&page=32&q=Furthermore%2C%20the%20Company%20expects%20that%20in%202026%20HHS%20will%20include%20Keytruda%20in%20a%20subsequent%20selection%20of%20products%20to%20undergo%20IRA%20price%20setting%2C%20with%20such%20price%20to%20become%20effective%20on%20January%201%2C%202028",
+     "note": ""
+    },
+    {
+     "cite_id": "c_d0e9c8cd02",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33,
+     "quote": "Furthermore, the Company expects that in 2027 HHS will include Keytruda in a subsequent selection of products to undergo IRA price setting, with such price to become effective on January 1, 2029 and the Company expects that, as a result, U.S. sales of Keytruda will decline materially after that time",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=HHS%20will%20include%20Keytruda%20in%20a%20subsequent%20selection",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 31",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p33",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=33&q=Furthermore%2C%20the%20Company%20expects%20that%20in%202027%20HHS%20will%20include%20Keytruda%20in%20a%20subsequent%20selection%20of%20products%20to%20undergo%20IRA%20price%20setting%2C%20with%20such%20price%20to%20become%20effective%20on%20January%201%2C%202029%20and%20the%20Company%20expects%20that%2C%20as%20a%20result%2C%20U.S.%20sales%20of%20Keytruda%20will%20decline%20materially%20after%20that%20time",
+     "note": ""
+    },
+    {
+     "cite_id": "c_d463d52e4d",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31,
+     "quote": "biosimilar competition could begin in December 2028 when the primary compound patent expires",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=biosimilar%20competition%20could%20begin%20in%20December%202028%20when",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 29",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p31",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=31&q=biosimilar%20competition%20could%20begin%20in%20December%202028%20when%20the%20primary%20compound%20patent%20expires",
+     "note": ""
+    },
+    {
+     "cite_id": "c_b2b301deca",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134,
+     "quote": "Keytruda $ 18,829 $ 12,812 $ 31,641",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 132",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p134",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=134&q=Keytruda%20%24%2018%2C829%20%24%2012%2C812%20%24%2031%2C641",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_4bed25dd85",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 3,
+     "quote": "Total Sales $ 65,011 $ 64,168 $ 60,115",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 1",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p3",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=3&q=Total%20Sales%20%24%2065%2C011%20%24%2064%2C168%20%24%2060%2C115",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_8b8d315204",
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 9,
+     "quote": "Opdivo (nivolumab) 2028 2030 2031",
+     "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Bristol Myers Squibb 10-K FY2025",
+     "location": "p. 7",
+     "speaker": null,
+     "locator": "BMY:10k_FY2025.md#p9",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3A10k_FY2025.md&page=9&q=Opdivo%20%28nivolumab%29%202028%202030%202031",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_32a3eb4775",
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q2_transcript.md",
+     "page": 16,
+     "quote": "that would imply that you would expect now to see the drug selected for negotiation in 2027 for implementation of the negotiated price in 2029",
+     "url": "https://www.marketbeat.com/earnings/reports/2025-7-29-merck-co-inc-stock/",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "doc_title": "Merck 2025Q2 earnings call (third_party)",
+     "location": "p. 16",
+     "speaker": "Rob Davis",
+     "locator": "MRK:companies/MRK/transcripts/2025Q2_transcript.md#p16",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Acompanies%2FMRK%2Ftranscripts%2F2025Q2_transcript.md&page=16&q=that%20would%20imply%20that%20you%20would%20expect%20now%20to%20see%20the%20drug%20selected%20for%20negotiation%20in%202027%20for%20implementation%20of%20the%20negotiated%20price%20in%202029",
+     "note": ""
+    },
+    {
+     "cite_id": "c_8e8a219b11",
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11,
+     "quote": "And I would also remind you that we do face the IRA as of the beginning of 2029",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf#page=11",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "A",
+     "doc_title": "Merck 2025Q4 earnings call (official)",
+     "location": "p. 11",
+     "speaker": "Robert Davis",
+     "locator": "MRK:transcripts/2025Q4_transcript.md#p11",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Atranscripts%2F2025Q4_transcript.md&page=11&q=And%20I%20would%20also%20remind%20you%20that%20we%20do%20face%20the%20IRA%20as%20of%20the%20beginning%20of%202029",
+     "note": ""
+    }
+   ],
+   "impact": {
+    "text": "U.S. Keytruda sales were 18,829 ($ millions) in 2025, about 29.0% of total sales of 65,011, and that is the base exposed to both events; the size of the IRA cut is not in the sources, so only the timing is sized.",
+    "text_marked": "U.S. Keytruda sales were 18,829[2] ($ millions) in 2025, about 29.0%[derived: 2, 3] of total sales of 65,011[3], and that is the base exposed to both events; the size of the IRA cut is not in the sources, so only the timing is sized.",
+    "math": "U.S. Keytruda share of 2025 sales = 18,829 / 65,011 = 29.0%.",
+    "math_marked": "U.S. Keytruda share of 2025 sales = 18,829[2] / 65,011[3] = 29.0%[derived: 2, 3].",
+    "direction": "down",
+    "metric": "revenue",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 6,
+     "total": 6,
+     "verified": 4,
+     "derived": 2,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "Bristol Myers Squibb's own 10-K table gives Opdivo the same 2028 U.S. exclusivity year, so the 2028 to 2029 cliff is shared with the closest rival.",
+   "peer_marked": "Bristol Myers Squibb's own 10-K table gives Opdivo the same 2028 U.S. exclusivity year, so the 2028 to 2029 cliff is shared with the closest rival.",
+   "confidence": "high",
+   "confidence_reason": "The date change is verbatim in both 10-Ks and both calls; the only number is a share of audited sales.",
+   "obviousness": "high",
+   "materiality": "low",
+   "derived": {
+    "share": {
+     "value": 29.0,
+     "expr": "a / b * 100",
+     "operands": {
+      "a": {
+       "value": 18829,
+       "text": "18,829",
+       "cite_id": "c_b2b301deca"
+      },
+      "b": {
+       "value": 65011,
+       "text": "65,011",
+       "cite_id": "c_4bed25dd85"
+      }
+     }
+    }
+   },
+   "assumptions": {},
+   "on_the_record": "On the record: CEO Rob Davis said on the grade-A 2025Q2 call that Keytruda would be selected in 2027 for a negotiated price in 2029, and repeated on the grade-A 2025Q4 call that Merck faces the IRA as of the beginning of 2029.",
+   "on_the_record_marked": "On the record: CEO Rob Davis said on the grade-A 2025Q2 call that Keytruda would be selected in 2027 for a negotiated price in 2029, and repeated on the grade-A 2025Q4 call that Merck faces the IRA as of the beginning of 2029."
+  }
+ ],
+ "sharpest_needle": {
+  "finding_n": 1,
+  "candidate_id": "MRK-c03",
+  "why": "The IRS transition-tax NOPA is the only survivor that both skeptics held in both rounds as the least obvious item: it appears in no call, release, slide deck or press release, and it sits outside the non-GAAP EPS line the Street models. It is also material on cash, about $1.56B plus interest, with a gross GAAP ceiling of about $0.63/share whose reserve coverage no analyst can read from the filings.",
+  "cites": [
+   {
+    "cite_id": "c_7baff5b517",
+    "doc_id": "MRK:10k_FY2025.md",
+    "page": 131,
+    "quote": "In April 2025, Merck received Notices of Proposed Adjustment (NOPAs) that would increase the amount of the one-time transition tax on certain undistributed earnings of foreign subsidiaries by approximately $ 1.3 billion",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=In%20April%202025%2C%20Merck%20received%20Notices%20of%20Proposed",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Merck 10-K FY2025",
+    "location": "p. 129",
+    "speaker": null,
+    "locator": "MRK:10k_FY2025.md#p131",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=In%20April%202025%2C%20Merck%20received%20Notices%20of%20Proposed%20Adjustment%20%28NOPAs%29%20that%20would%20increase%20the%20amount%20of%20the%20one-time%20transition%20tax%20on%20certain%20undistributed%20earnings%20of%20foreign%20subsidiaries%20by%20approximately%20%24%201.3%20billion",
+    "note": ""
+   },
+   {
+    "cite_id": "c_0609fc92c6",
+    "doc_id": "MRK:10q_2026Q2.md",
+    "page": 25,
+    "quote": "In addition, the NOPAs included penalties of approximately $ 260 million. These amounts are exclusive of any interest that may be due",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=In%20addition%2C%20the%20NOPAs%20included%20penalties%20of%20approximately",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Merck 10-Q 2026-06-30",
+    "location": "p. 25",
+    "speaker": null,
+    "locator": "MRK:10q_2026Q2.md#p25",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=In%20addition%2C%20the%20NOPAs%20included%20penalties%20of%20approximately%20%24%20260%20million.%20These%20amounts%20are%20exclusive%20of%20any%20interest%20that%20may%20be%20due",
+    "note": ""
+   },
+   {
+    "cite_id": "c_e0b56e8e34",
+    "doc_id": "MRK:10q_2026Q2.md",
+    "page": 25,
+    "quote": "Average common shares outstanding assuming dilution 2,470 2,513 2,471 2,522",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=Average%20common%20shares%20outstanding%20assuming%20dilution",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Merck 10-Q 2026-06-30",
+    "location": "p. 25",
+    "speaker": null,
+    "locator": "MRK:10q_2026Q2.md#p25",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=Average%20common%20shares%20outstanding%20assuming%20dilution%202%2C470%202%2C513%202%2C471%202%2C522",
+    "note": ""
+   },
+   {
+    "cite_id": "c_92c1d01055",
+    "doc_id": "MRK:10q_2026Q2.md",
+    "page": 25,
+    "quote": "is vigorously contesting the NOPAs through available administrative proceedings. However, it remains uncertain whether a resolution can be reached during this phase of the audit, and judicial proceedings may be necessary",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Merck 10-Q 2026-06-30",
+    "location": "p. 25",
+    "speaker": null,
+    "locator": "MRK:10q_2026Q2.md#p25",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative%20proceedings.%20However%2C%20it%20remains%20uncertain%20whether%20a%20resolution%20can%20be%20reached%20during%20this%20phase%20of%20the%20audit%2C%20and%20judicial%20proceedings%20may%20be%20necessary",
+    "note": ""
+   },
+   {
+    "cite_id": "c_df91b689dc",
+    "doc_id": "MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md",
+    "page": 1,
+    "quote": "Non-GAAP EPS in the third quarter of 2025 also excludes tax expense relating to audit reserve adjustments",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000110465925103974/tm2529620d1_ex99-1.htm#:~:text=Non%2DGAAP%20EPS%20in%20the%20third%20quarter%20of%202025",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Merck earnings release (8-K) 2025-10-30",
+    "location": "file page 1 (no printed page number)",
+    "speaker": null,
+    "locator": "MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md#p1",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Aearnings%2F2025-10-30_tm2529620d1_ex99-1.md&page=1&q=Non-GAAP%20EPS%20in%20the%20third%20quarter%20of%202025%20also%20excludes%20tax%20expense%20relating%20to%20audit%20reserve%20adjustments",
+    "note": ""
+   }
+  ],
+  "why_marked": "The IRS transition-tax NOPA is the only survivor that both skeptics held in both rounds as the least obvious item: it appears in no call, release, slide deck or press release, and it sits outside the non-GAAP EPS line the Street models. It is also material on cash, about $1.56B[derived: 1, 2] plus interest, with a gross GAAP ceiling of about $0.63[derived: 1, 2, 3]/share whose reserve coverage no analyst can read from the filings.",
+  "marker_map": {
+   "1": "c_7baff5b517",
+   "2": "c_0609fc92c6",
+   "3": "c_e0b56e8e34",
+   "4": "c_92c1d01055",
+   "5": "c_df91b689dc"
+  },
+  "numeric_check": {
+   "status": "passed",
+   "checked": 2,
+   "total": 2,
+   "verified": 0,
+   "derived": 2,
+   "assumed": 0,
+   "unsupported": []
+  }
+ },
+ "product_table": {
+  "product": "Keytruda (pembrolizumab), including subcutaneous Keytruda Qlex",
+  "rivals": [
+   "Bristol Myers Squibb's Opdivo (and Opdivo Qvantig)",
+   "AstraZeneca's Imfinzi",
+   "Roche's Tecentriq"
+  ],
+  "verdict": "narrowed",
+  "edge": "Remaining fine-print edge: Opdivo Qvantig's label bars use with ipilimumab for renal cell carcinoma, and Keytruda Qlex has no such combination limit. Keytruda Qlex also carries the only contraindication among the six labels checked (hyaluronidase hypersensitivity), and Medicare pays a small per-dose premium for Qlex over IV rather than a discount. The Imfinzi and Tecentriq side is thin: the Tecentriq SC (Hybreza) label is not in the index and no AstraZeneca or Roche filing statements on these products were retrieved.",
+  "rows": [
+   {
+    "row": "approved uses",
+    "cells": {
+     "Keytruda / Keytruda Qlex (Merck)": {
+      "text": "IV Keytruda covers solid tumors and blood cancers such as relapsed or refractory classical Hodgkin lymphoma, while Keytruda Qlex is approved in the U.S. only in the solid tumor indications approved for Keytruda, so cHL patients stay on the IV form. Qlex carries no combination carve-out of the kind Qvantig has.",
+      "text_marked": "IV Keytruda covers solid tumors and blood cancers such as relapsed or refractory classical Hodgkin lymphoma, while Keytruda Qlex is approved in the U.S. only in the solid tumor indications approved for Keytruda, so cHL patients stay on the IV form. Qlex carries no combination carve-out of the kind Qvantig has.[1]",
+      "marker_map": {
+       "1": "c_779e806e8c",
+       "2": "c_6eb3e35a57",
+       "3": "c_19487d56e4"
+      },
+      "cites": [
+       {
+        "cite_id": "c_779e806e8c",
+        "doc_id": "drug:keytruda:label_sections.md",
+        "page": 5,
+        "quote": "KEYTRUDA is indicated for the treatment of adult patients with relapsed or refractory classical Hodgkin lymphoma (cHL)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda label",
+        "location": "section 1.5 Classical Hodgkin Lymphoma",
+        "speaker": null,
+        "locator": "drug:keytruda:label_sections.md#p5",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda%3Alabel_sections.md&page=5&q=KEYTRUDA%20is%20indicated%20for%20the%20treatment%20of%20adult%20patients%20with%20relapsed%20or%20refractory%20classical%20Hodgkin%20lymphoma%20%28cHL%29",
+        "note": ""
+       },
+       {
+        "cite_id": "c_6eb3e35a57",
+        "doc_id": "MRK:10k_FY2025.md",
+        "page": 4,
+        "quote": "Keytruda Qlex is approved in the U.S. in solid tumor indications approved for Keytruda",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=Keytruda%20Qlex%20is%20approved%20in%20the%20U.S.%20in",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Merck 10-K FY2025",
+        "location": "p. 2",
+        "speaker": null,
+        "locator": "MRK:10k_FY2025.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=4&q=Keytruda%20Qlex%20is%20approved%20in%20the%20U.S.%20in%20solid%20tumor%20indications%20approved%20for%20Keytruda",
+        "note": ""
+       },
+       {
+        "cite_id": "c_19487d56e4",
+        "doc_id": "drug:opdivo-qvantig:label_sections.md",
+        "page": 1,
+        "quote": "Limitations of Use: OPDIVO QVANTIG is not indicated in combination with ipilimumab for the treatment of renal cell carcinoma",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7f8c38fa-42f4-4387-9e8c-7a1c66855d8b",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo-Qvantig label",
+        "location": "section 1.1 Advanced Renal Cell Carcinoma",
+        "speaker": null,
+        "locator": "drug:opdivo-qvantig:label_sections.md#p1",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aopdivo-qvantig%3Alabel_sections.md&page=1&q=Limitations%20of%20Use%3A%20OPDIVO%20QVANTIG%20is%20not%20indicated%20in%20combination%20with%20ipilimumab%20for%20the%20treatment%20of%20renal%20cell%20carcinoma",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Opdivo / Opdivo Qvantig (Bristol Myers Squibb)": {
+      "text": "Opdivo Qvantig's label says it is not indicated in combination with ipilimumab for renal cell carcinoma, the one label difference between the two subcutaneous PD-1s that bears on conversion.",
+      "text_marked": "Opdivo Qvantig's label says it is not indicated in combination with ipilimumab for renal cell carcinoma, the one label difference between the two subcutaneous PD-1s that bears on conversion.[1]",
+      "marker_map": {
+       "1": "c_19487d56e4"
+      },
+      "cites": [
+       {
+        "cite_id": "c_19487d56e4",
+        "doc_id": "drug:opdivo-qvantig:label_sections.md",
+        "page": 1,
+        "quote": "Limitations of Use: OPDIVO QVANTIG is not indicated in combination with ipilimumab for the treatment of renal cell carcinoma",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7f8c38fa-42f4-4387-9e8c-7a1c66855d8b",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo-Qvantig label",
+        "location": "section 1.1 Advanced Renal Cell Carcinoma",
+        "speaker": null,
+        "locator": "drug:opdivo-qvantig:label_sections.md#p1",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aopdivo-qvantig%3Alabel_sections.md&page=1&q=Limitations%20of%20Use%3A%20OPDIVO%20QVANTIG%20is%20not%20indicated%20in%20combination%20with%20ipilimumab%20for%20the%20treatment%20of%20renal%20cell%20carcinoma",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Imfinzi (AstraZeneca)": {
+      "text": "IV only in the index; uses center on lung cancer, for example neoadjuvant chemotherapy combination followed by single-agent adjuvant Imfinzi in resectable NSCLC. No AstraZeneca filing statement on Imfinzi was retrieved, so this side is thin.",
+      "text_marked": "IV only in the index; uses center on lung cancer, for example neoadjuvant chemotherapy combination followed by single-agent adjuvant Imfinzi in resectable NSCLC. No AstraZeneca filing statement on Imfinzi was retrieved, so this side is thin.[1]",
+      "marker_map": {
+       "1": "c_f585fa1898"
+      },
+      "cites": [
+       {
+        "cite_id": "c_f585fa1898",
+        "doc_id": "imfinzi:drugs/imfinzi/label_v34.md",
+        "page": 1,
+        "quote": "IMFINZI in combination with platinum-containing chemotherapy as neoadjuvant treatment, followed by IMFINZI continued as a single agent as adjuvant treatment after surgery",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=8baba4ea-2855-42fa-9bd9-5a7548d4cec3",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Imfinzi label v34 (2026-09-07)",
+        "location": "p. 1 INDICATIONS",
+        "speaker": null,
+        "locator": "imfinzi:drugs/imfinzi/label_v34.md#p1",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=imfinzi%3Adrugs%2Fimfinzi%2Flabel_v34.md&page=1&q=IMFINZI%20in%20combination%20with%20platinum-containing%20chemotherapy%20as%20neoadjuvant%20treatment%2C%20followed%20by%20IMFINZI%20continued%20as%20a%20single%20agent%20as%20adjuvant%20treatment%20after%20surgery",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Tecentriq (Roche)": {
+      "text": "IV label in the index; uses include adjuvant single-agent treatment after resection and platinum chemotherapy in NSCLC. The subcutaneous Tecentriq Hybreza label is not in the index, so the SC comparison is missing and this side is thin.",
+      "text_marked": "IV label in the index; uses include adjuvant single-agent treatment after resection and platinum chemotherapy in NSCLC. The subcutaneous Tecentriq Hybreza label is not in the index, so the SC comparison is missing and this side is thin.[1]",
+      "marker_map": {
+       "1": "c_4d11e5740a"
+      },
+      "cites": [
+       {
+        "cite_id": "c_4d11e5740a",
+        "doc_id": "tecentriq:drugs/tecentriq/label_v46.md",
+        "page": 1,
+        "quote": "TECENTRIQ, as a single-agent, is indicated as adjuvant treatment following resection and platinum-based chemotherapy",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=6fa682c9-a312-4932-9831-f286908660ee",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Tecentriq label v46 (2026-10-16)",
+        "location": "p. 1 INDICATIONS",
+        "speaker": null,
+        "locator": "tecentriq:drugs/tecentriq/label_v46.md#p1",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=tecentriq%3Adrugs%2Ftecentriq%2Flabel_v46.md&page=1&q=TECENTRIQ%2C%20as%20a%20single-agent%2C%20is%20indicated%20as%20adjuvant%20treatment%20following%20resection%20and%20platinum-based%20chemotherapy",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "boxed warnings and safety",
+    "cells": {
+     "Keytruda / Keytruda Qlex (Merck)": {
+      "text": "No boxed warning on either label. IV Keytruda lists no contraindications; Keytruda Qlex is the only one of the six labels checked with a contraindication (known hypersensitivity to berahyaluronidase alfa or hyaluronidase), a differentiator with no dollar value.",
+      "text_marked": "No boxed warning on either label. IV Keytruda lists no contraindications; Keytruda Qlex is the only one of the six labels checked with a contraindication (known hypersensitivity to berahyaluronidase alfa or hyaluronidase), a differentiator with no dollar value.[1]",
+      "marker_map": {
+       "1": "c_f482fdb32d",
+       "2": "c_fc951f24d8"
+      },
+      "cites": [
+       {
+        "cite_id": "c_f482fdb32d",
+        "doc_id": "drug:keytruda:label_sections.md",
+        "page": 29,
+        "quote": "## 4 CONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda label",
+        "location": "section 4 CONTRAINDICATIONS",
+        "speaker": null,
+        "locator": "drug:keytruda:label_sections.md#p29",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda%3Alabel_sections.md&page=29&q=%23%23%204%20CONTRAINDICATIONS%20None.",
+        "note": ""
+       },
+       {
+        "cite_id": "c_fc951f24d8",
+        "doc_id": "drug:keytruda-qlex:label_sections.md",
+        "page": 26,
+        "quote": "KEYTRUDA QLEX is contraindicated in patients with known hypersensitivity to berahyaluronidase alfa, hyaluronidase or to any of its excipients",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=097d166f-b73b-41d3-9b37-7653cd2a0c41",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda-Qlex label",
+        "location": "section 4 CONTRAINDICATIONS",
+        "speaker": null,
+        "locator": "drug:keytruda-qlex:label_sections.md#p26",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda-qlex%3Alabel_sections.md&page=26&q=KEYTRUDA%20QLEX%20is%20contraindicated%20in%20patients%20with%20known%20hypersensitivity%20to%20berahyaluronidase%20alfa%2C%20hyaluronidase%20or%20to%20any%20of%20its%20excipients",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Opdivo / Opdivo Qvantig (Bristol Myers Squibb)": {
+      "text": "No boxed warning; Opdivo and Opdivo Qvantig both list contraindications as none.",
+      "text_marked": "No boxed warning; Opdivo and Opdivo Qvantig both list contraindications as none.[1]",
+      "marker_map": {
+       "1": "c_06a3da07b1",
+       "2": "c_f3cafa38e4"
+      },
+      "cites": [
+       {
+        "cite_id": "c_06a3da07b1",
+        "doc_id": "drug:opdivo:label_sections.md",
+        "page": 25,
+        "quote": "## 4 CONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f570b9c4-6846-4de2-abfa-4d0a4ae4e394",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo label",
+        "location": "section 4 CONTRAINDICATIONS",
+        "speaker": null,
+        "locator": "drug:opdivo:label_sections.md#p25",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aopdivo%3Alabel_sections.md&page=25&q=%23%23%204%20CONTRAINDICATIONS%20None.",
+        "note": ""
+       },
+       {
+        "cite_id": "c_f3cafa38e4",
+        "doc_id": "drug:opdivo-qvantig:label_sections.md",
+        "page": 23,
+        "quote": "## 4\tCONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7f8c38fa-42f4-4387-9e8c-7a1c66855d8b",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo-Qvantig label",
+        "location": "section 4 CONTRAINDICATIONS",
+        "speaker": null,
+        "locator": "drug:opdivo-qvantig:label_sections.md#p23",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aopdivo-qvantig%3Alabel_sections.md&page=23&q=%23%23%204%20CONTRAINDICATIONS%20None.",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Imfinzi (AstraZeneca)": {
+      "text": "No boxed warning; contraindications none.",
+      "text_marked": "No boxed warning; contraindications none.[1]",
+      "marker_map": {
+       "1": "c_bc47b7de41"
+      },
+      "cites": [
+       {
+        "cite_id": "c_bc47b7de41",
+        "doc_id": "drug:imfinzi:label_sections.md",
+        "page": 13,
+        "quote": "## 4 CONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8baba4ea-2855-42fa-9bd9-5a7548d4cec3",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Imfinzi label",
+        "location": "section 4 CONTRAINDICATIONS",
+        "speaker": null,
+        "locator": "drug:imfinzi:label_sections.md#p13",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aimfinzi%3Alabel_sections.md&page=13&q=%23%23%204%20CONTRAINDICATIONS%20None.",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Tecentriq (Roche)": {
+      "text": "No boxed warning; contraindications none.",
+      "text_marked": "No boxed warning; contraindications none.[1]",
+      "marker_map": {
+       "1": "c_ada58396a4"
+      },
+      "cites": [
+       {
+        "cite_id": "c_ada58396a4",
+        "doc_id": "drug:tecentriq:label_sections.md",
+        "page": 15,
+        "quote": "CONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6fa682c9-a312-4932-9831-f286908660ee",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Tecentriq label",
+        "location": "section 4 CONTRAINDICATIONS",
+        "speaker": null,
+        "locator": "drug:tecentriq:label_sections.md#p15",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Atecentriq%3Alabel_sections.md&page=15&q=CONTRAINDICATIONS%20None.",
+        "note": "short quote: capped at substring, matched at a token boundary"
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "dosing and convenience",
+    "cells": {
+     "Keytruda / Keytruda Qlex (Merck)": {
+      "text": "IV: 200 mg every 3 weeks or 400 mg every 6 weeks, infused over 30 minutes. Qlex: 395 mg every 3 weeks injected over 1 minute, or 790 mg every 6 weeks over 2 minutes.",
+      "text_marked": "IV: 200[1] mg every 3[1][3] weeks or 400[1] mg every 6[1][4] weeks, infused over 30[2] minutes. Qlex: 395[3] mg every 3[1][3] weeks injected over 1[3] minute, or 790[4] mg every 6[1][4] weeks over 2[3][4] minutes.",
+      "marker_map": {
+       "1": "c_5115963b25",
+       "2": "c_cba91f6033",
+       "3": "c_adaa1598b8",
+       "4": "c_538ed389a3"
+      },
+      "cites": [
+       {
+        "cite_id": "c_5115963b25",
+        "doc_id": "drug:keytruda:label_sections.md",
+        "page": 23,
+        "quote": "Adult patients with unresectable or metastatic melanoma 200 mg every 3 weeks or 400 mg every 6 weeks",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda label",
+        "location": "section 2.2 Recommended Dosage",
+        "speaker": null,
+        "locator": "drug:keytruda:label_sections.md#p23",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda%3Alabel_sections.md&page=23&q=Adult%20patients%20with%20unresectable%20or%20metastatic%20melanoma%20200%20mg%20every%203%20weeks%20or%20400%20mg%20every%206%20weeks",
+        "note": ""
+       },
+       {
+        "cite_id": "c_cba91f6033",
+        "doc_id": "keytruda:drugs/keytruda/label_v228.md",
+        "page": 4,
+        "quote": "Administer diluted solution intravenously over 30 minutes",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda label v228 (2026-07-24)",
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "speaker": null,
+        "locator": "keytruda:drugs/keytruda/label_v228.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=keytruda%3Adrugs%2Fkeytruda%2Flabel_v228.md&page=4&q=Administer%20diluted%20solution%20intravenously%20over%2030%20minutes",
+        "note": ""
+       },
+       {
+        "cite_id": "c_adaa1598b8",
+        "doc_id": "drug:keytruda-qlex:label_sections.md",
+        "page": 22,
+        "quote": "Every 3-week dosing (395 mg pembrolizumab and 4,800 units berahyaluronidase alfa): inject 2.4 mL subcutaneously over 1 minute",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=097d166f-b73b-41d3-9b37-7653cd2a0c41",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda-Qlex label",
+        "location": "section 2.3 Recommended Dosage",
+        "speaker": null,
+        "locator": "drug:keytruda-qlex:label_sections.md#p22",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda-qlex%3Alabel_sections.md&page=22&q=Every%203-week%20dosing%20%28395%20mg%20pembrolizumab%20and%204%2C800%20units%20berahyaluronidase%20alfa%29%3A%20inject%202.4%20mL%20subcutaneously%20over%201%20minute",
+        "note": ""
+       },
+       {
+        "cite_id": "c_538ed389a3",
+        "doc_id": "drug:keytruda-qlex:label_sections.md",
+        "page": 22,
+        "quote": "Every 6-week dosing (790 mg pembrolizumab and 9,600 units berahyaluronidase alfa): inject 4.8 mL subcutaneously over 2 minutes",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=097d166f-b73b-41d3-9b37-7653cd2a0c41",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda-Qlex label",
+        "location": "section 2.3 Recommended Dosage",
+        "speaker": null,
+        "locator": "drug:keytruda-qlex:label_sections.md#p22",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda-qlex%3Alabel_sections.md&page=22&q=Every%206-week%20dosing%20%28790%20mg%20pembrolizumab%20and%209%2C600%20units%20berahyaluronidase%20alfa%29%3A%20inject%204.8%20mL%20subcutaneously%20over%202%20minutes",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 11,
+       "total": 11,
+       "verified": 11,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Opdivo / Opdivo Qvantig (Bristol Myers Squibb)": {
+      "text": "IV Opdivo: 240 mg every 2 weeks or 480 mg every 4 weeks as a 30-minute infusion. Qvantig: 1,200 mg every 4 weeks among its schedules, injected over 3 to 5 minutes.",
+      "text_marked": "IV Opdivo: 240[1] mg every 2[1] weeks or 480[1] mg every 4[1][3] weeks as a 30[2]-minute infusion. Qvantig: 1,200[3] mg every 4[1][3] weeks among its schedules, injected over 3[4] to 5[4] minutes.",
+      "marker_map": {
+       "1": "c_0ed346eb41",
+       "2": "c_e13376bf25",
+       "3": "c_75aa6874d1",
+       "4": "c_f4521527f8"
+      },
+      "cites": [
+       {
+        "cite_id": "c_0ed346eb41",
+        "doc_id": "opdivo:drugs/opdivo/label_v68.md",
+        "page": 4,
+        "quote": "Metastatic non-small cell lung cancer 240 mg every 2 weeks or 480 mg every 4 weeks",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=f570b9c4-6846-4de2-abfa-4d0a4ae4e394",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo label v68 (2026-08-28)",
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "speaker": null,
+        "locator": "opdivo:drugs/opdivo/label_v68.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=opdivo%3Adrugs%2Fopdivo%2Flabel_v68.md&page=4&q=Metastatic%20non-small%20cell%20lung%20cancer%20240%20mg%20every%202%20weeks%20or%20480%20mg%20every%204%20weeks",
+        "note": ""
+       },
+       {
+        "cite_id": "c_e13376bf25",
+        "doc_id": "opdivo:drugs/opdivo/label_v68.md",
+        "page": 4,
+        "quote": "30-minute intravenous infusion",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=f570b9c4-6846-4de2-abfa-4d0a4ae4e394",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo label v68 (2026-08-28)",
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "speaker": null,
+        "locator": "opdivo:drugs/opdivo/label_v68.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=opdivo%3Adrugs%2Fopdivo%2Flabel_v68.md&page=4&q=30-minute%20intravenous%20infusion",
+        "note": ""
+       },
+       {
+        "cite_id": "c_75aa6874d1",
+        "doc_id": "drug:opdivo-qvantig:label_sections.md",
+        "page": 16,
+        "quote": "1,200 mg nivolumab and 20,000 units hyaluronidase every 4 weeks",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7f8c38fa-42f4-4387-9e8c-7a1c66855d8b",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo-Qvantig label",
+        "location": "section 2.3 Recommended Dosage",
+        "speaker": null,
+        "locator": "drug:opdivo-qvantig:label_sections.md#p16",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aopdivo-qvantig%3Alabel_sections.md&page=16&q=1%2C200%20mg%20nivolumab%20and%2020%2C000%20units%20hyaluronidase%20every%204%20weeks",
+        "note": ""
+       },
+       {
+        "cite_id": "c_f4521527f8",
+        "doc_id": "drug:opdivo-qvantig:label_sections.md",
+        "page": 16,
+        "quote": "Administer OPDIVO QVANTIG as a subcutaneous injection over 3 to 5 minutes",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7f8c38fa-42f4-4387-9e8c-7a1c66855d8b",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Opdivo-Qvantig label",
+        "location": "section 2.3 Recommended Dosage",
+        "speaker": null,
+        "locator": "drug:opdivo-qvantig:label_sections.md#p16",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aopdivo-qvantig%3Alabel_sections.md&page=16&q=Administer%20OPDIVO%20QVANTIG%20as%20a%20subcutaneous%20injection%20over%203%20to%205%20minutes",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 9,
+       "total": 9,
+       "verified": 9,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Imfinzi (AstraZeneca)": {
+      "text": "IV only: adjuvant 1,500 mg every 4 weeks, given as a 60 minute intravenous infusion; no subcutaneous form in the index.",
+      "text_marked": "IV only: adjuvant 1,500[1] mg every 4[1] weeks, given as a 60[2] minute intravenous infusion; no subcutaneous form in the index.",
+      "marker_map": {
+       "1": "c_883e116571",
+       "2": "c_71345530ce"
+      },
+      "cites": [
+       {
+        "cite_id": "c_883e116571",
+        "doc_id": "imfinzi:drugs/imfinzi/label_v34.md",
+        "page": 4,
+        "quote": "Adjuvant: IMFINZI 1,500 mg as a single agent every 4 weeks for up to 12 cycles after surgery",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=8baba4ea-2855-42fa-9bd9-5a7548d4cec3",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Imfinzi label v34 (2026-09-07)",
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "speaker": null,
+        "locator": "imfinzi:drugs/imfinzi/label_v34.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=imfinzi%3Adrugs%2Fimfinzi%2Flabel_v34.md&page=4&q=Adjuvant%3A%20IMFINZI%201%2C500%20mg%20as%20a%20single%20agent%20every%204%20weeks%20for%20up%20to%2012%20cycles%20after%20surgery",
+        "note": ""
+       },
+       {
+        "cite_id": "c_71345530ce",
+        "doc_id": "imfinzi:drugs/imfinzi/label_v34.md",
+        "page": 4,
+        "quote": "Administer IMFINZI as a 60 minute intravenous infusion after dilution",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=8baba4ea-2855-42fa-9bd9-5a7548d4cec3",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Imfinzi label v34 (2026-09-07)",
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "speaker": null,
+        "locator": "imfinzi:drugs/imfinzi/label_v34.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=imfinzi%3Adrugs%2Fimfinzi%2Flabel_v34.md&page=4&q=Administer%20IMFINZI%20as%20a%2060%20minute%20intravenous%20infusion%20after%20dilution",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 3,
+       "total": 3,
+       "verified": 3,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Tecentriq (Roche)": {
+      "text": "IV: 840 mg every 2 weeks, 1200 mg every 3 weeks or 1680 mg every 4 weeks; first infusion over 60 minutes, later ones over 30 minutes if tolerated. The SC Hybreza label is not in the index.",
+      "text_marked": "IV: 840[1] mg every 2[1] weeks, 1200[1] mg every 3[1] weeks or 1680[1] mg every 4[1] weeks; first infusion over 60[2] minutes, later ones over 30[2] minutes if tolerated. The SC Hybreza label is not in the index.",
+      "marker_map": {
+       "1": "c_efbc6c16a9",
+       "2": "c_f19aa40745"
+      },
+      "cites": [
+       {
+        "cite_id": "c_efbc6c16a9",
+        "doc_id": "tecentriq:drugs/tecentriq/label_v46.md",
+        "page": 4,
+        "quote": "Metastatic NSCLC 840 mg every 2 weeks or 1200 mg every 3 weeks or 1680 mg every 4 weeks",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=6fa682c9-a312-4932-9831-f286908660ee",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Tecentriq label v46 (2026-10-16)",
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "speaker": null,
+        "locator": "tecentriq:drugs/tecentriq/label_v46.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=tecentriq%3Adrugs%2Ftecentriq%2Flabel_v46.md&page=4&q=Metastatic%20NSCLC%20840%20mg%20every%202%20weeks%20or%201200%20mg%20every%203%20weeks%20or%201680%20mg%20every%204%20weeks",
+        "note": ""
+       },
+       {
+        "cite_id": "c_f19aa40745",
+        "doc_id": "tecentriq:drugs/tecentriq/label_v46.md",
+        "page": 4,
+        "quote": "Administer TECENTRIQ as an intravenous infusion over 60 minutes. If the first infusion is tolerated, all subsequent infusions may be delivered over 30 minutes",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=6fa682c9-a312-4932-9831-f286908660ee",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Tecentriq label v46 (2026-10-16)",
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "speaker": null,
+        "locator": "tecentriq:drugs/tecentriq/label_v46.md#p4",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=tecentriq%3Adrugs%2Ftecentriq%2Flabel_v46.md&page=4&q=Administer%20TECENTRIQ%20as%20an%20intravenous%20infusion%20over%2060%20minutes.%20If%20the%20first%20infusion%20is%20tolerated%2C%20all%20subsequent%20infusions%20may%20be%20delivered%20over%2030%20minutes",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 8,
+       "total": 8,
+       "verified": 8,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "patent and exclusivity timeline",
+    "cells": {
+     "Keytruda / Keytruda Qlex (Merck)": {
+      "text": "Merck's 10-K lists Keytruda exclusivity to 2028 in the U.S., 2031 in the EU and 2032-2033 in Japan, and Keytruda Qlex to 2043 in the U.S. and 2031 in the EU; biosimilar competition could begin in December 2028, and IRA pricing is expected from January 1, 2029.",
+      "text_marked": "Merck's 10-K lists Keytruda exclusivity to 2028[1][3] in the U.S., 2031[1][2] in the EU and 2032[assumption]-2033[assumption] in Japan, and Keytruda Qlex to 2043[2] in the U.S. and 2031[1][2] in the EU; biosimilar competition could begin in December 2028[1][3], and IRA pricing is expected from January 1, 2029[4].",
+      "marker_map": {
+       "1": "c_c079091721",
+       "2": "c_9eea23448a",
+       "3": "c_d463d52e4d",
+       "4": "c_d0e9c8cd02"
+      },
+      "cites": [
+       {
+        "cite_id": "c_c079091721",
+        "doc_id": "MRK:10k_FY2025.md",
+        "page": 16,
+        "quote": "Keytruda 2028 (10) 2031 2032-2033 2028",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Merck 10-K FY2025",
+        "location": "p. 14",
+        "speaker": null,
+        "locator": "MRK:10k_FY2025.md#p16",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=16&q=Keytruda%202028%20%2810%29%202031%202032-2033%202028",
+        "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+       },
+       {
+        "cite_id": "c_9eea23448a",
+        "doc_id": "MRK:10k_FY2025.md",
+        "page": 16,
+        "quote": "Keytruda Qlex 2043 2031 (19)",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Merck 10-K FY2025",
+        "location": "p. 14",
+        "speaker": null,
+        "locator": "MRK:10k_FY2025.md#p16",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=16&q=Keytruda%20Qlex%202043%202031%20%2819%29",
+        "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+       },
+       {
+        "cite_id": "c_d463d52e4d",
+        "doc_id": "MRK:10k_FY2025.md",
+        "page": 31,
+        "quote": "biosimilar competition could begin in December 2028 when the primary compound patent expires",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=biosimilar%20competition%20could%20begin%20in%20December%202028%20when",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Merck 10-K FY2025",
+        "location": "p. 29",
+        "speaker": null,
+        "locator": "MRK:10k_FY2025.md#p31",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=31&q=biosimilar%20competition%20could%20begin%20in%20December%202028%20when%20the%20primary%20compound%20patent%20expires",
+        "note": ""
+       },
+       {
+        "cite_id": "c_d0e9c8cd02",
+        "doc_id": "MRK:10k_FY2025.md",
+        "page": 33,
+        "quote": "Furthermore, the Company expects that in 2027 HHS will include Keytruda in a subsequent selection of products to undergo IRA price setting, with such price to become effective on January 1, 2029 and the Company expects that, as a result, U.S. sales of Keytruda will decline materially after that time",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=HHS%20will%20include%20Keytruda%20in%20a%20subsequent%20selection",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Merck 10-K FY2025",
+        "location": "p. 31",
+        "speaker": null,
+        "locator": "MRK:10k_FY2025.md#p33",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=33&q=Furthermore%2C%20the%20Company%20expects%20that%20in%202027%20HHS%20will%20include%20Keytruda%20in%20a%20subsequent%20selection%20of%20products%20to%20undergo%20IRA%20price%20setting%2C%20with%20such%20price%20to%20become%20effective%20on%20January%201%2C%202029%20and%20the%20Company%20expects%20that%2C%20as%20a%20result%2C%20U.S.%20sales%20of%20Keytruda%20will%20decline%20materially%20after%20that%20time",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 8,
+       "total": 8,
+       "verified": 6,
+       "derived": 0,
+       "assumed": 2,
+       "unsupported": []
+      },
+      "assumptions": {
+       "jp_lo": {
+        "value": "2032",
+        "kind": "date",
+        "label": "Merck 10-K FY2025 p. 14 patent table, Japan column printed as a range '2032-2033' (loe_calendar.csv row 188)"
+       },
+       "jp_hi": {
+        "value": "2033",
+        "kind": "date",
+        "label": "Merck 10-K FY2025 p. 14 patent table, Japan column printed as a range '2032-2033' (loe_calendar.csv row 188)"
+       }
+      }
+     },
+     "Opdivo / Opdivo Qvantig (Bristol Myers Squibb)": {
+      "text": "BMS lists Opdivo at 2028 in the U.S., 2030 in the EU and 2031 in Japan; the Opdivo Qvantig row in the same table carries footnote symbols, not years.",
+      "text_marked": "BMS lists Opdivo at 2028 in the U.S., 2030 in the EU and 2031 in Japan; the Opdivo Qvantig row in the same table carries footnote symbols, not years.[1][2]",
+      "marker_map": {
+       "1": "c_8b8d315204",
+       "2": "c_e7083f6d65"
+      },
+      "cites": [
+       {
+        "cite_id": "c_8b8d315204",
+        "doc_id": "BMY:10k_FY2025.md",
+        "page": 9,
+        "quote": "Opdivo (nivolumab) 2028 2030 2031",
+        "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Bristol Myers Squibb 10-K FY2025",
+        "location": "p. 7",
+        "speaker": null,
+        "locator": "BMY:10k_FY2025.md#p9",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3A10k_FY2025.md&page=9&q=Opdivo%20%28nivolumab%29%202028%202030%202031",
+        "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+       },
+       {
+        "cite_id": "c_e7083f6d65",
+        "doc_id": "BMY:10k_FY2025.md",
+        "page": 9,
+        "quote": "Opdivo Qvantig (nivolumab and hyaluronidase-nvhy) (g)",
+        "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm#:~:text=Opdivo%20Qvantig%20%28nivolumab%20and%20hyaluronidase%2Dnvhy%29%20%28g%29",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Bristol Myers Squibb 10-K FY2025",
+        "location": "p. 7",
+        "speaker": null,
+        "locator": "BMY:10k_FY2025.md#p9",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3A10k_FY2025.md&page=9&q=Opdivo%20Qvantig%20%28nivolumab%20and%20hyaluronidase-nvhy%29%20%28g%29",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 3,
+       "total": 3,
+       "verified": 3,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Imfinzi (AstraZeneca)": {
+      "text": "AstraZeneca's 20-F lists Imfinzi at 2031 in the U.S., 2030 in the EU and China, and 2033 in Japan.",
+      "text_marked": "AstraZeneca's 20-F lists Imfinzi at 2031 in the U.S., 2030 in the EU and China, and 2033 in Japan.[1]",
+      "marker_map": {
+       "1": "c_24fe3ae99b"
+      },
+      "cites": [
+       {
+        "cite_id": "c_24fe3ae99b",
+        "doc_id": "AZN:20f_FY2025.md",
+        "page": 19,
+        "quote": "and for muscle-invasive bladder cancer (MIBC). 2031 2030 2030 2033",
+        "url": "https://www.sec.gov/Archives/edgar/data/901832/000110465926019130/azn-20251231x20f.htm#:~:text=and%20for%20muscle%2Dinvasive%20bladder%20cancer%20%28MIBC%29.",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "AstraZeneca 20-F FY2025",
+        "location": "p. 19",
+        "speaker": null,
+        "locator": "AZN:20f_FY2025.md#p19",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AZN%3A20f_FY2025.md&page=19&q=and%20for%20muscle-invasive%20bladder%20cancer%20%28MIBC%29.%202031%202030%202030%202033",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 3,
+       "total": 3,
+       "verified": 3,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Tecentriq (Roche)": {
+      "text": "No Tecentriq exclusivity date is in the index: the loe_calendar row carries no company-stated or Purple Book reference-exclusivity date and no Roche filing was retrieved; the row's only indexed fact is the FDA Purple Book biosimilar count (none approved), a machine-data field outside the verified whitelist.",
+      "text_marked": "No Tecentriq exclusivity date is in the index: the loe_calendar row carries no company-stated or Purple Book reference-exclusivity date and no Roche filing was retrieved; the row's only indexed fact is the FDA Purple Book biosimilar count (none approved), a machine-data field outside the verified whitelist.[1]",
+      "marker_map": {
+       "1": "c_ec7bead55e"
+      },
+      "cites": [
+       {
+        "cite_id": "c_ec7bead55e",
+        "doc_id": "pipeline/loe_calendar.csv",
+        "page": null,
+        "quote": "",
+        "url": "",
+        "verify_status": "unverified",
+        "withheld": true,
+        "grade": null,
+        "doc_title": "moat table pipeline/loe_calendar.csv",
+        "location": "row pipeline/loe_calendar.csv#617",
+        "speaker": null,
+        "locator": "pipeline/loe_calendar.csv#617 [ROCHE:TECENTRIQ:US] biosimilar_count = 0",
+        "viewer_link": "",
+        "note": "facts row pipeline/loe_calendar.csv#617 re-read (machine_data: unverified (status 'machine_data')); machine data: API row 617 at https://purplebooksearch.fda.gov/downloads (no page copy)"
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "pricing and gross-to-net",
+    "cells": {
+     "Keytruda / Keytruda Qlex (Merck)": {
+      "text": "Medicare Part B payment limits per mg in matched quarters, Qlex vs IV: Q2 2026 $32.129 vs $61.251, Q3 2026 $31.940 vs $60.645, Oct 2026 $32.307 vs $62.253. Per dose (395 mg Qlex vs 200 mg IV) Qlex runs +3.6%, +4.0% and +2.5% above IV: rough parity with a small premium, not a discount, while management says Qlex was priced to drive adoption. These are ASP-based payment limits, not Merck's net price, and they exclude the lower subcutaneous administration fee.",
+      "text_marked": "Medicare Part B payment limits per mg in matched quarters, Qlex vs IV: Q2 2026 $32.129[assumption] vs $61.251[assumption], Q3 2026 $31.940[assumption] vs $60.645[assumption], Oct 2026 $32.307[1] vs $62.253[assumption]. Per dose (395[2] mg Qlex vs 200[3] mg IV) Qlex runs +3.6%[derived: assumption], +4.0%[derived: assumption] and +2.5%[derived: 1, assumption] above IV: rough parity with a small premium, not a discount, while management says Qlex was priced to drive adoption. These are ASP-based payment limits, not Merck's net price, and they exclude the lower subcutaneous administration fee.",
+      "marker_map": {
+       "1": "c_ff81c9154f",
+       "2": "c_adaa1598b8",
+       "3": "c_5115963b25",
+       "4": "c_8d88ff4919"
+      },
+      "cites": [
+       {
+        "cite_id": "c_ff81c9154f",
+        "doc_id": "pricing/sample_checks.csv",
+        "page": null,
+        "quote": "",
+        "url": "",
+        "verify_status": "exact",
+        "withheld": true,
+        "grade": null,
+        "doc_title": "moat table pricing/sample_checks.csv",
+        "location": "row pricing/sample_checks.csv#24",
+        "speaker": null,
+        "locator": "pricing/sample_checks.csv#24 [] ours = 32.307",
+        "viewer_link": "",
+        "note": "facts row pricing/sample_checks.csv#24 re-read (True: verified); machine data: API row 24 at https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip:section (no page copy)"
+       },
+       {
+        "cite_id": "c_adaa1598b8",
+        "doc_id": "drug:keytruda-qlex:label_sections.md",
+        "page": 22,
+        "quote": "Every 3-week dosing (395 mg pembrolizumab and 4,800 units berahyaluronidase alfa): inject 2.4 mL subcutaneously over 1 minute",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=097d166f-b73b-41d3-9b37-7653cd2a0c41",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda-Qlex label",
+        "location": "section 2.3 Recommended Dosage",
+        "speaker": null,
+        "locator": "drug:keytruda-qlex:label_sections.md#p22",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda-qlex%3Alabel_sections.md&page=22&q=Every%203-week%20dosing%20%28395%20mg%20pembrolizumab%20and%204%2C800%20units%20berahyaluronidase%20alfa%29%3A%20inject%202.4%20mL%20subcutaneously%20over%201%20minute",
+        "note": ""
+       },
+       {
+        "cite_id": "c_5115963b25",
+        "doc_id": "drug:keytruda:label_sections.md",
+        "page": 23,
+        "quote": "Adult patients with unresectable or metastatic melanoma 200 mg every 3 weeks or 400 mg every 6 weeks",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "doc_title": "Keytruda label",
+        "location": "section 2.2 Recommended Dosage",
+        "speaker": null,
+        "locator": "drug:keytruda:label_sections.md#p23",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda%3Alabel_sections.md&page=23&q=Adult%20patients%20with%20unresectable%20or%20metastatic%20melanoma%20200%20mg%20every%203%20weeks%20or%20400%20mg%20every%206%20weeks",
+        "note": ""
+       },
+       {
+        "cite_id": "c_8d88ff4919",
+        "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+        "page": 11,
+        "quote": "we have priced this to drive for the adoption from KEYTRUDA IV to QLEX",
+        "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf#page=11",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": "A",
+        "doc_title": "Merck 2025Q4 earnings call (official)",
+        "location": "p. 11",
+        "speaker": "Robert Davis",
+        "locator": "MRK:transcripts/2025Q4_transcript.md#p11",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Atranscripts%2F2025Q4_transcript.md&page=11&q=we%20have%20priced%20this%20to%20drive%20for%20the%20adoption%20from%20KEYTRUDA%20IV%20to%20QLEX",
+        "note": ""
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 11,
+       "total": 11,
+       "verified": 3,
+       "derived": 3,
+       "assumed": 5,
+       "unsupported": []
+      },
+      "derived": {
+       "p_q2": {
+        "value": 3.6,
+        "expr": "(s * 395) / (i * 200) * 100 - 100",
+        "operands": {
+         "s": {
+          "value": 32.129,
+          "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q2 (file_line 749), table value, not page-cited"
+         },
+         "i": {
+          "value": 61.251,
+          "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q2 (file_line 744), table value, not page-cited"
+         }
+        }
+       },
+       "p_q3": {
+        "value": 4.0,
+        "expr": "(s * 395) / (i * 200) * 100 - 100",
+        "operands": {
+         "s": {
+          "value": 31.94,
+          "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q3 (file_line 753), table value, not page-cited"
+         },
+         "i": {
+          "value": 60.645,
+          "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q3 (file_line 748), table value, not page-cited"
+         }
+        }
+       },
+       "p_q4": {
+        "value": 2.5,
+        "expr": "(s * 395) / (i * 200) * 100 - 100",
+        "operands": {
+         "s": {
+          "value": 32.307,
+          "text": "32.307",
+          "cite_id": "c_ff81c9154f"
+         },
+         "i": {
+          "value": 62.253,
+          "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q4 (file_line 768), table value, not page-cited"
+         }
+        }
+       }
+      },
+      "assumptions": {
+       "61.251": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q2 (file_line 744), table value, not page-cited",
+       "60.645": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q3 (file_line 748), table value, not page-cited",
+       "62.253": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q4 (file_line 768), table value, not page-cited",
+       "32.129": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q2 (file_line 749), table value, not page-cited",
+       "31.940": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q3 (file_line 753), table value, not page-cited"
+      }
+     },
+     "Opdivo / Opdivo Qvantig (Bristol Myers Squibb)": {
+      "text": "Medicare Part B payment limit, 2026 average: $33.90 per mg for IV Opdivo (J9299) and $27.91 per HCPCS unit for Opdivo Qvantig (J9289).",
+      "text_marked": "Medicare Part B payment limit, 2026 average: $33.90[1] per mg for IV Opdivo (J9299) and $27.91[2] per HCPCS unit for Opdivo Qvantig (J9289).",
+      "marker_map": {
+       "1": "c_92b25fb99e",
+       "2": "c_5ca42209ea"
+      },
+      "cites": [
+       {
+        "cite_id": "c_92b25fb99e",
+        "doc_id": "pricing/gtn_proxy.csv",
+        "page": null,
+        "quote": "",
+        "url": "",
+        "verify_status": "exact",
+        "withheld": true,
+        "grade": null,
+        "doc_title": "moat table pricing/gtn_proxy.csv",
+        "location": "row pricing/gtn_proxy.csv#31",
+        "speaker": null,
+        "locator": "pricing/gtn_proxy.csv#31 [opdivo|2026] asp_payment_limit_per_hcpcs_unit = 33.9025",
+        "viewer_link": "",
+        "note": "facts row pricing/gtn_proxy.csv#31 re-read (verified: verified)"
+       },
+       {
+        "cite_id": "c_5ca42209ea",
+        "doc_id": "pricing/gtn_proxy.csv",
+        "page": null,
+        "quote": "",
+        "url": "",
+        "verify_status": "exact",
+        "withheld": true,
+        "grade": null,
+        "doc_title": "moat table pricing/gtn_proxy.csv",
+        "location": "row pricing/gtn_proxy.csv#33",
+        "speaker": null,
+        "locator": "pricing/gtn_proxy.csv#33 [opdivo-qvantig|2026] asp_payment_limit_per_hcpcs_unit = 27.91475",
+        "viewer_link": "",
+        "note": "facts row pricing/gtn_proxy.csv#33 re-read (verified: verified)"
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 2,
+       "total": 2,
+       "verified": 2,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Imfinzi (AstraZeneca)": {
+      "text": "Medicare Part B payment limit, 2026 average: $87.01 per HCPCS unit (J9173); no net-price or rebate disclosure from AstraZeneca was retrieved.",
+      "text_marked": "Medicare Part B payment limit, 2026 average: $87.01 per HCPCS unit (J9173); no net-price or rebate disclosure from AstraZeneca was retrieved.[1]",
+      "marker_map": {
+       "1": "c_e2d6ebb4c1"
+      },
+      "cites": [
+       {
+        "cite_id": "c_e2d6ebb4c1",
+        "doc_id": "pricing/gtn_proxy.csv",
+        "page": null,
+        "quote": "",
+        "url": "",
+        "verify_status": "exact",
+        "withheld": true,
+        "grade": null,
+        "doc_title": "moat table pricing/gtn_proxy.csv",
+        "location": "row pricing/gtn_proxy.csv#181",
+        "speaker": null,
+        "locator": "pricing/gtn_proxy.csv#181 [imfinzi|2026] asp_payment_limit_per_hcpcs_unit = 87.006",
+        "viewer_link": "",
+        "note": "facts row pricing/gtn_proxy.csv#181 re-read (verified: verified)"
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 1,
+       "total": 1,
+       "verified": 1,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Tecentriq (Roche)": {
+      "text": "Medicare Part B payment limit, 2026 average: $95.33 per HCPCS unit (J9022); no Roche net-price disclosure was retrieved.",
+      "text_marked": "Medicare Part B payment limit, 2026 average: $95.33 per HCPCS unit (J9022); no Roche net-price disclosure was retrieved.[1]",
+      "marker_map": {
+       "1": "c_986c677ef9"
+      },
+      "cites": [
+       {
+        "cite_id": "c_986c677ef9",
+        "doc_id": "pricing/gtn_proxy.csv",
+        "page": null,
+        "quote": "",
+        "url": "",
+        "verify_status": "exact",
+        "withheld": true,
+        "grade": null,
+        "doc_title": "moat table pricing/gtn_proxy.csv",
+        "location": "row pricing/gtn_proxy.csv#213",
+        "speaker": null,
+        "locator": "pricing/gtn_proxy.csv#213 [tecentriq|2026] asp_payment_limit_per_hcpcs_unit = 95.33149999999999",
+        "viewer_link": "",
+        "note": "facts row pricing/gtn_proxy.csv#213 re-read (verified: verified)"
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 1,
+       "total": 1,
+       "verified": 1,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   }
+  ],
+  "financial_tie": {
+   "text": "Keytruda Qlex was $395M of $5,006M U.S. Keytruda-family sales in Q2 2026 (7.9%). Because Medicare pays a small per-dose premium for Qlex rather than a discount (+3.6% that quarter), each U.S. patient converted keeps or slightly raises Merck's Medicare drug revenue per dose, so the conversion is a revenue defense, not a price concession, ahead of the December 2028 compound-patent expiry. This ties to the c10 pricing note and to the Halozyme finding above (the block on the same product in Europe).",
+   "text_marked": "Keytruda Qlex was $395M[1] of $5,006M[derived: 1, 2] U.S. Keytruda-family sales in Q2 2026 (7.9%[derived: 1, 2]). Because Medicare pays a small per-dose premium for Qlex rather than a discount (+3.6%[derived: assumption] that quarter), each U.S. patient converted keeps or slightly raises Merck's Medicare drug revenue per dose, so the conversion is a revenue defense, not a price concession, ahead of the December 2028 compound-patent expiry. This ties to the c10 pricing note and to the Halozyme finding above (the block on the same product in Europe).",
+   "math": "U.S. Qlex share = 395 / 5,006 = 7.9%, where 5,006 = 395 + 4,611 ($M, Q2 2026). Q2 2026 drug payment per dose: Qlex 395 mg x $32.129 = $12,691; IV 200 mg x $61.251 = $12,250; 12,691 / 12,250 - 1 = 3.6%.",
+   "math_marked": "U.S. Qlex share = 395[1][3] / 5,006[derived: 1, 2] = 7.9%[derived: 1, 2], where 5,006[derived: 1, 2] = 395[1][3] + 4,611[2] ($M, Q2 2026). Q2 2026 drug payment per dose: Qlex 395[1][3] mg x $32.129[assumption] = $12,691[derived: assumption]; IV 200[4] mg x $61.251[assumption] = $12,250[derived: assumption]; 12,691[derived: assumption] / 12,250[derived: assumption] - 1 = 3.6%[derived: assumption].",
+   "marker_map": {
+    "1": "c_3f590007df",
+    "2": "c_eaaf43aaf3",
+    "3": "c_adaa1598b8",
+    "4": "c_5115963b25",
+    "5": "c_d463d52e4d"
+   },
+   "math_marker_map": {
+    "1": "c_3f590007df",
+    "2": "c_eaaf43aaf3",
+    "3": "c_adaa1598b8",
+    "4": "c_5115963b25",
+    "5": "c_d463d52e4d"
+   },
+   "cites": [
+    {
+     "cite_id": "c_3f590007df",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28,
+     "quote": "Keytruda Qlex 395 68 463",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 28",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p28",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=28&q=Keytruda%20Qlex%20395%2068%20463",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_eaaf43aaf3",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28,
+     "quote": "Keytruda $ 4,611 $ 3,293 $ 7,904",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 28",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p28",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=28&q=Keytruda%20%24%204%2C611%20%24%203%2C293%20%24%207%2C904",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_adaa1598b8",
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22,
+     "quote": "Every 3-week dosing (395 mg pembrolizumab and 4,800 units berahyaluronidase alfa): inject 2.4 mL subcutaneously over 1 minute",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=097d166f-b73b-41d3-9b37-7653cd2a0c41",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Keytruda-Qlex label",
+     "location": "section 2.3 Recommended Dosage",
+     "speaker": null,
+     "locator": "drug:keytruda-qlex:label_sections.md#p22",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda-qlex%3Alabel_sections.md&page=22&q=Every%203-week%20dosing%20%28395%20mg%20pembrolizumab%20and%204%2C800%20units%20berahyaluronidase%20alfa%29%3A%20inject%202.4%20mL%20subcutaneously%20over%201%20minute",
+     "note": ""
+    },
+    {
+     "cite_id": "c_5115963b25",
+     "doc_id": "drug:keytruda:label_sections.md",
+     "page": 23,
+     "quote": "Adult patients with unresectable or metastatic melanoma 200 mg every 3 weeks or 400 mg every 6 weeks",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Keytruda label",
+     "location": "section 2.2 Recommended Dosage",
+     "speaker": null,
+     "locator": "drug:keytruda:label_sections.md#p23",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Akeytruda%3Alabel_sections.md&page=23&q=Adult%20patients%20with%20unresectable%20or%20metastatic%20melanoma%20200%20mg%20every%203%20weeks%20or%20400%20mg%20every%206%20weeks",
+     "note": ""
+    },
+    {
+     "cite_id": "c_d463d52e4d",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31,
+     "quote": "biosimilar competition could begin in December 2028 when the primary compound patent expires",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=biosimilar%20competition%20could%20begin%20in%20December%202028%20when",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 29",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p31",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=31&q=biosimilar%20competition%20could%20begin%20in%20December%202028%20when%20the%20primary%20compound%20patent%20expires",
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 20,
+    "total": 20,
+    "verified": 6,
+    "derived": 11,
+    "assumed": 3,
+    "unsupported": []
+   },
+   "tied_to": [
+    "MRK-c10",
+    "finding 3 (MRK-c04)"
+   ],
+   "derived": {
+    "us_total": {
+     "value": 5006,
+     "expr": "a + b",
+     "operands": {
+      "a": {
+       "value": 395,
+       "text": "395",
+       "cite_id": "c_3f590007df"
+      },
+      "b": {
+       "value": 4611,
+       "text": "4,611",
+       "cite_id": "c_eaaf43aaf3"
+      }
+     }
+    },
+    "share": {
+     "value": 7.9,
+     "expr": "a / (a + b) * 100",
+     "operands": {
+      "a": {
+       "value": 395,
+       "text": "395",
+       "cite_id": "c_3f590007df"
+      },
+      "b": {
+       "value": 4611,
+       "text": "4,611",
+       "cite_id": "c_eaaf43aaf3"
+      }
+     }
+    },
+    "p_q2": {
+     "value": 3.6,
+     "expr": "(s * 395) / (i * 200) * 100 - 100",
+     "operands": {
+      "s": {
+       "value": 32.129,
+       "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q2 (file_line 749), table value, not page-cited"
+      },
+      "i": {
+       "value": 61.251,
+       "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q2 (file_line 744), table value, not page-cited"
+      }
+     }
+    },
+    "dose_sc": {
+     "value": 12691,
+     "expr": "s * 395",
+     "operands": {
+      "s": {
+       "value": 32.129,
+       "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q2 (file_line 749), table value, not page-cited"
+      }
+     }
+    },
+    "dose_iv": {
+     "value": 12250,
+     "expr": "i * 200",
+     "operands": {
+      "i": {
+       "value": 61.251,
+       "assumption": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q2 (file_line 744), table value, not page-cited"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "61.251": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q2 (file_line 744), table value, not page-cited",
+    "60.645": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q3 (file_line 748), table value, not page-cited",
+    "62.253": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9271|2026Q4 (file_line 768), table value, not page-cited",
+    "32.129": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q2 (file_line 749), table value, not page-cited",
+    "31.940": "CMS Medicare Part B payment limit, data/moat/tables/partb_asp_quarterly.csv J9277|2026Q3 (file_line 753), table value, not page-cited"
+   }
+  },
+  "growth_limiter": {
+   "sentence": "What limits growth is the pace of Qlex conversion: Qlex was 7.9% of U.S. Keytruda-family sales in Q2 2026 against management's 30% to 40% adoption target, and in Europe the Halozyme injunction still blocks it in Germany, so more of Keytruda stays on the biosimilar-exposed IV form at the 2028 U.S. expiry.",
+   "sentence_marked": "What limits growth is the pace of Qlex conversion: Qlex was 7.9%[derived: 1, 2] of U.S. Keytruda-family sales in Q2 2026 against management's 30%[3] to 40%[3] adoption target, and in Europe the Halozyme injunction still blocks it in Germany, so more of Keytruda stays on the biosimilar-exposed IV form at the 2028 U.S. expiry.",
+   "marker_map": {
+    "1": "c_3f590007df",
+    "2": "c_eaaf43aaf3",
+    "3": "c_f74f0a58e7",
+    "4": "c_bc113d8d51",
+    "5": "c_c079091721"
+   },
+   "cites": [
+    {
+     "cite_id": "c_3f590007df",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28,
+     "quote": "Keytruda Qlex 395 68 463",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 28",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p28",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=28&q=Keytruda%20Qlex%20395%2068%20463",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_eaaf43aaf3",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28,
+     "quote": "Keytruda $ 4,611 $ 3,293 $ 7,904",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 28",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p28",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=28&q=Keytruda%20%24%204%2C611%20%24%203%2C293%20%24%207%2C904",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_f74f0a58e7",
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11,
+     "quote": "we continue to think we're going to see 30% to 40% adoption as you get out to 2028",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf#page=11",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "doc_title": "Merck 2025Q4 earnings call (official)",
+     "location": "p. 11",
+     "speaker": "Robert Davis",
+     "locator": "MRK:transcripts/2025Q4_transcript.md#p11",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Atranscripts%2F2025Q4_transcript.md&page=11&q=we%20continue%20to%20think%20we%27re%20going%20to%20see%2030%25%20to%2040%25%20adoption%20as%20you%20get%20out%20to%202028",
+     "note": ""
+    },
+    {
+     "cite_id": "c_bc113d8d51",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22,
+     "quote": "The Company has appealed the preliminary injunction decision, and the appeal hearing is set for November 19, 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%2C",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 22",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p22",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=22&q=The%20Company%20has%20appealed%20the%20preliminary%20injunction%20decision%2C%20and%20the%20appeal%20hearing%20is%20set%20for%20November%2019%2C%202026",
+     "note": ""
+    },
+    {
+     "cite_id": "c_c079091721",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 16,
+     "quote": "Keytruda 2028 (10) 2031 2032-2033 2028",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 14",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p16",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=16&q=Keytruda%202028%20%2810%29%202031%202032-2033%202028",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 3,
+    "total": 3,
+    "verified": 2,
+    "derived": 1,
+    "assumed": 0,
+    "unsupported": []
+   },
+   "derived": {
+    "us_total": {
+     "value": 5006,
+     "expr": "a + b",
+     "operands": {
+      "a": {
+       "value": 395,
+       "text": "395",
+       "cite_id": "c_3f590007df"
+      },
+      "b": {
+       "value": 4611,
+       "text": "4,611",
+       "cite_id": "c_eaaf43aaf3"
+      }
+     }
+    },
+    "share": {
+     "value": 7.9,
+     "expr": "a / (a + b) * 100",
+     "operands": {
+      "a": {
+       "value": 395,
+       "text": "395",
+       "cite_id": "c_3f590007df"
+      },
+      "b": {
+       "value": 4611,
+       "text": "4,611",
+       "cite_id": "c_eaaf43aaf3"
+      }
+     }
+    }
+   }
+  },
+  "priced_in": {
+   "call": "not priced in",
+   "confidence": "medium",
+   "text": "Likely not priced in: no analyst asked about the IRS transition-tax NOPAs on any of 10 calls and no call, release or slide mentions them, FY2026 EPS consensus did not move after the Q2 10-Q (the item sits outside non-GAAP EPS), and the two-day abnormal return on the filing was -0.4%; Qlex conversion, the growth limiter, drew no analyst question on either 2026 call.",
+   "text_marked": "Likely not priced in: no analyst asked about the IRS transition-tax NOPAs on any of 10[1] calls and no call, release or slide mentions them, FY2026 EPS consensus did not move after the Q2 10-Q (the item sits outside non-GAAP EPS), and the two-day abnormal return on the filing was -0.4%[derived: 2]; Qlex conversion, the growth limiter, drew no analyst question on either 2026 call.[3][4][5][6][7]",
+   "marker_map": {
+    "1": "c_5f00e62035",
+    "2": "c_f8ca640711",
+    "3": "c_39b3c087e5",
+    "4": "c_71aada0a97",
+    "5": "c_9200c6039d",
+    "6": "c_5ae6c398d4",
+    "7": "c_3fbe09d6fa"
+   },
+   "cites": [
+    {
+     "cite_id": "c_5f00e62035",
+     "doc_id": "market/priced_in_scorecard.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/priced_in_scorecard.csv",
+     "location": "row market/priced_in_scorecard.csv#73",
+     "speaker": null,
+     "locator": "market/priced_in_scorecard.csv#73 quarters_covered = 10",
+     "viewer_link": "",
+     "note": "facts row market/priced_in_scorecard.csv#73 field quarters_covered re-read from row_json (verified: verified)"
+    },
+    {
+     "cite_id": "c_f8ca640711",
+     "doc_id": "market/event_returns.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/event_returns.csv",
+     "location": "row market/event_returns.csv#138",
+     "speaker": null,
+     "locator": "market/event_returns.csv#138 abn_0_to_1 = -0.0044",
+     "viewer_link": "",
+     "note": "facts row market/event_returns.csv#138 field abn_0_to_1 re-read from row_json (verified: verified)"
+    },
+    {
+     "cite_id": "c_39b3c087e5",
+     "doc_id": "market/event_returns.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/event_returns.csv",
+     "location": "row market/event_returns.csv#121",
+     "speaker": null,
+     "locator": "market/event_returns.csv#121 abn_0_to_1 = -0.00651",
+     "viewer_link": "",
+     "note": "facts row market/event_returns.csv#121 field abn_0_to_1 re-read from row_json (verified: verified)"
+    },
+    {
+     "cite_id": "c_71aada0a97",
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_eps_consensus.csv",
+     "location": "row tables/ibes_eps_consensus.csv#1006",
+     "speaker": null,
+     "locator": "fact:tables/ibes_eps_consensus.csv#1006 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_eps_consensus.csv#1006 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    },
+    {
+     "cite_id": "c_9200c6039d",
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_eps_consensus.csv",
+     "location": "row tables/ibes_eps_consensus.csv#1007",
+     "speaker": null,
+     "locator": "fact:tables/ibes_eps_consensus.csv#1007 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_eps_consensus.csv#1007 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    },
+    {
+     "cite_id": "c_5ae6c398d4",
+     "doc_id": "tables/ibes_revenue_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_revenue_consensus.csv",
+     "location": "row tables/ibes_revenue_consensus.csv#4149",
+     "speaker": null,
+     "locator": "fact:tables/ibes_revenue_consensus.csv#4149 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_revenue_consensus.csv#4149 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    },
+    {
+     "cite_id": "c_3fbe09d6fa",
+     "doc_id": "tables/ibes_revenue_consensus.csv",
+     "page": null,
+     "quote": "",
+     "url": "",
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_revenue_consensus.csv",
+     "location": "row tables/ibes_revenue_consensus.csv#4150",
+     "speaker": null,
+     "locator": "fact:tables/ibes_revenue_consensus.csv#4150 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_revenue_consensus.csv#4150 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page"
+    }
+   ],
+   "derived": {
+    "er": {
+     "value": -0.4,
+     "expr": "a * 100",
+     "operands": {
+      "a": {
+       "value": -0.0044,
+       "text": "-0.0044",
+       "cite_id": "c_f8ca640711"
+      }
+     }
+    }
+   },
+   "evidence": [
+    {
+     "source": "analyst attention (verified/calls/qa_turns.csv; index transcripts, releases and slides)",
+     "finding": "Zero analyst turns name the NOPAs, the transition tax, TCJA or the IRS across the 10 covered calls (2024Q1 to 2026Q2), and a full-text search of every indexed MRK transcript, release and slide deck finds no mention by management either. Limiter: Qlex or subcutaneous Keytruda was raised by analysts on calls from 2024Q1 to 2025Q4 but on neither 2026 call (topic top_products is asked every quarter).",
+     "cites": [
+      "c_5f00e62035"
+     ]
+    },
+    {
+     "source": "press attention (GDELT, tables/news_mentions.csv)",
+     "finding": "No item-level GDELT query exists for the IRS NOPAs or for Qlex. Nearest proxy \"Merck\" (Keytruda OR Januvia) spiked in the Q2 reporting month (2026-07: 88, 2026-08: 396, 2026-09: 63 articles), which reflects Keytruda news generally, not the tax item. Raw table, not re-verified; context only.",
+     "cites": [
+      "gdelt:doc:timelinevolraw:MRK:top_products:202607",
+      "gdelt:doc:timelinevolraw:MRK:top_products:202608",
+      "gdelt:doc:timelinevolraw:MRK:top_products:202609"
+     ]
+    },
+    {
+     "source": "consensus revisions (I/B/E/S; licensed, machine_data)",
+     "finding": "Company-level FY2026 mean EPS consensus was unchanged and revenue consensus moved up slightly between the snapshots before and after the Q2 10-Q (2026-07-16 to 2026-08-20). Direction only. The NOPAs would hit GAAP tax and cash, not the non-GAAP EPS the Street models, so consensus would not show them even if known.",
+     "cites": [
+      "c_71aada0a97",
+      "c_9200c6039d",
+      "c_5ae6c398d4",
+      "c_3fbe09d6fa"
+     ]
+    },
+    {
+     "source": "event returns (verified/market/event_returns.csv)",
+     "finding": "Two-day abnormal returns were small and negative on both disclosures carrying the item: the FY2025 10-K (-0.7%) and the Q2 2026 10-Q (-0.4%), each filed apart from the earnings release.",
+     "cites": [
+      "c_39b3c087e5",
+      "c_f8ca640711"
+     ]
+    }
+   ],
+   "limit": "No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.",
+   "numeric_check": {
+    "status": "passed",
+    "checked": 2,
+    "total": 2,
+    "verified": 1,
+    "derived": 1,
+    "assumed": 0,
+    "unsupported": []
+   }
+  }
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 2,
+  "best_candidate_id": "MRK-c03",
+  "one_line": "Middling pick: Merck's only material, non-obvious survivors are balance-sheet footnotes (the unmentioned IRS transition-tax NOPA, ~$1.56B cash and a gross ~$0.63/share GAAP ceiling, and a $5.9B long-dated inventory pool that kept growing after its tariff rationale lapsed), while the product story (Keytruda/Qlex) is the starter thread and its label fine print carries no sized edge."
+ },
+ "notes": [
+  "MRK-c10 is used in the product section only (pricing row and financial tie), per the synthesizer.",
+  "The MRK-c10 ruling text in synthesis.json and trace_part.jsonl carried an unfilled template placeholder ({prem[...]}); the matched-quarter premiums were recomputed from the CMS rows (Q2 2026 +3.6%, Q3 2026 +4.0%, Oct 2026 +2.5%) and substituted in trace.jsonl.",
+  "Inventory days for 2024 recompute to 247.5 (10,302 / 15,193 x 365), printed as 247; the synthesizer's 248 rounded up.",
+  "Rows 4 and 5 are killed-as-obvious candidates kept as on-the-record rows (obviousness high)."
+ ]
+}

@@ -1,0 +1,426 @@
+// Types mirroring the data contract in docs/ui_spec.md ("Data contract: ui/public/data/").
+// Everything beyond identifiers is optional: the exporter is evolving, and the UI must
+// tolerate missing or extra fields (index signatures keep unknown keys accessible).
+
+export type Loose = { [k: string]: unknown };
+export type Confidence = "high" | "medium" | "low" | string;
+
+export interface CompanyRef { ticker: string; name?: string }
+
+export interface MoatBucket { key: string; label?: string; why?: string }
+export interface MoatCell { have?: number; need?: number; note?: string }
+export interface MoatTable { name: string; rows?: number; what?: string; list_or_net?: string; source?: string }
+
+export interface Meta extends Loose {
+  as_of?: string;
+  default_ticker?: string;
+  companies: CompanyRef[];
+  onboarded?: string[];
+  totals?: { verified?: number; rejected?: number; findings?: number; high_confidence?: number } & Loose;
+  ledger?: { ok?: boolean; n?: number; bad?: number } & Loose;
+  corpus?: {
+    docs?: number; companies?: number; peers?: number; drugs?: number;
+    transcripts?: number; transcripts_official?: number; pages?: number;
+  } & Loose;
+  moat?: {
+    as_of?: string;
+    coverage?: Record<string, Record<string, MoatCell>>;
+    buckets?: MoatBucket[];
+    status?: Record<string, [string, string] | string[]>;
+    tables?: MoatTable[];
+    no_source?: string[][];
+    stages?: string[][];
+  } & Loose;
+  case_sets?: Record<string, Record<string, string[]>>;
+  verifier_rules?: string[];
+  limits?: string[];
+}
+
+export interface LeagueRow extends Loose {
+  ticker: string;
+  name?: string;
+  score?: number;
+  n_findings?: number;
+  n_verified?: number;
+  n_rejected?: number;
+  high_confidence?: number;
+  sharpest_needle?: string;
+  needle_id?: string;
+  /** v2 engine: strict (row clears the obscurity floor), provisional or floor_relaxed. */
+  needle_status?: NeedleStatus | string;
+  needle_confidence?: Confidence;
+  rank?: number;
+  v2_rank?: number | null;
+}
+
+export type NeedleStatus = "strict" | "provisional" | "floor_relaxed" | "none";
+
+export interface Excerpt { before?: string; match?: string; after?: string }
+
+export interface Evidence extends Loose {
+  doc_id?: string;
+  page?: number | null;
+  printed?: string;
+  citation?: string;
+  quote?: string;
+  speaker?: string;
+  figures?: unknown[];
+  url?: string;
+  doc_type?: string;
+  source_quality?: string;
+  grade?: string;
+  excerpt?: Excerpt;
+  /** Filled in by the UI when the evidence is opened from a finding. */
+  verdict?: string;
+  doc_title?: string;
+  period?: string;
+  location?: string;
+  deep_link?: string;
+  /** Public rule: unverified or licensed citations export no quote, excerpt or links. */
+  withheld?: boolean;
+  withheld_reason?: string | null;
+  verification?: { status?: string; score?: number; checked_at?: string; detail?: string } | null;
+  cite_id?: string;
+  /** Derived citation: operand cite_ids (no quote of its own). withheld wins over derived. */
+  derived_from?: string[] | null;
+  /** number_match display note: "constructed from the cited value (no page); not a verbatim quote", or a page note. */
+  quote_note?: string | null;
+  viewer_link?: string | null;
+  /** The computation as exported (e.g. "a / b"), when not withheld. */
+  derived_expr?: string | null;
+  /** Data-row cite (cite_id "row:..."): the JSON path it resolves to and how the value was checked. */
+  row_ref?: string | null;
+  row_check?: string | null;
+  value?: unknown;
+  unit?: string | null;
+}
+
+export interface Impact extends Loose {
+  formula?: string; dollars?: number | null; base?: number | null; bear?: number | null;
+  bull?: number | null; line?: string; eps?: number | null;
+}
+
+export interface Peer extends Loose { metric_value?: number | null; peer_median?: number | null; z?: number | null; note?: string }
+
+export interface Vector extends Loose {
+  I_norm?: number; P?: number; T?: number; Z?: number; D?: number; O?: number; E?: number;
+  obscurity_note?: string; topics?: string[];
+  v2?: VectorV2 | null;
+}
+
+export interface VectorV2 extends Loose { M?: number | null; O?: number | null; E?: number | null; pi?: number | null; S?: number | null; old_S?: number | null }
+
+/** Numbers-on-the-page check (league_v3 uncited-claim gate). Absent = not yet run. */
+export interface NumericCheck extends Loose {
+  status: "passed" | "failed" | "unchecked" | "no_numbers" | string;
+  checked?: number; total?: number;
+  verified?: number; derived?: number; assumed?: number;
+  unsupported?: { value?: unknown; where?: string; reason?: string }[];
+  note?: string;
+}
+
+export interface Finding extends Loose {
+  id: string;
+  numeric_check?: NumericCheck | null;
+  flags?: string[];
+  /** Sentence with inline markers [n] (evidence n, 1-based), [derived: a, b] and [assumption]. */
+  sentence_marked?: string | null;
+  /** Impact formula with the same inline markers ([n], [derived: a, b], [constant: NAME], [assumption]). */
+  formula_marked?: string | null;
+  /** Marker number -> cite_id (resolve anywhere in the company file). */
+  marker_map?: Record<string, string> | null;
+  /** Marker numbers that point at licensed sources: shown as a muted mark, never a chip. */
+  marker_licensed?: number[] | null;
+  guard_reason?: string | null;
+  /** Receivables-style row whose movement a filing footnote explains; never the needle. */
+  explained_by_footnote?: boolean | null;
+  explained_by_footnote_note?: string | null;
+  footnote_note?: string | null;
+  footnote_read?: { status?: string; doc?: string; net?: number; term?: string } | null;
+  /** Gated plain-language peer comparison (findings_table rows). */
+  peer_text?: string | null;
+  peer_comparison?: string | null;
+  not_quantified?: string | null;
+  corroborates?: string | null;
+  fact_key?: string | null;
+  impact_channel?: string | null;
+  finding: string;
+  signal_kind?: string;
+  detector?: string;
+  score?: number;
+  score_norm?: number;
+  confidence?: Confidence;
+  verdict?: string;
+  reason?: string;
+  impact?: Impact;
+  peer?: Peer;
+  vector?: Vector;
+  hit_rate?: unknown;
+  outside?: unknown;
+  evidence?: Evidence[];
+}
+
+export interface Rejected extends Loose { finding?: string; reason?: string; verdict?: string; signal_kind?: string }
+
+/** Evidence reference into company.findings[].evidence[]. */
+export interface CiteRef { finding_id: string; i?: number }
+
+export interface ComparisonRow { field: string; label?: string; values?: Record<string, { value?: unknown; source?: string }> }
+export interface Comparison { product: string; rivals?: string[]; rows?: ComparisonRow[] }
+
+export interface PricePoint extends Loose {
+  year: number; partd_per_unit?: number | null; nadac_brand?: number | null; asp?: number | null;
+  mfp_per_unit?: number | null; mfp_per_30day?: number | null;
+}
+
+export interface StanceOption { name: string; dollars?: number | null; share?: number | null; rationale?: string }
+export interface Stance extends Loose {
+  headline?: string;
+  confidence?: Confidence;
+  bullets?: { text: string; cites?: CiteRef[] }[];
+  options?: StanceOption[];
+  recommended?: string;
+  decision_needed?: string;
+  memo_points?: { text: string; cites?: CiteRef[] }[];
+  alternatives?: { name: string; why_rejected?: string }[];
+  prove_wrong?: string[];
+  deciders?: string[];
+  generated_by?: "template" | "model" | string;
+  note?: string;
+  decide?: Decide | null;
+  kill_signals?: KillSignal[] | null;
+}
+
+export interface DecideMove extends Loose {
+  name: string; code?: string; template?: string; status?: "chosen" | "rejected" | string; rank?: number;
+  ev?: number | null; ev_by_scenario?: { bear?: number; base?: number; bull?: number } | null;
+  cash_at_risk?: number | null; payback_month?: number | null; spread?: number | null; mcda?: number | null;
+  binding_reason?: string; why?: string; flags?: string[]; finding_ids?: string[]; kill_signal_ids?: string[];
+  budget?: Record<string, number> | null; units?: string;
+  why_passed?: string | null; cash_at_risk_note?: string | null;
+}
+export interface DecideFootnote extends Loose { n: number; move?: string; claim?: string; citation?: Evidence }
+export interface Decide extends Loose {
+  /** Pipeline demonstration, not the team's recommendation; `note` explains it. */
+  demo?: boolean | null; note?: string | null;
+  /** null when no candidate clears the hurdle; then `least_bad` names the move shown, `selection_rule` says why. */
+  chosen?: string | { name?: string; code?: string } | null;
+  least_bad?: string | { name?: string; code?: string } | null;
+  selection_rule?: string | null;
+  /** "Why it will work": the evidence each decider needs (cited rows). */
+  why_it_works_rows?: Loose[] | null;
+  as_of?: string; cash_and_equivalents?: number; units?: string; moves?: DecideMove[];
+  footnotes?: DecideFootnote[]; finding_cites?: CiteRef[]; source_files?: string[];
+}
+export interface KillSignal extends Loose {
+  id: string; signal?: string; threshold?: string; source?: string; lag?: string; check_month?: number;
+  action?: string; basis?: string; stop?: boolean;
+}
+
+export interface Question {
+  id: string;
+  q: string;
+  answer?: {
+    stance?: string; text?: string; cites?: CiteRef[]; trace?: string[];
+    exhibits?: { kind: string; ref?: unknown }[];
+  } & Loose;
+}
+
+export interface Company extends Loose {
+  ticker: string;
+  name?: string;
+  needle_id?: string;
+  findings: Finding[];
+  rejected?: Rejected[];
+  labels?: ({ comparison?: Comparison[] } & Loose) | null;
+  forces?: Loose | null;
+  priced_in?: Loose[];
+  never_asked?: Loose[];
+  consensus_vs_guidance?: Loose | null;
+  ira_cut_check?: Loose[];
+  comment_letters?: Loose[];
+  discontinued_breakouts?: Loose[];
+  transcript_grades?: Loose[];
+  gtn_exposure?: Loose[];
+  price_series?: Record<string, PricePoint[]>;
+  stance?: Stance | null;
+  questions?: Question[];
+}
+
+export interface Proof extends Loose {
+  backtest?: { hit_rates?: unknown; gate2_md?: string; examples?: unknown } & Loose;
+  calibration?: Loose;
+  blind?: Loose;
+  sealed?: { file?: unknown; canonical?: string; doc_hash?: string } & Loose;
+  ai_wrong?: Loose[];
+  verifier_rules?: string[];
+  limits?: string[];
+}
+
+/* ------------------------------------------------------------ memos.json (chat) */
+
+export interface MemoCite extends Loose {
+  n: number; cite_id?: string; finding_id?: string | null; ticker?: string | null;
+  doc_title?: string | null; period?: string | null; page?: number | string | null; quote?: string | null;
+  excerpt?: Excerpt | null; url?: string | null; withheld?: boolean; withheld_reason?: string | null;
+  verification?: { status?: string; score?: number; detail?: string } | string | null;
+  ref?: string | null; finding_ids?: string[] | null; doc_title_raw?: string | null; value?: unknown;
+  /** Operand cite_ids (or footnote numbers) of a derived figure. */
+  derived_from?: (string | number)[] | null; derived_expr?: string | null;
+  numeric_check?: NumericCheck | null;
+}
+
+export type MemoBlock =
+  | { type: "h"; text: string }
+  | { type: "p"; md: string }
+  | { type: "kpi"; items: { label: string; value: string; cite?: number | null }[] }
+  | { type: "table"; columns: string[]; rows: string[][] }
+  | { type: "list"; items: string[] }
+  | { type: "callout"; tone: "ok" | "warn" | "muted" | string; md: string }
+  | { type: "math"; label?: string; text: string; text_marked?: string | null; cite?: number | null };
+
+export interface MemoRecord extends Loose {
+  id: string; prompt: string; aliases?: string[]; ticker?: string | null; kind?: string;
+  /** "chat" answers in the thread; "memo" renders a document card. */
+  format?: "chat" | "memo" | string;
+  memo_header?: { to?: string; from?: string; re?: string; date?: string } | null;
+  /** Pipeline demonstration (a decide run that is not the team's pick); the note opens the memo. */
+  demo?: boolean | null; demo_note?: string | null;
+  least_bad?: string | null; selection_rule?: string | null;
+  generated_by?: "template" | "decide_v2" | "data" | string;
+  summary?: string; blocks?: MemoBlock[]; cites?: MemoCite[]; numeric_check?: NumericCheck | null; ask_next?: string[];
+}
+
+export interface MemosFile extends Loose {
+  generated_at?: string; mode?: string; engine?: string; default_ticker?: string | null;
+  suggested?: string[]; memos: MemoRecord[];
+  /** Per-company suggested flow, used once a company is picked in the pill. */
+  suggested_by_ticker?: Record<string, string[]>;
+}
+
+/* Part 1 deliverable (data/part1/, written by agent/ui_part1_export.py). Shapes follow the Part 1 data
+   contract; every field beyond identifiers is optional so a partial export still renders. */
+
+export interface Part1Index extends Loose {
+  generated_at?: string; engine?: string; picked: string[]; tickers?: string[];
+  sealed?: { sha256?: string; sealed_at?: string } | null; sample?: boolean; sample_note?: string;
+  /** Picks whose answer files are written; `missing` picks are still being written. */
+  available?: string[]; missing?: string[];
+}
+
+export interface Part1Selection extends Loose {
+  picked: string[]; reasons?: Record<string, string>; eliminated?: Record<string, string>;
+  sealed_at?: string; sha256?: string; selection_md?: string;
+  /** Figure-free card text. `reasons` / `eliminated` are verbatim and ungated: never rendered as prose. */
+  reasons_card?: Record<string, string>; eliminated_card?: Record<string, string>;
+  /** The sealed markdown, relative to the data root (e.g. "part1/selection.md"). */
+  sealed_doc_path?: string;
+  names?: Record<string, string>;
+}
+
+export interface Part1Source extends Loose { doc_title?: string; period?: string; page?: number | string | null; quote?: string | null; url?: string | null; speaker?: string | null; cite?: number | null }
+
+export interface Part1Impact extends Loose {
+  text?: string; text_marked?: string | null; math?: string | null; math_marked?: string | null; direction?: string;
+  numeric_check?: NumericCheck | null;
+}
+
+export interface Part1Finding extends Loose {
+  n: number; finding: string; finding_marked?: string | null; marker_map?: Record<string, string> | null;
+  source?: Part1Source | null; cites?: Evidence[]; impact?: Part1Impact | null;
+  peer?: string | null; peer_marked?: string | null; confidence?: Confidence;
+  /** One of the eight "Where findings hide" categories. */
+  category?: string | null; confidence_reason?: string | null;
+  /** "narrowed" (a skeptic-narrowed claim) or "killed" (an on-the-record row used to fill the five). */
+  verdict?: string | null; obviousness?: string | null;
+  /** Where management already said it (on-the-record rows); may carry markers. */
+  on_the_record?: string | null; on_the_record_marked?: string | null;
+}
+
+export interface Part1Marked extends Loose { text?: string; text_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null; status?: string; note?: string }
+
+export interface Part1Product extends Loose {
+  product: string; rivals?: string[];
+  /** Header columns: cell key, short header label, full name (title). Absent: product then rivals. */
+  columns?: { key: string; label?: string; full?: string }[];
+  rows?: { row: string; cells?: Record<string, Part1Marked> }[];
+  financial_tie?: (Part1Marked & { math_marker_map?: Record<string, string> | null; math?: string | null; math_marked?: string | null; numeric_check?: NumericCheck | null; math_numeric_check?: NumericCheck | null }) | null;
+  growth_limiter?: { sentence?: string; sentence_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null; numeric_check?: NumericCheck | null } | null;
+  priced_in?: (Part1Marked & {
+    call?: "priced in" | "not priced in" | "untestable" | string;
+    confidence?: Confidence | null;
+    /** Graded signals (analyst attention, press, consensus revisions, event returns): list or object. */
+    evidence?: unknown;
+    limit?: string | null; limit_marked?: string | null;
+  }) | null;
+}
+
+export interface Part1Company extends Loose {
+  ticker: string; name?: string; findings?: Part1Finding[];
+  sharpest_needle?: { finding_n?: number; why?: string; why_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null } | null;
+  product_table?: Part1Product | null;
+}
+
+export interface Part1SkepticRounds { round1?: unknown; round2?: unknown }
+
+export interface Part1TraceStep extends Loose {
+  step: number; category: string; query?: string;
+  documents?: { doc_id?: string; doc_title?: string; page?: number | string | null }[];
+  candidate?: { text?: string; cites?: Evidence[] } | null;
+  skeptic_materiality?: Part1SkepticRounds | null; skeptic_obviousness?: Part1SkepticRounds | null;
+  verdict?: "survived" | "killed" | "narrowed" | string; verdict_reason?: string; finding_n?: number | string | null;
+}
+
+export interface Part1Trace extends Loose {
+  header?: { categories?: string[]; ticker?: string; generated_at?: string } & Loose;
+  steps?: Part1TraceStep[];
+  summary?: { candidates?: number; survived?: number; killed?: number; narrowed?: number; documents?: number } | null;
+  sample?: boolean;
+}
+
+/* Part 2 deliverable (data/part2/, written by agent/ui_part2_export.py from out/part2/<T>/part2.json).
+   Shapes follow docs/part2/UI_CONTRACT.md on quant-model; every field beyond identifiers is optional so a
+   partial export still renders. A "block" is {text, text_marked, marker_map, cites, numeric_check}. */
+export interface Part2Block extends Loose {
+  text?: string | null; text_marked?: string | null; marker_map?: Record<string, string> | null; cites?: Evidence[];
+  numeric_check?: NumericCheck | null;
+}
+export interface Part2Budget extends Part2Block { amount_usd?: number | null; people?: number | string | null; period?: string | null }
+export interface Part2Move extends Part2Block { type?: string | null; budget?: Part2Budget | null }
+export interface Part2Driver extends Loose { finding_n?: number | string | null; why?: string | null; why_marked?: string | null; marker_map?: Record<string, string> | null; cites?: Evidence[] }
+export interface Part2Step extends Part2Block { step?: number | string | null }
+export interface Part2Case extends Loose { cost?: Part2Block | null; return?: Part2Block | null; math_steps?: Part2Step[]; net?: Part2Block | null }
+export interface Part2Rejected extends Loose { id?: string; move?: string | null; type?: string | null; why_passed?: Part2Block | null; skeptic_lens?: string | null }
+export interface Part2Kill extends Part2Block { signal?: string | null; threshold?: string | null; month_window?: string | null }
+export interface Part2Evidence extends Loose { decider?: string | null; lands_because?: Part2Block | null; can_tell?: Part2Block | null; cannot_tell?: Part2Block | null }
+export interface Part2Piece extends Loose { title?: string | null; body?: string | null; body_marked?: string | null; marker_map?: Record<string, string> | null; cites?: Evidence[]; numeric_check?: NumericCheck | null }
+export interface Part2Claim extends Loose { claim?: string | null; support_section?: string | null; cite?: Evidence | null; cites?: Evidence[] }
+export interface Part2RulesCheck extends Loose {
+  approved_uses_only?: boolean | null; risks_prominent?: boolean | null; h2h_only?: boolean | null;
+  no_testimonials?: boolean | null; labelled?: boolean | null; claims_map_present?: boolean | null;
+}
+export interface Part2Promo extends Loose { has_material?: boolean | null; label?: string | null; pieces?: Part2Piece[]; claims_map?: Part2Claim[]; rules_check?: Part2RulesCheck | null }
+export interface Part2Unresolved extends Loose { topic?: string | null; cfo_position?: string | null; decider_position?: string | null }
+export interface Part2Company extends Loose {
+  ticker: string; company?: string; generated_at?: string;
+  move?: Part2Move | null; drivers?: Part2Driver[]; case_for?: Part2Case | null; rejected?: Part2Rejected[];
+  kill_signals?: Part2Kill[]; evidence?: Part2Evidence | null; promo?: Part2Promo | null; unresolved?: Part2Unresolved[];
+  candidates_considered?: number | null; skeptic_summary?: { killed?: number; narrowed?: number; survived?: number } | null;
+  /** Written by the exporter: the sum of every block's numeric_check (status passed when all passed or no_numbers). */
+  numeric_summary?: NumericCheck | null;
+  /** Written by the exporter: how many figures the gate withheld from this record's prose. */
+  figures_withheld?: number | null;
+}
+export interface Part2TraceStep extends Loose {
+  step: number; candidate_id?: string; move?: string | null; type?: string | null;
+  skeptic_cfo?: Part1SkepticRounds | null; skeptic_decider?: Part1SkepticRounds | null;
+  verdict?: string | null; reason?: string | null; cites?: Evidence[]; figures_withheld?: number;
+}
+export interface Part2Trace extends Loose {
+  ticker?: string; generated_at?: string; lenses?: string[]; steps?: Part2TraceStep[];
+  summary?: { killed?: number; narrowed?: number; survived?: number; candidates?: number };
+}
+export interface Part2Index extends Loose {
+  generated_at?: string; prompt?: string; picked: string[]; available?: string[];
+  missing?: { ticker: string; reason?: string }[]; sample?: boolean; sample_note?: string; contract?: string;
+}

@@ -1,0 +1,244 @@
+{
+ "ticker": "AMGN",
+ "lens": "decider",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "AMGN-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "As written ($74.65M committed, a trial offered 'in exchange for keeping TAVNEOS approved') the move is still refuted on the decider: no indexed page shows the FDA trading approval for a new trial, and the proposal's second ground, that the application 'contained untrue statements of material facts' (AMGN:10q_2026Q2.md p.21, printed p. 16), is untouched by any new study. Does the FDA give the gated offer any chance? Some, and I now say so: AMGN:10q_2026Q2.md p.59 (printed p. 54) lists 'postmarketing commitments or studies' among actions the FDA may require and then speaks of 'any such action or any withdrawal of regulatory approval', which presents PMRs as an alternative outcome to withdrawal, not only an add-on. The same page refutes any quantification: Amgen 'cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient'. The first gate is also on p.21: 'If a hearing is not granted, the FDA may enter summary judgment'. So the chance is real but unsourced in size, and it is zero on the untrue-statements ground if that ground alone carries the case. CFO points checked against pages: H1 TAVNEOS U.S. $257M and Q2 $143M are on AMGN:10q_2026Q2.md p.44 (printed p. 39), so Q1 was $114M and H1 x 2 = $514M is the right base; 'remain on the market during the pendency' is on p.21, so exposure inside 24 months starts only at withdrawal. Margin cite check: the CFO's 19.5% is on AMGN:transcripts/2026Q1_transcript.md p.1 (grade B) and verifies, but it is the Motley Fool summary bullet, not a management quote. Better pages: Peter Griffith, CFO, on AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.8 (grade B): 'Our non-GAAP cost of sales as a percentage of product sales was 19.6%' (80.4% margin), and the FY2025 reconciliation on AMGN:companies/AMGN/proxy_2026.md p.137: GAAP 34.2% less 15.9 points of acquisition-related expenses gives non-GAAP 18.3% (81.7% margin). The 80.5% figure is confirmed to within about a point; it is a company average that includes EVENITY and TEZSPIRE profit share, so it is a proxy, not a product margin. Combining both lenses: with the gated cost (about $12.5M [assumption], midpoint of my $10M to $15M) against the CFO's month-12 exposure of $413.8M, break-even is 12.5 / 413.8 = 3.0 points of retention probability, versus 18.0 points for the full $74.65M. The gated version is cheap enough that a small, unsourced FDA probability can carry it; the full commitment cannot.",
+   "correction": "Gated remedy offer in the hearing record: propose a confirmatory adult trial protocol and a U.S. hepatic monitoring program as PMRs the FDA would set; spend about $10M to $15M [assumption] on protocol, adjudication charter and registry setup; release the trial budget only if the FDA grants a hearing or signals PMRs in lieu of withdrawal. Return stated as option value: break-even about 3.0 points on $413.8M of month-12 exposure (H1 run-rate $514M a year at about 80.4% non-GAAP margin, AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.8); most of the payoff runs after month 24 toward the 1/6/2034 patent. The $345M impairment stays a balance-sheet note, not a second return. Kill: hearing denied or summary judgment entered.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 59
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 44
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 11
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 58
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/proxy_2026.md",
+     "page": 137
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 76
+    }
+   ],
+   "round2": {
+    "conceded": "The CFO is right that the H1 run-rate ($514M a year, p.44) replaces Q2 x 4, that exposure inside 24 months starts only at withdrawal (p.21), that the $345M impairment would double count if used as a return, and that the move is option value with most payoff after month 24. I also concede the FDA gives a gated PMR offer a nonzero chance: p.59 frames PMRs as an alternative to withdrawal. On their framing m01 is the strongest survivor once gated.",
+    "held": "The FDA's acceptance is not on any page and Amgen itself says it cannot predict it (p.59); the untrue-statements ground (p.21) cannot be answered by a trial; so the candidate as written ($75M committed in exchange for approval) stays refuted. The 15-point shift remains a pure assumption.",
+    "narrowed": "From 'refute the regulatory bargain' to 'support only the gated version': about $12.5M [assumption] at risk, break-even about 3.0 points on the CFO's month-12 exposure, with the trial budget released only on an FDA hearing grant or PMR signal."
+   }
+  },
+  {
+   "id": "AMGN-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Held from round 1 and still on the pages: the primary-care push is already management's program (AMGN:presentations/2026Q2_earnings_slides.md p.7; AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.15, grade B; AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p.13, grade A), and the HCP piece fails promo rule 2 because it omits section 6.1 adverse reactions that are indexed (drug:repatha:label_sections.md page 9). CFO points checked: 'expect net selling price to decline by approximately mid-single digits' is on AMGN:10k_FY2025.md p.71, so a flat $1,950M base is high; the $239 AmgenNow price on the press release p.1 is a cash channel price, not a net floor. Margin cite check: the CFO's 19.5% is on AMGN:transcripts/2026Q1_transcript.md p.1 (grade B) and verifies, but it is the Motley Fool summary bullet, not a management quote. Better pages: Peter Griffith, CFO, on AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.8 (grade B): 'Our non-GAAP cost of sales as a percentage of product sales was 19.6%' (80.4% margin), and the FY2025 reconciliation on AMGN:companies/AMGN/proxy_2026.md p.137: GAAP 34.2% less 15.9 points of acquisition-related expenses gives non-GAAP 18.3% (81.7% margin). The 80.5% figure is confirmed to within about a point; it is a company average that includes EVENITY and TEZSPIRE profit share, so it is a proxy, not a product margin. At about 80.4% the contribution is about $141M on $120M, near the CFO's 8% two-year hurdle [assumption], but the 3% and 6% lifts are not separable from a trend management is already driving, which is the decider problem: the doctor is already moving, so the lift cannot be credited to this spend.",
+   "correction": "Fix the ISI (add section 6.1 common adverse reactions and rates, claims-map row to drug:repatha:label_sections.md page 9). Shrink to a roughly $30M [assumption] holdout-region pilot in PCP segments the 2026Q2 call does not already name, so lift is measured against a control; do not stack its volume with m04 on the same $1,950M base; cite Lipfendra's direct-to-patient plan on MRK:10q_2026Q2.md p.32.",
+   "pages_checked": [
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 1
+    },
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 2
+    },
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 3
+    },
+    {
+     "doc_id": "repatha:drugs/repatha/label_v30.md",
+     "page": 4
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 8
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 9
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 10
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 7
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 71
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "page": 8
+    }
+   ],
+   "round2": {
+    "conceded": "The CFO's corrections stand: mid-single-digit net price decline (p.71) lowers the base, the $239 price is not a net floor, the margin should be non-GAAP (about 80%, not 65.8%), and m02 and m04 cannot both claim incremental volume on the same base. Their $30M pilot and mine converge.",
+    "held": "Already announced and promo rule 2 failure, both independent of the math. The CFO treats the lift as merely unsourced; I hold that it is unattributable because the PCP push is already running (slides p.7, call p.15).",
+    "narrowed": "Severity stays major, but the narrowed holdout pilot with a corrected ISI is acceptable to both lenses."
+   }
+  },
+  {
+   "id": "AMGN-m03",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Both lenses agree fatal. CFO checks against pages: profit-share $721M, $547M, $396M on AMGN:10k_FY2025.md p.132; the ChemoCentryx $3.7B EV on deals:deals/2022-08-04_0001193125-22-211860.md p.1 is a whole-company deal, not a profit-share buyout comp; no indexed buyout comp exists. Their fair value of about $5.8B (8.0x trailing; 25% growth to 2028 then flat to 2031, 8% discount [assumption]) is more defensible than my undiscounted $7.4B for 2026 to 2030, and both put UCB's reservation price well above $3.6B. Their payback point (24-month avoided payments of $2,027.8M below the $3,605M outlay) strengthens the decider case: even Amgen's investors get no in-window payback.",
+   "correction": "None possible as a priced move: at a price UCB could accept (about $5.8B on the CFO's discounted basis) NPV is about zero and no return lands inside 24 months. Narrow to renegotiating cost sharing on Amgen-only U.S. spend, or opening talks with a bid capped at NPV at Amgen's cost of capital; name UCB as the decider.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 132
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 30
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 7
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/agreements/2024_10_17_Amendment_No_2_to_Collaboration_and_License_Agree.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/agreements/2024_10_17_Amendment_No_2_to_Collaboration_and_License_Agree.md",
+     "page": 3
+    },
+    {
+     "doc_id": "deals:deals/2022-08-04_0001193125-22-211860.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "The CFO's discounted fair value (about $5.8B, 8.0x) replaces my undiscounted $7.4B as the reference number; the missing amortization and the no-payback-in-window point are right.",
+    "held": "The decider is UCB, not investors, and nothing indexed shows UCB would sell; European commercialization and the Astellas Japan partnership (slides p.7) mean '100% of growth' is false even after a buyout.",
+    "narrowed": "No change to the verdict; only the reference price moves to the CFO's discounted figure."
+   }
+  },
+  {
+   "id": "AMGN-m04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Unit correction checked: AMGN:10k_FY2025.md p.83 (printed p. 77) states 'total sales deductions were 54%, 52% and 53% of gross product sales', so deduction rates, and rebate points by the same convention, are percentages of gross. With the company 54% as a Repatha proxy [assumption], gross is $1,950M / 0.46 = $4,239M a year and 5 points cost $423.9M over 24 months; the CFO's break-even lift of about 14% (423.9 / (1,950 x 0.95 x 2 x 0.805)) is right. Even on the candidate's own net basis the best case is $103.3M at about 80% margin. Repatha's own deduction rate is not disclosed and is plausibly above the company average given the access rebates on AMGN:companies/AMGN/10q_2025Q2.md p.55, which would make gross, and the cost, larger. Margin cite check: the CFO's 19.5% is on AMGN:transcripts/2026Q1_transcript.md p.1 (grade B) and verifies, but it is the Motley Fool summary bullet, not a management quote. Better pages: Peter Griffith, CFO, on AMGN:companies/AMGN/transcripts/2026Q2_transcript.md p.8 (grade B): 'Our non-GAAP cost of sales as a percentage of product sales was 19.6%' (80.4% margin), and the FY2025 reconciliation on AMGN:companies/AMGN/proxy_2026.md p.137: GAAP 34.2% less 15.9 points of acquisition-related expenses gives non-GAAP 18.3% (81.7% margin). The 80.5% figure is confirmed to within about a point; it is a company average that includes EVENITY and TEZSPIRE profit share, so it is a proxy, not a product margin. My round 1 pilot does not survive this as a priced proposal: $30M to $50M was sized to net points and never tested against a lift. Combined with the decider evidence (payers kept PA 'despite these net and list price reductions', 10q_2025Q2 p.55; Praluent PA share 1.0 in verified/rx/formulary_part2.csv), there is no page showing a lift large enough. What remains valid is only the measurement design (SPUF prior_auth_share and step_therapy_share, quarterly).",
+   "correction": "Restate cost in gross points ($423.9M for 5 points over 24 months on a 54% proxy). The only version left is the CFO's: one large Part D sponsor, rebate paid only on new-to-brand scripts above a baseline, in exchange for PA simplification (auto-approval on a documented diagnosis), with cost capped and a kill if that sponsor's SPUF prior_auth_flag does not change at the next quarterly release. No return should be claimed until a lift is measured; break-even on full rollout is about 14%.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+     "page": 55
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q3.md",
+     "page": 54
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 17
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 36
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    }
+   ],
+   "round2": {
+    "conceded": "The gross-versus-net unit error is real (p.83) and kills the candidate's $175.5M; the CFO's $103.3M is the ceiling on the net basis and about 14% break-even on the gross basis. My m04 pilot was not priced on gross points, so I withdraw m04 as my strongest survivor.",
+    "held": "The decider objection stands independently of the math: rebates already failed to remove PA (10q_2025Q2 p.55) and PA is class-wide (Praluent 1.0), so payer acceptance is unproven. The kill signals remain the best measured in the set.",
+    "narrowed": "From 'pilot $30M to $50M' to 'new-to-brand-only rebate with one sponsor, no return claimed until measured'; m01 gated replaces m04 as my strongest survivor."
+   }
+  }
+ ],
+ "overall": "Both lenses refute all four AMGN candidates as written; after round 2 the strongest survivor for both is m01 narrowed to a gated FDA remedy offer (about $12.5M at risk, break-even about 3 points on $413.8M of month-12 exposure), with m04 dropped after the gross-points correction and m03 fatal on price. Unresolved: whether the FDA's PMR option on 10q_2026Q2 p.59 has any real probability given the untrue-statements ground on p.21 (no page sizes it), and whether m02's lift is unsourced (CFO) or unattributable because management is already running the PCP push (decider)."
+}

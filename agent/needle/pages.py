@@ -100,6 +100,9 @@ def paragraphs(text, min_words=12):
     out = []
     for p in re.split(r"\n\s*\n", text):
         p = " ".join(p.split())
-        if len(p.split()) >= min_words and sum(c.isalpha() for c in p) > 0.6 * len(p):
+        # a paragraph has a sentence in it: drops tables of contents and heading runs (NVO's "45 51 71 132
+        # General information Prioritised topics ...")
+        if (len(p.split()) >= min_words and sum(c.isalpha() for c in p) > 0.6 * len(p)
+                and re.search(r"[a-z][.;:]", p) and not re.match(r"(\d+\s+){3}", p)):
             out.append(p)
     return out

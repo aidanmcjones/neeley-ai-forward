@@ -1,0 +1,411 @@
+{
+ "ticker": "AZN",
+ "lens": "obviousness",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "AZN-c01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The escalation the candidate calls filing-only is printed in the FY2025 results announcement (10 Feb 2026), the earnings release itself: AZN:reports/2025Q4_results_announcement.md p.33 (Table 27) carries the April 2025 transfer to the prosecutor, the RMB 24m (about $3.5m) customs appraisal naming Imfinzi, Imjudo and Enhertu, the November 2025 indictment of AstraZeneca Investment (China) Co., Ltd., and the medical-insurance-fraud charges against the former EVP. The same text is in the glossy annual report (AZN:reports/annual_report_2025.md p.190). The investigation is a long-running call topic: 2024Q3 (grade C, p.30) an analyst asked whether Leon Wang was still an employee; 2024Q4 (grade C, p.13) James Gordon asked why there was no provision; 2024Q4 (grade C, p.22) Steve Scala asked what it means that corporate AstraZeneca is now implicated. The FY2024 annual report (p.41, p.68) already named 'broadening of government investigations into the healthcare industry in China'. China revenue decline (-13% CER in Q2 2026) is a results-release table line (2026Q2 p.7). What survives: I confirmed the FY2024 20-F risk factors (pp.1-20) do not contain the 'anti-bribery/anti-corruption, anti-fraud' principal risk or the phrase 'debarment or exclusion from government sales or reimbursement programmes'; that sentence is new on AZN:20f_FY2025.md p.10. That is boilerplate-level risk wording, not a quantified exposure.",
+   "correction": "Narrow to: the FY2025 20-F adds a new principal risk naming exclusion from reimbursement programmes, while the corporate entity (not just individuals) is now indicted. The indictment itself is in the FY2025 earnings release and was flagged on 2024Q4 calls. Would become non-obvious only with evidence that China NRDL/tender rules exclude indicted entities, sized against the $6.6bn China line.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 33
+    },
+    {
+     "doc_id": "AZN:reports/annual_report_2025.md",
+     "page": 190
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2024Q4_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2024Q4_transcript.md",
+     "page": 22
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2024Q3_transcript.md",
+     "page": 30
+    },
+    {
+     "doc_id": "AZN:reports/annual_report_2024.md",
+     "page": 68
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 10
+    },
+    {
+     "doc_id": "AZN:20f_FY2024.md",
+     "page": 6
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 117
+    }
+   ]
+  },
+  {
+   "id": "AZN-c02",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Half of this is obvious. The US destocking is a results-release bullet (AZN:reports/2026Q1_results_announcement.md p.8 'higher Q1 inventory destocking'; p.9 Imjudo 'offset by US destocking'; 2026Q2 p.8 'channel mix and inventory destocking'), it is in the Q1 2026 prepared remarks (Bloomberg grade A, AZN:_inbox/bloomberg/AZN_2026Q1_transcript_bbg.pdf p.4, Fredrickson: 'higher-than-historic destocking in the US', cite only), and it was asked directly in Q&A: Simon Baker (Redburn) asked whether destocking was specific to Tagrisso; Fredrickson answered demand growth was mid-teens percent and 'we are seeing some destocking across the oral agents' (2026Q1 grade C p.23, same text in the Bloomberg copy p.24). The H1 2026 working-capital outflow is explained by the CFO as working capital tied to the Farxiga US loss of exclusivity, 'expected to persist through the remainder of the year' (AZN:transcripts/2026Q2_transcript.md p.1, grade C) and in the release cash-flow text (2026Q2 p.20). priced_in_scorecard lists inventory_channel as 'rarely asked' but it was asked in 2026Q1. What I could not find said anywhere (FY2025 release, 2025Q4 grade-C call, 2025Q3 grade-B call): the year-end 2025 receivables build (+23% vs revenue +8.6%) or the factorable FVOCI receivables rising from $667m to $2,681m (AZN:20f_FY2025.md p.88). That is the non-obvious part.",
+   "correction": "Drop destocking as the hook (management disclosed and quantified it). Keep: the FY2025 balance-sheet build, DSO 56 to 64 days and the 4x factorable-receivables pool, which no release or call addresses. It must also be tested against management's own explanation (Farxiga LOE working capital) and against a reclassification of which receivables are held to collect and sell, before it is called pull-forward.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:reports/2026Q1_results_announcement.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AZN:reports/2026Q1_results_announcement.md",
+     "page": 9
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 20
+    },
+    {
+     "doc_id": "AZN:_inbox/bloomberg/AZN_2026Q1_transcript_bbg.pdf",
+     "page": 4
+    },
+    {
+     "doc_id": "AZN:_inbox/bloomberg/AZN_2026Q1_transcript_bbg.pdf",
+     "page": 24
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2026Q1_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "AZN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 88
+    }
+   ]
+  },
+  {
+   "id": "AZN-c03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The $50bn pledge, the 3-year Section 232 delay and the 'all medicines sold in America made in America' promise are the press release headline (AZN:policy/press_2025-10-10_us_government_agreement.md p.1), repeated in the Q3 2025 results release (AZN:reports/2025Q3_results_announcement.md p.5) and the Q3 call (grade B p.2). News volume confirms it was priced as news: tariff 575 and MFN 211 GDELT articles for AZN in Oct 2025 (tables/news_mentions.csv). Pledge-to-US-revenue is arithmetic on two headline numbers, and every shortlist name has a pledge and the same 2029-01-20 exemption end (force_summary.csv), so it fails the 'every company has it' test. The angle that goes beyond a skim, profit booked in UK/Europe so a tariff taxes it, is contradicted by what management said plainly: Soriot, 2025Q1 prepared remarks, 'we currently have 11 manufacturing sites in the country, and the vast majority of our medicines sold in the U.S. are made domestically. We do import a minority of medicines' (grade C p.2); CFO Sarin, 2025Q2 Q&A to Peter Verdult, 'only a handful of products where we do import some products from Europe into the U.S... We will not be significantly impacted by tariffs' (grade C p.20). The Americas 1.6% segment margin reflects where IP and entrepreneur entities sit (transfer pricing), not the customs value of physical imports, so it does not measure tariff exposure.",
+   "correction": "If kept at all, reframe as a tax point: onshoring production plus the UK/Swedish IP-regime benefit of 5.3pp (AZN:20f_FY2025.md p.78) means profit may migrate to a higher-tax US entity. That would be non-obvious only with a computed ETR effect; tariff exposure has been answered.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:policy/press_2025-10-10_us_government_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:reports/2025Q3_results_announcement.md",
+     "page": 5
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q3_transcript.md",
+     "page": 2
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q1_transcript.md",
+     "page": 2
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q2_transcript.md",
+     "page": 20
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 81
+    }
+   ]
+  },
+  {
+   "id": "AZN-c04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Each tax one-off is stated by the company in its release or the CFO's prepared remarks. Q2 2026: the results release table says 'Benefit from adjustments to deferred tax assets, as a result of certain internal legal entity changes. Variations in the tax rate can be expected between periods' next to the Core tax rate of 15%, -6pp (AZN:reports/2026Q2_results_announcement.md p.4). CFO: 'Our tax rate in Q2 benefited from a one-time adjustment to deferred tax assets' (AZN:transcripts/2026Q2_transcript.md p.1, grade C). Q4 2025: CFO 'The lower tax rate seen in the fourth quarter reflected release of certain tax provisions taken in prior years' (AZN:transcripts/2025Q4_transcript.md p.1, grade C). Q1 2026: CFO 'Our EPS growth was held back by the low tax rate in the prior period' (Bloomberg A p.2, cite only; grade C p.1). The 31% cash-tax figure is a sentence in the release (2026Q2 p.19). Guidance of an 18-22% Core tax rate is on release p.1, so analysts can see 15% is outside it. The I/B/E/S quarterly rows for AZN are ADR-based with 2-3 estimates (tables/ibes_eps_quarterly.csv), too thin to show whether consensus stripped the item, so I rely on the company's own labelling.",
+   "correction": "The only incremental work is the sum: about $0.18 of Q2 2026 Core EPS and $0.30 of FY2025 Reported EPS from items management itself called one-time. That is arithmetic on disclosed items, not a finding. It would become non-obvious only if the IP-regime benefit (5.3pp) were shown to be at risk from US onshoring with a sized ETR path.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 4
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 19
+    },
+    {
+     "doc_id": "AZN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:_inbox/bloomberg/AZN_2026Q1_transcript_bbg.pdf",
+     "page": 2
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 78
+    }
+   ]
+  },
+  {
+   "id": "AZN-c05",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Holds as the least obvious AZN item. The gross-to-net table is only in the 20-F (AZN:20f_FY2025.md p.34) and the glossy annual report, not in the four results releases. I searched the releases and transcripts for rebate, chargeback and gross to net: no hit gives the $23.9bn, the 50.5% rate or the +29% contractual and chargeback lines. analyst_topics.csv shows gross_to_net_price with 0 analyst turns in 2025Q3, 2025Q4 and 2026Q1 (priced_in_scorecard: 'rarely asked'). Partial obviousness: the cause is flagged product by product in releases as Medicare Part D redesign (AZN:reports/2025Q4_results_announcement.md p.9 Tagrisso US 'Underlying demand growth more than offset Medicare Part D redesign'; 2025Q3 grade-B call p.4), the annual report says Part D pricing adjustments diluted Gross Margin (annual_report_2025.md p.60), and the 2025 widening is industry-wide: TAK discount rose 43% to 46% and BMY net price fell 4.2% in 2025 (tables/company_list_vs_net.csv). Also the 2025 rate is a reversion, not a new high: 2023 was 50.9% (20-F p.34; annual_report_2024.md p.85 shows 2024 46.7%).",
+   "correction": "Say 'the US discount rate went back to 50.5% from 46.7%, matching 2023's 50.9%, with chargebacks (+29%, not a Part D item) growing as fast as managed-care rebates', and drop 'highest on the shortlist': BMY and TAK figures come from voluntary pricing reports with different definitions, not 20-F gross-to-net tables. The chargeback line is the part Part D redesign does not explain and is the angle a skim misses.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 34
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 9
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "AZN:reports/annual_report_2025.md",
+     "page": 60
+    },
+    {
+     "doc_id": "AZN:reports/annual_report_2024.md",
+     "page": 85
+    }
+   ]
+  },
+  {
+   "id": "AZN-c06",
+   "refuted": true,
+   "severity": "major",
+   "argument": "I read the grade-B quote (AZN:companies/AZN/transcripts/2025Q3_transcript.md p.21, speaker Dave Fredrickson, EVP Oncology BU, answering Steve Scala, Cowen). He deferred the price question ('we will share the IRA negotiated price on Calquence once that's public'), and 'absolutely consistent with the expectations' refers to having anticipated in 2024 that Calquence would be selected when setting the 2030 ambition, not to the price. Suing while planning for selection is not a contradiction. It is AZN's standing practice: it sued HHS over the IRA in August 2023 (Farxiga), lost in district court and the Third Circuit and petitioned the Supreme Court, all listed in each results release (AZN:reports/2025Q3_results_announcement.md p.33). The Calquence suit is in the FY2025 earnings release legal table (AZN:reports/2025Q4_results_announcement.md p.33, also 6-K AZN:6k/2026-02-10_a3234s.md). The 40% MFP cut was public CMS data with 117 AZN IRA articles in Nov 2025 and 41 in Jan 2026 (tables/news_mentions.csv). The 'not asked for 3 quarters' fact (never_asked.csv) is real but uses grade-C/1-page 2025Q4 and 2026Q2 transcripts.",
+   "correction": "Narrow to: 'AZN, which planned for Calquence selection, is litigating the qualifying-single-source-drug definition as it did for Farxiga, and analysts have not asked since 2025Q3.' That is a weak governance note, not a hidden contradiction. Non-obvious only if the suit's theory (orphan or combined-molecule definition) is shown to have a realistic path to removing Calquence from IPAY 2027, with the Farxiga loss as the base rate.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q3_transcript.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AZN:reports/2025Q3_results_announcement.md",
+     "page": 33
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 33
+    },
+    {
+     "doc_id": "AZN:6k/2026-02-10_a3234s.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:6k/2026-07-27_azn-20260630x6k.md",
+     "page": 40
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 117
+    }
+   ]
+  },
+  {
+   "id": "AZN-c07",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Both survival results are headline trial news that management discusses on every call. MARIPOSA OS: Steve Scala asked 'has the first line outlook been influenced by the Mariposa OS data?' (2024Q4 grade C p.22), answered on p.23. Q1 2026: Fredrickson 'Very importantly on MARIPOSA, we have not seen any impact from the subcutaneous launch on U.S. Tagrisso shares' (grade C p.23; Bloomberg A p.24, cite only). Q2 2026: Soriot names the MARIPOSA regimen as one of 'two major competitive threats' (AZN:transcripts/2026Q2_transcript.md p.1, grade C). FLAURA2 OS: AZN's own good news, announced July 2025 (6-K AZN:6k/2025-07-29_azn-20250630x6k.md p.16), in the 2025Q3 results release (p.13) and grade-B call p.4 ('compelling overall survival results... will drive further leadership'). FLAURA2 beating Tagrisso monotherapy keeps Tagrisso as the backbone and lengthens its use, so it is not a revenue negative for AZN. The candidate's convenience edge also leans on IV infusion, but the Q1 2026 call says J&J has launched subcutaneous amivantamab, which weakens that point. The index has no subcutaneous Rybrevant label to check.",
+   "correction": "No narrower claim survives the obviousness test. Non-obvious would be a sized estimate of US first-line share moving from Tagrisso-based regimens to amivantamab plus lazertinib, using Part D or claims data, which the reader did not build.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2024Q4_transcript.md",
+     "page": 22
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2024Q4_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2026Q1_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "AZN:_inbox/bloomberg/AZN_2026Q1_transcript_bbg.pdf",
+     "page": 24
+    },
+    {
+     "doc_id": "AZN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "AZN:reports/2025Q3_results_announcement.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AZN:6k/2025-07-29_azn-20250630x6k.md",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "id": "AZN-c08",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Not obvious in the sense that nobody says it: no release or call notes that Nexium ($831m FY2025, AZN:reports/2025Q4_results_announcement.md p.7 and p.12) disappeared into 'Other Medicines' in 2026 (AZN:reports/2026Q2_results_announcement.md p.6), and the only 2026 reporting change disclosed is the therapy-area rename (2026Q1 p.5). Partial correction: Kanuma is not hidden. The 2026 releases footnote 'Other Rare Disease medicines include Kanuma and Beyonttra (JP only)' (2026Q1 p.11; 2026Q2 p.11). The Andexxa impairment and the decision to stop promotion were said plainly in the 2024Q3 prepared remarks (grade C p.3) and the FY2025 release (p.19). Little value to the case: these are declining, written-down lines.",
+   "correction": "Narrow to Nexium only: an $831m line, -5% CER, moved into Other Medicines without a reconciliation, so 2026 generic erosion on it can no longer be tracked. Andexxa and Kanuma are disclosed elsewhere.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 7
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 12
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 19
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 6
+    },
+    {
+     "doc_id": "AZN:reports/2026Q1_results_announcement.md",
+     "page": 5
+    },
+    {
+     "doc_id": "AZN:reports/2026Q1_results_announcement.md",
+     "page": 11
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2024Q3_transcript.md",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "AZN-c09",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The 21-state list, the Arkansas pause order and the rulings by state are printed in the FY2025 earnings release (AZN:reports/2025Q4_results_announcement.md p.33), and 340B items appear in every quarterly release's legal table (2025Q3 p.32 antitrust; 2026Q1 p.32 qui tam; 2026Q2 p.37). 340B contract-pharmacy litigation is industry-wide: the index has '340B' plus 'contract pharmacy' in annual reports or transcripts for AMGN, BMY, GILD, JNJ, LLY, MRK, NVO, NVS, PFE, REGN, SNY and TAK as well as AZN. So it fails the 'every shortlist company has it' test. The link from the 340B fight to the 29% chargeback rise is the reader's inference; the 20-F (p.34) does not split chargebacks by program.",
+   "correction": "Fold the chargeback growth into c05. The 340B litigation alone is not an AZN-specific finding. It would be non-obvious only with a 340B share of chargebacks, which is not disclosed.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 33
+    },
+    {
+     "doc_id": "AZN:reports/2025Q3_results_announcement.md",
+     "page": 32
+    },
+    {
+     "doc_id": "AZN:reports/2026Q1_results_announcement.md",
+     "page": 32
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 37
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 34
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 117
+    }
+   ]
+  },
+  {
+   "id": "AZN-c10",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Management has said this plainly and repeatedly on calls. Soriot, 2025Q2 Q&A: 'a rebalancing, equalization, if you want to call it this way, of pricing... The U.S. can no longer pay for the R&D for the world' (grade C p.20). 2025Q3 Q&A: 'there has to be a rebalancing, and Europe has to cover a little bit more of this innovation by increasing budgets allocated to innovative pharmaceuticals' (grade B p.18, Soriot). 2025Q1: 'there has to be a rebalancing' (grade C p.14). The MFN press release says prices 'equalized with those available in wealthy countries' (press_2025-10-10 p.1; also 2025Q3 release p.5), and the FY2025 annual report says 'measures are being taken by the US administration to ensure wealthy nations make equitable contributions' (annual_report_2025.md p.34). MFN had 211 AZN GDELT articles in Oct 2025. Dropping a 'first round' sentence from a risk factor is wording drift that shows nothing an investor did not hear from the CEO.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q2_transcript.md",
+     "page": 20
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q3_transcript.md",
+     "page": 18
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q1_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "AZN:policy/press_2025-10-10_us_government_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:reports/annual_report_2025.md",
+     "page": 34
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 5
+    },
+    {
+     "doc_id": "AZN:20f_FY2024.md",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "id": "product",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Tagrisso vs amivantamab plus lazertinib is the most-discussed competitive question on AZN calls (2024Q4 grade C p.22; 2026Q1 grade C p.23; 2026Q2 grade C p.1, Soriot calling MARIPOSA one of 'two major competitive threats'). The fine-print trade-offs the reader lists (VTE 36% with 4 months of anticoagulation, dermatologic prophylaxis) are on the Lazcluze label, and that is the standard argument AZN makes. Part of the edge is stale: Fredrickson says J&J's subcutaneous amivantamab has launched and is 'cannibalizing IV' (2026Q1 grade C p.23), so 'IV infusions' is no longer a clean differentiator. The index's Rybrevant label sections do not include the subcutaneous product. The label quotes themselves check out as cited, and five indications against first-line only is a fair point.",
+   "correction": "Keep Tagrisso but restate the edge as oral, no anticoagulant, no antibiotic prophylaxis, plus the adjuvant and stage III indications the rival lacks, and drop IV infusion. To earn points it needs a number, such as the share of first-line EGFR patients with anticoagulation contraindications, or Part D Tagrisso volume after the subcutaneous launch.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:lazcluze:label_sections.md",
+     "page": 45
+    },
+    {
+     "doc_id": "drug:lazcluze:label_sections.md",
+     "page": 6
+    },
+    {
+     "doc_id": "drug:tagrisso:label_sections.md",
+     "page": 44
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2026Q1_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "AZN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2024Q4_transcript.md",
+     "page": 22
+    }
+   ]
+  }
+ ],
+ "overall": "Most AZN candidates restate things the company put in its own earnings releases (the China indictment, 340B and Calquence suits in the FY2025 release legal table, tax one-offs in release footnotes) or said on calls (destocking, tariffs, Europe paying more, MARIPOSA). The material that holds up is in the 20-F tables nobody discusses: the gross-to-net reversion with chargebacks up 29% (c05), the year-end 2025 receivables build with a 4x factorable pool (c02), and the Nexium line folded into Other Medicines (c08)."
+}

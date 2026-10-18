@@ -1,0 +1,191 @@
+// data/part1/: the cached Part 1 deliverable (sealed pick, findings table, product fine print) and the
+// reasoning trace behind it. Same resolution as data.ts and memos.ts: the real export first, else the
+// _sample fixture (the answer then shows a one-line sample banner). Company files load lazily.
+import { useEffect, useState } from "react";
+import { fetchJson, ROOT, SAMPLE } from "./data";
+import { INTERNAL_TEXT } from "./cites";
+import type { Evidence, Part1Company, Part1Index, Part1Selection, Part1Trace } from "./types";
+
+export const PART1_PROMPT = "find material, non-obvious findings about one company and compare one of its key products against its rivals.";
+
+/** The eight "Where findings hide" categories, verbatim and in the case's order. */
+export const PART1_CATEGORIES = [
+  "Language drift", "Gross-to-net", "Inventory and receivables growing faster than revenue",
+  "Segment and product table changes", "Footnotes", "Earnings-call Q&A", "Product fine print", "Peer contrast",
+];
+
+/** The five product rows, exact keys, contract order. */
+export const PART1_ROWS = ["approved uses", "boxed warnings and safety", "dosing and convenience", "patent and exclusivity timeline", "pricing and gross-to-net"];
+
+export interface Part1State {
+  index: Part1Index | null; selection: Part1Selection | null; prefix: string | null;
+  sample: boolean; loading: boolean; error: string | null;
+}
+
+export function usePart1(): Part1State {
+  const [st, setSt] = useState<Part1State>({ index: null, selection: null, prefix: null, sample: false, loading: true, error: null });
+  useEffect(() => {
+    let live = true;
+    (async () => {
+      for (const [base, sample] of [[`${ROOT}part1/`, false], [`${SAMPLE}part1/`, true]] as const) {
+        let index: Part1Index;
+        try { index = await fetchJson<Part1Index>(base, "index.json"); } catch { continue; }
+        const picked = Array.isArray(index?.picked) ? index.picked.filter((t) => typeof t === "string") : [];
+        let selection: Part1Selection | null = null;
+        try { selection = await fetchJson<Part1Selection>(base, "selection.json"); } catch { selection = null; }
+        if (live) setSt({ index: { ...index, picked }, selection, prefix: base, sample: sample || index.sample === true, loading: false, error: null });
+        return;
+      }
+      if (live) setSt({ index: null, selection: null, prefix: null, sample: false, loading: false, error: "Could not load /data/part1/index.json" });
+    })();
+    return () => { live = false; };
+  }, []);
+  return st;
+}
+
+export const loadPart1Company = (prefix: string, t: string) => fetchJson<Part1Company>(prefix, `${t}.json`);
+export const loadPart1Trace = (prefix: string, t: string) => fetchJson<Part1Trace>(prefix, `${t}_trace.json`);
+
+/* Pitch rule: no league score, no S, no robustness words. Same scrub as Answer.tsx's INTERNAL, plus the
+   shared INTERNAL_TEXT list, applied sentence by sentence to every string rendered from part1 files. */
+const INTERNAL = /\bS ?= |score L\b|\bL ?= |robustness|scoring variants|vs v2|M x O x E|M × O × E|floor[_ ]relaxed|needle status|\bstatus (strict|provisional|floor relaxed|none)\b/i;
+export const isInternal = (s: string) => INTERNAL.test(s) || INTERNAL_TEXT.test(s);
+export function scrub(s: string | null | undefined): string {
+  if (!s) return "";
+  return s.split(/(?<=[.!?])\s+/).filter((x) => !isInternal(x)).join(" ");
+}
+
+/* Cite resolution. Markers [n] resolve through the nearest marker_map (n -> cite_id) against every
+   evidence object in the company file; without a map, [n] is the n-th entry of the local cites. */
+export function evidenceLabel(e: Evidence): Evidence {
+  const page = e.page != null && (e.page as unknown) !== "" ? (/^p/i.test(String(e.page)) ? String(e.page) : `p. ${e.page}`) : "";
+  const period = e.period && !(e.doc_title ?? "").includes(e.period) ? e.period : null;
+  const citation = e.citation ?? (typeof e.label === "string" && e.label ? e.label : null) ?? ([e.doc_title, period, page].filter(Boolean).join(", ") || e.cite_id || e.doc_id || "Source");
+  return { ...e, citation, location: e.location ?? (page || undefined), quote: e.quote ?? "" };
+}
+
+const IX = new WeakMap<object, Map<string, Evidence>>();
+export function part1CiteIndex(c: Part1Company | null | undefined): Map<string, Evidence> {
+  if (!c) return new Map();
+  const hit = IX.get(c);
+  if (hit) return hit;
+  const m = new Map<string, Evidence>();
+  const walk = (x: unknown, d: number) => {
+    if (!x || typeof x !== "object" || d > 10) return;
+    if (Array.isArray(x)) { for (const y of x) walk(y, d + 1); return; }
+    const o = x as Record<string, unknown>;
+    if (typeof o.cite_id === "string" && !m.has(o.cite_id) && (o.doc_id != null || o.quote != null || o.doc_title != null)) m.set(o.cite_id, evidenceLabel(o as Evidence));
+    for (const v of Object.values(o)) if (v && typeof v === "object") walk(v, d + 1);
+  };
+  walk(c, 0);
+  IX.set(c, m);
+  return m;
+}
+
+export function resolver(ix: Map<string, Evidence>, map?: Record<string, string> | null, local?: Evidence[] | null) {
+  return (n: number): Evidence | undefined => {
+    const id = map?.[String(n)];
+    if (id && ix.has(id)) return ix.get(id);
+    const l = local?.find((e) => Number(e.n) === n) ?? local?.[n - 1];
+    if (l) return l.cite_id && ix.has(l.cite_id) ? ix.get(l.cite_id) : evidenceLabel(l);
+    return undefined;
+  };
+}
+
+/* Routing: does a typed question ask for the Part 1 answer, or for the selection card? */
+const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9&]+/g, " ").trim();
+export function isPart1Query(q: string): boolean {
+  const n = norm(q);
+  if (!n) return false;
+  if (n === norm(PART1_PROMPT)) return true;
+  if (/\bpart (1|one)\b/.test(n)) return true;
+  if (/\bfind(ing)? material\b|\bmaterial non obvious\b|\bnon obvious finding/.test(n)) return true;
+  if (/\bcompare\b/.test(n) && /\bproducts?\b/.test(n) && /\brivals?\b|\bcompetitors?\b/.test(n)) return true;
+  // Term overlap with the prompt (matchMemo style), floor 0.6 of the prompt's content words.
+  const stop = new Set(["a", "an", "the", "of", "its", "one", "about", "and", "against", "to", "for", "me"]);
+  const pw = new Set(norm(PART1_PROMPT).split(" ").filter((w) => !stop.has(w)));
+  const qw = n.split(" ").filter((w) => !stop.has(w));
+  const hit = qw.filter((w) => pw.has(w)).length;
+  return pw.size > 0 && hit / pw.size >= 0.6;
+}
+
+export function isWhyCompanyQuery(q: string, names: string[]): boolean {
+  const n = norm(q);
+  if (/\bwhy (this|that|the) (company|pick)\b|\bbeat the other nine\b|\bwhy did (it|they|this company) (win|beat)\b|\bwhy (was|did) .* (picked|chosen|win|beat)\b/.test(n)) return true;
+  return names.some((x) => x && new RegExp(`^why (did |was |is )?${norm(x).replace(/ /g, " ")}\\b`).test(n));
+}
+
+/* Figures on the selection card. The card prints only reasons_card / eliminated_card (figure-free). The
+   fallback to the verbatim reasons / eliminated drops every clause carrying a figure the gate never saw. */
+const ALLOWED_DIGIT = [
+  /^(19|20)\d\d(s)?$/,                                  // years, 2020s
+  /^(19|20)\d\d-\d\d(-\d\d)?(T[\d:.]+Z?)?$/,                // dates, timestamps
+  /^(19|20)\d\dQ[1-4]$|^Q[1-4]$|^(FY|H[12])\d{2,4}$|^[1-4]Q\d{2,4}$/i,  // quarters, fiscal years
+  /^(10-K|10-Q|20-F|8-K|6-K|S-1|DEF14A)s?$/i,                 // filing forms
+  /^[A-Z]{2,5}-[A-Za-z]*-?\d+[a-z]?$/,                    // candidate ids: AMGN-c06, LLY-nugget-002
+  /^c\d{1,3}$/,                                           // short candidate ids in a list: c03, c04
+  /^([1-9]|1[0-2])$/,                                     // small word counts
+];
+const tokenOf = (w: string) => w.replace(/^[("'\[]+|[)"',.;:!?\]]+$/g, "").replace(/['’]s$/, "");
+export function disallowedFigures(s: string | null | undefined): string[] {
+  if (!s) return [];
+  return s.split(/\s+/).map(tokenOf).filter((w) => /\d/.test(w) && !ALLOWED_DIGIT.some((r) => r.test(w)));
+}
+/** Text with every sentence that carries a disallowed figure removed. */
+export function stripFigures(s: string | null | undefined): string {
+  const t = scrub(s);
+  return splitSentences(t).filter((x) => x.trim() && !disallowedFigures(x).length).join(" ");
+}
+/** Card prose for a ticker: the figure-free card field, else the stripped verbatim field. */
+export function cardText(card: Record<string, string> | undefined, raw: Record<string, string> | undefined, t: string): string {
+  const c = card?.[t];
+  if (typeof c === "string") return scrub(c);
+  return stripFigures(raw?.[t]);
+}
+/** Cheap checker: warn when a rendered selection-card string carries a figure outside the allowed forms. */
+const warned = new Set<string>();
+export function checkCardFigures(ticker: string, strings: string[]) {
+  const bad = strings.flatMap(disallowedFigures);
+  const k = `${ticker}:${bad.join(",")}`;
+  if (bad.length && !warned.has(k)) {
+    warned.add(k);
+    console.warn(`[part1] selection card for ${ticker} prints figures outside the allowed forms: ${bad.join(", ")}`);
+  }
+}
+
+/** The sealed selection markdown: data/<sealed_doc_path> next to the part1 folder in use. */
+export async function loadSealedDoc(prefix: string, path: string): Promise<string> {
+  const base = prefix.replace(/part1\/?$/, "");
+  const res = await fetch(base + path.replace(/^\/+/, ""));
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const text = await res.text();
+  if (/^\s*<!doctype html|^\s*<html/i.test(text)) throw new Error("not markdown");
+  return text;
+}
+
+/** Sentence split that keeps "Merck & Co.", "U.S.", "e.g." and similar abbreviations whole. */
+export function splitSentences(s: string): string[] {
+  return s.split(/(?<!\b(?:Co|Inc|Corp|Ltd|vs|No|St|U\.S|e\.g|i\.e)\.)(?<=[.!?])\s+(?=[A-Z("'])/);
+}
+
+/** Company names for the ten (meta.json, the only other file the chat reads), real export else sample. */
+export function useCompanyNames(): { names: Record<string, string>; loading: boolean } {
+  const [st, setSt] = useState<{ names: Record<string, string>; loading: boolean }>({ names: {}, loading: true });
+  useEffect(() => {
+    let live = true;
+    (async () => {
+      for (const base of [ROOT, SAMPLE]) {
+        try {
+          const m = await fetchJson<{ companies?: { ticker: string; name?: string }[] }>(base, "meta.json");
+          const names: Record<string, string> = {};
+          for (const c of m?.companies ?? []) if (c?.ticker) names[c.ticker] = c.name ?? c.ticker;
+          if (live) setSt({ names, loading: false });
+          return;
+        } catch { /* next */ }
+      }
+      if (live) setSt({ names: {}, loading: false });
+    })();
+    return () => { live = false; };
+  }, []);
+  return st;
+}

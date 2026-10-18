@@ -1,0 +1,298 @@
+{
+ "ticker": "AZN",
+ "lens": "obviousness",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "AZN-c01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Unchanged on obviousness. The materiality skeptic did not challenge my point that the FY2025 earnings release legal table (AZN:reports/2025Q4_results_announcement.md p.33) already prints the indictment. Their checks agree the anti-bribery risk factor is new, which I confirmed in round 1 (absent from the FY2024 20-F risk factors, present on AZN:20f_FY2025.md p.10).",
+   "correction": "New principal risk naming exclusion from reimbursement, stated as an illustrative sensitivity rather than an exposure. 'Shrinking' is a 2026 fact.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 81
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 7
+    }
+   ],
+   "round2": {
+    "conceded": "Their dating is right: FY2025 China revenue grew to $6,636m from $6,419m, +3.4% (AZN:20f_FY2025.md p.81). 'Already shrinking' applies only to 2026 (Q2 -13% CER, 2026Q2 p.7). The 10% scenario is the reader's sensitivity.",
+    "held": "Refuted on obviousness. The indictment and customs escalation are in the FY2025 results release and were raised on the 2024Q3 and 2024Q4 calls. Their 'not refuted, minor' rests on the numbers being real, which I do not dispute.",
+    "narrowed": "The new risk-factor sentence is the only non-headline piece, and it is wording, not a sized exposure."
+   }
+  },
+  {
+   "id": "AZN-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "I re-read the pages they cite. AZN:20f_FY2025.md p.64 (cash flow statement): 'Increase in trade and other receivables (1,728) (1,624) (1,425)' and 'Increase in inventories (755) (131) (669)' for 2025, 2024 and 2023. So on a cash basis inventories rose 755/5,288 = 14.3% and trade and other receivables 1,728/12,972 = 13.3%, against year-end balance growth of 24% and 23% inflated by translation. Receivables also built by $1.6bn in 2024 and $1.4bn in 2023, so the 2025 build is the normal pattern. p.88 says the $2,681m FVOCI line covers customers 'that the Group has the option to factor, or relate to bank acceptance drafts received in settlement of trade receivables per common practice in China'. It is a classification and partly a China payment instrument, not proof of a factoring pool. The H1 2026 working-capital outflow grew to (1,438) from (771) (2026Q2 p.20). If 2025 had been channel loading that 2026 destocking unwound, that outflow would have shrunk. Combined with round 1 (destocking was a release bullet and a Q&A answer, and the CFO attributed the 2026 working-capital drag to the Farxiga loss of exclusivity), nothing non-obvious and true is left.",
+   "correction": "Withdraw. At most: FY2025 working capital grew about $0.9bn faster than revenue on a cash basis, in line with 2023 and 2024. That is neither new nor hidden.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 64
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 88
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 20
+    },
+    {
+     "doc_id": "AZN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "All four math points are right and verified on the pages: the FX translation effect, cash-basis growth of 14.3% and 13.3%, the FVOCI line including China bank acceptance drafts, and the H1 2026 outflow growing rather than releasing. My round-1 'held' depended on the year-end build and the 4x factorable pool being the non-obvious residue, and both fall.",
+    "held": "Nothing held. I flip from not refuted to refuted.",
+    "narrowed": "The only angle that might be worth a future look is China customers settling in bank acceptance drafts (part of the $2.0bn FVOCI rise) during VBP pressure. The 20-F does not split the line, so it is not a candidate now."
+   }
+  },
+  {
+   "id": "AZN-c03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "They are right that $440m is legal-entity operating profit ('made by companies located in that area'), not a segment margin (AZN:20f_FY2025.md p.81; AZN reports one segment). Their restatement, that about 89% of entity operating profit (UK 7,066 plus Rest of Europe 5,233, of 13,743) is booked by UK and European entities, is a transfer-pricing location. I checked whether that reopens a non-obvious angle. On tariffs it does not: management said plainly that the vast majority of US-sold medicines are made in the US and that only a handful of products are imported (2025Q1 grade C p.2; 2025Q2 grade C p.20). On tax it partly does. If onshoring moves manufacturing, and with it some entrepreneurial profit, into US entities, the UK and Swedish IP-incentive benefit of $655m (5.3pp of PBT, AZN:20f_FY2025.md p.78) is at risk. I found no release or call that links the $50bn programme to the tax rate. My round-1 searches ('manufacturing tax rate', 'tariff tax rate', 'transfer pricing') hit only the 18-22% guidance and Note 30 boilerplate, and 2026 Core tax-rate guidance is unchanged at 18-22% (2026Q2 p.1). The candidate as written (tariff on imports carrying group profit) stays refuted.",
+   "correction": "Replace with a narrower tax angle: about 89% of entity profit and a $655m IP-regime tax benefit sit in UK and European entities, and nobody has asked what US onshoring under the $50bn pledge does to the 18-22% tax rate after 2029. This is non-obvious but unsized.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 81
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 78
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q1_transcript.md",
+     "page": 2
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q2_transcript.md",
+     "page": 20
+    }
+   ],
+   "round2": {
+    "conceded": "The Americas figure is legal-entity profit, not a margin, and includes Canada ($954m) and other Americas ($2,633m). The pledge mixes R&D the company already spends ($14.2bn a year), so 2.09x overstates the incremental cost. I accept both.",
+    "held": "Refuted as written. The pledge is a headline, every shortlist company has one, and management answered the tariff exposure directly.",
+    "narrowed": "The legal-entity correction points to one non-obvious residue, the tax consequence of onshoring. It belongs in a merged tax candidate with c04 rather than in c03."
+   }
+  },
+  {
+   "id": "AZN-c04",
+   "refuted": true,
+   "severity": "minor",
+   "argument": "I verified their recurrence point on AZN:20f_FY2025.md p.78: Other items (360) 2025, (200) 2024, (406) 2023; prior-period adjustments (107), (84), (7). (The 2023 item footnote ties part of 2023 to the UK rate difference.) This changes the obviousness ruling on part of the candidate. Each quarter's item is flagged by management as one-off (Q2 2026 DTA, 2026Q2 p.4 and CFO remarks; Q4 2025 provision release, CFO remarks), so the individual items are obvious. That below-statutory credits labelled one-off recur every year (about $0.2-0.4bn a year, 2023-2025) is not said in any release or call I searched. The Q1 2026 CFO remark ('held back by the low tax rate in the prior period') treats each low quarter as an exception.",
+   "correction": "Narrow to: 'AZN's tax credits labelled one-time recurred in each of 2023, 2024 and 2025 ($406m, $200m and $360m of Other items plus prior-period adjustments). Q2 2026's DTA benefit, worth $0.09-0.18 per share depending on the normalising rate, continues the pattern.' Pair with the c03 tax residue.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 78
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 4
+    },
+    {
+     "doc_id": "AZN:reports/2026Q2_results_announcement.md",
+     "page": 19
+    },
+    {
+     "doc_id": "AZN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Their sizing is right. At the 18% H1 2026 Core rate the Q2 benefit is about $0.09, so $0.18 is an upper bound. Cash tax of 31% is on Reported H1 PBT, a different base, so the '31% vs 15%' contrast should go.",
+    "held": "The single-quarter items remain obvious: the company labels each one in the release table and the CFO's prepared remarks.",
+    "narrowed": "Severity drops from major to minor. The recurrence pattern is a non-obvious framing the reader did not make, so the claim survives only in that narrower form."
+   }
+  },
+  {
+   "id": "AZN-c05",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Both lenses now agree on the 2023 base: US gross-to-net was 50.9%, 46.7% and 50.5% for 2023-2025 (AZN:20f_FY2025.md p.34). The materiality skeptic's c09 work adds the stronger non-obvious thread: chargebacks rose from 8.4% to 9.8% to 10.8% of US gross over 2023-2025 (3,075/36,568; 3,969/40,641; 5,113/47,385, all on p.34), two years of increase while the overall rate went down then up. Part D redesign (the cause flagged in releases) works through rebates, not chargebacks, so the chargeback trend is the part no release or call explains. analyst_topics.csv still shows 0 gross-to-net analyst turns in 2025Q3, 2025Q4 and 2026Q1.",
+   "correction": "Lead with chargebacks as a share of US gross: 8.4% to 9.8% to 10.8% (2023-2025), about +$1.1bn of 2025 net revenue versus the 2023 share. Put the overall rate in context as a return to 2023's 50.9%. Drop 'highest on the shortlist'.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 34
+    }
+   ],
+   "round2": {
+    "conceded": "The overall rate reverts to the 2023 level. US net Product Sales ($23,444m) are not US Total Revenue ($23,970m). Peer rates mix years and definitions.",
+    "held": "Still the least obvious AZN item. The table is only in the 20-F and annual report, and the chargeback trend is unexplained anywhere management speaks.",
+    "narrowed": "Folded c09's chargeback math in. The finding is now the chargeback line, not the headline 50.5% rate. The $1.1bn is 2.4pp x $47,385m of 2025 US gross sales."
+   }
+  },
+  {
+   "id": "AZN-c06",
+   "refuted": true,
+   "severity": "major",
+   "argument": "No change. The materiality skeptic independently reads the grade-B quote (AZN:companies/AZN/transcripts/2025Q3_transcript.md p.21) the same way I did: 'absolutely consistent' refers to anticipated selection, and 'suing over the statutory interpretation is not evidence the selection was unexpected'. They also find the net hit below the 1% threshold. Both lenses remove the contradiction that was the candidate's non-obvious hook.",
+   "correction": "Drop the contradiction framing. What remains, AZN litigating IRA selection as it did for Farxiga, is in every results release.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q3_transcript.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 33
+    }
+   ],
+   "round2": {
+    "conceded": "Their point that the candidate sentence says 'selection' accurately is fair. The quote is not misattributed: speaker Dave Fredrickson, grade B.",
+    "held": "Refuted on obviousness. The lawsuit is in the FY2025 release, there is a prior Farxiga suit, and the CMS price drew 117 AZN articles in Nov 2025.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "AZN-c07",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "No change. The materiality skeptic agrees the FLAURA2 half is not a Tagrisso revenue loss and that the sized impact ($0.1-0.3bn) is a reader guess below 1% of revenue. That leaves only the MARIPOSA half, which management discusses on every recent call (2024Q4 p.22, 2026Q1 p.23, 2026Q2 p.1).",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "drug:lazcluze:label_sections.md",
+     "page": 45
+    },
+    {
+     "doc_id": "drug:tagrisso:label_sections.md",
+     "page": 44
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2026Q1_transcript.md",
+     "page": 23
+    }
+   ],
+   "round2": {
+    "conceded": "I confirmed the label quotes are verbatim on the pages; they verified it again.",
+    "held": "Fatal on obviousness. Both trials are headline news and are discussed on the calls.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "AZN-c08",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "New sub-candidate from the materiality skeptic: the Andexxa inventory provision reversal. Verified on AZN:20f_FY2025.md p.88: 'partial reversals of $407m Andexxa provisions previously recognised in 2024 following the decision to cease promotional activities'. p.77 says 2025 restructuring 'included a $138m credit to Cost of sales primarily due to the reversal of inventory and related product provisions related to Andexxa'. Was it ever mentioned outside the 20-F and annual report? I searched the full index for 'Andexxa' and 'reversal inventory provisions'. Hits are only the 20-F (pp.77, 85, 88), the glossy annual report (pp.144, 155, 158) and the FY2024 documents. The FY2025 results release mentions Andexxa only as the prior-year $504m intangible impairment (AZN:reports/2025Q4_results_announcement.md p.19). Its Core reconciliation shows an unlabelled Restructuring (138) credit to Gross profit (p.20), not named as Andexxa. No transcript mentions it. So the reversal is non-obvious. One caveat limits its value: the $138m restructuring portion is excluded from Core EPS by the company's definition (p.18 and p.20). Only the unexplained remainder (about $269m, if it sits in Core cost of sales) could have flattered Core gross margin, and the 20-F does not show where it sits.",
+   "correction": "Narrow c08 to two points: (a) Nexium ($831m) was folded into Other Medicines in 2026 without comment; (b) a $407m 2025 reversal of Andexxa inventory provisions, 'following revised sales forecasts', was never mentioned in a results release or call. Only $138m of it is shown as a (unnamed) restructuring credit outside Core, so up to about $269m may have helped Reported, and possibly Core, cost of sales on a product whose sales are no longer disclosed.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 88
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 77
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 19
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 20
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 18
+    }
+   ],
+   "round2": {
+    "conceded": "The materiality skeptic found the $407m reversal, and it is the more valuable part of c08. The $504m impairment cite belongs to 20f_FY2024_ex15d1 p.176.",
+    "held": "Not refuted on obviousness. Neither the Nexium line drop nor the Andexxa reversal appears in any release text or call.",
+    "narrowed": "I rule the Andexxa reversal a valid new sub-candidate that is non-obvious. Its weight depends on how much sits inside Core, which the filings do not split. The '3% of operating profit' applies to Reported operating profit, not Core."
+   }
+  },
+  {
+   "id": "AZN-c09",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Their chargeback trend (8.4% to 9.8% to 10.8% of gross, AZN:20f_FY2025.md p.34) is correct and is better support than the reader's one-year comparison. They also agree the 340B share is undisclosed, so the link to the litigation is inference. 340B contract-pharmacy litigation is industry-wide, and AZN's state suits are listed in every quarterly release.",
+   "correction": "Move the chargeback trend into c05. The 340B litigation by itself is not a finding.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 34
+    },
+    {
+     "doc_id": "AZN:reports/2025Q4_results_announcement.md",
+     "page": 33
+    }
+   ],
+   "round2": {
+    "conceded": "The two-year chargeback trend is the right evidence, and the $0.47bn must not be added on top of c05.",
+    "held": "Refuted on obviousness: industry-wide and listed in every release.",
+    "narrowed": "Folded the numeric part into c05."
+   }
+  },
+  {
+   "id": "AZN-c10",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Their corrected base, UK $4,359m plus Rest of Europe $13,455m plus Japan $3,556m = $21,370m, 36% of revenue (AZN:20f_FY2025.md p.81), fixes the reader's misuse of the 59% currency statistic (p.104). It does not reopen a non-obvious angle. The idea that ex-US prices now set US launch prices is what Soriot said on the 2025Q2 (grade C p.20) and 2025Q3 (grade B p.18) calls, and what the MFN press release says ('equalized with those available in wealthy countries'). A correct size for an obvious mechanism is still obvious. With the basket confidential, the $21.4bn cannot be turned into an exposure either.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 81
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "page": 104
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q3_transcript.md",
+     "page": 18
+    },
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2025Q2_transcript.md",
+     "page": 20
+    }
+   ],
+   "round2": {
+    "conceded": "The 59% is a currency-denomination figure. The right reference-market base is about $21.4bn, or 36%.",
+    "held": "Fatal on obviousness. Management stated the equalisation logic plainly on two calls.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The materiality skeptic rates the pick material (Tagrisso is 12.3% of revenue), which I do not contest. My objection is obviousness and staleness: the MARIPOSA trade-off is the competitive argument AZN makes on every call, and the IV-infusion part of the edge is weakened by the subcutaneous amivantamab launch that Fredrickson described (2026Q1 grade C p.23). They did not address the subcutaneous point.",
+   "correction": "Keep Tagrisso as the product. Restate the edge as oral dosing, no anticoagulant or antibiotic prophylaxis, and the adjuvant and stage III indications, and drop IV. It needs a quantified share or eligible-patient number to earn points.",
+   "pages_checked": [
+    {
+     "doc_id": "AZN:companies/AZN/transcripts/2026Q1_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "drug:lazcluze:label_sections.md",
+     "page": 45
+    }
+   ],
+   "round2": {
+    "conceded": "The pick is material, and the label figures are verbatim.",
+    "held": "Refuted on obviousness. The fine-print edge is unquantified and partly out of date.",
+    "narrowed": "None."
+   }
+  }
+ ],
+ "overall": "After the dialectic, three AZN threads are both true and non-obvious: the US chargeback line rising from 8.4% to 10.8% of gross over 2023-2025 (c05, with c09 folded in), and the $407m Andexxa provision reversal plus the unremarked Nexium line drop (c08). Two narrower tax framings are new: 'one-time' tax credits that recur every year (c04), and the tax-rate consequence of onshoring profit now booked in UK and European entities (c03 residue). Everything else, including c02 now that the FX and cash-flow math removes the balance-sheet build, is a release headline, a call answer or industry-wide."
+}

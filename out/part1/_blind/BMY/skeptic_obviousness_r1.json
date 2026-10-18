@@ -1,0 +1,389 @@
+{
+ "ticker": "BMY",
+ "lens": "obviousness",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "BMY-c01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The 'could' to 'has' shift is real (BMY:10k_FY2025.md p27: 'The expanded utilization of the 340B program in recent years has negatively affected our revenues and profit margins'), but it is not BMS-specific news. Peers already wrote 340B as a realized drag in the same filing season: Merck (MRK:10k_FY2025.md p39: 'increased utilization of the 340B Federal Drug Discount Program ... are having a negative impact on the Company's performance') and Amgen (AMGN:10k_FY2025.md p38: 'has had, and is expected to continue to have, a negative impact'). AbbVie, Gilead and Pfizer still use hedged language (ABBV p23, GILD p21, PFE p19), so BMS is catching up to peers, not leading. Management also said it plainly on the 2025Q1 call (BMY:companies/BMY/transcripts/2025Q1_transcript.md p11, grade C, Boerner: 'we continue to be very focused on and concerned about abuses in the 340B program'), and 340B is listed in the forward-looking risk list of every 2025-2026 earnings release (e.g. BMY:earnings/2026-07-30 release p10). Every shortlist pharma has 340B exposure to roughly the same degree, which is the brief's 'every company has it' kill. The charge-back growth (22% vs 5% gross sales) is an upper bound that also holds DoD/VA and cash discounts and, in 2025-26, price-protection on the January 2026 Eliquis WAC cut, so it cannot be pinned on 340B.",
+   "correction": "Narrow to: BMS joined Merck and Amgen in describing 340B as a realized drag in FY2025. It becomes non-obvious only if the 340B share of the $14.1B charge-back line can be sized (not disclosed), or if BMS's charge-back growth can be shown to exceed peers' on a comparable basis.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 27
+    },
+    {
+     "doc_id": "BMY:10k_FY2024.md",
+     "page": 27
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 39
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 38
+    },
+    {
+     "doc_id": "ABBV:10k_FY2025.md",
+     "page": 23
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "page": 21
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 19
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2025Q1_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "id": "BMY-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Part D redesign is one of the most-asked BMS topics. Louisa Hector asked BMS to quantify it on the 2024Q4 call (BMY:companies/BMY/transcripts/2024Q4_transcript.md p8-9, grade C). Lenkowsky answered 'there are pushes and pulls', and Elkins flagged 'additional gross to net pressures from Medicare Part D redesign' in prepared remarks (same doc, p6). On the 2025Q1 call Elkins blamed Eliquis's -3% quarter on Part D redesign and said immunology rebates rose because of it (BMY:companies/BMY/transcripts/2025Q1_transcript.md p4). The priced_in_scorecard has IRA_negotiation as 'routinely asked' (19 analyst turns, 7 of 10 quarters) and gross_to_net_price asked in 5 of 10 quarters (market/priced_in_scorecard.csv#29, #32). I re-read the 2025Q3 grade-B quote (Lenkowsky, BMY:transcripts/2025Q3_transcript.md p1). His 'roughly equal' is about revenue: Eliquis gains from the removed coverage gap are offset by catastrophic-phase liability on Revlimid, Pomalyst and Camzyos. The 10-Q statement is about the U.S. GTN percentage. A higher GTN rate with flat net revenue impact is consistent, so the 'contradiction' mixes a dollar effect with a rate. The second half of the candidate, that the request to tighten 2026-27 Eliquis guidance went unanswered, was answered on the next call. On 2025Q4 (BMY:transcripts/2025Q4_transcript.md p1) Lenkowsky and Elkins explained the decision not to guide 2027, the 2026Q1 call gave a $1.5-2B 2027 step-down, and 2026Q2 reiterated it (BMY:transcripts/2026Q2_transcript.md p1, Lenkowsky to Scala). All of these are grade C.",
+   "correction": "If anything survives, it is narrower: the FY2025 10-K names Part D and government channel mix as the main driver of a 49% to 53% U.S. GTN rate. That shows the redesign shifted cost into rebates even though management called the revenue effect a wash. This is an explanation of a disclosed number, not something management hid.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2025Q1_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "market/priced_in_scorecard.csv#29",
+     "page": null
+    },
+    {
+     "doc_id": "market/priced_in_scorecard.csv#32",
+     "page": null
+    }
+   ]
+  },
+  {
+   "id": "BMY-c03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The diabetes part (~$1.1B, the largest of the three streams) is fully public and guided. On the 2025Q4 call Elkins said BMS expects 'OI and E expense of approximately $700 million, which reflects the expiry of our royalty-bearing license of diabetes products at the end of 2025' (BMY:transcripts/2025Q4_transcript.md p1, grade C). That is a ~$1.2B swing from the ~$500M OI&E income guided for 2025 on the 2025Q3 call (BMY:transcripts/2025Q3_transcript.md p1, grade B). The Q2 2026 release bullet repeats it: 'Other (income)/expense, net ... reflects the expiry of royalty income on diabetes products at the end of 2025' (BMY:earnings/2026-07-30 release p3). The Q4 2025 release p14 breaks out 'Royalty income - divestitures (1,129)' and 'Royalty and licensing income (1,093)' as their own lines, so this is not buried in footnotes. The Keytruda and Tecentriq end dates are not new either. The FY2025 10-K wording (p34) appears almost word for word in the FY2024 10-K p33 and the FY2023 10-K p32 ('royalties related to Keytruda* decreased from 6.5% to 2.5% on January 1, 2024 and are expected to terminate on December 31, 2026'). The contract term itself has been in the notes since at least the FY2022 10-K p84 ('2.5% from January 1, 2024 through December 31, 2026'), and Merck discloses it too. Consensus already expects 2027 to be lower: the 2026-08-20 I/B/E/S mean is FY2026 EPS $6.88 and FY2027 $6.54 (tables/ibes_eps_consensus.csv#479, #510), with FY2027 pretax $18.49B vs FY2026 $18.88B (ibes_revenue_consensus.csv#1643, #1674). I found no royalty mention on the 2026Q1 or 2026Q2 calls, so the reader is right that the 2027 Keytruda/Tecentriq end has not come up on recent calls.",
+   "correction": "Drop the diabetes royalty and the 'in footnotes, not in the tables investors model' framing. What may survive: about $0.67B a year of Keytruda/Tecentriq royalty (H1 2026 $334M x 2) ends 2026-12-31 and has not been raised on any 2025Q3-2026Q2 call. It would become non-obvious only by showing that FY2027 consensus OI&E or pretax income leaves it out. I/B/E/S has no OI&E line, and the $0.39B pretax decline already shown cannot be broken down from the tables available.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 34
+    },
+    {
+     "doc_id": "BMY:10k_FY2024.md",
+     "page": 33
+    },
+    {
+     "doc_id": "BMY:companies/BMY/10k_FY2023.md",
+     "page": 32
+    },
+    {
+     "doc_id": "BMY:companies/BMY/10k_FY2022.md",
+     "page": 84
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 3
+    },
+    {
+     "doc_id": "BMY:earnings/2026-02-05_a2025q4ex991.md",
+     "page": 14
+    },
+    {
+     "doc_id": "tables/ibes_eps_consensus.csv#479",
+     "page": null
+    },
+    {
+     "doc_id": "tables/ibes_eps_consensus.csv#510",
+     "page": null
+    },
+    {
+     "doc_id": "tables/ibes_revenue_consensus.csv#1643",
+     "page": null
+    },
+    {
+     "doc_id": "tables/ibes_revenue_consensus.csv#1674",
+     "page": null
+    }
+   ]
+  },
+  {
+   "id": "BMY-c04",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Management has laid out the mechanism repeatedly. On the 2025Q4 call (BMY:transcripts/2025Q4_transcript.md p1, grade C) Lenkowsky said 'The roughly 40% WAC reduction eliminates inflationary penalties or CPI penalties of statutory rebates that have been accumulating over many years', cited the '$0 Medicaid agreement' and the removal of Part D liability, and told Scala the price cut 'will eliminate the inflationary penalties, CPI penalties of the rebates this year and into next year'. Boerner tied the 10-15% Eliquis guide to 'the recent price reduction which ... eliminates the associated inflation penalty'. On the 2026Q1 call Elkins attributed $1.2B of lower cash collections to the Eliquis list price cut, 'more than offset later in the year through lower rebate payments' (BMY:transcripts/2026Q1_transcript.md p1). On the 2026Q2 call: 'U.S. second half sales are expected to benefit from the elimination of the accumulated CPI penalty in certain government channels' (BMY:transcripts/2026Q2_transcript.md p1). The guidance raise to 20-25% is the headline of the Q2 release (BMY:earnings/2026-07-30 release p1, p6). Scala's sustainability question on the same call shows the street is already focused on the rebate-driven 2026 bump. That the MFN terms are confidential is stated in the press release (BMY:policy/press_2025-12-19 p1). The $485M prior-period reserve release is a 10-K MD&A sentence (p49) and is too small to change the story. gross_to_net_price was last asked in 2026Q2 (market/never_asked.csv#32).",
+   "correction": "No non-obvious claim remains on the mechanism. What could still add value: the scale of the shift (Medicaid/Medicare rebates -61% in Q2 2026, U.S. GTN from 52% to 34%, BMY:10q_2026Q2.md p31) may be larger than the street's 2027 step-down assumption. That would have to be argued against the $1.5-2B step-down management keeps repeating, which is a materiality question, not a new fact.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 6
+    },
+    {
+     "doc_id": "BMY:policy/press_2025-12-19_us-government-agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 49
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 31
+    },
+    {
+     "doc_id": "market/never_asked.csv#32",
+     "page": null
+    }
+   ]
+  },
+  {
+   "id": "BMY-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The candidate's own conclusion is 'not channel stuffing'. What is left is that the charge-back reserve nearly doubled ($900M to $1,720M, BMY:10k_FY2025.md p107) ahead of the January 2026 WAC cut, and management already explained the working-capital side of that cut: '$1.2 billion in lower net cash collections due to Eliquis list price reductions ... more than offset later in the year through lower rebate payments' (BMY:transcripts/2026Q1_transcript.md p1, Elkins, grade C). Inventory/channel was asked in 4 of 10 quarters, last in 2025Q2 (market/never_asked.csv#34), so it is not a topic nobody has looked at. Because the finding explains itself away, the brief's obviousness test leaves nothing to score.",
+   "correction": "At most a supporting footnote to the Eliquis price-reset story: the 2025 year-end charge-back reserve rose $820M, which matches price protection ahead of the WAC cut. Not a standalone nugget.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 107
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 108
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "market/never_asked.csv#34",
+     "page": null
+    }
+   ]
+  },
+  {
+   "id": "BMY-c06",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The fold-in is plainly disclosed. Footnote (a) under the product table in both 2026 earnings releases reads 'Includes Abecma, Augtyro, Onureg, Inrebic, Nulojix, Empliciti and royalty revenues' (BMY:earnings/2026-04-30 release p2, p12-14; BMY:earnings/2026-07-30 release p2). The FY2025 release footnote did not list Abecma (BMY:earnings/2026-02-05 release p3, p6), so anyone comparing the two release footnotes sees the change. The economic content was answered in Q&A long before. On the 2024Q4 call Matt Phipps asked about 'the profitability breakpoint for Abecma' and whether arlo-cel 'negate[s] the need for Abecma', and Lenkowsky answered 'we're going to see continued competitive intensity and competitive pressures' (BMY:companies/BMY/transcripts/2024Q4_transcript.md p23, grade C). The FY2025 10-K MD&A says U.S. Abecma revenue fell 14% on BCMA competition (p53). No 2026 call mentions Abecma, so the reclassification itself was never asked about, but at $427M (under 1% of revenue) and already declining, folding it in is standard practice. Calling it 'hidden' is an inference about motive that no source supports.",
+   "correction": "Narrow to a disclosure observation: since Q1 2026 Abecma is no longer reported separately, so its decline can no longer be tracked. That fact is true and was not asked about, but it is small and the decline is already known.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:earnings/2026-04-30_a2026q1ex991.md",
+     "page": 2
+    },
+    {
+     "doc_id": "BMY:earnings/2026-04-30_a2026q1ex991.md",
+     "page": 12
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 2
+    },
+    {
+     "doc_id": "BMY:earnings/2026-02-05_a2025q4ex991.md",
+     "page": 3
+    },
+    {
+     "doc_id": "BMY:earnings/2026-02-05_a2025q4ex991.md",
+     "page": 6
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 23
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q3_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 53
+    },
+    {
+     "doc_id": "BMY:10q_2026Q1.md",
+     "page": 8
+    }
+   ]
+  },
+  {
+   "id": "BMY-c07",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "I found no source where anyone sets Eliquis's list-to-MFP gap against Xarelto's. Xarelto comes up once across ten BMS calls (BMY:companies/BMY/transcripts/2024Q4_transcript.md p14: Lenkowsky, '~75% NBRx share'), and never in the 2025Q3-2026Q2 calls or releases. The verified table supports the inputs: Eliquis 2026 NADAC per unit $5.63 vs $9.69 in 2025, after the cut, with MFP $231 per 30 days (pricing/gtn_proxy.csv#39, #40), while Xarelto NADAC stayed at ~$18.3 (#154, #155). The outcome is already management's talking point, though. 'Strong demand through continued market share gains', 'new-to-brand share approaching 80%' (BMY:transcripts/2026Q2_transcript.md p1) and the 27% U.S. growth is the Q2 release headline (BMY:earnings/2026-07-30 release p2). So the share gain is priced, and the new part is only that J&J did not match the cut and that the price gap outside Medicare is now about 2x.",
+   "correction": "Frame it as the pricing gap, not the growth: Eliquis's non-Medicare acquisition cost fell ~42% while Xarelto's did not move, so the list gap between the two widened to ~44%. Claiming the gap caused the 27% growth goes too far, because management credits demand and share gains that predate the cut.",
+   "pages_checked": [
+    {
+     "doc_id": "pricing/gtn_proxy.csv#39",
+     "page": null
+    },
+    {
+     "doc_id": "pricing/gtn_proxy.csv#40",
+     "page": null
+    },
+    {
+     "doc_id": "pricing/gtn_proxy.csv#154",
+     "page": null
+    },
+    {
+     "doc_id": "pricing/gtn_proxy.csv#155",
+     "page": null
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 2
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "BMY-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "I confirmed both label sentences: Eliquis 'No dose adjustment is recommended for patients with renal impairment, including those with ESRD on dialysis' (drug:eliquis:label_sections.md p39), and Xarelto 'avoid the use of XARELTO in these patients' at CrCl <15 including dialysis (drug:xarelto:label_sections.md p24). The Eliquis renal and dialysis pharmacology text appears in the label versions in the index going back to 2014 (eliquis:drugs/eliquis/label_v2.md, 2014-02-18, 'Hemodialysis does not appear to have a substantial impact on apixaban exposure'). This is a decade-old prescribing fact. What it would explain, Eliquis's share lead, is disclosed and repeated by management (75% NBRx, 2024Q4 p14; ~80% new-to-brand share, 2026Q2 p1). On the 2026Q2 call management itself names 'patients who have renal impairment' as a group where physicians hesitate to use Eliquis today and that milvexian aims to win (BMY:transcripts/2026Q2_transcript.md p1, grade C). The renal angle is therefore already part of management's own story, about the next drug.",
+   "correction": "Turned toward the future it may survive: if Eliquis's renal and dialysis edge is the moat behind its ~3x Part D enrollee lead, the question is whether milvexian's label will match it. Management has flagged that group itself, so the scoreable point would be label risk for milvexian, which cannot be tested until it has a label.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:eliquis:label_sections.md",
+     "page": 39
+    },
+    {
+     "doc_id": "drug:xarelto:label_sections.md",
+     "page": 24
+    },
+    {
+     "doc_id": "eliquis:drugs/eliquis/label_v2.md",
+     "page": null
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "product",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Eliquis is the obvious BMS product. It is the largest brand ($14,443M, BMY:earnings/2026-02-05 release p6), the headline of the Q2 2026 guidance raise (release p1, p6), and subject to IRA, MFN and the EU loss of exclusivity in November 2026, which management discussed on the 2025Q4 call (BMY:transcripts/2025Q4_transcript.md p1). Every team will pick it. The fine-print edge (renal and dialysis use) has been on the label since about 2014 (see c08), and management already ties renal patients to the milvexian pitch (2026Q2 call p1). The Eliquis vs Xarelto pair is sound and lines up cleanly, but it does not differentiate the team.",
+   "correction": "Keep Eliquis, but make the fine print about the post-cut pricing gap against Xarelto (c07, the one candidate that held) rather than the label. Or switch to Opdivo/Opdivo Qvantig vs Keytruda, which the reader rejected but which ties to the 2026-12-31 Keytruda royalty end and the subcutaneous switch that analysts asked about only in 2024Q3.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:earnings/2026-02-05_a2025q4ex991.md",
+     "page": 6
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:earnings/2026-07-30_a2026q2ex991-filing.md",
+     "page": 6
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q3_transcript.md",
+     "page": 17
+    }
+   ]
+  }
+ ],
+ "overall": "Most of BMS's material is about Eliquis pricing, which management explained on the 2025Q4, 2026Q1 and 2026Q2 calls (WAC cut, CPI-penalty removal, $0 Medicaid, $1.5-2B 2027 step-down), so the GTN, Part D and receivables candidates mostly restate answered points. The royalty end dates have been in Item 1A since FY2023 and the diabetes piece is in guidance. The 340B drift copies peer language, and the Abecma fold-in is printed in the release footnote. The only candidate that held is c07, the Eliquis vs Xarelto post-cut price-gap contrast, which no call, release or analyst has raised. The 2027 Keytruda/Tecentriq royalty end not coming up on any recent call is a weak second."
+}

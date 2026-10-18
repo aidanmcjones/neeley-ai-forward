@@ -1,0 +1,478 @@
+{
+ "ticker": "AMGN",
+ "lens": "obviousness",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "AMGN-c01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Both lenses kill it. Materiality checked that ROW kept growing (+7% H1 2026, AMGN:10q_2026Q2.md p.37), so there is no number behind the $0.85B. My round 1 evidence that peers (MRK, BMY, REGN 10-Ks) say the same thing more plainly stands.",
+   "correction": "Wording observation only; no economic claim.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 46
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 21
+    },
+    {
+     "doc_id": "REGN:10k_FY2025.md",
+     "page": 43
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 37
+    }
+   ],
+   "round2": {
+    "conceded": "Materiality's point that the $0.85B scenario has no filing support and ROW is still growing.",
+    "held": "Industry-wide: every shortlist company carries MFN launch-pricing risk to the same degree.",
+    "narrowed": "None needed; both lenses agree it is dead."
+   }
+  },
+  {
+   "id": "AMGN-c02",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Still held, on the narrow claim. Materiality recomputed the same operands on AMGN:10k_FY2025.md p.83 (54.4% vs 52.5%, rebates +24.7%, accrual +29.7%) and holds it. Nothing they cite shows the aggregate deduction rate or the accrual build quantified on a call or in a release. The Enbrel IRA leg and the 340B leg remain headline (2026Q2 and 2025Q4 calls).",
+   "correction": "Company-wide deductions rose ~1.9 pts to 54% of gross; the rebate accrual grew ~30% vs net sales ~10%, with a new 'timing of payments' explanation. Each point is ~$0.77B of net revenue, ~$1.42/share pre-tax. The rise is a mix-driven rate on a growing base, not lost revenue. Not quantified on any call.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:10k_FY2024.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    }
+   ],
+   "round2": {
+    "conceded": "Their EPS label fix ($1.42 pre-tax, not $1.2). The 1.9-pt rise is a mix counterfactual, not a lost $1.5B. NADAC is an acquisition-cost benchmark, not list price.",
+    "held": "The aggregate deduction-rate and accrual-build angle is filings-only and goes beyond the IRA headline.",
+    "narrowed": "Drop the Enbrel list-vs-net hook entirely, since it is headline. Keep only the company-wide rate and accrual."
+   }
+  },
+  {
+   "id": "AMGN-c03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "I now refute it. I opened AMGN:10q_2026Q2.md p.39 (printed 34). Q2 2026 TEPEZZA grew 14% on 'higher net selling price of 6%, volume growth of 6% and favorable changes to estimated sales deductions of 4%, partially offset by 4% from lower inventory'. U.S. sales were $520M vs $466M (+12%). So the Q1 stocking began unwinding within one quarter while volume grew, and the 2026Q1 call's demand narrative was not wrong over H1 (H1 volume +3%, AMGN:10q_2026Q2.md p.40). My round 1 hold rested on a call-vs-10-Q contradiction. It is real for Q1 alone but self-corrects in the next 10-Q, is worth ~$84M (~0.2% of revenue), and the volume splits are global. A non-obvious item that is immaterial and already reversing does not earn points.",
+   "correction": "At most a one-line status note: Q1 2026 TEPEZZA included ~$84M of wholesaler stocking that the call did not mention; about a quarter of it unwound in Q2 as volume grew 6%.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 37
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 40
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 73
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 40
+    }
+   ],
+   "round2": {
+    "conceded": "Materiality's size objection (~0.2% of revenue) and the Q2 contradiction on p.39 both hold against the sources.",
+    "held": "It remains true that inventory was never asked on any call (never_asked#16) and the Q1 call credited demand, but that alone is not a finding.",
+    "narrowed": "From 'TEPEZZA demand flat to down, growth is stocking' to 'one quarter of unflagged stocking, already unwinding'."
+   }
+  },
+  {
+   "id": "AMGN-c04",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Materiality found the decisive fact, and I confirmed it on AMGN:10k_FY2025.md p.75 (printed 69). The 'Other product sales by geographic region' table itemizes the bucket: PAVBLU U.S. 691, UPLIZNA U.S. 528 + ROW 127, IMDELLTRA U.S. 513 + ROW 114, TAVNEOS U.S. 423 (+65%) + ROW 36, and others. AMGN:10q_2026Q2.md p.44 continues it (TAVNEOS U.S. 143 vs 103, +39%). The premise 'undisclosed' is false in the filing itself, not just on calls.",
+   "correction": "Drop.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 119
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 75
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 44
+    }
+   ],
+   "round2": {
+    "conceded": "The p.75 product-level table, and TAVNEOS being broken out in the 10-K and both 2026 10-Qs. My round 1 ground (calls give the numbers) was weaker than theirs.",
+    "held": "Refuted.",
+    "narrowed": "Severity raised from major to fatal."
+   }
+  },
+  {
+   "id": "AMGN-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Materiality holds it on the math, and I accept their numbers: $7.6B is a floor before interest, interest pushes cash exposure higher, and EPS is hit only above an undisclosed case-specific reserve. None of that changes obviousness. The $3.6B, $5.1B and $2.0B figures and 'plus interest' are 10-K text read by everyone. Management answered reserve adequacy in 2024Q2 Q&A and in 2026Q1 remarks, and described the harsher audit method on the 2026Q1 call. On the coordinator's question: the filings-only timing update is a status note, not a finding. (1) The decision moved from 'no earlier than the second half of 2026' (AMGN:10q_2026Q1.md p.14) to 'no earlier than late 2026 or early 2027' (AMGN:10q_2026Q2.md p.17). That is a one-quarter 'no earlier than' bound that changes neither the amount nor the odds. (2) The NOPA was 'reissued in substantially the same form', which by its own words is no change in the claim, and Amgen still does not quantify it. (3) The 2019-2022 audit start was pre-announced: the Q1 10-Q said 'We expect that the IRS will begin its audit for years 2019-2022 in the first half of 2026' (AMGN:10q_2026Q1.md p.15). None of the three moves exposure, probability or timing enough to change a view.",
+   "correction": "Material risk, obvious angle. If the team wants AMGN tax in the deck, frame it as materiality's corrected exposure (at least $7.6B before interest vs $4.4B gross UTBs covering all positions). Credit it as a known risk sized properly, not as a hidden finding.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q2_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q1_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 85
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 14
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 15
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 17
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 18
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 14
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 15
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 17
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 18
+    }
+   ],
+   "round2": {
+    "conceded": "Their math corrections: floor-before-interest, cash vs EPS, and the 'up to' credits. The exposure is larger than the reader said, so it is more material.",
+    "held": "Obvious: the headline, the reserve question and the harsher-method point were all addressed by management.",
+    "narrowed": "The timing update is a status note. The 2019-2022 audit start was itself pre-announced in the Q1 10-Q."
+   }
+  },
+  {
+   "id": "AMGN-c06",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Held, and now my least-obvious candidate. I confirmed the carrying-value paragraph first appeared with the FDA proposal in the Q1 10-Q (AMGN:10q_2026Q1.md p.18: 'did not result in significant changes to the estimated future cash flows'). Q2 (AMGN:10q_2026Q2.md p.21) replaced that with 'observations with respect to new U.S. patient interest'. That is a wording change no call or release mentions. TAVNEOS sales are in the filings (AMGN:10k_FY2025.md p.75: U.S. 423, ROW 36; AMGN:10q_2026Q2.md p.44: Q2 U.S. 143), so investors can compute the ratio. But no call, slide or release puts the $2.3B against it, and the FDA headline was framed as 'a very small product'. One tension: U.S. Q2 sales rose 39% (p.44), so the 'new patient interest' caveat signals forward risk, not a sales decline yet.",
+   "correction": "$2.4B TAVNEOS intangible ($2.3B U.S.) is ~5.2x FY2025 sales ($459M) and ~4x the Q2 2026 run rate. Q2 2026 replaced Q1's 'no significant changes' with a 'new U.S. patient interest' caveat. A full U.S. write-off is ~$4.2/share pre-tax (~$3.3-3.5 after tax), non-cash and outside non-GAAP. ~$0.6B/yr of revenue is at risk.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 137
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 27
+    },
+    {
+     "doc_id": "AMGN:presentations/2026-03_shareholder_letter.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 75
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 44
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 18
+    }
+   ],
+   "round2": {
+    "conceded": "TAVNEOS sales ARE in filing tables (I had said calls only). The correct ratio is ~5.2x or ~4x, not 5.6x. Pre-tax vs after-tax per-share.",
+    "held": "The carrying value against a product FDA wants withdrawn, plus the Q1-to-Q2 recoverability wording change, is said nowhere outside the intangibles note.",
+    "narrowed": "Severity unchanged (minor). The angle is now the Q1-to-Q2 wording change on recoverability, not 'sales not in filings'."
+   }
+  },
+  {
+   "id": "AMGN-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Materiality holds it only as a 'borderline' level that 'consensus models'. That agrees with my obviousness kill: the CFO named profit share as a cost-of-sales driver on 2024Q2, 2024Q4 and 2026Q1 and guided cost of sales including it.",
+   "correction": "Quantification of a guided headwind; the scopes are mismatched (global profit share vs Amgen-booked sales), and the AZ royalty partly offsets it.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q2_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q4_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 132
+    }
+   ],
+   "round2": {
+    "conceded": "Their scope-mismatch and AZ-royalty caveats, which make the 'a third of incremental sales' ratio weaker still.",
+    "held": "Obvious: management guides it.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "AMGN-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "I flip to refuted. My round 1 residue was 'Q2 2026 true-ups (~$130M) not flagged on the call'. Materiality is right that this is mostly a comparison effect. AMGN:companies/AMGN/10q_2025Q2.md p.41 shows Q2 2025 Enbrel had 'unfavorable changes to estimated sales deductions of 20%', so Q2 2026's +16% laps a depressed base. Otezla had an offsetting unfavorable change (AMGN:10q_2026Q2.md p.40), and the 10-K calls prior-year adjustments 'immaterial' (p.83). Nothing unflagged remains. On disclosure thinning: the price and volume detail moved into the filings rather than disappearing. The 10-Qs give product-level price, volume, inventory and deduction effects every quarter (e.g. p.39-40), and per fact:secx/comment_letter_findings.csv#6 the FY2024 10-K now quantifies portfolio price and volume. Fewer call mentions with more filing detail is the SEC's requested outcome, not concealment. The drop also starts two calls after the reply, and the item is a pre-built row in the verified table.",
+   "correction": "A disclosure-history footnote: after the 2024 SEC comment, price and volume detail moved from calls into 10-K and 10-Q MD&A.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/sec_letters/2024-04-22_CORRESP_0001193125-24-105075.md",
+     "page": 3
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/sec_letters/2024-04-05_UPLOAD_0000000000-24-003674.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 3
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 40
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+     "page": 41
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 40
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    }
+   ],
+   "round2": {
+    "conceded": "Enbrel +16% laps -20% in Q2 2025. Otezla offsets it. The timing link is weak (2024Q3 had the most mentions).",
+    "held": "Round 1's point that the 2025Q3 CFO already flagged $250M of true-ups as discrete.",
+    "narrowed": "From held (narrowed) to refuted: no unflagged item survives, and the detail moved to filings rather than being cut."
+   }
+  },
+  {
+   "id": "AMGN-c09",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Refutation stands on obviousness (management's own label-leadership message). Materiality adds that the price claim is also weak: in Q1 2026 the -7% price was more than offset by +8% favorable deductions (AMGN:10q_2026Q1.md p.36), and Q2 growth was volume-driven.",
+   "correction": "Repatha net price guided down mid-single digits for 2026 (~$150M global); no evidence yet that Lipfendra is pressuring price.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 71
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 36
+    }
+   ],
+   "round2": {
+    "conceded": "Their base correction (global, not U.S.) and the +8% deduction offset.",
+    "held": "Obvious label edge.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "AMGN-c10",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Materiality holds it as 'minor' relative exposure with no dollar effect and a qualitative Puerto Rico link. That agrees that nothing beyond a press-release level fact survives. Tariff relief tied to $2.5B of U.S. capex is the Dec 2025 press release headline.",
+   "correction": "Relative policy exposure (12.2% of revenue in IRA-selected drugs) is a peer-table fact, not a finding.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:policy/press_2026-05-04_pr_manufacturing_300m.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 68
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 55
+    }
+   ],
+   "round2": {
+    "conceded": "Their verified 12.2% IRA share math.",
+    "held": "Obvious: relief and investments are press-release headlines; the Puerto Rico 'one asset' link has no number.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": true,
+   "severity": "minor",
+   "argument": "Materiality is right that Repatha is a material, defensible choice ($3.0B, +36%). I narrow: the choice is fine, but the stated fine-print edge (primary plus secondary prevention) is management's own message and was asked on two calls. Under this lens the edge earns little.",
+   "correction": "Keep Repatha. Lead with the less-marketed label details (HoFH from age 10 vs Praluent adults only; Lipfendra fasting rule) and the 10-K mid-single-digit 2026 price guide, not the primary-prevention claim.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "drug:lipfendra:label_sections.md",
+     "page": 3
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Product choice is material and reasonable.",
+    "held": "The edge as written is obvious.",
+    "narrowed": "Severity lowered from major to minor: a weak framing of an acceptable pick."
+   }
+  }
+ ],
+ "overall": "After the dialectic, only two AMGN candidates survive obviousness. c06 is the strongest: the TAVNEOS $2.3B U.S. intangible, ~4-5x sales, with Q2's new 'U.S. patient interest' recoverability caveat that no call mentions. c02 is narrow: the company-wide deduction rate and rebate-accrual build. The IRS case (c05) is material but obvious. Its 2026 filing updates are a status note, and the 2019-2022 audit was pre-announced. c03 and c08 fall to materiality's evidence that the Q1 inventory and Q2 true-ups are small, reversing or comparison effects."
+}

@@ -5,6 +5,7 @@ Run:  streamlit run app/needle_app.py
 
 import html
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -152,8 +153,54 @@ def money(x):
 
 
 # ----------------------------------------------------------------- data
-league = read_json("out/league.json") or []
-tickers = [r["ticker"] for r in league] or sorted(p.name for p in OUT.glob("*") if (p / "findings.jsonl").exists())
+def load_league():
+    """out/league_v3.json if present, else league_v2.json, else league.json (review B22). FIND rows (v2/v3) are
+    mapped onto the columns this page shows; the AI-rejected count still comes from the engine's league.json."""
+    old = read_json("out/league.json") or []
+    for name in ("out/league_v3.json", "out/league_v2.json"):
+        rows = read_json(name)
+        if rows:
+            by = {r["ticker"]: r for r in old}
+            return [{"ticker": r["ticker"], "score": r["L"], "n_findings": r.get("n_findings", 0),
+                     "n_verified": r.get("n_findings", 0),
+                     "n_rejected": by.get(r["ticker"], {}).get("n_rejected", r.get("n_withheld", 0)),
+                     "high_confidence": sum(t.get("confidence") == "HIGH" for t in r.get("top", [])),
+                     "sharpest_needle": (f"{r['needle']['sentence']} ({r.get('needle_status')})" if r.get("needle")
+                                         else "none")} for r in rows]
+    return old
+
+
+def load_findings(ticker):
+    """Gated FIND rows (out/<T>/findings_v3.jsonl, every row passed the numeric gate) in the shape this page renders;
+    the old engine's findings.jsonl only when no v3 file exists. Rows in rejected_v3.jsonl are never shown."""
+    v3 = read_jsonl(f"out/{ticker}/findings_v3.jsonl")
+    if not v3:
+        return read_jsonl(f"out/{ticker}/findings.jsonl")
+    out = []
+    for r in v3:
+        if (r.get("numeric_check") or {}).get("status") not in ("passed", "no_numbers"):
+            continue                       # fail closed: only rows the numeric gate passed (no_numbers is not a failure)
+        imp = r.get("impact") or {}
+        out.append({"finding": r.get("sentence_md") or r.get("sentence", ""), "score": r.get("S", 0),
+                    "confidence": str(r.get("confidence", "")).lower(),
+                    "verdict": "numeric gate: " + r["numeric_check"]["status"],
+                    "impact": {"formula": imp.get("formula", "")}, "formula_md": r.get("formula_md", ""),
+                    "peer": {"metric_value": (r.get("peer") or {}).get("metric_value"),
+                             "peer_median": (r.get("peer") or {}).get("peer_median"), "z": (r.get("peer") or {}).get("peer_z")},
+                    "vector": r.get("vector") or {},
+                    "evidence": [{"doc_id": c["canonical_id"], "page": c.get("page"), "quote": c.get("quote", ""),
+                                  "citation": c.get("doc_title", ""), "speaker": c.get("speaker", "")}
+                                 for c in r.get("citations", []) if c.get("page") is not None
+                                 and (c.get("verification") or {}).get("status") in ("exact", "substring", "fuzzy",
+                                                                                      "number_match")]})
+    return out
+
+
+league = load_league()
+# the default company is no longer the league leader: NEEDLE_TICKER if set, else the first ticker alphabetically
+tickers = sorted({r["ticker"] for r in league}) or sorted(p.name for p in OUT.glob("*") if (p / "findings_v3.jsonl").exists()
+                                                          or (p / "findings.jsonl").exists())
+_default = os.environ.get("NEEDLE_TICKER", "").upper()
 total_verified = sum(r.get("n_verified", 0) for r in league)
 total_rejected = sum(r.get("n_rejected", 0) for r in league)
 
@@ -177,15 +224,17 @@ if not tickers:
     note("No engine output found in out/. Run the NEEDLE pipeline to produce out/league.json.")
     st.stop()
 
-selected = st.selectbox("Company (drives the Findings, Fine print and AI caught tabs)", tickers, key="company")
+selected = st.selectbox("Company (drives the Findings, Fine print and AI caught tabs)", tickers, key="company",
+                        index=tickers.index(_default) if _default in tickers else 0)
 
 tab_league, tab_find, tab_labels, tab_ai, tab_proof = st.tabs(
-    ["League table", "Findings", "Product fine print", "AI caught", "Proof"]
+    ["Internal triage", "Findings", "Product fine print", "AI caught", "Proof"]
 )
 
 # ----------------------------------------------------------------- tab 1
 with tab_league:
-    st.subheader("Which companies hide the most in their filings?")
+    st.subheader("Internal triage")
+    st.caption("Internal triage only: the league score orders candidates for review and is not the pitch or the company pick.")
     if not league:
         note("out/league.json is missing.")
     else:
@@ -221,7 +270,7 @@ with tab_league:
 # ----------------------------------------------------------------- tab 2
 with tab_find:
     st.subheader(f"{selected}: findings ranked by score")
-    rows = read_jsonl(f"out/{selected}/findings.jsonl")
+    rows = load_findings(selected)
     if not rows:
         note(f"No findings file for {selected}.")
     else:
@@ -241,15 +290,11 @@ with tab_find:
                     "Confidence: " + badge(conf.upper(), CONF_COLOR.get(conf, SKY)), unsafe_allow_html=True
                 )
                 c.markdown(f"Verdict: **{r.get('verdict', 'n/a')}**")
-                imp = r.get("impact") or {}
-                if imp.get("formula"):
-                    st.markdown(f"Impact: **{money(imp.get('dollars', 0))}**. {imp['formula']}")
-                pe = r.get("peer") or {}
-                if pe.get("peer_median") is not None and pe.get("metric_value") is not None:
-                    zt = f"z {pe['z']:+.2f}" if pe.get("z") is not None else "z n/a"
-                    st.markdown(
-                        f"Peer line: value {pe['metric_value']:+.3f} vs peer median {pe['peer_median']:+.3f} ({zt})"
-                    )
+                # review verify2: only gated text is printed. The impact math comes from formula_md (marked from the
+                # gate's maps: [n], [derived], [assumption], [constant: name]); no ungated dollar total or peer line
+                # (the peer comparison is in the gated sentence).
+                if r.get("formula_md"):
+                    st.markdown(f"Impact math: {r['formula_md']}")
                 vec = r.get("vector") or {}
                 if vec.get("obscurity_note"):
                     st.markdown(f"Obscurity: {vec['obscurity_note']}")
