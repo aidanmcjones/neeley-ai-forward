@@ -1,16 +1,36 @@
 {
  "ticker": "AMGN",
  "company": "Amgen Inc.",
- "generated_at": "2026-10-18T05:43:10.162191+00:00",
+ "generated_at": "2026-10-18T05:47:07.839759+00:00",
  "move": {
-  "text": "We commit $12.5M and a team of 12 people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record a designed confirmatory randomized trial with independent endpoint adjudication plus a U.S. liver-safety registry, offered to the FDA as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives.",
-  "text_marked": "We commit $12.5M[assumption] and a team of 12[assumption] people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record a designed confirmatory randomized trial with independent endpoint adjudication plus a U.S. liver-safety registry, offered to the FDA as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives[1][2][3].",
+  "text": "We commit $12.5M and a team of 12 people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record an offer to fully fund and independently adjudicate the FDA-required five-year randomized trial (PMR 4155-1) plus a U.S. liver-safety registry, as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives.",
+  "text_marked": "We commit $12.5M[assumption] and a team of 12[assumption] people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record an offer to fully fund and independently adjudicate the FDA-required five-year randomized trial (PMR 4155-1)[1] plus a U.S. liver-safety registry, as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives[2][3][4][5][6][7].",
   "marker_map": {
-   "1": "c_5708b85898",
-   "2": "c_0437623b64",
-   "3": "c_16970919bd"
+   "1": "c_b2e127f5b7",
+   "2": "c_5708b85898",
+   "3": "c_0437623b64",
+   "4": "c_16970919bd",
+   "5": "c_170b043e97",
+   "6": "c_20dbbe8e17",
+   "7": "c_ab6edbb273"
   },
   "cites": [
+   {
+    "cite_id": "c_b2e127f5b7",
+    "doc_id": "policy:policy/fda_tavneos_approval_letter_2021.md",
+    "doc_title": "FDA approval letter 2021-10-07",
+    "location": "p. 3",
+    "page": 3,
+    "quote": "4155-1 Conduct a randomized controlled clinical trial of at least five years duration",
+    "label": "FDA approval letter 2021-10-07, p. 3 (file page 3)",
+    "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214487Orig1s000ltr.pdf#page=3",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=3&q=4155-1%20Conduct%20a%20randomized%20controlled%20clinical%20trial%20of%20at%20least%20five%20years%20duration",
+    "quote_grade": null,
+    "verify_status": "substring",
+    "withheld": false,
+    "grade": "filing",
+    "speaker": null
+   },
    {
     "cite_id": "c_5708b85898",
     "doc_id": "AMGN:10q_2026Q2.md",
@@ -58,13 +78,61 @@
     "withheld": false,
     "grade": "B",
     "speaker": "the head of R&D"
+   },
+   {
+    "cite_id": "c_170b043e97",
+    "doc_id": "policy:policy/fda_tavneos_approval_letter_2021.md",
+    "doc_title": "FDA approval letter 2021-10-07",
+    "location": "p. 4",
+    "page": 4,
+    "quote": "4155-3 Conduct a randomized controlled clinical trial of at least five years duration",
+    "label": "FDA approval letter 2021-10-07, p. 4 (file page 4)",
+    "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214487Orig1s000ltr.pdf#page=4",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=4&q=4155-3%20Conduct%20a%20randomized%20controlled%20clinical%20trial%20of%20at%20least%20five%20years%20duration",
+    "quote_grade": null,
+    "verify_status": "substring",
+    "withheld": false,
+    "grade": "filing",
+    "speaker": null
+   },
+   {
+    "cite_id": "c_20dbbe8e17",
+    "doc_id": "policy:policy/fda_tavneos_approval_letter_2021.md",
+    "doc_title": "FDA approval letter 2021-10-07",
+    "location": "p. 5",
+    "page": 5,
+    "quote": "Trial Completion:  12/2030  Final Report Submission: 09/2031",
+    "label": "FDA approval letter 2021-10-07, p. 5 (file page 5)",
+    "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214487Orig1s000ltr.pdf#page=5",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=5&q=Trial%20Completion%3A%2012%2F2030%20Final%20Report%20Submission%3A%2009%2F2031",
+    "quote_grade": null,
+    "verify_status": "substring",
+    "withheld": false,
+    "grade": "filing",
+    "speaker": null
+   },
+   {
+    "cite_id": "c_ab6edbb273",
+    "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+    "doc_title": "Federal Register 2026-04-30",
+    "location": "p. 8",
+    "page": 8,
+    "quote": "According to the applicant's most recent annual report for this ongoing study, only 21 of the planned 300 patients have been enrolled.",
+    "label": "Federal Register 2026-04-30, p. 8 (file page 8)",
+    "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=8&q=According%20to%20the%20applicant%27s%20most%20recent%20annual%20report%20for%20this%20ongoing%20study%2C%20only%2021%20of%20the%20planned%20300%20patients%20have%20been%20enrolled.",
+    "quote_grade": null,
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": "filing",
+    "speaker": null
    }
   ],
   "numeric_check": {
    "status": "passed",
-   "checked": 2,
-   "total": 2,
-   "verified": 0,
+   "checked": 4,
+   "total": 4,
+   "verified": 2,
    "derived": 0,
    "assumed": 2,
    "unsupported": []
@@ -84,8 +152,8 @@
    "amount_usd": 12500000,
    "people": 12,
    "period": "committed now; trial budget released only on an FDA signal, decided when it arrives",
-   "text": "Committed now: $12.5M and 12 people (regulatory affairs, biostatistics, clinical operations, hepatic safety and legal) for protocol design, an independent adjudication charter and registry setup, about 0.17% of 2025 R&D of $7,272M; no trial money is committed until the FDA signals it will accept postmarketing commitments.",
-   "text_marked": "Committed now: $12.5M[assumption] and 12[assumption] people (regulatory affairs, biostatistics, clinical operations, hepatic safety and legal) for protocol design, an independent adjudication charter and registry setup, about 0.17%[derived: 1][assumption] of 2025 R&D of $7,272M[1]; no trial money is committed until the FDA signals it will accept postmarketing commitments[2].",
+   "text": "Committed now: $12.5M and 12 people (regulatory affairs, biostatistics, clinical operations, hepatic safety and legal) for the funding plan and independent adjudication charter for the FDA-required trial and the registry setup, about 0.17% of 2025 R&D of $7,272M; no trial money is committed until the FDA signals it will accept postmarketing commitments.",
+   "text_marked": "Committed now: $12.5M[assumption] and 12[assumption] people (regulatory affairs, biostatistics, clinical operations, hepatic safety and legal) for the funding plan and independent adjudication charter for the FDA-required trial and the registry setup, about 0.17%[derived: 1][assumption] of 2025 R&D of $7,272M[1]; no trial money is committed until the FDA signals it will accept postmarketing commitments[2].",
    "marker_map": {
     "1": "c_48afc5fc27",
     "2": "c_0437623b64"
@@ -169,7 +237,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -251,8 +319,8 @@
  ],
  "case_for": {
   "cost": {
-   "text": "The committed cost is $12.5M, the midpoint of the $10M to $15M range the decider skeptic set for protocol design, an adjudication charter and registry setup. It is 0.54% of the $2.3B U.S. TAVNEOS carrying value and about 0.17% of 2025 R&D of $7,272M. The downside is capped at that $12.5M because no trial money moves without an FDA signal.",
-   "text_marked": "The committed cost is $12.5M[assumption], the midpoint of the $10M[assumption] to $15M[assumption] range the decider skeptic set for protocol design, an adjudication charter and registry setup. It is 0.54%[derived: 1][assumption] of the $2.3B[1] U.S. TAVNEOS carrying value and about 0.17%[derived: 2][assumption] of 2025 R&D of $7,272M[2]. The downside is capped at that $12.5M[assumption] because no trial money moves without an FDA signal.",
+   "text": "The committed cost is $12.5M, the midpoint of the $10M to $15M range the decider skeptic set for the funding plan and independent adjudication charter for the FDA-required five-year trial and the registry setup. It is 0.54% of the $2.3B U.S. TAVNEOS carrying value and about 0.17% of 2025 R&D of $7,272M. The downside is capped at that $12.5M because no trial money moves without an FDA signal.",
+   "text_marked": "The committed cost is $12.5M[assumption], the midpoint of the $10M[assumption] to $15M[assumption] range the decider skeptic set for the funding plan and independent adjudication charter for the FDA-required five-year trial and the registry setup. It is 0.54%[derived: 1][assumption] of the $2.3B[1] U.S. TAVNEOS carrying value and about 0.17%[derived: 2][assumption] of 2025 R&D of $7,272M[2]. The downside is capped at that $12.5M[assumption] because no trial money moves without an FDA signal.",
    "marker_map": {
     "1": "c_526146ff94",
     "2": "c_48afc5fc27"
@@ -336,7 +404,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -382,7 +450,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -410,13 +478,15 @@
    }
   },
   "return": {
-   "text": "The return is avoided loss of contribution: $413.3M a year is exposed once a withdrawal can bite, from about month 12, because TAVNEOS stays on the market while the hearing process runs. At a 5 points gain in the probability TAVNEOS stays approved, the expected avoided loss is $20.7M against $12.5M, a net $8.2M; break-even is 3.0 points (2.4 points to 3.6 points across the $10M to $15M range). No page prices that gain. If the FDA signals acceptance, the trial budget of about $62.15M is released (program $74.65M), whose break-even of 18.1 points is why it waits for that signal; most of the payoff lands after the 24-month window.",
-   "text_marked": "The return is avoided loss of contribution: $413.3M[derived: 1, 2][assumption] a year is exposed once a withdrawal can bite, from about month 12[assumption], because TAVNEOS stays on the market while the hearing process runs. At a 5 points[assumption] gain in the probability TAVNEOS stays approved, the expected avoided loss is $20.7M[derived: 1, 2][assumption] against $12.5M[assumption], a net $8.2M[derived: 1, 2][assumption]; break-even is 3.0 points[derived: 1, 2][assumption] (2.4 points[derived: 1, 2][assumption] to 3.6 points[derived: 1, 2][assumption] across the $10M[assumption] to $15M[assumption] range). No page prices that gain. If the FDA signals acceptance, the trial budget of about $62.15M[derived: 3][assumption] is released (program $74.65M[derived: 3][assumption]), whose break-even of 18.1 points[derived: 3, 1, 2][assumption] is why it waits for that signal; most of the payoff lands after the 24[assumption]-month window[4].",
+   "text": "The return is avoided loss of contribution: $413.3M a year is exposed once a withdrawal can bite, from about month 12, because TAVNEOS stays on the market while the hearing process runs. At a 5 points gain in the probability TAVNEOS stays approved, the expected avoided loss is $20.7M against $12.5M, a net $8.2M; break-even is 3.0 points (2.4 points to 3.6 points across the $10M to $15M range). No page prices that gain. If the FDA signals acceptance, the budget to fully fund the FDA-required trial, about $30.7M, is released (program $43.2M), whose break-even of 10.4 points is why it waits for that signal; most of the payoff lands after the 24-month window.",
+   "text_marked": "The return is avoided loss of contribution: $413.3M[derived: 1, 2][assumption] a year is exposed once a withdrawal can bite, from about month 12[assumption], because TAVNEOS stays on the market while the hearing process runs. At a 5 points[assumption] gain in the probability TAVNEOS stays approved, the expected avoided loss is $20.7M[derived: 1, 2][assumption] against $12.5M[assumption], a net $8.2M[derived: 1, 2][assumption]; break-even is 3.0 points[derived: 1, 2][assumption] (2.4 points[derived: 1, 2][assumption] to 3.6 points[derived: 1, 2][assumption] across the $10M[assumption] to $15M[assumption] range). No page prices that gain. If the FDA signals acceptance, the budget to fully fund the FDA-required trial, about $30.7M[derived: 3, 4][assumption], is released (program $43.2M[derived: 3, 4][assumption]), whose break-even of 10.4 points[derived: 3, 4, 1, 2][assumption] is why it waits for that signal; most of the payoff lands after the 24[assumption]-month window[5][6].",
    "marker_map": {
     "1": "c_ea8f8528bc",
     "2": "c_dfda4c301b",
     "3": "c_2c635b78fc",
-    "4": "c_133da21cc2"
+    "4": "c_751c45d1ae",
+    "5": "c_133da21cc2",
+    "6": "c_b2e127f5b7"
    },
    "cites": [
     {
@@ -468,6 +538,22 @@
      "speaker": null
     },
     {
+     "cite_id": "c_751c45d1ae",
+     "doc_id": "costs/trial_cost_benchmarks.csv",
+     "doc_title": "moat table costs/trial_cost_benchmarks.csv",
+     "location": "row costs/trial_cost_benchmarks.csv#217",
+     "page": null,
+     "quote": "costs/trial_cost_benchmarks.csv#217 [sertkaya2024|T1|Per-patient cost (2018), $|Phase 3|Immuno-modulation] value = 54909.0",
+     "label": "Sertkaya, Beleche, Jessup, Sommers, JAMA Netw Open 2024, Table 1, Immuno-modulation Phase 3 per-patient cost (2018 USD), verified table row costs/trial_cost_benchmarks.csv#217",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/",
+     "viewer_link": "",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "table",
+     "speaker": null
+    },
+    {
      "cite_id": "c_133da21cc2",
      "doc_id": "AMGN:10q_2026Q2.md",
      "doc_title": "Amgen 10-Q 2026-06-30",
@@ -479,6 +565,22 @@
      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the%20pendency%20of%20this%20process",
      "quote_grade": null,
      "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_b2e127f5b7",
+     "doc_id": "policy:policy/fda_tavneos_approval_letter_2021.md",
+     "doc_title": "FDA approval letter 2021-10-07",
+     "location": "p. 3",
+     "page": 3,
+     "quote": "4155-1 Conduct a randomized controlled clinical trial of at least five years duration",
+     "label": "FDA approval letter 2021-10-07, p. 3 (file page 3)",
+     "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214487Orig1s000ltr.pdf#page=3",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=3&q=4155-1%20Conduct%20a%20randomized%20controlled%20clinical%20trial%20of%20at%20least%20five%20years%20duration",
+     "quote_grade": null,
+     "verify_status": "substring",
      "withheld": false,
      "grade": "filing",
      "speaker": null
@@ -538,7 +640,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -584,7 +686,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -666,7 +768,7 @@
      }
     },
     "rem": {
-     "value": 62.15,
+     "value": 30.7,
      "unit": "USD millions",
      "expr": "p - o",
      "operands": {
@@ -680,7 +782,7 @@
      }
     },
     "prog": {
-     "value": 74.65,
+     "value": 43.2,
      "unit": "USD millions",
      "expr": "t + g",
      "operands": {
@@ -694,7 +796,7 @@
      }
     },
     "trial": {
-     "value": 49.65,
+     "value": 18.2,
      "unit": "USD millions",
      "expr": "n * p / 1000000",
      "operands": {
@@ -724,7 +826,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -734,13 +836,44 @@
        "text": "331"
       },
       "p": {
-       "value": 150000,
-       "assumption": "trial cost per patient (strategist; no indexed vasculitis trial-cost benchmark)"
+       "value": 54909,
+       "citation": {
+        "canonical_id": "costs/trial_cost_benchmarks.csv",
+        "page": null,
+        "quote": "costs/trial_cost_benchmarks.csv#217 [sertkaya2024|T1|Per-patient cost (2018), $|Phase 3|Immuno-modulation] value = 54909.0",
+        "claim_type": "number",
+        "value": "54909.0",
+        "unit": "USD per patient",
+        "ticker": "",
+        "doc_type": "machine_data",
+        "doc_title": "moat table costs/trial_cost_benchmarks.csv",
+        "period": "",
+        "folio": "",
+        "char_start": null,
+        "char_end": null,
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/",
+        "deep_link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/",
+        "viewer_link": "",
+        "speaker": "",
+        "location": "row costs/trial_cost_benchmarks.csv#217",
+        "raw_doc_type": "machine_data",
+        "page_scheme": "none",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18",
+         "detail": "facts row costs/trial_cost_benchmarks.csv#217 re-read (verified: verified); machine data: API row 217 at https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/ (no page copy)"
+        },
+        "confidence_note": "facts row costs/trial_cost_benchmarks.csv#217 re-read (verified: verified); machine data: API row 217 at https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/ (no page copy)",
+        "cite_id": "c_751c45d1ae",
+        "operands": []
+       },
+       "text": "54,909"
       }
      }
     },
     "be_full": {
-     "value": 18.1,
+     "value": 10.4,
      "unit": "pts",
      "expr": "p / e * 100",
      "operands": {
@@ -864,7 +997,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -899,7 +1032,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -995,7 +1128,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1101,7 +1234,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1143,7 +1276,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1252,7 +1385,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1298,7 +1431,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1427,7 +1560,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1473,7 +1606,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1530,12 +1663,14 @@
    },
    {
     "step": 6,
-    "text": "Full program: 331 patients x $150,000 = $49.65M of trial cost plus $25M of adjudication and registry = $74.65M; $74.65M / $413.3M = 18.1 points, so the trial money stays gated.",
-    "text_marked": "Full program: 331[1] patients x $150,000[assumption] = $49.65M[derived: 1][assumption] of trial cost plus $25M[assumption] of adjudication and registry = $74.65M[derived: 1][assumption]; $74.65M[derived: 1][assumption] / $413.3M[derived: 2, 3][assumption] = 18.1 points[derived: 1, 2, 3][assumption], so the trial money stays gated.",
+    "text": "Full program: fully funding the FDA-required five-year trial, sized at ADVOCATE's 331 patients (the required trial plans 300), at $54,909 per patient = $18.2M, plus $25M of adjudication and registry = $43.2M; $43.2M / $413.3M = 10.4 points, so the trial money stays gated. The $54,909 is the Sertkaya 2024 immunomodulation Phase 3 per-patient cost in 2018 dollars, the nearest benchmark because no vasculitis category exists; the 2018 basis understates today's cost.",
+    "text_marked": "Full program: fully funding the FDA-required five-year trial, sized at ADVOCATE's 331[1] patients (the required trial plans 300)[2], at $54,909[3] per patient = $18.2M[derived: 1, 3], plus $25M[assumption] of adjudication and registry = $43.2M[derived: 1, 3][assumption]; $43.2M[derived: 1, 3][assumption] / $413.3M[derived: 4, 5][assumption] = 10.4 points[derived: 1, 3, 4, 5][assumption], so the trial money stays gated. The $54,909[3] is the Sertkaya 2024 immunomodulation Phase 3 per-patient cost in 2018 dollars, the nearest benchmark because no vasculitis category exists; the 2018 basis understates today's cost.",
     "marker_map": {
      "1": "c_2c635b78fc",
-     "2": "c_ea8f8528bc",
-     "3": "c_dfda4c301b"
+     "2": "c_ab6edbb273",
+     "3": "c_751c45d1ae",
+     "4": "c_ea8f8528bc",
+     "5": "c_dfda4c301b"
     },
     "cites": [
      {
@@ -1552,6 +1687,38 @@
       "verify_status": "exact",
       "withheld": false,
       "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_ab6edbb273",
+      "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+      "doc_title": "Federal Register 2026-04-30",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "According to the applicant's most recent annual report for this ongoing study, only 21 of the planned 300 patients have been enrolled.",
+      "label": "Federal Register 2026-04-30, p. 8 (file page 8)",
+      "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=8&q=According%20to%20the%20applicant%27s%20most%20recent%20annual%20report%20for%20this%20ongoing%20study%2C%20only%2021%20of%20the%20planned%20300%20patients%20have%20been%20enrolled.",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_751c45d1ae",
+      "doc_id": "costs/trial_cost_benchmarks.csv",
+      "doc_title": "moat table costs/trial_cost_benchmarks.csv",
+      "location": "row costs/trial_cost_benchmarks.csv#217",
+      "page": null,
+      "quote": "costs/trial_cost_benchmarks.csv#217 [sertkaya2024|T1|Per-patient cost (2018), $|Phase 3|Immuno-modulation] value = 54909.0",
+      "label": "Sertkaya, Beleche, Jessup, Sommers, JAMA Netw Open 2024, Table 1, Immuno-modulation Phase 3 per-patient cost (2018 USD), verified table row costs/trial_cost_benchmarks.csv#217",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/",
+      "viewer_link": "",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "table",
       "speaker": null
      },
      {
@@ -1589,16 +1756,16 @@
     ],
     "numeric_check": {
      "status": "passed",
-     "checked": 8,
-     "total": 8,
-     "verified": 1,
+     "checked": 10,
+     "total": 10,
+     "verified": 4,
      "derived": 5,
-     "assumed": 2,
+     "assumed": 1,
      "unsupported": []
     },
     "derived": {
      "prog": {
-      "value": 74.65,
+      "value": 43.2,
       "unit": "USD millions",
       "expr": "t + g",
       "operands": {
@@ -1612,7 +1779,7 @@
       }
      },
      "trial": {
-      "value": 49.65,
+      "value": 18.2,
       "unit": "USD millions",
       "expr": "n * p / 1000000",
       "operands": {
@@ -1642,7 +1809,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1652,13 +1819,44 @@
         "text": "331"
        },
        "p": {
-        "value": 150000,
-        "assumption": "trial cost per patient (strategist; no indexed vasculitis trial-cost benchmark)"
+        "value": 54909,
+        "citation": {
+         "canonical_id": "costs/trial_cost_benchmarks.csv",
+         "page": null,
+         "quote": "costs/trial_cost_benchmarks.csv#217 [sertkaya2024|T1|Per-patient cost (2018), $|Phase 3|Immuno-modulation] value = 54909.0",
+         "claim_type": "number",
+         "value": "54909.0",
+         "unit": "USD per patient",
+         "ticker": "",
+         "doc_type": "machine_data",
+         "doc_title": "moat table costs/trial_cost_benchmarks.csv",
+         "period": "",
+         "folio": "",
+         "char_start": null,
+         "char_end": null,
+         "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/",
+         "deep_link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/",
+         "viewer_link": "",
+         "speaker": "",
+         "location": "row costs/trial_cost_benchmarks.csv#217",
+         "raw_doc_type": "machine_data",
+         "page_scheme": "none",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18",
+          "detail": "facts row costs/trial_cost_benchmarks.csv#217 re-read (verified: verified); machine data: API row 217 at https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/ (no page copy)"
+         },
+         "confidence_note": "facts row costs/trial_cost_benchmarks.csv#217 re-read (verified: verified); machine data: API row 217 at https://pmc.ncbi.nlm.nih.gov/articles/PMC11214120/ (no page copy)",
+         "cite_id": "c_751c45d1ae",
+         "operands": []
+        },
+        "text": "54,909"
        }
       }
      },
      "be_full": {
-      "value": 18.1,
+      "value": 10.4,
       "unit": "pts",
       "expr": "p / e * 100",
       "operands": {
@@ -1714,7 +1912,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1760,7 +1958,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1773,10 +1971,6 @@
      }
     },
     "assumptions": {
-     "per_pt": {
-      "value": "$150,000",
-      "label": "trial cost per patient (strategist; no indexed vasculitis trial-cost benchmark)"
-     },
      "reg": {
       "value": "$25M",
       "label": "independent adjudication committee plus U.S. hepatic registry (strategist; no indexed benchmark)"
@@ -1893,7 +2087,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1939,7 +2133,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2108,7 +2302,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2166,7 +2360,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2212,7 +2406,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2258,7 +2452,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2455,7 +2649,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2501,7 +2695,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -2543,7 +2737,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -2578,7 +2772,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2719,7 +2913,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2768,7 +2962,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2844,7 +3038,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:43:10+00:00",
+          "checked_at": "2026-10-18T05:47:07+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -3203,7 +3397,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -3238,7 +3432,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:43:10+00:00",
+         "checked_at": "2026-10-18T05:47:07+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -3301,7 +3495,7 @@
    "marker_map": {
     "1": "c_ab6edbb273",
     "2": "c_0437623b64",
-    "3": "c_9648a68491",
+    "3": "c_b2e127f5b7",
     "4": "c_ad313b05a8",
     "5": "c_076877fec9",
     "6": "c_8a49ecea39",
@@ -3341,17 +3535,17 @@
      "speaker": null
     },
     {
-     "cite_id": "c_9648a68491",
+     "cite_id": "c_b2e127f5b7",
      "doc_id": "policy:policy/fda_tavneos_approval_letter_2021.md",
      "doc_title": "FDA approval letter 2021-10-07",
      "location": "p. 3",
      "page": 3,
-     "quote": "Conduct a randomized controlled clinical trial of at least five years duration",
+     "quote": "4155-1 Conduct a randomized controlled clinical trial of at least five years duration",
      "label": "FDA approval letter 2021-10-07, p. 3 (file page 3)",
      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214487Orig1s000ltr.pdf#page=3",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=3&q=Conduct%20a%20randomized%20controlled%20clinical%20trial%20of%20at%20least%20five%20years%20duration",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=3&q=4155-1%20Conduct%20a%20randomized%20controlled%20clinical%20trial%20of%20at%20least%20five%20years%20duration",
      "quote_grade": null,
-     "verify_status": "exact",
+     "verify_status": "substring",
      "withheld": false,
      "grade": "filing",
      "speaker": null
@@ -3568,8 +3762,8 @@
    }
   },
   "cannot_tell": {
-   "text": "It cannot show the FDA ever accepting a new trial in lieu of withdrawal; no indexed precedent does. In the closest case Genentech asked that Avastin's breast indication stay subject to a new confirmatory study, CDER framed the issue as withdrawal versus keeping the indication while the sponsor runs new studies, and the Commissioner withdrew it after the hearing. Makena was withdrawn after a hearing that discussed new studies, Pepaxto was withdrawn, Ukoniq was withdrawn with the hearing waived, and the only retentions on the record (LUMAKRAS, Leqembi) came through confirmatory trials the FDA itself required. Every precedent was an accelerated approval while TAVNEOS holds a full approval, so none is a direct match, and that cuts both ways. CDER's TAVNEOS notice says no new blinded re-adjudication can redeem ADVOCATE and warns against letting a drug stay on the market while the applicant gets another chance; no trial answers the untrue-statements ground. The probability, the hearing date and the weight of the CHMP recommendation stay unsized.",
-   "text_marked": "It cannot show the FDA ever accepting a new trial in lieu of withdrawal; no indexed precedent does. In the closest case Genentech asked that Avastin's breast indication stay subject to a new confirmatory study, CDER framed the issue as withdrawal versus keeping the indication while the sponsor runs new studies, and the Commissioner withdrew it after the hearing. Makena was withdrawn after a hearing that discussed new studies, Pepaxto was withdrawn, Ukoniq was withdrawn with the hearing waived, and the only retentions on the record (LUMAKRAS, Leqembi) came through confirmatory trials the FDA itself required. Every precedent was an accelerated approval while TAVNEOS holds a full approval, so none is a direct match, and that cuts both ways. CDER's TAVNEOS notice says no new blinded re-adjudication can redeem ADVOCATE and warns against letting a drug stay on the market while the applicant gets another chance; no trial answers the untrue-statements ground. The probability, the hearing date and the weight of the CHMP recommendation stay unsized[1][2][3][4][5][6][7][8][9][10][11][12][13][14].",
+   "text": "It cannot show the FDA ever accepting a sponsor's trial offer, new or already required, in lieu of withdrawal; no indexed precedent does, and the precedents cut against the move. In the closest case Genentech asked that Avastin's breast indication stay subject to a new confirmatory study, CDER framed the issue as withdrawal versus keeping the indication while the sponsor runs new studies, and the Commissioner withdrew it after the hearing. Makena was withdrawn after a hearing that discussed new studies, Pepaxto was withdrawn, Ukoniq was withdrawn with the hearing waived, and the only retentions on the record (LUMAKRAS, Leqembi) came through confirmatory trials the FDA itself required. Every precedent was an accelerated approval while TAVNEOS holds a full approval, so none is a direct match, and that cuts both ways. CDER's TAVNEOS notice says no new blinded re-adjudication can redeem ADVOCATE and warns against letting a drug stay on the market while the applicant gets another chance; no trial answers the untrue-statements ground. The probability, the hearing date and the weight of the CHMP recommendation stay unsized.",
+   "text_marked": "It cannot show the FDA ever accepting a sponsor's trial offer, new or already required, in lieu of withdrawal; no indexed precedent does, and the precedents cut against the move. In the closest case Genentech asked that Avastin's breast indication stay subject to a new confirmatory study, CDER framed the issue as withdrawal versus keeping the indication while the sponsor runs new studies, and the Commissioner withdrew it after the hearing. Makena was withdrawn after a hearing that discussed new studies, Pepaxto was withdrawn, Ukoniq was withdrawn with the hearing waived, and the only retentions on the record (LUMAKRAS, Leqembi) came through confirmatory trials the FDA itself required. Every precedent was an accelerated approval while TAVNEOS holds a full approval, so none is a direct match, and that cuts both ways. CDER's TAVNEOS notice says no new blinded re-adjudication can redeem ADVOCATE and warns against letting a drug stay on the market while the applicant gets another chance; no trial answers the untrue-statements ground. The probability, the hearing date and the weight of the CHMP recommendation stay unsized[1][2][3][4][5][6][7][8][9][10][11][12][13][14].",
    "marker_map": {
     "1": "c_b4efc45ab9",
     "2": "c_438a868915",
