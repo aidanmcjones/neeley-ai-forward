@@ -297,3 +297,63 @@ export interface MemosFile extends Loose {
   /** Per-company suggested flow, used once a company is picked in the pill. */
   suggested_by_ticker?: Record<string, string[]>;
 }
+
+/* Part 1 deliverable (data/part1/, written by agent/ui_part1_export.py). Shapes follow the Part 1 data
+   contract; every field beyond identifiers is optional so a partial export still renders. */
+
+export interface Part1Index extends Loose {
+  generated_at?: string; engine?: string; picked: string[]; tickers?: string[];
+  sealed?: { sha256?: string; sealed_at?: string } | null; sample?: boolean; sample_note?: string;
+}
+
+export interface Part1Selection extends Loose {
+  picked: string[]; reasons?: Record<string, string>; eliminated?: Record<string, string>;
+  sealed_at?: string; sha256?: string; selection_md?: string;
+  names?: Record<string, string>;
+}
+
+export interface Part1Source extends Loose { doc_title?: string; period?: string; page?: number | string | null; quote?: string | null; url?: string | null; speaker?: string | null; cite?: number | null }
+
+export interface Part1Impact extends Loose {
+  text?: string; text_marked?: string | null; math?: string | null; math_marked?: string | null; direction?: string;
+  numeric_check?: NumericCheck | null;
+}
+
+export interface Part1Finding extends Loose {
+  n: number; finding: string; finding_marked?: string | null; marker_map?: Record<string, string> | null;
+  source?: Part1Source | null; cites?: Evidence[]; impact?: Part1Impact | null;
+  peer?: string | null; peer_marked?: string | null; confidence?: Confidence;
+}
+
+export interface Part1Marked extends Loose { text?: string; text_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null; status?: string; note?: string }
+
+export interface Part1Product extends Loose {
+  product: string; rivals?: string[];
+  rows?: { row: string; cells?: Record<string, Part1Marked> }[];
+  financial_tie?: (Part1Marked & { math?: string | null; math_marked?: string | null; numeric_check?: NumericCheck | null }) | null;
+  growth_limiter?: { sentence?: string; sentence_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null; numeric_check?: NumericCheck | null } | null;
+  priced_in?: (Part1Marked & { call?: "priced in" | "not priced in" | "untestable" | string }) | null;
+}
+
+export interface Part1Company extends Loose {
+  ticker: string; name?: string; findings?: Part1Finding[];
+  sharpest_needle?: { finding_n?: number; why?: string; why_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null } | null;
+  product_table?: Part1Product | null;
+}
+
+export interface Part1SkepticRounds { round1?: unknown; round2?: unknown }
+
+export interface Part1TraceStep extends Loose {
+  step: number; category: string; query?: string;
+  documents?: { doc_id?: string; doc_title?: string; page?: number | string | null }[];
+  candidate?: { text?: string; cites?: Evidence[] } | null;
+  skeptic_materiality?: Part1SkepticRounds | null; skeptic_obviousness?: Part1SkepticRounds | null;
+  verdict?: "survived" | "killed" | "narrowed" | string; verdict_reason?: string; finding_n?: number | string | null;
+}
+
+export interface Part1Trace extends Loose {
+  header?: { categories?: string[]; ticker?: string; generated_at?: string } & Loose;
+  steps?: Part1TraceStep[];
+  summary?: { candidates?: number; survived?: number; killed?: number; narrowed?: number; documents?: number } | null;
+  sample?: boolean;
+}

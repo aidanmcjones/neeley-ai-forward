@@ -5,11 +5,16 @@ import { loadMemo, matchMemo, useMemos } from "../lib/memos";
 import { useData } from "../lib/data";
 import type { MemoRecord, MemosFile } from "../lib/types";
 import { Answer } from "../components/chat/Answer";
+import { isPart1Query, isWhyCompanyQuery, PART1_PROMPT, usePart1 } from "../lib/part1";
+import { Part1Answer } from "../components/chat/Part1Answer";
+import type { FollowChip } from "../components/chat/Part1Answer";
+import { SelectionCard } from "../components/chat/Part1Selection";
 
 // The demo page (/): one column, a prompt box, cached answers. Part 1 (Find) questions answer as
 // chat; Part 2 (Decide) arrives as a memo card. No model, no network: answers come from memos.json.
 
-interface Turn { id: number; prompt: string; memoId: string | null }
+// kind "part1": the cached Part 1 deliverable; "selection": the why-this-company card alone.
+interface Turn { id: number; prompt: string; memoId: string | null; kind?: "part1" | "selection"; ticker?: string }
 
 // Generator kinds, in Part 1 (Find, chat) to Part 2 (Decide, memo) order.
 const KIND_ORDER = ["needles", "needle", "why_company", "findings", "products", "product", "peers", "priced_in", "decides", "ceo_memo", "prove_wrong", "ai_wrong", "moat", "how_it_works", "limits", "league"];
@@ -52,6 +57,8 @@ export default function Chat() {
   const [loaded, setLoaded] = useState<Map<string, MemoRecord>>(new Map());
   const [failed, setFailed] = useState<Set<string>>(new Set());
   const { meta, loading: metaLoading } = useData();
+  const part1 = usePart1();
+  const nameOf = useCallback((t: string) => meta?.companies.find((c) => c.ticker === t)?.name ?? t, [meta]);
   const [params] = useSearchParams();
   // undefined until the default rule has run; null = no company picked.
   const [ticker, setTicker] = useState<string | null | undefined>(undefined);
@@ -76,20 +83,45 @@ export default function Chat() {
   const send = useCallback((prompt: string, memo?: MemoRecord) => {
     const p = prompt.trim();
     if (!p) return;
+    // The Part 1 prompt (and its aliases) answers with the sealed pick; "why <company>" with the selection card.
+    if (!memo && part1.index?.picked.length && isPart1Query(p)) {
+      setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memoId: null, kind: "part1" }]);
+      setText("");
+      return;
+    }
+    if (!memo && part1.selection?.picked?.length) {
+      const pk = part1.selection.picked;
+      const names = (meta?.companies ?? []).flatMap((c) => [c.ticker, c.name ?? ""]);
+      if (isWhyCompanyQuery(p, names)) {
+        const lower = p.toLowerCase();
+        const named = pk.find((t) => new RegExp(`\\b${t.toLowerCase()}\\b`).test(lower) || lower.includes(nameOf(t).toLowerCase()));
+        setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memoId: null, kind: "selection", ticker: named ?? pk[0] }]);
+        setText("");
+        return;
+      }
+    }
     const m = memo ?? matchMemo(file, p, ticker === undefined ? picked : ticker).memo;
     setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memoId: m?.id ?? null }]);
     setText("");
-  }, [file, ticker, picked]);
+  }, [file, ticker, picked, part1.index, part1.selection, meta, nameOf]);
+
+  // ask_next chips under the Part 1 answer: that company's memo flow (the selection card already says why).
+  const followFor = useCallback((t: string): FollowChip[] => {
+    const ids = (file?.suggested_by_ticker as Record<string, string[]> | undefined)?.[t] ?? [];
+    return ids.map((id) => byId.get(id)).filter((m): m is MemoRecord => !!m)
+      .filter((m) => !(part1.selection && m.kind === "why_company"))
+      .map((m) => ({ key: m.id, label: m.prompt, onClick: () => send(m.prompt, m) }));
+  }, [file, byId, send, part1.selection]);
 
   const askId = useCallback((id: string) => { const m = byId.get(id); if (m) send(m.prompt, m); }, [byId, send]);
 
   // ?q= sends on load (judge links open on an answer).
   const q = params.get("q");
   useEffect(() => {
-    if (!file || !q || sentQ.current === q || metaLoading) return;
+    if ((!file && !part1.index) || !q || sentQ.current === q || metaLoading || part1.loading) return;
     sentQ.current = q;
     send(q);
-  }, [file, q, send, metaLoading]);
+  }, [file, q, send, metaLoading, part1.index, part1.loading]);
 
   // Fetch each asked answer once (index mode).
   useEffect(() => {
@@ -147,10 +179,18 @@ export default function Chat() {
       <main id="main" className="mx-auto w-full max-w-[760px] flex-1 px-4 pb-6">
         {loading && <p role="status" className="text-sm text-muted">Loading…</p>}
         {error && !file && <p role="alert" className="text-sm text-bad">{error}</p>}
-        {file && turns.length === 0 && (
+        {(file || part1.index) && turns.length === 0 && (
           <section aria-label="Suggested questions" className="no-print pt-6">
             <div className="mb-3 text-[12px] font-semibold uppercase tracking-wide text-muted">Start here: find, then decide</div>
-            <div className="flex flex-col items-start gap-2">{suggested.map(chip)}</div>
+            <div className="flex flex-col items-start gap-2">
+              {part1.index && part1.index.picked.length > 0 && (
+                <button type="button" onClick={() => send(PART1_PROMPT)} data-hero
+                  className="rounded-2xl border-2 border-purple bg-purple dark:bg-purple-deep px-4 py-3 text-left text-[15.5px] font-semibold leading-snug text-white shadow-card hover:opacity-95">
+                  <span className="mb-0.5 block text-[10.5px] font-bold uppercase tracking-[0.14em] text-white/80">Part 1</span>{PART1_PROMPT}
+                </button>
+              )}
+              {suggested.map(chip)}
+            </div>
           </section>
         )}
         <ol className="space-y-8 pt-4" aria-live="polite">
@@ -159,7 +199,17 @@ export default function Chat() {
               <div className="no-print flex justify-end">
                 <div className="max-w-[85%] rounded-2xl rounded-br-sm bg-purple dark:bg-purple-deep px-4 py-2.5 text-[15px] text-white">{t.prompt}</div>
               </div>
-              {t.memoId ? (
+              {t.kind === "part1" ? (
+                <Part1Answer part1={part1} instant={i < turns.length - 1} nameOf={nameOf} followFor={followFor} />
+              ) : t.kind === "selection" && part1.selection ? (
+                <div className="space-y-2">
+                  {part1.sample && <p role="note" className="text-[12px] text-muted">Sample data: the blind reasoning pass has not run yet</p>}
+                  <SelectionCard selection={part1.selection} ticker={t.ticker ?? part1.selection.picked[0]} nameOf={nameOf} seal={part1.index?.sealed} />
+                  <div className="no-print flex flex-wrap gap-2" aria-label="Ask next">
+                    <button type="button" onClick={() => send(PART1_PROMPT)} className="rounded-full border border-purple/40 bg-surface px-3 py-1.5 text-[13px] text-purple hover:bg-chip text-left">{PART1_PROMPT}</button>
+                  </div>
+                </div>
+              ) : t.memoId ? (
                 answerOf(t.memoId)
                   ? <Answer memo={answerOf(t.memoId)!} instant={i < turns.length - 1} onAsk={askId} labelFor={labelFor} />
                   : failed.has(t.memoId)

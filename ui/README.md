@@ -60,6 +60,36 @@ a company pill, the thread and a prompt box (Enter sends, Shift+Enter new line).
   chips and a "Show all prompts" list by kind.
 - **Reveal**: a 1.5 to 2.5 s typewriter, skippable by click, instant under reduced motion.
 
+## Part 1 answer and reasoning trace
+
+The hero chip on an empty chat is the case's Part 1 prompt, verbatim. It (or a typed match: the exact prompt,
+"part 1", "find material", "non-obvious findings", "compare ... product ... rivals") answers with the cached
+Part 1 deliverable instead of a memo; the company pill does not apply (the pick is sealed).
+
+- **Data** (`src/lib/part1.ts`, shapes in `src/lib/types.ts`): `data/part1/index.json`, else
+  `data/_sample/part1/index.json`; then `selection.json`, and `<T>.json` plus `<T>_trace.json` for each of the
+  three picked tickers (all three load at once so the 1 / 2 / 3 switcher swaps instantly). Written by
+  `agent/ui_part1_export.py`; the sample fixture by `agent/ui_part1_fixture.py`. From `_sample` (or
+  `index.sample: true`) the answer shows one muted line: "Sample data: the blind reasoning pass has not run yet".
+- **Layout** (case "Minimum expectations"): header with the switcher; "Why <name> beat the other nine" (reason,
+  collapsible "the other nine", seal sha256 short form and sealed_at); Findings table (Finding | Source | Impact
+  with "Show the math" and the numeric gate pill | Peer comparison | Confidence); Sharpest Needle; Product fine
+  print (five rows, product then rivals, "needs citation" cells muted), Tie to the numbers, what limits growth,
+  priced in ("untestable" reads as a plain statement). Markers render through `Md` with the existing CiteChip and
+  SourceDrawer: `[n]` resolves via the nearest `marker_map` against every cite in the company file, else the
+  local `cites` entry with that `n`.
+- **Reasoning trace** ("How the answer was found"): a summary strip (candidates, survived, killed, narrowed,
+  documents read), then the eight "Where findings hide" categories in the case's order, collapsed; each opens to
+  its queries, distinct documents (title, page) and candidate cards with a verdict badge, the reason, a link to
+  the finding it became, and the materiality / obviousness skeptic rounds on demand. When the trace is a sample or
+  every skeptic field is null, one muted line says it is illustrative.
+- **Routing**: "why this company", "why <name>", "why did it beat the other nine" answer with the selection card
+  alone when a part1 selection exists, else the `why_company` memo. Everything else routes to the memos as before;
+  the ask-next chips under the Part 1 answer offer the other two picks and `memos.suggested_by_ticker[T]`.
+- **Pitch rule**: every string from part1 files passes `scrub()` (the Answer.tsx INTERNAL regex plus
+  `INTERNAL_TEXT`), so no league score, S or robustness wording renders.
+- **Reveal**: header, selection card and Findings first, the rest 0.7 s later (click to show at once).
+
 ## Cockpit (`/cockpit/...`, unlinked except for "Full cockpit" under the prompt box)
 
 - **Briefing**: KPI row; the Sharpest Needle hero; the findings grid; the stance panel.
