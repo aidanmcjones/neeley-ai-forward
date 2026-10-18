@@ -420,6 +420,7 @@ GENERIC_TITLES = {"government document", "document", "source", ""}
 def doc_label(e):
     """A readable document title; the exporter labels some government files 'government document'."""
     title = (e.get("doc_title") or e.get("doc_label") or "").replace("(third_party)", "(third-party transcript)")
+    title = re.sub(r"^moat table (?:[\w]+/)*([\w-]+)\.csv$", lambda m: "verified data table: " + m.group(1).replace("_", " ") + " (machine data)", title)
     if title.lower() not in GENERIC_TITLES:
         return title
     did = e.get("doc_id") or ""
@@ -2414,22 +2415,56 @@ def ceo_memo(ctx, t):
         nc = d.get("numeric_check") or nc
     return record("ceo_memo", ctx, t, f"Write the CEO memo for {name}", summary, blocks, C, gen, nc, memo_header=header)
 
+def baseline_parts(base):
+    """(label text, cite dicts) from a kill-signal baseline: {value, text, cites} (current export), [value, repr,
+    label] (older) or a bare string."""
+    if isinstance(base, dict):
+        return (base.get("text") or None), [c for c in base.get("cites") or [] if isinstance(c, dict)]
+    if isinstance(base, list) and base and isinstance(base[-1], str):
+        return base[-1], []
+    return (base if isinstance(base, str) else None), []
+
+
+def kill_parts(ctx, t, C, i, k):
+    """(signal, baseline today, what it would show) for one DECIDE kill signal, all in plain words and cited, or
+    None when the row is a context row or has no baseline. The physician-breadth row (Open Payments) reads:
+    'Doctors with any <product> contact in Open Payments | 2,751 in 2024 (...) | a fall below 30% of that by
+    month 6 stops the move; annual file, ...'."""
+    if k.get("threshold") == "context" or not k.get("signal"):
+        return None
+    label, cites = baseline_parts(k.get("baseline"))
+    if not label:
+        return None
+    label = re.sub(r";?\s*api_\w+$", "", label).strip()
+    n = C.add(row_cite(f"row:kill:{t}:{i}", f"companies/{t}.json:stance.kill_signals[{i}]",
+                       f"out/{t}/decide.json kill-signal table ({k.get('source')})",
+                       "; ".join(f"{key} {k.get(key)}" for key in ("id", "signal", "threshold", "source", "lag", "check_month", "action") if k.get(key) not in (None, ""))
+                       + f"; baseline {label}", "decide record", ticker=t))
+    ns = [n] + [C.add(ev_cite(c, None, t, 300 + 10 * i + j)) for j, c in enumerate(cites[:2]) if c.get("cite_id")]
+    act = ACTION_WORDS.get(k.get("action"), str(k.get("action") or "review").replace("_", " "))
+    stops = "stops the move" if k.get("stop") else f"; then {act}"
+    sig, thr, lag = plain_terms(k.get("signal") or ""), str(k.get("threshold") or ""), plain_terms(k.get("lag") or "")
+    product = sig.split(":")[0].strip() if ":" in sig else None
+    m = re.match(r"Open Payments ([\d,]+) distinct physicians \(PY(\d{4})\): ([\d,]+) paid relationships \(([^)]*)\), ([\d,]+) light-touch only", label)
+    if k.get("id") == "physician_breadth" and m and product:
+        pct = re.search(r"(\d+)%", thr)
+        signal = f"Doctors with any {product} contact in Open Payments"
+        base_md = f"{m.group(1)} in {m.group(2)} ({m.group(3)} paid relationships: {m.group(4)}; {m.group(5)} light-touch only) {C.mark(*ns)}"
+        what = (f"a fall below {pct.group(1)}% of that by month {k.get('check_month')}" if pct else
+                f"{thr} by month {k.get('check_month')}") + (f" {stops}" if not stops.startswith(";") else stops) + (f"; {lag}" if lag else "")
+        return signal, base_md, what
+    return (sig, f"{plain_terms(label)} {C.mark(*ns)}",
+            f"{thr} by month {k.get('check_month')} ({plain_terms(k.get('source') or '')})" + (f" {stops}" if not stops.startswith(";") else stops) + (f"; {lag}" if lag else ""))
+
+
 def kill_rows(ctx, t, C, fs, st, gen):
     """[signal, baseline today, what it would show] rows: decide signals with a baseline, then findings-based rules."""
     rows = []
     if gen == "decide_v2" and st.get("kill_signals"):
         for i, k in enumerate(st["kill_signals"]):
-            base = k.get("baseline")
-            label = base[-1] if isinstance(base, list) and base and isinstance(base[-1], str) else (base if isinstance(base, str) else None)
-            if k.get("threshold") == "context" or not k.get("signal") or not label:
-                continue
-            n = C.add(row_cite(f"row:kill:{t}:{i}", f"companies/{t}.json:stance.kill_signals[{i}]",
-                               f"out/{t}/decide.json kill-signal table ({k.get('source')})",
-                               "; ".join(f"{key} {k.get(key)}" for key in ("id", "signal", "threshold", "source", "lag", "check_month", "action") if k.get(key) not in (None, ""))
-                               + f"; baseline {label}", "decide record", ticker=t))
-            act = ACTION_WORDS.get(k.get("action"), str(k.get("action") or "review").replace("_", " "))
-            rows.append([plain_terms(k.get("signal")), f"{plain_terms(label)} [{n}]",
-                         f"{k.get('threshold')} by month {k.get('check_month')} ({plain_terms(k.get('source'))}); then {act}"])
+            parts = kill_parts(ctx, t, C, i, k)
+            if parts:
+                rows.append(list(parts))
     seen = set()
     for f in fs:
         if len(rows) >= 3:
@@ -2459,22 +2494,13 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
     items = []
     if gen == "decide_v2" and st.get("kill_signals"):
         for i, k in enumerate(st["kill_signals"]):
-            if k.get("threshold") == "context" or not k.get("signal"):
-                continue  # baseline context rows are inputs, not signals
-            base = k.get("baseline")
-            label = base[-1] if isinstance(base, list) and base and isinstance(base[-1], str) else (base if isinstance(base, str) else None)
-            if not label:
-                continue  # a signal with no baseline value is dropped (nothing to move from)
             if brief and len(items) >= 4:
                 break
-            n = C.add(row_cite(f"row:kill:{t}:{i}", f"companies/{t}.json:stance.kill_signals[{i}]",
-                               f"out/{t}/decide.json kill-signal table ({k.get('source')})",
-                               "; ".join(f"{key} {k.get(key)}" for key in ("id", "signal", "threshold", "source", "lag", "check_month", "action") if k.get(key) not in (None, ""))
-                               + f"; baseline {label}", "decide record", ticker=t))
-            act = ACTION_WORDS.get(k.get("action"), str(k.get("action") or "review").replace("_", " "))
-            items.append(f"**{plain_terms(k.get('signal'))}**: {k.get('threshold')} by month {k.get('check_month')} "
-                         f"({plain_terms(k.get('source'))}; {plain_terms(k.get('lag'))}); baseline today: {plain_terms(label)}; "
-                         f"action: {act} [{n}].")
+            parts = kill_parts(ctx, t, C, i, k)
+            if not parts:
+                continue  # context rows are inputs, not signals; a signal with no baseline has nothing to move from
+            sig, base_md, what = parts
+            items.append(f"**{sig}**: {base_md}; {what}.")
         if len(items) >= 3:
             return items
     seen = set()
