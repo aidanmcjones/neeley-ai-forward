@@ -166,6 +166,9 @@ export function Part2Answer({ part2, part1, instant, nameOf, startTicker, onPart
           </div>
         )}
         {!ready.length && <p role="note" className="w-full text-[12px] text-muted">The Part 2 answers are still being written.</p>}
+        {startTicker && missing.has(startTicker) && ready.length > 0 && (
+          <p role="note" className="w-full text-[12px] text-muted">The move for {nameOf(startTicker)} is still being written; showing {nameOf(active)}.</p>
+        )}
         {part2.sample && <p role="note" title={part2.index?.sample_note} className="w-full text-[12px] text-muted">Sample data: the Part 2 pass has not run yet</p>}
       </header>
 

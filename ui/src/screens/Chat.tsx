@@ -73,9 +73,10 @@ export default function Chat() {
   // Cross links between the two answers: Part 1 offers the move for its company; Part 2 opens the findings.
   const openPart2 = useCallback((t: string) => push({ prompt: PART2_PROMPT, kind: "part2", ticker: t }), [push]);
   const openPart1 = useCallback((t: string, n?: number) => push({ prompt: PART1_PROMPT, kind: "part1", ticker: t, finding: n }), [push]);
+  // Offered only for a company whose Part 2 file is on disk, so the chip never lands on another pick.
   const followFor = useCallback((t: string): FollowChip[] => (
-    ready2 ? [{ key: `p2:${t}`, label: `Part 2: the CEO move for ${nameOf(t)}`, onClick: () => openPart2(t) }] : []
-  ), [ready2, nameOf, openPart2]);
+    part2Ready(part2.index).includes(t) ? [{ key: `p2:${t}`, label: `Part 2: the CEO move for ${nameOf(t)}`, onClick: () => openPart2(t) }] : []
+  ), [part2.index, nameOf, openPart2]);
 
   const chip = (part: "Part 1" | "Part 2", prompt: string) => (
     <button key={part} type="button" onClick={() => send(prompt)} data-hero

@@ -9,24 +9,50 @@ import { CiteChip } from "../CiteChip";
 
 const VERDICT: Record<string, string> = { survived: "border-good/50 bg-good/10 text-good", narrowed: "border-warn/60 bg-warn/10 text-warn", killed: "border-bad/50 bg-bad/10 text-bad" };
 
+const WITHHELD = "[figure withheld: not gated]";
+/** Trace prose with each withheld-figure marker shown as a small pill instead of the literal bracket text. */
+export function Withheld({ text }: { text: string }) {
+  const parts = text.split(WITHHELD);
+  return (
+    <>
+      {parts.map((p, i) => (
+        <span key={i}>
+          {p}
+          {i < parts.length - 1 && <span title="Figure withheld: the numeric gate never checked it" className="mx-0.5 inline-block rounded border border-dashed border-muted/60 px-1 align-baseline font-mono text-[9.5px] leading-tight text-muted">withheld</span>}
+        </span>
+      ))}
+    </>
+  );
+}
+
+/** One skeptic round: a string, or {refuted, severity, argument, correction} as the Part 2 skeptics write it. */
+function Round({ n, r }: { n: number; r: unknown }) {
+  if (r == null) return null;
+  const y = (typeof r === "object" ? r : {}) as Record<string, unknown>;
+  const body = typeof r === "string" ? r : String(y.argument ?? y.text ?? y.reason ?? y.summary ?? y.verdict ?? y.note ?? "");
+  const tag = typeof r === "object"
+    ? [y.refuted === true ? "refuted" : y.refuted === false ? "not refuted" : "", typeof y.severity === "string" ? y.severity : ""].filter(Boolean).join(", ")
+    : "";
+  const fix = typeof y.correction === "string" ? y.correction : "";
+  if (!body && !tag && !fix) return null;
+  return (
+    <p>
+      <span className="font-mono text-[10.5px] text-muted">R{n} </span>
+      {tag && <span className="mr-1 rounded border border-line px-1 text-[10px] uppercase tracking-wide text-muted">{tag}</span>}
+      <Withheld text={scrub(body)} />
+      {fix && <span className="block text-muted"><span className="font-semibold">Correction: </span><Withheld text={scrub(fix)} /></span>}
+    </p>
+  );
+}
+
 function Rounds({ title, r }: { title: string; r: unknown }) {
   const o = (r && typeof r === "object" ? r : {}) as Record<string, unknown>;
-  const text = (x: unknown): string => {
-    if (x == null) return "";
-    if (typeof x === "string") return scrub(x);
-    if (typeof x === "object") {
-      const y = x as Record<string, unknown>;
-      return scrub(String(y.verdict ?? y.text ?? y.reason ?? y.summary ?? y.note ?? ""));
-    }
-    return scrub(String(x));
-  };
-  const r1 = text(o.round1), r2 = text(o.round2);
-  if (!r1 && !r2) return null;
+  if (o.round1 == null && o.round2 == null) return null;
   return (
-    <div className="text-[12.5px]">
+    <div className="text-[12.5px] space-y-1">
       <div className="font-semibold text-muted">{title}</div>
-      {r1 && <p><span className="font-mono text-[10.5px] text-muted">R1 </span>{r1}</p>}
-      {r2 && <p><span className="font-mono text-[10.5px] text-muted">R2 </span>{r2}</p>}
+      <Round n={1} r={o.round1} />
+      <Round n={2} r={o.round2} />
     </div>
   );
 }
@@ -42,8 +68,8 @@ function Step({ s }: { s: Part2TraceStep }) {
         {v && <span className={`rounded border px-1.5 py-px text-[10.5px] font-semibold uppercase tracking-wide ${VERDICT[v] ?? "border-line text-muted"}`}>{v}</span>}
         {s.type && <span className="text-[11px] text-muted">{scrub(String(s.type)).replace(/^other:/, "").replace(/[_-]+/g, " ")}</span>}
       </div>
-      {s.move && <p className="text-[13.5px] leading-snug">{scrub(s.move)}</p>}
-      {s.reason && <p className="text-[12.5px] text-muted"><span className="font-semibold">Verdict: </span>{scrub(s.reason)}</p>}
+      {s.move && <p className="text-[13.5px] leading-snug"><Withheld text={scrub(s.move)} /></p>}
+      {s.reason && <p className="text-[12.5px] text-muted"><span className="font-semibold">Verdict: </span><Withheld text={scrub(s.reason)} /></p>}
       {(s.skeptic_cfo || s.skeptic_decider || cites.length > 0) && (
         <button type="button" onClick={(e) => { e.stopPropagation(); setOpen((x) => !x); }} className="no-print text-[11px] text-purple underline">{open ? "Hide the skeptic rounds" : "Show the skeptic rounds"}</button>
       )}
