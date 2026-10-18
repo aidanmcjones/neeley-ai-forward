@@ -18,6 +18,3 @@ data/moat/*
 
 # Bloomberg terminal exports (licensed, never commit)
 data/corpus/_inbox/bloomberg/
-
-# local data copies (R2 mirror), never committed
-data/moat/
