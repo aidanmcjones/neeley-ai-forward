@@ -9,7 +9,7 @@ import sys
 
 def norm(s):
     s = s.replace("“", '"').replace("”", '"').replace("’", "'").replace("‘", "'")
-    s = s.replace(" ", " ").replace("–", "-").replace("—", "-")
+    s = s.replace("​", " ").replace(" ", " ").replace("–", "-").replace("—", "-")
     return re.sub(r"\s+", " ", s).strip().lower()
 
 

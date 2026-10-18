@@ -1,3 +1,14 @@
+# moat dataset bulk files (documents live in R2 moat/; includes Bloomberg/LSEG licensed data). Only README, GAPS,
+# manifest and CENSUS are tracked. Kept first on purpose: nothing under data/moat may be committed by accident.
+data/moat/*
+!data/moat/README.md
+!data/moat/GAPS.md
+!data/moat/manifest.csv
+!data/moat/CENSUS.md
+
+# Bloomberg terminal exports (licensed, never commit)
+data/corpus/_inbox/bloomberg/
+
 .env
 .venv/
 __pycache__/
@@ -9,12 +20,3 @@ data/external/
 .streamlit/secrets.toml
 out/
 data/backtest/
-
-# moat dataset bulk files (documents live in R2 moat/); README, GAPS and manifest are tracked
-data/moat/*
-!data/moat/README.md
-!data/moat/GAPS.md
-!data/moat/manifest.csv
-
-# Bloomberg terminal exports (licensed, never commit)
-data/corpus/_inbox/bloomberg/

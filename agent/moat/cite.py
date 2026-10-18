@@ -179,7 +179,10 @@ def search_facts(q, ticker=None, table=None, k=20):
         rows = db().execute(sql, [_or(q), *args, k]).fetchall()
     keep = ["table", "doc_id", "row_key", "ticker", "drug", "period", "field", "value", "unit", "source",
             "source_row", "verify_status", "text", "score"]
-    return [{c: r[c] for c in keep} for r in rows]
+    # additive: facts.locator = doc_id#p<page_no> when the row names a page, else fact:<table>#<row_key>
+    has_loc = rows and "locator" in rows[0].keys()
+    return [{**{c: r[c] for c in keep}, "locator": (r["locator"] if has_loc else f"fact:{r['table']}#{r['row_key']}")}
+            for r in rows]
 
 
 def main(argv=None):
