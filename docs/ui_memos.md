@@ -70,7 +70,12 @@ one" sentence, cited to the record path (skipped when it only restates the plain
 footnote: <reason>" cited to `explained_by_footnote_note`. A findings_table row's `peer_text` is the Peer cell.
 Product dollars print when the growth limiter's or tied finding's `numeric_check` passed (the engine derived them
 from cited revenue and erosion operands); otherwise the money gate replaces the figure with its direction.
-Markers of the form `[assumption: reason]` pass through unchanged.
+Markers of the form `[assumption: reason]` pass through unchanged. The "Why this one" sentence is dropped when
+the needle sentence already carries every figure in `needle_reason`, or when the reason is not printable.
+Analyst attention is one sentence without scorecard mechanics, everywhere it appears (needle, why_company,
+needles:global, priced_in, the ceo_memo Why section): "Analysts have not asked about it on the last N calls",
+"Analysts raised it in M of the last N calls" (from the calls data or the scorecard row's quarters, cited), or
+"Analyst attention: not measurable from the calls we hold" when the engine imputed it.
 
 `generated_by` is set honestly: `decide_v2` when `stance.decide` carries moves (DECIDE output, five numbers per
 move), `template` when the stance is the exporter's rule-drafted one, `data` for tables and lists assembled

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T01:40:28+00:00",
+ "generated_at": "2026-10-18T01:42:32+00:00",
  "mode": "cached",
  "engine": "sample",
  "default_ticker": "BMY",
@@ -43,7 +43,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle (biggest cited impact, least asked about): eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller addressable patient pool [1][2]. Analyst attention: only in filings / data, not in headlines or call Q&A [3]. Impact: Not quantified."
+     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle (biggest cited impact, least asked about): eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller addressable patient pool [1][2]. Analyst attention: not measurable from the calls we hold [3]. Impact: Not quantified."
     },
     {
      "type": "math",
@@ -253,7 +253,7 @@
     },
     {
      "type": "p",
-     "md": "The Sharpest Needle (the biggest cited impact that analysts asked about least): the label is narrower than rivals' [1][2]. Impact: Not quantified. How rarely analysts asked: only in filings / data, not in headlines or call Q&A [3]."
+     "md": "The Sharpest Needle (the biggest cited impact that analysts asked about least): the label is narrower than rivals' [1][2]. Impact: Not quantified. Analyst attention: not measurable from the calls we hold [3]."
     },
     {
      "type": "math",
@@ -344,7 +344,7 @@
     },
     {
      "type": "p",
-     "md": "Not priced in: analysts rarely asked about the needle item; only in filings / data, not in headlines or call Q&A [3]."
+     "md": "Not priced in: analysts rarely asked about the needle item; analyst attention: not measurable from the calls we hold [3]."
     }
    ],
    "cites": [

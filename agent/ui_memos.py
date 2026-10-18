@@ -194,6 +194,27 @@ CHANNEL_WORDS = {"ira_mfp": "Medicare negotiated price", "ira_expected": "expect
                  "label_breadth_medicare": "Medicare label breadth"}
 
 
+def attention_words(f, ctx, t, C):
+    """(sentence, cites) on analyst attention from the engine's note, without scorecard mechanics: counts from the
+    calls data ("Analysts have not asked about it on the last N calls" / "Analysts raised it in M of the last N
+    calls"), the scorecard row's quarters when the note only carries a scorecard share, else "not measurable"."""
+    note, ons = obscurity_cite(f, C, t)
+    if not note:
+        return "Analyst attention: not measurable from the calls we hold", []
+    m = re.search(r"qa_turns regex '[^']+': (\d+) of (\d+) quarters", note) or re.search(r"qa_turns: analysts named \S+ in (\d+) of (\d+) quarters", note)
+    if m:
+        a, n = int(m.group(1)), int(m.group(2))
+        return (f"Analysts have not asked about it on the last {n} calls" if a == 0 else f"Analysts raised it in {a} of the last {n} calls"), ons
+    m = re.search(r"priced_in_scorecard \w+ (\w+): ([\d.]+)", note)
+    if m and ctx is not None:
+        row = next((r for r in (ctx.companies.get(t) or {}).get("priced_in") or [] if r.get("topic") == m.group(1)), None)
+        if row and row.get("quarters_covered"):
+            a, n = int(row.get("quarters_asked") or 0), int(row["quarters_covered"])
+            pn = priced_in_cite(t, row, C)
+            return (f"Analysts have not asked about it on the last {n} calls" if a == 0 else f"Analysts raised it in {a} of the last {n} calls"), ons + [pn]
+    return "Analyst attention: not measurable from the calls we hold", ons
+
+
 def attention_cell(note):
     """The analyst-attention clause of a plain attention note, short enough for a table cell."""
     t = plain_obscurity(note).rstrip(".")
@@ -1220,16 +1241,22 @@ def needle_memo(ctx, t):
     chosen = {"red_team": ", chosen by the red-team read, confirmed by the gate", "rule": ", chosen by the plain rule"}.get(src, "")
     p = f"**{lead}.** {poss(name)} Sharpest Needle (biggest cited impact, least asked about{chosen}): {C.after(s, *ns)}."
     reason = c.get("needle_reason")
-    if isinstance(reason, str) and reason.strip() and not reason.startswith("plain rule"):
+    if isinstance(reason, str) and ("carries figures the gate does not support" in reason or reason.startswith("plain rule")):
+        reason = None  # nothing to add: the rule is already stated, or the reviewer's reason is not printable
+    if isinstance(reason, str):
+        nums = re.findall(r"\d[\d,.]*\d|\d", reason)
+        if nums and all(x in strip_marks(s) for x in nums):
+            reason = None  # the needle sentence already carries every figure in the reason
+    if isinstance(reason, str) and reason.strip():
         rn = C.add(row_cite(f"row:needle_reason:{t}", f"companies/{t}.json:needle_reason", "needle selection record (red team vs rule)",
                             reason, "engine record", ticker=t))
         why = re.sub(r"^red-team read: ", "", reason.strip().rstrip("."))
         why = re.sub(r"Parker's best needle for [A-Z]+ \(([A-Z]+)-nugget-(\d+), docs/[\w./-]+\); his one-line reason carries figures the gate does not support, so it is not printed",
                      r"the red team's pick (nugget \2); the reviewer's own reason carries figures the gate does not support, so it is not printed", why)
         p += f" Why this one: {plain_terms(why)} [{rn}]."
-    note, ons = obscurity_cite(f, C, t)
-    if note:
-        p += f" Analyst attention: {plain_obscurity(note)} {C.mark(*ons)}."
+    att, ons = attention_words(f, ctx, t, C)
+    p += f" {att} {C.mark(*ons)}." if ons else f" {att}."
+    note = ((f.get("vector") or {}).get("obscurity_note")) or ""
     imp = f.get("impact") or {}
     itxt, formula, ins = impact_cell(f, C, t)
     p += f" Impact: {itxt} {C.mark(*ins)}." if ins else f" Impact: {itxt}."
@@ -1553,7 +1580,8 @@ def priced_in_memo(ctx, t):
         note, ons = obscurity_cite(needle, C, t)
         lead = match_rule(needle.get("signal_kind"), LEADS) or "the needle"
         if note:
-            p += f"How rarely analysts asked about {lc(lead)}: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}. "
+            att, ans = attention_words(needle, ctx, t, C)
+            p += f"On {lc(lead)}: {att[0].lower() + att[1:]} {C.mark(*ans)}. " if ans else f"On {lc(lead)}: {att[0].lower() + att[1:]}. "
             maths.append(math_block("Analyst-attention test, as computed", note, ons[0]))
     rows = sorted(c.get("priced_in") or [], key=lambda r: (r.get("share_of_quarters_asked") if r.get("share_of_quarters_asked") is not None else 9))
     never = [r for r in rows if (r.get("quarters_asked") or 0) == 0]
@@ -1767,7 +1795,8 @@ def moat_memo(ctx):
             why = (f"Why it mattered: {poss(ctx.name(d))} Sharpest Needle ({lc(lead)}) rests on "
                    f"{', '.join(x for x in docs if x)} {C.mark(*ns)}")
             if note:
-                why += f", plus the call transcripts behind its obscurity test ({plain_obscurity(note).rstrip('.')}) {C.mark(*ons)}"
+                att, ans = attention_words(f, ctx, d, C)
+                why += f", plus the call transcripts behind its attention test ({att[0].lower() + att[1:]}) {C.mark(*(ans or ons))}"
             blocks.append({"type": "p", "md": why + "."})
     return record("moat", ctx, None, "What did you scrape beyond the case packet?",
                   "The corpus and verified tables behind every citation, bucket by bucket.", blocks, C, "data")
@@ -1810,8 +1839,8 @@ def needles_memo(ctx):
         by, unres = ctx.table_rows(t)
         s_, ns = sentence(f, C, t, row=by.get(f.get("id")), unresolved=unres)
         itxt, _, ins = impact_cell(f, C, t)
-        note, ons = obscurity_cite(f, C, t)
-        att = attention_cell(note) if note else "not tested"
+        att, ons = attention_words(f, ctx, t, C)
+        att = att.replace("Analyst attention: ", "")
         if status in STATUS_TEXT:
             att += " (caveat: " + {"provisional": "provisional needle", "floor_relaxed": "best of the least-discussed group",
                                    "none": "largest impact, not promoted"}[status] + ")"
@@ -1931,11 +1960,10 @@ def why_company_memo(ctx, t):
     if f:
         lead = match_rule(f.get("signal_kind"), LEADS) or "the needle"
         itxt, _, ins = impact_cell(f, C, t)
-        note, ons = obscurity_cite(f, C, t)
         p += f" Its Sharpest Needle is {lc(lead)} {C.mark(*lead_cites(f, C, t))}."
         p += f" Impact: {C.after(itxt, *ins)}."
-        if note:
-            p += f" How rarely analysts asked: {C.after(plain_obscurity(note).rstrip('.'), *ons)}."
+        att, ons = attention_words(f, ctx, t, C)
+        p += f" {C.after(att, *ons)}." if ons else f" {att}."
     if d.get("moves"):
         mv, least_bad = decide_pick(d)
         n = decide_cite(d, t, mv, C)
@@ -2312,13 +2340,13 @@ def ceo_memo(ctx, t):
     if needle:
         ns = lead_cites(needle, C, t)
         itxt, formula, ins = impact_cell(needle, C, t)
-        note, ons = obscurity_cite(needle, C, t)
         why = f"The Sharpest Needle ({NEEDLE_RULE}): {lc(lead)} {C.mark(*ns)}."
         why += f" Impact: {itxt} {C.mark(*ins)}." if ins else f" Impact: {itxt}."
-        if note:
-            why += f" How rarely analysts asked: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}."
+        att, ons = attention_words(needle, ctx, t, C)
+        why += f" {att} {C.mark(*ons)}." if ons else f" {att}."
         blocks.append({"type": "p", "md": why})
-        if note:
+        note = ((needle.get("vector") or {}).get("obscurity_note")) or ""
+        if note and ons:
             blocks.append(math_block("Analyst-attention test, as computed", note, ons[0]))
     table, maths = findings_table(fs, C, t, ctx)
     blocks += [table, *maths]
@@ -2376,9 +2404,8 @@ def ceo_memo(ctx, t):
         pp += (f"; analysts raised {topic_words(hit['topic'])} in {hit.get('quarters_asked')} of "
                f"{hit.get('quarters_covered')} quarters [{n}]")
     elif needle:
-        note, ons = obscurity_cite(needle, C, t)
-        if note:
-            pp += f"; {attention_cell(note)[0].lower() + attention_cell(note)[1:]} {C.mark(*ons)}"
+        att, ons = attention_words(needle, ctx, t, C)
+        pp += f"; {att[0].lower() + att[1:]} {C.mark(*ons)}" if ons else f"; {att[0].lower() + att[1:]}"
     blocks.append({"type": "p", "md": pp + "."})
     summary = ((f"{'Least-bad option' if least_bad else 'Recommend'} {rec} for {name} (EV {mny(mv.get('ev'))})" if mv else
                 f"Template stance for {name} (no valued move): {rec} archetype; {lc(lead)}") + f"; {pi.split(':')[0]}.")
