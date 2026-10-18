@@ -204,6 +204,7 @@ def for_ticker(p, ticker, col="ticker"):
 
 
 def write(path, obj):
+    assert_no_repr(obj)
     path.parent.mkdir(parents=True, exist_ok=True)
     text = json.dumps(clean(obj), ensure_ascii=False, allow_nan=False, separators=(",", ":"))
     path.write_text(text, encoding="utf-8")
@@ -543,6 +544,20 @@ def derived_operands(c):
 NC_KEYS = ("checked", "total", "verified", "derived", "assumed")
 
 
+def assert_no_repr(obj, path="$"):
+    """Fail the export if any str()-serialised Citation or Claim survives anywhere in the output."""
+    if isinstance(obj, str):
+        if re.search(r"\bCitation\(canonical_id=|\bClaim\(text=|\bCitation\(|\bClaim\(", obj) and \
+                not path.endswith("_md"):  # doc text fields (*_md) may name the classes in prose
+            raise ValueError(f"{path} carries a repr string: {obj[:80]}")
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            assert_no_repr(v, f"{path}.{k}")
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            assert_no_repr(v, f"{path}[{i}]")
+
+
 def assert_numeric_checks(obj, path="$"):
     """Fail the export if any record claims 'passed' with checked == 0 or without the verified/derived/assumed
     breakdown, or carries a numeric_check that is not a dict with a status."""
@@ -586,8 +601,8 @@ def withhold_reason(c, pool=None):
     st = (c.get("verification") or {}).get("status")
     if "bloomberg" in (c.get("license") or "").lower():
         return "Bloomberg-licensed source: quote and links withheld from the public export"
-    if "machine_data" in ((c.get("raw_doc_type") or "") + (c.get("doc_type") or "")):
-        return "machine-readable data row (no page copy): value shown, quote and links withheld"
+    if st == "machine_data" or "machine_data" in ((c.get("raw_doc_type") or "") + (c.get("doc_type") or "")):
+        return "machine data, no page copy"
     if st == "derived":
         ops = derived_operands(c)
         pool = pool or {}
@@ -637,12 +652,17 @@ def citation_evidence(c, side, pool=None):
               f" (file page {c['page']})" if c.get("page") and c.get("page_scheme") == "marker" else ""),
           "quote": "" if why else (c.get("quote") or ""), "speaker": c.get("speaker") or "", "figures": [],
           "url": None if why else (c.get("source_url") or None), "deep_link": "" if why else (c.get("deep_link") or ""),
-          "viewer_link": "" if why else (c.get("viewer_link") or ""),
+          "viewer_link": (c.get("viewer_link") or "") if (not why or why == "machine data, no page copy")
+          else "",
           "doc_type": c.get("raw_doc_type") or c.get("doc_type") or None, "cite_id": c.get("cite_id"),
           "doc_title": c.get("doc_title"), "period": c.get("period"), "location": c.get("location"),
           "claim_type": c.get("claim_type"), "value": c.get("value"), "unit": c.get("unit"),
           "license": c.get("license") or None, "verification": c.get("verification"),
           "confidence_note": c.get("confidence_note") or "", "withheld": bool(why), "withheld_reason": why}
+    if (c.get("verification") or {}).get("status") == "number_match" and not why:
+        # docs/citations.md: the quote did not verify; the public footnote shows page text around the number
+        ev["quote"] = ""
+        ev["quote_note"] = "the quote did not verify; the number is on the cited page"
     if derived:  # never rendered as a quote: the UI shows "derived from [a][b]"
         ev.update(quote="", deep_link="", viewer_link="", url=None, derived_from=derived_operands(c),
                   derived_expr=None if why else (c.get("quote") or None))
@@ -662,8 +682,11 @@ def citation_evidence(c, side, pool=None):
     elif derived:
         ev["excerpt"] = {"before": "", "match": "", "after": "", "located": False, "how": None, "scope": "derived"}
     elif c.get("page_scheme") in ("marker", "section") and c.get("page") is not None:
+        q = c.get("quote")
+        if (c.get("verification") or {}).get("status") == "number_match" and c.get("value"):
+            q = str(c["value"])
         if cid.startswith("drug:") or _resolve_doc(cid):
-            ev["excerpt"] = excerpt({"doc_id": cid, "page": c["page"], "quote": c.get("quote")}, side)
+            ev["excerpt"] = excerpt({"doc_id": cid, "page": c["page"], "quote": q}, side)
         else:
             text = _moat_pages(cid, c["page"])
             hit = locate(text, c.get("quote") or "") if text else None
@@ -1138,35 +1161,12 @@ def footnote_cite(n, line):
             "withheld": bool(why), "withheld_reason": why, "from_footnote": True}
 
 
-_CIT_FIELDS = ("canonical_id", "quote", "claim_type", "value", "unit", "ticker", "doc_type", "doc_title", "period",
-               "folio", "source_url", "deep_link", "viewer_link", "speaker", "location", "raw_doc_type", "page_scheme",
-               "license", "confidence_note", "cite_id")
-
-
-def citation_from_repr(r):
-    """decide.json kill baselines serialise Citation objects with str(); rebuild a dict so the public rule applies."""
-    if isinstance(r, dict):
-        return r
-    if not isinstance(r, str) or not r.startswith("Citation("):
-        return None
-    out = {}
-    for f in _CIT_FIELDS:
-        m = re.search(rf"\b{f}=(?:'((?:[^'\\]|\\.)*)'|\"((?:[^\"\\]|\\.)*)\"|None)", r)
-        if m:
-            out[f] = m.group(1) if m.group(1) is not None else m.group(2)
-    pm = re.search(r"\bpage=(\d+|None)", r)
-    out["page"] = int(pm.group(1)) if pm and pm.group(1).isdigit() else None
-    vm = re.search(r"Verification\(status='(\w+)', score=([\d.]+)", r)
-    out["verification"] = {"status": vm.group(1), "score": float(vm.group(2))} if vm else {"status": None}
-    return out
-
-
 def clean_kill(k):
-    """Kill-signal row with its baseline [value, [Citation...], text] turned into {value, text, cites}."""
-    def fix(o):  # any other str()-serialised Citation (e.g. context rows) becomes a public cite dict
-        if isinstance(o, str) and o.startswith("Citation("):
-            c = citation_from_repr(o)
-            return cell_cite(c, pool={c.get("cite_id"): c}) if c else None
+    """Kill-signal row with its baseline [value, [Citation dict...], text] turned into {value, text, cites}; any
+    Citation dict elsewhere in the row (context rows) goes through the public rule too."""
+    def fix(o):
+        if isinstance(o, dict) and "cite_id" in o and "verification" in o:
+            return cell_cite(o, pool={o.get("cite_id"): o})
         if isinstance(o, list):
             return [fix(x) for x in o]
         if isinstance(o, dict):
@@ -1175,8 +1175,8 @@ def clean_kill(k):
     k = dict(k)
     b = k.get("baseline")
     if isinstance(b, (list, tuple)) and len(b) >= 2:
-        cits = [citation_from_repr(x) for x in (b[1] or [])]
-        cits = [c for c in cits if c]
+        raw_c = b[1] if isinstance(b[1], list) else [b[1]] if isinstance(b[1], dict) else []
+        cits = [x for x in raw_c if isinstance(x, dict) and "cite_id" in x]
         pool = {c.get("cite_id"): c for c in cits}
         k["baseline"] = {"value": b[0], "text": b[2] if len(b) > 2 else None,
                          "cites": [cell_cite(c, pool=pool) for c in cits]}
@@ -2015,6 +2015,7 @@ def main():
             print(f"{t}: no out/{t}/findings.jsonl, no company file")
             continue
         assert_numeric_checks(data)
+        assert_no_repr(data)
         path = DEST / "companies" / f"{t}.json"
         n = write(path, data)
         if n > MAX_COMPANY_BYTES:
