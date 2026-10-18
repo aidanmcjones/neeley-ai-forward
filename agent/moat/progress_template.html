@@ -1,0 +1,211 @@
+<title>Fine Print Data Tracker</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a pipeline strip, then one wide coverage matrix (companies down, data buckets across), then the two
+   case parts as checklists. TCU purple carries completion; amber and red carry gaps; teal marks the verifier. */
+:root {
+  --purple: #4D1979; --purple-deep: #3C145F; --purple-soft: #EDE5F6;
+  --teal: #007B6E; --teal-soft: #DDF1EE;
+  --bg: #F7F5FA; --fg: #1F1630; --muted: #5E566C; --line: #E2DCEA; --surface: #FFFFFF; --surface-2: #F1ECF7;
+  --track: #E8E2F0; --fill: #4D1979; --partial: #B26A00; --partial-soft: #FBEBD3; --empty: #B3261E; --empty-soft: #F9E0DD;
+  --good: #1E7F4F; --good-soft: #DDF3E6; --na: #C9C3D2;
+  --display: "Bebas Neue", "Oswald", Impact, "Arial Narrow", sans-serif;
+  --body: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --purple: #9A63D6; --purple-deep: #B98BE6; --purple-soft: #2E2045; --teal: #4FC2B2; --teal-soft: #10302C;
+    --bg: #120C1B; --fg: #EEE8F5; --muted: #A79FB5; --line: #2C2340; --surface: #1A1226; --surface-2: #221833;
+    --track: #2A2138; --fill: #9A63D6; --partial: #E8A33D; --partial-soft: #3A2A10; --empty: #F2726A; --empty-soft: #3E1A17;
+    --good: #5CC98E; --good-soft: #13301F; --na: #3A3148; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --purple: #9A63D6; --purple-deep: #B98BE6; --purple-soft: #2E2045; --teal: #4FC2B2; --teal-soft: #10302C;
+  --bg: #120C1B; --fg: #EEE8F5; --muted: #A79FB5; --line: #2C2340; --surface: #1A1226; --surface-2: #221833;
+  --track: #2A2138; --fill: #9A63D6; --partial: #E8A33D; --partial-soft: #3A2A10; --empty: #F2726A; --empty-soft: #3E1A17;
+  --good: #5CC98E; --good-soft: #13301F; --na: #3A3148; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 14px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; gap: 36px; }
+h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: 0.02em; line-height: 1; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(40px, 6vw, 64px); color: var(--purple); }
+h2 { font-size: clamp(26px, 3.6vw, 36px); }
+p { margin: 0; }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.lead { font-size: 16px; max-width: 70ch; }
+.num { font-variant-numeric: tabular-nums; font-family: var(--mono); }
+header { display: grid; gap: 10px; }
+.headline { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: end; }
+.big { display: grid; gap: 2px; }
+.big b { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 600; }
+.big span { font-family: var(--display); font-size: 44px; line-height: 1; color: var(--purple); }
+.big small { font-size: 12px; color: var(--muted); }
+
+/* pipeline strip */
+.stages { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.stage { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 6px; align-content: start; position: relative; }
+.stage::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; border-radius: 10px 10px 0 0; background: var(--na); }
+.stage.done::before { background: var(--good); } .stage.running::before { background: var(--teal); }
+.stage.queued::before { background: var(--purple); opacity: 0.5; } .stage.blocked::before { background: var(--empty); }
+.stage h3 { margin: 0; font-size: 15px; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.stage p { font-size: 12px; color: var(--muted); }
+.pill { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.pill.done, .pill.ready, .pill.verified { background: var(--good-soft); color: var(--good); }
+.pill.running, .pill.verifying { background: var(--teal-soft); color: var(--teal); }
+.pill.queued, .pill.waiting, .pill.collected { background: var(--purple-soft); color: var(--purple); }
+.pill.blocked, .pill.gap { background: var(--empty-soft); color: var(--empty); }
+.pill.collecting, .pill.human { background: var(--partial-soft); color: var(--partial); }
+.pill.verifying::before, .pill.running::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+@media (prefers-reduced-motion: no-preference) { .pill.verifying::before, .pill.running::before { animation: pulse 1.8s ease-in-out infinite; } @keyframes pulse { 50% { opacity: 0.35; } } }
+
+/* matrix */
+.matrix-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table.matrix { border-collapse: separate; border-spacing: 0; min-width: 1080px; width: 100%; }
+table.matrix th, table.matrix td { padding: 8px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+table.matrix thead th { position: sticky; top: 0; background: var(--surface-2); z-index: 1; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); line-height: 1.25; }
+table.matrix thead th .pills { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+table.matrix thead th .pill { font-size: 9px; padding: 1px 6px; }
+table.matrix tbody th { position: sticky; left: 0; background: var(--surface); font-family: var(--display); font-size: 22px; letter-spacing: 0.03em; font-weight: 400; color: var(--fg); z-index: 1; white-space: nowrap; }
+table.matrix tbody th small { display: block; font-family: var(--body); font-size: 11px; color: var(--muted); letter-spacing: 0; }
+table.matrix tbody tr:last-child td, table.matrix tbody tr:last-child th { border-bottom: 0; }
+table.matrix tfoot th, table.matrix tfoot td { border-bottom: 0; border-top: 2px solid var(--line); background: var(--surface-2); font-size: 12px; }
+table.matrix tfoot th { font-family: var(--body); font-weight: 600; font-size: 12px; position: sticky; left: 0; }
+.cell { display: grid; gap: 4px; min-width: 84px; }
+.bar { height: 8px; border-radius: 4px; background: var(--track); overflow: hidden; position: relative; }
+.bar i { position: absolute; inset: 0 auto 0 0; border-radius: 4px; background: var(--fill); }
+.bar.partial i { background: var(--partial); } .bar.empty i { background: var(--empty); }
+.bar.na { background: repeating-linear-gradient(135deg, var(--track) 0 4px, var(--surface) 4px 8px); }
+.cell .lbl { font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; gap: 6px; }
+.cell .lbl b { color: var(--fg); font-weight: 600; }
+.total { display: grid; gap: 4px; min-width: 110px; }
+.total .bar { height: 10px; }
+.total .lbl { font-size: 12px; display: flex; justify-content: space-between; }
+.total .lbl b { font-family: var(--display); font-size: 20px; line-height: 1; color: var(--purple); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 22px; height: 8px; border-radius: 4px; display: inline-block; background: var(--fill); }
+.legend i.p { background: var(--partial); } .legend i.e { background: var(--empty); } .legend i.n { background: repeating-linear-gradient(135deg, var(--track) 0 4px, var(--surface) 4px 8px); }
+
+/* bucket key */
+.keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 8px 18px; font-size: 12.5px; }
+.keys div { display: grid; grid-template-columns: 18px 1fr; gap: 8px; align-items: baseline; }
+.keys .k { font-family: var(--mono); font-size: 11px; color: var(--purple); font-weight: 500; }
+.keys .why { color: var(--muted); }
+
+/* parts */
+.parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px; align-items: start; }
+.part { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 12px; min-width: 0; }
+.part h2 { font-size: 26px; }
+.part .sub { font-size: 12.5px; color: var(--muted); }
+.req { display: grid; gap: 0; }
+.req div { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.req div:last-child { border-bottom: 0; }
+.req .t { font-size: 13px; font-weight: 500; }
+.req .d { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+.req .d code { font-family: var(--mono); font-size: 10.5px; color: var(--purple); }
+
+/* no source */
+table.plain { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 620px; }
+table.plain th, table.plain td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.plain thead th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.scroll { overflow-x: auto; }
+footer { font-size: 12px; color: var(--muted); display: grid; gap: 4px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Neeley AI Forward · The Fine Print · data moat</span>
+    <h1>Fine Print Data Tracker</h1>
+    <p class="lead">Ten companies, ten data buckets, one rule: every number the model cites must trace to a page. The matrix shows what is collected per company; the column pills show whether the Opus verifier has checked it. Model, UI and the demo video wait until the index is green.</p>
+    <div class="headline" id="headline"></div>
+  </header>
+
+  <section style="display:grid; gap:12px">
+    <span class="eyebrow">Pipeline</span>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section style="display:grid; gap:12px">
+    <div style="display:flex; justify-content:space-between; align-items:end; flex-wrap:wrap; gap:10px">
+      <h2>Coverage by company and bucket</h2>
+      <div class="legend"><span><i></i>complete</span><span><i class="p"></i>partial</span><span><i class="e"></i>missing</span><span><i class="n"></i>not applicable</span></div>
+    </div>
+    <div class="matrix-scroll"><table class="matrix" id="matrix"></table></div>
+    <div class="keys" id="keys"></div>
+  </section>
+
+  <section class="parts">
+    <div class="part">
+      <h2>Part 1: Find</h2>
+      <p class="sub">Each case requirement and the buckets that feed it. Ready means the data exists; verifying means Opus is still checking it.</p>
+      <div class="req" id="part1"></div>
+    </div>
+    <div class="part">
+      <h2>Part 2: Decide</h2>
+      <p class="sub">The CEO move needs data we have not pulled yet. Most of it is free and takes 30 to 60 minutes each once the move is chosen.</p>
+      <div class="req" id="part2"></div>
+    </div>
+  </section>
+
+  <section style="display:grid; gap:12px">
+    <h2>No free source for anyone</h2>
+    <p class="sub" style="color:var(--muted); font-size:12.5px; max-width:70ch">Every team hits the same wall. We state these as limits and use the proxies on the right; the rubric's Completeness category rewards saying so plainly.</p>
+    <div class="scroll"><table class="plain" id="nosource"></table></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pill = (s, t) => `<span class="pill ${s}">${esc(t || s)}</span>`;
+const NAMES = {MRK:"Merck",BMY:"Bristol Myers Squibb",PFE:"Pfizer",LLY:"Eli Lilly",NVO:"Novo Nordisk",ABBV:"AbbVie",JNJ:"Johnson & Johnson",AZN:"AstraZeneca",AMGN:"Amgen",GILD:"Gilead"};
+
+function barHtml(c) {
+  if (!c.need) return `<div class="cell"><div class="bar na"></div><div class="lbl"><span>n/a</span><span>${esc(c.note||"")}</span></div></div>`;
+  const pct = Math.min(100, Math.round(100 * c.have / c.need));
+  const cls = pct >= 100 ? "" : pct > 0 ? "partial" : "empty";
+  return `<div class="cell"><div class="bar ${cls}"><i style="width:${pct}%"></i></div><div class="lbl"><b class="num">${c.have}/${c.need}</b><span class="num">${pct}%</span></div></div>`;
+}
+
+function render() {
+  const d = DATA; if (!d) return;
+  const keys = d.buckets.map(b => b.key);
+  const tick = Object.keys(d.companies);
+  let haveAll = 0, needAll = 0;
+  const rowTot = {};
+  for (const t of tick) { let h = 0, n = 0; for (const k of keys) { const c = d.companies[t][k]; h += Math.min(c.have, c.need); n += c.need; } rowTot[t] = [h, n]; haveAll += h; needAll += n; }
+  const colTot = {}; for (const k of keys) { let h = 0, n = 0; for (const t of tick) { const c = d.companies[t][k]; h += Math.min(c.have, c.need); n += c.need; } colTot[k] = [h, n]; }
+  const verifiedCols = keys.filter(k => d.status[k][1] === "verified").length;
+  const stagesDone = d.stages.filter(s => s[1] === "done").length;
+
+  document.getElementById("headline").innerHTML = `
+    <div class="big"><b>Collected</b><span class="num">${Math.round(100*haveAll/needAll)}%</span><small>${haveAll} of ${needAll} required items</small></div>
+    <div class="big"><b>Verified by Opus</b><span class="num">${verifiedCols}/${keys.length}</span><small>buckets re-checked against source pages</small></div>
+    <div class="big"><b>Pipeline</b><span class="num">${stagesDone}/${d.stages.length}</span><small>stages complete</small></div>
+    <div class="big"><b>Deadline</b><span>SUN 2:00 PM</span><small>Devpost closes; judging 2 to 4</small></div>`;
+
+  document.getElementById("stages").innerHTML = d.stages.map(([n, s, t]) => `<div class="stage ${s}"><h3>${esc(n)} ${pill(s)}</h3><p>${esc(t)}</p></div>`).join("");
+
+  const head = `<thead><tr><th>Company</th>${d.buckets.map(b => `<th title="${esc(b.why)}">${esc(b.label)}<div class="pills">${pill(d.status[b.key][0])}${pill(d.status[b.key][1])}</div></th>`).join("")}<th>Total</th></tr></thead>`;
+  const body = `<tbody>${tick.map(t => { const [h, n] = rowTot[t]; const pct = Math.round(100*h/n); return `<tr><th>${t}<small>${esc(NAMES[t]||"")}</small></th>${keys.map(k => `<td>${barHtml(d.companies[t][k])}</td>`).join("")}<td><div class="total"><div class="bar ${pct>=100?"":"partial"}"><i style="width:${pct}%"></i></div><div class="lbl"><b class="num">${pct}%</b><span class="num">${h}/${n}</span></div></div></td></tr>`; }).join("")}</tbody>`;
+  const foot = `<tfoot><tr><th>All 10</th>${keys.map(k => { const [h, n] = colTot[k]; return `<td class="num">${h}/${n}</td>`; }).join("")}<td class="num"><b>${Math.round(100*haveAll/needAll)}%</b></td></tr></tfoot>`;
+  document.getElementById("matrix").innerHTML = head + body + foot;
+
+  document.getElementById("keys").innerHTML = d.buckets.map((b, i) => `<div><span class="k">${String(i+1).padStart(2,"0")}</span><span><b>${esc(b.label)}.</b> <span class="why">${esc(b.why)}</span></span></div>`).join("");
+
+  document.getElementById("part1").innerHTML = d.part1.map(([t, bs, s]) => `<div><span><div class="t">${esc(t)}</div><div class="d">feeds from ${bs.map(k => `<code>${esc(k)}</code>`).join(", ")}</div></span>${pill(s)}</div>`).join("");
+  document.getElementById("part2").innerHTML = d.part2.map(([t, dsc, s]) => `<div><span><div class="t">${esc(t)}</div><div class="d">${esc(dsc)}</div></span>${pill(s)}</div>`).join("");
+  document.getElementById("nosource").innerHTML = `<thead><tr><th>Missing</th><th>Who sells it</th><th>Our proxy</th></tr></thead><tbody>${d.no_source.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody>`;
+  document.getElementById("foot").innerHTML = `<span>Counts rebuilt ${esc(d.built)} from data/corpus/manifest.csv, data/moat/manifests/*.jsonl and the moat tables (agent/moat/progress.py). Buckets 01 to 04 count documents; 05 to 10 count tables, drugs or quarters covered.</span><span>Bucket meanings in the key above. Hover a column header for why it matters.</span>`;
+}
+render();
+</script>

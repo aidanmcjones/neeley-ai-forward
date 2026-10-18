@@ -1,0 +1,1261 @@
+{
+ "header": {
+  "step": 0,
+  "category": "header",
+  "categories": [
+   "Language drift",
+   "Gross-to-net",
+   "Inventory and receivables growing faster than revenue",
+   "Segment and product table changes",
+   "Footnotes",
+   "Earnings-call Q&A",
+   "Product fine print",
+   "Peer contrast"
+  ],
+  "ticker": "LLY",
+  "generated_at": "2026-10-18T04:44:07Z",
+  "sample": true,
+  "note": "Illustrative trace assembled from the engine's gate and red-team decisions; the blind skeptic pass has not run",
+  "trimmed": {
+   "rows_total": 71,
+   "killed_same_reason_dropped": 13,
+   "narrowed_not_shown": 18
+  },
+  "sources": [
+   "out/LLY/findings_v3.jsonl",
+   "out/LLY/rejected_v3.jsonl",
+   "docs/nuggets/LLY.jsonl",
+   "ui/public/data/companies/LLY.json"
+  ]
+ },
+ "steps": [
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "45"
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs FY2024 (topics: ira, gtn, 340b, supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "7b53d777ea12",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 12,
+   "step": 12,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors removed since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "34"
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from risk factors vs FY2024 (topics: tariff, gtn, supply, pricing, china)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "9a26f6a39b69",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 13,
+   "step": 13,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs reworded since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "47"
+    },
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "46"
+    }
+   ],
+   "candidate": {
+    "text": "Reworded paragraph in MD&A vs FY2024 (topics: ira, gtn, 340b, litigation, supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_modified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "b68d5bf34e48",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 14,
+   "step": 14,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "47"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: gtn, supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "276e83e18c7a",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 15,
+   "step": 15,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "35"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: tariff, supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "8083b655c5ef",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 16,
+   "step": 16,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "36"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: gtn, pricing, china)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "d4f4f45f3e2e",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 17,
+   "step": 17,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "46"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: ira, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "381feaee28ab",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 18,
+   "step": 18,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors whose wording grew stronger since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "26"
+    },
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "25"
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in risk factors vs FY2024 (topics: generic, pricing, china); new risk vocabulary: significant; new topics: china"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "a29c2d59aa34",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 19,
+   "step": 19,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "27"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: ira, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "0c69b5d4c6cb",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 20,
+   "step": 20,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors whose wording grew stronger since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "36"
+    },
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "35"
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in risk factors vs FY2024 (topics: litigation, pricing); hedges dropped: could, may"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "e2b9b146d43e",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 21,
+   "step": 21,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "45"
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs FY2024 (topics: gtn, supply)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "4b014d1204a0",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 22,
+   "step": 22,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "46"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: gtn, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "f1e7bae505f0",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 23,
+   "step": 23,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "46"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "19df02af43b8",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 24,
+   "step": 24,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "47"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: tariff, supply)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "3d5f02cd7276",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 25,
+   "step": 25,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "49"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "e0bc0b8010d6",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 26,
+   "step": 26,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "49"
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs FY2024 (topics: gtn, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "7e4ca496ce36",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 27,
+   "step": 27,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "27"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "8439b69c48a7",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 28,
+   "step": 28,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors reworded since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "28"
+    },
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "26"
+    }
+   ],
+   "candidate": {
+    "text": "Reworded paragraph in risk factors vs FY2024 (topics: gtn, 340b, pricing); new figures: 2028"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_modified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "fcb90ec5877f",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 29,
+   "step": 29,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors whose wording grew stronger since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": 29
+    },
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": 28
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in risk factors vs [figure withheld: not gated] (topics: ira, supply, pricing); hedges dropped: may, potential; new figures: [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "risk_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "6cebb375a674",
+   "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
+   "step": 32,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": 36
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs [figure withheld: not gated] (topics: tariff, supply, china)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "61851994761f",
+   "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
+   "step": 33,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": 46
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs [figure withheld: not gated] (topics: generic, supply)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "320841898267",
+   "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
+   "step": 34,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for a product selected for Medicare price negotiation.",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+     "doc_title": "CMS fact sheet",
+     "page": "1"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "26"
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "doc_title": "CMS fact sheet",
+     "page": "2"
+    }
+   ],
+   "candidate": {
+    "text": "Trulicity's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $4,898.4M; base list discount 71% (CMS-published analog, cited)."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "ira_selected",
+   "detector": "ira_generator",
+   "block": "P",
+   "source_id": "4bf1a2f5e9e4",
+   "finding_n": 2,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 2,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for a product selected for Medicare price negotiation.",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+     "doc_title": "CMS fact sheet",
+     "page": "1"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "26"
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md",
+     "doc_title": "CMS fact sheet",
+     "page": "2"
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "doc_title": "CMS fact sheet",
+     "page": "2"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "18"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "10"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "11"
+    }
+   ],
+   "candidate": {
+    "text": "Verzenio's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,428.7M; base list discount 50% (CMS-published analog, cited)."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "ira_selected",
+   "detector": "ira_generator",
+   "block": "P",
+   "source_id": "9cdaa161375b",
+   "finding_n": 4,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 4,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for the terms of the most-favored-nation pricing agreement.",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/wh/wh_fact_sheet_2025-11-06_lilly_novo.md",
+     "doc_title": "White House fact sheet 2025-11-06",
+     "page": "1"
+    }
+   ],
+   "candidate": {
+    "text": "LLY signed an MFN agreement on 2025-11-06 that extends MFN pricing to Medicaid (R010); US investment pledge [figure withheld: not gated]; TrumpRx: Zepbound avg $346/mo; Trulicity [figure withheld: not gated]/mo (R012). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mfn_medicaid",
+   "detector": "mfn_generator",
+   "block": "P",
+   "source_id": "ccde14de6e25",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 6,
+   "step": 6,
+   "figures_withheld": 2
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Red-team read of the gtn pages for rebate true up product.",
+   "documents": [
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "28"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "10"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "11"
+    },
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "65"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "26"
+    },
+    {
+     "doc_id": "LLY:policy/press_2025-11-06_wh_mfn_factsheet.md",
+     "doc_title": "Eli Lilly press release 2025-11-06",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:transcripts/2026Q2_transcript.md",
+     "doc_title": "Eli Lilly 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "Trulicity, a product in multi-year decline, jumped [figure withheld: not gated] sequentially in the US in Q2 2026 ([figure withheld: not gated]) because of prior-period rebate estimate releases the 10-Q attributes primarily to Trulicity; the CFO says these will not continue, and Trulicity now also sells at [figure withheld: not gated] a month on TrumpRx and faces a Medicare set price in 2028."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "rebate_true_up_product",
+   "detector": "nuggets",
+   "block": "P",
+   "source_id": "2101e3ee6d4a",
+   "nugget_id": "LLY-nugget-003",
+   "obscurity_rung": "analyst_asked",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 7,
+   "step": 7,
+   "figures_withheld": 4
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Red-team read of the forces pages for program cliff and cannibalization.",
+   "documents": [
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "25"
+    },
+    {
+     "doc_id": "LLY:transcripts/2026Q1_transcript.md",
+     "doc_title": "Eli Lilly 2026Q1 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:transcripts/2025Q4_transcript.md",
+     "doc_title": "Eli Lilly 2025Q4 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:policy/press_2026-02-05_wh_trumprx_factsheet.md",
+     "doc_title": "Eli Lilly press release 2026-02",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "The Medicare GLP-1 Bridge that opened Zepbound and Foundayo to seniors at [figure withheld: not gated] ends December 31, 2027 and exists only because Part D plans declined to opt in ('we now know they didn't'), while [figure withheld: not gated] to 40% of Bridge patients are not new, so part of the 'new access' is existing patients moving from about $346 self-pay to [figure withheld: not gated]."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "program_cliff_and_cannibalization",
+   "detector": "nuggets",
+   "block": "P",
+   "source_id": "9a8917824228",
+   "nugget_id": "LLY-nugget-005",
+   "obscurity_rung": "analyst_asked",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 8,
+   "step": 8,
+   "figures_withheld": 3
+  },
+  {
+   "category": "Segment and product table changes",
+   "query": "Looked for product revenue moving apart from prescription volume.",
+   "documents": [],
+   "candidate": {
+    "text": "LLY total revenue grew [figure withheld: not gated] YoY in [figure withheld: not gated] while FAERS reports naming MOUNJARO moved [figure withheld: not gated] ([figure withheld: not gated] vs a year earlier): a [figure withheld: not gated] gap. FAERS report volume is only a loose proxy for patient use (reports follow news, litigation and label changes), and revenue here is company-wide, so treat this as a prompt to look, not a finding."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "demand_divergence",
+   "detector": "supply",
+   "block": "X",
+   "source_id": "3c6d46c998e1",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 38,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for collaboration one time revenue.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "66"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "12"
+    },
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "73"
+    },
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "12"
+    },
+    {
+     "doc_id": "LLY:transcripts/2026Q2_transcript.md",
+     "doc_title": "Eli Lilly 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "BOEHRINGER:policy/press_2026-03_fy2025_results_petworldwide.md",
+     "doc_title": "Boehringer Ingelheim press release FY2025",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "Jardiance revenue has carried a growing one-off every year (a $300M amendment payment in 2024, $570M in 2025, up to $910M of milestones limited to 2026, $500M already booked in H1), and the FY2025 10-K newly states that its most significant markets leave the Boehringer collaboration after December 31, 2028."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "collaboration_one_time_revenue",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "b1c0d840e1ed",
+   "nugget_id": "LLY-nugget-002",
+   "obscurity_rung": "footnote_only",
+   "finding_n": 1,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown; the Sharpest Needle",
+   "step": 1,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the forces pages for conditional tariff relief.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "17"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "26"
+    },
+    {
+     "doc_id": "LLY:policy/press_2025-11-06_us_govt_agreement.md",
+     "doc_title": "Eli Lilly press release 2025-11",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "51"
+    },
+    {
+     "doc_id": "LLY:10k_FY2024.md",
+     "doc_title": "Eli Lilly 10-K FY2024",
+     "page": "51"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "23"
+    }
+   ],
+   "candidate": {
+    "text": "Lilly's tariff shield is conditional: the government deal gives a three-year Section 232 grace period only 'provided that we meet U.S. manufacturing investment commitments', which helps explain capital spending rising from [figure withheld: not gated] in H1 2026 alone."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "conditional_tariff_relief",
+   "detector": "nuggets",
+   "block": "P",
+   "source_id": "d689e5fdb404",
+   "category_note": "no case category matches this signal; filed under Footnotes",
+   "nugget_id": "LLY-nugget-009",
+   "obscurity_rung": "press_release",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 9,
+   "step": 9,
+   "figures_withheld": 5
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a shift in R&D spending against a year earlier.",
+   "documents": [
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "5"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "9"
+    }
+   ],
+   "candidate": {
+    "text": "R&D [figure withheld: not gated] of revenue vs [figure withheld: not gated] a year earlier ([figure withheld: not gated]) (Q2 2026); peer median [figure withheld: not gated], z -0.3"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "rnd_shift",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "0d5117aa79d5",
+   "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 10,
+   "step": 10,
+   "figures_withheld": 4
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a shift in the effective tax rate against a year earlier.",
+   "documents": [
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": 5
+    }
+   ],
+   "candidate": {
+    "text": "Effective tax rate [figure withheld: not gated] a year earlier ([figure withheld: not gated] pts) ([figure withheld: not gated]); peer median [figure withheld: not gated], z [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "tax_rate_shift",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "06f417cc48b6",
+   "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
+   "verdict_reason": "review guard: the tax-rate move is under the shift threshold",
+   "step": 30,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a clinical trial stopped for business reasons.",
+   "documents": [],
+   "candidate": {
+    "text": "Terminated Phase [figure withheld: not gated] trial [figure withheld: not gated] (A Study of Baricitinib ([figure withheld: not gated]) in Children With [figure withheld: not gated]); registry reason: Study terminated due to an inability to enroll participants. Registry text is sponsor-written; it may understate or reframe the real reason."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "trial_terminated",
+   "detector": "supply",
+   "block": "F",
+   "source_id": "a06e31bca581",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 40,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Red-team read of the call qa pages for net price channel mix.",
+   "documents": [
+    {
+     "doc_id": "LLY:transcripts/2026Q2_transcript.md",
+     "doc_title": "Eli Lilly 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:transcripts/2026Q1_transcript.md",
+     "doc_title": "Eli Lilly 2026Q1 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "11"
+    }
+   ],
+   "candidate": {
+    "text": "Zepbound's US net price (about $580 per prescription, an analyst figure management called 'spot on') is held up by medical-exception scripts at near list price; with CVS restoring formulary access in Q4 2026, management said 'expect that price to actually go down for sure'."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "net_price_channel_mix",
+   "detector": "nuggets",
+   "block": "C",
+   "source_id": "95f24fb976b5",
+   "nugget_id": "LLY-nugget-004",
+   "obscurity_rung": "analyst_asked",
+   "finding_n": 3,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 3,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Red-team read of the call qa pages for competitor ira price spillover.",
+   "documents": [
+    {
+     "doc_id": "LLY:transcripts/2025Q3_transcript.md",
+     "doc_title": "Eli Lilly 2025Q3 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:policy/press_2025-11-06_wh_mfn_factsheet.md",
+     "doc_title": "Eli Lilly press release 2025-11-06",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "17"
+    },
+    {
+     "doc_id": "LLY:policy/press_2026-06_medicare_part_d_foundayo_zepbound.md",
+     "doc_title": "Eli Lilly press release 2026-06",
+     "page": 1
+    },
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "65"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "11"
+    },
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "57"
+    }
+   ],
+   "candidate": {
+    "text": "Sensitivity, not a forecast: from January 1, 2027, Novo's semaglutide (Ozempic, Rybelsus, Wegovy) carries a Medicare set price of $274 per 30 days, 78% below Ozempic's 2024 Part D gross cost per claim, while Mounjaro's Part D business (5.1 million claims, $6.3B gross in 2024, nearly triple 2023) is excluded from the Bridge and has no set price of its own, and Lilly's only on-call answer called Part D 'a small proportion of our overall volume'."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "competitor_ira_price_spillover",
+   "detector": "nuggets",
+   "block": "C",
+   "source_id": "450cc54e36aa",
+   "nugget_id": "LLY-nugget-001",
+   "obscurity_rung": "analyst_asked",
+   "finding_n": 5,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 5,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Looked for a topic analysts suddenly raised more often on earnings calls.",
+   "documents": [
+    {
+     "doc_id": "LLY:transcripts/2026Q2_transcript.md",
+     "doc_title": "Eli Lilly 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "'generic' came up [figure withheld: not gated] times in the [figure withheld: not gated] call vs an average of [figure withheld: not gated] in earlier calls ([figure withheld: not gated])."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "call_topic_surge",
+   "detector": "calls",
+   "block": "C",
+   "source_id": "02febbb1ea1b",
+   "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
+   "step": 35,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for a label with narrower approved uses than a rival's.",
+   "documents": [
+    {
+     "doc_id": "drug:zepbound:label_sections.md",
+     "doc_title": "Zepbound label",
+     "page": 2
+    },
+    {
+     "doc_id": "drug:wegovy:label_sections.md",
+     "doc_title": "Wegovy label",
+     "page": 2
+    }
+   ],
+   "candidate": {
+    "text": "Zepbound lists [figure withheld: not gated] indications vs rival median [figure withheld: not gated] (Wegovy [figure withheld: not gated]), counting indication map rows, each cited to its label line; narrower label should show up as a smaller addressable patient pool"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "label_narrower",
+   "detector": "labels",
+   "block": "L",
+   "source_id": "d2aae6b94153",
+   "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
+   "step": 36,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for an exclusivity end earlier than the market assumes.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": 12
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": 18
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": 26
+    }
+   ],
+   "candidate": {
+    "text": "Zepbound protection ends [figure withheld: not gated] years before Wegovy ([figure withheld: not gated]); earlier loss of exclusivity"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "exclusivity_earlier",
+   "detector": "labels",
+   "block": "P",
+   "source_id": "d8177d9f7349",
+   "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
+   "step": 37,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for rising serious adverse-event reports in FDA's FAERS data.",
+   "documents": [],
+   "candidate": {
+    "text": "FAERS serious reports naming ZEPBOUND rose [figure withheld: not gated] (last [figure withheld: not gated] quarters [figure withheld: not gated] vs prior [figure withheld: not gated]); rival change Wegovy [figure withheld: not gated]. FAERS is unverified spontaneous reporting and report counts are not incidence; reporting surges follow publicity, litigation and new indications."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "faers_serious_rising",
+   "detector": "supply",
+   "block": "X",
+   "source_id": "f7169664c5c6",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 39,
+   "figures_withheld": 0
+  },
+  {
+   "category": "Peer contrast",
+   "query": "Looked for gross margin far from the peer median.",
+   "documents": [
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "9"
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": "5"
+    }
+   ],
+   "candidate": {
+    "text": "Gross margin [figure withheld: not gated] (Q2 2026) vs peers; peer median [figure withheld: not gated], z [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "gross_margin_peer_outlier",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "af61dfe56dd3",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 11,
+   "step": 11,
+   "figures_withheld": 3
+  },
+  {
+   "category": "Peer contrast",
+   "query": "Looked for days of inventory far from the peer median.",
+   "documents": [
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": 7
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": 5
+    },
+    {
+     "doc_id": "LLY:10q_2026Q2.md",
+     "doc_title": "Eli Lilly 10-Q 2026-06-30",
+     "page": 15
+    }
+   ],
+   "candidate": {
+    "text": "Days inventory [figure withheld: not gated] days ([figure withheld: not gated]) vs peers; peer median [figure withheld: not gated] days, z [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "dio_peer_outlier",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "ee1507cd1047",
+   "verdict_reason": "review guard: not a peer outlier once measured on the right base",
+   "step": 31,
+   "figures_withheld": 0
+  }
+ ],
+ "summary": {
+  "candidates": 40,
+  "survived": 5,
+  "killed": 11,
+  "narrowed": 24,
+  "documents": 18
+ }
+}

@@ -1,0 +1,369 @@
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { ReactNode } from "react";
+import type { Evidence, NumericCheck, Part1Company, Part1Finding, Part1Trace } from "../../lib/types";
+import type { Part1State } from "../../lib/part1";
+import { evidenceLabel, loadPart1Company, loadPart1Trace, part1CiteIndex, PART1_ROWS, resolver, scrub } from "../../lib/part1";
+import { registerCites } from "../../lib/cites";
+import { CiteChip } from "../CiteChip";
+import { ConfPill } from "../ConfPill";
+import { NumericPill } from "../NumericCheck";
+import { Md } from "./Md";
+import { SelectionCard } from "./Part1Selection";
+import { Part1TraceView } from "./Part1Trace";
+
+// The Part 1 answer, in the case's "Minimum expectations" layout: header with the 1 / 2 / 3 switcher,
+// why this company beat the other nine, the Findings table, the Sharpest Needle, Product fine print,
+// then the reasoning trace. All three companies load at once so the switcher swaps instantly.
+
+type Cite = (n: number) => Evidence | undefined;
+
+const ROW_LABEL: Record<string, string> = {
+  "approved uses": "Approved uses",
+  "boxed warnings and safety": "Boxed warnings and safety fine print",
+  "dosing and convenience": "Dosing and convenience",
+  "patent and exclusivity timeline": "Patent and exclusivity timeline",
+  "pricing and gross-to-net": "Pricing and gross-to-net exposure",
+};
+
+const passed = (c?: NumericCheck | null) => !c || c.status !== "failed";
+
+export function Math_({ math, cite, check }: { math?: string | null; cite: Cite; check?: NumericCheck | null }) {
+  const m = scrub(math);
+  return (
+    <>
+      {m && (
+        <details className="mt-1 rounded border border-line bg-surface-2 px-2 py-1 text-[12px]">
+          <summary className="cursor-pointer select-none font-semibold text-purple">Show the math</summary>
+          <pre className="mt-1 whitespace-pre-wrap break-words font-mono text-[11.5px] leading-relaxed"><Md md={m} cite={cite} /></pre>
+        </details>
+      )}
+      {check && <div className="mt-1"><NumericPill check={check} compact /></div>}
+    </>
+  );
+}
+
+function Th({ children, title }: { children: ReactNode; title?: string }) {
+  return <th scope="col" title={title} className="px-2.5 py-1.5 text-left text-[11px] font-semibold uppercase tracking-wide text-muted">{children}</th>;
+}
+
+function FindingsTable({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }) {
+  const rows = c.findings ?? [];
+  if (!rows.length) return <p className="text-[13px] text-muted">No findings exported for {c.ticker}.</p>;
+  return (
+    <div className="overflow-x-auto rounded-md border border-line">
+      <table className="w-full min-w-[720px] table-fixed border-collapse text-[13px]">
+        <colgroup><col className="w-[11%]" /><col className="w-[24%]" /><col className="w-[17%]" /><col className="w-[20%]" /><col className="w-[16%]" /><col className="w-[12%]" /></colgroup>
+        <thead className="bg-surface-2"><tr><Th>#</Th><Th>Finding</Th><Th>Source</Th><Th>Impact</Th><Th>Peer comparison</Th><th scope="col" className="px-1.5 py-1.5 text-left text-[11px] font-semibold uppercase tracking-wide text-muted">Confidence</th></tr></thead>
+        <tbody>{rows.map((f) => <FindingRow key={f.n} f={f} ix={ix} />)}</tbody>
+      </table>
+    </div>
+  );
+}
+
+function FindingRow({ f, ix }: { f: Part1Finding; ix: Map<string, Evidence> }) {
+  const cite = resolver(ix, f.marker_map, f.cites);
+  const s = f.source ?? {};
+  const where = [scrub(s.doc_title), s.period && !(s.doc_title ?? "").includes(s.period) ? s.period : "", s.page != null && s.page !== "" ? (/^p/i.test(String(s.page)) ? String(s.page) : `p. ${s.page}`) : ""].filter(Boolean).join(", ");
+  // The quote's chip: the finding's cite on the same page, else its first cite.
+  const srcEv = (s.cite != null ? cite(Number(s.cite)) : undefined) ?? (f.cites ?? []).find((e) => s.page != null && String(e.page) === String(s.page)) ?? f.cites?.[0];
+  const srcChip = srcEv ? (srcEv.cite_id && ix.get(srcEv.cite_id)) || evidenceLabel(srcEv) : undefined;
+  const speaker = s.speaker ? scrub(s.speaker) : "";
+  const imp = f.impact ?? {};
+  const v = String(f.verdict ?? "").toLowerCase();
+  const otrText = scrub(f.on_the_record_marked ?? f.on_the_record);
+  const otr = v === "killed" || (String(f.obviousness ?? "").toLowerCase() === "high" && !!otrText);
+  const narrowed = v === "narrowed";
+  return (
+    <tr id={`p1-finding-${f.n}`} className="border-t border-line align-top">
+      <td className="px-2 py-2 text-muted">
+        <div className="font-mono text-[12px]">{f.n}</div>
+        {f.category && scrub(f.category) && <div className="mt-1 text-[10px] leading-tight break-words">{scrub(f.category)}</div>}
+        {otr && <div className="mt-1 inline-block rounded border border-line px-1 text-[10px] leading-tight">on the record</div>}
+        {narrowed && <div className="mt-1 text-[10px] italic leading-tight">narrowed by the skeptics</div>}
+      </td>
+      <td className="px-2.5 py-2 leading-snug break-words">
+        <Md md={scrub(f.finding_marked ?? f.finding)} cite={cite} />
+        {otr && otrText && <p className="mt-1 text-[12px] leading-snug text-muted"><span className="font-semibold">On the record: </span><Md md={otrText} cite={cite} /></p>}
+      </td>
+      <td className="px-2.5 py-2 break-words">
+        <div className="font-semibold text-[12.5px]">{where || "Source not exported"}</div>
+        {s.quote && !srcChip?.withheld && <p className="mt-0.5 text-[12px] italic text-muted break-words">{speaker ? `${speaker}: ` : ""}"{scrub(s.quote)}"</p>}
+        {srcChip && <div className="mt-0.5"><CiteChip evidence={srcChip} label="source" /></div>}
+      </td>
+      <td className="px-2.5 py-2 break-words">
+        {passed(imp.numeric_check)
+          ? <><Md md={scrub(imp.text_marked ?? imp.text) || "Not quantified"} cite={cite} /><Math_ math={imp.math_marked ?? imp.math} cite={cite} check={imp.numeric_check} /></>
+          : <span className="text-muted">Withheld: failed the numeric gate</span>}
+      </td>
+      <td className="px-2.5 py-2 break-words">{f.peer_marked || f.peer ? <Md md={scrub(f.peer_marked ?? f.peer)} cite={cite} /> : <span className="text-muted">No peer comparison exported</span>}</td>
+      <td className="px-1.5 py-2"><span title={scrub(f.confidence_reason) || undefined} className="inline-block"><ConfPill level={f.confidence} short /></span></td>
+    </tr>
+  );
+}
+
+function Needle({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }) {
+  const nd = c.sharpest_needle;
+  if (!nd) return null;
+  const f = (c.findings ?? []).find((x) => Number(x.n) === Number(nd.finding_n));
+  const fc = resolver(ix, f?.marker_map, f?.cites);
+  const wc = resolver(ix, nd.marker_map ?? f?.marker_map, nd.cites ?? f?.cites);
+  const why = scrub(nd.why_marked ?? nd.why);
+  return (
+    <section aria-label="Sharpest Needle" className="rounded-md border-l-4 border-purple bg-chip/60 px-4 py-3 space-y-1.5">
+      <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-purple">Sharpest Needle{nd.finding_n != null ? ` · finding ${nd.finding_n}` : ""}</div>
+      {f ? <p className="text-[15px] font-semibold leading-snug"><Md md={scrub(f.finding_marked ?? f.finding)} cite={fc} /></p> : <p className="text-[13px] text-muted">Needle finding {nd.finding_n ?? "?"} is not in the findings table.</p>}
+      {why && <p className="text-[13.5px] text-muted"><span className="font-semibold text-fg">Why: </span><Md md={why} cite={wc} /></p>}
+    </section>
+  );
+}
+
+function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }) {
+  const p = c.product_table;
+  if (!p) return <p className="text-[13px] text-muted">No product table exported for {c.ticker}.</p>;
+  const cols = p.columns?.length
+    ? p.columns.map((c) => ({ key: c.key, label: c.label ?? c.key, full: c.full ?? c.label ?? c.key }))
+    : [p.product, ...(p.rivals ?? [])].map((x) => ({ key: x, label: x, full: x }));
+  const byRow = new Map((p.rows ?? []).map((r) => [r.row, r]));
+  const tie = p.financial_tie, gl = p.growth_limiter, pi = p.priced_in;
+  const call = (pi?.call ?? "").toLowerCase();
+  return (
+    <section aria-label="Product fine print" className="space-y-3">
+      <h3 className="text-[16px] font-semibold">Product fine print: {p.product}{p.rivals?.length ? <span className="font-normal text-muted"> vs {p.rivals.join(", ")}</span> : null}</h3>
+      <div className="overflow-x-auto rounded-md border border-line">
+        <table className="w-full border-collapse text-[13px]" style={{ minWidth: `${160 + cols.length * 190}px` }}>
+          <thead className="bg-surface-2"><tr><Th>&nbsp;</Th>{cols.map((x, i) => <Th key={i} title={x.full}>{x.label}</Th>)}</tr></thead>
+          <tbody>
+            {PART1_ROWS.map((rk) => {
+              const r = byRow.get(rk);
+              return (
+                <tr key={rk} className="border-t border-line align-top">
+                  <th scope="row" className="px-2.5 py-2 text-left text-[12px] font-semibold w-[160px]">{ROW_LABEL[rk]}</th>
+                  {cols.map((col, j) => {
+                    const cell = r?.cells?.[col.key];
+                    const txt = scrub(cell?.text_marked ?? cell?.text);
+                    const needs = !txt || cell?.status === "needs citation" || /^needs citation\.?$/i.test(scrub(cell?.text).trim());
+                    return (
+                      <td key={j} title={needs && cell?.note ? cell.note : undefined} className={`px-2.5 py-2 leading-snug ${j === 0 ? "bg-chip/30" : ""}`}>
+                        {needs ? <span className="text-muted italic">{cell ? "needs citation" : "not exported"}</span> : <Md md={txt} cite={resolver(ix, cell?.marker_map, cell?.cites)} />}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      {tie && (scrub(tie.text_marked ?? tie.text)) && (
+        <div className="space-y-1">
+          <h4 className="text-[13px] font-semibold uppercase tracking-wide text-muted">Tie to the numbers</h4>
+          {passed(tie.numeric_check) ? (
+            <div className="text-[14px] leading-relaxed">
+              <Md md={scrub(tie.text_marked ?? tie.text)} cite={resolver(ix, tie.marker_map, tie.cites)} />
+              {tie.numeric_check && <> <NumericPill check={tie.numeric_check} compact /></>}
+              <Math_ math={tie.math_marked ?? tie.math} cite={resolver(ix, tie.math_marker_map ?? tie.marker_map, tie.cites)} check={tie.math_numeric_check} />
+            </div>
+          ) : <p className="text-[13px] text-muted">Withheld: failed the numeric gate</p>}
+        </div>
+      )}
+      {gl && scrub(gl.sentence_marked ?? gl.sentence) && (
+        <p className="text-[14px] leading-relaxed"><span className="font-semibold">What limits growth: </span><Md md={scrub(gl.sentence_marked ?? gl.sentence)} cite={resolver(ix, gl.marker_map, gl.cites)} />{gl.numeric_check && <> <NumericPill check={gl.numeric_check} compact /></>}</p>
+      )}
+      {pi && (
+        <p className="text-[14px] leading-relaxed">
+          <span className="font-semibold">Priced in? </span>
+          {call && call !== "untestable" && (
+            <span className={`mr-1.5 inline-block rounded-full border px-2 py-px align-middle text-[11px] font-bold uppercase tracking-wide ${call === "not priced in" ? "border-warn/50 bg-warn/10 text-warn" : "border-line bg-surface-2 text-fg"}`}>{call}</span>
+          )}
+          {call && call !== "untestable" && pi.confidence && <span className="mr-1.5 inline-block align-middle"><ConfPill level={String(pi.confidence)} /></span>}
+          <Md md={scrub(pi.text_marked ?? pi.text) || (call === "untestable" ? "Not testable: no consensus estimate is cited." : "")} cite={resolver(ix, pi.marker_map, pi.cites)} />
+          {(!call || call === "untestable") && pi.confidence && <> <ConfPill level={String(pi.confidence)} /></>}
+        </p>
+      )}
+      {pi && <PricedEvidence evidence={pi.evidence} ix={ix} />}
+      {pi && scrub(pi.limit_marked ?? pi.limit) && (
+        <p className="text-[12.5px] text-muted"><Md md={scrub(pi.limit_marked ?? pi.limit)} cite={resolver(ix, pi.marker_map, pi.cites)} /></p>
+      )}
+    </section>
+  );
+}
+
+/** priced_in.evidence: [{source, finding, cites}] (cites as cite_ids or evidence objects). An object keyed
+ *  by signal is also accepted. Chips follow the finding when it has no markers of its own. */
+function PricedEvidence({ evidence, ix }: { evidence: unknown; ix: Map<string, Evidence> }) {
+  if (!evidence || typeof evidence !== "object") return null;
+  const str = (x: unknown) => (typeof x === "string" || typeof x === "number" ? String(x) : "");
+  const pick = (o: Record<string, unknown>, ks: string[]) => { for (const k of ks) { const v = str(o[k]); if (v) return v; } return ""; };
+  const toEv = (c: unknown): Evidence | undefined =>
+    typeof c === "string" ? ix.get(c)
+      : c && typeof c === "object" ? (((c as Evidence).cite_id && ix.get((c as Evidence).cite_id!)) || evidenceLabel(c as Evidence)) : undefined;
+  type Row = { source: string; finding: string; evs: (Evidence | undefined)[]; map: Record<string, string> | null };
+  const toRow = (label: string, x: unknown): Row | null => {
+    if (typeof x === "string" || typeof x === "number") return { source: label, finding: String(x), evs: [], map: null };
+    if (!x || typeof x !== "object") return null;
+    const o = x as Record<string, unknown>;
+    return {
+      source: label || pick(o, ["source", "signal", "name", "label", "kind"]),
+      finding: pick(o, ["finding_marked", "finding", "text_marked", "text", "showed", "summary", "value"]),
+      evs: Array.isArray(o.cites) ? (o.cites as unknown[]).map(toEv) : [],
+      map: o.marker_map && typeof o.marker_map === "object" ? (o.marker_map as Record<string, string>) : null,
+    };
+  };
+  const rows = (Array.isArray(evidence) ? evidence.map((x) => toRow("", x)) : Object.entries(evidence as Record<string, unknown>).map(([k, x]) => toRow(k.replace(/_/g, " "), x)))
+    .filter((r): r is Row => !!r && !!(r.source || r.finding));
+  if (!rows.length) return null;
+  return (
+    <div className="space-y-1">
+      <h4 className="text-[13px] font-semibold uppercase tracking-wide text-muted">Evidence</h4>
+      <ul className="divide-y divide-line rounded-md border border-line bg-surface-2 text-[13px]">
+        {rows.map((r, i) => {
+          const local = r.evs; // an id with no exported evidence object renders as a struck "[n]" (Source not exported)
+          const cite: Cite = (n) => (r.map?.[String(n)] && ix.get(r.map[String(n)])) || r.evs[n - 1];
+          const text = scrub(r.finding);
+          const marked = /\[(\d+|derived:[^\]]*)\]/.test(text);
+          return (
+            <li key={i} className="grid gap-x-3 gap-y-0.5 px-3 py-1.5 sm:grid-cols-[minmax(0,11rem)_1fr]">
+              <div className="text-[10.5px] font-semibold uppercase tracking-wide text-muted break-words">{scrub(r.source) || "signal"}</div>
+              <div className="min-w-0 break-words leading-snug">
+                <Md md={text || "not reported"} cite={cite} />
+                {!marked && local.length > 0 && <span className="ml-1 inline-flex flex-wrap gap-0.5 align-baseline">{local.map((e, j) => <CiteChip key={j} evidence={e ?? null} n={j + 1} />)}</span>}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+export interface FollowChip { key: string; label: string; onClick: () => void }
+
+export function Part1Answer({ part1, instant, nameOf, followFor, startTicker, focusFinding }: {
+  part1: Part1State; instant: boolean; nameOf: (t: string) => string;
+  /** ask_next chips for a ticker (the memo prompts for that company). */
+  followFor: (t: string) => FollowChip[];
+  startTicker?: string;
+  /** Scroll to this finding once the answer has rendered (a Part 2 driver chip). */
+  focusFinding?: number;
+}) {
+  const picked = part1.index?.picked ?? [];
+  // A pick in index.missing (or absent from index.available) is still being written: shown, disabled.
+  const missing = new Set([...(part1.index?.missing ?? []), ...(Array.isArray(part1.index?.available) ? picked.filter((t) => !part1.index!.available!.includes(t)) : [])]);
+  const ready = picked.filter((t) => !missing.has(t));
+  const [active, setActive] = useState<string>(startTicker && ready.includes(startTicker) ? startTicker : ready[0] ?? picked[0] ?? "");
+  const [cos, setCos] = useState<Map<string, Part1Company | Error>>(new Map());
+  const [trs, setTrs] = useState<Map<string, Part1Trace | Error>>(new Map());
+  const reduce = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  const [stage, setStage] = useState(instant || reduce ? 2 : 0);
+  const topRef = useRef<HTMLDivElement>(null);
+
+  // Load all three company files at once (instant swap); traces load with them.
+  useEffect(() => {
+    const prefix = part1.prefix;
+    if (!prefix) return;
+    let live = true;
+    for (const t of ready) {
+      loadPart1Company(prefix, t).then((c) => live && setCos((m) => new Map(m).set(t, { ...c, ticker: c?.ticker ?? t })), (e) => live && setCos((m) => new Map(m).set(t, e as Error)));
+      loadPart1Trace(prefix, t).then((x) => live && setTrs((m) => new Map(m).set(t, x)), (e) => live && setTrs((m) => new Map(m).set(t, e as Error)));
+    }
+    return () => { live = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [part1.prefix, ready.join(",")]);
+
+  const co = cos.get(active);
+  const company = co && !(co instanceof Error) ? co : null;
+  const tr = trs.get(active);
+  const trace = tr && !(tr instanceof Error) ? tr : null;
+  const ix = useMemo(() => part1CiteIndex(company), [company]);
+  useEffect(() => { registerCites([...ix.values()]); }, [ix]);
+
+  // Header and Findings first, then the rest at once.
+  useEffect(() => {
+    if (stage >= 2 || !company) return;
+    const t = window.setTimeout(() => setStage(2), 700);
+    return () => window.clearTimeout(t);
+  }, [stage, company]);
+
+  const goFinding = (n: number) => {
+    const el = document.getElementById(`p1-finding-${n}`);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.classList.add("bg-chip");
+    window.setTimeout(() => el.classList.remove("bg-chip"), 1400);
+  };
+
+  // A driver chip from Part 2 lands on its finding once the table is on the page.
+  const focused = useRef(false);
+  useEffect(() => {
+    if (focused.current || focusFinding == null || !company || stage < 2) return;
+    focused.current = true;
+    const t = window.setTimeout(() => goFinding(focusFinding), 250);
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusFinding, company, stage]);
+
+  const name = company?.name ?? nameOf(active);
+  const follow = [
+    ...ready.filter((t) => t !== active).map((t) => ({ key: `co:${t}`, label: `Show pick ${picked.indexOf(t) + 1}: ${nameOf(t)} (${t})`, onClick: () => { setActive(t); topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); } })),
+    ...followFor(active),
+  ];
+
+  return (
+    <div ref={topRef} className="min-w-0 space-y-5 text-[15px] leading-relaxed" onClick={() => { if (stage < 2) setStage(2); }}>
+      <header className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <div className="min-w-0">
+          <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-purple">Financial forensics</div>
+          <h2 className="text-[22px] font-semibold leading-tight">{name} <span className="font-mono text-[15px] text-muted">{active}</span></h2>
+        </div>
+        {picked.length > 1 && (
+          <div role="tablist" aria-label="Picked companies" className="ml-auto inline-flex rounded-full border border-line bg-surface p-0.5">
+            {picked.map((t, i) => (
+              <button key={t} type="button" role="tab" aria-selected={t === active} disabled={missing.has(t)}
+                title={missing.has(t) ? `Pick ${i + 1} (${t}) is still being written` : undefined}
+                onClick={(e) => { e.stopPropagation(); setActive(t); }}
+                className={`rounded-full px-3 py-1 text-[12.5px] font-semibold ${t === active ? "bg-purple text-white dark:bg-purple-deep" : missing.has(t) ? "cursor-not-allowed text-muted/60" : "text-muted hover:text-purple"}`}>
+                {i + 1} <span className="font-mono">{t}</span>{missing.has(t) && <span className="ml-1 text-[10px] font-normal italic">writing</span>}
+              </button>
+            ))}
+          </div>
+        )}
+        {picked[0] && missing.has(picked[0]) && ready.length > 0 && (
+          <p role="note" className="w-full text-[12px] text-muted">Number one pick still being written; showing number {["one", "two", "three"][picked.indexOf(active)] ?? picked.indexOf(active) + 1}.</p>
+        )}
+        {!ready.length && <p role="note" className="w-full text-[12px] text-muted">All three picks are still being written.</p>}
+        {part1.sample && <p role="note" title={part1.index?.sample_note} className="w-full text-[12px] text-muted">Sample data: the blind reasoning pass has not run yet</p>}
+      </header>
+
+      {co instanceof Error && <p role="alert" className="text-[14px] text-bad">Could not load data/part1/{active}.json.</p>}
+      {!co && ready.length > 0 && <p role="status" className="text-[14px] text-muted">Loading the cited answer…</p>}
+
+      {company && (
+        <>
+          {part1.selection && <SelectionCard selection={part1.selection} ticker={active} nameOf={nameOf} seal={part1.index?.sealed} prefix={part1.prefix} />}
+          <section aria-label="Findings" className="space-y-2">
+            <h3 className="text-[16px] font-semibold">Findings</h3>
+            <FindingsTable c={company} ix={ix} />
+          </section>
+          {stage >= 2 ? (
+            <>
+              <Needle c={company} ix={ix} />
+              <ProductBlock c={company} ix={ix} />
+              {trace
+                ? <Part1TraceView trace={trace} sample={part1.sample} onFinding={goFinding} findings={company.findings} />
+                : tr instanceof Error ? <p className="text-[13px] text-muted">Reasoning trace not exported (data/part1/{active}_trace.json).</p> : null}
+            </>
+          ) : <button type="button" onClick={() => setStage(2)} className="no-print text-[11px] text-muted underline">Show all</button>}
+        </>
+      )}
+
+      {stage >= 2 && follow.length > 0 && (
+        <div className="no-print flex flex-wrap gap-2" aria-label="Ask next">
+          {follow.map((f) => (
+            <button key={f.key} type="button" onClick={(e) => { e.stopPropagation(); f.onClick(); }}
+              className="rounded-full border border-purple/40 bg-surface px-3 py-1.5 text-[13px] text-purple hover:bg-chip text-left">{f.label}</button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
