@@ -2138,14 +2138,14 @@
       }
      },
      "Tecentriq (Roche)": {
-      "text": "No exclusivity dates in the index: the Purple Book row is empty and no Roche filing was retrieved, so this side is thin.",
-      "text_marked": "No exclusivity dates in the index: the Purple Book row is empty and no Roche filing was retrieved, so this side is thin.[1]",
+      "text": "No Tecentriq exclusivity date is in the index: the loe_calendar row carries no company-stated or Purple Book reference-exclusivity date and no Roche filing was retrieved; the row's only indexed fact is the FDA Purple Book biosimilar count (none approved), a machine-data field outside the verified whitelist.",
+      "text_marked": "No Tecentriq exclusivity date is in the index: the loe_calendar row carries no company-stated or Purple Book reference-exclusivity date and no Roche filing was retrieved; the row's only indexed fact is the FDA Purple Book biosimilar count (none approved), a machine-data field outside the verified whitelist.[1]",
       "marker_map": {
-       "1": "c_3ed2ebed7e"
+       "1": "c_ec7bead55e"
       },
       "cites": [
        {
-        "cite_id": "c_3ed2ebed7e",
+        "cite_id": "c_ec7bead55e",
         "doc_id": "pipeline/loe_calendar.csv",
         "page": null,
         "quote": null,
@@ -2156,9 +2156,9 @@
         "doc_title": "moat table pipeline/loe_calendar.csv",
         "location": "row pipeline/loe_calendar.csv#617",
         "speaker": null,
-        "locator": "pipeline/loe_calendar.csv#617 company_stated_loe = None",
+        "locator": "pipeline/loe_calendar.csv#617 [ROCHE:TECENTRIQ:US] biosimilar_count = 0",
         "viewer_link": null,
-        "note": "derived from moat table pipeline/loe_calendar.csv row pipeline/loe_calendar.csv#617 field company_stated_loe",
+        "note": "facts row pipeline/loe_calendar.csv#617 re-read (machine_data: unverified (status 'machine_data')); machine data: API row 617 at https://purplebooksearch.fda.gov/downloads (no page copy)",
         "excerpt": null,
         "deep_link": null,
         "withheld_reason": "citation status unverified is not public: quote and links withheld"

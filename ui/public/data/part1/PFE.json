@@ -176,7 +176,7 @@
    "peer": "Alnylam's U.S. Amvuttra revenue was $1,511.6M in H1 2026 vs $559.3M (+170%), growth 'mainly in patients with ATTR-CM in the U.S.'; BridgeBio's net product revenue (Attruby) was $403.0M vs $108.2M. Amvuttra's U.S. line also includes hATTR-PN use, so the class total is approximate.",
    "peer_marked": "Alnylam's U.S. Amvuttra revenue was $1,511.6M[2] in H1 2026 vs $559.3M[2] (+170%[derived: 1, 2, 3, 4]), growth 'mainly in patients with ATTR-CM in the U.S.'; BridgeBio's net product revenue (Attruby) was $403.0M[3] vs $108.2M[3]. Amvuttra's U.S. line also includes hATTR-PN use, so the class total is approximate.[8]",
    "confidence": "high",
-   "confidence_reason": "Every operand is printed in the three companies' Q2 2026 10-Qs for near-identical half-years; the share is approximate because Amvuttra's U.S. figure includes polyneuropathy revenue and revenue share mixes price with volume.",
+   "confidence_reason": "Every operand is printed in the three companies' Q2 2026 10-Qs for near-identical half-years; the share is approximate because Amvuttra's U.S. figure includes polyneuropathy revenue and revenue share mixes price with volume. BridgeBio's 10-Q page gives total net product revenue with no geography; it is read as U.S. Attruby here, which the page does not state.",
    "obviousness": "medium",
    "on_the_record": "The direction is on the record: Aamir Malik said 'Attruby is taking some first-line share' (Pfizer 2025Q2 call p.10, grade A) and cited payer contracting on the 2025Q3 call (p.9, grade A); no Pfizer, Alnylam or BridgeBio document in the index sizes the class revenue share.",
    "derived": {
@@ -1228,7 +1228,7 @@
    "category": "Gross-to-net",
    "verdict": "killed",
    "finding": "Pfizer's product revenue deductions rose from 38.6% of gross product sales in 2024 to 41.3% in 2025, a step the CFO flagged in advance as an IRA Part D redesign revenue headwind of approximately $1 billion; in H1 2026 the rate excluding returns and cash discounts was flat at about 40.0%.",
-   "finding_marked": "Pfizer's product revenue deductions rose from 38.6%[derived: 1, 2, 4, 5, 6] of gross product sales in 2024 to 41.3%[derived: 1, 2, 4, 5, 6] in 2025, a step the CFO flagged in advance as an IRA Part D redesign revenue headwind of approximately $1 billion[3][5]; in H1 2026 the rate excluding returns and cash discounts was flat at about 40.0%[derived: 1, 2, 4, 5, 6].",
+   "finding_marked": "Pfizer's product revenue deductions rose from 38.6%[derived: 1, 2, 4, 5, 6] of gross product sales in 2024 to 41.3%[derived: 1, 2, 4, 5, 6] in 2025, a step the CFO flagged in advance as an IRA Part D redesign revenue headwind of approximately $1 billion[3]; in H1 2026 the rate excluding returns and cash discounts was flat at about 40.0%[derived: 1, 2, 4, 5, 6].",
    "marker_map": {
     "1": "c_f6a23d1f67",
     "2": "c_92eda2df9c",
@@ -1348,8 +1348,8 @@
     }
    ],
    "impact": {
-    "text": "The 2025 step cost about $2,357M of product revenue versus the 2024 rate, guided in advance and partly COVID-product mix; there is no further widening in 2026, where chargebacks rose but Medicare rebates and sales allowances fell.",
-    "text_marked": "The 2025 step cost about $2,357M[derived: 1, 2, 4, 5, 6] of product revenue versus the 2024 rate, guided in advance and partly COVID-product mix; there is no further widening in 2026, where chargebacks rose but Medicare rebates and sales allowances fell.",
+    "text": "The 2025 step cost about $2,357M of product revenue versus the 2024 rate, guided in advance; there is no further widening in 2026, where chargebacks rose but Medicare rebates and sales allowances fell.",
+    "text_marked": "The 2025 step cost about $2,357M[derived: 1, 2, 4, 5, 6] of product revenue versus the 2024 rate, guided in advance; there is no further widening in 2026, where chargebacks rose but Medicare rebates and sales allowances fell.",
     "math": "2024: $33,888M / ($53,816M + $33,888M) = 38.6%. 2025: $36,374M / ($51,663M + $36,374M) = 41.3%. Cost vs 2024 rate: $36,374M - ($51,663M + $36,374M) x $33,888M / ($53,816M + $33,888M) = $2,357M. H1 ex-returns: ($17,280M - $919M) / ($23,578M + $17,280M) = 40.04% vs ($16,569M - $639M) / ($23,248M + $16,569M) = 40.01%.",
     "math_marked": "2024: $33,888M[1] / ($53,816M[2] + $33,888M[1]) = 38.6%[derived: 1, 2, 4, 5, 6]. 2025: $36,374M[1] / ($51,663M[2] + $36,374M[1]) = 41.3%[derived: 1, 2, 4, 5, 6]. Cost vs 2024 rate: $36,374M[1] - ($51,663M[2] + $36,374M[1]) x $33,888M[1] / ($53,816M[2] + $33,888M[1]) = $2,357M[derived: 1, 2, 4, 5, 6]. H1 ex-returns: ($17,280M[4] - $919M[5]) / ($23,578M[6] + $17,280M[4]) = 40.04%[derived: 1, 2, 4, 5, 6] vs ($16,569M[4] - $639M[5]) / ($23,248M[6] + $16,569M[4]) = 40.01%[derived: 1, 2, 4, 5, 6].",
     "direction": "down",
@@ -2584,14 +2584,13 @@
   ],
   "financial_tie": {
    "text": "The label and channel contrast shows up in the numbers: in H1 2026 U.S. Vyndaqel was flat at $1,975M vs $1,976M while Alnylam's U.S. Amvuttra grew to $1,511.6M from $559.3M and Attruby to $403.0M from $108.2M, so Vyndaqel's share of U.S. class revenue fell from 74.8% to 50.8% (the first finding). Amvuttra's Part B channel and broader label explain where the gap shows, while Pfizer's filings point to its own payer-contract price cuts; the Part B vs Part D point itself is well known.",
-   "text_marked": "The label and channel contrast shows up in the numbers: in H1 2026 U.S. Vyndaqel was flat at $1,975M[1] vs $1,976M[1] while Alnylam's U.S. Amvuttra grew to $1,511.6M[2] from $559.3M[2] and Attruby to $403.0M[3] from $108.2M[3], so Vyndaqel's share of U.S. class revenue fell from 74.8%[derived: 1, 2, 3, 6] to 50.8%[derived: 1, 2, 3, 6] (the first finding). Amvuttra's Part B channel and broader label explain where the gap shows, while Pfizer's filings point to its own payer-contract price cuts; the Part B vs Part D point itself is well known.[4][5]",
+   "text_marked": "The label and channel contrast shows up in the numbers: in H1 2026 U.S. Vyndaqel was flat at $1,975M[1] vs $1,976M[1] while Alnylam's U.S. Amvuttra grew to $1,511.6M[2] from $559.3M[2] and Attruby to $403.0M[3] from $108.2M[3], so Vyndaqel's share of U.S. class revenue fell from 74.8%[derived: 1, 2, 3] to 50.8%[derived: 1, 2, 3] (the first finding). Amvuttra's Part B channel and broader label explain where the gap shows, while Pfizer's filings point to its own payer-contract price cuts; the Part B vs Part D point itself is well known.[4][5]",
    "marker_map": {
     "1": "c_de42636698",
     "2": "c_fd1ff92224",
     "3": "c_d18c418a1c",
     "4": "c_d503e47523",
-    "5": "c_07a56cfbf8",
-    "6": "c_6de0d6e012"
+    "5": "c_07a56cfbf8"
    },
    "cites": [
     {
@@ -2663,33 +2662,19 @@
      "withheld": false,
      "grade": null,
      "speaker": null
-    },
-    {
-     "cite_id": "c_6de0d6e012",
-     "doc_id": "PFE:10k_FY2025.md",
-     "doc_title": "Pfizer 10-K FY2025",
-     "page": 44,
-     "location": "p. 38",
-     "quote": "U.S. $ 3,834 $ 3,547 8",
-     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=44&q=U.S.%20%24%203%2C834%20%24%203%2C547%208",
-     "verify_status": "exact",
-     "withheld": false,
-     "grade": null,
-     "speaker": null
     }
    ],
    "numeric_check": {
     "status": "passed",
-    "checked": 8,
-    "total": 8,
-    "verified": 6,
-    "derived": 2,
+    "checked": 20,
+    "total": 20,
+    "verified": 14,
+    "derived": 6,
     "assumed": 0,
     "unsupported": []
    },
    "math": "Vyndaqel share $1,975M / ($1,975M + $1,511.6M + $403.0M) = 50.8% vs $1,976M / ($1,976M + $559.3M + $108.2M) = 74.8%; class growth $1,246M (+47%).",
-   "math_marked": "Vyndaqel share $1,975M[1] / ($1,975M[1] + $1,511.6M[2] + $403.0M[3]) = 50.8%[derived: 1, 2, 3, 4] vs $1,976M[1] / ($1,976M[1] + $559.3M[2] + $108.2M[3]) = 74.8%[derived: 1, 2, 3, 4]; class growth $1,246M[derived: 1, 2, 3, 4] (+47%[derived: 1, 2, 3, 4]).",
+   "math_marked": "Vyndaqel share $1,975M[1] / ($1,975M[1] + $1,511.6M[2] + $403.0M[3]) = 50.8%[derived: 1, 2, 3] vs $1,976M[1] / ($1,976M[1] + $559.3M[2] + $108.2M[3]) = 74.8%[derived: 1, 2, 3]; class growth $1,246M[derived: 1, 2, 3] (+47%[derived: 1, 2, 3]).",
    "math_numeric_check": {
     "status": "passed",
     "checked": 12,
@@ -2698,6 +2683,194 @@
     "derived": 4,
     "assumed": 0,
     "unsupported": []
+   },
+   "derived": {
+    "class26": {
+     "value": "$3,889.7M",
+     "expr": "a + c + e",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      }
+     },
+     "label": "H1 2026 U.S. ATTR-CM class revenue"
+    },
+    "class25": {
+     "value": "$2,643.5M",
+     "expr": "b + d + f",
+     "operands": {
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      }
+     },
+     "label": "H1 2025 U.S. ATTR-CM class revenue"
+    },
+    "growth": {
+     "value": "$1,246M",
+     "expr": "(a + c + e) - (b + d + f)",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      }
+     },
+     "label": "class growth"
+    },
+    "growth_pct": {
+     "value": "+47%",
+     "expr": "((a + c + e) / (b + d + f) - 1) * 100",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      }
+     },
+     "label": "class growth %"
+    },
+    "share26": {
+     "value": "50.8%",
+     "expr": "a / (a + c + e) * 100",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      }
+     },
+     "label": "Vyndaqel share H1 2026"
+    },
+    "share25": {
+     "value": "74.8%",
+     "expr": "b / (b + d + f) * 100",
+     "operands": {
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      }
+     },
+     "label": "Vyndaqel share H1 2025"
+    }
    }
   },
   "growth_limiter": {
