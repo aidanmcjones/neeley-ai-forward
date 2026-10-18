@@ -42,3 +42,22 @@ Steps: {step, candidate_id, move, type, skeptic_cfo:{round1, round2}, skeptic_de
  verdict: survived|narrowed|killed, reason, cites}.
 
 out/part2/<T>/part2.md is the human-readable twin; out/part2/<T>/rejected.jsonl holds gate failures.
+
+
+## Exporter checks the UI enforces (agent/ui_part2_export.py on the ui branch, built against 319b38a)
+
+A company that fails any hard check is listed in index.missing and not published.
+
+- Every gated block carries numeric_check with status passed or no_numbers: move, move.budget, case_for.cost, case_for.return, each math_steps[], case_for.net (when present), each rejected[].why_passed, each kill_signals[], evidence.lands_because, can_tell, cannot_tell, each promo.pieces[]. passed needs checked > 0 and the checked, total, verified, derived, assumed keys. No failed or unchecked block anywhere.
+- move.budget.amount_usd and people are published only when budget.numeric_check is passed; otherwise they are nulled.
+- drivers[].finding_n must be integers that exist as findings[].n in the Part 1 export for that ticker.
+- rejected has exactly 2 entries, each with move, why_passed and skeptic_lens in ["CFO/math", "Decider/compliance"].
+- kill_signals non-empty, each with signal, threshold and month_window strings.
+- promo.has_material true: label exactly "Student concept, not actual promotional material.", pieces non-empty with body (or body_marked) and numeric_check, claims_map non-empty with claim, support_section and cite, rules_check.labelled and claims_map_present true. The UI withholds the piece body unless rules_check.risks_prominent is also true. has_material false: pieces and claims_map empty.
+- skeptic_summary integer killed, narrowed, survived; candidates_considered integer; unresolved[] entries need a topic.
+- Figure gate, same as Part 1: any figure in prose that no passed numeric_check governs and that is not in the gated set (this record's passed blocks plus the company's Part 1 gated figures) is replaced by "[figure withheld: not gated]". Exempt keys: ids, type, skeptic_lens, month_window, label, decider, support_section, cite fields. So a dollar figure in rejected[].move or drivers[].why with no numeric_check will be withheld: keep those fields figure-free or give them a gated block.
+- Markers: every [n] in a *_marked field must resolve through that record's marker_map to a cite_id in its cites; unresolved markers are dropped.
+- Text: no "Citation(" or "Claim(", no lost dollar sign (" .4B"), no league, score L, "S =" or robustness words anywhere.
+- trace.jsonl: header lenses exactly ["CFO/math", "Decider/compliance"]; verdict in survived, narrowed, killed; killed candidates lose every ungated digit-bearing chunk, so write kill reasons in words.
+- Unknown top-level keys are dropped. claims_map rows' single cite is republished as cites:[cite] under the public withholding rule.
+- Every cites[] entry carries the full evidence object (cite_id, doc_id, page, quote, label, url, verify_status, withheld, grade), never just an id.
