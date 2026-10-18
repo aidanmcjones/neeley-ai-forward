@@ -31,7 +31,7 @@
     ".mol-wrap:nth-of-type(odd) .mol-stage{animation-delay:-2.3s}" +
     ".mol-cap{margin:0;font-size:11px;line-height:1.4;color:rgb(var(--muted))}" +
     ".mol-cap a{color:rgb(var(--purple));text-decoration:none}.mol-cap a:hover{text-decoration:underline}" +
-    ".mol-tag{display:block;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:10px;color:rgb(var(--muted))}" +
+    ".mol-tag{display:block;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11px;color:rgb(var(--muted))}" +
     "@keyframes mol-bob{0%,100%{transform:translateY(0) rotate(-1.5deg) scale(1)}50%{transform:translateY(-5px) rotate(1.5deg) scale(1.03)}}" +
     "@media (prefers-reduced-motion:reduce){.mol-stage{animation:none}}" +
     "@media print{.mol-wrap{display:none}}";

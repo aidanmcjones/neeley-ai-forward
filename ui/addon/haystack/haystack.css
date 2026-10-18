@@ -115,3 +115,33 @@ form .focus-within\:border-purple:focus-within {
   border-color: rgb(var(--hay)) !important;
   box-shadow: 0 0 0 3px rgb(var(--hay) / 0.18) !important;
 }
+
+/* Phones (judges scanning the QR code). The findings table turns into stacked cards so no column is hidden
+   off-screen, the smallest labels come up to 11px, and the tap targets for summaries and source links grow. */
+@media (max-width: 640px) {
+  .ft-scroll { overflow: visible; }
+  .ft-table { display: block; width: auto; min-width: 0; }
+  .ft-table thead { display: none; }
+  .ft-table tbody { display: grid; }
+  .ft-table tbody tr { display: grid; grid-template-columns: 26px minmax(0, 1fr); column-gap: 10px; padding: 14px 0; border-top: 1px solid rgb(var(--line)); }
+  .ft-table tbody tr:first-child { border-top: 0; }
+  .ft-table td { display: block; grid-column: 2; min-width: 0; max-width: none; padding: 0; border: 0 !important; }
+  .ft-table td.ft-n { grid-column: 1; grid-row: 1 / span 5; padding-top: 1px; }
+  .ft-table td.ft-finding { font-size: 15px; line-height: 1.45; }
+  .ft-table td.ft-src, .ft-table td.ft-impact, .ft-table td.ft-peer, .ft-table td.ft-conf { margin-top: 10px; }
+  .ft-table td.ft-src::before, .ft-table td.ft-impact::before, .ft-table td.ft-peer::before, .ft-table td.ft-conf::before {
+    display: block; margin-bottom: 2px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgb(var(--muted));
+  }
+  .ft-table td.ft-src::before { content: "Source"; }
+  .ft-table td.ft-impact::before { content: "Impact"; }
+  .ft-table td.ft-peer::before { content: "Peer comparison"; }
+  .ft-table td.ft-conf::before { content: "Confidence"; }
+  .ft-table td.ft-src a { display: inline; }
+  .ft-table td.ft-src .ft-src-page { margin-left: 6px; }
+  .ft-table td.ft-src .ft-src-page::before { content: ""; }
+  .text-\[10\.5px\] { font-size: 11px !important; }
+  .nd-call, .ft-math-k { font-size: 11px; }
+  details > summary { padding-block: 5px; }
+  .cite-note { padding-block: 2px; }
+  .nd-lead-link, .nd-sec-link { display: inline-block; padding-block: 4px; }
+}
