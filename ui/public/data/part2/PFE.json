@@ -1,0 +1,3845 @@
+{
+ "ticker": "PFE",
+ "company": "Pfizer Inc.",
+ "generated_at": "2026-10-18T05:35:53Z",
+ "move": {
+  "text": "Pfizer commits $50M over 24 months, owned by the U.S. Vyndaqel cardiology commercial team with no new headcount, to scale up its existing U.S. ATTR-CM detection program with scintigraphy referral support at high heart-failure, low-testing cardiology sites, paid as two $25M tranches against matched control sites, with the second tranche decided at month 12 and released only if first-tranche sites show at least 380 more new tafamidis starts than control.",
+  "text_marked": "Pfizer commits $50M[derived: assumption] over 24[assumption] months, owned by the U.S. Vyndaqel cardiology commercial team with no new headcount, to scale up its existing U.S. ATTR-CM detection program with scintigraphy referral support at high heart-failure, low-testing cardiology sites, paid as two $25M[assumption] tranches against matched control sites, with the second tranche decided at month 12[assumption] and released only if first-tranche sites show at least 380[derived: assumption, 2, 3, 4, 5] more new tafamidis starts than control.[1]",
+  "marker_map": {
+   "1": "c_3ebfa09b81",
+   "2": "c_b4cc327a17",
+   "3": "c_f6a23d1f67",
+   "4": "c_92eda2df9c",
+   "5": "c_ca18f4bb19"
+  },
+  "cites": [
+   {
+    "cite_id": "c_3ebfa09b81",
+    "doc_id": "PFE:companies/PFE/proxy_2026.md",
+    "page": 81,
+    "quote": "Launched industry leading, data driven approach to bring awareness to clinical gaps in patient care and provided medical education to activate healthcare providers to",
+    "label": "Pfizer proxy (DEF 14A) 2026-03-12, p. 73",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm#:~:text=Launched%20industry%20leading%2C%20data%20driven%20approach%20to%20bring",
+    "quote_grade": null,
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Pfizer proxy (DEF 14A) 2026-03-12",
+    "location": "p. 73",
+    "speaker": null,
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Acompanies%2FPFE%2Fproxy_2026.md&page=81&q=Launched%20industry%20leading%2C%20data%20driven%20approach%20to%20bring%20awareness%20to%20clinical%20gaps%20in%20patient%20care%20and%20provided%20medical%20education%20to%20activate%20healthcare%20providers%20to",
+    "note": ""
+   },
+   {
+    "cite_id": "c_b4cc327a17",
+    "doc_id": "rx/cms_spend_part2.csv",
+    "page": null,
+    "quote": null,
+    "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+    "url": null,
+    "quote_grade": null,
+    "verify_status": "machine_data",
+    "withheld": true,
+    "grade": null,
+    "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+    "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+    "speaker": null,
+    "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+    "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+    "excerpt": null,
+    "deep_link": null,
+    "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+   },
+   {
+    "cite_id": "c_f6a23d1f67",
+    "doc_id": "PFE:10k_FY2025.md",
+    "page": 43,
+    "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+    "label": "Pfizer 10-K FY2025, p. 37",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+    "quote_grade": null,
+    "verify_status": "substring",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Pfizer 10-K FY2025",
+    "location": "p. 37",
+    "speaker": null,
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+    "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+   },
+   {
+    "cite_id": "c_92eda2df9c",
+    "doc_id": "PFE:10k_FY2025.md",
+    "page": 58,
+    "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+    "label": "Pfizer 10-K FY2025, p. 52",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+    "quote_grade": null,
+    "verify_status": "substring",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Pfizer 10-K FY2025",
+    "location": "p. 52",
+    "speaker": null,
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+    "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+   },
+   {
+    "cite_id": "c_ca18f4bb19",
+    "doc_id": "PFE:10q_2026Q2.md",
+    "page": 39,
+    "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+    "label": "Pfizer 10-Q 2026-06-28, p. 39",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+    "quote_grade": null,
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "doc_title": "Pfizer 10-Q 2026-06-28",
+    "location": "p. 39",
+    "speaker": null,
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+    "note": ""
+   }
+  ],
+  "derived": {
+   "contrib_py": {
+    "value": "$88,401",
+    "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+    "operands": {
+     "g": {
+      "value": 203289.89997,
+      "citation": "c_b4cc327a17"
+     },
+     "a": {
+      "value": 36374,
+      "citation": "c_f6a23d1f67",
+      "text": "36,374",
+      "unit": "USD millions"
+     },
+     "b": {
+      "value": 51663,
+      "citation": "c_92eda2df9c",
+      "text": "51,663",
+      "unit": "USD millions"
+     },
+     "c": {
+      "value": 25.9,
+      "citation": "c_ca18f4bb19",
+      "text": "25.9%",
+      "unit": "%"
+     }
+    },
+    "label": "contribution per patient-year"
+   },
+   "budget": {
+    "value": "$50M",
+    "expr": "2 * t",
+    "operands": {
+     "t": {
+      "value": 25,
+      "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+     }
+    },
+    "label": "total budget"
+   },
+   "be": {
+    "value": "566",
+    "expr": "b * 1000000 / k",
+    "operands": {
+     "b": {
+      "derived": "budget"
+     },
+     "k": {
+      "derived": "contrib_py"
+     }
+    },
+    "label": "break-even incremental patient-years"
+   },
+   "gate": {
+    "value": "380",
+    "expr": "round(e / p / 10) * 10",
+    "operands": {
+     "e": {
+      "derived": "be"
+     },
+     "p": {
+      "value": 1.5,
+      "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+     }
+    },
+    "label": "month-12 starts gate: break-even patient-years over 1.5 patient-years per start, to the nearest ten"
+   }
+  },
+  "assumptions": {
+   "window": {
+    "value": 24,
+    "label": "the case's 24-month decision window"
+   },
+   "tranche": {
+    "value": 25,
+    "unit": "USD millions",
+    "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+   },
+   "gate_month": {
+    "value": 12,
+    "label": "tranche-2 decision month (design choice of the CFO lens)"
+   },
+   "py": {
+    "value": 1.5,
+    "label": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+   }
+  },
+  "numeric_check": {
+   "status": "passed",
+   "checked": 5,
+   "total": 5,
+   "verified": 0,
+   "derived": 2,
+   "assumed": 3,
+   "unsupported": []
+  },
+  "type": "campaign",
+  "budget": {
+   "amount_usd": 50000000,
+   "people": 0,
+   "period": "24 months",
+   "text": "$50M over 24 months, paid as two $25M tranches; no new headcount (the existing U.S. Vyndaqel cardiology team runs it).",
+   "text_marked": "$50M[derived: assumption] over 24[assumption] months, paid as two $25M[assumption] tranches; no new headcount (the existing U.S. Vyndaqel cardiology team runs it).",
+   "marker_map": {},
+   "cites": [],
+   "derived": {
+    "budget": {
+     "value": "$50M",
+     "expr": "2 * t",
+     "operands": {
+      "t": {
+       "value": 25,
+       "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+      }
+     },
+     "label": "total budget"
+    }
+   },
+   "assumptions": {
+    "window": {
+     "value": 24,
+     "label": "the case's 24-month decision window"
+    },
+    "tranche": {
+     "value": 25,
+     "unit": "USD millions",
+     "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+    }
+   },
+   "numeric_check": {
+    "status": "passed",
+    "checked": 3,
+    "total": 3,
+    "verified": 0,
+    "derived": 1,
+    "assumed": 2,
+    "unsupported": []
+   }
+  }
+ },
+ "drivers": [
+  {
+   "finding_n": 1,
+   "why": "This is the sealed Sharpest Needle: U.S. ATTR-CM class growth is going to Attruby and Amvuttra while U.S. Vyndaqel is flat, and the move spends only against new tafamidis starts measured over control sites, so it tests whether detection can win back a share of that growth.",
+   "cites": [
+    {
+     "cite_id": "c_de42636698",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38,
+     "quote": "U.S. $ 1,975 $ 1,976",
+     "label": "Pfizer 10-Q 2026-06-28, p. 38",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 38",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_fd1ff92224",
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "page": 38,
+     "quote": "United States $ 809,079 $ 361,346 $ 447,733 124 % $ 1,511,633 $ 559,310 $ 952,323 170 %",
+     "label": "Alnylam 10-Q 2026-06-30, p. 38",
+     "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Alnylam 10-Q 2026-06-30",
+     "location": "p. 38",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=United%20States%20%24%20809%2C079%20%24%20361%2C346%20%24%20447%2C733%20124%20%25%20%24%201%2C511%2C633%20%24%20559%2C310%20%24%20952%2C323%20170%20%25",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_d18c418a1c",
+     "doc_id": "BBIO:10q_2026Q2.md",
+     "page": 56,
+     "quote": "Net product revenue $ 222,440 $ 71,501 $ 150,939 $ 403,036 $ 108,240",
+     "label": "BridgeBio 10-Q 2026-06-30, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "BridgeBio 10-Q 2026-06-30",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=56&q=Net%20product%20revenue%20%24%20222%2C440%20%24%2071%2C501%20%24%20150%2C939%20%24%20403%2C036%20%24%20108%2C240",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ]
+  },
+  {
+   "finding_n": 4,
+   "why": "The company-wide product revenue deduction rate from this finding is the net-price proxy in the return math, because Pfizer does not disclose tafamidis gross-to-net.",
+   "cites": [
+    {
+     "cite_id": "c_f6a23d1f67",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 43,
+     "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+     "label": "Pfizer 10-K FY2025, p. 37",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 37",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_92eda2df9c",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58,
+     "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+     "label": "Pfizer 10-K FY2025, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ]
+  },
+  {
+   "finding_n": 5,
+   "why": "Ibrance's Medicare negotiated price and patent expiry free promotional budget that can fund this program; it is folded in as a funding note with no separate return, and that saving likely already sits inside Pfizer's announced cost program.",
+   "cites": [
+    {
+     "cite_id": "c_82eaa05fc5",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 52,
+     "quote": "These additional net savings are expected to further reduce costs in SI&A and be realized from 2027 through 2029.",
+     "label": "Pfizer 10-Q 2026-06-28, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=These%20additional%20net%20savings%20are%20expected%20to%20further",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=52&q=These%20additional%20net%20savings%20are%20expected%20to%20further%20reduce%20costs%20in%20SI%26A%20and%20be%20realized%20from%202027%20through%202029.",
+     "note": ""
+    },
+    {
+     "cite_id": "c_f88889ec96",
+     "doc_id": "PFE:companies/PFE/proxy_2026.md",
+     "page": 81,
+     "quote": "Portfolio Acceleration Value Enablement (PAVE) team",
+     "label": "Pfizer proxy (DEF 14A) 2026-03-12, p. 73",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm#:~:text=Portfolio%20Acceleration%20Value%20Enablement%20%28PAVE%29%20team",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer proxy (DEF 14A) 2026-03-12",
+     "location": "p. 73",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Acompanies%2FPFE%2Fproxy_2026.md&page=81&q=Portfolio%20Acceleration%20Value%20Enablement%20%28PAVE%29%20team",
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "case_for": {
+  "cost": {
+   "text": "Cost: two tranches of $25M = $50M over 24 months, about 1.9% of Pfizer's $2.7B 2025 advertising expense, run by the existing U.S. Vyndaqel cardiology team with no new headcount. It can be funded from Ibrance de-promotion, a saving that likely already sits inside Pfizer's announced cost program for 2027 through 2029, so no separate return is claimed for it.",
+   "text_marked": "Cost: two tranches of $25M[assumption] = $50M[derived: assumption] over 24[assumption] months, about 1.9%[derived: assumption, 1] of Pfizer's $2.7B[1] 2025 advertising expense, run by the existing U.S. Vyndaqel cardiology team with no new headcount. It can be funded from Ibrance de-promotion, a saving that likely already sits inside Pfizer's announced cost program for 2027 through 2029, so no separate return is claimed for it.[2]",
+   "marker_map": {
+    "1": "c_ac06f6a559",
+    "2": "c_82eaa05fc5"
+   },
+   "cites": [
+    {
+     "cite_id": "c_ac06f6a559",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 67,
+     "quote": "Advertising expenses totaled approximately $ 2.7 billion in 2025",
+     "label": "Pfizer 10-K FY2025, p. 61",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm#:~:text=Advertising%20expenses%20totaled%20approximately",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 61",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=67&q=Advertising%20expenses%20totaled%20approximately%20%24%202.7%20billion%20in%202025",
+     "note": ""
+    },
+    {
+     "cite_id": "c_82eaa05fc5",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 52,
+     "quote": "These additional net savings are expected to further reduce costs in SI&A and be realized from 2027 through 2029.",
+     "label": "Pfizer 10-Q 2026-06-28, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=These%20additional%20net%20savings%20are%20expected%20to%20further",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=52&q=These%20additional%20net%20savings%20are%20expected%20to%20further%20reduce%20costs%20in%20SI%26A%20and%20be%20realized%20from%202027%20through%202029.",
+     "note": ""
+    }
+   ],
+   "derived": {
+    "budget": {
+     "value": "$50M",
+     "expr": "2 * t",
+     "operands": {
+      "t": {
+       "value": 25,
+       "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+      }
+     },
+     "label": "total budget"
+    },
+    "adv_share": {
+     "value": "1.9%",
+     "unit": "%",
+     "expr": "b / a * 100",
+     "operands": {
+      "b": {
+       "derived": "budget"
+      },
+      "a": {
+       "value": 2700,
+       "citation": "c_ac06f6a559",
+       "text": "2.7 billion",
+       "unit": ""
+      }
+     },
+     "label": "budget as a share of 2025 Pfizer advertising expense"
+    }
+   },
+   "assumptions": {
+    "tranche": {
+     "value": 25,
+     "unit": "USD millions",
+     "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+    },
+    "window": {
+     "value": 24,
+     "label": "the case's 24-month decision window"
+    }
+   },
+   "numeric_check": {
+    "status": "passed",
+    "checked": 5,
+    "total": 5,
+    "verified": 1,
+    "derived": 2,
+    "assumed": 2,
+    "unsupported": []
+   }
+  },
+  "return": {
+   "text": "Return at the month-12 gate: 570 patient-years x $119,299 = $68.0M of net revenue and 570 x $88,401 = $50.4M of contribution inside 24 months, which repays the full $50M before the second tranche is released; second-tranche starts and the tail to the June 1, 2031 generic Vyndamax date are upside and are not counted.",
+   "text_marked": "Return at the month-12 gate: 570[derived: assumption, 2, 3, 4, 5] patient-years x $119,299[derived: 2, 3, 4] = $68.0M[derived: assumption, 2, 3, 4, 5] of net revenue and 570[derived: assumption, 2, 3, 4, 5] x $88,401[derived: 2, 3, 4, 5] = $50.4M[derived: assumption, 2, 3, 4, 5] of contribution inside 24[assumption] months, which repays the full $50M[derived: assumption] before the second tranche is released; second-tranche starts and the tail to the June 1, 2031 generic Vyndamax date are upside and are not counted.[1]",
+   "marker_map": {
+    "1": "c_5cfab1e529",
+    "2": "c_b4cc327a17",
+    "3": "c_f6a23d1f67",
+    "4": "c_92eda2df9c",
+    "5": "c_ca18f4bb19"
+   },
+   "cites": [
+    {
+     "cite_id": "c_5cfab1e529",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 29,
+     "quote": "the generic companies will be permitted to launch generic versions of Vyndamax capsules on June 1, 2031, subject to the outcome of other litigation relating to Vyndamax",
+     "label": "Pfizer 10-Q 2026-06-28, p. 29",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=the%20generic%20companies%20will%20be%20permitted%20to%20launch",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 29",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=29&q=the%20generic%20companies%20will%20be%20permitted%20to%20launch%20generic%20versions%20of%20Vyndamax%20capsules%20on%20June%201%2C%202031%2C%20subject%20to%20the%20outcome%20of%20other%20litigation%20relating%20to%20Vyndamax",
+     "note": ""
+    },
+    {
+     "cite_id": "c_b4cc327a17",
+     "doc_id": "rx/cms_spend_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+     "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+     "speaker": null,
+     "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+     "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_f6a23d1f67",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 43,
+     "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+     "label": "Pfizer 10-K FY2025, p. 37",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 37",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_92eda2df9c",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58,
+     "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+     "label": "Pfizer 10-K FY2025, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_ca18f4bb19",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 39,
+     "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+     "label": "Pfizer 10-Q 2026-06-28, p. 39",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 39",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+     "note": ""
+    }
+   ],
+   "derived": {
+    "net_py": {
+     "value": "$119,299",
+     "expr": "g * (1 - a / (a + b))",
+     "operands": {
+      "g": {
+       "value": 203289.89997,
+       "citation": "c_b4cc327a17"
+      },
+      "a": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      }
+     },
+     "label": "net value per patient-year"
+    },
+    "contrib_py": {
+     "value": "$88,401",
+     "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+     "operands": {
+      "g": {
+       "value": 203289.89997,
+       "citation": "c_b4cc327a17"
+      },
+      "a": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 25.9,
+       "citation": "c_ca18f4bb19",
+       "text": "25.9%",
+       "unit": "%"
+      }
+     },
+     "label": "contribution per patient-year"
+    },
+    "budget": {
+     "value": "$50M",
+     "expr": "2 * t",
+     "operands": {
+      "t": {
+       "value": 25,
+       "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+      }
+     },
+     "label": "total budget"
+    },
+    "be": {
+     "value": "566",
+     "expr": "b * 1000000 / k",
+     "operands": {
+      "b": {
+       "derived": "budget"
+      },
+      "k": {
+       "derived": "contrib_py"
+      }
+     },
+     "label": "break-even incremental patient-years"
+    },
+    "gate": {
+     "value": "380",
+     "expr": "round(e / p / 10) * 10",
+     "operands": {
+      "e": {
+       "derived": "be"
+      },
+      "p": {
+       "value": 1.5,
+       "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+      }
+     },
+     "label": "month-12 starts gate: break-even patient-years over 1.5 patient-years per start, to the nearest ten"
+    },
+    "py_gate": {
+     "value": "570",
+     "expr": "s * p",
+     "operands": {
+      "s": {
+       "derived": "gate"
+      },
+      "p": {
+       "value": 1.5,
+       "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+      }
+     },
+     "label": "patient-years at the gate"
+    },
+    "contrib_gate": {
+     "value": "$50.4M",
+     "expr": "y * k / 1000000",
+     "operands": {
+      "y": {
+       "derived": "py_gate"
+      },
+      "k": {
+       "derived": "contrib_py"
+      }
+     },
+     "label": "contribution at the gate"
+    },
+    "rev_gate": {
+     "value": "$68.0M",
+     "expr": "y * n / 1000000",
+     "operands": {
+      "y": {
+       "derived": "py_gate"
+      },
+      "n": {
+       "derived": "net_py"
+      }
+     },
+     "label": "net revenue at the gate"
+    }
+   },
+   "assumptions": {
+    "window": {
+     "value": 24,
+     "label": "the case's 24-month decision window"
+    },
+    "py": {
+     "value": 1.5,
+     "label": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+    },
+    "tranche": {
+     "value": 25,
+     "unit": "USD millions",
+     "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+    }
+   },
+   "numeric_check": {
+    "status": "passed",
+    "checked": 8,
+    "total": 8,
+    "verified": 0,
+    "derived": 7,
+    "assumed": 1,
+    "unsupported": []
+   }
+  },
+  "math_steps": [
+   {
+    "step": 1,
+    "text": "This answers the sealed Part One Sharpest Needle: the U.S. ATTR-CM class grew $1,246M in H1 2026 while U.S. Vyndaqel was flat at $1,975M vs $1,976M, leaving Pfizer 50.8% of class revenue; the move grows the diagnosed pool at sites where Pfizer still captures tafamidis starts, and prices the leakage to Attruby and Amvuttra by assuming Pfizer keeps only that 50.8% share of found patients.",
+    "text_marked": "This answers the sealed Part One Sharpest Needle: the U.S. ATTR-CM class grew $1,246M[derived: 1, 2, 3] in H1 2026 while U.S. Vyndaqel was flat at $1,975M[1] vs $1,976M[1], leaving Pfizer 50.8%[derived: 1, 2, 3] of class revenue; the move grows the diagnosed pool at sites where Pfizer still captures tafamidis starts, and prices the leakage to Attruby and Amvuttra by assuming Pfizer keeps only that 50.8%[derived: 1, 2, 3] share of found patients.",
+    "marker_map": {
+     "1": "c_de42636698",
+     "2": "c_fd1ff92224",
+     "3": "c_d18c418a1c"
+    },
+    "cites": [
+     {
+      "cite_id": "c_de42636698",
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 38,
+      "quote": "U.S. $ 1,975 $ 1,976",
+      "label": "Pfizer 10-Q 2026-06-28, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-Q 2026-06-28",
+      "location": "p. 38",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_fd1ff92224",
+      "doc_id": "ALNY:10q_2026Q2.md",
+      "page": 38,
+      "quote": "United States $ 809,079 $ 361,346 $ 447,733 124 % $ 1,511,633 $ 559,310 $ 952,323 170 %",
+      "label": "Alnylam 10-Q 2026-06-30, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Alnylam 10-Q 2026-06-30",
+      "location": "p. 38",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=United%20States%20%24%20809%2C079%20%24%20361%2C346%20%24%20447%2C733%20124%20%25%20%24%201%2C511%2C633%20%24%20559%2C310%20%24%20952%2C323%20170%20%25",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_d18c418a1c",
+      "doc_id": "BBIO:10q_2026Q2.md",
+      "page": 56,
+      "quote": "Net product revenue $ 222,440 $ 71,501 $ 150,939 $ 403,036 $ 108,240",
+      "label": "BridgeBio 10-Q 2026-06-30, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "BridgeBio 10-Q 2026-06-30",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=56&q=Net%20product%20revenue%20%24%20222%2C440%20%24%2071%2C501%20%24%20150%2C939%20%24%20403%2C036%20%24%20108%2C240",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     }
+    ],
+    "derived": {
+     "share26": {
+      "value": "50.8%",
+      "unit": "%",
+      "expr": "a / (a + c + e) * 100",
+      "operands": {
+       "a": {
+        "value": 1975,
+        "citation": "c_de42636698",
+        "text": "1,975",
+        "unit": "USD millions"
+       },
+       "c": {
+        "value": 1511.633,
+        "citation": "c_fd1ff92224",
+        "text": "1,511,633",
+        "unit": "USD thousands"
+       },
+       "e": {
+        "value": 403.036,
+        "citation": "c_d18c418a1c",
+        "text": "403,036",
+        "unit": "USD thousands"
+       }
+      },
+      "label": "U.S. Vyndaqel share of H1 2026 U.S. ATTR-CM class revenue (Part 1 finding 1)"
+     },
+     "class_growth": {
+      "value": "$1,246M",
+      "expr": "(a + c + e) - (b + d + f)",
+      "operands": {
+       "a": {
+        "value": 1975,
+        "citation": "c_de42636698",
+        "text": "1,975",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 1976,
+        "citation": "c_de42636698",
+        "text": "1,976",
+        "unit": "USD millions"
+       },
+       "c": {
+        "value": 1511.633,
+        "citation": "c_fd1ff92224",
+        "text": "1,511,633",
+        "unit": "USD thousands"
+       },
+       "d": {
+        "value": 559.31,
+        "citation": "c_fd1ff92224",
+        "text": "559,310",
+        "unit": "USD thousands"
+       },
+       "e": {
+        "value": 403.036,
+        "citation": "c_d18c418a1c",
+        "text": "403,036",
+        "unit": "USD thousands"
+       },
+       "f": {
+        "value": 108.24,
+        "citation": "c_d18c418a1c",
+        "text": "108,240",
+        "unit": "USD thousands"
+       }
+      },
+      "label": "H1 2026 vs H1 2025 U.S. ATTR-CM class revenue growth (Part 1 finding 1)"
+     }
+    },
+    "assumptions": {},
+    "numeric_check": {
+     "status": "passed",
+     "checked": 5,
+     "total": 5,
+     "verified": 2,
+     "derived": 3,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   {
+    "step": 2,
+    "text": "Gross value per patient-year: the CMS Part D 2024 row shows Vyndamax spend of $2,830.8M across 13,925 beneficiaries, $203,290 per beneficiary (2025 and 2026 quarterly Part D rows are not used: they have no public CMS source).",
+    "text_marked": "Gross value per patient-year: the CMS Part D 2024 row shows Vyndamax spend of $2,830.8M[1] across 13,925[2] beneficiaries, $203,290[3] per beneficiary (2025 and 2026 quarterly Part D rows are not used: they have no public CMS source).",
+    "marker_map": {
+     "1": "c_ee1274ab15",
+     "2": "c_75e0c9a649",
+     "3": "c_b4cc327a17"
+    },
+    "cites": [
+     {
+      "cite_id": "c_ee1274ab15",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (total_spend)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (total_spend)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field total_spend re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_75e0c9a649",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (beneficiaries)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (beneficiaries)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field beneficiaries re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_b4cc327a17",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     }
+    ],
+    "derived": {},
+    "assumptions": {},
+    "numeric_check": {
+     "status": "passed",
+     "checked": 3,
+     "total": 3,
+     "verified": 3,
+     "derived": 0,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   {
+    "step": 3,
+    "text": "Net: Pfizer's 2025 product revenue deductions of $36,374M on gross product sales of $88,037M are 41.3% (the Part One gross-to-net finding), so net value per patient-year = $203,290 x (1 - 41.3%) = $119,299; the company-wide rate stands in for tafamidis gross-to-net, which Pfizer does not disclose.",
+    "text_marked": "Net: Pfizer's 2025 product revenue deductions of $36,374M[1] on gross product sales of $88,037M[derived: 1, 2] are 41.3%[derived: 1, 2] (the Part One gross-to-net finding), so net value per patient-year = $203,290[3] x (1 - 41.3%[derived: 1, 2]) = $119,299[derived: 3, 1, 2]; the company-wide rate stands in for tafamidis gross-to-net, which Pfizer does not disclose.",
+    "marker_map": {
+     "1": "c_f6a23d1f67",
+     "2": "c_92eda2df9c",
+     "3": "c_b4cc327a17"
+    },
+    "cites": [
+     {
+      "cite_id": "c_f6a23d1f67",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 37",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_92eda2df9c",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_b4cc327a17",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     }
+    ],
+    "derived": {
+     "ded_rate": {
+      "value": "41.3%",
+      "unit": "%",
+      "expr": "a / (a + b) * 100",
+      "operands": {
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       }
+      },
+      "label": "2025 product revenue deductions as a share of gross product sales (Part 1 finding 4)"
+     },
+     "gross_sales": {
+      "value": "$88,037M",
+      "expr": "a + b",
+      "operands": {
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       }
+      },
+      "label": "2025 gross product sales"
+     },
+     "net_py": {
+      "value": "$119,299",
+      "expr": "g * (1 - a / (a + b))",
+      "operands": {
+       "g": {
+        "value": 203289.89997,
+        "citation": "c_b4cc327a17"
+       },
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       }
+      },
+      "label": "net value per patient-year"
+     }
+    },
+    "assumptions": {},
+    "numeric_check": {
+     "status": "passed",
+     "checked": 7,
+     "total": 7,
+     "verified": 2,
+     "derived": 4,
+     "assumed": 1,
+     "unsupported": []
+    }
+   },
+   {
+    "step": 4,
+    "text": "Contribution: $119,299 x (1 - 25.9%, Pfizer's H1 2026 cost of sales as a share of revenue) = $88,401 per patient-year.",
+    "text_marked": "Contribution: $119,299[derived: 2, 3, 4] x (1 - 25.9%[1], Pfizer's H1 2026 cost of sales as a share of revenue) = $88,401[derived: 2, 3, 4, 1] per patient-year.",
+    "marker_map": {
+     "1": "c_ca18f4bb19",
+     "2": "c_b4cc327a17",
+     "3": "c_f6a23d1f67",
+     "4": "c_92eda2df9c"
+    },
+    "cites": [
+     {
+      "cite_id": "c_ca18f4bb19",
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 39,
+      "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+      "label": "Pfizer 10-Q 2026-06-28, p. 39",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-Q 2026-06-28",
+      "location": "p. 39",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+      "note": ""
+     },
+     {
+      "cite_id": "c_b4cc327a17",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_f6a23d1f67",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 37",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_92eda2df9c",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     }
+    ],
+    "derived": {
+     "net_py": {
+      "value": "$119,299",
+      "expr": "g * (1 - a / (a + b))",
+      "operands": {
+       "g": {
+        "value": 203289.89997,
+        "citation": "c_b4cc327a17"
+       },
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       }
+      },
+      "label": "net value per patient-year"
+     },
+     "contrib_py": {
+      "value": "$88,401",
+      "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+      "operands": {
+       "g": {
+        "value": 203289.89997,
+        "citation": "c_b4cc327a17"
+       },
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       },
+       "c": {
+        "value": 25.9,
+        "citation": "c_ca18f4bb19",
+        "text": "25.9%",
+        "unit": "%"
+       }
+      },
+      "label": "contribution per patient-year"
+     }
+    },
+    "assumptions": {},
+    "numeric_check": {
+     "status": "passed",
+     "checked": 4,
+     "total": 4,
+     "verified": 1,
+     "derived": 2,
+     "assumed": 1,
+     "unsupported": []
+    }
+   },
+   {
+    "step": 5,
+    "text": "Break-even: $50M / $88,401 = 566 incremental tafamidis patient-years (611 at an 8% hurdle), about 4.1% of the 13,925 Vyndamax Part D beneficiaries in 2024.",
+    "text_marked": "Break-even: $50M[derived: assumption] / $88,401[derived: 2, 3, 4, 5] = 566[derived: assumption, 2, 3, 4, 5] incremental tafamidis patient-years (611[derived: assumption, 2, 3, 4, 5] at an 8%[assumption] hurdle), about 4.1%[derived: assumption, 2, 3, 4, 5, 1] of the 13,925[1] Vyndamax Part D beneficiaries in 2024.",
+    "marker_map": {
+     "1": "c_75e0c9a649",
+     "2": "c_b4cc327a17",
+     "3": "c_f6a23d1f67",
+     "4": "c_92eda2df9c",
+     "5": "c_ca18f4bb19"
+    },
+    "cites": [
+     {
+      "cite_id": "c_75e0c9a649",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (beneficiaries)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (beneficiaries)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field beneficiaries re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_b4cc327a17",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_f6a23d1f67",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 37",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_92eda2df9c",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_ca18f4bb19",
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 39,
+      "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+      "label": "Pfizer 10-Q 2026-06-28, p. 39",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-Q 2026-06-28",
+      "location": "p. 39",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+      "note": ""
+     }
+    ],
+    "derived": {
+     "contrib_py": {
+      "value": "$88,401",
+      "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+      "operands": {
+       "g": {
+        "value": 203289.89997,
+        "citation": "c_b4cc327a17"
+       },
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       },
+       "c": {
+        "value": 25.9,
+        "citation": "c_ca18f4bb19",
+        "text": "25.9%",
+        "unit": "%"
+       }
+      },
+      "label": "contribution per patient-year"
+     },
+     "budget": {
+      "value": "$50M",
+      "expr": "2 * t",
+      "operands": {
+       "t": {
+        "value": 25,
+        "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+       }
+      },
+      "label": "total budget"
+     },
+     "be": {
+      "value": "566",
+      "expr": "b * 1000000 / k",
+      "operands": {
+       "b": {
+        "derived": "budget"
+       },
+       "k": {
+        "derived": "contrib_py"
+       }
+      },
+      "label": "break-even incremental patient-years"
+     },
+     "be_hurdle": {
+      "value": "611",
+      "expr": "e * (1 + h / 100)",
+      "operands": {
+       "e": {
+        "derived": "be"
+       },
+       "h": {
+        "value": 8,
+        "assumption": "8% a year pre-tax hurdle; no Pfizer cost of capital is in the index"
+       }
+      },
+      "label": "break-even at the hurdle"
+     },
+     "be_scale": {
+      "value": "4.1%",
+      "unit": "%",
+      "expr": "e / n * 100",
+      "operands": {
+       "e": {
+        "derived": "be"
+       },
+       "n": {
+        "value": 13925,
+        "citation": "c_75e0c9a649"
+       }
+      },
+      "label": "break-even as a share of 2024 Vyndamax Part D beneficiaries"
+     }
+    },
+    "assumptions": {
+     "hurdle": {
+      "value": 8,
+      "unit": "%",
+      "label": "8% a year pre-tax hurdle; no Pfizer cost of capital is in the index"
+     },
+     "tranche": {
+      "value": 25,
+      "unit": "USD millions",
+      "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+     }
+    },
+    "numeric_check": {
+     "status": "passed",
+     "checked": 7,
+     "total": 7,
+     "verified": 1,
+     "derived": 5,
+     "assumed": 1,
+     "unsupported": []
+    }
+   },
+   {
+    "step": 6,
+    "text": "Leakage priced in: if Pfizer keeps only its 50.8% class revenue share of newly found patients, the sites must find about 1,114 class-wide patient-years to yield 566 for tafamidis; the control-site count measures tafamidis starts directly, so leakage is already netted out of the gate.",
+    "text_marked": "Leakage priced in: if Pfizer keeps only its 50.8%[derived: 1, 2, 3] class revenue share of newly found patients, the sites must find about 1,114[derived: assumption, 4, 5, 6, 7, 1, 2, 3] class-wide patient-years to yield 566[derived: assumption, 4, 5, 6, 7] for tafamidis; the control-site count measures tafamidis starts directly, so leakage is already netted out of the gate.",
+    "marker_map": {
+     "1": "c_de42636698",
+     "2": "c_fd1ff92224",
+     "3": "c_d18c418a1c",
+     "4": "c_b4cc327a17",
+     "5": "c_f6a23d1f67",
+     "6": "c_92eda2df9c",
+     "7": "c_ca18f4bb19"
+    },
+    "cites": [
+     {
+      "cite_id": "c_de42636698",
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 38,
+      "quote": "U.S. $ 1,975 $ 1,976",
+      "label": "Pfizer 10-Q 2026-06-28, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-Q 2026-06-28",
+      "location": "p. 38",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_fd1ff92224",
+      "doc_id": "ALNY:10q_2026Q2.md",
+      "page": 38,
+      "quote": "United States $ 809,079 $ 361,346 $ 447,733 124 % $ 1,511,633 $ 559,310 $ 952,323 170 %",
+      "label": "Alnylam 10-Q 2026-06-30, p. 38",
+      "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Alnylam 10-Q 2026-06-30",
+      "location": "p. 38",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=United%20States%20%24%20809%2C079%20%24%20361%2C346%20%24%20447%2C733%20124%20%25%20%24%201%2C511%2C633%20%24%20559%2C310%20%24%20952%2C323%20170%20%25",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_d18c418a1c",
+      "doc_id": "BBIO:10q_2026Q2.md",
+      "page": 56,
+      "quote": "Net product revenue $ 222,440 $ 71,501 $ 150,939 $ 403,036 $ 108,240",
+      "label": "BridgeBio 10-Q 2026-06-30, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "BridgeBio 10-Q 2026-06-30",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=56&q=Net%20product%20revenue%20%24%20222%2C440%20%24%2071%2C501%20%24%20150%2C939%20%24%20403%2C036%20%24%20108%2C240",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_b4cc327a17",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_f6a23d1f67",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 37",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_92eda2df9c",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_ca18f4bb19",
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 39,
+      "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+      "label": "Pfizer 10-Q 2026-06-28, p. 39",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-Q 2026-06-28",
+      "location": "p. 39",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+      "note": ""
+     }
+    ],
+    "derived": {
+     "contrib_py": {
+      "value": "$88,401",
+      "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+      "operands": {
+       "g": {
+        "value": 203289.89997,
+        "citation": "c_b4cc327a17"
+       },
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       },
+       "c": {
+        "value": 25.9,
+        "citation": "c_ca18f4bb19",
+        "text": "25.9%",
+        "unit": "%"
+       }
+      },
+      "label": "contribution per patient-year"
+     },
+     "budget": {
+      "value": "$50M",
+      "expr": "2 * t",
+      "operands": {
+       "t": {
+        "value": 25,
+        "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+       }
+      },
+      "label": "total budget"
+     },
+     "be": {
+      "value": "566",
+      "expr": "b * 1000000 / k",
+      "operands": {
+       "b": {
+        "derived": "budget"
+       },
+       "k": {
+        "derived": "contrib_py"
+       }
+      },
+      "label": "break-even incremental patient-years"
+     },
+     "share26": {
+      "value": "50.8%",
+      "unit": "%",
+      "expr": "a / (a + c + e) * 100",
+      "operands": {
+       "a": {
+        "value": 1975,
+        "citation": "c_de42636698",
+        "text": "1,975",
+        "unit": "USD millions"
+       },
+       "c": {
+        "value": 1511.633,
+        "citation": "c_fd1ff92224",
+        "text": "1,511,633",
+        "unit": "USD thousands"
+       },
+       "e": {
+        "value": 403.036,
+        "citation": "c_d18c418a1c",
+        "text": "403,036",
+        "unit": "USD thousands"
+       }
+      },
+      "label": "U.S. Vyndaqel share of H1 2026 U.S. ATTR-CM class revenue (Part 1 finding 1)"
+     },
+     "class_be": {
+      "value": "1,114",
+      "expr": "e / (s / 100)",
+      "operands": {
+       "e": {
+        "derived": "be"
+       },
+       "s": {
+        "derived": "share26"
+       }
+      },
+      "label": "class-wide found patient-years needed if Pfizer keeps only its class revenue share"
+     }
+    },
+    "assumptions": {
+     "tranche": {
+      "value": 25,
+      "unit": "USD millions",
+      "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+     }
+    },
+    "numeric_check": {
+     "status": "passed",
+     "checked": 3,
+     "total": 3,
+     "verified": 0,
+     "derived": 3,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   {
+    "step": 7,
+    "text": "Gate: 380 tafamidis starts over control by month 12 x 1.5 patient-years each inside the 24 months = 570 patient-years, above the 566 break-even.",
+    "text_marked": "Gate: 380[derived: assumption, 1, 2, 3, 4] tafamidis starts over control by month 12[assumption] x 1.5[assumption] patient-years each inside the 24[assumption] months = 570[derived: assumption, 1, 2, 3, 4] patient-years, above the 566[derived: assumption, 1, 2, 3, 4] break-even.",
+    "marker_map": {
+     "1": "c_b4cc327a17",
+     "2": "c_f6a23d1f67",
+     "3": "c_92eda2df9c",
+     "4": "c_ca18f4bb19"
+    },
+    "cites": [
+     {
+      "cite_id": "c_b4cc327a17",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_f6a23d1f67",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 37",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_92eda2df9c",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_ca18f4bb19",
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 39,
+      "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+      "label": "Pfizer 10-Q 2026-06-28, p. 39",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-Q 2026-06-28",
+      "location": "p. 39",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+      "note": ""
+     }
+    ],
+    "derived": {
+     "contrib_py": {
+      "value": "$88,401",
+      "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+      "operands": {
+       "g": {
+        "value": 203289.89997,
+        "citation": "c_b4cc327a17"
+       },
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       },
+       "c": {
+        "value": 25.9,
+        "citation": "c_ca18f4bb19",
+        "text": "25.9%",
+        "unit": "%"
+       }
+      },
+      "label": "contribution per patient-year"
+     },
+     "budget": {
+      "value": "$50M",
+      "expr": "2 * t",
+      "operands": {
+       "t": {
+        "value": 25,
+        "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+       }
+      },
+      "label": "total budget"
+     },
+     "be": {
+      "value": "566",
+      "expr": "b * 1000000 / k",
+      "operands": {
+       "b": {
+        "derived": "budget"
+       },
+       "k": {
+        "derived": "contrib_py"
+       }
+      },
+      "label": "break-even incremental patient-years"
+     },
+     "gate": {
+      "value": "380",
+      "expr": "round(e / p / 10) * 10",
+      "operands": {
+       "e": {
+        "derived": "be"
+       },
+       "p": {
+        "value": 1.5,
+        "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+       }
+      },
+      "label": "month-12 starts gate: break-even patient-years over 1.5 patient-years per start, to the nearest ten"
+     },
+     "py_gate": {
+      "value": "570",
+      "expr": "s * p",
+      "operands": {
+       "s": {
+        "derived": "gate"
+       },
+       "p": {
+        "value": 1.5,
+        "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+       }
+      },
+      "label": "patient-years at the gate"
+     }
+    },
+    "assumptions": {
+     "gate_month": {
+      "value": 12,
+      "label": "tranche-2 decision month (design choice of the CFO lens)"
+     },
+     "py": {
+      "value": 1.5,
+      "label": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+     },
+     "window": {
+      "value": 24,
+      "label": "the case's 24-month decision window"
+     },
+     "tranche": {
+      "value": 25,
+      "unit": "USD millions",
+      "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+     }
+    },
+    "numeric_check": {
+     "status": "passed",
+     "checked": 6,
+     "total": 6,
+     "verified": 0,
+     "derived": 3,
+     "assumed": 3,
+     "unsupported": []
+    }
+   },
+   {
+    "step": 8,
+    "text": "Price cross-check: ICER's 2024 ATTR-CM report uses an annual net price of $194,291 for tafamidis (annual WAC of $267,987.48 less an assumed 27.5% discount), above the $119,299 used here, so the net value in this case is the lower of the two.",
+    "text_marked": "Price cross-check: ICER's 2024 ATTR-CM report uses an annual net price of $194,291[1] for tafamidis (annual WAC of $267,987.48[1] less an assumed 27.5%[1] discount), above the $119,299[derived: 2, 3, 4] used here, so the net value in this case is the lower of the two.",
+    "marker_map": {
+     "1": "c_b9e529f454",
+     "2": "c_b4cc327a17",
+     "3": "c_f6a23d1f67",
+     "4": "c_92eda2df9c"
+    },
+    "cites": [
+     {
+      "cite_id": "c_b9e529f454",
+      "doc_id": "policy:policy/icer_attr-cm_2024.md",
+      "page": 128,
+      "quote": "$267,987.48 annual supply 27.5% † $194,290.92",
+      "label": "ICER report 2024-10-21, p. E10",
+      "url": "https://icer.org/wp-content/uploads/2025/12/ICER_ATTR-CM_Final-Report_10212024_12MonthCheckUp.pdf#page=128",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "ICER report 2024-10-21",
+      "location": "p. E10",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ficer_attr-cm_2024.md&page=128&q=%24267%2C987.48%20annual%20supply%2027.5%25%20%E2%80%A0%20%24194%2C290.92",
+      "note": ""
+     },
+     {
+      "cite_id": "c_b4cc327a17",
+      "doc_id": "rx/cms_spend_part2.csv",
+      "page": null,
+      "quote": null,
+      "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "url": null,
+      "quote_grade": null,
+      "verify_status": "machine_data",
+      "withheld": true,
+      "grade": null,
+      "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+      "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+      "speaker": null,
+      "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+      "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+      "excerpt": null,
+      "deep_link": null,
+      "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+     },
+     {
+      "cite_id": "c_f6a23d1f67",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 43,
+      "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+      "label": "Pfizer 10-K FY2025, p. 37",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 37",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_92eda2df9c",
+      "doc_id": "PFE:10k_FY2025.md",
+      "page": 58,
+      "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+      "label": "Pfizer 10-K FY2025, p. 52",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-K FY2025",
+      "location": "p. 52",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     }
+    ],
+    "derived": {
+     "net_py": {
+      "value": "$119,299",
+      "expr": "g * (1 - a / (a + b))",
+      "operands": {
+       "g": {
+        "value": 203289.89997,
+        "citation": "c_b4cc327a17"
+       },
+       "a": {
+        "value": 36374,
+        "citation": "c_f6a23d1f67",
+        "text": "36,374",
+        "unit": "USD millions"
+       },
+       "b": {
+        "value": 51663,
+        "citation": "c_92eda2df9c",
+        "text": "51,663",
+        "unit": "USD millions"
+       }
+      },
+      "label": "net value per patient-year"
+     }
+    },
+    "assumptions": {},
+    "numeric_check": {
+     "status": "passed",
+     "checked": 4,
+     "total": 4,
+     "verified": 3,
+     "derived": 1,
+     "assumed": 0,
+     "unsupported": []
+    }
+   }
+  ],
+  "net": {
+   "text": "Net at the gate: $50.4M of contribution less the $50M cost = about $0.4M, so the gate is set at break-even by design: the second $25M is released only after the first sites have shown enough tafamidis starts to pay for the whole program.",
+   "text_marked": "Net at the gate: $50.4M[derived: assumption, 1, 2, 3, 4] of contribution less the $50M[derived: assumption] cost = about $0.4M[derived: assumption, 1, 2, 3, 4], so the gate is set at break-even by design: the second $25M[assumption] is released only after the first sites have shown enough tafamidis starts to pay for the whole program.",
+   "marker_map": {
+    "1": "c_b4cc327a17",
+    "2": "c_f6a23d1f67",
+    "3": "c_92eda2df9c",
+    "4": "c_ca18f4bb19"
+   },
+   "cites": [
+    {
+     "cite_id": "c_b4cc327a17",
+     "doc_id": "rx/cms_spend_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+     "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+     "speaker": null,
+     "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+     "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_f6a23d1f67",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 43,
+     "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+     "label": "Pfizer 10-K FY2025, p. 37",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 37",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_92eda2df9c",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58,
+     "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+     "label": "Pfizer 10-K FY2025, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_ca18f4bb19",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 39,
+     "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+     "label": "Pfizer 10-Q 2026-06-28, p. 39",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 39",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+     "note": ""
+    }
+   ],
+   "derived": {
+    "contrib_py": {
+     "value": "$88,401",
+     "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+     "operands": {
+      "g": {
+       "value": 203289.89997,
+       "citation": "c_b4cc327a17"
+      },
+      "a": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 25.9,
+       "citation": "c_ca18f4bb19",
+       "text": "25.9%",
+       "unit": "%"
+      }
+     },
+     "label": "contribution per patient-year"
+    },
+    "budget": {
+     "value": "$50M",
+     "expr": "2 * t",
+     "operands": {
+      "t": {
+       "value": 25,
+       "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+      }
+     },
+     "label": "total budget"
+    },
+    "be": {
+     "value": "566",
+     "expr": "b * 1000000 / k",
+     "operands": {
+      "b": {
+       "derived": "budget"
+      },
+      "k": {
+       "derived": "contrib_py"
+      }
+     },
+     "label": "break-even incremental patient-years"
+    },
+    "gate": {
+     "value": "380",
+     "expr": "round(e / p / 10) * 10",
+     "operands": {
+      "e": {
+       "derived": "be"
+      },
+      "p": {
+       "value": 1.5,
+       "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+      }
+     },
+     "label": "month-12 starts gate: break-even patient-years over 1.5 patient-years per start, to the nearest ten"
+    },
+    "py_gate": {
+     "value": "570",
+     "expr": "s * p",
+     "operands": {
+      "s": {
+       "derived": "gate"
+      },
+      "p": {
+       "value": 1.5,
+       "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+      }
+     },
+     "label": "patient-years at the gate"
+    },
+    "contrib_gate": {
+     "value": "$50.4M",
+     "expr": "y * k / 1000000",
+     "operands": {
+      "y": {
+       "derived": "py_gate"
+      },
+      "k": {
+       "derived": "contrib_py"
+      }
+     },
+     "label": "contribution at the gate"
+    },
+    "net_gate": {
+     "value": "$0.4M",
+     "expr": "c - b",
+     "operands": {
+      "c": {
+       "derived": "contrib_gate"
+      },
+      "b": {
+       "derived": "budget"
+      }
+     },
+     "label": "net at the gate"
+    }
+   },
+   "assumptions": {
+    "tranche": {
+     "value": 25,
+     "unit": "USD millions",
+     "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+    },
+    "py": {
+     "value": 1.5,
+     "label": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+    }
+   },
+   "numeric_check": {
+    "status": "passed",
+    "checked": 4,
+    "total": 4,
+    "verified": 0,
+    "derived": 3,
+    "assumed": 1,
+    "unsupported": []
+   }
+  }
+ },
+ "rejected": [
+  {
+   "id": "PFE-m02",
+   "move": "Cap Vyndamax rebate depth at current levels in the next Part D and commercial contract years and accept fewer formulary listings.",
+   "type": "pricing_or_coverage",
+   "why_passed": {
+    "text": "Management states and pays for the opposite strategy, 'contracting to maintain access for Vynda, both in Medicare and commercial, where we've maintained 90% access for the brand', and payers already manage both oral ATTR-CM agents with prior authorization on nearly every listing formulary, so a payer offered no further rebate has a ready substitute; the claims series offered as evidence has no public CMS source and the formulary jump was class-wide.",
+    "text_marked": "Management states and pays for the opposite strategy, 'contracting to maintain access for Vynda, both in Medicare and commercial, where we've maintained 90% access for the brand', and payers already manage both oral ATTR-CM agents with prior authorization on nearly every listing formulary, so a payer offered no further rebate has a ready substitute; the claims series offered as evidence has no public CMS source and the formulary jump was class-wide.[1][2][3]",
+    "marker_map": {
+     "1": "c_1057b31e87",
+     "2": "c_dba05b8dd0",
+     "3": "c_debca57c0e"
+    },
+    "cites": [
+     {
+      "cite_id": "c_1057b31e87",
+      "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+      "page": 10,
+      "quote": "contracting to maintain access for Vynda, both in Medicare and commercial, where we've maintained 90% access for the brand",
+      "label": "Pfizer 2025Q2 earnings call (third_party), p. 10",
+      "url": "https://bullfincher.io/companies/pfizer/earnings-call/fy2025-q2",
+      "quote_grade": "A",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "doc_title": "Pfizer 2025Q2 earnings call (third_party)",
+      "location": "p. 10",
+      "speaker": "Aamir Malik",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Acompanies%2FPFE%2Ftranscripts%2F2025Q2_transcript.md&page=10&q=contracting%20to%20maintain%20access%20for%20Vynda%2C%20both%20in%20Medicare%20and%20commercial%2C%20where%20we%27ve%20maintained%2090%25%20access%20for%20the%20brand",
+      "note": ""
+     },
+     {
+      "cite_id": "c_dba05b8dd0",
+      "doc_id": "rx/formulary_history.csv",
+      "page": null,
+      "quote": null,
+      "label": "moat table rx/formulary_history.csv, row rx/formulary_history.csv#1399",
+      "url": "",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "moat table rx/formulary_history.csv",
+      "location": "row rx/formulary_history.csv#1399",
+      "speaker": null,
+      "viewer_link": "",
+      "note": "facts row rx/formulary_history.csv#1399 field prior_auth_share re-read from row_json (verified: verified); machine data: API row 1399 at https://data.cms.gov/sites/default/files/2026-10/062e9434-ed9d-4e83-abbd-4d64eb375949/SPUF_2026_20261007.zip (no page copy); the URL returns the whole dataset or a bulk file, so the row key is the citation (no deep link)"
+     },
+     {
+      "cite_id": "c_debca57c0e",
+      "doc_id": "rx/formulary_history.csv",
+      "page": null,
+      "quote": null,
+      "label": "moat table rx/formulary_history.csv, row rx/formulary_history.csv#1774",
+      "url": "",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "moat table rx/formulary_history.csv",
+      "location": "row rx/formulary_history.csv#1774",
+      "speaker": null,
+      "viewer_link": "",
+      "note": "facts row rx/formulary_history.csv#1774 field prior_auth_share re-read from row_json (verified: verified); machine data: API row 1774 at https://data.cms.gov/sites/default/files/2026-10/062e9434-ed9d-4e83-abbd-4d64eb375949/SPUF_2026_20261007.zip (no page copy); the URL returns the whole dataset or a bulk file, so the row key is the citation (no deep link)"
+     }
+    ],
+    "derived": {},
+    "assumptions": {},
+    "numeric_check": {
+     "status": "passed",
+     "checked": 1,
+     "total": 1,
+     "verified": 1,
+     "derived": 0,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "skeptic_lens": "Decider/compliance"
+  },
+  {
+   "id": "PFE-m03",
+   "move": "Buy Intellia's co-development stake in the CRISPR ATTR-CM therapy nex-z on terms modelled on an earlier antisense licence.",
+   "type": "license_or_acquire",
+   "why_passed": {
+    "text": "The comp was misapplied: the eplontersen licence paid a $200 million upfront and up to $485 million in development and approval milestones but also up to $2.9 billion in sales-related milestones, which the offer dropped; Regeneron keeps 25% of nex-z profits or losses, Intellia's own filings were not indexed, and any return begins only after the June 1, 2031 generic Vyndamax date, outside the 24-month window.",
+    "text_marked": "The comp was misapplied: the eplontersen licence paid a $200 million[1] upfront and up to $485 million[1] in development and approval milestones but also up to $2.9 billion[1] in sales-related milestones, which the offer dropped; Regeneron keeps 25%[2] of nex-z profits or losses, Intellia's own filings were not indexed, and any return begins only after the June 1, 2031 generic Vyndamax date, outside the 24[assumption]-month window.[3]",
+    "marker_map": {
+     "1": "c_35dd9573e7",
+     "2": "c_90e8b8bf60",
+     "3": "c_5cfab1e529"
+    },
+    "cites": [
+     {
+      "cite_id": "c_35dd9573e7",
+      "doc_id": "deals:deals/2021-12-07_0001140361-21-040536.md",
+      "page": 2,
+      "quote": "Under the terms of the agreement, Ionis will receive a $200 million upfront payment, up to $485 million in development and approval milestones, and up to  $2.9 billion in sales-related milestone payments.",
+      "label": "8-K 2021-12-07, file page 2 (no printed page number)",
+      "url": "https://www.sec.gov/Archives/edgar/data/874015/000114036121040536/brhc10031559_ex99-1.htm#:~:text=Under%20the%20terms%20of%20the%20agreement%2C%20Ionis%20will",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "8-K 2021-12-07",
+      "location": "file page 2 (no printed page number)",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=deals%3Adeals%2F2021-12-07_0001140361-21-040536.md&page=2&q=Under%20the%20terms%20of%20the%20agreement%2C%20Ionis%20will%20receive%20a%20%24200%20million%20upfront%20payment%2C%20up%20to%20%24485%20million%20in%20development%20and%20approval%20milestones%2C%20and%20up%20to%20%242.9%20billion%20in%20sales-related%20milestone%20payments.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_90e8b8bf60",
+      "doc_id": "REGN:10k_FY2025.md",
+      "page": 20,
+      "quote": "If nex-z is commercialized, Intellia will lead commercialization activities and we will share in 25% of any profits or losses.",
+      "label": "Regeneron 10-K FY2025, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000008/regn-20251231.htm#:~:text=If%20nex%2Dz%20is%20commercialized%2C%20Intellia%20will%20lead%20commercialization",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Regeneron 10-K FY2025",
+      "location": "p. 19",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=REGN%3A10k_FY2025.md&page=20&q=If%20nex-z%20is%20commercialized%2C%20Intellia%20will%20lead%20commercialization%20activities%20and%20we%20will%20share%20in%2025%25%20of%20any%20profits%20or%20losses.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_5cfab1e529",
+      "doc_id": "PFE:10q_2026Q2.md",
+      "page": 29,
+      "quote": "the generic companies will be permitted to launch generic versions of Vyndamax capsules on June 1, 2031, subject to the outcome of other litigation relating to Vyndamax",
+      "label": "Pfizer 10-Q 2026-06-28, p. 29",
+      "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=the%20generic%20companies%20will%20be%20permitted%20to%20launch",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Pfizer 10-Q 2026-06-28",
+      "location": "p. 29",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=29&q=the%20generic%20companies%20will%20be%20permitted%20to%20launch%20generic%20versions%20of%20Vyndamax%20capsules%20on%20June%201%2C%202031%2C%20subject%20to%20the%20outcome%20of%20other%20litigation%20relating%20to%20Vyndamax",
+      "note": ""
+     }
+    ],
+    "derived": {},
+    "assumptions": {
+     "window": {
+      "value": 24,
+      "label": "the case's 24-month decision window"
+     }
+    },
+    "numeric_check": {
+     "status": "passed",
+     "checked": 5,
+     "total": 5,
+     "verified": 4,
+     "derived": 0,
+     "assumed": 1,
+     "unsupported": []
+    }
+   },
+   "skeptic_lens": "CFO/math"
+  }
+ ],
+ "kill_signals": [
+  {
+   "signal": "Attributable new tafamidis starts at first-tranche sites over matched control sites (Pfizer internal new-patient data; internal checkpoint)",
+   "threshold": "fewer than 380 by month 12",
+   "month_window": "month 12 (October 2027)",
+   "text": "If first-tranche sites show fewer than 380 more new tafamidis starts than matched control sites by month 12, the second $25M is not released and the program stops at the first tranche; this is the primary signal and it is internal, because no public source reports site-level starts.",
+   "text_marked": "If first-tranche sites show fewer than 380[derived: assumption, 1, 2, 3, 4] more new tafamidis starts than matched control sites by month 12[assumption], the second $25M[assumption] is not released and the program stops at the first tranche; this is the primary signal and it is internal, because no public source reports site-level starts.",
+   "marker_map": {
+    "1": "c_b4cc327a17",
+    "2": "c_f6a23d1f67",
+    "3": "c_92eda2df9c",
+    "4": "c_ca18f4bb19"
+   },
+   "cites": [
+    {
+     "cite_id": "c_b4cc327a17",
+     "doc_id": "rx/cms_spend_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+     "location": "row rx/cms_spend_part2.csv#167 (avg_spend_per_bene)",
+     "speaker": null,
+     "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+     "note": "facts row rx/cms_spend_part2.csv#167 field avg_spend_per_bene re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_f6a23d1f67",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 43,
+     "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+     "label": "Pfizer 10-K FY2025, p. 37",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 37",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_92eda2df9c",
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58,
+     "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+     "label": "Pfizer 10-K FY2025, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-K FY2025",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_ca18f4bb19",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 39,
+     "quote": "27.2 % 25.8 % 25.9 % 23.4 %",
+     "label": "Pfizer 10-Q 2026-06-28, p. 39",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 39",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=39&q=27.2%20%25%2025.8%20%25%2025.9%20%25%2023.4%20%25",
+     "note": ""
+    }
+   ],
+   "derived": {
+    "contrib_py": {
+     "value": "$88,401",
+     "expr": "g * (1 - a / (a + b)) * (1 - c / 100)",
+     "operands": {
+      "g": {
+       "value": 203289.89997,
+       "citation": "c_b4cc327a17"
+      },
+      "a": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 25.9,
+       "citation": "c_ca18f4bb19",
+       "text": "25.9%",
+       "unit": "%"
+      }
+     },
+     "label": "contribution per patient-year"
+    },
+    "budget": {
+     "value": "$50M",
+     "expr": "2 * t",
+     "operands": {
+      "t": {
+       "value": 25,
+       "assumption": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+      }
+     },
+     "label": "total budget"
+    },
+    "be": {
+     "value": "566",
+     "expr": "b * 1000000 / k",
+     "operands": {
+      "b": {
+       "derived": "budget"
+      },
+      "k": {
+       "derived": "contrib_py"
+      }
+     },
+     "label": "break-even incremental patient-years"
+    },
+    "gate": {
+     "value": "380",
+     "expr": "round(e / p / 10) * 10",
+     "operands": {
+      "e": {
+       "derived": "be"
+      },
+      "p": {
+       "value": 1.5,
+       "assumption": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+      }
+     },
+     "label": "month-12 starts gate: break-even patient-years over 1.5 patient-years per start, to the nearest ten"
+    }
+   },
+   "assumptions": {
+    "gate_month": {
+     "value": 12,
+     "label": "tranche-2 decision month (design choice of the CFO lens)"
+    },
+    "tranche": {
+     "value": 25,
+     "unit": "USD millions",
+     "label": "tranche size: half of the decider lens's incremental budget; no ATTR-CM campaign cost benchmark is in the index"
+    },
+    "py": {
+     "value": 1.5,
+     "label": "patient-years on drug inside the 24 months for a patient started during months 1 to 12 (mid-year start, before discontinuation or death, which would lower it; CFO lens)"
+    }
+   },
+   "numeric_check": {
+    "status": "passed",
+    "checked": 3,
+    "total": 3,
+    "verified": 0,
+    "derived": 1,
+    "assumed": 2,
+    "unsupported": []
+   }
+  },
+  {
+   "signal": "U.S. Vyndaqel family revenue in Pfizer's Q1 2027 10-Q product table (public)",
+   "threshold": "below $911M, the Q1 2026 level",
+   "month_window": "month 7 (Q1 2027 10-Q, about May 2027)",
+   "text": "If U.S. Vyndaqel family revenue in Pfizer's Q1 2027 10-Q is below $911M, the Q1 2026 level ($1,975M for the first half less $1,064M for the second quarter), stop the scale-up whatever the site count shows; the line mixes price with volume, so it backs up the site count rather than replacing it.",
+   "text_marked": "If U.S. Vyndaqel family revenue in Pfizer's Q1 2027 10-Q is below $911M[derived: 1, 2], the Q1 2026 level ($1,975M[1] for the first half less $1,064M[2] for the second quarter), stop the scale-up whatever the site count shows; the line mixes price with volume, so it backs up the site count rather than replacing it.",
+   "marker_map": {
+    "1": "c_de42636698",
+    "2": "c_d0fd0ba39c"
+   },
+   "cites": [
+    {
+     "cite_id": "c_de42636698",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38,
+     "quote": "U.S. $ 1,975 $ 1,976",
+     "label": "Pfizer 10-Q 2026-06-28, p. 38",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 38",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_d0fd0ba39c",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38,
+     "quote": "U.S. $ 1,064 $ 990 7",
+     "label": "Pfizer 10-Q 2026-06-28, p. 38",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 38",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C064%20%24%20990%207",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ],
+   "derived": {
+    "q1_26": {
+     "value": "$911M",
+     "expr": "a - q",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "q": {
+       "value": 1064,
+       "citation": "c_d0fd0ba39c",
+       "text": "1,064",
+       "unit": "USD millions"
+      }
+     },
+     "label": "Q1 2026 U.S. Vyndaqel family revenue (H1 less Q2)"
+    }
+   },
+   "assumptions": {},
+   "numeric_check": {
+    "status": "passed",
+    "checked": 3,
+    "total": 3,
+    "verified": 2,
+    "derived": 1,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  {
+   "signal": "U.S. Vyndaqel share of U.S. ATTR-CM class revenue, H1 2027, from the Pfizer, Alnylam and BridgeBio 10-Qs (public)",
+   "threshold": "below 45% (H1 2026: 50.8%)",
+   "month_window": "month 10 (Q2 2027 10-Qs, about August 2027)",
+   "text": "If U.S. Vyndaqel's share of U.S. ATTR-CM class revenue (first-half figures in the Pfizer, Alnylam and BridgeBio Q2 2027 10-Q filings) falls below 45% from 50.8% in H1 2026, the class is moving away from tafamidis faster than detection adds patients: stop the second tranche.",
+   "text_marked": "If U.S. Vyndaqel's share of U.S. ATTR-CM class revenue (first-half figures in the Pfizer, Alnylam and BridgeBio Q2 2027 10-Q filings) falls below 45%[assumption] from 50.8%[derived: 1, 2, 3] in H1 2026, the class is moving away from tafamidis faster than detection adds patients: stop the second tranche.",
+   "marker_map": {
+    "1": "c_de42636698",
+    "2": "c_fd1ff92224",
+    "3": "c_d18c418a1c"
+   },
+   "cites": [
+    {
+     "cite_id": "c_de42636698",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38,
+     "quote": "U.S. $ 1,975 $ 1,976",
+     "label": "Pfizer 10-Q 2026-06-28, p. 38",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 38",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_fd1ff92224",
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "page": 38,
+     "quote": "United States $ 809,079 $ 361,346 $ 447,733 124 % $ 1,511,633 $ 559,310 $ 952,323 170 %",
+     "label": "Alnylam 10-Q 2026-06-30, p. 38",
+     "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Alnylam 10-Q 2026-06-30",
+     "location": "p. 38",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=United%20States%20%24%20809%2C079%20%24%20361%2C346%20%24%20447%2C733%20124%20%25%20%24%201%2C511%2C633%20%24%20559%2C310%20%24%20952%2C323%20170%20%25",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_d18c418a1c",
+     "doc_id": "BBIO:10q_2026Q2.md",
+     "page": 56,
+     "quote": "Net product revenue $ 222,440 $ 71,501 $ 150,939 $ 403,036 $ 108,240",
+     "label": "BridgeBio 10-Q 2026-06-30, p. 52",
+     "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "BridgeBio 10-Q 2026-06-30",
+     "location": "p. 52",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=56&q=Net%20product%20revenue%20%24%20222%2C440%20%24%2071%2C501%20%24%20150%2C939%20%24%20403%2C036%20%24%20108%2C240",
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ],
+   "derived": {
+    "share26": {
+     "value": "50.8%",
+     "unit": "%",
+     "expr": "a / (a + c + e) * 100",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      }
+     },
+     "label": "U.S. Vyndaqel share of H1 2026 U.S. ATTR-CM class revenue (Part 1 finding 1)"
+    }
+   },
+   "assumptions": {
+    "share_kill": {
+     "value": 45,
+     "unit": "%",
+     "label": "kill line for H1 2027 class revenue share, about six points under H1 2026 (design choice)"
+    }
+   },
+   "numeric_check": {
+    "status": "passed",
+    "checked": 2,
+    "total": 2,
+    "verified": 0,
+    "derived": 1,
+    "assumed": 1,
+    "unsupported": []
+   }
+  }
+ ],
+ "evidence": {
+  "decider": "U.S. cardiologists who refer suspected ATTR-CM patients for scintigraphy and start therapy (doctor)",
+  "lands_because": {
+   "text": "Cardiologists already prescribe tafamidis at scale: the CMS Part D 2024 row shows 13,925 Vyndamax beneficiaries and 109,373 claims, the label's pivotal trial shows a 30% relative reduction in the risk of death versus placebo, and Pfizer credits U.S. growth to 'continued market expansion'; the move asks them only to test more of the heart-failure patients they already see, at sites where testing lags.",
+   "text_marked": "Cardiologists already prescribe tafamidis at scale: the CMS Part D 2024 row shows 13,925[1] Vyndamax beneficiaries and 109,373[2] claims, the label's pivotal trial shows a 30%[3] relative reduction in the risk of death versus placebo, and Pfizer credits U.S. growth to 'continued market expansion'; the move asks them only to test more of the heart-failure patients they already see, at sites where testing lags.[4]",
+   "marker_map": {
+    "1": "c_75e0c9a649",
+    "2": "c_cadc9dd53b",
+    "3": "c_beb23d27c0",
+    "4": "c_eaa1c72e9c"
+   },
+   "cites": [
+    {
+     "cite_id": "c_75e0c9a649",
+     "doc_id": "rx/cms_spend_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (beneficiaries)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+     "location": "row rx/cms_spend_part2.csv#167 (beneficiaries)",
+     "speaker": null,
+     "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+     "note": "facts row rx/cms_spend_part2.csv#167 field beneficiaries re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_cadc9dd53b",
+     "doc_id": "rx/cms_spend_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (total_claims_or_units)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+     "location": "row rx/cms_spend_part2.csv#167 (total_claims_or_units)",
+     "speaker": null,
+     "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+     "note": "facts row rx/cms_spend_part2.csv#167 field total_claims_or_units re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_beb23d27c0",
+     "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+     "page": 29,
+     "quote": "The hazard ratio from the all-cause mortality Cox-proportional hazard model for pooled VYNDAQEL versus placebo was 0.70 (95% confidence interval [CI] 0.51, 0.96), indicating a 30% relative reduction in the risk of death relative to the placebo group (p=0.026).",
+     "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Vyndaqel label v15 (2026-05-13)",
+     "location": "section 14. CLINICAL STUDIES",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=The%20hazard%20ratio%20from%20the%20all-cause%20mortality%20Cox-proportional%20hazard%20model%20for%20pooled%20VYNDAQEL%20versus%20placebo%20was%200.70%20%2895%25%20confidence%20interval%20%5BCI%5D%200.51%2C%200.96%29%2C%20indicating%20a%2030%25%20relative%20reduction%20in%20the%20risk%20of%20death%20relative%20to%20the%20placebo%20group%20%28p%3D0.026%29.",
+     "note": ""
+    },
+    {
+     "cite_id": "c_eaa1c72e9c",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38,
+     "quote": "continued market expansion in the U.S.",
+     "label": "Pfizer 10-Q 2026-06-28, p. 38",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=continued%20market%20expansion%20in%20the%20U.S.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "location": "p. 38",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=continued%20market%20expansion%20in%20the%20U.S.",
+     "note": ""
+    }
+   ],
+   "derived": {},
+   "assumptions": {},
+   "numeric_check": {
+    "status": "passed",
+    "checked": 3,
+    "total": 3,
+    "verified": 3,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "can_tell": {
+   "text": "The CMS annual rows show strong organic growth, from 7,589 Vyndamax Part D beneficiaries in 2023 to 13,925 in 2024, which is why lift must be measured against control sites; the label supports mortality and hospitalization claims for the approved use; and Pfizer's 2026 proxy confirms a running data-driven ATTR-CM awareness and diagnosis program for this money to scale.",
+   "text_marked": "The CMS annual rows show strong organic growth, from 7,589[1] Vyndamax Part D beneficiaries in 2023 to 13,925[2] in 2024, which is why lift must be measured against control sites; the label supports mortality and hospitalization claims for the approved use; and Pfizer's 2026 proxy confirms a running data-driven ATTR-CM awareness and diagnosis program for this money to scale.[3][4]",
+   "marker_map": {
+    "1": "c_1a9a6d77c8",
+    "2": "c_75e0c9a649",
+    "3": "c_13145511ea",
+    "4": "c_3ebfa09b81"
+   },
+   "cites": [
+    {
+     "cite_id": "c_1a9a6d77c8",
+     "doc_id": "rx/cms_spend_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2023, row rx/cms_spend_part2.csv#166 (beneficiaries)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2023",
+     "location": "row rx/cms_spend_part2.csv#166 (beneficiaries)",
+     "speaker": null,
+     "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+     "note": "facts row rx/cms_spend_part2.csv#166 field beneficiaries re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_75e0c9a649",
+     "doc_id": "rx/cms_spend_part2.csv",
+     "page": null,
+     "quote": null,
+     "label": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024, row rx/cms_spend_part2.csv#167 (beneficiaries)",
+     "url": null,
+     "quote_grade": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "CMS Medicare Part D Spending by Drug (DY2024 release), Vyndamax 2024",
+     "location": "row rx/cms_spend_part2.csv#167 (beneficiaries)",
+     "speaker": null,
+     "viewer_link": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+     "note": "facts row rx/cms_spend_part2.csv#167 field beneficiaries re-read from row_json (scraper verify_status machine_data: CMS Medicare Part D Spending by Drug, DY2024 release, public API row; no page copy). Cited by locator, never quoted or deep-linked.",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_13145511ea",
+     "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+     "page": 1,
+     "quote": "VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+     "label": "Vyndaqel label v15 (2026-05-13), section 1. INDICATIONS AND USAGE",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Vyndaqel label v15 (2026-05-13)",
+     "location": "section 1. INDICATIONS AND USAGE",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=1&q=VYNDAQEL%20and%20VYNDAMAX%20are%20indicated%20for%20the%20treatment%20of%20the%20cardiomyopathy%20of%20wild-type%20or%20hereditary%20transthyretin-mediated%20amyloidosis%20%28ATTR-CM%29%20in%20adults%20to%20reduce%20cardiovascular%20mortality%20and%20cardiovascular-related%20hospitalization.",
+     "note": ""
+    },
+    {
+     "cite_id": "c_3ebfa09b81",
+     "doc_id": "PFE:companies/PFE/proxy_2026.md",
+     "page": 81,
+     "quote": "Launched industry leading, data driven approach to bring awareness to clinical gaps in patient care and provided medical education to activate healthcare providers to",
+     "label": "Pfizer proxy (DEF 14A) 2026-03-12, p. 73",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm#:~:text=Launched%20industry%20leading%2C%20data%20driven%20approach%20to%20bring",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "Pfizer proxy (DEF 14A) 2026-03-12",
+     "location": "p. 73",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Acompanies%2FPFE%2Fproxy_2026.md&page=81&q=Launched%20industry%20leading%2C%20data%20driven%20approach%20to%20bring%20awareness%20to%20clinical%20gaps%20in%20patient%20care%20and%20provided%20medical%20education%20to%20activate%20healthcare%20providers%20to",
+     "note": ""
+    }
+   ],
+   "derived": {},
+   "assumptions": {},
+   "numeric_check": {
+    "status": "passed",
+    "checked": 2,
+    "total": 2,
+    "verified": 2,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "cannot_tell": {
+   "text": "How many U.S. ATTR-CM patients remain undiagnosed: published U.S. estimates run from about 6.1 per million overall to 95.8 per hundred thousand people in the Medicare database depending on method, and Pfizer gives no diagnosed-population count. Whether found patients choose tafamidis over Attruby or Amvuttra, since Pfizer says competition is taking first-line share from treatment-naive patients. Tafamidis's own gross-to-net, which Pfizer does not disclose. And Vyndamax's IRA negotiation status for 2029, which CMS has not yet published.",
+   "text_marked": "How many U.S. ATTR-CM patients remain undiagnosed: published U.S. estimates run from about 6.1[1] per million overall to 95.8[2] per hundred thousand people in the Medicare database depending on method, and Pfizer gives no diagnosed-population count. Whether found patients choose tafamidis over Attruby or Amvuttra, since Pfizer says competition is taking first-line share from treatment-naive patients. Tafamidis's own gross-to-net, which Pfizer does not disclose. And Vyndamax's IRA negotiation status for 2029, which CMS has not yet published.[3]",
+   "marker_map": {
+    "1": "c_5fe6b1ee81",
+    "2": "c_55010393bf",
+    "3": "c_0499bac9ea"
+   },
+   "cites": [
+    {
+     "cite_id": "c_5fe6b1ee81",
+     "doc_id": "epi:epi/sources/pmc_attr_cm_prevalence.md",
+     "page": 5,
+     "quote": "In the US, the prevalence of ATTR-CM was reported to be approximately 6.1 per million",
+     "label": "paper, p. 5",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740649/",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "paper",
+     "location": "p. 5",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=epi%3Aepi%2Fsources%2Fpmc_attr_cm_prevalence.md&page=5&q=In%20the%20US%2C%20the%20prevalence%20of%20ATTR-CM%20was%20reported%20to%20be%20approximately%206.1%20per%20million",
+     "note": ""
+    },
+    {
+     "cite_id": "c_55010393bf",
+     "doc_id": "epi:epi/sources/pmc_jaha_attr_cm_us_trends.md",
+     "page": 1,
+     "quote": "the prevalence per 100 000 individuals was 95.8 (95% CI, 89.2–102.4) in 2022 in the Medicare Database",
+     "label": "paper, p. 1",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13477393/",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "doc_title": "paper",
+     "location": "p. 1",
+     "speaker": null,
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=epi%3Aepi%2Fsources%2Fpmc_jaha_attr_cm_us_trends.md&page=1&q=the%20prevalence%20per%20100%20000%20individuals%20was%2095.8%20%2895%25%20CI%2C%2089.2%E2%80%93102.4%29%20in%202022%20in%20the%20Medicare%20Database",
+     "note": ""
+    },
+    {
+     "cite_id": "c_0499bac9ea",
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 9,
+     "quote": "We are seeing competition that previews taking some first-line share from treatment-naive patients",
+     "label": "Pfizer 2025Q3 earnings call (official), p. 9",
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q3/PFE-USQ_Transcript_2025-11-04.pdf#page=9",
+     "quote_grade": "A",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "doc_title": "Pfizer 2025Q3 earnings call (official)",
+     "location": "p. 9",
+     "speaker": "Aamir Malik",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Atranscripts%2F2025Q3_transcript.md&page=9&q=We%20are%20seeing%20competition%20that%20previews%20taking%20some%20first-line%20share%20from%20treatment-naive%20patients",
+     "note": "speaker attributed from transcript label: Aamir Malik"
+    }
+   ],
+   "derived": {},
+   "assumptions": {},
+   "numeric_check": {
+    "status": "passed",
+    "checked": 2,
+    "total": 2,
+    "verified": 2,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  }
+ },
+ "promo": {
+  "has_material": true,
+  "label": "Student concept, not actual promotional material.",
+  "pieces": [
+   {
+    "title": "HCP leave-behind: Think ATTR-CM in heart failure",
+    "label": "Student concept, not actual promotional material.",
+    "body": "Student concept, not actual promotional material. HCP leave-behind: Think ATTR-CM in heart failure. INDICATION: VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization. EFFICACY: In a randomized, double-blind, placebo-controlled study in 441 patients treated for 30 months, pooled VYNDAQEL reduced the risk of all-cause death by 30% relative to placebo (hazard ratio 0.70, 95% CI 0.51 to 0.96) and reduced cardiovascular-related hospitalizations by 32% (relative risk ratio 0.68). Results favored VYNDAQEL across subgroups except for cardiovascular-related hospitalization frequency in NYHA Class III. IMPORTANT SAFETY INFORMATION (same type size, weight and placement as the efficacy text): There are no contraindications. Adverse reactions: in the 30-month placebo-controlled trial the frequency of adverse events with VYNDAQEL was similar to placebo, and 7% (80 mg), 6% (20 mg) and 6% (placebo) of patients discontinued for an adverse event. Drug interactions: tafamidis inhibits BCRP and may increase exposure to BCRP substrates (for example methotrexate, rosuvastatin, imatinib) and the risk of substrate-related toxicities; monitor and modify the substrate dose if appropriate. Pregnancy: based on animal studies, VYNDAQEL and VYNDAMAX may cause fetal harm; advise pregnant women of the potential risk to a fetus. Lactation: breastfeeding is not recommended during treatment. DOSING: VYNDAQEL 80 mg (four 20-mg capsules) or VYNDAMAX 61 mg (one capsule) orally once daily; VYNDAMAX and VYNDAQEL are not substitutable on a per mg basis. See full Prescribing Information.",
+    "body_marked": "Student concept, not actual promotional material. HCP leave-behind: Think ATTR-CM in heart failure. INDICATION: VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization. EFFICACY: In a randomized, double-blind, placebo-controlled study in 441[12] patients treated for 30[5][16] months, pooled VYNDAQEL reduced the risk of all-cause death by 30%[13] relative to placebo (hazard ratio 0.70[13], 95%[13] CI 0.51[13] to 0.96)[13] and reduced cardiovascular-related hospitalizations by 32%[14] (relative risk ratio 0.68)[14]. Results favored VYNDAQEL across subgroups except for cardiovascular-related hospitalization frequency in NYHA Class III. IMPORTANT SAFETY INFORMATION (same type size, weight and placement as the efficacy text): There are no contraindications. Adverse reactions: in the 30[5][16]-month placebo-controlled trial the frequency of adverse events with VYNDAQEL was similar to placebo, and 7%[6] (80[2][5][6] mg), 6%[6] (20[2][5][6] mg) and 6%[6] (placebo) of patients discontinued for an adverse event. Drug interactions: tafamidis inhibits BCRP and may increase exposure to BCRP substrates (for example methotrexate, rosuvastatin, imatinib) and the risk of substrate-related toxicities; monitor and modify the substrate dose if appropriate. Pregnancy: based on animal studies, VYNDAQEL and VYNDAMAX may cause fetal harm; advise pregnant women of the potential risk to a fetus. Lactation: breastfeeding is not recommended during treatment. DOSING: VYNDAQEL 80[2][5][6] mg (four 20[2][5][6]-mg capsules) or VYNDAMAX 61[2] mg (one capsule) orally once daily; VYNDAMAX and VYNDAQEL are not substitutable on a per mg basis. See full Prescribing Information.[1][3][4][7][8][9][10][11][15]",
+    "marker_map": {
+     "1": "c_13145511ea",
+     "2": "c_1eb52ec97c",
+     "3": "c_d45898338c",
+     "4": "c_f35902dabf",
+     "5": "c_8c9d037588",
+     "6": "c_997025d30b",
+     "7": "c_f48d64e475",
+     "8": "c_478b453f24",
+     "9": "c_7ee4bddec8",
+     "10": "c_e9fe8e0ae5",
+     "11": "c_6396920911",
+     "12": "c_5be6946565",
+     "13": "c_beb23d27c0",
+     "14": "c_d58e4d8a57",
+     "15": "c_8eae1b503f",
+     "16": "c_5b154536bf"
+    },
+    "cites": [
+     {
+      "cite_id": "c_13145511ea",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 1,
+      "quote": "VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 1. INDICATIONS AND USAGE",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 1. INDICATIONS AND USAGE",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=1&q=VYNDAQEL%20and%20VYNDAMAX%20are%20indicated%20for%20the%20treatment%20of%20the%20cardiomyopathy%20of%20wild-type%20or%20hereditary%20transthyretin-mediated%20amyloidosis%20%28ATTR-CM%29%20in%20adults%20to%20reduce%20cardiovascular%20mortality%20and%20cardiovascular-related%20hospitalization.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_1eb52ec97c",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 2,
+      "quote": "The recommended dosage is either VYNDAQEL 80 mg (four 20-mg tafamidis meglumine capsules) orally once daily or VYNDAMAX 61 mg (one 61-mg tafamidis capsule) orally once daily.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 2.1 Recommended Dosage",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 2.1 Recommended Dosage",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=2&q=The%20recommended%20dosage%20is%20either%20VYNDAQEL%2080%20mg%20%28four%2020-mg%20tafamidis%20meglumine%20capsules%29%20orally%20once%20daily%20or%20VYNDAMAX%2061%20mg%20%28one%2061-mg%20tafamidis%20capsule%29%20orally%20once%20daily.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_d45898338c",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 2,
+      "quote": "VYNDAMAX and VYNDAQEL are not substitutable on a per mg basis",
+      "label": "Vyndaqel label v15 (2026-05-13), section 2.1 Recommended Dosage",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 2.1 Recommended Dosage",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=2&q=VYNDAMAX%20and%20VYNDAQEL%20are%20not%20substitutable%20on%20a%20per%20mg%20basis",
+      "note": ""
+     },
+     {
+      "cite_id": "c_f35902dabf",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 5,
+      "quote": "## 4. CONTRAINDICATIONS\n\nNone.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 4. CONTRAINDICATIONS",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 4. CONTRAINDICATIONS",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=5&q=%23%23%204.%20CONTRAINDICATIONS%20None.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_8c9d037588",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 6,
+      "quote": "primarily a 30-month placebo-controlled trial [see Clinical Studies (14) ] . The frequency of adverse events in patients treated with VYNDAQEL 20 mg (n=88) or 80 mg (n=176; administered as four 20-mg capsules) was similar to that with placebo (n=177).",
+      "label": "Vyndaqel label v15 (2026-05-13), section 6.1 Clinical Trials Experience",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 6.1 Clinical Trials Experience",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=6&q=primarily%20a%2030-month%20placebo-controlled%20trial%20%5Bsee%20Clinical%20Studies%20%2814%29%20%5D%20.%20The%20frequency%20of%20adverse%20events%20in%20patients%20treated%20with%20VYNDAQEL%2020%20mg%20%28n%3D88%29%20or%2080%20mg%20%28n%3D176%3B%20administered%20as%20four%2020-mg%20capsules%29%20was%20similar%20to%20that%20with%20placebo%20%28n%3D177%29.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_997025d30b",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 6,
+      "quote": "discontinued the study drug because of an adverse event: 12 (7%), 5 (6%), and 11 (6%) from the VYNDAQEL 80-mg, VYNDAQEL 20-mg, and placebo groups, respectively.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 6.1 Clinical Trials Experience",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 6.1 Clinical Trials Experience",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=6&q=discontinued%20the%20study%20drug%20because%20of%20an%20adverse%20event%3A%2012%20%287%25%29%2C%205%20%286%25%29%2C%20and%2011%20%286%25%29%20from%20the%20VYNDAQEL%2080-mg%2C%20VYNDAQEL%2020-mg%2C%20and%20placebo%20groups%2C%20respectively.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_f48d64e475",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 7,
+      "quote": "Coadministration of tafamidis and drugs that are BCRP substrates may increase the exposure of substrates of this transporter (e.g., methotrexate, rosuvastatin, imatinib) and the risk of the substrate-related toxicities. Monitor for signs of BCRP substrate-related toxicities and modify dosage of the substrate if appropriate.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 7.1 BCRP Substrates",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 7.1 BCRP Substrates",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=7&q=Coadministration%20of%20tafamidis%20and%20drugs%20that%20are%20BCRP%20substrates%20may%20increase%20the%20exposure%20of%20substrates%20of%20this%20transporter%20%28e.g.%2C%20methotrexate%2C%20rosuvastatin%2C%20imatinib%29%20and%20the%20risk%20of%20the%20substrate-related%20toxicities.%20Monitor%20for%20signs%20of%20BCRP%20substrate-related%20toxicities%20and%20modify%20dosage%20of%20the%20substrate%20if%20appropriate.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_478b453f24",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 7,
+      "quote": "Tafamidis inhibits breast cancer resistant protein (BCRP) in humans",
+      "label": "Vyndaqel label v15 (2026-05-13), section 7.1 BCRP Substrates",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 7.1 BCRP Substrates",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=7&q=Tafamidis%20inhibits%20breast%20cancer%20resistant%20protein%20%28BCRP%29%20in%20humans",
+      "note": ""
+     },
+     {
+      "cite_id": "c_7ee4bddec8",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 8,
+      "quote": "Based on findings from animal studies, VYNDAQEL and VYNDAMAX may cause fetal harm when administered to a pregnant woman.",
+      "label": "Vyndaqel label v15 (2026-05-13), section SPL UNCLASSIFIED SECTION",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section SPL UNCLASSIFIED SECTION",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=8&q=Based%20on%20findings%20from%20animal%20studies%2C%20VYNDAQEL%20and%20VYNDAMAX%20may%20cause%20fetal%20harm%20when%20administered%20to%20a%20pregnant%20woman.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_e9fe8e0ae5",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 8,
+      "quote": "Advise pregnant women of the potential risk to a fetus.",
+      "label": "Vyndaqel label v15 (2026-05-13), section SPL UNCLASSIFIED SECTION",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section SPL UNCLASSIFIED SECTION",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=8&q=Advise%20pregnant%20women%20of%20the%20potential%20risk%20to%20a%20fetus.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_6396920911",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 10,
+      "quote": "advise patients that breastfeeding is not recommended during treatment with VYNDAQEL or VYNDAMAX.",
+      "label": "Vyndaqel label v15 (2026-05-13), section SPL UNCLASSIFIED SECTION",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section SPL UNCLASSIFIED SECTION",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=10&q=advise%20patients%20that%20breastfeeding%20is%20not%20recommended%20during%20treatment%20with%20VYNDAQEL%20or%20VYNDAMAX.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_5be6946565",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "Efficacy was demonstrated in a multicenter, international, randomized, double-blind, placebo-controlled study in 441 patients with wild-type or hereditary ATTR-CM (NCT01994889).",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=Efficacy%20was%20demonstrated%20in%20a%20multicenter%2C%20international%2C%20randomized%2C%20double-blind%2C%20placebo-controlled%20study%20in%20441%20patients%20with%20wild-type%20or%20hereditary%20ATTR-CM%20%28NCT01994889%29.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_beb23d27c0",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "The hazard ratio from the all-cause mortality Cox-proportional hazard model for pooled VYNDAQEL versus placebo was 0.70 (95% confidence interval [CI] 0.51, 0.96), indicating a 30% relative reduction in the risk of death relative to the placebo group (p=0.026).",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=The%20hazard%20ratio%20from%20the%20all-cause%20mortality%20Cox-proportional%20hazard%20model%20for%20pooled%20VYNDAQEL%20versus%20placebo%20was%200.70%20%2895%25%20confidence%20interval%20%5BCI%5D%200.51%2C%200.96%29%2C%20indicating%20a%2030%25%20relative%20reduction%20in%20the%20risk%20of%20death%20relative%20to%20the%20placebo%20group%20%28p%3D0.026%29.",
+      "note": ""
+     },
+     {
+      "cite_id": "c_d58e4d8a57",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "There were significantly fewer cardiovascular-related hospitalizations with VYNDAQEL compared with placebo with a reduction in risk of 32% corresponding to a Relative Risk Ratio of 0.68",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=There%20were%20significantly%20fewer%20cardiovascular-related%20hospitalizations%20with%20VYNDAQEL%20compared%20with%20placebo%20with%20a%20reduction%20in%20risk%20of%2032%25%20corresponding%20to%20a%20Relative%20Risk%20Ratio%20of%200.68",
+      "note": ""
+     },
+     {
+      "cite_id": "c_8eae1b503f",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "consistently favored VYNDAQEL versus placebo across all subgroups (wild-type, variant and NYHA Class I & II, and III), except for CV-related hospitalization frequency in NYHA Class III",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=consistently%20favored%20VYNDAQEL%20versus%20placebo%20across%20all%20subgroups%20%28wild-type%2C%20variant%20and%20NYHA%20Class%20I%20%26%20II%2C%20and%20III%29%2C%20except%20for%20CV-related%20hospitalization%20frequency%20in%20NYHA%20Class%20III",
+      "note": ""
+     },
+     {
+      "cite_id": "c_5b154536bf",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "or matching placebo (n=177) once daily for 30 months, in addition to standard of care",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=or%20matching%20placebo%20%28n%3D177%29%20once%20daily%20for%2030%20months%2C%20in%20addition%20to%20standard%20of%20care",
+      "note": ""
+     }
+    ],
+    "derived": {},
+    "assumptions": {},
+    "numeric_check": {
+     "status": "passed",
+     "checked": 18,
+     "total": 18,
+     "verified": 18,
+     "derived": 0,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   {
+    "title": "Unbranded patient awareness card: heart failure that may be amyloid",
+    "label": "Student concept, not actual promotional material.",
+    "body": "Student concept, not actual promotional material. Unbranded patient card: Heart failure that may be amyloid. ATTR-CM, the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis, is a disease of the heart muscle in adults. If you have heart failure, ask your cardiologist whether testing for ATTR-CM is right for you. No product is named; no testimonial, patient or real person appears.",
+    "body_marked": "Student concept, not actual promotional material. Unbranded patient card: Heart failure that may be amyloid. ATTR-CM, the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis, is a disease of the heart muscle in adults. If you have heart failure, ask your cardiologist whether testing for ATTR-CM is right for you. No product is named; no testimonial, patient or real person appears.[1]",
+    "marker_map": {
+     "1": "c_13145511ea"
+    },
+    "cites": [
+     {
+      "cite_id": "c_13145511ea",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 1,
+      "quote": "VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 1. INDICATIONS AND USAGE",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 1. INDICATIONS AND USAGE",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=1&q=VYNDAQEL%20and%20VYNDAMAX%20are%20indicated%20for%20the%20treatment%20of%20the%20cardiomyopathy%20of%20wild-type%20or%20hereditary%20transthyretin-mediated%20amyloidosis%20%28ATTR-CM%29%20in%20adults%20to%20reduce%20cardiovascular%20mortality%20and%20cardiovascular-related%20hospitalization.",
+      "note": ""
+     }
+    ],
+    "derived": {},
+    "assumptions": {},
+    "numeric_check": {
+     "status": "no_numbers",
+     "checked": 0,
+     "total": 0,
+     "verified": 0,
+     "derived": 0,
+     "assumed": 0,
+     "unsupported": []
+    }
+   }
+  ],
+  "claims_map": [
+   {
+    "claim": "Indicated for ATTR-CM in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization (HCP piece)",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 1 Indications and Usage",
+    "cites": [
+     {
+      "cite_id": "c_13145511ea",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 1,
+      "quote": "VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 1. INDICATIONS AND USAGE",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 1. INDICATIONS AND USAGE",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=1&q=VYNDAQEL%20and%20VYNDAMAX%20are%20indicated%20for%20the%20treatment%20of%20the%20cardiomyopathy%20of%20wild-type%20or%20hereditary%20transthyretin-mediated%20amyloidosis%20%28ATTR-CM%29%20in%20adults%20to%20reduce%20cardiovascular%20mortality%20and%20cardiovascular-related%20hospitalization.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "ATTR-CM is the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis, a heart muscle disease in adults (patient card)",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 1 Indications and Usage",
+    "cites": [
+     {
+      "cite_id": "c_13145511ea",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 1,
+      "quote": "VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 1. INDICATIONS AND USAGE",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 1. INDICATIONS AND USAGE",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=1&q=VYNDAQEL%20and%20VYNDAMAX%20are%20indicated%20for%20the%20treatment%20of%20the%20cardiomyopathy%20of%20wild-type%20or%20hereditary%20transthyretin-mediated%20amyloidosis%20%28ATTR-CM%29%20in%20adults%20to%20reduce%20cardiovascular%20mortality%20and%20cardiovascular-related%20hospitalization.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Randomized, double-blind, placebo-controlled study in 441 patients",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 14 Clinical Studies",
+    "cites": [
+     {
+      "cite_id": "c_5be6946565",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "Efficacy was demonstrated in a multicenter, international, randomized, double-blind, placebo-controlled study in 441 patients with wild-type or hereditary ATTR-CM (NCT01994889).",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=Efficacy%20was%20demonstrated%20in%20a%20multicenter%2C%20international%2C%20randomized%2C%20double-blind%2C%20placebo-controlled%20study%20in%20441%20patients%20with%20wild-type%20or%20hereditary%20ATTR-CM%20%28NCT01994889%29.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Treated for 30 months",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 14 Clinical Studies",
+    "cites": [
+     {
+      "cite_id": "c_5b154536bf",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "or matching placebo (n=177) once daily for 30 months, in addition to standard of care",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=or%20matching%20placebo%20%28n%3D177%29%20once%20daily%20for%2030%20months%2C%20in%20addition%20to%20standard%20of%20care",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "30% relative reduction in the risk of all-cause death; hazard ratio 0.70, 95% CI 0.51 to 0.96",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 14 Clinical Studies",
+    "cites": [
+     {
+      "cite_id": "c_beb23d27c0",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "The hazard ratio from the all-cause mortality Cox-proportional hazard model for pooled VYNDAQEL versus placebo was 0.70 (95% confidence interval [CI] 0.51, 0.96), indicating a 30% relative reduction in the risk of death relative to the placebo group (p=0.026).",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=The%20hazard%20ratio%20from%20the%20all-cause%20mortality%20Cox-proportional%20hazard%20model%20for%20pooled%20VYNDAQEL%20versus%20placebo%20was%200.70%20%2895%25%20confidence%20interval%20%5BCI%5D%200.51%2C%200.96%29%2C%20indicating%20a%2030%25%20relative%20reduction%20in%20the%20risk%20of%20death%20relative%20to%20the%20placebo%20group%20%28p%3D0.026%29.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "32% reduction in cardiovascular-related hospitalizations; relative risk ratio 0.68",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 14 Clinical Studies",
+    "cites": [
+     {
+      "cite_id": "c_d58e4d8a57",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "There were significantly fewer cardiovascular-related hospitalizations with VYNDAQEL compared with placebo with a reduction in risk of 32% corresponding to a Relative Risk Ratio of 0.68",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=There%20were%20significantly%20fewer%20cardiovascular-related%20hospitalizations%20with%20VYNDAQEL%20compared%20with%20placebo%20with%20a%20reduction%20in%20risk%20of%2032%25%20corresponding%20to%20a%20Relative%20Risk%20Ratio%20of%200.68",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Results favored VYNDAQEL across subgroups except cardiovascular-related hospitalization frequency in NYHA Class III",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 14 Clinical Studies (Figure 4 text)",
+    "cites": [
+     {
+      "cite_id": "c_8eae1b503f",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 29,
+      "quote": "consistently favored VYNDAQEL versus placebo across all subgroups (wild-type, variant and NYHA Class I & II, and III), except for CV-related hospitalization frequency in NYHA Class III",
+      "label": "Vyndaqel label v15 (2026-05-13), section 14. CLINICAL STUDIES",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 14. CLINICAL STUDIES",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=29&q=consistently%20favored%20VYNDAQEL%20versus%20placebo%20across%20all%20subgroups%20%28wild-type%2C%20variant%20and%20NYHA%20Class%20I%20%26%20II%2C%20and%20III%29%2C%20except%20for%20CV-related%20hospitalization%20frequency%20in%20NYHA%20Class%20III",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "No contraindications",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 4 Contraindications",
+    "cites": [
+     {
+      "cite_id": "c_f35902dabf",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 5,
+      "quote": "## 4. CONTRAINDICATIONS\n\nNone.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 4. CONTRAINDICATIONS",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 4. CONTRAINDICATIONS",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=5&q=%23%23%204.%20CONTRAINDICATIONS%20None.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Adverse event frequency similar to placebo in the 30-month placebo-controlled trial",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 6.1 Adverse Reactions, Clinical Trials Experience",
+    "cites": [
+     {
+      "cite_id": "c_8c9d037588",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 6,
+      "quote": "primarily a 30-month placebo-controlled trial [see Clinical Studies (14) ] . The frequency of adverse events in patients treated with VYNDAQEL 20 mg (n=88) or 80 mg (n=176; administered as four 20-mg capsules) was similar to that with placebo (n=177).",
+      "label": "Vyndaqel label v15 (2026-05-13), section 6.1 Clinical Trials Experience",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 6.1 Clinical Trials Experience",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=6&q=primarily%20a%2030-month%20placebo-controlled%20trial%20%5Bsee%20Clinical%20Studies%20%2814%29%20%5D%20.%20The%20frequency%20of%20adverse%20events%20in%20patients%20treated%20with%20VYNDAQEL%2020%20mg%20%28n%3D88%29%20or%2080%20mg%20%28n%3D176%3B%20administered%20as%20four%2020-mg%20capsules%29%20was%20similar%20to%20that%20with%20placebo%20%28n%3D177%29.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Discontinuation for an adverse event: 7% (80 mg), 6% (20 mg), 6% (placebo)",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 6.1 Adverse Reactions, Clinical Trials Experience",
+    "cites": [
+     {
+      "cite_id": "c_997025d30b",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 6,
+      "quote": "discontinued the study drug because of an adverse event: 12 (7%), 5 (6%), and 11 (6%) from the VYNDAQEL 80-mg, VYNDAQEL 20-mg, and placebo groups, respectively.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 6.1 Clinical Trials Experience",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 6.1 Clinical Trials Experience",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=6&q=discontinued%20the%20study%20drug%20because%20of%20an%20adverse%20event%3A%2012%20%287%25%29%2C%205%20%286%25%29%2C%20and%2011%20%286%25%29%20from%20the%20VYNDAQEL%2080-mg%2C%20VYNDAQEL%2020-mg%2C%20and%20placebo%20groups%2C%20respectively.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Tafamidis inhibits BCRP",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 7.1 BCRP Substrates",
+    "cites": [
+     {
+      "cite_id": "c_478b453f24",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 7,
+      "quote": "Tafamidis inhibits breast cancer resistant protein (BCRP) in humans",
+      "label": "Vyndaqel label v15 (2026-05-13), section 7.1 BCRP Substrates",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 7.1 BCRP Substrates",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=7&q=Tafamidis%20inhibits%20breast%20cancer%20resistant%20protein%20%28BCRP%29%20in%20humans",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "May increase exposure to BCRP substrates (methotrexate, rosuvastatin, imatinib) and substrate-related toxicities; monitor and modify the substrate dose",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 7.1 BCRP Substrates",
+    "cites": [
+     {
+      "cite_id": "c_f48d64e475",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 7,
+      "quote": "Coadministration of tafamidis and drugs that are BCRP substrates may increase the exposure of substrates of this transporter (e.g., methotrexate, rosuvastatin, imatinib) and the risk of the substrate-related toxicities. Monitor for signs of BCRP substrate-related toxicities and modify dosage of the substrate if appropriate.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 7.1 BCRP Substrates",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 7.1 BCRP Substrates",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=7&q=Coadministration%20of%20tafamidis%20and%20drugs%20that%20are%20BCRP%20substrates%20may%20increase%20the%20exposure%20of%20substrates%20of%20this%20transporter%20%28e.g.%2C%20methotrexate%2C%20rosuvastatin%2C%20imatinib%29%20and%20the%20risk%20of%20the%20substrate-related%20toxicities.%20Monitor%20for%20signs%20of%20BCRP%20substrate-related%20toxicities%20and%20modify%20dosage%20of%20the%20substrate%20if%20appropriate.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "May cause fetal harm based on animal studies",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 8.1 Pregnancy, Risk Summary",
+    "cites": [
+     {
+      "cite_id": "c_7ee4bddec8",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 8,
+      "quote": "Based on findings from animal studies, VYNDAQEL and VYNDAMAX may cause fetal harm when administered to a pregnant woman.",
+      "label": "Vyndaqel label v15 (2026-05-13), section SPL UNCLASSIFIED SECTION",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section SPL UNCLASSIFIED SECTION",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=8&q=Based%20on%20findings%20from%20animal%20studies%2C%20VYNDAQEL%20and%20VYNDAMAX%20may%20cause%20fetal%20harm%20when%20administered%20to%20a%20pregnant%20woman.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Advise pregnant women of the potential risk to a fetus",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 8.1 Pregnancy, Risk Summary",
+    "cites": [
+     {
+      "cite_id": "c_e9fe8e0ae5",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 8,
+      "quote": "Advise pregnant women of the potential risk to a fetus.",
+      "label": "Vyndaqel label v15 (2026-05-13), section SPL UNCLASSIFIED SECTION",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section SPL UNCLASSIFIED SECTION",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=8&q=Advise%20pregnant%20women%20of%20the%20potential%20risk%20to%20a%20fetus.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "Breastfeeding is not recommended during treatment",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 8.2 Lactation, Risk Summary",
+    "cites": [
+     {
+      "cite_id": "c_6396920911",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 10,
+      "quote": "advise patients that breastfeeding is not recommended during treatment with VYNDAQEL or VYNDAMAX.",
+      "label": "Vyndaqel label v15 (2026-05-13), section SPL UNCLASSIFIED SECTION",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section SPL UNCLASSIFIED SECTION",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=10&q=advise%20patients%20that%20breastfeeding%20is%20not%20recommended%20during%20treatment%20with%20VYNDAQEL%20or%20VYNDAMAX.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "VYNDAQEL 80 mg (four 20-mg capsules) or VYNDAMAX 61 mg (one capsule) orally once daily",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 2.1 Recommended Dosage",
+    "cites": [
+     {
+      "cite_id": "c_1eb52ec97c",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 2,
+      "quote": "The recommended dosage is either VYNDAQEL 80 mg (four 20-mg tafamidis meglumine capsules) orally once daily or VYNDAMAX 61 mg (one 61-mg tafamidis capsule) orally once daily.",
+      "label": "Vyndaqel label v15 (2026-05-13), section 2.1 Recommended Dosage",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 2.1 Recommended Dosage",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=2&q=The%20recommended%20dosage%20is%20either%20VYNDAQEL%2080%20mg%20%28four%2020-mg%20tafamidis%20meglumine%20capsules%29%20orally%20once%20daily%20or%20VYNDAMAX%2061%20mg%20%28one%2061-mg%20tafamidis%20capsule%29%20orally%20once%20daily.",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "claim": "VYNDAMAX and VYNDAQEL are not substitutable on a per mg basis",
+    "support_section": "Vyndaqel label v15 (2026-05-13), section 2.1 Recommended Dosage",
+    "cites": [
+     {
+      "cite_id": "c_d45898338c",
+      "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+      "page": 2,
+      "quote": "VYNDAMAX and VYNDAQEL are not substitutable on a per mg basis",
+      "label": "Vyndaqel label v15 (2026-05-13), section 2.1 Recommended Dosage",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": null,
+      "doc_title": "Vyndaqel label v15 (2026-05-13)",
+      "location": "section 2.1 Recommended Dosage",
+      "speaker": null,
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=2&q=VYNDAMAX%20and%20VYNDAQEL%20are%20not%20substitutable%20on%20a%20per%20mg%20basis",
+      "note": ""
+     }
+    ]
+   }
+  ],
+  "rules_check": {
+   "approved_uses_only": true,
+   "risks_prominent": true,
+   "h2h_only": true,
+   "no_testimonials": true,
+   "labelled": true,
+   "claims_map_present": true
+  }
+ },
+ "unresolved": [
+  {
+   "topic": "Size and gate of the PFE-m01 scale-up",
+   "cfo_position": "Second round: adopt the decider lens's smaller incremental budget, split into two tranches with matched control sites, and release the second tranche on a month-12 starts gate set at break-even; this halves both the cash at risk and the break-even bar against the CFO lens's own earlier pilot.",
+   "decider_position": "Second round: adopt the CFO lens's original larger controlled pilot, twice the budget, scaled to the strategist's full size only if attributable starts clear a much higher gate, because its own earlier version had no way to attribute lift.",
+   "synthesis_note": "Picked the CFO the second round version: it keeps the decider's attribution concern (matched control sites) at half the cash at risk. Both rounds crossed over, so neither lens's final position is averaged."
+  },
+  {
+   "topic": "Is the month-12 site-level starts gate a kill signal or an internal checkpoint",
+   "cfo_position": "It must be the primary kill signal: own-site baselines and the 10-Q revenue line cannot attribute lift when organic Part D beneficiaries grew strongly, and the revenue line mixes price with volume.",
+   "decider_position": "It is an internal decision gate only, since no public or indexed source reports site-level new starts; the public 10-Q revenue line must sit beside it.",
+   "synthesis_note": "Both are kept: the starts gate is listed first and labelled internal, the 10-Q revenue line and the class-share line are the public signals."
+  },
+  {
+   "topic": "PFE-m02: Vyndaqel twenty-milligram in the 2026Q3 CMS formulary file, blank count or zero",
+   "cfo_position": "The 2026Q3 row has a blank formulary count, not a recorded zero; the product-switch reading is likely but should be cited as missing data.",
+   "decider_position": "Vyndaqel twenty-milligram went to zero formularies while Vyndamax rose, so the listing jump is mostly a product switch.",
+   "synthesis_note": "Opened the 2026Q3 Vyndaqel brand row in verified/rx/formulary_history.csv: the count field is blank, covered_in_any_formulary is False and the scraper's verify_note reads 'not on any Part D formulary in this file'. The m02 kill stands either way."
+  },
+  {
+   "topic": "PFE-m03: has the MAGNITUDE primary completion already slipped",
+   "cfo_position": "A slip past the month-9 threshold is plausible after the enrollment hold but is not shown on any page; the registry row still carries the original date.",
+   "decider_position": "The enrollment hold recorded in Regeneron's 10-K makes the registry date unreliable, so the threshold is likely already breached once the registry updates.",
+   "synthesis_note": "Regeneron's Q2 2026 10-Q (page thirty-three) records only that the FDA removed the hold; no indexed page gives a new completion date. m03 is killed on the CFO comp and timing grounds regardless."
+  },
+  {
+   "topic": "PFE-m04: whether Ibrance de-promotion is new money for m01",
+   "cfo_position": "Severity fatal on the arithmetic alone (the redeployed budget was booked as freed income); Ibrance de-promotion can still serve as the funding note for the m01 budget.",
+   "decider_position": "Severity fatal as well after the second round; even the funding note likely sits inside the announced cost program and the PAVE team's remit, so it must not be presented as new savings.",
+   "synthesis_note": "Both lenses rate m04 fatal in the second round, so severity is settled; the funding note is kept with the decider's caveat in the cost block."
+  }
+ ],
+ "candidates_considered": 4,
+ "skeptic_summary": {
+  "killed": 3,
+  "narrowed": 1,
+  "survived": 0
+ },
+ "figures_withheld": 0,
+ "numeric_summary": {
+  "status": "passed",
+  "checked": 103,
+  "total": 103,
+  "verified": 45,
+  "derived": 39,
+  "assumed": 19,
+  "note": "22 of 23 blocks carry numbers; all page-checked"
+ }
+}

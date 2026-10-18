@@ -1,0 +1,1522 @@
+[
+  {
+    "ticker": "AMGN",
+    "L": 0.5431709860203475,
+    "top5_sum": 0.7449300651028833,
+    "N_eff": 2.1874710585563335,
+    "blocks": {
+      "A": 0.23749368982229616,
+      "P": 0.4388294338976556,
+      "T": 0.06860694138293151
+    },
+    "largest_share": 0.3188134040334318,
+    "n_blocks": 3,
+    "n_findings": 54,
+    "n_withheld": 22,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "bc852b02400d",
+        "S": 0.23749368982229616,
+        "kind": "receivables_outpace_revenue",
+        "family": "receivables outpace revenue",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Receivables +17.5% YoY vs revenue +9.5% (Q2 2026); gap +8.0 pts; peer median -0.3 pts, z +1.2",
+        "M": 4.981165944896254,
+        "O": 0.7580021182121116,
+        "E": 1.0,
+        "pi": 0.0629,
+        "flags": [
+          "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "e78dad58497e",
+        "S": 0.22192363871032242,
+        "kind": "mfn_medicaid",
+        "family": "contractual: MFN agreement",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "AMGN's MFN agreement (2025-12-19) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 73.0%), about $181M a year.",
+        "M": 0.7758234140997152,
+        "O": 0.28604916360747906,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+          "tariff exposure proxy 0.417 (sites outside US 57.1% x US revenue 73.0%), exempt until 2029-01-20: not scored",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "a4b34956387a",
+        "S": 0.21690579518733322,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Otezla's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $994.0M; base list discount 65%.",
+        "M": 1.109222976356558,
+        "O": 0.19554751371973852,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (0.3, 0.4, 0.5) x list discount (rebated class; KQ2 cross-check, review A15)",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "4c3a0c3d5f1d",
+        "S": 0.03563826446916897,
+        "kind": "risk_added",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024 (topics: ira, gtn, 340b, litigation, supply, pricing)",
+        "M": 4.981165944896254,
+        "O": 0.27517174404351386,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "9c705c10b1e3",
+        "S": 0.03296867691376254,
+        "kind": "risk_intensified",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "stronger wording in risk factors vs FY2024 (topics: supply, ai); hedges dropped: could",
+        "M": 4.981165944896254,
+        "O": 0.3931024914907341,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "bc852b02400d",
+      "S": 0.23749368982229616,
+      "sentence": "Receivables +17.5% YoY vs revenue +9.5% (Q2 2026); gap +8.0 pts; peer median -0.3 pts, z +1.2",
+      "O": 0.7580021182121116,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "receivables_outpace_revenue",
+      "flags": [
+        "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
+        "c_f n/a (no consensus line item for this family)",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 1,
+    "n_strict_needle_candidates": 3,
+    "tariff_exposure": {
+      "proxy": 0.4168300000000001,
+      "pct_mfg_sites_outside_us": 57.1,
+      "us_revenue_share_pct": 73.0,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.0894,
+    "old_rank": 5,
+    "constants": {
+      "Rev_TTM": 38095.0,
+      "t": 0.15009234956741518,
+      "D": 544.0,
+      "sigma_EPS": 0.34516041819089605,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 1
+  },
+  {
+    "ticker": "GILD",
+    "L": 0.4066973683637218,
+    "top5_sum": 1.1659642031355222,
+    "N_eff": 1.0464232965386775,
+    "blocks": {
+      "P": 1.1395002579931517,
+      "T": 0.026463945142370444
+    },
+    "largest_share": 0.9242181231873365,
+    "n_blocks": 2,
+    "n_findings": 37,
+    "n_withheld": 13,
+    "comparable": true,
+    "company_flags": [
+      "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
+    ],
+    "top": [
+      {
+        "id": "49af018377a3",
+        "S": 1.0776052475255307,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; base list discount 66%.",
+        "M": 3.654987292334416,
+        "O": 0.2948314621464173,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "no same-class MFP analog: d = cycle 1-2 smallest / median / largest (deviation, see notes)",
+          "adjacent to GILD's starter thread (HIV franchise durability): human check before pitching",
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (1.0, 1.0, 1.0) x list discount (low-rebate class; KQ2 cross-check, review A15)",
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f untestable (FY consensus first appears after the disclosure)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "f87b31bee9cb",
+        "S": 0.061895010467621074,
+        "kind": "mfn_medicaid",
+        "family": "contractual: MFN agreement",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "GILD's MFN agreement (2025-12-19) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 70.9%), about $140M a year.",
+        "M": 0.21637892482200832,
+        "O": 0.28604916360747906,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+          "tariff exposure proxy 0.236 (sites outside US 33.3% x US revenue 70.9%), exempt until 2029-01-20: not scored",
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "573cebabc205",
+        "S": 0.010670311599737744,
+        "kind": "mdna_added",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in MD&A vs FY2024 (topics: generic, litigation, supply)",
+        "M": 1.430407278555741,
+        "O": 0.2869033974112181,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "aaff49fde3a8",
+        "S": 0.00789681677131635,
+        "kind": "risk_intensified",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "stronger wording in risk factors vs FY2024 (topics: supply); hedges dropped: may",
+        "M": 1.430407278555741,
+        "O": 0.3278895970413922,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "c8afab4529a0",
+        "S": 0.00789681677131635,
+        "kind": "risk_added",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024 (topics: supply)",
+        "M": 1.430407278555741,
+        "O": 0.3278895970413922,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "49af018377a3",
+      "S": 1.0776052475255307,
+      "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; base list discount 66%.",
+      "O": 0.2948314621464173,
+      "E": 1.0,
+      "confidence": "HIGH",
+      "kind": "ira_selected",
+      "flags": [
+        "no same-class MFP analog: d = cycle 1-2 smallest / median / largest (deviation, see notes)",
+        "adjacent to GILD's starter thread (HIV franchise durability): human check before pitching",
+        "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+        "IRA net hit = (1.0, 1.0, 1.0) x list discount (low-rebate class; KQ2 cross-check, review A15)",
+        "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+        "c_f untestable (FY consensus first appears after the disclosure)",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "provisional",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 0,
+    "tariff_exposure": {
+      "proxy": 0.236097,
+      "pct_mfg_sites_outside_us": 33.3,
+      "us_revenue_share_pct": 70.9,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.1079,
+    "old_rank": 4,
+    "constants": {
+      "Rev_TTM": 30457.0,
+      "t": 0.18535431018433027,
+      "D": 1243.0,
+      "sigma_EPS": 0.40312174694147046,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 2
+  },
+  {
+    "ticker": "JNJ",
+    "L": 0.19495788074919523,
+    "top5_sum": 0.3263571291455357,
+    "N_eff": 1.7921276724638888,
+    "blocks": {
+      "P": 0.23224906815243593,
+      "T": 0.07011682388315812,
+      "A": 0.023991237109941686
+    },
+    "largest_share": 0.7116408603069515,
+    "n_blocks": 3,
+    "n_findings": 45,
+    "n_withheld": 21,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "00b6e9d6910d",
+        "S": 0.23224906815243593,
+        "kind": "mfn_medicaid",
+        "family": "contractual: MFN agreement",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "JNJ's MFN agreement (2026-01-08) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 57.1%), about $363M a year.",
+        "M": 0.8093787865950914,
+        "O": 0.28694731317269295,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+          "tariff exposure proxy 0.428 (sites outside US 75.0% x US revenue 57.1%), exempt until 2029-01-20: not scored",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "a177107eb269",
+        "S": 0.03578445087581753,
+        "kind": "risk_added",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024 (topics: pricing)",
+        "M": 6.643649272549164,
+        "O": 0.31990641424202576,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "0dbc04560b20",
+        "S": 0.023991237109941686,
+        "kind": "inventory_outpaces_revenue",
+        "family": "inventory outpaces revenue (backtest flag not fired: pi_min)",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Inventory +12.9% YoY vs revenue +6.6% (Q2 2026); gap +6.3 pts; peer median -4.5 pts, z +0.7",
+        "M": 6.643649272549164,
+        "O": 0.6565733577962907,
+        "E": 1.0,
+        "pi": 0.0055,
+        "flags": [
+          "stage split: inventory note with a stage split not found",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "pi downgraded to pi_min: row does not satisfy the backtest flag inventory_outpaces_revenue (review A1)"
+        ]
+      },
+      {
+        "id": "d46b18f40a3d",
+        "S": 0.021819787119400937,
+        "kind": "risk_added",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024",
+        "M": 6.643649272549164,
+        "O": 0.19506488673294253,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "0d01db7ededb",
+        "S": 0.012512585887939654,
+        "kind": "mdna_intensified",
+        "family": "MD&A change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "stronger wording in MD&A vs FY2024 (topics: pricing, china); new risk vocabulary: substantial; new figures: $9.3, 1.1%, 2025; new topics: pricing",
+        "M": 6.643649272549164,
+        "O": 0.3121038187727081,
+        "E": 0.745,
+        "pi": 0.0081,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "0dbc04560b20",
+      "S": 0.023991237109941686,
+      "sentence": "Inventory +12.9% YoY vs revenue +6.6% (Q2 2026); gap +6.3 pts; peer median -4.5 pts, z +0.7",
+      "O": 0.6565733577962907,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "inventory_outpaces_revenue",
+      "flags": [
+        "stage split: inventory note with a stage split not found",
+        "c_f n/a (no consensus line item for this family)",
+        "s_f no data (FINRA short interest not in moat)",
+        "pi downgraded to pi_min: row does not satisfy the backtest flag inventory_outpaces_revenue (review A1)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 1,
+    "n_strict_needle_candidates": 1,
+    "tariff_exposure": {
+      "proxy": 0.42825,
+      "pct_mfg_sites_outside_us": 75.0,
+      "us_revenue_share_pct": 57.1,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.0696,
+    "old_rank": 8,
+    "constants": {
+      "Rev_TTM": 97929.0,
+      "t": 0.16506588347356724,
+      "D": 2440.1,
+      "sigma_EPS": 0.14570027943889252,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 3
+  },
+  {
+    "ticker": "AZN",
+    "L": 0.11273699299367253,
+    "top5_sum": 0.2187244883980299,
+    "N_eff": 1.546287667458382,
+    "blocks": {
+      "A": 0.16860190453381765,
+      "P": 0.050122583864212235
+    },
+    "largest_share": 0.2643186737997407,
+    "n_blocks": 2,
+    "n_findings": 52,
+    "n_withheld": 11,
+    "comparable": true,
+    "company_flags": [
+      "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+      "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used"
+    ],
+    "top": [
+      {
+        "id": "c491682c6c0b",
+        "S": 0.05781296670089404,
+        "kind": "dso_rising",
+        "family": "days sales outstanding",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "DSO 64 days vs 56 a year earlier (+13.5%) (FY2025); peer median 72 days, z -0.7",
+        "M": 1.657517204238748,
+        "O": 0.4098619963017402,
+        "E": 1.0,
+        "pi": 0.0851,
+        "flags": [
+          "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "2d04774ac231",
+        "S": 0.050122583864212235,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Calquence's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,614.2M; base list discount 40%.",
+        "M": 0.5980781522529616,
+        "O": 0.08380607730845938,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "company filing sentence naming the selection not found: n_ind = 1",
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (1.0, 1.0, 1.0) x list discount (low-rebate class; KQ2 cross-check, review A15)",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "9f3934dba134",
+        "S": 0.04273132321370429,
+        "kind": "receivables_outpace_revenue",
+        "family": "receivables outpace revenue",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Receivables +23.3% YoY vs revenue +8.6% (FY2025); gap +14.7 pts; peer median -0.3 pts, z +2.1",
+        "M": 1.657517204238748,
+        "O": 0.4098619963017402,
+        "E": 1.0,
+        "pi": 0.0629,
+        "flags": [
+          "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "a459fbf4164d",
+        "S": 0.04273132321370429,
+        "kind": "rec_gap_peer_outlier",
+        "family": "receivables outpace revenue",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Receivables-vs-revenue growth gap +14.7 pts (FY2025) vs peers; peer median -0.3 pts, z +2.1",
+        "M": 1.657517204238748,
+        "O": 0.4098619963017402,
+        "E": 1.0,
+        "pi": 0.0629,
+        "flags": [
+          "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "b0573ba3b531",
+        "S": 0.025326291405515042,
+        "kind": "inventory_outpaces_revenue",
+        "family": "inventory outpaces revenue",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Inventory +24.0% YoY vs revenue +8.6% (FY2025); gap +15.4 pts; peer median -4.5 pts, z +1.3",
+        "M": 1.657517204238748,
+        "O": 0.3278895970413922,
+        "E": 1.0,
+        "pi": 0.0466,
+        "flags": [
+          "stage split: inventory note with a stage split not found",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "c491682c6c0b",
+      "S": 0.05781296670089404,
+      "sentence": "DSO 64 days vs 56 a year earlier (+13.5%) (FY2025); peer median 72 days, z -0.7",
+      "O": 0.4098619963017402,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "dso_rising",
+      "flags": [
+        "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
+        "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+        "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
+        "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+        "c_f n/a (no consensus line item for this family)",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "provisional",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 0,
+    "tariff_exposure": {
+      "proxy": 0.18115199999999998,
+      "pct_mfg_sites_outside_us": 44.4,
+      "us_revenue_share_pct": 40.8,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.19,
+    "old_rank": 2,
+    "constants": {
+      "Rev_TTM": 58739.0,
+      "t": 0.1748911465892598,
+      "D": 1562.0,
+      "sigma_EPS": 0.5407666515499744,
+      "currency": "USD",
+      "annual_only": true
+    },
+    "rank": 4
+  },
+  {
+    "ticker": "MRK",
+    "L": 0.09696044830834485,
+    "top5_sum": 0.14665520401388543,
+    "N_eff": 1.983436911638633,
+    "blocks": {
+      "A": 0.08002843735311137,
+      "T": 0.06662676666077405
+    },
+    "largest_share": 0.5456910846855063,
+    "n_blocks": 2,
+    "n_findings": 51,
+    "n_withheld": 25,
+    "comparable": true,
+    "company_flags": [
+      "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
+    ],
+    "top": [
+      {
+        "id": "0591acf35698",
+        "S": 0.08002843735311137,
+        "kind": "gross_margin_drop",
+        "family": "gross margin drop",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1%, z -0.1",
+        "M": 2.482931657630372,
+        "O": 0.7637779566969947,
+        "E": 1.0,
+        "pi": 0.0422,
+        "flags": [
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "11c157283e99",
+        "S": 0.026459651302469443,
+        "kind": "mdna_added",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in MD&A vs FY2024 (topics: litigation)",
+        "M": 2.482931657630372,
+        "O": 0.4098619963017402,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "076da93e4dc6",
+        "S": 0.013707464055835172,
+        "kind": "risk_added",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024 (topics: gtn, pricing)",
+        "M": 2.482931657630372,
+        "O": 0.3278895970413922,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "0ec2980ec276",
+        "S": 0.013229825651234721,
+        "kind": "mdna_added",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in MD&A vs FY2024 (topics: generic, litigation, pricing)",
+        "M": 2.482931657630372,
+        "O": 0.2049309981508701,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "d0c5187293ee",
+        "S": 0.013229825651234721,
+        "kind": "risk_modified",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "reworded paragraph in risk factors vs FY2024 (topics: generic, litigation, pricing); new figures: 2029",
+        "M": 2.482931657630372,
+        "O": 0.2049309981508701,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "0591acf35698",
+      "S": 0.08002843735311137,
+      "sentence": "Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1%, z -0.1",
+      "O": 0.7637779566969947,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "gross_margin_drop",
+      "flags": [
+        "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+        "c_f n/a (no consensus line item for this family)",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 3,
+    "tariff_exposure": {
+      "proxy": 0.383284,
+      "pct_mfg_sites_outside_us": 68.2,
+      "us_revenue_share_pct": 56.2,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.1398,
+    "old_rank": 3,
+    "constants": {
+      "Rev_TTM": 66569.0,
+      "t": 0.18535431018433027,
+      "D": 2470.0,
+      "sigma_EPS": 0.25544079548889603,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 5
+  },
+  {
+    "ticker": "ABBV",
+    "L": 0.08806346456165078,
+    "top5_sum": 0.23156393272485118,
+    "N_eff": 1.1408961256452168,
+    "blocks": {
+      "P": 0.21625296227534557,
+      "T": 0.015310970449505598
+    },
+    "largest_share": 0.32090089486076595,
+    "n_blocks": 2,
+    "n_findings": 35,
+    "n_withheld": 16,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "63ebf779aa7c",
+        "S": 0.07430907322888294,
+        "kind": "mfn_medicaid",
+        "family": "contractual: MFN agreement",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "ABBV's MFN agreement (2026-01-12) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 76.2%), about $319M a year.",
+        "M": 0.23715962367192212,
+        "O": 0.31332936053094507,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+          "tariff exposure proxy 0.343 (sites outside US 45.0% x US revenue 76.2%), exempt until 2029-01-20: not scored",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "e7af05b8c437",
+        "S": 0.07246725232310079,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Linzess's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,937.9M; base list discount 75%.",
+        "M": 0.432350819000724,
+        "O": 0.16761215461691872,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (0.3, 0.4, 0.5) x list discount (rebated class; KQ2 cross-check, review A15)",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "702ebc520f15",
+        "S": 0.04565650309171858,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Botox's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,143.1M; base list discount 66%.",
+        "M": 0.206475038357315,
+        "O": 0.22112359660981296,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (0.3, 0.4, 0.5) x list discount (rebated class; KQ2 cross-check, review A15)",
+          "c_f untestable (FY consensus first appears after the disclosure)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "859993953701",
+        "S": 0.02382013363164326,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Vraylar's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,085.8M; base list discount 44%.",
+        "M": 0.14211459596163953,
+        "O": 0.16761215461691872,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (0.3, 0.4, 0.5) x list discount (rebated class; KQ2 cross-check, review A15)",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "a730473ccdf9",
+        "S": 0.015310970449505598,
+        "kind": "mdna_added",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in MD&A vs FY2024 (topics: litigation)",
+        "M": 1.4587362292329675,
+        "O": 0.4036865216354242,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "63ebf779aa7c",
+      "S": 0.07430907322888294,
+      "sentence": "ABBV's MFN agreement (2026-01-12) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 76.2%), about $319M a year.",
+      "O": 0.31332936053094507,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "mfn_medicaid",
+      "flags": [
+        "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+        "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+        "tariff exposure proxy 0.343 (sites outside US 45.0% x US revenue 76.2%), exempt until 2029-01-20: not scored",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "provisional",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 0,
+    "tariff_exposure": {
+      "proxy": 0.3429,
+      "pct_mfg_sites_outside_us": 45.0,
+      "us_revenue_share_pct": 76.2,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.075,
+    "old_rank": 7,
+    "constants": {
+      "Rev_TTM": 64386.0,
+      "t": 0.27393953327968734,
+      "D": 1771.0,
+      "sigma_EPS": 0.522733201547405,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 6
+  },
+  {
+    "ticker": "BMY",
+    "L": 0.06983793283088946,
+    "top5_sum": 0.18300185823732298,
+    "N_eff": 1.1448725193870097,
+    "blocks": {
+      "P": 0.1705801478676422,
+      "T": 0.012421710369680764
+    },
+    "largest_share": 0.4290974148277777,
+    "n_blocks": 2,
+    "n_findings": 39,
+    "n_withheld": 13,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "7f7c26eaeb9a",
+        "S": 0.07852562427831475,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Pomalyst's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $2,069.1M; base list discount 60%.",
+        "M": 0.9369920034473249,
+        "O": 0.08380607730845938,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (1.0, 1.0, 1.0) x list discount (low-rebate class; KQ2 cross-check, review A15)",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "9bf2ba315ff8",
+        "S": 0.05003712791606488,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Orencia's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $2,450.1M; base list discount 66%.",
+        "M": 0.4525715815337306,
+        "O": 0.1105617983049065,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (0.3, 0.4, 0.5) x list discount (rebated class; KQ2 cross-check, review A15)",
+          "c_f untestable (FY consensus first appears after the disclosure)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "3a9be0a2b8fe",
+        "S": 0.042017395673262584,
+        "kind": "mfn_medicaid",
+        "family": "contractual: MFN agreement",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "BMY's MFN agreement (2025-12-19) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 69.1%), about $221M a year.",
+        "M": 0.16673477888330093,
+        "O": 0.25200138780086734,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+          "tariff exposure proxy 0.230 (sites outside US 33.3% x US revenue 69.1%), exempt until 2029-01-20: not scored",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "3c7dcb571549",
+        "S": 0.006685831937531271,
+        "kind": "risk_added",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024 (topics: tariff)",
+        "M": 1.130938890087401,
+        "O": 0.3511167961192966,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "fff608012557",
+        "S": 0.005735878432149492,
+        "kind": "mdna_added",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in MD&A vs FY2024 (topics: litigation, pricing)",
+        "M": 1.130938890087401,
+        "O": 0.19506488673294253,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "3a9be0a2b8fe",
+      "S": 0.042017395673262584,
+      "sentence": "BMY's MFN agreement (2025-12-19) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 69.1%), about $221M a year.",
+      "O": 0.25200138780086734,
+      "E": 1.0,
+      "confidence": "HIGH",
+      "kind": "mfn_medicaid",
+      "flags": [
+        "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+        "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+        "tariff exposure proxy 0.230 (sites outside US 33.3% x US revenue 69.1%), exempt until 2029-01-20: not scored",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "provisional",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 0,
+    "tariff_exposure": {
+      "proxy": 0.23010299999999995,
+      "pct_mfg_sites_outside_us": 33.3,
+      "us_revenue_share_pct": 69.1,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.0451,
+    "old_rank": 10,
+    "constants": {
+      "Rev_TTM": 49186.0,
+      "t": 0.22115869017632242,
+      "D": 2048.0,
+      "sigma_EPS": 0.47778506823525935,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 7
+  },
+  {
+    "ticker": "LLY",
+    "L": 0.06907588447937224,
+    "top5_sum": 0.18649105832328305,
+    "N_eff": 1.1111935086929834,
+    "blocks": {
+      "P": 0.17663990813938793,
+      "T": 0.009851150183895124
+    },
+    "largest_share": 0.5296933587751872,
+    "n_blocks": 2,
+    "n_findings": 46,
+    "n_withheld": 16,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "4bf1a2f5e9e4",
+        "S": 0.09878307506479914,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Trulicity's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $4,898.4M; base list discount 71%.",
+        "M": 0.5360788802966605,
+        "O": 0.1842696638415108,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "Trulicity loses US exclusivity in 2027 (starter thread); biosimilar entry would end selection",
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (0.3, 0.4, 0.5) x list discount (rebated class; KQ2 cross-check, review A15)",
+          "c_f untestable (FY consensus first appears after the disclosure)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "9cdaa161375b",
+        "S": 0.05072560204167436,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Verzenio's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,428.7M; base list discount 50%.",
+        "M": 0.2752791804369011,
+        "O": 0.1842696638415108,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (1.0, 1.0, 1.0) x list discount (low-rebate class; KQ2 cross-check, review A15)",
+          "c_f untestable (FY consensus first appears after the disclosure)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "ccde14de6e25",
+        "S": 0.02713123103291442,
+        "kind": "mfn_medicaid",
+        "family": "contractual: MFN agreement",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "LLY's MFN agreement (2025-11-06) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 66.7%), about $345M a year.",
+        "M": 0.1435662494213576,
+        "O": 0.18898056571280916,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+          "tariff exposure proxy 0.267 (sites outside US 40.0% x US revenue 66.7%), exempt until 2029-01-20: not scored",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "4cd4bc1af84f",
+        "S": 0.007190427218182189,
+        "kind": "risk_intensified",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "stronger wording in risk factors vs FY2024 (topics: generic, litigation); hedges dropped: could",
+        "M": 1.0088288860297219,
+        "O": 0.2741293182378273,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "61851994761f",
+        "S": 0.002660722965712935,
+        "kind": "risk_added",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024 (topics: tariff, supply, china)",
+        "M": 1.0088288860297219,
+        "O": 0.15664532470732992,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "06f417cc48b6",
+      "S": 0.0021411444110674633,
+      "sentence": "Effective tax rate 23.3% vs 16.5% a year earlier (+6.8 pts) (Q2 2026); peer median 17.7%, z +1.0",
+      "O": 0.7580021182121116,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "tax_rate_shift",
+      "flags": [
+        "c_f n/a (no consensus line item for this family)",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 1,
+    "n_strict_needle_candidates": 2,
+    "tariff_exposure": {
+      "proxy": 0.26680000000000004,
+      "pct_mfg_sites_outside_us": 40.0,
+      "us_revenue_share_pct": 66.7,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.3034,
+    "old_rank": 1,
+    "constants": {
+      "Rev_TTM": 79665.0,
+      "t": 0.2049114451555291,
+      "D": 893.7,
+      "sigma_EPS": 2.029480932934049,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 8
+  },
+  {
+    "ticker": "PFE",
+    "L": 0.038393091989699334,
+    "top5_sum": 0.07806757619339806,
+    "N_eff": 1.4753791725743162,
+    "blocks": {
+      "P": 0.062309964502906975,
+      "T": 0.015757611690491093
+    },
+    "largest_share": 0.31621399866375083,
+    "n_blocks": 2,
+    "n_findings": 47,
+    "n_withheld": 19,
+    "comparable": true,
+    "company_flags": [
+      "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
+    ],
+    "top": [
+      {
+        "id": "9f93e6694754",
+        "S": 0.02468606043410144,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Xeljanz's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,013.3M; base list discount 66%.",
+        "M": 0.13396703461365062,
+        "O": 0.1842696638415108,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (0.3, 0.4, 0.5) x list discount (rebated class; KQ2 cross-check, review A15)",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f untestable (FY consensus first appears after the disclosure)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "d516c2df7fcd",
+        "S": 0.022087276566945816,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Ibrance's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,984.6M; base list discount 50%.",
+        "M": 0.5360163600142827,
+        "O": 0.04120634781811003,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "IRA: net hit = k x list discount (KQ2 cross-check, inference)",
+          "IRA net hit = (1.0, 1.0, 1.0) x list discount (low-rebate class; KQ2 cross-check, review A15)",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "b79c3ddda98d",
+        "S": 0.015536627501859716,
+        "kind": "mfn_medicaid",
+        "family": "contractual: MFN agreement",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "PFE's MFN agreement (2025-09-30) extends MFN pricing to Medicaid: at the Pfizer base rate of 0.65% of US revenue (US share 59.2%), about $245M a year.",
+        "M": 0.13239665887707056,
+        "O": 0.11734909048033738,
+        "E": 1.0,
+        "pi": 1.0,
+        "flags": [
+          "MFN: s_MFN is Pfizer's Medicaid base rate applied to every company (deal texts confidential)",
+          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
+          "tariff exposure proxy 0.364 (sites outside US 61.5% x US revenue 59.2%), exempt until 2029-01-20: not scored",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "3b7b3b11dabb",
+        "S": 0.010129893229601415,
+        "kind": "risk_added",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "new paragraph in risk factors vs FY2024 (topics: litigation, ai)",
+        "M": 1.0482051927603862,
+        "O": 0.3716865632530408,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      },
+      {
+        "id": "9253749d0df2",
+        "S": 0.005627718460889676,
+        "kind": "risk_intensified",
+        "family": "litigation-language change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "stronger wording in risk factors vs FY2024 (topics: mfn, generic, litigation, supply, pricing); hedges dropped: potential; new figures: 12, 13%, 65%; new topics: mfn",
+        "M": 1.0482051927603862,
+        "O": 0.2064925351405782,
+        "E": 0.745,
+        "pi": 0.0349,
+        "flags": [
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "60cdbac30922",
+      "S": 0.0019946601738281187,
+      "sentence": "Effective tax rate 62.3% vs 4.6% a year earlier (+57.7 pts) (Q2 2026); peer median 17.7%, z +3.0",
+      "O": 0.679617539037405,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "tax_rate_shift",
+      "flags": [
+        "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+        "c_f n/a (no consensus line item for this family)",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 1,
+    "tariff_exposure": {
+      "proxy": 0.36408,
+      "pct_mfg_sites_outside_us": 61.5,
+      "us_revenue_share_pct": 59.2,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.0788,
+    "old_rank": 6,
+    "constants": {
+      "Rev_TTM": 63696.0,
+      "t": 0.18535431018433027,
+      "D": 5699.0,
+      "sigma_EPS": 0.2509268533144385,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 9
+  },
+  {
+    "ticker": "NVO",
+    "L": 0.028089972342147274,
+    "top5_sum": 0.07033013839040166,
+    "N_eff": 1.1982049083802544,
+    "blocks": {
+      "A": 0.06406127244113487,
+      "X": 0.00465423989944198,
+      "T": 0.001614626049824809
+    },
+    "largest_share": 0.5246384380618073,
+    "n_blocks": 3,
+    "n_findings": 52,
+    "n_withheld": 5,
+    "comparable": true,
+    "company_flags": [
+      "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)"
+    ],
+    "top": [
+      {
+        "id": "368385278158",
+        "S": 0.03689789395381107,
+        "kind": "gross_margin_drop",
+        "family": "gross margin drop",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Gross margin 81.0% vs 84.7% a year earlier (-3.7 pts) (FY2025); peer median 74.1%, z +1.1",
+        "M": 2.5572664169385826,
+        "O": 0.34191106207750016,
+        "E": 1.0,
+        "pi": 0.0422,
+        "flags": [
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "ba6c1c58702b",
+        "S": 0.027163378487323794,
+        "kind": "inventory_outpaces_revenue",
+        "family": "inventory outpaces revenue",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Inventory +21.5% YoY vs revenue +6.4% (FY2025); gap +15.1 pts; peer median -4.5 pts, z +1.3",
+        "M": 2.5572664169385826,
+        "O": 0.22794070805166677,
+        "E": 1.0,
+        "pi": 0.0466,
+        "flags": [
+          "stage split: inventory note with a stage split not found",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "204c2ebb7969",
+        "S": 0.002776288107818887,
+        "kind": "distributor_commentary",
+        "family": "outside data: FAERS, demand divergence, distributor (no evidence)",
+        "block": "X",
+        "confidence": "MEDIUM",
+        "sentence": "CAH filing paragraph that discusses the GLP-1 class next to inventory, pricing or channel language: context for how NVO's product reaches pharmacies.",
+        "M": 2.5572664169385826,
+        "O": 0.38773100077119865,
+        "E": 1.0,
+        "pi": 0.0028,
+        "flags": [
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "ded044b64583",
+        "S": 0.0018779517916230933,
+        "kind": "distributor_commentary",
+        "family": "outside data: FAERS, demand divergence, distributor (no evidence)",
+        "block": "X",
+        "confidence": "MEDIUM",
+        "sentence": "CAH filing paragraph that discusses the GLP-1 class next to inventory, pricing or channel language: context for how NVO's product reaches pharmacies.",
+        "M": 2.5572664169385826,
+        "O": 0.262271096978523,
+        "E": 1.0,
+        "pi": 0.0028,
+        "flags": [
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "3187277d63ec",
+        "S": 0.001614626049824809,
+        "kind": "risk_removed",
+        "family": "risk-factor change",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "paragraph dropped from risk factors vs FY2024 (topics: supply, china)",
+        "M": 2.5572664169385826,
+        "O": 0.0375,
+        "E": 0.745,
+        "pi": 0.0226,
+        "flags": [
+          "disclosure date unknown",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no consensus line item for this family)",
+          "s_f no data (FINRA short interest not in moat)",
+          "age unknown: set to 24 months",
+          "impact is the generic anchor placeholder (3% of revenue margin event); no page-verified number backs it: E capped at 0.745"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "368385278158",
+      "S": 0.03689789395381107,
+      "sentence": "Gross margin 81.0% vs 84.7% a year earlier (-3.7 pts) (FY2025); peer median 74.1%, z +1.1",
+      "O": 0.34191106207750016,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "gross_margin_drop",
+      "flags": [
+        "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+        "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+        "c_f n/a (no consensus line item for this family)",
+        "s_f no data (FINRA short interest not in moat)"
+      ]
+    },
+    "needle_status": "provisional",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 0,
+    "tariff_exposure": {
+      "proxy": 0.37352,
+      "pct_mfg_sites_outside_us": 66.7,
+      "us_revenue_share_pct": 56.0,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.05,
+    "old_rank": 9,
+    "constants": {
+      "Rev_TTM": 309064.0,
+      "t": 0.21530565343955876,
+      "D": 4447.7,
+      "sigma_EPS": 0.6159545437773796,
+      "currency": "DKK",
+      "annual_only": true
+    },
+    "rank": 10
+  }
+]

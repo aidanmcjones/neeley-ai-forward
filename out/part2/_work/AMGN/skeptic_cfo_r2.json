@@ -1,0 +1,144 @@
+{
+ "ticker": "AMGN",
+ "lens": "cfo",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "AMGN-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Re-read the decider's pages. AMGN:10q_2026Q2.md p.21 (printed p. 16) confirms the proposal alleges both lack of substantial evidence of effectiveness and that the application 'contained untrue statements of material facts'; a new trial addresses neither on the hearing timeline. p.59 (printed p. 54) confirms 'We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient', and the LUMAKRAS example there is a Complete Response Letter plus an FDA-imposed postmarketing requirement in an accelerated-approval case. AMGN:presentations/2026Q2_earnings_slides.md p.11 lists only a pediatric (6 to under 18) TAVNEOS Phase 3. Inside-24-month math for the decider's gated offer: cost $10M to $15M (midpoint $12.5M) [assumption]. Exposure inside the window, using the H1 2026 run-rate $514M a year [AMGN:10q_2026Q2.md p.44] x 80.5% non-GAAP margin [AMGN:transcripts/2026Q1_transcript.md p.1, grade B] = $413.8M a year, with withdrawal able to bite only from about month 12 [assumption]. Break-even shift in the probability of keeping approval: 12.5 / 413.8 = 3.0 points (2.4 to 3.6 across the range); to clear the 16.6% two-year hurdle, 3.5 points (2.8 to 4.2). At a 5-point shift [assumption] the expected avoided loss is $20.7M, a 66% two-year return; at 2.5 points it is $10.3M, a loss. If the FDA does signal acceptance, the trial budget (about $62M on r1 inputs) follows in that good-news state, so the gated structure caps the downside at the $12.5M. Hurdle: 8% a year [assumption], 16.6% over 24 months; Amgen WACC is not indexed, debt floor 4.200% to 5.650% coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "Gated offer as the decider proposes: $10M to $15M inside 24 months, break-even 2.4 to 3.6 points of retention probability (3.5 points at midpoint to clear an 8% hurdle). The move must state it cannot answer the untrue-statements ground (AMGN:10q_2026Q2.md p.21) and that its return is an unpriceable option, not a forecast.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 59
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 44
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 11
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md",
+     "page": 2
+    }
+   ],
+   "round2": {
+    "conceded": "The decider is right on the pages: the proposal's untrue-statements ground (p.21) cannot be cured by a new trial, and the only indexed precedent (LUMAKRAS, p.59) shows the FDA imposing a study, not bargaining. My r1 call that m01 was the strongest survivor leaned on its cheapness and lopsided payoff, but the probability shift that carries the return is weaker than I allowed. I withdraw 'strongest survivor' for the $75M version.",
+    "held": "The CFO case for some spend still holds because the exposure is large relative to cost: $413.8M a year of contribution plus a $2.3B U.S. intangible (p.21). At $12.5M the break-even is only about 3 points, so the gated offer is a defensible option purchase even though the shift is unknowable. I also hold my r1 corrections: H1 run-rate not Q2 x 4, impairment avoided is not a second return, and most of the value lands after month 24.",
+    "narrowed": "Adopt the decider's $10M to $15M gated hearing-record offer. Inside 24 months: break-even 3.0 points (3.5 points against the 8% hurdle). The return is an option whose probability no page can price, so it does not pass a cost-of-capital test on evidence; it is justified only as cheap downside protection."
+   }
+  },
+  {
+   "id": "AMGN-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Opened the decider's pages: AMGN:presentations/2026Q2_earnings_slides.md p.7 headlines Repatha 'Expanding adoption across primary care and cardiology', so the campaign is incremental to one already running and the 3% and 6% lifts cannot be separated from trend (U.S. +41% in Q2 2026, AMGN:10q_2026Q2.md p.38). MRK:10q_2026Q2.md p.32 confirms Merck 'will be expanding the program in the future to include Lipfendra'; the strategist's p.37 cite does not carry the direct-to-patient claim. Math for the decider's $20M to $30M holdout test: at $25M and 80.5% non-GAAP margin, break-even requires $31.1M of incremental U.S. Repatha revenue over 24 months attributable against the holdout; that is about 1.6% of one year's $1,950M U.S. base if run nationally, but a regional test only covers part of the base, so the required regional lift is higher. The r1 full-scale numbers stand: $141.3M contribution on $120M, and a $49.4M loss if lifts halve. Hurdle: 8% a year [assumption], 16.6% over 24 months; Amgen WACC is not indexed, debt floor 4.200% to 5.650% coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "A $20M to $30M test with a holdout region, budget justified as the cost of measuring promotion elasticity rather than as a 24-month return; do not stack its volume with m04. Fix the Lipfendra direct-to-patient cite to MRK:10q_2026Q2.md p.32.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 7
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 71
+    }
+   ],
+   "round2": {
+    "conceded": "The decider is right that management already runs a primary-care push (slides p.7), so the $120M buys only the increment above an existing program; this weakens the lift assumption further than my r1 margin math allowed. The direct-to-patient cite is on MRK p.32, not p.37.",
+    "held": "My r1 arithmetic stands: break-even within 24 months only at the 80.5% margin and only at the unsourced lifts, and m02 and m04 share the Repatha base. The promo fair-balance failure is outside my lens and I take no position on it.",
+    "narrowed": "Accept the decider's $20M to $30M holdout test; break-even at $25M is $31.1M of attributable incremental revenue over 24 months. It is a measurement buy, not a hurdle-clearing investment."
+   }
+  },
+  {
+   "id": "AMGN-m03",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Checked the decider's arithmetic: on the strategist's 25% growth, 2026 to 2030 payments are 901.2 + 1,126.6 + 1,408.2 + 1,760.3 + 2,200.3 = $7,396.6M undiscounted, correct. AMGN:10k_FY2025.md p.30 (printed p. 24) confirms UCB leads commercialization in most of Europe, so buying those rights adds a European commercial cost line the candidate omits; AMGN:presentations/2026Q2_earnings_slides.md p.7 confirms Astellas is a partner in Japan, so '100% of the growth' is false. My r1 fair value of about $5.8B (8.0x) assumed growth stops after 2028 because the U.S. antibody patent expired 4/25/2026 [AMGN:10k_FY2025.md p.13]; the decider's $7.4B assumes 25% growth runs to 2030 and is undiscounted. Either way 5x is below UCB's walk-away. Hurdle: 8% a year [assumption], 16.6% over 24 months; Amgen WACC is not indexed, debt floor 4.200% to 5.650% coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "none possible at $3.6B: UCB's walk-away is at least the NPV of its stream (about $5.8B at 8% with growth stopping in 2028, more if growth runs to 2030), and at that price the deal is about zero NPV with no cash payback inside 24 months. The decider's narrower option (charge Amgen-only incremental U.S. spend before the 50/50 split, or buy a right of first negotiation) has no indexed contract term to price it, so I cannot give it a number.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 30
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 132
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 7
+    }
+   ],
+   "round2": {
+    "conceded": "The decider is right that the decider here is UCB, not investors; that the European commercialization cost is missing from the cost line (p.30); and that Astellas in Japan (slides p.7) makes '100% of the growth' untrue.",
+    "held": "I hold that the right floor for UCB's price is a discounted value, not the $7.4B undiscounted sum: the antibody patent expired 4/25/2026 (p.13), so 25% growth through 2030 is not supported, and undiscounted cash overstates a seller's walk-away. The conclusion is the same: fatal.",
+    "narrowed": "UCB's walk-away is somewhere above about $5.8B (8.0x), not a single number; the disagreement with the decider is only on how far above."
+   }
+  },
+  {
+   "id": "AMGN-m04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Opened the decider's pages. AMGN:companies/AMGN/10q_2025Q2.md p.55 (printed p. 50): 'despite these net and list price reductions, some payers have restricted, and may continue to restrict, patient access and may seek further discounts or rebates', so rebates-for-access has been run and PA survived it. AMGN:10k_FY2025.md p.17 (printed p. 11): payers are 'increasingly using stricter utilization management criteria, such as prior authorization and step therapy'. verified/rx/formulary_part2.csv: Praluent prior_auth_share 1.0 on 42 formularies, so PA is class-wide. Inside-24-month math for the decider's pilot: $30M to $50M (midpoint $40M) [assumption]. At 5 rebate points of net, $40M over 2 years covers $400M a year of net Repatha sales, about 20.5% of the $1,950M U.S. base [AMGN:10q_2026Q2.md p.38]. Contribution per point of volume lift on covered business = 400 x 0.95 x 0.805 x 2 = $6.1M. Break-even lift 6.5%; 7.6% to clear the 16.6% two-year hurdle; 8.7% if the lift takes six months to start [assumption]. At the strategist's 10% lift: +$21.2M (53% two-year return), or +$5.9M with the ramp; at 5%: a $9.4M loss. If the 5 points are of gross price (p.83 states deductions as a share of gross), $40M covers only about $184M of net sales a year and a 10% lift loses $11.9M. PA simplification rather than removal likely yields less than the 10% the strategist assumed for full removal. Hurdle: 8% a year [assumption], 16.6% over 24 months; Amgen WACC is not indexed, debt floor 4.200% to 5.650% coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "$30M to $50M pilot with one or two PBMs: break-even 6.5% volume lift on covered business (7.6% at the 8% hurdle, 8.7% with a six-month ramp), on a net-points basis. Write the contract so rebate applies only above a new-to-brand baseline, which removes the giveaway on existing volume and makes any measured lift accretive; state whether points are of gross or net.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+     "page": 55
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 17
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 36
+    }
+   ],
+   "round2": {
+    "conceded": "The decider is right that rebates for access were already run and PA persisted (10-Q 2025Q2 p.55), that utilization management is tightening (10-K p.17), and that PA is class-wide (Praluent at 1.0), which lowers the odds a rebate buys PA removal. Their kill signals (CMS SPUF prior_auth_share, 10-Q driver text, 10-K deduction rate) are the most measurable in the set, which matters for a pilot.",
+    "held": "My r1 math errors stand and also apply to the pilot: rebate cost must be netted against contribution not revenue, and the gross-versus-net unit for rebate points is unresolved and can flip the sign.",
+    "narrowed": "Accept the $30M to $50M pilot. On net points it clears the 8% hurdle only with a 7.6% or better lift on covered volume; on gross points it does not clear at 10%."
+   }
+  }
+ ],
+ "overall": "All four stay refuted; of the narrowed versions the m04 PBM pilot has the better cost-of-capital case, because its break-even (6.5% lift on covered volume, 7.6% at an 8% hurdle) can be measured inside 24 months from CMS SPUF and 10-Q data, while the gated $10M to $15M m01 offer needs only about 3 points of retention probability but no page can price that probability, so it is a cheap option rather than a hurdle-clearing investment. Unresolved with the decider: whether m04 rebate points are of gross or net (no contract terms indexed, and gross flips the pilot negative at a 10% lift), how far above my $5.8B NPV floor UCB's walk-away sits for m03, and whether the m01 option deserves to rank alongside m04 given its larger but unmeasurable payoff."
+}

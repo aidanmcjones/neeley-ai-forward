@@ -1,0 +1,159 @@
+{
+  "ticker": "ABBV",
+  "lens": "materiality",
+  "round": 1,
+  "verdicts": [
+    {
+      "id": "ABBV-c01",
+      "refuted": true,
+      "severity": "major",
+      "argument": "The new language checks out. The MFN and direct-to-patient spillover sentences are on ABBV:10k_FY2025.md p.19 and the 340B share sentence is on p.23; FY2024 p.21 mentions 340B only as a program name. BMY's U.S. GTN going from 49% to 53% is confirmed on BMY:10k_FY2025.md p.49. The headline 'deleted' claim is wrong, though. The FY2024 MD&A sentence 'would significantly impact our results of operations' (ABBV:10k_FY2024.md p.36) was dropped from the FY2025 MD&A (p.37), but FY2025 still says 'The effect of reducing prices and reimbursement could significantly impact revenues for certain of our products' (ABBV:10k_FY2025.md p.13) and 'the IRA will have the effect of reducing prices and reimbursements ... which could significantly impact AbbVie's results of operations' (p.18). FY2024 p.13 and p.18 carry the same two sentences. So the warning stayed in Item 1 and only a repeated sentence was removed from the MD&A. The math (0.01 x 46,603 = $466M; 466/61,160 = 0.76%; 466/1,773 = $0.26) is correct but is a generic per-1% sensitivity that applies to any U.S. revenue base. Nothing on the cited pages sizes 340B or MFN spillover, so the dollar figure does not show materiality. The 'direction confirmed by c02' support also fails, because c02's government-rebate jump is mostly a mix shift (see c02).",
+      "correction": "FY2025 adds new risk language: MFN and direct-to-patient concessions could spread to other payers and markets (p.19), and growth in 340B claims has increased the share of sales at 340B discounts (p.23). The 'significantly impact' warning was not deleted. It survives in Item 1 (p.13, p.18) and was only dropped from the MD&A recap. No dollar size can be derived from the filing.",
+      "pages_checked": [
+        {"doc_id": "ABBV:10k_FY2024.md", "page": 36},
+        {"doc_id": "ABBV:10k_FY2024.md", "page": 18},
+        {"doc_id": "ABBV:10k_FY2024.md", "page": 13},
+        {"doc_id": "ABBV:10k_FY2024.md", "page": 21},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 13},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 18},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 19},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 23},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 37},
+        {"doc_id": "BMY:10k_FY2025.md", "page": 49}
+      ]
+    },
+    {
+      "id": "ABBV-c02",
+      "refuted": true,
+      "severity": "fatal",
+      "argument": "The operands are real: Medicaid and Medicare provisions were 15,866 in 2024 and 21,283 in 2025 (+34.1%), on ABBV:10k_FY2025.md p.49, and U.S. revenue was 43,029 and 46,603 (+8.3%) on p.41. The inference fails on the same table. Managed Care rebate provisions fell from 24,127 to 22,307 (-1,820) in the column right next to it. Total rebates and chargebacks rose only from $59.3B to $65.1B (+9.8%), against net revenue +8.6%. The candidate's own implied deduction ratio, provisions/(net revenue + provisions), moves from 59.3/(56.334+59.3) = 51.28% to 65.1/(61.16+65.1) = 51.56%. That is +0.28 points, about 0.0028 x 126.3B = roughly $0.35B, not $4.1B. On a U.S.-only basis (assuming all provisions are U.S.) the ratio goes from 57.95% to 58.28%, also +0.3 points. So most of the government-line jump is a reclassification of the same rebate dollars from managed care to Medicare, consistent with Part D redesign (p.37) moving liability from plan-negotiated rebates to the manufacturer discount program. The '$4.1B absorbed, 6.7% of revenue' figure isolates one column and ignores the offset. The ratio can be derived from cited lines (p.49 totals, p.41 revenue), but it mixes U.S. and international and leaves out cash discounts ($2.2B vs $2.0B, p.49). The peer contrast also points the other way. BMY's Medicaid and Medicare line rose 9% (BMY:10k_FY2025.md p.49), but BMY's total GTN rose 12% on gross sales +5%, and its U.S. GTN percentage rose 4 points. AbbVie's total deduction ratio rose about 0.3 points, so AbbVie shows less total GTN pressure than BMY. The rebate categories are also not comparable: BMY puts managed-care rebates in 'Other rebates'.",
+      "correction": "In 2025 AbbVie's total rebate and chargeback provisions grew 9.8%, slightly ahead of 8.6% net revenue growth. The implied deduction ratio rose about 0.3 points (51.3% to 51.6%), worth roughly $0.35B. The 34% Medicaid/Medicare jump is largely offset by a $1.8B drop in managed-care rebates, a channel mix shift under Part D redesign rather than a $4B hit. The only forward angle is whether the January 2026 'low prices in Medicaid' commitment raises the total ratio in 2026, which is not yet observable.",
+      "pages_checked": [
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 49},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 41},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 37},
+        {"doc_id": "BMY:10k_FY2025.md", "page": 49},
+        {"doc_id": "BMY:10k_FY2025.md", "page": 48}
+      ]
+    },
+    {
+      "id": "ABBV-c03",
+      "refuted": true,
+      "severity": "fatal",
+      "argument": "The balance-sheet figures are correct: AR 12,589 vs 10,919 and inventories 4,951 vs 4,181 (ABBV:10k_FY2025.md p.56), finished goods 1,580 vs 1,173 (p.61), and Q4 revenue $16.618B, +10.0% (earnings release p.2). The 'year-end build that then unwound' story is contradicted by the cited mid-year balance sheets. At June 30, 2025, AR was already 12,637 and inventories 4,960 (ABBV:companies/ABBV/10q_2025Q2.md p.5), both higher than at December 31, 2025. So there was no Q4 spike: the 15% year-over-year rise comes from a low December 2024 base. Nothing unwound in 2026 either. AR rose further to 13,824 at June 2026 and finished goods to 1,671 (ABBV:10q_2026Q2.md p.5, p.8). Receivables as a share of quarterly revenue were 75.8% at Q4 2025 (12,589/16,618) against 81.9% at Q2 2025 (12,637/15,423), so year-end DSO was lower than mid-year. The '$578M excess AR = revenue pulled into Q4' step also treats a balance (AR level) as a revenue flow.",
+      "correction": null,
+      "pages_checked": [
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 56},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 61},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 41},
+        {"doc_id": "ABBV:earnings/2026-02-04_abbv-20251231xexhibit991.md", "page": 2},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 5},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 8},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 3},
+        {"doc_id": "ABBV:companies/ABBV/10q_2025Q2.md", "page": 5}
+      ]
+    },
+    {
+      "id": "ABBV-c04",
+      "refuted": false,
+      "severity": "minor",
+      "argument": "The reconciliation holds. FY2025 eye care is 493+410+197+1,009 = 2,109 (ABBV:10k_FY2025.md p.43). H1 2025 eye care is 248+209+96+467 = 1,020 (ABBV:companies/ABBV/10q_2025Q2.md p.28), and 1,350+1,020 = 2,370, matching the restated H1 2025 'All other' (ABBV:10q_2026Q2.md p.24). The Restasis fold also checks: 224+847 = 1,071 (ABBV:10k_FY2024.md p.42). Duodopa was folded separately into Other Neuroscience (114+193 = 307, 10q_2026Q2 p.23), not into All other. The materiality story is weaker than stated. (1) The -10% in the restated bucket is not new. On the old basis, H1 2025 vs H1 2024 was (1,350+1,020)/(1,554+1,071) = 2,370/2,625 = -9.7%, so the bucket was already shrinking at the same rate before the change. (2) The TrumpRx link touches a trivial line: Alphagan/Combigan U.S. was $53M in 2025 (p.43) and $0 in Q2 2025 (10q_2025Q2 p.28), about 0.1% of revenue. (3) The reclassification has no P&L effect. The roughly $0.24B per half decline (about 0.8% of revenue annualized) is just under the materiality threshold.",
+      "correction": "In 2026 AbbVie folded about $2.1B of eye care (3.4% of 2025 revenue) into 'All other', and the restatement reconciles exactly. The combined bucket is declining about 10% a year, the same rate as before the change. The TrumpRx angle concerns only Alphagan/Combigan U.S., which was $53M in 2025. This is a transparency point, not a hidden earnings hit.",
+      "pages_checked": [
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 43},
+        {"doc_id": "ABBV:10k_FY2024.md", "page": 42},
+        {"doc_id": "ABBV:companies/ABBV/10q_2025Q2.md", "page": 28},
+        {"doc_id": "ABBV:companies/ABBV/10q_2025Q2.md", "page": 27},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 24},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 23},
+        {"doc_id": "ABBV:policy/press_2026-01-12_mfn_trump_agreement.md", "page": 1}
+      ]
+    },
+    {
+      "id": "ABBV-c05",
+      "refuted": false,
+      "severity": "major",
+      "argument": "The facts are confirmed. ABBV:10q_2026Q2.md p.15 says payments end in 2037 for Skyrizi and in 2044 for pipeline assets in combination with Skyrizi, at 38% probability. The 10-K range was 2025-2034 for FY2024 and 2026-2037 for FY2025 (ABBV:10k_FY2025.md p.83). Balances are 25,374 at December 2025 and 27,495 at June 2026, the H1 2026 fair-value charge is 3,905, and H1 payments are 1,784. The math is right: 2,865/17,562 = 16.3%, 1,784/9,988 = 17.9%, and 3,905/1,773 (six-month diluted shares, 10q_2026Q2 p.3) = $2.20. The framing has three problems. (1) Level vs. cost: $27.5B is the present value of all future payments to 2044, not an annual drag. The annual economic cost is the cash royalty, about $2.9B in 2025 (4.7% of revenue). That figure is already known: the 2025Q3 call (grade B) cites 'nearly $2.2 billion of SKYRIZI royalty payments' for nine months. (2) $27.5B is total contingent consideration, including the $78M Nimble addition, not only Skyrizi. (3) The new combination tail is small and can be sized from the cited page. The fair-value-weighted average probability is 93% with approved Skyrizi at 100% and combinations at 38%, so the combination share is w = (100-93)/(100-38) = 11.3% (10.5% to 12.1% given rounding), about $2.9-3.3B of the $27.5B. The weighted-average payment year stayed at 2030. The H1 2026 fair-value charge (3,905) was below H1 2025 (4,313), and 'Additions' were zero, so adding the combinations did not raise the charge run-rate. The J&J contrast ($753M, JNJ:10k_FY2025.md p.69) is level against level, which is fine, but J&J's balance is mostly a CVR, not a sales royalty.",
+      "correction": "From June 2026 the Skyrizi royalty liability includes combination pipeline assets paid out to 2044. From the 93% weighted probability this tail is about $3B (11%) of the $27.5B present value, and the weighted-average payment year is unchanged at 2030. The annual cost to track is cash royalty at 16-18% of Skyrizi sales (about $2.9B in 2025), already disclosed on calls. The 2044 tail is a modest PV item that would grow only if the combinations succeed.",
+      "pages_checked": [
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 83},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 9},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 42},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 37},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 15},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 3},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 23},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 33},
+        {"doc_id": "JNJ:10k_FY2025.md", "page": 69},
+        {"doc_id": "ABBV:transcripts/2025Q3_transcript.md", "page": 1}
+      ]
+    },
+    {
+      "id": "ABBV-c06",
+      "refuted": true,
+      "severity": "major",
+      "argument": "The quotes are confirmed. Both are Robert A. Michael on the grade-B 2025Q3 transcript, p.1, answering Terence Flynn and then Steve Scala. He also said 'we have visibility to where it's landing', so he did not decline for lack of information. The CMS figures are confirmed: Vraylar $770 vs $1,376 (44%), Linzess $136 vs $539 (75%), Imbruvica 38% (CMS IPAY2027 p.2, IPAY2026 p.2). Imbruvica U.S. H1 669 vs 1,072 (-37.6%) is on 10q_2026Q2 p.24. The bound does not carry over to Vraylar and Linzess, and the cited CMS pages show why. (1) The CMS discount is measured from list price (WAC) and applies only to Medicare Part D units, while the candidate applies it to all U.S. net revenue. (2) Imbruvica is almost entirely a Part D drug: its 2023 Part D gross cost of $2,372M (IPAY2026 p.2) is close to its full 2023 U.S. net revenue of $2,665M (ABBV:10k_FY2025.md p.42). For Vraylar, 2024 Part D gross cost was $1,137M (IPAY2027 p.2) against $3,260M of U.S. net revenue, about 35% even at gross. For Linzess, 2024 Part D gross of $1,983M exceeds AbbVie's entire $916M U.S. net revenue, so Linzess is already priced far below list and a 75% list-price discount implies a much smaller net cut. (3) Imbruvica's -37.6% is not all IRA. U.S. sales were already falling 16.4% in 2025 (p.42) and 11.0% in H1 2025 (10q_2025Q2 p.28), so the trend-adjusted IRA effect is about 25-30%, not 38%. The 'pass-through about 0.99' therefore double-counts the existing decline. (4) Linzess is profit-shared, so the pre-tax effect is smaller than the revenue effect. (5) The 2027 base is unstable: Linzess U.S. was up 43.8% in H1 2026 (555 vs 386, 10q_2026Q2 p.24).",
+      "correction": "A better bound is the Part D book. Vraylar at most about 44% of roughly $1.1-1.4B of Part D gross spend (2024 level grown to 2027), which is ≤ about $0.5-0.6B, and lower after existing rebates. Linzess's net hit cannot be derived but is far below 75% of U.S. net, because Part D gross alone is already twice AbbVie's U.S. Linzess net revenue. Combined 2027 exposure is likely under about $0.8B (about 1.3% of revenue), consistent with the CEO's statement that it will not move long-term guidance. The $1.1-2.2B range overstates the exposure.",
+      "pages_checked": [
+        {"doc_id": "ABBV:transcripts/2025Q3_transcript.md", "page": 1},
+        {"doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md", "page": 2},
+        {"doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md", "page": 2},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 24},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 23},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 42},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 43},
+        {"doc_id": "ABBV:10k_FY2024.md", "page": 42},
+        {"doc_id": "ABBV:companies/ABBV/10q_2025Q2.md", "page": 28}
+      ]
+    },
+    {
+      "id": "ABBV-c07",
+      "refuted": true,
+      "severity": "major",
+      "argument": "The label text is confirmed: Skyrizi IV-only induction of 1,200 mg for CD and 600 mg for UC (skyrizi label_v178 p.4), Tremfya 400 mg SC induction (tremfya label_sections p.8), and the hepatotoxicity wording (skyrizi p.19, tremfya p.16). The grade-B call quotes (Schott, Thakkar) are also confirmed. 'AbbVie's pending fix covers only Crohn's' rests on grade C/D calls and is not verifiable. On materiality, the $152-304M is a free-standing assumption (1-2 points of growth) with no anchor. It is 0.25-0.5% of revenue, below the 1% threshold. The cited revenue data show no visible effect: Skyrizi U.S. grew 50.7% in 2025 (ABBV:10k_FY2025.md p.42) and +26.3% in H1 2026 (8,542 vs 6,762) and +24.0% in Q2 2026 (4,767 vs 3,843) (10q_2026Q2 p.23), during the period of the Tremfya SC-induction rollout mentioned on the 2025Q3 call.",
+      "correction": "Label difference only. Skyrizi IBD induction is IV-only, while Tremfya allows SC induction. No revenue effect can be detected in the cited data, and the sensitivity is below the materiality threshold.",
+      "pages_checked": [
+        {"doc_id": "skyrizi:drugs/skyrizi/label_v178.md", "page": 4},
+        {"doc_id": "drug:skyrizi:label_sections.md", "page": 19},
+        {"doc_id": "drug:tremfya:label_sections.md", "page": 8},
+        {"doc_id": "drug:tremfya:label_sections.md", "page": 16},
+        {"doc_id": "ABBV:transcripts/2025Q3_transcript.md", "page": 1},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 42},
+        {"doc_id": "ABBV:10q_2026Q2.md", "page": 23}
+      ]
+    },
+    {
+      "id": "ABBV-c08",
+      "refuted": false,
+      "severity": "minor",
+      "argument": "Confirmed: U.S. share 46,603/61,160 = 76.2% (ABBV:10k_FY2025.md p.41; fact:policy/force_summary.csv#7), R&D 9,096 (p.54), capex 1,214 (p.58), and $100B over ten years (press release p.1; 10-K p.37). $10.0B a year against $10.3B is correct. Further support from the grade-B 2025Q3 call (p.1), where management pledged 'at least $10 billion of capital in The US over the next ten years'. That implies about $1B a year of capex, so the $100B is mostly R&D at roughly the current $9B global rate. Three errors. (1) 'The highest per-point exposure on the shortlist' holds only as a percent of revenue. In dollars, J&J's U.S. revenue is 0.571 x 94,193 = $53.8B (force_summary.csv#8), above AbbVie's $46.6B, so a 1% U.S. price reset costs J&J more ($538M vs $466M). Per-share comparisons need peer share counts, which are not cited. (2) The peer pledge list mixes horizons. AbbVie's $100B is over 10 years, J&J's $55B over about 4 years (about $13.8B a year, larger than AbbVie's), BMY's $40B over 5 years, and AZN's $50B by 2030 (force_summary.csv pledge_horizon). So 'record' holds only in nominal total. (3) Amgen's 73.0% is a product-sales basis, not total revenue. The 5% reset is an unanchored scenario. Also, the CEO answered Breen's question substantively (mix is portfolio-driven, historically two-thirds/one-third), so 'declined' overstates it.",
+      "correction": "AbbVie has the highest U.S. share of revenue on the shortlist (76.2%), so each 1% of U.S. net price is 0.76% of its revenue. In dollar terms J&J's per-point exposure is larger. The $100B pledge is about $10B a year, roughly AbbVie's current R&D plus capex, and smaller per year than J&J's pledge.",
+      "pages_checked": [
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 41},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 54},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 58},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 37},
+        {"doc_id": "ABBV:policy/press_2026-01-12_mfn_trump_agreement.md", "page": 1},
+        {"doc_id": "ABBV:transcripts/2025Q3_transcript.md", "page": 1},
+        {"doc_id": "policy:verified/policy/force_summary.csv", "page": 0}
+      ]
+    },
+    {
+      "id": "product",
+      "refuted": false,
+      "severity": "minor",
+      "argument": "Skyrizi is $17,562M, 28.7% of $61,160M (ABBV:10k_FY2025.md p.42, p.41): confirmed. The fine-print edge (IV-only IBD induction vs Tremfya SC, and hepatotoxicity at the labeled vs above-label dose) is verbatim on skyrizi label_v178 p.4, skyrizi label_sections p.19, and tremfya label_sections p.8 and p.16. The list-vs-net support mixes products and periods. The fact:pricing/gtn_exposure.csv#21 row compares the NADAC of the SC syringe NDCs (2022 to 2026, +28.4%) with the Part B ASP for J2327, the IV risankizumab HCPCS code (2023 to 2026, -6.9%). Those are different dosage forms and channels over different start years, so the 'gap widening' is not a same-product gross-to-net measure. The c07 revenue sensitivity tied to this edge is below materiality (see c07).",
+      "correction": "Keep Skyrizi as the pick on size and on the label contrast. Drop or restate the NADAC-vs-ASP gap as two separate price series (SC pharmacy acquisition cost up, IV Part B ASP down), not as a GTN measure.",
+      "pages_checked": [
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 42},
+        {"doc_id": "ABBV:10k_FY2025.md", "page": 41},
+        {"doc_id": "skyrizi:drugs/skyrizi/label_v178.md", "page": 4},
+        {"doc_id": "drug:skyrizi:label_sections.md", "page": 19},
+        {"doc_id": "drug:tremfya:label_sections.md", "page": 8},
+        {"doc_id": "drug:tremfya:label_sections.md", "page": 16},
+        {"doc_id": "fact:pricing/gtn_exposure.csv", "page": 21}
+      ]
+    }
+  ],
+  "overall": "AbbVie's numbers are almost all transcribed correctly, but three of the eight candidates draw large conclusions from a single line while the offsetting line sits on the same page or a neighboring one. The government-rebate jump is offset by lower managed-care rebates, the year-end AR 'build' was already present at June 2025, and the Imbruvica pass-through overstates exposure for drugs with a much smaller Part D share. What survives is the Skyrizi royalty tail, about $3B of present value by the weighted-probability math. The eye-care fold and U.S.-concentration points are real but small or need narrowing."
+}

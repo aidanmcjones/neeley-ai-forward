@@ -1,3 +1,5 @@
+> Superseded. This was the Saturday plan. The final deck is `Needle_in_the_Haystack_Pitch_Deck.pptx` (see README.md); the league table it mentions was internal triage only and is not in the deck.
+
 # Deck outline (maps every slide to a case deliverable and a rubric category)
 
 Owner: Parker. One idea per slide. Every number carries its citation in small type. No em dashes. Brackets are filled

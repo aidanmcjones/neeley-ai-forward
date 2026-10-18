@@ -1,0 +1,144 @@
+{
+ "ticker": "AMGN",
+ "lens": "cfo",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "AMGN-m01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Operands trace: 331 pivotal patients is on AMGN:10k_FY2025.md p.8 (printed p. 2); R&D $7,272M and cost of sales 34.2% of product sales on p.76 (printed p. 70); TAVNEOS U.S. Q2 2026 $143M and H1 $257M on AMGN:10q_2026Q2.md p.44 (printed p. 39); $2.3B U.S. intangible and 'remain on the market during the pendency' on p.21 (printed p. 16). Arithmetic is right as written (572 x 2 x 0.658 x 0.15 = 112.9). Problems: (1) Run-rate: Q2 x 4 = $572M annualizes the peak quarter; Q1 was only $114M (257 - 143), so H1 x 2 = $514M is the defensible base. (2) Timing: p.21 says TAVNEOS stays on the market while the hearing process runs, so the full 24 months of contribution is only at risk if withdrawal happens on day 1; the candidate itself concedes the loss 'only arises after a withdrawal'. If a decision lands at month 12 [assumption], only 12 months are exposed inside the window and the break-even uplift doubles. (3) The 15-point probability shift is the whole return and is unsourced; halved to 7.5 points it falls below the candidate's own 9.9-point break-even, so the move is negative. (4) Cost period: a randomized, adjudicated 331-patient AAV trial cannot enroll and read out inside 24 months, so the $74.65M is a 24-month slice of a longer commitment, and $150,000 a patient and the $25M registry are both unsourced. (5) Margin cuts the other way: 34.2% GAAP cost of sales includes acquisition amortization (p.76 says the 2025 decline was driven by lower amortization), and non-GAAP cost of sales was 19.5% of product sales in Q1 2026 [AMGN:transcripts/2026Q1_transcript.md p.1, grade B], so incremental contribution is closer to 80.5%. (6) The $345M 'impairment avoided' is the capitalized value of the same TAVNEOS cash flows; adding it to the operating-income return would double count. The candidate keeps it out of the $112.9M headline, which is correct, but it should not be presented as a second return. (7) Most of the value (to the 1/6/2034 compound patent) lands after month 24. Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February 2026 senior notes carry 4.200% (2031) to 5.650% (2056) coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "Narrowed number: H1 2026 run-rate $514M a year x 2 = $1,028M x 80.5% non-GAAP margin = $827.5M exposed if withdrawal were immediate; at 15 points, expected avoided loss = $124.1M over 24 months, break-even 9.0 points. If withdrawal could only bite from month 12 [assumption], exposure = $413.8M, return = $62.1M, below the $74.65M cost (break-even 18.0 points). Restate the move as option value whose payoff mostly lands after month 24 (through 2034), with the 24-month return stated as roughly break-even; keep the $345M impairment as a balance-sheet risk note, not a return.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 76
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 44
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 59
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "AMGN-m02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Operands trace: SG&A $7,050M on AMGN:10k_FY2025.md p.76; Repatha U.S. Q2 $510M and H1 $975M on AMGN:10q_2026Q2.md p.38 (printed p. 33); $239 AmgenNow monthly price on AMGN:policy/press_2025-10-06_amgennow_repatha.md p.1; Lipfendra July 2026 approval on MRK:10q_2026Q2.md p.37. Arithmetic is right (58.5 + 117.0 = 175.5; x 0.658 = 115.5). But by the candidate's own math the move loses $4.5M inside 24 months, so it fails any positive hurdle as written. The 3% and 6% lifts are unsourced and carry the entire return; the cost ($120M) is also unsourced. The base is overstated: management guided Repatha net selling price down about mid-single digits for 2026 [AMGN:10k_FY2025.md p.71, verified], so a flat $1,950M base for two years is high. The $239 cash price is not a net-price floor (it is a direct-to-patient channel price), so the 61,192 patient-years figure is not evidence of anything. Double counting risk: m02 and m04 both claim incremental U.S. Repatha volume on the same $1,950M base; they cannot both be added to a plan without netting. Correcting the margin to the 19.5% non-GAAP cost of sales [AMGN:transcripts/2026Q1_transcript.md p.1, grade B] helps: contribution = $141.3M vs $120M cost, a 17.7% two-year return, roughly the 16.6% two-year hurdle at 8% [assumption]. Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February 2026 senior notes carry 4.200% (2031) to 5.650% (2056) coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "Corrected number: at 80.5% non-GAAP margin the 24-month contribution is $141.3M on $120M, about break-even against an 8% hurdle [assumption]; halve the lifts to 1.5% and 3% and contribution is $70.6M, a $49.4M loss. Narrow to a pilot of about $30M [assumption] in a few regions with a measured lift before committing $120M, and do not stack its volume with m04.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 76
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 71
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "AMGN-m03",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Payment stream traces: $721M, $547M, $396M profit and loss share expense on AMGN:10k_FY2025.md p.132 (printed p. F-29), recorded primarily in cost of sales; equal sharing and UCB's European commercialization lead on p.30 and p.132; EVENITY U.S. antibody patent 4/25/2026 and formulation 5/11/2031 on p.13; EVENITY Q2 2026 $714M on AMGN:10q_2026Q2.md p.39. Arithmetic is right (721 x 1.25 = 901.2; x 1.25 = 1,126.6; sum 2,027.8; 3,605 x 0.045 x 2 = 324.4). Fatal: the price is invented. 5x trailing payments has no comp on any page. The ChemoCentryx $3.7B enterprise value [deals:deals/2022-08-04_0001193125-22-211860.md p.1] is a whole-company acquisition, not a profit-share buyout; the royalty monetization rows in verified/deals/deal_comps.csv (for example D0428 Sagard and AnaptysBio, D0533 Royalty Pharma) are financier purchases of sales royalties with no trailing-payment multiple, a different structure. The price is also inconsistent with the candidate's own growth case: 25% growth to 2028 then flat to 2031, discounted at 8% [assumption], values UCB's stream at about $5.8B, or 8.0x trailing. A seller who believes the strategist's growth will not take 5x; at a fair price the deal is near zero NPV and the 'return' is just the yield on cash paid out. Return framing: $2,027.8M of avoided payments inside 24 months is below the $3,605M outlay, so there is no cash payback in the window (simple payback is about 3.6 years); the $1,703.4M 'net' treats the principal as never spent and omits amortization of the purchased intangible (about $721M a year if amortized to the 2031 formulation patent, derived). Period mismatch: 721 x 1.25 is a 2026 level labelled '2027 to 2028', and with closing up to 12 months out only 12 to 24 months of savings fall inside the window. The 4.5% cost of cash is near Amgen's 4.200% 2031 coupon but a $3.6B equity-like use should clear WACC, not the debt rate. Whether $721M already nets UCB's European profits is not stated on p.132 ('net costs recovered from and due to UCB ... were not material' does not resolve it). Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February 2026 senior notes carry 4.200% (2031) to 5.650% (2056) coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "none possible as a priced move: no indexed comp supports any multiple, and at the fair value implied by the candidate's own growth (about $5.8B, 8.0x) the 24-month benefit is $2,027.8M less $922.9M carrying cost at 8% = $1,104.9M with zero NPV. Narrow to 'open talks with UCB, bid capped at the NPV of the stream at Amgen's cost of capital', with no return claimed inside 24 months.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 132
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 30
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "deals:deals/2022-08-04_0001193125-22-211860.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "AMGN-m04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Operands trace: Repatha U.S. H1 $975M on AMGN:10q_2026Q2.md p.38; 54% total sales deductions of gross product sales on AMGN:10k_FY2025.md p.83 (printed p. 77); verified/rx/formulary_part2.csv repatha 2026Q3 auto-injector row: 318 of 328 formularies, prior_auth_share 0.7987 (unweighted by enrollees); Q1 2026 volume +35%, net price -7% on AMGN:10q_2026Q1.md p.36; past rebates for access on AMGN:companies/AMGN/10q_2025Q2.md p.55. Math errors: (1) Revenue mixed with profit: the $195M rebate is a pure margin loss, but it is netted against $370.5M of incremental revenue that carries cost of sales. At 65.8% margin the net is $48.8M, not $175.5M; at the 80.5% non-GAAP margin [AMGN:transcripts/2026Q1_transcript.md p.1, grade B] it is $103.3M. The break-even lift is 6.5% to 8.0%, not 5.26%. (2) Unit: rebate points and the 54% deduction rate on p.83 are percentages of gross sales, but the candidate applies 5 points to net sales. Using the company 54% deduction rate as a proxy for Repatha [assumption], gross is about $1,950M / 0.46 = $4,239M a year, so 5 gross points cost about $423.9M over 24 months and the move is negative at either margin. (3) The 10% lift is applied to all U.S. Repatha although PA removal reaches only payers that sign; commercial PA is unknown and Medicare share is a stated data gap. (4) No ramp: the lift is booked from month 0. Halving the lift to 5% gives $149.1M contribution against $195M, a $45.9M loss. (5) Same Repatha base as m02; volumes cannot be stacked. Hurdle used: 8% a year pre-tax cost of capital [assumption]; Amgen WACC is not indexed. Floor reference: Amgen's February 2026 senior notes carry 4.200% (2031) to 5.650% (2056) coupons [AMGN:companies/AMGN/8k/2026-02-19_0001193125-26-059490_d106293d8k.md p.2].",
+   "correction": "Corrected number on the candidate's own net-price basis: 24-month contribution $298.3M at 80.5% less $195M rebate = $103.3M (or $48.8M at 65.8% GAAP margin), break-even lift 6.5%. If the 5 points are of gross price, cost is about $423.9M and no lift under about 14% clears it (423.9 / (1950 x 0.95 x 2 x 0.805)). Narrow to a single large Part D sponsor with rebate paid only on new-to-brand scripts above a baseline, so the rebate is not given away on existing volume.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 36
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+     "page": 55
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    }
+   ]
+  }
+ ],
+ "overall": "Every operand in the four AMGN candidates traces to its cited page and the arithmetic is right as written, but each return rests on one unsourced behavioral assumption (FDA probability shift, promotion lift, PA-removal lift, UCB price) that flips the sign when halved, and m04 mixes revenue with profit and gross with net. m03 is fatal on an invented 5x multiple; m01 is the strongest survivor once narrowed, cheap at about 1% of R&D with an asymmetric payoff, but its value lands mostly after month 24."
+}

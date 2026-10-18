@@ -1,0 +1,431 @@
+{
+ "ticker": "NVO",
+ "lens": "obviousness",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "NVO-c01",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "The DKK 3bn 'right-sizing of manufacturing capacity agreements' charge is not hidden: it is in the Q2 2026 6-K MD&A (NVO:6k/2026-08-04_caq22026.md p13, and again in H1 text p14) and was read out in the CFO's prepared remarks on the 2026Q2 call (NVO:transcripts/2026Q2_transcript.md p1, grade C, Karsten Munk Knudsen). The CMD financials deck lists 'manufacturing right-sizing' as a destination for >DKK 10bn of savings (NVO:presentations/2026-03_cmd.md p5) and the CMD manufacturing deck flags 'CMO optionality' for oral capacity (NVO:presentations/2026-03_cmd_manufacturing.md p10). So the existence of a CMO exit cost is management-voiced. What no source in the index addresses is the stock: the DKK 91.0bn purchase obligation to contract manufacturers (AR2025 p110) vs DKK 33.1bn (AR2024 p130). The only analyst supply question on the 2026Q2 call (Richard Vosser, JPM) asked about API plant utilisation, not CMO commitments; the 2025Q4 call question was about supply shortfall risk for the Wegovy pill (opposite direction). Searched 'contract manufactur', 'capacity agreement', 'right-siz', 'CMO', 'onerous', 'overcapacity' across all NVO transcripts including the Bloomberg-licensed 2026Q1 call (label: Novo Nordisk 2026Q1 earnings call (Bloomberg)): no hit beyond the prepared-remark line and a 2024Q4 Catalent remark about 'pre-existing CMO contracts'. I/B/E/S FY2026 sales consensus (DKK 299.6bn, 15 estimates, 2026-08-20) sits at the guidance midpoint (market/consensus_vs_guidance.csv#10), giving no sign the Street models further exit costs. Not the starter thread, not a patent item.",
+   "correction": "Drop any implication that the right-sizing charge itself is undisclosed; the non-obvious claim is narrowly the DKK 91bn unpriced commitment stock (2.75x 2023) against which the first ~DKK 3bn was settled, and the fact that no analyst has asked how much of it is surplus.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 110
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2024.md",
+     "page": 130
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 13
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 14
+    },
+    {
+     "doc_id": "NVO:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:presentations/2026-03_cmd.md",
+     "page": 5
+    },
+    {
+     "doc_id": "NVO:presentations/2026-03_cmd_manufacturing.md",
+     "page": 10
+    },
+    {
+     "doc_id": "NVO:_inbox/bloomberg/NVO_2026Q1_transcript_bbg.pdf",
+     "page": 8
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q4_transcript.md",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "NVO-c02",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Half of this candidate is already on the record. 'Pipeline fill' is printed in the 6-Ks themselves: Wegovy pill Q1 2026 sales 'positively impacted by pre-launch pipeline fill with wholesalers and telehealth partners' (NVO:6k/2026-05-06_caq12026.md p2 headline bullet and p9), Ozempic pill/Rybelsus Q2 growth 'driven by the re-branding and re-launch ... and related wholesaler pipeline fill' and Wegovy pill IO 'primarily driven by wholesaler pipeline fill' (NVO:6k/2026-08-04_caq22026.md p10-11). On the 2026Q1 call Graham Parry (Citi) asked directly to quantify the Wegovy pill inventory impact and whether further inventory build would follow; the CFO answered about USD 150m of pipeline filling and said further channel build is 'absolutely normal' (NVO:companies/NVO/transcripts/2026Q1_transcript.md p15, grade C; same exchange in the Bloomberg-licensed 2026Q1 call, p17, cited by label only). The 6-K also explains cash timing: H1 2026 FCF DKK 55.3bn up on 'timing of US rebate payments' (NVO:6k/2026-08-04_caq22026.md p15), and the working-capital outflow (DKK -19.9bn H1, p28; -33.2bn Q1, NVO:6k/2026-05-06_caq12026.md p26) is on the face of the cash-flow statement. What is not addressed anywhere: the receivables level itself (DKK 88.9bn vs 69.6bn a year earlier, p29) and DSO. Searched 'receivable', 'working capital', 'DSO' in 2025Q3/2025Q4/2026Q1(+Bloomberg)/2026Q2 transcripts: the only receivables mention is the 2025Q3 CFO saying FCF guidance reflected 'lower-than-expected trade receivables in the U.S.' (NVO:transcripts/2025Q3_transcript.md p1, grade B), i.e. the opposite direction a year earlier.",
+   "correction": "Narrow to: receivables up 28% YoY to DKK 88.9bn (DSO ~82 to ~103 days) has never been raised on a call; the pipeline-fill explanation is management's own disclosed and Q&A-answered point (USD 150m for the Wegovy pill in Q1) and is too small to account for an ~DKK 18bn excess, which is what makes the gap non-obvious.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 29
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 10
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 28
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 26
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:_inbox/bloomberg/NVO_2026Q1_transcript_bbg.pdf",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "NVO-c03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The underlying point (the capacity build ran ahead of demand and production assets are being written down) was said plainly by management. 2025Q3 call, CFO prepared remarks (grade B): gross margin fell on 'around DKK 3 billion from the one-off restructuring costs and impairments related to a few production assets', and capex guidance was cut 'driven by adjustments to expansion plans' (NVO:transcripts/2025Q3_transcript.md p1). The 2026Q2 call and 6-K then announced the DKK 3bn 'right-sizing of manufacturing capacity agreements' (NVO:6k/2026-08-04_caq22026.md p13), and the CMD lists 'manufacturing right-sizing' as a use of savings (NVO:presentations/2026-03_cmd.md p5). The FY2026 capex guide (DKK 55bn, down from ~60bn) and 'capital expenditure investments are expected to decline' (NVO:6k/2026-08-04_caq22026.md p17) are headline guidance items. The wording swap from 'significantly expanding' to 'optimising' global production (AR2024 p40 vs AR2025 p42) is real but only restates what management already told the market; the impairment table (AR2025 p96) is the quantified version of the CFO's 'impairments related to a few production assets'.",
+   "correction": "If kept at all, narrow to the inventory write-down acceleration (+52% stock, +61% charge, AR2025 p97), which no call addresses; the language-drift and AUC-impairment pieces are management-voiced.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2024.md",
+     "page": 40
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 42
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 96
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 13
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:presentations/2026-03_cmd.md",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "id": "NVO-c04",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "This is the most-covered story on the name. The cash channel as a price driver was stated by management in a Q&A answer on the 2026Q2 call (speaker label unreliable in the grade-C text; the answer credits 'Jamey and the team', so likely the CFO): Wegovy injectable US self-pay is 'to the tune of 35% ... compared to a year ago, where we were around the 10% to 15% range. It's at a different price' (NVO:transcripts/2026Q2_transcript.md p1, grade C), and Graham Parry asked whether a ~57% negative price/mix on US Wegovy injectable was 'just the cash pay mix', which Jamey Millar answered with channel mix 'reimbursed versus self-pay' (same page). The 2025Q4 call gave self-pay at ~30% of injectable scripts (NVO:transcripts/2025Q4_transcript.md p1). The 6-K headlines the -22% US Wegovy injectable decline and the 39% self-pay share (NVO:6k/2026-08-04_caq22026.md p7, p31), the MFN agreement and its 'negative low single-digit' impact were a press-release headline (NVO:policy/press_2025-11-06_us_administration_agreement.md p1), and guidance prepared remarks list 'lower realized prices ... amplified by the Most-Favored-Nation agreements' (2026Q2 call p1; 2025Q4 call p1). I/B/E/S FY2026 sales consensus sits at the guidance midpoint (market/consensus_vs_guidance.csv#10), so the price collapse is priced. Prescription-share loss to Lilly is likewise a starter-thread fact. The 20-F clause edit adds nothing an analyst did not already hear.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "NVO:20f_FY2024.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:20f_FY2025.md",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 7
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 6
+    },
+    {
+     "doc_id": "NVO:policy/press_2025-11-06_us_administration_agreement.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "NVO-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The 'true-up recurred' point is an earnings-release headline and was quantified in Q&A. The Q2 2026 6-K's first page bullet says adjusted sales grew 7% 'driven by GLP-1 volume growth ... and favourable US rebate adjustments in the quarter' (NVO:6k/2026-08-04_caq22026.md p2; repeated p6, p11, p12). CEO and CFO both said it in prepared remarks (NVO:transcripts/2026Q2_transcript.md p1, grade C), and on Graham Parry's question Jamey Millar sized it: 'the DKK 2 billion that we've highlighted ... about three quarters of the impact is Ozempic gross to net, and the balance is insulin' (same page). The 2025 'not anticipated to reoccur' statement was itself prepared-remark guidance (NVO:transcripts/2025Q4_transcript.md p1) and the CFO's 2025Q3 framing (grade B) was about the comparator, which the CFO walked through for an analyst named James on the 2026Q2 call ('favorable gross to net effects we had in Q3 and Q4 last year of combined $5 billion ... we don't carry forward'). Any analyst reading the release saw the contradiction and got the number. The Medicaid sub-angle is also discussed: MFN Medicaid timing was asked on the 2025Q4 call (Thibault Boutherin, Morgan Stanley) and reduced Medicaid obesity coverage is in every outlook paragraph since 2025Q3. Consensus sits at the raised guidance midpoint (market/consensus_vs_guidance.csv#10).",
+   "correction": "The one piece not voiced is the arithmetic from note 2.1: Medicaid rebates +17.7% vs US net sales +3.4% in 2025 and a sales-deduction liability at 43.5% of sales (AR2025 p88-89). That is a sensitivity observation, not a contradiction, and would need to stand alone without the 'will not repeat' framing.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 6
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    },
+    {
+     "doc_id": "NVO:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 88
+    }
+   ]
+  },
+  {
+   "id": "NVO-c06",
+   "refuted": false,
+   "severity": "major",
+   "argument": "The reversal itself is a headline (NVO:6k/2026-05-06_caq12026.md p2: reported sales +32% 'positively impacted by a provision reversal related to the 340B Drug Pricing Program'; 2025Q4 call prepared remarks, NVO:transcripts/2025Q4_transcript.md p1). The Seventh Circuit risk is also management-voiced: the CFO's 2024Q2 prepared remarks said 'One ruling from the U.S. Court of Appeals for the Seventh Circuit remains pending ... there may be a material impact on Novo Nordisk's financial position', and Peter Verdult (Citi) asked about 340B recognition prudence on the same call, answered by the CFO naming the outstanding Seventh Circuit ruling (NVO:companies/NVO/transcripts/2024Q2_transcript.md p8, p15, grade C). The pending Seventh Circuit appeal sits in the FY2025 6-K legal note right beside the reversal (NVO:6k/2026-02-03_caq42025.md p29). What is not discussed anywhere in the index is the Mosaic Health antitrust class action being reversed and remanded by the Second Circuit (AR2025 p99 vs AR2024 p117 'appeal is currently pending'): 'Mosaic' and 'antitrust' in NVO transcripts return only Catalent merger-review hits (2024Q2 p11, 2024Q3 p11/p18), and no call since the reversal asks about reversal risk.",
+   "correction": "Narrow to the Mosaic remand: the revived antitrust exposure on the same contract-pharmacy conduct was never raised on a call, while the Seventh Circuit pendency was flagged by management in 2024 and printed in the 6-K.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 98
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 99
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2024.md",
+     "page": 117
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-02-03_caq42025.md",
+     "page": 29
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q2_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2024Q2_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "NVO-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Both halves were announced plainly. The adjusted measures excluding 'major impairment losses and major legal matters' were explained in CFO prepared remarks on the 2025Q4 call (NVO:transcripts/2025Q4_transcript.md p1) and defined in the annual report (AR2025 p118); every 6-K front page now carries reported vs adjusted operating profit with 'non-cash impairment' called out (NVO:6k/2026-08-04_caq22026.md p2). The Rybelsus re-brand was announced on the 2025Q4 call ('the Ozempic pill, formerly known as Rybelsus', same page) and discussed in Q&A on the 2026Q1 call (Jamey Millar: the Ozempic pill 'will breathe new life into Ozempic', NVO:companies/NVO/transcripts/2026Q1_transcript.md p16-17; same exchange in the Bloomberg-licensed 2026Q1 call p19, cited by label only). The Q2 6-K text itself attributes the Ozempic pill/Rybelsus growth to 're-branding' and 'wholesaler pipeline fill' (p11), so the 'growth is pipeline fill' point is the company's own sentence. Combining a brand line after a rename and non-GAAP impairment carve-outs are common across the shortlist.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 90
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 118
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 4
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "NVO-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Confirmed the exchange on the grade-B 2025Q3 transcript (NVO:transcripts/2025Q3_transcript.md p1): Harry Sephton asked whether channel prices would trend to the lowest level and David Moore (EVP US Operations) said 'we can't discuss any of the specifics around IRA or MFN'. But the mechanism the deflection supposedly hid was disclosed the next day as a press-release headline with a stated 'negative low single-digit impact on global sales growth in 2026' (NVO:policy/press_2025-11-06_us_administration_agreement.md p1; policy/policy_exposure.csv R017), built into guidance on the 2025Q4 call ('lower realized prices ... amplified by the MFN agreement', NVO:transcripts/2025Q4_transcript.md p1), asked about again on that call (Thibault Boutherin on MFN Medicare/Medicaid timing, same page), and the -11% US Q1 decline is the Q1 2026 6-K headline (NVO:6k/2026-05-06_caq12026.md p2). A company declining to pre-announce a deal under negotiation the day before it is announced is not an information gap an investor could have used: the deal and its sizing were public within 24 hours and consensus sits at guidance (market/consensus_vs_guidance.csv#10). This is the MFN/price-collapse starter story told through hindsight.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "NVO:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:policy/press_2025-11-06_us_administration_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-05-06_caq12026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "id": "NVO-c09",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Confirmed label section 8.6 (drug:wegovy:label_sections.md p31): Wegovy tablets 'have not been studied for weight reduction in adults with type 2 diabetes' and some T2D patients 'may experience subtherapeutic semaglutide blood concentrations'. Part of the competitive comparison is already covered: Novo's own Q2 2026 investor slide 'Wegovy pill has a differentiated label in the US' compares DDI and population-use rows vs orforglipron and omits 8.6 (NVO:presentations/2026Q2_earnings_slides.md p29), and James Quigley (Goldman) asked on the 2026Q1 call about Foundayo's early launch and 'how to manage relative food and water interactions' (NVO:companies/NVO/transcripts/2026Q1_transcript.md p14; Bloomberg-licensed 2026Q1 call p16, cited by label only), so the dosing-convenience half is asked-and-answered. The US approval press release does state OASIS 4 excluded people with diabetes (NVO:policy/press_2025-12-22_wegovy_pill_us.md p1), but only as trial design, not as a commercial limitation. Searched 'subtherapeutic', 'not been studied', 'bioavailab', 'type 2' near pill across 2025Q4, 2026Q1 (+Bloomberg), 2026Q2 transcripts: no question or answer on the T2D exposure gap. A caveat that weakens the 'fence' claim: Novo sells its own oral semaglutide for T2D (Ozempic pill, re-launched 2026, NVO:6k/2026-08-04_caq22026.md p11), so an obese T2D patient has a Novo oral option, which may be why no analyst has asked.",
+   "correction": "Drop the food/water contrast (already asked on the 2026Q1 call) and frame the point as the label's subtherapeutic-exposure warning in T2D, which Novo's own label-comparison slide omits; acknowledge the Ozempic pill as Novo's in-house oral alternative for that population.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:wegovy:label_sections.md",
+     "page": 31
+    },
+    {
+     "doc_id": "drug:wegovy:label_sections.md",
+     "page": 3
+    },
+    {
+     "doc_id": "drug:foundayo:label_sections.md",
+     "page": 4
+    },
+    {
+     "doc_id": "NVO:presentations/2026Q2_earnings_slides.md",
+     "page": 29
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "NVO:_inbox/bloomberg/NVO_2026Q1_transcript_bbg.pdf",
+     "page": 16
+    },
+    {
+     "doc_id": "NVO:policy/press_2025-12-22_wegovy_pill_us.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "NVO-c10",
+   "refuted": false,
+   "severity": "major",
+   "argument": "The tariff exemption itself is a press-release headline: 'Novo Nordisk is expected to receive a three-year tariff exemption' (NVO:policy/press_2025-11-06_us_administration_agreement.md p1), tariffs are a named risk in AR2025 p41 and the outlook assumptions (AR2025 p17; NVO:6k/2026-08-04_caq22026.md p17), and the CFO addressed tariffs in 2025Q1 prepared remarks ('a potential expansion or increase of tariffs may have a negative impact', NVO:companies/NVO/transcripts/2025Q1_transcript.md p9, grade C). Section 232 pharma tariffs and the 2029 grace expiry apply to every EU-manufacturing name on the shortlist, which makes the generic point obvious. Searched 'tariff', 'Section 232', 'grace period', '2029' in 2025Q3, 2025Q4, 2026Q1 (+Bloomberg), 2026Q2 transcripts: zero hits since 2025Q1, so the post-exemption cliff has not been discussed. The Novo-specific part (61% of PP&E and intangibles in Denmark vs 56% US sales, AR2025 p89; IRA-selected share 80% vs Lilly 15%) is a computed contrast no call or release makes.",
+   "correction": "Keep only the relative-footprint angle (Denmark asset concentration and modest US investment pledge vs Lilly against an identical 2029 grace expiry); the existence of the exemption and its end date are public headlines, and the duty sizing rests on an undisclosed import-value assumption.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:policy/press_2025-11-06_us_administration_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 41
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:reports/annual_report_2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "NVO:6k/2026-08-04_caq22026.md",
+     "page": 17
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2025Q1_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/tariff/wh_proclamation_11020_2026-04-02_section232_pharma.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "product",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Wegovy (injection + pill) is the obvious product pick, but the fine-print edge is partly management's own talking point: Novo's Q2 2026 slide 'Wegovy pill has a differentiated label in the US' already sells the MACE indication, no-DDI restrictions and 16.6% weight loss vs orforglipron (NVO:presentations/2026Q2_earnings_slides.md p29), and the food/water dosing contrast with Foundayo was asked on the 2026Q1 call (NVO:companies/NVO/transcripts/2026Q1_transcript.md p14). The part not voiced by management or analysts is the label's T2D 'not studied' and subtherapeutic-exposure language (drug:wegovy:label_sections.md p31), which the company slide omits.",
+   "correction": "Lead the fine-print edge with the section 8.6 T2D caveat that Novo's comparison slide leaves out; the MACE and DDI advantages are Novo's own investor messaging and score as obvious.",
+   "pages_checked": [
+    {
+     "doc_id": "NVO:presentations/2026Q2_earnings_slides.md",
+     "page": 29
+    },
+    {
+     "doc_id": "drug:wegovy:label_sections.md",
+     "page": 31
+    },
+    {
+     "doc_id": "NVO:companies/NVO/transcripts/2026Q1_transcript.md",
+     "page": 14
+    }
+   ]
+  }
+ ],
+ "overall": "Most of NVO's shortlist material restates the US price collapse, MFN, gross-to-net true-ups and the re-brand, all of which are earnings-release bullets, prepared remarks or answered Q&A, and I/B/E/S FY2026 sales consensus (DKK 299.6bn, 2026-08-20) sits on the guidance midpoint. What survives is balance-sheet and footnote material no call has touched: the DKK 91bn contract-manufacturer commitment stock (least obvious), the 28% receivables build beyond the disclosed USD 150m pipeline fill, the Mosaic antitrust remand, the Wegovy pill T2D label gap, and the Denmark-heavy tariff footprint."
+}

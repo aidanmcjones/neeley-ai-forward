@@ -399,8 +399,9 @@ def _profile(slug):
         pairs = sorted({(r["Exclusivity_Code"], _iso(r["_d"])) for _, r in ex.iterrows()}, key=lambda x: x[1])
         P["exclusivity"] = _f([{"code": c, "date": d_} for c, d_ in pairs], "orange_book_exclusivity.csv",
                               latest=pairs[-1][1] if pairs else None)
-        if pairs:
-            ends.append(pd.Timestamp(pairs[-1][1]))
+        prot = [p_ for p_ in pairs if not str(p_[0]).upper().startswith("ODE")]   # orphan exclusivity is not protection
+        if prot:
+            ends.append(pd.Timestamp(prot[-1][1]))
     else:
         P["exclusivity"] = _f([], "orange_book_exclusivity.csv not in pack", latest=None)
 
@@ -422,13 +423,15 @@ def _profile(slug):
             ds = _dates(own[c]) if c in own else []
             if len(ds):
                 ed[c] = _iso(max(ds))
+        orphan = ed.pop("Orphan Exclusivity Exp. Date", None)   # indication-limited: not product protection
         lic = own[own["Submission Type"].fillna("") == "Original"] if "Submission Type" in own else own
         ap = _dates(lic["Approval Date"]) if len(lic) else []
         derived = None
         if len(ap):
             derived = _iso(min(ap) + pd.DateOffset(years=12))
         P["purple_exclusivity"] = _f(ed, "purple_book.csv", derived_12y_reference_exclusivity=derived,
-                                     first_licensed=_iso(min(ap)) if len(ap) else None)
+                                     first_licensed=_iso(min(ap)) if len(ap) else None,
+                                     orphan_exclusivity_not_protection=orphan)
         P["biosimilars_referencing"] = _f(len(bios_names), "purple_book.csv", names=bios_names)
         for v in list(ed.values()) + ([derived] if derived else []):
             ends.append(pd.Timestamp(v))
@@ -436,7 +439,8 @@ def _profile(slug):
         P["purple_exclusivity"] = _f({}, "purple_book.csv not in pack", derived_12y_reference_exclusivity=None)
         P["biosimilars_referencing"] = _f(None, "purple_book.csv not in pack", names=[])
     P["protection_end"] = _f(_iso(max(ends)) if ends else None,
-                             "max of orange_book_patents/exclusivity.csv, purple_book.csv (12y derived for biologics)")
+                             "max of orange_book_patents/exclusivity.csv, purple_book.csv (12y derived for biologics); orphan "
+                             "exclusivity excluded (indication-limited, not product protection)")
 
     # Paragraph IV
     pv = _csv(slug, "paragraph_iv.csv")

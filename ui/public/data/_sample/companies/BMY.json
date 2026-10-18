@@ -1,0 +1,228 @@
+{
+ "ticker": "BMY",
+ "name": "BMY",
+ "needle_id": "BMY-labels-484154",
+ "findings": [
+  {
+   "id": "BMY-labels-484154",
+   "ticker": "BMY",
+   "finding": "eliquis lists 6 indications vs rival median 10 ({'xarelto': 10}); narrower label should show up as a smaller addressable patient pool",
+   "signal_kind": "label_narrower",
+   "evidence": [
+    {
+     "doc_id": "drug:eliquis:label_sections.md",
+     "page": null,
+     "quote": "ELIQUIS is indicated to reduce the risk of stroke and systemic embolism in adult patients with nonvalvular atrial fibrillation.",
+     "speaker": "",
+     "figures": [],
+     "printed": "",
+     "citation": "Eliquis label \u00a71.1 (DailyMed setid e9481622-7cc6-418a-acb6-c5450daae9b0)",
+     "excerpt": {
+      "before": "(sample) ",
+      "match": "ELIQUIS is indicated to reduce the risk of stroke and systemic embolism in adult patients with nonvalvular atrial fibrillation.",
+      "after": ""
+     }
+    },
+    {
+     "doc_id": "drug:xarelto:label_sections.md",
+     "page": null,
+     "quote": "XARELTO is indicated to reduce the risk of stroke and systemic embolism in adult patients with nonvalvular atrial fibrillation.",
+     "speaker": "",
+     "figures": [],
+     "printed": "",
+     "citation": "Xarelto label \u00a71.1 (DailyMed setid 10db92f9-2300-4a80-836b-673e1ae91610)",
+     "excerpt": {
+      "before": "(sample) ",
+      "match": "XARELTO is indicated to reduce the risk of stroke and systemic embolism in adult patients with nonvalvular atrial fibrillation.",
+      "after": ""
+     }
+    }
+   ],
+   "impact": {
+    "dollars": null,
+    "formula": "no direct dollar path; scored on a stated proxy of 2% of operating income",
+    "i_norm": 0.02,
+    "ttm_operating_income": 4918600000.0
+   },
+   "peer": {
+    "metric_value": 6,
+    "peer_median": 10,
+    "z": null
+   },
+   "vector": {
+    "I_norm": 0.02,
+    "P": 0.9,
+    "T": 0.926,
+    "O": 0.9,
+    "E": 1.0,
+    "Z": 0,
+    "D": 0,
+    "obscurity_note": "only in filings / data, not in headlines or call Q&A",
+    "prior": "contractual",
+    "topics": [
+     "other"
+    ]
+   },
+   "score": 0.015,
+   "confidence": "high",
+   "verdict": "verified",
+   "reason": "",
+   "outside": {},
+   "hit_rate": {}
+  },
+  {
+   "id": "BMY-labels-223816",
+   "ticker": "BMY",
+   "finding": "eliquis twice daily (730/yr) vs xarelto once daily (365/yr)",
+   "signal_kind": "dosing_burden",
+   "evidence": [
+    {
+     "doc_id": "drug:eliquis:label_sections.md",
+     "page": null,
+     "quote": "The recommended dose of ELIQUIS for most patients is 5 mg taken orally twice daily.",
+     "speaker": "",
+     "figures": [],
+     "printed": "",
+     "citation": "Eliquis label \u00a72.1 (DailyMed setid e9481622-7cc6-418a-acb6-c5450daae9b0)",
+     "excerpt": {
+      "before": "(sample) ",
+      "match": "The recommended dose of ELIQUIS for most patients is 5 mg taken orally twice daily.",
+      "after": ""
+     }
+    },
+    {
+     "doc_id": "drug:xarelto:label_sections.md",
+     "page": null,
+     "quote": "Reduction in Risk of Stroke in Nonvalvular Atrial Fibrillation CrCl >50 mL/min 20 mg once daily Take with evening meal",
+     "speaker": "",
+     "figures": [],
+     "printed": "",
+     "citation": "Xarelto label \u00a72.1 (DailyMed setid 10db92f9-2300-4a80-836b-673e1ae91610)",
+     "excerpt": {
+      "before": "(sample) ",
+      "match": "Reduction in Risk of Stroke in Nonvalvular Atrial Fibrillation CrCl >50 mL/min 20 mg once daily Take with evening meal",
+      "after": ""
+     }
+    }
+   ],
+   "impact": {
+    "dollars": null,
+    "formula": "no direct dollar path; scored on a stated proxy of 2% of operating income",
+    "i_norm": 0.02,
+    "ttm_operating_income": 4918600000.0
+   },
+   "peer": {
+    "metric_value": 730,
+    "peer_median": 365,
+    "z": null
+   },
+   "vector": {
+    "I_norm": 0.02,
+    "P": 0.9,
+    "T": 0.926,
+    "O": 0.9,
+    "E": 1.0,
+    "Z": 0,
+    "D": 0,
+    "obscurity_note": "only in filings / data, not in headlines or call Q&A",
+    "prior": "contractual",
+    "topics": [
+     "other"
+    ]
+   },
+   "score": 0.015,
+   "confidence": "high",
+   "verdict": "verified",
+   "reason": "",
+   "outside": {},
+   "hit_rate": {}
+  },
+  {
+   "id": "BMY-forensics-652877",
+   "ticker": "BMY",
+   "finding": "Receivables-vs-revenue growth gap -12.3 pts (Q2 2026) vs peers; peer median -0.3 pts, z -1.7",
+   "signal_kind": "rec_gap_peer_outlier",
+   "evidence": [
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 18,
+     "quote": "allowance for expected credit loss ( 59 ) ( 58 ) Net trade receivables 9,077 9,592 Alliance, royalties, VAT and other 1,475 1,821 Receivables $ 10,553 $ 11,414 Non-U.S. receivables",
+     "speaker": "",
+     "figures": [
+      "9,077"
+     ],
+     "printed": "18",
+     "citation": "BMY 10-Q 2026-06-30, p. 18",
+     "excerpt": {
+      "before": "(sample) ",
+      "match": "allowance for expected credit loss ( 59 ) ( 58 ) Net trade receivables 9,077 9,592 Alliance, royalties, VAT and other 1,475 1,821 Receivables $ 10,553 $ 11,414 Non-U.S. receivables",
+      "after": ""
+     }
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 3,
+     "quote": "$ 23,756 $ 22,794 Alliance and other revenues 385 360 706 676 Total Revenues 12,973 12,269 24,462 23,470 Cost of products sold (a) 3,726 3,372 7,146 6,404 Selling, general and",
+     "speaker": "",
+     "figures": [
+      "12,973"
+     ],
+     "printed": "3",
+     "citation": "BMY 10-Q 2026-06-30, p. 3",
+     "excerpt": {
+      "before": "(sample) ",
+      "match": "$ 23,756 $ 22,794 Alliance and other revenues 385 360 706 676 Total Revenues 12,973 12,269 24,462 23,470 Cost of products sold (a) 3,726 3,372 7,146 6,404 Selling, general and",
+      "after": ""
+     }
+    }
+   ],
+   "impact": {
+    "dollars": null,
+    "formula": "no direct dollar path; scored on a stated proxy of 2% of operating income",
+    "i_norm": 0.02,
+    "ttm_operating_income": 4918600000.0
+   },
+   "peer": {
+    "metric_value": -0.12266717777815883,
+    "peer_median": -0.0032137116541257615,
+    "z": -1.6529544421292364
+   },
+   "vector": {
+    "I_norm": 0.02,
+    "P": 0.6,
+    "T": 0.926,
+    "O": 0.9,
+    "E": 1.0,
+    "Z": -1.6529544421292364,
+    "D": -1,
+    "obscurity_note": "only in filings / data, not in headlines or call Q&A",
+    "prior": "trend",
+    "topics": [
+     "other"
+    ]
+   },
+   "score": 0.0075,
+   "confidence": "high",
+   "verdict": "verified",
+   "reason": "",
+   "outside": {},
+   "hit_rate": {}
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "q": "Where is BMY's label narrower than its rivals?"
+  },
+  {
+   "id": "q2",
+   "q": "What is priced in for Eliquis exclusivity?"
+  }
+ ],
+ "stance": {
+  "headline": "Sample stance (fixture)",
+  "generated_by": "template",
+  "options": [],
+  "alternatives": []
+ }
+}

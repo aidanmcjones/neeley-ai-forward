@@ -1,0 +1,221 @@
+{
+  "ticker": "GILD",
+  "as_of": "2026-10-17",
+  "demo": true,
+  "header_note": "Pipeline demonstration for Gilead; not the team's Part 2 recommendation, which follows the company pick.",
+  "_comment": "Demo fixture: three moves tied by finding id to GILD rows that pass the numeric gate in out/GILD/findings_v3.jsonl (run with --nuggets docs/nuggets/). Biktarvy: Medicare set price from January 2028 (FIND IRA row 49af018377a3, Parker's nugget GILD-nugget-001 f6f1c54114fe) with US generic entry no earlier than April 1, 2036 under the patent settlements (10-K FY2025 file page 37), so the generic date lies outside the horizon. Yeztugo vs ViiV's Apretude (GILD-nugget-009 488e8cc72ba4). Descovy MFN-aligned Medicaid and cash channel (MFN row f87b31bee9cb, deal terms confidential). Every company number is cited to its 10-K or 10-Q page; every other parameter is a labelled team input.",
+  "cash_and_equivalents": {
+    "value": 3179,
+    "citation": {
+      "canonical_id": "GILD:10q_2026Q2.md",
+      "page": 4,
+      "ticker": "GILD",
+      "quote": "Cash and cash equivalents $ 3,179 $ 7,564",
+      "doc_title": "Gilead 10-Q 2026-06-30",
+      "doc_type": "10-Q"
+    }
+  },
+  "moves": [
+    {
+      "name": "Reset Biktarvy's US net price and contracting before the January 2028 Medicare set price, holding share until generic entry no earlier than April 1, 2036",
+      "template": "M4",
+      "context": {
+        "product": "biktarvy"
+      },
+      "why": "Biktarvy's Medicare price is set from January 2028 while its US generic entry date under the patent settlements is April 1, 2036, so the price step, not generics, is the event inside the window.",
+      "finding_ids": [
+        "49af018377a3",
+        "f6f1c54114fe"
+      ],
+      "params": {
+        "base_us_rev_annual": {
+          "value": 11467,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "GILD:10k_FY2025.md",
+            "page": 40,
+            "ticker": "GILD",
+            "quote": "Biktarvy $ 11,467 $ 1,676 $ 1,190 $ 14,334 $ 10,855 $ 1,509 $ 1,060 $ 13,423 7 %",
+            "doc_title": "Gilead 10-K FY2025",
+            "doc_type": "10-K"
+          },
+          "note": "Biktarvy US product sales FY2025"
+        },
+        "share_moved": {
+          "value": 0.1,
+          "kind": "assumption",
+          "note": "share of US volume under the reset contracts at plateau (team input)"
+        },
+        "price_delta": {
+          "value": -0.08,
+          "kind": "assumption",
+          "note": "net price given on that volume to hold share (team input)"
+        },
+        "volume_gain": {
+          "value": 0.02,
+          "kind": "assumption",
+          "note": "share held against switches to long-acting regimens (team input)"
+        },
+        "ramp_months": {
+          "value": 12,
+          "kind": "assumption",
+          "note": "contract ramp (team input)"
+        },
+        "channel_build_cost": {
+          "value": 20.0,
+          "kind": "assumption",
+          "note": "contracting and analytics build (team input, not disclosed)"
+        },
+        "channel_annual_cost": {
+          "value": 15.0,
+          "kind": "assumption",
+          "note": "operating cost (team input, not disclosed)"
+        },
+        "baseline_start_month": {
+          "value": 15,
+          "kind": "assumption",
+          "note": "January 2028, the Medicare set-price effective date (CMS selected-drug list)"
+        },
+        "loe_month": {
+          "value": 0,
+          "kind": "assumption",
+          "note": "US generic entry no earlier than April 1, 2036 (10-K settlement): outside the 60-month horizon"
+        },
+        "tax_rate": {
+          "value": 0.185354,
+          "kind": "company",
+          "note": "TTM effective tax rate t from SEC XBRL (income tax / pretax, four quarters), as FIND"
+        }
+      },
+      "capability": {
+        "approved label": true,
+        "commercial footprint in the TA": true,
+        "direct-to-patient fulfilment channel": false
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": true,
+        "regulators": false,
+        "investors": true
+      }
+    },
+    {
+      "name": "Expand the Yeztugo PrEP launch against ViiV's Apretude",
+      "template": "M6",
+      "context": {
+        "product": "yeztugo"
+      },
+      "why": "Yeztugo already outsells Apretude in the US, but about a third of its switch patients come from Gilead's own Descovy, so promotion must target new PrEP users.",
+      "finding_ids": [
+        "488e8cc72ba4"
+      ],
+      "params": {
+        "n_reps": {
+          "value": 80,
+          "kind": "assumption",
+          "note": "incremental PrEP reps (team input)"
+        },
+        "dtc_spend_annual": {
+          "value": 60.0,
+          "kind": "assumption",
+          "note": "PrEP awareness spend (team input)"
+        },
+        "tax_rate": {
+          "value": 0.185354,
+          "kind": "company",
+          "note": "TTM effective tax rate t from SEC XBRL (income tax / pretax, four quarters), as FIND"
+        }
+      },
+      "capability": {
+        "approved indication with promotional claims map": true,
+        "field force or media buying capability": true
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": true,
+        "regulators": true,
+        "investors": false
+      }
+    },
+    {
+      "name": "Sell Descovy for PrEP through an MFN-aligned Medicaid and cash-pay channel",
+      "template": "M4",
+      "context": {
+        "product": "descovy"
+      },
+      "why": "Gilead's MFN agreement extends MFN pricing to Medicaid with terms that are not public; an explicit cash and Medicaid channel for Descovy prices the commitment instead of leaving it open.",
+      "finding_ids": [
+        "f87b31bee9cb"
+      ],
+      "params": {
+        "base_us_rev_annual": {
+          "value": 2559,
+          "kind": "company",
+          "citation": {
+            "canonical_id": "GILD:10k_FY2025.md",
+            "page": 40,
+            "ticker": "GILD",
+            "quote": "Descovy 2,559 93 105 2,758 1,902 100 110 2,113 31 %",
+            "doc_title": "Gilead 10-K FY2025",
+            "doc_type": "10-K"
+          },
+          "note": "Descovy US product sales FY2025"
+        },
+        "share_moved": {
+          "value": 0.08,
+          "kind": "assumption",
+          "note": "share of US volume through the channel at plateau (team input)"
+        },
+        "price_delta": {
+          "value": -0.2,
+          "kind": "assumption",
+          "note": "cash and Medicaid MFN net below current US net (team input; no MFN rate is public)"
+        },
+        "volume_gain": {
+          "value": 0.03,
+          "kind": "assumption",
+          "note": "uninsured PrEP users reached (team input)"
+        },
+        "ramp_months": {
+          "value": 12,
+          "kind": "assumption",
+          "note": "channel ramp (team input)"
+        },
+        "channel_build_cost": {
+          "value": 30.0,
+          "kind": "assumption",
+          "note": "one-time build (team input, not disclosed)"
+        },
+        "channel_annual_cost": {
+          "value": 20.0,
+          "kind": "assumption",
+          "note": "operating cost (team input, not disclosed)"
+        },
+        "baseline_delta_rev_annual": {
+          "value": 0.0,
+          "kind": "assumption",
+          "note": "Medicaid MFN size not disclosed: no baseline erosion modeled (the finding is direction only)"
+        },
+        "tax_rate": {
+          "value": 0.185354,
+          "kind": "company",
+          "note": "TTM effective tax rate t from SEC XBRL (income tax / pretax, four quarters), as FIND"
+        }
+      },
+      "capability": {
+        "approved label": true,
+        "TrumpRx listing in place": true,
+        "direct-to-patient fulfilment channel": false
+      },
+      "stakeholders": {
+        "prescribers": true,
+        "patients": true,
+        "payers": false,
+        "regulators": true,
+        "investors": false
+      }
+    }
+  ]
+}

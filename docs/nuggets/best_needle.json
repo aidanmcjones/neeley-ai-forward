@@ -1,0 +1,39 @@
+{
+  "source": "docs/red_team_v3_final.md on origin/needle b908519f59f78ed7aad86e2d224274d53f423648, section (a) summary table, 'Best needle' column",
+  "best_needle": {
+    "MRK": "MRK-nugget-001",
+    "JNJ": "JNJ-nugget-010",
+    "PFE": "PFE-nugget-001",
+    "BMY": "BMY-nugget-001",
+    "AMGN": "AMGN-nugget-006",
+    "NVO": "NVO-nugget-001",
+    "LLY": "LLY-nugget-002",
+    "ABBV": "ABBV-nugget-001",
+    "GILD": "GILD-nugget-001",
+    "AZN": "AZN-nugget-010"
+  },
+  "red_team_score_30": {
+    "MRK": 25.5,
+    "JNJ": 24.5,
+    "PFE": 23.5,
+    "BMY": 22,
+    "AMGN": 20.5,
+    "NVO": 20.5,
+    "LLY": 20,
+    "ABBV": 19.5,
+    "GILD": 19,
+    "AZN": 17.5
+  },
+  "reason": {
+    "MRK": "the 2.5% Keytruda royalty to BMS and Ono ends Dec 31, 2026, so 2027 gets a one-year margin step right before the Dec 2028 cliff, and nobody has said so on a call",
+    "JNJ": "four \"other\" US products went from flat to -$390M a quarter in Q3 2026, 60% of STELARA's drop, and cross STELARA's remaining decline by Q1 2027",
+    "PFE": "Eliquis US +$466M in H1 2026 is a rebate windfall from BMS's list-price cut that ends with April 2028 generics",
+    "BMY": "the same royalty from the receiving side: $0.67B of other income disappears in 2027, unmentioned on four calls",
+    "AMGN": "the IRS Puerto Rico claim ($7.6B of tax and penalties plus interest) exceeds Amgen's entire tax reserve for all open years ($6.3B), with a decision due late 2026 or early 2027",
+    "NVO": "61% of H1 2026 FCF was a growing US rebate accrual on falling sales, and the Jan 2027 WAC cut forces it to unwind",
+    "LLY": "Jardiance revenue has carried a rising one-off every year (9%, 17%, 21%) and the up-to-$910M of 2026 milestones has no 2027 successor in the filings",
+    "ABBV": "the Skyrizi royalty bypasses adjusted EPS, and since the Q2 2026 10-Q it extends to combination assets with payments to 2044",
+    "GILD": "Biktarvy ($11.5B US) takes a Medicare set price Jan 1, 2028, eight years before the 2036 LOE management cites, and Gilead widened the spillover risk to \"potentially other segments\"",
+    "AZN": "chargebacks rose every year, 7.5% to 10.8% of US gross, while AZN loses its 22-state 340B fight"
+  }
+}

@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme tokens as RGB channels (use as rgb(var(--x)) or Tailwind bg-x/50).
+   Hex reference (light): purple #4D1979, purple-deep #3C145F, purple-bright #6A23A7,
+   frog-grey #A3A9AC, teal #007B6E (AI only), teal-soft #DDF1EE (AI only),
+   good #1E7F4F, warn #B26A00, bad #B3261E, bg #F7F5FA, fg #1F1630, muted #5E566C,
+   line #E2DCEA, surface #FFFFFF, surface-2 #F1ECF7, chip #EDE5F6. */
+:root {
+  --purple: 77 25 121;
+  --purple-deep: 60 20 95;
+  --purple-bright: 106 35 167;
+  --frog-grey: 163 169 172;
+  --teal: 0 123 110;
+  --teal-soft: 221 241 238;
+  --good: 30 127 79;
+  --warn: 178 106 0;
+  --bad: 179 38 30;
+  --bg: 247 245 250;
+  --fg: 31 22 48;
+  --muted: 94 86 108;
+  --line: 226 220 234;
+  --surface: 255 255 255;
+  --surface-2: 241 236 247;
+  --chip: 237 229 246;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --purple: 180 140 230;
+    --purple-deep: 120 70 180;
+    --purple-bright: 196 160 245;
+    --frog-grey: 140 146 150;
+    --teal: 64 196 178;
+    --teal-soft: 14 52 48;
+    --good: 86 196 138;
+    --warn: 230 160 60;
+    --bad: 240 110 100;
+    --bg: 20 15 30;
+    --fg: 238 233 245;
+    --muted: 170 160 186;
+    --line: 58 48 76;
+    --surface: 30 23 44;
+    --surface-2: 40 31 58;
+    --chip: 50 38 72;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --purple: 180 140 230;
+  --purple-deep: 120 70 180;
+  --purple-bright: 196 160 245;
+  --frog-grey: 140 146 150;
+  --teal: 64 196 178;
+  --teal-soft: 14 52 48;
+  --good: 86 196 138;
+  --warn: 230 160 60;
+  --bad: 240 110 100;
+  --bg: 20 15 30;
+  --fg: 238 233 245;
+  --muted: 170 160 186;
+  --line: 58 48 76;
+  --surface: 30 23 44;
+  --surface-2: 40 31 58;
+  --chip: 50 38 72;
+  color-scheme: dark;
+}
+
+@layer base {
+  html, body { background: rgb(var(--bg)); color: rgb(var(--fg)); }
+  body { @apply font-body text-[14px] leading-snug antialiased; overflow-x: hidden; }
+  :focus-visible { outline: 2px solid rgb(var(--purple-bright)); outline-offset: 2px; border-radius: 3px; }
+  mark { background: rgb(var(--warn) / 0.25); color: inherit; padding: 0 1px; border-radius: 2px; }
+}
+
+@layer utilities {
+  .tnum { font-variant-numeric: tabular-nums; }
+}
+
+/* AiMark pulse; disabled for reduced motion. */
+@keyframes ai-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.55; transform: scale(0.82); } }
+.ai-pulse { animation: ai-pulse 2.2s ease-in-out infinite; display: inline-block; }
+@media (prefers-reduced-motion: reduce) { .ai-pulse { animation: none; } }
+
+/* Print: hide app chrome, keep content (memo export via window.print). */
+@media print {
+  .no-print, [data-chrome], [data-sidenav] { display: none !important; }
+  body { min-width: 0; background: #fff; color: #000; }
+  main { padding: 0 !important; overflow: visible !important; }
+  body.print-one [data-turn]:not(.print-turn) { display: none !important; }
+  body.print-one .chat-page main { padding-top: 0 !important; }
+  .memo-card { box-shadow: none !important; border: 0 !important; padding: 0 !important; background: #fff !important; color: #000 !important; }
+  .memo-card * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .chat-page { min-height: 0 !important; background: #fff !important; }
+  .app-shell, .app-shell > div { height: auto !important; min-width: 0 !important; overflow: visible !important; display: block !important; }
+}
