@@ -60,7 +60,7 @@ export CITATIONS_DB=$NEEDLE_MOAT/index/citations.sqlite
 | Deck element | Source |
 |---|---|
 | Findings table (ranked by dollar impact) | `out/<T>/findings_table.md` and `.json` (`rank_basis: "impact"`): marked sentence, marked impact math, base-case abs dEPS and dOI, analyst share asked, one shared footnote list. No S and no league number |
-| Sharpest Needle | the row marked Needle in `findings_table.*` (`needle_id`), by the plain rule: the biggest-impact finding that analysts asked about least |
+| Sharpest Needle | the row marked Needle in `findings_table.*` (`needle_id`): Parker's red-team best needle when it passes the gate and is slide-ready, else the plain rule (biggest impact, least asked about); `needle_source` says which |
 | Why this company | Parker's red-team read and a human read of the findings (league_v3 is internal triage only) |
 | Product table and growth limiter | `out/<T>/product_<slug>.md`: five rows, the tie row, the limiter sentence and the priced-in call with its reasons |
 | DECIDE five numbers | `out/<T>/decide.md`: EV (in-window and TV), cash at risk, payback month, scenario spread, MCDA, for the pick and the two rejected moves with each one's binding reason; plus a hand-built decider-evidence table for the picked move |

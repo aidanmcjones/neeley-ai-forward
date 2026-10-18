@@ -1,19 +1,402 @@
 [
   {
-    "ticker": "AMGN",
-    "L": 0.08769086206380915,
-    "top5_sum": 0.2046829825343806,
-    "N_eff": 1.2852684816982238,
+    "ticker": "JNJ",
+    "L": 1.5398648732636566,
+    "top5_sum": 2.7248311989829848,
+    "N_eff": 1.6953691008511595,
     "blocks": {
-      "A": 0.17865936800826734,
-      "P": 0.026023614526113254
+      "P": 1.9413917113795758,
+      "F": 0.7812789973907667,
+      "C": 0.002160490212642111
     },
-    "largest_share": 0.8728589245481506,
-    "n_blocks": 2,
-    "n_findings": 43,
-    "n_withheld": 33,
-    "n_gate_rejected": 4,
+    "largest_share": 0.676170856341689,
+    "n_blocks": 3,
+    "n_findings": 36,
+    "n_withheld": 40,
+    "n_gate_rejected": 10,
     "gate_failed": [
+      {
+        "id": "2aa1c7d275af",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$24.1",
+            "where": "sentence@97",
+            "reason": "a cited source shows 6.0%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "90ed0a734c76",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$5.1",
+            "where": "sentence@110",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "d9615a66e39c",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$1.0",
+            "where": "sentence@70",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$20.1",
+            "where": "sentence@82",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$22.3",
+            "where": "sentence@89",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "05e3a1447674",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$0.9",
+            "where": "sentence@95",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$1.0",
+            "where": "sentence@101",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$122",
+            "where": "sentence@107",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$205",
+            "where": "sentence@113",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "e9d4f0643ea1",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$0.8",
+            "where": "sentence@95",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$152",
+            "where": "sentence@101",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$167",
+            "where": "sentence@107",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "92e5348800df",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$14.5",
+            "where": "sentence@70",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$2.0",
+            "where": "sentence@77",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$3.4",
+            "where": "sentence@90",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "8956344c1d78",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$12.1",
+            "where": "sentence@70",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$14.5",
+            "where": "sentence@77",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$27.8",
+            "where": "sentence@84",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "$29.70",
+            "where": "sentence@91",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "b4554552db9e",
+        "kind": "rebate_true_up",
+        "S": 0.002148785794582007,
+        "unsupported": [
+          {
+            "value": "1%",
+            "where": "sentence@222",
+            "reason": "a cited source shows 2025: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "074764d80850",
+        "kind": "gtn_language_drift",
+        "S": 0.0008124606143018097,
+        "unsupported": [
+          {
+            "value": "10",
+            "where": "sentence@137",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "cac8d96654da",
+        "kind": "segment_fold",
+        "S": 0.001543207294744365,
+        "unsupported": [
+          {
+            "value": "4.6%",
+            "where": "sentence@238",
+            "reason": "a cited source shows (1): unit differs (% vs plain)"
+          }
+        ]
+      }
+    ],
+    "n_scored": 6,
+    "n_not_quantified": 25,
+    "n_guarded": 27,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "be46f62342cd",
+        "S": 1.8424514452028762,
+        "kind": "ira_patent_convergence",
+        "family": "nugget: forces",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "2029 is the same year the Genmab DARZALEX US patents expire and the US royalty ends, but it may also be the first year DARZALEX could face IRA Part B price setting: Medicare Part B paid $2.68 billion for the drug in 2024, about 41% of US sales.",
+        "M": 2.2468920063449707,
+        "O": 0.8200000000000001,
+        "D": 0.8200000000000001,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget JNJ-nugget-005: verdict needs_human, slide_ready False, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "nugget not slide-ready or not verified: kept, flagged, never the Sharpest Needle",
+          "not Parker's red-team best needle for this company (flag only)",
+          "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "056e05d2dc09",
+        "S": 0.4233796086298512,
+        "kind": "royalty_footnote",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "J&J's FY2025 10-K newly puts a number on the Genmab royalty (the FY2024 10-K gave none): 12% to 20% of all DARZALEX net sales, about $2.4 billion in 2025 (up from $2.0 billion), sitting in cost of goods; the CEO separately said the US royalty rolls off in 2029, a gross-margin tailwind no filing quantifies.",
+        "M": 3.077507188076065,
+        "O": 0.13757225662063563,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget JNJ-nugget-001: verdict verified, slide_ready True, best_needle False, obscurity rung prepared_remarks",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)"
+        ]
+      },
+      {
+        "id": "27d8d81f2265",
+        "S": 0.3578993887609155,
+        "kind": "recurring_excluded_charge",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Talc has swung J&J's GAAP results by billions every year (charges of $5.1 billion in 2024, a $7.0 billion reversal in 2025, $0.8 billion in 1H 2026 and a $5.5 billion settlement in Q3 2026), yet 'litigation related' items are excluded from adjusted EPS, the measure J&J says it uses for employee pay targets.",
+        "M": 4.473742359511444,
+        "O": 0.07999999999999999,
+        "D": 0.07999999999999999,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget JNJ-nugget-008: verdict verified, slide_ready True, best_needle False, obscurity rung press_release",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)"
+        ]
+      },
+      {
+        "id": "a0d67e31b1e7",
+        "S": 0.0989402661766996,
+        "kind": "ira_selection",
+        "family": "nugget: forces",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "ERLEADA, which management names as a 2026 growth driver, was put on the IRA list for government-set Medicare prices from 2028; the only mention is one sentence in the 10-K, and Medicare Part D gross spend on it ($1.39 billion in 2024) already exceeds J&J's entire US net ERLEADA sales.",
+        "M": 0.7927587257272641,
+        "O": 0.1248050169185251,
+        "D": 0.8200000000000001,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget JNJ-nugget-004: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "f55997ea7798",
+        "S": 0.002160490212642111,
+        "kind": "launch_metric_gap",
+        "family": "nugget: call_qa",
+        "block": "C",
+        "confidence": "MEDIUM",
+        "sentence": "Analysts asked twice about ICOTYDE sampling and free drug and got patient counts instead; the 'Other Immunology' line that holds ICOTYDE plus IMAAVY booked only $126 million of US sales in Q3 2026 against 20,000+ patients initiated, at most about $6,300 per patient for the quarter.",
+        "M": 0.7856328045971314,
+        "O": 0.5,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "2 of 9 nugget quotes did not verify on our ladder: dropped from the evidence (E over the verified quotes; none verified gives E = 0)",
+          "nugget JNJ-nugget-006: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions",
+          "enriches 570485b15c91 (needle-branch id JNJ-calls-533977, matched by id): one fact, counted once"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "056e05d2dc09",
+      "S": 0.4233796086298512,
+      "sentence": "J&J's FY2025 10-K newly puts a number on the Genmab royalty (the FY2024 10-K gave none): 12% to 20% of all DARZALEX net sales, about $2.4 billion in 2025 (up from $2.0 billion), sitting in cost of goods; the CEO separately said the US royalty rolls off in 2029, a gross-margin tailwind no filing quantifies.",
+      "O": 0.13757225662063563,
+      "D": 0.5,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "royalty_footnote",
+      "flags": [
+        "nugget JNJ-nugget-001: verdict verified, slide_ready True, best_needle False, obscurity rung prepared_remarks",
+        "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "not Parker's red-team best needle for this company (flag only)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 1,
+    "n_strict_needle_candidates": 3,
+    "tariff_exposure": {
+      "proxy": 0.42825,
+      "pct_mfg_sites_outside_us": 75.0,
+      "us_revenue_share_pct": 57.1,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.0696,
+    "old_rank": 8,
+    "v2_L": 0.19495788074919523,
+    "v2_rank": 3,
+    "constants": {
+      "Rev_TTM": 97929.0,
+      "t": 0.16506588347356724,
+      "D": 2440.1,
+      "sigma_EPS": 0.14570027943889252,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 1
+  },
+  {
+    "ticker": "AMGN",
+    "L": 1.1999715189947393,
+    "top5_sum": 3.4003457952310714,
+    "N_eff": 1.0586907255235742,
+    "blocks": {
+      "F": 3.3039687088030316,
+      "A": 0.0642351439949224,
+      "P": 0.03214194243311751
+    },
+    "largest_share": 0.5546487770750138,
+    "n_blocks": 3,
+    "n_findings": 46,
+    "n_withheld": 41,
+    "n_gate_rejected": 8,
+    "gate_failed": [
+      {
+        "id": "f4abcb70e70f",
+        "kind": "risk_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "20",
+            "where": "sentence@142",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "3",
+            "where": "sentence@158",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
       {
         "id": "8c63b397bcb1",
         "kind": "risk_modified",
@@ -44,7 +427,7 @@
           {
             "value": "1",
             "where": "sentence@88",
-            "reason": "a cited source shows 10 %: unit differs (plain vs %)"
+            "reason": "no passing citation, derivation or assumption carries this number"
           }
         ]
       },
@@ -54,6 +437,16 @@
         "S": 0.0,
         "unsupported": [
           {
+            "value": "4",
+            "where": "sentence@15",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "0.5",
+            "where": "sentence@59",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
             "value": "4.0x",
             "where": "sentence@81",
             "reason": "a cited source shows 340B: unit differs (x vs plain)"
@@ -61,53 +454,132 @@
         ]
       },
       {
-        "id": "54027019b116",
-        "kind": "label_broader",
-        "S": 0.0,
+        "id": "108a4e29df41",
+        "kind": "sales_deduction_true_up",
+        "S": 0.0016113083449463394,
         "unsupported": [
           {
-            "value": "5",
-            "where": "sentence@14",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "16",
+            "where": "sentence@47",
+            "reason": "a cited source shows (4) %: unit differs (plain vs %)"
           },
           {
-            "value": "3",
-            "where": "sentence@44",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "18",
+            "where": "sentence@143",
+            "reason": "a cited source shows (4) %: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "0efe85ede7b2",
+        "kind": "price_disclosure_dropped",
+        "S": 0.0022338592964028805,
+        "unsupported": [
+          {
+            "value": "8",
+            "where": "sentence@154",
+            "reason": "a cited source shows 43%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "f101c2002d3b",
+        "kind": "collaboration_profit_split",
+        "S": 0.6633638579592369,
+        "unsupported": [
+          {
+            "value": "50",
+            "where": "sentence@38",
+            "reason": "a cited source shows 48.4%: unit differs (plain vs %)"
           },
           {
-            "value": "5",
-            "where": "sentence@60",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "50",
+            "where": "sentence@41",
+            "reason": "a cited source shows 48.4%: unit differs (plain vs %)"
           },
           {
-            "value": "3",
-            "where": "sentence@73",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
+            "value": "8.7%",
+            "where": "sentence@290",
+            "reason": "a cited source shows 2024: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "3e369fb1fcc8",
+        "kind": "ira_mfp_quantified",
+        "S": 0.6391966988216885,
+        "unsupported": [
           {
-            "value": "1",
-            "where": "sentence@89",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "$290M",
+            "where": "sentence@228",
+            "reason": "a cited source shows 8 %: unit differs (plain vs %)"
           }
         ]
       }
     ],
-    "n_scored": 3,
-    "n_not_quantified": 34,
-    "n_guarded": 22,
+    "n_scored": 7,
+    "n_not_quantified": 33,
+    "n_guarded": 31,
     "comparable": true,
     "company_flags": [],
     "top": [
       {
+        "id": "2756b7c86172",
+        "S": 1.8859976369570792,
+        "kind": "tax_dispute_escalation",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "$7.6B claimed (2010-2015 tax and penalties net of credits, plus undisclosed interest) vs $6.3B reserved for all open years (UTB $4.4B plus $1.9B accrued interest and penalties): at least $1.3B unreserved. Amgen's IRS fight over Puerto Rico profits reaches a U.S. Tax Court decision within months (expected 'no earlier than late 2026 or early 2027', after slipping twice), and the reserve has not moved to meet it: the gross unrecognized tax benefits balance grew in 2025 and H1 2026 almost only from current-year positions ($14M of prior-year additions in 2025) even as the IRS issued a similar 2016-2018 adjustment three times and opened 2019-2022. No analyst has asked about it on any of the three calls, and the Q2 call did not mention it.",
+        "M": 6.56493304924939,
+        "O": 0.287283605607024,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget AMGN-nugget-006: verdict verified, slide_ready True, best_needle True, obscurity rung prepared_remarks",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "2 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "df01b30ed900",
+        "S": 1.4179710718459524,
+        "kind": "intangible_at_risk",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Amgen still carries TAVNEOS at $2.4B ($2.3B tied to the US) although FDA's drug center proposed withdrawing approval, alleging 'untrue statements of material facts'; between the Q1 and Q2 10-Qs the recoverability language moved from 'did not result in significant changes to the estimated future cash flows' to 'potential changes' that still leave the asset 'recoverable', now leaning on 'new U.S. patient interest', and Q2 adds that without a hearing FDA 'may enter summary judgment and ultimately withdraw approval'.",
+        "M": 4.9357883435423,
+        "O": 0.287283605607024,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget AMGN-nugget-007: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)"
+        ]
+      },
+      {
         "id": "bc852b02400d",
-        "S": 0.17865936800826734,
+        "S": 0.0642351439949224,
         "kind": "receivables_outpace_revenue",
         "family": "receivables outpace revenue",
         "block": "A",
         "confidence": "MEDIUM",
-        "sentence": "Receivables 10,227 vs 8,701 a year earlier (+17.5%, 2026Q2 vs 2025Q2) against quarterly revenue 10,054 vs 9,179 (+9.5%); gap +8.0 pts (derived); peer median -0.3 pts, z +1.2 (derived from the shortlist peer panel, not page-cited).",
-        "M": 4.981165944896254,
+        "sentence": "Receivables 10,227 vs 8,701 a year earlier (+17.5%, 2026Q2 vs 2025Q2) against quarterly revenue 10,054 vs 9,179 (+9.5%); gap +8.0 pts (derived); peer median -0.3 pts, z +1.2 (derived from the shortlist peer panel, not page-cited). Explained by footnote: the sales-deduction (rebate and chargeback) liability moved with receivables in FY2025 (10-K; the 10-Q does not give the quarterly deduction balance); receivables rose 2,788 and that balance rose 2,201, leaving a net 587.",
+        "M": 1.7909271442077888,
         "O": 0.5702222214410602,
         "D": 1.0,
         "E": 1.0,
@@ -119,7 +591,9 @@
           "YoY re-derived from XBRL on one basis (review D1): receivables +17.54%, revenue +9.53%, gap +8.01 pts; 4 of 4 operands also page-cited",
           "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
           "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-          "s_f no data (FINRA short interest not in moat)"
+          "s_f no data (FINRA short interest not in moat)",
+          "footnote read: explained by footnote (gross billing with a separate rebate liability, AMGN:10k_FY2025.md); impact lowered to the net movement 587 (floored at 0); not eligible as the Sharpest Needle",
+          "corroborated by nugget AMGN-nugget-001 (3 verified quote(s) added; matched by id)"
         ]
       },
       {
@@ -143,49 +617,53 @@
         ]
       },
       {
-        "id": "e78dad58497e",
-        "S": 0.00038793987978665386,
-        "kind": "mfn_medicaid",
-        "family": "directional: MFN agreement (deal terms confidential)",
+        "id": "8fd08db29181",
+        "S": 0.006506267786790903,
+        "kind": "price_volume_decomposition",
+        "family": "nugget: gtn",
         "block": "P",
         "confidence": "MEDIUM",
-        "sentence": "AMGN signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R023); TrumpRx: Repatha $573 -> $239/mo (R031). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given.",
-        "M": 0.7758234140997152,
-        "O": 0.09091569333393147,
+        "sentence": "Amgen's entire 2025 net-price decline came from one product: Enbrel lost about $1.19B to lower net price while the whole company lost about $0.96B, so the rest of the portfolio had flat-to-positive price; in the first half of 2026 the erosion broadened to five brands (Enbrel, Prolia, XGEVA, Otezla, Repatha) worth about $0.75B in six months.",
+        "M": 2.2876305974852578,
+        "O": 0.5171104900926432,
         "D": 0.9,
         "E": 1.0,
         "pi": 0.0055,
         "c": 0.0,
         "flags": [
-          "tariff exposure proxy 0.417 (sites outside US 57.1% x US revenue 73.0%), exempt until 2029-01-20: not scored",
-          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
-          "MFN size is an internal placeholder (Pfizer base rate 0.65% of US revenue), not printed: deal terms are confidential (review R3)",
+          "nugget AMGN-nugget-003: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
           "s_f no data (FINRA short interest not in moat)",
-          "MFN direction with a placeholder size: not eligible as the Sharpest Needle"
+          "not Parker's red-team best needle for this company (flag only)",
+          "3 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "3 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
         ]
       }
     ],
     "needle": {
-      "id": "bc852b02400d",
-      "S": 0.17865936800826734,
-      "sentence": "Receivables 10,227 vs 8,701 a year earlier (+17.5%, 2026Q2 vs 2025Q2) against quarterly revenue 10,054 vs 9,179 (+9.5%); gap +8.0 pts (derived); peer median -0.3 pts, z +1.2 (derived from the shortlist peer panel, not page-cited).",
-      "O": 0.5702222214410602,
-      "D": 1.0,
+      "id": "2756b7c86172",
+      "S": 1.8859976369570792,
+      "sentence": "$7.6B claimed (2010-2015 tax and penalties net of credits, plus undisclosed interest) vs $6.3B reserved for all open years (UTB $4.4B plus $1.9B accrued interest and penalties): at least $1.3B unreserved. Amgen's IRS fight over Puerto Rico profits reaches a U.S. Tax Court decision within months (expected 'no earlier than late 2026 or early 2027', after slipping twice), and the reserve has not moved to meet it: the gross unrecognized tax benefits balance grew in 2025 and H1 2026 almost only from current-year positions ($14M of prior-year additions in 2025) even as the IRS issued a similar 2016-2018 adjustment three times and opened 2019-2022. No analyst has asked about it on any of the three calls, and the Q2 call did not mention it.",
+      "O": 0.287283605607024,
+      "D": 0.5,
       "E": 1.0,
       "confidence": "MEDIUM",
-      "kind": "receivables_outpace_revenue",
+      "kind": "tax_dispute_escalation",
       "flags": [
-        "age from first public date 2026-08-04 (earnings release AMGN:earnings/2026-08-04_amgn-20260804.md), not the filing 2026-08-05",
-        "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
-        "YoY re-derived from XBRL on one basis (review D1): receivables +17.54%, revenue +9.53%, gap +8.01 pts; 4 of 4 operands also page-cited",
-        "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
+        "nugget AMGN-nugget-006: verdict verified, slide_ready True, best_needle True, obscurity rung prepared_remarks",
+        "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
         "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-        "s_f no data (FINRA short interest not in moat)"
+        "s_f no data (FINRA short interest not in moat)",
+        "1 sentence number(s) cited to a verified line of a page the nugget already cites",
+        "2 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+        "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
       ]
     },
     "needle_status": "strict",
     "n_pi_downgraded": 1,
-    "n_strict_needle_candidates": 2,
+    "n_strict_needle_candidates": 5,
     "tariff_exposure": {
       "proxy": 0.4168300000000001,
       "pct_mfg_sites_outside_us": 57.1,
@@ -205,27 +683,244 @@
       "currency": "USD",
       "annual_only": false
     },
-    "rank": 1
+    "rank": 2
+  },
+  {
+    "ticker": "ABBV",
+    "L": 0.8768514806176912,
+    "top5_sum": 2.490214289575476,
+    "N_eff": 1.0563566568809315,
+    "blocks": {
+      "F": 2.4223975294383244,
+      "L": 0.03034336077953779,
+      "P": 0.03747339935761375
+    },
+    "largest_share": 0.972766697058544,
+    "n_blocks": 3,
+    "n_findings": 34,
+    "n_withheld": 25,
+    "n_gate_rejected": 1,
+    "gate_failed": [
+      {
+        "id": "656d50a62ff9",
+        "kind": "gtn_mix_shift",
+        "S": 0.0001158462392127722,
+        "unsupported": [
+          {
+            "value": "34%",
+            "where": "sentence@123",
+            "reason": "a cited source shows 15,153: unit differs (% vs plain)"
+          }
+        ]
+      }
+    ],
+    "n_scored": 9,
+    "n_not_quantified": 19,
+    "n_guarded": 17,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "53d422aaae7b",
+        "S": 2.4223975294383244,
+        "kind": "royalty_outside_non_gaap",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Since the Q2 2026 10-Q, AbbVie's Skyrizi royalty extends to combination pipeline assets, with payments now projected to 2044 (38% probability for the pipeline slice; Skyrizi itself ends in 2037). The royalty (roughly 16% to 21% of Skyrizi sales; cash paid $2.9B in 2025, $1.8B in H1 2026) bypasses adjusted EPS, gross margin and operating margin because it is booked as a contingent-consideration liability whose fair-value changes are added back. The cash size is not new: the CFO said \"roughly $3.5 billion of SKYRIZI royalty payments\" in 2026 free cash flow on the Q4 2025 call (ABBV 2025Q4 transcript; the verifier cannot attach the speaker to that line, so it is cited here in text, not as evidence). What is new and unsaid is the extension to combination assets and the adjusted-EPS bypass.",
+        "M": 2.653418941270438,
+        "O": 0.9129344378157254,
+        "D": 1.0,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "3 of 28 nugget quotes did not verify on our ladder: dropped from the evidence (E over the verified quotes; none verified gives E = 0)",
+          "nugget ABBV-nugget-001: verdict verified, slide_ready True, best_needle True, obscurity rung prepared_remarks",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "5 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "2 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
+        ]
+      },
+      {
+        "id": "7d4db3d9974e",
+        "S": 0.03034336077953779,
+        "kind": "label_restriction_growth_gap",
+        "family": "nugget: label_fine_print",
+        "block": "L",
+        "confidence": "MEDIUM",
+        "sentence": "Rinvoq's US label requires prior failure of a TNF blocker in RA, PsA, AS, nr-axSpA, UC, Crohn's and pJIA (UC and Crohn's have a narrow carve-out) and carries a five-part boxed warning, while Skyrizi and Tremfya carry none; the numbers show it: Rinvoq US grew 18.6% in H1 2026 vs Skyrizi's 26.3%, and AbbVie sells Rinvoq as the switch after a first TNF.",
+        "M": 0.10723739106816063,
+        "O": 0.28295504466582366,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget ABBV-nugget-008: verdict verified, slide_ready True, best_needle False, obscurity rung prepared_remarks",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "enriches 1ea9d91ec6a8 (needle-branch id ABBV-labels-211443, matched by id): one fact, counted once"
+        ]
+      },
+      {
+        "id": "094963600058",
+        "S": 0.0189382972965215,
+        "kind": "ira_selection_2028",
+        "family": "nugget: forces",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "Botox (listed by CMS as 'BOTOX; BOTOX COSMETIC') was selected for Medicare price setting from Jan 1, 2028, on about $601M of 2024 Medicare Part B plus Part D spend (22% of US Botox Therapeutic sales); management said it 'should have been excluded' but planned for it, and denied any 'large or meaningful interaction' with cosmetic pricing.",
+        "M": 0.16732602628527143,
+        "O": 0.11318201786632943,
+        "D": 0.19999999999999996,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget ABBV-nugget-006: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "e7af05b8c437",
+        "S": 0.010121993584202365,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Linzess's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,937.9M; base list discount 75% (CMS-published analog, cited).",
+        "M": 0.21617540950036207,
+        "O": 0.046823057292209785,
+        "D": 0.6,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)",
+          "corroborated by nugget ABBV-nugget-005 (3 verified quote(s) added; matched by page and value)"
+        ]
+      },
+      {
+        "id": "702ebc520f15",
+        "S": 0.008413108476889884,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Botox's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,143.1M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published).",
+        "M": 0.206475038357315,
+        "O": 0.04074637081471608,
+        "D": 0.3,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.5,
+        "flags": [
+          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part B: none); review A15, one formula (S3)",
+          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "53d422aaae7b",
+      "S": 2.4223975294383244,
+      "sentence": "Since the Q2 2026 10-Q, AbbVie's Skyrizi royalty extends to combination pipeline assets, with payments now projected to 2044 (38% probability for the pipeline slice; Skyrizi itself ends in 2037). The royalty (roughly 16% to 21% of Skyrizi sales; cash paid $2.9B in 2025, $1.8B in H1 2026) bypasses adjusted EPS, gross margin and operating margin because it is booked as a contingent-consideration liability whose fair-value changes are added back. The cash size is not new: the CFO said \"roughly $3.5 billion of SKYRIZI royalty payments\" in 2026 free cash flow on the Q4 2025 call (ABBV 2025Q4 transcript; the verifier cannot attach the speaker to that line, so it is cited here in text, not as evidence). What is new and unsaid is the extension to combination assets and the adjusted-EPS bypass.",
+      "O": 0.9129344378157254,
+      "D": 1.0,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "royalty_outside_non_gaap",
+      "flags": [
+        "3 of 28 nugget quotes did not verify on our ladder: dropped from the evidence (E over the verified quotes; none verified gives E = 0)",
+        "nugget ABBV-nugget-001: verdict verified, slide_ready True, best_needle True, obscurity rung prepared_remarks",
+        "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "5 sentence number(s) cited to a verified line of a page the nugget already cites",
+        "2 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 5,
+    "tariff_exposure": {
+      "proxy": 0.3429,
+      "pct_mfg_sites_outside_us": 45.0,
+      "us_revenue_share_pct": 76.2,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.075,
+    "old_rank": 7,
+    "v2_L": 0.08806346456165078,
+    "v2_rank": 6,
+    "constants": {
+      "Rev_TTM": 64386.0,
+      "t": 0.27393953327968734,
+      "D": 1771.0,
+      "sigma_EPS": 0.522733201547405,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 3
   },
   {
     "ticker": "GILD",
-    "L": 0.05106803938207053,
-    "top5_sum": 0.1532041181462116,
-    "N_eff": 1.0,
+    "L": 0.5008041117643782,
+    "top5_sum": 0.76761942097269,
+    "N_eff": 1.9572359612649597,
     "blocks": {
-      "P": 0.1532041181462116
+      "F": 0.44624749068714165,
+      "P": 0.3192454548375811,
+      "T": 0.0014167063711593752,
+      "C": 0.0007097690768078521
     },
-    "largest_share": 0.9992937701599609,
-    "n_blocks": 1,
-    "n_findings": 28,
-    "n_withheld": 22,
-    "n_gate_rejected": 2,
+    "largest_share": 0.5813395004020072,
+    "n_blocks": 4,
+    "n_findings": 32,
+    "n_withheld": 27,
+    "n_gate_rejected": 4,
     "gate_failed": [
+      {
+        "id": "8000ae4904de",
+        "kind": "qa_deflection",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$800 million",
+            "where": "sentence@228",
+            "reason": "a cited source shows 40%: unit differs (plain vs %)"
+          }
+        ]
+      },
       {
         "id": "545f2fa901b7",
         "kind": "call_topic_surge",
         "S": 0.0,
         "unsupported": [
+          {
+            "value": "4",
+            "where": "sentence@18",
+            "reason": "a cited source shows 80%: unit differs (plain vs %)"
+          },
+          {
+            "value": "1.0",
+            "where": "sentence@62",
+            "reason": "a cited source shows 80%: unit differs (plain vs %)"
+          },
           {
             "value": "4.0x",
             "where": "sentence@84",
@@ -234,94 +929,183 @@
         ]
       },
       {
-        "id": "cf9d0c82406a",
-        "kind": "label_broader",
+        "id": "1e531a99afdf",
+        "kind": "patent_challenge",
         "S": 0.0,
         "unsupported": [
           {
-            "value": "3",
-            "where": "sentence@15",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "$3.9B",
+            "where": "sentence@72",
+            "reason": "a cited source shows 48 %: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "e70393173807",
+        "kind": "gtn_baseline",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "2.5",
+            "where": "sentence@134",
+            "reason": "a cited source shows 41 %: unit differs (plain vs %)"
           }
         ]
       }
     ],
-    "n_scored": 2,
-    "n_not_quantified": 21,
-    "n_guarded": 18,
+    "n_scored": 8,
+    "n_not_quantified": 20,
+    "n_guarded": 22,
     "comparable": true,
     "company_flags": [
       "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
     ],
     "top": [
       {
-        "id": "49af018377a3",
-        "S": 0.15309592082635987,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published).",
-        "M": 2.817967301723481,
-        "O": 0.05432849441962145,
-        "D": 0.4,
+        "id": "cdc443f73256",
+        "S": 0.44624749068714165,
+        "kind": "contingent_consideration_benchmark",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Gilead's own deal terms set a high bar for anito-cel: Arcellx holders get a $300M CVR only if anito-cel reaches $6.0B of cumulative sales from launch (revenue from early 2027) through 2029, about $2.0B a year, more than Gilead's whole shrinking cell therapy line and close to JNJ's Carvykti run-rate.",
+        "M": 1.5415877242100415,
+        "O": 0.2894726545100202,
+        "D": 0.5,
         "E": 1.0,
         "pi": 1.0,
-        "c": 0.5,
+        "c": 0.0,
         "flags": [
-          "no same-class MFP analog: d = cycle 1-2 smallest / median / largest (deviation, see notes)",
-          "adjacent to GILD's starter thread (HIV franchise durability): human check before pitching",
-          "IRA class rule: net hit = (1.0, 1.0, 1.0) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
+          "nugget GILD-nugget-007: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
           "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
-          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-          "s_f no data (FINRA short interest not in moat)"
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites"
         ]
       },
       {
-        "id": "f87b31bee9cb",
-        "S": 0.00010819731985173937,
-        "kind": "mfn_medicaid",
-        "family": "directional: MFN agreement (deal terms confidential)",
+        "id": "f6f1c54114fe",
+        "S": 0.3192454548375811,
+        "kind": "ira_selection_spillover",
+        "family": "nugget: forces",
         "block": "P",
         "confidence": "MEDIUM",
-        "sentence": "GILD signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R025); US investment pledge $32bn; TrumpRx: Epclusa $24,920 -> $2,425 (R033). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given.",
-        "M": 0.21637892482200832,
-        "O": 0.09091569333393147,
-        "D": 0.9,
+        "sentence": "Gilead widened its Biktarvy price-spillover warning in May 2026 to 'potentially other segments' (beyond Medicaid rebates and 340B ceiling prices), and the Medicare set price that triggers it lands on January 1, 2028, eight years before the April 2036 generic date management keeps citing; no Gilead call or slide in the corpus frames that gap. The selection itself is public: Biktarvy has been in the CMS selected-drug file since January 27, 2026 (IPAY 2028, MFP blank) and is already a row in Aidan's model, so this row claims only the spillover wording and the 2028 vs 2036 gap. Gilead's own risk factor says the price will be 'substantially lower'.",
+        "M": 0.7877513270713312,
+        "O": 0.40526171631402824,
+        "D": 0.7,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget GILD-nugget-001: verdict verified, slide_ready True, best_needle True, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "enriches 49af018377a3 (needle-branch id GILD-labels-332990, matched by page and value): one fact, counted once"
+        ]
+      },
+      {
+        "id": "e305d3c6d908",
+        "S": 0.0008755197268285441,
+        "kind": "growth_driver_drift",
+        "family": "nugget: language_drift",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "Gilead's HIV growth switched from volume to price in 2026: Biktarvy's stated drivers went from 'higher demand' (2024, 2025) to 'higher average realized price, favorable inventory dynamics and higher demand' (Q2 2026), credited on the call to channel mix, while the ACA risk factor moved from 'could substantially decrease' to 'has already contributed' and the Q2 HIV treatment market slowed.",
+        "M": 0.3927965521287185,
+        "O": 0.40526171631402824,
+        "D": 0.7,
         "E": 1.0,
         "pi": 0.0055,
         "c": 0.0,
         "flags": [
-          "tariff exposure proxy 0.236 (sites outside US 33.3% x US revenue 70.9%), exempt until 2029-01-20: not scored",
-          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
-          "MFN size is an internal placeholder (Pfizer base rate 0.65% of US revenue), not printed: deal terms are confidential (review R3)",
+          "nugget GILD-nugget-006: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
           "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
           "s_f no data (FINRA short interest not in moat)",
-          "MFN direction with a placeholder size: not eligible as the Sharpest Needle"
+          "not Parker's red-team best needle for this company (flag only)",
+          "enriches GILD-drift-406298: no matching row on this branch"
+        ]
+      },
+      {
+        "id": "9fd7bce5651f",
+        "S": 0.0007097690768078521,
+        "kind": "collaboration_split_dodge",
+        "family": "nugget: call_qa",
+        "block": "C",
+        "confidence": "MEDIUM",
+        "sentence": "Gilead's switch-market plan hands half of each switched patient to Merck: the once-weekly islatravir plus lenacapavir pill (launch targeted for 2027, non-inferior to Biktarvy in Phase 3) splits revenue 50/50 with Merck up to $2.0B a year while Gilead pays 60% of costs, and when an analyst asked whether migration from wholly owned Biktarvy is dilutive, management answered with 'switch leadership' and no economics.",
+        "M": 0.44243567684828194,
+        "O": 0.2916783835681181,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "nugget GILD-nugget-002: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites"
+        ]
+      },
+      {
+        "id": "ad5f7464bbbf",
+        "S": 0.0005411866443308309,
+        "kind": "mfn_launch_scope_drift",
+        "family": "nugget: language_drift",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "Between the February 2026 10-K and the May 2026 10-Q, Gilead's description of its MFN deal changed from MFN prices 'in Medicaid for select existing and future launched products' to 'MFN prices in the U.S. market for future launched products', and the tariff exemption became conditional on more US investment; the ~2% 2026 HIV policy headwind on the slides names only ACA and the pricing agreement, while at least five products launch inside the deal's three-year term.",
+        "M": 0.24280006656308153,
+        "O": 0.40526171631402824,
+        "D": 0.7,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "nugget GILD-nugget-003: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "enriches GILD-drift-127434: no matching row on this branch"
         ]
       }
     ],
     "needle": {
-      "id": "49af018377a3",
-      "S": 0.15309592082635987,
-      "sentence": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published).",
-      "O": 0.05432849441962145,
-      "D": 0.4,
+      "id": "cdc443f73256",
+      "S": 0.44624749068714165,
+      "sentence": "Gilead's own deal terms set a high bar for anito-cel: Arcellx holders get a $300M CVR only if anito-cel reaches $6.0B of cumulative sales from launch (revenue from early 2027) through 2029, about $2.0B a year, more than Gilead's whole shrinking cell therapy line and close to JNJ's Carvykti run-rate.",
+      "O": 0.2894726545100202,
+      "D": 0.5,
       "E": 1.0,
-      "confidence": "HIGH",
-      "kind": "ira_selected",
+      "confidence": "MEDIUM",
+      "kind": "contingent_consideration_benchmark",
       "flags": [
-        "no same-class MFP analog: d = cycle 1-2 smallest / median / largest (deviation, see notes)",
-        "adjacent to GILD's starter thread (HIV franchise durability): human check before pitching",
-        "IRA class rule: net hit = (1.0, 1.0, 1.0) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
+        "nugget GILD-nugget-007: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+        "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
         "TTM GAAP ETR -0.657 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
-        "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-        "s_f no data (FINRA short interest not in moat)"
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "not Parker's red-team best needle for this company (flag only)",
+        "1 sentence number(s) cited to a verified line of a page the nugget already cites"
       ]
     },
-    "needle_status": "floor relaxed",
+    "needle_status": "strict",
     "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 0,
+    "n_strict_needle_candidates": 6,
     "tariff_exposure": {
       "proxy": 0.236097,
       "pct_mfg_sites_outside_us": 33.3,
@@ -341,22 +1125,1350 @@
       "currency": "USD",
       "annual_only": false
     },
-    "rank": 2
+    "rank": 4
+  },
+  {
+    "ticker": "MRK",
+    "L": 0.1913268454714366,
+    "top5_sum": 0.3810290823553297,
+    "N_eff": 1.50639560861405,
+    "blocks": {
+      "F": 0.30426292637452457,
+      "A": 0.0597477223921137,
+      "P": 0.015116492371651035,
+      "C": 0.0019019412170403727
+    },
+    "largest_share": 0.6560433654205745,
+    "n_blocks": 4,
+    "n_findings": 44,
+    "n_withheld": 44,
+    "n_gate_rejected": 9,
+    "gate_failed": [
+      {
+        "id": "3365b7def9ed",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "49%",
+            "where": "sentence@107",
+            "reason": "a cited source shows 9: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "ec376690d43f",
+        "kind": "mdna_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "16",
+            "where": "sentence@84",
+            "reason": "a cited source shows 39%: unit differs (plain vs %)"
+          },
+          {
+            "value": "45",
+            "where": "sentence@93",
+            "reason": "a cited source shows 39%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "4cc5be7192d1",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "9%",
+            "where": "sentence@109",
+            "reason": "a cited source shows 65,011: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "ef2a8ff47bc9",
+        "kind": "qa_repeated_deflection",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "2",
+            "where": "sentence@38",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "d9e62f2a809b",
+        "kind": "call_topic_surge",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "6",
+            "where": "sentence@14",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "1.0",
+            "where": "sentence@58",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "6.0x",
+            "where": "sentence@80",
+            "reason": "a cited source shows 65,011: unit differs (x vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "fb490ad0a731",
+        "kind": "royalty_footnote",
+        "S": 0.2874673417382293,
+        "unsupported": [
+          {
+            "value": "$780M",
+            "where": "sentence@244",
+            "reason": "a cited source shows 22%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "5947b92d763d",
+        "kind": "nongaap_definition_drift",
+        "S": 0.002749687616626541,
+        "unsupported": [
+          {
+            "value": "(2025)",
+            "where": "sentence@377",
+            "reason": "a cited source shows 2025: sign differs"
+          },
+          {
+            "value": "(2026)",
+            "where": "sentence@393",
+            "reason": "a cited source shows 2026: sign differs"
+          }
+        ]
+      },
+      {
+        "id": "11a8d328bff1",
+        "kind": "revenue_quality",
+        "S": 0.00020622657124699057,
+        "unsupported": [
+          {
+            "value": "6%",
+            "where": "sentence@288",
+            "reason": "a cited source shows 2025: unit differs (% vs plain)"
+          },
+          {
+            "value": "7%",
+            "where": "sentence@294",
+            "reason": "a cited source shows 2025: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "203fbf4f7ff8",
+        "kind": "loe_patent_footnote",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "(2025)",
+            "where": "sentence@416",
+            "reason": "a cited source shows 8%: unit differs (plain vs %)"
+          }
+        ]
+      }
+    ],
+    "n_scored": 6,
+    "n_not_quantified": 29,
+    "n_guarded": 32,
+    "comparable": true,
+    "company_flags": [
+      "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
+    ],
+    "top": [
+      {
+        "id": "796df46154cc",
+        "S": 0.24997160151150372,
+        "kind": "expense_offset_nonrecurring",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Merck's 2026 R&D line is flattered by $700M of Blackstone funding for sac-TMT, booked as a reduction of R&D through the year and paid in Q4 2026; nothing repeats in 2027, and Blackstone earns low-to-mid single-digit royalties on all sac-TMT sales once first-line TNBC is approved.",
+        "M": 0.8570110628480144,
+        "O": 0.2916783835681181,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget MRK-nugget-004: verdict verified, slide_ready True, best_needle False, obscurity rung prepared_remarks",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)"
+        ]
+      },
+      {
+        "id": "0591acf35698",
+        "S": 0.0597477223921137,
+        "kind": "gross_margin_drop",
+        "family": "gross margin drop",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1%, z -0.1",
+        "M": 2.482931657630372,
+        "O": 0.5702222214410602,
+        "D": 1.0,
+        "E": 1.0,
+        "pi": 0.0422,
+        "c": 0.0,
+        "flags": [
+          "age from first public date 2026-08-04 (earnings release MRK:earnings/2026-08-04_tm2621496d1_8k.md), not the filing 2026-08-07",
+          "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "corroborated by nugget MRK-nugget-006 (3 verified quote(s) added; matched by id)"
+        ]
+      },
+      {
+        "id": "fc8bf1fd46dd",
+        "S": 0.05429132486302082,
+        "kind": "royalty_footnote",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Behind the Keytruda roll-off sits a second royalty ladder: the 7.25% royalty on Capvaxive and Vaxneuvance falls to 2.5% from 2027, and the 7% royalty on US Gardasil sales ends in December 2028, together about $260M a year of cost of sales gone by 2029.",
+        "M": 0.3183183947721197,
+        "O": 0.17055666827513166,
+        "D": 1.0,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget MRK-nugget-007: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "a0afee4619a8",
+        "S": 0.015116492371651035,
+        "kind": "ira_selection",
+        "family": "nugget: forces",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "Lenvima, Merck's $1.05B Eisai alliance, was picked in January 2026 for Medicare price setting effective January 1, 2028, with settled generics allowed in July 2030, so Merck's US Lenvima profit share takes a government price cut for about two and a half years before generics finish it.",
+        "M": 0.17997232319808304,
+        "O": 0.08399342800622384,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget MRK-nugget-008: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
+        ]
+      },
+      {
+        "id": "19c4fde8d3a2",
+        "S": 0.0019019412170403727,
+        "kind": "qa_deflection",
+        "family": "nugget: call_qa",
+        "block": "C",
+        "confidence": "MEDIUM",
+        "sentence": "Asked in October 2025 how much of Merck's 50/50 US vs ex-US revenue split would shift through price equalization, CEO Robert Davis said he was 'not going to get into' it; seven weeks later Merck signed an MFN agreement that ties US prices of every product launched in the three-year term, Lipfendra first, to prices in MFN countries.",
+        "M": 0.8998616159904151,
+        "O": 0.38428963727576515,
+        "D": 0.7,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "nugget MRK-nugget-010: verdict verified, slide_ready False, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "nugget not slide-ready or not verified: kept, flagged, never the Sharpest Needle",
+          "not Parker's red-team best needle for this company (flag only)",
+          "enriches MRK-calls-879939: no matching row on this branch"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "796df46154cc",
+      "S": 0.24997160151150372,
+      "sentence": "Merck's 2026 R&D line is flattered by $700M of Blackstone funding for sac-TMT, booked as a reduction of R&D through the year and paid in Q4 2026; nothing repeats in 2027, and Blackstone earns low-to-mid single-digit royalties on all sac-TMT sales once first-line TNBC is approved.",
+      "O": 0.2916783835681181,
+      "D": 0.5,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "expense_offset_nonrecurring",
+      "flags": [
+        "nugget MRK-nugget-004: verdict verified, slide_ready True, best_needle False, obscurity rung prepared_remarks",
+        "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+        "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "not Parker's red-team best needle for this company (flag only)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 5,
+    "tariff_exposure": {
+      "proxy": 0.383284,
+      "pct_mfg_sites_outside_us": 68.2,
+      "us_revenue_share_pct": 56.2,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.1398,
+    "old_rank": 3,
+    "v2_L": 0.09696044830834485,
+    "v2_rank": 5,
+    "constants": {
+      "Rev_TTM": 66569.0,
+      "t": 0.18535431018433027,
+      "D": 2470.0,
+      "sigma_EPS": 0.25544079548889603,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 5
+  },
+  {
+    "ticker": "LLY",
+    "L": 0.12612040802295302,
+    "top5_sum": 0.17735927025633194,
+    "N_eff": 2.1333039063705277,
+    "blocks": {
+      "F": 0.1086670403983527,
+      "P": 0.05133893940667306,
+      "L": 0.017353290451306163
+    },
+    "largest_share": 0.6126944491894872,
+    "n_blocks": 3,
+    "n_findings": 47,
+    "n_withheld": 24,
+    "n_gate_rejected": 0,
+    "gate_failed": [],
+    "n_scored": 8,
+    "n_not_quantified": 35,
+    "n_guarded": 29,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "b1c0d840e1ed",
+        "S": 0.1086670403983527,
+        "kind": "collaboration_one_time_revenue",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Jardiance revenue has carried a growing one-off every year (a $300M amendment payment in 2024, $570M in 2025, up to $910M of milestones limited to 2026, $500M already booked in H1), and the FY2025 10-K newly states that its most significant markets leave the Boehringer collaboration after December 31, 2028.",
+        "M": 0.378257019465979,
+        "O": 0.287283605607024,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget LLY-nugget-002: verdict verified, slide_ready True, best_needle True, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
+        ]
+      },
+      {
+        "id": "9a8917824228",
+        "S": 0.028898267886155335,
+        "kind": "program_cliff_and_cannibalization",
+        "family": "nugget: forces",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "The Medicare GLP-1 Bridge that opened Zepbound and Foundayo to seniors at $245 ends December 31, 2027 and exists only because Part D plans declined to opt in ('we now know they didn't'), while 30% to 40% of Bridge patients are not new, so part of the 'new access' is existing patients moving from about $346 self-pay to $245.",
+        "M": 0.10059142715468893,
+        "O": 0.287283605607024,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "2 of 8 nugget quotes did not verify on our ladder: dropped from the evidence (E over the verified quotes; none verified gives E = 0)",
+          "nugget LLY-nugget-005: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "3 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "f4a7780b90cc",
+        "S": 0.017353290451306163,
+        "kind": "ira_mfp_peer_benchmark",
+        "family": "nugget: label_fine_print",
+        "block": "L",
+        "confidence": "MEDIUM",
+        "sentence": "Verzenio is already shrinking in the US (Q2 2026 -9%) and now faces two clocks at once: a Medicare set price from January 2028 and a Cipla patent challenge filed in March 2026; Pfizer's rival Ibrance got a set price about 49% below its Part D cost per claim.",
+        "M": 0.15101184084834082,
+        "O": 0.11491344224280957,
+        "D": 0.19999999999999996,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget LLY-nugget-006: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions",
+          "enriches 9cdaa161375b (needle-branch id LLY-drift-096034, matched by page and value): one fact, counted once"
+        ]
+      },
+      {
+        "id": "d689e5fdb404",
+        "S": 0.013852062292537269,
+        "kind": "conditional_tariff_relief",
+        "family": "nugget: forces",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "Lilly's tariff shield is conditional: the government deal gives a three-year Section 232 grace period only 'provided that we meet U.S. manufacturing investment commitments', which helps explain capital spending rising from $3.45B (2023) to $7.8B (2025) and $5.3B in H1 2026 alone.",
+        "M": 0.060271722881941714,
+        "O": 0.2298268844856192,
+        "D": 0.4,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget LLY-nugget-009: verdict verified, slide_ready True, best_needle False, obscurity rung press_release",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "2 sentence number(s) restate the nugget's own estimate: labelled assumptions",
+          "enriches LLY-drift-986179: no matching row on this branch"
+        ]
+      },
+      {
+        "id": "4bf1a2f5e9e4",
+        "S": 0.00858860922798046,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Trulicity's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $4,898.4M; base list discount 71% (CMS-published analog, cited).",
+        "M": 0.2529386266188469,
+        "O": 0.0339553090122634,
+        "D": 0.25,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.5,
+        "flags": [
+          "Trulicity loses US exclusivity in 2027 (starter thread); biosimilar entry would end selection",
+          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
+          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "b1c0d840e1ed",
+      "S": 0.1086670403983527,
+      "sentence": "Jardiance revenue has carried a growing one-off every year (a $300M amendment payment in 2024, $570M in 2025, up to $910M of milestones limited to 2026, $500M already booked in H1), and the FY2025 10-K newly states that its most significant markets leave the Boehringer collaboration after December 31, 2028.",
+      "O": 0.287283605607024,
+      "D": 0.5,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "collaboration_one_time_revenue",
+      "flags": [
+        "nugget LLY-nugget-002: verdict verified, slide_ready True, best_needle True, obscurity rung footnote_only",
+        "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 2,
+    "tariff_exposure": {
+      "proxy": 0.26680000000000004,
+      "pct_mfg_sites_outside_us": 40.0,
+      "us_revenue_share_pct": 66.7,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.3034,
+    "old_rank": 1,
+    "v2_L": 0.06907588447937224,
+    "v2_rank": 8,
+    "constants": {
+      "Rev_TTM": 79665.0,
+      "t": 0.2049114451555291,
+      "D": 893.7,
+      "sigma_EPS": 2.029480932934049,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 6
+  },
+  {
+    "ticker": "PFE",
+    "L": 0.1203356722616111,
+    "top5_sum": 0.18918948754362486,
+    "N_eff": 1.9081769366365526,
+    "blocks": {
+      "F": 0.12551671158966018,
+      "P": 0.05392667281343895,
+      "T": 0.00974610314052572
+    },
+    "largest_share": 0.4477232344852345,
+    "n_blocks": 3,
+    "n_findings": 41,
+    "n_withheld": 35,
+    "n_gate_rejected": 8,
+    "gate_failed": [
+      {
+        "id": "e9f06e6978c3",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "232",
+            "where": "sentence@95",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "0e2dfbe2b4ab",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "27",
+            "where": "sentence@87",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "9ab26f56cac1",
+        "kind": "risk_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "10",
+            "where": "sentence@91",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "4",
+            "where": "sentence@107",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "f87a7d01a799",
+        "kind": "mdna_modified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$1.5",
+            "where": "sentence@81",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "5aefd47896e6",
+        "kind": "qa_deflection",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "25",
+            "where": "sentence@185",
+            "reason": "a cited source shows 20%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "3e4406d4b2ea",
+        "kind": "qa_deflection",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "20",
+            "where": "sentence@209",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "d7a0da481fc3",
+        "kind": "label_scope_vs_rivals",
+        "S": 0.05025904743579103,
+        "unsupported": [
+          {
+            "value": "20%",
+            "where": "sentence@184",
+            "reason": "a cited source shows 2027: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "487a85c253e0",
+        "kind": "exclusivity_risk_exus",
+        "S": 0.049161371275677164,
+        "unsupported": [
+          {
+            "value": "+16%",
+            "where": "sentence@78",
+            "reason": "a cited source shows 2026: unit differs (% vs plain)"
+          }
+        ]
+      }
+    ],
+    "n_scored": 8,
+    "n_not_quantified": 30,
+    "n_guarded": 24,
+    "comparable": true,
+    "company_flags": [
+      "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
+    ],
+    "top": [
+      {
+        "id": "6b5957016f4c",
+        "S": 0.0847045292936357,
+        "kind": "contingent_consideration",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Metsera's obesity progress is landing as GAAP losses: Pfizer's contingent-consideration liability rose from $1.79B to $2.26B in H1 2026, a $550M charge (versus $42M a year earlier) that adjusted EPS excludes, against a CVR worth up to $2.3B plus Zihipp milestones and low-single-digit royalties on the same two molecules.",
+        "M": 0.297093049371423,
+        "O": 0.2851111107205301,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget PFE-nugget-005: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "2 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "4 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
+        ]
+      },
+      {
+        "id": "99a2dabfdac5",
+        "S": 0.05196237851576852,
+        "kind": "undisclosed_policy_terms",
+        "family": "nugget: forces",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "Pfizer has never disclosed a rate or a dollar cost for its MFN pricing agreement: the terms are confidential, the CEO refused to quantify it ('no matter how much you torture us'), and in Q2 2026 he deflected a question on the final binding agreements; so any model using a Pfizer-sourced MFN rate such as 0.65% is using a number that is not in Pfizer's filings.",
+        "M": 0.13018077254275082,
+        "O": 0.3991555550087421,
+        "D": 0.7,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget PFE-nugget-006: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions",
+          "enriches 58fc7c9804c4 (needle-branch id PFE-calls-349331, matched by id): one fact, counted once"
+        ]
+      },
+      {
+        "id": "93023c8e35b0",
+        "S": 0.04081218229602448,
+        "kind": "lost_dividend_income",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "Selling the 11.7% ViiV stake for $1.875B also ended a dividend of $265M to $272M a year that sat inside adjusted income, so adjusted pretax income loses about $265M a year from H2 2026: a 14% pretax yield given up to add BD capacity.",
+        "M": 0.14314483287895838,
+        "O": 0.2851111107205301,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget PFE-nugget-010: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites"
+        ]
+      },
+      {
+        "id": "32f39186aaf4",
+        "S": 0.00974610314052572,
+        "kind": "recurring_nonrecurring",
+        "family": "nugget: language_drift",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "Charges Pfizer keeps out of adjusted EPS as 'certain significant items' recur every year: impairments of $3.0B, $3.3B and $4.9B plus restructuring of $2.2B, $2.2B and $1.6B in 2023 to 2025, and $5.0B more in H1 2026; meanwhile the cost-program target moved from $4.5B by 2025 to $5.7B through 2026 to $6.7B through 2029, with $2.0B of new one-time costs.",
+        "M": 3.107593296425084,
+        "O": 0.5702222214410602,
+        "D": 1.0,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "nugget PFE-nugget-004: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "3 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "3 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "enriches PFE-drift-164127: no matching row on this branch"
+        ]
+      },
+      {
+        "id": "9f93e6694754",
+        "S": 0.0019642942976704275,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Xeljanz's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,013.3M; base list discount 66% (CMS-published analog, cited).",
+        "M": 0.05784940131044006,
+        "O": 0.0339553090122634,
+        "D": 0.25,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.5,
+        "flags": [
+          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
+          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "6b5957016f4c",
+      "S": 0.0847045292936357,
+      "sentence": "Metsera's obesity progress is landing as GAAP losses: Pfizer's contingent-consideration liability rose from $1.79B to $2.26B in H1 2026, a $550M charge (versus $42M a year earlier) that adjusted EPS excludes, against a CVR worth up to $2.3B plus Zihipp milestones and low-single-digit royalties on the same two molecules.",
+      "O": 0.2851111107205301,
+      "D": 0.5,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "contingent_consideration",
+      "flags": [
+        "nugget PFE-nugget-005: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+        "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+        "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "not Parker's red-team best needle for this company (flag only)",
+        "2 sentence number(s) cited to a verified line of a page the nugget already cites",
+        "4 sentence number(s) derived by code from two figures in the nugget's own verified quotes"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 5,
+    "tariff_exposure": {
+      "proxy": 0.36408,
+      "pct_mfg_sites_outside_us": 61.5,
+      "us_revenue_share_pct": 59.2,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.0788,
+    "old_rank": 6,
+    "v2_L": 0.038393091989699334,
+    "v2_rank": 9,
+    "constants": {
+      "Rev_TTM": 63696.0,
+      "t": 0.18535431018433027,
+      "D": 5699.0,
+      "sigma_EPS": 0.2509268533144385,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 7
+  },
+  {
+    "ticker": "NVO",
+    "L": 0.09753500046953738,
+    "top5_sum": 0.266840953274423,
+    "N_eff": 1.0965520765011398,
+    "blocks": {
+      "F": 0.2546063086603539,
+      "A": 0.010319399542459997,
+      "P": 0.0019152450716090768
+    },
+    "largest_share": 0.9541500490687919,
+    "n_blocks": 3,
+    "n_findings": 37,
+    "n_withheld": 30,
+    "n_gate_rejected": 9,
+    "gate_failed": [
+      {
+        "id": "66ab7f0b83f2",
+        "kind": "risk_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "41",
+            "where": "sentence@163",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "5a6a821bfd4d",
+        "kind": "mdna_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "1",
+            "where": "sentence@118",
+            "reason": "a cited source shows 16%: unit differs (plain vs %)"
+          },
+          {
+            "value": "13%",
+            "where": "sentence@121",
+            "reason": "a cited source shows 3 percentage points: unit differs (% vs pts)"
+          },
+          {
+            "value": "2.3",
+            "where": "sentence@126",
+            "reason": "a cited source shows 16%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "8abaafe6b32b",
+        "kind": "mfn_medicaid",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "$35",
+            "where": "sentence@156",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "39705809ba02",
+        "kind": "rebate_liability_cash_timing",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "0.3",
+            "where": "sentence@304",
+            "reason": "a cited source shows 2%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "8bad3db66f71",
+        "kind": "adjusted_metric_widening",
+        "S": 0.0038858436074190625,
+        "unsupported": [
+          {
+            "value": "25",
+            "where": "sentence@163",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "5db39c654e5e",
+        "kind": "oral_cannibalisation_price",
+        "S": 0.0006338364889682378,
+        "unsupported": [
+          {
+            "value": "(USD 169)",
+            "where": "sentence@50",
+            "reason": "a cited source shows 22%: unit differs (plain vs %)"
+          },
+          {
+            "value": "2,390",
+            "where": "sentence@91",
+            "reason": "a cited source shows 22%: unit differs (plain vs %)"
+          },
+          {
+            "value": "(USD 374)",
+            "where": "sentence@97",
+            "reason": "a cited source shows 22%: unit differs (plain vs %)"
+          },
+          {
+            "value": "4%",
+            "where": "sentence@251",
+            "reason": "a cited source shows 2.9 million: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "3fef56adff49",
+        "kind": "qa_deflection",
+        "S": 0.0020314240564665875,
+        "unsupported": [
+          {
+            "value": "2bn",
+            "where": "sentence@186",
+            "reason": "a cited source shows 15.2%: unit differs (plain vs %)"
+          }
+        ]
+      },
+      {
+        "id": "3132a05b8e94",
+        "kind": "inventory_write_downs",
+        "S": 0.0002215731229426236,
+        "unsupported": [
+          {
+            "value": "24%",
+            "where": "sentence@187",
+            "reason": "a cited source shows 4,272: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "179815e5c998",
+        "kind": "fcf_definition_change",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "55bn",
+            "where": "sentence@232",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
+    "n_scored": 6,
+    "n_not_quantified": 29,
+    "n_guarded": 29,
+    "comparable": true,
+    "company_flags": [
+      "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)"
+    ],
+    "top": [
+      {
+        "id": "96ce6210b65d",
+        "S": 0.2546063086603539,
+        "kind": "catalent_scarcity_premium",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "69% of the DKK 82.1bn Catalent price (know-how 41.1bn plus goodwill 15.2bn) was booked for 'accelerated access to capacity' during a fill-finish shortage Novo is now unwinding (DKK 3bn to right-size capacity agreements in Q2 2026); the know-how costs DKK 4.1bn a year in cost of goods to 2034, is excluded from adjusted net profit, and the goodwill is tested only against the whole Obesity and Diabetes segment.",
+        "M": 1.1162591490073608,
+        "O": 0.22808888857642406,
+        "D": 0.4,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget NVO-nugget-004: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "3 sentence number(s) restate the nugget's own estimate: labelled assumptions",
+          "enriches 368385278158 (needle-branch id NVO-forensics-082545, matched by id): one fact, counted once"
+        ]
+      },
+      {
+        "id": "ba6c1c58702b",
+        "S": 0.010319399542459997,
+        "kind": "inventory_outpaces_revenue",
+        "family": "inventory outpaces revenue",
+        "block": "A",
+        "confidence": "MEDIUM",
+        "sentence": "Inventory 49,623 vs 40,849 a year earlier (+21.5%, 2025 vs 2024) against annual revenue 309,064 vs 290,403 (+6.4%); gap +15.1 pts (derived); peer median -4.5 pts, z +1.3 (derived from the shortlist peer panel, not page-cited).",
+        "M": 2.5572664169385826,
+        "O": 0.08659494397849198,
+        "D": 0.6,
+        "E": 1.0,
+        "pi": 0.0466,
+        "c": 0.0,
+        "flags": [
+          "stage split: inventory note with a stage split not found",
+          "YoY re-derived from XBRL on one basis (review D1): inventory +21.48%, revenue +6.43%, gap +15.05 pts; 0 of 4 operands also page-cited",
+          "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "corroborated by nugget NVO-nugget-008 (3 verified quote(s) added; matched by id)"
+        ]
+      },
+      {
+        "id": "035042bdfbbd",
+        "S": 0.0014885931028659604,
+        "kind": "recurring_gtn_true_up",
+        "family": "nugget: gtn",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "Novo has released prior-year rebate accruals into sales three years running (DKK 2.4bn, 6.5bn, 4.2bn), told investors the 2025 benefit would not recur, then booked another DKK 2bn favourable US rebate adjustment that lifted Q2 2026 adjusted growth.",
+        "M": 1.1776398224077655,
+        "O": 0.2298268844856192,
+        "D": 0.4,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "nugget NVO-nugget-002: verdict verified, slide_ready True, best_needle False, obscurity rung analyst_asked",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "21196c25ac74",
+        "S": 0.00042665196874311644,
+        "kind": "gtn_mix_shift",
+        "family": "nugget: gtn",
+        "block": "P",
+        "confidence": "MEDIUM",
+        "sentence": "Novo's US gross-to-net rose to 69.5% in 2025 from 68.7% (73.7% in 2023), and the mix moved toward statutory Medicaid rebates (+18%) and patient and other US discounts (+28%) while US gross sales grew 6%; a falling managed-care share hid the shift, and US net sales grew only 3.4%.",
+        "M": 1.2645505104083388,
+        "O": 0.06134439438166205,
+        "D": 0.4,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "nugget NVO-nugget-009: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "2 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "1 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "3 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "368385278158",
+      "S": 0.014017553455745018,
+      "sentence": "Gross margin 81.0% vs 84.7% a year earlier (-3.7 pts) (FY2025); peer median 74.1%, z +1.1",
+      "O": 0.12989241596773796,
+      "D": 0.9,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "gross_margin_drop",
+      "flags": [
+        "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
+        "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
+        "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "corroborated by nugget NVO-nugget-003 (3 verified quote(s) added; matched by id)",
+        "corroborated by nugget NVO-nugget-004 (3 verified quote(s) added; matched by id)",
+        "same fact as 96ce6210b65d: counted once in the league (review S1)"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 2,
+    "tariff_exposure": {
+      "proxy": 0.37352,
+      "pct_mfg_sites_outside_us": 66.7,
+      "us_revenue_share_pct": 56.0,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.05,
+    "old_rank": 9,
+    "v2_L": 0.028089972342147274,
+    "v2_rank": 10,
+    "constants": {
+      "Rev_TTM": 309064.0,
+      "t": 0.21530565343955876,
+      "D": 4447.7,
+      "sigma_EPS": 0.6159545437773796,
+      "currency": "DKK",
+      "annual_only": true
+    },
+    "rank": 8
+  },
+  {
+    "ticker": "BMY",
+    "L": 0.07633837805150262,
+    "top5_sum": 0.16936032128723488,
+    "N_eff": 1.3522360634053032,
+    "blocks": {
+      "F": 0.1433606695677615,
+      "P": 0.025672636088096647,
+      "T": 0.00032701563137675074
+    },
+    "largest_share": 0.817125417409099,
+    "n_blocks": 3,
+    "n_findings": 33,
+    "n_withheld": 26,
+    "n_gate_rejected": 3,
+    "gate_failed": [
+      {
+        "id": "14bc46a1b6b7",
+        "kind": "risk_intensified",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "1",
+            "where": "sentence@127",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "28fbd084a524",
+        "kind": "qa_deflection",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "3",
+            "where": "sentence@182",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      },
+      {
+        "id": "3a9be0a2b8fe",
+        "kind": "mfn_medicaid",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "80%",
+            "where": "sentence@149",
+            "reason": "a cited source shows 12,222: unit differs (% vs plain)"
+          },
+          {
+            "value": "5",
+            "where": "sentence@161",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          }
+        ]
+      }
+    ],
+    "n_scored": 8,
+    "n_not_quantified": 22,
+    "n_guarded": 28,
+    "comparable": true,
+    "company_flags": [],
+    "top": [
+      {
+        "id": "e387364988f2",
+        "S": 0.13838862322437093,
+        "kind": "royalty_footnote",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "The Keytruda and Tecentriq patent royalties end on December 31, 2026, so BMS loses about $0.67B a year of pretax income in 2027. That is roughly $0.27 of EPS and nearly doubles the ~$700M other-expense line it guided for 2026. Management has not mentioned it on any of the last four calls.",
+        "M": 0.5041615847035945,
+        "O": 0.27449259805411796,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget BMY-nugget-001: verdict verified, slide_ready True, best_needle True, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "7f7c26eaeb9a",
+        "S": 0.016452311347408696,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Pomalyst's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $2,069.1M; base list discount 60% (CMS-published analog, cited).",
+        "M": 0.7027440025854936,
+        "O": 0.023411528646104896,
+        "D": 0.30000000000000004,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "IRA class rule: net hit = (1.0, 1.0, 1.0) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
+          "c_f confounded (earnings announced between the two statpers)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "9bf2ba315ff8",
+        "S": 0.009220324740687952,
+        "kind": "ira_selected",
+        "family": "contractual: IRA negotiation",
+        "block": "P",
+        "confidence": "HIGH",
+        "sentence": "Orencia's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $2,450.1M; base list discount 66% (CMS-published analog, cited).",
+        "M": 0.4525715815337306,
+        "O": 0.020373185407358045,
+        "D": 0.15000000000000002,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.5,
+        "flags": [
+          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part B: none); review A15, one formula (S3)",
+          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
+          "s_f no data (FINRA short interest not in moat)"
+        ]
+      },
+      {
+        "id": "26c40bb4dfae",
+        "S": 0.004972046343390569,
+        "kind": "guidance_exclusion",
+        "family": "nugget: footnotes",
+        "block": "F",
+        "confidence": "MEDIUM",
+        "sentence": "BMS raised its 2026 non-GAAP EPS guidance to $6.75 to $7.00 on July 30, but that guidance excludes Acquired IPRD charges incurred after June 30. The same day's 10-Q committed a $600M Hengrui upfront payment in Q3 2026, and BMS's non-GAAP EPS does include such charges. That is about $0.24 of EPS already contracted and left out of the raised guidance, and the earnings release did not give the dollar amount.",
+        "M": 0.4528397467397556,
+        "O": 0.010979703922164713,
+        "D": 0.01999999999999999,
+        "E": 1.0,
+        "pi": 1.0,
+        "c": 0.0,
+        "flags": [
+          "nugget BMY-nugget-002: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) cited to a verified line of a page the nugget already cites",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+        ]
+      },
+      {
+        "id": "09c2af7c308b",
+        "S": 0.00032701563137675074,
+        "kind": "biosimilar_settlement",
+        "family": "nugget: language_drift",
+        "block": "T",
+        "confidence": "MEDIUM",
+        "sentence": "In April 2026 BMS settled with Dr. Reddy's to allow an IV Orencia biosimilar in the US 'upon approval' (subcutaneous from February 2028). Orencia was also picked for a 2028 Medicare price. Neither the Q1 nor the Q2 2026 call mentioned Orencia, and in February 2026 Lenkowsky had cited how hard Orencia is to manufacture.",
+        "M": 0.21660834552384975,
+        "O": 0.27449259805411796,
+        "D": 0.5,
+        "E": 1.0,
+        "pi": 0.0055,
+        "c": 0.0,
+        "flags": [
+          "nugget BMY-nugget-005: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
+          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)"
+        ]
+      }
+    ],
+    "needle": {
+      "id": "e387364988f2",
+      "S": 0.13838862322437093,
+      "sentence": "The Keytruda and Tecentriq patent royalties end on December 31, 2026, so BMS loses about $0.67B a year of pretax income in 2027. That is roughly $0.27 of EPS and nearly doubles the ~$700M other-expense line it guided for 2026. Management has not mentioned it on any of the last four calls.",
+      "O": 0.27449259805411796,
+      "D": 0.5,
+      "E": 1.0,
+      "confidence": "MEDIUM",
+      "kind": "royalty_footnote",
+      "flags": [
+        "nugget BMY-nugget-001: verdict verified, slide_ready True, best_needle True, obscurity rung footnote_only",
+        "impact from the nugget's own estimate on line eps; EPS translated on FIND constants",
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
+        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
+        "s_f no data (FINRA short interest not in moat)",
+        "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
+      ]
+    },
+    "needle_status": "strict",
+    "n_pi_downgraded": 0,
+    "n_strict_needle_candidates": 3,
+    "tariff_exposure": {
+      "proxy": 0.23010299999999995,
+      "pct_mfg_sites_outside_us": 33.3,
+      "us_revenue_share_pct": 69.1,
+      "exempt_until": "2029-01-20",
+      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
+    },
+    "old_score": 0.0451,
+    "old_rank": 10,
+    "v2_L": 0.06983793283088946,
+    "v2_rank": 7,
+    "constants": {
+      "Rev_TTM": 49186.0,
+      "t": 0.22115869017632242,
+      "D": 2048.0,
+      "sigma_EPS": 0.47778506823525935,
+      "currency": "USD",
+      "annual_only": false
+    },
+    "rank": 9
   },
   {
     "ticker": "AZN",
-    "L": 0.029033177380705932,
-    "top5_sum": 0.06742431179071494,
-    "N_eff": 1.2918119566792872,
+    "L": 0.07386395940557598,
+    "top5_sum": 0.0923439413565356,
+    "N_eff": 2.3996363482166325,
     "blocks": {
-      "A": 0.05867310941941513,
-      "P": 0.00875120237129981
+      "F": 0.052358539309768595,
+      "P": 0.022521576008490064,
+      "A": 0.01746382603827694
     },
-    "largest_share": 0.3514361113199759,
-    "n_blocks": 2,
-    "n_findings": 32,
-    "n_withheld": 31,
-    "n_gate_rejected": 4,
+    "largest_share": 0.5669948514284737,
+    "n_blocks": 3,
+    "n_findings": 39,
+    "n_withheld": 35,
+    "n_gate_rejected": 6,
     "gate_failed": [
       {
         "id": "521da920d64e",
@@ -366,90 +2478,129 @@
           {
             "value": "19",
             "where": "sentence@14",
-            "reason": "a cited source shows 6%: unit differs (plain vs %)"
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "6.0",
+            "where": "sentence@59",
+            "reason": "no passing citation, derivation or assumption carries this number"
           },
           {
             "value": "3.2x",
             "where": "sentence@81",
-            "reason": "a cited source shows 2026: unit differs (x vs plain)"
+            "reason": "a cited source shows 58,739: unit differs (x vs plain)"
           }
         ]
       },
       {
-        "id": "7c7b1e815ae1",
-        "kind": "label_broader",
+        "id": "928c72761a00",
+        "kind": "gtn_deterioration",
         "S": 0.0,
         "unsupported": [
           {
-            "value": "5",
-            "where": "sentence@15",
+            "value": "(2022)",
+            "where": "sentence@70",
             "reason": "no passing citation, derivation or assumption carries this number"
           },
           {
-            "value": "2.5",
+            "value": "(2023)",
+            "where": "sentence@84",
+            "reason": "no passing citation, derivation or assumption carries this number"
+          },
+          {
+            "value": "(2024)",
+            "where": "sentence@98",
+            "reason": "a cited source shows 2024: sign differs"
+          }
+        ]
+      },
+      {
+        "id": "a5e003cda673",
+        "kind": "receivables_composition",
+        "S": 0.0,
+        "unsupported": [
+          {
+            "value": "14.7 pts",
             "where": "sentence@45",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "reason": "a cited source shows 10,289: unit differs (pts vs plain)"
           },
           {
-            "value": "4",
-            "where": "sentence@64",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
+            "value": "0.8%",
+            "where": "sentence@282",
+            "reason": "a cited source shows 10,289: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "4d12f2668626",
+        "kind": "ira_mfp",
+        "S": 0.01442388289454844,
+        "unsupported": [
           {
-            "value": "1",
-            "where": "sentence@79",
+            "value": "38%",
+            "where": "sentence@69",
+            "reason": "a cited source shows $2,339 million: unit differs (% vs plain)"
+          }
+        ]
+      },
+      {
+        "id": "28db92975fe5",
+        "kind": "gtn_line_trend",
+        "S": 0.0011701516527460479,
+        "unsupported": [
+          {
+            "value": "8",
+            "where": "sentence@369",
             "reason": "no passing citation, derivation or assumption carries this number"
           }
         ]
       },
       {
-        "id": "0859c8746a30",
-        "kind": "label_broader",
+        "id": "a83ca9103144",
+        "kind": "label_vs_numbers",
         "S": 0.0,
         "unsupported": [
           {
-            "value": "7",
-            "where": "sentence@14",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "0.75",
+            "where": "sentence@131",
+            "reason": "a cited source shows 11%: unit differs (plain vs %)"
           },
           {
-            "value": "4",
-            "where": "sentence@44",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "36.7",
+            "where": "sentence@144",
+            "reason": "a cited source shows 11%: unit differs (plain vs %)"
           },
           {
-            "value": "4",
-            "where": "sentence@61",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      },
-      {
-        "id": "d81ba19db011",
-        "kind": "label_narrower",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "6",
-            "where": "sentence@14",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "0.77",
+            "where": "sentence@231",
+            "reason": "a cited source shows 11%: unit differs (plain vs %)"
           },
           {
-            "value": "21",
-            "where": "sentence@44",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "47.5",
+            "where": "sentence@237",
+            "reason": "a cited source shows 11%: unit differs (plain vs %)"
           },
           {
-            "value": "21",
-            "where": "sentence@61",
-            "reason": "no passing citation, derivation or assumption carries this number"
+            "value": "37.6",
+            "where": "sentence@245",
+            "reason": "a cited source shows 11%: unit differs (plain vs %)"
+          },
+          {
+            "value": "36%",
+            "where": "sentence@336",
+            "reason": "a cited source shows $3,064 million: unit differs (% vs plain)"
+          },
+          {
+            "value": "86%",
+            "where": "sentence@404",
+            "reason": "a cited source shows $3,064 million: unit differs (% vs plain)"
           }
         ]
       }
     ],
-    "n_scored": 6,
+    "n_scored": 9,
     "n_not_quantified": 25,
-    "n_guarded": 40,
+    "n_guarded": 43,
     "comparable": true,
     "company_flags": [
       "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
@@ -457,52 +2608,58 @@
     ],
     "top": [
       {
-        "id": "c491682c6c0b",
-        "S": 0.023695337944154456,
-        "kind": "dso_rising",
-        "family": "days sales outstanding",
-        "block": "A",
+        "id": "efe7ad14adb9",
+        "S": 0.052358539309768595,
+        "kind": "partner_payables",
+        "family": "nugget: footnotes",
+        "block": "F",
         "confidence": "MEDIUM",
-        "sentence": "DSO 64 days vs 56 a year earlier (+13.5%) (FY2025); peer median 72 days, z -0.7",
-        "M": 1.657517204238748,
-        "O": 0.16798685601244767,
-        "D": 1.0,
+        "sentence": "AstraZeneca owes Daiichi Sankyo $673m of Enhertu sales-related payments within a year (up from $377m) and $1,952m in total sales-linked payables to three partners, up $657m in 2025, on top of the 50:50 Enhertu/Datroway profit split.",
+        "M": 0.6233647149856638,
+        "O": 0.08399342800622384,
+        "D": 0.5,
         "E": 1.0,
-        "pi": 0.0851,
+        "pi": 1.0,
         "c": 0.0,
         "flags": [
-          "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
-          "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
+          "nugget AZN-nugget-004: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
           "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
           "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+          "a_f imputed: no measurable topic (peer median of scorecard topics)",
           "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-          "s_f no data (FINRA short interest not in moat)"
+          "s_f no data (FINRA short interest not in moat)",
+          "not Parker's red-team best needle for this company (flag only)",
+          "2 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+          "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
         ]
       },
       {
-        "id": "9f3934dba134",
-        "S": 0.01751394543698373,
-        "kind": "receivables_outpace_revenue",
-        "family": "receivables outpace revenue",
-        "block": "A",
+        "id": "6b97051b511c",
+        "S": 0.013770373637190256,
+        "kind": "ira_selection_risk",
+        "family": "nugget: forces",
+        "block": "P",
         "confidence": "MEDIUM",
-        "sentence": "Receivables 10,237 vs 8,302 a year earlier (+23.3%, 2025 vs 2024) against annual revenue 58,739 vs 54,073 (+8.6%); gap +14.7 pts (derived); peer median -0.3 pts, z +2.1 (derived from the shortlist peer panel, not page-cited).",
-        "M": 1.657517204238748,
-        "O": 0.16798685601244767,
-        "D": 1.0,
+        "sentence": "Tagrisso drew $1.63bn of Medicare Part D spend in 2024, more than four oncology drugs CMS selected for 2028 negotiation (Erleada, Verzenio, Lenvima, Kisqali), yet it is on no list; if it is picked next, a Medicare price cut could land around 2029, while three generic filers already challenge its patents.",
+        "M": 0.27324307714824786,
+        "O": 0.05039605680373431,
+        "D": 0.30000000000000004,
         "E": 1.0,
-        "pi": 0.0629,
+        "pi": 1.0,
         "c": 0.0,
         "flags": [
-          "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
-          "YoY re-derived from XBRL on one basis (review D1): receivables +23.31%, revenue +8.63%, gap +14.68 pts; 0 of 4 operands also page-cited",
-          "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
+          "nugget AZN-nugget-009: verdict needs_human, slide_ready False, best_needle False, obscurity rung footnote_only",
+          "impact from the nugget's own estimate on line revenue; EPS translated on FIND constants",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
           "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
           "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
           "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-          "s_f no data (FINRA short interest not in moat)"
+          "s_f no data (FINRA short interest not in moat)",
+          "nugget not slide-ready or not verified: kept, flagged, never the Sharpest Needle",
+          "not Parker's red-team best needle for this company (flag only)",
+          "1 sentence number(s) restate the nugget's own estimate: labelled assumptions"
         ]
       },
       {
@@ -545,7 +2702,6 @@
         "pi": 1.0,
         "c": 0.0,
         "flags": [
-          "company filing sentence naming the selection not found: n_ind = 1",
           "IRA class rule: net hit = (1.0, 1.0, 1.0) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
           "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
           "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
@@ -580,27 +2736,31 @@
       }
     ],
     "needle": {
-      "id": "c491682c6c0b",
-      "S": 0.023695337944154456,
-      "sentence": "DSO 64 days vs 56 a year earlier (+13.5%) (FY2025); peer median 72 days, z -0.7",
-      "O": 0.16798685601244767,
-      "D": 1.0,
+      "id": "efe7ad14adb9",
+      "S": 0.052358539309768595,
+      "sentence": "AstraZeneca owes Daiichi Sankyo $673m of Enhertu sales-related payments within a year (up from $377m) and $1,952m in total sales-linked payables to three partners, up $657m in 2025, on top of the 50:50 Enhertu/Datroway profit split.",
+      "O": 0.08399342800622384,
+      "D": 0.5,
       "E": 1.0,
       "confidence": "MEDIUM",
-      "kind": "dso_rising",
+      "kind": "partner_payables",
       "flags": [
-        "DSO channel-stuffing test: wholesaler-language half not checked (mandatory diagnostic)",
-        "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
+        "nugget AZN-nugget-004: verdict verified, slide_ready True, best_needle False, obscurity rung footnote_only",
+        "impact from the nugget's own estimate on line operating_income; EPS translated on FIND constants",
         "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
         "sigma_EPS window skips a quarter (I/B/E/S gap); last 8 available surprises used",
         "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
+        "a_f imputed: no measurable topic (peer median of scorecard topics)",
         "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-        "s_f no data (FINRA short interest not in moat)"
+        "s_f no data (FINRA short interest not in moat)",
+        "not Parker's red-team best needle for this company (flag only)",
+        "2 sentence number(s) derived by code from two figures in the nugget's own verified quotes",
+        "2 sentence number(s) restate the nugget's own estimate: labelled assumptions"
       ]
     },
     "needle_status": "strict",
     "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 4,
+    "n_strict_needle_candidates": 3,
     "tariff_exposure": {
       "proxy": 0.18115199999999998,
       "pct_mfg_sites_outside_us": 44.4,
@@ -619,1014 +2779,6 @@
       "sigma_EPS": 0.5407666515499744,
       "currency": "USD",
       "annual_only": true
-    },
-    "rank": 3
-  },
-  {
-    "ticker": "MRK",
-    "L": 0.0199159074640379,
-    "top5_sum": 0.0597477223921137,
-    "N_eff": 1.0,
-    "blocks": {
-      "A": 0.0597477223921137
-    },
-    "largest_share": 1.0,
-    "n_blocks": 1,
-    "n_findings": 37,
-    "n_withheld": 39,
-    "n_gate_rejected": 4,
-    "gate_failed": [
-      {
-        "id": "ef2a8ff47bc9",
-        "kind": "qa_repeated_deflection",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "2",
-            "where": "sentence@38",
-            "reason": "a cited source shows 25%: unit differs (plain vs %)"
-          }
-        ]
-      },
-      {
-        "id": "d9e62f2a809b",
-        "kind": "call_topic_surge",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "6",
-            "where": "sentence@14",
-            "reason": "a cited source shows 60%: unit differs (plain vs %)"
-          },
-          {
-            "value": "6.0x",
-            "where": "sentence@80",
-            "reason": "a cited source shows 60%: unit differs (x vs %)"
-          }
-        ]
-      },
-      {
-        "id": "3f39dd0d23f0",
-        "kind": "label_broader",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "21",
-            "where": "sentence@15",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "7",
-            "where": "sentence@46",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "14",
-            "where": "sentence@60",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "6",
-            "where": "sentence@75",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "7",
-            "where": "sentence@91",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      },
-      {
-        "id": "fc96c4e7ed6a",
-        "kind": "label_narrower",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "1",
-            "where": "sentence@14",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "3.5",
-            "where": "sentence@44",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "3",
-            "where": "sentence@61",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "4",
-            "where": "sentence@77",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      }
-    ],
-    "n_scored": 1,
-    "n_not_quantified": 32,
-    "n_guarded": 30,
-    "comparable": true,
-    "company_flags": [
-      "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
-    ],
-    "top": [
-      {
-        "id": "0591acf35698",
-        "S": 0.0597477223921137,
-        "kind": "gross_margin_drop",
-        "family": "gross margin drop",
-        "block": "A",
-        "confidence": "MEDIUM",
-        "sentence": "Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1%, z -0.1",
-        "M": 2.482931657630372,
-        "O": 0.5702222214410602,
-        "D": 1.0,
-        "E": 1.0,
-        "pi": 0.0422,
-        "c": 0.0,
-        "flags": [
-          "age from first public date 2026-08-04 (earnings release MRK:earnings/2026-08-04_tm2621496d1_8k.md), not the filing 2026-08-07",
-          "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
-          "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
-          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      }
-    ],
-    "needle": {
-      "id": "0591acf35698",
-      "S": 0.0597477223921137,
-      "sentence": "Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1%, z -0.1",
-      "O": 0.5702222214410602,
-      "D": 1.0,
-      "E": 1.0,
-      "confidence": "MEDIUM",
-      "kind": "gross_margin_drop",
-      "flags": [
-        "age from first public date 2026-08-04 (earnings release MRK:earnings/2026-08-04_tm2621496d1_8k.md), not the filing 2026-08-07",
-        "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
-        "TTM GAAP ETR 0.467 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
-        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-        "s_f no data (FINRA short interest not in moat)"
-      ]
-    },
-    "needle_status": "strict",
-    "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 1,
-    "tariff_exposure": {
-      "proxy": 0.383284,
-      "pct_mfg_sites_outside_us": 68.2,
-      "us_revenue_share_pct": 56.2,
-      "exempt_until": "2029-01-20",
-      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
-    },
-    "old_score": 0.1398,
-    "old_rank": 3,
-    "v2_L": 0.09696044830834485,
-    "v2_rank": 5,
-    "constants": {
-      "Rev_TTM": 66569.0,
-      "t": 0.18535431018433027,
-      "D": 2470.0,
-      "sigma_EPS": 0.25544079548889603,
-      "currency": "USD",
-      "annual_only": false
-    },
-    "rank": 4
-  },
-  {
-    "ticker": "BMY",
-    "L": 0.008557545362698881,
-    "top5_sum": 0.025672636088096647,
-    "N_eff": 1.0,
-    "blocks": {
-      "P": 0.025672636088096647
-    },
-    "largest_share": 0.6408500977831786,
-    "n_blocks": 1,
-    "n_findings": 28,
-    "n_withheld": 24,
-    "n_gate_rejected": 2,
-    "gate_failed": [
-      {
-        "id": "14bc46a1b6b7",
-        "kind": "risk_intensified",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "1",
-            "where": "sentence@127",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      },
-      {
-        "id": "6b6086c7cd08",
-        "kind": "label_narrower",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "6",
-            "where": "sentence@14",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "10",
-            "where": "sentence@44",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "10",
-            "where": "sentence@60",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      }
-    ],
-    "n_scored": 2,
-    "n_not_quantified": 23,
-    "n_guarded": 27,
-    "comparable": true,
-    "company_flags": [],
-    "top": [
-      {
-        "id": "7f7c26eaeb9a",
-        "S": 0.016452311347408696,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Pomalyst's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $2,069.1M; base list discount 60% (CMS-published analog, cited).",
-        "M": 0.7027440025854936,
-        "O": 0.023411528646104896,
-        "D": 0.30000000000000004,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.0,
-        "flags": [
-          "IRA class rule: net hit = (1.0, 1.0, 1.0) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-          "c_f confounded (earnings announced between the two statpers)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "9bf2ba315ff8",
-        "S": 0.009220324740687952,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Orencia's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $2,450.1M; base list discount 66% (CMS-published analog, cited).",
-        "M": 0.4525715815337306,
-        "O": 0.020373185407358045,
-        "D": 0.15000000000000002,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.5,
-        "flags": [
-          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part B: none); review A15, one formula (S3)",
-          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      }
-    ],
-    "needle": {
-      "id": "7f7c26eaeb9a",
-      "S": 0.016452311347408696,
-      "sentence": "Pomalyst's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $2,069.1M; base list discount 60% (CMS-published analog, cited).",
-      "O": 0.023411528646104896,
-      "D": 0.30000000000000004,
-      "E": 1.0,
-      "confidence": "HIGH",
-      "kind": "ira_selected",
-      "flags": [
-        "IRA class rule: net hit = (1.0, 1.0, 1.0) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-        "c_f confounded (earnings announced between the two statpers)",
-        "s_f no data (FINRA short interest not in moat)"
-      ]
-    },
-    "needle_status": "floor relaxed",
-    "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 0,
-    "tariff_exposure": {
-      "proxy": 0.23010299999999995,
-      "pct_mfg_sites_outside_us": 33.3,
-      "us_revenue_share_pct": 69.1,
-      "exempt_until": "2029-01-20",
-      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
-    },
-    "old_score": 0.0451,
-    "old_rank": 10,
-    "v2_L": 0.06983793283088946,
-    "v2_rank": 7,
-    "constants": {
-      "Rev_TTM": 49186.0,
-      "t": 0.22115869017632242,
-      "D": 2048.0,
-      "sigma_EPS": 0.47778506823525935,
-      "currency": "USD",
-      "annual_only": false
-    },
-    "rank": 5
-  },
-  {
-    "ticker": "NVO",
-    "L": 0.008112317666068337,
-    "top5_sum": 0.024336952998205014,
-    "N_eff": 1.0,
-    "blocks": {
-      "A": 0.024336952998205014
-    },
-    "largest_share": 0.5759781619654232,
-    "n_blocks": 1,
-    "n_findings": 36,
-    "n_withheld": 21,
-    "n_gate_rejected": 2,
-    "gate_failed": [
-      {
-        "id": "5a6a821bfd4d",
-        "kind": "mdna_intensified",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "1",
-            "where": "sentence@118",
-            "reason": "a cited source shows -5%: unit differs (plain vs %)"
-          },
-          {
-            "value": "13%",
-            "where": "sentence@121",
-            "reason": "a cited source shows -13%: sign differs"
-          }
-        ]
-      },
-      {
-        "id": "fea12cba1257",
-        "kind": "label_broader",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "5",
-            "where": "sentence@13",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "1.5",
-            "where": "sentence@43",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "2",
-            "where": "sentence@61",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "1",
-            "where": "sentence@76",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      }
-    ],
-    "n_scored": 2,
-    "n_not_quantified": 30,
-    "n_guarded": 27,
-    "comparable": true,
-    "company_flags": [
-      "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)"
-    ],
-    "top": [
-      {
-        "id": "368385278158",
-        "S": 0.014017553455745018,
-        "kind": "gross_margin_drop",
-        "family": "gross margin drop",
-        "block": "A",
-        "confidence": "MEDIUM",
-        "sentence": "Gross margin 81.0% vs 84.7% a year earlier (-3.7 pts) (FY2025); peer median 74.1%, z +1.1",
-        "M": 2.5572664169385826,
-        "O": 0.12989241596773796,
-        "D": 0.9,
-        "E": 1.0,
-        "pi": 0.0422,
-        "c": 0.0,
-        "flags": [
-          "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
-          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
-          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
-          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "ba6c1c58702b",
-        "S": 0.010319399542459997,
-        "kind": "inventory_outpaces_revenue",
-        "family": "inventory outpaces revenue",
-        "block": "A",
-        "confidence": "MEDIUM",
-        "sentence": "Inventory 49,623 vs 40,849 a year earlier (+21.5%, 2025 vs 2024) against annual revenue 309,064 vs 290,403 (+6.4%); gap +15.1 pts (derived); peer median -4.5 pts, z +1.3 (derived from the shortlist peer panel, not page-cited).",
-        "M": 2.5572664169385826,
-        "O": 0.08659494397849198,
-        "D": 0.6,
-        "E": 1.0,
-        "pi": 0.0466,
-        "c": 0.0,
-        "flags": [
-          "stage split: inventory note with a stage split not found",
-          "YoY re-derived from XBRL on one basis (review D1): inventory +21.48%, revenue +6.43%, gap +15.05 pts; 0 of 4 operands also page-cited",
-          "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
-          "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
-          "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
-          "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      }
-    ],
-    "needle": {
-      "id": "368385278158",
-      "S": 0.014017553455745018,
-      "sentence": "Gross margin 81.0% vs 84.7% a year earlier (-3.7 pts) (FY2025); peer median 74.1%, z +1.1",
-      "O": 0.12989241596773796,
-      "D": 0.9,
-      "E": 1.0,
-      "confidence": "MEDIUM",
-      "kind": "gross_margin_drop",
-      "flags": [
-        "anchor flat across flag strength: hit_rates.json has no per-flag dose response (D3)",
-        "annual filer (20-F): Rev_TTM, t from the latest fiscal year (section 7.4)",
-        "h_f imputed 0.000: no earnings release in the index (shortlist median for these topics)",
-        "c_f n/a (no fiscal-year consensus line for this family: anchor rows have no dated year)",
-        "s_f no data (FINRA short interest not in moat)"
-      ]
-    },
-    "needle_status": "strict",
-    "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 2,
-    "tariff_exposure": {
-      "proxy": 0.37352,
-      "pct_mfg_sites_outside_us": 66.7,
-      "us_revenue_share_pct": 56.0,
-      "exempt_until": "2029-01-20",
-      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
-    },
-    "old_score": 0.05,
-    "old_rank": 9,
-    "v2_L": 0.028089972342147274,
-    "v2_rank": 10,
-    "constants": {
-      "Rev_TTM": 309064.0,
-      "t": 0.21530565343955876,
-      "D": 4447.7,
-      "sigma_EPS": 0.6159545437773796,
-      "currency": "DKK",
-      "annual_only": true
-    },
-    "rank": 6
-  },
-  {
-    "ticker": "ABBV",
-    "L": 0.006553467026393145,
-    "top5_sum": 0.019660401079179435,
-    "N_eff": 1.0,
-    "blocks": {
-      "P": 0.019660401079179435
-    },
-    "largest_share": 0.5148416628652434,
-    "n_blocks": 1,
-    "n_findings": 31,
-    "n_withheld": 20,
-    "n_gate_rejected": 1,
-    "gate_failed": [
-      {
-        "id": "e05128d03e28",
-        "kind": "label_broader",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "7",
-            "where": "sentence@13",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "4",
-            "where": "sentence@43",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "4",
-            "where": "sentence@58",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "2",
-            "where": "sentence@87",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      }
-    ],
-    "n_scored": 4,
-    "n_not_quantified": 18,
-    "n_guarded": 12,
-    "comparable": true,
-    "company_flags": [],
-    "top": [
-      {
-        "id": "e7af05b8c437",
-        "S": 0.010121993584202365,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Linzess's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,937.9M; base list discount 75% (CMS-published analog, cited).",
-        "M": 0.21617540950036207,
-        "O": 0.046823057292209785,
-        "D": 0.6,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.0,
-        "flags": [
-          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-          "c_f confounded (earnings announced between the two statpers)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "702ebc520f15",
-        "S": 0.008413108476889884,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Botox's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,143.1M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published).",
-        "M": 0.206475038357315,
-        "O": 0.04074637081471608,
-        "D": 0.3,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.5,
-        "flags": [
-          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part B: none); review A15, one formula (S3)",
-          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "859993953701",
-        "S": 0.0009830127078866392,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Vraylar's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,085.8M; base list discount 44% (CMS-published analog, cited).",
-        "M": 0.020994201676151306,
-        "O": 0.046823057292209785,
-        "D": 0.6,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.0,
-        "flags": [
-          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-          "c_f confounded (earnings announced between the two statpers)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "63ebf779aa7c",
-        "S": 0.00014228631020054647,
-        "kind": "mfn_medicaid",
-        "family": "directional: MFN agreement (deal terms confidential)",
-        "block": "P",
-        "confidence": "MEDIUM",
-        "sentence": "ABBV signed an MFN agreement on 2026-01-12 that extends MFN pricing to Medicaid (R041); US investment pledge $100bn; TrumpRx: Alphagan, Combigan, Humira, Synthroid (R042). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given.",
-        "M": 0.23715962367192212,
-        "O": 0.1090836535230344,
-        "D": 0.9,
-        "E": 1.0,
-        "pi": 0.0055,
-        "c": 0.0,
-        "flags": [
-          "tariff exposure proxy 0.343 (sites outside US 45.0% x US revenue 76.2%), exempt until 2029-01-20: not scored",
-          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
-          "MFN size is an internal placeholder (Pfizer base rate 0.65% of US revenue), not printed: deal terms are confidential (review R3)",
-          "s_f no data (FINRA short interest not in moat)",
-          "MFN direction with a placeholder size: not eligible as the Sharpest Needle"
-        ]
-      }
-    ],
-    "needle": {
-      "id": "e7af05b8c437",
-      "S": 0.010121993584202365,
-      "sentence": "Linzess's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,937.9M; base list discount 75% (CMS-published analog, cited).",
-      "O": 0.046823057292209785,
-      "D": 0.6,
-      "E": 1.0,
-      "confidence": "HIGH",
-      "kind": "ira_selected",
-      "flags": [
-        "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-        "c_f confounded (earnings announced between the two statpers)",
-        "s_f no data (FINRA short interest not in moat)"
-      ]
-    },
-    "needle_status": "strict",
-    "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 2,
-    "tariff_exposure": {
-      "proxy": 0.3429,
-      "pct_mfg_sites_outside_us": 45.0,
-      "us_revenue_share_pct": 76.2,
-      "exempt_until": "2029-01-20",
-      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
-    },
-    "old_score": 0.075,
-    "old_rank": 7,
-    "v2_L": 0.08806346456165078,
-    "v2_rank": 6,
-    "constants": {
-      "Rev_TTM": 64386.0,
-      "t": 0.27393953327968734,
-      "D": 1771.0,
-      "sigma_EPS": 0.522733201547405,
-      "currency": "USD",
-      "annual_only": false
-    },
-    "rank": 7
-  },
-  {
-    "ticker": "LLY",
-    "L": 0.005057309236214908,
-    "top5_sum": 0.015171927708644726,
-    "N_eff": 1.0,
-    "blocks": {
-      "P": 0.015171927708644726
-    },
-    "largest_share": 0.5660855622905984,
-    "n_blocks": 1,
-    "n_findings": 38,
-    "n_withheld": 24,
-    "n_gate_rejected": 1,
-    "gate_failed": [
-      {
-        "id": "d2aae6b94153",
-        "kind": "label_narrower",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "2",
-            "where": "sentence@15",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "5",
-            "where": "sentence@45",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          },
-          {
-            "value": "5",
-            "where": "sentence@59",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      }
-    ],
-    "n_scored": 3,
-    "n_not_quantified": 34,
-    "n_guarded": 26,
-    "comparable": true,
-    "company_flags": [],
-    "top": [
-      {
-        "id": "4bf1a2f5e9e4",
-        "S": 0.00858860922798046,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Trulicity's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $4,898.4M; base list discount 71% (CMS-published analog, cited).",
-        "M": 0.2529386266188469,
-        "O": 0.0339553090122634,
-        "D": 0.25,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.5,
-        "flags": [
-          "Trulicity loses US exclusivity in 2027 (starter thread); biosimilar entry would end selection",
-          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "9cdaa161375b",
-        "S": 0.0065430327454643125,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Verzenio's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,428.7M; base list discount 50% (CMS-published analog, cited).",
-        "M": 0.19269542630583072,
-        "O": 0.0339553090122634,
-        "D": 0.25,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.5,
-        "flags": [
-          "IRA class rule: net hit = (1.0, 1.0, 1.0) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "ccde14de6e25",
-        "S": 4.028573519995428e-05,
-        "kind": "mfn_medicaid",
-        "family": "directional: MFN agreement (deal terms confidential)",
-        "block": "P",
-        "confidence": "MEDIUM",
-        "sentence": "LLY signed an MFN agreement on 2025-11-06 that extends MFN pricing to Medicaid (R010); US investment pledge $50bn; TrumpRx: Zepbound avg $346/mo; Trulicity $389/mo (R012). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given.",
-        "M": 0.1435662494213576,
-        "O": 0.05101950602447626,
-        "D": 0.7,
-        "E": 1.0,
-        "pi": 0.0055,
-        "c": 0.0,
-        "flags": [
-          "tariff exposure proxy 0.267 (sites outside US 40.0% x US revenue 66.7%), exempt until 2029-01-20: not scored",
-          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
-          "MFN size is an internal placeholder (Pfizer base rate 0.65% of US revenue), not printed: deal terms are confidential (review R3)",
-          "c_f confounded (earnings announced between the two statpers)",
-          "s_f no data (FINRA short interest not in moat)",
-          "MFN direction with a placeholder size: not eligible as the Sharpest Needle"
-        ]
-      }
-    ],
-    "needle": {
-      "id": "4bf1a2f5e9e4",
-      "S": 0.00858860922798046,
-      "sentence": "Trulicity's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $4,898.4M; base list discount 71% (CMS-published analog, cited).",
-      "O": 0.0339553090122634,
-      "D": 0.25,
-      "E": 1.0,
-      "confidence": "HIGH",
-      "kind": "ira_selected",
-      "flags": [
-        "Trulicity loses US exclusivity in 2027 (starter thread); biosimilar entry would end selection",
-        "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-        "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-        "s_f no data (FINRA short interest not in moat)"
-      ]
-    },
-    "needle_status": "provisional",
-    "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 0,
-    "tariff_exposure": {
-      "proxy": 0.26680000000000004,
-      "pct_mfg_sites_outside_us": 40.0,
-      "us_revenue_share_pct": 66.7,
-      "exempt_until": "2029-01-20",
-      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
-    },
-    "old_score": 0.3034,
-    "old_rank": 1,
-    "v2_L": 0.06907588447937224,
-    "v2_rank": 8,
-    "constants": {
-      "Rev_TTM": 79665.0,
-      "t": 0.2049114451555291,
-      "D": 893.7,
-      "sigma_EPS": 2.029480932934049,
-      "currency": "USD",
-      "annual_only": false
-    },
-    "rank": 8
-  },
-  {
-    "ticker": "PFE",
-    "L": 0.0006614471021727613,
-    "top5_sum": 0.001984341306518284,
-    "N_eff": 1.0,
-    "blocks": {
-      "P": 0.001984341306518284
-    },
-    "largest_share": 0.9898973988083578,
-    "n_blocks": 1,
-    "n_findings": 38,
-    "n_withheld": 28,
-    "n_gate_rejected": 3,
-    "gate_failed": [
-      {
-        "id": "e9f06e6978c3",
-        "kind": "risk_modified",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "232",
-            "where": "sentence@95",
-            "reason": "a cited source shows 41%: unit differs (plain vs %)"
-          }
-        ]
-      },
-      {
-        "id": "0e2dfbe2b4ab",
-        "kind": "risk_modified",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "27",
-            "where": "sentence@87",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      },
-      {
-        "id": "9ab26f56cac1",
-        "kind": "risk_modified",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "4",
-            "where": "sentence@107",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      }
-    ],
-    "n_scored": 2,
-    "n_not_quantified": 33,
-    "n_guarded": 22,
-    "comparable": true,
-    "company_flags": [
-      "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used"
-    ],
-    "top": [
-      {
-        "id": "9f93e6694754",
-        "S": 0.0019642942976704275,
-        "kind": "ira_selected",
-        "family": "contractual: IRA negotiation",
-        "block": "P",
-        "confidence": "HIGH",
-        "sentence": "Xeljanz's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,013.3M; base list discount 66% (CMS-published analog, cited).",
-        "M": 0.05784940131044006,
-        "O": 0.0339553090122634,
-        "D": 0.25,
-        "E": 1.0,
-        "pi": 1.0,
-        "c": 0.5,
-        "flags": [
-          "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
-          "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-          "s_f no data (FINRA short interest not in moat)"
-        ]
-      },
-      {
-        "id": "b79c3ddda98d",
-        "S": 2.0047008847856366e-05,
-        "kind": "mfn_medicaid",
-        "family": "directional: MFN agreement (deal terms confidential)",
-        "block": "P",
-        "confidence": "MEDIUM",
-        "sentence": "PFE signed an MFN agreement on 2025-09-30 that extends MFN pricing to Medicaid (R002); US investment pledge $70bn; TrumpRx: avg 50%, up to 85% (R004). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given.",
-        "M": 0.13239665887707056,
-        "O": 0.027530231733374214,
-        "D": 0.5002067970197434,
-        "E": 1.0,
-        "pi": 0.0055,
-        "c": 0.2854188614003666,
-        "flags": [
-          "tariff exposure proxy 0.364 (sites outside US 61.5% x US revenue 59.2%), exempt until 2029-01-20: not scored",
-          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
-          "MFN size is an internal placeholder (Pfizer base rate 0.65% of US revenue), not printed: deal terms are confidential (review R3)",
-          "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
-          "s_f no data (FINRA short interest not in moat)",
-          "MFN direction with a placeholder size: not eligible as the Sharpest Needle"
-        ]
-      }
-    ],
-    "needle": {
-      "id": "9f93e6694754",
-      "S": 0.0019642942976704275,
-      "sentence": "Xeljanz's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $1,013.3M; base list discount 66% (CMS-published analog, cited).",
-      "O": 0.0339553090122634,
-      "D": 0.25,
-      "E": 1.0,
-      "confidence": "HIGH",
-      "kind": "ira_selected",
-      "flags": [
-        "IRA class rule: net hit = (0.3, 0.4, 0.5) x list discount less avoided discount-program liability (Part D); review A15, one formula (S3)",
-        "TTM GAAP ETR -0.039 outside [0, 0.40] (one-off charges); peer median TTM ETR used",
-        "c_f untestable (FY consensus first appears after the disclosure): set to 0.5, uninformative, not 0 (review A12)",
-        "s_f no data (FINRA short interest not in moat)"
-      ]
-    },
-    "needle_status": "floor relaxed",
-    "n_pi_downgraded": 0,
-    "n_strict_needle_candidates": 0,
-    "tariff_exposure": {
-      "proxy": 0.36408,
-      "pct_mfg_sites_outside_us": 61.5,
-      "us_revenue_share_pct": 59.2,
-      "exempt_until": "2029-01-20",
-      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
-    },
-    "old_score": 0.0788,
-    "old_rank": 6,
-    "v2_L": 0.038393091989699334,
-    "v2_rank": 9,
-    "constants": {
-      "Rev_TTM": 63696.0,
-      "t": 0.18535431018433027,
-      "D": 5699.0,
-      "sigma_EPS": 0.2509268533144385,
-      "currency": "USD",
-      "annual_only": false
-    },
-    "rank": 9
-  },
-  {
-    "ticker": "JNJ",
-    "L": 0.0001460026021652225,
-    "top5_sum": 0.0004380078064956675,
-    "N_eff": 1.0,
-    "blocks": {
-      "P": 0.0004380078064956675
-    },
-    "largest_share": 1.0,
-    "n_blocks": 1,
-    "n_findings": 37,
-    "n_withheld": 29,
-    "n_gate_rejected": 1,
-    "gate_failed": [
-      {
-        "id": "534615ae84f3",
-        "kind": "label_broader",
-        "S": 0.0,
-        "unsupported": [
-          {
-            "value": "7",
-            "where": "sentence@15",
-            "reason": "no passing citation, derivation or assumption carries this number"
-          }
-        ]
-      }
-    ],
-    "n_scored": 1,
-    "n_not_quantified": 32,
-    "n_guarded": 22,
-    "comparable": true,
-    "company_flags": [],
-    "top": [
-      {
-        "id": "00b6e9d6910d",
-        "S": 0.0004380078064956675,
-        "kind": "mfn_medicaid",
-        "family": "directional: MFN agreement (deal terms confidential)",
-        "block": "P",
-        "confidence": "MEDIUM",
-        "sentence": "JNJ signed an MFN agreement on 2026-01-08 that extends MFN pricing to Medicaid (R037); US investment pledge $55bn; TrumpRx: participating (R038). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given.",
-        "M": 0.8093787865950914,
-        "O": 0.09839371171838328,
-        "D": 0.8368294995587998,
-        "E": 1.0,
-        "pi": 0.0055,
-        "c": 0.0804071433419783,
-        "flags": [
-          "tariff exposure proxy 0.428 (sites outside US 75.0% x US revenue 57.1%), exempt until 2029-01-20: not scored",
-          "Medicaid MFN terms started in 2026: part of the effect may already be in reported numbers",
-          "MFN size is an internal placeholder (Pfizer base rate 0.65% of US revenue), not printed: deal terms are confidential (review R3)",
-          "s_f no data (FINRA short interest not in moat)",
-          "MFN direction with a placeholder size: not eligible as the Sharpest Needle"
-        ]
-      }
-    ],
-    "needle": null,
-    "needle_status": "none",
-    "n_pi_downgraded": 1,
-    "n_strict_needle_candidates": 0,
-    "tariff_exposure": {
-      "proxy": 0.42825,
-      "pct_mfg_sites_outside_us": 75.0,
-      "us_revenue_share_pct": 57.1,
-      "exempt_until": "2029-01-20",
-      "note": "exposure proxy only: share of manufacturing sites outside the US x US revenue share; MFN signers pay no Section 232 duty until 2029-01-20 (outside the window)"
-    },
-    "old_score": 0.0696,
-    "old_rank": 8,
-    "v2_L": 0.19495788074919523,
-    "v2_rank": 3,
-    "constants": {
-      "Rev_TTM": 97929.0,
-      "t": 0.16506588347356724,
-      "D": 2440.1,
-      "sigma_EPS": 0.14570027943889252,
-      "currency": "USD",
-      "annual_only": false
     },
     "rank": 10
   }

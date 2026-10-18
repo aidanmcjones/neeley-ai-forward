@@ -112,25 +112,78 @@ def merge_facts(rows):
     return kept, merged
 
 
+PLAIN_REASON = "plain rule: biggest impact, least asked about"
+
+
+def _red_team():
+    """{ticker: (nugget id, one-line reason)} from docs/nuggets/best_needle.json (Parker's red-team read)."""
+    from pathlib import Path
+    p = Path(__file__).resolve().parents[3] / "docs" / "nuggets" / "best_needle.json"
+    try:
+        d = json.loads(p.read_text())
+    except Exception:
+        return {}
+    return {t: (i, (d.get("reason") or {}).get(t, "")) for t, i in (d.get("best_needle") or {}).items()}
+
+
+def red_team_pick(ticker, ranked, merged):
+    """(row, nugget id, reason) when Parker's best needle for the company is a gated, slide-ready row (or merged into
+    one as the same fact), else (None, id, reason)."""
+    nid, reason = _red_team().get(ticker, (None, ""))
+    if not nid:
+        return None, None, ""
+    for f in ranked:
+        nug = getattr(f, "nugget", None) or {}
+        if nug.get("id") == nid:
+            ok = bool(nug.get("slide_ready")) and nug.get("verdict") == "verified"
+            return (f if ok else None), nid, reason
+    for g in merged:      # merged into a kept row as one fact: the kept row carries the needle
+        nug = getattr(g, "nugget", None) or {}
+        if nug.get("id") == nid and nug.get("slide_ready") and nug.get("verdict") == "verified":
+            keep = next((f for f in ranked if f.id == g.merged_into), None)
+            return keep, nid, reason
+    return None, nid, reason
+
+
 def build(ticker, rows, public=False):
-    """(markdown, json dict) for one ticker's gated Scored rows."""
+    """(markdown, json dict) for one ticker's gated Scored rows. The Sharpest Needle is Parker's red-team best needle
+    when that row passes the gate and is slide-ready (the human read governs), else the plain rule."""
     ranked, merged = merge_facts(rows)
-    needle = pick_needle(ranked)
+    plain = pick_needle(ranked)
+    rt_row, rt_id, rt_reason = red_team_pick(ticker, ranked, merged)
+    needle, source = (rt_row, "red_team") if rt_row is not None else (plain, "plain_rule")
     per_row = [_claims(f) for f in ranked]
     flat = [c for cs in per_row for c in cs if c is not None]
+    reason_claim = None
+    if needle is not None:
+        if source == "red_team":
+            from agent.needle.cite.gate import numeric_gate
+            sent = per_row[ranked.index(needle)][0]
+            txt = f"red-team read: {rt_reason}" if rt_reason else "red-team read (docs/red_team_v3_final.md)"
+            res = numeric_gate([("reason", txt)], sent.citations, sent.derived, sent.assumptions)
+            if not (res.passed or res.numeric_check["status"] in ("no_numbers", "unchecked")):
+                txt = (f"red-team read: Parker's best needle for {ticker} ({rt_id}, docs/red_team_v3_final.md); his "
+                       "one-line reason carries figures the gate does not support, so it is not printed")
+            reason_claim = Claim(txt, sent.citations, derived=sent.derived, assumptions=sent.assumptions,
+                                 where="needle_reason")
+        else:
+            reason_claim = Claim(PLAIN_REASON, [], where="needle_reason")
+        flat.append(reason_claim)
     texts, order = claim_markup(flat)
     it = iter(texts)
     marked = []
     for cs in per_row:
         marked.append([next(it) if c is not None else "" for c in cs])
+    reason_md = next(it) if reason_claim is not None else ""
     summary = gate_document([{"where": c.where, "text": c.text, "citations": c.citations, "derived": c.derived,
                               "assumptions": c.assumptions} for c in flat])
     L = [f"# {ticker} findings ranked by dollar impact", "",
-         "Rank basis: base-case |dEPS| (USD per share) from each finding's impact formula; ties by |dOI| (USD M). "
-         "Sharpest Needle rule: " + NEEDLE_RULE + ".", ""]
+         "Rank basis: base-case |dEPS| (per share, reporting currency) from each finding's impact formula; ties by |dOI| (millions). "
+         "Sharpest Needle: Parker's red-team best needle when that row passes the gate and is slide-ready (the human "
+         "read governs), else the plain rule: " + NEEDLE_RULE + ".", ""]
     if needle is not None:
         i = ranked.index(needle)
-        L += [f"**Sharpest Needle (rank {i + 1}):** {_cell(marked[i][0])}", ""]
+        L += [f"**Sharpest Needle (rank {i + 1}):** {_cell(marked[i][0])}", "", f"Why this needle: {_cell(reason_md)}", ""]
     else:
         L += ["**Sharpest Needle:** none (no finding is quantified).", ""]
     L += ["| Rank | Finding | Impact math | Base-case abs dEPS (per share); abs dOI (M) | Analyst share asked | "
@@ -154,7 +207,10 @@ def build(ticker, rows, public=False):
                          "merged": [g.id for g in merged if g.merged_into == f.id] or None})
     md = "\n".join(L) + ("\n" + render_footnotes_md(order, public) if order else "\n")
     js = {"ticker": ticker, "rank_basis": RANK_BASIS, "needle_rule": NEEDLE_RULE,
-          "needle_id": needle.id if needle is not None else None, "rows": out_rows,
+          "needle_id": needle.id if needle is not None else None, "needle_source": source if needle is not None else None,
+          "plain_rule_needle_id": plain.id if plain is not None else None,
+          "red_team_needle_id": rt_row.id if rt_row is not None else None, "red_team_nugget_id": rt_id,
+          "needle_reason": reason_claim.text if reason_claim is not None else None, "rows": out_rows,
           "merged_rows": [{"id": g.id, "merged_into": g.merged_into, "sentence": g.sentence,
                            "nugget": (getattr(g, "nugget", None) or {}).get("id")} for g in merged],
           "numeric_check": summary["numeric_check"], "failed": summary["failed"],

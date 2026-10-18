@@ -38,7 +38,13 @@ def _check_rule(d):
         return
     lo = min(r["analyst_share_asked"] for r in cand)
     assert len(needles) == 1 and needles[0]["id"] == d["needle_id"]
-    n = needles[0]
+    by = {r["id"]: r for r in rows}
+    if d.get("needle_source") == "red_team":     # the human read governs: Parker's best needle, gated and slide-ready
+        assert d["needle_id"] == d["red_team_needle_id"] and d["needle_reason"].startswith("red-team read")
+        n = by[d["plain_rule_needle_id"]]          # the plain-rule pick is still recorded and must obey the rule
+    else:
+        assert d["needle_reason"] == FT.PLAIN_REASON and d["needle_id"] == d["plain_rule_needle_id"]
+        n = needles[0]
     assert n["analyst_share_asked"] == lo
     assert n["d_eps_base_abs"] == max(r["d_eps_base_abs"] for r in cand if r["analyst_share_asked"] == lo)
 

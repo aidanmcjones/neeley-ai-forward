@@ -113,3 +113,22 @@ sigma_EPS is unchanged: GILD 0.4031, AZN 0.5408 (USD per share, both before and 
 ## Tests
 
 Full suite: 252 passed, 2 skipped (was 237 passed, 2 skipped at 1551f27; 15 new tests: nugget impact math and id scheme, best-needle map, MFN marker, Biktarvy context, receivables footnote read, LOE dates, turn-label speaker (synthetic and real GILD), peer comparison, DKK, regimens, DECIDE sections, GILD fixture).
+
+## 7. Needle decision: the human read governs
+
+Coordinator decision after section 5: `findings_table` names Parker's red-team best needle when that row passes the gate and is slide-ready (a nugget merged into a kept row as one fact counts as the kept row), else the plain-rule needle. `findings_table.json` records `needle_id`, `needle_source` (red_team or plain_rule), `plain_rule_needle_id`, `red_team_needle_id` and `needle_reason`; `findings_table.md` prints "Why this needle:" with Parker's one-line reason (gated on the row's citations; when his line carries figures the gate does not support, a number-free line names his pick instead) or "plain rule: biggest impact, least asked about".
+
+| Company | Needle id | Source | Row |
+|---|---|---|---|
+| MRK | eed81303c1d7 | red_team | MRK-nugget-001, Keytruda royalty to BMS and Ono ends Dec 31, 2026 |
+| JNJ | b3b341581796 | red_team | JNJ-nugget-010, second wave of exclusivity losses |
+| PFE | 8a78af774155 | red_team | PFE-nugget-001, Eliquis list-price rebate windfall |
+| BMY | e387364988f2 | red_team | BMY-nugget-001, Keytruda and Tecentriq royalties end |
+| AMGN | 2756b7c86172 | red_team | AMGN-nugget-006, IRS Puerto Rico claim vs reserve |
+| NVO | 368385278158 | plain_rule | gross margin -3.7 pts (NVO-nugget-001 is cash-only and fails the gate) |
+| LLY | b1c0d840e1ed | red_team | LLY-nugget-002, Jardiance one-off |
+| ABBV | 53d422aaae7b | red_team | ABBV-nugget-001, Skyrizi royalty to 2044 |
+| GILD | 49af018377a3 | red_team | Biktarvy 2028 Medicare price (GILD-nugget-001 merged into the IRA row) |
+| AZN | b0573ba3b531 | plain_rule | inventory gap +15.4 pts (AZN-nugget-010 fails the gate) |
+
+Suite after this change: 253 passed, 2 skipped.
