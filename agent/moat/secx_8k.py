@@ -50,4 +50,5 @@ def main():
         print("DONE", t, form, "filings", len(fs), "docs written", n, "skipped", skipped, flush=True)
 
 
-main()
+if __name__ == "__main__":
+    main()

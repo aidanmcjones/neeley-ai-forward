@@ -12,7 +12,6 @@ their text into a public artifact).
 """
 
 import argparse
-import os
 import re
 import sqlite3
 import sys
@@ -22,11 +21,7 @@ from pathlib import Path
 from agent.findings import _norm
 from agent.needle.pages import DOC_LABELS
 
-# Copied verbatim from data-moat commit 704741d (agent/moat/cite.py) except this DB resolution: the sqlite is
-# gitignored, so use env CITATIONS_DB, else the repo-local file, else the gap-data worktree copy.
-_LOCAL = Path(__file__).resolve().parents[2] / "data" / "moat" / "index" / "citations.sqlite"
-_GAP = Path("/Users/aidanjones/dev/neeley-ai-forward/.claude/worktrees/gap-data/data/moat/index/citations.sqlite")
-DB = Path(os.environ["CITATIONS_DB"]) if os.environ.get("CITATIONS_DB") else (_LOCAL if _LOCAL.exists() else _GAP)
+DB = Path(__file__).resolve().parents[2] / "data" / "moat" / "index" / "citations.sqlite"
 GRADE_ORDER = {"A": 1, "B": 2, "C": 3, "D": 4}
 TRANSCRIPT_TYPES = ("transcript", "transcript_source")
 EXTRA_LABELS = {"current_report_8k": "8-K", "proxy_statement": "proxy (DEF 14A)", "material_agreement": "agreement exhibit",
@@ -179,7 +174,10 @@ def search_facts(q, ticker=None, table=None, k=20):
         rows = db().execute(sql, [_or(q), *args, k]).fetchall()
     keep = ["table", "doc_id", "row_key", "ticker", "drug", "period", "field", "value", "unit", "source",
             "source_row", "verify_status", "text", "score"]
-    return [{c: r[c] for c in keep} for r in rows]
+    # additive: facts.locator = doc_id#p<page_no> when the row names a page, else fact:<table>#<row_key>
+    has_loc = rows and "locator" in rows[0].keys()
+    return [{**{c: r[c] for c in keep}, "locator": (r["locator"] if has_loc else f"fact:{r['table']}#{r['row_key']}")}
+            for r in rows]
 
 
 def main(argv=None):

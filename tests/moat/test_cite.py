@@ -1,4 +1,3 @@
-# Copied from data-moat 704741d; two tests skip when the gitignored data/moat tree is absent.
 """Citation index checks. No API key needed; needs data/moat/index/citations.sqlite (python -m agent.moat.index)."""
 
 import csv
@@ -38,7 +37,6 @@ def test_verify_quote_normalizes_whitespace_and_dashes():
     assert C.verify_quote(messy, "JNJ:10k_FY2025.md", 8)
 
 
-@pytest.mark.skipif(not (I.ROOT / "data" / "moat" / "verified").exists(), reason="needs data/moat tree")
 def test_force_summary_fact_retrievable():
     with open(I.MOAT / "verified" / "policy" / "force_summary.csv", encoding="utf-8") as f:
         row = next(r for r in csv.DictReader(f) if r["ticker"] == "AZN")
@@ -58,7 +56,9 @@ def test_azn_mislabeled_transcript_superseded():
 
 
 def test_grade_d_transcript_excluded_with_grade_min_b():
-    d_docs = [r["doc_id"] for r in q("SELECT doc_id FROM docs WHERE quote_grade='D' AND n_pages > 0")]
+    # a below-B transcript that is still live (D copies superseded by better moat copies are hidden by design)
+    d_docs = [r["doc_id"] for r in q("SELECT doc_id FROM docs WHERE quote_grade IN ('C', 'D') AND n_pages > 0 "
+                                     "AND superseded_by='' ORDER BY quote_grade DESC")]
     assert d_docs
     doc = d_docs[0]
     ticker = C._doc(doc)["ticker"]
@@ -81,11 +81,6 @@ def test_bloomberg_pdf_page_searchable():
     assert turns >= 10  # speaker turns detected
 
 
-needs_tree = pytest.mark.skipif(not (I.ROOT / "data" / "moat" / "manifests").exists(),
-                                reason="needs the gitignored data/moat tree (set up in the gap-data worktree)")
-
-
-@needs_tree
 def test_counts_match_manifests():
     expect = set(I.corpus_rows()) | set(I.moat_rows()) | set(I.bloomberg_rows())
     have = {r[0] for r in q("SELECT doc_id FROM docs")}
