@@ -417,7 +417,8 @@ def run(ticker):
                 emitted.add(id(f))
                 sigs.append(Signal(
                     ticker=ticker, detector="calls", kind="qa_deflection", period=q, value=1.0,
-                    detail=f"{f['speaker']} deflected a {topic} question in {q} ('{f['phrase']}'); asked: "
+                    detail=f"{f['speaker']} deflected {'a' if topic == 'other' else 'a ' + topic} question in {q} "
+                           f"('{f['phrase']}'); asked: "
                            f"'{f['question']}'",
                     evidence=[ev], meta={"topic": topic, "phrase": f["phrase"], "question": f["question"],
                                          "verifier": st}))

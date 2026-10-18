@@ -2,7 +2,18 @@
 
 Update this every hour and at the end of every task.
 
-**Last updated:** Sat Oct 17, ~12:00, corpus branch (Parker's agent)
+**Last updated:** Sat Oct 17, ~5:00 pm, needle branch (Parker's agent)
+
+## Sat Oct 17 ~5 pm: audit and fixes (needle branch, uncommitted until Parker OKs)
+- Scorer and detector fixes from docs/red_team_v1.md: no more level-as-change margin impact, favorable outliers,
+  COGS-based peer days inventory, single-quarter tax rates, IPR&D one-offs, duplicate peer rows, label or
+  undirected-MD&A needles, table-of-contents paragraphs, or half-year figures in annual impact math. 6 new
+  regression tests; 48 pass. `python -m agent.needle.run --all` reruns in about 50 s; ledger intact.
+- New agents: .claude/agents/nugget-miner.md (cited nuggets mapped to case and rubric, scorer-compatible JSONL in
+  docs/nuggets/) and .claude/agents/red-team.md (rubric judge).
+- New docs: docs/red_team_v1.md, docs/part2.md, docs/how_we_did_it.md, deck/outline.md; PLAN.md and
+  demo_script.md filled.
+- Open: company pick (after nuggets), API key, mirror the guards into Aidan's quant-model scorer.
 
 ## Sat Oct 17: the real case and the source corpus
 - The case is "The Fine Print" (Advanced track): pick 1 of 10 drugmakers, 5+ cited findings with page numbers and

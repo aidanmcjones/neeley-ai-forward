@@ -17,15 +17,26 @@ from agent.needle.schema import Evidence, Signal
 
 ANNUAL_ONLY = {"NVO", "AZN"}
 NAME = "forensics"
+# Peer days-inventory uses revenue, not cost of sales: on cost of sales an 85%-margin company (LLY) shows 469
+# days vs a 74% median purely from its margin. Own-history DIO (dio_rising) still uses cost of sales.
 PEER_METRICS = {
     "inv_gap": "inventory-vs-revenue growth gap", "rec_gap": "receivables-vs-revenue growth gap",
-    "dio": "days inventory", "dso": "days sales outstanding", "gross_margin": "gross margin",
-    "etr": "effective tax rate", "rnd_pct": "R&D % of revenue",
+    "dis": "inventory in days of sales", "dso": "days sales outstanding", "gross_margin": "gross margin",
+    "etr": "effective tax rate (trailing 4Q)", "rnd_pct": "R&D % of revenue",
 }
+# Which direction is a risk: +1 high is bad, -1 low is bad, 0 either. A favorable outlier (LLY's high margin)
+# is a strength, not a finding.
+ADVERSE = {"inv_gap": 1, "rec_gap": 1, "dis": 1, "dso": 1, "gross_margin": -1, "etr": 1, "rnd_pct": 0}
 # XBRL columns behind each metric (for evidence and meta)
 COLS = {"inv_gap": ["inventory", "revenue"], "rec_gap": ["receivables", "revenue"], "dio": ["inventory", "cogs"],
-        "dso": ["receivables", "revenue"], "gross_margin": ["revenue", "cogs"], "etr": ["income_tax", "pretax_income"],
-        "rnd_pct": ["rnd", "revenue"], "impairment": ["impairment"]}
+        "dis": ["inventory", "revenue"], "dso": ["receivables", "revenue"], "gross_margin": ["revenue", "cogs"],
+        "etr": ["income_tax", "pretax_income"], "rnd_pct": ["rnd", "revenue"], "impairment": ["impairment"]}
+# A charge this text describes makes an R&D jump a one-off (context, not a finding), when it is >= 25% of R&D
+ONE_OFF_RND = re.compile(
+    r"\$\s*([\d.,]+)\s*(billion|million)[^$]{0,200}?acquired in-process research and development"
+    r"|acquired (?:in-process research and development|IPR&D)[^$]{0,120}?\$\s*([\d.,]+)\s*(billion|million)", re.I)
+# ...and a tax-rate move is the same one-off when the filing says that charge carried no tax benefit
+ONE_OFF_TAX = re.compile(r"[^.]{0,200}(?:had no tax benefit|not (?:tax )?deductible|non-deductible)[^.]{0,160}", re.I)
 
 
 def _lab(p):
@@ -50,6 +61,56 @@ def _frame(ticker):
     return df, mult, ticker in ANNUAL_ONLY
 
 
+def _etr(df, p, mult):
+    """Effective tax rate over the trailing 4 quarters (one quarter swings on discrete items: PFE's 62.3% in
+    Q2 2026 was a tax benefit on impairment losses). None when pre-tax income is under 5% of revenue, where
+    the ratio means nothing (MRK's -95.8% after a $5.7B IPR&D charge)."""
+    ps = [p]
+    if mult == 4:
+        from agent.needle.backtest import _shift
+        ps = [_shift(p, -i) for i in range(4)]
+    sums = {}
+    for c in ("income_tax", "pretax_income", "revenue"):
+        vals = [_g(df, q, c) for q in ps]
+        sums[c] = None if None in vals else sum(vals)
+    tax, pre, rev = sums["income_tax"], sums["pretax_income"], sums["revenue"]
+    if tax is None or pre is None or not rev or abs(pre) < 0.05 * rev:
+        return None
+    return tax / pre
+
+
+def _first_verified(ticker, pattern):
+    """First verified Evidence for a regex match in the latest filing, else None."""
+    ds, cands = _doc_pool(ticker)
+    for doc_id, d in cands:
+        for n, (_, text) in d["pages"].items():
+            m = pattern.search(" ".join(text.split()))
+            if m:
+                ev = Evidence(doc_id=doc_id, page=n, quote=m.group(0).strip())
+                if pages.check(ev, ds)[0] == "verified":
+                    return ev
+    return None
+
+
+def _one_off_rnd(ticker, rnd):
+    """Verified Evidence of an acquired-IPR&D charge >= 25% of the period's R&D in the latest filing, else None."""
+    if not rnd:
+        return None
+    ds, cands = _doc_pool(ticker)
+    for doc_id, d in cands:
+        for n, (_, text) in d["pages"].items():
+            flat = " ".join(text.split())
+            for m in ONE_OFF_RND.finditer(flat):
+                amt, unit = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
+                dollars = float(amt.replace(",", "")) * (1e9 if unit.lower() == "billion" else 1e6)
+                if dollars < 0.25 * rnd:
+                    continue
+                ev = Evidence(doc_id=doc_id, page=n, quote=m.group(0))
+                if pages.check(ev, ds)[0] == "verified":
+                    return ev, dollars
+    return None
+
+
 def _metrics(df, p, mult):
     """Metrics for one period p; None where inputs are missing."""
     rev, cogs, inv, rec = (_g(df, p, c) for c in ("revenue", "cogs", "inventory", "receivables"))
@@ -61,10 +122,10 @@ def _metrics(df, p, mult):
     out["inv_gap"] = None if out["inv_yoy"] is None or out["rev_yoy"] is None else out["inv_yoy"] - out["rev_yoy"]
     out["rec_gap"] = None if out["rec_yoy"] is None or out["rev_yoy"] is None else out["rec_yoy"] - out["rev_yoy"]
     out["dio"] = inv / (cogs * mult) * 365 if inv is not None and cogs else None
+    out["dis"] = inv / (rev * mult) * 365 if inv is not None and rev else None
     out["dso"] = rec / (rev * mult) * 365 if rec is not None and rev else None
     out["gross_margin"] = 1 - cogs / rev if cogs is not None and rev else None
-    tax, pre = _g(df, p, "income_tax"), _g(df, p, "pretax_income")
-    out["etr"] = tax / pre if tax is not None and pre else None
+    out["etr"] = _etr(df, p, mult)
     rnd = _g(df, p, "rnd")
     out["rnd_pct"] = rnd / rev if rnd is not None and rev else None
     imp, assets = _g(df, p, "impairment"), _g(df, p, "assets")
@@ -167,7 +228,7 @@ def _pp(x):
 
 
 def _fmt_metric(m, v):
-    if m in ("dio", "dso"):
+    if m in ("dio", "dis", "dso"):
         return f"{v:.0f} days"
     if m in ("inv_gap", "rec_gap"):
         return _pp(v)
@@ -184,11 +245,32 @@ def run(ticker):
     values = {col: _g(df, L, col) for col in df.columns}
     sigs = []
 
+    # An IPR&D charge is a one-off only when R&D rose and removing it lands R&D back near last year's level
+    # (LLY books acquired IPR&D on its own line, so its R&D fell and its charge explains nothing)
+    one_off = _one_off_rnd(ticker, values.get("rnd"))
+    if one_off and c.get("rnd_pct") is not None and bc.get("rnd_pct") is not None:
+        ex = (values["rnd"] - one_off[1]) / values["revenue"]
+        if not (c["rnd_pct"] - bc["rnd_pct"] >= 0.03 and abs(ex - bc["rnd_pct"]) < 0.03):
+            one_off = None
+    else:
+        one_off = None
+    tax_one_off = _first_verified(ticker, ONE_OFF_TAX) if one_off else None
+
     def add(kind, value, detail, cols, metric=None):
         med, z = _zscore(metric, ticker) if metric else (None, None)
         evs = _evidence(ticker, cols, values)
         meta = {"concepts": {x: concepts.get(x) for x in cols if x in concepts},
                 "series": {p: {x: _g(df, p, x) for x in cols} for p in ps}}
+        if metric == "rnd_pct" and one_off:
+            ev, dollars = one_off
+            evs.append(ev)
+            meta["one_off"] = {"what": "acquired IPR&D charge", "dollars": dollars}
+            ex = (values["rnd"] - dollars) / values["revenue"]
+            detail += f" (one-off: {dollars / 1e9:,.1f}B acquired IPR&D; {ex:.1%} of revenue without it)"
+        if metric == "etr" and tax_one_off:
+            evs.append(tax_one_off)
+            meta["one_off"] = {"what": "acquired IPR&D charge with no tax benefit", "dollars": one_off[1]}
+            detail += " (one-off: the acquired IPR&D charge carried no tax benefit)"
         if metric:
             meta["trend"] = {p: hist[p].get(metric) for p in ps}
         if med is not None:
@@ -218,7 +300,8 @@ def run(ticker):
             COLS["gross_margin"], "gross_margin")
     a, b = c.get("etr"), bc.get("etr")
     if a is not None and b is not None and abs(a - b) >= 0.04:
-        add("tax_rate_shift", a - b, f"Effective tax rate {a:.1%} vs {b:.1%} a year earlier ({_pp(a - b)}) ({lab})",
+        add("tax_rate_shift", a - b, f"Effective tax rate {a:.1%} vs {b:.1%} a year earlier ({_pp(a - b)}) "
+                                     f"({'trailing 4Q to ' if not ann else ''}{lab})",
             COLS["etr"], "etr")
     a, b = c.get("rnd_pct"), bc.get("rnd_pct")
     if a is not None and b is not None and abs(a - b) >= 0.03:
@@ -240,7 +323,7 @@ def run(ticker):
     for m, label in PEER_METRICS.items():
         x = c.get(m)
         med, z = _zscore(m, ticker)
-        if x is None or z is None or abs(z) < 1.5:
+        if x is None or z is None or abs(z) < 1.5 or ADVERSE[m] * z < 0:
             continue
         add(f"{m}_peer_outlier", x, f"{label.capitalize()} {_fmt_metric(m, x)} ({lab}) vs peers",
             COLS[m], m)

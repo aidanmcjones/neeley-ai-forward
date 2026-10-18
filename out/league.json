@@ -1,102 +1,102 @@
 [
   {
-    "ticker": "LLY",
-    "score": 0.3034,
-    "n_findings": 22,
-    "n_verified": 6,
-    "n_rejected": 4,
-    "high_confidence": 5,
-    "sharpest_needle": "Days inventory 469 days (Q2 2026) vs peers; peer median 187 days, z +2.9",
-    "needle_id": "LLY-forensics-640707"
-  },
-  {
     "ticker": "AZN",
-    "score": 0.19,
-    "n_findings": 61,
-    "n_verified": 50,
+    "score": 0.1327,
+    "n_findings": 60,
+    "n_verified": 49,
     "n_rejected": 0,
-    "high_confidence": 9,
+    "high_confidence": 8,
     "sharpest_needle": "Receivables +23.3% YoY vs revenue +8.6% (FY2025); gap +14.7 pts; peer median -0.3 pts, z +2.1",
-    "needle_id": "AZN-forensics-400151"
+    "needle_id": "AZN-forensics-328835"
   },
   {
     "ticker": "MRK",
-    "score": 0.1398,
-    "n_findings": 37,
-    "n_verified": 12,
+    "score": 0.0993,
+    "n_findings": 73,
+    "n_verified": 48,
     "n_rejected": 0,
-    "high_confidence": 10,
-    "sharpest_needle": "R&D 58.7% of revenue vs 25.6% a year earlier (+33.0 pts) (Q2 2026); peer median 18.6%, z +3.0",
-    "needle_id": "MRK-forensics-323481"
-  },
-  {
-    "ticker": "GILD",
-    "score": 0.1079,
-    "n_findings": 25,
-    "n_verified": 10,
-    "n_rejected": 0,
-    "high_confidence": 8,
-    "sharpest_needle": "biktarvy lists 3 indications vs rival median 1 ({'dovato': 1, 'cabenuva': 1}); broader label supports more volume growth routes",
-    "needle_id": "GILD-labels-061286"
-  },
-  {
-    "ticker": "AMGN",
-    "score": 0.0894,
-    "n_findings": 34,
-    "n_verified": 12,
-    "n_rejected": 0,
-    "high_confidence": 10,
-    "sharpest_needle": "Receivables +17.5% YoY vs revenue +9.5% (Q2 2026); gap +8.0 pts; peer median -0.3 pts, z +1.2",
-    "needle_id": "AMGN-forensics-522500"
-  },
-  {
-    "ticker": "PFE",
-    "score": 0.0788,
-    "n_findings": 28,
-    "n_verified": 7,
-    "n_rejected": 0,
-    "high_confidence": 4,
-    "sharpest_needle": "Effective tax rate 62.3% vs 4.6% a year earlier (+57.7 pts) (Q2 2026); peer median 17.7%, z +3.0",
-    "needle_id": "PFE-forensics-631880"
-  },
-  {
-    "ticker": "ABBV",
-    "score": 0.075,
-    "n_findings": 26,
-    "n_verified": 10,
-    "n_rejected": 0,
-    "high_confidence": 10,
-    "sharpest_needle": "skyrizi every 12 weeks (4.3/yr) vs cosentyx every 4 weeks (13/yr)",
-    "needle_id": "ABBV-labels-417784"
-  },
-  {
-    "ticker": "JNJ",
-    "score": 0.0696,
-    "n_findings": 64,
-    "n_verified": 43,
-    "n_rejected": 0,
-    "high_confidence": 5,
-    "sharpest_needle": "rinvoq carries a boxed warning (WARNING: SERIOUS INFECTIONS, MORTALITY, MALIGNANCY, MAJOR ADVERSE CARDIOVASCULAR EVENTS, and\u00a0THROMBOSIS); tremfya does not",
-    "needle_id": "JNJ-labels-625677"
+    "high_confidence": 6,
+    "sharpest_needle": "Robert Davis deflected a question in 2025Q3 ('not going to get into'); asked: 'Hi everyone, thanks so much. For taking my question today. Just coming back to some of the White House price policy pressures and comments you've made already. I wanted to'",
+    "needle_id": "MRK-calls-879939"
   },
   {
     "ticker": "NVO",
-    "score": 0.05,
-    "n_findings": 52,
-    "n_verified": 46,
+    "score": 0.0985,
+    "n_findings": 50,
+    "n_verified": 44,
     "n_rejected": 4,
     "high_confidence": 5,
-    "sharpest_needle": "wegovy lists 5 indications vs rival median 1.5 ({'zepbound': 2, 'foundayo': 1}); broader label supports more volume growth routes",
-    "needle_id": "NVO-labels-768657"
+    "sharpest_needle": "New paragraph in risk factors vs FY2024: 'Sustainability reporting risks and controls are assessed annually. Data owners evaluate risks related to sustainability data, while a...'",
+    "needle_id": "NVO-drift-742156"
+  },
+  {
+    "ticker": "GILD",
+    "score": 0.0812,
+    "n_findings": 64,
+    "n_verified": 49,
+    "n_rejected": 0,
+    "high_confidence": 7,
+    "sharpest_needle": "Stronger wording in MD&A vs FY2024; hedges dropped: potential; new figures: 2026, 50: 'Our R&D portfolio includes over 50 clinical-stage programs across our core therapeutic areas. We expect updates in 2026...'",
+    "needle_id": "GILD-drift-660739"
+  },
+  {
+    "ticker": "AMGN",
+    "score": 0.069,
+    "n_findings": 74,
+    "n_verified": 52,
+    "n_rejected": 0,
+    "high_confidence": 10,
+    "sharpest_needle": "Receivables +17.5% YoY vs revenue +9.5% (Q2 2026); gap +8.0 pts; peer median -0.3 pts, z +1.2",
+    "needle_id": "AMGN-forensics-004011"
+  },
+  {
+    "ticker": "ABBV",
+    "score": 0.0438,
+    "n_findings": 67,
+    "n_verified": 51,
+    "n_rejected": 0,
+    "high_confidence": 11,
+    "sharpest_needle": "Effective tax rate (trailing 4q) 27.4% (Q2 2026) vs peers; peer median 19.0%, z +1.6",
+    "needle_id": "ABBV-forensics-858653"
+  },
+  {
+    "ticker": "JNJ",
+    "score": 0.0429,
+    "n_findings": 70,
+    "n_verified": 49,
+    "n_rejected": 0,
+    "high_confidence": 5,
+    "sharpest_needle": "Stronger wording in MD&A vs FY2024; hedges dropped: may; new figures: $8.9, 15.8%, 2025: 'The Cardiovascular franchise achieved sales of $8.9 billion in 2025, representing an increase of 15.8% from 2024. Electrophysiology...'",
+    "needle_id": "JNJ-drift-013893"
   },
   {
     "ticker": "BMY",
-    "score": 0.0451,
-    "n_findings": 18,
-    "n_verified": 5,
+    "score": 0.0367,
+    "n_findings": 56,
+    "n_verified": 43,
     "n_rejected": 0,
-    "high_confidence": 4,
-    "sharpest_needle": "eliquis lists 6 indications vs rival median 10 ({'xarelto': 10}); narrower label should show up as a smaller addressable patient pool",
-    "needle_id": "BMY-labels-558226"
+    "high_confidence": 2,
+    "sharpest_needle": "New paragraph in risk factors vs FY2024 (topics: tariff): 'The U.S. and other countries have recently imposed, and may continue to impose, new tariffs. While pharmaceuticals are...'",
+    "needle_id": "BMY-drift-866150"
+  },
+  {
+    "ticker": "PFE",
+    "score": 0.0367,
+    "n_findings": 66,
+    "n_verified": 45,
+    "n_rejected": 0,
+    "high_confidence": 2,
+    "sharpest_needle": "New paragraph in risk factors vs FY2024 (topics: litigation, ai): 'AI, including machine learning and generative AI, is increasingly being used in the biopharmaceutical and global healthcare industries....'",
+    "needle_id": "PFE-drift-496629"
+  },
+  {
+    "ticker": "LLY",
+    "score": 0.0358,
+    "n_findings": 59,
+    "n_verified": 43,
+    "n_rejected": 4,
+    "high_confidence": 2,
+    "sharpest_needle": "R&D 16.6% of revenue vs 21.4% a year earlier (-4.8 pts) (Q2 2026); peer median 18.6%, z -0.3",
+    "needle_id": "LLY-forensics-023227"
   }
 ]
