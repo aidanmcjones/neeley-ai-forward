@@ -1,0 +1,1248 @@
+{
+ "header": {
+  "step": 0,
+  "category": "header",
+  "categories": [
+   "Language drift",
+   "Gross-to-net",
+   "Inventory and receivables growing faster than revenue",
+   "Segment and product table changes",
+   "Footnotes",
+   "Earnings-call Q&A",
+   "Product fine print",
+   "Peer contrast"
+  ],
+  "ticker": "GILD",
+  "generated_at": "2026-10-18T03:38:22Z",
+  "sample": true,
+  "note": "Illustrative trace assembled from the engine's gate and red-team decisions; the blind skeptic pass has not run",
+  "trimmed": {
+   "rows_total": 59,
+   "killed_same_reason_dropped": 10,
+   "narrowed_not_shown": 9
+  },
+  "sources": [
+   "out/GILD/findings_v3.jsonl",
+   "out/GILD/rejected_v3.jsonl",
+   "docs/nuggets/GILD.jsonl",
+   "ui/public/data/companies/GILD.json"
+  ]
+ },
+ "steps": [
+  {
+   "category": "Language drift",
+   "query": "Red-team read of the language drift pages for growth driver drift.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": "39"
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "39"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q1.md",
+     "doc_title": "Gilead 10-Q 2026-03-31",
+     "page": "26"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "31"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "30"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "10"
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "20"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q1.md",
+     "doc_title": "Gilead 10-Q 2026-03-31",
+     "page": "35"
+    },
+    {
+     "doc_id": "GILD:transcripts/2026Q2_transcript.md",
+     "doc_title": "Gilead 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "Gilead's HIV growth switched from volume to price in 2026: Biktarvy's stated drivers went from 'higher demand' (2024, 2025) to 'higher average realized price, favorable inventory dynamics and higher demand' (Q2 2026), credited on the call to channel mix, while the ACA risk factor moved from 'could substantially decrease' to 'has already contributed' and the Q2 HIV treatment market slowed."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "growth_driver_drift",
+   "detector": "nuggets",
+   "block": "T",
+   "source_id": "e305d3c6d908",
+   "nugget_id": "GILD-nugget-006",
+   "obscurity_rung": "analyst_asked",
+   "finding_n": 4,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 4
+  },
+  {
+   "category": "Language drift",
+   "query": "Red-team read of the language drift pages for mfn launch scope drift.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "20"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q1.md",
+     "doc_title": "Gilead 10-Q 2026-03-31",
+     "page": "35"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "42"
+    },
+    {
+     "doc_id": "GILD:policy/press_2025-12-19_mfn_agreement.md",
+     "doc_title": "Gilead press release 2025-12",
+     "page": 1
+    },
+    {
+     "doc_id": "GILD:presentations/2025Q4_earnings_slides.md",
+     "doc_title": "Gilead earnings slides 2025Q4",
+     "page": "12"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "28"
+    },
+    {
+     "doc_id": "GILD:transcripts/2026Q2_transcript.md",
+     "doc_title": "Gilead 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "8"
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "doc_title": "Amgen 10-K FY2025",
+     "page": "12"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "52"
+    }
+   ],
+   "candidate": {
+    "text": "Between the February 2026 10-K and the May 2026 10-Q, Gilead's description of its MFN deal changed from MFN prices 'in Medicaid for select existing and future launched products' to 'MFN prices in the U.S. market for future launched products', and the tariff exemption became conditional on more US investment; the ~2% 2026 HIV policy headwind on the slides names only ACA and the pricing agreement, while at least five products launch inside the deal's three-year term."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "mfn_launch_scope_drift",
+   "detector": "nuggets",
+   "block": "T",
+   "source_id": "ad5f7464bbbf",
+   "nugget_id": "GILD-nugget-003",
+   "obscurity_rung": "footnote_only",
+   "finding_n": 5,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 5
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "20"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: ira, mfn, tariff, gtn, supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "d060d07d3608",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 9,
+   "step": 9
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors reworded since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "24"
+    },
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": "24"
+    }
+   ],
+   "candidate": {
+    "text": "Reworded paragraph in risk factors vs FY2024 (topics: gtn, 340b, supply, pricing, china, ai); new figures: 2026; new topics: china, ai"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_modified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "b14f3db6e68b",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 10,
+   "step": 10
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "36"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: generic, litigation, supply)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "573cebabc205",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 11,
+   "step": 11
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "20"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: tariff, generic, supply)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "3a2209595561",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 12,
+   "step": 12
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "30"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: tariff, supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "94d5f3082a35",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 13,
+   "step": 13
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "37"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: supply)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "5d5279b36280",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 14,
+   "step": 14
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": "38"
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs FY2024 (topics: ira, gtn)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "b16cc5d6adf9",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 15,
+   "step": 15
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "40"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: gtn)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "918fc0789d72",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 16,
+   "step": 16
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "41"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: supply)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "112689841fc3",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 17,
+   "step": 17
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "36"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "94d12b765c75",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 18,
+   "step": 18
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "37"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "c36097d0a2f5",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 19,
+   "step": 19
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A wording that grew stronger since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "38"
+    },
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": "38"
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in MD&A vs FY2024; hedges dropped: potential; new figures: 2026, 50"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "218c275ed6c4",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 20,
+   "step": 20
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "40"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "6a60fbdc5b5e",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 21,
+   "step": 21
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": "40"
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs FY2024 (topics: gtn)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "2a7b1e0418a0",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 22,
+   "step": 22
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "42"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "ab32aedd9986",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 23,
+   "step": 23
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A wording that grew stronger since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 43
+    },
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": 43
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in MD&A vs [figure withheld: not gated] (topics: gtn); hedges dropped: could; new figures: [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "64ad2bd37480",
+   "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
+   "step": 31
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 19
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs [figure withheld: not gated] (topics: supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "4a876b7a4db6",
+   "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
+   "step": 32
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 39
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "86c90dd3343c",
+   "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
+   "step": 33
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": 41
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs [figure withheld: not gated] (topics: gtn, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "8a894b4d859f",
+   "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
+   "step": 34
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for a product selected for Medicare price negotiation.",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+     "doc_title": "CMS fact sheet",
+     "page": "1"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "41"
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "36"
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "page": "35"
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "doc_title": "Bristol Myers Squibb 10-Q 2026-06-30",
+     "page": "35"
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md",
+     "doc_title": "CMS fact sheet",
+     "page": "2"
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "doc_title": "CMS fact sheet",
+     "page": "2"
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "19"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q1.md",
+     "doc_title": "Gilead 10-Q 2026-03-31",
+     "page": "34"
+    }
+   ],
+   "candidate": {
+    "text": "Biktarvy's Medicare price is set by negotiation from January 2028: CMS Part B+D spend $3,904.5M; assumed base list discount 65.5% (median of the cycle 1-2 negotiated discounts in the CMS fact sheets; cited range 38% to 85%; no same-class MFP published). US generic entry no earlier than April 1, 2036 under the patent settlements (10-K), not the earlier 2033 projection, so the set price runs eight years before generics. Bear precedent for the first set-price year: Amgen's ENBREL net selling price fell 22% under Part D price setting; bull precedent: BMS cut the Eliquis list price and Eliquis revenue rose 22% in its first set-price year."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "ira_selected",
+   "detector": "ira_generator",
+   "block": "P",
+   "source_id": "49af018377a3",
+   "finding_n": 1,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown; the Sharpest Needle",
+   "step": 1
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for the terms of the most-favored-nation pricing agreement.",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/wh/wh_fact_sheet_2025-12-19_nine_deals_mrk_bmy_amgn_gild.md",
+     "doc_title": "White House fact sheet 2025-12-19",
+     "page": "1"
+    }
+   ],
+   "candidate": {
+    "text": "GILD signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R025); US investment pledge $32bn; TrumpRx: Epclusa $24,920 -> $2,425 (R033). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mfn_medicaid",
+   "detector": "mfn_generator",
+   "block": "P",
+   "source_id": "f87b31bee9cb",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 7,
+   "step": 7
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Red-team read of the gtn pages for gtn baseline.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 41
+    },
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": 41
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 48
+    },
+    {
+     "doc_id": "GILD:10k_FY2024.md",
+     "doc_title": "Gilead 10-K FY2024",
+     "page": 47
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 66
+    },
+    {
+     "doc_id": "GILD:presentations/2025Q4_earnings_slides.md",
+     "doc_title": "Gilead earnings slides 2025Q4",
+     "page": 5
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "doc_title": "Amgen 10-K FY2025",
+     "page": 83
+    }
+   ],
+   "candidate": {
+    "text": "The [figure withheld: not gated] gross-to-net jump is a one-time step, not a trend: deductions were [figure withheld: not gated] ([figure withheld: not gated]), [figure withheld: not gated] ([figure withheld: not gated]) and [figure withheld: not gated] ([figure withheld: not gated]) of gross, the [figure withheld: not gated] step equals about [figure withheld: not gated] and matches the [figure withheld: not gated] Part D redesign headwind on the slides, but the [figure withheld: not gated] stopped splitting rebates from other deductions and dropped both 'not indicative' caveats."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "gtn_baseline",
+   "detector": "nuggets",
+   "block": "P",
+   "source_id": "e70393173807",
+   "nugget_id": "GILD-nugget-008",
+   "obscurity_rung": "prepared_remarks",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 27
+  },
+  {
+   "category": "Segment and product table changes",
+   "query": "Looked for product revenue moving apart from prescription volume.",
+   "documents": [],
+   "candidate": {
+    "text": "GILD total revenue grew [figure withheld: not gated] YoY in [figure withheld: not gated] while FAERS reports naming BIKTARVY moved [figure withheld: not gated] ([figure withheld: not gated] vs a year earlier): a [figure withheld: not gated] gap. FAERS report volume is only a loose proxy for patient use (reports follow news, litigation and label changes), and revenue here is company-wide, so treat this as a prompt to look, not a finding."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "demand_divergence",
+   "detector": "supply",
+   "block": "X",
+   "source_id": "b69c7cb948dc",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 39
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for contingent consideration benchmark.",
+   "documents": [
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "18"
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "40"
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "10"
+    },
+    {
+     "doc_id": "GILD:transcripts/2026Q2_transcript.md",
+     "doc_title": "Gilead 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "JNJ:10q_2026Q2.md",
+     "doc_title": "Johnson & Johnson 10-Q 2026-06-28",
+     "page": "34"
+    },
+    {
+     "doc_id": "JNJ:10q_2026Q2.md",
+     "doc_title": "Johnson & Johnson 10-Q 2026-06-28",
+     "page": "33"
+    }
+   ],
+   "candidate": {
+    "text": "Gilead's own deal terms set a high bar for anito-cel: Arcellx holders get a $300M CVR only if anito-cel reaches $6.0B of cumulative sales from launch (revenue from early 2027) through 2029, about $2.0B a year, more than Gilead's whole shrinking cell therapy line and close to JNJ's Carvykti run-rate."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "contingent_consideration_benchmark",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "cdc443f73256",
+   "nugget_id": "GILD-nugget-007",
+   "obscurity_rung": "footnote_only",
+   "finding_n": 2,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 2
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a booked impairment in the footnotes.",
+   "documents": [
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": "4"
+    }
+   ],
+   "candidate": {
+    "text": "Impairment 1,750M = 3.55% of assets (Q2 2026)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "impairment",
+   "detector": "forensics",
+   "block": "F",
+   "source_id": "c5d73d50d14d",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 8,
+   "step": 8
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a shift in the effective tax rate against a year earlier.",
+   "documents": [
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": 5
+    }
+   ],
+   "candidate": {
+    "text": "Effective tax rate [figure withheld: not gated] a year earlier ([figure withheld: not gated] pts) ([figure withheld: not gated]); peer median [figure withheld: not gated], z [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "tax_rate_shift",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "7b6827512a8f",
+   "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
+   "verdict_reason": "review guard: the pre-tax base is too small for a tax rate to mean anything",
+   "step": 28
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a booked impairment in the footnotes.",
+   "documents": [],
+   "candidate": {
+    "text": "Impairment [figure withheld: not gated] = [figure withheld: not gated] of assets ([figure withheld: not gated]) (xbrl_only: figure not found in filing text)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "impairment",
+   "detector": "forensics",
+   "block": "F",
+   "source_id": "9f12e9002232",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 29
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a clinical trial stopped for business reasons.",
+   "documents": [],
+   "candidate": {
+    "text": "Terminated Phase [figure withheld: not gated] trial [figure withheld: not gated] (Study of Magrolimab in Patients With Solid Tumors); registry reason: Sponsor decision to terminate study Registry text is sponsor-written; it may understate or reframe the real reason."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "trial_terminated",
+   "detector": "supply",
+   "block": "F",
+   "source_id": "22fbd516537f",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 40
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Red-team read of the call qa pages for collaboration split dodge.",
+   "documents": [
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "73"
+    },
+    {
+     "doc_id": "GILD:transcripts/2026Q2_transcript.md",
+     "doc_title": "Gilead 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "GILD:transcripts/2026Q1_transcript.md",
+     "doc_title": "Gilead 2026Q1 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": "39"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "38"
+    }
+   ],
+   "candidate": {
+    "text": "Gilead's switch-market plan hands half of each switched patient to Merck: the once-weekly islatravir plus lenacapavir pill (launch targeted for 2027, non-inferior to Biktarvy in Phase 3) splits revenue 50/50 with Merck up to $2.0B a year while Gilead pays 60% of costs, and when an analyst asked whether migration from wholly owned Biktarvy is dilutive, management answered with 'switch leadership' and no economics."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "collaboration_split_dodge",
+   "detector": "nuggets",
+   "block": "C",
+   "source_id": "9fd7bce5651f",
+   "nugget_id": "GILD-nugget-002",
+   "obscurity_rung": "analyst_asked",
+   "finding_n": 3,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 3
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Red-team read of the call qa pages for launch cannibalization dodge.",
+   "documents": [
+    {
+     "doc_id": "GILD:transcripts/2026Q2_transcript.md",
+     "doc_title": "Gilead 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "GILD:presentations/2025Q4_earnings_slides.md",
+     "doc_title": "Gilead earnings slides 2025Q4",
+     "page": "11"
+    },
+    {
+     "doc_id": "GSK:reports/2026Q2_results.md",
+     "doc_title": "GSK interim report 2026Q2",
+     "page": "25"
+    },
+    {
+     "doc_id": "GSK:reports/2026Q2_results.md",
+     "doc_title": "GSK interim report 2026Q2",
+     "page": "4"
+    }
+   ],
+   "candidate": {
+    "text": "Yeztugo already outsells ViiV's Apretude in the US after four quarters, but about a third of its switch patients come from Gilead's own Descovy, and when TD Cowen asked about the growing gap between Yeztugo prescriptions and reported sales, Johanna Mercier said Gilead 'won't be commenting' on IQVIA data."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "launch_cannibalization_dodge",
+   "detector": "nuggets",
+   "block": "C",
+   "source_id": "488e8cc72ba4",
+   "nugget_id": "GILD-nugget-009",
+   "obscurity_rung": "analyst_asked",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 6,
+   "step": 6
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Looked for an analyst question management did not answer.",
+   "documents": [
+    {
+     "doc_id": "GILD:transcripts/2025Q4_transcript.md",
+     "doc_title": "Gilead 2025Q4 earnings call (third-party transcript)",
+     "page": 1
+    },
+    {
+     "doc_id": "GILD:transcripts/2026Q2_transcript.md",
+     "doc_title": "Gilead 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "Johanna Mercier deflected a guidance question in [figure withheld: not gated] ('more to come'); asked: 'Great. Thanks so much. Just wanted to kick off with a question on [figure withheld: not gated]. Can you just elaborate a little bit more on the assumptions driving the [figure withheld: not gated] million guidance?'"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "qa_deflection",
+   "detector": "calls",
+   "block": "C",
+   "source_id": "8000ae4904de",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 24
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Looked for a topic analysts suddenly raised more often on earnings calls.",
+   "documents": [
+    {
+     "doc_id": "GILD:transcripts/2026Q2_transcript.md",
+     "doc_title": "Gilead 2026Q2 earnings call (third-party transcript)",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "'generic' came up [figure withheld: not gated] times in the [figure withheld: not gated] call vs an average of [figure withheld: not gated] in earlier calls ([figure withheld: not gated])."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "call_topic_surge",
+   "detector": "calls",
+   "block": "C",
+   "source_id": "545f2fa901b7",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 25
+  },
+  {
+   "category": "Product fine print",
+   "query": "Red-team read of the label fine print pages for patent challenge.",
+   "documents": [
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": 25
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 9
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": 31
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": 12
+    },
+    {
+     "doc_id": "GILD:10k_FY2025.md",
+     "doc_title": "Gilead 10-K FY2025",
+     "page": 40
+    },
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": 32
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "doc_title": "Bristol Myers Squibb 10-Q 2026-06-30",
+     "page": 24
+    }
+   ],
+   "candidate": {
+    "text": "Descovy, Gilead's fastest-growing large product ([figure withheld: not gated] in [figure withheld: not gated], about [figure withheld: not gated] annualized), faces a January [figure withheld: not gated] Cipla [figure withheld: not gated](b)([figure withheld: not gated]) filing with a paragraph IV challenge to two Descovy patents even though Cipla signed the [figure withheld: not gated] TAF settlement; Gilead sued in February [figure withheld: not gated] and listed five new Descovy patents running to June [figure withheld: not gated] between May and July [figure withheld: not gated], and no call has mentioned it."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "patent_challenge",
+   "detector": "nuggets",
+   "block": "L",
+   "source_id": "1e531a99afdf",
+   "nugget_id": "GILD-nugget-005",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 26
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for a label with broader approved uses than a rival's.",
+   "documents": [
+    {
+     "doc_id": "drug:biktarvy:label_sections.md",
+     "doc_title": "Biktarvy label",
+     "page": 2
+    },
+    {
+     "doc_id": "drug:dovato:label_sections.md",
+     "doc_title": "Dovato label",
+     "page": 2
+    },
+    {
+     "doc_id": "drug:cabenuva:label_sections.md",
+     "doc_title": "Cabenuva label",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "Biktarvy lists [figure withheld: not gated] indications vs rival median [figure withheld: not gated] (Dovato [figure withheld: not gated], Cabenuva [figure withheld: not gated]), counting indication map rows, each cited to its label line; broader label supports more volume growth routes"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "label_broader",
+   "detector": "labels",
+   "block": "L",
+   "source_id": "cf9d0c82406a",
+   "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
+   "step": 35
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for a gap in Medicare spend per claim against a rival.",
+   "documents": [],
+   "candidate": {
+    "text": "Biktarvy Part D spend/claim [figure withheld: not gated] ([figure withheld: not gated]) is [figure withheld: not gated] higher than Dovato [figure withheld: not gated] ([figure withheld: not gated]); gross, before rebates"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "spend_per_claim_gap",
+   "detector": "labels",
+   "block": "L",
+   "source_id": "03cf4c388a03",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 36
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for a heavier dosing schedule than a rival's.",
+   "documents": [
+    {
+     "doc_id": "drug:biktarvy:label_sections.md",
+     "doc_title": "Biktarvy label",
+     "page": 4
+    },
+    {
+     "doc_id": "drug:cabenuva:label_sections.md",
+     "doc_title": "Cabenuva label",
+     "page": 2
+    }
+   ],
+   "candidate": {
+    "text": "Biktarvy once daily ([figure withheld: not gated]) vs Cabenuva monthly ([figure withheld: not gated])"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "dosing_burden",
+   "detector": "labels",
+   "block": "L",
+   "source_id": "e41204317cf4",
+   "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
+   "step": 37
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for an exclusivity end earlier than the market assumes.",
+   "documents": [],
+   "candidate": {
+    "text": "Biktarvy protection ends [figure withheld: not gated] years before Cabenuva ([figure withheld: not gated]); earlier loss of exclusivity"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "exclusivity_earlier",
+   "detector": "labels",
+   "block": "P",
+   "source_id": "d41ca8c2cbd5",
+   "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
+   "step": 38
+  },
+  {
+   "category": "Peer contrast",
+   "query": "Looked for an effective tax rate far from the peer median.",
+   "documents": [
+    {
+     "doc_id": "GILD:10q_2026Q2.md",
+     "doc_title": "Gilead 10-Q 2026-06-30",
+     "page": 5
+    }
+   ],
+   "candidate": {
+    "text": "Effective tax rate [figure withheld: not gated] ([figure withheld: not gated]) vs peers; peer median [figure withheld: not gated], z [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "etr_peer_outlier",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "108c36b7d3bf",
+   "verdict_reason": "review guard: the pre-tax base is too small for a tax rate to mean anything",
+   "step": 30
+  }
+ ],
+ "summary": {
+  "candidates": 40,
+  "survived": 5,
+  "killed": 17,
+  "narrowed": 18,
+  "documents": 23
+ }
+}

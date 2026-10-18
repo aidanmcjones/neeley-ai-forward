@@ -1,0 +1,21 @@
+{
+ "generated_at": "2026-10-18T03:38:22Z",
+ "engine": "v3",
+ "prompt": "find material, non-obvious findings about one company and compare one of its key products against its rivals.",
+ "picked": [
+  "LLY",
+  "GILD",
+  "MRK"
+ ],
+ "tickers": [
+  "LLY",
+  "GILD",
+  "MRK"
+ ],
+ "sealed": {
+  "sha256": "77d3ba2838c2285661bb7c4107ca7b44d8e34933cc11ec9bb02c4e5d1745ded9",
+  "sealed_at": "2026-10-18T03:38:22Z"
+ },
+ "sample": true,
+ "sample_note": "Sample fixture, not the team's Part 1 answer. The pick order LLY, GILD, MRK is illustrative; the selection text and its hash are written by agent/ui_part1_fixture.py, not sealed by the model session. Findings, impact math, sources, product cells and the priced-in call are copied from the gated company files with the public withholding rule applied. The trace is assembled from the engine's gate and red-team decisions; the blind skeptic pass has not run, so the skeptic fields are null."
+}

@@ -1,0 +1,1317 @@
+{
+ "header": {
+  "step": 0,
+  "category": "header",
+  "categories": [
+   "Language drift",
+   "Gross-to-net",
+   "Inventory and receivables growing faster than revenue",
+   "Segment and product table changes",
+   "Footnotes",
+   "Earnings-call Q&A",
+   "Product fine print",
+   "Peer contrast"
+  ],
+  "ticker": "MRK",
+  "generated_at": "2026-10-18T03:38:22Z",
+  "sample": true,
+  "note": "Illustrative trace assembled from the engine's gate and red-team decisions; the blind skeptic pass has not run",
+  "trimmed": {
+   "rows_total": 88,
+   "killed_same_reason_dropped": 24,
+   "narrowed_not_shown": 24
+  },
+  "sources": [
+   "out/MRK/findings_v3.jsonl",
+   "out/MRK/rejected_v3.jsonl",
+   "docs/nuggets/MRK.jsonl",
+   "ui/public/data/companies/MRK.json"
+  ]
+ },
+ "steps": [
+  {
+   "category": "Language drift",
+   "query": "Red-team read of the language drift pages for call vs filing contradiction.",
+   "documents": [
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "doc_title": "Merck 2025Q3 earnings call (official)",
+     "page": "14"
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "doc_title": "Merck 2025Q3 earnings call (official)",
+     "page": "15"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "56"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "35"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "132"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "28"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "60"
+    },
+    {
+     "doc_id": "GSK:6k/2025-10-29_a1902f-gskoriginaledgar.md",
+     "doc_title": "GSK 6-K 2025-10-29",
+     "page": 1
+    }
+   ],
+   "candidate": {
+    "text": "In October 2025 Merck's CFO said the ACIP HPV dosing decision 'will very much impact' whether US Gardasil grows; after CDC cut adolescents to a single dose in January 2026, the 10-K and both 2026 10-Qs call the effect 'not material', while the change sits only under a court stay."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "call_vs_filing_contradiction",
+   "detector": "nuggets",
+   "block": "T",
+   "source_id": "01f561376d76",
+   "nugget_id": "MRK-nugget-002",
+   "obscurity_rung": "analyst_asked",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 6,
+   "step": 6
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "52"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: mfn, tariff, gtn, supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "e7cc1cd5deb9",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 14,
+   "step": 14
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "52"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: gtn, 340b, generic, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "e988d5182a0c",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 15,
+   "step": 15
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "60"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs FY2024 (topics: generic, litigation, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "0ec2980ec276",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 16,
+   "step": 16
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "31"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: mfn, gtn, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "3cd174c13697",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 17,
+   "step": 17
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A wording that grew stronger since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "57"
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": "54"
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in MD&A vs FY2024 (topics: supply, pricing); new risk vocabulary: decline; new figures: 1%"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "93297166c764",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 18,
+   "step": 18
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A wording that grew stronger since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "58"
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": "55"
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in MD&A vs FY2024 (topics: generic, pricing); new risk vocabulary: significant; new figures: 2025, 2026"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mdna_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "fda35652a804",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 19,
+   "step": 19
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "34"
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs FY2024 (topics: supply, china)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "640fabda3aaa",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 20,
+   "step": 20
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors reworded since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": 31
+    }
+   ],
+   "candidate": {
+    "text": "Reworded paragraph in risk factors vs [figure withheld: not gated] (topics: generic, supply, pricing, china); new figures: [figure withheld: not gated]; new topics: pricing"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "risk_modified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "3365b7def9ed",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 21
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs reworded since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 58
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": 56
+    }
+   ],
+   "candidate": {
+    "text": "Reworded paragraph in MD&A vs [figure withheld: not gated] (topics: supply, pricing, china); new figures: [figure withheld: not gated]; new topics: supply"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_modified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "ec376690d43f",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 22
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A wording that grew stronger since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 61
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": 57
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in MD&A vs [figure withheld: not gated] (topics: generic); new risk vocabulary: decline; new figures: [figure withheld: not gated]; new topics: generic"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "4cc5be7192d1",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 23
+  },
+  {
+   "category": "Language drift",
+   "query": "Red-team read of the language drift pages for nongaap definition drift.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 91
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": 63
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 66
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 108
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 89
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 62
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 107
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "doc_title": "Bristol Myers Squibb 10-K FY2025",
+     "page": 59
+    }
+   ],
+   "candidate": {
+    "text": "Merck widened its non-GAAP exclusion in [figure withheld: not gated] to cover 'asset acquisitions' in the same year it bought Verona Pharma as an asset acquisition, so the [figure withheld: not gated] Ohtuvayre intangible (nine-year life, about [figure withheld: not gated] a year) and [figure withheld: not gated] of Verona inventory step-up never reach non-GAAP EPS. Ohtuvayre, not the Keytruda Qlex switch, drives most of the jump in GAAP amortization from [figure withheld: not gated] ([figure withheld: not gated]) to [figure withheld: not gated] ([figure withheld: not gated]); the [figure withheld: not gated] of Alteogen milestones capitalized for Qlex adds only about [figure withheld: not gated] a year."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "nongaap_definition_drift",
+   "detector": "nuggets",
+   "block": "T",
+   "source_id": "5947b92d763d",
+   "nugget_id": "MRK-nugget-006",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "numeric gate: a number in the sentence has the opposite sign to the cited figure",
+   "step": 27
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs added since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 61
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in MD&A vs [figure withheld: not gated] (topics: gtn, generic, pricing, china)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "0f6a98e13fa3",
+   "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
+   "step": 32
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors whose wording grew stronger since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 36
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": 35
+    }
+   ],
+   "candidate": {
+    "text": "Stronger wording in risk factors vs [figure withheld: not gated] (topics: ira, generic, pricing, china); new risk vocabulary: significant; new figures: [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "risk_intensified",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "f34066e3bcec",
+   "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
+   "step": 33
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for risk factors added since the prior annual report.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 38
+    }
+   ],
+   "candidate": {
+    "text": "New paragraph in risk factors vs [figure withheld: not gated] (topics: supply, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "risk_added",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "5601f4e0f452",
+   "verdict_reason": "review guard: no evidence quote is a full sentence (a table of contents or a parsed table)",
+   "step": 34
+  },
+  {
+   "category": "Language drift",
+   "query": "Looked for MD&A paragraphs removed since the prior filing.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": 58
+    }
+   ],
+   "candidate": {
+    "text": "Paragraph dropped from MD&A vs [figure withheld: not gated] (topics: generic, pricing)"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "mdna_removed",
+   "detector": "drift",
+   "block": "T",
+   "source_id": "c401886fa5d3",
+   "verdict_reason": "review guard: an MD&A change with no direction read yet, so it cannot be a finding",
+   "step": 35
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Red-team read of the gtn pages for gtn rollforward.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "72"
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "doc_title": "Merck 10-K FY2024",
+     "page": "69"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "83"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "132"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "59"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "111"
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "doc_title": "Johnson & Johnson 10-K FY2025",
+     "page": "51"
+    }
+   ],
+   "candidate": {
+    "text": "Merck's US sales before discounts rose only about 2% in 2025 while net US sales rose 13%: the US discount provision fell from $13.3B to $10.0B, so the gross-to-net rate dropped to about 21% from 29% (2024) and 30% (2023). The cut in Januvia's list price explains the drop mechanically, not stronger pricing, and $249M of 2025 revenue was a release of prior-year rebate accruals, up from $139M in 2024 and $70M in 2023."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "gtn_rollforward",
+   "detector": "nuggets",
+   "block": "P",
+   "source_id": "270055428844",
+   "nugget_id": "MRK-nugget-011",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 8,
+   "step": 8
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for the terms of the most-favored-nation pricing agreement.",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/wh/wh_fact_sheet_2025-12-19_nine_deals_mrk_bmy_amgn_gild.md",
+     "doc_title": "White House fact sheet 2025-12-19",
+     "page": "1"
+    }
+   ],
+   "candidate": {
+    "text": "MRK signed an MFN agreement on 2025-12-19 that extends MFN pricing to Medicaid (R019); US investment pledge $70bn; TrumpRx: Januvia $330 -> $100 (R026). Direction: adverse to US net price; size not disclosed (deal terms confidential), so no dollar figure is given."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "mfn_medicaid",
+   "detector": "mfn_generator",
+   "block": "P",
+   "source_id": "055023d4eff6",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 9,
+   "step": 9
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for a product selected for Medicare price negotiation.",
+   "documents": [
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2027.md",
+     "doc_title": "CMS fact sheet",
+     "page": "1"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "31"
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "doc_title": "CMS fact sheet",
+     "page": "2"
+    }
+   ],
+   "candidate": {
+    "text": "Janumet's Medicare price is set by negotiation from January 2027: CMS Part B+D spend $1,082.5M; base list discount 85% (CMS-published analog, cited)."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "ira_selected",
+   "detector": "ira_generator",
+   "block": "P",
+   "source_id": "dd2b47cc4d2b",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 10,
+   "step": 10
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Red-team read of the forces pages for ira selection.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "9"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "116"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "132"
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "doc_title": "Johnson & Johnson 10-K FY2025",
+     "page": "5"
+    }
+   ],
+   "candidate": {
+    "text": "Lenvima, Merck's $1.05B Eisai alliance, was picked in January 2026 for Medicare price setting effective January 1, 2028, with settled generics allowed in July 2030, so Merck's US Lenvima profit share takes a government price cut for about two and a half years before generics finish it."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "ira_selection",
+   "detector": "nuggets",
+   "block": "P",
+   "source_id": "a0afee4619a8",
+   "nugget_id": "MRK-nugget-008",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 11,
+   "step": 11
+  },
+  {
+   "category": "Gross-to-net",
+   "query": "Looked for a product exposed to a future Medicare negotiated price.",
+   "documents": [],
+   "candidate": {
+    "text": "Januvia IRA-selected (IPAY [figure withheld: not gated]) while Ozempic is selected later (IPAY [figure withheld: not gated])"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "ira_exposed",
+   "detector": "labels",
+   "block": "P",
+   "source_id": "7a329dec1a36",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 38
+  },
+  {
+   "category": "Segment and product table changes",
+   "query": "Looked for a fall in gross margin against a year earlier.",
+   "documents": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "3"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "89"
+    }
+   ],
+   "candidate": {
+    "text": "Gross margin 73.5% vs 77.5% a year earlier (-4.0 pts) (Q2 2026); peer median 74.1%, z -0.1"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "gross_margin_drop",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "0591acf35698",
+   "finding_n": 2,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 2
+  },
+  {
+   "category": "Segment and product table changes",
+   "query": "Red-team read of the segment change pages for revenue quality.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 55
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 8
+    }
+   ],
+   "candidate": {
+    "text": "Three quarters of Merck's [figure withheld: not gated] Koselugo alliance revenue ([figure withheld: not gated] of [figure withheld: not gated]) was one-off upfront and milestone cash from AstraZeneca booked as Sales, and AstraZeneca can switch back to profit sharing in January [figure withheld: not gated] or January [figure withheld: not gated], cancelling the remaining [figure withheld: not gated] payments and the [figure withheld: not gated] royalties."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "revenue_quality",
+   "detector": "nuggets",
+   "block": "A",
+   "source_id": "11a8d328bff1",
+   "nugget_id": "MRK-nugget-009",
+   "obscurity_rung": "prepared_remarks",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 28
+  },
+  {
+   "category": "Segment and product table changes",
+   "query": "Looked for product revenue moving apart from prescription volume.",
+   "documents": [],
+   "candidate": {
+    "text": "MRK total revenue grew [figure withheld: not gated] YoY in [figure withheld: not gated] while FAERS reports naming KEYTRUDA moved [figure withheld: not gated] ([figure withheld: not gated] vs a year earlier): a [figure withheld: not gated] gap. FAERS report volume is only a loose proxy for patient use (reports follow news, litigation and label changes), and revenue here is company-wide, so treat this as a prompt to look, not a finding."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "demand_divergence",
+   "detector": "supply",
+   "block": "X",
+   "source_id": "0e6ce72a63db",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 39
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for royalty footnote.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "54"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "34"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "53"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "16"
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "doc_title": "Bristol Myers Squibb 10-K FY2025",
+     "page": "89"
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "doc_title": "Bristol Myers Squibb 10-Q 2026-06-30",
+     "page": "10"
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "doc_title": "Bristol Myers Squibb 10-K FY2025",
+     "page": "32"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "77"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "57"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "22"
+    }
+   ],
+   "candidate": {
+    "text": "Merck's 2.5% royalty on every dollar of Keytruda and Keytruda Qlex sales, paid to BMS and Ono under the PD-1 patent settlement, ends after December 31, 2026, so roughly $0.8B a year of cost of sales disappears in 2027 (about $0.54B to $0.79B net of Winrevair royalty growth and a possible European Qlex royalty). It is a one-year step, not a run-rate: the Keytruda compound patent ends in December 2028, and Lynparza generics could start taking part of it back as early as late 2027 (earliest approval date only; see MRK-nugget-012)."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "royalty_footnote",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "eed81303c1d7",
+   "nugget_id": "MRK-nugget-001",
+   "obscurity_rung": "footnote_only",
+   "finding_n": 1,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown; the Sharpest Needle",
+   "step": 1
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for expense offset nonrecurring.",
+   "documents": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "7"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": "68"
+    }
+   ],
+   "candidate": {
+    "text": "Merck's 2026 R&D line is flattered by $700M of Blackstone funding for sac-TMT, booked as a reduction of R&D through the year and paid in Q4 2026; nothing repeats in 2027, and Blackstone earns low-to-mid single-digit royalties on all sac-TMT sales once first-line TNBC is approved."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "expense_offset_nonrecurring",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "796df46154cc",
+   "nugget_id": "MRK-nugget-004",
+   "obscurity_rung": "prepared_remarks",
+   "finding_n": 5,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 5
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for royalty footnote.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "57"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "132"
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": "8"
+    }
+   ],
+   "candidate": {
+    "text": "Behind the Keytruda roll-off sits a second royalty ladder: the 7.25% royalty on Capvaxive and Vaxneuvance falls to 2.5% from 2027, and the 7% royalty on US Gardasil sales ends in December 2028, together about $260M a year of cost of sales gone by 2029."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "royalty_footnote",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "fc8bf1fd46dd",
+   "nugget_id": "MRK-nugget-007",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 7,
+   "step": 7
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for litigation footnote.",
+   "documents": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "22"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "34"
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "doc_title": "Merck 2025Q4 earnings call (official)",
+     "page": "11"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "132"
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "28"
+    }
+   ],
+   "candidate": {
+    "text": "Keytruda Qlex, Merck's defense against 2028 to 2029 IV biosimilars, is enjoined in Germany by Halozyme (appeal hearing Nov 19, 2026), faces a Dutch counterclaim covering seven more European countries with a ruling due about end October 2026, and Merck warns it may owe 'additional royalties' on Qlex. The risk is European: in the US the PTAB has found every challenged claim unpatentable in four decisions, and Halozyme consented to revocation in the UK. Qlex sold $463M in Q2 2026, of which only $68M was outside the US."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "litigation_footnote",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "7fff54a278c7",
+   "nugget_id": "MRK-nugget-005",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 12,
+   "step": 12
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a shift in R&D spending against a year earlier.",
+   "documents": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": "3"
+    }
+   ],
+   "candidate": {
+    "text": "R&D 58.7% of revenue vs 25.6% a year earlier (+33.0 pts) (Q2 2026); peer median 18.6%, z +3.0"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "narrowed",
+   "signal_kind": "rnd_shift",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "56ea4e659d72",
+   "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
+   "verdict_reason": "passed the citation and numeric gates; ranked outside the five shown",
+   "table_rank": 13,
+   "step": 13
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for royalty footnote.",
+   "documents": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 60
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 37
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 107
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "doc_title": "Bristol Myers Squibb 10-K FY2025",
+     "page": 92
+    }
+   ],
+   "candidate": {
+    "text": "Merck's royalty bill does not vanish with the Keytruda roll-off, it migrates: Winrevair, the fastest-growing launch ([figure withheld: not gated] in [figure withheld: not gated]), carries a [figure withheld: not gated] royalty to BMS plus a [figure withheld: not gated] acquired intangible, so each [figure withheld: not gated] of Winrevair growth keeps at most [figure withheld: not gated] before manufacturing cost."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "royalty_footnote",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "fb490ad0a731",
+   "nugget_id": "MRK-nugget-003",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 26
+  },
+  {
+   "category": "Footnotes",
+   "query": "Red-team read of the footnotes pages for loe patent footnote.",
+   "documents": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 23
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 16
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 8
+    },
+    {
+     "doc_id": "AZN:20f_FY2025.md",
+     "doc_title": "AstraZeneca 20-F FY2025",
+     "page": 26
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": 118
+    }
+   ],
+   "candidate": {
+    "text": "Generic Lynparza can be approved from September [figure withheld: not gated] at the earliest, when the olaparib compound patent expires (none of the four filers challenges it); actual US entry depends on drug-product patents running to [figure withheld: not gated] that are in litigation with no trial date, and a six-month pediatric exclusivity grant ([figure withheld: not gated] footnote [figure withheld: not gated]) would move the earliest date to about March [figure withheld: not gated]. Merck's [figure withheld: not gated] US Lynparza profit share ([figure withheld: not gated]) is therefore exposed from late [figure withheld: not gated] at the earliest. Lynparza is never mentioned on Merck's four calls, and Merck's LOE commentary names only Januvia, Bridion, Dificid and Keytruda."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "loe_patent_footnote",
+   "detector": "nuggets",
+   "block": "F",
+   "source_id": "203fbf4f7ff8",
+   "nugget_id": "MRK-nugget-012",
+   "obscurity_rung": "footnote_only",
+   "verdict_reason": "numeric gate: a number in the sentence matches a cited figure only in a different unit",
+   "step": 29
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a shift in the effective tax rate against a year earlier.",
+   "documents": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 3
+    }
+   ],
+   "candidate": {
+    "text": "Effective tax rate [figure withheld: not gated] a year earlier ([figure withheld: not gated] pts) ([figure withheld: not gated]); peer median [figure withheld: not gated], z [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "tax_rate_shift",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "87cd6b955880",
+   "category_note": "tax and R&D shifts are read from the income-statement footnotes; no closer case category",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 30
+  },
+  {
+   "category": "Footnotes",
+   "query": "Looked for a clinical trial stopped for business reasons.",
+   "documents": [],
+   "candidate": {
+    "text": "Terminated Phase [figure withheld: not gated] trial [figure withheld: not gated] (A Study to Evaluate the Efficacy and Safety of [figure withheld: not gated] in Participants With Alzheimer's Disease Dementia ([figure withheld: not gated])); registry reason: Termination Notes: Business reason Registry text is sponsor-written; it may understate or reframe the real reason."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "trial_terminated",
+   "detector": "supply",
+   "block": "F",
+   "source_id": "e3fb0233778c",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 40
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Looked for an analyst question management did not answer.",
+   "documents": [
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "doc_title": "Merck 2025Q3 earnings call (official)",
+     "page": "14"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "8"
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "doc_title": "Merck 10-K FY2025",
+     "page": "32"
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "doc_title": "Merck 2026Q2 earnings call (official)",
+     "page": "14"
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "doc_title": "Merck 2026Q2 earnings call (official)",
+     "page": "13"
+    }
+   ],
+   "candidate": {
+    "text": "Asked in October 2025 how much of Merck's 50/50 US vs ex-US revenue split would shift through price equalization, CEO Robert Davis said he was 'not going to get into' it; seven weeks later Merck signed an MFN agreement that ties US prices of every product launched in the three-year term, Lipfendra first, to prices in MFN countries."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "qa_deflection",
+   "detector": "nuggets",
+   "block": "C",
+   "source_id": "19c4fde8d3a2",
+   "nugget_id": "MRK-nugget-010",
+   "obscurity_rung": "analyst_asked",
+   "finding_n": 4,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 4
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Looked for the same analyst question deflected on more than one call.",
+   "documents": [
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "doc_title": "Merck 2025Q3 earnings call (official)",
+     "page": 12
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "doc_title": "Merck 2026Q2 earnings call (official)",
+     "page": 14
+    }
+   ],
+   "candidate": {
+    "text": "Management deflected mfn questions in [figure withheld: not gated] quarters ([figure withheld: not gated]: Robert Davis; [figure withheld: not gated]: Robert Davis); latest answer to: 'Martine, thanks so much for the question today. Just one on LIPFENDRA, following up on the comments regarding kind of fixed-dose combinations. You highlighted rosuvastatin in your own Lp(a). Particularly'"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "qa_repeated_deflection",
+   "detector": "calls",
+   "block": "C",
+   "source_id": "ef2a8ff47bc9",
+   "verdict_reason": "numeric gate: a number in the sentence is carried by no passing citation, derivation or assumption",
+   "step": 24
+  },
+  {
+   "category": "Earnings-call Q&A",
+   "query": "Looked for a topic analysts suddenly raised more often on earnings calls.",
+   "documents": [
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "doc_title": "Merck 2026Q2 earnings call (official)",
+     "page": 14
+    }
+   ],
+   "candidate": {
+    "text": "'mfn' came up [figure withheld: not gated] times in the [figure withheld: not gated] call vs an average of [figure withheld: not gated] in earlier calls ([figure withheld: not gated])."
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "call_topic_surge",
+   "detector": "calls",
+   "block": "C",
+   "source_id": "d9e62f2a809b",
+   "verdict_reason": "numeric gate: a number in the sentence is carried by no passing citation, derivation or assumption; a number in the sentence matches a cited figure only in a different unit",
+   "step": 25
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for an exclusivity end earlier than the market assumes.",
+   "documents": [
+    {
+     "doc_id": "LLY:10k_FY2025.md",
+     "doc_title": "Eli Lilly 10-K FY2025",
+     "page": "12"
+    }
+   ],
+   "candidate": {
+    "text": "Januvia US protection ends 2026 (company-stated, Merck 10-K), about 3 years before Jardiance (2029, company-stated, its own filing); earlier loss of exclusivity"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "survived",
+   "signal_kind": "exclusivity_earlier",
+   "detector": "labels",
+   "block": "P",
+   "source_id": "85621c9fd772",
+   "finding_n": 3,
+   "verdict_reason": "passed the citation and numeric gates; one of the five shown",
+   "step": 3
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for a heavier dosing schedule than a rival's.",
+   "documents": [
+    {
+     "doc_id": "drug:januvia:label_sections.md",
+     "doc_title": "Januvia label",
+     "page": 3
+    },
+    {
+     "doc_id": "drug:ozempic:label_sections.md",
+     "doc_title": "Ozempic label",
+     "page": 3
+    }
+   ],
+   "candidate": {
+    "text": "Januvia once daily ([figure withheld: not gated]) vs Ozempic once weekly ([figure withheld: not gated])"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "dosing_burden",
+   "detector": "labels",
+   "block": "L",
+   "source_id": "5ad818374c50",
+   "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
+   "step": 36
+  },
+  {
+   "category": "Product fine print",
+   "query": "Looked for an exclusivity end earlier than the market assumes.",
+   "documents": [],
+   "candidate": {
+    "text": "Januvia protection ends [figure withheld: not gated] years before Ozempic ([figure withheld: not gated]); earlier loss of exclusivity"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "exclusivity_earlier",
+   "detector": "labels",
+   "block": "P",
+   "source_id": "120f6c6bbdfe",
+   "verdict_reason": "review guard: dropped (the guard recorded no further reason)",
+   "step": 37
+  },
+  {
+   "category": "Peer contrast",
+   "query": "Looked for an effective tax rate far from the peer median.",
+   "documents": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "page": 3
+    }
+   ],
+   "candidate": {
+    "text": "Effective tax rate [figure withheld: not gated] ([figure withheld: not gated]) vs peers; peer median [figure withheld: not gated], z [figure withheld: not gated]"
+   },
+   "skeptic_materiality": null,
+   "skeptic_obviousness": null,
+   "verdict": "killed",
+   "signal_kind": "etr_peer_outlier",
+   "detector": "forensics",
+   "block": "A",
+   "source_id": "3f0a57bff484",
+   "verdict_reason": "evidence gate: no page-verified citation backs it",
+   "step": 31
+  }
+ ],
+ "summary": {
+  "candidates": 40,
+  "survived": 5,
+  "killed": 20,
+  "narrowed": 15,
+  "documents": 18
+ }
+}
