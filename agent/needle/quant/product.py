@@ -544,6 +544,23 @@ def _company_stated(idx, ticker, ent):
     """-> (value, detail, citations, note). Looks in the cached 10-K LOE table first, then searches the latest annual
     report text for a sentence about the brand and a patent or exclusivity year."""
     brand = ent["name"].split(" (")[0].split()[0].lower()
+    # thread #19 (d): the LOE comes from pipeline/loe_calendar.csv (company_stated_loe with its 10-K page, a dated
+    # settlement entry first) or the company's own filing; never from labels_table.json (Orange/Purple Book max,
+    # which mixes orphan exclusivity into protection)
+    try:
+        from . import verified_tables as VT
+        got = VT.loe(ticker, brand)
+    except Exception:
+        got = None
+    if got:
+        d, tv, row = got
+        cites = [c for c in tv.citations if _ok(c)]
+        if cites:
+            day = d.isoformat() if (d.month, d.day) != (1, 1) else str(d.year)
+            basis = (row.get("best_basis") or row.get("rule_method") or "company-stated") if isinstance(row, dict) else ""
+            basis = str(basis).split("; FDA rule")[0]
+            return day, {"us_loe": day, "basis": str(basis)[:160], "source": tv.label}, cites, \
+                f"{day} (US), basis: {str(basis)[:120] or 'company filing'}"
     rows = [r for r in _loe_rows() if r["product"].lower().split()[0] == brand and r.get("us_loe")]
     cites = []
     for r in rows[:2]:
@@ -610,9 +627,12 @@ def _timeline_cell(idx, data, ticker, ent):
         det["orange_book_latest_patent"] = pat["value"]
         parts.append(f"Orange Book latest patent {pat['value']} ({P['patent_count']['value']} patents)")
         refs.append({"file": f"data/corpus/drugs/{slug}/orange_book_patents.csv", "key": f"Patent_No={pat.get('patent_no')}"})
+    exl_prod = [e for e in (exl["value"] or []) if not str(e.get("code", "")).upper().startswith("ODE")]
     if exl["value"]:
         det["orange_book_exclusivity"] = exl["value"]
-        parts.append("exclusivity " + ", ".join(f"{e['code']} {e['date']}" for e in exl["value"][-3:]))
+        det["orphan_exclusivity_not_protection"] = [e for e in exl["value"] if e not in exl_prod]
+    if exl_prod:
+        parts.append("exclusivity " + ", ".join(f"{e['code']} {e['date']}" for e in exl_prod[-3:]))
         refs.append({"file": f"data/corpus/drugs/{slug}/orange_book_exclusivity.csv", "key": slug})
     pb = P["purple_exclusivity"]
     if pb.get("derived_12y_reference_exclusivity") or pb["value"]:
@@ -622,7 +642,10 @@ def _timeline_cell(idx, data, ticker, ent):
         refs.append({"file": f"data/corpus/drugs/{slug}/purple_book.csv", "key": slug})
     if P["paragraph_iv"]["value"]:
         det["paragraph_iv_filings"] = P["paragraph_iv"]["value"]
-    det["protection_end_regulatory"] = ob_end
+    # orphan drug exclusivity is indication-limited: it is not product protection (Parker, red team v3 (d)), so the
+    # labels profile's protection_end (max over every date incl. orphan) is kept for reference but never printed
+    det["protection_end_labels_profile_not_used"] = ob_end
+    ob_end = None
     cs_val, cs_det, cites, cs_txt = _company_stated(idx, ticker, ent) if ent["maker"] and _maker_ticker(ent) == ticker else (None, {}, [], "")
     if cs_val is None and _maker_ticker(ent) and _maker_ticker(ent) != ticker:
         t2 = _maker_ticker(ent)

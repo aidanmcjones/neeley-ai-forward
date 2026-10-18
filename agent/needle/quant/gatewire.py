@@ -393,17 +393,11 @@ def exclusivity_maps(sig, loe_got):
     meta = sig.meta.get("data") or {}
     prod, rival = str(sig.meta.get("product") or ""), str(sig.meta.get("rival") or "")
     rgot = VT.loe_any(rival.split(" ")[0]) if rival else None
-    if rgot:
-        rdate, rtv, _ = rgot
-        rc, rsrc = rtv.citations[0], "company-stated, its own filing"
-    else:
-        rd = str(meta.get("rival_end") or "")
-        if not re.match(r"\d{4}", rd):
-            return None
-        from datetime import date as _d
-        rdate = _d(int(rd[:4]), int(rd[5:7] or 1), int(rd[8:10] or 1)) if len(rd) >= 10 else _d(int(rd[:4]), 1, 1)
-        rc = data.table_citation("orange_book_patents.csv / purple_book.csv", rival, "latest protection end", rd)
-        rsrc = "Orange/Purple Book latest listed protection, no verified facts row"
+    if not rgot:
+        # thread #19 (d): the rival's labels_table date (Orange/Purple Book max incl. orphan exclusivity) is not used
+        return None
+    rdate, rtv, _ = rgot
+    rc, rsrc = rtv.citations[0], "company-stated, its own filing"
     gap = rdate.year - pdate.year
     if gap <= 0:
         return None

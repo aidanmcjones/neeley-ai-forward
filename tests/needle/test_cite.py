@@ -638,3 +638,59 @@ def test_verify2_fragment_never_crosses_flattened_table_cells():
     frag, note = fragment_for_page("Zepbound (1) 13,484 58 13,542 4,926 175", page)
     assert frag == "" and "plain URL" in note
     assert fragment_run("Net sales of Keytruda were $29,482 million in 2025", page).startswith("Net sales of Keytruda")
+
+
+# ---------------------------------------------------------------- speaker = label of the turn containing the quote
+def test_speaker_is_the_turn_label_not_the_operator_introduction(tmp_path):
+    import sqlite3
+    from agent.needle.cite import index as I
+    from agent.needle.cite import verify as V
+    from agent.needle.cite.locator import Citation
+    db = tmp_path / "c.sqlite"
+    con = sqlite3.connect(db)
+    con.executescript("""CREATE TABLE docs (doc_id TEXT, ticker TEXT, company TEXT, "group" TEXT, doc_type TEXT,
+      form TEXT, period TEXT, filed TEXT, source_quality TEXT, source_url TEXT, path TEXT, stream TEXT, quote_grade TEXT,
+      superseded_by TEXT, license TEXT, drug TEXT, n_pages INTEGER, page_scheme TEXT, notes TEXT);
+      CREATE TABLE pages (doc_id TEXT, page_no INTEGER, printed TEXT, char_start INTEGER, char_end INTEGER,
+      speakers TEXT, text TEXT);""")
+    # roic.ai layout: the operator names the analyst, a colleague asks the question (the GILD Q2 2026 case)
+    roic = ("Operator\n\nOur next question comes from Greg Renza at Truist Securities. \n\n A \n\nAnish Nikhanj\n\n"
+            "This is Anish on for Greg. How should we think about the net economics relative to the lead regimen?\n\n"
+            " A \n\nJohanna Mercier\n\nWe see switch leadership as the priority for the franchise this year.")
+    # Refinitiv layout with prepared remarks far longer than the old 4,000-character window
+    long_turn = ("Operator\nI will now turn the call over to Jane Roe.\nJane Roe - Acme Inc - Chief Financial Officer\n"
+                 + "Revenue grew in every region and our margin held steady through the quarter. " * 80
+                 + "Our gross-to-net erosion was about four points this year and we expect a similar step next year.")
+    for doc, text in (("ACME:roic.md", roic), ("ACME:lseg.md", long_turn)):
+        con.execute("INSERT INTO docs (doc_id, ticker, doc_type, period, filed, source_url, n_pages) VALUES "
+                    "(?, 'ACME', 'transcript', '2026Q2', '2026-07-30', 'https://www.roic.ai/x', 1)", (doc,))
+        con.execute("INSERT INTO pages (doc_id, page_no, text) VALUES (?, 1, ?)", (doc, text))
+    con.commit()
+    con.close()
+    idx = I.load_index(db)
+    q = "How should we think about the net economics relative to the lead regimen?"
+    bad = V.verify(Citation("ACME:roic.md", 1, q, speaker="Greg Renza"), idx)
+    assert not bad.verification.ok and "Anish Nikhanj" in bad.confidence_note
+    assert V.verify(Citation("ACME:roic.md", 1, q, speaker="Anish Nikhanj"), idx).verification.ok
+    q2 = "Our gross-to-net erosion was about four points this year"
+    assert len(long_turn) > 4000
+    assert V.verify(Citation("ACME:lseg.md", 1, q2, speaker="Jane Roe"), idx).verification.ok
+    assert V.verify(Citation("ACME:lseg.md", 1, q2), idx).speaker == "Jane Roe"
+
+
+def test_gild_q2_2026_nikhanj_not_renza_real_index():
+    from agent.needle.cite import verify as V
+    from agent.needle.cite.index import load_index
+    from agent.needle.cite.locator import Citation
+    try:
+        from agent.needle.quant import data
+        idx = data.index()
+        if idx.get_page("GILD:transcripts/2026Q2_transcript.md", 1) is None:
+            pytest.skip("GILD Q2 2026 transcript not indexed")
+    except Exception:
+        pytest.skip("citation index not available")
+    q = "How should we think about ISL/LEN's net economics relative to Biktarvy or your next-gen BIC/LEN?"
+    bad = V.verify(Citation("GILD:transcripts/2026Q2_transcript.md", 1, q, speaker="Greg Renza"), idx)
+    assert not bad.verification.ok and "Anish Nikhanj" in bad.confidence_note
+    ok = V.verify(Citation("GILD:transcripts/2026Q2_transcript.md", 1, q, speaker="Anish Nikhanj"), idx)
+    assert ok.verification.ok

@@ -736,6 +736,9 @@ def score_signal(sig, co, panel=None):
             sc.flags += got["flags"]
     if lc is not None and not lc["holds"]:
         apply_guard(sc, ("drop", lc["why"]))
+    if sig.kind == "exclusivity_earlier" and ex is None:
+        apply_guard(sc, ("drop", "exclusivity dates from labels_table (Orange/Purple Book max incl. orphan "
+                                 "exclusivity) are not used; no loe_calendar row on both sides (thread #19 (d))"))
     GW.forensics_maps(sig, sc.derived, sc.assumptions)
     GW.dose_counts(sc.sentence, sc.assumptions)
     GW.peer_stats(sc.assumptions, sig)
@@ -773,13 +776,19 @@ def _loe_impact(sig, co):
     flags = []
     meta = sig.meta.get("data") or {}
     prod = (sig.meta.get("product") or "").lower()
-    loe_date = OB.to_date(meta.get("product_end"))
-    src, cites = "Orange/Purple Book (detector)", []
+    # thread #19 (d): never the labels_table date (Orange/Purple Book max incl. orphan exclusivity)
+    loe_date, src, cites = None, "", []
     got = VT.loe(sig.ticker, prod.split(" ")[0]) if prod else None
     if got:
         loe_date, tv, row = got
         cites = list(tv.citations)
         src = tv.label
+    else:
+        flags.append("no loe_calendar row or settlement date for this product: the labels_table protection date "
+                     "(which mixes in orphan exclusivity) is not used; LOE not quantified")
+        imp = IM.Impact("loe", formula="no company-stated or settlement LOE date", quantified=False)
+        imp.d_eps = {"bull": 0.0, "base": 0.0, "bear": 0.0}
+        return imp, flags, None
     flags.append(f"LOE date source: {src}")
     rev_pre = _product_revenue(sig.ticker, prod)
     if rev_pre is None:
