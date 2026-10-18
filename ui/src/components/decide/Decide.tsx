@@ -176,13 +176,39 @@ function DecideCards({ company, decide, moves, onPreview }: {
   );
 }
 
+function KillBaseline({ k }: { k: KillSignal }) {
+  const b = k.baseline as { value?: unknown; text?: string; cites?: Evidence[] } | string | null | undefined;
+  const ctx = Array.isArray(k.context) ? (k.context as unknown[]) : [];
+  const text = typeof b === "string" ? b : b?.text;
+  const cites = typeof b === "object" && b && Array.isArray(b.cites) ? b.cites : [];
+  if (!text && !cites.length && !ctx.length) return <span className="text-muted">n/a</span>;
+  return (
+    <span className="block">
+      {text && <span>{text} </span>}
+      {cites.map((ev, i) => <CiteChip key={i} evidence={ev} n={i + 1} />)}
+      {ctx.map((row, i) => {
+        const [v, ev] = Array.isArray(row) ? row : [null, row];
+        const e = ev && typeof ev === "object" ? (ev as Evidence) : null;
+        return (
+          <span key={`x${i}`} className="mr-1.5 inline-flex items-baseline gap-0.5">
+            {typeof v === "number" ? <span className="font-mono tnum">{v.toLocaleString("en-US")}</span> : v != null ? <span>{String(v)}</span> : null}
+            {e && <CiteChip evidence={e} n={cites.length + i + 1} />}
+          </span>
+        );
+      })}
+    </span>
+  );
+}
+
 export function KillSignalTable({ signals, compact = false }: { signals: KillSignal[]; compact?: boolean }) {
+  const anyBase = signals.some((k) => k.baseline || (Array.isArray(k.context) && (k.context as unknown[]).length));
   return (
     <table className={`w-full border-collapse ${compact ? "text-[11.5px]" : "text-[12.5px]"}`}>
-      <caption className="sr-only">Kill signals: what would prove the chosen move wrong, the threshold, when to check and what to do</caption>
+      <caption className="sr-only">Kill signals: what would prove the chosen move wrong, the baseline it must move from, the threshold, when to check and what to do</caption>
       <thead>
         <tr className="border-b border-line text-[10px] uppercase tracking-wide text-muted text-left">
           <th scope="col" className="px-1.5 py-1 font-semibold">Signal</th>
+          {anyBase && <th scope="col" className="px-1.5 py-1 font-semibold">Baseline</th>}
           <th scope="col" className="px-1.5 py-1 font-semibold">Threshold</th>
           <th scope="col" className="px-1.5 py-1 font-semibold">Check by</th>
           <th scope="col" className="px-1.5 py-1 font-semibold">Source (lag)</th>
@@ -193,8 +219,9 @@ export function KillSignalTable({ signals, compact = false }: { signals: KillSig
         {signals.map((k) => (
           <tr key={k.id} className="border-b border-line align-top">
             <th scope="row" className="px-1.5 py-1 text-left font-semibold">{k.signal ?? k.id}</th>
+            {anyBase && <td className="px-1.5 py-1"><KillBaseline k={k} /></td>}
             <td className="px-1.5 py-1">{k.threshold ?? "n/a"}</td>
-            <td className="px-1.5 py-1 font-mono tnum whitespace-nowrap">{k.check_month != null ? `month ${k.check_month}` : "n/a"}</td>
+            <td className="px-1.5 py-1 font-mono tnum whitespace-nowrap">{k.check_month == null ? "n/a" : Number(k.check_month) === 0 ? "now" : `month ${k.check_month}`}</td>
             <td className="px-1.5 py-1 text-muted">{k.source ?? "n/a"}{k.lag ? ` (${k.lag})` : ""}</td>
             <td className={`px-1.5 py-1 font-semibold ${k.stop ? "text-bad" : "text-warn"}`}>{k.stop ? "stop" : k.action ?? "review"}</td>
           </tr>
