@@ -63,18 +63,26 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
   );
 
   // findings_table (when exported): the engine's ranked table, e.g. by dollar impact, with its rank_basis.
-  const { order, tableBasis } = useMemo(() => {
+  const { order, tableBasis, marked } = useMemo(() => {
     const ft = company.findings_table as unknown;
     const rowsT = Array.isArray(ft) ? ft : Array.isArray((ft as { rows?: unknown })?.rows) ? (ft as { rows: unknown[] }).rows : null;
-    if (!rowsT) return { order: null as Map<string, number> | null, tableBasis: null as string | null };
+    if (!rowsT) return { order: null as Map<string, number> | null, tableBasis: null as string | null, marked: new Map<string, Partial<Finding>>() };
     const m = new Map<string, number>();
+    const marked = new Map<string, Partial<Finding>>();
     rowsT.forEach((r, i) => {
-      const o = r as { finding_id?: string; id?: string; rank?: number };
+      const o = r as Record<string, unknown> & { finding_id?: string; id?: string; rank?: number };
       const id = o.finding_id ?? o.id;
-      if (id) m.set(id, typeof o.rank === "number" ? o.rank : i + 1);
+      if (!id) return;
+      m.set(id, typeof o.rank === "number" ? o.rank : i + 1);
+      // The table's own marked sentence and footnote map (markers shared across the table).
+      if (typeof o.sentence_marked === "string") {
+        marked.set(id, { sentence_marked: o.sentence_marked, marker_map: o.marker_map as Record<string, string>, marker_licensed: o.marker_licensed as number[],
+          ...(o.numeric_check ? { numeric_check: o.numeric_check as Finding["numeric_check"] } : {}) });
+      }
     });
     const basis = (ft as { rank_basis?: unknown })?.rank_basis ?? company.rank_basis;
-    return { order: m, tableBasis: typeof basis === "string" && basis ? basis : "ranked by dollar impact" };
+    const b = typeof basis === "string" && basis ? basis : "impact";
+    return { order: m, tableBasis: /^ranked/i.test(b) ? b : `ranked by ${b}`, marked };
   }, [company]);
 
   const rows = useMemo<GridRow[]>(() => {
@@ -83,12 +91,12 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
       .filter((f) => verdicts.has(verdictKey(f.verdict)))
       .filter((f) => detector === "all" || (f.detector ?? "other") === detector)
       .sort((a, b) => (order ? (order.get(a.id) ?? 1e9) - (order.get(b.id) ?? 1e9) : (b.score ?? 0) - (a.score ?? 0)))
-      .map<GridRow>((f) => ({ kind: "finding", id: f.id, f }));
+      .map<GridRow>((f) => ({ kind: "finding", id: f.id, f: marked.has(f.id) ? { ...f, ...marked.get(f.id) } : f }));
     const rej = verdicts.has("rejected")
       ? (company.rejected ?? []).map<GridRow>((r, i) => ({ kind: "rejected", id: `rej-${i}`, r }))
       : [];
     return [...fs, ...rej];
-  }, [company, confs, verdicts, detector, order]);
+  }, [company, confs, verdicts, detector, order, marked]);
 
   const flip = <T,>(set: Set<T>, v: T, put: (s: Set<T>) => void) => {
     const n = new Set(set);
@@ -199,7 +207,7 @@ export function FindingsGrid({ company, selectedId, onSelect }: {
           ))}
         </span>
         <label className="flex items-center gap-1.5">
-          <span className="font-semibold uppercase tracking-wide text-muted">Detector</span>
+          <span className="font-semibold uppercase tracking-wide text-muted">Signal type</span>
           <select value={detector} onChange={(e) => setDetector(e.target.value)} className="rounded border border-line bg-surface px-1.5 py-0.5 text-xs font-semibold">
             <option value="all">All ({company.findings.length})</option>
             {detectors.map((d) => <option key={d} value={d}>{d}</option>)}

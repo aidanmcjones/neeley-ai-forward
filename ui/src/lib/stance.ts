@@ -1,3 +1,4 @@
+import { pitchLine } from "./cites";
 // Stance and finding helpers shared by the Briefing and Memo screens.
 // Everything here reads the exported JSON as-is; nothing invents a number.
 
@@ -124,7 +125,9 @@ export class CiteRegistry {
 
 export function citeLabel(ev: Evidence | undefined): string {
   if (!ev) return "Source not exported";
-  return ev.citation || [ev.doc_id, ev.page != null ? `p. ${ev.printed || ev.page}` : ""].filter(Boolean).join(", ") || "Source";
+  const c = pitchLine(ev.citation);
+  if (!c && ev.citation) return "Data row";
+  return c || [ev.doc_id, ev.page != null ? `p. ${ev.printed || ev.page}` : ""].filter(Boolean).join(", ") || "Source";
 }
 
 /* ------------------------------------------------------------ findings */

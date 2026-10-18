@@ -1,16 +1,10 @@
 import { useData } from "../lib/data";
 import { date } from "../lib/format";
 import { usePalette } from "./CommandPalette";
-import { needleStatusInfo } from "./NeedleStatus";
-
-function statusSuffix(s?: string | null): string {
-  const i = needleStatusInfo(s);
-  return i && (i.warn || i.muted) ? ` (needle ${i.label.toLowerCase()})` : "";
-}
 
 // Top bar: logo, tagline, company picker, As-of pill, ⌘K Ask.
 export function Chrome() {
-  const { meta, league, ticker, setTicker } = useData();
+  const { meta, ticker, setTicker } = useData();
   const { openPalette } = usePalette();
   const companies = meta?.companies ?? [];
   const onboarded = (meta?.onboarded ?? []).filter((t) => !companies.some((c) => c.ticker === t));
@@ -37,7 +31,7 @@ export function Chrome() {
           >
             {!companies.length && <option value="">No companies</option>}
             {companies.map((c) => (
-              <option key={c.ticker} value={c.ticker}>{c.ticker}{c.name ? ` · ${c.name}` : ""}{statusSuffix(league?.find((r) => r.ticker === c.ticker)?.needle_status)}</option>
+              <option key={c.ticker} value={c.ticker}>{c.ticker}{c.name ? ` · ${c.name}` : ""}</option>
             ))}
             {onboarded.length > 0 && (
               <optgroup label="Onboarded">

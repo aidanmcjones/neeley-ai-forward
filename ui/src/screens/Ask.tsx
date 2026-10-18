@@ -9,6 +9,7 @@ import { usePins } from "../lib/exhibits";
 import { NumericPill, AiMark, CiteChip, ScreenFrame, StanceBadge, useSource } from "../components";
 import { ExhibitView } from "../components/ask";
 import { MarkedSentence, hasMarked } from "../components/MarkedSentence";
+import { citeLabel } from "../lib/stance";
 import { derivedOperands, formulaMarkedOf, isDerived } from "../lib/cites";
 
 // Ask NEEDLE (docs/ui_spec.md screen 2, Option C): preset + session questions on the left,
@@ -156,7 +157,7 @@ function SourceCards({ company, refs, preview }: { company: Company; refs: CiteR
       <div className="text-[11px] font-semibold uppercase tracking-wider text-muted mb-1.5">Sources</div>
       {preview && (
         <div className="mb-2 rounded-md border border-purple/30 bg-surface-2 p-3 text-xs" aria-live="polite">
-          <div className="font-mono text-[11px] text-purple">{preview.citation ?? preview.doc_id}</div>
+          <div className="font-mono text-[11px] text-purple">{citeLabel(preview)}</div>
           {isWithheld(preview) ? <p className="mt-1 text-warn font-semibold">Quote withheld: {withheldReason(preview)}.</p>
             : isDerived(preview) ? <p className="mt-1 text-purple font-semibold">Derived from {preview.derived_from!.length} cited operand{preview.derived_from!.length > 1 ? "s" : ""}; click to see them.</p>
             : preview.quote ? <blockquote className="mt-1 leading-relaxed"><mark>{preview.quote}</mark></blockquote> : <p className="mt-1 text-muted">No page quote exported for this source.</p>}
@@ -171,7 +172,7 @@ function SourceCards({ company, refs, preview }: { company: Company; refs: CiteR
               <button type="button" onClick={() => open(e)}
                 className={`w-full h-full text-left rounded-md border bg-surface p-2.5 hover:border-purple focus-visible:border-purple ${wh ? "border-dashed border-muted/70" : "border-line"}`}>
                 <div className="text-[10px] font-semibold uppercase tracking-wide text-muted">{(e.doc_type ?? "document").replace(/_/g, " ")}{e.source_quality ? ` · ${e.source_quality}` : ""}</div>
-                <div className="mt-0.5 font-mono text-[11px] text-purple leading-snug line-clamp-2">{e.citation ?? e.doc_id}</div>
+                <div className="mt-0.5 font-mono text-[11px] text-purple leading-snug line-clamp-2">{citeLabel(e)}</div>
                 {isCall && <div className="mt-1 text-[11px]">Transcript grade <span className="font-mono font-bold">{e.grade ?? "ungraded"}</span>{e.speaker ? <span className="text-muted"> · {e.speaker}</span> : null}</div>}
                 {wh
                   ? <div className="mt-1 text-[10.5px] font-semibold text-warn">Quote withheld: {withheldReason(e)}</div>

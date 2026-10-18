@@ -89,6 +89,9 @@ export function resolveCite(company: Company | null | undefined, ref: CiteRef): 
 
 export function findNeedle(company: Company | null | undefined): Finding | undefined {
   if (!company) return undefined;
+  // The pitch-facing needle (needle_id_rule) wins; the league needle (needle_id) is internal triage.
+  const rule = typeof company.needle_id_rule === "string" ? company.findings.find((f) => f.id === company.needle_id_rule) : undefined;
+  if (rule) return rule;
   const byId = company.needle_id ? company.findings.find((f) => f.id === company.needle_id) : undefined;
   if (byId) return byId;
   // v3: needle status "none" means no row qualifies; never promote another row to needle.
@@ -97,6 +100,7 @@ export function findNeedle(company: Company | null | undefined): Finding | undef
 }
 
 export function needleNone(company: Company | null | undefined): boolean {
+  if (typeof company?.needle_id_rule === "string" && company.needle_id_rule) return false;
   return String(company?.needle_status ?? "").replace(/\s+/g, "_").toLowerCase() === "none";
 }
 

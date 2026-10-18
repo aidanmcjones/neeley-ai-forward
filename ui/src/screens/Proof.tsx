@@ -2,7 +2,7 @@ import { useData } from "../lib/data";
 import { ScreenFrame } from "../components";
 import { AiCaughtPanel, VerifierPanel } from "../components/proof/Verifier";
 import { BacktestPanel } from "../components/proof/Backtest";
-import { BlindPanel, CalibrationPanel, LimitsPanel, SealedPanel } from "../components/proof/Forecasts";
+import { AiWrongCasesPanel, BlindPanel, CalibrationPanel, HonestLimitsPanel, LimitsPanel, SealedPanel } from "../components/proof/Forecasts";
 
 // Proof: the responsible-AI screen. AI reads; code checks; humans see what was held back.
 export default function Proof() {
@@ -14,6 +14,9 @@ export default function Proof() {
       loading={loading} error={error}
     >
       <VerifierPanel meta={meta} league={league} rules={proof?.verifier_rules ?? meta?.verifier_rules ?? []} />
+      {Array.isArray(proof?.ai_wrong_cases) && (proof!.ai_wrong_cases as unknown[]).length > 0 && (
+        <AiWrongCasesPanel rows={proof!.ai_wrong_cases as Parameters<typeof AiWrongCasesPanel>[0]["rows"]} />
+      )}
       <AiCaughtPanel company={company} ticker={ticker} league={league} aiWrong={proof?.ai_wrong ?? []} onPick={setTicker} />
       <BacktestPanel hitRates={proof?.backtest?.hit_rates} gate2={proof?.backtest?.gate2_md} />
       <div className="grid grid-cols-1 gap-4">
@@ -21,7 +24,9 @@ export default function Proof() {
         <BlindPanel blind={proof?.blind} />
       </div>
       <SealedPanel sealed={proof?.sealed} />
-      <LimitsPanel limits={proof?.limits ?? meta?.limits ?? []} noSource={meta?.moat?.no_source ?? []} />
+      {Array.isArray(meta?.honest_limits) && (meta!.honest_limits as unknown[]).length > 0
+        ? <HonestLimitsPanel rows={meta!.honest_limits as Parameters<typeof HonestLimitsPanel>[0]["rows"]} />
+        : <LimitsPanel limits={proof?.limits ?? meta?.limits ?? []} noSource={meta?.moat?.no_source ?? []} />}
     </ScreenFrame>
   );
 }

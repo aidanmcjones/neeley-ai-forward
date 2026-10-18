@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import type { ReactNode } from "react";
 import type { Evidence } from "../../lib/types";
 import { CiteChip } from "../CiteChip";
@@ -9,6 +9,20 @@ import { AssumptionPill, ConstantPill } from "../MarkedSentence";
 
 const TOKEN = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`|\[\d+\]|\[derived:\s*[^\]]+\]|\[constant:\s*[^\]]+\]|\[assumption\])/g;
 
+function Run({ ns, chip }: { ns: number[]; chip: (n: number, k: string) => ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const shown = open ? ns : ns.slice(0, 3);
+  return (
+    <span className="inline-flex flex-wrap items-baseline gap-0.5 align-baseline">
+      {shown.map((n, j) => chip(n, `r${j}`))}
+      {ns.length > shown.length && (
+        <button type="button" onClick={(e) => { e.stopPropagation(); setOpen(true); }} title={`${ns.length - shown.length} more sources`}
+          className="font-mono text-[10.5px] rounded px-1 py-px border border-line text-muted hover:text-purple hover:border-purple">+{ns.length - shown.length}</button>
+      )}
+    </span>
+  );
+}
+
 export function Md({ md, cite }: { md: string; cite: (n: number) => Evidence | undefined }) {
   const parts = md.split(TOKEN).filter((x) => x !== "");
   const chip = (n: number, k: string) => {
@@ -17,7 +31,19 @@ export function Md({ md, cite }: { md: string; cite: (n: number) => Evidence | u
       ? <span key={k} className="inline-block align-baseline leading-none"><CiteChip evidence={ev} n={n} /></span>
       : <span key={k} className="font-mono text-[11px] text-muted" title="No source exported for this marker">[{n}]</span>;
   };
-  const out: ReactNode[] = parts.map((p, i) => {
+  // Runs of adjacent [n] markers collapse to three chips and "+N" (expand on click).
+  const merged: (string | number[])[] = [];
+  for (const p of parts) {
+    const m = p.match(/^\[(\d+)\]$/);
+    const last = merged[merged.length - 1];
+    if (m) {
+      if (Array.isArray(last)) { last.push(Number(m[1])); continue; }
+      if (typeof last === "string" && !last.trim() && Array.isArray(merged[merged.length - 2])) { merged.pop(); (merged[merged.length - 1] as number[]).push(Number(m[1])); continue; }
+      merged.push([Number(m[1])]);
+    } else merged.push(p);
+  }
+  const out: ReactNode[] = merged.map((p, i) => {
+    if (Array.isArray(p)) return <Run key={i} ns={p} chip={chip} />;
     let m: RegExpMatchArray | null;
     if ((m = p.match(/^\[(\d+)\]$/))) return chip(Number(m[1]), `c${i}`);
     if (p === "[assumption]") return <Fragment key={i}>{" "}<AssumptionPill /></Fragment>;

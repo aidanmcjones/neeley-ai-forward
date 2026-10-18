@@ -84,6 +84,8 @@
     main.querySelectorAll("h3").forEach(function (h) {
       var how = RULES.block[norm(h.textContent)];
       if (!how) return;
+      // NEEDLE adaptation: cut "pinned exhibits" only when nothing is pinned (pinned charts must print).
+      if (norm(h.textContent) === "pinned exhibits" && norm(h.parentElement.textContent).indexOf("no exhibits pinned") < 0) return;
       // a heading inside a big panel only takes the content right after it
       if (norm(h.parentElement.textContent).length > 1500) { tag(h, how); tag(h.nextElementSibling, how); }
       else tag(h.parentElement, how);

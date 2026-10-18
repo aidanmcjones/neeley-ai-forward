@@ -2,7 +2,7 @@ import type { KeyboardEvent } from "react";
 import type { Evidence } from "../lib/types";
 import { useSource } from "./SourceDrawer";
 import { isWithheld, withheldReason } from "../lib/data";
-import { isDerived, isRowCite } from "../lib/cites";
+import { isDerived, isRowCite, pitchLine } from "../lib/cites";
 
 // Small mono citation chip: "[n]" or a label. Click / Enter / Space opens the SourceDrawer.
 // onPreview fires on hover/focus so a live source card can show the quote.
@@ -12,11 +12,11 @@ export function CiteChip({ evidence, n, label, onPreview }: {
   const { open } = useSource();
   const text = label ?? (n != null ? `[${n}]` : "[src]");
   const withheld = isWithheld(evidence);
-  const base = evidence?.citation || evidence?.doc_title || evidence?.doc_id || "Source not exported";
+  const base = pitchLine(evidence?.citation) || pitchLine(evidence?.doc_title) || (isRowCite(evidence) ? "Data row" : pitchLine(evidence?.doc_id)) || "Source";
   const derived = isDerived(evidence);
   const row = isRowCite(evidence);
   const title = withheld && evidence ? `${base} (quote withheld: ${withheldReason(evidence)})`
-    : row ? `${base} (data row: ${evidence!.row_ref ?? evidence!.cite_id})`
+    : row ? `${base} (data row${pitchLine(evidence!.row_ref) ? `: ${evidence!.row_ref}` : ""})`
     : derived ? `${base} (derived from ${evidence!.derived_from!.length} cited operand${evidence!.derived_from!.length > 1 ? "s" : ""})` : base;
   if (!evidence) {
     return <span className="inline-block font-mono text-[11px] rounded px-1 py-px bg-line text-muted line-through" title="Source not exported">{text}</span>;

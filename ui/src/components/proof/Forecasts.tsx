@@ -201,3 +201,52 @@ export function LimitsPanel({ limits, noSource }: { limits: string[]; noSource: 
     </Panel>
   );
 }
+
+/** meta.honest_limits (docs/honest_limits.md): what we cannot know, said plainly, with our proxy. */
+export function HonestLimitsPanel({ rows }: { rows: { limit?: string; sentence?: string; proxy?: string; source?: string }[] }) {
+  return (
+    <Panel title="Honest limits" meta={<span className="font-mono">{rows.length} limits</span>}>
+      <div className="overflow-auto rounded-md border border-line">
+        <table className="w-full border-collapse text-[13px]">
+          <thead className="bg-surface-2"><tr>
+            {["Limit", "What we say", "Our proxy"].map((h) => <th key={h} scope="col" className="text-left px-3 py-2 border-b border-line text-[11px] uppercase tracking-wide text-muted font-semibold">{h}</th>)}
+          </tr></thead>
+          <tbody>{rows.map((r, i) => (
+            <tr key={i} className="border-b border-line last:border-0 align-top">
+              <th scope="row" className="text-left px-3 py-2 font-semibold">{r.limit ?? "n/a"}</th>
+              <td className="px-3 py-2">{r.sentence ?? ""}</td>
+              <td className="px-3 py-2 text-muted">{r.proxy ?? ""}</td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
+      <SourceNote>meta.json · honest_limits ({[...new Set(rows.map((r) => r.source).filter(Boolean))].join(", ") || "docs/honest_limits.md"})</SourceNote>
+    </Panel>
+  );
+}
+
+/** proof.ai_wrong_cases (docs/ai_in_the_build.md): where the AI was confidently wrong in the build, and the fix. */
+export function AiWrongCasesPanel({ rows }: { rows: { n?: number; date?: string; ai_claimed?: string; caught_by?: string; fix?: string; evidence?: string }[] }) {
+  return (
+    <Panel title="Where the AI was confidently wrong" meta={<span className="font-mono">{rows.length} cases</span>}>
+      <div className="overflow-auto rounded-md border border-line max-h-[520px]">
+        <table className="w-full border-collapse text-[13px]">
+          <thead className="bg-surface-2 sticky top-0"><tr>
+            {["#", "When", "What the AI claimed", "How we caught it", "What we changed", "Evidence"].map((h) => <th key={h} scope="col" className="text-left px-3 py-2 border-b border-line text-[11px] uppercase tracking-wide text-muted font-semibold">{h}</th>)}
+          </tr></thead>
+          <tbody>{rows.map((r, i) => (
+            <tr key={i} className="border-b border-line last:border-0 align-top">
+              <td className="px-3 py-2 font-mono text-muted">{r.n ?? i + 1}</td>
+              <td className="px-3 py-2 whitespace-nowrap">{r.date ?? ""}</td>
+              <td className="px-3 py-2">{r.ai_claimed ?? ""}</td>
+              <td className="px-3 py-2">{r.caught_by ?? ""}</td>
+              <td className="px-3 py-2">{r.fix ?? ""}</td>
+              <td className="px-3 py-2 font-mono text-[11px] text-muted [overflow-wrap:anywhere]">{(r.evidence ?? "").replace(/`/g, "")}</td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
+      <SourceNote>proof.json · ai_wrong_cases (docs/ai_in_the_build.md)</SourceNote>
+    </Panel>
+  );
+}

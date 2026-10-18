@@ -13,7 +13,8 @@ import { StancePanel } from "../components/briefing/StancePanel";
 export default function Briefing() {
   const { meta, company, ticker, league, leagueRow, loading, error } = useData();
   const leagueRowStatus = (t?: string) => String(league?.find((r) => r.ticker === t)?.needle_status ?? "");
-  const none = needleNone(company) || leagueRowStatus(company?.ticker) === "none";
+  const hasRule = typeof company?.needle_id_rule === "string" && !!company.needle_id_rule;
+  const none = needleNone(company) || (!hasRule && leagueRowStatus(company?.ticker) === "none");
   const needle = none ? undefined : findNeedle(company);
   const top = none ? topFinding(company) : undefined;
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -36,7 +37,7 @@ export default function Briefing() {
         <div className="space-y-4">
           <KpiRow meta={meta} company={company} />
           {needle || top ? (
-            <NeedleHero needle={(needle ?? top)!} none={!needle} ticker={t} onPreview={setPreview} status={leagueRow?.needle_status ?? (company.needle_status as string | undefined)} v2={company.engine !== "v1" && !!(needle ?? top)!.vector?.v2} />
+            <NeedleHero needle={(needle ?? top)!} none={!needle} ticker={t} onPreview={setPreview} status={hasRule ? null : leagueRow?.needle_status ?? (company.needle_status as string | undefined)} rule={typeof company.needle_rule === "string" ? company.needle_rule : (company.findings_table as { needle_rule?: string } | undefined)?.needle_rule} v2={company.engine !== "v1" && !!(needle ?? top)!.vector?.v2} />
           ) : (
             <EmptyState file={`companies/${t}.json`} message="No Sharpest Needle: the company file has no findings" />
           )}

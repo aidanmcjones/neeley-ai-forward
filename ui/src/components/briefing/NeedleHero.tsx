@@ -1,12 +1,13 @@
+import { useState } from "react";
 import { formulaMarkedOf } from "../../lib/cites";
 import { MarkedSentence } from "../MarkedSentence";
 import { AiMark, CiteChip, ConfPill, FlagPills, NeedleStatusPill, NumericPill } from "..";
 import { money, z } from "../../lib/format";
-import { externalSources, impactView, isShiftMetric, metricText } from "../../lib/stance";
+import { citeLabel, externalSources, impactView, isShiftMetric, metricText } from "../../lib/stance";
 import type { Evidence, Finding } from "../../lib/types";
 
 // Full-width hero band: the Sharpest Needle as the engine's verdict.
-export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none = false }: {
+export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none = false, rule }: {
   needle: Finding; ticker: string; onPreview?: (ev: Evidence | null) => void;
   /** league needle_status (strict / provisional / floor_relaxed). */
   status?: string | null;
@@ -14,8 +15,11 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
   v2?: boolean;
   /** No row qualifies as the needle: `needle` is the highest-scored finding, shown as such. */
   none?: boolean;
+  /** needle_rule: the plain-English rule that picked the pitch-facing needle. */
+  rule?: string | null;
 }) {
   const im = impactView(needle);
+  const [showAll, setShowAll] = useState(false);
   const peer = needle.peer;
   const ev = needle.evidence ?? [];
   const ext = externalSources(needle);
@@ -27,8 +31,9 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
         <div className="flex items-center gap-2.5">
           <AiMark label="Sharpest Needle · engine verdict" />
           <NeedleStatusPill status={status} />
+          {rule && <span tabIndex={0} title={`Needle rule: ${rule}`} aria-label={`Needle rule: ${rule}`} className="rounded-full border border-line px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-muted">Needle rule</span>}
         </div>
-        <span className="text-[11px] text-muted font-mono">{v2 ? "most material, least discussed, quote verified" : "most material, least discussed"} · companies/{ticker}.json</span>
+        <span className="text-[11px] text-muted font-mono">{rule ? "biggest impact, least asked about" : v2 ? "most material, least discussed, quote verified" : "most material, least discussed"} · companies/{ticker}.json</span>
       </div>
       {none ? (
         <>
@@ -39,7 +44,7 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
           </p>
         </>
       ) : (
-        <h2 id="needle-h" className={`mt-1.5 font-display leading-[1.02] tracking-wide text-fg ${needle.finding.length > 150 ? "text-[32px]" : "text-[40px]"}`}>
+        <h2 id="needle-h" className={`mt-1.5 font-display leading-[1.02] tracking-wide text-fg ${needle.finding.length > 170 ? "text-[28px]" : needle.finding.length > 100 ? "text-[32px]" : "text-[40px]"}`}>
           <MarkedSentence finding={needle} onPreview={onPreview} />
         </h2>
       )}
@@ -62,9 +67,14 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
               <span className="mr-2"><s className="font-display text-[22px] leading-none text-muted tnum">{money(im.dollars)}</s> <span className="text-warn font-semibold text-xs">suspect: {im.note}</span></span>
             )}
             {im.kind === "proxy" && <span className="mr-2 rounded bg-chip px-1.5 py-0.5 text-[11px] font-semibold text-purple">proxy, no direct $</span>}
-            <span className="font-mono text-xs text-muted">{formulaMarkedOf(needle)
-              ? <MarkedSentence finding={needle} marked={formulaMarkedOf(needle)} onPreview={onPreview} />
-              : im.formula || "no formula exported"}</span>
+            {(formulaMarkedOf(needle) || im.formula) ? (
+              <details className="inline-block align-top">
+                <summary className="cursor-pointer select-none text-[12px] font-semibold text-purple">Show the math</summary>
+                <div className="mt-1 font-mono text-xs text-muted leading-relaxed">{formulaMarkedOf(needle)
+                  ? <MarkedSentence finding={needle} marked={formulaMarkedOf(needle)} onPreview={onPreview} />
+                  : im.formula}</div>
+              </details>
+            ) : <span className="font-mono text-xs text-muted">no formula exported</span>}
           </dd>
           <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted pt-0.5">Peers</dt>
           <dd className="tnum">
@@ -83,7 +93,8 @@ export function NeedleHero({ needle, ticker, onPreview, status, v2 = false, none
           <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">Proof on the page</span>
           {ev.length > 0 ? (
             <div className="flex flex-wrap justify-end gap-1.5">
-              {ev.map((e, i) => <CiteChip key={i} evidence={{ ...e, verdict: e.verdict ?? needle.verdict }} label={`[${i + 1}] ${(e.citation ?? e.doc_id ?? "source").replace(/\s*\(file page \d+\)$/, "")}`} onPreview={onPreview} />)}
+              {(showAll ? ev : ev.slice(0, 3)).map((e, i) => <CiteChip key={i} evidence={{ ...e, verdict: e.verdict ?? needle.verdict }} label={`[${i + 1}] ${citeLabel(e).replace(/\s*\(file page \d+\)$/, "")}`} onPreview={onPreview} />)}
+              {!showAll && ev.length > 3 && <button type="button" onClick={() => setShowAll(true)} className="rounded border border-line px-1.5 py-px font-mono text-[11px] text-muted hover:text-purple hover:border-purple">+{ev.length - 3} more</button>}
             </div>
           ) : (
             <div className="text-right text-xs">

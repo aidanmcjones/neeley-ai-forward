@@ -42,7 +42,7 @@ export function LimitsPanel({ company, product }: { company: Company; product: s
 
   return (
     <Panel ai title={<span className="inline-flex items-center gap-2"><AiMark label="Engine verdict" /> What limits growth</span>}
-      meta={<span className="font-mono">labels detector · priced_in</span>}>
+      meta={<span className="font-mono">labels signals · priced_in</span>}>
       {limitText ? (
         <p className="text-[15px] font-semibold leading-snug">
           <span className="text-muted font-normal">What limits {name}: </span>{limitText}.
@@ -59,7 +59,7 @@ export function LimitsPanel({ company, product }: { company: Company; product: s
       <h3 className="mt-4 mb-2 text-[11px] font-bold uppercase tracking-wide text-muted">Label-derived findings for {name} ({fs.length})</h3>
       {fs.length === 0 ? (
         <div className="rounded-md border border-dashed border-line bg-surface-2 px-3 py-3 text-sm text-muted">
-          No findings with detector <code className="font-mono text-xs">labels</code> mention {name} in <code className="font-mono text-xs">companies/{company.ticker}.json · findings</code>.
+          No findings with signal type <code className="font-mono text-xs">labels</code> mention {name} in <code className="font-mono text-xs">companies/{company.ticker}.json · findings</code>.
         </div>
       ) : (
         <ul className="space-y-2 max-h-[340px] overflow-y-auto pr-1">

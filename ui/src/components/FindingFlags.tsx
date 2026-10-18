@@ -1,3 +1,4 @@
+import { onTriage } from "../lib/cites";
 import type { Finding } from "../lib/types";
 
 // v3 finding flags as small labelled pills (text plus color, never color alone).
@@ -18,8 +19,12 @@ export function findingFlags(f: Finding | null | undefined): string[] {
   return Array.isArray(fl) ? fl.filter((x): x is string => typeof x === "string" && !!x) : [];
 }
 
+// League-selection flags are internal triage; they show only on /cockpit/triage.
+const LEAGUE_FLAGS = new Set(["provisional", "needle_eligible", "not_league_comparable"]);
+
 export function FlagPills({ finding, flags, className = "" }: { finding?: Finding | null; flags?: string[]; className?: string }) {
-  const list = flags ?? findingFlags(finding);
+  const all = flags ?? findingFlags(finding);
+  const list = onTriage() ? all : all.filter((f) => !LEAGUE_FLAGS.has(f));
   if (!list.length) return null;
   return (
     <span className={`inline-flex flex-wrap gap-1 ${className}`}>

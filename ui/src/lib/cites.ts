@@ -80,3 +80,42 @@ export function markedOf(f: Finding | null | undefined): string | null {
   const s = f?.sentence_marked;
   return typeof s === "string" && s.trim() ? s : null;
 }
+
+/* --------------------------------------------------------------- pitch filter */
+
+/** League / scoring internals that never show outside /cockpit/triage. */
+export const INTERNAL_TEXT = /\bscore L\b|\bL \d*\.\d+|\bS ?=|\bS \d*\.\d+|obscurity|robustness|floor[_ ]relaxed|\bprovisional\b|\bstrict\b|league(_v\d)?\b|scoring variant/i;
+
+export function onTriage(): boolean {
+  return typeof window !== "undefined" && /^#\/cockpit\/triage/.test(window.location.hash);
+}
+
+/** The text, or null when it names league / scoring internals (outside the triage route). */
+export function pitchLine(s: string | null | undefined): string | null {
+  if (s == null) return null;
+  if (onTriage()) return s;
+  return INTERNAL_TEXT.test(s) ? null : s;
+}
+
+/** Drop the lines (and "; " clauses) of a block of text that name internals. */
+export function pitchText(s: string | null | undefined): string {
+  if (!s) return "";
+  if (onTriage()) return s;
+  return s.split("\n").map((line) => line.split(/;\s+/).filter((c) => !INTERNAL_TEXT.test(c)).join("; ")).filter((l) => l.trim()).join("\n");
+}
+
+/** Evidence with league / scoring internals stripped from every text field (outside triage). */
+export function pitchEvidence(ev: Evidence): Evidence {
+  if (onTriage()) return ev;
+  const L = (x: unknown) => (typeof x === "string" ? pitchLine(x) ?? undefined : (x as undefined));
+  const T = (x: unknown) => (typeof x === "string" ? pitchText(x) : (x as undefined));
+  const ex = ev.excerpt ? { before: T(ev.excerpt.before), match: T(ev.excerpt.match), after: T(ev.excerpt.after) } : ev.excerpt;
+  const ver = ev.verification ? { ...ev.verification, detail: L(ev.verification.detail), status: L(ev.verification.status) } : ev.verification;
+  return {
+    ...ev,
+    citation: L(ev.citation), doc_title: L(ev.doc_title), doc_label: L(ev.doc_label), doc_id: L(ev.doc_id),
+    row_ref: pitchLine(ev.row_ref ?? null), row_check: pitchLine(ev.row_check ?? null), quote: T(ev.quote) ?? "",
+    excerpt: ex, verification: ver, withheld_reason: pitchLine(ev.withheld_reason ?? null), derived_expr: pitchLine(ev.derived_expr ?? null),
+    confidence_note: L(ev.confidence_note),
+  };
+}

@@ -43,7 +43,7 @@ function useReveal(total: number, instant: boolean) {
 
 /* The league score (L, S), score anatomy, robustness variants and rank-vs-v2 are internal triage, not the
    pitch: they never render on the chat page. The league answer becomes a plain ranked list. */
-const INTERNAL = /\bS ?= |score L\b|\bL ?= |robustness|scoring variants|vs v2|M x O x E|M × O × E/i;
+const INTERNAL = /\bS ?= |score L\b|\bL ?= |robustness|scoring variants|vs v2|M x O x E|M × O × E|floor[_ ]relaxed|needle status|\bstatus (strict|provisional|floor relaxed|none)\b/i;
 const INTERNAL_COL = /^(score( L)?|L|S|rank vs v2|v2 rank|old rank)$/i;
 
 function stripSentences(md: string): string {
@@ -61,7 +61,13 @@ export function pitchSafe(m: MemoRecord): MemoRecord {
     return { ...m, blocks: out, numeric_check: { status: "no_numbers" } };
   }
   const out: MemoBlock[] = [];
-  for (const b of blocks) {
+  for (const b0 of blocks) {
+    // League needle status (strict / provisional / floor relaxed) is internal; "Detector" reads "Signal type".
+    const b: MemoBlock = b0.type === "kpi"
+      ? { ...b0, items: b0.items.filter((k) => !/needle status/i.test(k.label) && !INTERNAL.test(String(k.value)) && !/^(strict|provisional|floor[_ ]relaxed|none)$/i.test(String(k.value).trim()))
+          .map((k) => (/^detector$/i.test(k.label.trim()) ? { ...k, label: "Signal type" } : k)) }
+      : b0;
+    if (b.type === "kpi" && !b.items.length) continue;
     if (b.type === "math" && (INTERNAL.test(b.label ?? "") || INTERNAL.test(b.text))) continue;
     if (b.type === "p" || b.type === "callout") { const md = stripSentences(b.md); if (md.trim()) out.push({ ...b, md }); continue; }
     if (b.type === "list") { const items = b.items.filter((x) => !INTERNAL.test(x)); if (items.length) out.push({ ...b, items }); continue; }

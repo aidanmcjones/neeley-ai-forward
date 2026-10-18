@@ -12,10 +12,11 @@ import { Answer } from "../components/chat/Answer";
 interface Turn { id: number; prompt: string; memo: MemoRecord | null }
 
 // Generator kinds, in Part 1 (Find, chat) to Part 2 (Decide, memo) order.
-const KIND_ORDER = ["needle", "findings", "product", "peers", "priced_in", "league", "ceo_memo", "prove_wrong", "ai_wrong", "moat", "how_it_works"];
+const KIND_ORDER = ["needles", "needle", "why_company", "findings", "products", "product", "peers", "priced_in", "decides", "ceo_memo", "prove_wrong", "ai_wrong", "moat", "how_it_works", "limits", "league"];
 const KIND_LABEL: Record<string, string> = {
+  needles: "Needles across the ten", why_company: "Why this company", products: "Products", decides: "CEO moves", limits: "Honest limits",
   needle: "Sharpest Needle", findings: "Findings", product: "Product fine print", peers: "Peers", priced_in: "Priced in?",
-  league: "League", ceo_memo: "CEO memo", prove_wrong: "What would prove us wrong", ai_wrong: "Where the AI was wrong",
+  league: "Ranking", ceo_memo: "CEO memo", prove_wrong: "What would prove us wrong", ai_wrong: "Where the AI was wrong",
   moat: "Data moat", how_it_works: "How it works",
 };
 const kindRank = (k?: string) => { const i = KIND_ORDER.indexOf((k ?? "").toLowerCase()); return i < 0 ? 50 : i; };

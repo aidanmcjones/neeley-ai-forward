@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import type React from "react";
 import type { Evidence } from "../lib/types";
 import { isWithheld, useData, withheldReason } from "../lib/data";
-import { derivedOperands, isDerived, isRowCite } from "../lib/cites";
+import { derivedOperands, isDerived, isRowCite, pitchEvidence, pitchLine } from "../lib/cites";
 
 // Global right-side source drawer. Any CiteChip calls useSource().open(evidence).
 // Esc closes, focus is trapped while open and restored to the opener on close.
@@ -50,7 +50,8 @@ function verdictTone(v?: string) {
   return "text-warn";
 }
 
-export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; onClose: () => void }) {
+export function SourceDrawer({ evidence: evRaw, onClose }: { evidence: Evidence; onClose: () => void }) {
+  const ev = pitchEvidence(evRaw);
   const { company } = useData();
   const { open } = useSource();
   const ref = useRef<HTMLDivElement>(null);
@@ -73,7 +74,7 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  const label = ev.citation || [ev.doc_id, ev.page != null ? `p. ${ev.printed || ev.page}` : ""].filter(Boolean).join(", ") || "Source";
+  const label = ev.citation || [String(ev.doc_id ?? "").startsWith("row:") ? "" : ev.doc_id, ev.page != null ? `p. ${ev.printed || ev.page}` : ""].filter(Boolean).join(", ") || "Source";
   const figures = Array.isArray(ev.figures) ? ev.figures.map(String).filter(Boolean) : [];
   const ex = ev.excerpt;
   const hasExcerpt = !!(ex && (ex.before || ex.match || ex.after));
@@ -82,15 +83,15 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
   const vdetail = ev.verification?.detail;
 
   if (isRowCite(ev)) {
-    const title = String(ev.doc_title || ev.citation || ev.cite_id || "Data row");
+    const title = String(ev.doc_title || ev.citation || "Data row");
     const val = ev.value != null && ev.value !== "" ? String(ev.value) : null;
     return (
       <DrawerShell refEl={ref} closeBtn={closeBtn} onClose={onClose} label={title}>
         <dl>
           <Row k="Source">{title}</Row>
-          <Row k="Data row"><span className="font-mono text-xs break-all">{ev.row_ref ?? ev.cite_id}</span></Row>
+          {ev.row_ref && <Row k="Data row"><span className="font-mono text-xs break-all">{ev.row_ref}</span></Row>}
           {val && <Row k="Value"><span className="font-mono tnum">{val}</span></Row>}
-          <Row k="Check"><span className="font-semibold text-good">{ev.row_check || "data row"}</span></Row>
+          {ev.row_check && <Row k="Check"><span className="font-semibold text-good">{ev.row_check}</span></Row>}
         </dl>
         <div>
           <div className="text-[11px] font-semibold uppercase tracking-wider text-muted mb-1.5">Row text</div>
@@ -118,7 +119,7 @@ export function SourceDrawer({ evidence: ev, onClose }: { evidence: Evidence; on
             <span className="flex flex-wrap gap-1">
               {ops.map((o, i) => o.ev
                 ? <button key={o.id} type="button" onClick={() => open(o.ev!)} title={o.ev.citation ?? o.id}
-                    className="font-mono text-[11px] rounded px-1 py-px bg-chip text-purple border border-purple/20 hover:bg-purple hover:text-white dark:hover:bg-purple-deep">[{String.fromCharCode(97 + i)}] {o.ev.citation ?? o.ev.doc_title ?? o.id}</button>
+                    className="font-mono text-[11px] rounded px-1 py-px bg-chip text-purple border border-purple/20 hover:bg-purple hover:text-white dark:hover:bg-purple-deep">[{String.fromCharCode(97 + i)}] {pitchLine(o.ev.citation) ?? pitchLine(o.ev.doc_title) ?? "operand"}</button>
                 : <span key={o.id} className="font-mono text-[11px] text-muted" title="Operand not in this export">[{String.fromCharCode(97 + i)}] {o.id}</span>)}
             </span>
           </Row>

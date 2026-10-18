@@ -110,7 +110,9 @@ memos.json lands, the page shows a 3-record sample (`_sample/memos.json`) with a
 are off every judge-facing surface (chat and cockpit Briefing / Proof) and live at `/#/cockpit/triage` (unlinked,
 "Internal triage view, not part of the pitch"). The chat starts at "Pick a company" unless
 `meta.default_ticker_source` is "pick". Parker's trim layer (`ui/public/assets/trim.js`, `trim.css`) runs on
-cockpit routes only with a "Full detail" pill; `fit.css` is now in the repo and linked from `index.html`.
+cockpit routes only with a "Full detail" pill; `fit.css` is now in the repo and linked from `index.html`. The Briefing hero uses the rule
+needle (`needle_id_rule`), the grid follows `findings_table` ranked by impact, Proof shows `ai_wrong_cases` and
+`honest_limits`, and tooltips / drawers never name score L, S, obscurity, robustness or needle status words.
 
 **Open.**
 - `sentence_marked` / `derived_from` in the export.

@@ -13,7 +13,7 @@ export default function Triage() {
       <Panel title="League" meta={<span className="font-mono">league.json</span>} bodyClassName="p-0">
         <table className="w-full border-collapse text-[13px] tnum">
           <thead className="bg-surface-2 text-[11px] uppercase tracking-wide text-muted">
-            <tr>{["#", "Company", "Score L", "Needle", "Rank vs v2", "Findings"].map((h) => <th key={h} scope="col" className="px-3 py-2 text-left font-semibold">{h}</th>)}</tr>
+            <tr>{["#", "Company", "Score L", "Needle", "League needle", "Rank vs v2", "Findings"].map((h) => <th key={h} scope="col" className="px-3 py-2 text-left font-semibold">{h}</th>)}</tr>
           </thead>
           <tbody>
             {(league ?? []).map((r, i) => (
@@ -22,6 +22,7 @@ export default function Triage() {
                 <td className="px-3 py-1.5"><button type="button" onClick={() => setTicker(r.ticker)} className="hover:text-purple"><span className="font-mono">{r.ticker}</span> {r.name}</button></td>
                 <td className="px-3 py-1.5 font-mono">{typeof r.score === "number" ? r.score.toFixed(4) : "n/a"}</td>
                 <td className="px-3 py-1.5"><NeedleStatusPill status={r.needle_status} /></td>
+                <td className="px-3 py-1.5 text-[12px] max-w-[320px]"><span className="line-clamp-2" title={r.sharpest_needle}>{r.sharpest_needle ?? "none"}</span></td>
                 <td className="px-3 py-1.5"><RankChange row={r} /></td>
                 <td className="px-3 py-1.5 font-mono">{r.n_verified ?? "n/a"} verified / {r.n_rejected ?? "n/a"} rejected</td>
               </tr>

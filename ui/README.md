@@ -75,10 +75,23 @@ them is dropped) or on the cockpit Briefing / Proof. They live at `/#/cockpit/tr
 in the side nav, reachable by URL, with a muted "not part of the pitch" banner). When a company file carries
 `findings_table`, the Briefing grid follows its order and shows its `rank_basis`.
 
+**Pitch-facing needle and grid.** The Briefing hero uses `needle_id_rule` with a "Needle rule" pill whose
+tooltip is `needle_rule` (fallback `needle_id`); the league needle and its status appear only on triage. The
+findings grid follows `findings_table` (rows' own `sentence_marked` / `marker_map`, label "ranked by impact").
+The hero keeps the impact formula behind a collapsed "Show the math", shows three proof chips plus "+N more", and
+shrinks a long headline (40 / 32 / 28 px) so the hero stays above the fold at 1280 x 800. Proof adds "Where the AI
+was confidently wrong" (`proof.ai_wrong_cases`) and "Honest limits" (`meta.honest_limits`). "Detector" labels
+read "Signal type".
+
+**Popover filter.** Outside `/cockpit/triage`, chip tooltips, drawers and live source cards drop any line or clause
+naming score L, S =, obscurity, robustness, league or the needle status words (strict / provisional /
+floor relaxed); a row cite whose title names them reads "Data row". League-selection flag pills (provisional,
+needle eligible, not league-comparable) show only on triage.
+
 **Trim layer (cockpit only).** `public/assets/trim.js` + `trim.css` (Parker's layer from `docs/ui-trim/` on
 branch `ui-trim`) tag secondary content by its visible label and cut or fade it; a "Full detail" pill (bottom
-right) turns it off. Default on. Adapted: it runs only on `#/cockpit` routes and the pill is hidden on the chat
-page. `public/assets/fit.css` lets the cockpit shrink below 1280 px (it now also releases `.app-shell`'s
+right) turns it off. Default on. Adapted: it runs only on `#/cockpit` routes, the pill is hidden on the chat
+page, and "pinned exhibits" is cut only when nothing is pinned (pinned charts must print). `public/assets/fit.css` lets the cockpit shrink below 1280 px (it now also releases `.app-shell`'s
 min-width). All three are linked from `index.html`, so the repo build is self-contained.
 
 The cockpit screens below now live under `/cockpit` (link "Full cockpit" under the prompt box).

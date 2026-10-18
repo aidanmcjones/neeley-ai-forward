@@ -11,7 +11,7 @@ export function Architecture() {
   type Node = { x: number; w: number; y?: number; h?: number; title: string; sub: string[]; ai?: boolean };
   const nodes: Node[] = [
     { x: 194, w: 126, title: "Page-anchored", sub: ["corpus: 836 docs,", "every page keeps", "its printed number"] },
-    { x: 342, w: 130, y: 28, h: 82, title: "Detectors", sub: ["code: forensics,", "labels, forces"] },
+    { x: 342, w: 130, y: 28, h: 82, title: "Signals", sub: ["code: forensics,", "labels, forces"] },
     { x: 342, w: 130, y: 126, h: 82, title: "LLM reading", sub: ["drift, call Q&A,", "deflections"], ai: true },
     { x: 500, w: 116, title: "Verifier", sub: ["code: quote and", "figures on the", "cited page"] },
     { x: 644, w: 104, title: "Audit ledger", sub: ["hash-chained,", "append-only"] },
