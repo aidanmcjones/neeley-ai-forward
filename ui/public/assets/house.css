@@ -450,3 +450,18 @@ details.cite-notes[open] > summary { margin-bottom: 4px; }
 .ft-conf-v.is-high { color: rgb(var(--good)); }
 .ft-conf-v.is-medium { color: rgb(var(--warn)); }
 .ft-conf-v.is-low { color: rgb(var(--bad)); }
+
+/* Findings tab gate: locked until the first Part 1 query, loading for 10 s, then open. */
+.tabnav-a.is-locked { color: rgb(var(--muted) / 0.38); cursor: not-allowed; }
+.tabnav-a.is-loading { display: inline-flex; align-items: center; gap: 7px; color: rgb(var(--muted) / 0.6); cursor: progress; }
+.tabnav-spin {
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid rgb(var(--muted) / 0.35);
+  border-top-color: rgb(var(--purple));
+  border-radius: 50%;
+  animation: th-spin 0.8s linear infinite;
+}
+.tabnav-note { font-size: 11px; font-weight: 600; color: rgb(var(--purple)); }
+.nd-sec-link.is-wait { color: rgb(var(--muted) / 0.6); }
+@media (prefers-reduced-motion: reduce) { .tabnav-spin { animation: none; } }
