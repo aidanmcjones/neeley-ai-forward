@@ -1,0 +1,116 @@
+/* Needle in the Haystack: theme layer for Parker's page. Loads after house.css, touches only existing hooks. */
+
+:root { --hay: 224 170 58; --hay-deep: 184 128 40; --steel: 142 153 168; }
+:root:not([data-theme=light]) { --hay: 240 196 92; --hay-deep: 208 150 56; --steel: 201 209 220; }
+:root[data-theme=dark] { --hay: 240 196 92; --hay-deep: 208 150 56; --steel: 201 209 220; }
+
+/* Wordmark: white bubble letters outlined and extruded in the product purple, with the mark at left. */
+h1.font-display, h1.font-display * {
+  font-family: "Baloo 2", "Fredoka", Aptos, "Aptos Display", system-ui, sans-serif !important;
+}
+h1.font-display {
+  display: flex;
+  align-items: center;
+  gap: 0.32em;
+  font-size: 44px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.05 !important;
+  color: #fff !important;
+  text-wrap: balance;
+  overflow: visible;
+}
+h1.font-display .hay-word {
+  text-shadow:
+    -2px 0 0 rgb(var(--purple-deep)), 2px 0 0 rgb(var(--purple-deep)),
+    0 -2px 0 rgb(var(--purple-deep)), 0 2px 0 rgb(var(--purple-deep)),
+    -1.5px -1.5px 0 rgb(var(--purple-deep)), 1.5px -1.5px 0 rgb(var(--purple-deep)),
+    -1.5px 1.5px 0 rgb(var(--purple-deep)), 1.5px 1.5px 0 rgb(var(--purple-deep)),
+    0 3px 0 rgb(var(--purple-deep)), 0 4px 0 rgb(var(--purple-deep)),
+    0 5px 0 rgb(var(--purple-deep)), 1px 6px 0 rgb(var(--purple-deep)),
+    0 10px 22px rgb(var(--purple) / 0.35);
+}
+h1.font-display .hay-mark {
+  --hay-ink: rgb(var(--purple-deep));
+  flex: none;
+  width: 1.3em;
+  height: 1.3em;
+  overflow: visible;
+  filter: drop-shadow(0 4px 0 rgb(var(--purple-deep)));
+}
+@media (max-width: 560px) {
+  h1.font-display { font-size: 32px !important; gap: 0.3em; }
+}
+@media print { h1.font-display { color: rgb(var(--fg)) !important; } h1.font-display .hay-word { text-shadow: none; } }
+
+/* The mark glistens: the glint breathes and a sheen runs the length of the needle. */
+.hay-mark .hay-glint { transform-origin: 57px 7px; animation: hay-glint 2.8s ease-in-out infinite; }
+.hay-mark .hay-glint2 { transform-origin: 49px 15px; animation: hay-glint 2.8s ease-in-out 0.9s infinite; }
+.hay-mark .hay-sheen { stroke-dasharray: 7 70; stroke-dashoffset: 77; animation: hay-sheen 2.8s linear infinite; }
+@keyframes hay-glint { 0%, 100% { transform: scale(0.72); opacity: 0.75; } 45% { transform: scale(1.12); opacity: 1; } }
+@keyframes hay-sheen { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .hay-mark .hay-glint, .hay-mark .hay-glint2, .hay-mark .hay-sheen { animation: none; }
+  .hay-mark .hay-sheen { stroke-dashoffset: 0; }
+}
+
+/* Tabs: the active tab is underlined by a needle, glint at its point. */
+.tabnav-a { position: relative; }
+.tabnav-a[aria-current="page"] {
+  border-bottom-color: transparent !important;
+  background: linear-gradient(90deg, rgb(var(--purple)) 0%, rgb(var(--purple)) 72%, rgb(var(--steel)) 100%) left bottom / 100% 2px no-repeat;
+  background-origin: border-box;
+}
+.tabnav-a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  background: rgb(var(--hay));
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+}
+
+/* Thinking: the spark is the glint off the needle. */
+.th-spark { background: rgb(var(--hay)) !important; filter: drop-shadow(0 0 3px rgb(var(--hay) / 0.7)); }
+.th-steps li.is-now::before { border-top-color: rgb(var(--hay)) !important; }
+
+/* Eyebrows that open the answer and the CEO move carry the needle glyph. */
+.nd-lead > .nd-eyebrow::before, .p2-eyebrow::before {
+  content: "";
+  display: inline-block;
+  flex: none;
+  width: 17px;
+  height: 17px;
+  margin-right: 2px;
+  align-self: center;
+  vertical-align: -3px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 21 20 4' stroke='%237A4BB5' stroke-width='4.2' stroke-linecap='round'/%3E%3Cpath d='M3 21 20 4' stroke='%23D6DDE6' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M20 1 20.9 3.1 23 4 20.9 4.9 20 7 19.1 4.9 17 4 19.1 3.1Z' fill='%23E8B84A' stroke='%237A4BB5' stroke-width='.8' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.p2-eyebrow { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Hero prompt: a haystack beside "Part 1"; the Part 2 chip carries the needle. */
+button[data-hero] > span:first-child { display: flex !important; align-items: center; gap: 6px; }
+button[data-hero] > span:first-child::before {
+  content: "";
+  width: 15px;
+  height: 13px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 20'%3E%3Cpath d='M1 19C2 9 6 3 12 3s10 6 11 16Z' fill='%23E8B84A' stroke='%237A4BB5' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='M6 15l3-4M12 16l3-5M16 15l3-4M9 7l2-3M14 7l2-3' stroke='%23B8771F' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+button[data-p2-chip]::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  vertical-align: -1px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 21 20 4' stroke='%237A4BB5' stroke-width='4.2' stroke-linecap='round'/%3E%3Cpath d='M3 21 20 4' stroke='%23D6DDE6' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M20 1 20.9 3.1 23 4 20.9 4.9 20 7 19.1 4.9 17 4 19.1 3.1Z' fill='%23E8B84A' stroke='%237A4BB5' stroke-width='.8' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+[aria-label="Ask next"] button:hover, button[data-p2-chip]:hover { border-color: rgb(var(--hay)) !important; }
+
+/* Composer: focus glints gold instead of purple. */
+form .focus-within\:border-purple:focus-within {
+  border-color: rgb(var(--hay)) !important;
+  box-shadow: 0 0 0 3px rgb(var(--hay) / 0.18) !important;
+}
