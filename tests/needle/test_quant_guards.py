@@ -92,3 +92,42 @@ def test_nuggets_go_through_scoring_and_gate():
     assert any("invented" in f.sentence for f in held)          # the citation gate withholds the fake quote
     terns = [f for f in shown + held if "Terns" in f.sentence][0]
     assert terns.S == 0 and terns.guard in ("drop", "context")  # guards 3 and 4 apply to nuggets too
+
+
+def test_needle_branch_id_scheme():
+    import hashlib
+    from agent.needle.quant.run import needle_branch_id
+    from agent.needle.schema import Signal
+    s = Signal(ticker="AMGN", detector="forensics", kind="receivables_outpace_revenue", detail="x")
+    six = int(hashlib.sha256(b"receivables_outpace_revenue|x").hexdigest(), 16) % 10 ** 6
+    assert needle_branch_id(s) == f"AMGN-forensics-{six:06d}"
+
+
+def test_nugget_impact_eps_translation_and_cash_only():
+    from types import SimpleNamespace
+    from agent.needle.quant import find
+    co = SimpleNamespace(tax=0.2, shares=1000.0, citations={}, flags=[])
+    imp, am, nq = find.nugget_impact(co, {"id": "X-nugget-001", "ticker": "X", "signal_family": "gtn",
+                                          "impact": {"line": "revenue", "bull": 100, "base": 200, "bear": 400}})
+    assert not nq and abs(imp.d_eps["base"] - 200 * 1.0 * 0.8 / 1000) < 1e-12
+    assert imp.d_rev == {"bull": 100, "base": 200, "bear": 400} and am
+    imp, _, nq = find.nugget_impact(co, {"id": "X-nugget-002", "signal_family": "gtn",
+                                         "impact": {"line": "free_cash_flow", "base": 5000}})
+    assert nq.startswith("not quantified on EPS") and not imp.quantified
+    imp, _, _ = find.nugget_impact(co, {"id": "X-nugget-003", "signal_family": "footnotes", "signal_kind": "tax_dispute",
+                                        "impact": {"line": "eps", "bull": 0, "base": 1300, "bear": 3200}})
+    assert abs(imp.d_eps["base"] - 1.3) < 1e-12 and imp.d_oi["base"] == 0   # tax item: no tax shield, below OI
+
+
+def test_nuggets_dir_sets_best_needle():
+    from pathlib import Path
+    from agent.needle.quant.run import load_nuggets
+    d = Path(__file__).resolve().parents[2] / "docs" / "nuggets"
+    if not (d / "best_needle.json").exists():
+        pytest.skip("docs/nuggets not present")
+    rows = load_nuggets(d)
+    assert len(rows) == 97
+    best = [r.meta["nugget"]["id"] for r in rows if r.meta["nugget"].get("best_needle")]
+    assert sorted(best) == sorted(["MRK-nugget-001", "JNJ-nugget-010", "PFE-nugget-001", "BMY-nugget-001",
+                                   "AMGN-nugget-006", "NVO-nugget-001", "LLY-nugget-002", "ABBV-nugget-001",
+                                   "GILD-nugget-001", "AZN-nugget-010"])

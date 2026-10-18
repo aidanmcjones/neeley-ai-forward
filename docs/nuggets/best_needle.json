@@ -1,0 +1,17 @@
+{
+  "source": "docs/red_team_v3_final.md on origin/needle b908519f59f78ed7aad86e2d224274d53f423648, section (a) summary table, 'Best needle' column",
+  "best_needle": {
+    "MRK": "MRK-nugget-001",
+    "JNJ": "JNJ-nugget-010",
+    "PFE": "PFE-nugget-001",
+    "BMY": "BMY-nugget-001",
+    "AMGN": "AMGN-nugget-006",
+    "NVO": "NVO-nugget-001",
+    "LLY": "LLY-nugget-002",
+    "ABBV": "ABBV-nugget-001",
+    "GILD": "GILD-nugget-001",
+    "AZN": "AZN-nugget-010"
+  },
+  "red_team_score_30": {"MRK": 25.5, "JNJ": 24.5, "PFE": 23.5, "BMY": 22, "AMGN": 20.5, "NVO": 20.5, "LLY": 20,
+                        "ABBV": 19.5, "GILD": 19, "AZN": 17.5}
+}

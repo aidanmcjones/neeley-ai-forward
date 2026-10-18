@@ -485,6 +485,9 @@ class Scored:
     derived: dict = field(default_factory=dict)       # numeric gate: computed numbers with cited operands
     assumptions: dict = field(default_factory=dict)   # numeric gate: labelled assumptions and model constants
     public: bool = False                              # render with public=True (licensed text withheld)
+    nugget: dict = field(default_factory=dict)        # nugget-miner row fields (id, slide_ready, best_needle, ...)
+    corroborated_by: list = field(default_factory=list)   # nugget ids whose quotes corroborate this row
+    merged_into: str = ""         # id of the row that carries this fact in the findings table (one fact, one row)
 
     def all_citations(self):
         """citations plus every derived citation's operands and every derived-map operand citation, inline and
@@ -518,6 +521,8 @@ class Scored:
             "needle_eligible": self.needle_eligible, "old_S": self.old_S, "fact_key": self.fact_key,
             "citations": [c.to_dict() for c in self.all_citations()],
             "derived": _jsonable(self.derived), "assumptions": _jsonable(self.assumptions),
+            "nugget": self.nugget or None, "corroborated_by": self.corroborated_by or None,
+            "merged_into": self.merged_into or None,
         }
 
 
@@ -1120,3 +1125,139 @@ def mfn_findings(ticker, co):
     sc.citations += [c for c in ctx_cites if c not in sc.citations]
     sc.product = ""
     return [sc]
+
+
+# ------------------------------------------------------------------ nugget-miner rows (Parker, docs/nuggets)
+# A nugget row carries its own dollar estimate (impact.bull / base / bear on one P&L line, in the reporting currency,
+# millions) and verified page quotes. FIND re-runs the EPS translation of section 4.2 on the company's own constants,
+# grades the quotes on the same ladder, and gates every number in the sentence and the impact math. The dollar
+# estimate itself is Parker's (derivation in the nugget's impact.formula); it prints as a labelled assumption.
+NUGGET_BLOCK = {"footnotes": "F", "gtn": "P", "forces": "P", "language_drift": "T", "call_qa": "C",
+                "label_fine_print": "L", "segment_change": "A", "inventory_receivables": "A", "peer_contrast": "X"}
+NUGGET_PRICE_LED = {"gtn", "forces", "footnotes"}        # price, rebate, contractual: CM 1.00; else volume CM 0.70
+NUGGET_CONTRACTUAL = {"footnotes", "forces", "label_fine_print"}
+
+
+def nugget_family(fam_name):
+    pi = W.PI_CONTRACTUAL if fam_name in NUGGET_CONTRACTUAL else W.PI_MIN
+    route = "nugget"
+    return Family(f"nugget: {fam_name}", NUGGET_BLOCK.get(fam_name, "X"), pi, route, False)
+
+
+def nugget_topics(text):
+    t = [k for k, pat in OB.TOPIC_WORDS.items() if re.search(pat, text or "", re.I)]
+    return sorted(set(t)) or ["other"]
+
+
+def _fmt_num(x):
+    return f"{x:,.1f}" if abs(x) < 100 and x != int(x) else f"{x:,.0f}"
+
+
+def nugget_impact(co, r):
+    """Impact for one nugget row on the company's constants (section 4.2). Returns (Impact, assumptions, nq_reason)."""
+    imp_in = r.get("impact") or {}
+    line = str(imp_in.get("line") or "revenue")
+    fam = str(r.get("signal_family") or "")
+    nid = str(r.get("id") or "")
+    raw = {k: imp_in.get(k) for k in ("bull", "base", "bear")}
+    if line == "free_cash_flow":
+        reason = ("not quantified on EPS: the nugget's effect is on free cash flow only (no revenue, operating "
+                  "income or EPS line)")
+        return IM.not_quantified("nugget", reason), {}, reason
+    base = raw["base"]
+    if base is None:
+        vals = [v for v in raw.values() if v is not None]
+        base = sorted(vals)[len(vals) // 2] if vals else None
+    if base is None or all(not v for v in raw.values() if v is not None):
+        reason = "not quantified: the nugget gives no dollar estimate (base 0 or missing)"
+        return IM.not_quantified("nugget", reason), {}, reason
+    sign = 1 if base >= 0 else -1
+    same = [abs(v) for v in raw.values() if v is not None and (v * sign > 0)]
+    lo = min(same + [abs(base)]) if not any(v is not None and v * sign < 0 for v in raw.values()) else 0.0
+    hi = max(same + [abs(base)])
+    revs = (lo, abs(base), hi)
+    kind = str(r.get("signal_kind") or "")
+    no_tax = line == "eps" and "tax" in kind
+    cm = W.CM_PRICE if (fam in NUGGET_PRICE_LED or line != "revenue") else W.CM_VOLUME
+    imp = IM.Impact("nugget", fiscal_year=data.AS_OF.year + 1, t_years=IM.years_to_mid(data.AS_OF.year + 1))
+    IM._fill(imp, revs, cm, co)
+    nums = f"({_fmt_num(revs[0])}, {_fmt_num(revs[1])}, {_fmt_num(revs[2])})"
+    if line == "revenue":
+        imp.formula = (f"nugget dRev (bull, base, bear) {nums} x CM {cm:.2f} x (1 - t {co.tax:.4f}) / D "
+                       f"{co.shares:,.1f} (line revenue; estimate from nugget {nid})")
+    elif line == "operating_income":
+        imp.formula = (f"nugget dOI (bull, base, bear) {nums} x (1 - t {co.tax:.4f}) / D {co.shares:,.1f} "
+                       f"(line operating income; estimate from nugget {nid})")
+    elif no_tax:
+        imp.d_eps = {k: v / co.shares for k, v in imp.d_rev.items()}
+        imp.d_oi = {k: 0.0 for k in imp.d_rev}
+        imp.formula = (f"nugget net-income effect (bull, base, bear) {nums} / D {co.shares:,.1f} (tax item: no tax "
+                       f"shield; below operating income; estimate from nugget {nid})")
+    else:
+        imp.d_oi = {k: 0.0 for k in imp.d_rev}
+        imp.formula = (f"nugget pre-tax effect below operating income (bull, base, bear) {nums} x (1 - t "
+                       f"{co.tax:.4f}) / D {co.shares:,.1f} (line EPS; estimate from nugget {nid})")
+    am = {}
+    lab = (f"nugget-miner estimate ({nid}, docs/nuggets/{r.get('ticker')}.jsonl impact.formula; Parker's derivation, "
+           "not re-derived by FIND)")
+    for i, v in enumerate(revs):
+        GW.assume(am, f"nugget_{nid}_{i}", float(_fmt_num(v).replace(",", "")), lab)
+    if line == "revenue":
+        GW.const(am, "CM_PRICE" if cm == W.CM_PRICE else "CM_VOLUME", cm,
+                 "contribution margin on a price-led (1.00) or volume-led (0.70) revenue change, KQ7")
+    imp.flags.append(f"impact from the nugget's own estimate on line {line}; EPS translated on FIND constants")
+    return imp, am, ""
+
+
+def score_nugget(sig, co):
+    """One nugget row (Signal from run.load_nuggets) -> Scored, through the same ladder, obscurity and gate."""
+    r = sig.meta.get("nugget") or {}
+    fam = nugget_family(str(r.get("signal_family") or ""))
+    text = sig.detail
+    topics = nugget_topics(text)
+    all_cites = [EV.from_evidence(ev) for ev in sig.evidence]
+    page_cites = [c for c in all_cites if c.verification.ok]
+    disclosed, age_note = first_public(sig)
+    imp, am, nq = nugget_impact(co, r)
+    flags = [age_note] if age_note else []
+    if len(page_cites) < len(all_cites):
+        flags.append(f"{len(all_cites) - len(page_cites)} of {len(all_cites)} nugget quotes did not verify on our "
+                     "ladder: dropped from the evidence (E over the verified quotes; none verified gives E = 0)")
+    rung = (r.get("obscurity") or {}).get("rung") if isinstance(r.get("obscurity"), dict) else r.get("obscurity")
+    flags.append(f"nugget {r.get('id')}: verdict {r.get('verdict')}, slide_ready {r.get('slide_ready')}, "
+                 f"best_needle {r.get('best_needle')}, obscurity rung {rung}")
+    sc = _assemble(co, sig.ticker, sig.kind, text, fam, imp, page_cites, topics, disclosed, product=None,
+                   peer={"note": (r.get("peer") or {}).get("note"), "metric_value": (r.get("peer") or {}).get("metric_value"),
+                         "peer_median": (r.get("peer") or {}).get("peer_median")},
+                   extra_flags=flags, detector="nuggets")
+    sc.id = finding_id(sig.ticker, sig.kind, "nugget|" + str(r.get("id")))
+    sc.assumptions.update(am)
+    sc.not_quantified = nq
+    sc.nugget = {k: r.get(k) for k in ("id", "signal_family", "slide_ready", "verdict", "best_needle", "enriches",
+                                       "case_fit", "part2_hook", "confidence")}
+    sc.nugget["obscurity_rung"] = rung
+    sc.nugget_evidence = [{"doc": ev.doc_id, "page": ev.page, "figures": list(ev.figures or [])} for ev in sig.evidence]
+    if not r.get("slide_ready") or r.get("verdict") != "verified":
+        sc.needle_eligible, sc.needle_blocked = False, True
+        sc.flags.append("nugget not slide-ready or not verified: kept, flagged, never the Sharpest Needle")
+    if r.get("best_needle") is False:
+        sc.flags.append("not Parker's red-team best needle for this company (flag only)")
+    GW.dose_counts(sc.sentence, sc.assumptions)
+    extra = GW.page_line_support(sc.sentence, page_cites, data.index())
+    if extra:
+        sc.citations += extra
+        sc.flags.append(f"{len(extra)} sentence number(s) cited to a verified line of a page the nugget already cites")
+    n_auto = GW.auto_derive(sc.sentence, page_cites + extra, sc.derived, tag=f"nug_{r.get('id')}")
+    if n_auto:
+        sc.flags.append(f"{n_auto} sentence number(s) derived by code from two figures in the nugget's own verified quotes")
+    imp_in = r.get("impact") or {}
+    n_est = GW.nugget_estimates(sc.sentence, page_cites + extra, sc.derived, sc.assumptions,
+                                [imp_in.get(k) for k in ("bull", "base", "bear")], imp_in.get("eps"),
+                                f"nugget-miner estimate ({r.get('id')}, docs/nuggets/{sig.ticker}.jsonl impact; "
+                                "Parker's derivation, not re-derived by FIND)", formula=str(imp_in.get("formula") or ""))
+    if n_est:
+        sc.flags.append(f"{n_est} sentence number(s) restate the nugget's own estimate: labelled assumptions")
+    if not sig.evidence:
+        sc.flags.append("no page evidence: E = 0, withheld by the gate")
+    return sc
+

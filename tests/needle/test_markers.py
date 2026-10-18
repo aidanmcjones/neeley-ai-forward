@@ -52,7 +52,10 @@ def unresolved(rec):
         qm = re.search(r' -- "(.*)" -- ', line + " -- ")
         cand = [c for c in cits if head.startswith(f"{c.get('doc_title')}, {c.get('location')}")]
         q = qm.group(1) if qm else None
-        if not (any(q is not None and (c.get("quote") or "") == q for c in cand) or len(cand) == 1
+        def shown(c):   # transcript footnotes print "speaker: quote" (render._quote)
+            qq = c.get("quote") or ""
+            return {qq, f"{c.get('speaker')}: {qq}"} if c.get("speaker") else {qq}
+        if not (any(q is not None and q in shown(c) for c in cand) or len(cand) == 1
                 or (cand and q is None)):
             bad.append(n)
     return bad

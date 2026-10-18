@@ -77,9 +77,25 @@ def _cell(s):
     return " ".join(str(s or "").split()).replace("|", "/")
 
 
+def merge_facts(rows):
+    """One fact, one row: rows sharing a fact_key (a statistical flag and its twin, or a nugget and the detector row it
+    enriches) keep the larger-impact row; the others are listed as merged into it, not ranked. Returns (kept, merged)."""
+    kept, merged, seen = [], [], {}
+    for f in rank(rows):
+        k = getattr(f, "fact_key", "") or ""
+        if k and k in seen:
+            f.merged_into = seen[k].id
+            merged.append(f)
+            continue
+        if k:
+            seen[k] = f
+        kept.append(f)
+    return kept, merged
+
+
 def build(ticker, rows, public=False):
     """(markdown, json dict) for one ticker's gated Scored rows."""
-    ranked = rank(rows)
+    ranked, merged = merge_facts(rows)
     needle = pick_needle(ranked)
     per_row = [_claims(f) for f in ranked]
     flat = [c for cs in per_row for c in cs if c is not None]
@@ -112,10 +128,15 @@ def build(ticker, rows, public=False):
                          "d_eps_base_abs": eps, "d_oi_base_abs": oi, "analyst_share_asked": share_asked(f),
                          "analyst_share_source": (f.vector or {}).get("a_source"), "confidence": f.confidence,
                          "not_quantified": f.not_quantified or None,
-                         "needle_blocked": bool(getattr(f, "needle_blocked", False)), "needle": is_n})
+                         "needle_blocked": bool(getattr(f, "needle_blocked", False)), "needle": is_n,
+                         "nugget": getattr(f, "nugget", None) or None,
+                         "corroborated_by": getattr(f, "corroborated_by", None) or None,
+                         "merged": [g.id for g in merged if g.merged_into == f.id] or None})
     md = "\n".join(L) + ("\n" + render_footnotes_md(order, public) if order else "\n")
     js = {"ticker": ticker, "rank_basis": RANK_BASIS, "needle_rule": NEEDLE_RULE,
           "needle_id": needle.id if needle is not None else None, "rows": out_rows,
+          "merged_rows": [{"id": g.id, "merged_into": g.merged_into, "sentence": g.sentence,
+                           "nugget": (getattr(g, "nugget", None) or {}).get("id")} for g in merged],
           "numeric_check": summary["numeric_check"], "failed": summary["failed"],
           "note": "internal FIND score S and league_v3 order candidates for review only; not pitched"}
     return md, js
