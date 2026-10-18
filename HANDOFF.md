@@ -43,80 +43,45 @@ python -m agent.llm    # should print: scaffold OK
 streamlit run app/main.py
 ```
 
-## Sat Oct 17, evening: NEEDLE cockpit UI (branch `ui`)
+## NEEDLE UI (branch `ui`, PR #22 at 7723625, artifact version 6)
 
-**What it is.** `ui/` is a static single-page app (Vite + React 18 + TypeScript + Tailwind 3 + Recharts,
-hash router) that reads precomputed JSON from `ui/public/data/` written by `python -m agent.ui_export`.
-No API key, no network, fonts bundled: it runs with Wi-Fi off. Spec and data contract: `docs/ui_spec.md`.
-Seven screens: Briefing (opens here, league leader preloaded: AMGN under v2), Ask NEEDLE, Product fine print, Three forces
-and priced-in, Proof, Data moat, CEO memo; plus the global source drawer and ⌘K palette.
+**What it is.** `ui/` is a static app (Vite + React + TypeScript + Tailwind + Recharts) over precomputed JSON
+in `ui/public/data/`. No API key, no live model, no network at runtime. The demo is a chat page at `/#/`;
+the seven cockpit screens are the depth at `/#/cockpit` (one small "Full cockpit" link). Full details:
+`ui/README.md`.
 
-**How to run.**
+**Regenerate and publish** (repo root):
 ```
-cd ui && npm install
-npm run dev -- --port 5173                        # http://localhost:5173/#/
-npm run build && python3 -m http.server 8090 -d dist   # static build: http://localhost:8090/#/
-python -m agent.ui_export                         # (repo root) regenerate ui/public/data/
-PYTHONPATH=. python ui/server.py --port 8787      # optional live Ask; then open /?live=1#/ask
+NEEDLE_TICKER=XXX PYTHONPATH=. python -m agent.ui_export   # NEEDLE_TICKER optional: the team's pick
+PYTHONPATH=. python -m agent.ui_memos
+PYTHONPATH=. python -m agent.ui_memos --check
+cd ui && npm run build                                     # then publish the root of ui/dist/
 ```
+Local: `cd ui && npm run dev -- --port 5173` or `python3 -m http.server 8090 -d ui/dist`.
 
-**What works (checked in headless Chrome at 1280x800).** All 7 routes x 10 tickers load with no console
-errors or warnings, no "undefined" / "NaN" / "null" / "[object Object]" text, no horizontal overflow; every
-product tab and every Ask preset for all 10 tickers is clean too (102 states). Hero and KPI row sit above the
-fold for every ticker. Pinned exhibits render full size in the memo and print without clipping. Keyboard:
-Tab reaches the company select, nav, chips and grid rows; Enter on a chip opens the source drawer, Esc
-closes and returns focus; ⌘K opens the palette; `?q=` and "Jump to <T>" survive a hard reload. Dark mode
-text passes a 3:1 contrast scan (4 tickers x 7 routes). The static build loads `/#/` and `/#/proof` with zero off-origin requests.
+**What works.**
+- Chat: per-answer loading (`ui/vite.memos-index.js` derives `memos_index.json` and `memos/<id>.json`, with a
+  full-file fallback; chips in 0.6 s and first answer in 0.9 s at 20 Mbps). With no pick
+  (`default_ticker_source: "unpicked"`) it starts at "Pick a company" with six global questions; picking a
+  company runs its 7-step `suggested_by_ticker` flow from needle to CEO memo. Part 1 answers as chat, Part 2
+  as a memo card with Copy and Print.
+- Needle: red-team read or plain rule (`needle_source`, shown on the pill), `needle_reason` under the
+  headline; explained-by-footnote rows are never the needle. Findings grid ranked by impact with a Peer column.
+- DECIDE: AMGN, MRK and GILD as pipeline demonstrations, LLY as the real valued move; why it will work, why we
+  passed, cash-at-risk notes, least-bad option when nothing clears the hurdle, and the kill table with the
+  physician-breadth row (Open Payments baseline, withheld machine-data chips).
+- Every number carries a chip (page, withheld, derived, data row) and the numbers-check pill; assumption
+  markers show their reason. Score L, S, robustness and needle-status words appear only on `/cockpit/triage`
+  (unlinked, "Internal triage view, not part of the pitch"); tooltips and drawers filter them out elsewhere.
+- Parker's trim layer on cockpit routes with a "Full detail" pill; the chat page is untouched by it.
+- Last sweeps (this commit's data): chat 16 of 17 clean (the one flag is honest-limits prose saying "no
+  detector yet"), cockpit 80 pages, 102 sub-states and 10 printed memos clean, hero above the fold at
+  1280 x 800 for all ten, drawer term filter clean.
 
-**v2 data (follow-up pass, same evening).** The UI now reads the v2 engine export. League order AMGN, GILD,
-JNJ, AZN, MRK, ABBV, BMY, LLY, PFE, NVO; default ticker AMGN. New on screen: needle status pill (strict /
-provisional / floor relaxed; 5 of 10 provisional), withheld-citation chips and drawer, the decide panel and
-kill-signal table (stance.decide covers LLY only; the other nine keep the template stance), Score anatomy v2,
-product v2 tables with per-cell citations (20 of 22 case-set products; AMGN Repatha and Enbrel pending a
-product_cli error, so they show the v1 table with a note), and a numbers-check pill next to "quote located".
-Re-swept: 70 route pages and 102 product/Ask states clean, dark mode and static build clean.
-
-**Known gap: numbers are not page-checked yet.** The verifier proves each quote is on its page, not the
-numbers in the finding sentence; the citation skeptics found about 58% of numeric tokens in v2 finding
-sentences on pages that do not contain them. Until league_v3 fills `numeric_check`, every finding shows a muted
-"numbers not yet page-checked" pill (hero, grid rows, memo points, Ask answers); the demo must not present
-numbers as page-verified. **AMGN's needle (receivables +17.5% YoY) is disputed pending v3:** the cited balance
-sheet compares June 2026 with December 2025, which is 6.9%.
-
-**v3 data (third pass).** `meta.engine` v3. League order AMGN, GILD, AZN, MRK, BMY, NVO, ABBV, LLY, PFE, JNJ;
-rank change vs v2 shown next to the rank. JNJ has needle status none: the hero says no row qualifies and shows
-the highest-scored finding as such. Robustness table (8 variants; AMGN leads in 6, GILD in 2) on the Briefing
-and Proof. Finding flags as pills; guard reason, corroborates link, fact key and impact channel in the
-selected-row strip. `numeric_check` is still unchecked everywhere pending the gate commit. Re-swept: 70 routes,
-102 sub-states, 10 printed memos clean; hero above the fold for all 10 (headline drops to 32 px for very long
-sentences); dark mode and static build clean.
-
-**Derived cites and marked sentences (fourth pass).** The UI renders `derived_from` evidence (own chip style;
-drawer lists clickable operands; memo sources print "derived from [n][m]"; withheld wins) and
-`finding.sentence_marked` (`[n]` chips, `[derived: a, b]`, amber `[assumption]` pills) on the hero, grid, memo
-points and Ask answers. Both were checked by injecting values; the export does not carry them yet. Proof now
-states the public status whitelist (exact, substring, fuzzy, number_match, derived; machine_data and
-unverified never quote). For the current artifact link, see PR #22.
-
-**Chat overhaul (Sat Oct 17, night): the chat is the demo, the cockpit is depth.** `/#/` is now one page: a
-chatbot over cached answers in `ui/public/data/memos.json` (format "chat" for Part 1 Find questions, "memo"
-for the Part 2 CEO memo card with TO / FROM / RE / DATE, Copy as markdown and Print). Suggested chips run
-needle, findings, product, priced-in, the CEO memo, then "Where was the AI wrong?", and `ask_next` chips let a
-judge click through in under a minute. `/#/?q=<prompt>` opens on an answer. The seven cockpit screens moved
-under `/#/cockpit` (old links redirect), reached from a small "Full cockpit" link. Until the exporter's
-memos.json lands, the page shows a 3-record sample (`_sample/memos.json`) with a banner.
-
-**Pitch trim (Sat Oct 17, late night).** League score, S equation, score anatomy, robustness and rank vs v2
-are off every judge-facing surface (chat and cockpit Briefing / Proof) and live at `/#/cockpit/triage` (unlinked,
-"Internal triage view, not part of the pitch"). The chat starts at "Pick a company" unless
-`meta.default_ticker_source` is "pick". Parker's trim layer (`ui/public/assets/trim.js`, `trim.css`) runs on
-cockpit routes only with a "Full detail" pill; `fit.css` is now in the repo and linked from `index.html`. The Briefing hero uses the rule
-needle (`needle_id_rule`), the grid follows `findings_table` ranked by impact, Proof shows `ai_wrong_cases` and
-`honest_limits`, and tooltips / drawers never name score L, S, obscurity, robustness or needle status words.
-
-**Open.**
-- `sentence_marked` / `derived_from` in the export.
-- `numeric_check` and token-level assumption tags (for "[assumption]" markers) not in the export yet.
-- stance.decide for the nine companies other than LLY; AMGN product v2 tables.
-- VRTX is onboarding-pending (no findings, no company file, not in the picker).
-- The JS bundle is about 800 kB (about 230 kB gzip); fine for a local demo, not code-split.
+**Known gaps.**
+- AZN and NVO needles come from the plain rule, not the red-team read.
+- 6 companies (ABBV, AZN, BMY, JNJ, NVO, PFE) have a template stance, not a valued move.
+- VRTX products are missing (onboarding pending, no findings or company file).
+- The JS bundle is about 800 kB (230 kB gzip).
+- Needle answers run over 160 words for AMGN (184), ABBV (195) and GILD (197).
+- `meta.honest_limits` still mentions "a published robustness table".
