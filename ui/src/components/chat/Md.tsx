@@ -50,7 +50,7 @@ export function Md({ md, cite, prefix }: { md: string; cite: (n: number) => Evid
     if ((m = p.match(/^\[derived:\s*([^\]]+)\]$/))) {
       const ns = m[1].split(",").map((x) => x.trim());
       return (
-        <span key={i} className="inline-flex items-baseline gap-0.5 text-[11px] text-purple" title="Derived number: computed from the cited operands">
+        <span key={i} className="inline-flex flex-wrap items-baseline gap-0.5 text-[11px] text-purple" title="Derived number: computed from the cited operands">
           <span className="italic">derived</span>
           {ns.map((x, j) => (/^\d+$/.test(x) ? chip(Number(x), `d${i}-${j}`) : <AssumptionPill key={j} />))}
         </span>

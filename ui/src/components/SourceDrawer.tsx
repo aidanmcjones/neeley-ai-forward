@@ -138,7 +138,7 @@ export function SourceDrawer({ evidence: evRaw, onClose }: { evidence: Evidence;
           {ev.period && <Row k="Period">{ev.period}</Row>}
           {(ev.page != null || ev.printed || ev.location) && <Row k="Page"><span className="font-mono tnum">{ev.location || ev.printed || ev.page}</span></Row>}
           {ev.value != null && ev.value !== "" && <Row k="Value"><span className="font-mono tnum">{String(ev.value)}{ev.unit ? ` ${ev.unit}` : ""}</span></Row>}
-          {ev.viewer_link && /^https?:|^\//.test(ev.viewer_link) && <Row k="Viewer"><a href={ev.viewer_link} target="_blank" rel="noreferrer" className="text-purple underline break-all">open in the local viewer</a></Row>}
+          {ev.viewer_link && /^https?:|^\//.test(ev.viewer_link) && <Row k="Viewer"><a href={ev.viewer_link} target="_blank" rel="noreferrer" className="text-purple underline break-all">{/^https?:/.test(ev.viewer_link) ? "open the source dataset" : "open in the local viewer"}</a></Row>}
         </dl>
         <p className="rounded-md border border-dashed border-warn/60 px-3 py-2 text-sm">
           <span className="font-semibold text-warn">Quote withheld: {withheldReason(ev)}.</span>{" "}

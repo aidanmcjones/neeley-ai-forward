@@ -185,6 +185,22 @@ def numeric_summary(rec):
     return {"status": "no_numbers", "note": f"{blocks} blocks, none states a number"}
 
 
+def keep_dataset_links(obj):
+    """A machine-data cite (CMS rows cited by locator) keeps its public dataset URL as viewer_link: the public rule
+    withholds the quote and the deep link, never the dataset the row comes from."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == "cites" and isinstance(v, list):
+                for c in v:
+                    if isinstance(c, dict) and c.get("verify_status") == "machine_data" and c.get("url") and not c.get("viewer_link"):
+                        c["viewer_link"] = c["url"]
+            else:
+                keep_dataset_links(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            keep_dataset_links(v)
+
+
 def build_company(raw, ticker, p1rec):
     """The exported record: contract keys only, cites withheld, markers repaired, ungated figures withheld."""
     rec = copy.deepcopy(raw) if isinstance(raw, dict) else {}
@@ -208,6 +224,7 @@ def build_company(raw, ticker, p1rec):
             r["cites"] = cites
             rows.append(r)
         promo["claims_map"] = rows
+    keep_dataset_links(rec)
     withhold_tree(rec)
     walk_marked(rec, fix=True)
     budget = (rec.get("move") or {}).get("budget") if isinstance(rec.get("move"), dict) else None
