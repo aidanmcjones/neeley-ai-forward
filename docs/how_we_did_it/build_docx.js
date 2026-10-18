@@ -219,7 +219,7 @@ add(
   }),
   new Paragraph({
     spacing: { after: 60 },
-    children: [muted("Team NEEDLE: Aidan Jones and Parker  ·  TCU Neeley School of Business  ·  October 18, 2026", 18)],
+    children: [muted("Team NEEDLE: Aidan Jones and Parker Kingsbury  ·  TCU Neeley School of Business  ·  October 18, 2026", 18)],
   }),
   rule(CLAY, 280, 160)
 );
