@@ -247,17 +247,17 @@ add(
   bodyRuns([
     run("Over thirty hours we built Needle in the Haystack, a system that finds material, non-obvious facts in pharmaceutical filings and turns them into one defensible CEO decision. It reads ten companies blind. Two skeptics who assume each candidate finding is wrong argue over it. The company pick is sealed with a hash before anyone can influence it, and no number reaches the screen unless it traces to a page a judge can open."),
   ]),
-  body("The deliverable is a chat page with two prompts, both taken verbatim from the case. The first returns a five-finding table, a Sharpest Needle and a product fine-print comparison for Amgen, Merck or Pfizer. The second returns one strategic move for the next 24 months with a budget, the math, two rejected alternatives and the signals that would prove it wrong. Every figure on the page carries a footnote that opens the source document at the cited page."),
-  body("This report covers the tools we used and what each was for, how documents reached the AI and how the work was split between people and tools, the prompts that mattered most, the cases where the AI was confidently wrong, and what we would do differently. We logged 542 of those wrong cases. A person reading a page caught the ones that taught us the most.")
+  body("The deliverable is a chat page with two prompts, both taken verbatim from the case and labelled Find the needle and The CEO Move. The first returns a five-finding table, a Sharpest Needle and a product fine-print comparison for Amgen, Merck or Pfizer. The second returns one strategic move for the next 24 months with a budget, the math, two rejected alternatives and the signals that would prove it wrong. Every figure on the page carries a footnote that opens the source document at the cited page. Anyone can open it, with no login, at aidanmcjones.github.io/needle-demo, and a seven-slide deck sets it up for a three-to-five-minute pitch."),
+  body("This report covers the tools we used and what each was for, how documents reached the AI and how the work was split between people and tools, the prompts that mattered most, the cases where the AI was confidently wrong, and what we would do differently. We logged 543 of those wrong cases. A person reading a page caught the ones that taught us the most.")
 );
 
 add(
   spacer(120),
   statStrip([
-    ["78,392", "pages in the citation index, from 7,003 documents and 117,904 fact rows"],
+    ["78,392", "pages in the citation index, from 7,005 documents and 118,329 fact rows"],
     ["95", "candidate findings from ten blind readers; 70 killed, 25 narrowed, 0 survived as first stated"],
     ["503", "numbers and 261 citations re-verified by an independent agent; 7 defects, all scoping, all fixed"],
-    ["542", "logged cases of a confidently wrong AI, each with the source, the catch and the fix"],
+    ["543", "logged cases of a confidently wrong AI, each with the source, the catch and the fix"],
   ]),
   spacer(80)
 );
@@ -284,13 +284,14 @@ add(
       ["Claude Code with Claude Opus 5.5", "Four long-running sessions (scraper, model, UI, watcher) and 59 worker agents launched by the model session. Every reader, skeptic, synthesizer, ranker, writer, strategist and verifier was an Opus agent with a written brief. Later sessions ran on Claude Fable 5.1."],
       ["Git worktrees and a PR chain", "Each session owned one branch and one open pull request. No two agents edited the same file. Chain: scaffold #1, gap-data #2, corpus #5, Parker's needle branch, data-moat #16, quant-model #21, ui #22."],
       ["Python collectors", "Fetched SEC EDGAR filings and XBRL companyfacts, DailyMed labels, Orange and Purple Book dates, CMS Part B and Part D files, NADAC, FAERS, ClinicalTrials.gov, ICER reports and GDELT news volumes into page-marked text and verified CSV tables."],
-      ["The citation index (SQLite, FTS5)", "7,003 documents, 78,392 pages, 15,463 speaker turns and 117,904 fact rows. A five-call API: search_pages, search_facts, get_page, cite, verify_quote. Transcripts graded A to D for quotability; Bloomberg pages flagged as licensed."],
+      ["The citation index (SQLite, FTS5)", "7,005 documents, 78,392 pages, 15,463 speaker turns and 118,329 fact rows. A five-call API: search_pages, search_facts, get_page, cite, verify_quote. Transcripts graded A to D for quotability; Bloomberg pages flagged as licensed."],
       ["Eight case retrieval helpers", "One per item on the case's own 'where findings hide' list: language drift, gross-to-net, working capital, segment changes, footnotes, call Q&A, label fine print, peer forces. Each returns cited rows and never ranks them."],
       ["The per-number citation gate", "Python that checks every figure in every block one at a time against the quoted span, a recomputed derivation or a printed assumption label, and withholds anything else."],
-      ["Adversarial review pattern", "Two skeptic agents with different lenses, two rounds in which each reads the other, a synthesizer who never averages, then a fresh verifier. Used on the quant spec, the gate itself, the backtest, every Part 1 finding and every Part 2 move."],
+      ["Adversarial review pattern", "Two skeptic agents with different lenses, two rounds in which each reads the other, a synthesizer who never averages, then a fresh verifier. Used on the quant spec, the gate itself, the backtest, every Part 1 finding and every Part 2 move, and later on the pitch deck's layout and wording."],
       ["Bloomberg transcripts and WRDS I/B/E/S", "Official transcripts to upgrade quote grades, and analyst consensus for the 'was it priced in' test. Both are licensed, so we used them locally and cited them by label only."],
       ["pytest", "259 tests across the data, citation and model code. Every behavior change carried a test."],
-      ["Vite and React, published as a claude.ai Artifact", "A static one-page chat with cached answers and no API key, republished on every commit so Parker and the judges always saw the committed state."],
+      ["Vite and React, published as a claude.ai Artifact and on GitHub Pages", "A static one-page chat with cached answers and no API key, republished to the artifact on every commit so Parker always saw the committed state. The artifact needs a claude.ai login, so a public copy on GitHub Pages is what the deck's QR code opens."],
+      ["python-pptx and PowerPoint", "Built the seven-slide pitch deck from code in the product's theme, with every number on a slide linked to its filing page. Review renders were exported through PowerPoint itself, because LibreOffice swapped in other fonts and misreported the layout."],
       ["agent-chat (GitHub issues)", "A message bus so Aidan's and Parker's agents could ask each other for data without a human relaying."],
       ["Cloudflare R2", "Bulk storage for the corpus and the gzipped index, so either machine could rebuild from the same bytes."],
     ],
@@ -308,7 +309,7 @@ add(
   body("The scraper session ran five waves on Saturday. The first fetched the ten shortlist companies at filing depth, with ten quarters of graded calls. The second built the Part 2 backend for all ten companies and 52 drugs, covering epidemiology, peers, deals, pipeline, costs and prescribers. The third filled every gap a free source could still fill. The fourth built the eight case helpers. The fifth was a Part 2 evidence wave of labels, head-to-head trials, payer tables, deal comps and 325 page-anchored filing numbers for the three picked companies. Explicit negatives are rows too, so 'no public source' is itself citable."),
 
   h2("3.2 How the work was split between people and tools"),
-  body("Two people ran four long-lived Claude Code sessions, each in its own git worktree with its own branch and pull request. Parker owned the company read, the human judgment on findings, the Part 2 content and the deck. Aidan owned the API key, the repository and PR chain, the UI, the demo, this report and the submission. A fourth session, the watcher, did no building. It checked the other three against their goals, the rubric and the one deadline, and ruled on discrepancies when a refresh moved a published number."),
+  body("Two people ran four long-lived Claude Code sessions, each in its own git worktree with its own branch and pull request. Parker owned the company read, the human judgment on findings and the Part 2 content, and he shaped the judge-facing page himself, editing its layout in the browser. Aidan owned the API key, the repository and PR chain, the UI, the demo and its public copy, the pitch deck, this report and the submission. A fourth session, the watcher, did no building. It checked the other three against their goals, the rubric and the one deadline, and ruled on discrepancies when a refresh moved a published number."),
   body("Parker's branch also carried a nugget miner and a red-team agent that read footnotes, risk language and call Q&A for each company and scored our work against the rubric. We demoted an earlier quantitative league table, which ranked companies by a scoring equation, to internal triage on Saturday evening after a scorer bug misled it (Section 5). Nothing from it appears in the pitch."),
   figure("fig3_team.png", "Figure 4. People, sessions and branches. Sessions messaged each other directly with status, commit SHAs, data inventories and rulings.", 5.3),
   body("Keeping each agent's scope narrow did more for us than any wording in the prompts. Every worker agent opened with the same frame. It is a worker and not an orchestrator, it works only in its own worktree, it owns only the files named, it does not spawn agents, and it reports file paths and counts. No two agents edited the same file all weekend."),
@@ -355,7 +356,12 @@ add(
     [bold("Tests and greps. "), run("259 tests, plus two mechanical checks after every write: a pattern that catches a dropped leading digit (one shell heredoc turned '$2.4B' into '.4B' before we banned heredocs for output) and a count of em dashes, which must be zero.")],
     [bold("A human read. "), run("A person opened the cited page behind every needle. Several of our worst errors passed every code check, and that read is where we caught them.")],
   ]),
-  body("Across sessions, the watcher ran status checks, enforced the single deadline and ruled on refresh discrepancies. Its rulings were that a cited benchmark replaces an unsourced assumption even when it moves a number, that a timing assumption stays when no page dates it, and that a published number which fails against a new source is logged and reported before anyone edits it.")
+  body("Across sessions, the watcher ran status checks, enforced the single deadline and ruled on refresh discrepancies. Its rulings were that a cited benchmark replaces an unsourced assumption even when it moves a number, that a timing assumption stays when no page dates it, and that a published number which fails against a new source is logged and reported before anyone edits it."),
+
+  h2("3.6 Getting it in front of judges"),
+  body("The last morning went into making the work easy for a judge to read without changing a single cited number. The chat took the name Needle in the Haystack and a haystack theme, and its two prompts were relabelled Find the needle and The CEO Move, with the case's own Part 1 and Part 2 kept beside them on the slides. Answers now open with what the case grades first. The product answer leads with what limits growth and the tie to the numbers, and the CEO Move leads with what it should return. When that summary started repeating the detail below it, the expandable section was cut back to only what the summary leaves out."),
+  body("The judge-facing page lives on Parker's claude.ai artifact, which needs a login to open. We published an exact copy to GitHub Pages so the QR code on the deck opens it on any phone. The copy is a snapshot, so each change to the artifact is pushed to it again, and we check that the two match by file fingerprint."),
+  body("The deck went through the same adversarial pattern as the analysis. A skeptic agent reviewed PowerPoint renders of every slide for gaps, sizing, alignment and arrows over three rounds; it flagged 25 problems in the first round and two in the last, and every slide passed. A second skeptic read every line of slide text and speaker notes for machine-sounding phrasing and proposed 30 rewrites that kept each number, citation and asterisk. We applied most of them, and overrode the ones that would have made a claim less accurate (Section 5).")
 );
 
 // 4. Prompts
@@ -410,7 +416,7 @@ RULES:
 // 5. AI wrong
 add(
   h1("5. Where the AI was confidently wrong"),
-  body("We kept a log. The collectors recorded 516 cases where a model wrote something the source did not say, each with what it wrote, what the page says and how it was caught. The model and findings work added 26 more. The table picks the cases that changed how we built, grouped by what caught them."),
+  body("We kept a log. The collectors recorded 516 cases where a model wrote something the source did not say, each with what it wrote, what the page says and how it was caught. The model, findings and deck work added 27 more. The table picks the cases that changed how we built, grouped by what caught them."),
   table(
     ["What the AI claimed", "What was true", "Caught by", "What changed"],
     [
@@ -425,6 +431,7 @@ add(
       ["The Amgen Sharpest Needle rationale read 'the only surviving ruling both skeptics held through both rounds'.", "A second candidate had the same profile. The sentence overclaimed and the block had no marker map to trace its numbers.", "The independent verifier, as its single worst defect.", "The rationale was rewritten truthfully and given a marker map; the gate now checks for marker maps."],
       ["The Amgen blind reader: TAVNEOS sales appear in no filing table.", "The 10-K itemises them on page 75.", "The synthesizer settling the fact from the page.", "Readers' data-gap notes are treated as claims to verify, not facts."],
       ["A Part 2 move named a real executive as its owner, and a trial cost of $150,000 per patient stood as a bare assumption.", "The name was on no cited page. A published benchmark (Sertkaya 2024) was in the index.", "The orchestrator's post-synthesis read and the scraper's fills.", "Name the role unless the name is on a cited page. A cited benchmark replaces an assumption even when it moves a number."],
+      ["A copy-editing agent rewrote Repatha's label row, 'CV outcomes incl. revascularization', as 'Heart events + stents' to make it plainer.", "The label's coronary revascularization covers bypass surgery as well as stents, so the plainer line understated the label edge.", "The orchestrator checking each wording change against the cited label before applying it.", "A rewrite that touches a factual claim is checked against its source first. The row now reads 'Heart events + procedures'."],
       ["A $100 billion market forecast recorded as an upfront deal payment, and a takeover target's market cap 50 times too high from pricing ordinary shares at the ADS rate.", "Collector misreads of a press release and a share count.", "Hand checks on 554 deal rows and every target's balance sheet date.", "Deal benchmarks rebuilt from verified rows only; every target priced from one balance-sheet date."],
     ],
     [1.8, 1.8, 1.3, 1.8],
@@ -447,6 +454,8 @@ add(
     [bold("Give every skeptic the operands to test. "), run("Generic instructions produced generic verdicts. Lifting the specific figures, comparables and deciders from the candidates file into each prompt made round two sharp.")],
     [bold("Fix identifiers on day one. "), run("Unstable ids broke joins quietly for hours.")],
     [bold("Arm the API key earlier. "), run("The planned one-pass model track, with citations on every block and the courtroom trial, stayed a plan. Every sentence in the demo is deterministic. That is honest, but a checked model track would have been better.")],
+    [bold("Get product-level analyst estimates. "), run("Our consensus data is company-level, so every priced-in call is an inference from how often analysts asked and how the stock moved, and none rates above medium confidence. Product-level estimates would let us test the call directly.")],
+    [bold("Publish where judges can open it from the start. "), run("The demo lived behind a claude.ai login until the last morning, when we copied it to a public page. A public URL on day one would have saved a scramble.")],
     [bold("Write partial output early and keep per-worker scratch space. "), run("The host machine slept mid-run once, and parallel workers collided on a shared folder once. Both are avoidable.")],
   ])
 );
@@ -459,7 +468,7 @@ add(
   rule(LINE, 120, 200),
   new Paragraph({
     spacing: { after: 0 },
-    children: [muted("Repository: aidanmcjones/neeley-ai-forward. Final commits: data-moat ce3c0f2, quant-model 2460a00, ui 2401772. Sealed selection sha256 903fc656fa7a1d1b2bdf303d8d8f9321d5f1f7b741f6b751c4cdf4f9c40c8fa7.", 16)],
+    children: [muted("Repository: aidanmcjones/neeley-ai-forward. Final commits: data-moat ce3c0f2, ui 9f064c4, quant-model at the commit that carries this report. Public demo: aidanmcjones.github.io/needle-demo. Sealed selection sha256 903fc656fa7a1d1b2bdf303d8d8f9321d5f1f7b741f6b751c4cdf4f9c40c8fa7.", 16)],
   })
 );
 
