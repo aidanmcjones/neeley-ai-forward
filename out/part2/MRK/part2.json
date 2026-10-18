@@ -1,0 +1,2781 @@
+{
+ "ticker": "MRK",
+ "company": "Merck & Co., Inc.",
+ "generated_at": "2026-10-18T05:32:37+00:00",
+ "move": {
+  "text": "Merck's CFO and head of manufacturing fund a $7.5M, 15-person team that by month 6 splits the $5.9B long-dated inventory pool by product and discloses the split in the 10-Q inventory note, then releases only the sellable surplus, up to $1.0B counted net of reserve charges, to retire the 4.30% notes due 2028 instead of refinancing them.",
+  "text_marked": "Merck's CFO and head of manufacturing fund a $7.5M[derived: assumption], 15-person[assumption] team that by month 6[assumption] splits the $5.9B[1] long-dated inventory pool by product and discloses the split in the 10-Q inventory note, then releases only the sellable surplus, up to $1.0B[2] counted net of reserve charges, to retire the 4.30%[2] notes due 2028 instead of refinancing them.",
+  "marker_map": {
+   "1": "c_1027131b6d",
+   "2": "c_aa4f2527f1"
+  },
+  "cites": [
+   {
+    "cite_id": "c_1027131b6d",
+    "doc_id": "MRK:10q_2026Q2.md",
+    "page": 19,
+    "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+    "label": "Merck 10-Q 2026-06-30, p. 19",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+    "quote_grade": "",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": "",
+    "doc_title": "Merck 10-Q 2026-06-30",
+    "location": "p. 19",
+    "speaker": null,
+    "locator": "MRK:10q_2026Q2.md#p19",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+    "verify_quote": true,
+    "note": ""
+   },
+   {
+    "cite_id": "c_aa4f2527f1",
+    "doc_id": "MRK:10q_2026Q2.md",
+    "page": 19,
+    "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+    "label": "Merck 10-Q 2026-06-30, p. 19",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+    "quote_grade": "",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": "",
+    "doc_title": "Merck 10-Q 2026-06-30",
+    "location": "p. 19",
+    "speaker": null,
+    "locator": "MRK:10q_2026Q2.md#p19",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+    "verify_quote": true,
+    "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+   }
+  ],
+  "numeric_check": {
+   "status": "passed",
+   "checked": 6,
+   "total": 6,
+   "verified": 3,
+   "derived": 1,
+   "assumed": 2,
+   "unsupported": []
+  },
+  "derived": {
+   "cost": {
+    "value": "$7.5M",
+    "expr": "n * c * y / 1000000",
+    "operands": {
+     "n": {
+      "value": 15,
+      "assumption": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount"
+     },
+     "c": {
+      "value": 250000,
+      "assumption": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE"
+     },
+     "y": {
+      "value": 2,
+      "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+     }
+    }
+   }
+  },
+  "assumptions": {
+   "15": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount",
+   "250,000": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE",
+   "2": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)",
+   "24": "24-month decision window of the brief",
+   "6": "month 6 decision gate set by this move"
+  },
+  "type": "other:working_capital_release",
+  "budget": {
+   "amount_usd": 7500000,
+   "people": 15,
+   "period": "24 months",
+   "text": "$7.5M over 24 months: 15 people x $250,000 loaded cost per person-year x 2 years, all assumptions because no Merck page gives supply-planning headcount or cost per person. Owners: the CFO and the head of manufacturing. They decide at month 6, on the review's product split, whether anything is released.",
+   "text_marked": "$7.5M[derived: assumption] over 24[assumption] months: 15[assumption] people x $250,000[assumption] loaded cost per person-year x 2[assumption] years, all assumptions because no Merck page gives supply-planning headcount or cost per person. Owners: the CFO and the head of manufacturing. They decide at month 6[assumption], on the review's product split, whether anything is released.",
+   "marker_map": {},
+   "cites": [],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 6,
+    "total": 6,
+    "verified": 0,
+    "derived": 1,
+    "assumed": 5,
+    "unsupported": []
+   },
+   "derived": {
+    "cost": {
+     "value": "$7.5M",
+     "expr": "n * c * y / 1000000",
+     "operands": {
+      "n": {
+       "value": 15,
+       "assumption": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount"
+      },
+      "c": {
+       "value": 250000,
+       "assumption": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE"
+      },
+      "y": {
+       "value": 2,
+       "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "15": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount",
+    "250,000": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE",
+    "2": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)",
+    "24": "24-month decision window of the brief",
+    "6": "month 6 decision gate set by this move"
+   }
+  }
+ },
+ "drivers": [
+  {
+   "finding_n": 2,
+   "why": "Driver. The long-dated inventory pool is the only Part One finding that both skeptics left standing as a move: it ties up cash Merck is now borrowing to replace, it kept growing after the tariff delay that was its stated reason, and a product split plus a capped, net-of-reserve release is a step the CFO controls without a counterparty.",
+   "cites": [
+    {
+     "cite_id": "c_1027131b6d",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_cf73b71bcd",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107,
+     "quote": "these amounts included $ 5.5 billion and $ 3.8 billion, respectively, of inventories not expected to be sold within one year",
+     "label": "Merck 10-K FY2025, p. 105",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 105",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p107",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=107&q=these%20amounts%20included%20%24%205.5%20billion%20and%20%24%203.8%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_aa4f2527f1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_8dd6bf4634",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32,
+     "quote": "delay Section 232 tariffs for three years, enabling the Company to make investments in the U.S. to reshore manufacturing",
+     "label": "Merck 10-Q 2026-06-30, p. 32",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=tariffs%20for%20three%20years%2C%20enabling%20the%20Company%20to",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 32",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p32",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=32&q=delay%20Section%20232%20tariffs%20for%20three%20years%2C%20enabling%20the%20Company%20to%20make%20investments%20in%20the%20U.S.%20to%20reshore%20manufacturing",
+     "verify_quote": true,
+     "note": ""
+    }
+   ]
+  },
+  {
+   "finding_n": 1,
+   "why": "Not the driver, though it is the Sharpest Needle. Both skeptics killed the tax-settlement move: Merck already contests the NOPAs in administrative proceedings, the annual report says resolution may take a number of years, a reserved penalty would come back as a non-cash release, and disclosing reserve coverage would hand the IRS Merck's own estimate. The move's cash plan keeps this exposure separate from the inventory release (see case_for.net).",
+   "cites": [
+    {
+     "cite_id": "c_06fd4e5e53",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "would increase the amount of the one-time transition tax on certain undistributed earnings of foreign subsidiaries by approximately $ 1.3 billion",
+     "label": "Merck 10-Q 2026-06-30, p. 25",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=would%20increase%20the%20amount%20of%20the%20one%2Dtime%20transition",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=would%20increase%20the%20amount%20of%20the%20one-time%20transition%20tax%20on%20certain%20undistributed%20earnings%20of%20foreign%20subsidiaries%20by%20approximately%20%24%201.3%20billion",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_c4cbdae1c4",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "the NOPAs included penalties of approximately $ 260 million. These amounts are exclusive of any interest that may be due",
+     "label": "Merck 10-Q 2026-06-30, p. 25",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=the%20NOPAs%20included%20penalties%20of%20approximately%20%24%20260",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=the%20NOPAs%20included%20penalties%20of%20approximately%20%24%20260%20million.%20These%20amounts%20are%20exclusive%20of%20any%20interest%20that%20may%20be%20due",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_d312d9da34",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "is vigorously contesting the NOPAs through available administrative proceedings",
+     "label": "Merck 10-Q 2026-06-30, p. 25",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative%20proceedings",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_aadd07008d",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131,
+     "quote": "It may take a number of years to reach resolution of this matter",
+     "label": "Merck 10-K FY2025, p. 129",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=It%20may%20take%20a%20number%20of%20years%20to",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 129",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p131",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=It%20may%20take%20a%20number%20of%20years%20to%20reach%20resolution%20of%20this%20matter",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_c17f1fd3ba",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131,
+     "quote": "Liabilities for accrued interest and penalties were $ 546 million and $ 437 million as of December 31, 2025 and 2024, respectively",
+     "label": "Merck 10-K FY2025, p. 129",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=Liabilities%20for%20accrued%20interest%20and%20penalties%20were",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 129",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p131",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=Liabilities%20for%20accrued%20interest%20and%20penalties%20were%20%24%20546%20million%20and%20%24%20437%20million%20as%20of%20December%2031%2C%202025%20and%202024%2C%20respectively",
+     "verify_quote": true,
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "case_for": {
+  "cost": {
+   "text": "Cost is $7.5M = 15 people x $250,000 per person-year x 2 years. Write-downs the review finds are not a cost of the move: Merck is already booking them (non-GAAP gross margin guidance moved from about 82.0% to about 81.0% and now includes higher inventory reserves), so they are netted out of the release on the return side.",
+   "text_marked": "Cost is $7.5M[derived: assumption] = 15[assumption] people x $250,000[assumption] per person-year x 2[assumption] years. Write-downs the review finds are not a cost of the move: Merck is already booking them (non-GAAP gross margin guidance moved from about 82.0%[1] to about 81.0%[1] and now includes higher inventory reserves), so they are netted out of the release on the return side.",
+   "marker_map": {
+    "1": "c_004859ebd3"
+   },
+   "cites": [
+    {
+     "cite_id": "c_004859ebd3",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 6,
+    "total": 6,
+    "verified": 2,
+    "derived": 1,
+    "assumed": 3,
+    "unsupported": []
+   },
+   "derived": {
+    "cost": {
+     "value": "$7.5M",
+     "expr": "n * c * y / 1000000",
+     "operands": {
+      "n": {
+       "value": 15,
+       "assumption": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount"
+      },
+      "c": {
+       "value": 250000,
+       "assumption": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE"
+      },
+      "y": {
+       "value": 2,
+       "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "15": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount",
+    "250,000": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE",
+    "2": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)",
+    "24": "24-month decision window of the brief",
+    "6": "month 6 decision gate set by this move"
+   }
+  },
+  "return": {
+   "text": "Return is pre-tax interest avoided on the 4.30% notes over 24 months, by release scenario: nothing if the review finds the pool is bridge or pre-patent-expiry stock; $14.5M if $0.34B is released, the $1.0B cap less a $0.66B impaired slice; $43M if the full $1.0B is released. Weighted 30%, 40% and 30%, expected interest is $18.7M and the expected one-time cash release is $0.43B, counted net of reserve charges.",
+   "text_marked": "Return is pre-tax interest avoided on the 4.30%[1] notes over 24[assumption] months, by release scenario: nothing if the review finds the pool is bridge or pre-patent-expiry stock; $14.5M[derived: 1, 2, 3] if $0.34B[derived: 1, 2, 3] is released, the $1.0B[1] cap less a $0.66B[derived: 2, 3] impaired slice; $43M[derived: 1, assumption] if the full $1.0B[1] is released. Weighted 30%[assumption], 40%[assumption] and 30%[assumption], expected interest is $18.7M[derived: 1, 2, 3, assumption] and the expected one-time cash release is $0.43B[derived: 1, 2, 3, assumption], counted net of reserve charges.",
+   "marker_map": {
+    "1": "c_aa4f2527f1",
+    "2": "c_004859ebd3",
+    "3": "c_d2ee6e207a"
+   },
+   "cites": [
+    {
+     "cite_id": "c_aa4f2527f1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_004859ebd3",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_d2ee6e207a",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Revenue $65.8B to $67.0B $66.3B to $67.3B",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Revenue%20%2465.8B%20to%20%2467.0B%20%2466.3B%20to%20%2467.3B",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 13,
+    "total": 13,
+    "verified": 3,
+    "derived": 6,
+    "assumed": 4,
+    "unsupported": []
+   },
+   "derived": {
+    "imp": {
+     "value": "$0.66B",
+     "expr": "r * (a - b) / 100",
+     "operands": {
+      "r": {
+       "value": 66.3,
+       "text": "$66.3B",
+       "cite_id": "c_d2ee6e207a"
+      },
+      "a": {
+       "value": 82.0,
+       "text": "82.0%",
+       "cite_id": "c_004859ebd3"
+      },
+      "b": {
+       "value": 81.0,
+       "text": "81.0%",
+       "cite_id": "c_004859ebd3"
+      }
+     }
+    },
+    "gmpt": {
+     "value": "1 point",
+     "expr": "a - b",
+     "operands": {
+      "a": {
+       "value": 82.0,
+       "text": "82.0%",
+       "cite_id": "c_004859ebd3"
+      },
+      "b": {
+       "value": 81.0,
+       "text": "81.0%",
+       "cite_id": "c_004859ebd3"
+      }
+     }
+    },
+    "mid": {
+     "value": "$0.34B",
+     "expr": "cap - imp",
+     "operands": {
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "imp": {
+       "derived": "imp"
+      }
+     }
+    },
+    "i_mid": {
+     "value": "$14.5M",
+     "expr": "mid / 2 * r / 100 * y * 1000",
+     "operands": {
+      "mid": {
+       "derived": "mid"
+      },
+      "r": {
+       "value": 4.3,
+       "text": "4.30 %",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "y": {
+       "value": 2,
+       "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+      }
+     }
+    },
+    "i_high": {
+     "value": "$43M",
+     "expr": "cap / 2 * r / 100 * y * 1000",
+     "operands": {
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "r": {
+       "value": 4.3,
+       "text": "4.30 %",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "y": {
+       "value": 2,
+       "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+      }
+     }
+    },
+    "e_int": {
+     "value": "$18.7M",
+     "expr": "w2 * i_mid + w3 * i_high",
+     "operands": {
+      "w2": {
+       "value": 0.4,
+       "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+      },
+      "i_mid": {
+       "derived": "i_mid"
+      },
+      "w3": {
+       "value": 0.3,
+       "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+      },
+      "i_high": {
+       "derived": "i_high"
+      }
+     }
+    },
+    "e_rel": {
+     "value": "$0.43B",
+     "expr": "w2 * mid + w3 * cap",
+     "operands": {
+      "w2": {
+       "value": 0.4,
+       "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+      },
+      "mid": {
+       "derived": "mid"
+      },
+      "w3": {
+       "value": 0.3,
+       "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+      },
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "15": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount",
+    "250,000": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE",
+    "2": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)",
+    "24": "24-month decision window of the brief",
+    "6": "month 6 decision gate set by this move",
+    "30%": {
+     "value": "30%",
+     "label": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+    },
+    "40%": {
+     "value": "40%",
+     "label": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+    }
+   }
+  },
+  "math_steps": [
+   {
+    "step": 1,
+    "text": "Pool: $5.9B at June 30, 2026 and $5.5B at December 31, 2025, against $3.8B at December 31, 2024. It grew $0.4B in the first half of 2026, after the December 2025 tariff delay, and it is almost entirely raw materials and work in process.",
+    "text_marked": "Pool: $5.9B[1] at June 30, 2026 and $5.5B[1] at December 31, 2025, against $3.8B[2] at December 31, 2024. It grew $0.4B[derived: 1] in the first half of 2026, after the December 2025 tariff delay, and it is almost entirely raw materials and work in process[3].",
+    "marker_map": {
+     "1": "c_1027131b6d",
+     "2": "c_cf73b71bcd",
+     "3": "c_b321ae8dcd"
+    },
+    "cites": [
+     {
+      "cite_id": "c_1027131b6d",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_cf73b71bcd",
+      "doc_id": "MRK:10k_FY2025.md",
+      "page": 107,
+      "quote": "these amounts included $ 5.5 billion and $ 3.8 billion, respectively, of inventories not expected to be sold within one year",
+      "label": "Merck 10-K FY2025, p. 105",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-K FY2025",
+      "location": "p. 105",
+      "speaker": null,
+      "locator": "MRK:10k_FY2025.md#p107",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=107&q=these%20amounts%20included%20%24%205.5%20billion%20and%20%24%203.8%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_b321ae8dcd",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "Amounts recognized as Other Assets are comprised almost entirely of raw materials and work in process inventories",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=Amounts%20recognized%20as%20Other%20Assets%20are%20comprised%20almost",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=Amounts%20recognized%20as%20Other%20Assets%20are%20comprised%20almost%20entirely%20of%20raw%20materials%20and%20work%20in%20process%20inventories",
+      "verify_quote": true,
+      "note": ""
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 4,
+     "total": 4,
+     "verified": 3,
+     "derived": 1,
+     "assumed": 0,
+     "unsupported": []
+    },
+    "derived": {
+     "grow_h1": {
+      "value": "$0.4B",
+      "expr": "a - b",
+      "operands": {
+       "a": {
+        "value": 5.9,
+        "text": "$ 5.9 billion",
+        "cite_id": "c_1027131b6d"
+       },
+       "b": {
+        "value": 5.5,
+        "text": "$ 5.5 billion",
+        "cite_id": "c_1027131b6d"
+       }
+      }
+     }
+    }
+   },
+   {
+    "step": 2,
+    "text": "Release cap: $1.0B, the size of the 4.30% notes due 2028. A full release leaves the pool at $4.9B, still above the $3.8B December 2024 level, so the move never treats the whole $2.1B build as surplus.",
+    "text_marked": "Release cap: $1.0B[1], the size of the 4.30%[1] notes due 2028. A full release leaves the pool at $4.9B[derived: 1, 2], still above the $3.8B[3] December 2024 level, so the move never treats the whole $2.1B[derived: 2, 3] build as surplus.",
+    "marker_map": {
+     "1": "c_aa4f2527f1",
+     "2": "c_1027131b6d",
+     "3": "c_cf73b71bcd"
+    },
+    "cites": [
+     {
+      "cite_id": "c_aa4f2527f1",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+      "verify_quote": true,
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_1027131b6d",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_cf73b71bcd",
+      "doc_id": "MRK:10k_FY2025.md",
+      "page": 107,
+      "quote": "these amounts included $ 5.5 billion and $ 3.8 billion, respectively, of inventories not expected to be sold within one year",
+      "label": "Merck 10-K FY2025, p. 105",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-K FY2025",
+      "location": "p. 105",
+      "speaker": null,
+      "locator": "MRK:10k_FY2025.md#p107",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=107&q=these%20amounts%20included%20%24%205.5%20billion%20and%20%24%203.8%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+      "verify_quote": true,
+      "note": ""
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 5,
+     "total": 5,
+     "verified": 3,
+     "derived": 2,
+     "assumed": 0,
+     "unsupported": []
+    },
+    "derived": {
+     "left": {
+      "value": "$4.9B",
+      "expr": "a - cap",
+      "operands": {
+       "a": {
+        "value": 5.9,
+        "text": "$ 5.9 billion",
+        "cite_id": "c_1027131b6d"
+       },
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       }
+      }
+     },
+     "build": {
+      "value": "$2.1B",
+      "expr": "a - b",
+      "operands": {
+       "a": {
+        "value": 5.9,
+        "text": "$ 5.9 billion",
+        "cite_id": "c_1027131b6d"
+       },
+       "b": {
+        "value": 3.8,
+        "text": "$ 3.8 billion",
+        "cite_id": "c_cf73b71bcd"
+       }
+      }
+     }
+    }
+   },
+   {
+    "step": 3,
+    "text": "Impairment haircut: guidance gross margin moved from about 82.0% to about 81.0% for higher inventory reserves. 1 point on the $66.3B low end of revenue guidance is $0.66B. The middle scenario releases $1.0B - $0.66B = $0.34B.",
+    "text_marked": "Impairment haircut: guidance gross margin moved from about 82.0%[1] to about 81.0%[1] for higher inventory reserves. 1 point[derived: 1] on the $66.3B[2] low end of revenue guidance is $0.66B[derived: 1, 2]. The middle scenario releases $1.0B[3] - $0.66B[derived: 1, 2] = $0.34B[derived: 1, 2, 3].",
+    "marker_map": {
+     "1": "c_004859ebd3",
+     "2": "c_d2ee6e207a",
+     "3": "c_aa4f2527f1"
+    },
+    "cites": [
+     {
+      "cite_id": "c_004859ebd3",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_d2ee6e207a",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Revenue $65.8B to $67.0B $66.3B to $67.3B",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Revenue%20%2465.8B%20to%20%2467.0B%20%2466.3B%20to%20%2467.3B",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_aa4f2527f1",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+      "verify_quote": true,
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 8,
+     "total": 8,
+     "verified": 4,
+     "derived": 4,
+     "assumed": 0,
+     "unsupported": []
+    },
+    "derived": {
+     "imp": {
+      "value": "$0.66B",
+      "expr": "r * (a - b) / 100",
+      "operands": {
+       "r": {
+        "value": 66.3,
+        "text": "$66.3B",
+        "cite_id": "c_d2ee6e207a"
+       },
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "gmpt": {
+      "value": "1 point",
+      "expr": "a - b",
+      "operands": {
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "mid": {
+      "value": "$0.34B",
+      "expr": "cap - imp",
+      "operands": {
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "imp": {
+        "derived": "imp"
+       }
+      }
+     }
+    }
+   },
+   {
+    "step": 4,
+    "text": "Interest by scenario, straight-line release (average balance is half the release) at 4.30% for 2 years: $0.34B / 2 x 4.30% x 2 = $14.5M; $1.0B / 2 x 4.30% x 2 = $43M; no release earns nothing.",
+    "text_marked": "Interest by scenario, straight-line release (average balance is half the release) at 4.30%[1] for 2[assumption] years: $0.34B[derived: 1, 2, 3] / 2[assumption] x 4.30%[1] x 2[assumption] = $14.5M[derived: 1, 2, 3]; $1.0B[1] / 2[assumption] x 4.30%[1] x 2[assumption] = $43M[derived: 1]; no release earns nothing.",
+    "marker_map": {
+     "1": "c_aa4f2527f1",
+     "2": "c_004859ebd3",
+     "3": "c_d2ee6e207a"
+    },
+    "cites": [
+     {
+      "cite_id": "c_aa4f2527f1",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+      "verify_quote": true,
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_004859ebd3",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_d2ee6e207a",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Revenue $65.8B to $67.0B $66.3B to $67.3B",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Revenue%20%2465.8B%20to%20%2467.0B%20%2466.3B%20to%20%2467.3B",
+      "verify_quote": true,
+      "note": ""
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 12,
+     "total": 12,
+     "verified": 4,
+     "derived": 3,
+     "assumed": 5,
+     "unsupported": []
+    },
+    "derived": {
+     "imp": {
+      "value": "$0.66B",
+      "expr": "r * (a - b) / 100",
+      "operands": {
+       "r": {
+        "value": 66.3,
+        "text": "$66.3B",
+        "cite_id": "c_d2ee6e207a"
+       },
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "gmpt": {
+      "value": "1 point",
+      "expr": "a - b",
+      "operands": {
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "mid": {
+      "value": "$0.34B",
+      "expr": "cap - imp",
+      "operands": {
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "imp": {
+        "derived": "imp"
+       }
+      }
+     },
+     "i_mid": {
+      "value": "$14.5M",
+      "expr": "mid / 2 * r / 100 * y * 1000",
+      "operands": {
+       "mid": {
+        "derived": "mid"
+       },
+       "r": {
+        "value": 4.3,
+        "text": "4.30 %",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+       }
+      }
+     },
+     "i_high": {
+      "value": "$43M",
+      "expr": "cap / 2 * r / 100 * y * 1000",
+      "operands": {
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "r": {
+        "value": 4.3,
+        "text": "4.30 %",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "2": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+    }
+   },
+   {
+    "step": 5,
+    "text": "Weights 30% on no release, 40% on the middle and 30% on the full release: expected interest = 40% x $14.5M + 30% x $43M = $18.7M; expected release = 40% x $0.34B + 30% x $1.0B = $0.43B.",
+    "text_marked": "Weights 30%[assumption] on no release, 40%[assumption] on the middle and 30%[assumption] on the full release: expected interest = 40%[assumption] x $14.5M[derived: 1, 2, 3] + 30%[assumption] x $43M[derived: 1] = $18.7M[derived: 1, 2, 3, assumption]; expected release = 40%[assumption] x $0.34B[derived: 1, 2, 3] + 30%[assumption] x $1.0B[1] = $0.43B[derived: 1, 2, 3, assumption].",
+    "marker_map": {
+     "1": "c_aa4f2527f1",
+     "2": "c_004859ebd3",
+     "3": "c_d2ee6e207a"
+    },
+    "cites": [
+     {
+      "cite_id": "c_aa4f2527f1",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+      "verify_quote": true,
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_004859ebd3",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_d2ee6e207a",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Revenue $65.8B to $67.0B $66.3B to $67.3B",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Revenue%20%2465.8B%20to%20%2467.0B%20%2466.3B%20to%20%2467.3B",
+      "verify_quote": true,
+      "note": ""
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 13,
+     "total": 13,
+     "verified": 1,
+     "derived": 5,
+     "assumed": 7,
+     "unsupported": []
+    },
+    "derived": {
+     "imp": {
+      "value": "$0.66B",
+      "expr": "r * (a - b) / 100",
+      "operands": {
+       "r": {
+        "value": 66.3,
+        "text": "$66.3B",
+        "cite_id": "c_d2ee6e207a"
+       },
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "gmpt": {
+      "value": "1 point",
+      "expr": "a - b",
+      "operands": {
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "mid": {
+      "value": "$0.34B",
+      "expr": "cap - imp",
+      "operands": {
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "imp": {
+        "derived": "imp"
+       }
+      }
+     },
+     "i_mid": {
+      "value": "$14.5M",
+      "expr": "mid / 2 * r / 100 * y * 1000",
+      "operands": {
+       "mid": {
+        "derived": "mid"
+       },
+       "r": {
+        "value": 4.3,
+        "text": "4.30 %",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+       }
+      }
+     },
+     "i_high": {
+      "value": "$43M",
+      "expr": "cap / 2 * r / 100 * y * 1000",
+      "operands": {
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "r": {
+        "value": 4.3,
+        "text": "4.30 %",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+       }
+      }
+     },
+     "e_int": {
+      "value": "$18.7M",
+      "expr": "w2 * i_mid + w3 * i_high",
+      "operands": {
+       "w2": {
+        "value": 0.4,
+        "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+       },
+       "i_mid": {
+        "derived": "i_mid"
+       },
+       "w3": {
+        "value": 0.3,
+        "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+       },
+       "i_high": {
+        "derived": "i_high"
+       }
+      }
+     },
+     "e_rel": {
+      "value": "$0.43B",
+      "expr": "w2 * mid + w3 * cap",
+      "operands": {
+       "w2": {
+        "value": 0.4,
+        "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+       },
+       "mid": {
+        "derived": "mid"
+       },
+       "w3": {
+        "value": 0.3,
+        "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+       },
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "30%": {
+      "value": "30%",
+      "label": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+     },
+     "40%": {
+      "value": "40%",
+      "label": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+     }
+    }
+   },
+   {
+    "step": 6,
+    "text": "Against cost: expected interest of $18.7M is 2.5 times the $7.5M cost over 24 months, and the middle scenario's $14.5M is 1.9 times cost. Released cash itself comes on top.",
+    "text_marked": "Against cost: expected interest of $18.7M[derived: 1, 2, 3, assumption] is 2.5[derived: 1, 2, 3, assumption] times the $7.5M[derived: assumption] cost over 24[assumption] months, and the middle scenario's $14.5M[derived: 1, 2, 3] is 1.9[derived: 1, 2, 3, assumption] times cost. Released cash itself comes on top.",
+    "marker_map": {
+     "1": "c_aa4f2527f1",
+     "2": "c_004859ebd3",
+     "3": "c_d2ee6e207a"
+    },
+    "cites": [
+     {
+      "cite_id": "c_aa4f2527f1",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 19,
+      "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+      "label": "Merck 10-Q 2026-06-30, p. 19",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 19",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p19",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+      "verify_quote": true,
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_004859ebd3",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_d2ee6e207a",
+      "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+      "page": 18,
+      "quote": "Revenue $65.8B to $67.0B $66.3B to $67.3B",
+      "label": "Merck earnings slides 2026Q2, p. 18",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck earnings slides 2026Q2",
+      "location": "p. 18",
+      "speaker": null,
+      "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Revenue%20%2465.8B%20to%20%2467.0B%20%2466.3B%20to%20%2467.3B",
+      "verify_quote": true,
+      "note": ""
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 6,
+     "total": 6,
+     "verified": 0,
+     "derived": 5,
+     "assumed": 1,
+     "unsupported": []
+    },
+    "derived": {
+     "cost": {
+      "value": "$7.5M",
+      "expr": "n * c * y / 1000000",
+      "operands": {
+       "n": {
+        "value": 15,
+        "assumption": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount"
+       },
+       "c": {
+        "value": 250000,
+        "assumption": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+       }
+      }
+     },
+     "imp": {
+      "value": "$0.66B",
+      "expr": "r * (a - b) / 100",
+      "operands": {
+       "r": {
+        "value": 66.3,
+        "text": "$66.3B",
+        "cite_id": "c_d2ee6e207a"
+       },
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "gmpt": {
+      "value": "1 point",
+      "expr": "a - b",
+      "operands": {
+       "a": {
+        "value": 82.0,
+        "text": "82.0%",
+        "cite_id": "c_004859ebd3"
+       },
+       "b": {
+        "value": 81.0,
+        "text": "81.0%",
+        "cite_id": "c_004859ebd3"
+       }
+      }
+     },
+     "mid": {
+      "value": "$0.34B",
+      "expr": "cap - imp",
+      "operands": {
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "imp": {
+        "derived": "imp"
+       }
+      }
+     },
+     "i_mid": {
+      "value": "$14.5M",
+      "expr": "mid / 2 * r / 100 * y * 1000",
+      "operands": {
+       "mid": {
+        "derived": "mid"
+       },
+       "r": {
+        "value": 4.3,
+        "text": "4.30 %",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+       }
+      }
+     },
+     "i_high": {
+      "value": "$43M",
+      "expr": "cap / 2 * r / 100 * y * 1000",
+      "operands": {
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "r": {
+        "value": 4.3,
+        "text": "4.30 %",
+        "cite_id": "c_aa4f2527f1"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+       }
+      }
+     },
+     "e_int": {
+      "value": "$18.7M",
+      "expr": "w2 * i_mid + w3 * i_high",
+      "operands": {
+       "w2": {
+        "value": 0.4,
+        "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+       },
+       "i_mid": {
+        "derived": "i_mid"
+       },
+       "w3": {
+        "value": 0.3,
+        "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+       },
+       "i_high": {
+        "derived": "i_high"
+       }
+      }
+     },
+     "e_rel": {
+      "value": "$0.43B",
+      "expr": "w2 * mid + w3 * cap",
+      "operands": {
+       "w2": {
+        "value": 0.4,
+        "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+       },
+       "mid": {
+        "derived": "mid"
+       },
+       "w3": {
+        "value": 0.3,
+        "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+       },
+       "cap": {
+        "value": 1.0,
+        "text": "$ 1.0 billion",
+        "cite_id": "c_aa4f2527f1"
+       }
+      }
+     },
+     "r_exp": {
+      "value": "2.5",
+      "expr": "e / c",
+      "operands": {
+       "e": {
+        "derived": "e_int"
+       },
+       "c": {
+        "derived": "cost"
+       }
+      }
+     },
+     "r_mid": {
+      "value": "1.9",
+      "expr": "m / c",
+      "operands": {
+       "m": {
+        "derived": "i_mid"
+       },
+       "c": {
+        "derived": "cost"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "15": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount",
+     "250,000": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE",
+     "2": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)",
+     "24": "24-month decision window of the brief",
+     "6": "month 6 decision gate set by this move",
+     "30%": {
+      "value": "30%",
+      "label": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+     },
+     "40%": {
+      "value": "40%",
+      "label": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+     }
+    }
+   }
+  ],
+  "net": {
+   "text": "Net over 24 months: expected interest of $18.7M less the $7.5M cost is $11.2M pre-tax, plus an expected one-time cash release of $0.43B, which is zero if the review finds no sellable surplus. Part 1's Sharpest Needle, the IRS transition-tax NOPAs of about $1.56B before interest ($1.3B of tax plus $260M of penalties), does not drive this move: both skeptics killed the tax move because Merck is already contesting the NOPAs, resolution may take a number of years, and a reserved penalty would come back as a non-cash reserve release. The cash plan keeps that exposure separate: even the full $1.0B release would cover only 64% of the $1.56B, Merck already carries $546M of accrued interest and penalties, and any tax payment would come from the $8,363M of cash and investments at June 30, 2026, not from the release, which retires debt. Interest on any tax owed is left unsized: the IRS rate page is not yet in the index.",
+   "text_marked": "Net over 24[assumption] months: expected interest of $18.7M[derived: 1, 2, 3, assumption] less the $7.5M[derived: assumption] cost is $11.2M[derived: 1, 2, 3, assumption] pre-tax, plus an expected one-time cash release of $0.43B[derived: 1, 2, 3, assumption], which is zero if the review finds no sellable surplus. Part 1's Sharpest Needle, the IRS transition-tax NOPAs of about $1.56B[derived: 4, 5] before interest ($1.3B[4] of tax plus $260M[5] of penalties), does not drive this move: both skeptics killed the tax move because Merck is already contesting the NOPAs[6], resolution may take a number of years[7], and a reserved penalty would come back as a non-cash reserve release. The cash plan keeps that exposure separate: even the full $1.0B[1] release would cover only 64%[derived: 1, 4, 5] of the $1.56B[derived: 4, 5], Merck already carries $546M[8] of accrued interest and penalties, and any tax payment would come from the $8,363M[9] of cash and investments at June 30, 2026, not from the release, which retires debt. Interest on any tax owed is left unsized: the IRS rate page is not yet in the index.",
+   "marker_map": {
+    "1": "c_aa4f2527f1",
+    "2": "c_004859ebd3",
+    "3": "c_d2ee6e207a",
+    "4": "c_06fd4e5e53",
+    "5": "c_c4cbdae1c4",
+    "6": "c_d312d9da34",
+    "7": "c_aadd07008d",
+    "8": "c_c17f1fd3ba",
+    "9": "c_06026f29f1"
+   },
+   "cites": [
+    {
+     "cite_id": "c_aa4f2527f1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_004859ebd3",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_d2ee6e207a",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Revenue $65.8B to $67.0B $66.3B to $67.3B",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Revenue%20%2465.8B%20to%20%2467.0B%20%2466.3B%20to%20%2467.3B",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_06fd4e5e53",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "would increase the amount of the one-time transition tax on certain undistributed earnings of foreign subsidiaries by approximately $ 1.3 billion",
+     "label": "Merck 10-Q 2026-06-30, p. 25",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=would%20increase%20the%20amount%20of%20the%20one%2Dtime%20transition",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=would%20increase%20the%20amount%20of%20the%20one-time%20transition%20tax%20on%20certain%20undistributed%20earnings%20of%20foreign%20subsidiaries%20by%20approximately%20%24%201.3%20billion",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_c4cbdae1c4",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "the NOPAs included penalties of approximately $ 260 million. These amounts are exclusive of any interest that may be due",
+     "label": "Merck 10-Q 2026-06-30, p. 25",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=the%20NOPAs%20included%20penalties%20of%20approximately%20%24%20260",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=the%20NOPAs%20included%20penalties%20of%20approximately%20%24%20260%20million.%20These%20amounts%20are%20exclusive%20of%20any%20interest%20that%20may%20be%20due",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_d312d9da34",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "is vigorously contesting the NOPAs through available administrative proceedings",
+     "label": "Merck 10-Q 2026-06-30, p. 25",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=is%20vigorously%20contesting%20the%20NOPAs%20through%20available%20administrative%20proceedings",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_aadd07008d",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131,
+     "quote": "It may take a number of years to reach resolution of this matter",
+     "label": "Merck 10-K FY2025, p. 129",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=It%20may%20take%20a%20number%20of%20years%20to",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 129",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p131",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=It%20may%20take%20a%20number%20of%20years%20to%20reach%20resolution%20of%20this%20matter",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_c17f1fd3ba",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131,
+     "quote": "Liabilities for accrued interest and penalties were $ 546 million and $ 437 million as of December 31, 2025 and 2024, respectively",
+     "label": "Merck 10-K FY2025, p. 129",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=Liabilities%20for%20accrued%20interest%20and%20penalties%20were",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 129",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p131",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=131&q=Liabilities%20for%20accrued%20interest%20and%20penalties%20were%20%24%20546%20million%20and%20%24%20437%20million%20as%20of%20December%2031%2C%202025%20and%202024%2C%20respectively",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_06026f29f1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 45,
+     "quote": "Cash and investments $ 8,363 $ 15,521",
+     "label": "Merck 10-Q 2026-06-30, p. 45",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 45",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p45",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=45&q=Cash%20and%20investments%20%24%208%2C363%20%24%2015%2C521",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 13,
+    "total": 13,
+    "verified": 5,
+    "derived": 7,
+    "assumed": 1,
+    "unsupported": []
+   },
+   "derived": {
+    "cost": {
+     "value": "$7.5M",
+     "expr": "n * c * y / 1000000",
+     "operands": {
+      "n": {
+       "value": 15,
+       "assumption": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount"
+      },
+      "c": {
+       "value": 250000,
+       "assumption": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE"
+      },
+      "y": {
+       "value": 2,
+       "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+      }
+     }
+    },
+    "imp": {
+     "value": "$0.66B",
+     "expr": "r * (a - b) / 100",
+     "operands": {
+      "r": {
+       "value": 66.3,
+       "text": "$66.3B",
+       "cite_id": "c_d2ee6e207a"
+      },
+      "a": {
+       "value": 82.0,
+       "text": "82.0%",
+       "cite_id": "c_004859ebd3"
+      },
+      "b": {
+       "value": 81.0,
+       "text": "81.0%",
+       "cite_id": "c_004859ebd3"
+      }
+     }
+    },
+    "gmpt": {
+     "value": "1 point",
+     "expr": "a - b",
+     "operands": {
+      "a": {
+       "value": 82.0,
+       "text": "82.0%",
+       "cite_id": "c_004859ebd3"
+      },
+      "b": {
+       "value": 81.0,
+       "text": "81.0%",
+       "cite_id": "c_004859ebd3"
+      }
+     }
+    },
+    "mid": {
+     "value": "$0.34B",
+     "expr": "cap - imp",
+     "operands": {
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "imp": {
+       "derived": "imp"
+      }
+     }
+    },
+    "i_mid": {
+     "value": "$14.5M",
+     "expr": "mid / 2 * r / 100 * y * 1000",
+     "operands": {
+      "mid": {
+       "derived": "mid"
+      },
+      "r": {
+       "value": 4.3,
+       "text": "4.30 %",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "y": {
+       "value": 2,
+       "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+      }
+     }
+    },
+    "i_high": {
+     "value": "$43M",
+     "expr": "cap / 2 * r / 100 * y * 1000",
+     "operands": {
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "r": {
+       "value": 4.3,
+       "text": "4.30 %",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "y": {
+       "value": 2,
+       "assumption": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)"
+      }
+     }
+    },
+    "e_int": {
+     "value": "$18.7M",
+     "expr": "w2 * i_mid + w3 * i_high",
+     "operands": {
+      "w2": {
+       "value": 0.4,
+       "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+      },
+      "i_mid": {
+       "derived": "i_mid"
+      },
+      "w3": {
+       "value": 0.3,
+       "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+      },
+      "i_high": {
+       "derived": "i_high"
+      }
+     }
+    },
+    "e_rel": {
+     "value": "$0.43B",
+     "expr": "w2 * mid + w3 * cap",
+     "operands": {
+      "w2": {
+       "value": 0.4,
+       "assumption": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+      },
+      "mid": {
+       "derived": "mid"
+      },
+      "w3": {
+       "value": 0.3,
+       "assumption": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+      },
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      }
+     }
+    },
+    "net": {
+     "value": "$11.2M",
+     "expr": "e - c",
+     "operands": {
+      "e": {
+       "derived": "e_int"
+      },
+      "c": {
+       "derived": "cost"
+      }
+     }
+    },
+    "nopa": {
+     "value": "$1.56B",
+     "expr": "a + b",
+     "operands": {
+      "a": {
+       "value": 1.3,
+       "text": "$ 1.3 billion",
+       "cite_id": "c_06fd4e5e53"
+      },
+      "b": {
+       "value": 0.26,
+       "text": "$ 260 million",
+       "cite_id": "c_c4cbdae1c4"
+      }
+     }
+    },
+    "cover": {
+     "value": "64%",
+     "expr": "cap / n * 100",
+     "operands": {
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "n": {
+       "derived": "nopa"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "15": "15-person review team: headcount the skeptics sized; no Merck page gives supply-planning headcount",
+    "250,000": "$250,000 loaded cost per person-year; no page gives Merck's cost per FTE",
+    "2": "2-year window (24 months) for the team, and straight-line release (average balance is half the release)",
+    "24": "24-month decision window of the brief",
+    "6": "month 6 decision gate set by this move",
+    "30%": {
+     "value": "30%",
+     "label": "scenario weight 30% on no release and 30% on the full release (judgment: the pool's split is undisclosed)"
+    },
+    "40%": {
+     "value": "40%",
+     "label": "scenario weight 40% on the middle, impairment-haircut release (judgment)"
+    }
+   }
+  }
+ },
+ "rejected": [
+  {
+   "id": "MRK-m01",
+   "type": "campaign",
+   "move": "Fund a U.S. field program converting Keytruda IV patients to Keytruda Qlex, or its narrowed pilot in IV-chemotherapy combination regimens.",
+   "why_passed": {
+    "text": "Management already says it is on track to reach 30% to 40% peak adoption of Keytruda Qlex by end of 2027 and has a contracting strategy to make conversion frictionless, so a funded program adds nothing the company has not announced and paid for. The label's crossover data cover monotherapy only, the draft doctor piece left out the route-specific administration-reaction warning, and the CFO lens found the narrowed chemotherapy-combination pilot earns no return inside 24 months.",
+    "text_marked": "Management already says it is on track to reach 30%[1] to 40%[1] peak adoption of Keytruda Qlex by end of 2027 and has a contracting strategy to make conversion frictionless[2], so a funded program adds nothing the company has not announced and paid for. The label's crossover data cover monotherapy only, the draft doctor piece left out the route-specific administration-reaction warning, and the CFO lens found the narrowed chemotherapy-combination pilot earns no return inside 24[assumption] months.",
+    "marker_map": {
+     "1": "c_8256a5a006",
+     "2": "c_1aebb92db7"
+    },
+    "cites": [
+     {
+      "cite_id": "c_8256a5a006",
+      "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+      "page": 25,
+      "quote": "On track to achieve 30% to 40% peak adoption of KEYTRUDA QLEX by end of 2027",
+      "label": "Merck investor presentation 2026-06, p. 25",
+      "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jun/01/MRK-ASCO-2026-Investor-Event-Presentation_Updated_6-17-26.pdf#page=25",
+      "quote_grade": "",
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck investor presentation 2026-06",
+      "location": "p. 25",
+      "speaker": null,
+      "locator": "MRK:presentations/2026-06_asco_investor_event.md#p25",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026-06_asco_investor_event.md&page=25&q=On%20track%20to%20achieve%2030%25%20to%2040%25%20peak%20adoption%20of%20KEYTRUDA%20QLEX%20by%20end%20of%202027",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_1aebb92db7",
+      "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+      "page": 15,
+      "quote": "a commercial contracting strategy that really will make it frictionless to convert patients over",
+      "label": "Merck 2025Q3 earnings call (official), p. 15",
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf#page=15",
+      "quote_grade": "A",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "A",
+      "doc_title": "Merck 2025Q3 earnings call (official)",
+      "location": "p. 15",
+      "speaker": "Robert Davis",
+      "locator": "MRK:transcripts/2025Q3_transcript.md#p15",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Atranscripts%2F2025Q3_transcript.md&page=15&q=a%20commercial%20contracting%20strategy%20that%20really%20will%20make%20it%20frictionless%20to%20convert%20patients%20over",
+      "verify_quote": true,
+      "note": "speaker attributed from transcript label: Robert Davis"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 3,
+     "total": 3,
+     "verified": 2,
+     "derived": 0,
+     "assumed": 1,
+     "unsupported": []
+    },
+    "assumptions": {
+     "24": "24-month decision window of the brief"
+    }
+   },
+   "skeptic_lens": "Decider/compliance"
+  },
+  {
+   "id": "MRK-m02",
+   "type": "license_or_acquire",
+   "move": "If the German appeal fails, authorize a Germany-only settlement license with Halozyme on the MDASE patents for subcutaneous Keytruda.",
+   "why_passed": {
+    "text": "No indexed page gives German Keytruda sales or an MDASE settlement royalty (the Halozyme comps in the index are voluntary Hypercon platform licenses), so neither cost nor return can be sized. Merck is winning on validity, with four PTAB decisions finding every challenged claim unpatentable, only Germany is under an injunction, and international Keytruda Qlex already sold $68M in the second quarter of 2026 against $3,293M of international IV Keytruda.",
+    "text_marked": "No indexed page gives German Keytruda sales or an MDASE settlement royalty (the Halozyme comps in the index are voluntary Hypercon platform licenses), so neither cost nor return can be sized. Merck is winning on validity, with four PTAB decisions finding every challenged claim unpatentable[1], only Germany is under an injunction[2], and international Keytruda Qlex already sold $68M[3] in the second quarter of 2026 against $3,293M[4] of international IV Keytruda.",
+    "marker_map": {
+     "1": "c_68a7013f3e",
+     "2": "c_d0297f4046",
+     "3": "c_3f590007df",
+     "4": "c_eaaf43aaf3"
+    },
+    "cites": [
+     {
+      "cite_id": "c_68a7013f3e",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 22,
+      "quote": "The PTAB has since issued FWDs regarding four of the instituted PGR petitions finding every challenged claim unpatentable",
+      "label": "Merck 10-Q 2026-06-30, p. 22",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=The%20PTAB%20has%20since%20issued%20FWDs%20regarding%20four",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 22",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p22",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=22&q=The%20PTAB%20has%20since%20issued%20FWDs%20regarding%20four%20of%20the%20instituted%20PGR%20petitions%20finding%20every%20challenged%20claim%20unpatentable",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_d0297f4046",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 22,
+      "quote": "a preliminary injunction was awarded against the Company, prohibiting sales in Germany",
+      "label": "Merck 10-Q 2026-06-30, p. 22",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=a%20preliminary%20injunction%20was%20awarded%20against%20the%20Company%2C",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 22",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p22",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=22&q=a%20preliminary%20injunction%20was%20awarded%20against%20the%20Company%2C%20prohibiting%20sales%20in%20Germany",
+      "verify_quote": true,
+      "note": ""
+     },
+     {
+      "cite_id": "c_3f590007df",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 28,
+      "quote": "Keytruda Qlex 395 68 463",
+      "label": "Merck 10-Q 2026-06-30, p. 28",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 28",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p28",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=28&q=Keytruda%20Qlex%20395%2068%20463",
+      "verify_quote": true,
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     },
+     {
+      "cite_id": "c_eaaf43aaf3",
+      "doc_id": "MRK:10q_2026Q2.md",
+      "page": 28,
+      "quote": "Keytruda $ 4,611 $ 3,293 $ 7,904",
+      "label": "Merck 10-Q 2026-06-30, p. 28",
+      "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+      "quote_grade": "",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "",
+      "doc_title": "Merck 10-Q 2026-06-30",
+      "location": "p. 28",
+      "speaker": null,
+      "locator": "MRK:10q_2026Q2.md#p28",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=28&q=Keytruda%20%24%204%2C611%20%24%203%2C293%20%24%207%2C904",
+      "verify_quote": true,
+      "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 2,
+     "total": 2,
+     "verified": 2,
+     "derived": 0,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "skeptic_lens": "CFO/math"
+  }
+ ],
+ "kill_signals": [
+  {
+   "signal": "Month 6 product-split review: sellable surplus found in the long-dated pool",
+   "threshold": "below $0.34B",
+   "month_window": "month 6",
+   "text": "Stop the release phase if the month 6 review finds less than $0.34B of sellable surplus in the $5.9B pool, the middle scenario after an impaired slice the size of the 2026 reserve cut.",
+   "text_marked": "Stop the release phase if the month 6[assumption] review finds less than $0.34B[derived: 1, 2, 3] of sellable surplus in the $5.9B[4] pool, the middle scenario after an impaired slice the size of the 2026 reserve cut.",
+   "marker_map": {
+    "1": "c_aa4f2527f1",
+    "2": "c_004859ebd3",
+    "3": "c_d2ee6e207a",
+    "4": "c_1027131b6d"
+   },
+   "cites": [
+    {
+     "cite_id": "c_aa4f2527f1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_004859ebd3",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_d2ee6e207a",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Revenue $65.8B to $67.0B $66.3B to $67.3B",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Revenue%20%2465.8B%20to%20%2467.0B%20%2466.3B%20to%20%2467.3B",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_1027131b6d",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 3,
+    "total": 3,
+    "verified": 1,
+    "derived": 1,
+    "assumed": 1,
+    "unsupported": []
+   },
+   "derived": {
+    "imp": {
+     "value": "$0.66B",
+     "expr": "r * (a - b) / 100",
+     "operands": {
+      "r": {
+       "value": 66.3,
+       "text": "$66.3B",
+       "cite_id": "c_d2ee6e207a"
+      },
+      "a": {
+       "value": 82.0,
+       "text": "82.0%",
+       "cite_id": "c_004859ebd3"
+      },
+      "b": {
+       "value": 81.0,
+       "text": "81.0%",
+       "cite_id": "c_004859ebd3"
+      }
+     }
+    },
+    "gmpt": {
+     "value": "1 point",
+     "expr": "a - b",
+     "operands": {
+      "a": {
+       "value": 82.0,
+       "text": "82.0%",
+       "cite_id": "c_004859ebd3"
+      },
+      "b": {
+       "value": 81.0,
+       "text": "81.0%",
+       "cite_id": "c_004859ebd3"
+      }
+     }
+    },
+    "mid": {
+     "value": "$0.34B",
+     "expr": "cap - imp",
+     "operands": {
+      "cap": {
+       "value": 1.0,
+       "text": "$ 1.0 billion",
+       "cite_id": "c_aa4f2527f1"
+      },
+      "imp": {
+       "derived": "imp"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "6": "month 6 decision gate set by this move"
+   }
+  },
+  {
+   "signal": "Inventories not expected to be sold within one year, 10-Q inventory note",
+   "threshold": "at or above $5.9B",
+   "month_window": "month 7 (Q1 2027 10-Q)",
+   "text": "Kill if the long-dated line in the Q1 2027 10-Q inventory note is still at or above the $5.9B of June 30, 2026: the pool is being built on purpose, not released.",
+   "text_marked": "Kill if the long-dated line in the Q1 2027 10-Q inventory note is still at or above the $5.9B[1] of June 30, 2026: the pool is being built on purpose, not released.",
+   "marker_map": {
+    "1": "c_1027131b6d"
+   },
+   "cites": [
+    {
+     "cite_id": "c_1027131b6d",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 1,
+    "total": 1,
+    "verified": 1,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  {
+   "signal": "Same long-dated line, 10-Q inventory note",
+   "threshold": "above $5.5B",
+   "month_window": "month 10 (Q2 2027 10-Q)",
+   "text": "Kill if the same line is above the $5.5B of December 31, 2025 in the Q2 2027 10-Q: no sellable surplus is coming out.",
+   "text_marked": "Kill if the same line is above the $5.5B[1] of December 31, 2025 in the Q2 2027 10-Q: no sellable surplus is coming out.",
+   "marker_map": {
+    "1": "c_1027131b6d"
+   },
+   "cites": [
+    {
+     "cite_id": "c_1027131b6d",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 1,
+    "total": 1,
+    "verified": 1,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  {
+   "signal": "Non-GAAP gross margin guidance cut that cites inventory reserves",
+   "threshold": "any cut below about 81.0%",
+   "month_window": "months 6 to 10 (Q1 and Q2 2027 earnings slides)",
+   "text": "Kill if Merck cuts non-GAAP gross margin guidance below the about 81.0% set on the Q2 2026 slides and again cites inventory reserves: the pool is being impaired, not released as cash.",
+   "text_marked": "Kill if Merck cuts non-GAAP gross margin guidance below the about 81.0%[1] set on the Q2 2026 slides and again cites inventory reserves: the pool is being impaired, not released as cash.",
+   "marker_map": {
+    "1": "c_004859ebd3"
+   },
+   "cites": [
+    {
+     "cite_id": "c_004859ebd3",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 1,
+    "total": 1,
+    "verified": 1,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  }
+ ],
+ "evidence": {
+  "decider": "Investors: debt and equity holders who read the 10-Q inventory note and liquidity table",
+  "lands_because": {
+   "text": "Cash and investments fell from $15,521M to $8,363M and total debt rose from 36.0% to 41.5% of total liabilities and equity in the first half of 2026, while first-half interest expense rose to $1,004M from $618M, up 62%. Investors have a cited reason to want cash out of working capital, and a disclosed product split lets them check that the release is cash, not a write-down.",
+   "text_marked": "Cash and investments fell from $15,521M[1] to $8,363M[1] and total debt rose from 36.0%[2] to 41.5%[2] of total liabilities and equity in the first half of 2026, while first-half interest expense rose to $1,004M[3] from $618M[3], up 62%[derived: 3]. Investors have a cited reason to want cash out of working capital, and a disclosed product split lets them check that the release is cash, not a write-down.",
+   "marker_map": {
+    "1": "c_06026f29f1",
+    "2": "c_d99fbfadc6",
+    "3": "c_586a354298"
+   },
+   "cites": [
+    {
+     "cite_id": "c_06026f29f1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 45,
+     "quote": "Cash and investments $ 8,363 $ 15,521",
+     "label": "Merck 10-Q 2026-06-30, p. 45",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 45",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p45",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=45&q=Cash%20and%20investments%20%24%208%2C363%20%24%2015%2C521",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_d99fbfadc6",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 45,
+     "quote": "Total debt to total liabilities and equity 41.5 % 36.0 %",
+     "label": "Merck 10-Q 2026-06-30, p. 45",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=Total%20debt%20to%20total%20liabilities%20and%20equity%2041.5",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 45",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p45",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=45&q=Total%20debt%20to%20total%20liabilities%20and%20equity%2041.5%20%25%2036.0%20%25",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_586a354298",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25,
+     "quote": "Interest expense 525 305 1,004 618",
+     "label": "Merck 10-Q 2026-06-30, p. 25",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 25",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p25",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=25&q=Interest%20expense%20525%20305%201%2C004%20618",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 7,
+    "total": 7,
+    "verified": 6,
+    "derived": 1,
+    "assumed": 0,
+    "unsupported": []
+   },
+   "derived": {
+    "ie": {
+     "value": "62%",
+     "expr": "(a / b - 1) * 100",
+     "operands": {
+      "a": {
+       "value": 1004,
+       "text": "1,004",
+       "cite_id": "c_586a354298"
+      },
+      "b": {
+       "value": 618,
+       "text": "618",
+       "cite_id": "c_586a354298"
+      }
+     }
+    }
+   }
+  },
+  "can_tell": {
+   "text": "The filings show the pool's size and path ($3.8B at December 2024, $5.5B at December 2025, $5.9B at June 2026), that it is almost entirely raw materials and work in process, the 4.30% coupon of the notes the release can retire, and that inventory reserves already moved gross margin guidance from about 82.0% to about 81.0%.",
+   "text_marked": "The filings show the pool's size and path ($3.8B[1] at December 2024, $5.5B[2] at December 2025, $5.9B[2] at June 2026), that it is almost entirely raw materials and work in process[3], the 4.30%[4] coupon of the notes the release can retire, and that inventory reserves already moved gross margin guidance from about 82.0%[5] to about 81.0%[5].",
+   "marker_map": {
+    "1": "c_cf73b71bcd",
+    "2": "c_1027131b6d",
+    "3": "c_b321ae8dcd",
+    "4": "c_aa4f2527f1",
+    "5": "c_004859ebd3"
+   },
+   "cites": [
+    {
+     "cite_id": "c_cf73b71bcd",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107,
+     "quote": "these amounts included $ 5.5 billion and $ 3.8 billion, respectively, of inventories not expected to be sold within one year",
+     "label": "Merck 10-K FY2025, p. 105",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 105",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p107",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=107&q=these%20amounts%20included%20%24%205.5%20billion%20and%20%24%203.8%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_1027131b6d",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "these amounts included $ 5.9 billion and $ 5.5 billion, respectively, of inventories not expected to be sold within one year",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=these%20amounts%20included%20%24%205.9%20billion%20and%20%24%205.5%20billion%2C%20respectively%2C%20of%20inventories%20not%20expected%20to%20be%20sold%20within%20one%20year",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_b321ae8dcd",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "Amounts recognized as Other Assets are comprised almost entirely of raw materials and work in process inventories",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=Amounts%20recognized%20as%20Other%20Assets%20are%20comprised%20almost",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=Amounts%20recognized%20as%20Other%20Assets%20are%20comprised%20almost%20entirely%20of%20raw%20materials%20and%20work%20in%20process%20inventories",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_aa4f2527f1",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19,
+     "quote": "$ 1.0 billion of 4.30 % notes due 2028",
+     "label": "Merck 10-Q 2026-06-30, p. 19",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 19",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p19",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=19&q=%24%201.0%20billion%20of%204.30%20%25%20notes%20due%202028",
+     "verify_quote": true,
+     "note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+    },
+    {
+     "cite_id": "c_004859ebd3",
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18,
+     "quote": "Gross Margin Rate ~82.0% ~81.0% • Now includes higher inventory reserves",
+     "label": "Merck earnings slides 2026Q2, p. 18",
+     "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/2Q26-Merck-Earnings-Presentation.pdf#page=18",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck earnings slides 2026Q2",
+     "location": "p. 18",
+     "speaker": null,
+     "locator": "MRK:presentations/2026Q2_earnings_slides.md#p18",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3Apresentations%2F2026Q2_earnings_slides.md&page=18&q=Gross%20Margin%20Rate%20~82.0%25%20~81.0%25%20%E2%80%A2%20Now%20includes%20higher%20inventory%20reserves",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 6,
+    "total": 6,
+    "verified": 6,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "cannot_tell": {
+   "text": "No indexed page says what products the pool holds, whether part of it is reshoring bridge stock or Keytruda drug substance built ahead of the patent expiry, how much of the 2026 reserve increase relates to it, or whether the 2028 notes can be prepaid at par. Until Merck discloses the split, the release size is unproven and could be zero, and write-downs may be required on whatever is aged.",
+   "text_marked": "No indexed page says what products the pool holds, whether part of it is reshoring bridge stock[1] or Keytruda drug substance built ahead of the patent expiry, how much of the 2026 reserve increase relates to it, or whether the 2028 notes can be prepaid at par. Until Merck discloses the split, the release size is unproven and could be zero, and write-downs may be required[2] on whatever is aged.",
+   "marker_map": {
+    "1": "c_8dd6bf4634",
+    "2": "c_4affeeb195"
+   },
+   "cites": [
+    {
+     "cite_id": "c_8dd6bf4634",
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32,
+     "quote": "delay Section 232 tariffs for three years, enabling the Company to make investments in the U.S. to reshore manufacturing",
+     "label": "Merck 10-Q 2026-06-30, p. 32",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm#:~:text=tariffs%20for%20three%20years%2C%20enabling%20the%20Company%20to",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-Q 2026-06-30",
+     "location": "p. 32",
+     "speaker": null,
+     "locator": "MRK:10q_2026Q2.md#p32",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10q_2026Q2.md&page=32&q=delay%20Section%20232%20tariffs%20for%20three%20years%2C%20enabling%20the%20Company%20to%20make%20investments%20in%20the%20U.S.%20to%20reshore%20manufacturing",
+     "verify_quote": true,
+     "note": ""
+    },
+    {
+     "cite_id": "c_4affeeb195",
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 75,
+     "quote": "If future demand for the Company’s products are less favorable than forecasted, inventory write-downs may be required",
+     "label": "Merck 10-K FY2025, p. 73",
+     "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm#:~:text=If%20future%20demand%20for%20the%20Company%E2%80%99s%20products%20are",
+     "quote_grade": "",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "",
+     "doc_title": "Merck 10-K FY2025",
+     "location": "p. 73",
+     "speaker": null,
+     "locator": "MRK:10k_FY2025.md#p75",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=MRK%3A10k_FY2025.md&page=75&q=If%20future%20demand%20for%20the%20Company%E2%80%99s%20products%20are%20less%20favorable%20than%20forecasted%2C%20inventory%20write-downs%20may%20be%20required",
+     "verify_quote": true,
+     "note": ""
+    }
+   ],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  }
+ },
+ "promo": {
+  "has_material": false,
+  "label": "Student concept, not actual promotional material.",
+  "pieces": [],
+  "claims_map": [],
+  "rules_check": {
+   "approved_uses_only": null,
+   "risks_prominent": null,
+   "h2h_only": null,
+   "no_testimonials": null,
+   "labelled": null,
+   "claims_map_present": null
+  }
+ },
+ "unresolved": [
+  {
+   "topic": "What the long-dated inventory pool holds, and whether a release arrives as cash or as reserve charges",
+   "cfo_position": "No page ties the pool to tariff staging or to reshoring bridge stock; the reshoring reading is an inference too. The release math holds for any slice proven sellable at cost, so diagnose first and size the release on the sellable surplus only.",
+   "decider_position": "Management is choosing to build: the pool grew after the tariff delay, which the filing ties to reshoring, and reserves are rising. Investors cannot verify any target until Merck discloses the split in the inventory note, so disclosure must come before any target, and the release must be counted net of reserve charges."
+  },
+  {
+   "topic": "Severity of the Qlex re-pricing candidate",
+   "cfo_position": "Fatal on its own numbers: certain forgone revenue inside the window against a smaller benefit after it, negative through the end of the decade whoever decides. The CFO round-two summary still describes the decider as rating it major.",
+   "decider_position": "Rated it major in round one for the wrong-decider and wrong-lever reasons, then conceded fatal in round two once the CFO's net-negative math was in; the two files agree on fatal but give different reasons (math versus decider and lever)."
+  },
+  {
+   "topic": "Whether CMS Part B payment-limit rows may size a decision when cited only by locator",
+   "cfo_position": "Machine-data rows cannot be quoted but can be cited by locator and are fit for sizing; the cross-quarter Qlex premium check used them that way.",
+   "decider_position": "Did not open the rows beyond their locators and treats the cross-quarter premium only as a reason the re-price is sized to one quarter, not as a quoted fact to size a move on."
+  },
+  {
+   "topic": "Target segment for any salvage pilot of the Qlex conversion candidate",
+   "cfo_position": "Round one: monotherapy and oral-combination practices, where early use clusters. Round two: no segment earns a return inside the window, so any pilot is a post-patent-expiry option, not a funded return.",
+   "decider_position": "IV-chemotherapy combination regimens, the segment management says lags; a pilot in monotherapy practices, where management already converts, cannot show causation."
+  }
+ ],
+ "candidates_considered": 5,
+ "skeptic_summary": {
+  "killed": 4,
+  "narrowed": 1,
+  "survived": 0
+ }
+}
