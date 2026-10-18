@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T00:07:37+00:00",
+ "generated_at": "2026-10-18T00:14:40+00:00",
  "mode": "cached",
  "engine": "sample",
  "default_ticker": "BMY",
@@ -43,7 +43,7 @@
    "blocks": [
     {
      "type": "p",
-     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle is this: eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller addressable patient pool [1][2]. We pick the needle by a plain rule: the biggest cited impact that analysts asked about least. How rarely analysts asked: only in filings / data, not in headlines or call Q&A [3]. Impact: Not quantified."
+     "md": "**The label is narrower than rivals'.** BMY's Sharpest Needle (biggest cited impact, least asked about): eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller addressable patient pool [1][2]. Analyst attention: only in filings / data, not in headlines or call Q&A [3]. Impact: Not quantified."
     },
     {
      "type": "math",
@@ -74,7 +74,7 @@
     {
      "type": "callout",
      "tone": "muted",
-     "md": "The quote is located on the cited page; the per-number gate recorded no checked figures for this row."
+     "md": "Quote located on the cited page; the per-number gate recorded no checked figures for this row."
     }
    ],
    "cites": [
@@ -219,33 +219,32 @@
      "text": "Return math"
     },
     {
-     "type": "kpi",
-     "items": [
-      {
-       "label": "Template stance",
-       "value": "Defend archetype",
-       "cite": null
-      },
-      {
-       "label": "Budget",
-       "value": "not valued: no DECIDE run for this company",
-       "cite": null
-      },
-      {
-       "label": "Expected value",
-       "value": "not valued",
-       "cite": null
-      },
-      {
-       "label": "Direction",
-       "value": "not quantified",
-       "cite": null
-      },
-      {
-       "label": "Confidence",
-       "value": "high",
-       "cite": null
-      }
+     "type": "table",
+     "columns": [
+      "Number",
+      "Value"
+     ],
+     "rows": [
+      [
+       "Template stance",
+       "Defend archetype"
+      ],
+      [
+       "Budget",
+       "not valued: no DECIDE run for this company"
+      ],
+      [
+       "Expected value",
+       "not valued"
+      ],
+      [
+       "Direction",
+       "not quantified"
+      ],
+      [
+       "Confidence",
+       "high"
+      ]
      ]
     },
     {
@@ -300,20 +299,31 @@
      "text": "Alternatives rejected"
     },
     {
-     "type": "list",
-     "items": [
-      "No alternative recorded."
-     ]
+     "type": "p",
+     "md": "No alternative recorded."
     },
     {
      "type": "h",
      "text": "What would prove us wrong: kill signals, 6 to 12 months"
     },
     {
-     "type": "list",
-     "items": [
-      "A new DailyMed label version for the product or a rival closes the gap within twelve months. Baseline: the label is narrower than rivals' [1][2].",
-      "Receivables growth falls back inside revenue growth in the next two 10-Qs. Baseline: customers are taking longer to pay than revenue growth explains [6][7]."
+     "type": "table",
+     "columns": [
+      "Signal",
+      "Baseline today",
+      "What it would show"
+     ],
+     "rows": [
+      [
+       "The label is narrower than rivals'",
+       "eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller ... [1][2]",
+       "A new DailyMed label version for the product or a rival closes the gap within twelve months"
+      ],
+      [
+       "Customers are taking longer to pay than revenue growth explains",
+       "Receivables-vs-revenue growth gap -12.3 pts (Q2 2026) vs peers; peer median -0.3 pts (1.7 standard deviations below) [6][7]",
+       "Receivables growth falls back inside revenue growth in the next two 10-Qs"
+      ]
      ]
     },
     {
@@ -326,7 +336,7 @@
     },
     {
      "type": "p",
-     "md": "The move answers what the cited filings show: the label is narrower than rivals' [1]; the audiences who decide its fate are payers (CMS (Medicare negotiation) and Part D plan sponsors); investors (analysts and holders who will read the next 10-Q and earnings call); regulators (FDA (labels, exclusivity) and SEC (disclosure)). What that evidence can tell you is the size and timing of the exposure on the cited pages; what it cannot tell you is how prescribers, patients or payers will respond, because no survey, prescriber or claims evidence was gathered for this move."
+     "md": "The move answers what the filings show, the label is narrower than rivals' [1], and lands with payers (CMS (Medicare negotiation) and Part D plan sponsors); investors (analysts and holders who will read the next 10-Q and earnings call); regulators (FDA (labels, exclusivity) and SEC (disclosure)). Those pages show the size and timing of the exposure, not how prescribers, patients or payers will respond: no survey or claims evidence was gathered."
     },
     {
      "type": "h",
@@ -334,7 +344,7 @@
     },
     {
      "type": "p",
-     "md": "Not priced in: analysts rarely asked about the needle item. Only in filings / data, not in headlines or call Q&A [3]."
+     "md": "Not priced in: analysts rarely asked about the needle item; only in filings / data, not in headlines or call Q&A [3]."
     }
    ],
    "cites": [

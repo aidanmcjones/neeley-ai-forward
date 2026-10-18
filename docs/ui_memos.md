@@ -52,16 +52,16 @@ Kinds and formats, mapped to the case wording:
 | product | chat | ticker x product | data | Part 1: product table | the five case rows vs each rival, growth limiter, tied finding, priced-in call; `uncited` cells print "needs citation", never a value |
 | priced_in | chat | ticker | data | Part 1: priced-in call | analyst-attention test, least-asked topics, guidance quote vs consensus position, our call |
 | peers | chat | ticker | data | context | ten-company table on IRA share, MFN date, tariff exemption, sites outside the US, US revenue share |
-| ceo_memo | memo | ticker | template or decide_v2 | Part 2 | Recommendation (move, budget), Return math (five numbers), Why (five findings), Alternatives rejected, What would prove us wrong (kill signals), Why it lands with the deciders, Priced in or not |
+| ceo_memo | memo | ticker | template or decide_v2 | Part 2 | Recommendation (move, budget), Return math (five numbers as a two-column table plus a one-callout definition), Why (five findings), Alternatives rejected (one table), What would prove us wrong (3-row table: signal, baseline today, what it would show), Why it lands with the deciders (two sentences), Priced in or not (one sentence); prose at or under 350 words |
 | prove_wrong | memo | ticker | template or decide_v2 | Part 2: kill signals | kill signals with the cited baseline each must move from |
-| needles | chat | global | data | Part 1 across companies | one line per company: its needle sentence (marked), impact, analyst attention; ordered by gated dollar impact where the engine states one, else the engine's needle order |
-| products | chat | global | data | Part 1 across products | one line per case product: growth limiter, tied finding, priced-in call |
-| decides | chat | global | data | Part 2 across companies | every DECIDE output: chosen or least-bad move, EV, budget, payback, selection rule, demo flag (reached from ceo_memo ask_next) |
-| limits | chat | global | data | honest limits | `meta.honest_limits` sentences grouped into data we lack (with the proxy) and limits of the method; limits that describe the internal league are not shown |
+| needles | chat | global | data | Part 1 across companies | two-sentence lead plus one table: company, needle sentence clipped to 20 words (markers cut by the clip move to the Cites column), impact direction, analyst attention (with the status caveat), cites; ordered by gated dollar impact where the engine states one, else the engine's needle order |
+| products | chat | global | data | Part 1 across products | two-sentence lead plus one table per case product: product vs rivals, growth limiter (20 words), tied finding direction and channel, priced-in call |
+| decides | chat | global | data | Part 2 across companies | one lead plus a table of every DECIDE output: company, chosen or least-bad move, EV, 24-month budget, payback month, selection rule, demo flag (reached from ceo_memo ask_next) |
+| limits | chat | global | data | honest limits | `meta.honest_limits` sentences as two tables: data we lack (with the proxy) and limits of the method; limits that describe the internal league are not shown |
 | league | chat | global | data | internal triage only | reading order, ranks and counts only, with a caveat; no scores |
 | ai_wrong | chat | global | data | proof | `proof.ai_wrong_cases` (26 rows): the count plus eight instructive cases (date, AI claim, caught by, fix), each a row cite to its evidence refs; falls back to `proof.ai_wrong` when the cases list is absent |
 | moat | chat | global | data | proof | corpus counts, the ten buckets, and why the data mattered for the default needle |
-| how_it_works | chat | global | data | method | the four pitch outputs, verify to the page, the numeric gate, sealed forecasts, ledger; cites sections of `proof.how_we_did_it_md` as row cites |
+| how_it_works | chat | global | data | method | one paragraph (the four pitch outputs, verify to the page, the numeric gate) plus a proof table (sealed forecasts and calibration, ledger, honesty); cites sections of `proof.how_we_did_it_md` as row cites |
 
 `generated_by` is set honestly: `decide_v2` when `stance.decide` carries moves (DECIDE output, five numbers per
 move), `template` when the stance is the exporter's rule-drafted one, `data` for tables and lists assembled
@@ -154,15 +154,17 @@ robustness variants; `--check` fails on those words anywhere except the league m
    in neither; when no company pick was made, `suggested` holds only `:global` answers; needle aliases name the
    company or ticker; `format` matches the kind; memo format carries a `memo_header`; every record carries
    `demo` and `demo_note`.
-7b. Case mapping: every ceo_memo carries the six Part 2 elements as headings or kpi labels (Recommendation,
-   Budget, Return math, Alternatives rejected, kill signals, deciders); every findings table carries the Impact,
-   Peer, Confidence and Source columns.
+7b. Case mapping: every ceo_memo carries the six Part 2 elements as headings, kpi labels or table first cells
+   (Recommendation, Budget, Return math, Alternatives rejected, kill signals, deciders); every findings table
+   carries the Impact, Peer, Confidence and Source columns.
 7d. Freshness: `--check` fails when memos.json is older than any company file, meta.json, proof.json or
    league.json; every `row:decide` cite's quoted five numbers must equal the decide row it resolves to.
 7c. Pitch language: "score L", "S =", "materiality score" and "robustness" fail anywhere except the league memo's
    caveat callout.
-8. Word counts (prose blocks only: p, list, callout) against the targets: chat 60 to 160, memo 200 to 400; a
-   miss is a warning.
+8. Word counts (prose blocks only: p, list, callout; tables, kpi and math blocks are not counted) against the
+   targets: chat 30 to 160 (needles and products 120; decides, limits and how_it_works 180), memo 200 to 350; a
+   miss is a warning. Judges read for about a minute, so repeated boilerplate is trimmed before any cited number
+   or caveat.
 
 Whitelisted without a marker: years and fiscal periods (2026, FY2024, 2026Q2, Q2 2026), ISO dates, filing form
 names (10-K, 10-Q, 20-F, 8-K), Medicare Part B/D, Section 232, the case's Part 1 and Part 2, finding ids and
