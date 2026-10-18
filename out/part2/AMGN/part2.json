@@ -1,7 +1,7 @@
 {
  "ticker": "AMGN",
  "company": "Amgen Inc.",
- "generated_at": "2026-10-18T05:34:07.777624+00:00",
+ "generated_at": "2026-10-18T05:43:10.162191+00:00",
  "move": {
   "text": "We commit $12.5M and a team of 12 people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record a designed confirmatory randomized trial with independent endpoint adjudication plus a U.S. liver-safety registry, offered to the FDA as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives.",
   "text_marked": "We commit $12.5M[assumption] and a team of 12[assumption] people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record a designed confirmatory randomized trial with independent endpoint adjudication plus a U.S. liver-safety registry, offered to the FDA as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives[1][2][3].",
@@ -169,7 +169,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -336,7 +336,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -382,7 +382,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -538,7 +538,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -584,7 +584,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -724,7 +724,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -864,7 +864,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -899,7 +899,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -995,7 +995,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1101,7 +1101,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1143,7 +1143,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1252,7 +1252,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1298,7 +1298,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1427,7 +1427,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1473,7 +1473,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1642,7 +1642,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1714,7 +1714,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1760,7 +1760,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -1893,7 +1893,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -1939,7 +1939,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2108,7 +2108,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2166,7 +2166,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2212,7 +2212,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2258,7 +2258,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2455,7 +2455,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2501,7 +2501,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -2543,7 +2543,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": ""
         },
         "confidence_note": "",
@@ -2578,7 +2578,7 @@
         "license": "",
         "verification": {
          "status": "exact",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2719,7 +2719,7 @@
          "license": "",
          "verification": {
           "status": "substring",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
          },
          "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -2768,7 +2768,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -2844,7 +2844,7 @@
          "license": "",
          "verification": {
           "status": "exact",
-          "checked_at": "2026-10-18T05:34:07+00:00",
+          "checked_at": "2026-10-18T05:43:10+00:00",
           "detail": ""
          },
          "confidence_note": "",
@@ -3203,7 +3203,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -3238,7 +3238,7 @@
         "license": "",
         "verification": {
          "status": "substring",
-         "checked_at": "2026-10-18T05:34:07+00:00",
+         "checked_at": "2026-10-18T05:43:10+00:00",
          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
         },
         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
@@ -3296,26 +3296,28 @@
  "evidence": {
   "decider": "regulator (FDA, CDER, in the TAVNEOS withdrawal hearing)",
   "lands_because": {
-   "text": "The decider is the FDA's drug center in a withdrawal proceeding. Amgen's own 10-Q lists postmarketing commitments or studies among the actions the FDA may take, framed as an alternative to withdrawal, and the FDA's stated concern is the reliability of the ADVOCATE data, where 9 of the 331 pivotal patients were re-adjudicated. Amgen's submissions so far are retrospective (real-world evidence and a blinded re-adjudication); a prospective, independently adjudicated trial answers the reliability concern going forward, and a U.S. liver registry speaks to the hepatotoxicity warning the label already carries.",
-   "text_marked": "The decider is the FDA's drug center in a withdrawal proceeding. Amgen's own 10-Q lists postmarketing commitments or studies among the actions the FDA may take, framed as an alternative to withdrawal, and the FDA's stated concern is the reliability of the ADVOCATE data, where 9[1] of the 331[1] pivotal patients were re-adjudicated. Amgen's submissions so far are retrospective (real-world evidence and a blinded re-adjudication); a prospective, independently adjudicated trial answers the reliability concern going forward, and a U.S. liver registry speaks to the hepatotoxicity warning the label already carries[2][3][4][5].",
+   "text": "The decider is the FDA's drug center, and the hearing record is the one channel it must read. Amgen's 10-Q lists postmarketing commitments or studies among the actions the FDA may take, and the offer fills a gap CDER itself documents: the randomized trial of at least five years the FDA required at approval, which also carries the efficacy commitment, has enrolled only 21 of a planned 300 patients. A funded, independently adjudicated trial plus a U.S. liver registry speaks to both of CDER's live concerns, the unreliable ADVOCATE data and the hepatotoxicity the label warns of, which Amgen's retrospective submissions (real-world evidence and a blinded re-adjudication) cannot.",
+   "text_marked": "The decider is the FDA's drug center, and the hearing record is the one channel it must read. Amgen's 10-Q lists postmarketing commitments or studies among the actions the FDA may take, and the offer fills a gap CDER itself documents: the randomized trial of at least five years the FDA required at approval, which also carries the efficacy commitment, has enrolled only 21[1] of a planned 300[1] patients. A funded, independently adjudicated trial plus a U.S. liver registry speaks to both of CDER's live concerns, the unreliable ADVOCATE data and the hepatotoxicity the label warns of, which Amgen's retrospective submissions (real-world evidence and a blinded re-adjudication) cannot[2][3][4][5][6][7].",
    "marker_map": {
-    "1": "c_2c635b78fc",
+    "1": "c_ab6edbb273",
     "2": "c_0437623b64",
-    "3": "c_2b3dbb1fc0",
-    "4": "c_8a49ecea39",
-    "5": "c_80b5ca7b19"
+    "3": "c_9648a68491",
+    "4": "c_ad313b05a8",
+    "5": "c_076877fec9",
+    "6": "c_8a49ecea39",
+    "7": "c_80b5ca7b19"
    },
    "cites": [
     {
-     "cite_id": "c_2c635b78fc",
-     "doc_id": "AMGN:10k_FY2025.md",
-     "doc_title": "Amgen 10-K FY2025",
-     "location": "p. 2",
+     "cite_id": "c_ab6edbb273",
+     "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+     "doc_title": "Federal Register 2026-04-30",
+     "location": "p. 8",
      "page": 8,
-     "quote": "re-adjudicate primary endpoint results for 9 of the 331 patients in its pivotal clinical trial",
-     "label": "Amgen 10-K FY2025, p. 2 (file page 8)",
-     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=patients%20in%20its%20pivotal%20clinical%20trial",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=8&q=re-adjudicate%20primary%20endpoint%20results%20for%209%20of%20the%20331%20patients%20in%20its%20pivotal%20clinical%20trial",
+     "quote": "According to the applicant's most recent annual report for this ongoing study, only 21 of the planned 300 patients have been enrolled.",
+     "label": "Federal Register 2026-04-30, p. 8 (file page 8)",
+     "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=8&q=According%20to%20the%20applicant%27s%20most%20recent%20annual%20report%20for%20this%20ongoing%20study%2C%20only%2021%20of%20the%20planned%20300%20patients%20have%20been%20enrolled.",
      "quote_grade": null,
      "verify_status": "exact",
      "withheld": false,
@@ -3339,15 +3341,47 @@
      "speaker": null
     },
     {
-     "cite_id": "c_2b3dbb1fc0",
-     "doc_id": "AMGN:10q_2026Q2.md",
-     "doc_title": "Amgen 10-Q 2026-06-30",
-     "location": "p. 54",
-     "page": 59,
-     "quote": "We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient to address its stated concerns regarding the reliability of the ADVOCATE data",
-     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
-     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to%20which%2C%20the%20FDA%20will%20consider%20the%20information%20we%20submitted%20sufficient%20to%20address%20its%20stated%20concerns%20regarding%20the%20reliability%20of%20the%20ADVOCATE%20data",
+     "cite_id": "c_9648a68491",
+     "doc_id": "policy:policy/fda_tavneos_approval_letter_2021.md",
+     "doc_title": "FDA approval letter 2021-10-07",
+     "location": "p. 3",
+     "page": 3,
+     "quote": "Conduct a randomized controlled clinical trial of at least five years duration",
+     "label": "FDA approval letter 2021-10-07, p. 3 (file page 3)",
+     "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214487Orig1s000ltr.pdf#page=3",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=3&q=Conduct%20a%20randomized%20controlled%20clinical%20trial%20of%20at%20least%20five%20years%20duration",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_ad313b05a8",
+     "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+     "doc_title": "Federal Register 2026-04-30",
+     "location": "p. 8",
+     "page": 8,
+     "quote": "Because of the limited safety data in the original NDA, the Agency required a postmarketing study (PMR 4155-1) to evaluate safety outcomes, including hepatotoxicity, DILI, and serious hypersensitivity reactions",
+     "label": "Federal Register 2026-04-30, p. 8 (file page 8)",
+     "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=8&q=Because%20of%20the%20limited%20safety%20data%20in%20the%20original%20NDA%2C%20the%20Agency%20required%20a%20postmarketing%20study%20%28PMR%204155-1%29%20to%20evaluate%20safety%20outcomes%2C%20including%20hepatotoxicity%2C%20DILI%2C%20and%20serious%20hypersensitivity%20reactions",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_076877fec9",
+     "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+     "doc_title": "Federal Register 2026-04-30",
+     "location": "p. 8",
+     "page": 8,
+     "quote": "The same study is also assessing efficacy outcomes to fulfill a postmarketing commitment agreed to during NDA review",
+     "label": "Federal Register 2026-04-30, p. 8 (file page 8)",
+     "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=8&q=The%20same%20study%20is%20also%20assessing%20efficacy%20outcomes%20to%20fulfill%20a%20postmarketing%20commitment%20agreed%20to%20during%20NDA%20review",
      "quote_grade": null,
      "verify_status": "exact",
      "withheld": false,
@@ -3398,25 +3432,28 @@
    }
   },
   "can_tell": {
-   "text": "The evidence can tell that the FDA's option set includes postmarketing commitments, that the hearing request is filed, that TAVNEOS stays on the market while the process runs, and that if a hearing is not granted the FDA may enter summary judgment.",
-   "text_marked": "The evidence can tell that the FDA's option set includes postmarketing commitments, that the hearing request is filed, that TAVNEOS stays on the market while the process runs, and that if a hearing is not granted the FDA may enter summary judgment[1][2][3][4].",
+   "text": "The record can tell that contested withdrawals get hearings: the FDA granted Genentech's request on Avastin's breast cancer indication and Covis's request on Makena, and the Makena hearing put on its agenda what studies could confirm benefit and whether the drug should stay on the market. It also shows that TAVNEOS stays on the market while the process runs, that a hearing request resting on mere allegations draws summary judgment, and that the trial already required at approval is barely enrolled (21 of a planned 300 patients).",
+   "text_marked": "The record can tell that contested withdrawals get hearings: the FDA granted Genentech's request on Avastin's breast cancer indication and Covis's request on Makena, and the Makena hearing put on its agenda what studies could confirm benefit and whether the drug should stay on the market. It also shows that TAVNEOS stays on the market while the process runs, that a hearing request resting on mere allegations draws summary judgment, and that the trial already required at approval is barely enrolled (21[1] of a planned 300[1] patients)[2][3][4][5][6][7].",
    "marker_map": {
-    "1": "c_0437623b64",
-    "2": "c_5708b85898",
-    "3": "c_133da21cc2",
-    "4": "c_e9beae09b4"
+    "1": "c_ab6edbb273",
+    "2": "c_a31bc83605",
+    "3": "c_3db0708755",
+    "4": "c_883c09ec92",
+    "5": "c_133da21cc2",
+    "6": "c_3fdc3e0fbf",
+    "7": "c_e9beae09b4"
    },
    "cites": [
     {
-     "cite_id": "c_0437623b64",
-     "doc_id": "AMGN:10q_2026Q2.md",
-     "doc_title": "Amgen 10-Q 2026-06-30",
-     "location": "p. 54",
-     "page": 59,
-     "quote": "the FDA may require additional actions, including further labeling changes, warnings, monitoring, restrictions on use, postmarketing commitments or studies, and any such action or any withdrawal of regulatory approval for TAVNEOS",
-     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
-     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further%20labeling%20changes%2C%20warnings%2C%20monitoring%2C%20restrictions%20on%20use%2C%20postmarketing%20commitments%20or%20studies%2C%20and%20any%20such%20action%20or%20any%20withdrawal%20of%20regulatory%20approval%20for%20TAVNEOS",
+     "cite_id": "c_ab6edbb273",
+     "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+     "doc_title": "Federal Register 2026-04-30",
+     "location": "p. 8",
+     "page": 8,
+     "quote": "According to the applicant's most recent annual report for this ongoing study, only 21 of the planned 300 patients have been enrolled.",
+     "label": "Federal Register 2026-04-30, p. 8 (file page 8)",
+     "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=8&q=According%20to%20the%20applicant%27s%20most%20recent%20annual%20report%20for%20this%20ongoing%20study%2C%20only%2021%20of%20the%20planned%20300%20patients%20have%20been%20enrolled.",
      "quote_grade": null,
      "verify_status": "exact",
      "withheld": false,
@@ -3424,15 +3461,47 @@
      "speaker": null
     },
     {
-     "cite_id": "c_5708b85898",
-     "doc_id": "AMGN:10q_2026Q2.md",
-     "doc_title": "Amgen 10-Q 2026-06-30",
-     "location": "p. 16",
-     "page": 21,
-     "quote": "On June 1, 2026, we requested a hearing on this proposal",
-     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
-     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=we%20requested%20a%20hearing%20on%20this%20proposal",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=On%20June%201%2C%202026%2C%20we%20requested%20a%20hearing%20on%20this%20proposal",
+     "cite_id": "c_a31bc83605",
+     "doc_id": "policy:policy/fda_avastin_breast_final_decision_2012.md",
+     "doc_title": "Federal Register 2012-02-27",
+     "location": "p. 1",
+     "page": 1,
+     "quote": "The Agency granted Genentech's hearing request and published a notice of hearing on May 11, 2011",
+     "label": "Federal Register 2012-02-27, p. 1 (file page 1)",
+     "url": "https://www.federalregister.gov/documents/2012/02/27/2012-4424/final-decision-on-withdrawal-of-breast-cancer-indication-for-avastin-bevacizumab-following-public",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_avastin_breast_final_decision_2012.md&page=1&q=The%20Agency%20granted%20Genentech%27s%20hearing%20request%20and%20published%20a%20notice%20of%20hearing%20on%20May%2011%2C%202011",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_3db0708755",
+     "doc_id": "policy:policy/fda_makena_proposal_hearing_2022.md",
+     "doc_title": "Federal Register 2022-08-17",
+     "location": "p. 2",
+     "page": 2,
+     "quote": "FDA's Chief Scientist granted Covis's hearing request",
+     "label": "Federal Register 2022-08-17, p. 2 (file page 2)",
+     "url": "https://www.federalregister.gov/documents/2022/08/17/2022-17715/proposal-to-withdraw-approval-of-makena-hearing",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_makena_proposal_hearing_2022.md&page=2&q=FDA%27s%20Chief%20Scientist%20granted%20Covis%27s%20hearing%20request",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_883c09ec92",
+     "doc_id": "policy:policy/fda_makena_proposal_hearing_2022.md",
+     "doc_title": "Federal Register 2022-08-17",
+     "location": "p. 3",
+     "page": 3,
+     "quote": "what types of studies could provide confirmatory evidence to verify the clinical benefit of MAKENA",
+     "label": "Federal Register 2022-08-17, p. 3 (file page 3)",
+     "url": "https://www.federalregister.gov/documents/2022/08/17/2022-17715/proposal-to-withdraw-approval-of-makena-hearing",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_makena_proposal_hearing_2022.md&page=3&q=what%20types%20of%20studies%20could%20provide%20confirmatory%20evidence%20to%20verify%20the%20clinical%20benefit%20of%20MAKENA",
      "quote_grade": null,
      "verify_status": "exact",
      "withheld": false,
@@ -3449,6 +3518,22 @@
      "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the",
      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the%20pendency%20of%20this%20process",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_3fdc3e0fbf",
+     "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+     "doc_title": "Federal Register 2026-04-30",
+     "location": "p. 12",
+     "page": 12,
+     "quote": "A request for a hearing may not rest upon mere allegations or denials but must present specific facts showing that there is a genuine and substantial issue of fact that requires a hearing.",
+     "label": "Federal Register 2026-04-30, p. 12 (file page 12)",
+     "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=12&q=A%20request%20for%20a%20hearing%20may%20not%20rest%20upon%20mere%20allegations%20or%20denials%20but%20must%20present%20specific%20facts%20showing%20that%20there%20is%20a%20genuine%20and%20substantial%20issue%20of%20fact%20that%20requires%20a%20hearing.",
      "quote_grade": null,
      "verify_status": "exact",
      "withheld": false,
@@ -3473,35 +3558,125 @@
     }
    ],
    "numeric_check": {
-    "status": "no_numbers",
-    "checked": 0,
-    "total": 0,
-    "verified": 0,
+    "status": "passed",
+    "checked": 2,
+    "total": 2,
+    "verified": 2,
     "derived": 0,
     "assumed": 0,
     "unsupported": []
    }
   },
   "cannot_tell": {
-   "text": "It cannot tell whether the FDA would accept commitments in lieu of withdrawal: Amgen says it cannot predict whether the FDA will find its submissions sufficient; the only indexed precedent (LUMAKRAS) is an FDA-imposed confirmatory study after a Complete Response Letter in an accelerated-approval case, not a bargain; and no trial can answer the proposal's second ground, that the application contained untrue statements of material facts. Nothing indexed sizes the probability, the hearing date or how the CHMP recommendation weighs.",
-   "text_marked": "It cannot tell whether the FDA would accept commitments in lieu of withdrawal: Amgen says it cannot predict whether the FDA will find its submissions sufficient; the only indexed precedent (LUMAKRAS) is an FDA-imposed confirmatory study after a Complete Response Letter in an accelerated-approval case, not a bargain; and no trial can answer the proposal's second ground, that the application contained untrue statements of material facts. Nothing indexed sizes the probability, the hearing date or how the CHMP recommendation weighs[1][2][3][4].",
+   "text": "It cannot show the FDA ever accepting a new trial in lieu of withdrawal; no indexed precedent does. In the closest case Genentech asked that Avastin's breast indication stay subject to a new confirmatory study, CDER framed the issue as withdrawal versus keeping the indication while the sponsor runs new studies, and the Commissioner withdrew it after the hearing. Makena was withdrawn after a hearing that discussed new studies, Pepaxto was withdrawn, Ukoniq was withdrawn with the hearing waived, and the only retentions on the record (LUMAKRAS, Leqembi) came through confirmatory trials the FDA itself required. Every precedent was an accelerated approval while TAVNEOS holds a full approval, so none is a direct match, and that cuts both ways. CDER's TAVNEOS notice says no new blinded re-adjudication can redeem ADVOCATE and warns against letting a drug stay on the market while the applicant gets another chance; no trial answers the untrue-statements ground. The probability, the hearing date and the weight of the CHMP recommendation stay unsized.",
+   "text_marked": "It cannot show the FDA ever accepting a new trial in lieu of withdrawal; no indexed precedent does. In the closest case Genentech asked that Avastin's breast indication stay subject to a new confirmatory study, CDER framed the issue as withdrawal versus keeping the indication while the sponsor runs new studies, and the Commissioner withdrew it after the hearing. Makena was withdrawn after a hearing that discussed new studies, Pepaxto was withdrawn, Ukoniq was withdrawn with the hearing waived, and the only retentions on the record (LUMAKRAS, Leqembi) came through confirmatory trials the FDA itself required. Every precedent was an accelerated approval while TAVNEOS holds a full approval, so none is a direct match, and that cuts both ways. CDER's TAVNEOS notice says no new blinded re-adjudication can redeem ADVOCATE and warns against letting a drug stay on the market while the applicant gets another chance; no trial answers the untrue-statements ground. The probability, the hearing date and the weight of the CHMP recommendation stay unsized[1][2][3][4][5][6][7][8][9][10][11][12][13][14].",
    "marker_map": {
-    "1": "c_2b3dbb1fc0",
-    "2": "c_884bdef7c5",
-    "3": "c_7ee93f6866",
-    "4": "c_97f5494de3"
+    "1": "c_b4efc45ab9",
+    "2": "c_438a868915",
+    "3": "c_9709228cb4",
+    "4": "c_5e9a93e0e7",
+    "5": "c_226c69552e",
+    "6": "c_695a9772ed",
+    "7": "c_884bdef7c5",
+    "8": "c_9908a55c9c",
+    "9": "c_23c488ec60",
+    "10": "c_adad8e5c33",
+    "11": "c_42d20061f5",
+    "12": "c_7ee93f6866",
+    "13": "c_2b3dbb1fc0",
+    "14": "c_97f5494de3"
    },
    "cites": [
     {
-     "cite_id": "c_2b3dbb1fc0",
-     "doc_id": "AMGN:10q_2026Q2.md",
-     "doc_title": "Amgen 10-Q 2026-06-30",
-     "location": "p. 54",
-     "page": 59,
-     "quote": "We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient to address its stated concerns regarding the reliability of the ADVOCATE data",
-     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
-     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to",
-     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to%20which%2C%20the%20FDA%20will%20consider%20the%20information%20we%20submitted%20sufficient%20to%20address%20its%20stated%20concerns%20regarding%20the%20reliability%20of%20the%20ADVOCATE%20data",
+     "cite_id": "c_b4efc45ab9",
+     "doc_id": "policy:policy/fda_avastin_breast_proposal_2011.md",
+     "doc_title": "Federal Register 2011-05-11",
+     "location": "p. 4",
+     "page": 4,
+     "quote": "subject to Genentech's conduct of a new confirmatory study of Avastin with paclitaxel",
+     "label": "Federal Register 2011-05-11, p. 4 (file page 4)",
+     "url": "https://www.federalregister.gov/documents/2011/05/11/2011-11539/proposal-to-withdraw-approval-for-the-breast-cancer-indication-for-bevacizumab-hearing",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_avastin_breast_proposal_2011.md&page=4&q=subject%20to%20Genentech%27s%20conduct%20of%20a%20new%20confirmatory%20study%20of%20Avastin%20with%20paclitaxel",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_438a868915",
+     "doc_id": "policy:policy/fda_avastin_breast_proposal_2011.md",
+     "doc_title": "Federal Register 2011-05-11",
+     "location": "p. 4",
+     "page": 4,
+     "quote": "rather than allowing the indication to remain on the label while the sponsor designs and conducts additional studies intended to verify the drug's clinical benefit",
+     "label": "Federal Register 2011-05-11, p. 4 (file page 4)",
+     "url": "https://www.federalregister.gov/documents/2011/05/11/2011-11539/proposal-to-withdraw-approval-for-the-breast-cancer-indication-for-bevacizumab-hearing",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_avastin_breast_proposal_2011.md&page=4&q=rather%20than%20allowing%20the%20indication%20to%20remain%20on%20the%20label%20while%20the%20sponsor%20designs%20and%20conducts%20additional%20studies%20intended%20to%20verify%20the%20drug%27s%20clinical%20benefit",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_9709228cb4",
+     "doc_id": "policy:policy/fda_avastin_breast_final_decision_2012.md",
+     "doc_title": "Federal Register 2012-02-27",
+     "location": "p. 1",
+     "page": 1,
+     "quote": "Following the hearing, on November 18, 2011, the Commissioner issued a final decision withdrawing approval of AVASTIN's MBC indication.",
+     "label": "Federal Register 2012-02-27, p. 1 (file page 1)",
+     "url": "https://www.federalregister.gov/documents/2012/02/27/2012-4424/final-decision-on-withdrawal-of-breast-cancer-indication-for-avastin-bevacizumab-following-public",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_avastin_breast_final_decision_2012.md&page=1&q=Following%20the%20hearing%2C%20on%20November%2018%2C%202011%2C%20the%20Commissioner%20issued%20a%20final%20decision%20withdrawing%20approval%20of%20AVASTIN%27s%20MBC%20indication.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_5e9a93e0e7",
+     "doc_id": "policy:policy/fda_makena_final_decision_2023.md",
+     "doc_title": "Federal Register 2023-05-15",
+     "location": "p. 1",
+     "page": 1,
+     "quote": "the Commissioner and Chief Scientist jointly issued a final decision withdrawing approval of MAKENA and the ANDAs that referenced MAKENA.",
+     "label": "Federal Register 2023-05-15, p. 1 (file page 1)",
+     "url": "https://www.federalregister.gov/documents/2023/05/15/2023-10264/final-decision-on-withdrawal-of-makena-hydroxyprogesterone-caproate-and-eight-abbreviated-new-drug",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_makena_final_decision_2023.md&page=1&q=the%20Commissioner%20and%20Chief%20Scientist%20jointly%20issued%20a%20final%20decision%20withdrawing%20approval%20of%20MAKENA%20and%20the%20ANDAs%20that%20referenced%20MAKENA.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_226c69552e",
+     "doc_id": "policy:policy/fda_pepaxto_final_decision_2024.md",
+     "doc_title": "Federal Register 2024-04-18",
+     "location": "p. 1",
+     "page": 1,
+     "quote": "Approval of PEPAXTO is withdrawn as of February 23, 2024.",
+     "label": "Federal Register 2024-04-18, p. 1 (file page 1)",
+     "url": "https://www.federalregister.gov/documents/2024/04/18/2024-08274/final-decision-on-withdrawal-of-pepaxto-melphalan-flufenamide-following-appeal-of-the-proposal-to",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_pepaxto_final_decision_2024.md&page=1&q=Approval%20of%20PEPAXTO%20is%20withdrawn%20as%20of%20February%2023%2C%202024.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_695a9772ed",
+     "doc_id": "policy:policy/fda_ukoniq_withdrawal_2022.md",
+     "doc_title": "Federal Register 2022-05-31",
+     "location": "p. 1",
+     "page": 1,
+     "quote": "has voluntarily requested that FDA withdraw approval of this application and has waived its opportunity for a hearing.",
+     "label": "Federal Register 2022-05-31, p. 1 (file page 1)",
+     "url": "https://www.federalregister.gov/documents/2022/05/31/2022-11631/tg-therapeutics-inc-withdrawal-of-approval-of-new-drug-application-for-ukoniq-umbralisib-tosylate",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_ukoniq_withdrawal_2022.md&page=1&q=has%20voluntarily%20requested%20that%20FDA%20withdraw%20approval%20of%20this%20application%20and%20has%20waived%20its%20opportunity%20for%20a%20hearing.",
      "quote_grade": null,
      "verify_status": "exact",
      "withheld": false,
@@ -3525,6 +3700,70 @@
      "speaker": null
     },
     {
+     "cite_id": "c_9908a55c9c",
+     "doc_id": "policy:policy/fda_leqembi_conversion_2023.md",
+     "doc_title": "FDA press announcement 2023-07-06",
+     "location": "p. 1",
+     "page": 1,
+     "quote": "converted Leqembi (lecanemab-irmb), indicated to treat adult patients with Alzheimer’s Disease, to traditional approval following a determination that a confirmatory trial verified clinical benefit",
+     "label": "FDA press announcement 2023-07-06, p. 1 (file page 1)",
+     "url": "https://www.fda.gov/news-events/press-announcements/fda-converts-novel-alzheimers-disease-treatment-traditional-approval",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_leqembi_conversion_2023.md&page=1&q=converted%20Leqembi%20%28lecanemab-irmb%29%2C%20indicated%20to%20treat%20adult%20patients%20with%20Alzheimer%E2%80%99s%20Disease%2C%20to%20traditional%20approval%20following%20a%20determination%20that%20a%20confirmatory%20trial%20verified%20clinical%20benefit",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_23c488ec60",
+     "doc_id": "policy:policy/fda_tavneos_approval_letter_2021.md",
+     "doc_title": "FDA approval letter 2021-10-07",
+     "location": "p. 1",
+     "page": 1,
+     "quote": "It is approved, effective on the date of this letter, for use as recommended in the enclosed agreed-upon labeling.",
+     "label": "FDA approval letter 2021-10-07, p. 1 (file page 1)",
+     "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/214487Orig1s000ltr.pdf#page=1",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_approval_letter_2021.md&page=1&q=It%20is%20approved%2C%20effective%20on%20the%20date%20of%20this%20letter%2C%20for%20use%20as%20recommended%20in%20the%20enclosed%20agreed-upon%20labeling.",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_adad8e5c33",
+     "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+     "doc_title": "Federal Register 2026-04-30",
+     "location": "p. 11",
+     "page": 11,
+     "quote": "There is no way to redeem the ADVOCATE study by permitting the applicant to conduct a new, independent, blinded review and adjudication of the study data.",
+     "label": "Federal Register 2026-04-30, p. 11 (file page 11)",
+     "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=11&q=There%20is%20no%20way%20to%20redeem%20the%20ADVOCATE%20study%20by%20permitting%20the%20applicant%20to%20conduct%20a%20new%2C%20independent%2C%20blinded%20review%20and%20adjudication%20of%20the%20study%20data.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_42d20061f5",
+     "doc_id": "policy:policy/fda_tavneos_proposal_to_withdraw_2026.md",
+     "doc_title": "Federal Register 2026-04-30",
+     "location": "p. 12",
+     "page": 12,
+     "quote": "Otherwise, applicants would be incentivized to deceive FDA and, if the deception is discovered by FDA after approval, claim the drug should remain on the market while the applicant gets another chance to reanalyze data and hope for a positive result.",
+     "label": "Federal Register 2026-04-30, p. 12 (file page 12)",
+     "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08455/chemocentryx-inc-proposal-to-withdraw-approval-of-new-drug-application-for-tavneos-avacopan-capsule",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy%3Apolicy%2Ffda_tavneos_proposal_to_withdraw_2026.md&page=12&q=Otherwise%2C%20applicants%20would%20be%20incentivized%20to%20deceive%20FDA%20and%2C%20if%20the%20deception%20is%20discovered%20by%20FDA%20after%20approval%2C%20claim%20the%20drug%20should%20remain%20on%20the%20market%20while%20the%20applicant%20gets%20another%20chance%20to%20reanalyze%20data%20and%20hope%20for%20a%20positive%20result.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
      "cite_id": "c_7ee93f6866",
      "doc_id": "AMGN:10q_2026Q2.md",
      "doc_title": "Amgen 10-Q 2026-06-30",
@@ -3534,6 +3773,22 @@
      "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20proposal%20alleges%20that%20there%20is%20new%20information",
      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20proposal%20alleges%20that%20there%20is%20new%20information%20indicating%20lack%20of%20substantial%20evidence%20of%20effectiveness%20for%20the%20drug%20and%20that%20ChemoCentryx%E2%80%99s%20application%20that%20resulted%20in%20FDA%20approval%20contained%20untrue%20statements%20of%20material%20facts.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_2b3dbb1fc0",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient to address its stated concerns regarding the reliability of the ADVOCATE data",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to%20which%2C%20the%20FDA%20will%20consider%20the%20information%20we%20submitted%20sufficient%20to%20address%20its%20stated%20concerns%20regarding%20the%20reliability%20of%20the%20ADVOCATE%20data",
      "quote_grade": null,
      "verify_status": "exact",
      "withheld": false,
@@ -3586,7 +3841,8 @@
   {
    "topic": "Whether the FDA postmarketing-commitment path has real probability given the untrue-statements ground",
    "cfo_position": "The probability gain that carries the return is weaker than first allowed and no page prices it; the gated offer is a cheap option bought as downside protection, not an investment that clears a cost-of-capital test on evidence.",
-   "decider_position": "The 10-Q frames postmarketing commitments as an alternative outcome to withdrawal, so the chance is real but unsized, and it is zero if the untrue-statements ground alone carries the case."
+   "decider_position": "The 10-Q frames postmarketing commitments as an alternative outcome to withdrawal, so the chance is real but unsized, and it is zero if the untrue-statements ground alone carries the case.",
+   "record_note": "Sharpened by the precedent pages, not settled: no indexed withdrawal ended with a new trial accepted in lieu of withdrawal, Genentech's new-study offer on Avastin did not change the outcome, and CDER's TAVNEOS notice rejects re-adjudication and a further chance on the market, which supports the decider side; every precedent was an accelerated approval while TAVNEOS holds a full approval, which keeps the CFO's small nonzero option open."
   },
   {
    "topic": "Which narrowed move ranks first",
