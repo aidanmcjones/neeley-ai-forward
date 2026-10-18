@@ -120,7 +120,8 @@ WHITELIST = [
     r"\b(?:19|20)\d{2}-\d{2}-\d{2}\b",            # ISO dates (before the year pattern)
     r"\b(?:FY)?(?:19|20)\d{2}(?:Q[1-4])?\b",      # years, FY2024, 2026Q2
     r"\bQ[1-4]\s?(?:19|20)\d{2}\b",               # Q2 2026
-    r"\b(?:10-K|10-Q|20-F|8-K|6-K)\b",            # filing forms
+    r"\b(?:10-K|10-Q|20-F|8-K|6-K)s?\b",           # filing forms
+    r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, (?:19|20)\d{2}\b",  # written dates
     r"\bPart [BD]\b", r"\bSection 232\b",         # Medicare parts, tariff statute
     r"\bPart [12]\b",                              # the case's Part 1 / Part 2
     r"\b[0-9a-f]{12}(?:-d\d)?\b",                 # finding ids
@@ -276,7 +277,7 @@ class Cites:
 
 
 # ---------------------------------------------------------------- inline markers ([n], [derived: a, b], [constant: X], [assumption])
-MARK = re.compile(r"\[(\d+)\]|\[derived: ([^\]]+)\]|\[constant: ([A-Za-z0-9_]+)\]|\[assumption\]|\[licensed source\]")
+MARK = re.compile(r"\[(\d+)\]|\[derived: ([^\]]+)\]|\[constant: ([A-Za-z0-9_]+)\]|\[assumption(?:: [^\]]*)?\]|\[licensed source\]")
 LICENSED = "[licensed source]"
 MAX_TAIL = 6  # a sentence's trailing run of blanket cites is capped at this many markers in a memo
 
@@ -315,7 +316,8 @@ def _cap_tail(text, limit):
 def remark(text, f, C, t, limit=MAX_TAIL, mm=None, lic=None, unresolved=()):
     """Renumber a finding's marked text to this memo's cite numbers: [n] is the finding's footnote number, which
     marker_map turns into a cite_id; [derived: a, b] operands are renumbered the same way; [constant: X] and
-    [assumption] pass through; a footnote on a licensed data row prints as [licensed source]; an unresolved
+    [assumption] and [assumption: reason] pass through (the UI shows the reason in a tooltip); a footnote on a
+    licensed data row prints as [licensed source]; an unresolved
     footnote is dropped (the number stays, as it is also in the gated sentence). `mm` and `lic` default to the
     finding's own maps; a findings_table row passes its own."""
     mm = mm if mm is not None else (f.get("marker_map") or {})
@@ -396,7 +398,7 @@ GENERIC_TITLES = {"government document", "document", "source", ""}
 
 def doc_label(e):
     """A readable document title; the exporter labels some government files 'government document'."""
-    title = e.get("doc_title") or e.get("doc_label") or ""
+    title = (e.get("doc_title") or e.get("doc_label") or "").replace("(third_party)", "(third-party transcript)")
     if title.lower() not in GENERIC_TITLES:
         return title
     did = e.get("doc_id") or ""
@@ -553,8 +555,8 @@ class Ctx:
         nid = rid or lid
         f = self.finding(t, nid) if nid else None
         status = c.get("needle_status") or (self.league_by.get(t) or {}).get("needle_status") or ("strict" if f else "none")
-        if f is None or nc_status(f) == "failed" or not f.get("evidence"):
-            pool = self.usable(t)
+        if f is None or nc_status(f) == "failed" or not f.get("evidence") or f.get("explained_by_footnote"):
+            pool = [x for x in self.usable(t) if not x.get("explained_by_footnote")]
             f = pool[0] if pool else None
             status = "none" if nid is None else status
             return f, (status or "none").replace(" ", "_")
@@ -780,8 +782,8 @@ def plain_obscurity(note):
         elif m3:
             tail = f"; analysts raised {topic_words(m3.group(1))} in {m3.group(2)} of the last {m3.group(3)} earnings calls"
         elif "imputed" in rest:
-            tail = "; attention imputed from the scorecard median"
-        return f"Already raised in part: headline score {h}, analyst attention {a} (higher = more discussed){tail}"
+            tail = "; imputed from the scorecard median"
+        return f"partly raised: headline score {h}, attention {a} (higher = more discussed){tail}"
     return re.sub(r"\bqa_turns regex\b", "analyst questions matching", note)
 
 
@@ -821,6 +823,8 @@ def plain_terms(text):
     t = re.sub(r"\s*\(R\d{3}(?:, R\d{3})*\)", "", text or "")
     t = re.sub(r"\b[A-Z]{1,4}-\d{1,4}\s+(?=(?:19|20)\d{2}-\d{2}-\d{2})", "", t)
     t = re.sub(r"\b[\w/]+\.csv\b", "our verified product-revenue table", t)
+    t = re.sub(r"\s*\(cited input \w+\)", " (cited input)", t)
+    t = t.replace("(third_party)", "(third-party transcript)").replace("labels_table", "label table").replace("ai_caught", "AI-caught")
     for pat, full in ABBREV:
         if re.search(pat, t) and full not in t:
             t = re.sub(pat, full, t, count=1)
@@ -837,23 +841,49 @@ def plain_peer(clause):
 MONEY = r"\$[\d.,]+\s?(?:bn|B|M|K|m|k)?\b"
 
 
-def money_gate(text, quotes):
-    """Dollar figures in product text stay only when their digits appear in a cited quote; otherwise the clause is
-    replaced by its direction and 'size not page-verified'."""
+def gate_passed(nc):
+    return isinstance(nc, dict) and nc.get("status") == "passed" and not nc.get("unsupported")
+
+
+def money_gate(text, quotes, gate=None):
+    """Dollar figures in product text stay only when their digits appear in a cited quote, or when the engine's
+    per-number gate on that text passed (its dollars are then derived from cited operands: revenue and erosion);
+    otherwise the clause is replaced by its direction and 'size not page-verified'."""
+    if gate_passed(gate):
+        return text or ""
     qtext = " ".join(q for q in quotes if q)
 
-    def ok(tok):
+    derived = set(re.findall("(" + MONEY + r")\[derived: [^\]]+\]", text or ""))
+    money_in_quotes = [m for m in re.findall(MONEY, text or "") if m not in derived]
+
+    def forms(tok):
         digits = re.sub(r"[^\d.]", "", tok).rstrip(".")
-        return bool(digits) and (digits in qtext or digits.replace(".", ",") in qtext)
+        if not digits:
+            return []
+        out = [digits, digits.replace(".", ",")]
+        try:  # comma-grouped form as filings print it ($3,400M -> 3,400)
+            whole, _, frac = digits.partition(".")
+            out.append(f"{int(whole):,}" + (f".{frac}" if frac else ""))
+        except ValueError:
+            pass
+        return out
+
+    def ok(tok):
+        if any(x in qtext for x in forms(tok)):
+            return True
+        # a figure the engine marks [derived: ...] prints when the operands it is derived from (the other money
+        # figures in the sentence: revenue, erosion) are themselves in the cited quotes
+        return tok in derived and bool(money_in_quotes) and all(any(x in qtext for x in forms(m)) for m in money_in_quotes)
     t = text or ""
-    t = re.sub(r"\s*about (" + MONEY + r") base \((" + MONEY + r") bull to (" + MONEY + r") bear\) on ([^$]+?)'s (" + MONEY + r") of annual revenue",
+    MM = "(" + MONEY + r")(?:\[derived: [^\]]+\])?"  # a money figure with its optional derived marker
+    t = re.sub(r"\s*about " + MM + r" base \(" + MM + r" bull to " + MM + r" bear\) on ([^$]+?)'s " + MM + r" of annual revenue",
                lambda m: m.group(0) if all(ok(m.group(i)) for i in (1, 2, 3, 5)) else
                f" an adverse revenue effect for {m.group(4)} whose size is not page-verified (the revenue and erosion inputs are not cited)", t)
-    t = re.sub(r",? worth about (" + MONEY + r") a year in the base case",
+    t = re.sub(r",? worth about " + MM + r" a year in the base case",
                lambda m: m.group(0) if ok(m.group(1)) else ", an adverse revenue effect whose size is not page-verified", t)
-    t = re.sub(r"the range is (" + MONEY + r") base \((" + MONEY + r") bull to (" + MONEY + r") bear\)",
+    t = re.sub(r"the range is " + MM + r" base \(" + MM + r" bull to " + MM + r" bear\)",
                lambda m: m.group(0) if all(ok(m.group(i)) for i in (1, 2, 3)) else "the size is not page-verified", t)
-    t = re.sub(r"(?:about |around )?(" + MONEY + r")(?: of annual revenue| a year| per year)?",
+    t = re.sub(r"(?:about |around )?" + MM + r"(?: of annual revenue| a year| per year)?",
                lambda m: m.group(0) if ok(m.group(1)) else "an amount not page-verified", t)
     return t
 
@@ -900,9 +930,45 @@ def math_block(label, text, cite, text_marked=None):
     return b
 
 
+FOOTNOTE_KEYS = ("explained_by_footnote_note", "footnote_note", "explanation_note", "explanation", "footnote")
+
+
+def footnote_note(f):
+    """The note on a row the engine marks explained_by_footnote (a receivables rise that a filing footnote accounts
+    for), else None."""
+    if not f.get("explained_by_footnote"):
+        return None
+    for k in FOOTNOTE_KEYS:
+        v = f.get(k)
+        if isinstance(v, dict):
+            v = v.get("note") or v.get("text")
+        if isinstance(v, str) and v.strip():
+            m = re.search(r"explained by footnote \((.+?)(?:, [A-Z]+:[\w.-]+\.md)?\)", v)
+            return (m.group(1) if m else v.split(";")[0].replace("footnote read: ", "")).strip().rstrip(".")
+    return "a filing footnote accounts for the movement"
+
+
+def footnote_cite(f, C, t):
+    """Cite for the footnote note: the finding's evidence row the engine names, else a row cite to the note."""
+    index = finding_cite_index(f)
+    for k in ("explained_by_footnote_cite_id", "footnote_cite_id", "footnote_cite"):
+        cid = f.get(k)
+        if isinstance(cid, dict):
+            cid = cid.get("cite_id")
+        if cid and index.get(cid):
+            e, i = index[cid]
+            return C.add(ev_cite(e, f.get("id"), t, i))
+    key = next((k for k in FOOTNOTE_KEYS if isinstance(f.get(k), str) and f[k].strip()), "explained_by_footnote")
+    return C.add(row_cite(f"row:footnote:{t}:{f['id']}", f"companies/{t}.json:findings[id={f['id']}].{key}",
+                          "engine footnote read (agent.needle.quant.receivables)", f.get(key) if isinstance(f.get(key), str) else footnote_note(f),
+                          "engine note", ticker=t, finding_id=f.get("id")))
+
+
 def impact_cell(f, C, t):
     """(plain impact text, formula or None, cites). Only the engine's gated math is used; never impact.dollars."""
     imp = f.get("impact") or {}
+    if f.get("explained_by_footnote"):
+        return f"Explained by footnote: {plain_terms(footnote_note(f))}", None, [footnote_cite(f, C, t)]
     if imp.get("suspect"):
         return "Withheld: impact figure flagged suspect (above trailing operating income)", None, []
     text = gated_impact_text(f)
@@ -915,9 +981,14 @@ def impact_cell(f, C, t):
     return plain, formula, ns
 
 
-def peer_cell(f, C, t):
-    """Peer comparison as the engine wrote it: the peer clause of the finding sentence, else the peer note."""
+def peer_cell(f, C, t, row=None, unresolved=()):
+    """Peer comparison as the engine wrote it: the findings_table row's peer_text (gated, markers resolved through
+    the row's marker_map) when present, else the peer clause of the finding sentence, else the peer note."""
     p = f.get("peer") or {}
+    pt = row.get("peer_text") if isinstance(row, dict) else None
+    if isinstance(pt, str) and pt.strip():
+        txt = remark(pt.strip().rstrip("."), f, C, t, mm=row.get("marker_map"), lic=row.get("marker_licensed"), unresolved=unresolved)
+        return plain_peer(plain_terms(txt)) if not MARK.search(txt) else plain_terms(txt), []
     m = re.search(r"peer median[^;()]*", f.get("finding") or "")
     if m:
         return plain_peer(m.group(0).strip().rstrip(",")), []
@@ -937,7 +1008,7 @@ def source_cell(f, C, t):
         n = C.add(ev_cite(e, f["id"], t, i))
         lab = doc_label(e)
         page = e.get("printed") or e.get("page")
-        loc = f", p. {page}" if page not in (None, "", "None") and not str(page).startswith("row") else (f", {e.get('location')}" if e.get("location") and "section" in str(e.get("location")) else "")
+        loc = f", p. {page}" if page not in (None, "", "None", "?") and not str(page).startswith("row") else (f", {e.get('location')}" if e.get("location") and "section" in str(e.get("location")) else "")
         labels.append(f"{lab}{loc} [{n}]")
     return "; ".join(labels)
 
@@ -949,10 +1020,10 @@ def findings_table(fs, C, t, ctx=None):
         row = by.get(f.get("id"))
         s, ns = sentence(f, C, t, row=row, unresolved=unres)
         imp, formula, ins = impact_cell(f, C, t)
-        peer, pns = peer_cell(f, C, t)
+        peer, pns = peer_cell(f, C, t, row=row, unresolved=unres)
         rows.append([C.after(s, *ns), C.after(imp, *ins), C.after(peer, *pns),
                      f.get("confidence") or "n/a", source_cell(f, C, t)])
-        if formula and ins:
+        if formula and ins and not f.get("explained_by_footnote"):
             lead = match_rule(f.get("signal_kind"), LEADS) or "finding"
             maths.append(impact_math(f, C, t, f"Impact math, row {i} ({lc(lead)})", ins[0], row, unres))
     return {"type": "table", "columns": ["Finding", "Impact", "Peer", "Confidence", "Source"], "rows": rows}, maths
@@ -1145,7 +1216,17 @@ def needle_memo(ctx, t):
     lead = match_rule(f.get("signal_kind"), LEADS) or "The sharpest needle"
     by0, unres0 = ctx.table_rows(t)
     s, ns = sentence(f, C, t, row=by0.get(f.get("id")), unresolved=unres0)
-    p = f"**{lead}.** {poss(name)} Sharpest Needle (biggest cited impact, least asked about): {C.after(s, *ns)}."
+    src = c.get("needle_source") or ((c.get("findings_table") or {}).get("needle_source") if isinstance(c.get("findings_table"), dict) else None)
+    chosen = {"red_team": ", chosen by the red-team read, confirmed by the gate", "rule": ", chosen by the plain rule"}.get(src, "")
+    p = f"**{lead}.** {poss(name)} Sharpest Needle (biggest cited impact, least asked about{chosen}): {C.after(s, *ns)}."
+    reason = c.get("needle_reason")
+    if isinstance(reason, str) and reason.strip() and not reason.startswith("plain rule"):
+        rn = C.add(row_cite(f"row:needle_reason:{t}", f"companies/{t}.json:needle_reason", "needle selection record (red team vs rule)",
+                            reason, "engine record", ticker=t))
+        why = re.sub(r"^red-team read: ", "", reason.strip().rstrip("."))
+        why = re.sub(r"Parker's best needle for [A-Z]+ \(([A-Z]+)-nugget-(\d+), docs/[\w./-]+\); his one-line reason carries figures the gate does not support, so it is not printed",
+                     r"the red team's pick (nugget \2); the reviewer's own reason carries figures the gate does not support, so it is not printed", why)
+        p += f" Why this one: {plain_terms(why)} [{rn}]."
     note, ons = obscurity_cite(f, C, t)
     if note:
         p += f" Analyst attention: {plain_obscurity(note)} {C.mark(*ons)}."
@@ -1272,6 +1353,12 @@ def plain_cell(v):
     return v
 
 
+def tied_gate(tied):
+    """A tied product finding's dollars print when its per-number check passed and the engine marks the impact gated."""
+    nc = tied.get("numeric_check")
+    return nc if ((tied.get("impact") or {}).get("gated") is True and gate_passed(nc)) else None
+
+
 def product_memo(ctx, t, slug, v2, comp):
     name, C = ctx.name(t), Cites()
     ents = (v2 or {}).get("entities") or []
@@ -1287,12 +1374,12 @@ def product_memo(ctx, t, slug, v2, comp):
             gns = [C.add(row_cite(f"row:gl:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter",
                                   "product growth limiter (agent.needle.quant.product)", gl["sentence"], "computed", ticker=t))]
         gq = [e.get("quote") for e in gl.get("citations") or []]
-        p += " " + C.after(money_gate(plain_terms(gl["sentence"].rstrip(".")), gq), *gns) + "."
+        p += " " + C.after(money_gate(plain_terms(gl["sentence"].rstrip(".")), gq, gl.get("numeric_check")), *gns) + "."
     tied = ((v2 or {}).get("findings") or [None])[0]
     if isinstance(tied, dict) and tied.get("finding"):
         tns = [C.add(ev_cite(e, tied.get("id"), t, i)) for i, e in list(enumerate(tied.get("evidence") or []))[:2]]
         tq = [e.get("quote") for e in tied.get("evidence") or []]
-        p += " Tied finding: " + C.after(money_gate(plain_terms(tied["finding"].rstrip(".")), tq), *tns) + "."
+        p += " Tied finding: " + C.after(money_gate(plain_terms(tied["finding"].rstrip(".")), tq, tied_gate(tied)), *tns) + "."
     elif (v2 or {}).get("notes"):
         notes = [re.sub(r"^\w+ produced no finding: ", "", n) for n in v2["notes"]]
         notes = [n for n in notes if not var_tokens(n)] or ["no label-to-numbers channel had its inputs"]
@@ -1674,7 +1761,7 @@ def moat_memo(ctx):
         f, _ = ctx.needle(d)
         if f:
             lead = match_rule(f.get("signal_kind"), LEADS) or "the needle"
-            docs = list(dict.fromkeys(e.get("doc_title") or e.get("citation") for e in f.get("evidence") or []))
+            docs = list(dict.fromkeys(doc_label(e) for e in f.get("evidence") or []))[:6]
             ns = [C.add(ev_cite(e, f["id"], d, i)) for i, e in list(enumerate(f.get("evidence") or []))[:3]]
             note, ons = obscurity_cite(f, C, d)
             why = (f"Why it mattered: {poss(ctx.name(d))} Sharpest Needle ({lc(lead)}) rests on "
@@ -1764,7 +1851,7 @@ def products_memo(ctx):
                     gns = [C.add(row_cite(f"row:gl:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter",
                                           "product growth limiter (agent.needle.quant.product)", gl["sentence"], "computed", ticker=t))]
                 gq = [e.get("quote") for e in gl.get("citations") or []]
-                glc = money_gate(plain_terms(gl["sentence"].rstrip(".")), gq)
+                glc = money_gate(plain_terms(gl["sentence"].rstrip(".")), gq, gl.get("numeric_check"))
                 glc = re.sub(r"^What limits .+?'s growth is ", "", glc)
                 glc = re.sub(r", and the market has (?:already|not clearly) priced (?:this|it) in$", "", glc)
                 glc = re.sub(r"^The data do not support naming what limits .+?'s growth: ", "not named: ", glc)
@@ -2028,21 +2115,94 @@ def decide_cite(d, t, mv, C):
     q = "; ".join(f"{k} {mv.get(k)}" for k in FIVE)
     if bud is not None:
         q += f"; {bk} {bud}"
+    if car_note(mv, d) and (mv.get("cash_at_risk") or 0) == 0:
+        q += f"; cash_at_risk_note {car_note(mv, d)}"
     return C.add(row_cite(f"row:decide:{t}:{i}", f"companies/{t}.json:stance.decide.moves[{i}]",
                           f"out/{t}/decide.json (agent.needle.quant.decide): {mv.get('name')}", q,
                           (mv.get("numeric_check") or {}).get("status") or "decide record", ticker=t))
 
 
-def car_text(mv):
+ROW_META_KEYS = {"cite", "cites", "cite_id", "cite_ids", "citations", "citation", "ref", "quote", "url", "source_ref",
+                 "evidence", "numeric_check", "id"}
+
+
+def why_it_works_table(d, t, C):
+    """stance.decide.why_it_works_rows (prescription, formulary, FDA-calendar and analyst-question data) as a table
+    with a cite per row: evidence-shaped citations on the row when it carries them, else a row cite to the record.
+    Accepts a list of dicts, a list of lists, or {columns, rows}."""
+    src = d.get("why_it_works_rows")
+    if isinstance(src, dict):
+        cols, rows = src.get("columns"), src.get("rows")
+    else:
+        cols, rows = None, src
+    if not isinstance(rows, list) or not rows:
+        return None
+    out = []
+    for i, r in enumerate(rows):
+        if isinstance(r, dict) and r.get("decider") and "what_our_data_shows" in r:
+            # decide.md rows: markers in the data cell are footnote numbers into the row's own cites
+            mm = {}
+            for j, e in enumerate(r.get("cites") or []):
+                if not isinstance(e, dict) or e.get("n") is None:
+                    continue
+                base = f"stance.decide.why_it_works_rows{'.rows' if isinstance(src, dict) else ''}[{i}].cites[{j}]"
+                page = e.get("printed") or e.get("page")
+                mm[str(e["n"])] = C.add(row_cite(f"row:why:{t}:{i}:{e['n']}", f"companies/{t}.json:{base}",
+                                                 doc_label(e), e.get("quote") or "", verification_str(e), ticker=t,
+                                                 page=page, url=e.get("deep_link") or e.get("url") or None))
+            unres = {int(x) for x in r.get("markers_unresolved") or []}
+
+            def sub(m, mm=mm, unres=unres):
+                if m.group(1):
+                    n_ = mm.get(m.group(1))
+                    return f"[{n_}]" if n_ and int(m.group(1)) not in unres else ""
+                if m.group(2):
+                    ops = [str(mm.get(x)) if x.isdigit() and mm.get(x) else x for x in (y.strip() for y in m.group(2).split(",")) if x and not (x.isdigit() and int(x) in unres)]
+                    return f"[derived: {', '.join(ops)}]" if ops else ""
+                return m.group(0)
+            data = _dedupe_runs(MARK.sub(sub, plain_terms(str(r.get("what_our_data_shows") or ""))))
+            cols = ["Decider", "What the move needs", "What our data shows", "What only interviews can show"]
+            out.append([str(r.get("decider") or ""), plain_terms(str(r.get("what_the_move_needs") or "")), data,
+                        plain_terms(str(r.get("what_only_interviews_can_show") or ""))])
+            continue
+        if isinstance(r, dict):
+            cols = cols or [k for k in r.keys() if k not in ROW_META_KEYS]
+            cells = ["" if r.get(k) is None else plain_terms(plain_cell(r.get(k))) for k in cols]
+            cites = r.get("citations") or r.get("cites") or r.get("evidence") or []
+            ns = [C.add(ev_cite(e, None, t, 200 + 10 * i + j)) for j, e in enumerate(cites[:2]) if isinstance(e, dict) and e.get("quote")]
+            if not ns:
+                ns = [C.add(row_cite(f"row:why:{t}:{i}", f"companies/{t}.json:stance.decide.why_it_works_rows{'.rows' if isinstance(src, dict) else ''}[{i}]",
+                                     f"out/{t}/decide.json why_it_works_rows ({r.get('source') or 'decide record'})",
+                                     "; ".join(f"{k} {r.get(k)}" for k in cols if r.get(k) not in (None, "")), "decide record", ticker=t))]
+        elif isinstance(r, list):
+            cols = cols or [f"Column {k + 1}" for k in range(len(r))]
+            cells = ["" if x is None else plain_terms(plain_cell(x)) for x in r]
+            ns = [C.add(row_cite(f"row:why:{t}:{i}", f"companies/{t}.json:stance.decide.why_it_works_rows{'.rows' if isinstance(src, dict) else ''}[{i}]",
+                                 "out/{t}/decide.json why_it_works_rows", "; ".join(str(x) for x in r), "decide record", ticker=t))]
+        else:
+            continue
+        cells[-1] = C.after(cells[-1], *ns)
+        out.append(cells)
+    if not out:
+        return None
+    return {"type": "table", "columns": [str(c).replace("_", " ").capitalize() for c in cols], "rows": out}
+
+
+def car_note(mv, d=None):
+    note = mv.get("cash_at_risk_note") or (d or {}).get("cash_at_risk_note")
+    return str(note).strip().rstrip(".") if note else None
+
+
+def car_text(mv, d=None):
     car, bud = mv.get("cash_at_risk"), budget_total(mv)[0]
     if (car or 0) == 0 and bud:
-        return "none under the base case"
+        return plain_terms(car_note(mv, d)) or "none under the base case"
     return mny(car)
 
 
-def five_kpi(mv, n):
+def five_kpi(mv, n, d=None):
     pm = mv.get("payback_month")
-    car = car_text(mv)
+    car = car_text(mv, d)
     return [{"label": "Expected value, $M", "value": f"{mv.get('ev') or 0:,.1f}", "cite": n},
             {"label": "Cash at risk" + (", $M" if car.startswith(("$", "-$")) else ""), "value": car.lstrip("$") if car.startswith("$") else car, "cite": n},
             {"label": "Payback month", "value": f"{pm}" if pm is not None else "none within the horizon", "cite": n},
@@ -2061,7 +2221,7 @@ def deciders_sentence(ctx, t, st, C, needle, fs, rec):
         label, _, body = x.partition(":")
         parts.append(f"{label.strip().lower()} ({body.strip()})" if body else x[0].lower() + x[1:])
     lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the needle"
-    top = next((f for f in fs if f is not needle and impact_cell(f, Cites(), t)[2]
+    top = next((f for f in fs if f is not needle and not f.get("explained_by_footnote") and impact_cell(f, Cites(), t)[2]
                 and (match_rule(f.get("signal_kind"), LEADS) or "") != lead), None)
     bits = []
     if needle:
@@ -2123,7 +2283,7 @@ def ceo_memo(ctx, t):
             p += f" Decision needed: approve {mny(bud)} over 24 months against {mny(cash)} of cash and equivalents [{cn}]."
         kpi = [{"label": "Least-bad option" if least_bad else "Recommended", "value": rec, "cite": n},
                {"label": "Budget, $M committed over 24 months", "value": f"{bud:,.1f}" if bud is not None else "not stated", "cite": n},
-               *five_kpi(mv, n)]
+               *five_kpi(mv, n, d)]
     else:
         rns = option_cites(st, ctx, t, C, rec)
         ndir = impact_cell(needle, Cites(), t)[0].split(".")[0].rstrip() if needle else ""
@@ -2174,9 +2334,14 @@ def ceo_memo(ctx, t):
             reason = re.sub(r"\s*\(spec [\d.]+\)", "", reason).strip().rstrip(";. ")
             pm = m.get("payback_month")
             reason = reason.replace("MCDA", "weighted score")
-            items.append([m.get("name"), f"{mny(m.get('ev'))} [{n}]", car_text(m), f"{pm}" if pm is not None else "none within the horizon",
-                          mny(m.get("spread")), f"{m.get('mcda') or 0:.3f}", reason])
-        cols = ["Move", "Expected value", "Cash at risk", "Payback month", "Spread", "Weighted score", "Not chosen because"]
+            passed = m.get("why_passed") or (alts.get(m.get("name")) or {}).get("why_passed")
+            if passed:
+                passed = re.sub(r"^Why we passed: ", "", str(passed).strip().rstrip(".")).replace("MCDA", "weighted score")
+                passed = re.sub(r"\s*\(spec [\d.]+\)", "", passed)
+            items.append([m.get("name"), f"{mny(m.get('ev'))} [{n}]", C.after(car_text(m, d), n), f"{pm}" if pm is not None else "none within the horizon",
+                          mny(m.get("spread")), f"{m.get('mcda') or 0:.3f}", f"{plain_terms(passed)} [{n}]" if passed else reason])
+        cols = ["Move", "Expected value", "Cash at risk", "Payback month", "Spread", "Weighted score",
+                "Why we passed" if any(m.get("why_passed") or (alts.get(m.get("name")) or {}).get("why_passed") for m in others[:2]) else "Not chosen because"]
     else:
         for alt in (st.get("alternatives") or [])[:2]:
             an = alt.get("name")
@@ -2197,6 +2362,9 @@ def ceo_memo(ctx, t):
     blocks.append({"type": "p", "md": "Two signals firing in one quarter pause the move and re-run the valuation."})
     # Deciders
     blocks.append({"type": "h", "text": "Why it lands with the deciders"})
+    wiw = why_it_works_table(d, t, C)
+    if wiw:
+        blocks.append(wiw)
     blocks.append({"type": "p", "md": deciders_sentence(ctx, t, st, C, needle, fs, rec)})
     # Priced in
     blocks.append({"type": "h", "text": "Priced in or not"})
@@ -2239,6 +2407,8 @@ def kill_rows(ctx, t, C, fs, st, gen):
     for f in fs:
         if len(rows) >= 3:
             break
+        if f.get("explained_by_footnote") or "explained_by" in str(f.get("signal_kind") or ""):
+            continue  # a footnote-explained or artifact-explaining row is not a signal to watch
         rule = match_rule(f.get("signal_kind"), PROVE_WRONG)
         if not rule or rule in seen:
             continue
@@ -2283,7 +2453,7 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
     seen = set()
     for f in fs:
         rule = match_rule(f.get("signal_kind"), PROVE_WRONG)
-        if not rule or rule in seen:
+        if not rule or rule in seen or f.get("explained_by_footnote") or "explained_by" in str(f.get("signal_kind") or ""):
             continue
         seen.add(rule)
         lead = match_rule(f.get("signal_kind"), LEADS) or "the finding"
@@ -2291,7 +2461,8 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
             items.append(f"{rule} Baseline: {lc(lead)} {C.mark(*lead_cites(f, C, t))}.")
         else:
             s, ns = sentence(f, C, t)
-            items.append(f"{rule} Baseline today: {C.after(s, *ns)}.")
+            cell = clip(s, 30)
+            items.append(f"{rule} Baseline today: {C.after(cell + rest_marks(s, cell, C), *ns)}.")
         if len(items) >= 3:
             break
     sf = ctx.companies[t].get("sealed_forecast") or {}
@@ -2535,6 +2706,9 @@ def allowed_tokens(m, ctx):
             f = ctx.finding(tk, fid) if fid and tk in ctx.companies else None
             if f:
                 allowed |= num_tokens(gated_text(f))
+                row = ctx.table_rows(tk)[0].get(fid) if tk in ctx.companies else None
+                if isinstance(row, dict):  # the findings_table row's gated peer text and marked cells
+                    allowed |= num_tokens(" ".join(str(row.get(k) or "") for k in ("peer_text", "peer_comparison", "sentence_marked", "impact_marked")))
         if (c.get("cite_id") or "").startswith("row:"):
             allowed |= num_tokens(c.get("quote") or "")
             obj, _ = resolve_ref(c.get("ref") or "", ctx)

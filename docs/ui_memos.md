@@ -52,7 +52,7 @@ Kinds and formats, mapped to the case wording:
 | product | chat | ticker x product | data | Part 1: product table | the five case rows vs each rival, growth limiter, tied finding, priced-in call; `uncited` cells print "needs citation", never a value |
 | priced_in | chat | ticker | data | Part 1: priced-in call | analyst-attention test, least-asked topics, guidance quote vs consensus position, our call |
 | peers | chat | ticker | data | context | ten-company table on IRA share, MFN date, tariff exemption, sites outside the US, US revenue share |
-| ceo_memo | memo | ticker | template or decide_v2 | Part 2 | Recommendation (move, budget), Return math (five numbers as a two-column table plus a one-callout definition), Why (five findings), Alternatives rejected (one table), What would prove us wrong (3-row table: signal, baseline today, what it would show), Why it lands with the deciders (two sentences), Priced in or not (one sentence); prose at or under 350 words |
+| ceo_memo | memo | ticker | template or decide_v2 | Part 2 | Recommendation (move, budget), Return math (five numbers as a two-column table plus a one-callout definition; the Cash at risk cell prints `decide.cash_at_risk_note` when cash at risk is zero), Why (five findings), Alternatives rejected (one table; the last column is `why_passed` from the alternative when the export carries it, else the binding reason), What would prove us wrong (3-row table: signal, baseline today, what it would show), Why it lands with the deciders (`decide.why_it_works_rows` as a Decider / needs / data / interviews table, each data marker resolved to a row cite on the row's own `cites[j]`, plus two sentences), Priced in or not (one sentence); prose at or under 350 words |
 | prove_wrong | memo | ticker | template or decide_v2 | Part 2: kill signals | kill signals with the cited baseline each must move from |
 | needles | chat | global | data | Part 1 across companies | two-sentence lead plus one table: company, needle sentence clipped to 20 words (markers cut by the clip move to the Cites column), impact direction, analyst attention (with the status caveat), cites; ordered by gated dollar impact where the engine states one, else the engine's needle order |
 | products | chat | global | data | Part 1 across products | two-sentence lead plus one table per case product: product vs rivals, growth limiter (20 words), tied finding direction and channel, priced-in call |
@@ -62,6 +62,15 @@ Kinds and formats, mapped to the case wording:
 | ai_wrong | chat | global | data | proof | `proof.ai_wrong_cases` (26 rows): the count plus eight instructive cases (date, AI claim, caught by, fix), each a row cite to its evidence refs; falls back to `proof.ai_wrong` when the cases list is absent |
 | moat | chat | global | data | proof | corpus counts, the ten buckets, and why the data mattered for the default needle |
 | how_it_works | chat | global | data | method | one paragraph (the four pitch outputs, verify to the page, the numeric gate) plus a proof table (sealed forecasts and calibration, ledger, honesty); cites sections of `proof.how_we_did_it_md` as row cites |
+
+Needle selection: the needle is `needle_id_rule`; `needle_source` adds one clause to the needle answer ("chosen
+by the red-team read, confirmed by the gate" or "chosen by the plain rule") and `needle_reason` is the "Why this
+one" sentence, cited to the record path (skipped when it only restates the plain rule). A finding with
+`explained_by_footnote` is never the needle, never a kill signal, and its Impact cell reads "Explained by
+footnote: <reason>" cited to `explained_by_footnote_note`. A findings_table row's `peer_text` is the Peer cell.
+Product dollars print when the growth limiter's or tied finding's `numeric_check` passed (the engine derived them
+from cited revenue and erosion operands); otherwise the money gate replaces the figure with its direction.
+Markers of the form `[assumption: reason]` pass through unchanged.
 
 `generated_by` is set honestly: `decide_v2` when `stance.decide` carries moves (DECIDE output, five numbers per
 move), `template` when the stance is the exporter's rule-drafted one, `data` for tables and lists assembled
