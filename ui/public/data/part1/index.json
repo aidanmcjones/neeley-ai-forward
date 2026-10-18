@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T04:20:26Z",
+ "generated_at": "2026-10-18T04:26:23Z",
  "engine": "v3",
  "prompt": "find material, non-obvious findings about one company and compare one of its key products against its rivals.",
  "picked": [
@@ -7,27 +7,17 @@
   "MRK",
   "PFE"
  ],
- "tickers": [],
- "available": [],
+ "tickers": [
+  "AMGN",
+  "PFE"
+ ],
+ "available": [
+  "AMGN",
+  "PFE"
+ ],
  "missing": [
   {
-   "ticker": "AMGN",
-   "reason": "writing",
-   "absent": [
-    "part1.json",
-    "trace.jsonl"
-   ]
-  },
-  {
    "ticker": "MRK",
-   "reason": "writing",
-   "absent": [
-    "part1.json",
-    "trace.jsonl"
-   ]
-  },
-  {
-   "ticker": "PFE",
    "reason": "writing",
    "absent": [
     "part1.json",

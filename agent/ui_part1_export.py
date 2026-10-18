@@ -550,8 +550,65 @@ def selection_problems(sel):
 
 
 # ---------------------------------------------------------------- company record
+CONTRACT_TOP = {"ticker", "name", "findings", "sharpest_needle", "product_table", "sample", "rank_basis"}
+
+
+def _norm_words(s, drop_possessor=True):
+    s = re.sub(r"\([^()]*\)", " ", s or "")
+    if drop_possessor:
+        s = re.sub(r"\b[\w-]+['\u2019]s\b", " ", s)
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).split()
+
+
+def _col_matches(name, key):
+    """Normalized containment either way: the cell key's words all appear in the column name (parentheticals
+    included), or the column name's first brand word appears in the key."""
+    kw = set(_norm_words(key))
+    full = set(re.sub(r"[^a-z0-9]+", " ", re.sub(r"\b[\w-]+['\u2019]s\b", " ", (name or "").lower())).split())
+    if kw and kw <= full:
+        return True
+    nw = _norm_words(name)
+    return bool(nw) and nw[0] in kw
+
+
+def _short_label(name):
+    words = re.sub(r"\([^()]*\)", " ", name or "")
+    words = re.sub(r"\b[\w-]+['\u2019]s\s+", "", words)
+    return re.sub(r"\s+", " ", words).strip() or name
+
+
+def resolve_columns(pt):
+    """[{key, label, full}] mapping the product, then each rival in order, to the cell key the rows use. Columns are
+    matched by name; when that fails and every row has exactly len(rivals) + 1 cells, by position. Raises
+    ExportError when a row cannot be resolved."""
+    names = [pt.get("product")] + list(pt.get("rivals") or [])
+    rows = [r for r in pt.get("rows") or [] if isinstance(r, dict)]
+    if all(all(nm in (r.get("cells") or {}) for nm in names) for r in rows):
+        return [{"key": nm, "label": _short_label(nm), "full": nm} for nm in names]
+    keys = list(dict.fromkeys(k for r in rows for k in (r.get("cells") or {})))
+    cols, used = [], set()
+    for nm in names:
+        hits = [k for k in keys if k not in used and (k == nm or _col_matches(nm, k))]
+        if len(hits) != 1:
+            cols = None
+            break
+        used.add(hits[0])
+        cols.append({"key": hits[0], "label": hits[0], "full": nm})
+    if cols is None or any(any(c["key"] not in (r.get("cells") or {}) for c in cols) for r in rows):
+        if rows and all(len(r.get("cells") or {}) == len(names) for r in rows) and \
+                all(list(r.get("cells")) == list(rows[0].get("cells")) for r in rows):
+            cols = [{"key": k, "label": k, "full": nm} for k, nm in zip(rows[0]["cells"], names)]
+        else:
+            bad = [r.get("row") for r in rows if cols is None or any(c["key"] not in (r.get("cells") or {}) for c in cols)]
+            raise ExportError(f"product_table rows {bad} cannot be matched to the product and rivals {names}")
+    return cols
+
+
 def build_company(rec):
     rec = copy.deepcopy(rec)
+    pt = rec.get("product_table")
+    if isinstance(pt, dict) and pt.get("rows"):
+        pt["columns"] = resolve_columns(pt)
     withhold_tree(rec)
     for f in rec.get("findings") or []:
         reconcile_source(f)
@@ -588,11 +645,18 @@ def company_problems(rec, t, sample=False):
     rows = pt.get("rows") or []
     if [r.get("row") for r in rows] != ROW_KEYS:
         errs.append(f"{t}.product_table rows {[r.get('row') for r in rows]} != the five case rows in order")
+    cols = pt.get("columns")
     names = [pt.get("product")] + list(pt.get("rivals") or [])
+    if not isinstance(cols, list) or [c.get("full") for c in cols] != names:
+        errs.append(f"{t}.product_table.columns must map the product and each rival, in order")
+        cols = [{"key": nm} for nm in names]
     for r in rows:
-        for nm in names:
-            if nm not in (r.get("cells") or {}):
-                errs.append(f"{t}.product_table row '{r.get('row')}' has no cell for {nm}")
+        for c in cols:
+            if c.get("key") not in (r.get("cells") or {}):
+                errs.append(f"{t}.product_table row '{r.get('row')}' has no cell for column {c.get('key')}")
+    extra = sorted(set(rec) - CONTRACT_TOP)
+    if extra:
+        warns.append(f"{t}.json carries top-level keys beyond the contract (passed through): {extra}")
     for k in ("financial_tie", "growth_limiter", "priced_in"):
         if not isinstance(pt.get(k), dict):
             errs.append(f"{t}.product_table.{k} missing")

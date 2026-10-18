@@ -8741,6 +8741,28 @@
     }
    ]
   },
-  "source_file": "out/LLY/product_zepbound.json"
+  "source_file": "out/LLY/product_zepbound.json",
+  "columns": [
+   {
+    "key": "Zepbound",
+    "label": "Zepbound",
+    "full": "Zepbound"
+   },
+   {
+    "key": "Ozempic",
+    "label": "Ozempic",
+    "full": "Ozempic"
+   },
+   {
+    "key": "Wegovy injection",
+    "label": "Wegovy injection",
+    "full": "Wegovy injection"
+   },
+   {
+    "key": "Wegovy pill",
+    "label": "Wegovy pill",
+    "full": "Wegovy pill"
+   }
+  ]
  }
 }

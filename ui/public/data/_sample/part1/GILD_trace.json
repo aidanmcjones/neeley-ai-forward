@@ -13,7 +13,7 @@
    "Peer contrast"
   ],
   "ticker": "GILD",
-  "generated_at": "2026-10-18T04:20:26Z",
+  "generated_at": "2026-10-18T04:26:30Z",
   "sample": true,
   "note": "Illustrative trace assembled from the engine's gate and red-team decisions; the blind skeptic pass has not run",
   "trimmed": {

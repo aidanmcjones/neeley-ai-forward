@@ -102,6 +102,18 @@ Exporter transforms:
   (10-K, 10-Q, 20-F), page numbers and ids glued to letters (AMGN-c06) are exempt there; this module also exempts
   plural form names (10-Qs) and digit counts of rows or survivors (5 rows). Word counts (five-row table, two
   survivors, four rows short of five) carry no digits.
+- Product columns: the exporter adds `product_table.columns: [{key, label, full}]`, one per column (product first,
+  then rivals in order). `key` is the cell key the rows use (cells stay keyed as written), `label` a short header,
+  `full` the original product or rival string for the hover. A column is matched to a key by normalized containment
+  either way (possessors such as "BridgeBio's", parentheticals and punctuation removed, lowercase): the key's words
+  all appear in the name, or the name's first brand word appears in the key ("Vyndaqel family (Vyndaqel /
+  Vyndamax, tafamidis)" -> "Vyndaqel / Vyndamax", "BridgeBio's Attruby (acoramidis)" -> "Attruby"). When matching
+  fails and every row has exactly len(rivals) + 1 cells in the same order, columns map by position; otherwise the
+  company fails the checks.
+- Pass-through: extra keys on findings (blind_id, category, verdict, confidence_reason, obviousness,
+  on_the_record, derived), on financial_tie (math_numeric_check) and at the top level of part1.json (derived,
+  assumptions, not_sourced, dash_note, notes, generated_at) are copied unchanged; unknown top-level keys are a
+  `--check` warning, not an error. Any `numeric_check` key, wherever it sits, still has to pass.
 - Partial availability: every picked ticker with both `<T>/part1.json` and `<T>/trace.jsonl` is exported; the
   others are listed in `index.missing` with reason "writing". A company whose files fail any hard check is not
   written (a stale copy is deleted) and is listed with reason "failed checks" and its errors. selection.json,

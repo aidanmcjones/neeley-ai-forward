@@ -4284,6 +4284,23 @@
     }
    ]
   },
-  "source_file": "out/GILD/product_biktarvy.json"
+  "source_file": "out/GILD/product_biktarvy.json",
+  "columns": [
+   {
+    "key": "Biktarvy",
+    "label": "Biktarvy",
+    "full": "Biktarvy"
+   },
+   {
+    "key": "Dovato",
+    "label": "Dovato",
+    "full": "Dovato"
+   },
+   {
+    "key": "Cabenuva",
+    "label": "Cabenuva",
+    "full": "Cabenuva"
+   }
+  ]
  }
 }

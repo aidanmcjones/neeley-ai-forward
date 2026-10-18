@@ -4834,6 +4834,28 @@
     }
    ]
   },
-  "source_file": "out/MRK/product_keytruda.json"
+  "source_file": "out/MRK/product_keytruda.json",
+  "columns": [
+   {
+    "key": "Keytruda",
+    "label": "Keytruda",
+    "full": "Keytruda"
+   },
+   {
+    "key": "Opdivo",
+    "label": "Opdivo",
+    "full": "Opdivo"
+   },
+   {
+    "key": "Imfinzi",
+    "label": "Imfinzi",
+    "full": "Imfinzi"
+   },
+   {
+    "key": "Tecentriq",
+    "label": "Tecentriq",
+    "full": "Tecentriq"
+   }
+  ]
  }
 }

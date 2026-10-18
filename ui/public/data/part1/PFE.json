@@ -1,0 +1,2799 @@
+{
+ "ticker": "PFE",
+ "name": "Pfizer Inc.",
+ "generated_at": "2026-10-18T04:23:48Z",
+ "findings": [
+  {
+   "n": 1,
+   "blind_id": "PFE-c01",
+   "category": "Peer contrast",
+   "verdict": "narrowed",
+   "finding": "In H1 2026 the U.S. ATTR-CM class (U.S. Vyndaqel family, Alnylam's U.S. Amvuttra and BridgeBio's Attruby) grew $1,246M (+47%) while U.S. Vyndaqel revenue was flat at $1,975M vs $1,976M, so Vyndaqel's share of U.S. class revenue fell from 74.8% to 50.8%; this quantifies a share loss management has described but never sized, and it is revenue share, not patient share.",
+   "finding_marked": "In H1 2026 the U.S. ATTR-CM class (U.S. Vyndaqel family, Alnylam's U.S. Amvuttra and BridgeBio's Attruby) grew $1,246M[derived: 1, 2, 3, 4] (+47%[derived: 1, 2, 3, 4]) while U.S. Vyndaqel revenue was flat at $1,975M[1] vs $1,976M[1], so Vyndaqel's share of U.S. class revenue fell from 74.8%[derived: 1, 2, 3, 4] to 50.8%[derived: 1, 2, 3, 4]; this quantifies a share loss management has described but never sized, and it is revenue share, not patient share.[5][6]",
+   "marker_map": {
+    "1": "c_de42636698",
+    "2": "c_fd1ff92224",
+    "3": "c_d18c418a1c",
+    "4": "c_6de0d6e012",
+    "5": "c_7546c0f350",
+    "6": "c_e93bf4c036",
+    "7": "c_d503e47523",
+    "8": "c_f3321ec22f"
+   },
+   "source": {
+    "doc_title": "Pfizer 10-Q 2026-06-28",
+    "period": "2026-06-28",
+    "page": "p. 38",
+    "file_page": 38,
+    "quote": "U.S. $ 1,975 $ 1,976",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+   },
+   "cites": [
+    {
+     "cite_id": "c_de42636698",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "U.S. $ 1,975 $ 1,976",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_d0fd0ba39c",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "U.S. $ 1,064 $ 990 7",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C064%20%24%20990%207",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_d503e47523",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "net price erosion in the U.S. as a result of new payer contracts",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=net%20price%20erosion%20in%20the%20U.S.%20as%20a",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=net%20price%20erosion%20in%20the%20U.S.%20as%20a%20result%20of%20new%20payer%20contracts",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_fd1ff92224",
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "doc_title": "Alnylam 10-Q 2026-06-30",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "United States $ 809,079 $ 361,346 $ 447,733 124 % $ 1,511,633 $ 559,310 $ 952,323 170 %",
+     "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=United%20States%20%24%20809%2C079%20%24%20361%2C346%20%24%20447%2C733%20124%20%25%20%24%201%2C511%2C633%20%24%20559%2C310%20%24%20952%2C323%20170%20%25",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_f3321ec22f",
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "doc_title": "Alnylam 10-Q 2026-06-30",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "mainly in patients with ATTR-CM in the U.S.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm#:~:text=mainly%20in%20patients%20with%20ATTR%2DCM%20in%20the%20U.S.",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=mainly%20in%20patients%20with%20ATTR-CM%20in%20the%20U.S.",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_d18c418a1c",
+     "doc_id": "BBIO:10q_2026Q2.md",
+     "doc_title": "BridgeBio 10-Q 2026-06-30",
+     "page": 56,
+     "location": "p. 52",
+     "quote": "Net product revenue $ 222,440 $ 71,501 $ 150,939 $ 403,036 $ 108,240",
+     "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=56&q=Net%20product%20revenue%20%24%20222%2C440%20%24%2071%2C501%20%24%20150%2C939%20%24%20403%2C036%20%24%20108%2C240",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_6de0d6e012",
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": 44,
+     "location": "p. 38",
+     "quote": "U.S. $ 3,834 $ 3,547 8",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=44&q=U.S.%20%24%203%2C834%20%24%203%2C547%208",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_7546c0f350",
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "doc_title": "Pfizer 2025Q2 earnings call (third_party)",
+     "page": 10,
+     "location": "p. 10",
+     "quote": "Attruby is taking some first-line share",
+     "url": "https://bullfincher.io/companies/pfizer/earnings-call/fy2025-q2",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Acompanies%2FPFE%2Ftranscripts%2F2025Q2_transcript.md&page=10&q=Attruby%20is%20taking%20some%20first-line%20share",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "speaker": "Aamir Malik"
+    },
+    {
+     "cite_id": "c_e93bf4c036",
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "doc_title": "Pfizer 2025Q3 earnings call (official)",
+     "page": 9,
+     "location": "p. 9",
+     "quote": "that's reinforced by our continued market share leadership, both on a TRx basis, clearly, but also in terms of first-line share",
+     "url": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/q3/PFE-USQ_Transcript_2025-11-04.pdf#page=9",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Atranscripts%2F2025Q3_transcript.md&page=9&q=that%27s%20reinforced%20by%20our%20continued%20market%20share%20leadership%2C%20both%20on%20a%20TRx%20basis%2C%20clearly%2C%20but%20also%20in%20terms%20of%20first-line%20share",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "speaker": "Aamir Malik"
+    }
+   ],
+   "impact": {
+    "text": "Vyndaqel took none of the class's $1,246M of H1 growth. Against its own FY2025 U.S. growth rate, H1 2026 U.S. Vyndaqel would have been about $2,136M, so about $161M per half (about $0.32B a year) is missing versus trend; this is a counterfactual, not a decline, and part of it is Pfizer's own payer-contract price cuts.",
+    "text_marked": "Vyndaqel took none of the class's $1,246M[derived: 1, 2, 3, 4] of H1 growth. Against its own FY2025 U.S. growth rate, H1 2026 U.S. Vyndaqel would have been about $2,136M[derived: 1, 2, 3, 4], so about $161M[derived: 1, 2, 3, 4] per half (about $0.32B[derived: 1, 2, 3, 4] a year) is missing versus trend; this is a counterfactual, not a decline, and part of it is Pfizer's own payer-contract price cuts.[7]",
+    "math": "Class H1 2026 = $1,975M + $1,511.6M + $403.0M = $3,889.7M; H1 2025 = $1,976M + $559.3M + $108.2M = $2,643.5M; change $1,246M (+47%). Vyndaqel share $1,975M / $3,889.7M = 50.8% vs $1,976M / $2,643.5M = 74.8%. Trend: $1,976M x ($3,834M / $3,547M) = $2,136M, minus actual $1,975M = $161M per half, annualized $0.32B a year.",
+    "math_marked": "Class H1 2026 = $1,975M[1] + $1,511.6M[2] + $403.0M[3] = $3,889.7M[derived: 1, 2, 3, 4]; H1 2025 = $1,976M[1] + $559.3M[2] + $108.2M[3] = $2,643.5M[derived: 1, 2, 3, 4]; change $1,246M[derived: 1, 2, 3, 4] (+47%[derived: 1, 2, 3, 4]). Vyndaqel share $1,975M[1] / $3,889.7M[derived: 1, 2, 3, 4] = 50.8%[derived: 1, 2, 3, 4] vs $1,976M[1] / $2,643.5M[derived: 1, 2, 3, 4] = 74.8%[derived: 1, 2, 3, 4]. Trend: $1,976M[1] x ($3,834M[4] / $3,547M[4]) = $2,136M[derived: 1, 2, 3, 4], minus actual $1,975M[1] = $161M[derived: 1, 2, 3, 4] per half, annualized $0.32B[derived: 1, 2, 3, 4] a year.",
+    "direction": "down",
+    "metric": "revenue",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 38,
+     "total": 38,
+     "verified": 18,
+     "derived": 20,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "Alnylam's U.S. Amvuttra revenue was $1,511.6M in H1 2026 vs $559.3M (+170%), growth 'mainly in patients with ATTR-CM in the U.S.'; BridgeBio's net product revenue (Attruby) was $403.0M vs $108.2M. Amvuttra's U.S. line also includes hATTR-PN use, so the class total is approximate.",
+   "peer_marked": "Alnylam's U.S. Amvuttra revenue was $1,511.6M[2] in H1 2026 vs $559.3M[2] (+170%[derived: 1, 2, 3, 4]), growth 'mainly in patients with ATTR-CM in the U.S.'; BridgeBio's net product revenue (Attruby) was $403.0M[3] vs $108.2M[3]. Amvuttra's U.S. line also includes hATTR-PN use, so the class total is approximate.[8]",
+   "confidence": "high",
+   "confidence_reason": "Every operand is printed in the three companies' Q2 2026 10-Qs for near-identical half-years; the share is approximate because Amvuttra's U.S. figure includes polyneuropathy revenue and revenue share mixes price with volume.",
+   "obviousness": "medium",
+   "on_the_record": "The direction is on the record: Aamir Malik said 'Attruby is taking some first-line share' (Pfizer 2025Q2 call p.10, grade A) and cited payer contracting on the 2025Q3 call (p.9, grade A); no Pfizer, Alnylam or BridgeBio document in the index sizes the class revenue share.",
+   "derived": {
+    "class26": {
+     "value": "$3,889.7M",
+     "expr": "a + c + e",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "H1 2026 U.S. ATTR-CM class revenue"
+    },
+    "class25": {
+     "value": "$2,643.5M",
+     "expr": "b + d + f",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "H1 2025 U.S. ATTR-CM class revenue"
+    },
+    "growth": {
+     "value": "$1,246M",
+     "expr": "(a + c + e) - (b + d + f)",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "class growth"
+    },
+    "growth_pct": {
+     "value": "+47%",
+     "expr": "((a + c + e) / (b + d + f) - 1) * 100",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "class growth %"
+    },
+    "share26": {
+     "value": "50.8%",
+     "expr": "a / (a + c + e) * 100",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "Vyndaqel share H1 2026"
+    },
+    "share25": {
+     "value": "74.8%",
+     "expr": "b / (b + d + f) * 100",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "Vyndaqel share H1 2025"
+    },
+    "cf": {
+     "value": "$2,136M",
+     "expr": "b * g / h",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "H1 2026 at FY2025 U.S. growth"
+    },
+    "gap": {
+     "value": "$161M",
+     "expr": "b * g / h - a",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "shortfall vs trend per half"
+    },
+    "gap_yr": {
+     "value": "$0.32B",
+     "expr": "(b * g / h - a) * 2 / 1000",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "shortfall annualized"
+    },
+    "amv_pct": {
+     "value": "+170%",
+     "expr": "(c / d - 1) * 100",
+     "operands": {
+      "a": {
+       "value": 1975,
+       "citation": "c_de42636698",
+       "text": "1,975",
+       "unit": "USD millions"
+      },
+      "b": {
+       "value": 1976,
+       "citation": "c_de42636698",
+       "text": "1,976",
+       "unit": "USD millions"
+      },
+      "c": {
+       "value": 1511.633,
+       "citation": "c_fd1ff92224",
+       "text": "1,511,633",
+       "unit": "USD thousands"
+      },
+      "d": {
+       "value": 559.31,
+       "citation": "c_fd1ff92224",
+       "text": "559,310",
+       "unit": "USD thousands"
+      },
+      "e": {
+       "value": 403.036,
+       "citation": "c_d18c418a1c",
+       "text": "403,036",
+       "unit": "USD thousands"
+      },
+      "f": {
+       "value": 108.24,
+       "citation": "c_d18c418a1c",
+       "text": "108,240",
+       "unit": "USD thousands"
+      },
+      "g": {
+       "value": 3834,
+       "citation": "c_6de0d6e012",
+       "text": "3,834",
+       "unit": "USD millions"
+      },
+      "h": {
+       "value": 3547,
+       "citation": "c_6de0d6e012",
+       "text": "3,547",
+       "unit": "USD millions"
+      }
+     },
+     "label": "Amvuttra U.S. growth"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "blind_id": "PFE-c04",
+   "category": "Footnotes",
+   "verdict": "narrowed",
+   "finding": "Pfizer's 'certain legal matters' charge was $842M in Q2 2026 vs $422M a year earlier ($1,033M vs $564M for H1), shown as $867M in the 10-Q's non-GAAP reconciliation; the only MDL resolution dated in the quarter, the June 2026 Depo-Provera agreement-in-principle, is called 'not material to the Company's liquidity or financial condition', while the March 2026 Chantix resolution a paragraph earlier is called 'not material to Pfizer', and linking the charge to Depo-Provera is an inference.",
+   "finding_marked": "Pfizer's 'certain legal matters' charge was $842M[1][2] in Q2 2026 vs $422M[1][2] a year earlier ($1,033M[1][2] vs $564M[1][2] for H1), shown as $867M[3] in the 10-Q's non-GAAP reconciliation; the only MDL resolution dated in the quarter, the June 2026 Depo-Provera agreement-in-principle, is called 'not material to the Company's liquidity or financial condition', while the March 2026 Chantix resolution a paragraph earlier is called 'not material to Pfizer', and linking the charge to Depo-Provera is an inference.[4][5]",
+   "marker_map": {
+    "1": "c_3d9e3bb359",
+    "2": "c_d38c1d0c70",
+    "3": "c_6b2f3d287c",
+    "4": "c_9d8ee7a1cb",
+    "5": "c_da73cde953",
+    "6": "c_9a42aa345e",
+    "7": "c_d6180d3140",
+    "8": "c_f223b2f0b8",
+    "9": "c_ff65efbdc4"
+   },
+   "source": {
+    "doc_title": "Pfizer 10-Q 2026-06-28",
+    "period": "2026-06-28",
+    "page": "p. 27",
+    "file_page": 27,
+    "quote": "we reached an agreement-in-principle with plaintiff leadership in the Depo-Provera MDL that we expect to resolve a substantial majority of the pending MDL cases on terms that are not material to the Company’s liquidity or financial condition",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=we%20reached%20an%20agreement%2Din%2Dprinciple%20with%20plaintiff%20leadership%20in"
+   },
+   "cites": [
+    {
+     "cite_id": "c_3d9e3bb359",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 14,
+     "location": "p. 14",
+     "quote": "Certain legal matters, net (a) 842 422 1,033 564",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=Certain%20legal%20matters%2C%20net%20%28a%29",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=14&q=Certain%20legal%20matters%2C%20net%20%28a%29%20842%20422%201%2C033%20564",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_f223b2f0b8",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 14,
+     "location": "p. 14",
+     "quote": "primarily include certain product liability and other legal expenses",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=primarily%20include%20certain%20product%20liability%20and%20other%20legal",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=14&q=primarily%20include%20certain%20product%20liability%20and%20other%20legal%20expenses",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_6b2f3d287c",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 46,
+     "location": "p. 46",
+     "quote": "charges of $867 million for the second quarter and $1.0 billion for the first six months for certain legal matters",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=charges%20of%20%24867%20million%20for%20the%20second%20quarter",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=46&q=charges%20of%20%24867%20million%20for%20the%20second%20quarter%20and%20%241.0%20billion%20for%20the%20first%20six%20months%20for%20certain%20legal%20matters",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_9d8ee7a1cb",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 27,
+     "location": "p. 27",
+     "quote": "we reached an agreement-in-principle with plaintiff leadership in the Depo-Provera MDL that we expect to resolve a substantial majority of the pending MDL cases on terms that are not material to the Company’s liquidity or financial condition",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=we%20reached%20an%20agreement%2Din%2Dprinciple%20with%20plaintiff%20leadership%20in",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=27&q=we%20reached%20an%20agreement-in-principle%20with%20plaintiff%20leadership%20in%20the%20Depo-Provera%20MDL%20that%20we%20expect%20to%20resolve%20a%20substantial%20majority%20of%20the%20pending%20MDL%20cases%20on%20terms%20that%20are%20not%20material%20to%20the%20Company%E2%80%99s%20liquidity%20or%20financial%20condition",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_da73cde953",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 27,
+     "location": "p. 27",
+     "quote": "In March 2026, the parties reached an agreement in principle to resolve the litigation on terms not material to Pfizer",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=In%20March%202026%2C%20the%20parties%20reached%20an%20agreement",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=27&q=In%20March%202026%2C%20the%20parties%20reached%20an%20agreement%20in%20principle%20to%20resolve%20the%20litigation%20on%20terms%20not%20material%20to%20Pfizer",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_d6180d3140",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 27,
+     "location": "p. 27",
+     "quote": "coordinated proceedings were established in several U.S. state jurisdictions, including California, Connecticut, Delaware, and New York",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=coordinated%20proceedings%20were%20established%20in%20several%20U.S.%20state",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=27&q=coordinated%20proceedings%20were%20established%20in%20several%20U.S.%20state%20jurisdictions%2C%20including%20California%2C%20Connecticut%2C%20Delaware%2C%20and%20New%20York",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_9a42aa345e",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 5,
+     "location": "p. 5",
+     "quote": "Weighted-average shares––diluted 5,699 5,706 5,733 5,708",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=5&q=Weighted-average%20shares%E2%80%93%E2%80%93diluted%205%2C699%205%2C706%205%2C733%205%2C708",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_d38c1d0c70",
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "doc_title": "Pfizer earnings release (8-K) 2026-08-04",
+     "page": 16,
+     "location": "file page 16 (no printed page number)",
+     "quote": "Certain legal matters, net (a) 842 422 1,033 564",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000094/pfe-6282026xex99.htm#:~:text=Certain%20legal%20matters%2C%20net%20%28a%29",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Aearnings%2F2026-08-04_pfe-6282026xex99.md&page=16&q=Certain%20legal%20matters%2C%20net%20%28a%29%20842%20422%201%2C033%20564",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_ff65efbdc4",
+     "doc_id": "BMY:10q_2026Q2.md",
+     "doc_title": "Bristol Myers Squibb 10-Q 2026-06-30",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "Litigation and other settlements 5 1 8 259",
+     "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000020/bmy-20260630.htm#:~:text=Litigation%20and%20other%20settlements",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3A10q_2026Q2.md&page=38&q=Litigation%20and%20other%20settlements%205%201%208%20259",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    }
+   ],
+   "impact": {
+    "text": "About $0.148 of pre-tax GAAP EPS in Q2 2026 alone; the charge is outside adjusted EPS but product-liability settlements are paid in cash, and state-court Depo-Provera cases (California, Connecticut, Delaware, New York) sit outside the MDL deal.",
+    "text_marked": "About $0.148[derived: 1, 6, 3] of pre-tax GAAP EPS in Q2 2026 alone; the charge is outside adjusted EPS but product-liability settlements are paid in cash, and state-court Depo-Provera cases (California, Connecticut, Delaware, New York) sit outside the MDL deal.[7]",
+    "math": "$842M / 5,699M diluted shares = $0.148 pre-tax GAAP EPS. H1: $1,033M - $564M = $469M more than a year earlier. Reconciliation gap: $867M - $842M = $25M, unexplained.",
+    "math_marked": "$842M[1] / 5,699M[6] diluted shares = $0.148[derived: 1, 6, 3] pre-tax GAAP EPS. H1: $1,033M[1] - $564M[1] = $469M[derived: 1, 6, 3] more than a year earlier. Reconciliation gap: $867M[3] - $842M[1] = $25M[derived: 1, 6, 3], unexplained.[8]",
+    "direction": "down",
+    "metric": "EPS",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 17,
+     "total": 17,
+     "verified": 13,
+     "derived": 4,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "Bristol Myers Squibb booked $8M of litigation and other settlements in H1 2026 vs $259M a year earlier; it is the only shortlist peer checked for this line.",
+   "peer_marked": "Bristol Myers Squibb booked $8M of litigation and other settlements in H1 2026 vs $259M a year earlier; it is the only shortlist peer checked for this line.[9]",
+   "confidence": "medium",
+   "confidence_reason": "The amounts and both materiality wordings are verbatim in the Q2 2026 10-Q (Note 4, Note 16, MD&A); the 10-Q never names the matter behind the charge, so the Depo-Provera link rests on timing.",
+   "obviousness": "low",
+   "on_the_record": "The charge size is public in the Q2 2026 earnings-release reconciliation (p.16); the explanation and the differing materiality wording are not discussed on the Q2 2026 call.",
+   "derived": {
+    "eps": {
+     "value": "$0.148",
+     "expr": "q / sh",
+     "operands": {
+      "q": {
+       "value": 842,
+       "citation": "c_3d9e3bb359",
+       "text": "842",
+       "unit": "USD millions"
+      },
+      "sh": {
+       "value": 5699,
+       "citation": "c_9a42aa345e",
+       "text": "5,699",
+       "unit": "USD millions"
+      },
+      "h1": {
+       "value": 1033,
+       "citation": "c_3d9e3bb359",
+       "text": "1,033",
+       "unit": "USD millions"
+      },
+      "h0": {
+       "value": 564,
+       "citation": "c_3d9e3bb359",
+       "text": "564",
+       "unit": "USD millions"
+      },
+      "r": {
+       "value": 867,
+       "citation": "c_6b2f3d287c",
+       "text": "$867 million",
+       "unit": ""
+      }
+     },
+     "label": ""
+    },
+    "inc": {
+     "value": "$469M",
+     "expr": "h1 - h0",
+     "operands": {
+      "q": {
+       "value": 842,
+       "citation": "c_3d9e3bb359",
+       "text": "842",
+       "unit": "USD millions"
+      },
+      "sh": {
+       "value": 5699,
+       "citation": "c_9a42aa345e",
+       "text": "5,699",
+       "unit": "USD millions"
+      },
+      "h1": {
+       "value": 1033,
+       "citation": "c_3d9e3bb359",
+       "text": "1,033",
+       "unit": "USD millions"
+      },
+      "h0": {
+       "value": 564,
+       "citation": "c_3d9e3bb359",
+       "text": "564",
+       "unit": "USD millions"
+      },
+      "r": {
+       "value": 867,
+       "citation": "c_6b2f3d287c",
+       "text": "$867 million",
+       "unit": ""
+      }
+     },
+     "label": ""
+    },
+    "gap": {
+     "value": "$25M",
+     "expr": "r - q",
+     "operands": {
+      "q": {
+       "value": 842,
+       "citation": "c_3d9e3bb359",
+       "text": "842",
+       "unit": "USD millions"
+      },
+      "sh": {
+       "value": 5699,
+       "citation": "c_9a42aa345e",
+       "text": "5,699",
+       "unit": "USD millions"
+      },
+      "h1": {
+       "value": 1033,
+       "citation": "c_3d9e3bb359",
+       "text": "1,033",
+       "unit": "USD millions"
+      },
+      "h0": {
+       "value": 564,
+       "citation": "c_3d9e3bb359",
+       "text": "564",
+       "unit": "USD millions"
+      },
+      "r": {
+       "value": 867,
+       "citation": "c_6b2f3d287c",
+       "text": "$867 million",
+       "unit": ""
+      }
+     },
+     "label": ""
+    }
+   }
+  },
+  {
+   "n": 3,
+   "blind_id": "PFE-c05",
+   "category": "Footnotes",
+   "verdict": "killed",
+   "finding": "Pfizer's contingent consideration liabilities rose from $1,790M to $2,259M in H1 2026 after a $550M fair-value increase that the 10-Q ties primarily to the Metsera acquisition; the $632M of Metsera CVRs is already inside the opening balance, so the rise is a re-pricing of obesity milestones, not a new obligation.",
+   "finding_marked": "Pfizer's contingent consideration liabilities rose from $1,790M[1] to $2,259M[2] in H1 2026 after a $550M[3] fair-value increase that the 10-Q ties primarily to the Metsera acquisition; the $632M[5] of Metsera CVRs is already inside the opening balance, so the rise is a re-pricing of obesity milestones, not a new obligation.[4][6]",
+   "marker_map": {
+    "1": "c_94a48afbc1",
+    "2": "c_8569f2e728",
+    "3": "c_eaf5aa2760",
+    "4": "c_c1de34ada8",
+    "5": "c_953b67be08",
+    "6": "c_537be2f4e8",
+    "7": "c_9a42aa345e",
+    "8": "c_5b8954cd87",
+    "9": "c_1264ebdeb8"
+   },
+   "source": {
+    "doc_title": "Pfizer 10-Q 2026-06-28",
+    "period": "2026-06-28",
+    "page": "p. 17",
+    "file_page": 17,
+    "quote": "The amount in the first six months of 2026 is primarily related to our acquisition of Metsera.",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=The%20amount%20in%20the%20first%20six%20months%20of"
+   },
+   "cites": [
+    {
+     "cite_id": "c_eaf5aa2760",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 14,
+     "location": "p. 14",
+     "quote": "Changes in fair value of contingent consideration liabilities (d) 255 34 550 42",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=Changes%20in%20fair%20value%20of%20contingent%20consideration%20liabilities",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=14&q=Changes%20in%20fair%20value%20of%20contingent%20consideration%20liabilities%20%28d%29%20255%2034%20550%2042",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_94a48afbc1",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 17,
+     "location": "p. 17",
+     "quote": "Fair value, beginning $ 1,790 $ 517",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=17&q=Fair%20value%2C%20beginning%20%24%201%2C790%20%24%20517",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_8569f2e728",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 17,
+     "location": "p. 17",
+     "quote": "Fair value, ending $ 2,259 $ 508",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=17&q=Fair%20value%2C%20ending%20%24%202%2C259%20%24%20508",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_1264ebdeb8",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 17,
+     "location": "p. 17",
+     "quote": "Settlements and other ( 81 ) ( 51 )",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=81%20%29%20%28%2051",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=17&q=Settlements%20and%20other%20%28%2081%20%29%20%28%2051%20%29",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_c1de34ada8",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 17,
+     "location": "p. 17",
+     "quote": "The amount in the first six months of 2026 is primarily related to our acquisition of Metsera.",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=The%20amount%20in%20the%20first%20six%20months%20of",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=17&q=The%20amount%20in%20the%20first%20six%20months%20of%202026%20is%20primarily%20related%20to%20our%20acquisition%20of%20Metsera.",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_953b67be08",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 11,
+     "location": "p. 11",
+     "quote": "which includes the fair value of $ 632 million for the CVRs",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=which%20includes%20the%20fair%20value%20of%20%24%20632",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=11&q=which%20includes%20the%20fair%20value%20of%20%24%20632%20million%20for%20the%20CVRs",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_537be2f4e8",
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": 84,
+     "location": "p. 78",
+     "quote": "Fair value, beginning $ 517 $ 692 Changes in estimated fair value (a) 67 ( 52 ) Additions 1,266",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm#:~:text=Changes%20in%20estimated%20fair%20value%20%28a%29",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=84&q=Fair%20value%2C%20beginning%20%24%20517%20%24%20692%20Changes%20in%20estimated%20fair%20value%20%28a%29%2067%20%28%2052%20%29%20Additions%201%2C266",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_9a42aa345e",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 5,
+     "location": "p. 5",
+     "quote": "Weighted-average shares––diluted 5,699 5,706 5,733 5,708",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=5&q=Weighted-average%20shares%E2%80%93%E2%80%93diluted%205%2C699%205%2C706%205%2C733%205%2C708",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_5b8954cd87",
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "doc_title": "Pfizer earnings release (8-K) 2026-08-04",
+     "page": 16,
+     "location": "file page 16 (no printed page number)",
+     "quote": "Changes in fair value of contingent consideration liabilities 255 34 550 42",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000094/pfe-6282026xex99.htm#:~:text=Changes%20in%20fair%20value%20of%20contingent%20consideration%20liabilities",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Aearnings%2F2026-08-04_pfe-6282026xex99.md&page=16&q=Changes%20in%20fair%20value%20of%20contingent%20consideration%20liabilities%20255%2034%20550%2042",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    }
+   ],
+   "impact": {
+    "text": "A non-cash GAAP charge of about $0.096 per diluted share, excluded from adjusted EPS; a higher liability means higher milestone odds, so the signal is mixed rather than a hidden cost.",
+    "text_marked": "A non-cash GAAP charge of about $0.096[derived: 3, 7] per diluted share, excluded from adjusted EPS; a higher liability means higher milestone odds, so the signal is mixed rather than a hidden cost.[8]",
+    "math": "$550M / 5,733M diluted H1 shares = $0.096 pre-tax. Roll-forward: $1,790M opening plus the $550M increase, net of settlements and other, gives $2,259M. 2025 additions of $1,266M include the $632M CVR fair value.",
+    "math_marked": "$550M[3] / 5,733M[7] diluted H1 shares = $0.096[derived: 3, 7] pre-tax. Roll-forward: $1,790M[1] opening plus the $550M[3] increase, net of settlements and other, gives $2,259M[2]. 2025 additions of $1,266M[6] include the $632M[5] CVR fair value.[9]",
+    "direction": "mixed",
+    "metric": "EPS",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 14,
+     "total": 14,
+     "verified": 12,
+     "derived": 2,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "No shortlist peer was compared for this line; Pfizer's own balance was $508M at June 2025, before Metsera.",
+   "peer_marked": "No shortlist peer was compared for this line; Pfizer's own balance was $508M at June 2025, before Metsera.[2]",
+   "confidence": "high",
+   "confidence_reason": "All amounts are verbatim from the Q2 2026 10-Q (Notes 2, 4, 7) and the FY2025 10-K roll-forward.",
+   "obviousness": "high",
+   "on_the_record": "On the record: the $550M line is printed in the Q2 2026 earnings-release reconciliation (p.16) and tracks obesity-program milestones Pfizer has promoted; kept as a sized valuation note, not a discovery.",
+   "derived": {
+    "eps": {
+     "value": "$0.096",
+     "expr": "fv / sh",
+     "operands": {
+      "fv": {
+       "value": 550,
+       "citation": "c_eaf5aa2760",
+       "text": "550",
+       "unit": "USD millions"
+      },
+      "sh": {
+       "value": 5733,
+       "citation": "c_9a42aa345e",
+       "text": "5,733",
+       "unit": "USD millions"
+      }
+     },
+     "label": ""
+    }
+   }
+  },
+  {
+   "n": 4,
+   "blind_id": "PFE-c02",
+   "category": "Gross-to-net",
+   "verdict": "killed",
+   "finding": "Pfizer's product revenue deductions rose from 38.6% of gross product sales in 2024 to 41.3% in 2025, a step the CFO flagged in advance as an IRA Part D redesign revenue headwind of approximately $1 billion; in H1 2026 the rate excluding returns and cash discounts was flat at about 40.0%.",
+   "finding_marked": "Pfizer's product revenue deductions rose from 38.6%[derived: 1, 2, 4, 5, 6] of gross product sales in 2024 to 41.3%[derived: 1, 2, 4, 5, 6] in 2025, a step the CFO flagged in advance as an IRA Part D redesign revenue headwind of approximately $1 billion[3][5]; in H1 2026 the rate excluding returns and cash discounts was flat at about 40.0%[derived: 1, 2, 4, 5, 6].",
+   "marker_map": {
+    "1": "c_f6a23d1f67",
+    "2": "c_92eda2df9c",
+    "3": "c_a60884809c",
+    "4": "c_700e2b5d3e",
+    "5": "c_f165a276e3",
+    "6": "c_4d8a0ed94e",
+    "7": "c_5a27a14a1f"
+   },
+   "source": {
+    "doc_title": "Pfizer 2024Q4 earnings call (third_party)",
+    "period": "2024Q4",
+    "page": "p. 7",
+    "file_page": 7,
+    "quote": "the impact of the IRA Medicare Part D redesign is expected to be a net headwind to the company's revenue of approximately $1 billion across our product portfolio",
+    "url": "https://www.marketbeat.com/earnings/reports/2025-2-4-pfizer-inc-stock/",
+    "speaker": "Dave Denton"
+   },
+   "cites": [
+    {
+     "cite_id": "c_f6a23d1f67",
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": 43,
+     "location": "p. 37",
+     "quote": "Total $ 36,374 $ 33,888 $ 30,048",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=43&q=Total%20%24%2036%2C374%20%24%2033%2C888%20%24%2030%2C048",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_92eda2df9c",
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": 58,
+     "location": "p. 52",
+     "quote": "Product revenues $ 51,663 $ 53,816 $ 50,914",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=58&q=Product%20revenues%20%24%2051%2C663%20%24%2053%2C816%20%24%2050%2C914",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_700e2b5d3e",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 37,
+     "location": "p. 37",
+     "quote": "Total $ 9,022 $ 8,436 $ 17,280 $ 16,569",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=37&q=Total%20%24%209%2C022%20%24%208%2C436%20%24%2017%2C280%20%24%2016%2C569",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_f165a276e3",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 37,
+     "location": "p. 37",
+     "quote": "Sales returns and cash discounts 594 304 919 639",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=Sales%20returns%20and%20cash%20discounts",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=37&q=Sales%20returns%20and%20cash%20discounts%20594%20304%20919%20639",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_4d8a0ed94e",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 5,
+     "location": "p. 5",
+     "quote": "Product revenues $ 11,863 $ 11,954 $ 23,578 $ 23,248",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=5&q=Product%20revenues%20%24%2011%2C863%20%24%2011%2C954%20%24%2023%2C578%20%24%2023%2C248",
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_a60884809c",
+     "doc_id": "PFE:companies/PFE/transcripts/2024Q4_transcript.md",
+     "doc_title": "Pfizer 2024Q4 earnings call (third_party)",
+     "page": 7,
+     "location": "p. 7",
+     "quote": "the impact of the IRA Medicare Part D redesign is expected to be a net headwind to the company's revenue of approximately $1 billion across our product portfolio",
+     "url": "https://www.marketbeat.com/earnings/reports/2025-2-4-pfizer-inc-stock/",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Acompanies%2FPFE%2Ftranscripts%2F2024Q4_transcript.md&page=7&q=the%20impact%20of%20the%20IRA%20Medicare%20Part%20D%20redesign%20is%20expected%20to%20be%20a%20net%20headwind%20to%20the%20company%27s%20revenue%20of%20approximately%20%241%20billion%20across%20our%20product%20portfolio",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "speaker": "Dave Denton"
+    },
+    {
+     "cite_id": "c_5a27a14a1f",
+     "doc_id": "BMY:10q_2026Q2.md",
+     "doc_title": "Bristol Myers Squibb 10-Q 2026-06-30",
+     "page": 31,
+     "location": "p. 31",
+     "quote": "GTN adjustments percentage 30 % 46 % (16) % 32 % 46 % (14) %",
+     "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000020/bmy-20260630.htm#:~:text=GTN%20adjustments%20percentage%2030%20%25%2046%20%25%20%2816%29",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BMY%3A10q_2026Q2.md&page=31&q=GTN%20adjustments%20percentage%2030%20%25%2046%20%25%20%2816%29%20%25%2032%20%25%2046%20%25%20%2814%29%20%25",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    }
+   ],
+   "impact": {
+    "text": "The 2025 step cost about $2,357M of product revenue versus the 2024 rate, guided in advance and partly COVID-product mix; there is no further widening in 2026, where chargebacks rose but Medicare rebates and sales allowances fell.",
+    "text_marked": "The 2025 step cost about $2,357M[derived: 1, 2, 4, 5, 6] of product revenue versus the 2024 rate, guided in advance and partly COVID-product mix; there is no further widening in 2026, where chargebacks rose but Medicare rebates and sales allowances fell.",
+    "math": "2024: $33,888M / ($53,816M + $33,888M) = 38.6%. 2025: $36,374M / ($51,663M + $36,374M) = 41.3%. Cost vs 2024 rate: $36,374M - ($51,663M + $36,374M) x $33,888M / ($53,816M + $33,888M) = $2,357M. H1 ex-returns: ($17,280M - $919M) / ($23,578M + $17,280M) = 40.04% vs ($16,569M - $639M) / ($23,248M + $16,569M) = 40.01%.",
+    "math_marked": "2024: $33,888M[1] / ($53,816M[2] + $33,888M[1]) = 38.6%[derived: 1, 2, 4, 5, 6]. 2025: $36,374M[1] / ($51,663M[2] + $36,374M[1]) = 41.3%[derived: 1, 2, 4, 5, 6]. Cost vs 2024 rate: $36,374M[1] - ($51,663M[2] + $36,374M[1]) x $33,888M[1] / ($53,816M[2] + $33,888M[1]) = $2,357M[derived: 1, 2, 4, 5, 6]. H1 ex-returns: ($17,280M[4] - $919M[5]) / ($23,578M[6] + $17,280M[4]) = 40.04%[derived: 1, 2, 4, 5, 6] vs ($16,569M[4] - $639M[5]) / ($23,248M[6] + $16,569M[4]) = 40.01%[derived: 1, 2, 4, 5, 6].",
+    "direction": "down",
+    "metric": "revenue",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 32,
+     "total": 32,
+     "verified": 23,
+     "derived": 9,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "Bristol Myers Squibb's GTN adjustments fell from 46% to 32% of gross product sales in H1 2026 on an Eliquis U.S. list-price cut, so there is no shortlist-wide widening.",
+   "peer_marked": "Bristol Myers Squibb's GTN adjustments fell from 46% to 32% of gross product sales in H1 2026 on an Eliquis U.S. list-price cut, so there is no shortlist-wide widening.[7]",
+   "confidence": "high",
+   "confidence_reason": "Every operand is from Pfizer's deduction tables and income statements; the rate is a proxy because product revenue includes ex-U.S. sales.",
+   "obviousness": "high",
+   "on_the_record": "On the record: CFO Dave Denton guided the Part D redesign headwind on the 2024Q4 call (p.7, grade A). The blind pass refuted the 'chargeback-led 2026 widening' version on the math; it is not used here.",
+   "derived": {
+    "r24": {
+     "value": "38.6%",
+     "expr": "d24 / (p24 + d24) * 100",
+     "operands": {
+      "d24": {
+       "value": 33888,
+       "citation": "c_f6a23d1f67",
+       "text": "33,888",
+       "unit": "USD millions"
+      },
+      "d25": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "p24": {
+       "value": 53816,
+       "citation": "c_92eda2df9c",
+       "text": "53,816",
+       "unit": "USD millions"
+      },
+      "p25": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "d26h": {
+       "value": 17280,
+       "citation": "c_700e2b5d3e",
+       "text": "17,280",
+       "unit": "USD millions"
+      },
+      "d25h": {
+       "value": 16569,
+       "citation": "c_700e2b5d3e",
+       "text": "16,569",
+       "unit": "USD millions"
+      },
+      "r26h": {
+       "value": 919,
+       "citation": "c_f165a276e3",
+       "text": "919",
+       "unit": "USD millions"
+      },
+      "r25h": {
+       "value": 639,
+       "citation": "c_f165a276e3",
+       "text": "639",
+       "unit": "USD millions"
+      },
+      "p26h": {
+       "value": 23578,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,578",
+       "unit": "USD millions"
+      },
+      "p25h": {
+       "value": 23248,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,248",
+       "unit": "USD millions"
+      }
+     },
+     "label": ""
+    },
+    "r25": {
+     "value": "41.3%",
+     "expr": "d25 / (p25 + d25) * 100",
+     "operands": {
+      "d24": {
+       "value": 33888,
+       "citation": "c_f6a23d1f67",
+       "text": "33,888",
+       "unit": "USD millions"
+      },
+      "d25": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "p24": {
+       "value": 53816,
+       "citation": "c_92eda2df9c",
+       "text": "53,816",
+       "unit": "USD millions"
+      },
+      "p25": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "d26h": {
+       "value": 17280,
+       "citation": "c_700e2b5d3e",
+       "text": "17,280",
+       "unit": "USD millions"
+      },
+      "d25h": {
+       "value": 16569,
+       "citation": "c_700e2b5d3e",
+       "text": "16,569",
+       "unit": "USD millions"
+      },
+      "r26h": {
+       "value": 919,
+       "citation": "c_f165a276e3",
+       "text": "919",
+       "unit": "USD millions"
+      },
+      "r25h": {
+       "value": 639,
+       "citation": "c_f165a276e3",
+       "text": "639",
+       "unit": "USD millions"
+      },
+      "p26h": {
+       "value": 23578,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,578",
+       "unit": "USD millions"
+      },
+      "p25h": {
+       "value": 23248,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,248",
+       "unit": "USD millions"
+      }
+     },
+     "label": ""
+    },
+    "cost": {
+     "value": "$2,357M",
+     "expr": "d25 - (p25 + d25) * d24 / (p24 + d24)",
+     "operands": {
+      "d24": {
+       "value": 33888,
+       "citation": "c_f6a23d1f67",
+       "text": "33,888",
+       "unit": "USD millions"
+      },
+      "d25": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "p24": {
+       "value": 53816,
+       "citation": "c_92eda2df9c",
+       "text": "53,816",
+       "unit": "USD millions"
+      },
+      "p25": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "d26h": {
+       "value": 17280,
+       "citation": "c_700e2b5d3e",
+       "text": "17,280",
+       "unit": "USD millions"
+      },
+      "d25h": {
+       "value": 16569,
+       "citation": "c_700e2b5d3e",
+       "text": "16,569",
+       "unit": "USD millions"
+      },
+      "r26h": {
+       "value": 919,
+       "citation": "c_f165a276e3",
+       "text": "919",
+       "unit": "USD millions"
+      },
+      "r25h": {
+       "value": 639,
+       "citation": "c_f165a276e3",
+       "text": "639",
+       "unit": "USD millions"
+      },
+      "p26h": {
+       "value": 23578,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,578",
+       "unit": "USD millions"
+      },
+      "p25h": {
+       "value": 23248,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,248",
+       "unit": "USD millions"
+      }
+     },
+     "label": ""
+    },
+    "x26": {
+     "value": "40.04%",
+     "expr": "(d26h - r26h) / (p26h + d26h) * 100",
+     "operands": {
+      "d24": {
+       "value": 33888,
+       "citation": "c_f6a23d1f67",
+       "text": "33,888",
+       "unit": "USD millions"
+      },
+      "d25": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "p24": {
+       "value": 53816,
+       "citation": "c_92eda2df9c",
+       "text": "53,816",
+       "unit": "USD millions"
+      },
+      "p25": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "d26h": {
+       "value": 17280,
+       "citation": "c_700e2b5d3e",
+       "text": "17,280",
+       "unit": "USD millions"
+      },
+      "d25h": {
+       "value": 16569,
+       "citation": "c_700e2b5d3e",
+       "text": "16,569",
+       "unit": "USD millions"
+      },
+      "r26h": {
+       "value": 919,
+       "citation": "c_f165a276e3",
+       "text": "919",
+       "unit": "USD millions"
+      },
+      "r25h": {
+       "value": 639,
+       "citation": "c_f165a276e3",
+       "text": "639",
+       "unit": "USD millions"
+      },
+      "p26h": {
+       "value": 23578,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,578",
+       "unit": "USD millions"
+      },
+      "p25h": {
+       "value": 23248,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,248",
+       "unit": "USD millions"
+      }
+     },
+     "label": ""
+    },
+    "x25": {
+     "value": "40.01%",
+     "expr": "(d25h - r25h) / (p25h + d25h) * 100",
+     "operands": {
+      "d24": {
+       "value": 33888,
+       "citation": "c_f6a23d1f67",
+       "text": "33,888",
+       "unit": "USD millions"
+      },
+      "d25": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "p24": {
+       "value": 53816,
+       "citation": "c_92eda2df9c",
+       "text": "53,816",
+       "unit": "USD millions"
+      },
+      "p25": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "d26h": {
+       "value": 17280,
+       "citation": "c_700e2b5d3e",
+       "text": "17,280",
+       "unit": "USD millions"
+      },
+      "d25h": {
+       "value": 16569,
+       "citation": "c_700e2b5d3e",
+       "text": "16,569",
+       "unit": "USD millions"
+      },
+      "r26h": {
+       "value": 919,
+       "citation": "c_f165a276e3",
+       "text": "919",
+       "unit": "USD millions"
+      },
+      "r25h": {
+       "value": 639,
+       "citation": "c_f165a276e3",
+       "text": "639",
+       "unit": "USD millions"
+      },
+      "p26h": {
+       "value": 23578,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,578",
+       "unit": "USD millions"
+      },
+      "p25h": {
+       "value": 23248,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,248",
+       "unit": "USD millions"
+      }
+     },
+     "label": ""
+    },
+    "x26r": {
+     "value": "40.0%",
+     "expr": "(d26h - r26h) / (p26h + d26h) * 100",
+     "operands": {
+      "d24": {
+       "value": 33888,
+       "citation": "c_f6a23d1f67",
+       "text": "33,888",
+       "unit": "USD millions"
+      },
+      "d25": {
+       "value": 36374,
+       "citation": "c_f6a23d1f67",
+       "text": "36,374",
+       "unit": "USD millions"
+      },
+      "p24": {
+       "value": 53816,
+       "citation": "c_92eda2df9c",
+       "text": "53,816",
+       "unit": "USD millions"
+      },
+      "p25": {
+       "value": 51663,
+       "citation": "c_92eda2df9c",
+       "text": "51,663",
+       "unit": "USD millions"
+      },
+      "d26h": {
+       "value": 17280,
+       "citation": "c_700e2b5d3e",
+       "text": "17,280",
+       "unit": "USD millions"
+      },
+      "d25h": {
+       "value": 16569,
+       "citation": "c_700e2b5d3e",
+       "text": "16,569",
+       "unit": "USD millions"
+      },
+      "r26h": {
+       "value": 919,
+       "citation": "c_f165a276e3",
+       "text": "919",
+       "unit": "USD millions"
+      },
+      "r25h": {
+       "value": 639,
+       "citation": "c_f165a276e3",
+       "text": "639",
+       "unit": "USD millions"
+      },
+      "p26h": {
+       "value": 23578,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,578",
+       "unit": "USD millions"
+      },
+      "p25h": {
+       "value": 23248,
+       "citation": "c_4d8a0ed94e",
+       "text": "23,248",
+       "unit": "USD millions"
+      }
+     },
+     "label": ""
+    }
+   }
+  },
+  {
+   "n": 5,
+   "blind_id": "PFE-c09",
+   "category": "Peer contrast",
+   "verdict": "killed",
+   "finding": "Ibrance's Medicare negotiated price of $7,871 vs a $15,741 list price (50% lower) takes effect in 2027, the same year as its U.S. basic product patent expiry, and CEO Albert Bourla has called the NPV hit 'very small'.",
+   "finding_marked": "Ibrance's Medicare negotiated price of $7,871 vs a $15,741 list price (50% lower) takes effect in 2027, the same year as its U.S. basic product patent expiry, and CEO Albert Bourla has called the NPV hit 'very small'.[1][2][3][4]",
+   "marker_map": {
+    "1": "c_c1ed727358",
+    "2": "c_634308f158",
+    "3": "c_8027238d25",
+    "4": "c_539cd40c0d",
+    "5": "c_9417840b89",
+    "6": "c_f71533649a"
+   },
+   "source": {
+    "doc_title": "CMS fact sheet",
+    "period": "",
+    "page": "p. 2",
+    "file_page": 2,
+    "quote": "Ibrance Pfizer Inc. Breast cancer $7,871 $15,741 50% $2,036,178,000",
+    "url": "https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf#page=2"
+   },
+   "cites": [
+    {
+     "cite_id": "c_c1ed727358",
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "doc_title": "CMS fact sheet",
+     "page": 2,
+     "location": "p. 2",
+     "quote": "Ibrance Pfizer Inc. Breast cancer $7,871 $15,741 50% $2,036,178,000",
+     "url": "https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf#page=2",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy_gov%3Apolicy_gov%2Fcms%2Fcms_fact_sheet_negotiated_prices_ipay2027.md&page=2&q=Ibrance%20Pfizer%20Inc.%20Breast%20cancer%20%247%2C871%20%2415%2C741%2050%25%20%242%2C036%2C178%2C000",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_634308f158",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 35,
+     "location": "p. 35",
+     "quote": "Negotiated prices for Ibrance and Xtandi are effective in 2027.",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=Negotiated%20prices%20for%20Ibrance%20and%20Xtandi%20are%20effective",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=35&q=Negotiated%20prices%20for%20Ibrance%20and%20Xtandi%20are%20effective%20in%202027.",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_8027238d25",
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": 13,
+     "location": "p. 7",
+     "quote": "Ibrance 2027 2028 2028",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=13&q=Ibrance%202027%202028%202028",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_539cd40c0d",
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "doc_title": "Pfizer 2025Q2 earnings call (third_party)",
+     "page": 13,
+     "location": "p. 13",
+     "quote": "Both of them are losing patent on '27. So for us, of course, we try to achieve the best we can in the negotiations of the prices. But the hit on us is very small. The NPV is very small because it's really a few months of exclusivity.",
+     "url": "https://bullfincher.io/companies/pfizer/earnings-call/fy2025-q2",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3Acompanies%2FPFE%2Ftranscripts%2F2025Q2_transcript.md&page=13&q=Both%20of%20them%20are%20losing%20patent%20on%20%2727.%20So%20for%20us%2C%20of%20course%2C%20we%20try%20to%20achieve%20the%20best%20we%20can%20in%20the%20negotiations%20of%20the%20prices.%20But%20the%20hit%20on%20us%20is%20very%20small.%20The%20NPV%20is%20very%20small%20because%20it%27s%20really%20a%20few%20months%20of%20exclusivity.",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "A",
+     "speaker": "Albert Bourla"
+    },
+    {
+     "cite_id": "c_9417840b89",
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+     "doc_title": "CMS fact sheet",
+     "page": 1,
+     "location": "p. 1",
+     "quote": "Kisqali Breast cancer $1,578,679,000",
+     "url": "https://www.cms.gov/files/document/factsheet-medicare-negotiation-selected-drug-list-ipay-2028.pdf#page=1",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy_gov%3Apolicy_gov%2Fcms%2Fcms_fact_sheet_selected_list_ipay2028.md&page=1&q=Kisqali%20Breast%20cancer%20%241%2C578%2C679%2C000",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_f71533649a",
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+     "doc_title": "CMS fact sheet",
+     "page": 1,
+     "location": "p. 1",
+     "quote": "Verzenio Breast cancer $1,428,714,000",
+     "url": "https://www.cms.gov/files/document/factsheet-medicare-negotiation-selected-drug-list-ipay-2028.pdf#page=1",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=policy_gov%3Apolicy_gov%2Fcms%2Fcms_fact_sheet_selected_list_ipay2028.md&page=1&q=Verzenio%20Breast%20cancer%20%241%2C428%2C714%2C000",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    }
+   ],
+   "impact": {
+    "text": "Small: the negotiated price overlaps only the months of exclusivity left before U.S. generics. Ibrance's Medicare Part D gross covered cost of $2,036M is list-basis, so half of it, $1,018M, is a ceiling, not a revenue loss.",
+    "text_marked": "Small: the negotiated price overlaps only the months of exclusivity left before U.S. generics. Ibrance's Medicare Part D gross covered cost of $2,036M[1] is list-basis, so half of it, $1,018M[derived: 1], is a ceiling, not a revenue loss.",
+    "math": "$2,036M x 50% = $1,018M list-basis ceiling. Realized net effect is lower because Ibrance already carries Part D rebates and redesign discounts; not divided by net revenue (different basis).",
+    "math_marked": "$2,036M[1] x 50%[1] = $1,018M[derived: 1] list-basis ceiling. Realized net effect is lower because Ibrance already carries Part D rebates and redesign discounts; not divided by net revenue (different basis).",
+    "direction": "down",
+    "metric": "revenue",
+    "numeric_check": {
+     "status": "passed",
+     "checked": 10,
+     "total": 10,
+     "verified": 8,
+     "derived": 2,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "peer": "Kisqali ($1,578.7M) and Verzenio ($1,428.7M) Medicare spend were selected for the 2028 price year, one year after Ibrance.",
+   "peer_marked": "Kisqali ($1,578.7M[5]) and Verzenio ($1,428.7M[6]) Medicare spend were selected for the 2028 price year, one year after Ibrance.",
+   "confidence": "high",
+   "confidence_reason": "Prices and spend are verbatim from CMS fact sheets; the patent year is Pfizer's 10-K table.",
+   "obviousness": "high",
+   "on_the_record": "On the record: Bourla answered it on the 2025Q2 call (p.13, grade A), and the 2027 patent expiry is in the FY2025 10-K; the blind pass refuted the 71% Medicare-to-net-revenue ratio on basis, so it is not used.",
+   "derived": {
+    "ceil": {
+     "value": "$1,018M",
+     "expr": "g * p / 100",
+     "operands": {
+      "g": {
+       "value": 2036.178,
+       "citation": "c_c1ed727358",
+       "text": "$2,036,178,000",
+       "unit": ""
+      },
+      "p": {
+       "value": 50,
+       "citation": "c_c1ed727358",
+       "text": "50%",
+       "unit": ""
+      }
+     },
+     "label": ""
+    }
+   }
+  }
+ ],
+ "sharpest_needle": {
+  "finding_n": 1,
+  "blind_id": "PFE-c01",
+  "why": "No PFE ruling is both highly material and non-obvious, so this is the least-bad choice: c01 is the only high-materiality survivor and every operand is printed in three filers' 10-Qs, but it quantifies a share loss management and rivals have already described, so it is credited as a quantification, not a discovery. The less discussed c04 (legal charge and Depo-Provera wording) ranks below it because it is GAAP-only, medium materiality and its link to Depo-Provera is an inference.",
+  "cites": [
+   {
+    "cite_id": "c_de42636698",
+    "doc_id": "PFE:10q_2026Q2.md",
+    "doc_title": "Pfizer 10-Q 2026-06-28",
+    "page": 38,
+    "location": "p. 38",
+    "quote": "U.S. $ 1,975 $ 1,976",
+    "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "speaker": null
+   },
+   {
+    "cite_id": "c_fd1ff92224",
+    "doc_id": "ALNY:10q_2026Q2.md",
+    "doc_title": "Alnylam 10-Q 2026-06-30",
+    "page": 38,
+    "location": "p. 38",
+    "quote": "United States $ 809,079 $ 361,346 $ 447,733 124 % $ 1,511,633 $ 559,310 $ 952,323 170 %",
+    "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=United%20States%20%24%20809%2C079%20%24%20361%2C346%20%24%20447%2C733%20124%20%25%20%24%201%2C511%2C633%20%24%20559%2C310%20%24%20952%2C323%20170%20%25",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "speaker": null
+   },
+   {
+    "cite_id": "c_d18c418a1c",
+    "doc_id": "BBIO:10q_2026Q2.md",
+    "doc_title": "BridgeBio 10-Q 2026-06-30",
+    "page": 56,
+    "location": "p. 52",
+    "quote": "Net product revenue $ 222,440 $ 71,501 $ 150,939 $ 403,036 $ 108,240",
+    "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=56&q=Net%20product%20revenue%20%24%20222%2C440%20%24%2071%2C501%20%24%20150%2C939%20%24%20403%2C036%20%24%20108%2C240",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": null,
+    "speaker": null
+   }
+  ]
+ },
+ "product_table": {
+  "product": "Vyndaqel family (Vyndaqel / Vyndamax, tafamidis)",
+  "rivals": [
+   "BridgeBio's Attruby (acoramidis)",
+   "Alnylam's Amvuttra (vutrisiran)"
+  ],
+  "rows": [
+   {
+    "row": "approved uses",
+    "cells": {
+     "Vyndaqel / Vyndamax": {
+      "text": "One indication: ATTR-CM in adults, to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+      "text_marked": "One indication: ATTR-CM in adults, to reduce cardiovascular mortality and cardiovascular-related hospitalization.[1]",
+      "marker_map": {
+       "1": "c_13145511ea"
+      },
+      "cites": [
+       {
+        "cite_id": "c_13145511ea",
+        "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+        "doc_title": "Vyndaqel label v15 (2026-05-13)",
+        "page": 1,
+        "location": "p. 1 INDICATIONS",
+        "quote": "VYNDAQEL and VYNDAMAX are indicated for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality and cardiovascular-related hospitalization.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=1&q=VYNDAQEL%20and%20VYNDAMAX%20are%20indicated%20for%20the%20treatment%20of%20the%20cardiomyopathy%20of%20wild-type%20or%20hereditary%20transthyretin-mediated%20amyloidosis%20%28ATTR-CM%29%20in%20adults%20to%20reduce%20cardiovascular%20mortality%20and%20cardiovascular-related%20hospitalization.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Attruby": {
+      "text": "One indication: ATTR-CM in adults, to reduce cardiovascular death and cardiovascular-related hospitalization.",
+      "text_marked": "One indication: ATTR-CM in adults, to reduce cardiovascular death and cardiovascular-related hospitalization.[1]",
+      "marker_map": {
+       "1": "c_6ce08b1159"
+      },
+      "cites": [
+       {
+        "cite_id": "c_6ce08b1159",
+        "doc_id": "drug:attruby:label_sections.md",
+        "doc_title": "Attruby label",
+        "page": 1,
+        "location": "section 1 INDICATIONS AND USAGE",
+        "quote": "ATTRUBY is indicated for the treatment of the cardiomyopathy of wild-type or variant transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular death and cardiovascular-related hospitalization.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aattruby%3Alabel_sections.md&page=1&q=ATTRUBY%20is%20indicated%20for%20the%20treatment%20of%20the%20cardiomyopathy%20of%20wild-type%20or%20variant%20transthyretin-mediated%20amyloidosis%20%28ATTR-CM%29%20in%20adults%20to%20reduce%20cardiovascular%20death%20and%20cardiovascular-related%20hospitalization.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Amvuttra": {
+      "text": "Two indications: hATTR-PN in adults, and ATTR-CM in adults with an extra outcome, 'urgent heart failure visits', on top of cardiovascular mortality and hospitalizations.",
+      "text_marked": "Two indications: hATTR-PN in adults, and ATTR-CM in adults with an extra outcome, 'urgent heart failure visits', on top of cardiovascular mortality and hospitalizations.[1][2]",
+      "marker_map": {
+       "1": "c_1832e1ed91",
+       "2": "c_76d249bbe5"
+      },
+      "cites": [
+       {
+        "cite_id": "c_1832e1ed91",
+        "doc_id": "amvuttra:drugs/amvuttra/label_v8.md",
+        "doc_title": "Amvuttra label v8 (2025-11-17)",
+        "page": 1,
+        "location": "p. 1 INDICATIONS",
+        "quote": "AMVUTTRA is indicated for the treatment of the polyneuropathy of hereditary transthyretin-mediated amyloidosis (hATTR-PN) in adults.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=amvuttra%3Adrugs%2Famvuttra%2Flabel_v8.md&page=1&q=AMVUTTRA%20is%20indicated%20for%20the%20treatment%20of%20the%20polyneuropathy%20of%20hereditary%20transthyretin-mediated%20amyloidosis%20%28hATTR-PN%29%20in%20adults.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       },
+       {
+        "cite_id": "c_76d249bbe5",
+        "doc_id": "drug:amvuttra:label_sections.md",
+        "doc_title": "Amvuttra label",
+        "page": 2,
+        "location": "section 1.2 Cardiomyopathy of Wild-type or Hereditary Transthyretin-mediated Amyloidosis",
+        "quote": "to reduce cardiovascular mortality, cardiovascular hospitalizations and urgent heart failure visits",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aamvuttra%3Alabel_sections.md&page=2&q=to%20reduce%20cardiovascular%20mortality%2C%20cardiovascular%20hospitalizations%20and%20urgent%20heart%20failure%20visits",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "boxed warnings and safety",
+    "cells": {
+     "Vyndaqel / Vyndamax": {
+      "text": "No boxed warning, no contraindications (label: 'None') and no REMS.",
+      "text_marked": "No boxed warning, no contraindications (label: 'None') and no REMS.[1]",
+      "marker_map": {
+       "1": "c_e8b6fb2492"
+      },
+      "cites": [
+       {
+        "cite_id": "c_e8b6fb2492",
+        "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+        "doc_title": "Vyndaqel label v15 (2026-05-13)",
+        "page": 2,
+        "location": "p. 4 CONTRAINDICATIONS",
+        "quote": "4. CONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=2&q=4.%20CONTRAINDICATIONS%20None.",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Attruby": {
+      "text": "No boxed warning, no contraindications (label: 'None') and no REMS.",
+      "text_marked": "No boxed warning, no contraindications (label: 'None') and no REMS.[1]",
+      "marker_map": {
+       "1": "c_4e1e8463c6"
+      },
+      "cites": [
+       {
+        "cite_id": "c_4e1e8463c6",
+        "doc_id": "drug:attruby:label_sections.md",
+        "doc_title": "Attruby label",
+        "page": 4,
+        "location": "section 4 CONTRAINDICATIONS",
+        "quote": "4 CONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aattruby%3Alabel_sections.md&page=4&q=4%20CONTRAINDICATIONS%20None.",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Amvuttra": {
+      "text": "No boxed warning, no contraindications and no REMS; one warning: it lowers serum vitamin A, so supplementation at the recommended daily allowance is advised.",
+      "text_marked": "No boxed warning, no contraindications and no REMS; one warning: it lowers serum vitamin A, so supplementation at the recommended daily allowance is advised.[1][2]",
+      "marker_map": {
+       "1": "c_db196f6402",
+       "2": "c_8a57ad4642"
+      },
+      "cites": [
+       {
+        "cite_id": "c_db196f6402",
+        "doc_id": "amvuttra:drugs/amvuttra/label_v8.md",
+        "doc_title": "Amvuttra label v8 (2025-11-17)",
+        "page": 2,
+        "location": "p. 4 CONTRAINDICATIONS",
+        "quote": "4 CONTRAINDICATIONS None.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=amvuttra%3Adrugs%2Famvuttra%2Flabel_v8.md&page=2&q=4%20CONTRAINDICATIONS%20None.",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       },
+       {
+        "cite_id": "c_8a57ad4642",
+        "doc_id": "amvuttra:drugs/amvuttra/label_v8.md",
+        "doc_title": "Amvuttra label v8 (2025-11-17)",
+        "page": 3,
+        "location": "p. 5 WARNINGS AND PRECAUTIONS",
+        "quote": "Supplementation at the recommended daily allowance of vitamin A is advised for patients taking",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=amvuttra%3Adrugs%2Famvuttra%2Flabel_v8.md&page=3&q=Supplementation%20at%20the%20recommended%20daily%20allowance%20of%20vitamin%20A%20is%20advised%20for%20patients%20taking",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "dosing and convenience",
+    "cells": {
+     "Vyndaqel / Vyndamax": {
+      "text": "Oral capsule once daily: Vyndamax 61 mg or Vyndaqel 80 mg, taken at home.",
+      "text_marked": "Oral capsule once daily: Vyndamax 61 mg or Vyndaqel 80 mg, taken at home.[1]",
+      "marker_map": {
+       "1": "c_90819323d9"
+      },
+      "cites": [
+       {
+        "cite_id": "c_90819323d9",
+        "doc_id": "vyndaqel:drugs/vyndaqel/label_v15.md",
+        "doc_title": "Vyndaqel label v15 (2026-05-13)",
+        "page": 3,
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "quote": "The recommended dosage is either VYNDAQEL 80 mg (four 20-mg tafamidis meglumine capsules) orally once daily or VYNDAMAX 61 mg (one 61-mg tafamidis capsule) orally once daily.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=vyndaqel%3Adrugs%2Fvyndaqel%2Flabel_v15.md&page=3&q=The%20recommended%20dosage%20is%20either%20VYNDAQEL%2080%20mg%20%28four%2020-mg%20tafamidis%20meglumine%20capsules%29%20orally%20once%20daily%20or%20VYNDAMAX%2061%20mg%20%28one%2061-mg%20tafamidis%20capsule%29%20orally%20once%20daily.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 2,
+       "total": 2,
+       "verified": 2,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Attruby": {
+      "text": "712 mg orally twice daily, with or without food, taken at home.",
+      "text_marked": "712 mg orally twice daily, with or without food, taken at home.[1]",
+      "marker_map": {
+       "1": "c_b721a3b6e9"
+      },
+      "cites": [
+       {
+        "cite_id": "c_b721a3b6e9",
+        "doc_id": "drug:attruby:label_sections.md",
+        "doc_title": "Attruby label",
+        "page": 2,
+        "location": "section 2.1 Recommended Dosage",
+        "quote": "The recommended dosage of ATTRUBY is 712 mg orally twice daily (with or without food).",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aattruby%3Alabel_sections.md&page=2&q=The%20recommended%20dosage%20of%20ATTRUBY%20is%20712%20mg%20orally%20twice%20daily%20%28with%20or%20without%20food%29.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 1,
+       "total": 1,
+       "verified": 1,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Amvuttra": {
+      "text": "25 mg subcutaneous injection once every 3 months, administered by a healthcare professional.",
+      "text_marked": "25 mg subcutaneous injection once every 3 months, administered by a healthcare professional.[1][2]",
+      "marker_map": {
+       "1": "c_c3fcf7e76b",
+       "2": "c_07a56cfbf8"
+      },
+      "cites": [
+       {
+        "cite_id": "c_c3fcf7e76b",
+        "doc_id": "amvuttra:drugs/amvuttra/label_v8.md",
+        "doc_title": "Amvuttra label v8 (2025-11-17)",
+        "page": 4,
+        "location": "p. 2 DOSAGE AND ADMINISTRATION",
+        "quote": "The recommended dosage of AMVUTTRA is 25 mg administered by subcutaneous injection once every 3 months",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/history.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=amvuttra%3Adrugs%2Famvuttra%2Flabel_v8.md&page=4&q=The%20recommended%20dosage%20of%20AMVUTTRA%20is%2025%20mg%20administered%20by%20subcutaneous%20injection%20once%20every%203%20months",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       },
+       {
+        "cite_id": "c_07a56cfbf8",
+        "doc_id": "drug:amvuttra:label_sections.md",
+        "doc_title": "Amvuttra label",
+        "page": 5,
+        "location": "section 2.2 Administration Instructions",
+        "quote": "AMVUTTRA is for subcutaneous use only and should be administered by a healthcare professional.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aamvuttra%3Alabel_sections.md&page=5&q=AMVUTTRA%20is%20for%20subcutaneous%20use%20only%20and%20should%20be%20administered%20by%20a%20healthcare%20professional.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 2,
+       "total": 2,
+       "verified": 2,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "patent and exclusivity timeline",
+    "cells": {
+     "Vyndaqel / Vyndamax": {
+      "text": "U.S. basic product patent listed as 2026 (2028 pending PTE); patent settlements let generic Vyndamax launch on June 1, 2031, subject to other litigation.",
+      "text_marked": "U.S. basic product patent listed as 2026 (2028 pending PTE); patent settlements let generic Vyndamax launch on June 1, 2031, subject to other litigation.[1][2]",
+      "marker_map": {
+       "1": "c_2446929ed3",
+       "2": "c_5cfab1e529"
+      },
+      "cites": [
+       {
+        "cite_id": "c_2446929ed3",
+        "doc_id": "PFE:10k_FY2025.md",
+        "doc_title": "Pfizer 10-K FY2025",
+        "page": 13,
+        "location": "p. 7",
+        "quote": "Vyndaqel/Vyndamax/Vynmac 2026 (2028 pending PTE) (8) 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm#:~:text=%282028%20pending%20PTE%29%20%288%29",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=13&q=Vyndaqel%2FVyndamax%2FVynmac%202026%20%282028%20pending%20PTE%29%20%288%29%202026",
+        "verify_status": "substring",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       },
+       {
+        "cite_id": "c_5cfab1e529",
+        "doc_id": "PFE:10q_2026Q2.md",
+        "doc_title": "Pfizer 10-Q 2026-06-28",
+        "page": 29,
+        "location": "p. 29",
+        "quote": "the generic companies will be permitted to launch generic versions of Vyndamax capsules on June 1, 2031, subject to the outcome of other litigation relating to Vyndamax",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=the%20generic%20companies%20will%20be%20permitted%20to%20launch",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=29&q=the%20generic%20companies%20will%20be%20permitted%20to%20launch%20generic%20versions%20of%20Vyndamax%20capsules%20on%20June%201%2C%202031%2C%20subject%20to%20the%20outcome%20of%20other%20litigation%20relating%20to%20Vyndamax",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Attruby": {
+      "text": "Licensed composition-of-matter and method patents are expected to expire in 2031 or 2033, before any patent term extension.",
+      "text_marked": "Licensed composition-of-matter and method patents are expected to expire in 2031 or 2033, before any patent term extension.[1]",
+      "marker_map": {
+       "1": "c_5903ca7a62"
+      },
+      "cites": [
+       {
+        "cite_id": "c_5903ca7a62",
+        "doc_id": "BBIO:10k_FY2025.md",
+        "doc_title": "BridgeBio 10-K FY2025",
+        "page": 25,
+        "location": "p. 25",
+        "quote": "These patents are expected to expire in 2031 or 2033, not including any potential patent term extension.",
+        "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000009/bbio-20251231.htm#:~:text=These%20patents%20are%20expected%20to%20expire%20in%202031",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10k_FY2025.md&page=25&q=These%20patents%20are%20expected%20to%20expire%20in%202031%20or%202033%2C%20not%20including%20any%20potential%20patent%20term%20extension.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Amvuttra": {
+      "text": "NCE exclusivity until June 13, 2027; orphan exclusivity for ATTR-CM until March 20, 2032.",
+      "text_marked": "NCE exclusivity until June 13, 2027; orphan exclusivity for ATTR-CM until March 20, 2032.[1][2]",
+      "marker_map": {
+       "1": "c_f413293514",
+       "2": "c_8516776d07"
+      },
+      "cites": [
+       {
+        "cite_id": "c_f413293514",
+        "doc_id": "ALNY:10k_FY2025.md",
+        "doc_title": "Alnylam 10-K FY2025",
+        "page": 20,
+        "location": "p. 20",
+        "quote": "AMVUTTRA received new chemical entity, or NCE, exclusivity until June 13, 2027",
+        "url": "https://www.sec.gov/Archives/edgar/data/1178670/000162828026007497/alny-20251231.htm#:~:text=AMVUTTRA%20received%20new%20chemical%20entity%2C%20or%20NCE%2C%20exclusivity",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10k_FY2025.md&page=20&q=AMVUTTRA%20received%20new%20chemical%20entity%2C%20or%20NCE%2C%20exclusivity%20until%20June%2013%2C%202027",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       },
+       {
+        "cite_id": "c_8516776d07",
+        "doc_id": "ALNY:10k_FY2025.md",
+        "doc_title": "Alnylam 10-K FY2025",
+        "page": 20,
+        "location": "p. 20",
+        "quote": "AMVUTTRA was also granted ODE for hATTR-PN until June 13, 2029, and for ATTR-CM until March 20, 2032",
+        "url": "https://www.sec.gov/Archives/edgar/data/1178670/000162828026007497/alny-20251231.htm#:~:text=AMVUTTRA%20was%20also%20granted%20ODE%20for%20hATTR%2DPN%20until",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10k_FY2025.md&page=20&q=AMVUTTRA%20was%20also%20granted%20ODE%20for%20hATTR-PN%20until%20June%2013%2C%202029%2C%20and%20for%20ATTR-CM%20until%20March%2020%2C%202032",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   },
+   {
+    "row": "pricing and gross-to-net",
+    "cells": {
+     "Vyndaqel / Vyndamax": {
+      "text": "Oral drug in Medicare Part D. Pfizer says 2025 U.S. net price fell mostly from higher IRA Part D Redesign manufacturer discounts plus new payer contracts, and 2026 U.S. growth was offset by 'net price erosion in the U.S. as a result of new payer contracts'. No product-level gross-to-net rate is disclosed.",
+      "text_marked": "Oral drug in Medicare Part D. Pfizer says 2025 U.S. net price fell mostly from higher IRA Part D Redesign manufacturer discounts plus new payer contracts, and 2026 U.S. growth was offset by 'net price erosion in the U.S. as a result of new payer contracts'. No product-level gross-to-net rate is disclosed.[1][2]",
+      "marker_map": {
+       "1": "c_41fd79da56",
+       "2": "c_d503e47523"
+      },
+      "cites": [
+       {
+        "cite_id": "c_41fd79da56",
+        "doc_id": "PFE:10k_FY2025.md",
+        "doc_title": "Pfizer 10-K FY2025",
+        "page": 44,
+        "location": "p. 38",
+        "quote": "lower net price in the U.S. mostly due to the impact of higher manufacturer discounts resulting from the IRA Medicare Part D Redesign as well as new payer contracts with reduced pricing",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm#:~:text=lower%20net%20price%20in%20the%20U.S.%20mostly%20due",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=44&q=lower%20net%20price%20in%20the%20U.S.%20mostly%20due%20to%20the%20impact%20of%20higher%20manufacturer%20discounts%20resulting%20from%20the%20IRA%20Medicare%20Part%20D%20Redesign%20as%20well%20as%20new%20payer%20contracts%20with%20reduced%20pricing",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       },
+       {
+        "cite_id": "c_d503e47523",
+        "doc_id": "PFE:10q_2026Q2.md",
+        "doc_title": "Pfizer 10-Q 2026-06-28",
+        "page": 38,
+        "location": "p. 38",
+        "quote": "net price erosion in the U.S. as a result of new payer contracts",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=net%20price%20erosion%20in%20the%20U.S.%20as%20a",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=net%20price%20erosion%20in%20the%20U.S.%20as%20a%20result%20of%20new%20payer%20contracts",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Attruby": {
+      "text": "Oral drug in Medicare Part D. BridgeBio's accrued rebates and other related costs rose from $45.9M at December 31, 2025 to $80.0M at June 30, 2026 as Attruby sales grew; no gross-to-net rate is disclosed.",
+      "text_marked": "Oral drug in Medicare Part D. BridgeBio's accrued rebates and other related costs rose from $45.9M at December 31, 2025 to $80.0M at June 30, 2026 as Attruby sales grew; no gross-to-net rate is disclosed.[1]",
+      "marker_map": {
+       "1": "c_28d9775263"
+      },
+      "cites": [
+       {
+        "cite_id": "c_28d9775263",
+        "doc_id": "BBIO:10q_2026Q2.md",
+        "doc_title": "BridgeBio 10-Q 2026-06-30",
+        "page": 17,
+        "location": "p. 13",
+        "quote": "Accrued rebates and other related costs $ 79,967 $ 45,909",
+        "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm#:~:text=Accrued%20rebates%20and%20other%20related%20costs",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=17&q=Accrued%20rebates%20and%20other%20related%20costs%20%24%2079%2C967%20%24%2045%2C909",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "passed",
+       "checked": 2,
+       "total": 2,
+       "verified": 2,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     },
+     "Amvuttra": {
+      "text": "Given by a healthcare professional, so Medicare pays for it under Part B at ASP-based rates, outside the Part D redesign discount; this contrast is well known (asked on Alnylam's 2025Q1 call, a grade C transcript cited by label only). Alnylam discloses no Amvuttra gross-to-net rate.",
+      "text_marked": "Given by a healthcare professional, so Medicare pays for it under Part B at ASP-based rates, outside the Part D redesign discount; this contrast is well known (asked on Alnylam's 2025Q1 call, a grade C transcript cited by label only). Alnylam discloses no Amvuttra gross-to-net rate.[1]",
+      "marker_map": {
+       "1": "c_07a56cfbf8"
+      },
+      "cites": [
+       {
+        "cite_id": "c_07a56cfbf8",
+        "doc_id": "drug:amvuttra:label_sections.md",
+        "doc_title": "Amvuttra label",
+        "page": 5,
+        "location": "section 2.2 Administration Instructions",
+        "quote": "AMVUTTRA is for subcutaneous use only and should be administered by a healthcare professional.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aamvuttra%3Alabel_sections.md&page=5&q=AMVUTTRA%20is%20for%20subcutaneous%20use%20only%20and%20should%20be%20administered%20by%20a%20healthcare%20professional.",
+        "verify_status": "exact",
+        "withheld": false,
+        "grade": null,
+        "speaker": null
+       }
+      ],
+      "numeric_check": {
+       "status": "no_numbers",
+       "checked": 0,
+       "total": 0,
+       "verified": 0,
+       "derived": 0,
+       "assumed": 0,
+       "unsupported": []
+      }
+     }
+    }
+   }
+  ],
+  "financial_tie": {
+   "text": "The label and channel contrast shows up in the numbers: in H1 2026 U.S. Vyndaqel was flat at $1,975M vs $1,976M while Alnylam's U.S. Amvuttra grew to $1,511.6M from $559.3M and Attruby to $403.0M from $108.2M, so Vyndaqel's share of U.S. class revenue fell from 74.8% to 50.8% (the first finding). Amvuttra's Part B channel and broader label explain where the gap shows, while Pfizer's filings point to its own payer-contract price cuts; the Part B vs Part D point itself is well known.",
+   "text_marked": "The label and channel contrast shows up in the numbers: in H1 2026 U.S. Vyndaqel was flat at $1,975M[1] vs $1,976M[1] while Alnylam's U.S. Amvuttra grew to $1,511.6M[2] from $559.3M[2] and Attruby to $403.0M[3] from $108.2M[3], so Vyndaqel's share of U.S. class revenue fell from 74.8%[derived: 1, 2, 3, 6] to 50.8%[derived: 1, 2, 3, 6] (the first finding). Amvuttra's Part B channel and broader label explain where the gap shows, while Pfizer's filings point to its own payer-contract price cuts; the Part B vs Part D point itself is well known.[4][5]",
+   "marker_map": {
+    "1": "c_de42636698",
+    "2": "c_fd1ff92224",
+    "3": "c_d18c418a1c",
+    "4": "c_d503e47523",
+    "5": "c_07a56cfbf8",
+    "6": "c_6de0d6e012"
+   },
+   "cites": [
+    {
+     "cite_id": "c_de42636698",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "U.S. $ 1,975 $ 1,976",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_fd1ff92224",
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "doc_title": "Alnylam 10-Q 2026-06-30",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "United States $ 809,079 $ 361,346 $ 447,733 124 % $ 1,511,633 $ 559,310 $ 952,323 170 %",
+     "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=ALNY%3A10q_2026Q2.md&page=38&q=United%20States%20%24%20809%2C079%20%24%20361%2C346%20%24%20447%2C733%20124%20%25%20%24%201%2C511%2C633%20%24%20559%2C310%20%24%20952%2C323%20170%20%25",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_d18c418a1c",
+     "doc_id": "BBIO:10q_2026Q2.md",
+     "doc_title": "BridgeBio 10-Q 2026-06-30",
+     "page": 56,
+     "location": "p. 52",
+     "quote": "Net product revenue $ 222,440 $ 71,501 $ 150,939 $ 403,036 $ 108,240",
+     "url": "https://www.sec.gov/Archives/edgar/data/1743881/000174388126000027/bbio-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=BBIO%3A10q_2026Q2.md&page=56&q=Net%20product%20revenue%20%24%20222%2C440%20%24%2071%2C501%20%24%20150%2C939%20%24%20403%2C036%20%24%20108%2C240",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_d503e47523",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "net price erosion in the U.S. as a result of new payer contracts",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=net%20price%20erosion%20in%20the%20U.S.%20as%20a",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=net%20price%20erosion%20in%20the%20U.S.%20as%20a%20result%20of%20new%20payer%20contracts",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_07a56cfbf8",
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "doc_title": "Amvuttra label",
+     "page": 5,
+     "location": "section 2.2 Administration Instructions",
+     "quote": "AMVUTTRA is for subcutaneous use only and should be administered by a healthcare professional.",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Aamvuttra%3Alabel_sections.md&page=5&q=AMVUTTRA%20is%20for%20subcutaneous%20use%20only%20and%20should%20be%20administered%20by%20a%20healthcare%20professional.",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_6de0d6e012",
+     "doc_id": "PFE:10k_FY2025.md",
+     "doc_title": "Pfizer 10-K FY2025",
+     "page": 44,
+     "location": "p. 38",
+     "quote": "U.S. $ 3,834 $ 3,547 8",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10k_FY2025.md&page=44&q=U.S.%20%24%203%2C834%20%24%203%2C547%208",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 8,
+    "total": 8,
+    "verified": 6,
+    "derived": 2,
+    "assumed": 0,
+    "unsupported": []
+   },
+   "math": "Vyndaqel share $1,975M / ($1,975M + $1,511.6M + $403.0M) = 50.8% vs $1,976M / ($1,976M + $559.3M + $108.2M) = 74.8%; class growth $1,246M (+47%).",
+   "math_marked": "Vyndaqel share $1,975M[1] / ($1,975M[1] + $1,511.6M[2] + $403.0M[3]) = 50.8%[derived: 1, 2, 3, 4] vs $1,976M[1] / ($1,976M[1] + $559.3M[2] + $108.2M[3]) = 74.8%[derived: 1, 2, 3, 4]; class growth $1,246M[derived: 1, 2, 3, 4] (+47%[derived: 1, 2, 3, 4]).",
+   "math_numeric_check": {
+    "status": "passed",
+    "checked": 12,
+    "total": 12,
+    "verified": 8,
+    "derived": 4,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "growth_limiter": {
+   "sentence": "Vyndaqel's U.S. growth is limited by price rather than demand: Pfizer is giving up net price in payer contracts to hold access while Amvuttra and Attruby take the class's growth, and generic Vyndamax can launch on June 1, 2031.",
+   "sentence_marked": "Vyndaqel's U.S. growth is limited by price rather than demand: Pfizer is giving up net price in payer contracts to hold access while Amvuttra and Attruby take the class's growth, and generic Vyndamax can launch on June 1, 2031.[1][2][3]",
+   "marker_map": {
+    "1": "c_d503e47523",
+    "2": "c_de42636698",
+    "3": "c_5cfab1e529"
+   },
+   "cites": [
+    {
+     "cite_id": "c_d503e47523",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "net price erosion in the U.S. as a result of new payer contracts",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=net%20price%20erosion%20in%20the%20U.S.%20as%20a",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=net%20price%20erosion%20in%20the%20U.S.%20as%20a%20result%20of%20new%20payer%20contracts",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_de42636698",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 38,
+     "location": "p. 38",
+     "quote": "U.S. $ 1,975 $ 1,976",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=38&q=U.S.%20%24%201%2C975%20%24%201%2C976",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    },
+    {
+     "cite_id": "c_5cfab1e529",
+     "doc_id": "PFE:10q_2026Q2.md",
+     "doc_title": "Pfizer 10-Q 2026-06-28",
+     "page": 29,
+     "location": "p. 29",
+     "quote": "the generic companies will be permitted to launch generic versions of Vyndamax capsules on June 1, 2031, subject to the outcome of other litigation relating to Vyndamax",
+     "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm#:~:text=the%20generic%20companies%20will%20be%20permitted%20to%20launch",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=PFE%3A10q_2026Q2.md&page=29&q=the%20generic%20companies%20will%20be%20permitted%20to%20launch%20generic%20versions%20of%20Vyndamax%20capsules%20on%20June%201%2C%202031%2C%20subject%20to%20the%20outcome%20of%20other%20litigation%20relating%20to%20Vyndamax",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": null,
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "priced_in": {
+   "call": "untestable",
+   "text": "No consensus figure for Vyndaqel's U.S. revenue share is in the index (the priced-in scorecard tracks call topics, not this product line), so whether the share loss is priced in cannot be tested.",
+   "text_marked": "No consensus figure for Vyndaqel's U.S. revenue share is in the index (the priced-in scorecard tracks call topics, not this product line), so whether the share loss is priced in cannot be tested.",
+   "cites": [],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "columns": [
+   {
+    "key": "Vyndaqel / Vyndamax",
+    "label": "Vyndaqel / Vyndamax",
+    "full": "Vyndaqel family (Vyndaqel / Vyndamax, tafamidis)"
+   },
+   {
+    "key": "Attruby",
+    "label": "Attruby",
+    "full": "BridgeBio's Attruby (acoramidis)"
+   },
+   {
+    "key": "Amvuttra",
+    "label": "Amvuttra",
+    "full": "Alnylam's Amvuttra (vutrisiran)"
+   }
+  ]
+ },
+ "notes": "Rows 3 to 5 are killed-as-obvious candidates kept because they are true, cited and sized; each carries obviousness 'high' and says where it is on the record. Refuted math (the c02 chargeback-led widening, the c05 CVR double count, the c09 Medicare-to-net-revenue ratio) is not used."
+}
