@@ -1,0 +1,3618 @@
+{
+ "ticker": "AMGN",
+ "company": "Amgen Inc.",
+ "generated_at": "2026-10-18T05:34:07.777624+00:00",
+ "move": {
+  "text": "We commit $12.5M and a team of 12 people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record a designed confirmatory randomized trial with independent endpoint adjudication plus a U.S. liver-safety registry, offered to the FDA as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives.",
+  "text_marked": "We commit $12.5M[assumption] and a team of 12[assumption] people, owned by the head of R&D, to file into the TAVNEOS withdrawal hearing record a designed confirmatory randomized trial with independent endpoint adjudication plus a U.S. liver-safety registry, offered to the FDA as postmarketing commitments in lieu of withdrawal, and we release the trial budget only if the FDA signals it will accept those commitments, a release the head of R&D and the CFO decide when that FDA signal arrives[1][2][3].",
+  "marker_map": {
+   "1": "c_5708b85898",
+   "2": "c_0437623b64",
+   "3": "c_16970919bd"
+  },
+  "cites": [
+   {
+    "cite_id": "c_5708b85898",
+    "doc_id": "AMGN:10q_2026Q2.md",
+    "doc_title": "Amgen 10-Q 2026-06-30",
+    "location": "p. 16",
+    "page": 21,
+    "quote": "On June 1, 2026, we requested a hearing on this proposal",
+    "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+    "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=we%20requested%20a%20hearing%20on%20this%20proposal",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=On%20June%201%2C%202026%2C%20we%20requested%20a%20hearing%20on%20this%20proposal",
+    "quote_grade": null,
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": "filing",
+    "speaker": null
+   },
+   {
+    "cite_id": "c_0437623b64",
+    "doc_id": "AMGN:10q_2026Q2.md",
+    "doc_title": "Amgen 10-Q 2026-06-30",
+    "location": "p. 54",
+    "page": 59,
+    "quote": "the FDA may require additional actions, including further labeling changes, warnings, monitoring, restrictions on use, postmarketing commitments or studies, and any such action or any withdrawal of regulatory approval for TAVNEOS",
+    "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+    "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further%20labeling%20changes%2C%20warnings%2C%20monitoring%2C%20restrictions%20on%20use%2C%20postmarketing%20commitments%20or%20studies%2C%20and%20any%20such%20action%20or%20any%20withdrawal%20of%20regulatory%20approval%20for%20TAVNEOS",
+    "quote_grade": null,
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": "filing",
+    "speaker": null
+   },
+   {
+    "cite_id": "c_16970919bd",
+    "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+    "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+    "location": "p. 8",
+    "page": 8,
+    "quote": "The impact and insight from these investments are already proving valuable.",
+    "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+    "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+    "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=The%20impact%20and%20insight%20from%20these%20investments%20are%20already%20proving%20valuable.",
+    "quote_grade": "B",
+    "verify_status": "exact",
+    "withheld": false,
+    "grade": "B",
+    "speaker": "the head of R&D"
+   }
+  ],
+  "numeric_check": {
+   "status": "passed",
+   "checked": 2,
+   "total": 2,
+   "verified": 0,
+   "derived": 0,
+   "assumed": 2,
+   "unsupported": []
+  },
+  "assumptions": {
+   "offer": {
+    "value": "$12.5M",
+    "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+   },
+   "people": {
+    "value": "12",
+    "label": "team size: regulatory affairs, biostatistics, clinical operations, hepatic safety and legal; sized by the writer, not sourced"
+   }
+  },
+  "type": "other:regulatory_evidence",
+  "budget": {
+   "amount_usd": 12500000,
+   "people": 12,
+   "period": "committed now; trial budget released only on an FDA signal, decided when it arrives",
+   "text": "Committed now: $12.5M and 12 people (regulatory affairs, biostatistics, clinical operations, hepatic safety and legal) for protocol design, an independent adjudication charter and registry setup, about 0.17% of 2025 R&D of $7,272M; no trial money is committed until the FDA signals it will accept postmarketing commitments.",
+   "text_marked": "Committed now: $12.5M[assumption] and 12[assumption] people (regulatory affairs, biostatistics, clinical operations, hepatic safety and legal) for protocol design, an independent adjudication charter and registry setup, about 0.17%[derived: 1][assumption] of 2025 R&D of $7,272M[1]; no trial money is committed until the FDA signals it will accept postmarketing commitments[2].",
+   "marker_map": {
+    "1": "c_48afc5fc27",
+    "2": "c_0437623b64"
+   },
+   "cites": [
+    {
+     "cite_id": "c_48afc5fc27",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "doc_title": "Amgen 10-K FY2025",
+     "location": "p. 70",
+     "page": 76,
+     "quote": "Research and development $ 7,272",
+     "label": "Amgen 10-K FY2025, p. 70 (file page 76)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=76&q=Research%20and%20development%20%24%207%2C272",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_0437623b64",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "the FDA may require additional actions, including further labeling changes, warnings, monitoring, restrictions on use, postmarketing commitments or studies, and any such action or any withdrawal of regulatory approval for TAVNEOS",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further%20labeling%20changes%2C%20warnings%2C%20monitoring%2C%20restrictions%20on%20use%2C%20postmarketing%20commitments%20or%20studies%2C%20and%20any%20such%20action%20or%20any%20withdrawal%20of%20regulatory%20approval%20for%20TAVNEOS",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 4,
+    "total": 4,
+    "verified": 1,
+    "derived": 1,
+    "assumed": 2,
+    "unsupported": []
+   },
+   "derived": {
+    "pct_rd": {
+     "value": 0.17,
+     "unit": "%",
+     "expr": "o / r * 100",
+     "operands": {
+      "o": {
+       "value": 12.5,
+       "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+      },
+      "r": {
+       "value": 7272,
+       "citation": {
+        "canonical_id": "AMGN:10k_FY2025.md",
+        "page": 76,
+        "quote": "Research and development $ 7,272",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-K",
+        "doc_title": "Amgen 10-K FY2025",
+        "period": "2025-12-31",
+        "folio": "70",
+        "char_start": 337,
+        "char_end": 369,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=76&q=Research%20and%20development%20%24%207%2C272",
+        "speaker": "",
+        "location": "p. 70",
+        "raw_doc_type": "annual_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+        },
+        "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+        "cite_id": "c_48afc5fc27",
+        "operands": []
+       },
+       "text": "7,272"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "offer": {
+     "value": "$12.5M",
+     "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+    },
+    "people": {
+     "value": "12",
+     "label": "team size: regulatory affairs, biostatistics, clinical operations, hepatic safety and legal; sized by the writer, not sourced"
+    }
+   }
+  }
+ },
+ "drivers": [
+  {
+   "finding_n": 1,
+   "why": "The move goes straight at the sealed Sharpest Needle from the findings pass, the TAVNEOS intangible whose recoverability wording weakened between the first- and second-quarter filings while the FDA moved to withdraw the drug: it is the cheapest action that can change the cash flows behind that carrying value.",
+   "cites": [
+    {
+     "cite_id": "c_526146ff94",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_9d240b0d59",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "indicate the carrying value of the related intangible assets remains recoverable; however, future changes to estimated TAVNEOS cash flows could unfavorably impact the Company’s ability to recover the carrying value of the related intangible assets",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=indicate%20the%20carrying%20value%20of%20the%20related%20intangible",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=indicate%20the%20carrying%20value%20of%20the%20related%20intangible%20assets%20remains%20recoverable%3B%20however%2C%20future%20changes%20to%20estimated%20TAVNEOS%20cash%20flows%20could%20unfavorably%20impact%20the%20Company%E2%80%99s%20ability%20to%20recover%20the%20carrying%20value%20of%20the%20related%20intangible%20assets",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_27bd3ddc3f",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "The Company evaluated these developments, as well as observations with respect to new U.S. patient interest, during the second quarter of 2026.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20Company%20evaluated%20these%20developments%2C%20as%20well%20as",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20Company%20evaluated%20these%20developments%2C%20as%20well%20as%20observations%20with%20respect%20to%20new%20U.S.%20patient%20interest%2C%20during%20the%20second%20quarter%20of%202026.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ]
+  }
+ ],
+ "case_for": {
+  "cost": {
+   "text": "The committed cost is $12.5M, the midpoint of the $10M to $15M range the decider skeptic set for protocol design, an adjudication charter and registry setup. It is 0.54% of the $2.3B U.S. TAVNEOS carrying value and about 0.17% of 2025 R&D of $7,272M. The downside is capped at that $12.5M because no trial money moves without an FDA signal.",
+   "text_marked": "The committed cost is $12.5M[assumption], the midpoint of the $10M[assumption] to $15M[assumption] range the decider skeptic set for protocol design, an adjudication charter and registry setup. It is 0.54%[derived: 1][assumption] of the $2.3B[1] U.S. TAVNEOS carrying value and about 0.17%[derived: 2][assumption] of 2025 R&D of $7,272M[2]. The downside is capped at that $12.5M[assumption] because no trial money moves without an FDA signal.",
+   "marker_map": {
+    "1": "c_526146ff94",
+    "2": "c_48afc5fc27"
+   },
+   "cites": [
+    {
+     "cite_id": "c_526146ff94",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_48afc5fc27",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "doc_title": "Amgen 10-K FY2025",
+     "location": "p. 70",
+     "page": 76,
+     "quote": "Research and development $ 7,272",
+     "label": "Amgen 10-K FY2025, p. 70 (file page 76)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=76&q=Research%20and%20development%20%24%207%2C272",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 8,
+    "total": 8,
+    "verified": 2,
+    "derived": 2,
+    "assumed": 4,
+    "unsupported": []
+   },
+   "derived": {
+    "pct_carry": {
+     "value": 0.54,
+     "unit": "%",
+     "expr": "o / (a * 1000) * 100",
+     "operands": {
+      "o": {
+       "value": 12.5,
+       "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+      },
+      "a": {
+       "value": 2.3,
+       "citation": {
+        "canonical_id": "AMGN:10q_2026Q2.md",
+        "page": 21,
+        "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-Q",
+        "doc_title": "Amgen 10-Q 2026-06-30",
+        "period": "2026-06-30",
+        "folio": "16",
+        "char_start": 2055,
+        "char_end": 2238,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+        "speaker": "",
+        "location": "p. 16",
+        "raw_doc_type": "quarterly_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": ""
+        },
+        "confidence_note": "",
+        "cite_id": "c_526146ff94",
+        "operands": []
+       },
+       "text": "2.3 billion"
+      }
+     }
+    },
+    "pct_rd": {
+     "value": 0.17,
+     "unit": "%",
+     "expr": "o / r * 100",
+     "operands": {
+      "o": {
+       "value": 12.5,
+       "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+      },
+      "r": {
+       "value": 7272,
+       "citation": {
+        "canonical_id": "AMGN:10k_FY2025.md",
+        "page": 76,
+        "quote": "Research and development $ 7,272",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-K",
+        "doc_title": "Amgen 10-K FY2025",
+        "period": "2025-12-31",
+        "folio": "70",
+        "char_start": 337,
+        "char_end": 369,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=76&q=Research%20and%20development%20%24%207%2C272",
+        "speaker": "",
+        "location": "p. 70",
+        "raw_doc_type": "annual_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+        },
+        "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+        "cite_id": "c_48afc5fc27",
+        "operands": []
+       },
+       "text": "7,272"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "offer": {
+     "value": "$12.5M",
+     "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+    },
+    "offer_lo": {
+     "value": "$10M",
+     "label": "low end of the decider skeptic gated-offer range (no indexed benchmark)"
+    },
+    "offer_hi": {
+     "value": "$15M",
+     "label": "high end of the decider skeptic gated-offer range (no indexed benchmark)"
+    }
+   }
+  },
+  "return": {
+   "text": "The return is avoided loss of contribution: $413.3M a year is exposed once a withdrawal can bite, from about month 12, because TAVNEOS stays on the market while the hearing process runs. At a 5 points gain in the probability TAVNEOS stays approved, the expected avoided loss is $20.7M against $12.5M, a net $8.2M; break-even is 3.0 points (2.4 points to 3.6 points across the $10M to $15M range). No page prices that gain. If the FDA signals acceptance, the trial budget of about $62.15M is released (program $74.65M), whose break-even of 18.1 points is why it waits for that signal; most of the payoff lands after the 24-month window.",
+   "text_marked": "The return is avoided loss of contribution: $413.3M[derived: 1, 2][assumption] a year is exposed once a withdrawal can bite, from about month 12[assumption], because TAVNEOS stays on the market while the hearing process runs. At a 5 points[assumption] gain in the probability TAVNEOS stays approved, the expected avoided loss is $20.7M[derived: 1, 2][assumption] against $12.5M[assumption], a net $8.2M[derived: 1, 2][assumption]; break-even is 3.0 points[derived: 1, 2][assumption] (2.4 points[derived: 1, 2][assumption] to 3.6 points[derived: 1, 2][assumption] across the $10M[assumption] to $15M[assumption] range). No page prices that gain. If the FDA signals acceptance, the trial budget of about $62.15M[derived: 3][assumption] is released (program $74.65M[derived: 3][assumption]), whose break-even of 18.1 points[derived: 3, 1, 2][assumption] is why it waits for that signal; most of the payoff lands after the 24[assumption]-month window[4].",
+   "marker_map": {
+    "1": "c_ea8f8528bc",
+    "2": "c_dfda4c301b",
+    "3": "c_2c635b78fc",
+    "4": "c_133da21cc2"
+   },
+   "cites": [
+    {
+     "cite_id": "c_ea8f8528bc",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 39",
+     "page": 44,
+     "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_dfda4c301b",
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+     "location": "p. 8",
+     "page": 8,
+     "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+     "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+     "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B",
+     "speaker": "Peter Griffith"
+    },
+    {
+     "cite_id": "c_2c635b78fc",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "doc_title": "Amgen 10-K FY2025",
+     "location": "p. 2",
+     "page": 8,
+     "quote": "re-adjudicate primary endpoint results for 9 of the 331 patients in its pivotal clinical trial",
+     "label": "Amgen 10-K FY2025, p. 2 (file page 8)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=patients%20in%20its%20pivotal%20clinical%20trial",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=8&q=re-adjudicate%20primary%20endpoint%20results%20for%209%20of%20the%20331%20patients%20in%20its%20pivotal%20clinical%20trial",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_133da21cc2",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "TAVNEOS will remain on the market during the pendency of this process",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the%20pendency%20of%20this%20process",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 15,
+    "total": 15,
+    "verified": 0,
+    "derived": 9,
+    "assumed": 6,
+    "unsupported": []
+   },
+   "derived": {
+    "expo": {
+     "value": 413.3,
+     "unit": "USD millions",
+     "expr": "r * m / 100",
+     "operands": {
+      "r": {
+       "derived": "run"
+      },
+      "m": {
+       "derived": "mgn"
+      }
+     }
+    },
+    "run": {
+     "value": 514,
+     "unit": "USD millions",
+     "expr": "h * k",
+     "operands": {
+      "h": {
+       "value": 257,
+       "citation": {
+        "canonical_id": "AMGN:10q_2026Q2.md",
+        "page": 44,
+        "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-Q",
+        "doc_title": "Amgen 10-Q 2026-06-30",
+        "period": "2026-06-30",
+        "folio": "39",
+        "char_start": 538,
+        "char_end": 578,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+        "speaker": "",
+        "location": "p. 39",
+        "raw_doc_type": "quarterly_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "substring",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+        },
+        "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+        "cite_id": "c_ea8f8528bc",
+        "operands": []
+       },
+       "text": "257"
+      },
+      "k": {
+       "value": 2,
+       "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+      }
+     }
+    },
+    "mgn": {
+     "value": 80.4,
+     "unit": "%",
+     "expr": "100 - c",
+     "operands": {
+      "c": {
+       "value": 19.6,
+       "citation": {
+        "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+        "page": 8,
+        "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "call transcript",
+        "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+        "period": "2026Q2",
+        "folio": "8",
+        "char_start": 1520,
+        "char_end": 1590,
+        "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+        "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+        "speaker": "Peter Griffith",
+        "location": "p. 8",
+        "raw_doc_type": "transcript",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": ""
+        },
+        "confidence_note": "",
+        "cite_id": "c_dfda4c301b",
+        "operands": []
+       },
+       "text": "19.6%"
+      }
+     }
+    },
+    "ev": {
+     "value": 20.7,
+     "unit": "USD millions",
+     "expr": "s * e",
+     "operands": {
+      "s": {
+       "value": 0.05,
+       "assumption": "illustrative gain in the probability TAVNEOS stays approved; no page prices it (CFO skeptic example)"
+      },
+      "e": {
+       "derived": "expo"
+      }
+     }
+    },
+    "net": {
+     "value": 8.2,
+     "unit": "USD millions",
+     "expr": "v - o",
+     "operands": {
+      "v": {
+       "derived": "ev"
+      },
+      "o": {
+       "value": 12.5,
+       "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+      }
+     }
+    },
+    "be": {
+     "value": 3.0,
+     "unit": "pts",
+     "expr": "o / e * 100",
+     "operands": {
+      "o": {
+       "value": 12.5,
+       "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+      },
+      "e": {
+       "derived": "expo"
+      }
+     }
+    },
+    "be_lo": {
+     "value": 2.4,
+     "unit": "pts",
+     "expr": "o / e * 100",
+     "operands": {
+      "o": {
+       "value": 10,
+       "assumption": "low end of the decider skeptic gated-offer range (no indexed benchmark)"
+      },
+      "e": {
+       "derived": "expo"
+      }
+     }
+    },
+    "be_hi": {
+     "value": 3.6,
+     "unit": "pts",
+     "expr": "o / e * 100",
+     "operands": {
+      "o": {
+       "value": 15,
+       "assumption": "high end of the decider skeptic gated-offer range (no indexed benchmark)"
+      },
+      "e": {
+       "derived": "expo"
+      }
+     }
+    },
+    "rem": {
+     "value": 62.15,
+     "unit": "USD millions",
+     "expr": "p - o",
+     "operands": {
+      "p": {
+       "derived": "prog"
+      },
+      "o": {
+       "value": 12.5,
+       "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+      }
+     }
+    },
+    "prog": {
+     "value": 74.65,
+     "unit": "USD millions",
+     "expr": "t + g",
+     "operands": {
+      "t": {
+       "derived": "trial"
+      },
+      "g": {
+       "value": 25,
+       "assumption": "independent adjudication committee plus U.S. hepatic registry (strategist; no indexed benchmark)"
+      }
+     }
+    },
+    "trial": {
+     "value": 49.65,
+     "unit": "USD millions",
+     "expr": "n * p / 1000000",
+     "operands": {
+      "n": {
+       "value": 331,
+       "citation": {
+        "canonical_id": "AMGN:10k_FY2025.md",
+        "page": 8,
+        "quote": "re-adjudicate primary endpoint results for 9 of the 331 patients in its pivotal clinical trial",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-K",
+        "doc_title": "Amgen 10-K FY2025",
+        "period": "2025-12-31",
+        "folio": "2",
+        "char_start": 3855,
+        "char_end": 3949,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=patients%20in%20its%20pivotal%20clinical%20trial",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=8&q=re-adjudicate%20primary%20endpoint%20results%20for%209%20of%20the%20331%20patients%20in%20its%20pivotal%20clinical%20trial",
+        "speaker": "",
+        "location": "p. 2",
+        "raw_doc_type": "annual_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": ""
+        },
+        "confidence_note": "",
+        "cite_id": "c_2c635b78fc",
+        "operands": []
+       },
+       "text": "331"
+      },
+      "p": {
+       "value": 150000,
+       "assumption": "trial cost per patient (strategist; no indexed vasculitis trial-cost benchmark)"
+      }
+     }
+    },
+    "be_full": {
+     "value": 18.1,
+     "unit": "pts",
+     "expr": "p / e * 100",
+     "operands": {
+      "p": {
+       "derived": "prog"
+      },
+      "e": {
+       "derived": "expo"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "offer": {
+     "value": "$12.5M",
+     "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+    },
+    "offer_lo": {
+     "value": "$10M",
+     "label": "low end of the decider skeptic gated-offer range (no indexed benchmark)"
+    },
+    "offer_hi": {
+     "value": "$15M",
+     "label": "high end of the decider skeptic gated-offer range (no indexed benchmark)"
+    },
+    "months_bite": {
+     "value": "month 12",
+     "label": "month from which a withdrawal can first cut sales (TAVNEOS stays on the market while the hearing process runs); CFO skeptic assumption"
+    },
+    "shift": {
+     "value": "5 points",
+     "label": "illustrative gain in the probability TAVNEOS stays approved; no page prices it (CFO skeptic example)"
+    },
+    "window": {
+     "value": "24",
+     "label": "two-year evaluation window in months (Part 2 rule)"
+    }
+   }
+  },
+  "math_steps": [
+   {
+    "step": 1,
+    "text": "Part 1 anchor: the TAVNEOS intangible is carried at $2.4B, of which $2.3B is U.S.; $2.3B / 544M diluted shares = $4.23 a share pre-tax if it were written off.",
+    "text_marked": "Part 1 anchor: the TAVNEOS intangible is carried at $2.4B[1], of which $2.3B[1] is U.S.; $2.3B[1] / 544M[2] diluted shares = $4.23[derived: 1, 2] a share pre-tax if it were written off.",
+    "marker_map": {
+     "1": "c_526146ff94",
+     "2": "c_be00af3959"
+    },
+    "cites": [
+     {
+      "cite_id": "c_526146ff94",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 16",
+      "page": 21,
+      "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+      "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_be00af3959",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 32",
+      "page": 37,
+      "quote": "Diluted shares 544 541 1 % 544 541 1 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 32 (file page 37)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=37&q=Diluted%20shares%20544%20541%201%20%25%20544%20541%201%20%25",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 5,
+     "total": 5,
+     "verified": 4,
+     "derived": 1,
+     "assumed": 0,
+     "unsupported": []
+    },
+    "derived": {
+     "eps": {
+      "value": 4.23,
+      "unit": "USD",
+      "expr": "a * 1000 / s",
+      "operands": {
+       "a": {
+        "value": 2.3,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 21,
+         "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "16",
+         "char_start": 2055,
+         "char_end": 2238,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+         "speaker": "",
+         "location": "p. 16",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_526146ff94",
+         "operands": []
+        },
+        "text": "2.3 billion"
+       },
+       "s": {
+        "value": 544,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 37,
+         "quote": "Diluted shares 544 541 1 % 544 541 1 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "32",
+         "char_start": 752,
+         "char_end": 790,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=37&q=Diluted%20shares%20544%20541%201%20%25%20544%20541%201%20%25",
+         "speaker": "",
+         "location": "p. 32",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_be00af3959",
+         "operands": []
+        },
+        "text": "544"
+       }
+      }
+     }
+    }
+   },
+   {
+    "step": 2,
+    "text": "Run-rate: U.S. TAVNEOS first-half 2026 sales of $257M x 2 = $514M a year, above FY2025 U.S. sales of $423M.",
+    "text_marked": "Run-rate: U.S. TAVNEOS first-half 2026 sales of $257M[1] x 2[assumption] = $514M[derived: 1][assumption] a year, above FY2025 U.S. sales of $423M[2].",
+    "marker_map": {
+     "1": "c_ea8f8528bc",
+     "2": "c_53c8a35231"
+    },
+    "cites": [
+     {
+      "cite_id": "c_ea8f8528bc",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 39",
+      "page": 44,
+      "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_53c8a35231",
+      "doc_id": "AMGN:10k_FY2025.md",
+      "doc_title": "Amgen 10-K FY2025",
+      "location": "p. 69",
+      "page": 75,
+      "quote": "TAVNEOS - U.S. \n 423 65 % 256",
+      "label": "Amgen 10-K FY2025, p. 69 (file page 75)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=75&q=TAVNEOS%20-%20U.S.%20423%2065%20%25%20256",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 4,
+     "total": 4,
+     "verified": 2,
+     "derived": 1,
+     "assumed": 1,
+     "unsupported": []
+    },
+    "derived": {
+     "run": {
+      "value": 514,
+      "unit": "USD millions",
+      "expr": "h * k",
+      "operands": {
+       "h": {
+        "value": 257,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 44,
+         "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "39",
+         "char_start": 538,
+         "char_end": 578,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+         "speaker": "",
+         "location": "p. 39",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_ea8f8528bc",
+         "operands": []
+        },
+        "text": "257"
+       },
+       "k": {
+        "value": 2,
+        "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "two": {
+      "value": "2",
+      "label": "half-years per year (annualizing first-half 2026 U.S. sales)"
+     }
+    }
+   },
+   {
+    "step": 3,
+    "text": "Margin: the CFO put non-GAAP cost of sales at 19.6% of product sales, so 100 - 19.6% = 80.4%; the FY2025 reconciliation (18.3%) gives 81.7%, so 80.4% is the lower company-average proxy, not a TAVNEOS product margin.",
+    "text_marked": "Margin: the CFO put non-GAAP cost of sales at 19.6%[1] of product sales, so 100 - 19.6%[1] = 80.4%[derived: 1]; the FY2025 reconciliation (18.3%[2]) gives 81.7%[derived: 2], so 80.4%[derived: 1] is the lower company-average proxy, not a TAVNEOS product margin.",
+    "marker_map": {
+     "1": "c_dfda4c301b",
+     "2": "c_73e408432c"
+    },
+    "cites": [
+     {
+      "cite_id": "c_dfda4c301b",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Peter Griffith"
+     },
+     {
+      "cite_id": "c_73e408432c",
+      "doc_id": "AMGN:companies/AMGN/proxy_2026.md",
+      "doc_title": "Amgen proxy (DEF 14A) 2026-04-07",
+      "location": "p. B-1",
+      "page": 137,
+      "quote": "Non-GAAP cost of sales as a percentage of product sales 18.3 %",
+      "label": "Amgen proxy (DEF 14A) 2026-04-07, p. B-1 (file page 137)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000119312526145588/d13946ddef14a.htm#:~:text=Non%2DGAAP%20cost%20of%20sales%20as%20a%20percentage%20of",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Fproxy_2026.md&page=137&q=Non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%2018.3%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 7,
+     "total": 7,
+     "verified": 3,
+     "derived": 3,
+     "assumed": 1,
+     "unsupported": []
+    },
+    "derived": {
+     "mgn": {
+      "value": 80.4,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 19.6,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+         "page": 8,
+         "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "call transcript",
+         "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+         "period": "2026Q2",
+         "folio": "8",
+         "char_start": 1520,
+         "char_end": 1590,
+         "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+         "speaker": "Peter Griffith",
+         "location": "p. 8",
+         "raw_doc_type": "transcript",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_dfda4c301b",
+         "operands": []
+        },
+        "text": "19.6%"
+       }
+      }
+     },
+     "mgn_p": {
+      "value": 81.7,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 18.3,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/proxy_2026.md",
+         "page": 137,
+         "quote": "Non-GAAP cost of sales as a percentage of product sales 18.3 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "proxy",
+         "doc_title": "Amgen proxy (DEF 14A) 2026-04-07",
+         "period": "2026-05-19",
+         "folio": "B-1",
+         "char_start": 900,
+         "char_end": 966,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000119312526145588/d13946ddef14a.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000119312526145588/d13946ddef14a.htm#:~:text=Non%2DGAAP%20cost%20of%20sales%20as%20a%20percentage%20of",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Fproxy_2026.md&page=137&q=Non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%2018.3%20%25",
+         "speaker": "",
+         "location": "p. B-1",
+         "raw_doc_type": "proxy_statement",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_73e408432c",
+         "operands": []
+        },
+        "text": "18.3%"
+       }
+      }
+     }
+    }
+   },
+   {
+    "step": 4,
+    "text": "Exposure: $514M x 80.4% = $413.3M of contribution a year, at risk only after a withdrawal, so it counts from about month 12.",
+    "text_marked": "Exposure: $514M[derived: 1][assumption] x 80.4%[derived: 2] = $413.3M[derived: 1, 2][assumption] of contribution a year, at risk only after a withdrawal, so it counts from about month 12[assumption].",
+    "marker_map": {
+     "1": "c_ea8f8528bc",
+     "2": "c_dfda4c301b"
+    },
+    "cites": [
+     {
+      "cite_id": "c_ea8f8528bc",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 39",
+      "page": 44,
+      "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_dfda4c301b",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Peter Griffith"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 4,
+     "total": 4,
+     "verified": 0,
+     "derived": 3,
+     "assumed": 1,
+     "unsupported": []
+    },
+    "derived": {
+     "expo": {
+      "value": 413.3,
+      "unit": "USD millions",
+      "expr": "r * m / 100",
+      "operands": {
+       "r": {
+        "derived": "run"
+       },
+       "m": {
+        "derived": "mgn"
+       }
+      }
+     },
+     "run": {
+      "value": 514,
+      "unit": "USD millions",
+      "expr": "h * k",
+      "operands": {
+       "h": {
+        "value": 257,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 44,
+         "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "39",
+         "char_start": 538,
+         "char_end": 578,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+         "speaker": "",
+         "location": "p. 39",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_ea8f8528bc",
+         "operands": []
+        },
+        "text": "257"
+       },
+       "k": {
+        "value": 2,
+        "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+       }
+      }
+     },
+     "mgn": {
+      "value": 80.4,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 19.6,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+         "page": 8,
+         "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "call transcript",
+         "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+         "period": "2026Q2",
+         "folio": "8",
+         "char_start": 1520,
+         "char_end": 1590,
+         "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+         "speaker": "Peter Griffith",
+         "location": "p. 8",
+         "raw_doc_type": "transcript",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_dfda4c301b",
+         "operands": []
+        },
+        "text": "19.6%"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "months_bite": {
+      "value": "month 12",
+      "label": "month from which a withdrawal can first cut sales (TAVNEOS stays on the market while the hearing process runs); CFO skeptic assumption"
+     }
+    }
+   },
+   {
+    "step": 5,
+    "text": "Break-even: $12.5M / $413.3M = 3.0 points of retention probability; $10M gives 2.4 points and $15M gives 3.6 points.",
+    "text_marked": "Break-even: $12.5M[assumption] / $413.3M[derived: 1, 2][assumption] = 3.0 points[derived: 1, 2][assumption] of retention probability; $10M[assumption] gives 2.4 points[derived: 1, 2][assumption] and $15M[assumption] gives 3.6 points[derived: 1, 2][assumption].",
+    "marker_map": {
+     "1": "c_ea8f8528bc",
+     "2": "c_dfda4c301b"
+    },
+    "cites": [
+     {
+      "cite_id": "c_ea8f8528bc",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 39",
+      "page": 44,
+      "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_dfda4c301b",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Peter Griffith"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 7,
+     "total": 7,
+     "verified": 0,
+     "derived": 4,
+     "assumed": 3,
+     "unsupported": []
+    },
+    "derived": {
+     "be": {
+      "value": 3.0,
+      "unit": "pts",
+      "expr": "o / e * 100",
+      "operands": {
+       "o": {
+        "value": 12.5,
+        "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+       },
+       "e": {
+        "derived": "expo"
+       }
+      }
+     },
+     "expo": {
+      "value": 413.3,
+      "unit": "USD millions",
+      "expr": "r * m / 100",
+      "operands": {
+       "r": {
+        "derived": "run"
+       },
+       "m": {
+        "derived": "mgn"
+       }
+      }
+     },
+     "run": {
+      "value": 514,
+      "unit": "USD millions",
+      "expr": "h * k",
+      "operands": {
+       "h": {
+        "value": 257,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 44,
+         "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "39",
+         "char_start": 538,
+         "char_end": 578,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+         "speaker": "",
+         "location": "p. 39",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_ea8f8528bc",
+         "operands": []
+        },
+        "text": "257"
+       },
+       "k": {
+        "value": 2,
+        "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+       }
+      }
+     },
+     "mgn": {
+      "value": 80.4,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 19.6,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+         "page": 8,
+         "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "call transcript",
+         "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+         "period": "2026Q2",
+         "folio": "8",
+         "char_start": 1520,
+         "char_end": 1590,
+         "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+         "speaker": "Peter Griffith",
+         "location": "p. 8",
+         "raw_doc_type": "transcript",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_dfda4c301b",
+         "operands": []
+        },
+        "text": "19.6%"
+       }
+      }
+     },
+     "be_lo": {
+      "value": 2.4,
+      "unit": "pts",
+      "expr": "o / e * 100",
+      "operands": {
+       "o": {
+        "value": 10,
+        "assumption": "low end of the decider skeptic gated-offer range (no indexed benchmark)"
+       },
+       "e": {
+        "derived": "expo"
+       }
+      }
+     },
+     "be_hi": {
+      "value": 3.6,
+      "unit": "pts",
+      "expr": "o / e * 100",
+      "operands": {
+       "o": {
+        "value": 15,
+        "assumption": "high end of the decider skeptic gated-offer range (no indexed benchmark)"
+       },
+       "e": {
+        "derived": "expo"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "offer": {
+      "value": "$12.5M",
+      "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+     },
+     "offer_lo": {
+      "value": "$10M",
+      "label": "low end of the decider skeptic gated-offer range (no indexed benchmark)"
+     },
+     "offer_hi": {
+      "value": "$15M",
+      "label": "high end of the decider skeptic gated-offer range (no indexed benchmark)"
+     }
+    }
+   },
+   {
+    "step": 6,
+    "text": "Full program: 331 patients x $150,000 = $49.65M of trial cost plus $25M of adjudication and registry = $74.65M; $74.65M / $413.3M = 18.1 points, so the trial money stays gated.",
+    "text_marked": "Full program: 331[1] patients x $150,000[assumption] = $49.65M[derived: 1][assumption] of trial cost plus $25M[assumption] of adjudication and registry = $74.65M[derived: 1][assumption]; $74.65M[derived: 1][assumption] / $413.3M[derived: 2, 3][assumption] = 18.1 points[derived: 1, 2, 3][assumption], so the trial money stays gated.",
+    "marker_map": {
+     "1": "c_2c635b78fc",
+     "2": "c_ea8f8528bc",
+     "3": "c_dfda4c301b"
+    },
+    "cites": [
+     {
+      "cite_id": "c_2c635b78fc",
+      "doc_id": "AMGN:10k_FY2025.md",
+      "doc_title": "Amgen 10-K FY2025",
+      "location": "p. 2",
+      "page": 8,
+      "quote": "re-adjudicate primary endpoint results for 9 of the 331 patients in its pivotal clinical trial",
+      "label": "Amgen 10-K FY2025, p. 2 (file page 8)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=patients%20in%20its%20pivotal%20clinical%20trial",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=8&q=re-adjudicate%20primary%20endpoint%20results%20for%209%20of%20the%20331%20patients%20in%20its%20pivotal%20clinical%20trial",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_ea8f8528bc",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 39",
+      "page": 44,
+      "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_dfda4c301b",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Peter Griffith"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 8,
+     "total": 8,
+     "verified": 1,
+     "derived": 5,
+     "assumed": 2,
+     "unsupported": []
+    },
+    "derived": {
+     "prog": {
+      "value": 74.65,
+      "unit": "USD millions",
+      "expr": "t + g",
+      "operands": {
+       "t": {
+        "derived": "trial"
+       },
+       "g": {
+        "value": 25,
+        "assumption": "independent adjudication committee plus U.S. hepatic registry (strategist; no indexed benchmark)"
+       }
+      }
+     },
+     "trial": {
+      "value": 49.65,
+      "unit": "USD millions",
+      "expr": "n * p / 1000000",
+      "operands": {
+       "n": {
+        "value": 331,
+        "citation": {
+         "canonical_id": "AMGN:10k_FY2025.md",
+         "page": 8,
+         "quote": "re-adjudicate primary endpoint results for 9 of the 331 patients in its pivotal clinical trial",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-K",
+         "doc_title": "Amgen 10-K FY2025",
+         "period": "2025-12-31",
+         "folio": "2",
+         "char_start": 3855,
+         "char_end": 3949,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=patients%20in%20its%20pivotal%20clinical%20trial",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=8&q=re-adjudicate%20primary%20endpoint%20results%20for%209%20of%20the%20331%20patients%20in%20its%20pivotal%20clinical%20trial",
+         "speaker": "",
+         "location": "p. 2",
+         "raw_doc_type": "annual_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_2c635b78fc",
+         "operands": []
+        },
+        "text": "331"
+       },
+       "p": {
+        "value": 150000,
+        "assumption": "trial cost per patient (strategist; no indexed vasculitis trial-cost benchmark)"
+       }
+      }
+     },
+     "be_full": {
+      "value": 18.1,
+      "unit": "pts",
+      "expr": "p / e * 100",
+      "operands": {
+       "p": {
+        "derived": "prog"
+       },
+       "e": {
+        "derived": "expo"
+       }
+      }
+     },
+     "expo": {
+      "value": 413.3,
+      "unit": "USD millions",
+      "expr": "r * m / 100",
+      "operands": {
+       "r": {
+        "derived": "run"
+       },
+       "m": {
+        "derived": "mgn"
+       }
+      }
+     },
+     "run": {
+      "value": 514,
+      "unit": "USD millions",
+      "expr": "h * k",
+      "operands": {
+       "h": {
+        "value": 257,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 44,
+         "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "39",
+         "char_start": 538,
+         "char_end": 578,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+         "speaker": "",
+         "location": "p. 39",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_ea8f8528bc",
+         "operands": []
+        },
+        "text": "257"
+       },
+       "k": {
+        "value": 2,
+        "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+       }
+      }
+     },
+     "mgn": {
+      "value": 80.4,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 19.6,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+         "page": 8,
+         "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "call transcript",
+         "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+         "period": "2026Q2",
+         "folio": "8",
+         "char_start": 1520,
+         "char_end": 1590,
+         "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+         "speaker": "Peter Griffith",
+         "location": "p. 8",
+         "raw_doc_type": "transcript",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_dfda4c301b",
+         "operands": []
+        },
+        "text": "19.6%"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "per_pt": {
+      "value": "$150,000",
+      "label": "trial cost per patient (strategist; no indexed vasculitis trial-cost benchmark)"
+     },
+     "reg": {
+      "value": "$25M",
+      "label": "independent adjudication committee plus U.S. hepatic registry (strategist; no indexed benchmark)"
+     }
+    }
+   },
+   {
+    "step": 7,
+    "text": "Expected value: 0.05 x $413.3M = $20.7M of avoided loss less $12.5M = $8.2M net; at 0.025 it is $10.3M, a $2.2M loss, so the case rests on a gain no page can size.",
+    "text_marked": "Expected value: 0.05[assumption] x $413.3M[derived: 1, 2][assumption] = $20.7M[derived: 1, 2][assumption] of avoided loss less $12.5M[assumption] = $8.2M[derived: 1, 2][assumption] net; at 0.025[assumption] it is $10.3M[derived: 1, 2][assumption], a $2.2M[derived: 1, 2][assumption] loss, so the case rests on a gain no page can size.",
+    "marker_map": {
+     "1": "c_ea8f8528bc",
+     "2": "c_dfda4c301b"
+    },
+    "cites": [
+     {
+      "cite_id": "c_ea8f8528bc",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 39",
+      "page": 44,
+      "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_dfda4c301b",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Peter Griffith"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 8,
+     "total": 8,
+     "verified": 0,
+     "derived": 5,
+     "assumed": 3,
+     "unsupported": []
+    },
+    "derived": {
+     "ev": {
+      "value": 20.7,
+      "unit": "USD millions",
+      "expr": "s * e",
+      "operands": {
+       "s": {
+        "value": 0.05,
+        "assumption": "illustrative gain in the probability TAVNEOS stays approved; no page prices it (CFO skeptic example)"
+       },
+       "e": {
+        "derived": "expo"
+       }
+      }
+     },
+     "expo": {
+      "value": 413.3,
+      "unit": "USD millions",
+      "expr": "r * m / 100",
+      "operands": {
+       "r": {
+        "derived": "run"
+       },
+       "m": {
+        "derived": "mgn"
+       }
+      }
+     },
+     "run": {
+      "value": 514,
+      "unit": "USD millions",
+      "expr": "h * k",
+      "operands": {
+       "h": {
+        "value": 257,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 44,
+         "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "39",
+         "char_start": 538,
+         "char_end": 578,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+         "speaker": "",
+         "location": "p. 39",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_ea8f8528bc",
+         "operands": []
+        },
+        "text": "257"
+       },
+       "k": {
+        "value": 2,
+        "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+       }
+      }
+     },
+     "mgn": {
+      "value": 80.4,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 19.6,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+         "page": 8,
+         "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "call transcript",
+         "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+         "period": "2026Q2",
+         "folio": "8",
+         "char_start": 1520,
+         "char_end": 1590,
+         "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+         "speaker": "Peter Griffith",
+         "location": "p. 8",
+         "raw_doc_type": "transcript",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_dfda4c301b",
+         "operands": []
+        },
+        "text": "19.6%"
+       }
+      }
+     },
+     "net": {
+      "value": 8.2,
+      "unit": "USD millions",
+      "expr": "v - o",
+      "operands": {
+       "v": {
+        "derived": "ev"
+       },
+       "o": {
+        "value": 12.5,
+        "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+       }
+      }
+     },
+     "ev_h": {
+      "value": 10.3,
+      "unit": "USD millions",
+      "expr": "s * e",
+      "operands": {
+       "s": {
+        "value": 0.025,
+        "assumption": "illustrative half-size gain (2.5 points)"
+       },
+       "e": {
+        "derived": "expo"
+       }
+      }
+     },
+     "loss_h": {
+      "value": 2.2,
+      "unit": "USD millions",
+      "expr": "o - v",
+      "operands": {
+       "v": {
+        "derived": "ev_h"
+       },
+       "o": {
+        "value": 12.5,
+        "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "offer": {
+      "value": "$12.5M",
+      "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+     },
+     "shift_d": {
+      "value": "0.05",
+      "label": "illustrative 5-point gain as a fraction"
+     },
+     "half_d": {
+      "value": "0.025",
+      "label": "illustrative 2.5-point gain as a fraction"
+     }
+    }
+   },
+   {
+    "step": 8,
+    "text": "Intangible test: the U.S. carrying value is $2.3B / $413.3M = 5.6 years of current contribution, and the offer costs 0.54% of it.",
+    "text_marked": "Intangible test: the U.S. carrying value is $2.3B[1] / $413.3M[derived: 2, 3][assumption] = 5.6[derived: 1, 2, 3][assumption] years of current contribution, and the offer costs 0.54%[derived: 1][assumption] of it.",
+    "marker_map": {
+     "1": "c_526146ff94",
+     "2": "c_ea8f8528bc",
+     "3": "c_dfda4c301b"
+    },
+    "cites": [
+     {
+      "cite_id": "c_526146ff94",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 16",
+      "page": 21,
+      "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+      "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_ea8f8528bc",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 39",
+      "page": 44,
+      "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_dfda4c301b",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Peter Griffith"
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 4,
+     "total": 4,
+     "verified": 1,
+     "derived": 3,
+     "assumed": 0,
+     "unsupported": []
+    },
+    "derived": {
+     "yrs": {
+      "value": 5.6,
+      "unit": "",
+      "expr": "a * 1000 / e",
+      "operands": {
+       "a": {
+        "value": 2.3,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 21,
+         "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "16",
+         "char_start": 2055,
+         "char_end": 2238,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+         "speaker": "",
+         "location": "p. 16",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_526146ff94",
+         "operands": []
+        },
+        "text": "2.3 billion"
+       },
+       "e": {
+        "derived": "expo"
+       }
+      }
+     },
+     "expo": {
+      "value": 413.3,
+      "unit": "USD millions",
+      "expr": "r * m / 100",
+      "operands": {
+       "r": {
+        "derived": "run"
+       },
+       "m": {
+        "derived": "mgn"
+       }
+      }
+     },
+     "run": {
+      "value": 514,
+      "unit": "USD millions",
+      "expr": "h * k",
+      "operands": {
+       "h": {
+        "value": 257,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 44,
+         "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "39",
+         "char_start": 538,
+         "char_end": 578,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+         "speaker": "",
+         "location": "p. 39",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_ea8f8528bc",
+         "operands": []
+        },
+        "text": "257"
+       },
+       "k": {
+        "value": 2,
+        "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+       }
+      }
+     },
+     "mgn": {
+      "value": 80.4,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 19.6,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+         "page": 8,
+         "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "call transcript",
+         "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+         "period": "2026Q2",
+         "folio": "8",
+         "char_start": 1520,
+         "char_end": 1590,
+         "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+         "speaker": "Peter Griffith",
+         "location": "p. 8",
+         "raw_doc_type": "transcript",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_dfda4c301b",
+         "operands": []
+        },
+        "text": "19.6%"
+       }
+      }
+     },
+     "pct_carry": {
+      "value": 0.54,
+      "unit": "%",
+      "expr": "o / (a * 1000) * 100",
+      "operands": {
+       "o": {
+        "value": 12.5,
+        "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+       },
+       "a": {
+        "value": 2.3,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 21,
+         "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "16",
+         "char_start": 2055,
+         "char_end": 2238,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+         "speaker": "",
+         "location": "p. 16",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_526146ff94",
+         "operands": []
+        },
+        "text": "2.3 billion"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "offer": {
+      "value": "$12.5M",
+      "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+     }
+    }
+   }
+  ],
+  "net": {
+   "text": "Net: the loss is capped at $12.5M, break-even is 3.0 points, and the payoff is an option, not a forecast. The offer tests the 10-Q's recoverability conclusion directly: an FDA hearing grant or a signal that it will take postmarketing commitments supports the cash flows behind the $2.3B U.S. carrying value, while a hearing denial or summary judgment is the event that would force the impairment Part 1 sized at $4.23 a share pre-tax.",
+   "text_marked": "Net: the loss is capped at $12.5M[assumption], break-even is 3.0 points[derived: 1, 2][assumption], and the payoff is an option, not a forecast. The offer tests the 10-Q's recoverability conclusion directly: an FDA hearing grant or a signal that it will take postmarketing commitments supports the cash flows behind the $2.3B[3] U.S. carrying value, while a hearing denial or summary judgment is the event that would force the impairment Part 1 sized at $4.23[derived: 3, 4] a share pre-tax[5][6].",
+   "marker_map": {
+    "1": "c_ea8f8528bc",
+    "2": "c_dfda4c301b",
+    "3": "c_526146ff94",
+    "4": "c_be00af3959",
+    "5": "c_9d240b0d59",
+    "6": "c_e9beae09b4"
+   },
+   "cites": [
+    {
+     "cite_id": "c_ea8f8528bc",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 39",
+     "page": 44,
+     "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_dfda4c301b",
+     "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+     "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+     "location": "p. 8",
+     "page": 8,
+     "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+     "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+     "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+     "quote_grade": "B",
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "B",
+     "speaker": "Peter Griffith"
+    },
+    {
+     "cite_id": "c_526146ff94",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_be00af3959",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 32",
+     "page": 37,
+     "quote": "Diluted shares 544 541 1 % 544 541 1 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 32 (file page 37)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=37&q=Diluted%20shares%20544%20541%201%20%25%20544%20541%201%20%25",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_9d240b0d59",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "indicate the carrying value of the related intangible assets remains recoverable; however, future changes to estimated TAVNEOS cash flows could unfavorably impact the Company’s ability to recover the carrying value of the related intangible assets",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=indicate%20the%20carrying%20value%20of%20the%20related%20intangible",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=indicate%20the%20carrying%20value%20of%20the%20related%20intangible%20assets%20remains%20recoverable%3B%20however%2C%20future%20changes%20to%20estimated%20TAVNEOS%20cash%20flows%20could%20unfavorably%20impact%20the%20Company%E2%80%99s%20ability%20to%20recover%20the%20carrying%20value%20of%20the%20related%20intangible%20assets",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_e9beae09b4",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "If a hearing is not granted, the FDA may enter summary judgment and ultimately withdraw approval.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA%20may%20enter%20summary%20judgment%20and%20ultimately%20withdraw%20approval.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 4,
+    "total": 4,
+    "verified": 1,
+    "derived": 2,
+    "assumed": 1,
+    "unsupported": []
+   },
+   "derived": {
+    "be": {
+     "value": 3.0,
+     "unit": "pts",
+     "expr": "o / e * 100",
+     "operands": {
+      "o": {
+       "value": 12.5,
+       "assumption": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+      },
+      "e": {
+       "derived": "expo"
+      }
+     }
+    },
+    "expo": {
+     "value": 413.3,
+     "unit": "USD millions",
+     "expr": "r * m / 100",
+     "operands": {
+      "r": {
+       "derived": "run"
+      },
+      "m": {
+       "derived": "mgn"
+      }
+     }
+    },
+    "run": {
+     "value": 514,
+     "unit": "USD millions",
+     "expr": "h * k",
+     "operands": {
+      "h": {
+       "value": 257,
+       "citation": {
+        "canonical_id": "AMGN:10q_2026Q2.md",
+        "page": 44,
+        "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-Q",
+        "doc_title": "Amgen 10-Q 2026-06-30",
+        "period": "2026-06-30",
+        "folio": "39",
+        "char_start": 538,
+        "char_end": 578,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+        "speaker": "",
+        "location": "p. 39",
+        "raw_doc_type": "quarterly_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "substring",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+        },
+        "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+        "cite_id": "c_ea8f8528bc",
+        "operands": []
+       },
+       "text": "257"
+      },
+      "k": {
+       "value": 2,
+       "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+      }
+     }
+    },
+    "mgn": {
+     "value": 80.4,
+     "unit": "%",
+     "expr": "100 - c",
+     "operands": {
+      "c": {
+       "value": 19.6,
+       "citation": {
+        "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+        "page": 8,
+        "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "call transcript",
+        "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+        "period": "2026Q2",
+        "folio": "8",
+        "char_start": 1520,
+        "char_end": 1590,
+        "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+        "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+        "speaker": "Peter Griffith",
+        "location": "p. 8",
+        "raw_doc_type": "transcript",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": ""
+        },
+        "confidence_note": "",
+        "cite_id": "c_dfda4c301b",
+        "operands": []
+       },
+       "text": "19.6%"
+      }
+     }
+    },
+    "eps": {
+     "value": 4.23,
+     "unit": "USD",
+     "expr": "a * 1000 / s",
+     "operands": {
+      "a": {
+       "value": 2.3,
+       "citation": {
+        "canonical_id": "AMGN:10q_2026Q2.md",
+        "page": 21,
+        "quote": "The developed-product-technology rights intangible assets related to TAVNEOS have a carrying value of $ 2.4 billion as of June 30, 2026, with $ 2.3 billion related to the U.S. market.",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-Q",
+        "doc_title": "Amgen 10-Q 2026-06-30",
+        "period": "2026-06-30",
+        "folio": "16",
+        "char_start": 2055,
+        "char_end": 2238,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20developed%2Dproduct%2Dtechnology%20rights%20intangible%20assets%20related%20to%20TAVNEOS",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20developed-product-technology%20rights%20intangible%20assets%20related%20to%20TAVNEOS%20have%20a%20carrying%20value%20of%20%24%202.4%20billion%20as%20of%20June%2030%2C%202026%2C%20with%20%24%202.3%20billion%20related%20to%20the%20U.S.%20market.",
+        "speaker": "",
+        "location": "p. 16",
+        "raw_doc_type": "quarterly_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": ""
+        },
+        "confidence_note": "",
+        "cite_id": "c_526146ff94",
+        "operands": []
+       },
+       "text": "2.3 billion"
+      },
+      "s": {
+       "value": 544,
+       "citation": {
+        "canonical_id": "AMGN:10q_2026Q2.md",
+        "page": 37,
+        "quote": "Diluted shares 544 541 1 % 544 541 1 %",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-Q",
+        "doc_title": "Amgen 10-Q 2026-06-30",
+        "period": "2026-06-30",
+        "folio": "32",
+        "char_start": 752,
+        "char_end": 790,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=37&q=Diluted%20shares%20544%20541%201%20%25%20544%20541%201%20%25",
+        "speaker": "",
+        "location": "p. 32",
+        "raw_doc_type": "quarterly_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "exact",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+        },
+        "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+        "cite_id": "c_be00af3959",
+        "operands": []
+       },
+       "text": "544"
+      }
+     }
+    }
+   },
+   "assumptions": {
+    "offer": {
+     "value": "$12.5M",
+     "label": "gated offer cost: midpoint of the $10M to $15M range the decider skeptic set for protocol design, adjudication charter and registry setup (no indexed benchmark)"
+    }
+   }
+  }
+ },
+ "rejected": [
+  {
+   "id": "AMGN-m04",
+   "move": "Offer U.S. payers extra Repatha rebate points only in exchange for removing prior authorization inside the label's cardiovascular-risk indication.",
+   "type": "pricing_or_coverage",
+   "why_passed": {
+    "text": "CFO lens: rebate points are a share of gross sales, since the 10-K states deductions as 54% of gross. U.S. Repatha first-half 2026 net sales of $975M annualize to $1,950M; on a 54% proxy deduction rate that is $4,239M of gross sales a year, so 5 points of gross cost $423.9M over the 24-month window, and break-even needs about a 14.2% volume lift at 95% of net price and the 80.4% margin. The decider side adds that payers kept prior authorization despite earlier Repatha rebates.",
+    "text_marked": "CFO lens: rebate points are a share of gross sales, since the 10-K states deductions as 54%[1] of gross. U.S. Repatha first-half 2026 net sales of $975M[2] annualize to $1,950M[derived: 2][assumption]; on a 54%[1] proxy deduction rate that is $4,239M[derived: 2, 1][assumption] of gross sales a year, so 5 points[assumption] of gross cost $423.9M[derived: 2, 1][assumption] over the 24[assumption]-month window, and break-even needs about a 14.2%[derived: 2, 1, 3][assumption] volume lift at 95%[assumption] of net price and the 80.4%[derived: 3] margin. The decider side adds that payers kept prior authorization despite earlier Repatha rebates[4].",
+    "marker_map": {
+     "1": "c_8c9c856499",
+     "2": "c_6dd97740fe",
+     "3": "c_dfda4c301b",
+     "4": "c_b9f0b62cb2"
+    },
+    "cites": [
+     {
+      "cite_id": "c_8c9c856499",
+      "doc_id": "AMGN:10k_FY2025.md",
+      "doc_title": "Amgen 10-K FY2025",
+      "location": "p. 77",
+      "page": 83,
+      "quote": "total sales deductions were 54%, 52% and 53% of gross product sales, respectively",
+      "label": "Amgen 10-K FY2025, p. 77 (file page 83)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=total%20sales%20deductions%20were%2054%25%2C",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=83&q=total%20sales%20deductions%20were%2054%25%2C%2052%25%20and%2053%25%20of%20gross%20product%20sales%2C%20respectively",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_6dd97740fe",
+      "doc_id": "AMGN:10q_2026Q2.md",
+      "doc_title": "Amgen 10-Q 2026-06-30",
+      "location": "p. 33",
+      "page": 38,
+      "quote": "Repatha - U.S. $ 510 $ 361 41 % $ 975 $ 704 38 %",
+      "label": "Amgen 10-Q 2026-06-30, p. 33 (file page 38)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=38&q=Repatha%20-%20U.S.%20%24%20510%20%24%20361%2041%20%25%20%24%20975%20%24%20704%2038%20%25",
+      "quote_grade": null,
+      "verify_status": "substring",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_dfda4c301b",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 8",
+      "page": 8,
+      "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 8 (file page 8)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Peter Griffith"
+     },
+     {
+      "cite_id": "c_b9f0b62cb2",
+      "doc_id": "AMGN:companies/AMGN/10q_2025Q2.md",
+      "doc_title": "Amgen 10-Q 2025-06-30",
+      "location": "p. 50",
+      "page": 55,
+      "quote": "despite these net and list price reductions, some payers have restricted, and may continue to restrict, patient access",
+      "label": "Amgen 10-Q 2025-06-30, p. 50 (file page 55)",
+      "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815425000056/amgn-20250630.htm#:~:text=despite%20these%20net%20and%20list%20price%20reductions%2C%20some",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2F10q_2025Q2.md&page=55&q=despite%20these%20net%20and%20list%20price%20reductions%2C%20some%20payers%20have%20restricted%2C%20and%20may%20continue%20to%20restrict%2C%20patient%20access",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     }
+    ],
+    "numeric_check": {
+     "status": "passed",
+     "checked": 11,
+     "total": 11,
+     "verified": 3,
+     "derived": 5,
+     "assumed": 3,
+     "unsupported": []
+    },
+    "derived": {
+     "rp": {
+      "value": 1950,
+      "unit": "USD millions",
+      "expr": "h * k",
+      "operands": {
+       "h": {
+        "value": 975,
+        "citation": {
+         "canonical_id": "AMGN:10q_2026Q2.md",
+         "page": 38,
+         "quote": "Repatha - U.S. $ 510 $ 361 41 % $ 975 $ 704 38 %",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-Q",
+         "doc_title": "Amgen 10-Q 2026-06-30",
+         "period": "2026-06-30",
+         "folio": "33",
+         "char_start": 2398,
+         "char_end": 2446,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=38&q=Repatha%20-%20U.S.%20%24%20510%20%24%20361%2041%20%25%20%24%20975%20%24%20704%2038%20%25",
+         "speaker": "",
+         "location": "p. 33",
+         "raw_doc_type": "quarterly_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "substring",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+         },
+         "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+         "cite_id": "c_6dd97740fe",
+         "operands": []
+        },
+        "text": "975"
+       },
+       "k": {
+        "value": 2,
+        "assumption": "half-years per year (annualizing first-half 2026 U.S. sales)"
+       }
+      }
+     },
+     "gross": {
+      "value": 4239,
+      "unit": "USD millions",
+      "expr": "r / (1 - d / 100)",
+      "operands": {
+       "r": {
+        "derived": "rp"
+       },
+       "d": {
+        "value": 54,
+        "citation": {
+         "canonical_id": "AMGN:10k_FY2025.md",
+         "page": 83,
+         "quote": "total sales deductions were 54%, 52% and 53% of gross product sales, respectively",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "10-K",
+         "doc_title": "Amgen 10-K FY2025",
+         "period": "2025-12-31",
+         "folio": "77",
+         "char_start": 2456,
+         "char_end": 2537,
+         "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+         "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=total%20sales%20deductions%20were%2054%25%2C",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=83&q=total%20sales%20deductions%20were%2054%25%2C%2052%25%20and%2053%25%20of%20gross%20product%20sales%2C%20respectively",
+         "speaker": "",
+         "location": "p. 77",
+         "raw_doc_type": "annual_report",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_8c9c856499",
+         "operands": []
+        },
+        "text": "54%"
+       }
+      }
+     },
+     "cost5": {
+      "value": 423.9,
+      "unit": "USD millions",
+      "expr": "g * p * y",
+      "operands": {
+       "g": {
+        "derived": "gross"
+       },
+       "p": {
+        "value": 0.05,
+        "assumption": "5 points as a fraction"
+       },
+       "y": {
+        "value": 2,
+        "assumption": "years in the 24-month window"
+       }
+      }
+     },
+     "be14": {
+      "value": 14.2,
+      "unit": "%",
+      "expr": "c / (r * 0.95 * 2 * m / 100) * 100",
+      "operands": {
+       "c": {
+        "derived": "cost5"
+       },
+       "r": {
+        "derived": "rp"
+       },
+       "m": {
+        "derived": "mgn"
+       }
+      }
+     },
+     "mgn": {
+      "value": 80.4,
+      "unit": "%",
+      "expr": "100 - c",
+      "operands": {
+       "c": {
+        "value": 19.6,
+        "citation": {
+         "canonical_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+         "page": 8,
+         "quote": "Our non-GAAP cost of sales as a percentage of product sales was 19.6%.",
+         "claim_type": "quote",
+         "value": null,
+         "unit": "",
+         "ticker": "AMGN",
+         "doc_type": "call transcript",
+         "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+         "period": "2026Q2",
+         "folio": "8",
+         "char_start": 1520,
+         "char_end": 1590,
+         "source_url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "deep_link": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+         "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=8&q=Our%20non-GAAP%20cost%20of%20sales%20as%20a%20percentage%20of%20product%20sales%20was%2019.6%25.",
+         "speaker": "Peter Griffith",
+         "location": "p. 8",
+         "raw_doc_type": "transcript",
+         "page_scheme": "marker",
+         "license": "",
+         "verification": {
+          "status": "exact",
+          "checked_at": "2026-10-18T05:34:07+00:00",
+          "detail": ""
+         },
+         "confidence_note": "",
+         "cite_id": "c_dfda4c301b",
+         "operands": []
+        },
+        "text": "19.6%"
+       }
+      }
+     }
+    },
+    "assumptions": {
+     "pts5": {
+      "value": "5 points",
+      "label": "rebate size from the strategist candidate (5 points), read as points of gross price per the 10-K convention"
+     },
+     "pts5d": {
+      "value": "0.05",
+      "label": "5 points as a fraction"
+     },
+     "two": {
+      "value": "2",
+      "label": "half-years per year (annualizing first-half 2026 U.S. sales)"
+     },
+     "yrs2": {
+      "value": "2",
+      "label": "years in the 24-month window"
+     },
+     "net95": {
+      "value": "95%",
+      "label": "share of current net price kept on new volume (strategist)"
+     },
+     "window": {
+      "value": "24",
+      "label": "two-year evaluation window in months (Part 2 rule)"
+     }
+    }
+   },
+   "skeptic_lens": "CFO/math"
+  },
+  {
+   "id": "AMGN-m02",
+   "move": "Fund a U.S. HCP campaign putting Repatha's cardiovascular outcomes indication in front of primary-care and cardiology prescribers before Merck's oral Lipfendra scales.",
+   "type": "campaign",
+   "why_passed": {
+    "text": "Decider lens: the primary-care Repatha push is already management's own program, so the campaign's lift cannot be credited to new spend, and the drafted HCP piece left out the Section 6.1 common adverse reactions that are indexed, so it fails fair balance; both skeptics would accept only a small holdout pilot with a corrected safety section, which is a measurement buy rather than a move.",
+    "text_marked": "Decider lens: the primary-care Repatha push is already management's own program, so the campaign's lift cannot be credited to new spend, and the drafted HCP piece left out the Section 6.1 common adverse reactions that are indexed, so it fails fair balance; both skeptics would accept only a small holdout pilot with a corrected safety section, which is a measurement buy rather than a move[1][2][3].",
+    "marker_map": {
+     "1": "c_4075577279",
+     "2": "c_ed4f53ddca",
+     "3": "c_de3510a967"
+    },
+    "cites": [
+     {
+      "cite_id": "c_4075577279",
+      "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+      "doc_title": "Amgen earnings slides 2026Q2",
+      "location": "p. 7",
+      "page": 7,
+      "quote": "Expanding adoption across primary \ncare and cardiology",
+      "label": "Amgen earnings slides 2026Q2, p. 7 (file page 7)",
+      "url": "manual:manual:AMGN_slides_2026Q2.pdf",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Apresentations%2F2026Q2_earnings_slides.md&page=7&q=Expanding%20adoption%20across%20primary%20care%20and%20cardiology",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "filing",
+      "speaker": null
+     },
+     {
+      "cite_id": "c_ed4f53ddca",
+      "doc_id": "AMGN:companies/AMGN/transcripts/2026Q2_transcript.md",
+      "doc_title": "Amgen 2026Q2 earnings call (third_party)",
+      "location": "p. 15",
+      "page": 15,
+      "quote": "the other half of our growth is coming from primary care physicians and expansion in the number of primary care physicians",
+      "label": "Amgen 2026Q2 earnings call (third_party), p. 15 (file page 15)",
+      "url": "https://www.marketbeat.com/earnings/reports/2026-8-6-amgen-inc-stock/",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3Acompanies%2FAMGN%2Ftranscripts%2F2026Q2_transcript.md&page=15&q=the%20other%20half%20of%20our%20growth%20is%20coming%20from%20primary%20care%20physicians%20and%20expansion%20in%20the%20number%20of%20primary%20care%20physicians",
+      "quote_grade": "B",
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "B",
+      "speaker": "Murdo Gordon"
+     },
+     {
+      "cite_id": "c_de3510a967",
+      "doc_id": "drug:repatha:label_sections.md",
+      "doc_title": "Repatha label",
+      "location": "section 6.1 Clinical Trials Experience",
+      "page": 9,
+      "quote": "Adverse reactions reported in at least 3% of REPATHA-treated patients, and more frequently than in placebo-treated patients are shown in Table 1.",
+      "label": "Repatha label, section 6.1 Clinical Trials Experience (file page 9)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd61e902-166d-4aa6-9f3c-a18c1008d07e",
+      "viewer_link": "http://127.0.0.1:8765/viewer?doc=drug%3Arepatha%3Alabel_sections.md&page=9&q=Adverse%20reactions%20reported%20in%20at%20least%203%25%20of%20REPATHA-treated%20patients%2C%20and%20more%20frequently%20than%20in%20placebo-treated%20patients%20are%20shown%20in%20Table%201.",
+      "quote_grade": null,
+      "verify_status": "exact",
+      "withheld": false,
+      "grade": "label",
+      "speaker": null
+     }
+    ],
+    "numeric_check": {
+     "status": "no_numbers",
+     "checked": 0,
+     "total": 0,
+     "verified": 0,
+     "derived": 0,
+     "assumed": 0,
+     "unsupported": []
+    }
+   },
+   "skeptic_lens": "Decider/compliance"
+  }
+ ],
+ "kill_signals": [
+  {
+   "signal": "FDA denies the TAVNEOS hearing request",
+   "threshold": "any written denial of the June 1, 2026 hearing request",
+   "month_window": "months 6 to 12",
+   "text": "If the FDA denies the hearing Amgen requested, the offer has no record to enter and the gated spend stops.",
+   "text_marked": "If the FDA denies the hearing Amgen requested, the offer has no record to enter and the gated spend stops[1][2].",
+   "marker_map": {
+    "1": "c_5708b85898",
+    "2": "c_e9beae09b4"
+   },
+   "cites": [
+    {
+     "cite_id": "c_5708b85898",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "On June 1, 2026, we requested a hearing on this proposal",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=we%20requested%20a%20hearing%20on%20this%20proposal",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=On%20June%201%2C%202026%2C%20we%20requested%20a%20hearing%20on%20this%20proposal",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_e9beae09b4",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "If a hearing is not granted, the FDA may enter summary judgment and ultimately withdraw approval.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA%20may%20enter%20summary%20judgment%20and%20ultimately%20withdraw%20approval.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   },
+   "signal_marked": "FDA denies the TAVNEOS hearing request",
+   "threshold_marked": "any written denial of the June 1, 2026 hearing request"
+  },
+  {
+   "signal": "FDA enters summary judgment or a final withdrawal order",
+   "threshold": "any summary-judgment or withdrawal order",
+   "month_window": "months 6 to 12",
+   "text": "A summary judgment or withdrawal order ends the postmarketing path and triggers the impairment review of the U.S. carrying value.",
+   "text_marked": "A summary judgment or withdrawal order ends the postmarketing path and triggers the impairment review of the U.S. carrying value[1][2].",
+   "marker_map": {
+    "1": "c_e9beae09b4",
+    "2": "c_9d240b0d59"
+   },
+   "cites": [
+    {
+     "cite_id": "c_e9beae09b4",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "If a hearing is not granted, the FDA may enter summary judgment and ultimately withdraw approval.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA%20may%20enter%20summary%20judgment%20and%20ultimately%20withdraw%20approval.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_9d240b0d59",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "indicate the carrying value of the related intangible assets remains recoverable; however, future changes to estimated TAVNEOS cash flows could unfavorably impact the Company’s ability to recover the carrying value of the related intangible assets",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=indicate%20the%20carrying%20value%20of%20the%20related%20intangible",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=indicate%20the%20carrying%20value%20of%20the%20related%20intangible%20assets%20remains%20recoverable%3B%20however%2C%20future%20changes%20to%20estimated%20TAVNEOS%20cash%20flows%20could%20unfavorably%20impact%20the%20Company%E2%80%99s%20ability%20to%20recover%20the%20carrying%20value%20of%20the%20related%20intangible%20assets",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   },
+   "signal_marked": "FDA enters summary judgment or a final withdrawal order",
+   "threshold_marked": "any summary-judgment or withdrawal order"
+  },
+  {
+   "signal": "No FDA signal that it would accept postmarketing commitments in lieu of withdrawal",
+   "threshold": "no written FDA signal by month 12",
+   "month_window": "months 9 to 12",
+   "text": "Without an FDA signal by month 12 the trial budget is never released and the program closes at the committed cost.",
+   "text_marked": "Without an FDA signal by month 12[assumption] the trial budget is never released and the program closes at the committed cost[1][2].",
+   "marker_map": {
+    "1": "c_0437623b64",
+    "2": "c_2b3dbb1fc0"
+   },
+   "cites": [
+    {
+     "cite_id": "c_0437623b64",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "the FDA may require additional actions, including further labeling changes, warnings, monitoring, restrictions on use, postmarketing commitments or studies, and any such action or any withdrawal of regulatory approval for TAVNEOS",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further%20labeling%20changes%2C%20warnings%2C%20monitoring%2C%20restrictions%20on%20use%2C%20postmarketing%20commitments%20or%20studies%2C%20and%20any%20such%20action%20or%20any%20withdrawal%20of%20regulatory%20approval%20for%20TAVNEOS",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_2b3dbb1fc0",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient to address its stated concerns regarding the reliability of the ADVOCATE data",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to%20which%2C%20the%20FDA%20will%20consider%20the%20information%20we%20submitted%20sufficient%20to%20address%20its%20stated%20concerns%20regarding%20the%20reliability%20of%20the%20ADVOCATE%20data",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 2,
+    "total": 2,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 2,
+    "unsupported": []
+   },
+   "assumptions": {
+    "months_bite": {
+     "value": "month 12",
+     "label": "month from which a withdrawal can first cut sales (TAVNEOS stays on the market while the hearing process runs); CFO skeptic assumption"
+    }
+   },
+   "signal_marked": "No FDA signal that it would accept postmarketing commitments in lieu of withdrawal",
+   "threshold_marked": "no written FDA signal by month 12[assumption]"
+  },
+  {
+   "signal": "U.S. TAVNEOS quarterly sales in the 10-Q product table fall below the Q1 2026 level",
+   "threshold": "U.S. TAVNEOS below $114M in a quarter",
+   "month_window": "months 7 to 10 (Q1 2027 and Q2 2027 10-Qs)",
+   "text": "U.S. TAVNEOS sales below $114M a quarter, the Q1 2026 level ($257M first-half less $143M second quarter), would show prescribers leaving before any ruling, shrinking the exposure the offer protects.",
+   "text_marked": "U.S. TAVNEOS sales below $114M[derived: 1] a quarter, the Q1 2026 level ($257M[1] first-half less $143M[1] second quarter), would show prescribers leaving before any ruling, shrinking the exposure the offer protects[1].",
+   "marker_map": {
+    "1": "c_ea8f8528bc"
+   },
+   "cites": [
+    {
+     "cite_id": "c_ea8f8528bc",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 39",
+     "page": 44,
+     "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+     "label": "Amgen 10-Q 2026-06-30, p. 39 (file page 44)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+     "quote_grade": null,
+     "verify_status": "substring",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 4,
+    "total": 4,
+    "verified": 2,
+    "derived": 2,
+    "assumed": 0,
+    "unsupported": []
+   },
+   "derived": {
+    "q1": {
+     "value": 114,
+     "unit": "USD millions",
+     "expr": "h - q",
+     "operands": {
+      "h": {
+       "value": 257,
+       "citation": {
+        "canonical_id": "AMGN:10q_2026Q2.md",
+        "page": 44,
+        "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-Q",
+        "doc_title": "Amgen 10-Q 2026-06-30",
+        "period": "2026-06-30",
+        "folio": "39",
+        "char_start": 538,
+        "char_end": 578,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+        "speaker": "",
+        "location": "p. 39",
+        "raw_doc_type": "quarterly_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "substring",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+        },
+        "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+        "cite_id": "c_ea8f8528bc",
+        "operands": []
+       },
+       "text": "257"
+      },
+      "q": {
+       "value": 143,
+       "citation": {
+        "canonical_id": "AMGN:10q_2026Q2.md",
+        "page": 44,
+        "quote": "TAVNEOS - U.S. 143 103 39 % 257 180 43 %",
+        "claim_type": "quote",
+        "value": null,
+        "unit": "",
+        "ticker": "AMGN",
+        "doc_type": "10-Q",
+        "doc_title": "Amgen 10-Q 2026-06-30",
+        "period": "2026-06-30",
+        "folio": "39",
+        "char_start": 538,
+        "char_end": 578,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "deep_link": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+        "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=44&q=TAVNEOS%20-%20U.S.%20143%20103%2039%20%25%20257%20180%2043%20%25",
+        "speaker": "",
+        "location": "p. 39",
+        "raw_doc_type": "quarterly_report",
+        "page_scheme": "marker",
+        "license": "",
+        "verification": {
+         "status": "substring",
+         "checked_at": "2026-10-18T05:34:07+00:00",
+         "detail": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL"
+        },
+        "confidence_note": "no run of 4+ quote words sits inside one block of the page text; text fragment dropped, plain URL",
+        "cite_id": "c_ea8f8528bc",
+        "operands": []
+       },
+       "text": "143"
+      }
+     }
+    }
+   },
+   "signal_marked": "U.S. TAVNEOS quarterly sales in the 10-Q product table fall below the Q1 2026 level",
+   "threshold_marked": "U.S. TAVNEOS below $114M[derived: 1] in a quarter"
+  },
+  {
+   "signal": "Intangible recoverability wording",
+   "threshold": "the \"remains recoverable\" sentence dropped, or any TAVNEOS impairment charge",
+   "month_window": "months 7 to 10 (Q1 2027 and Q2 2027 10-Qs)",
+   "text": "If a later filing drops the sentence that the TAVNEOS carrying value \"remains recoverable\" or books an impairment, the asset the offer protects is already being written down.",
+   "text_marked": "If a later filing drops the sentence that the TAVNEOS carrying value \"remains recoverable\" or books an impairment, the asset the offer protects is already being written down[1].",
+   "marker_map": {
+    "1": "c_9d240b0d59"
+   },
+   "cites": [
+    {
+     "cite_id": "c_9d240b0d59",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "indicate the carrying value of the related intangible assets remains recoverable; however, future changes to estimated TAVNEOS cash flows could unfavorably impact the Company’s ability to recover the carrying value of the related intangible assets",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=indicate%20the%20carrying%20value%20of%20the%20related%20intangible",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=indicate%20the%20carrying%20value%20of%20the%20related%20intangible%20assets%20remains%20recoverable%3B%20however%2C%20future%20changes%20to%20estimated%20TAVNEOS%20cash%20flows%20could%20unfavorably%20impact%20the%20Company%E2%80%99s%20ability%20to%20recover%20the%20carrying%20value%20of%20the%20related%20intangible%20assets",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   },
+   "signal_marked": "Intangible recoverability wording",
+   "threshold_marked": "the \"remains recoverable\" sentence dropped, or any TAVNEOS impairment charge"
+  }
+ ],
+ "evidence": {
+  "decider": "regulator (FDA, CDER, in the TAVNEOS withdrawal hearing)",
+  "lands_because": {
+   "text": "The decider is the FDA's drug center in a withdrawal proceeding. Amgen's own 10-Q lists postmarketing commitments or studies among the actions the FDA may take, framed as an alternative to withdrawal, and the FDA's stated concern is the reliability of the ADVOCATE data, where 9 of the 331 pivotal patients were re-adjudicated. Amgen's submissions so far are retrospective (real-world evidence and a blinded re-adjudication); a prospective, independently adjudicated trial answers the reliability concern going forward, and a U.S. liver registry speaks to the hepatotoxicity warning the label already carries.",
+   "text_marked": "The decider is the FDA's drug center in a withdrawal proceeding. Amgen's own 10-Q lists postmarketing commitments or studies among the actions the FDA may take, framed as an alternative to withdrawal, and the FDA's stated concern is the reliability of the ADVOCATE data, where 9[1] of the 331[1] pivotal patients were re-adjudicated. Amgen's submissions so far are retrospective (real-world evidence and a blinded re-adjudication); a prospective, independently adjudicated trial answers the reliability concern going forward, and a U.S. liver registry speaks to the hepatotoxicity warning the label already carries[2][3][4][5].",
+   "marker_map": {
+    "1": "c_2c635b78fc",
+    "2": "c_0437623b64",
+    "3": "c_2b3dbb1fc0",
+    "4": "c_8a49ecea39",
+    "5": "c_80b5ca7b19"
+   },
+   "cites": [
+    {
+     "cite_id": "c_2c635b78fc",
+     "doc_id": "AMGN:10k_FY2025.md",
+     "doc_title": "Amgen 10-K FY2025",
+     "location": "p. 2",
+     "page": 8,
+     "quote": "re-adjudicate primary endpoint results for 9 of the 331 patients in its pivotal clinical trial",
+     "label": "Amgen 10-K FY2025, p. 2 (file page 8)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm#:~:text=patients%20in%20its%20pivotal%20clinical%20trial",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10k_FY2025.md&page=8&q=re-adjudicate%20primary%20endpoint%20results%20for%209%20of%20the%20331%20patients%20in%20its%20pivotal%20clinical%20trial",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_0437623b64",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "the FDA may require additional actions, including further labeling changes, warnings, monitoring, restrictions on use, postmarketing commitments or studies, and any such action or any withdrawal of regulatory approval for TAVNEOS",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further%20labeling%20changes%2C%20warnings%2C%20monitoring%2C%20restrictions%20on%20use%2C%20postmarketing%20commitments%20or%20studies%2C%20and%20any%20such%20action%20or%20any%20withdrawal%20of%20regulatory%20approval%20for%20TAVNEOS",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_2b3dbb1fc0",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient to address its stated concerns regarding the reliability of the ADVOCATE data",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to%20which%2C%20the%20FDA%20will%20consider%20the%20information%20we%20submitted%20sufficient%20to%20address%20its%20stated%20concerns%20regarding%20the%20reliability%20of%20the%20ADVOCATE%20data",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_8a49ecea39",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "including additional real world evidence data and data from an independent, blinded re-adjudication of certain study data",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=including%20additional%20real%20world%20evidence%20data%20and%20data",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=including%20additional%20real%20world%20evidence%20data%20and%20data%20from%20an%20independent%2C%20blinded%20re-adjudication%20of%20certain%20study%20data",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_80b5ca7b19",
+     "doc_id": "tavneos:drugs/tavneos/label_v16.md",
+     "doc_title": "Tavneos label v16 (2026-06-12)",
+     "location": "section 5.1 Hepatotoxicity",
+     "page": 7,
+     "quote": "Serious cases of hepatic injury have been observed in patients taking TAVNEOS.",
+     "label": "Tavneos label v16 (2026-06-12), section 5.1 Hepatotoxicity (file page 7)",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c93cbc0b-29a3-46a5-9c85-41815ea5cf4a",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=tavneos%3Adrugs%2Ftavneos%2Flabel_v16.md&page=7&q=Serious%20cases%20of%20hepatic%20injury%20have%20been%20observed%20in%20patients%20taking%20TAVNEOS.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "label",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "passed",
+    "checked": 2,
+    "total": 2,
+    "verified": 2,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "can_tell": {
+   "text": "The evidence can tell that the FDA's option set includes postmarketing commitments, that the hearing request is filed, that TAVNEOS stays on the market while the process runs, and that if a hearing is not granted the FDA may enter summary judgment.",
+   "text_marked": "The evidence can tell that the FDA's option set includes postmarketing commitments, that the hearing request is filed, that TAVNEOS stays on the market while the process runs, and that if a hearing is not granted the FDA may enter summary judgment[1][2][3][4].",
+   "marker_map": {
+    "1": "c_0437623b64",
+    "2": "c_5708b85898",
+    "3": "c_133da21cc2",
+    "4": "c_e9beae09b4"
+   },
+   "cites": [
+    {
+     "cite_id": "c_0437623b64",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "the FDA may require additional actions, including further labeling changes, warnings, monitoring, restrictions on use, postmarketing commitments or studies, and any such action or any withdrawal of regulatory approval for TAVNEOS",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=the%20FDA%20may%20require%20additional%20actions%2C%20including%20further%20labeling%20changes%2C%20warnings%2C%20monitoring%2C%20restrictions%20on%20use%2C%20postmarketing%20commitments%20or%20studies%2C%20and%20any%20such%20action%20or%20any%20withdrawal%20of%20regulatory%20approval%20for%20TAVNEOS",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_5708b85898",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "On June 1, 2026, we requested a hearing on this proposal",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=we%20requested%20a%20hearing%20on%20this%20proposal",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=On%20June%201%2C%202026%2C%20we%20requested%20a%20hearing%20on%20this%20proposal",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_133da21cc2",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "TAVNEOS will remain on the market during the pendency of this process",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=TAVNEOS%20will%20remain%20on%20the%20market%20during%20the%20pendency%20of%20this%20process",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_e9beae09b4",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "If a hearing is not granted, the FDA may enter summary judgment and ultimately withdraw approval.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=If%20a%20hearing%20is%20not%20granted%2C%20the%20FDA%20may%20enter%20summary%20judgment%20and%20ultimately%20withdraw%20approval.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  },
+  "cannot_tell": {
+   "text": "It cannot tell whether the FDA would accept commitments in lieu of withdrawal: Amgen says it cannot predict whether the FDA will find its submissions sufficient; the only indexed precedent (LUMAKRAS) is an FDA-imposed confirmatory study after a Complete Response Letter in an accelerated-approval case, not a bargain; and no trial can answer the proposal's second ground, that the application contained untrue statements of material facts. Nothing indexed sizes the probability, the hearing date or how the CHMP recommendation weighs.",
+   "text_marked": "It cannot tell whether the FDA would accept commitments in lieu of withdrawal: Amgen says it cannot predict whether the FDA will find its submissions sufficient; the only indexed precedent (LUMAKRAS) is an FDA-imposed confirmatory study after a Complete Response Letter in an accelerated-approval case, not a bargain; and no trial can answer the proposal's second ground, that the application contained untrue statements of material facts. Nothing indexed sizes the probability, the hearing date or how the CHMP recommendation weighs[1][2][3][4].",
+   "marker_map": {
+    "1": "c_2b3dbb1fc0",
+    "2": "c_884bdef7c5",
+    "3": "c_7ee93f6866",
+    "4": "c_97f5494de3"
+   },
+   "cites": [
+    {
+     "cite_id": "c_2b3dbb1fc0",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "We cannot predict whether, or the extent to which, the FDA will consider the information we submitted sufficient to address its stated concerns regarding the reliability of the ADVOCATE data",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=We%20cannot%20predict%20whether%2C%20or%20the%20extent%20to%20which%2C%20the%20FDA%20will%20consider%20the%20information%20we%20submitted%20sufficient%20to%20address%20its%20stated%20concerns%20regarding%20the%20reliability%20of%20the%20ADVOCATE%20data",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_884bdef7c5",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "we received a Complete Response Letter from the FDA and a new postmarketing requirement for an additional confirmatory study to support full approval",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=we%20received%20a%20Complete%20Response%20Letter%20from%20the",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=we%20received%20a%20Complete%20Response%20Letter%20from%20the%20FDA%20and%20a%20new%20postmarketing%20requirement%20for%20an%20additional%20confirmatory%20study%20to%20support%20full%20approval",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_7ee93f6866",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 16",
+     "page": 21,
+     "quote": "The proposal alleges that there is new information indicating lack of substantial evidence of effectiveness for the drug and that ChemoCentryx’s application that resulted in FDA approval contained untrue statements of material facts.",
+     "label": "Amgen 10-Q 2026-06-30, p. 16 (file page 21)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=The%20proposal%20alleges%20that%20there%20is%20new%20information",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=21&q=The%20proposal%20alleges%20that%20there%20is%20new%20information%20indicating%20lack%20of%20substantial%20evidence%20of%20effectiveness%20for%20the%20drug%20and%20that%20ChemoCentryx%E2%80%99s%20application%20that%20resulted%20in%20FDA%20approval%20contained%20untrue%20statements%20of%20material%20facts.",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    },
+    {
+     "cite_id": "c_97f5494de3",
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "doc_title": "Amgen 10-Q 2026-06-30",
+     "location": "p. 54",
+     "page": 59,
+     "quote": "such as a recent recommendation by the Committee for Medicinal Products for Human Use (CHMP)",
+     "label": "Amgen 10-Q 2026-06-30, p. 54 (file page 59)",
+     "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm#:~:text=such%20as%20a%20recent%20recommendation%20by%20the%20Committee",
+     "viewer_link": "http://127.0.0.1:8765/viewer?doc=AMGN%3A10q_2026Q2.md&page=59&q=such%20as%20a%20recent%20recommendation%20by%20the%20Committee%20for%20Medicinal%20Products%20for%20Human%20Use%20%28CHMP%29",
+     "quote_grade": null,
+     "verify_status": "exact",
+     "withheld": false,
+     "grade": "filing",
+     "speaker": null
+    }
+   ],
+   "numeric_check": {
+    "status": "no_numbers",
+    "checked": 0,
+    "total": 0,
+    "verified": 0,
+    "derived": 0,
+    "assumed": 0,
+    "unsupported": []
+   }
+  }
+ },
+ "promo": {
+  "has_material": false,
+  "label": "Student concept, not actual promotional material.",
+  "pieces": [],
+  "claims_map": [],
+  "rules_check": {
+   "approved_uses_only": null,
+   "risks_prominent": null,
+   "h2h_only": null,
+   "no_testimonials": null,
+   "labelled": null,
+   "claims_map_present": null
+  }
+ },
+ "unresolved": [
+  {
+   "topic": "Whether the FDA postmarketing-commitment path has real probability given the untrue-statements ground",
+   "cfo_position": "The probability gain that carries the return is weaker than first allowed and no page prices it; the gated offer is a cheap option bought as downside protection, not an investment that clears a cost-of-capital test on evidence.",
+   "decider_position": "The 10-Q frames postmarketing commitments as an alternative outcome to withdrawal, so the chance is real but unsized, and it is zero if the untrue-statements ground alone carries the case."
+  },
+  {
+   "topic": "Which narrowed move ranks first",
+   "cfo_position": "The Repatha prior-authorization pilot has the better cost-of-capital case because its break-even can be measured from CMS formulary and 10-Q data, while the TAVNEOS offer rests on a probability no page can price.",
+   "decider_position": "After the gross-points correction the prior-authorization pilot no longer survives as a priced proposal, and payers kept prior authorization through earlier rebates; the gated TAVNEOS offer is the strongest survivor."
+  },
+  {
+   "topic": "Repatha campaign lift (AMGN-m02)",
+   "cfo_position": "The lift is unsourced: it carries the whole return and flips the sign when halved.",
+   "decider_position": "The lift is unattributable: management already runs the primary-care push, so no lift can be credited to new spend without a holdout."
+  },
+  {
+   "topic": "Whether Repatha rebate points are of gross or net price (AMGN-m04)",
+   "cfo_position": "Unresolved: no contract terms are indexed, and on gross points the pilot does not clear its hurdle at the strategist's lift, so the unit can flip the sign.",
+   "decider_position": "Gross, by the 10-K convention that states deductions as a share of gross sales; on that basis the candidate's return is gone and no priced pilot is left."
+  },
+  {
+   "topic": "UCB walk-away price for its EVENITY profit share (AMGN-m03)",
+   "cfo_position": "The floor is a discounted value of UCB's stream with growth stopping after the U.S. antibody patent expiry, roughly eight times trailing payments.",
+   "decider_position": "UCB's price sits above that discounted floor, closer to its undiscounted near-term stream; the decider is UCB, and nothing indexed shows it would sell at any price."
+  }
+ ],
+ "candidates_considered": 4,
+ "skeptic_summary": {
+  "killed": 2,
+  "narrowed": 2,
+  "survived": 0
+ }
+}
