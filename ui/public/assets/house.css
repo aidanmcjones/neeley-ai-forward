@@ -465,3 +465,123 @@ details.cite-notes[open] > summary { margin-bottom: 4px; }
 .tabnav-note { font-size: 11px; font-weight: 600; color: rgb(var(--purple)); }
 .nd-sec-link.is-wait { color: rgb(var(--muted) / 0.6); }
 @media (prefers-reduced-motion: reduce) { .tabnav-spin { animation: none; } }
+
+/* Agentic reasoning steps: tool tag, then narration; done steps get a check, the live one a spinner. */
+.th-steps li { display: grid; grid-template-columns: 14px 162px minmax(0, 1fr); align-items: baseline; gap: 4px 8px; }
+.th-tag { justify-self: start; }
+.th-steps li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  align-self: center;
+  border-radius: 50%;
+}
+.th-steps li.is-done::before {
+  width: 8px;
+  height: 4px;
+  border-radius: 0;
+  border-left: 1.5px solid rgb(var(--good));
+  border-bottom: 1.5px solid rgb(var(--good));
+  transform: rotate(-45deg) translateY(-1px);
+}
+.th-steps li.is-now::before {
+  border: 1.5px solid rgb(var(--muted) / 0.35);
+  border-top-color: rgb(var(--purple));
+  animation: th-spin 0.7s linear infinite;
+}
+.th-tag {
+  padding: 1px 6px;
+  border: 1px solid rgb(var(--purple) / 0.35);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgb(var(--purple));
+  background: rgb(var(--purple) / 0.08);
+  white-space: nowrap;
+}
+.th-txt { min-width: 0; }
+@media (max-width: 560px) {
+  .th-steps li { grid-template-columns: 14px minmax(0, 1fr); }
+  .th-txt { grid-column: 2; }
+}
+@media (prefers-reduced-motion: reduce) { .th-steps li.is-now::before { animation: none; } }
+
+/* Findings table, report style: ruled like a printed exhibit, columns sized to their content, math on demand. */
+.ft-scroll { border: 0; border-radius: 0; background: transparent; }
+.ft-table {
+  width: 100%;
+  min-width: 920px;
+  table-layout: auto;
+  border-top: 2px solid rgb(var(--fg));
+  border-bottom: 2px solid rgb(var(--fg));
+  font-size: 13.5px;
+}
+.ft-table th {
+  position: static;
+  padding: 10px 16px 8px 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgb(var(--fg));
+  background: transparent;
+  border-bottom: 1px solid rgb(var(--fg));
+  white-space: nowrap;
+}
+.ft-table td { padding: 14px 16px 14px 0; }
+.ft-table th:last-child, .ft-table td:last-child { padding-right: 0; }
+.ft-table tbody tr:hover td { background: transparent; }
+.ft-table tbody tr + tr td { border-top: 1px solid rgb(var(--line)); }
+.ft-table td { border-bottom: 0; }
+.ft-n { width: 1%; white-space: nowrap; font-size: 14px; }
+.ft-finding { min-width: 220px; max-width: 300px; font-weight: 600; }
+.ft-src { min-width: 130px; max-width: 190px; }
+.ft-impact { min-width: 220px; max-width: 300px; }
+.ft-peer { min-width: 220px; max-width: 300px; }
+.ft-conf { width: 1%; white-space: nowrap; }
+.ft-math { display: block; margin-top: 8px; padding-top: 0; border-top: 0; }
+.ft-math > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgb(var(--purple));
+  user-select: none;
+}
+.ft-math > summary::-webkit-details-marker { display: none; }
+.ft-math > summary::before {
+  content: "";
+  border-left: 5px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.12s ease;
+}
+.ft-math[open] > summary::before { transform: rotate(90deg); }
+.ft-math > p {
+  margin: 6px 0 0;
+  padding-left: 10px;
+  border-left: 2px solid rgb(var(--line));
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgb(var(--muted));
+  font-variant-numeric: tabular-nums;
+}
+@media (prefers-reduced-motion: reduce) { .ft-math > summary::before { transition: none; } }
+
+/* Wordmark: the one exception to the single typeface, a 3D extruded color display face at double size. */
+h1.font-display, h1.font-display * {
+  font-family: "Honk", "Aptos Display", Aptos, system-ui, sans-serif !important;
+}
+h1.font-display {
+  font-size: 60px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1 !important;
+  color: rgb(var(--purple));
+}
+@media (max-width: 560px) { h1.font-display { font-size: 48px !important; } }
+h1.font-display { text-wrap: balance; overflow-wrap: anywhere; }
