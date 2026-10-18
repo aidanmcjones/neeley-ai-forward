@@ -736,6 +736,9 @@ def score_signal(sig, co, panel=None):
             sc.flags += got["flags"]
     if lc is not None and not lc["holds"]:
         apply_guard(sc, ("drop", lc["why"]))
+    if sig.kind in ("dosing_advantage", "dosing_burden"):
+        apply_guard(sc, ("drop", "case audit H5: a dosing difference is a product-table row (every regimen the label "
+                                 "lists), not a finding; the detector read one regimen per label"))
     if sig.kind == "exclusivity_earlier" and ex is None:
         apply_guard(sc, ("drop", "exclusivity dates from labels_table (Orange/Purple Book max incl. orphan "
                                  "exclusivity) are not used; no loe_calendar row on both sides (thread #19 (d))"))

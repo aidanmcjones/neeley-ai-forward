@@ -91,7 +91,7 @@ def build(ticker, product, data_root=None, index=None, public=False):
     gl_am.update(lam)
     gl_am.update(NOTE_A)
     L += ["", "## What limits growth, and is it priced in", "",
-          doc.cell("growth limiter", "growth_limiter", sentence, gl_cites, gl_dm, gl_am), "", f"Priced in: **{priced}**"]
+          doc.cell("growth limiter", "growth_limiter", sentence, gl_cites, gl_dm, gl_am), "", ("Priced in: **not testable with our data**" if priced is None else f"Priced in: **{priced}**")]
     for j, r in enumerate(reasons):
         L.append("- " + line("growth limiter", f"reasons[{j}]", r, list(gl_cites) + lc, gl_dm, gl_am))
     emp = cmp_.empties()

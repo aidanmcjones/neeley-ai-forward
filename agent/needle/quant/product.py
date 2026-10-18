@@ -396,10 +396,26 @@ def _variant_dosing(idx, ent):
     return None, None
 
 
+_REGIMEN = re.compile(r"\b(?:once |twice )?(?:every \d+ (?:weeks?|months?|days?)|every (?:two|three|four|six) "
+                      r"(?:weeks|months)|(?:once |twice )?(?:daily|weekly|monthly)|every other week)\b", re.I)
+
+
+def regimens(text):
+    """Distinct dosing frequencies a label sentence lists, in order ('every 2 weeks', 'once monthly')."""
+    out = []
+    for m in _REGIMEN.finditer(text or ""):
+        r = " ".join(m.group(0).lower().split())
+        key = r.replace("once ", "")
+        if key not in [x.replace("once ", "") for x in out]:
+            out.append(r)
+    return out
+
+
 def _titration(slug, secs):
     s2 = secs.get(2, "")
     for ln in re.split(r"(?<=[.])\s+|\n", s2):
-        if re.search(r"\b(escalat|titrat|increase the dos)", ln, re.I) and len(ln.split()) >= 8:
+        if re.search(r"\b(escalat|titrat)", ln, re.I) and len(ln.split()) >= 8 and \
+                not re.search(r"not recommended|no dose|is not required", ln, re.I):
             return " ".join(ln.split()).lstrip("-• ")
     return None
 
@@ -511,6 +527,10 @@ def _label_cells(idx, data, ent):
         if _ok(c2):
             cites.append(c2)
         det["titration"] = tit[:200]
+    alts = regimens(dq_text) if (dq_text and cites) else []
+    if len(alts) > 1:     # case audit H5: keep every regimen the quoted label sentence lists
+        fq = dict(fq, value=" or ".join(alts))
+        det["regimens"] = alts
     if route["value"] or fq["value"]:
         det.update({"route": route["value"], "frequency": fq["value"], "doses_per_year": fq.get("doses_per_year")})
         out["dosing"] = Cell(f"{route['value'] or 'route n/a'}, {fq['value'] or 'frequency n/a'}"
@@ -801,15 +821,46 @@ def _pricing_cell(idx, data, ticker, ent):
 
 
 # ------------------------------------------------------------------ revenue and context
+def DATA_INDEX():
+    from . import data as _d
+    return _d.index()
+
+
+def revenue_line_cite(idx, ticker, brand, value_usd):
+    """A verified line of the company's latest annual or quarterly report that names the brand and prints the revenue
+    figure in millions (the product sales table), so the revenue operand of a growth-limiter dollar is cited."""
+    vm = round(float(value_usd) / 1e6)
+    pats = {f"{vm:,}", f"{vm - 1:,}", f"{vm + 1:,}"}
+    recs = sorted([r for r in idx.records.values() if r.ticker == ticker and r.raw_doc_type in ("annual_report",
+                   "quarterly_report")], key=lambda r: str(r.period), reverse=True)[:4]
+    for rec in recs:
+        for n, (printed, text) in idx.pages(rec.canonical_id).items():
+            for ln in text.split("\n"):
+                flat = " ".join(ln.replace("\u200b", " ").split())
+                if not re.search(r"\b" + re.escape(brand), flat, re.I) or len(flat) > 300:
+                    continue
+                hit = next((p for p in pats if re.search(r"(?<![\d,])" + re.escape(p) + r"(?![\d,])", flat)), None)
+                if hit:
+                    c = cite_quote(idx, rec.canonical_id, flat, claim_type="quote", hint=n)
+                    if _ok(c):
+                        c.value, c.unit = hit, ""      # the figure as printed in the sales table (USD millions)
+                        return c
+    return None
+
+
 def product_revenue(data, ticker, slug):
     """-> {"usd": total, "us": US or None, "basis", "ref"} from product_revenue_quarterly (latest 12 months), else None."""
     d = data.csv("tables/product_revenue_quarterly.csv")
     if not len(d):
         return None
     base = d[(d["ticker"] == ticker) & d["product_member"].fillna("").str.lower().str.contains(slug.split("-")[0], regex=False)
-             & d["concept"].fillna("").str.contains("Revenues") & ~d["product_member"].fillna("").str.lower().str.contains("qlex|membermember")]
+             & d["concept"].fillna("").str.contains("Revenue") & ~d["product_member"].fillna("").str.lower().str.contains("qlex|membermember")]
     if not len(base):
         return None
+    # one product member: the shortest name carrying the brand (OpdivoMember, not OpdivoOvantigMember, the Qvantig
+    # line whose $238M was printed as Opdivo's revenue; case audit H2)
+    mems = sorted(set(base["product_member"].dropna()), key=len)
+    base = base[base["product_member"] == mems[0]]
 
     def latest(frame):
         if not len(frame):
@@ -901,6 +952,11 @@ def compare(ticker, product, rivals=None, data_root=None, index=None):
                 rev = {"usd": (row["us_sales"][0] + row["row_sales"][0]) * 1e6, "us": row["us_sales"][0] * 1e6,
                        "basis": "annual report table row, latest fiscal year (US + rest of world, derived sum of two cited numbers)",
                        "ref": f"{row['doc']} p{row['page']}", "_cite": c}
+    if rev and "_cite" not in rev:
+        c = revenue_line_cite(idx, ticker, spec["self"]["name"].split(" (")[0].split()[0], rev.get("us") or rev["usd"])
+        if c is not None:
+            rev["_cite"] = c
+            ctx["revenue_citation"] = c.to_dict()
     ctx["revenue"] = {k: v for k, v in rev.items() if not k.startswith("_")} if rev else None
     if rev and "_cite" in rev:
         ctx["_revenue_cite"] = rev["_cite"]
@@ -1000,7 +1056,7 @@ def _channels(cmp_):
     mfp = next((float(x["value"]) for x in pol if "MFP per 30-day" in x["item"]), None)
     listp = next((float(x["value"]) for x in pol if "list price per 30-day" in x["item"]), None)
     med = P["medicare"]["value"]
-    if ira["selected"] and med and med["part"] == "D" and med["claims"]:
+    if ira["selected"] and med and med["part"] == "D" and med["claims"] and (mfp or ira.get("mfp_per_30_days")):
         mfp = mfp or ira["mfp_per_30_days"]
         listp = listp or (med["avg_per_claim"])
         if mfp and listp:
@@ -1016,9 +1072,24 @@ def _channels(cmp_):
                         "inputs": {"claims": med["claims"], "list30": listp, "mfp30": mfp, "d": d, "k": k, "m_avoided": W.M_MDP_AVOIDED, "mfp_effective": ira["mfp_effective"]},
                         "years_to_event": max(0.0, (pd.Timestamp(ira["mfp_effective"]) - pd.Timestamp(AS_OF)).days / 365.25) if ira["mfp_effective"] else None,
                         "cm": W.CM_PRICE, "assumed": False, "citations": [c for c in pricing.citations]})
-    elif not ira["selected"]:
+    elif not ira["selected"] or not (mfp or ira.get("mfp_per_30_days")):
+        # not selected but expected, or selected with no published MFP yet (Biktarvy: IPAY 2028, MFP blank): apply
+        # the CMS cuts already set, through the one IRA formula
         exp = [x for x in pol if "expected" in x["item"].lower() and "selection" in x["item"].lower()]
         cuts = _ira_cuts(cmp_.context.get("_data"))
+        sel_cites = []
+        if ira["selected"] and ira.get("mfp_effective"):
+            exp = exp or [{"item": "selected, MFP not yet published", "value": str(ira["mfp_effective"])[:10]}]
+            try:     # the CMS selected-drug list line for this drug (the same quote FIND's IRA row cites)
+                from .find import IRA_DRUGS
+                from agent.needle.cite.verify import verify as _v
+                for t_, drug_, ip_, G_, sdoc, spage, squote in (d_[:7] for d_ in IRA_DRUGS):
+                    if drug_.split("/")[0].lower() == me["name"].split()[0].lower():
+                        c_ = _v(Citation(canonical_id=sdoc, page=spage, quote=squote, claim_type="quote"), DATA_INDEX())
+                        if c_.verification.ok:
+                            sel_cites.append(c_)
+            except Exception:
+                pass
         if exp and med and cuts:
             eff = next((x["value"] for x in exp if re.match(r"20\d\d-\d\d-\d\d", str(x["value"]))), None)
             q = statistics.quantiles(cuts, n=4)
@@ -1030,9 +1101,10 @@ def _channels(cmp_):
                         "formula": (f"dRev = -G x max(0, k x d - m_avoided): G = Medicare Part {med['part']} gross spend {med['year']} ({_fmt_m(med['spend'])}); "
                                     f"d = observed CMS cuts in the verified IRA rows (n={len(cuts)}): q25 {q[0]:.0f} / median {statistics.median(cuts):.0f} / q75 {q[2]:.0f} percent (bull/base/bear); "
                                     f"k = {k}; m_avoided = {W.M_MDP_AVOIDED if part_d else (0.0, 0.0, 0.0)} (FIND impact.ira_class_rule)"),
-                        "inputs": {"medicare_spend": med["spend"], "year": med["year"], "cuts_pct": cuts, "mfp_effective": eff},
+                        "inputs": {"medicare_spend": med["spend"], "year": med["year"], "cuts_pct": cuts, "mfp_effective": eff,
+                                   "selected": bool(ira["selected"])},
                         "years_to_event": max(0.0, (pd.Timestamp(eff) - pd.Timestamp(AS_OF)).days / 365.25) if eff else None,
-                        "cm": W.CM_PRICE, "assumed": False, "citations": [c for c in pricing.citations]})
+                        "cm": W.CM_PRICE, "assumed": False, "citations": [c for c in pricing.citations] + sel_cites})
         else:
             uq.append("IRA: product is not a selected drug in the pack and no expected-selection row exists")
     # (2) LOE erosion
@@ -1205,6 +1277,9 @@ def tie_to_financials(comparison, findings=None):
                   "dEPS": None, "dEPS_note": "dEPS = dRev x CM x (1 - t) / D; t and D are company constants held by the FIND scorer (spec 10.1)",
                   "t_years": ch.get("years_to_event"), "horizon_months": HORIZON_MONTHS, "as_of": cmp_.as_of,
                   "math_lines": math}
+        if not cites:
+            cmp_.notes.append(f"{ch['channel']}: no citation for the channel; not printed")
+            continue
         cid = hashlib.sha256(f"{cmp_.ticker}|product|{ch['channel']}|{cites[0].cite_id}".encode()).hexdigest()[:12]
         claims.append(ProductClaim(text=sent, citations=cites, derived=dmap, assumptions=amap,
                                    numeric_check=res.numeric_check, id=cid, ticker=cmp_.ticker, channel=ch["channel"],
@@ -1226,6 +1301,10 @@ def math_lines(ch):
             f"dRev bull/base/bear: ${r['bull']:,} / ${r['base']:,} / ${r['bear']:,}; dOI at CM {cm}: base ${o['base']:,}"]
 
 
+def _rev_basis(i):
+    return "US revenue" if i.get("revenue_is_us") else "worldwide revenue"
+
+
 def _sentence(cmp_, ch):
     me = cmp_.entities[0]["name"]
     d = ch["dRev"]
@@ -1234,14 +1313,19 @@ def _sentence(cmp_, ch):
     if ch["channel"] == "ira_mfp":
         return (f"{me} is an IRA-selected drug whose Medicare negotiated price takes effect {i['mfp_effective']}, about "
                 f"${i['list30'] - i['mfp30']:,.0f} below the 30-day list price, which puts roughly {rng} of annual revenue at risk.")
+    if ch["channel"] == "ira_expected" and i.get("selected"):
+        return (f"{me} is selected for IRA price negotiation (CMS list) with the negotiated price effective {i['mfp_effective']} "
+                f"and not yet published, and applying the cuts CMS has already set (median {statistics.median(i['cuts_pct']):.0f}% "
+                f"off list) to its {i['year']} Medicare spend of {_fmt_m(i['medicare_spend'])} puts about {rng} of annual revenue at risk.")
     if ch["channel"] == "ira_expected":
         return (f"{me} is expected to be selected for IRA price negotiation with the negotiated price effective {i['mfp_effective']}, and "
                 f"applying the cuts CMS has already set (median {statistics.median(i['cuts_pct']):.0f}% off list) to its {i['year']} Medicare spend "
                 f"of {_fmt_m(i['medicare_spend'])} puts about {rng} of annual revenue at risk.")
     if ch["channel"] == "loe_erosion":
         return (f"{me} loses US exclusivity in {i['loe_year']}, and the first full year after entry has taken a median "
-                f"{100 - i['band']['median']:.0f}% of peak sales from comparable {i['modality'].replace('_', ' ')} products, "
-                f"about {rng} on {me}'s {_fmt_m(i['revenue'])} of annual revenue.")
+                f"{100 - i['band']['median']:.0f}% of peak sales from comparable {i['modality'].replace('_', ' ')} products "
+                f"(median of {i['band']['n']} US launches in the LOE curve table, a labelled table value), "
+                f"about {rng} on {me}'s {_fmt_m(i['revenue'])} of annual {_rev_basis(i)}.")
     if ch["channel"] == "label_breadth_medicare":
         lc = i.get("label_change")
         tail = (f" ({me}'s label last changed its indication count on {lc[0]}, so the {i['year']} claims mostly predate that change)" if lc else "")
@@ -1289,7 +1373,8 @@ def growth_limiter(comparison, findings=None):
     claims = findings if findings is not None else tie_to_financials(comparison)
     me = comparison.entities[0]
     if not claims:
-        return (f"The data do not support naming what limits {me['name']}'s growth: no label-to-numbers channel had its inputs.", False,
+        return (f"The data do not support naming what limits {me['name']}'s growth: no label-to-numbers channel had its "
+                "inputs. Priced in: not testable with our data.", None,
                 ["no quantified channel; priced-in cannot be tested"] + comparison.context.get("unquantified", []), [])
     top = claims[0]
     topics = next((f.split("=", 1)[1] for f in top.flags if f.startswith("topic=")), "").split("|")
@@ -1308,9 +1393,13 @@ def growth_limiter(comparison, findings=None):
     reasons.append("case starter thread " + ("already names this consequence" if match else "does not name this consequence"))
     reasons.append("consensus: not tested for a product-level number (I/B/E/S revenue consensus is company-level only)")
     priced = bool(sc is not None and share >= 0.5 and match) or bool(share is not None and share >= 0.8)
+    if sc is None:
+        priced = None      # case audit H4: with no analyst-question row the call cannot be made; no verdict is printed
+        reasons.insert(0, "priced-in cannot be tested: no analyst-question scorecard row for the limiter's topic")
     d = top.impact["dRev"]
-    what = {"ira_mfp": "the Medicare negotiated price", "loe_erosion": "loss of US exclusivity", "ira_expected": "the expected Medicare negotiated price", "label_breadth_medicare": "a narrower label that keeps it out of Medicare coverage",
+    what = {"ira_mfp": "the Medicare negotiated price", "loe_erosion": "loss of US exclusivity", "ira_expected": "the Medicare negotiated price (not yet published)", "label_breadth_medicare": "a narrower label that keeps it out of Medicare coverage",
             "mfn_cash_price": "the shift of volume to the lower cash price", "boxed_warning_share": "its boxed warning"}.get(top.channel, top.channel)
     s = (f"What limits {me['name']}'s growth is {what}, worth about {_fmt_m(d['base'])} a year in the base case, and "
-         + ("the market has already priced it in." if priced else "the market has not clearly priced it in."))
+         + ("whether the market has priced it in is not testable with our data." if priced is None else
+            "the market has already priced it in." if priced else "the market has not clearly priced it in."))
     return s, priced, reasons, list(top.citations)

@@ -85,10 +85,27 @@ def kill_table(result, context=None):
             base = V.rx_baselines(context["product"])
         except Exception:
             base = {}
+    prod = str((context or {}).get("product") or "").strip()
+    P = (prod[0].upper() + prod[1:]) if prod else ""
+    # company- and product-specific baselines: coverage from the formulary rows, year-one sales from the move's own
+    # cited revenue input
+    for i in getattr(result, "inputs", []) or []:
+        if "year_one_sales" in base:
+            break
+        if getattr(i, "kind", "") == "company" and "rev" in str(i.name) and getattr(i, "citation_ids", None):
+            cit = next((x for x in result.citations if x.cite_id in i.citation_ids and x.verification.ok), None)
+            if cit is not None:
+                try:
+                    v = float(i.value)
+                except (TypeError, ValueError):
+                    continue
+                base["year_one_sales"] = (None, cit, f"{P or 'product'} revenue at risk {v:,.0f} a year (cited input "
+                                                     f"{i.name}); year-one sales are read against the move's forecast")
     rows = []
     for sg in K.signals_for(result):
         rev = K.revise_ev(result, [sg.id])
-        rows.append({"id": sg.id, "signal": sg.name, "threshold": sg.threshold, "source": sg.source, "lag": sg.lag,
+        rows.append({"id": sg.id, "signal": (f"{P}: " if P else "") + sg.name, "threshold": sg.threshold,
+                     "source": sg.source, "lag": sg.lag,
                      "check_month": sg.check_month, "action": sg.action, "basis": sg.basis,
                      "p_posterior": rev.p_posterior, "ev_remaining_prior": rev.ev_remaining_prior,
                      "ev_revised": rev.ev_revised, "ev_revised_total": rev.ev_revised_total, "stop": rev.stop,
@@ -202,6 +219,11 @@ def move_maps(r):
         ops.update({f"i{m}": month("", v, m, "bear inflow before the first readout") for m, v in enumerate(ci, 1)})
         Dm["car"] = _derived(r.car, f"max(0, ({' + '.join(f'o{m}' for m in range(1, len(co) + 1))}) - "
                                     f"({' + '.join(f'i{m}' for m in range(1, len(ci) + 1)) or '0'}))", ops)
+        Dm["car_out"] = _derived(sum(co), " + ".join(f"o{m}" for m in range(1, len(co) + 1)),
+                                 {k: v for k, v in ops.items() if k.startswith("o")})
+        if ci:
+            Dm["car_in"] = _derived(sum(ci), " + ".join(f"i{m}" for m in range(1, len(ci) + 1)),
+                                    {k: v for k, v in ops.items() if k.startswith("i")})
     else:
         leaf("car", r.car)
     if r.payback_month is not None:
@@ -293,6 +315,13 @@ def build_md(out, findings, public=False):
         pass
     for m in (Ac, Aall):
         m["window"] = {"value": "24", "label": "design: the case's 24-month decision window"}
+        m["payback_search"] = {"value": "120", "label": "design: payback searched to 120 months (spec 5.4)"}
+        from agent.needle.quant.moves import LOE_RETENTION
+        for curve, ys in LOE_RETENTION.items():
+            for j, y in enumerate(ys, 1):
+                v = getattr(y, "value", y)
+                m[f"ret_{curve}_{j}"] = {"value": f"{float(v):.2f}", "label": "external benchmark: LOE retention "
+                                         f"curve {curve} year {j} (spec 4.3 e, pharma_impact_math KQ4; Humira US)"}
         m["partd_lag"] = {"value": "18", "label": "CMS Part D Prescriber PUF publication lag, about 18 months (assumption)"}
     withheld = []
 
@@ -302,8 +331,8 @@ def build_md(out, findings, public=False):
             withheld.append(w)
         return t
 
-    def cell(section, where, text, cites=(), derived=Dc, assumptions=Ac):
-        return doc.cell(section, where, text, cites, derived, assumptions)
+    def cell(section, where, text, cites=(), derived=Dc, assumptions=Ac, dates=""):
+        return doc.cell(section, where, text, cites, derived, assumptions, dates=dates)
     p = c.p_scenario
     L = [f"# Decide: {T} 24-month CEO move (as of {out['as_of']})", ""]
     if out.get("header_note"):
@@ -347,7 +376,22 @@ def build_md(out, findings, public=False):
         cc = out["cash_claim"].citations if out["cash_claim"] else []
         cash_txt = "; cash and equivalents " + cell("budget", "budget/cash", f"{out['cash']:,.0f}" if float(out["cash"]).is_integer() else f1(out["cash"]), cc)
     L += ["", "Cash at risk (bear scenario, technical failure at the first readout, net of inflows and avoidable "
-          f"payments): {cell('budget', 'budget/car', f1(c.car))}" + cash_txt, "", "### Return math, line by line", ""]
+          f"payments): {cell('budget', 'budget/car', f1(c.car))}" + cash_txt, ""]
+    co_, ci_ = sum((c.car_parts or {}).get("out") or []), sum((c.car_parts or {}).get("in") or [])
+    tot = sum(v for k, v in c.budget.items() if not k.startswith("total"))
+    if c.car == 0 and tot > 0:
+        if co_ <= 0:
+            why0 = (f"Cash at risk is zero although the 24-month budget is {f1(tot)}: every budgeted outflow before the "
+                    "first readout is avoidable (it stops if the move fails), so none is committed under the spec 5.4 "
+                    "rule.")
+        else:
+            why0 = (f"Cash at risk is zero although the 24-month budget is {f1(tot)}: the committed outflow before the "
+                    f"first readout, {f1(co_)}, is covered by bear-case inflows received before then, {f1(ci_)}.")
+        L += [line("budget", "car_why", why0, (), Dc, Ac), ""]
+    elif c.car > 0:
+        L += [line("budget", "car_why", f"Committed outflow before the first readout {f1(co_)}, less bear-case inflows "
+                   f"before then {f1(ci_)}.", (), Dc, Ac), ""]
+    L += ["### Return math, line by line", ""]
     for i, n in enumerate(c.notes):
         L.append(f"- {line('notes', f'notes[{i}]', n, (), Dc, Ac)}")
     L += ["", "| Scenario | Revenue multiplier | PV months 1-24 | PV terminal value (month 25 on) | Scenario EV |",
@@ -388,11 +432,17 @@ def build_md(out, findings, public=False):
                  f"{cell('five numbers', f'five/{r.name}/MCDA', f'{r.mcda:.3f}', (), Dall, Aall)} |")
     L.append("")
     for r in sel.rejected:
-        L.append(f"- Rejected: **{r.name}**. Binding reason: {line('selection', f'binding/{r.name}', r.binding_reason)}.")
+        pb_r = "no payback within 120 months" if r.payback_month is None else f"payback month {r.payback_month}"
+        pb_c = "none within 120 months" if c.payback_month is None else f"month {c.payback_month}"
+        passed = (f"Why we passed: EV {f1(r.ev)} vs {f1(c.ev)} for the {'chosen move' if sel.chosen is not None else 'least-bad option'}, "
+                  f"cash at risk {f1(r.car)} vs {f1(c.car)}, {pb_r} vs {pb_c}, scenario spread {f1(r.spread)} vs "
+                  f"{f1(c.spread)}, MCDA {r.mcda:.3f} vs {c.mcda:.3f}; binding: {r.binding_reason}.")
+        L.append(f"- Rejected: **{r.name}**. {line('selection', f'passed/{r.name}', passed)}")
     for i, n in enumerate(sel.notes):
         L.append(f"- Note: {line('selection', f'selection_note[{i}]', n)}")
     L += ["", f"MCDA parts ({'chosen' if sel.chosen is not None else 'least-bad'}): " + cell("five numbers", "mcda_parts", ", ".join(
         f"{k} {v:.2f}" for k, v in c.mcda_parts.items()) + " (weights 0.25 each)") + ".", ""]
+    L += why_it_will_work(out, c, cell, line)
     L += ["## Kill signals (early 6-to-12-month signals that would prove the move wrong)", "",
           "| Signal | Threshold | Baseline (chosen product, latest year in the rx tables) | Source and lag | Check month | "
           "If breached |", "|---|---|---|---|---|---|"]
@@ -483,6 +533,125 @@ def build_md(out, findings, public=False):
     return doc.render("\n".join(L) + "\n"), summary, withheld
 
 
+def _qa_evidence(ticker, product):
+    """(quarters asked, quarters seen, Citation of one analyst question on its transcript page) from qa_turns.csv."""
+    import re as _re
+    from agent.needle.cite.locator import Citation
+    from agent.needle.cite.verify import verify as _verify
+    from agent.needle.quant import data
+    q = data.qa_turns()
+    q = q[(q.ticker == ticker) & (q.role.astype(str) == "analyst")] if "role" in q else q[q.ticker == ticker]
+    quarters = sorted(q.quarter.dropna().unique())[-10:]
+    q = q[q.quarter.isin(quarters)]
+    hit = q[q.text.astype(str).str.contains(_re.escape(product), case=False, regex=True)]
+    cite = None
+    idx = data.index()
+    for _, r in hit.sort_values("quarter", ascending=False).iterrows():
+        doc = f"{ticker}:transcripts/{r.quarter}_transcript.md"
+        sent = next((x for x in _re.split(r"(?<=[.?!])\s+", str(r.text)) if product.lower() in x.lower()
+                     and 40 <= len(x) <= 300), None)
+        if not sent:
+            continue
+        rec = idx.resolve(doc)
+        if rec is None:
+            continue
+        for n in idx.pages(rec.canonical_id):
+            c = _verify(Citation(canonical_id=rec.canonical_id, page=n, quote=sent, claim_type="quote"), idx)
+            if c.verification.ok:
+                cite = c
+                break
+        if cite is not None:
+            break
+    return hit.quarter.nunique(), len(quarters), cite
+
+
+def _fda_rows(ticker, product):
+    """Verified fda_calendar rows (status pass) naming the product, newest first: [(date, action, Citation)]."""
+    from agent.needle.cite.locator import Citation
+    from agent.needle.cite.verify import verify as _verify
+    from agent.needle.quant import data, verified_tables as V
+    out = []
+    idx = data.index()
+    for rk, vs, r in V.find_rows("pipeline/fda_calendar.csv", {"ticker": ticker}):
+        if str(vs).lower() != "pass" or product.lower() not in (str(r.get("drug")) + " " + str(r.get("quote"))).lower():
+            continue
+        if not r.get("doc") or not r.get("quote"):
+            continue
+        try:
+            page = int(float(r.get("page") or 0)) or None
+        except ValueError:
+            page = None
+        c = _verify(Citation(canonical_id=r["doc"], page=page, quote=str(r["quote"])[:300], claim_type="quote"), idx)
+        if c.verification.ok:
+            out.append((str(r.get("date") or ""), str(r.get("action") or ""), c))
+    return sorted(out, key=lambda x: x[0], reverse=True)
+
+
+def why_it_will_work(out, c, cell, line):
+    """The evidence the move needs from doctors, payers, regulators and investors: what our data shows (cited rows
+    from the rx tables, qa_turns and the FDA calendar for this company and product) and what only interviews can
+    show. Built from the company's own rows, never a shared default."""
+    T = out["ticker"]
+    product = str((out.get("context") or {}).get("product") or "").strip()
+    L = ["## Why it will work: the evidence each decider needs", ""]
+    if not product:
+        return L + ["No product is named for the chosen move, so no prescriber, payer or FDA row can be read; the "
+                    "deciders' evidence is the human-interview list below only.", ""]
+    from agent.needle.quant import verified_tables as V
+    try:
+        base = V.rx_baselines(product)
+    except Exception:
+        base = {}
+    P = product[0].upper() + product[1:]
+    L += ["| Decider | What the move needs | What our data shows (cited) | What only interviews can show |",
+          "|---|---|---|---|"]
+    doc_bits = []
+    for k in ("zs_breadth", "zs_return_writing", "zs_depth"):
+        if k in base:
+            v, cit, txt = base[k]
+            bd = {}
+            if v is not None and abs(v) <= 1:
+                from agent.needle.cite.gate import derived_entry
+                bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
+            doc_bits.append(cell("why", f"why/doctors/{k}", f"{P} {txt}", [cit], bd, TOP20))
+    L.append(f"| Doctors | prescribers keep writing {P} through the move | "
+             f"{'; '.join(doc_bits) or 'no rx-table row for ' + P} | whether prescribers would switch or stay, and why "
+             "(prescriber interviews) |")
+    if "coverage" in base:
+        v, cit, txt = base["coverage"]
+        from agent.needle.cite.gate import derived_entry
+        pay = cell("why", "why/payers", f"{P} {txt}", [cit], {"pct": derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")})
+    elif "coverage_note" in base:
+        pay = f"{P}: Part B drug, so Part D formulary coverage does not apply"
+    else:
+        pay = f"no formulary row for {P}"
+    L.append(f"| Payers | formulary access at the move's net price | {pay} | rebate terms and PBM stance on the new "
+             "price (payer interviews; contracts are confidential) |")
+    fda = _fda_rows(T, product)
+    if fda:
+        d, act, cit = fda[0]
+        reg = cell("why", "why/regulators", f"latest FDA calendar row naming {P}: {act} {d}".strip(), [cit], {}, {},
+                   dates=d)
+    else:
+        reg = f"no verified FDA calendar row names {P}"
+    L.append(f"| Regulators | label, FDA and CMS events land on the dates the plan assumes | {reg} | how FDA and CMS "
+             "staff read the claims the move relies on (regulatory counsel) |")
+    try:
+        n_q, n_all, qcit = _qa_evidence(T, product)
+    except Exception:
+        n_q, n_all, qcit = 0, 0, None
+    qa = {"qa_n": {"value": str(n_q), "label": f"count by code over qa_turns.csv analyst turns naming {P}"},
+          "qa_all": {"value": str(n_all), "label": "quarters of analyst turns in qa_turns.csv (up to the last 10)"}}
+    inv = cell("why", "why/investors", f"analysts named {P} in {n_q} of the last {n_all} quarters of calls"
+               + (f"; latest question quoted" if qcit else ""), [qcit] if qcit else [], {}, qa) if n_all else \
+        f"no analyst turns for {T} in qa_turns.csv"
+    L.append(f"| Investors | believe the five numbers and the kill signals | {inv} | how the buy side would price the "
+             "move (investor conversations) |")
+    L += ["", line("why", "why/limits", "No prescriber, payer, regulator or investor interview was run for this memo; "
+                   "the right-hand column lists what only those interviews can show."), ""]
+    return L
+
+
 def rejected_md(out, summary, withheld):
     L = [f"# Decide: {out['ticker']} rejected by the numeric gate", "",
          "decide.md is not written: at least one headline number is not verified by a passing citation, derived from "
@@ -547,6 +716,7 @@ def main(argv=None):
     ctx = next((dict(mv.get("context") or {}, ticker=a.ticker) for mv in spec["moves"]
                 if (mv.get("name") or get_template(mv["template"]).name) == out["selection"].top.name), {})
     out["kill"] = kill_table(out["selection"].top, ctx)
+    out["context"] = ctx
     md, summary, withheld = build_md(out, findings, a.public)
     js = json.dumps(to_json(out, summary, withheld), indent=2, default=str)
     if not summary["passed"]:

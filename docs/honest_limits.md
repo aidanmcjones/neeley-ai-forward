@@ -31,6 +31,6 @@ Further limits a judge may ask about:
 - **Consensus test.** "When consensus for the affected year did not exist before the disclosure, we cannot test whether analysts priced it, and we assume a 50% chance they did."
 - **Foreign filers.** "AstraZeneca and Novo Nordisk have no earnings release in our index, so their headline term is imputed from the other eight; Novo's dollar-based policy channels are not converted."
 - **Coverage.** "Several signal families in the design (insider sales, 8-K items, misstatement scores, gross-to-net, footnotes) have no detector yet; patent-loss inputs are thin for four companies."
-- **Ten companies.** "With ten companies no ranking can be statistically significant (minimum p = 0.10); we show the pick survives a published robustness table instead."
+- **Ten companies.** "With ten companies no ranking can be statistically significant (minimum p = 0.10); we show the pick rests on the cited findings table and a human red-team read instead."
 - **DECIDE.** "Scenario weights are a launch base rate applied to every move, and the bear and bull multipliers are boundary values, so the scenario spread is understated and the value leans optimistic."
 - **Facts.** "69,553 facts in the store, 10,963 of them page-verified."

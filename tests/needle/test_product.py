@@ -126,7 +126,7 @@ def test_synthetic_table_five_rows_and_label_citations(fake):
     # generic rival: every cell empty with a reason, nothing invented
     assert all(c.rows[r]["Generic fooxide"].empty and c.rows[r]["Generic fooxide"].empty_reason for r in c.rows)
     gl = P.growth_limiter(c)
-    assert gl[1] is False and gl[0].count(".") == 1                  # no revenue: honest non-answer, still one sentence
+    assert gl[1] is None and "not testable with our data" in gl[0]     # no revenue: honest non-answer, no priced-in verdict
     assert gate(me["safety"].citations and [__import__("agent.needle.cite.locator", fromlist=["Claim"]).Claim("x", me["safety"].citations)])[0]
 
 
@@ -215,3 +215,9 @@ def test_loe_dates_come_from_loe_calendar_and_filings_not_labels():
         g = VT.loe(t, b)
         assert g is not None and g[0] == d, (t, b, g and g[0])
         assert all(c.verification.ok for c in g[1].citations)
+
+
+def test_regimens_keep_every_label_option():
+    assert P.regimens("either 140 mg every 2 weeks OR 420 mg once monthly") == ["every 2 weeks", "once monthly"]
+    assert P.regimens("CABENUVA can be injected monthly or every 2 months") == ["monthly", "every 2 months"]
+    assert P.regimens("200 mg every 3 weeks or 400 mg every 6 weeks") == ["every 3 weeks", "every 6 weeks"]
