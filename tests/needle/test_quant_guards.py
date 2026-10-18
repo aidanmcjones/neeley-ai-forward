@@ -196,3 +196,20 @@ def test_findings_table_every_row_has_a_gated_peer_comparison():
 def test_nvo_amounts_print_in_dkk():
     from agent.needle.quant import findings_table as FT
     assert FT._currency("NVO") == "DKK" and FT._currency("MRK") == "USD"
+
+
+def test_needle_red_team_when_gated_and_slide_ready_else_plain_rule():
+    from types import SimpleNamespace
+    from agent.needle.quant import findings_table as FT
+    rt = FT._red_team()
+    if "MRK" not in rt:
+        pytest.skip("docs/nuggets/best_needle.json not present")
+    nid = rt["MRK"][0]
+    ok = SimpleNamespace(id="a", nugget={"id": nid, "slide_ready": True, "verdict": "verified"}, merged_into="")
+    other = SimpleNamespace(id="b", nugget={}, merged_into="")
+    assert FT.red_team_pick("MRK", [other, ok], [])[0] is ok
+    bad = SimpleNamespace(id="a", nugget={"id": nid, "slide_ready": False, "verdict": "verified"}, merged_into="")
+    assert FT.red_team_pick("MRK", [other, bad], [])[0] is None          # not slide-ready: plain rule
+    assert FT.red_team_pick("MRK", [other], [])[0] is None               # failed the gate (absent): plain rule
+    gone = SimpleNamespace(id="g", nugget={"id": nid, "slide_ready": True, "verdict": "verified"}, merged_into="b")
+    assert FT.red_team_pick("MRK", [other], [gone])[0] is other          # merged as one fact: the kept row

@@ -342,6 +342,8 @@ LOW     otherwise; also any row the courtroom trial rules "fails"
 
 ### 4.8 Sharpest Needle
 
+**Which row is named (human read governs):** the needle is Parker's red-team best needle (docs/nuggets/best_needle.json, from docs/red_team_v3_final.md) when that row passes the numeric gate and is slide-ready; otherwise it is the plain rule below, and `findings_table.json` records `needle_source` (red_team or plain_rule), `plain_rule_needle_id` and `red_team_needle_id`.
+
 **Rule (pitched):** the biggest-impact finding that analysts asked about least. Among gated, quantified findings (base-case |ΔEPS| > 0), keep those with the lowest analyst-share-asked, the obscurity discussion term a of Section 4.4 (share of the last up-to-10 calls in which an analyst asked about the topic or product); among those, take the largest base-case |ΔEPS|. A row a guard marks as never-the-needle (MFN placeholder, undirected MD&A drift; Section 4.12) is skipped. Code: `findings_table.pick_needle`; output `out/<T>/findings_table.md` and `.json` (`needle_id`, `needle_rule`, `rank_basis: "impact"`).
 
 The S-based needle with its D, E and confidence floors and fallbacks is still computed for internal triage (Appendix A.3).
