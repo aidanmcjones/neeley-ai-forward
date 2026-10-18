@@ -235,7 +235,7 @@ KEYISH = set(TICKER_COLS + DRUG_COLS + PERIOD_COLS + SOURCE_COLS + PAGE_COLS + [
 NUM = re.compile(r"^-?\$?[\d,]*\.?\d+%?$")
 
 
-SUPERSEDED_TABLE = re.compile(r"(_dropped|_wave\d|_collector|_before_|_sample\d+|_raw)(_[a-z0-9]+)?\.csv$")
+SUPERSEDED_TABLE = re.compile(r"(_dropped|_wave\d|_collector|_before_|_sample\d+|_raw)[a-z0-9_]*\.csv$")
 
 
 def fact_tables():
@@ -248,7 +248,10 @@ def fact_tables():
             continue
         out.append((f"{p.parent.name}/{p.name}", p, "verified"))
     tables = MOAT / "tables"
+    verified_names = {p.name for p in (MOAT / "verified").glob("*/*.csv")}
     for p in sorted(tables.glob("ibes_*.csv")) + [tables / "prices_daily.csv"]:
+        if p.name in verified_names:  # a verified copy of the same name supersedes the raw table
+            continue
         out.append((f"tables/{p.name}", p, "no_verified_copy"))
     # Raw pricing tables mix units (wrong Part B codes, MFP averaged across units); the verified pricing copies
     # fix that, so the raw ones are indexed only as a flagged fallback when verified/pricing/ is absent.
