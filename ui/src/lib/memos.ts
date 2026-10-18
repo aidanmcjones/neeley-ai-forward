@@ -6,28 +6,51 @@ import { fetchJson, ROOT, SAMPLE } from "./data";
 import { terms } from "./retrieve";
 import type { Evidence, MemoCite, MemoRecord, MemosFile } from "./types";
 
-export interface MemosState { file: MemosFile | null; sample: boolean; error: string | null; loading: boolean }
+export interface MemosState {
+  file: MemosFile | null; sample: boolean; error: string | null; loading: boolean;
+  /** Where the files live (real export or the _sample fixture). */
+  prefix: string | null;
+  /** True when `file` is the small index (memos_index.json): answers load one by one via loadMemo. */
+  indexOnly: boolean;
+}
 
+const safeId = (id: string) => id.replace(/[^A-Za-z0-9_-]/g, "_");
+
+/** Loads memos_index.json first (chips and matching paint at once); answers are fetched per memo.
+ *  Without an index (plain static copy of public/), falls back to the full memos.json. */
 export function useMemos(): MemosState {
-  const [st, setSt] = useState<MemosState>({ file: null, sample: false, error: null, loading: true });
+  const [st, setSt] = useState<MemosState>({ file: null, sample: false, error: null, loading: true, prefix: null, indexOnly: false });
   useEffect(() => {
     let live = true;
     (async () => {
-      try {
-        const f = await fetchJson<MemosFile>(ROOT, "memos.json");
-        if (live) setSt({ file: norm(f), sample: false, error: null, loading: false });
-      } catch (e) {
+      for (const [prefix, sample] of [[ROOT, false], [SAMPLE, true]] as const) {
         try {
-          const f = await fetchJson<MemosFile>(SAMPLE, "memos.json");
-          if (live) setSt({ file: norm(f), sample: true, error: null, loading: false });
+          const ix = await fetchJson<MemosFile>(prefix, "memos_index.json");
+          if (live) setSt({ file: norm(ix), sample, error: null, loading: false, prefix, indexOnly: true });
+          return;
         } catch {
-          if (live) setSt({ file: null, sample: false, error: (e as Error).message, loading: false });
+          try {
+            const f = await fetchJson<MemosFile>(prefix, "memos.json");
+            if (live) setSt({ file: norm(f), sample, error: null, loading: false, prefix, indexOnly: false });
+            return;
+          } catch { /* try the next location */ }
         }
       }
+      if (live) setSt({ file: null, sample: false, error: "Could not load /data/memos.json", loading: false, prefix: null, indexOnly: false });
     })();
     return () => { live = false; };
   }, []);
   return st;
+}
+
+/** One answer with its blocks and cites: data/memos/<id>.json, else the full memos.json. */
+export async function loadMemo(prefix: string, id: string): Promise<MemoRecord | null> {
+  try {
+    return await fetchJson<MemoRecord>(prefix, `memos/${safeId(id)}.json`);
+  } catch {
+    const f = await fetchJson<MemosFile>(prefix, "memos.json");
+    return f.memos.find((m) => m.id === id) ?? null;
+  }
 }
 
 function norm(f: MemosFile): MemosFile {

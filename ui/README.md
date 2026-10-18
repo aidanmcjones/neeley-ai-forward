@@ -53,6 +53,11 @@ fixture `public/data/_sample/memos.json` and says so.
   demonstration (rules, no model)".
 - **Uncited product cells** (`uncited: true` or listed in `uncited_cells`): value muted with a "needs citation"
   label, never a cite chip, and counted in the table footnote.
+- **Loading**: `memos.json` is about 4.6 MB, so the Vite plugin `vite.memos-index.js` derives a 46 kB
+  `data/memos_index.json` (prompts, aliases, kinds, suggestions) and one `data/memos/<id>.json` per answer
+  (served in dev, emitted into `dist/` at build, never committed). The chat paints its chips from the index
+  and fetches only the answer asked for; without the index (a plain copy of `public/`) it falls back to the
+  full file. Static build, throttled: 20 Mbps chips 0.6 s, first answer 0.9 s; 5 Mbps chips 1.9 s, answer 2.8 s.
 - **Reveal**: a typewriter of 1.5 to 2.5 s per answer, skippable by click; instant under reduced motion.
 - **Matching** (`src/lib/memos.ts`): exact prompt or alias first, then term overlap using the retriever's
   synonym groups over prompt + aliases (floor 0.3), preferring the selected company; no match replies "I can

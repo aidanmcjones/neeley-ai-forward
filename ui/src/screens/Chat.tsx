@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type React from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { matchMemo, useMemos } from "../lib/memos";
+import { loadMemo, matchMemo, useMemos } from "../lib/memos";
 import { useData } from "../lib/data";
 import type { MemoRecord, MemosFile } from "../lib/types";
 import { Answer } from "../components/chat/Answer";
@@ -9,7 +9,7 @@ import { Answer } from "../components/chat/Answer";
 // The demo page (/): one column, a prompt box, cached answers. Part 1 (Find) questions answer as
 // chat; Part 2 (Decide) arrives as a memo card. No model, no network: answers come from memos.json.
 
-interface Turn { id: number; prompt: string; memo: MemoRecord | null }
+interface Turn { id: number; prompt: string; memoId: string | null }
 
 // Generator kinds, in Part 1 (Find, chat) to Part 2 (Decide, memo) order.
 const KIND_ORDER = ["needles", "needle", "why_company", "findings", "products", "product", "peers", "priced_in", "decides", "ceo_memo", "prove_wrong", "ai_wrong", "moat", "how_it_works", "limits", "league"];
@@ -47,7 +47,10 @@ function suggestionsFor(file: MemosFile | null, ticker: string | null): MemoReco
 }
 
 export default function Chat() {
-  const { file, sample, error, loading } = useMemos();
+  const { file, sample, error, loading, prefix, indexOnly } = useMemos();
+  // Answers with blocks: fetched one by one when the file is the small index.
+  const [loaded, setLoaded] = useState<Map<string, MemoRecord>>(new Map());
+  const [failed, setFailed] = useState<Set<string>>(new Set());
   const { meta, loading: metaLoading } = useData();
   const [params] = useSearchParams();
   // undefined until the default rule has run; null = no company picked.
@@ -67,13 +70,14 @@ export default function Chat() {
   const tickers = useMemo(() => [...new Set((file?.memos ?? []).map((m) => m.ticker).filter((t): t is string => !!t))].sort(), [file]);
   const suggested = useMemo(() => suggestionsFor(file, ticker ?? null), [file, ticker]);
   const byId = useMemo(() => new Map((file?.memos ?? []).map((m) => [m.id, m])), [file]);
+  const answerOf = (id: string): MemoRecord | undefined => (indexOnly ? loaded.get(id) : byId.get(id));
   const labelFor = useCallback((id: string) => byId.get(id)?.prompt ?? null, [byId]);
 
   const send = useCallback((prompt: string, memo?: MemoRecord) => {
     const p = prompt.trim();
     if (!p) return;
     const m = memo ?? matchMemo(file, p, ticker === undefined ? picked : ticker).memo;
-    setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memo: m }]);
+    setTurns((ts) => [...ts, { id: nextId.current++, prompt: p, memoId: m?.id ?? null }]);
     setText("");
   }, [file, ticker, picked]);
 
@@ -86,6 +90,19 @@ export default function Chat() {
     sentQ.current = q;
     send(q);
   }, [file, q, send, metaLoading]);
+
+  // Fetch each asked answer once (index mode).
+  useEffect(() => {
+    if (!indexOnly || !prefix) return;
+    for (const t of turns) {
+      const id = t.memoId;
+      if (!id || loaded.has(id) || failed.has(id)) continue;
+      loadMemo(prefix, id).then(
+        (m) => { if (m) setLoaded((x) => new Map(x).set(id, m)); else setFailed((x) => new Set(x).add(id)); },
+        () => setFailed((x) => new Set(x).add(id)),
+      );
+    }
+  }, [turns, indexOnly, prefix, loaded, failed]);
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length]);
 
@@ -142,8 +159,12 @@ export default function Chat() {
               <div className="no-print flex justify-end">
                 <div className="max-w-[85%] rounded-2xl rounded-br-sm bg-purple dark:bg-purple-deep px-4 py-2.5 text-[15px] text-white">{t.prompt}</div>
               </div>
-              {t.memo ? (
-                <Answer memo={t.memo} instant={i < turns.length - 1} onAsk={askId} labelFor={labelFor} />
+              {t.memoId ? (
+                answerOf(t.memoId)
+                  ? <Answer memo={answerOf(t.memoId)!} instant={i < turns.length - 1} onAsk={askId} labelFor={labelFor} />
+                  : failed.has(t.memoId)
+                    ? <p role="alert" className="text-[14px] text-bad">Could not load this answer (data/memos/{t.memoId}.json).</p>
+                    : <p role="status" className="text-[14px] text-muted">Loading the cited answer…</p>
               ) : (
                 <div className="space-y-3 text-[15px]">
                   <p>I can write these memos:</p>
