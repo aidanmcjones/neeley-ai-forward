@@ -276,6 +276,20 @@ def test_licensed_citation_is_viewer_only_and_withheld_when_public(idx):
     assert "Licensed source" in render_viewer(c.canonical_id, 1, "x", db_path=None, public=True)
 
 
+def test_machine_data_is_a_status_that_supports_a_number_but_is_never_quoted_or_deep_linked_publicly():
+    from agent.needle.cite.gate import PASSING
+    from agent.needle.cite.locator import STATUSES, Verification
+    assert "machine_data" in STATUSES and "machine_data" in PASSING and Verification(status="machine_data").ok
+    c = Citation("calls/ibes.csv", None, "EPS consensus 1.18", claim_type="number", value="1.18",
+                 deep_link="https://example.org/row", viewer_link="https://v/viewer?doc=x",
+                 verification=Verification(status="machine_data", score=0.6))
+    team = render.render_markdown([Claim("x 1.18", [c])])
+    pub = render.render_markdown([Claim("x 1.18", [c])], public=True)
+    assert "EPS consensus 1.18" in team and "[open]" in team and "verified: machine_data" in team
+    assert "EPS consensus 1.18" not in pub and "[open]" not in pub and "[viewer]" in pub and "verified: machine_data" in pub
+    assert "<a href=\"https://example.org/row\">open</a>" not in render.render_html([Claim("x", [c])], public=True)
+
+
 def test_viewer_marks_quote(root):
     h = render_viewer("AAA:10k_FY2025.md", 2, EXACT, db_path=root)
     assert "<mark>Net sales of Keytruda" in h and "p. 41" in h
@@ -549,7 +563,8 @@ def test_fact_status_whitelist():
         assert fact_status_grade(s) == (1.0, "verified"), s
         assert fact_citation_status(s, True) == "exact" and fact_citation_status(s, False) == "unverified"
     assert fact_status_grade("no_verified_copy") == (0.6, "machine data")
-    assert fact_citation_status("no_verified_copy", True) == "number_match"
+    assert fact_citation_status("no_verified_copy", True) == "machine_data"
+    assert fact_citation_status("api_exact_distinct", True) == "machine_data"
     assert fact_citation_status("no_verified_copy", False) == "unverified"
     for s in ("unverified_onboard", "unchecked"):
         g, label = fact_status_grade(s)

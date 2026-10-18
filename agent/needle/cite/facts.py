@@ -9,14 +9,14 @@ was graded like a quote found on the page. The rule is now a whitelist, fail clo
     VERIFIED_STATUSES        -> (1.0, "verified")       exact-equivalent: a person or a script compared the row with
                                                          its source page and it matched (or was corrected to match)
     MACHINE_STATUSES         -> (0.6, "machine data")   licensed or machine feeds with no page copy (I/B/E/S, prices);
-                                                         number_match-equivalent ONLY when the value is re-read from
+                                                         machine_data (supports a number like number_match) ONLY when the value is re-read from
                                                          the table row itself, else unverified
     everything else          -> (0.0, "unverified")     including unverified_onboard and unchecked, flagged
                                                          "not checked"; unknown values land here too
 
   fact_citation_status(verify_status, reread_ok) -> Citation verification status
     verified  + reread_ok -> "exact"
-    machine   + reread_ok -> "number_match"
+    machine   + reread_ok -> "machine_data" (never quoted or deep-linked in public mode)
     otherwise             -> "unverified"
   reread_ok means the caller re-read the value from the facts row and it equals the number being cited. With no value
   to compare (value None) there is no re-read, so the status is unverified.
@@ -54,14 +54,14 @@ def fact_status_grade(verify_status, table=None):
 
 
 def fact_citation_status(verify_status, reread_ok, table=None):
-    """Citation status for a facts-row citation: exact / number_match / unverified (see the module docstring)."""
+    """Citation status for a facts-row citation: exact / machine_data / unverified (see the module docstring)."""
     if not reread_ok:
         return "unverified"
     grade, label = fact_status_grade(verify_status, table)
     if label == "verified":
         return "exact"
     if label == "machine data":
-        return "number_match"
+        return "machine_data"
     return "unverified"
 
 
@@ -89,7 +89,7 @@ def fact_citation_status(verify_status, reread_ok, table=None):
 # gives these rows a url: locator.
 #
 # url: rows: the deep link is the URL and the citation is labelled machine data, but the status still follows the
-# whitelist (fail closed): verified statuses stay exact, machine statuses are number_match, and a row nobody checked
+# whitelist (fail closed): verified statuses stay exact, machine statuses are machine_data, and a row nobody checked
 # (unchecked, unverified_onboard, unknown) stays unverified. A URL is where the row came from, not a check of it.
 
 import re as _re

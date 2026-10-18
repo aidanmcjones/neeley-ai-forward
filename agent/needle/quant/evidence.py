@@ -24,7 +24,7 @@ from agent.findings import _norm
 from . import data
 from . import weights as W
 
-GRADE = {"exact": W.G_EXACT, "substring": W.G_EXACT, "fuzzy": W.G_FUZZY, "number_match": W.G_ENTAILED,
+GRADE = {"exact": W.G_EXACT, "substring": W.G_EXACT, "fuzzy": W.G_FUZZY, "number_match": W.G_ENTAILED, "machine_data": 0.6,
          "unverified": W.G_NONE}
 
 OFFICIAL_RAW = {"annual_report", "quarterly_report", "cms_fact_sheet", "mfp_explanation", "fda_label",

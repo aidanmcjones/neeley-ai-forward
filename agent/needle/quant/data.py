@@ -345,7 +345,7 @@ def flow_citation(ticker, p, col, q, value, unit):
 
 
 def _rank(status):
-    return {"exact": 4, "substring": 4, "fuzzy": 3, "number_match": 2}.get(status, 0)
+    return {"exact": 4, "substring": 4, "fuzzy": 3, "number_match": 2, "machine_data": 2}.get(status, 0)
 
 
 # ------------------------------------------------------------------ I/B/E/S

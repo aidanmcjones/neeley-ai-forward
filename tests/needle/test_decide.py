@@ -335,3 +335,39 @@ def test_gild_demo_fixture_exits_zero(tmp_path):
     assert decide_cli.main(["--ticker", "GILD", "--findings", str(f), "--moves", str(m), "--out", str(tmp_path)]) == 0
     md = (tmp_path / "decide.md").read_text()
     assert "pipeline demonstration" in md.lower() and "## Why it will work" in md
+
+
+def test_decide_json_is_pure_json_for_lly(tmp_path):
+    f, m = ROOT / "out" / "LLY" / "findings_v3.jsonl", EX / "moves_LLY.json"
+    if not f.exists():
+        f = EX / "findings_LLY_v3.jsonl"
+    from agent.needle.quant import decide_cli
+    rc = decide_cli.main(["--ticker", "LLY", "--findings", str(f), "--moves", str(m), "--out", str(tmp_path)])
+    assert rc == 0
+    d = json.loads((tmp_path / "decide.json").read_text())
+    seen = {"cites": 0}
+
+    def walk(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k == "citations":
+                    assert isinstance(v, list)
+                    for c in v:
+                        assert isinstance(c, dict) and c.get("cite_id"), c
+                        seen["cites"] += 1
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+        elif isinstance(o, str):
+            assert not o.startswith(("Citation(", "Claim(")), o[:80]
+    walk(d)
+    assert "Citation(" not in (tmp_path / "decide.json").read_text()
+    assert seen["cites"] > 0
+
+
+def test_json_default_writes_structured_citation_and_claim():
+    from agent.needle.cite.locator import Citation, Claim, json_default
+    c = Citation("AAA:x.md", 1, "q")
+    out = json.loads(json.dumps({"c": c, "k": Claim("t", [c])}, default=json_default))
+    assert out["c"]["cite_id"] == c.cite_id and out["k"]["citations"][0]["cite_id"] == c.cite_id
