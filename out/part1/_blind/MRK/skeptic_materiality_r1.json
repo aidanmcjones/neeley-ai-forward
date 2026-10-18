@@ -1,0 +1,367 @@
+{
+ "ticker": "MRK",
+ "lens": "materiality",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "MRK-c01",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Numbers confirmed. MRK:10k_FY2025.md p.107 (printed 105): total inventory $12,339M vs $10,302M (+19.8%), RM/WIP 10,645 vs 8,831, long-dated $5.5B vs $3.8B; MRK:10q_2026Q2.md p.19: $12,588M and long-dated $5.9B (Jun 30 2026); MRK:companies/MRK/10q_2025Q2.md p.18 gives $4.3B at Jun 30 2025. Dates correct: Dec-24 $3.8B -> Dec-25 $5.5B -> Jun-26 $5.9B is 18 months. Days on cost of sales 275 vs 248 recomputes (p.79). Three problems. (1) Not all organic: the Oct 2025 Verona acquisition added $522M of inventory including $498M fair-value step-up (MRK:10k_FY2025.md p.89), about a quarter of the $2.04B rise; ex-Verona the build is roughly +15%, still large. (2) 'No write-down has been booked yet' is false: 10-K p.62 attributes the 2025 gross-margin decline partly to 'higher inventory write-downs (primarily vaccines)', and MRK:10q_2026Q2.md p.39 and the Q2-26 earnings release p.1 cite higher inventory write-downs again; non-GAAP gross margin fell 82.2% to 81.1% 'primarily due to higher inventory write-downs'. (3) 'No explanation on any call' is overstated: CEO on the 2025Q1 call (grade C, MRK:companies/MRK/transcripts/2025Q1_transcript.md p.14) said Merck holds U.S. Keytruda inventory 'to protect us through all of 2025' and has prepared drug substance and drug product for 2026-2027 against tariffs, which fits a RM/WIP build. The $0.24/share 'per 10% write-down' is a hypothetical sensitivity, not a sourced figure, and is pre-tax. Comparing a stock's growth to a flow's growth ('15x faster') is a framing, not a ratio of like items; days-of-inventory is the right metric.",
+   "correction": "Total inventory rose $2.0B (+19.8%; about +15% excluding $522M acquired with Verona) and inventory not expected to sell within a year rose from $3.8B (Dec 2024) to $5.9B (Jun 2026), lifting days on cost of sales from 248 to 275. Management tied a U.S. stockpile to tariff protection on a grade-C call, and write-downs (primarily vaccines) are already hitting gross margin in 2025 and 1H26; the open question is whether the long-dated RM/WIP pool (likely Keytruda drug substance) faces further write-downs. Any per-share figure is an illustrative sensitivity.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "MRK:companies/MRK/10q_2025Q2.md",
+     "page": 18
+    },
+    {
+     "doc_id": "MRK:companies/MRK/10q_2025Q2.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 80
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 79
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 38
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 62
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:earnings/2026-08-04_tm2621496d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:earnings/2026-02-03_tm264564d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 2
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 108
+    }
+   ]
+  },
+  {
+   "id": "MRK-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The cited line is the right kind of number: MRK:10k_FY2025.md p.85 gives the year's U.S. provision (flow) for chargebacks and rebates, $10.0B (2025) vs $13.3B (2024), not the balance sheet accrual (which is the separate $1.5B vs $2.2B line on the same page). U.S. net sales 36,510 vs 32,277 (+4,233) confirmed on p.134. So 3.3/4.233 = 78% is arithmetically correct as an identity (change in net = change in sales before CB/rebates minus change in provision). The inference 'rather than gross demand' does not follow. 10-K p.61 says Merck cut the Januvia-family list price in early 2025 to align with net, which reduced Medicaid rebates (that exceeded Medicaid sales in 2024 after the AMP-cap removal). A list-price cut lowers gross sales and the rebate provision together, so a large part of the $3.3B provision fall is offset by an equal fall in gross, and the 'gross proxy' (+$0.9B, +2.0%) is depressed by the same cut. The decomposition cannot separate a genuine net-price gain from a list-price reset, so 78% overstates the discount-narrowing tailwind; the true net gain from Januvia is bounded by its U.S. net change (+530 Januvia, +107 Janumet, p.134). 'Already reversing' is confounded: MRK:10q_2026Q2.md p.38 attributes the Q2-26 decline to volume and lower net pricing, and Januvia/Janumet lost U.S. exclusivity in May 2026; the -$67M Q2 Januvia U.S. drop is about 2% of the $3.3B. The BMS rate (BMY:10k_FY2025.md p.49, U.S. GTN 49% to 53%) is a full-GTN rate on gross sales, while Merck's 29.2%/21.5% is a constructed CB+rebate-only proxy, so the peer contrast is direction-only.",
+   "correction": "Merck's U.S. chargeback and rebate provision (annual flow) fell $3.3B in 2025 while U.S. net sales rose $4.2B; part of the fall reflects the early-2025 Januvia list-price cut, which lowers gross sales and rebates together, plus an unquantified one-time Januvia true-up. The share of 2025 U.S. growth that came from net-price gains rather than volume cannot be computed from the filings; the identifiable non-recurring piece is within Januvia/Janumet's +$0.64B U.S. gain, now overtaken by the May 2026 LOE.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 85
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 61
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 49
+    }
+   ]
+  },
+  {
+   "id": "MRK-c03",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Confirmed: MRK:10k_FY2025.md p.131 and MRK:10q_2026Q2.md p.25 both state NOPAs of ~$1.3B transition tax plus ~$260M penalties, exclusive of interest (received April 2025). Share count 2,470M is the Q2-26 diluted average on 10-Q p.25 (equal to basic because Q2-26 was a loss quarter); FY2025 diluted was higher (~2.5B), so $1,560/2,470 = $0.63 is right within a cent or two. Caveats: (a) tax and penalties hit net income directly, so $0.63 is after-tax, but it is a gross ceiling: the 10-K p.131 shows $2.53B of unrecognized tax benefits at Dec 2025 and $546M of accrued interest and penalties, and does not say how much relates to the NOPA, so the incremental P&L hit could be smaller; cash could still be ~$1.6B plus interest. (b) Denominator: Merck's non-GAAP excludes 'certain other items', so 0.63/8.98 = 7% compares a likely-GAAP item to non-GAAP EPS; against GAAP $7.28 (10-K p.49) it is 8.7%. (c) The FY2024 to FY2025 wording change (p.40 vs p.41) reflects the April 2025 NOPA receipt, an event, not drift; the genuine hardening is 10-K FY2025 ('all available administrative and, if necessary, judicial') to 10-Q Q2-26 ('uncertain whether a resolution can be reached during this phase'). One-time item, correctly labeled one-time.",
+   "correction": "IRS NOPAs propose $1.3B extra transition tax plus $260M penalties before interest, a gross ceiling of ~$0.63/share (on 2,470M Q2-26 shares, ~8.7% of FY2025 GAAP EPS) one time, before any portion already reserved in Merck's $2.53B unrecognized-tax-benefit balance; Q2-26 language signals the matter likely goes to court.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 49
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 40
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "id": "MRK-c04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Facts confirmed: German preliminary injunction (Dec 2025) on MRK:10k_FY2025.md p.118; appeal timing 'Q2 2026' (10-K p.118) -> 'Q2 or Q3 2026' (MRK:10q_2026Q1.md p.22) -> hearing 'November 19, 2026' (MRK:10q_2026Q2.md p.22). That is two slips across three filings, not 'slipped three filings in a row'. The Dutch counterclaim covering seven more markets was already disclosed in the Q1-26 10-Q (Feb 2026), so it is not a Q2 widening. Materiality fails the lens: total ex-U.S. Qlex sales are $68M in Q2-26 (10-Q p.28), about 0.4% of quarterly company sales, and Germany cannot be sized because Merck does not report country sales. The '$132M per 1 point of international SC share' is a scaled hypothetical on annualized IV Keytruda, not a sourced figure, and the economic effect lands on EU LOE defense years out. No number on any cited page shows an impact of 1% of revenue or a few cents of EPS in the forecast window.",
+   "correction": "Halozyme's German preliminary injunction blocks Keytruda SC in Germany pending a Nov 19, 2026 appeal hearing (two timing slips), and a Dutch-court decision on seven more EU markets is due by about end-Oct 2026; current ex-U.S. Qlex sales are $68M a quarter, so near-term revenue impact is small and the long-run effect on EU biosimilar defense is unsized.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 118
+    },
+    {
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "id": "MRK-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Shares recompute from MRK:10q_2026Q2.md p.28: Q2-26 Keytruda U.S. 4,611, Qlex U.S. 395 -> 7.9%; global 463/(7,904+463) = 5.5%. Quotes confirmed (MRK:transcripts/2025Q4_transcript.md p.11 Davis, grade A; MRK:transcripts/2026Q2_transcript.md p.4 Litchfield, grade A; MRK:10k_FY2025.md p.31). The 'ceiling' conclusion is not supported by the math: (1) 'two quarters after its J-code' is wrong; the permanent J-code took effect April 2026, so Q2-26 is the first quarter with it. (2) The same table gives 1H26 Qlex U.S. 501, so Q1-26 U.S. Qlex was 106 against IV 4,599 (2.3%); share more than tripled to 7.9% in one quarter. A level in the first J-code quarter compared to a 2028 target is a level-vs-endpoint mix, and the observed quarter-on-quarter ramp points toward, not away from, 30-40%. (3) The '$1.9B per 10 points' and '27 points / ~$5.1B gap' are scaled hypotheticals on 2025 U.S. IV Keytruda; the 27-point 'gap' measures distance to a 2028 target from a mid-2026 level, not a shortfall. (4) The 10-K p.31 phrase 'lower than expected utilization of Keytruda Qlex' sits in a generic list of example events for key products ('Other events could include ...'), a routine addition for a newly launched product, not a specific warning.",
+   "correction": "Keytruda Qlex reached 7.9% of U.S. Keytruda-family sales in Q2-26, its first quarter with a permanent J-code, up from about 2.3% in Q1-26; early use is mostly monotherapy or oral combinations per the CFO. Whether combination-chemo settings convert is the open variable for the 30-40% 2028 target; the per-10-point revenue figure is an illustrative sensitivity.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "MRK-c06",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Terms confirmed verbatim on MRK:10q_2026Q2.md p.32: launches during the three-year MFN Agreement term are subject to MFN pricing 'with certain exceptions', plus a commitment to 'repatriate and share' a portion of foreign revenue; Lipfendra approval on p.37. BMS terms confirmed on BMY:10k_FY2025.md p.21. Materiality is not demonstrated: no MFN price, basket or sharing formula is disclosed, and the '$100M per $1B of launch revenue per 10%' line is pure arithmetic on an assumed base, not a sourced estimate. The '$70B, 20+ products' base (MRK:transcripts/2026Q2_transcript.md p.13) is a multi-year peak commercial opportunity, most of which launches after a three-year term that started Dec 2025, and some product types may fall under 'certain exceptions'; using it as the exposed base overstates reach. Kept as a qualitative risk because the terms are real and unusual vs BMS.",
+   "correction": "Merck's December 2025 MFN Agreement subjects in-term launches (to about Dec 2028, with unspecified exceptions) such as Lipfendra to MFN-country reference pricing and commits Merck to share some foreign revenue with the U.S. government; neither the price reference nor the sharing formula is disclosed, so the impact is unsized and applies to in-term launches only, not the full $70B pipeline.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 21
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "id": "MRK-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Facts confirmed on MRK:10q_2026Q2.md p.35 (rotavirus, hep A, hep B under shared clinical decision-making; AHIP no-cost-sharing pledge through end-2027; March 16, 2026 preliminary injunction staying the schedule changes) and RotaTeq U.S. $426M in 2025 (MRK:10k_FY2025.md p.134). The candidate's own bound kills it on materiality: even a total loss of U.S. RotaTeq is 426/65,011 = 0.7% of sales, below the 1% rule of thumb, and the '10% volume = $43M' line is a hypothetical with no uptake data. Hepatitis vaccines are not broken out. The schedule change is currently stayed by a court, so the end-2027 'cliff' is conditional. The large U.S. pediatric lines (ProQuad/MMR/Varivax $1,885M, Gardasil) remain 'recommended for all children'.",
+   "correction": "CDC moved rotavirus and hepatitis A/B to shared clinical decision-making (currently stayed by a district court), with insurer no-cost coverage pledged through end-2027; Merck's directly exposed U.S. sales are RotaTeq ($426M, 0.7% of sales) plus unbroken-out hepatitis vaccines, so even a severe outcome is below 1% of revenue.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "id": "MRK-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Facts confirmed: Koselugo $150M upfront + $175M milestones in 2025 Sales (MRK:10k_FY2025.md p.55); $150M in Feb 2026 in Sales (MRK:10q_2026Q1.md p.7); Koselugo alliance revenue $161M Q1-26 vs $44M, $10M Q2-26 vs $43M (10-Q Q1 p.26, Q2 p.28); optional $150M Q1-27 and $100M Q1-28 at AstraZeneca's election (10-K p.93). Belsomra, Pifeltro and Pneumovax 23 no longer appear as lines in the 2026 10-Q tables (checked Q1 p.26 and Q2 p.28). But the candidate's own estimate is $0.15-0.25B a year, 0.2-0.4% of sales; the folded products total $523M (0.8%) and are already shrinking. The Q1-26 Koselugo swing (+$117M) is about 0.7% of Q1 sales. Note also that the $175M milestones were all recognized in 2025 although cash arrives 2026-2028 (10-K p.93), so there is no further milestone revenue to fall away. Below the materiality bar.",
+   "correction": "Merck now books Koselugo restructuring payments as lump-sum alliance revenue ($325M in 2025, $150M in Q1-26, optional $150M/$100M in Q1-27/Q1-28) and folded Belsomra, Pifeltro and Pneumovax 23 into 'Other'; the total effect is about 0.2-0.4% of annual sales and mainly distorts Q1 comparisons.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 55
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 93
+    },
+    {
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 7
+    },
+    {
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 26
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    }
+   ]
+  },
+  {
+   "id": "MRK-c09",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "The date shift is on the cited pages: MRK:10k_FY2024.md p.32 'in 2026 HHS will include Keytruda ... effective on January 1, 2028 ... decline after that time' vs MRK:10k_FY2025.md p.33 'in 2027 ... effective on January 1, 2029 ... decline materially'; Davis repeats 'IRA as of the beginning of 2029' (MRK:transcripts/2025Q4_transcript.md p.11, grade A), so it is in a filing, not only a call. Math problems: the $5,988.5M base is a raw CMS fact row (rx/partb_providers_by_drug.csv#948, 2024 Medicare Part B allowed spend for J9271), not a cited page, and it is a gross payment amount (ASP+6%, including beneficiary coinsurance), not Merck net revenue, so 33.5% of U.S. sales is an upper bound as the reader says. '$0.6B per 10 points of IRA discount avoided' is a scaled sensitivity with no sourced discount and uses 2024 spend for a 2028 effect. The direction (one more year before IRA pricing, both shocks stacked in 2029) is sound.",
+   "correction": "Merck's FY2025 10-K moved its expected Keytruda IRA price date from Jan 1, 2028 to Jan 1, 2029 and now says U.S. sales will 'decline materially' after that; Medicare Part B spend on IV Keytruda ($6.0B gross in 2024, CMS table) bounds the exposed base, but the size of the 2028 benefit depends on an IRA discount not in the sources.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 30
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    }
+   ]
+  },
+  {
+   "id": "MRK-c10",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Label facts confirmed: Qlex 395 mg q3w over 1 min / 790 mg q6w over 2 min (drug:keytruda-qlex:label_sections.md p.22), hyaluronidase-hypersensitivity contraindication (p.26), IV Keytruda 200 mg q3w (drug:keytruda:label_sections.md p.23), Qlex solid tumors only (MRK:10k_FY2025.md p.4 lists cHL and PMBCL for IV). The 4.1% Medicare premium does not rest on any cited page: it is computed from derived table rows fact:pricing/gtn_proxy.csv#8 (IV, $60.96875/mg, 4-quarter 2026 mean) and #9 (Qlex, $32.12533/mg, 3-quarter mean). The two rows average different numbers of quarters, and Qlex's early quarters fall in its launch period before a permanent J-code (April 2026), when payment limits for new products are typically set off WAC rather than ASP, so the per-mg figure may not reflect settled ASP. The arithmetic itself is right (200 x 60.96875 = $12,194; 395 x 32.12533 = $12,690; +4.1%; the q6w doses give the same ratio). It also ignores the drug-administration fee difference between an IV infusion and an SC injection, so 'payer saves nothing' is about the drug line only. The convenience and label differences are real but carry no revenue number (cHL/PMBCL share of Keytruda is not disclosed), so materiality rests on c05.",
+   "correction": "Per CMS payment-limit data (derived table, Qlex based on 3 partly launch-period quarters), Medicare's drug payment per Qlex dose is roughly at parity with IV Keytruda (about +4%, provisional), not visibly discounted, despite management saying Qlex is priced to drive conversion; Qlex's label excludes cHL and PMBCL and adds a hyaluronidase-hypersensitivity contraindication.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "drug:keytruda:label_sections.md",
+     "page": 23
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "product",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Keytruda is clearly material: $31,641M of $65,011M 2025 sales = 48.7% (MRK:10k_FY2025.md p.134), U.S. $18,829M. The fine-print edge is accurate on the label pages (drug:keytruda-qlex:label_sections.md p.22, p.26; MRK:10k_FY2025.md p.4) but its pieces are small in dollars: the cHL/PMBCL carve-out and the hyaluronidase contraindication have no sales figures, and Opdivo Qvantig's ipilimumab carve-out was not sized. The pick is right; the money in it runs through Qlex conversion speed (c05) and SC IP (c04), not the contraindication.",
+   "correction": "Product pick holds (Keytruda/Qlex, 49% of sales); rest the fine-print edge on Qlex dosing convenience vs Opdivo Qvantig and its narrower indication set, and drop the contraindication as a value driver.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 4
+    }
+   ]
+  }
+ ],
+ "overall": "Merck's raw numbers are almost all on the cited pages and recompute, but several conclusions overreach: the 78% gross-to-net figure is a valid identity that cannot separate a narrowing discount gap from the 2025 Januvia list-price cut, and the Qlex 'ceiling' ignores a jump from 2.3% to 7.9% U.S. share in the first J-code quarter. Inventory build (c01, ~$2B, partly Verona) and the IRS NOPA (c03, ~$0.63/share ceiling) are the material survivors; vaccines, Koselugo and the German injunction are each below 1% of sales, and every 'per 10%' figure in the set is an illustrative sensitivity, not a sourced estimate."
+}

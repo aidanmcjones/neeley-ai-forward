@@ -1,0 +1,351 @@
+{
+ "ticker": "AMGN",
+ "lens": "obviousness",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "AMGN-c01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Wording change is real (verified 'to the extent that those prices are included in MFN calculations, such inclusion may affect our strategy with respect to such jurisdictions' on AMGN:10k_FY2025.md p.46, printed 40). But the implication, that MFN reference pricing will reshape ex-U.S. launch and pricing strategy, is an industry-wide 2025 headline that every shortlist company carries to the same degree: Merck 10-K FY2025 p.31 (MRK:10k_FY2025.md p.33) says products launched under its MFN Agreement are priced off MFN Countries; BMY 10-K FY2025 p.19 (BMY:10k_FY2025.md p.21) commits to 'a more balanced pricing approach for new launches across developed nations'; Regeneron 10-K p.42 (REGN:10k_FY2025.md p.43) describes the July 2025 letter's demand to 'guarantee MFN pricing for newly launched drugs'. Amgen's own MFN press release (AMGN:policy/press_2025-12-19_mfn_agreement.md p.1) says the deal 'satisfies the components outlined in President Trump's July 31 letter, including the Administration's Most Favored Nation pricing requests'. MFN was asked on the 2025Q2 call (Salveen Richter, Goldman, on Medicaid MFN; AMGN:companies/AMGN/transcripts/2025Q2_transcript.md p.5, grade C) and the topic is 'rarely asked', not never asked (fact:market/never_asked.csv#12). The deleted phrase 'As we expand internationally' is a stylistic edit with no number attached. The reader's own confidence note concedes Merck says it more plainly.",
+   "correction": "At most: Amgen alone among peers uses a vague one-line 'may affect our strategy' rather than naming launch delay. That is a disclosure-quality footnote, not a finding about Amgen's economics; the $0.85B 'ROW growth at risk' is a scenario with no Amgen-specific evidence.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 46
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 21
+    },
+    {
+     "doc_id": "REGN:10k_FY2025.md",
+     "page": 43
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q2_transcript.md",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c02",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Half of this is said plainly. Enbrel's net-price collapse is the IRA headline: the 2026Q2 call (AMGN:transcripts/2026Q2_transcript.md p.1, grade C) reports Enbrel down 4% 'primarily due to a 22% lower net selling price from Medicare Part D price setting' and quotes the earnings release saying the same; on that call Murdo Gordon said 'We are seeing definitely some pressure on price with Otezla given some 340B exposure'. On the 2025Q4 call (AMGN:transcripts/2025Q4_transcript.md p.1, grade C) the CFO's 2026 guidance named 'price declines for certain other products' and 'continued increases in 340B program utilization'. So the Enbrel and 340B legs are priced into guidance (consensus revenue mean $38.88B sits inside guidance $38.2-39.4B, fact:market/consensus_vs_guidance.csv#3). What is not said on any call: the aggregate deduction rate rising to 54% of gross (verified on AMGN:10k_FY2025.md p.83, printed 77), rebates charged up ~25% vs net sales up ~10%, and the year-end rebate accrual up ~30% with the new 'timing of payments' explanation (verified, same page; the FY2024 page 83 said only 'higher gross sales'). Gross-to-net was asked on 1 of 10 calls, last in 2024Q3 (fact:market/never_asked.csv#14). Searched 2025Q3 (A), 2025Q4, 2026Q1, 2026Q2 call text: no 'gross-to-net' or deduction-rate figure.",
+   "correction": "Drop the Enbrel net-price and 340B framing as the hook (headline, guided). Keep the narrow claim: company-wide deductions rose ~1.9 pts to 54% of gross sales and the rebate accrual grew ~3x faster than net sales, with a new 'timing of payments' explanation, none of which management quantified on a call.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:10k_FY2024.md",
+     "page": 83
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c03",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Partly said, but the core is not. Said: in 2025Q3 prepared remarks Murdo Gordon said 'Tepezza grew 15% to $560 million in the quarter, driven by increases in inventory and price' (AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p.6, grade A); on the 2025Q4 call the CFO flagged 'roughly $250 million of inventory build in 2025, that could potentially impact first-quarter sales' and said 'TEPEZZA grew 3% to $1.9 billion in 25 driven by higher net selling price' (AMGN:transcripts/2025Q4_transcript.md p.1, grade C), so price-led, not volume-led, growth was disclosed. The U.S. -4% is a row in the 10-K product table (AMGN:10k_FY2025.md p.73). Not said: the 10-Q line that Q1 2026 TEPEZZA growth 'was driven by a 22% impact from higher inventory' (verified, AMGN:10q_2026Q1.md p.37, printed 33). The 2026Q1 call (AMGN:transcripts/2026Q1_transcript.md p.1, grade C) credited 29% U.S. growth to 'interest in new subcutaneous delivery data and expanded specialist prescribing' and mentioned channel inventory only for TEZSPIRE ('partially offset by a burn in channel inventory'). Inventory/channel was never asked on any of 10 calls (fact:market/never_asked.csv#16). The call narrative and the 10-Q driver disagree, and no analyst probed it.",
+   "correction": "Narrow to Q1 2026: 22 of 29 points of TEPEZZA growth were wholesaler stocking per the 10-Q while the call attributed growth to demand. Drop 'not said' for 2025, since management named inventory and price as 2025 drivers.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 37
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 40
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 73
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The 'Other products' row is real (verified 'Other products (3)' on AMGN:10k_FY2025.md p.119, F-16), but the claim that it hides what investors need fails because management reads out the pieces on every call. TAVNEOS: '$459 million with a 62% year-over-year increase' for FY2025 (AMGN:transcripts/2025Q4_transcript.md p.1, grade C), $119 million in Q1 2026 (AMGN:transcripts/2026Q1_transcript.md p.1), $107 million in Q3 2025 (AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p.6, grade A). UPLIZNA: '$262 million', up 188%, in Q1 2026 (2026Q1 call p.1). Rare disease portfolio and biosimilars totals are also given on calls. Subtracting named rows from a total is mechanical. Top products are 'routinely asked', 72 analyst turns over 10 quarters (fact:market/priced_in_scorecard.csv#19). The reader did not compute peer bucket shares, so 'large exception' is untested.",
+   "correction": "True only as a filing-format note: TAVNEOS sales are given on calls but never in a filing table. That does not make the bucket unmodelable.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 119
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The case is a public headline, and both of the reader's 'non-obvious' angles were addressed on calls. (1) The harsher audit method was said in the 2026Q1 CFO prepared remarks (AMGN:transcripts/2026Q1_transcript.md p.1, grade C): 'its draft calculation methodology is inconsistent with the positions asserted by the IRS and the Tax Court, which positions were more favorable to Amgen'. So the reader's 'only the draft NOPA was said on a call' is wrong. (2) Accrual gap: the CFO answered reserve adequacy directly in Q&A when Carter Gould (Barclays) asked after the Koch ruling, 'We're confident our reserves are at, at an appropriate level' (AMGN:companies/AMGN/transcripts/2024Q2_transcript.md p.15, grade C). He repeated 'our tax reserves are appropriate' on the 2026Q1 call. The 10-K itself states the outcome 'may result in payments substantially greater than amounts accrued' (AMGN:10k_FY2025.md p.85, printed 79). The $800M deposit 'to stop the accrual of interest' was in 2024Q1 prepared remarks (AMGN:companies/AMGN/transcripts/2024Q1_transcript.md p.9). The $7.6B-vs-$6.3B comparison also sets a single case before interest against total UTBs plus interest for all positions, so it is not a clean gap. Market check: the Q1 2026 release and 10-Q that first carried the NOPA drew abnormal returns of -4.1% and -5.6% (fact:market/event_returns.csv#35, #37), so the escalation was reacted to as it was disclosed (other news was in the same window). What is only in filings: the decision slip from 'no earlier than the second half of 2026' (AMGN:10q_2026Q1.md p.14) to 'no earlier than late 2026 or early 2027' (verified, AMGN:10q_2026Q2.md p.17), the NOPA 'reissued in substantially the same form' in May and July 2026, and the 2019-2022 audit starting in Q2 2026 (AMGN:10q_2026Q2.md p.18). The supplemental-brief order was already in the Q1 10-Q, not new in Q2.",
+   "correction": "Narrow to a timing update: the Tax Court decision slipped by about a quarter to late 2026 or early 2027, the 2016-2018 NOPA was formally reissued twice, and the 2019-2022 audit began. None of this was said on the 2026Q2 call. It is a footnote refresh of a known risk, not a new angle; drop the accrual-gap framing.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q2_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q1_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 85
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 14
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q1.md",
+     "page": 15
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 17
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 18
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c06",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "The FDA action is a headline and was said on calls: 'As publicly disclosed, the FDA proposed to withdraw the approval of Tabneos' (Bradner, AMGN:transcripts/2026Q1_transcript.md p.1, grade C). The 2026Q2 call summary reports Amgen 'continues to engage with the FDA regarding a request to voluntarily withdraw TAVNEOS from the U.S. market' (AMGN:transcripts/2026Q2_transcript.md p.1, grade C). Bradway called it 'a very small product in our portfolio' in 2025Q4 Q&A after an analyst challenged the ADVOCATE re-adjudication (AMGN:transcripts/2025Q4_transcript.md p.1). The angle that goes past a press-release skim holds: searched every AMGN call, the 2026Q2 slides and the shareholder letter for 'carrying value', 'intangible', 'impair' next to TAVNEOS and found none. The $2.4B ($2.3B U.S.) figure and the new 'observations with respect to new U.S. patient interest' sentence appear only in the intangibles note (verified, AMGN:10q_2026Q2.md p.21, printed 16; AMGN:10k_FY2025.md p.137). Market check: on the day of the CDER proposal (2026-04-27) AMGN fell only from 339.96 to 335.65, about -1.3% (fact:tables/prices_daily.csv#15243, #15244), consistent with the market treating it as a small-revenue issue. Caveat: Amgen's non-GAAP EPS excludes impairments (Otezla's $1.2B was excluded, AMGN:presentations/2026-03_shareholder_letter.md p.1), so a write-off would not move I/B/E/S non-GAAP consensus. The non-obvious part is the GAAP and balance-sheet size, not an earnings-estimate miss.",
+   "correction": "Use FY2025 TAVNEOS sales of $459M (2025Q4 call), not 4 x $107M, so carrying value / sales is about 5x, not 5.6x. Add that the FDA moved from a proposal to a request for voluntary withdrawal (2026Q2 call), which the Q2 10-Q note does not mention. Frame the impact as a GAAP and book-value hit that non-GAAP consensus excludes.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 137
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:presentations/2026Q2_earnings_slides.md",
+     "page": 27
+    },
+    {
+     "doc_id": "AMGN:presentations/2026-03_shareholder_letter.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Management says this plainly every year and builds it into margin guidance. 2024Q2: 'Non-GAAP cost of sales as a percent of product sales increased 0.4% points ... primarily driven by higher royalties and profit share due to changes in sales mix' (AMGN:companies/AMGN/transcripts/2024Q2_transcript.md p.8). 2024Q4 guidance: cost of sales 18-19% of product sales 'reflects the ongoing impact of sales mix, including profit share and royalties' (AMGN:companies/AMGN/transcripts/2024Q4_transcript.md p.8, grade B, Peter Griffith). 2026Q1: cost of sales 19.5% 'driven by higher profit share and royalty expenses ... We expect these factors will continue to negatively impact the cost of sales in future quarters' (AMGN:transcripts/2026Q1_transcript.md p.1). The 10-Q itself says 'higher profit share expense and changes in our sales mix' (AMGN:10q_2026Q2.md p.37). The 50/50 UCB and AstraZeneca splits are long-public collaboration terms. Consensus models margin off this guidance. The only footnote-only element is the dollar split by partner (verified $721M and $587M, AMGN:10k_FY2025.md p.131-132).",
+   "correction": "At most a quantification of a guided headwind: about a third of EVENITY+TEZSPIRE incremental sales went to partners in 2025. The direction and the forward drag are management's own words.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q2_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2024Q4_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 132
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c08",
+   "refuted": false,
+   "severity": "major",
+   "argument": "The SEC exchange is real and obscure: 'we will accordingly refine the level of detail in these disclosures' (verified, AMGN:companies/AMGN/sec_letters/2024-04-22_CORRESP_0001193125-24-105075.md p.3). No call or release in the index mentions it. Note it is already a pre-built row in the verified table, flagged finding_candidate = yes (fact:secx/comment_letter_findings.csv#6), so any team with this dataset is handed it. Two parts of the candidate do not survive. (a) 'True-up sizes are ... not in call scripts' is false for 2025Q3: CFO Peter Griffith said the quarter 'benefited from discrete items, including roughly $250 million from favorable changes to U.S. estimated sales deductions' (AMGN:companies/AMGN/transcripts/2025Q3_transcript.md p.3, grade A). So the market was told these are discrete. (b) The fall in net-price talk lags the letter: by my count of 'net selling price|net price', the 2024Q1 and 2024Q2 calls, both held after Amgen's April 2024 reply, still had 5 mentions each. The drop starts in 2024Q4 (3), then 2025Q1 1, 2025Q3 0, 2026Q1 0. The 2026Q2 call still quotes a product-level figure (Enbrel 'a 22% lower net selling price', AMGN:transcripts/2026Q2_transcript.md p.1). What holds: the Q2 2026 true-ups (Enbrel +16%, verified on AMGN:10q_2026Q2.md p.40) were not flagged on the 2026Q2 call (0 'sales deduction' mentions, grade C).",
+   "correction": "Narrow to: after promising the SEC to 'refine' call detail, Amgen's call commentary on product net price thinned from 2024Q4. Q2 2026 product growth included about $130M of favorable deduction true-ups that, unlike the $250M in Q3 2025, the CFO did not call out. Drop the claim that true-ups never appear in call scripts.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:companies/AMGN/sec_letters/2024-04-22_CORRESP_0001193125-24-105075.md",
+     "page": 3
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/sec_letters/2024-04-05_UPLOAD_0000000000-24-003674.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:companies/AMGN/transcripts/2025Q3_transcript.md",
+     "page": 3
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10q_2026Q2.md",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c09",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Label breadth is management's lead message. 2026Q2 prepared remarks: Repatha is 'the only PCSK9 targeting therapy with outcomes data in both primary and secondary prevention' (AMGN:transcripts/2026Q2_transcript.md p.1). 2025Q4 Q&A answering Salveen Richter on Merck's oral PCSK9: 'we are the only PCS[K9] that has both secondary and primary prevention data in our label' (AMGN:transcripts/2025Q4_transcript.md p.1). Analysts asked for the Lipfendra label comparison on 2026Q2 (Morgan Stanley, same page). Price: the 2026 mid-single-digit net-price decline is stated in the 10-K MD&A (verified, AMGN:10k_FY2025.md p.71, printed 65). The $239 AmgenNow price 'nearly 60% below its current U.S. list price' is a press-release headline (AMGN:policy/press_2025-10-06_amgennow_repatha.md p.1; repeated in AMGN:policy/press_2025-12-19_mfn_agreement.md p.1) and was discussed in 2026Q1 Q&A (AMGN:transcripts/2026Q1_transcript.md p.1). The one detail not said is Lipfendra's fasting rule, which is a label lookup.",
+   "correction": "Only the observation that management answered the label half of the 2026Q2 Lipfendra question but not the contracting half has any non-obvious content, and that rests on a grade-C transcript.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 71
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-10-06_amgennow_repatha.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "AMGN-c10",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The parts are headlines. Tariff relief is the last line of the Dec 19 2025 press release: 'In recognition of these continued investments, Amgen will receive relief from industry-specific tariffs for the next three years' (AMGN:policy/press_2025-12-19_mfn_agreement.md p.1). The same release cites '$2.5 billion in U.S. manufacturing capital investments, including expansions of $900 million in Ohio and $1 billion in North Carolina'. A May 2026 release adds $300M, 'totaling nearly $2 billion over the last year' (AMGN:policy/press_2026-05-04_pr_manufacturing_300m.md p.1). So 'without a forward investment pledge' is a framing difference: Amgen tied the relief to announced U.S. capex, not to Puerto Rico. Enbrel and Otezla IRA selections are public CMS announcements. The IRS Puerto Rico case is public (see c05). The 'one asset' link is a narrative with no number, and the press release's own basis for relief (Ohio and North Carolina capex) weakens it. Tariffs were never asked on a call (fact:market/never_asked.csv#18), but that reflects low relevance as much as hidden risk.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:policy/press_2026-05-04_pr_manufacturing_300m.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 68
+    },
+    {
+     "doc_id": "AMGN:10k_FY2025.md",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "id": "product",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Repatha vs Praluent, Leqvio and Lipfendra: the fine-print edge (CV outcomes in primary and secondary prevention, versus LDL-only rivals) is the company's own prepared-remarks message on 2025Q4 and 2026Q2 (AMGN:transcripts/2025Q4_transcript.md p.1; AMGN:transcripts/2026Q2_transcript.md p.1). Analysts asked about the Merck oral PCSK9 label on both calls. HoFH from age 10 and Lipfendra's 30-minute fasting rule are true label details (drug:lipfendra:label_sections.md p.3) but are read directly off section 1/2.2 of public labels.",
+   "correction": "If kept, lead with the less-marketed details (Repatha pediatric HoFH from age 10 vs Praluent adults only; Lipfendra fasting administration) and tie them to the unexplained 7% Q1 2026 net-price decline, not to the primary-prevention claim management already makes.",
+   "pages_checked": [
+    {
+     "doc_id": "AMGN:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "AMGN:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "drug:lipfendra:label_sections.md",
+     "page": 3
+    },
+    {
+     "doc_id": "drug:repatha:label_sections.md",
+     "page": 1
+    }
+   ]
+  }
+ ],
+ "overall": "Most of Amgen's material is a footnote refresh of risks that are already public and that management addresses on calls: the IRS Puerto Rico case, including reserve adequacy and the harsher audit method; the TAVNEOS FDA action; Enbrel IRA price; profit-share drag on margins; and Repatha label leadership. What survives is narrow and comes only from filings: TEPEZZA's Q1 2026 growth was mostly channel stocking while the call credited demand (least obvious), the $2.3B U.S. TAVNEOS carrying value that calls never mention, the company-wide deduction-rate and rebate-accrual build, and Q2 2026 true-ups that went unflagged on the call."
+}

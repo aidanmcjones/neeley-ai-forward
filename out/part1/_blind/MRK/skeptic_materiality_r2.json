@@ -1,0 +1,502 @@
+{
+ "ticker": "MRK",
+ "lens": "materiality",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "MRK-c01",
+   "refuted": false,
+   "severity": "major",
+   "argument": "Checked the obviousness skeptic's sources. MRK:transcripts/2026Q2_transcript.md p.5 (grade A, Litchfield): non-GAAP GM 81.1%, down 1.1 pts 'primarily due to higher inventory reserves', FY GM now ~81%. MRK:presentations/2026Q2_earnings_slides.md p.18: GM guide cut from ~82.0% to ~81.0%, 'Now includes higher inventory reserves'; revenue guide $66.3-67.3B, shares ~2.48B. Write-offs/write-downs are named in the Q3-25, Q4-25 and Q2-26 releases (p.1 each). So the 2026 reserve step-up is guided: ~1 pt x ~$66.8B midpoint = ~$0.67B pre-tax, ~$0.27/share pre-tax on 2.48B shares, already in consensus. Netting: (a) Verona's $522M (10-K p.89) is $498M fair-value step-up on a marketed product; it sits in total inventory and flows through cost of sales as Ohtuvayre is sold, so it explains about a quarter of the $2.0B total rise but is unlikely to be in the long-dated RM/WIP pool. (b) The long-dated pool rose $2.1B in 18 months ($3.8B Dec-24 to $5.9B Jun-26, 10-K p.107 / 10-Q p.19), which Verona does not explain. (c) The guided ~$0.67B of reserves is labeled 'primarily vaccines' in the 10-Q p.39, so it is not shown to cover the RM/WIP build. Material on working capital ($2.1B is ~3% of sales; days on cost of sales 248 to 275). The incremental earnings risk beyond guided reserves is real but unsized; any per-share write-down number stays illustrative.",
+   "correction": "Long-dated inventory rose $2.1B to $5.9B in 18 months (organic, not Verona), lifting inventory days from 248 to 275; 2026 guidance already absorbs ~1 pt of gross margin (~$0.67B pre-tax) of higher reserves, mainly vaccines. The finding is the unexplained long-dated RM/WIP pool and whether it needs reserves beyond those guided; it is not 'write-downs have not started'.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 107
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "MRK:companies/MRK/10q_2025Q2.md",
+     "page": 18
+    },
+    {
+     "doc_id": "MRK:companies/MRK/10q_2025Q2.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 80
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 79
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 38
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 62
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:earnings/2026-08-04_tm2621496d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:earnings/2026-02-03_tm264564d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 2
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 108
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 18
+    },
+    {
+     "doc_id": "MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Write-offs are in every release since Q3-25, and the CFO cut FY gross-margin guidance by about 1 point for inventory reserves on the A-grade Q2-26 call (verified p.5 and slide p.18). The reader's write-down sensitivity is partly booked and guided.",
+    "held": "Still material net of both adjustments. Verona's $522M is mostly step-up on a marketed product and does not explain the $2.1B rise in the long-dated RM/WIP pool. The guided reserves (~$0.67B) are tied to vaccines, not shown to cover that pool.",
+    "narrowed": "Material on cash and working capital. The earnings tail risk beyond the guided reserves is unsized, so present it as a question with no per-share figure."
+   }
+  },
+  {
+   "id": "MRK-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Their sources confirm my round-1 mechanism. On the grade-C Q4-24 call (p.5) the CFO pre-announced the early-2025 Januvia list-price cut and higher 2025 Januvia net sales; on the grade-C Q1-25 call (p.5) she cited '>$100 million from favorable one-time true-ups'. The ~$2.5B 2026 headwind, including Januvia generics, is on MRK:transcripts/2025Q4_transcript.md p.6 (A). That gives one sized one-off (~$0.1B, grade C) against the $3.3B provision fall. Their residual angle needs a check: $3.3B against Januvia/Janumet U.S. net +$0.64B. Because a list cut lowers gross and provision together, the Januvia share of the $3.3B could be far larger than its +$0.64B net gain. So the 'non-Januvia residual' cannot be backed out by subtraction either. Without a product bridge, no residual is supportable.",
+   "correction": "Merck's U.S. chargeback and rebate provision fell $3.3B in 2025, largely tied to the pre-announced Januvia list-price cut (which shrinks gross and rebates together) and >$100M of one-time true-ups; the 2026 unwind is in guidance. No non-Januvia residual can be sized from the sources.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 85
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 61
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 49
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2024Q4_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 6
+    }
+   ],
+   "round2": {
+    "conceded": "The list-price cut and its effect on Medicaid rebates were stated by the CFO before the year began, and the true-up was sized at >$100M on the Q1-25 call (grade C). The unwind is in the ~$2.5B 2026 headwind guide.",
+    "held": "The 78% figure is still an accounting identity that overstates the discount-narrowing tailwind; refuted.",
+    "narrowed": "I reject their suggested residual angle (the $3.3B minus Januvia's +$0.53B net). A list cut makes Januvia's share of the provision fall larger than its net gain, so a subtraction does not isolate any non-Januvia tailwind."
+   }
+  },
+  {
+   "id": "MRK-c03",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Verified MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md p.1: 'Non-GAAP EPS in the third quarter of 2025 also excludes tax expense relating to audit reserve adjustments'. So a NOPA loss would most likely be excluded from non-GAAP, landing in GAAP EPS and cash. On the $2.53B reserve (10-K p.131): yes, the $0.63 must be presented beside it, as a gross ceiling, not as a net expected hit. The 10-K gives a total of $2.53B unrecognized tax benefits plus $546M accrued interest and penalties, but no split by matter. Some or all of the $1.56B may already be reserved, in which case a loss would be mostly cash with little P&L. Or none may be reserved, in which case GAAP EPS falls up to ~$0.63 plus interest. Both readings fit the filings. The cash exposure (~$1.56B plus interest, ~2.4% of 2025 sales, ~10% of Dec-25 cash of $14.6B on 10-K p.80) is material either way.",
+   "correction": "IRS NOPAs (April 2025, never mentioned on a call) seek $1.3B of transition tax plus $260M of penalties before interest: up to ~$1.6B of cash and a GAAP-only EPS hit of up to ~$0.63 (on 2,470M shares). The P&L hit is gross of any amount already inside Merck's $2.53B unrecognized-tax-benefit reserve (split not disclosed), and non-GAAP EPS would likely exclude it, as it did the Q3-25 audit reserve adjustments.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 49
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 40
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 41
+    },
+    {
+     "doc_id": "MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 80
+    }
+   ],
+   "round2": {
+    "conceded": "Non-GAAP excludes audit-reserve tax items (verified in the Q3-25 release), so this is a GAAP and cash exposure, not a hit to the non-GAAP EPS consensus tracks.",
+    "held": "The cash exposure is material regardless of reserve status, and the case for a non-obvious finding holds.",
+    "narrowed": "Always state $0.63 as a gross GAAP ceiling beside the undisclosed share of the $2.53B uncertain-tax reserve, and lead with cash (~$1.6B plus interest) rather than EPS."
+   }
+  },
+  {
+   "id": "MRK-c04",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Their sources add no dollars. ASCO deck p.25 promises major-market Qlex launches 'starting in 2026' with no litigation caveat; the Halozyme release (deals p.10) shows the dispute is public. That strengthens the obviousness case but does not change the size. Ex-U.S. Qlex is $68M a quarter (10-Q p.28), about 0.4% of quarterly sales, and German sales are not disclosed. Their correction keeps 'slipped three filings', which the pages do not support: Q2-26 (10-K p.118), then Q2/Q3-26 (Q1 10-Q p.22), then Nov 19, 2026 (Q2 10-Q p.22) is two slips across three filings.",
+   "correction": "Keytruda SC has been barred in Germany since Dec 2025, with the appeal slipping twice to a Nov 19, 2026 hearing and a Dutch decision on seven more markets due about end-Oct 2026, while Merck's June 2026 investor deck promised major-market launches in 2026 with no caveat. Near-term revenue at stake is small (ex-U.S. Qlex $68M a quarter); the value is a catalyst and governance signal, not a sized number.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 118
+    },
+    {
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    }
+   ],
+   "round2": {
+    "conceded": "Footnote-only and not raised by management; the ASCO deck's uncaveated launch promise is a sharper contrast than anything the reader had.",
+    "held": "Fails the materiality bar on present numbers, and 'three slips' is factually two.",
+    "narrowed": "If the team uses it, present it as a binary near-dated legal catalyst (Dutch ruling about Oct 2026, German appeal Nov 19), not a revenue impact."
+   }
+  },
+  {
+   "id": "MRK-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Confirmed the ASCO deck (p.25): 'On track to achieve 30% to 40% peak adoption of KEYTRUDA QLEX by end of 2027', with the mono/oral skew stated by management. So the ceiling framing is management's own, and the target date moved in from '2028' (Q4-25 call p.11) to end-2027. Their narrower angle needs a trajectory, which the 10-Qs supply: U.S. Qlex share was 2.3% in Q1-26 and 7.9% in Q2-26 (10-Q Q2 p.28, 1H minus Q2). Reaching 30% by end-2027 needs ~4x more in six quarters after a 3.4x jump in one. That is not implausible on the numbers, so a shortfall is not shown.",
+   "correction": "Management pulled its 30-40% Qlex adoption target in to end-2027; U.S. share went from 2.3% (Q1-26) to 7.9% (Q2-26), so the path is still open, and the mono/oral skew is management's own framing. Not a finding.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "page": 15
+    }
+   ],
+   "round2": {
+    "conceded": "Every element is management framing, including the mono/oral skew, and the target was restated in Q&A and on the ASCO deck.",
+    "held": "Refuted on math as well: one first-J-code quarter at 7.9% after 2.3% does not show a ceiling.",
+    "narrowed": "The pull-in to end-2027 is the only new fact; it is testable next quarter, not a finding now."
+   }
+  },
+  {
+   "id": "MRK-c06",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Verified the White House fact sheet p.1 (policy_gov ... nine_deals_mrk_bmy_amgn_gild.md): 'guaranteeing MFN prices on all new innovative medicines the nine companies bring to market' and 'require the nine companies to repatriate increased foreign revenue'. BMS is among the nine. The Merck-vs-BMS contrast, the candidate's only differentiator, is false; BMS's 'more balanced pricing approach' is different wording for the same commitment. On my lens the impact was already unsized and its $70B base was wrong.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 21
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/wh/wh_fact_sheet_2025-12-19_nine_deals_mrk_bmy_amgn_gild.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "The terms apply to all nine signers including BMS. I wrongly kept this as a Merck-specific qualitative risk in round 1.",
+    "held": "Nothing at company level.",
+    "narrowed": "Industry-wide, unsized; drop it."
+   }
+  },
+  {
+   "id": "MRK-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Their added data point (U.S. RotaTeq $84M in Q2-26 vs $60M, Q2-26 release ex99-2 p.1) moves against the candidate, and GSK has the same exposure. The 0.7%-of-sales ceiling from round 1 stands.",
+   "correction": "Below materiality (full U.S. RotaTeq loss = 0.7% of sales; U.S. RotaTeq up year on year in Q2-26), shared with GSK, and the schedule change is stayed by a court.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 38
+    },
+    {
+     "doc_id": "MRK:earnings/2026-08-04_tm2621496d1_ex99-2.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 10
+    }
+   ],
+   "round2": {
+    "conceded": "Federal headline restated in Item 1 (10-K p.10); not Merck-specific (GSK Rotarix).",
+    "held": "Refuted on materiality before any obviousness test.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "MRK-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Their release citations (Q1-26 ex99-1 p.1 explains the $150M payment; Q2-26 footnote gives $10M vs $43M) and the CFO's $0.09 2025 benefit (Q3-25 call p.6) confirm disclosure. Size is unchanged at 0.2-0.4% of sales.",
+   "correction": "Immaterial and disclosed in releases.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 55
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 93
+    },
+    {
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 7
+    },
+    {
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 26
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:earnings/2026-04-30_tm2612241d1_ex99-1.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "page": 6
+    }
+   ],
+   "round2": {
+    "conceded": "Explained in releases, and the EPS effect was quantified by the CFO.",
+    "held": "Refuted on materiality.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "MRK-c09",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Verified MRK:companies/MRK/transcripts/2025Q2_transcript.md p.16 (grade A): the UBS analyst asked whether the OBBB orphan exclusion shifts Keytruda's selection from 2028 to 2029, and Davis confirmed it implies selection in 2027 for a 2029 price. Round 1 I held this because the date shift was on the 10-K pages. It is real, but it follows a law change management explained on an A-grade call, so the market has it. On my lens the only number ($0.6B per 10 points on a gross CMS Part B base) was a sensitivity anyway, so nothing sized survives.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 30
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q2_transcript.md",
+     "page": 16
+    }
+   ],
+   "round2": {
+    "conceded": "Answered plainly on the A-grade 2025Q2 call; the reader wrongly treated pre-2025Q3 calls as grade C. I concede the kill.",
+    "held": "The deferral to 2029 is real and economically positive for 2028, but it is consensus, not a finding.",
+    "narrowed": "Drop it."
+   }
+  },
+  {
+   "id": "MRK-c10",
+   "refuted": false,
+   "severity": "major",
+   "argument": "On whether 4.1% can be a finding: not as a precise sourced figure. It averages derived gtn_proxy rows with different quarter counts (IV #8, 4 quarters; Qlex #9, 3 quarters). To test the launch-period WAC concern I checked the CMS-verified quarterly point: pricing/sample_checks.csv#24 shows J9277 (Qlex) at $32.307/mg in the Oct 2026 CMS payment-limit file (match=True against the CMS zip). That quarter rests on post-launch reported ASP, not launch WAC. 395 x 32.307 = $12,761 vs IV 200 x $60.969 (2026 mean, #8) = $12,194, +4.7%; vs the verified Oct-2025 IV point ($60.291, sample_checks#34) it is +5.8%. The latest, cleanest Qlex quarter shows a slightly larger premium than the 3-quarter mean, so the WAC concern does not reverse the sign. The finding survives as a direction and range: Medicare's drug payment per Qlex dose is ~4-6% above IV, not below it. It still excludes the lower administration fee for an SC injection, and it is a payment limit (ASP+6%), not Merck's net price. Dollar materiality is indirect, through conversion (c05).",
+   "correction": "On CMS payment limits (latest verified Qlex quarter, Oct 2026: $32.307/mg; IV 2026 ~$61/mg), Medicare pays about 4-6% more for the drug per Qlex dose than per IV Keytruda dose, despite management saying Qlex is 'priced to drive adoption'. This is a direction and range from CMS files, not a precise sourced figure, and excludes the administration-fee difference.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "drug:keytruda:label_sections.md",
+     "page": 23
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 4
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "pricing/sample_checks.csv",
+     "page": 24
+    },
+    {
+     "doc_id": "pricing/sample_checks.csv",
+     "page": 34
+    },
+    {
+     "doc_id": "MRK:presentations/2025Q3_earnings_slides.md",
+     "page": 23
+    }
+   ],
+   "round2": {
+    "conceded": "The solid-tumor-only scope was a headline (Q3-25 slide p.23, Li prepared remarks), so drop it; their narrowing to the per-dose payment gap is right.",
+    "held": "The precise 4.1% cannot be presented as sourced; it rests on derived gtn_proxy means.",
+    "narrowed": "Restate it as roughly 4-6% above IV, anchored on the CMS-verified Oct 2026 Qlex point. That addresses the launch-WAC concern, since the cleanest quarter shows the gap widening."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "No new numbers. Agree that the pick scores on fine print (contraindication, per-dose payment gap), not the convenience headline. Keytruda's weight (48.7% of sales, 10-K p.134) makes it the right product on materiality.",
+   "correction": "Keep Keytruda/Qlex. Lead with the per-dose Medicare payment gap (~4-6%, CMS files) and the hyaluronidase contraindication; treat the convenience edge as Merck's marketing.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 4
+    }
+   ],
+   "round2": {
+    "conceded": "The convenience edge repeats Merck's launch messaging.",
+    "held": "The pick holds on weight.",
+    "narrowed": "Drop the contraindication as a value driver on my lens; it is a differentiator, not a dollar item."
+   }
+  }
+ ],
+ "overall": "After round 2, MRK keeps two material, Merck-specific items: the IRS transition-tax NOPA (c03, up to ~$1.6B cash plus interest; at most ~$0.63 GAAP EPS gross of undisclosed reserves) and the $2.1B organic long-dated inventory build (c01, net of Verona and of ~$0.67B of reserves already guided). c10 survives only as a ~4-6% per-dose Medicare payment premium stated as a range, and everything else is either below 1% of sales or already explained by management (c06 and c09 are now conceded kills)."
+}

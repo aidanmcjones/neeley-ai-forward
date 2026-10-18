@@ -1,0 +1,305 @@
+{
+ "ticker": "JNJ",
+ "lens": "obviousness",
+ "round": 1,
+ "verdicts": [
+  {
+   "id": "JNJ-c01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The -3.1 point price figure is real (10-K FY2025 file p.28, printed p.23), but the same paragraph explains it: 'the negative impact of the STELARA sales decline, due to biosimilar competition, was approximately 6.2%' of worldwide sales. The 10-K product text names 'Medicare Part D redesign' as a driver for STELARA, ERLEADA, IMBRUVICA, INVEGA, OPSUMIT, UPTRAVI and XARELTO (10-K FY2025 p.31), and the segment margin bullets name it again (p.37). Management said it in prepared remarks every 2025 quarter: 'STELARA declined by 42%, driven by the impact of biosimilar competition and Part D redesign' (2025Q3 call p.6, grade A) and 'STELARA declined 48.6% driven by share loss due to biosimilar competition and Part D redesign' (2025Q4 call p.6, grade A). So the 2025 price drag is the STELARA starter thread plus a policy change management named each quarter. The candidate admits it cannot split STELARA and Part D out of the price line. It is true that analysts have not asked about gross-to-net since 2024Q4 (market/never_asked.csv row 50: last asked 2024Q4, unasked 7 quarters). That reflects a topic the market treats as explained, not a hidden one. The AbbVie rebate comparison does not rescue it: J&J's rebate accruals outgrowing sales in a STELARA biosimilar year is what a LOE produces.",
+   "correction": "Only a narrower claim would be non-obvious: price erosion outside STELARA that continues into 2026 after Part D redesign has lapped. The 10-Qs have no price/volume split, so that cannot be shown from the index. As written, the finding restates the STELARA/Part D story.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 28
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 37
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q4_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "market/never_asked.csv",
+     "page": "row 50"
+    }
+   ]
+  },
+  {
+   "id": "JNJ-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The deal is a press-release headline (JNJ:policy/press_2026-01-08 p.1) and a listed item in the Q4 2025 earnings release ('Johnson & Johnson Reaches Agreement with U.S. Government to Improve Access to Medicines', JNJ:earnings/2026-01-21_a2025q4exhibit991.md p.5). Management sized where it lands: the CFO said 'Relative to current analyst expectations, our EPS and margin outlooks absorb ... the impact of the voluntary US government agreement' (2025Q4 call p.9, grade A, Joseph Wolk). The 2026Q1 slides say 'Expect impact of voluntary agreement with the U.S. government to be evenly distributed throughout the year' (JNJ:presentations/2026Q1_earnings_slides.md p.23). An analyst did ask about it after signing, at JPM in January 2026 (Chris Schott: 'I know you have an agreement with the government'), and the CEO answered that the agreements are 'relatively similar' across companies and that the tariff exemption removed 'an overhang' (JPM fireside p.3). So the reader's 'no analyst asked' is true only for the four earnings calls. Consensus priced the guide: I/B/E/S FY2026 EPS mean was 11.45 on 2026-01-15 (fpi 2, row 755) and moved up to 11.53 on 2026-02-19 (row 737), after a guide that already absorbs the deal. The EPS-down impact is therefore already in the number the Street carries. The disclosure gap is real: one sentence in the 10-K at p.10, no mention in the 2026 10-Qs (searched 'U.S. Administration|TrumpRx|most favored|developed countries'). But a sparse Risk Factors section is a style point, not a mispricing.",
+   "correction": "Narrow it to this: J&J, unlike BMS and Merck, discloses neither the term, the products nor the discount depth, so the out-year cost after the 2026 guide is unknowable. That narrower point is non-obvious but has no sized impact.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:policy/press_2026-01-08_us_government_agreement_mfn.md",
+     "page": 1
+    },
+    {
+     "doc_id": "JNJ:earnings/2026-01-21_a2025q4exhibit991.md",
+     "page": 5
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q4_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "JNJ:presentations/2026Q1_earnings_slides.md",
+     "page": 23
+    },
+    {
+     "doc_id": "JNJ:presentations/2026-01_jpm_fireside_transcript.md",
+     "page": 3
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 10
+    },
+    {
+     "doc_id": "JNJ:10q_2026Q2.md",
+     "page": 4
+    },
+    {
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": "rows 737, 755"
+    }
+   ]
+  },
+  {
+   "id": "JNJ-c03",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "The broad theme is obvious and was asked and answered. Tariffs were asked in 2025Q1-2025Q3 (market/never_asked.csv row 54: 3 quarters, last 2025Q3). The CEO answered the 2025Q3 MFN/tariff question with '$55 billion ... all our advanced medicines that are used in the US are going to be manufactured in the US' (2025Q3 call p.13, grade A). The CFO said 'We have more manufacturing facilities in the United States than in any other country' (2025Q3 p.9). At JPM the CEO called the tariff exemption the removal of 'an overhang' (JPM p.3). The 2026Q1 call dates the $55B plan 'through early 2029' with 22% spent (p.6). What I could not find anywhere in calls, releases or slides: (a) the Item 2 drift, with Innovative Medicine U.S. plants falling from 4 to 3 and non-U.S. plants rising from 14 to 16 (10-K FY2024 vs FY2025 Item 2); (b) the Q2 2026 10-Q restructuring that exits Innovative Medicine manufacturing sites (10-Q 2026Q2; the call mentions only 'restructuring related asset impairments', 2026Q2 p.7); (c) the January 20, 2029 sunset of the zero rate. Tariffs on the 2025Q4-2026Q3 calls are MedTech-only (2025Q4 p.9, 2026Q1 p.6). Management's 'more U.S. facilities than any other country' framing counts all segments, which is what makes the Innovative Medicine split worth showing. Two caveats keep this minor. Every MFN signer faces the same 2029 date, so the angle depends on the peer domestic-share comparison. And the plants under construction (Wilson NC, Holly Springs, PA) are not yet in the Item 2 count.",
+   "correction": "Frame it as a timing race. The Innovative Medicine footprint moved offshore in 2025 while management's onshoring promise finishes 'through early 2029', the same quarter the zero tariff ends. Drop any implication that the tariff exemption itself is news.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 12
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "JNJ:presentations/2026-01_jpm_fireside_transcript.md",
+     "page": 3
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q1_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q4_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q2_transcript.md",
+     "page": 7
+    },
+    {
+     "doc_id": "JNJ:10q_2026Q2.md",
+     "page": 43
+    },
+    {
+     "doc_id": "market/never_asked.csv",
+     "page": "row 54"
+    }
+   ]
+  },
+  {
+   "id": "JNJ-c04",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Not a starter thread, and not discussed. The inventory_channel topic was last asked in 2024Q2 (market/never_asked.csv row 52). On the 2026 calls 'inventory' appears only as channel effects (China EP 2026Q2 p.12; contact lenses 'US inventory dynamics' 2026Q3 p.6; ERLEADA 2026Q2 p.6). The 2025 half fails the ubiquity test, though: the reader's own AbbVie figures (inventory +18.4%, receivables +15.3% on about 9% growth) show the same pre-tariff build, so 2025 is shared industry-wide. Only the June 2026 finished-goods build (+19% against +6.6% sales) is J&J-specific, and only if peers did not also build in H1 2026, which the candidate did not check.",
+   "correction": "Drop the 2025 receivables and inventory comparison. Keep only the H1 2026 finished-goods build, and check it against at least one peer's 2026Q2 10-Q before calling it J&J-specific.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2026Q2_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q2_transcript.md",
+     "page": 12
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "market/never_asked.csv",
+     "page": "row 52"
+    }
+   ]
+  },
+  {
+   "id": "JNJ-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "This is the most-watched question on the calls, not an overlooked one. Analysts asked on three straight calls: Flynn 2026Q1 p.8; Haider 2026Q2 official PDF p.10 ('when can we expect to see you break out sales?'); Divan 2026Q3 p.14. Divan added: 'We're just getting some questions from investors on that specifically'. Management answered in plain terms that sales are withheld until next year ('we haven't disclosed any sales for ICOTYDE, but I'm confident we're going to be doing that next year', Tom Cavanaugh, 2026Q3 p.14, grade A). The CFO's prepared remarks also give the mapping the candidate calls hidden: 'Growth in other immunology is driven by IMAAVY and ICOTYDE launch uptake in the US' (2026Q3 call p.6, Ryan Koors). Divan referenced 'where consensus was', so the sell side already carries ICOTYDE estimates. With the mapping stated, the $126M U.S. Other Immunology ceiling is a one-step read of the 8-K table. Dividing $126M by 20,000 patients is arithmetic on public numbers.",
+   "correction": "The only non-obvious version would be an estimate of free-drug or bridge share, for example from a list price times patients-on-therapy model. That needs an ICOTYDE WAC, which the index lacks, so the candidate cannot get there.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2026Q1_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "JNJ:verified/calls/src/JNJ_2026Q2_official.pdf",
+     "page": 10
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "JNJ:earnings/2026-10-13_a2026q3exhibit992.md",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "JNJ-c06",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "The label half is obvious. Management says it in prepared remarks: 'TREMFYA is the only IL-23 inhibitor to offer a fully subcutaneous regimen across ulcerative colitis and Crohn's disease' (2025Q3 call p.4, grade A), and 'the first and only IL-23 inhibitor with a fully subcutaneous treatment regimen' (2025Q4 call p.4). The candidate concedes this. The price half is not in any J&J call, release or slide I searched, nor is the medical-to-pharmacy benefit shift. The gross_to_net_price topic was last asked in 2024Q4 (market/never_asked.csv row 50). The CMS Part B ASP series sits outside J&J's documents. So the narrow pricing angle survives the obviousness test, though the evidence for it is weak: one IV vial ASP and no Part D net price.",
+   "correction": "Restate it as a pricing claim only: TREMFYA's IV ASP fell 11.8% against Skyrizi's 6.2%, which suggests SC induction volume is being bought with price. Remove the label edge from the finding text; it is management's own talking point.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q4_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "market/never_asked.csv",
+     "page": "row 50"
+    }
+   ]
+  },
+  {
+   "id": "JNJ-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Management sells the Genmab roll-off as a bull point. In Q&A the CEO said strong growth 'will drive operating leverage that will be further amplified when the US. DARZALEX royalties roll off in 2029. So taken together, this creates what some of you have called the cleanest growth story in healthcare' (2026Q1 call p.11, Joaquin Duato, grade A, answering Asad Haider). Every 2025-2026 earnings deck lists 'DARZALEX and DARZALEX FASPRO licensed from Genmab A/S' (2025Q4 slides p.4; 2026Q1 slides p.4). The $2.4B figure is new to the 10-K (FY2025 p.3), but it is the counterpart of Genmab's own reported royalty income, and the reader's $0.47 EPS is arithmetic on a date management announced. The upside is therefore in the company's narrative and in the long-dated consensus (I/B/E/S FY2028 EPS mean 14.25 on 2026-08-20, row 793) to whatever degree the sell side models it. The Xoma part is different: Xoma was not mentioned on any call 2024Q3-2026Q3 (searched 'Xoma'). It is non-obvious but small, about $52M per royalty point.",
+   "correction": "Drop the Genmab roll-off as a finding. If anything is kept, keep only the Xoma suit surviving dismissal (10-K FY2025 p.109) as a minor, non-obvious footnote risk on TREMFYA's royalty stack.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2026Q1_transcript.md",
+     "page": 10
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q1_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "JNJ:presentations/2025Q4_earnings_slides.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:presentations/2026Q1_earnings_slides.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 8
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 109
+    },
+    {
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": "row 793"
+    }
+   ]
+  },
+  {
+   "id": "JNJ-c08",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Not discussed by anyone. 'Part D' does not appear on the 2026Q1-2026Q3 calls, and no analyst asked about it. The relabel is visible in plain sight in the 2026Q1 slides, which explain IMBRUVICA, STELARA, SIMPONI/REMICADE (unfavorable) and INVEGA, OPSUMIT, PREZISTA (favorable) by 'patient mix' (JNJ:presentations/2026Q1_earnings_slides.md p.16), and on the call ('STELARA declined 61.7% ... and unfavorable patient mix', 2026Q1 p.5). So it is in the published materials, but nobody has connected it. The obvious innocent reading weakens it: Part D redesign took effect in January 2025, so by 2026 the year-over-year comparison has lapped it, and dropping 'Part D' as a growth driver is what you would expect. The ERLEADA 2028 IRA selection is a plain 10-K statement (p.10) and is obvious.",
+   "correction": "Keep it as a disclosure-drift observation, with the lapping explanation addressed head-on. It is non-obvious only if 'patient mix' is still a Medicare-channel effect after the lap, for example XARELTO still citing 'favorable patient mix' in 2026, as it did with Part D in 2025.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2026Q1_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "JNJ:presentations/2026Q1_earnings_slides.md",
+     "page": 16
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 10
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 31
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q4_transcript.md",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "id": "product",
+   "refuted": true,
+   "severity": "major",
+   "argument": "TREMFYA is management's headline growth asset. The CEO's prepared remarks call it a potential '$10 billion-plus franchise' (2026Q3 call p.4), and the fully subcutaneous IBD regimen is a repeated prepared-remarks point (2025Q3 p.4, 2025Q4 p.4). The STELARA-to-TREMFYA handoff is the starter thread. Skyrizi's IV induction is a widely compared trait. The fine-print edge the pick rests on is the company's own marketing claim.",
+   "correction": "The pick would be non-obvious only if built on the price side (c06's IV ASP decline versus Skyrizi) or on the Xoma royalty exposure, not on the SC-induction label edge.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q4_transcript.md",
+     "page": 4
+    }
+   ]
+  }
+ ],
+ "overall": "Four of eight candidates (c01, c02, c05, c07) and the product pick restate things management put in prepared remarks, the earnings release or Q&A: STELARA/Part D price drag, the MFN deal absorbed in a guide that consensus took, ICOTYDE sitting in Other Immunology, and the 2029 DARZALEX royalty roll-off. What survives is narrow: the Innovative Medicine plant drift and Q2 2026 plant exits racing the January 2029 tariff sunset (c03, least obvious), the Part D-to-patient-mix relabel (c08), TREMFYA's IV price slide (c06) and the 2026 finished-goods build (c04). All four are minor and need the corrections above."
+}

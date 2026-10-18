@@ -1,0 +1,314 @@
+{
+ "ticker": "BMY",
+ "lens": "obviousness",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "BMY-c01",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Settled on the specific question. I re-read BMY:10k_FY2025.md p49 and the arithmetic checks: at the 2024 rate (11,510/83,671 = 13.76%), 2025 charge-backs would have been $12,117M against $14,067M actual, an excess of $1,950M. Medicaid/Medicare rebates at the 2024 rate would have been $17,424M against $18,010M, an excess of only $586M. Nowhere in the sources does management or an analyst say that the charge-back line led the widening. Searching all ten BMS transcripts (2024Q1-2026Q2), the five 2025-26 earnings releases and the policy press releases for 'charge-back', 'chargeback', 'DoD', 'VA', 'covered entit' and 'channel mix' gives zero hits in any call. Management's own framing points the other way. The Q4 2025 release blames 'higher U.S. government channel rebates' (BMY:earnings/2026-02-05 release p2 and p6), and the 10-K's driver sentence on p49 credits 'the redesign of the U.S. Medicare Part D program and higher government channel mix'. Both read as a rebate and Part D story, while the line that actually grew 22% is charge-backs (p83 says it holds 340B, DoD/VA and cash discounts, settled as credits against receivables). The only 340B remark on any call is Boerner's policy comment on 2025Q1 ('concerned about abuses in the 340B program', BMY:companies/BMY/transcripts/2025Q1_transcript.md p11), which is not about BMS's own numbers. 340B is not even a tracked topic in market/never_asked.csv or priced_in_scorecard.csv for BMY. The composition is therefore not said, not asked, and runs against management's stated explanation.",
+   "correction": "Hold only this claim: in 2025 the charge-back line (340B, DoD/VA, cash discounts), not Medicaid/Medicare rebates, made up about $1.95B (~78%) of BMS's ~$2.5B gross-to-net excess, while management described the widening as Part D and government-channel rebates, and no analyst has asked about it. The 'could' to 'has' wording drift stays dead as a standalone point because peers use the same language. The 340B share of the line remains unsized, so the claim must say 'charge-backs', not '340B'.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 49
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 83
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 27
+    },
+    {
+     "doc_id": "BMY:earnings/2026-02-05_a2025q4ex991.md",
+     "page": 2
+    },
+    {
+     "doc_id": "BMY:earnings/2026-02-05_a2025q4ex991.md",
+     "page": 6
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2025Q1_transcript.md",
+     "page": 11
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "market/never_asked.csv#29",
+     "page": null
+    },
+    {
+     "doc_id": "market/priced_in_scorecard.csv#32",
+     "page": null
+    }
+   ],
+   "round2": {
+    "conceded": "The materiality skeptic is right that the charge-back-led composition is a distinct and checkable point, and my round-1 kill only addressed the 340B wording, which is industry-wide. I checked the composition against every call and release in the index and found it was never stated or asked; management's explanation (Part D, 'government channel rebates') points to the wrong line. So I reverse c01 from refuted to held.",
+    "held": "The 340B 'could' to 'has' wording drift on its own is still obvious: Merck 10-K p39 and Amgen 10-K p38 already use realized-tense language. I would not let the nugget lead with it.",
+    "narrowed": "From '340B drift plus charge-backs' to the composition finding only: charge-backs, not Medicaid/Medicare rebates, drove ~78% of the 2025 U.S. gross-to-net excess, which contradicts management's 'rebates' framing. 340B is named only as one unsized component."
+   }
+  },
+  {
+   "id": "BMY-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The materiality skeptic's p49 split (Medicaid/Medicare rebates only ~$0.59B above the 2024 rate) strengthens my kill. If Part D discounts sit in that line, Part D cannot be the main driver of the extra deductions, so the call-vs-filing 'contradiction' falls apart on the numbers as well as on obviousness (Part D was asked on 2024Q4 p8-9 and answered on 2025Q1 p4). Their reading of Lenkowsky's remark as about sales phasing matches my reading of the 2025Q3 p1 transcript.",
+   "correction": "Nothing in c02 survives on its own. Its only usable content, that the 10-K blames Part D and channel mix, belongs in narrowed c01 as the management framing that the charge-back composition contradicts.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 49
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q3_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2025Q1_transcript.md",
+     "page": 4
+    }
+   ],
+   "round2": {
+    "conceded": "Their p49 decomposition and their reading of the remark as about phasing are correct; I adopt both.",
+    "held": "Refuted: Part D was asked and answered, and the remark was not about the GTN rate.",
+    "narrowed": "Fold the 10-K driver sentence into c01 as the management claim that the numbers contradict."
+   }
+  },
+  {
+   "id": "BMY-c03",
+   "refuted": true,
+   "severity": "minor",
+   "argument": "I accept their math, which I checked on BMY:10q_2026Q2.md p10 (Keytruda 308 + Tecentriq 26 = 334 in H1 2026) and 10-K p34: about $0.62-0.67B pretax, roughly $0.26-0.27 EPS, ending 2026-12-31. Being material does not make it non-obvious, though. It is a scheduled contract end that has been printed in Item 1A for three years (FY2023 10-K p32, FY2024 p33, FY2025 p34) and in the notes since at least the FY2022 10-K p84. Merck also discloses it (MRK:10q_2026Q2.md p34, 'terminating thereafter'). That is the royalty version of an exclusivity loss, which the brief kills by name. What I concede: no 2025Q3-2026Q2 call mentions the Keytruda or Tecentriq royalty or a 2027 OI&E effect, and BMS has not guided 2027 (2025Q4 call). The 2026-08-20 I/B/E/S data shows consensus FY2027 EPS of $6.54 against $6.88 for FY2026 (ibes_eps_consensus.csv#479, #510), but with no OI&E line in I/B/E/S I cannot tell whether the royalty is in it.",
+   "correction": "If the team uses it, present it as a known, sized item: the Keytruda/Tecentriq royalties (~$0.27 EPS) end 2026-12-31 and management has not mentioned them since guiding 2026 OI&E. It is non-obvious only if an analyst model or consensus OI&E for 2027 can be shown to leave it out, and the index has no such data.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 34
+    },
+    {
+     "doc_id": "BMY:10k_FY2024.md",
+     "page": 33
+    },
+    {
+     "doc_id": "BMY:companies/BMY/10k_FY2023.md",
+     "page": 32
+    },
+    {
+     "doc_id": "BMY:companies/BMY/10k_FY2022.md",
+     "page": 84
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 10
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 34
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q1_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "tables/ibes_eps_consensus.csv#510",
+     "page": null
+    }
+   ],
+   "round2": {
+    "conceded": "The 2027 math, metric (non-GAAP EPS) and Merck confirmation hold, and the 2027 piece really has not come up on recent calls. I lower the severity from major to minor.",
+    "held": "Still refuted under obviousness: a contract expiry printed in Item 1A for three straight years and confirmed by the counterparty is the royalty version of an exclusivity loss. The diabetes $1.1B is fully in guidance (2025Q4 call; Q2 2026 release p3).",
+    "narrowed": "From the $1.76B 'royalty cliff in footnotes' to the 2027 Keytruda/Tecentriq ~$0.27 EPS only, which is non-obvious only if consensus can be shown to miss it."
+   }
+  },
+  {
+   "id": "BMY-c04",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "No change. Their materiality kill (10-Q p35 and release p2 credit demand first, and the $1.44B is not split out) and my obviousness kill (WAC cut, CPI penalty and $0 Medicaid explained on the 2025Q4, 2026Q1 and 2026Q2 calls) point the same way.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 31
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Their point that the 52%-to-34% drop is partly mechanical (a smaller gross denominator) is right, and it further undercuts the attribution.",
+    "held": "Fatal: management stated the mechanism on three calls.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "BMY-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Agreed with materiality: the $820M reserve build is the balance-sheet side of c01's charge-backs, it reversed by Q2 2026 (10-Q p18, net receivables 9,962), and the list-cut cash effect was explained on the 2026Q1 call.",
+   "correction": "Use only as a supporting data point inside narrowed c01: the charge-back reserve rose from $900M to $1,720M at year-end 2025 (10-K p107).",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 107
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 18
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q1_transcript.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Their fold-into-c01 recommendation; I had pointed it to the price-reset story instead, and the charge-back link is the better fit.",
+    "held": "Refuted as a standalone.",
+    "narrowed": "Now a supporting line for c01."
+   }
+  },
+  {
+   "id": "BMY-c06",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Both lenses agree: the fold-in is in footnote (a) of the 2026 releases, the decline was answered in 2024Q4 Q&A, and the effect is ~$60M a year (0.12% of revenue) per the materiality skeptic's check of 10-Q 2025Q2 p8.",
+   "correction": "At most one line on disclosure practice.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:earnings/2026-04-30_a2026q1ex991.md",
+     "page": 2
+    },
+    {
+     "doc_id": "BMY:companies/BMY/10q_2025Q2.md",
+     "page": 8
+    }
+   ],
+   "round2": {
+    "conceded": "Their sizing (~$60M decline hidden) makes it immaterial as well as obvious.",
+    "held": "Refuted.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "BMY-c07",
+   "refuted": false,
+   "severity": "major",
+   "argument": "I re-checked pricing/gtn_proxy.csv#155. It does say Xarelto 'NADAC mixes EA/ML NDCs; collector simple mean is not a valid per-unit price, weighted figure uses EA NDCs only', so the materiality skeptic is right that 1.36x and 2.83x are pipeline-derived fact rows, not quotable page text. They are also right that these are list-level (acquisition cost) ratios, not net prices, because Medicaid gets Eliquis free and commercial rebates are confidential. On my lens nothing changes: no call, release or analyst question compares Eliquis's post-cut list position to Xarelto's (Xarelto appears once in ten calls, 2024Q4 p14). The inputs the team can quote are on CMS fact sheet p2: MFP $231 vs list $521 for Eliquis, $197 vs $517 for Xarelto.",
+   "correction": "Hold only: after its 2026 list cut, Eliquis's list price sits much closer to its Medicare negotiated price than Xarelto's does, because J&J did not cut. Cite the CMS p2 MFPs and BMS's stated ~40% WAC cut (2025Q4 call, grade C) as the quotable basis, and the NADAC ratios as derived fact rows. Drop '44% cheaper in every non-Medicare channel' and any causal link to growth.",
+   "pages_checked": [
+    {
+     "doc_id": "pricing/gtn_proxy.csv#155",
+     "page": null
+    },
+    {
+     "doc_id": "pricing/gtn_proxy.csv#40",
+     "page": null
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md",
+     "page": 2
+    },
+    {
+     "doc_id": "BMY:transcripts/2025Q4_transcript.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:companies/BMY/transcripts/2024Q4_transcript.md",
+     "page": 14
+    }
+   ],
+   "round2": {
+    "conceded": "The ratios cannot be quoted, the Xarelto row uses an EA-only subset, and the gap is list-level, not net. I raise the severity from minor to major because the evidence base is now weaker.",
+    "held": "Not obvious: nobody in the index has made the Eliquis vs Xarelto post-cut comparison.",
+    "narrowed": "To a list-level price-gap claim built on CMS p2 plus the 40% WAC statement, with derived ratios labelled as such."
+   }
+  },
+  {
+   "id": "BMY-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Materiality held c08 only as an unsized fact with no causal claim, and that is the version I still call obvious. The renal/dialysis wording has been on the label since about 2014, and management itself names renal patients as an Eliquis-hesitation group (2026Q2 call p1). A true, decade-old, unsized label fact gives no edge.",
+   "correction": "Usable only as qualitative product color, not as a nugget.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:eliquis:label_sections.md",
+     "page": 39
+    },
+    {
+     "doc_id": "drug:xarelto:label_sections.md",
+     "page": 24
+    },
+    {
+     "doc_id": "BMY:transcripts/2026Q2_transcript.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "The label quotes verify, and their decision to drop the causal 'explains the share lead' claim is right.",
+    "held": "Refuted as a finding: old, public, and unsized.",
+    "narrowed": "Product color only."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "I reverse my round-1 kill of the pick itself. Eliquis is 30% of revenue and the only BMS product with a clean, same-MFP-year rival, so every team choosing it is a sign the pick is correct, not a flaw. The obviousness problem was the fine-print edge (the decade-old renal label), not the product choice.",
+   "correction": "Keep Eliquis vs Xarelto. Make the edge the narrowed c07 list-price gap after the cut, with the renal label difference as secondary qualitative color.",
+   "pages_checked": [
+    {
+     "doc_id": "BMY:earnings/2026-02-05_a2025q4ex991.md",
+     "page": 6
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md",
+     "page": 2
+    }
+   ],
+   "round2": {
+    "conceded": "Materiality's point that the pick is material and the comparator fair; a product pick is not scored for novelty the way a nugget is.",
+    "held": "The renal label edge is obvious and should not lead.",
+    "narrowed": "From 'refuted pick' to 'right pick, swap the fine-print edge'."
+   }
+  }
+ ],
+ "overall": "After round 2, two BMS candidates survive the obviousness lens. The stronger is narrowed c01: charge-backs, not the Medicaid/Medicare rebates management pointed to, drove ~78% of the 2025 U.S. gross-to-net excess, and no call or release says so or was asked about it. Second is narrowed c07, the post-cut Eliquis vs Xarelto list-price gap, now cited through CMS p2 rather than the unquotable NADAC ratios. The royalty end (c03) is material but a three-year Item 1A disclosure, and the Eliquis price-reset, Part D, receivables, Abecma and label candidates are already said, asked or immaterial."
+}

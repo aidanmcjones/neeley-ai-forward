@@ -1,0 +1,111 @@
+{
+ "ticker": "ABBV",
+ "company": "AbbVie Inc.",
+ "rulings": [
+  {
+   "id": "ABBV-c01",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "FY2025 10-K adds new risk wording on 340B (growth in 340B claimants 'has increased the portion of our sales subject to such discounts', 10-K FY2025 p.23) and on MFN/direct-to-patient spillover (p.19); the 'significantly impact' price warning was NOT deleted and no dollar size is derivable.",
+   "reason": "Both skeptics refuted in round 2. Conceded by both: the 'would significantly impact' sentence was dropped only from the MD&A recap (10-K FY2024 p.36); near-identical 'could significantly impact' sentences remain on p.13 and p.18 of both 10-Ks, so the novel half of the claim is false (confirmed false, not merely unrefuted). The MFN-spillover half restates the 2026-01-12 press release. What remains, the 340B-share sentence (10-K FY2025 p.23), is confirmed new and unsaid but unsized; the 2026-10-02 340B rebate-pilot release adds no dollars and points toward mitigation. The $466M-per-1% figure is a generic sensitivity. Killed as a finding; the p.23 sentence is usable only as context.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "ABBV-c02",
+   "category": "Gross-to-net",
+   "verdict": "killed",
+   "claim": "Medicaid/Medicare rebate provisions rose 34% in 2025, but managed-care provisions fell $1.8B on the same table and the total deduction ratio rose only about 0.3 points (51.3% to 51.6%), a channel shift under the guided Part D redesign.",
+   "reason": "Both skeptics fatal in round 2. Confirmed on 10-K FY2025 p.49: Managed Care provisions 24,127 to 22,307 offset the government-line jump; total rebates and chargebacks $59.3B to $65.1B (+9.8%) vs revenue +8.6% (p.41); implied ratio +0.3 pt, about $0.35B, not $4.1B. Obviousness skeptic withdrew its $3B residual in round 2 once the offset was applied. Part D redesign was guided at about $2B with product splits on the 2024Q4 call (grade C, used only to judge what was said) and GTN was asked in 8 of 10 quarters. The BMY contrast compares non-comparable rebate categories. Refuted on math and on obviousness.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "ABBV-c03",
+   "category": "Inventory and receivables growing faster than revenue",
+   "verdict": "killed",
+   "claim": "No year-end 2025 receivables or inventory build: June 2025 balances (AR 12,637, inventories 4,960) already exceeded December 2025 (12,589, 4,951), and both rose further by June 2026.",
+   "reason": "Both skeptics fatal in round 2; the obviousness skeptic conceded in full. Confirmed on 10-Q 2025Q2 p.5, 10-K FY2025 p.56 and 10-Q 2026Q2 p.5: the 15% year-over-year AR rise is a low December 2024 base, there was no Q4 spike and no 2026 unwind. The $578M 'excess AR = revenue pulled forward' step also treats a balance as a flow. Premise refuted.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "ABBV-c04",
+   "category": "Segment and product table changes",
+   "verdict": "narrowed",
+   "claim": "In 2026 AbbVie silently stopped breaking out its roughly $2.1B Eye Care franchise (3.4% of 2025 revenue) and folded it into a restated 'All other' line (H1 2025 restated 1,350 to 2,370, reconciling exactly to H1 2025 eye care of 1,020), with no recast note, release or call mention; the combined bucket's ~10% decline matches its pre-change trend, so this is a transparency point with no detectable earnings effect.",
+   "reason": "Neither skeptic refuted. Confirmed: FY2025 eye care 493+410+197+1,009 = 2,109 (10-K FY2025 p.43); 1,350+1,020 = 2,370 (10-Q 2025Q2 p.28; 10-Q 2026Q2 p.24); Q4 2025 release still had Eye Care rows, Q1 2026 release (2026-04-29 p.6) does not, no 'eye' in either 2026 10-Q, no call mention since 2024Q4. Conceded by obviousness skeptic: the -10% is on trend (old basis H1 2025 vs H1 2024 = 2,370/2,625 = -9.7%) and the TrumpRx link rests on a $53M Alphagan/Combigan U.S. line (p.43). Narrowed to a disclosure-only claim: drop the 'now shrinking' implication and the TrumpRx motive.",
+   "materiality": "low",
+   "obviousness": "low",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "ABBV-c05",
+   "category": "Footnotes",
+   "verdict": "narrowed",
+   "claim": "In the June 2026 10-Q (not in the March 2026 10-Q), AbbVie began carrying the Skyrizi partner royalty on pipeline assets used in combination with Skyrizi, paid through 2044 at a 38% probability of approval; on the Q2 roll-forward this new tail is worth at most about $1.5B of present value (best estimate $1.0-1.5B, 4-5% of the $27.5B liability, about $0.56-0.85 a share of GAAP-only pre-tax charge), and its real economic weight is a roughly 16-18% royalty on any future Skyrizi-combination sales that management promotes as its next immunology leg and that no call or release has mentioned.",
+   "reason": "Neither skeptic refuted; both narrowed to the 2044 combination tail and dropped the 2037-extension headline (management said Skyrizi IP runs to 'mid-2030s and later'), the $27.5B-as-annual-drag framing and any 'raised the charge run-rate' language (H1 2026 3,905 < H1 2025 4,313). Still disputed after round 2: tail size, ~$3B (obviousness, materiality r1) vs ~$1.0-1.5B (materiality r2). I opened both pages. 10-Q 2026Q1 p.14: probability 100%/100%, years 2026-2037, Q1 FV change 2,387, payments 722, ending 27,039. 10-Q 2026Q2 p.15: probability 38%-100%, weighted 93%; years 2026-2044, weighted 2030; footnote (a) says inputs are 'weighted by the relative fair value'; six-month Additions are a dash (zero), FV change 3,905, payments 1,784, ending 27,495. Because Additions are zero, the tail can only have entered through Q2's FV change of 3,905-2,387 = $1,518M (p.33 confirms '$1.5 billion for the three months'). P.33 lists the Q2 drivers as higher estimated Skyrizi sales, passage of time and favorable combination trial results (all positive), partially offset by higher discount rates. Accretion alone is about 4.3%/4 x 27,039 = ~$0.29B; the discount-rate offset is at most ~$0.1-0.25B (lower end of the range moved only 4.1% to 4.2%; part of the 4.3% to 4.5% average rise is mix from the long tail itself). So tail <= 1,518 - ~290 + ~250 - (Skyrizi sales uplift > 0), about $1.5B at most. The literal footnote reading (w = (100-93)/(100-38) = 11%, ~$3B) would require the Skyrizi-only value to have fallen ~$1.5B in Q2, which contradicts p.33's 'higher estimated Skyrizi sales'. I settle for the roll-forward: it is an accounting identity, while the 93% is a rounded summary statistic whose weight basis is the only way to reconcile the two (pre-probability weights give ~4.6%, ~$1.3B). Confirmed: tail is new in Q2 2026, unsaid on any call, release or 8-K (obviousness skeptic's search). Materiality is medium: one-time GAAP charge ~2% of revenue, excluded from adjusted EPS, with an option-like margin drag through 2044. The J&J $753M peer contrast is level-vs-level against a mostly CVR book; drop it.",
+   "materiality": "medium",
+   "obviousness": "low",
+   "confidence": "medium",
+   "unresolved": "Exact tail size. The literal footnote (a) reading of the 93% fair-value-weighted probability gives ~$3B (11% of $27.5B); the Q2 roll-forward (Additions zero, Q2 FV change $1,518M with all drivers but discount rate positive) caps it at ~$1.5B. Settled in favor of ~$1.0-1.5B, but AbbVie does not split the liability, so the figure is bounded, not disclosed. Counterparty and contractual royalty rate are also undisclosed; 16-18% is the effective cash rate (2,865/17,562; 1,784/9,988)."
+  },
+  {
+   "id": "ABBV-c06",
+   "category": "Earnings-call Q&A",
+   "verdict": "killed",
+   "claim": "The 2027 IRA prices for Vraylar (-44%) and Linzess (-75%) imply at most about $0.8B of 2027 exposure once applied to the Part D book rather than all U.S. net revenue, consistent with management's on-record statement that they will not affect long-term guidance.",
+   "reason": "Both skeptics refuted in both rounds. Confirmed: CMS IPAY2027 p.2 shows Vraylar 2024 Part D gross $1,137M vs $3,260M U.S. net (10-K FY2025 p.42) and Linzess Part D gross $1,983M above its $916M U.S. net, so cut-times-U.S.-sales overstates exposure; Imbruvica's -37.6% (10-Q 2026Q2 p.24) includes a pre-existing -16.4% trend and BTK competition. The CEO answered two analysts on the grade-B 2025Q3 call; the cuts are CMS headlines and a named case force. The only route to non-obviousness (larger-than-naive Medicare exposure) was tested and points the other way.",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "ABBV-c07",
+   "category": "Product fine print",
+   "verdict": "killed",
+   "claim": "Skyrizi IBD induction is IV-only while Tremfya allows SC induction; AbbVie's SC filing is Crohn's-only.",
+   "reason": "Both skeptics fatal in round 2. Label text confirmed (Skyrizi label v178 p.4; Tremfya label p.8). Obviousness: raised on the grade-B 2025Q3 call (Schott/Thakkar) and the Crohn's-only SC filing is in the official Q1 2026 earnings release (2026-04-29 p.3). Materiality: the $152-304M is an unanchored assumption, below 1% of revenue, and Skyrizi U.S. grew +26.3% in H1 2026 and +24.0% in Q2 2026 (10-Q 2026Q2 p.23) during the Tremfya SC rollout.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "ABBV-c08",
+   "category": "Peer contrast",
+   "verdict": "killed",
+   "claim": "AbbVie has the highest U.S. share of revenue on the shortlist (76.2%); its $100B/10-year MFN pledge is about its current R&D-plus-capex run-rate. Context only.",
+   "reason": "Both skeptics refuted in round 2. Numbers confirmed (10-K FY2025 p.41, p.54, p.58; press release 2026-01-12 p.1). But the 75/25 split was put to and answered by the CEO on the grade-B 2025Q3 call ('declined' is wrong), 'highest per-point exposure' fails in dollars (J&J $53.8B U.S. revenue), the pledge is smaller per year than J&J's ($55B over ~4 years), and the pledge-vs-run-rate inference applies to every signatory. Moved to company-selection context.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  }
+ ],
+ "product": {
+  "verdict": "narrowed",
+  "product": "Skyrizi (risankizumab-rzaa)",
+  "rivals": [
+   "Johnson & Johnson's Tremfya",
+   "Johnson & Johnson's Stelara",
+   "Novartis's Cosentyx",
+   "Takeda's Entyvio",
+   "Amgen's Amjevita (Humira biosimilar)"
+  ],
+  "reason": "Both skeptics keep Skyrizi on size ($17,562M, 28.7% of $61,160M; 10-K FY2025 p.41-42). The stated fine-print edge (IV-only IBD induction vs Tremfya SC) is on the record (2025Q3 grade-B call; Q1 2026 release p.3), so it cannot lead. The NADAC-vs-ASP gap (fact:pricing/gtn_exposure.csv#21) compares SC pharmacy NDCs with the IV Part B code over different start years; drop it. The skeptics split on the replacement lead: obviousness prefers the hepatotoxicity contrast, materiality the c05 tail. I opened both labels: Skyrizi's DILI case was after two labeled 600 mg IV doses with liver monitoring through 12 weeks (drug:skyrizi:label_sections.md p.19); Tremfya's was at an above-label induction dose but Tremfya requires at least 16 weeks of monitoring in UC/CD (drug:tremfya:label_sections.md p.16). So the liver contrast cuts both ways and has no revenue path; it is label color. Settled: lead the edge with the c05 combination-royalty tail (new in the June 2026 10-Q, ~$1.0-1.5B PV, ~16-18% effective royalty on any approved Skyrizi combination through 2044), with the liver-case and UC IV-only induction as secondary label notes."
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 1,
+  "best_candidate_id": "ABBV-c05",
+  "one_line": "Weak pick on the case's test: AbbVie's big themes (Part D, IRA, U.S. weight, MFN pledge, SC induction) are all on the record, and the one material, unsaid item is the Q2 2026 10-Q's 2044 Skyrizi-combination royalty tail, worth about $1.0-1.5B PV now and a 16-18% royalty on the combination strategy later, plus a silent but on-trend Eye Care fold."
+ }
+}

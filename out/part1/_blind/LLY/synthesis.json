@@ -1,0 +1,142 @@
+{
+ "ticker": "LLY",
+ "company": "Eli Lilly and Company",
+ "rulings": [
+  {
+   "id": "LLY-c01",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "Lilly's FY2025 10-K added a clause that deal volume may not offset obesity price concessions, and the Q2 2026 10-Q dates Medicare Bridge access to Dec 31, 2027.",
+   "reason": "Both skeptics refute in round 2. Obviousness: the Bridge end date is in Lilly's 25 Jun 2026 press release (LLY:policy/press_2026-06_medicare_part_d_foundayo_zepbound.md p.1), and the CFO said on the Q4 2025 call that price concessions 'will be more than offset by increased volume' (LLY:transcripts/2025Q4_transcript.md p.1, grade C, used as evidence it was said, not quoted). Materiality: the -10% FY2025 and -5% H1 2026 U.S. price lines (LLY:10k_FY2025.md p.49; LLY:10q_2026Q2.md p.28) mostly predate the deal, and the Bridge began 7/1/2026, after the 10-Q period. So no filed period carries a deal-specific number. The wording change itself is confirmed (LLY:10k_FY2025.md p.27 vs LLY:10k_FY2024.md p.26) but adds no unsaid fact. Confirmed killed, not merely unrefuted.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "LLY-c02",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "FY2025 Item 1A inserted 'overestimation of demand' and 'may result in supply imbalances' into an existing overcapacity risk factor.",
+   "reason": "Both skeptics refute in both rounds. LLY:10k_FY2024.md p.32 already says capacity may become 'unnecessary' with 'contractual payment obligations, which may be significant' and that 'tirzepatide supply currently exceeds demand in the U.S.'; LLY:10k_FY2025.md p.34 adds two phrases. No charge is disclosed and the 10% impairment is an invented scenario. The capacity build itself is a prepared-remarks headline. Confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "LLY-c03",
+   "category": "Inventory and receivables growing faster than revenue",
+   "verdict": "narrowed",
+   "claim": "Lilly's inventory kept outgrowing cost of sales after orforglipron (Foundayo) was approved: inventory days on annualized quarterly cost of sales rose from about 410 at June 30, 2025 to about 469 at June 30, 2026 (inventory $11.0B to $16.8B, +52.5%, vs Q2 cost of sales +33.5%), with work in process at $10.0B or 60% of inventory. That is about $2.1B more inventory than year-ago days imply. The 2025 year-end build points the same way (about 305 to 404 days with pre-launch stock excluded at both ends). This is a cash and write-down-risk item, not an EPS item today.",
+   "reason": "Round 2 left both skeptics holding a narrowed inventory-days finding but disagreeing on the version and on whether it is material. I opened the pages. June version: inventories 16,793 (LLY:10q_2026Q2.md p.7) on Q2 cost of sales 3,268 (p.5) gives 468.9 days; 11,013.8 (LLY:companies/LLY/10q_2025Q2.md p.7) on 2,447.8 (p.5) gives 410.6 days. WIP is 9,997 of 16,793, or 59.5% (LLY:10q_2026Q2.md p.15), and that note has no pre-launch line after approval. At 410.6 days the inventory would be $14.7B, so the excess is $2.09B. Year-end version: 13,744 and 11,052 (LLY:10k_FY2025.md p.59, p.57) give 453.9 days, against 329.1 for 2024. The obviousness skeptic's 404 removes the $1.5B pre-launch stock (LLY:10k_FY2025.md p.70) from 2025 only. Removing the $548.1M at YE2024 too (LLY:10k_FY2024.md p.75) gives 305 to 404, a larger rise on a like-for-like basis. Likewise the June 2025 base includes $808.5M of pre-launch stock (LLY:companies/LLY/10q_2025Q2.md p.18), so 410 to 469 is the conservative form (380 to 469 ex-pre-launch). Ruling: I adopt the June 2026 version as the headline. It is post-approval, so the most-discussed part of the build (orforglipron pre-launch stock) cannot explain it, and that answers the obviousness skeptic's own concern. Dropped legs, which both skeptics conceded: receivables (AR +41.7% vs Q2 revenue +47.7% at June 2026, LLY:10q_2026Q2.md p.5, p.7) and the $1.5B write-off downside, stale after approval. On materiality I side with the materiality skeptic: confirmed as cash and working-capital (about 10% of FY2025 net income), and there is no EPS effect unless written down. On obviousness I side with the obviousness skeptic: the direction (a large build, 1.8x doses) is said, but neither skeptic found the days level or the WIP share stated in any indexed call or release. That is unrefuted, not confirmed.",
+   "materiality": "medium",
+   "obviousness": "medium",
+   "confidence": "medium",
+   "unresolved": "(1) Materiality: the materiality skeptic holds that a cash-only working-capital build with no EPS effect may not meet the case's materiality test. The obviousness skeptic treats it as a major survivor. I rate it medium, not high, and leave open whether a cash item counts. (2) 'Never stated' rests on indexed transcripts that are grade C/D for Q4 2025 through Q2 2026, so it is unrefuted rather than confirmed."
+  },
+  {
+   "id": "LLY-c04",
+   "category": "Gross-to-net",
+   "verdict": "killed",
+   "claim": "U.S. gross-to-net re-widened in 2025 (implied deductions 57.7% to 58.8% of gross), about $1.2B of revenue.",
+   "reason": "Both skeptics refute in round 2. The 2025 widening (LLY:10k_FY2025.md p.54, p.49) is the -10% U.S. price line restated. The Q1 and Q2 2026 rebate true-ups and ex-adjustment price declines are in prepared remarks (LLY:transcripts/2026Q2_transcript.md p.1, grade C, used as evidence it was said). The only unsaid residual, the liability outrunning U.S. sales, compares a consolidated liability (21,122 vs 14,537.4, LLY:10q_2026Q2.md p.7; 13% ex-U.S. per LLY:10k_FY2025.md p.54) with U.S.-only revenue. Against consolidated Q2 revenue (+47.7%, p.5) it grew more slowly. Confirmed killed.",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "LLY-c05",
+   "category": "Segment and product table changes",
+   "verdict": "killed",
+   "claim": "The FY2025 10-K stopped naming ten products (about 18% of FY2024 revenue); totals were not restated.",
+   "reason": "Both skeptics refute in round 2. The 7.5% to 35.2% 'Other products' comparison mixes definitions: LLY:10k_FY2025.md p.49 restates 2024 Other products at 23,270, so like-for-like the bucket fell 1.4%. The U.S. insulin bucket decline (2,682 to 2,233) is printed on LLY:10k_FY2025.md p.65, so it is not hidden, and the -$449M is 0.7% of revenue. The residual (fewer named products) is a presentation change with no tradable number. Confirmed killed.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "LLY-c06",
+   "category": "Footnotes",
+   "verdict": "narrowed",
+   "claim": "Lilly's contingent consideration liability rose from $251M to $2.5B in the first half of 2026, mostly from Kelonia. The undiscounted maximum milestone payments for Kelonia and Centessa ($5.29B) exceed their booked fair value ($2.17B) by about $3.1B. That gap is a ceiling on future remeasurement charges ($2.80 to $3.50/share over several years) that arise only if milestones succeed. The $814M is fair value classified as current, not a fixed sum owed.",
+   "reason": "Both skeptics hold c06 in both rounds and agree on the corrections. The only disagreement is that the materiality skeptic rates it as a ceiling with a near-zero expected value. I opened the pages. Contingent consideration was 34 + 217 = 251 at YE2025 and 814 + 1,704 = 2,518 at 6/30/2026 (LLY:10q_2026Q2.md p.17). The fair value booked is 1,765 for Kelonia and 402 for Centessa, against maximums of 3,750 and 1,542; footnote 3 says these are the 'maximum amount of potential payments ... subject to the achievement of certain specified milestones' (p.13). p.17 says fair value is a discounted cash flow 'based primarily on probabilities of technical success, timing ... and estimated discount rates.' That confirms the materiality skeptic's point: the $3.1B gap is the probability haircut plus discounting. The expected future charge under Lilly's own assumptions is the discount unwind, which is not disclosed, not the full gap. The July 2026 $3.9B (p.14) is deal value including upfronts and is excluded. Ruling: narrowed to a ceiling. Unsaid on any indexed call (unrefuted per both skeptics). Materiality low as an expected value and medium only as a tail.",
+   "materiality": "low",
+   "obviousness": "low",
+   "confidence": "high",
+   "unresolved": "Materiality: the ceiling of about 8-10% of one year's EPS would clear the bar, but the expected incremental charge (discount unwind) is undisclosed and small. Whether the case should credit a tail exposure is unresolved. Whether remeasurement is excluded from non-GAAP EPS was not verified."
+  },
+  {
+   "id": "LLY-c07",
+   "category": "Footnotes",
+   "verdict": "killed",
+   "claim": "Lilly's effective tax rate rose from 16.5% to 19.8% in 2025 (about $0.94/share).",
+   "reason": "Both skeptics refute in round 2. The CFO gave the rate in Q4 2025 prepared remarks (LLY:transcripts/2025Q4_transcript.md p.1, grade C, used as evidence it was said), and it is in reported EPS. The prepaid-tax 'build' is not one: it peaked at $18.69B on 9/30/2025 (LLY:companies/LLY/10q_2025Q3.md p.26) and was $13.6B in June 2026 (LLY:10q_2026Q2.md p.15). The 2.1x cash-to-book ratio is explained in LLY:10k_FY2025.md p.79 as Irish production plus a prior-year payment. The residual cash-conversion point is context for c03, not a standalone finding. Confirmed killed.",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "LLY-c08",
+   "category": "Earnings-call Q&A",
+   "verdict": "killed",
+   "claim": "Q3 2025 call answers on gross-to-net and orforglipron inventory contradict the later 10-K.",
+   "reason": "Both skeptics refute in both rounds. On LLY:transcripts/2025Q3_transcript.md p.1 (grade B), Ricks' line answers a question about Cigna's GPO model, not Lilly's own gross-to-net. Custer's market-size answer responds to Breen's market-expansion question. The numbers duplicate c03 and c04. Confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "LLY-c09",
+   "category": "Product fine print",
+   "verdict": "narrowed",
+   "claim": "Zepbound's U.S. label covers weight management and obstructive sleep apnea only, while Wegovy carries CV risk-reduction and MASH indications that Novo says support Part D reimbursement. So once the Medicare Bridge ends on Dec 31, 2027, Zepbound enters the 2028 coverage negotiation without the indications that pull Wegovy into standard Part D. No reported period yet contains Bridge volume, and management says Part D is a small share of volume today, so the risk is unsized.",
+   "reason": "Both skeptics hold in round 2 and agree on the narrowing: drop the Bridge end date as a reveal (it is in Lilly's press release and the Q1 2026 call), and keep the label asymmetry, which neither found said anywhere. The label facts are verified by both on drug:zepbound:label_sections.md p.2, drug:wegovy:label_sections.md p.2, LLY:10k_FY2025.md p.44 (tirzepatide obesity outcomes Phase 3 ongoing) and NVO:presentations/2025Q4_earnings_slides.md p.33. Materiality is capped by Yuffa's 'Medicare Part D is a small proportion of our overall volume' (LLY:transcripts/2025Q3_transcript.md p.1, grade B) and by the fact that the Bridge started 7/1/2026. Sensitivity is about $180M per 1% of Zepbound U.S. revenue (LLY:10q_2026Q2.md p.29). The two skeptics did not disagree here, so I did not reopen pages. Non-obvious is unrefuted, and the size is unknown.",
+   "materiality": "low",
+   "obviousness": "low",
+   "confidence": "medium",
+   "unresolved": "Size: Medicare share of Zepbound is undisclosed and post-2027 CMS policy is unknown, so the revenue at risk cannot be estimated."
+  },
+  {
+   "id": "LLY-c10",
+   "category": "Peer contrast",
+   "verdict": "killed",
+   "claim": "Mounjaro ex-U.S. revenue has exceeded U.S. revenue since Q1 2026.",
+   "reason": "Both skeptics refute in round 2. The crossover is one subtraction on the headline product table (LLY:10q_2026Q2.md p.29). It started in Q1 2026 (4,430 vs 4,233), not Q2. The NRDL price cut was guided on the Q4 2025 call. The 75% self-pay figure is in CFO Montarce's prepared remarks (LLY:transcripts/2025Q3_transcript.md p.1, grade B). The IRA share should be 9.8% U.S.-only, not 15.3%. Confirmed killed.",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "LLY-c11",
+   "category": "Gross-to-net",
+   "verdict": "killed",
+   "claim": "Since mid-2026 a lower-acquisition-cost Zepbound KwikPen SKU sits beside unchanged single-dose pens at retail.",
+   "reason": "Both skeptics refute in both rounds. The NADAC gap brackets the $299-$449 prices announced in LLY:policy/press_2025-11-06_us_govt_agreement.md p.1. No existing SKU was repriced (the 7.5 mg single-dose pen NADAC rose from 510.44 to 526.00). NADAC is list-side and cannot size net revenue. The 'under the government deal' link is unsupported, since the press release excludes commercial pricing. The skeptics differ on the KwikPen's first NADAC date (2026-05-20 vs 2026-06-17), which is immaterial to the kill. Confirmed killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  }
+ ],
+ "product": {
+  "verdict": "narrowed",
+  "product": "Zepbound (tirzepatide) injection",
+  "rivals": [
+   "Novo Nordisk Wegovy injection",
+   "Novo Nordisk Wegovy pill (semaglutide tablets)",
+   "Novo Nordisk Ozempic"
+  ],
+  "reason": "Zepbound is the right product: 21% of H1 2026 revenue alone and 65% with Mounjaro (LLY:10q_2026Q2.md p.26, p.29), and both skeptics agree. Narrowed: Foundayo's 'with or without food' is Lilly's own launch marketing line (LLY:policy/press_2026-04-09_foundayo_launch_pricing.md p.1), so it is dropped. The fine-print edge that survives is (1) the Zepbound vs Wegovy CV/MASH indication gap as it bears on post-2027 Part D coverage (c09; drug:zepbound:label_sections.md p.2, drug:wegovy:label_sections.md p.2) and (2) Foundayo's 9 mg cap with strong CYP3A4 inhibitors (drug:foundayo:label_sections.md p.6). Neither has a revenue number."
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 1,
+  "best_candidate_id": "LLY-c03",
+  "one_line": "Weak pick: Lilly is the most-covered name, and every headline item (price deal, Bridge dates, rebate true-ups, tax rate, capacity, ex-U.S. mix) is said. The one material, unsaid survivor is a post-approval inventory-days build (410 to 469 days, about $2.1B), which is a cash and write-down risk with no EPS effect. c06 and c09 are unsaid but only a ceiling or unsized."
+ }
+}
