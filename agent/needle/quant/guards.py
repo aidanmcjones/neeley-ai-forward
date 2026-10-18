@@ -273,3 +273,70 @@ def check(sig, sigs):
     out.append(needle_direction_guard(sig))
     out.append(paragraph_guard(sig))
     return [g for g in out if g]
+
+
+# ------------------------------------------------------------------ receivables footnote read (thread #19 (c))
+RECEIVABLE_KINDS = {"receivables_outpace_revenue", "rec_gap_peer_outlier", "dso_rising", "dso_peer_outlier"}
+FOOTNOTE_TERMS = {
+    "factoring": r"\bfactor(?:ing|ed)?\b|option to factor",
+    "FVOCI receivables": r"FVOCI|fair value through other comprehensive income",
+    "bank acceptance drafts": r"bank acceptance drafts?",
+    "gross billing with a separate rebate liability": r"(?:sales deductions?|rebates?|chargebacks?)[^.]{0,160}"
+                                                       r"(?:accrued|liabilit|balance as of)",
+}
+# Notes that give the net movement, read by hand from the cited pages and re-verified on every run. The receivables
+# change and the explaining balance change are both quoted; the net is derived from them.
+FOOTNOTE_NET = {
+    "AMGN": {"doc": "AMGN:10k_FY2025.md", "term": "gross billing with a separate rebate liability",
+             "rec": (109, "Trade receivables, net 9,570 6,782", 9570.0, 6782.0),
+             "offset": [(83, "Balance as of December 31, 2024 6,817 1,162 426 8,405", 8405.0),
+                        (83, "Balance as of December 31, 2025 $ 8,839 $ 1,298 $ 469 $ 10,606", 10606.0)],
+             "what": "the sales-deduction (rebate and chargeback) liability",
+             "period": "FY2025 (10-K; the 10-Q does not give the quarterly deduction balance)"},
+    "AZN": {"doc": "AZN:20f_FY2025.md", "term": "factoring, FVOCI receivables and bank acceptance drafts",
+            "rec": (88, "Trade receivables 10,289 8,335", 10289.0, 8335.0),
+            "offset": [(88, "Trade receivables include $ 2,681 m (2024: $ 667 m) measured at FVOCI", 667.0),
+                       (88, "Trade receivables include $ 2,681 m (2024: $ 667 m) measured at FVOCI", 2681.0)],
+            "what": "receivables held at FVOCI because the Group can factor them or holds China bank acceptance drafts",
+            "period": "FY2025 (20-F p. F-29)"},
+}
+
+
+def _filing_pages(doc_ids):
+    out = []
+    idx = data.index()
+    for d in doc_ids:
+        try:
+            pages = idx.pages(d)
+        except Exception:
+            continue
+        for n, (printed, text) in pages.items():
+            flat = " ".join(text.replace("​", " ").split())
+            if re.search(r"receivable|sales deduction|rebate|chargeback", flat, re.I):
+                out.append((d, n, printed, flat))
+    return out
+
+
+def receivables_read(sig, cited_docs=()):
+    """Footnote read for a receivables-gap row: search the cited filing and the latest annual report's receivables and
+    revenue-deduction pages for factoring, FVOCI receivables, bank acceptance drafts, or gross billing with a separate
+    rebate liability. Returns {"hits": [(term, doc, page, printed, sentence)], "net": FOOTNOTE_NET spec or None}."""
+    if sig.kind not in RECEIVABLE_KINDS:
+        return None
+    docs = [d for d in cited_docs if d]
+    ann = data.db().execute("SELECT doc_id FROM docs WHERE ticker = ? AND doc_type = 'annual_report' ORDER BY filed "
+                            "DESC LIMIT 1", (sig.ticker,)).fetchone()
+    if ann:
+        docs.append(ann[0])
+    hits, seen = [], set()
+    for d, n, printed, flat in _filing_pages(dict.fromkeys(docs)):
+        for s in re.split(r"(?<=[.;])\s+", flat):
+            for term, pat in FOOTNOTE_TERMS.items():
+                if term in seen or not re.search(pat, s, re.I):
+                    continue
+                if term != "gross billing with a separate rebate liability" and not re.search(r"receivable", s, re.I):
+                    continue
+                if 30 <= len(s) <= 600:
+                    hits.append((term, d, n, printed, s))
+                    seen.add(term)
+    return {"hits": hits, "net": FOOTNOTE_NET.get(sig.ticker)}

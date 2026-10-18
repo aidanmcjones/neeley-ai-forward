@@ -131,3 +131,50 @@ def test_nuggets_dir_sets_best_needle():
     assert sorted(best) == sorted(["MRK-nugget-001", "JNJ-nugget-010", "PFE-nugget-001", "BMY-nugget-001",
                                    "AMGN-nugget-006", "NVO-nugget-001", "LLY-nugget-002", "ABBV-nugget-001",
                                    "GILD-nugget-001", "AZN-nugget-010"])
+
+
+def test_marker_label_prints_its_text():
+    from agent.needle.cite import render
+    assert render._assumption_tag("marker: no public MFN rate; terms confidential (internal 0.65%)") == \
+        "assumption: no public MFN rate; terms confidential"
+    assert render.is_marker("[assumption: no public MFN rate; terms confidential]")
+
+
+@need_moat
+def test_mfn_placeholder_rows_carry_the_explicit_marker():
+    from agent.needle.quant import data, find
+    from agent.needle.cite.render import claim_markup
+    from agent.needle.cite.locator import Claim
+    for t in ("GILD", "AMGN"):
+        rows = find.mfn_findings(t, data.company(t))
+        assert rows
+        f = rows[0]
+        assert getattr(f, "mfn_placeholder", False) and f.needle_blocked and f.vector["M"] > 0
+        texts, _ = claim_markup([Claim(f.impact.formula, [], derived=f.derived, assumptions=f.assumptions,
+                                       where="impact.formula")])
+        assert "[assumption: no public MFN rate; terms confidential]" in texts[0]
+        assert "$" not in f.sentence.split("Direction:")[1]
+
+
+@need_moat
+def test_gild_biktarvy_settlement_date_and_first_year_precedents():
+    from agent.needle.quant import data, find
+    f = [x for x in find.ira_findings("GILD", data.company("GILD")) if x.product == "Biktarvy"][0]
+    assert "April 1, 2036" in f.sentence and "22%" in f.sentence
+    pages = {(c.canonical_id, c.page) for c in f.citations if c.verification.ok}
+    assert ("GILD:10k_FY2025.md", 37) in pages and ("AMGN:10q_2026Q2.md", 40) in pages \
+        and ("BMY:10q_2026Q2.md", 35) in pages
+
+
+@need_moat
+def test_receivables_rows_explained_by_footnote_amgn_azn():
+    from agent.needle.quant import run
+    for t, net in (("AMGN", 587), ("AZN", -60)):
+        _, fs, wh = run.score_ticker(t, write=False)
+        rec = [f for f in fs + wh if f.kind == "receivables_outpace_revenue"]
+        assert rec
+        for f in rec:
+            assert f.needle_blocked and getattr(f, "footnote_read", {}).get("status") == "explained by footnote"
+            assert round(f.footnote_read["net"]) == net
+    amgn = [f for f in run.score_ticker("AMGN", write=False)[1] if f.kind == "receivables_outpace_revenue"][0]
+    assert amgn.impact.channel == "receivables_net" and 0 < amgn.impact.d_eps["base"] < 1.0

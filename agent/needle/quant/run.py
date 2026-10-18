@@ -98,6 +98,8 @@ def score_ticker(ticker, write=True, extra_signals=None):
         seen.add(key)
         f = find.score_signal(sig, co)
         nid_map[needle_branch_id(sig)] = f
+        if sig.kind in guards.RECEIVABLE_KINDS:      # thread #19 (c): footnote read before needle eligibility
+            find.apply_receivables_read(f, guards.receivables_read(sig, [e.doc_id for e in sig.evidence]), co)
         f.old_S = old.get((sig.kind, sig.detail))
         dropped = False
         for g in guards.check(sig, sigs):

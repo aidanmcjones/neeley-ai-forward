@@ -60,7 +60,11 @@ def _claims(f):
     form = Claim(formula, ok, derived=dm, assumptions=am, where=f"formula/{f.id}") if formula else None
     eps, oi = impact_of(f)
     ia = {}
-    if eps:
+    if eps and getattr(f, "mfn_placeholder", False):
+        from .find import MFN_MARKER_LABEL
+        GW.assume(ia, f"dEPS_{f.id}", round(eps, 2), MFN_MARKER_LABEL)
+        GW.assume(ia, f"dOI_{f.id}", round(oi, 1), MFN_MARKER_LABEL)
+    elif eps:
         GW.assume(ia, f"dEPS_{f.id}", round(eps, 2), "model output: base-case |dEPS| of this row's impact formula, "
                                                      "USD per share")
         GW.assume(ia, f"dOI_{f.id}", round(oi, 1), "model output: base-case |dOI| of this row's impact formula, USD M")

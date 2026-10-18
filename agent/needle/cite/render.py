@@ -25,10 +25,10 @@ import re
 
 from . import gate as _gate
 
-# Square brackets are reserved for markers: [n], [derived], [derived: ...], [assumption], [constant: NAME]. Any other
+# Square brackets are reserved for markers: [n], [derived], [derived: ...], [assumption], [assumption: TEXT], [constant: NAME]. Any other
 # bracketed text in a claim (a label such as "[biologic; LOE 2031-01-01]") would read as a citation marker, so it is
 # rendered in parentheses. The swap keeps string length, so the gate's number offsets stay valid.
-MARKER_RE = re.compile(r"\[(?:\d+|derived(?:: [^\[\]]*)?|assumption|constant: [^\[\]]+)\]")
+MARKER_RE = re.compile(r"\[(?:\d+|derived(?:: [^\[\]]*)?|assumption(?:: [^\[\]]+)?|constant: [^\[\]]+)\]")
 _BRACKET_RE = re.compile(r"\[([^\[\]]*)\]")
 
 
@@ -136,6 +136,7 @@ def _apply(text, inserts, fmt):
 
 
 CONSTANT = "constant: "
+MARKER = "marker: "   # an assumption whose marker text is printed: label "marker: <text> (detail)" -> [assumption: <text>]
 
 
 def _assumption_tag(label):
@@ -143,6 +144,8 @@ def _assumption_tag(label):
     label = str(label or "")
     if label.startswith(CONSTANT):
         return "constant: " + label[len(CONSTANT):].split(" (")[0].strip()
+    if label.startswith(MARKER):
+        return "assumption: " + label[len(MARKER):].split(" (")[0].strip()
     return "assumption"
 
 

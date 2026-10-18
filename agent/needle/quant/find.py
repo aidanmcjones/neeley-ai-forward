@@ -435,6 +435,34 @@ IRA_DRUGS = [
 ]
 
 
+# Cited context clauses for an IRA row (Parker, thread #19 (b)): the settlement generic date from the 10-K and the
+# two first set-price-year precedents that bracket the outcome. A clause prints only when its quote verifies.
+IRA_CONTEXT = {
+    "Biktarvy": [
+        ("GILD:10k_FY2025.md", 37, "Under the agreements, the earliest date the three generic manufacturers can market "
+         "a generic version of full dose Biktarvy in the U.S. is April 1, 2036, subject to standard acceleration "
+         "provisions.", "US generic entry no earlier than April 1, 2036 under the patent settlements (10-K), not the "
+         "earlier 2033 projection, so the set price runs eight years before generics"),
+        ("AMGN:10q_2026Q2.md", 40, "lower net selling price of 22% resulting from the impact of U.S. Medicare Part D "
+         "price setting under the IRA", "bear precedent for the first set-price year: Amgen's ENBREL net selling price "
+         "fell 22% under Part D price setting"),
+        ("BMY:10q_2026Q2.md", 35, "Eliquis revenues increased 22% during the second quarter of 2026",
+         "bull precedent: BMS cut the Eliquis list price and Eliquis revenue rose 22% in its first set-price year"),
+    ],
+}
+
+
+def _ira_context(drug, idx):
+    """(clauses, citations) for a drug's verified IRA context quotes."""
+    clauses, cites = [], []
+    for doc, page, quote, clause in IRA_CONTEXT.get(drug, []):
+        c = cite_verify(Citation(canonical_id=doc, page=page, quote=quote, claim_type="quote"), idx)
+        if c.verification.ok:
+            clauses.append(clause)
+            cites.append(c)
+    return clauses, cites
+
+
 def _company_selection_quote(ticker, drug):
     """A sentence in the company's own annual or quarterly report that names the drug as selected or negotiated."""
     idx = data.index()
@@ -862,7 +890,12 @@ def ira_findings(ticker, co):
             dtxt = f"base list discount {base_d:.0%}"
         sentence = (f"{drug}'s Medicare price is set by negotiation from January {ipay}: CMS Part B+D spend "
                     f"${G:,.1f}M; {dtxt}.")
-        page_cites = [spend] + ([comp] if comp else [])
+        ctx_clauses, ctx_cites = _ira_context(drug, idx)
+        if ctx_clauses:
+            sentence += " " + "; ".join(c[0].upper() + c[1:] for c in ctx_clauses[:1]) + "." + \
+                ("" if len(ctx_clauses) < 2 else " " + "; ".join(x[0].upper() + x[1:] if i == 0 else x
+                                                                for i, x in enumerate(ctx_clauses[1:])) + ".")
+        page_cites = [spend] + ([comp] if comp else []) + ctx_cites
         if comp is None:
             flags.append("company filing sentence naming the selection not found: n_ind = 1")
         sc = _assemble(co, ticker, "ira_selected", sentence, FAM["ira"], imp, page_cites, ["ira"], disclosed,
@@ -931,6 +964,9 @@ def tariff_exposure(ticker):
 MFN_UNIVERSAL = False
 MFN_DIRECTIONAL = Family("directional: MFN agreement (deal terms confidential)", "P", W.PI_MIN, "directional", False,
                          ("mfn",))
+MFN_MARKER = "no public MFN rate; terms confidential"
+MFN_MARKER_LABEL = (f"marker: {MFN_MARKER} (internal placeholder kept in M only: Pfizer Medicaid base rate 0.65% of US "
+                    "revenue, range 0.3-1.0%; no public source for any company's MFN rate)")
 SDUD_MEDICAID_BASIC_REBATE = 0.231   # statutory Medicaid basic rebate for brand drugs (23.1% of AMP), 42 USC 1396r-8
 
 
@@ -1118,10 +1154,16 @@ def mfn_findings(ticker, co):
     else:
         sc.derived.update(q[4])
         sc.assumptions.update(q[5])
-    if q is None and sc.needle_eligible:
+    if q is None:
         # a direction with a universal placeholder size cannot be the company's sharpest specific finding
         sc.needle_eligible, sc.needle_blocked = False, True
         sc.flags.append("MFN direction with a placeholder size: not eligible as the Sharpest Needle")
+        # Parker (thread #19): the 0.65% base rate has no public source. M keeps it internally; the rendered impact
+        # line says so explicitly and the sentence prints no dollar figure
+        sc.mfn_placeholder = True
+        for k, a in list(sc.assumptions.items()):
+            if isinstance(a, dict) and str(a.get("label", "")).startswith("constant: S_MFN"):
+                a["label"] = MFN_MARKER_LABEL
     sc.citations += [c for c in ctx_cites if c not in sc.citations]
     sc.product = ""
     return [sc]
@@ -1261,3 +1303,74 @@ def score_nugget(sig, co):
         sc.flags.append("no page evidence: E = 0, withheld by the gate")
     return sc
 
+
+# ------------------------------------------------------------------ receivables footnote read (thread #19 (c))
+def apply_receivables_read(sc, read, co):
+    """A receivables-gap row can be the Sharpest Needle only after a footnote read finds no factoring, FVOCI
+    receivables, bank acceptance drafts, or gross billing with a separate rebate liability. With a hit the row is
+    needle-ineligible; when the note gives the net movement (guards.FOOTNOTE_NET) the row is marked "explained by
+    footnote", cited, and its impact falls to the net receivables movement the note does not explain."""
+    if read is None:
+        return sc
+    idx = data.index()
+    hits = read["hits"]
+    spec = read["net"]
+    if not hits and spec is None:
+        sc.flags.append("footnote read: no factoring, FVOCI receivables, bank acceptance drafts or separate rebate "
+                        "liability found in the cited filing or the latest annual report")
+        return sc
+    if spec is None:
+        terms = ", ".join(sorted({h[0] for h in hits}))
+        where = "; ".join(f"{h[1]} p. {h[3]}" for h in hits[:3])
+        sc.needle_eligible, sc.needle_blocked = False, True
+        sc.flags.append(f"footnote read: {terms} found ({where}); the gap may be presentation, not collection risk: "
+                        "not eligible as the Sharpest Needle until the note gives the net movement")
+        sc.footnote_read = {"status": "terms found", "hits": [h[:4] for h in hits]}
+        return sc
+    doc = spec["doc"]
+    rp, rq, r1, r0 = spec["rec"]
+    rc = cite_verify(Citation(canonical_id=doc, page=rp, quote=rq, claim_type="quote"), idx)
+    (op0, oq0, o0), (op1, oq1, o1) = spec["offset"]
+    oc0 = cite_verify(Citation(canonical_id=doc, page=op0, quote=oq0, claim_type="quote"), idx)
+    oc1 = cite_verify(Citation(canonical_id=doc, page=op1, quote=oq1, claim_type="quote"), idx)
+    sc.needle_eligible, sc.needle_blocked = False, True
+    if not (rc.verification.ok and oc0.verification.ok and oc1.verification.ok):
+        sc.flags.append(f"footnote read: {spec['term']} named in {doc}, but its quotes did not verify: needle-ineligible")
+        return sc
+    net = (r1 - r0) - (o1 - o0)
+    exp = max(0.0, net)
+    before = abs(float((sc.impact.d_eps or {}).get("base") or 0.0))
+    ops = {"a": (r1, rc), "b": (r0, rc), "c": (o1, oc1), "d": (o0, oc0)}
+    sc.derived["fn_rec_chg"] = derived_entry(r1 - r0, "a - b", {"a": ops["a"], "b": ops["b"]})
+    sc.derived["fn_off_chg"] = derived_entry(o1 - o0, "c - d", {"c": ops["c"], "d": ops["d"]})
+    sc.derived["fn_net"] = derived_entry(net, "(a - b) - (c - d)", ops)
+    imp = IM.Impact("receivables_net", fiscal_year=data.AS_OF.year + 1, t_years=W.ANCHOR_T_YEARS)
+    IM._fill(imp, (exp, exp, exp), W.CM_VOLUME, co)
+    if sc.not_quantified or abs(imp.d_eps.get("base", 0.0)) > before:
+        # the note only ever lowers a row's impact: a row that was not quantified stays not quantified
+        sc.sentence = (sc.sentence.rstrip(".") + f". Explained by footnote: {spec['what']} moved with receivables in "
+                       f"{spec['period']}; receivables rose {r1 - r0:,.0f} and that balance rose {o1 - o0:,.0f}, "
+                       f"leaving a net {net:,.0f}.")
+        sc.citations += [c for c in (rc, oc0, oc1) if c not in sc.citations]
+        sc.flags.append(f"footnote read: explained by footnote ({spec['term']}, {doc}); impact not raised; not "
+                        "eligible as the Sharpest Needle")
+        sc.footnote_read = {"status": "explained by footnote", "doc": doc, "net": net, "term": spec["term"]}
+        return sc
+    imp.formula = (f"net receivables movement not explained by the note ({r1:,.0f} - {r0:,.0f}) - ({o1:,.0f} - "
+                   f"{o0:,.0f}) = {net:,.0f}, floored at 0, x CM {W.CM_VOLUME:.2f} x (1 - t {co.tax:.4f}) / D "
+                   f"{co.shares:,.1f}")
+    imp.citations = [rc, oc0, oc1] + IM.constants_citations(co)
+    GW.const(sc.assumptions, "CM_VOLUME", W.CM_VOLUME, "volume-led contribution margin, KQ7")
+    sc.impact = imp
+    sc.channel = imp.channel
+    sc.vector["M"] = materiality(imp.d_eps.get("base", 0.0), imp.t_years, co.sigma)
+    sc.vector["dEPS_base"] = imp.d_eps.get("base")
+    sc.S = score(sc.vector["M"], sc.vector["O"], sc.vector["E"], sc.vector["pi"])
+    sc.citations += [c for c in (rc, oc0, oc1) if c not in sc.citations]
+    sc.sentence = (sc.sentence.rstrip(".") + f". Explained by footnote: {spec['what']} moved with receivables in "
+                   f"{spec['period']}; receivables rose {r1 - r0:,.0f} and that balance rose {o1 - o0:,.0f}, "
+                   f"leaving a net {net:,.0f}.")
+    sc.flags.append(f"footnote read: explained by footnote ({spec['term']}, {doc}); impact lowered to the net "
+                    f"movement {net:,.0f} (floored at 0); not eligible as the Sharpest Needle")
+    sc.footnote_read = {"status": "explained by footnote", "doc": doc, "net": net, "term": spec["term"]}
+    return sc
