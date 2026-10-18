@@ -22,12 +22,12 @@ Outputs: `out/<TICKER>/`. Corpus: `data/corpus/` (from branch `corpus`).
 
 - `pages.py`, `schema.py`: the page verifier (now runs as `fineprint.pages`)
 - `agents/`: nugget-miner and red-team prompts, paths repointed here
-- `out/MRK/`: the 12 verified MRK nuggets and their AI-caught log; `out/red_team_v3_final.md`
+- `out/`: empty; the miner writes `out/<TICKER>/` per company
 
 Not carried over: detectors, backtest, scoring, league, predictions, trial, ledger. They stay on `needle` for reference.
 
 ## Check the verifier
 
 ```
-python -c "from fineprint.pages import docs, check; from fineprint.schema import Evidence; d=docs('MRK'); e=Evidence(doc_id='MRK:10q_2026Q2.md', page=34, quote='Merck pays a royalty of 2.5% on worldwide net sales of Keytruda', figures=['2.5%']); print(check(e, d), e.citation)"
+python -c "from fineprint.pages import docs, check; from fineprint.schema import Evidence; d=docs('<TICKER>'); e=Evidence(doc_id='<TICKER>:<file>.md', page=<N>, quote='EXACT TEXT', figures=['<figure>']); print(check(e, d), e.citation)"
 ```

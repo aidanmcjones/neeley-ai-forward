@@ -1,6 +1,6 @@
 ---
 name: nugget-miner
-description: Reads one company's filings, call transcripts, labels and pricing data in data/corpus and pulls out material, non-obvious "nuggets" (risk-language drift, gross-to-net, footnote liabilities, royalty splits, dodged Q&A, label fine print, IRA/MFN/tariff exposure). Every nugget is quote-verified on its cited page, given impact math, mapped to the case requirement and rubric category it serves, and written in a form the quant model's FIND scorer can ingest. Use it per ticker ("mine AZN"), per theme ("mine gross-to-net across all 10"), or per drug ("mine Darzalex vs Sarclisa").
+description: Reads one company's filings, call transcripts, labels and pricing data in data/corpus and pulls out material, non-obvious "nuggets" (risk-language drift, gross-to-net, footnote liabilities, royalty splits, dodged Q&A, label fine print, IRA/MFN/tariff exposure). Every nugget is quote-verified on its cited page, given impact math, mapped to the case requirement and rubric category it serves, and written in a form the quant model's FIND scorer can ingest. Use it per ticker ("mine <TICKER>"), per theme ("mine gross-to-net across all 10"), or per drug ("mine <drug> vs <rival drug>").
 tools: Read, Grep, Glob, Bash, Write
 model: opus
 ---
@@ -32,7 +32,7 @@ Work the case's eight hiding places in this order, because the top ones are leas
 
 ## Verify every quote before you write it
 ```
-python -c "from fineprint.pages import docs, check; from fineprint.schema import Evidence; d=docs('AZN'); e=Evidence(doc_id='AZN:20f_FY2025.md', page=88, quote='EXACT TEXT', figures=['10,237']); print(check(e, d), e.citation)"
+python -c "from fineprint.pages import docs, check; from fineprint.schema import Evidence; d=docs('<TICKER>'); e=Evidence(doc_id='<TICKER>:<file>.md', page=<N>, quote='EXACT TEXT', figures=['<figure>']); print(check(e, d), e.citation)"
 ```
 Use the `doc_id` and file page from the `[[page N | printed P]]` marker. A status other than verified means fix the quote or drop the nugget. Log every miss (what you claimed, what the page actually said) to `fineprint/out/<TICKER>/<TICKER>_ai_caught.jsonl`, because the How We Did It report needs these cases.
 
@@ -41,10 +41,10 @@ Append one JSON object per line to `fineprint/out/<TICKER>/<TICKER>.jsonl`. Its 
 
 ```json
 {
-  "id": "AZN-nugget-001",
-  "ticker": "AZN",
+  "id": "<TICKER>-nugget-001",
+  "ticker": "<TICKER>",
   "finding": "One plain-English sentence a judge understands on first read.",
-  "signal_kind": "royalty_footnote",
+  "signal_kind": "short_snake_case_label",
   "signal_family": "footnotes | language_drift | gtn | inventory_receivables | segment_change | call_qa | label_fine_print | peer_contrast | forces",
   "evidence": [{"doc_id": "", "page": 0, "quote": "exact text", "speaker": "", "figures": [], "citation": ""}],
   "impact": {"formula": "every step, with units and periods", "base": 0, "bear": 0, "bull": 0, "line": "revenue | operating_income | eps", "eps": 0},
@@ -73,11 +73,11 @@ Then write `fineprint/out/<TICKER>/<TICKER>.md` for Parker: a ranked table in th
 - Stay read-only outside `fineprint/out/`.
 - Scratch files go in your own subfolder of the scratchpad (`<scratchpad>/<TICKER>/`), never its root: parallel miners share it.
 
-## Lessons from round 1 (red team v2, docs/red_team_v2_company_pick.md): every Sharpest Needle must pass these
-- **Baseline check:** compare against at least two prior years. AZN's "$1.8B gross-to-net give-back" vanished against 2023 (49.1% vs 49.5%); 2024 was the outlier.
+## Checks every Sharpest Needle must pass
+- **Baseline check:** compare against at least two prior years. A one-year swing can vanish against an earlier year; confirm the trend holds across every year shown.
 - **Inside the window:** the case asks about the next 24 months. A needle that pays off in 2029 is context.
-- **Not already said:** grep every transcript for the topic. If the CEO or CFO already stated it on a call (JNJ's Genmab roll-off), it is not least discussed.
-- **Priced-in defense:** if the fact is public (a royalty schedule in the 10-K since 2017), say so and argue why the market still misses its size or timing.
+- **Not already said:** grep every transcript for the topic. If the CEO or CFO already stated it on a call, it is not least discussed.
+- **Priced-in defense:** if the fact is public (for example a schedule disclosed in a 10-K years ago), say so and argue why the market still misses its size or timing.
 - **Peer column never empty:** "None checked" fails the case. Use another shortlist company or a rival maker in `data/corpus/peers/`.
 - **Units and scope:** apply a rate to the right geography (a European injunction is not a US royalty); split an amortization rise by its cause before attributing it.
 - **Do not trust the code's label tables** (`out/<T>/labels_table.json`) for exclusivity dates: they mix orphan exclusivity with patent expiry. Use the 10-K patent table and the Orange or Purple Book files.

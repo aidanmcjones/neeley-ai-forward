@@ -88,8 +88,8 @@ The LLM may move P by up to 0.2 from the prior, and must cite why.
 
 ```json
 {
-  "id": "BMY-2026-001",
-  "ticker": "BMY",
+  "id": "<TICKER>-2026-001",
+  "ticker": "<TICKER>",
   "detector": "gtn_rollforward",
   "finding": "One plain-English sentence.",
   "source": {"doc": "10-K FY2025", "page_printed": "87", "quote": "exact text"},
