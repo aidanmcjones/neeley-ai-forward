@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T01:53:11+00:00",
+ "generated_at": "2026-10-18T02:22:20+00:00",
  "mode": "cached",
  "engine": "sample",
  "default_ticker": "BMY",
@@ -107,6 +107,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-labels-484154"
      ]
@@ -140,6 +142,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-labels-484154"
      ]
@@ -279,7 +283,7 @@
        "Eliquis label [1]; Xarelto label [2]"
       ],
       [
-       "eliquis twice daily vs xarelto once daily (label regimens: : twice daily; : once daily) [4][5]",
+       "eliquis twice daily (730/yr) vs xarelto once daily (365/yr) [4][5]",
        "Not quantified",
        "no peer comparison for this signal type",
        "high",
@@ -377,6 +381,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-labels-484154"
      ]
@@ -410,6 +416,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-labels-484154"
      ]
@@ -465,6 +473,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-labels-223816"
      ]
@@ -498,6 +508,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-labels-223816"
      ]
@@ -531,6 +543,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-forensics-652877"
      ]
@@ -564,6 +578,8 @@
      "derived_from": null,
      "derived_expr": null,
      "numeric_check": null,
+     "quote_note": null,
+     "viewer_link": null,
      "finding_ids": [
       "BMY-forensics-652877"
      ]

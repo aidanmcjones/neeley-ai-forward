@@ -433,6 +433,22 @@ def doc_label(e):
     return cit if cit and cit.lower() not in GENERIC_TITLES else (title or "source document")
 
 
+VERBATIM = ("exact", "substring", "fuzzy")
+
+
+def verbatim_quote(e):
+    """The cite's quote only when it is a located page quote (exact, substring or fuzzy); a constructed line
+    (number_match with a quote_note) is never printed as a quote."""
+    return (e.get("quote") or None) if verification_str(e) in VERBATIM else None
+
+
+def cite_text(e):
+    """Text that carries the cited value, for numeric gating only: the quote, the located excerpt match, a
+    constructed line (labelled by quote_note) and the value itself."""
+    ex = e.get("excerpt") if isinstance(e.get("excerpt"), dict) else {}
+    return " ".join(str(x) for x in (e.get("quote"), ex.get("match"), e.get("value")) if x)
+
+
 def ev_cite(e, finding_id, ticker, idx=0):
     withheld = bool(e.get("withheld"))
     url = e.get("deep_link") or e.get("url")
@@ -446,6 +462,7 @@ def ev_cite(e, finding_id, ticker, idx=0):
         "url": None if withheld else url, "withheld": withheld, "withheld_reason": e.get("withheld_reason"),
         "verification": verification_str(e), "derived_from": e.get("derived_from"),
         "derived_expr": e.get("derived_expr"), "numeric_check": None,
+        "quote_note": e.get("quote_note") or None, "viewer_link": e.get("viewer_link") or None,
     }
 
 
@@ -638,7 +655,7 @@ def sentence(f, C, t, n=2, row=None, unresolved=()):
     if "dosing" in (f.get("signal_kind") or ""):
         labels = []
         for e in f.get("evidence") or []:
-            regs = regimens([e.get("quote")])
+            regs = regimens([verbatim_quote(e)])
             if regs:
                 labels.append(f"{str(e.get('doc_title') or '').replace(' label', '')}: {' or '.join(regs)}")
         if labels:
@@ -1401,12 +1418,12 @@ def product_memo(ctx, t, slug, v2, comp):
         if not gns and re.search(r"\d", gl["sentence"]):
             gns = [C.add(row_cite(f"row:gl:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter",
                                   "product growth limiter (agent.needle.quant.product)", gl["sentence"], "computed", ticker=t))]
-        gq = [e.get("quote") for e in gl.get("citations") or []]
+        gq = [cite_text(e) for e in gl.get("citations") or []]
         p += " " + C.after(money_gate(plain_terms(gl["sentence"].rstrip(".")), gq, gl.get("numeric_check")), *gns) + "."
     tied = ((v2 or {}).get("findings") or [None])[0]
     if isinstance(tied, dict) and tied.get("finding"):
         tns = [C.add(ev_cite(e, tied.get("id"), t, i)) for i, e in list(enumerate(tied.get("evidence") or []))[:2]]
-        tq = [e.get("quote") for e in tied.get("evidence") or []]
+        tq = [cite_text(e) for e in tied.get("evidence") or []]
         p += " Tied finding: " + C.after(money_gate(plain_terms(tied["finding"].rstrip(".")), tq, tied_gate(tied)), *tns) + "."
     elif (v2 or {}).get("notes"):
         notes = [re.sub(r"^\w+ produced no finding: ", "", n) for n in v2["notes"]]
@@ -1441,7 +1458,7 @@ def product_memo(ctx, t, slug, v2, comp):
                 else:
                     val = cell.get("value") or ("no data: " + (cell.get("empty_reason") or "not located"))
                     if rk == "dosing" and cell.get("citations"):
-                        val = dosing_text(val, [c.get("quote") for c in cell["citations"]])
+                        val = dosing_text(val, [verbatim_quote(c) for c in cell["citations"] if isinstance(c, dict)])
                     val = shorten(plain_cell(val), 170)
                 out.append(C.after(val, *ns))
             rows.append(out)
@@ -1880,7 +1897,7 @@ def products_memo(ctx):
                 if not gns and re.search(r"\d", gl["sentence"]):
                     gns = [C.add(row_cite(f"row:gl:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter",
                                           "product growth limiter (agent.needle.quant.product)", gl["sentence"], "computed", ticker=t))]
-                gq = [e.get("quote") for e in gl.get("citations") or []]
+                gq = [cite_text(e) for e in gl.get("citations") or []]
                 glc = money_gate(plain_terms(gl["sentence"].rstrip(".")), gq, gl.get("numeric_check"))
                 glc = re.sub(r"^What limits .+?'s growth is ", "", glc)
                 glc = re.sub(r", and the market has (?:already|not clearly) priced (?:this|it) in$", "", glc)
@@ -2171,14 +2188,23 @@ def why_it_works_table(d, t, C):
         if isinstance(r, dict) and r.get("decider") and "what_our_data_shows" in r:
             # decide.md rows: markers in the data cell are footnote numbers into the row's own cites
             mm = {}
+            text0 = str(r.get("what_our_data_shows") or "")
+            nums = list(dict.fromkeys(seg_markers(text0)[0]))  # footnote numbers in order of first appearance
+            claimed = {int(e["n"]) for e in r.get("cites") or [] if isinstance(e, dict) and e.get("n") is not None}
+            free = [x for x in nums if x not in claimed]
             for j, e in enumerate(r.get("cites") or []):
+                if isinstance(e, dict) and e.get("n") is None and e.get("cite_id") and free:
+                    e = dict(e, n=free.pop(0))  # cites exported without a footnote number map to the markers in order
                 if not isinstance(e, dict) or e.get("n") is None:
                     continue
                 base = f"stance.decide.why_it_works_rows{'.rows' if isinstance(src, dict) else ''}[{i}].cites[{j}]"
                 page = e.get("printed") or e.get("page")
-                mm[str(e["n"])] = C.add(row_cite(f"row:why:{t}:{i}:{e['n']}", f"companies/{t}.json:{base}",
-                                                 doc_label(e), e.get("quote") or "", verification_str(e), ticker=t,
-                                                 page=page, url=e.get("deep_link") or e.get("url") or None))
+                rc = row_cite(f"row:why:{t}:{i}:{e['n']}", f"companies/{t}.json:{base}", doc_label(e),
+                              "" if e.get("withheld") else (e.get("quote") or ""), verification_str(e), ticker=t, page=page,
+                              url=None if e.get("withheld") else (e.get("deep_link") or e.get("url") or None), value=e.get("value"))
+                rc.update({"quote_note": e.get("quote_note") or None, "viewer_link": e.get("viewer_link") or None,
+                           "withheld": bool(e.get("withheld")), "withheld_reason": e.get("withheld_reason")})
+                mm[str(e["n"])] = C.add(rc)
             unres = {int(x) for x in r.get("markers_unresolved") or []}
 
             def sub(m, mm=mm, unres=unres):
@@ -2721,6 +2747,7 @@ def gated_text(f):
     parts.append(((f.get("vector") or {}).get("obscurity_note")) or "")
     parts.append(f.get("obscurity_note") or "")
     parts += [f.get(k) for k in ("formula_marked",) if isinstance(f.get(k), str)]
+    parts += [cite_text(e) for e in (f.get("evidence") or []) + (f.get("data_citations") or []) if isinstance(e, dict)]
     return strip_marks(" ".join(parts))
 
 
@@ -2735,7 +2762,7 @@ def product_gated_text(ctx, t, slug):
         for cell in (row or {}).values():
             if not (cell or {}).get("uncited"):
                 parts.append(str((cell or {}).get("value") or ""))
-                parts += [str(c.get("quote") or "") for c in (cell or {}).get("citations") or []]  # label quotes on the page
+                parts += [cite_text(c) for c in (cell or {}).get("citations") or [] if isinstance(c, dict)]  # label quotes on the page
     gl = v2.get("growth_limiter") or {}
     parts += [gl.get("sentence") or "", gl.get("sentence_raw") or ""]
     for f in v2.get("findings") or []:
@@ -2968,7 +2995,8 @@ def check(path, ctx):
                 obj, err = resolve_ref(c.get("ref") or "", ctx)
                 if err or obj is None:
                     errors.append(f"{mid}: row cite [{n}] {cid} does not resolve: {err}")
-                elif c.get("value") is not None and str(c["value"]) not in (c.get("quote") or ""):
+                elif c.get("value") is not None and not c.get("withheld") and str(c["value"]) not in (c.get("quote") or ""):
+                    # a withheld machine-data row shows its value with no quote by design
                     errors.append(f"{mid}: row cite [{n}] value {c['value']} not in quote")
                 if cid.startswith("row:decide:") and isinstance(obj, dict):
                     for key in FIVE:

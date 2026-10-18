@@ -171,6 +171,10 @@ robustness variants; `--check` fails on those words anywhere except the league m
 7b. Case mapping: every ceo_memo carries the six Part 2 elements as headings, kpi labels or table first cells
    (Recommendation, Budget, Return math, Alternatives rejected, kill signals, deciders); every findings table
    carries the Impact, Peer, Confidence and Source columns.
+7e. Quotes: memo cites carry `quote_note` and `viewer_link` from the export; a number_match cite's constructed
+   line ("concept CY2025 = 36,751", labelled by `quote_note`) and its located excerpt count as gated text for
+   the number check, but only exact, substring or fuzzy quotes are ever printed as quotes (label regimens); a
+   withheld machine-data cite shows its value with no quote, excerpt or url.
 7d. Freshness: `--check` fails when memos.json is older than any company file, meta.json, proof.json or
    league.json; every `row:decide` cite's quoted five numbers must equal the decide row it resolves to.
 7c. Pitch language: "score L", "S =", "materiality score" and "robustness" fail anywhere except the league memo's
