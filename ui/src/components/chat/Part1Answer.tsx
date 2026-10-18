@@ -175,11 +175,12 @@ function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> })
           {call && call !== "untestable" && (
             <span className={`mr-1.5 inline-block rounded-full border px-2 py-px align-middle text-[11px] font-bold uppercase tracking-wide ${call === "not priced in" ? "border-warn/50 bg-warn/10 text-warn" : "border-line bg-surface-2 text-fg"}`}>{call}</span>
           )}
+          {call && call !== "untestable" && pi.confidence && <span className="mr-1.5 inline-block align-middle"><ConfPill level={String(pi.confidence)} /></span>}
           <Md md={scrub(pi.text_marked ?? pi.text) || (call === "untestable" ? "Not testable: no consensus estimate is cited." : "")} cite={resolver(ix, pi.marker_map, pi.cites)} />
-          {pi.confidence && <> <ConfPill level={String(pi.confidence)} /></>}
+          {(!call || call === "untestable") && pi.confidence && <> <ConfPill level={String(pi.confidence)} /></>}
         </p>
       )}
-      {pi && <PricedEvidence evidence={pi.evidence} cite={resolver(ix, pi.marker_map, pi.cites)} ix={ix} />}
+      {pi && <PricedEvidence evidence={pi.evidence} ix={ix} />}
       {pi && scrub(pi.limit_marked ?? pi.limit) && (
         <p className="text-[12.5px] text-muted"><Md md={scrub(pi.limit_marked ?? pi.limit)} cite={resolver(ix, pi.marker_map, pi.cites)} /></p>
       )}
@@ -187,37 +188,51 @@ function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> })
   );
 }
 
-/** priced_in.evidence, shape not final: a list of signal records or an object keyed by signal. */
-function PricedEvidence({ evidence, cite, ix }: { evidence: unknown; cite: Cite; ix: Map<string, Evidence> }) {
+/** priced_in.evidence: [{source, finding, cites}] (cites as cite_ids or evidence objects). An object keyed
+ *  by signal is also accepted. Chips follow the finding when it has no markers of its own. */
+function PricedEvidence({ evidence, ix }: { evidence: unknown; ix: Map<string, Evidence> }) {
   if (!evidence || typeof evidence !== "object") return null;
   const str = (x: unknown) => (typeof x === "string" || typeof x === "number" ? String(x) : "");
-  const pick = (o: Record<string, unknown>, ks: string[]) => { for (const k of ks) { const s = str(o[k]); if (s) return s; } return ""; };
-  type Row = { signal: string; showed: string; grade: string; cite: Cite };
-  const toRow = (signal: string, x: unknown): Row | null => {
-    if (typeof x === "string" || typeof x === "number") return { signal, showed: String(x), grade: "", cite };
+  const pick = (o: Record<string, unknown>, ks: string[]) => { for (const k of ks) { const v = str(o[k]); if (v) return v; } return ""; };
+  const toEv = (c: unknown): Evidence | undefined =>
+    typeof c === "string" ? ix.get(c)
+      : c && typeof c === "object" ? (((c as Evidence).cite_id && ix.get((c as Evidence).cite_id!)) || evidenceLabel(c as Evidence)) : undefined;
+  type Row = { source: string; finding: string; evs: (Evidence | undefined)[]; map: Record<string, string> | null };
+  const toRow = (label: string, x: unknown): Row | null => {
+    if (typeof x === "string" || typeof x === "number") return { source: label, finding: String(x), evs: [], map: null };
     if (!x || typeof x !== "object") return null;
     const o = x as Record<string, unknown>;
-    const local = Array.isArray(o.cites) ? (o.cites as Evidence[]) : null;
-    const map = o.marker_map && typeof o.marker_map === "object" ? (o.marker_map as Record<string, string>) : null;
     return {
-      signal: signal || pick(o, ["signal", "name", "label", "key", "kind"]),
-      showed: pick(o, ["text_marked", "showed_marked", "showed", "text", "finding", "summary", "value", "result", "direction"]),
-      grade: pick(o, ["grade", "strength", "confidence", "verdict"]),
-      cite: local || map ? resolver(ix, map, local) : cite,
+      source: label || pick(o, ["source", "signal", "name", "label", "kind"]),
+      finding: pick(o, ["finding_marked", "finding", "text_marked", "text", "showed", "summary", "value"]),
+      evs: Array.isArray(o.cites) ? (o.cites as unknown[]).map(toEv) : [],
+      map: o.marker_map && typeof o.marker_map === "object" ? (o.marker_map as Record<string, string>) : null,
     };
   };
   const rows = (Array.isArray(evidence) ? evidence.map((x) => toRow("", x)) : Object.entries(evidence as Record<string, unknown>).map(([k, x]) => toRow(k.replace(/_/g, " "), x)))
-    .filter((r): r is Row => !!r && !!(r.signal || r.showed));
+    .filter((r): r is Row => !!r && !!(r.source || r.finding));
   if (!rows.length) return null;
   return (
-    <dl className="grid grid-cols-[minmax(0,10rem)_1fr] gap-x-3 gap-y-1 rounded-md border border-line bg-surface-2 px-3 py-2 text-[12.5px]">
-      {rows.map((r, i) => (
-        <div key={i} className="contents">
-          <dt className="font-semibold text-muted">{scrub(r.signal) || "signal"}{r.grade ? <span className="ml-1 font-normal italic">({scrub(r.grade)})</span> : null}</dt>
-          <dd className="min-w-0 break-words"><Md md={scrub(r.showed) || "not reported"} cite={r.cite} /></dd>
-        </div>
-      ))}
-    </dl>
+    <div className="space-y-1">
+      <h4 className="text-[13px] font-semibold uppercase tracking-wide text-muted">Evidence</h4>
+      <ul className="divide-y divide-line rounded-md border border-line bg-surface-2 text-[13px]">
+        {rows.map((r, i) => {
+          const local = r.evs; // an id with no exported evidence object renders as a struck "[n]" (Source not exported)
+          const cite: Cite = (n) => (r.map?.[String(n)] && ix.get(r.map[String(n)])) || r.evs[n - 1];
+          const text = scrub(r.finding);
+          const marked = /\[(\d+|derived:[^\]]*)\]/.test(text);
+          return (
+            <li key={i} className="grid gap-x-3 gap-y-0.5 px-3 py-1.5 sm:grid-cols-[minmax(0,11rem)_1fr]">
+              <div className="text-[10.5px] font-semibold uppercase tracking-wide text-muted break-words">{scrub(r.source) || "signal"}</div>
+              <div className="min-w-0 break-words leading-snug">
+                <Md md={text || "not reported"} cite={cite} />
+                {!marked && local.length > 0 && <span className="ml-1 inline-flex flex-wrap gap-0.5 align-baseline">{local.map((e, j) => <CiteChip key={j} evidence={e ?? null} n={j + 1} />)}</span>}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }
 
