@@ -1,0 +1,5 @@
+Annual Report 2025 full PDF (boehringer-ingelheim.com / annualreport.boehringer-ingelheim.com): 403 on all URLs; Highlights PDF via bayern.landtag.de is AES-encrypted, pypdf needs cryptography package
+Annual Report 2024 full PDF: 403
+H1 2026 results page (our-half-year-financial-results-2026): 403 (reported net sales +16.2% to EUR 15.8bn per search snippet)
+Official press releases (FY2025, H1 2025, FY2024 results): 403
+Jardiance Medicare IRA, MFN pricing agreement, tariffs, US manufacturing investment BI press releases: not found/403

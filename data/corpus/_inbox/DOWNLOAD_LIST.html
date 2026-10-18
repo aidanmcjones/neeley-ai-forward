@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corpus downloads</title>
+<style>
+  :root { --bg:#fff; --fg:#1d1d1f; --mute:#6e6e73; --line:#e3e3e6; --accent:#4b2e83; --chip:#f2eff8; --now:#b42318; --nowbg:#fdecea; --pick:#8a5a00; --pickbg:#fff4dc; --ok:#1a7f37; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161618; --fg:#ececf0; --mute:#a0a0a8; --line:#2c2c30; --accent:#b9a3ec; --chip:#25212f; --now:#ff8a80; --nowbg:#3a1d1b; --pick:#f2c46d; --pickbg:#33290f; --ok:#6fd38a; } }
+  body { background:var(--bg); color:var(--fg); font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif; margin:0; padding:24px 16px 64px; }
+  main { max-width:920px; margin:0 auto; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  h2 { font-size:17px; margin:30px 0 4px; color:var(--accent); display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+  h2 small { font-size:13px; font-weight:400; color:var(--mute); }
+  .mute { color:var(--mute); }
+  code { background:var(--chip); padding:1px 5px; border-radius:4px; font-size:13px; word-break:break-all; }
+  table { width:100%; border-collapse:collapse; margin:6px 0 4px; }
+  td { padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; font-size:14px; }
+  td:first-child { width:96px; }
+  a { color:var(--accent); }
+  .tag { display:inline-block; font-size:11px; font-weight:700; padding:2px 7px; border-radius:10px; letter-spacing:.03em; white-space:nowrap; }
+  .now { color:var(--now); background:var(--nowbg); }
+  .pick { color:var(--pick); background:var(--pickbg); }
+  .done { color:var(--ok); font-size:14px; margin:4px 0; }
+  .box { border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:12px 0; }
+  nav { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; }
+  nav a { font-size:13px; text-decoration:none; border:1px solid var(--line); border-radius:6px; padding:3px 8px; }
+</style></head>
+<body><main>
+<h1>Corpus downloads, by company</h1>
+<p class="mute">Everything the scripts couldn't fetch. Open the company's investor page once, then save all of that company's files in one go.</p>
+
+<div class="box">
+<ol style="margin:0;padding-left:20px">
+  <li>Save into <code>C:\Users\parke\OneDrive\Desktop\Hackathon\neeley-ai-forward\data\corpus\_inbox\</code></li>
+  <li>Save as <b>PDF</b>. If a page has no PDF, use Ctrl+S, "Webpage, HTML only", and save as <b>.html</b>.</li>
+  <li>Rename to the exact name shown below.</li>
+  <li>Tell Claude <b>"ingest the inbox"</b>.</li>
+</ol>
+<p style="margin:8px 0 0"><span class="tag now">NOW</span> fills a hole regardless of company. <span class="tag pick">IF PICKED</span> means do it only if this is our company or its product's rival. <b>Bloomberg transcripts:</b> add <code>_bloomberg</code> (or <code>_factset</code>, <code>_capiq</code>) to the end of the name, and the free-site copy is replaced automatically.</p>
+<nav>
+  <a href="#mrk">Merck</a><a href="#bmy">BMS</a><a href="#pfe">Pfizer</a><a href="#lly">Lilly</a><a href="#nvo">Novo</a><a href="#abbv">AbbVie</a><a href="#jnj">J&amp;J</a><a href="#azn">AstraZeneca</a><a href="#amgn">Amgen</a><a href="#gild">Gilead</a><a href="#peers">Rival makers</a>
+</nav>
+</div>
+
+<h2 id="amgn">Amgen <small>most holes · <a href="https://investors.amgen.com/events-presentations">investors.amgen.com → Events &amp; Presentations</a></small></h2>
+<table>
+<tr><td><span class="tag now">NOW</span></td><td><code>AMGN_transcript_2025Q3.pdf</code> Q3 2025 call transcript (Bloomberg/FactSet; no free copy exists)</td></tr>
+<tr><td><span class="tag now">NOW</span></td><td><code>AMGN_slides_2026Q2.pdf</code> Q2 2026 deck · <a href="https://investors.amgen.com/static-files/6214ad8a-4a21-4f66-8571-165e8cbb4681">direct link</a></td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>AMGN_slides_2025Q3.pdf</code>, <code>AMGN_slides_2025Q4.pdf</code>, <code>AMGN_slides_2026Q1.pdf</code> earnings decks</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>AMGN_presentation_2026-01-jpm.pdf</code> JPM Jan 2026 deck</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>AMGN_transcript_2025Q4_bloomberg.pdf</code>, <code>..._2026Q1_bloomberg.pdf</code>, <code>..._2026Q2_bloomberg.pdf</code> official transcripts</td></tr>
+</table>
+
+<h2 id="nvo">Novo Nordisk <small><a href="https://www.novonordisk.com/investors/financial-results.html">novonordisk.com → Investors → Financial results</a></small></h2>
+<table>
+<tr><td><span class="tag now">NOW</span></td><td><code>NVO_transcript_2026Q1.pdf</code> Q1 2026 call transcript (Bloomberg/FactSet; Novo posts recordings only)</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>NVO_slides_2025Q3.pdf</code> Q3 2025 investor presentation</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>NVO_transcript_2025Q3_bloomberg.pdf</code>, <code>..._2025Q4_bloomberg.pdf</code>, <code>..._2026Q2_bloomberg.pdf</code> official transcripts</td></tr>
+</table>
+
+<h2 id="lly">Eli Lilly <small><a href="https://investor.lilly.com/events-and-presentations">investor.lilly.com → Events &amp; Presentations</a></small></h2>
+<table>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>LLY_slides_2025Q3.pdf</code>, <code>LLY_slides_2025Q4.pdf</code>, <code>LLY_slides_2026Q1.pdf</code>, <code>LLY_slides_2026Q2.pdf</code> earnings decks</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>LLY_presentation_2026-01-jpm.pdf</code> JPM Jan 2026 · <a href="https://investor.lilly.com/node/53546">event page</a></td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>LLY_press_2025-11-06-us-govt-agreement.pdf</code> Lilly's own MFN agreement release (investor.lilly.com → News)</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>LLY_transcript_2026Q2_bloomberg.pdf</code> <b>first priority if picked</b>: the current copy is machine-generated with misspelled names. Then <code>..._2025Q3</code>, <code>..._2025Q4</code>, <code>..._2026Q1</code> with <code>_bloomberg</code></td></tr>
+</table>
+
+<h2 id="bmy">Bristol Myers Squibb <small><a href="https://www.bms.com/investors/events-and-presentations.html">bms.com → Investors → Events &amp; Presentations</a></small></h2>
+<table>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>BMY_slides_2025Q3.pdf</code>, <code>BMY_slides_2025Q4.pdf</code>, <code>BMY_slides_2026Q1.pdf</code>, <code>BMY_slides_2026Q2.pdf</code> earnings decks</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>BMY_presentation_2025-12-hematology.pdf</code> Dec 2025 hematology investor event</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>BMY_transcript_2025Q3_bloomberg.pdf</code>, <code>..._2025Q4</code>, <code>..._2026Q1</code>, <code>..._2026Q2</code> official transcripts</td></tr>
+</table>
+
+<h2 id="abbv">AbbVie <small><a href="https://investors.abbvie.com/events-and-presentations">investors.abbvie.com → Events &amp; Presentations</a></small></h2>
+<table>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>ABBV_slides_2025Q3.pdf</code>, <code>ABBV_slides_2025Q4.pdf</code>, <code>ABBV_slides_2026Q1.pdf</code>, <code>ABBV_slides_2026Q2.pdf</code> earnings decks</td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>ABBV_transcript_2025Q3_bloomberg.pdf</code>, <code>..._2025Q4</code>, <code>..._2026Q1</code>, <code>..._2026Q2</code> official transcripts</td></tr>
+</table>
+
+<h2 id="gild">Gilead <small>slides complete</small></h2>
+<table>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>GILD_transcript_2025Q3_bloomberg.pdf</code>, <code>..._2025Q4</code>, <code>..._2026Q1</code>, <code>..._2026Q2</code> official transcripts (Gilead posts prepared remarks only)</td></tr>
+</table>
+
+<h2 id="azn">AstraZeneca <small>slides and results complete</small></h2>
+<table>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>AZN_transcript_2025Q3_bloomberg.pdf</code>, <code>..._2025Q4</code>, <code>..._2026Q1</code>, <code>..._2026Q2</code> official transcripts (AZ doesn't publish them)</td></tr>
+</table>
+
+<h2 id="jnj">Johnson &amp; Johnson <small><a href="https://www.investor.jnj.com/financials/quarterly-results/default.aspx">investor.jnj.com → Quarterly results</a></small></h2>
+<p class="done">✓ All 5 transcripts official (incl. Q3 2026)</p>
+<table>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><code>JNJ_slides_2025Q3.pdf</code>, <code>JNJ_slides_2026Q3.pdf</code> two missing decks (Q3 2026 numbers are already in the 8-K)</td></tr>
+</table>
+
+<h2 id="mrk">Merck <small>nothing to download</small></h2>
+<p class="done">✓ Official transcripts, slides, JPM and ASCO decks all in</p>
+
+<h2 id="pfe">Pfizer <small>nothing to download</small></h2>
+<p class="done">✓ Official transcripts, slides, JPM decks all in</p>
+
+<h2 id="peers">Rival makers <small>only matter if they make our product's rival</small></h2>
+<table>
+<tr><td><span class="tag now">NOW</span></td><td><b>Novartis</b> (Kisqali, Cosentyx, Leqvio): <code>NVS_transcript_2026Q1.pdf</code> (Bloomberg/FactSet)</td></tr>
+<tr><td><span class="tag now">NOW</span></td><td><b>GSK / ViiV</b> (Dovato, Cabenuva, Apretude): <code>GSK_transcript_2026Q2.pdf</code> · <a href="https://www.gsk.com/en-gb/investors/quarterly-results/">gsk.com quarterly results</a></td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><b>Boehringer</b> (Jardiance; matters for Merck/Januvia or AstraZeneca/Farxiga): <code>BOEHRINGER_report_annual-2025.pdf</code> · <a href="https://www.boehringer-ingelheim.com/annual-report">annual report</a></td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><b>Regeneron</b> (Praluent; Amgen/Repatha): <code>REGN_slides_2026Q2.pdf</code></td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><b>Alnylam</b> (Amvuttra; Pfizer/Vyndaqel): <code>ALNY_slides_2026Q2.pdf</code></td></tr>
+<tr><td><span class="tag pick">IF PICKED</span></td><td><b>Takeda</b> (Entyvio; AbbVie/Skyrizi): <code>TAK_slides_FY2025Q4-amended.pdf</code> (June 5 amended version)</td></tr>
+</table>
+<p class="done">✓ Roche, Sanofi, BridgeBio: complete enough for a peer comparison</p>
+
+<p class="mute" style="margin-top:28px">Naming rule: <code>TICKER_kind_period[_source].pdf</code>. Kind is transcript, slides, presentation, report or press. If a link goes to a dead page, use the company's investor site and find the quarter under Events &amp; Presentations.</p>
+</main></body></html>

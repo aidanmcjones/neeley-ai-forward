@@ -1,0 +1,8 @@
+presentations/2025Q3_earnings_slides.md - Q3 2025 earnings slide deck PDF URL not found on investor.jnj.com (guessed paths 404; only seekingalpha copy)
+presentations/2026Q3_earnings_slides.md - Q3 2026 earnings slide deck PDF URL not found
+presentations/2026Q3_sales_supplement.md - Q3 2026 Other Financial Disclosures PDF not at guessed path (3Q26-Other-Financial-Disclosures.pdf 404); 8-K ex99.2 on EDGAR has the data
+presentations/2026-01_jpm_slides - J&J JPM Jan 2026 had a fireside chat only; no slide deck found (transcript saved instead)
+presentations/investor_day_2026 - Enterprise Business Review scheduled Dec 8 2026, not yet held; no 2025/2026 investor day deck
+policy/press_*_ira_negotiation - no J&J press release on IRA negotiation (Stelara/Xarelto/Imbruvica) found; only news coverage and MFP implementation plan PDF
+policy/press_2025_wilson_nc_biologics_groundbreaking.md - jnj.com page is JS, no text extracted; jnj.com copy of 2026-01-08 MFN release also failed (investor.jnj.com copy saved)
+policy/press_tariffs_trumprx_standalone - no separate J&J releases; covered by the 2026-01-08 agreement release

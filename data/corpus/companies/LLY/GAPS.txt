@@ -1,0 +1,8 @@
+Earnings slides 2025Q3, 2025Q4, 2026Q1, 2026Q2: investor.lilly.com and lilly.gcs-web.com static-files return HTTP 403 to ir_fetch
+Investor day / strategy presentation: not located (IR site 403)
+JPM Healthcare Conf Jan 2026 presentation (investor.lilly.com/node/53546): HTTP 403
+Transcript 2026Q3: call scheduled Oct 29 2026, has not happened
+Official (company IR) transcripts: none posted/accessible; all transcripts are third_party (roic.ai x3, benzinga x1)
+Press releases on investor.lilly.com (Nov 2025 US govt agreement official copy, Dec 2025 Zepbound vial price, Jan 2026 Pennsylvania $3.5B plant, Dec 2025 Alabama $6B, May 2026 Indiana $4.5B, Sep 2026 Houston $6.5B): HTTP 403; only Nov 2025 agreement saved via biospace repost (third_party)
+IRA Medicare negotiation press releases (Trulicity, Verzenio): not searched/found
+Pharma tariff Lilly-specific press releases: not found

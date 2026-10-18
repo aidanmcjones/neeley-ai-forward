@@ -1,0 +1,5 @@
+transcripts/2026Q1_transcript.md: no free full-text source found (roic.ai 403, fool.com/allmind not indexed); novonordisk.com posts only call recordings, no official transcripts for any quarter
+transcripts/2026Q3: call is 4-5 Nov 2026, not yet held
+presentations/2025Q3_earnings_slides.md: official Q3 2025 deck PDF URL not discoverable (guessed paths 404)
+reports/<period>_financial_report: saved only as HTML news-details page text (about 6k chars, partial); Announcement.pdf not fetched; full text is in EDGAR 6-Ks
+policy: no Novo press release found for tariffs, US manufacturing investment announcement, or IRA Medicare negotiated price for semaglutide (2027); no separate TrumpRx release found

@@ -1,0 +1,3 @@
+Labels re-pulled Sat Oct 17 after review: ozempic was the oral tablet label (now the injection, setid adec4fd2), sarclisa was SARCLISA ESCENA SC (now IV Sarclisa, setid a0473462; ESCENA kept as label_sections_escena.md), janumet was JANUMET XR (now JANUMET, setid d19c7ed0; XR kept as label_sections_xr.md). Root cause fixed in agent/drug_pack.py find_setid.
+orange_book_products.csv in every pack lists brand NDAs only (matched on trade name), so generic ANDAs (generic sitagliptin, dapagliflozin) are not in the packs; agent/product_table.py computes ANDA holders from data/external/orange_book.zip.
+keytruda-qlex and opdivo-qvantig Medicare spending files are the IV parent's data: CMS 2024 data has no subcutaneous rows yet.
