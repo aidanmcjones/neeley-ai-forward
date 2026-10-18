@@ -265,9 +265,10 @@ export function WhyItWorks({ company, decide, compact = false }: { company: Comp
   const evOf = (r: Record<string, unknown>) => (n: number): Evidence | undefined => {
     const c = (Array.isArray(r.cites) ? (r.cites as Record<string, unknown>[]) : []).find((x) => x?.n === n);
     if (c) {
+      // Full citation dicts (cite_id present) render as they are; older footnote stubs get a label built.
       const page = c.page != null ? `p. ${String(c.page)}` : String(c.location ?? "");
-      return { doc_id: String(c.doc_title ?? `footnote ${n}`), citation: [c.doc_title, page].filter(Boolean).join(", ") || `footnote ${n}`, doc_title: c.doc_title as string,
-        location: c.location as string, quote: (c.quote as string) ?? "", url: (c.url as string) ?? undefined, withheld: c.withheld === true, withheld_reason: (c.withheld_reason as string) ?? null,
+      return { ...(c as Evidence), doc_id: String(c.doc_id ?? c.doc_title ?? `footnote ${n}`), citation: (c.citation as string) || [c.doc_title, page].filter(Boolean).join(", ") || `footnote ${n}`,
+        quote: (c.quote as string) ?? "", url: (c.url as string) ?? undefined, withheld: c.withheld === true, withheld_reason: (c.withheld_reason as string) ?? null,
         verification: (typeof c.verification === "string" ? { status: c.verification } : c.verification) as Evidence["verification"], verdict: "verified" };
     }
     return fn.get(n)?.citation;

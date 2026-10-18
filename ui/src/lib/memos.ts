@@ -110,6 +110,8 @@ export function citeEvidence(c: MemoCite, all: MemoCite[]): Evidence {
   const ver = typeof c.verification === "string" ? { status: c.verification } : c.verification ?? null;
   const isRow = (c.cite_id ?? "").startsWith("row:");
   return {
+    quote_note: (c.quote_note as string | undefined) ?? null, doc_type: (c.doc_type as string | undefined) ?? undefined,
+    viewer_link: (c.viewer_link as string | undefined) ?? null, unit: (c.unit as string | undefined) ?? null,
     row_ref: isRow ? c.ref ?? null : null,
     row_check: isRow ? (typeof c.verification === "string" ? c.verification : c.verification?.detail ?? c.verification?.status ?? null) : null,
     value: c.value ?? undefined,

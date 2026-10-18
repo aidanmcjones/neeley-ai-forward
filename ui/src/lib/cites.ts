@@ -133,3 +133,8 @@ export function footnoteNote(f: Finding | null | undefined): string | null {
   const r = f.footnote_read;
   return r ? [r.term && `term: ${r.term}`, r.doc && `source: ${r.doc}`, typeof r.net === "number" && `net movement ${r.net.toLocaleString("en-US")}`].filter(Boolean).join("; ") || null : null;
 }
+
+/** A value line built from the cited data (XBRL rows): shown in monospace, never as a page quote. */
+export function isConstructed(ev: Evidence | null | undefined): boolean {
+  return !!ev && /constructed/i.test(String(ev.quote_note ?? ""));
+}

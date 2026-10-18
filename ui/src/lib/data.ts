@@ -287,5 +287,6 @@ export function withheldReason(ev: Evidence): string {
   const lic = ev.license;
   const r = String(ev.withheld_reason ?? "");
   if ((lic != null && lic !== "") || /licen[sc]ed|bloomberg|wrds/i.test(r)) return "licensed source";
+  if (ev.doc_type === "machine_data" || ev.verification?.status === "machine_data" || /machine data/i.test(r)) return "machine-readable data row";
   return "unverified citation";
 }

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import type React from "react";
 import type { Evidence } from "../lib/types";
 import { isWithheld, useData, withheldReason } from "../lib/data";
-import { derivedOperands, isDerived, isRowCite, pitchEvidence, pitchLine } from "../lib/cites";
+import { derivedOperands, isConstructed, isDerived, isRowCite, pitchEvidence, pitchLine } from "../lib/cites";
 
 // Global right-side source drawer. Any CiteChip calls useSource().open(evidence).
 // Esc closes, focus is trapped while open and restored to the opener on close.
@@ -138,11 +138,15 @@ export function SourceDrawer({ evidence: evRaw, onClose }: { evidence: Evidence;
           <Row k="Document">{String(title)}</Row>
           {ev.period && <Row k="Period">{ev.period}</Row>}
           {(ev.page != null || ev.printed || ev.location) && <Row k="Page"><span className="font-mono tnum">{ev.location || ev.printed || ev.page}</span></Row>}
+          {ev.value != null && ev.value !== "" && <Row k="Value"><span className="font-mono tnum">{String(ev.value)}{ev.unit ? ` ${ev.unit}` : ""}</span></Row>}
+          {ev.viewer_link && /^https?:|^\//.test(ev.viewer_link) && <Row k="Viewer"><a href={ev.viewer_link} target="_blank" rel="noreferrer" className="text-purple underline break-all">open in the local viewer</a></Row>}
         </dl>
         <p className="rounded-md border border-dashed border-warn/60 px-3 py-2 text-sm">
           <span className="font-semibold text-warn">Quote withheld: {withheldReason(ev)}.</span>{" "}
           <span className="text-muted">{withheldReason(ev) === "licensed source"
             ? "Licensed data is used as a model input but its text and links are not published."
+            : withheldReason(ev) === "machine-readable data row"
+            ? "This is a machine-readable data row: the cited value is shown above; there is no printed page to quote."
             : ev.doc_type === "benchmark"
               ? "External benchmark input (team assumption source); it is not in the page-anchored corpus, so nothing could be checked against a page."
               : `The quote could not be confirmed on the cited page${vdetail ? ` (${vdetail})` : ""}, so the quote and links are not shown.`}</span>
@@ -170,15 +174,20 @@ export function SourceDrawer({ evidence: evRaw, onClose }: { evidence: Evidence;
             {(isCall || ev.grade) && <Row k="Transcript grade">{ev.grade ? <span className="font-mono">{ev.grade}</span> : <span className="text-muted">ungraded</span>}{ev.source_quality ? <span className="text-muted"> · {ev.source_quality}</span> : null}</Row>}
           </dl>
           <div>
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted mb-1.5">Page excerpt</div>
-            {hasExcerpt ? (
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-muted mb-1.5">{isConstructed(ev) ? "Cited value" : ev.quote_note && !ev.quote ? ev.quote_note : "Page excerpt"}</div>
+            {isConstructed(ev) ? (
+              <div>
+                <code className="block rounded-md bg-surface-2 border border-line p-3 font-mono text-[12.5px] break-all">{ev.quote || (ev.value != null ? String(ev.value) : "")}</code>
+                <p className="mt-1 text-[11.5px] text-muted">constructed from the cited value, not a verbatim quote</p>
+              </div>
+            ) : hasExcerpt ? (
               <blockquote className="rounded-md bg-surface-2 border border-line p-3 text-sm leading-relaxed whitespace-pre-wrap">
                 {ex!.before}<mark>{ex!.match}</mark>{ex!.after}
               </blockquote>
             ) : ev.quote ? (
               <blockquote className="rounded-md bg-surface-2 border border-line p-3 text-sm leading-relaxed"><mark>{ev.quote}</mark></blockquote>
             ) : (
-              <p className="text-sm text-muted">No excerpt exported for this citation.</p>
+              <p className="text-sm text-muted">{ev.quote_note ? `${ev.quote_note}.` : "No excerpt exported for this citation."}{ev.value != null && ev.value !== "" ? <> Cited value: <span className="font-mono">{String(ev.value)}</span>.</> : null}</p>
             )}
           </div>
     </DrawerShell>

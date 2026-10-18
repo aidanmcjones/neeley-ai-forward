@@ -83,6 +83,9 @@ export interface Evidence extends Loose {
   cite_id?: string;
   /** Derived citation: operand cite_ids (no quote of its own). withheld wins over derived. */
   derived_from?: string[] | null;
+  /** number_match display note: "constructed from the cited value (no page); not a verbatim quote", or a page note. */
+  quote_note?: string | null;
+  viewer_link?: string | null;
   /** The computation as exported (e.g. "a / b"), when not withheld. */
   derived_expr?: string | null;
   /** Data-row cite (cite_id "row:..."): the JSON path it resolves to and how the value was checked. */

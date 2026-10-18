@@ -131,6 +131,8 @@ export function StancePanel({ company, preview, onPreview }: {
               ? <p className="mt-1 text-xs font-semibold text-warn">Quote withheld: {withheldReason(preview)}.</p>
               : isDerived(preview)
               ? <p className="mt-1 text-xs font-semibold text-purple">Derived from {preview.derived_from!.length} cited operand{preview.derived_from!.length > 1 ? "s" : ""}; click to see them.</p>
+              : /constructed/i.test(String(preview.quote_note ?? ""))
+                ? <p className="mt-1 text-xs"><code className="font-mono">{preview.quote || String(preview.value ?? "")}</code> <span className="text-muted">(constructed from the cited value, not a verbatim quote)</span></p>
               : (preview.excerpt?.match || preview.quote)
                 ? <blockquote className="mt-1 text-xs leading-snug line-clamp-3"><mark>{preview.excerpt?.match || preview.quote}</mark></blockquote>
                 : <p className="mt-1 text-xs text-muted">No quote exported for this citation.</p>}

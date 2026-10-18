@@ -16,6 +16,7 @@ export function CiteChip({ evidence, n, label, onPreview }: {
   const derived = isDerived(evidence);
   const row = isRowCite(evidence);
   const title = withheld && evidence ? `${base} (quote withheld: ${withheldReason(evidence)})`
+    : evidence && /constructed/i.test(String(evidence.quote_note ?? "")) ? `${base} (cited value: ${evidence.quote || evidence.value || ""}; constructed, not a verbatim quote)`
     : row ? `${base} (data row${pitchLine(evidence!.row_ref) ? `: ${evidence!.row_ref}` : ""})`
     : derived ? `${base} (derived from ${evidence!.derived_from!.length} cited operand${evidence!.derived_from!.length > 1 ? "s" : ""})` : base;
   if (!evidence) {

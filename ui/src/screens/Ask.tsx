@@ -160,7 +160,8 @@ function SourceCards({ company, refs, preview }: { company: Company; refs: CiteR
           <div className="font-mono text-[11px] text-purple">{citeLabel(preview)}</div>
           {isWithheld(preview) ? <p className="mt-1 text-warn font-semibold">Quote withheld: {withheldReason(preview)}.</p>
             : isDerived(preview) ? <p className="mt-1 text-purple font-semibold">Derived from {preview.derived_from!.length} cited operand{preview.derived_from!.length > 1 ? "s" : ""}; click to see them.</p>
-            : preview.quote ? <blockquote className="mt-1 leading-relaxed"><mark>{preview.quote}</mark></blockquote> : <p className="mt-1 text-muted">No page quote exported for this source.</p>}
+            : /constructed/i.test(String(preview.quote_note ?? "")) ? <p className="mt-1"><code className="font-mono">{preview.quote || String(preview.value ?? "")}</code> <span className="text-muted">(constructed from the cited value, not a verbatim quote)</span></p>
+            : (preview.quote || preview.excerpt?.match) ? <blockquote className="mt-1 leading-relaxed"><mark>{preview.quote || preview.excerpt?.match}</mark></blockquote> : <p className="mt-1 text-muted">{preview.quote_note ?? "No page quote exported for this source."}</p>}
         </div>
       )}
       <ul className="flex gap-2 overflow-x-auto pb-1">
