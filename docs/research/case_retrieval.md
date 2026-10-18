@@ -445,3 +445,26 @@ It prints the markdown and also writes the gap list to the `GAPS_JSON` path set 
 ```
 PYTHONPATH=. python -m pytest tests/moat -q
 ```
+
+## Part 2 evidence tables and GDELT item counts
+
+Added for the Part 2 "Decide" pass on AMGN, MRK and PFE. All live under `data/moat/verified/` and are indexed as facts
+(table name is the path without `verified/`, row key `<table>#<line>`); every row carries `source` (a `doc_id#p<page>`
+or an official URL), `source_row` and `verify_status`.
+
+| Table | What it holds |
+|---|---|
+| `product/label_claims.csv` | Current DailyMed label sections (indications, contraindications, warnings, adverse reactions, dosing, clinical studies) for 21 products and listed rivals, each row anchored to a label section page |
+| `product/head_to_head_part2.csv` | One row per product vs rival pair: relation `true_head_to_head`, `background_therapy`, `cross_trial_only`, `formulation_bridge` or `none_found` (with the ClinicalTrials.gov and PubMed queries run) |
+| `rx/cms_spend_part2.csv`, `rx/formulary_part2.csv`, `rx/coverage_policy_docs_part2.csv` | CMS Part D and Part B spend by drug 2020 to 2024, 2026Q3 formulary snapshot, plan coverage-policy links (unverified snippets) |
+| `policy/ira_selected_drugs.csv`, `policy/icer_reports.csv` | CMS negotiation selections for IPAY 2026 to 2028 with MFPs where published; ICER benchmark prices, both backed by page-marked docs under `policy:policy/` |
+| `deals/deal_comps.csv` (origin `part2_wave`), `deals/part2_comp_sets.csv` | Deal terms quoted verbatim from acquirer 8-Ks and press releases, mapped to comp sets |
+| `filings/part2_number_anchors.csv`, `filings/part2_q4_anchors.csv`, `filings/part2_fills_AMGN.csv`, `filings/part2_fills_MRK.csv` | Filing numbers (sales by quarter, impairments, tax items, debt, guidance, headcount) and the strategists' specific gap fills, each with `doc_id`, `page_no`, `citation` and a `verify_quote` check |
+| `pricing/vyndaqel_net_price_sources.csv`, `epi/attr_cm_prevalence_sources.csv`, `peers/amvuttra_indication_mix.csv` | Bounding statements where a figure is not disclosed (net price, prevalence, indication mix), including explicit `none_disclosed` rows |
+| `market/news_mentions_items.csv`, `market/news_mentions_items_summary.csv` | GDELT DOC 2.0 English-language article counts by month, 2024-11 to 2026-10, for Tavneos (brand, avacopan, impairment, FDA withdrawal), Merck IRS transition tax, Vyndaqel vs Attruby and Amvuttra, Keytruda Qlex; `query` and `source` give the exact query and API URL |
+
+Status vocabulary for these tables: `verified` (quote checked on the page), `machine_data` (pulled by code from an official
+dataset or API, citable by locator), `none_found`, `not_public`, `none_disclosed` (explicit negatives, the row records the
+query), `query_failed` (the API refused the query; count left blank, never zero), `derived_incomplete` (a total that
+excludes a failed series), `unverified` (lead only). GDELT allows one request every 5 seconds; two series (Vyndaqel
+standalone and Merck "transition tax" exact phrase) are `query_failed` and can be retried at 7 s spacing.
