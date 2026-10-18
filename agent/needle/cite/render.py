@@ -189,7 +189,8 @@ def claim_markup(claims, fmt="md", index=None):
 def _where(c):
     loc = c.location or (f"p. {c.folio}" if c.folio not in ("", "?", None) else "")
     if c.page is None:
-        return loc
+        # every footnote says where the number sits: a row with no page says so instead of printing nothing
+        return (loc + "; " if loc else "") + "no page (machine-readable data row)"
     if not loc:
         return f"file page {c.page}"
     return loc if "file page" in loc else f"{loc} (file page {c.page})"

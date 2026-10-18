@@ -59,22 +59,37 @@ def _claims(f):
     formula = "" if f.not_quantified else (f.impact.formula or "")
     form = Claim(formula, ok, derived=dm, assumptions=am, where=f"formula/{f.id}") if formula else None
     eps, oi = impact_of(f)
+    cur = _currency(f.ticker)
     ia = {}
     if eps and getattr(f, "mfn_placeholder", False):
         from .find import MFN_MARKER_LABEL
         GW.assume(ia, f"dEPS_{f.id}", round(eps, 2), MFN_MARKER_LABEL)
-        GW.assume(ia, f"dOI_{f.id}", round(oi, 1), MFN_MARKER_LABEL)
+        GW.assume(ia, f"dOI_{f.id}", round(oi, 1), MFN_MARKER_LABEL, f"{cur} millions")
     elif eps:
         GW.assume(ia, f"dEPS_{f.id}", round(eps, 2), "model output: base-case |dEPS| of this row's impact formula, "
-                                                     "USD per share")
-        GW.assume(ia, f"dOI_{f.id}", round(oi, 1), "model output: base-case |dOI| of this row's impact formula, USD M")
-    imp = Claim(f"{eps:.2f} per share; dOI {oi:,.1f}" if eps else "not quantified", [], assumptions=ia,
+                                                     f"{cur} per share (reporting currency, not converted)")
+        GW.assume(ia, f"dOI_{f.id}", round(oi, 1), f"model output: base-case |dOI| of this row's impact formula, {cur} M", f"{cur} millions")
+    imp = Claim(f"{cur} {eps:.2f} per share; dOI {cur} {oi:,.1f}M" if eps else "not quantified", [], assumptions=ia,
                 where=f"impact/{f.id}")
     a = share_asked(f)
     aa = GW.assume({}, f"a_{f.id}", round(a, 2), "obscurity term a (analyst share asked): "
                    + str((f.vector or {}).get("a_source") or "no topic match; 1.0 by default"))
     share = Claim(f"{a:.2f}", [], assumptions=aa, where=f"share/{f.id}")
-    return sent, form, imp, share
+    from . import peer as PEER
+    ptxt, pc, pd_, pa, _ = PEER.gated(f)
+    f.peer_comparison = ptxt
+    pcl = Claim(ptxt, pc, derived=pd_, assumptions=pa, where=f"peer/{f.id}")
+    return sent, form, imp, share, pcl
+
+
+def _currency(ticker):
+    """The reporting currency the row's dollars are in (NVO reports in DKK; no FX conversion without a cited rate)."""
+    try:
+        from . import data
+        cur = str(data.company(ticker).fin_currency or "USD")
+    except Exception:
+        return "USD"
+    return "USD" if cur.upper().startswith("USD") else cur.split()[0].upper()
 
 
 def _cell(s):
@@ -118,12 +133,12 @@ def build(ticker, rows, public=False):
         L += [f"**Sharpest Needle (rank {i + 1}):** {_cell(marked[i][0])}", ""]
     else:
         L += ["**Sharpest Needle:** none (no finding is quantified).", ""]
-    L += ["| Rank | Finding | Impact math | Base-case abs dEPS (USD/share); abs dOI (USD M) | Analyst share asked | Needle |",
-          "|---|---|---|---|---|---|"]
+    L += ["| Rank | Finding | Impact math | Base-case abs dEPS (per share); abs dOI (M) | Analyst share asked | "
+          "Peer comparison | Needle |", "|---|---|---|---|---|---|---|"]
     out_rows = []
     for i, (f, m) in enumerate(zip(ranked, marked), 1):
         is_n = f is needle
-        L.append(f"| {i} | {_cell(m[0])} | {_cell(m[1]) or 'n/a'} | {_cell(m[2])} | {_cell(m[3])} | "
+        L.append(f"| {i} | {_cell(m[0])} | {_cell(m[1]) or 'n/a'} | {_cell(m[2])} | {_cell(m[3])} | {_cell(m[4])} | "
                  f"{'**Needle**' if is_n else ''} |")
         eps, oi = impact_of(f)
         out_rows.append({"rank": i, "id": f.id, "signal_kind": f.kind, "direction": f.direction,
@@ -133,6 +148,7 @@ def build(ticker, rows, public=False):
                          "analyst_share_source": (f.vector or {}).get("a_source"), "confidence": f.confidence,
                          "not_quantified": f.not_quantified or None,
                          "needle_blocked": bool(getattr(f, "needle_blocked", False)), "needle": is_n,
+                         "peer_comparison": getattr(f, "peer_comparison", None), "peer_comparison_marked": m[4],
                          "nugget": getattr(f, "nugget", None) or None,
                          "corroborated_by": getattr(f, "corroborated_by", None) or None,
                          "merged": [g.id for g in merged if g.merged_into == f.id] or None})

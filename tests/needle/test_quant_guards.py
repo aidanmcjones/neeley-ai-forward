@@ -178,3 +178,21 @@ def test_receivables_rows_explained_by_footnote_amgn_azn():
             assert round(f.footnote_read["net"]) == net
     amgn = [f for f in run.score_ticker("AMGN", write=False)[1] if f.kind == "receivables_outpace_revenue"][0]
     assert amgn.impact.channel == "receivables_net" and 0 < amgn.impact.d_eps["base"] < 1.0
+
+
+@need_moat
+def test_findings_table_every_row_has_a_gated_peer_comparison():
+    from agent.needle.quant import findings_table as FT, run
+    _, fs, _ = run.score_ticker("AMGN", write=False)
+    md, js = FT.build("AMGN", fs)
+    assert js["rows"] and all(r["peer_comparison"] for r in js["rows"])
+    rec = [r for r in js["rows"] if r["signal_kind"] == "tax_rate_shift"]
+    assert rec and "median" in rec[0]["peer_comparison"] and "[derived" in rec[0]["peer_comparison_marked"]
+    assert js["numeric_check"]["status"] in ("passed", "no_numbers") and not js["failed"]
+    assert "AMGN USD" not in md and "USD " in md     # currency printed with the amount
+
+
+@need_moat
+def test_nvo_amounts_print_in_dkk():
+    from agent.needle.quant import findings_table as FT
+    assert FT._currency("NVO") == "DKK" and FT._currency("MRK") == "USD"
