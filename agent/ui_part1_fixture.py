@@ -518,21 +518,26 @@ def selection_record(ctx, t, picked_rank=None):
 
 
 def build_selection(ctx, generated_at):
+    """(selection.json, selection.md) in the model session's shapes: the md carries '## Picks' with '### N. T (Name)'
+    paragraphs, '## Eliminated' with '- T: ...' bullets and a trailing 'sha256:' line over the text above it."""
     others = [t for t in ctx.tickers if t not in PICKED]
     reason_records = {t: selection_record(ctx, t, i) for i, t in enumerate(PICKED, 1)}
     elim_records = {t: selection_record(ctx, t) for t in others}
-    md = ["# Part 1 selection (sample fixture, illustrative)", "",
+    md = ["# Part 1 company selection (sample fixture, illustrative)", "",
           "This text is written by agent/ui_part1_fixture.py from the gated company files. It is not the model "
-          "session's sealed selection; the order below is illustrative.", "", "## Picked", ""]
-    md += [f"{i}. {ctx.name(t)} ({t}): {reason_records[t]['text']}" for i, t in enumerate(PICKED, 1)]
-    md += ["", "## Not picked", ""] + [f"- {ctx.name(t)} ({t}): {elim_records[t]['text']}" for t in others]
-    selection_md = "\n".join(md) + "\n"
-    sha = hashlib.sha256(selection_md.encode("utf-8")).hexdigest()
-    return {"picked": list(PICKED), "reasons": {t: r["text"] for t, r in reason_records.items()},
-            "eliminated": {t: r["text"] for t, r in elim_records.items()},
-            "reason_records": reason_records, "eliminated_records": elim_records,
-            "sealed_at": generated_at, "sha256": sha, "selection_md": selection_md, "sample": True,
-            "sealed_note": "fixture hash of the illustrative selection text above; not sealed by the model session"}
+          "session's sealed selection; the order below is illustrative.", "", "## Picks", ""]
+    for i, t in enumerate(PICKED, 1):
+        md += [f"### {i}. {t} ({ctx.name(t)})", "", reason_records[t]["text"], ""]
+    md += ["## Eliminated", ""] + [f"- {t}: {elim_records[t]['text']}" for t in others]
+    above = "\n".join(md) + "\n"
+    sha = hashlib.sha256(above.rstrip("\n").encode("utf-8")).hexdigest()
+    sealed_md = above + f"sha256: {sha}\n"
+    sel = {"picked": list(PICKED), "reasons": {t: r["text"] for t, r in reason_records.items()},
+           "eliminated": {t: r["text"] for t, r in elim_records.items()},
+           "reason_records": reason_records, "eliminated_records": elim_records,
+           "sealed_at": generated_at, "sha256": sha, "sample": True,
+           "sealed_note": "fixture hash of the illustrative selection text; not sealed by the model session"}
+    return sel, sealed_md
 
 
 def main(argv=None):
@@ -542,14 +547,16 @@ def main(argv=None):
         print(f"ERROR: company files missing for {missing}; run agent.ui_export first")
         return 1
     generated_at = X.now_iso()
-    selection = X.build_selection(build_selection(ctx, generated_at))
+    sel, sealed_md = build_selection(ctx, generated_at)
+    selection = X.build_selection(sel, sealed_md, "_sample/part1/selection.md")
     records, traces = {}, {}
     for t in PICKED:
         part1 = company_part1(ctx, t)
         records[t] = X.build_company(part1)
         traces[t] = X.build_trace(trace_lines(ctx, t, part1, generated_at), t)
     try:
-        X.write_bundle(X.SAMPLE_DEST, selection, records, traces, {"sample": True, "sample_note": SAMPLE_NOTE})
+        index = X.write_bundle(X.SAMPLE_DEST, selection, records, traces,
+                               {"sample": True, "sample_note": SAMPLE_NOTE}, sealed_md)
     except X.ExportError as e:
         print(f"ERROR: {e}")
         return 1
@@ -557,8 +564,8 @@ def main(argv=None):
         s = traces[t]["summary"]
         print(f"{t}: {len(records[t]['findings'])} findings, product {records[t]['product_table']['product']} vs "
               f"{', '.join(records[t]['product_table']['rivals'])}, trace {s}")
-    print(f"wrote {X.SAMPLE_DEST}")
-    return 0
+    print(f"wrote {X.SAMPLE_DEST}; available {index['available']}, missing {index['missing']}")
+    return 1 if index["missing"] else 0
 
 
 if __name__ == "__main__":

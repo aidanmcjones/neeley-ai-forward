@@ -33,6 +33,7 @@ import re
 import sys
 from pathlib import Path
 
+from agent.needle.cite.numbers import tokenize
 from agent.ui_memos import MARK, PITCH_FORBIDDEN, VERBATIM
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -62,6 +63,13 @@ NC_OK = ("passed", "no_numbers")
 NC_KEYS = ("checked", "total", "verified", "derived", "assumed")
 FORBIDDEN = re.compile(PITCH_FORBIDDEN.pattern + r"|\bleague\b", re.I)
 REPR = re.compile(r"Citation\(|Claim\(")
+LOST_DOLLAR = re.compile(r"[ (]\.\d")  # "(.4B": a "$2" eaten by shell expansion
+# sealed text that may name the internal ranking (it says it did not read it) and the blind readers' ungated
+# sizing: kept verbatim for the record, exempt from the pitch-word check, never printed as card prose
+UNGATED_KEYS = {"selection_md", "reasons", "eliminated"}
+UNGATED_NOTE = ("verbatim from the sealed selection.md; carries the blind readers' sizing, which the numeric gate has "
+                "not passed, so the UI never prints it as prose (use the *_card text)")
+CARD_FALLBACK = "Figures withheld: the reasoning is in the sealed selection record."
 WITHHELD_FIGURE = "[figure withheld: not gated]"
 LICENSED_REASON = "Bloomberg/licensed source: quote and links withheld from the public export"
 MACHINE_REASON = "machine data, no page copy: quote withheld, value shown"
@@ -268,20 +276,24 @@ def numeric_problems(obj, path="$", out=None):
     return out
 
 
-def text_problems(obj, path="$", out=None):
+def text_problems(obj, path="$", out=None, sealed=False):
+    """repr strings and lost dollar signs anywhere; pitch words anywhere except the sealed, ungated record text."""
     out = [] if out is None else out
     if isinstance(obj, str):
         if REPR.search(obj):
             out.append(f"{path} carries a repr string: {obj[:60]}")
-        m = FORBIDDEN.search(obj)
+        m = LOST_DOLLAR.search(obj)
+        if m:
+            out.append(f"{path} has '{obj[max(0, m.start() - 12):m.end() + 8]}': probable lost dollar sign")
+        m = None if sealed else FORBIDDEN.search(obj)
         if m:
             out.append(f"{path} carries the pitch-forbidden word '{m.group(0)}'")
     elif isinstance(obj, dict):
         for k, v in obj.items():
-            text_problems(v, f"{path}.{k}", out)
+            text_problems(v, f"{path}.{k}", out, sealed or (path == "$" and k in UNGATED_KEYS))
     elif isinstance(obj, list):
         for i, v in enumerate(obj):
-            text_problems(v, f"{path}[{i}]", out)
+            text_problems(v, f"{path}[{i}]", out, sealed)
     return out
 
 
@@ -321,20 +333,189 @@ def split_selection_md(md):
 
 
 def sha_ok(text, sha):
-    """The hash covers the text above the line; one trailing newline either way is accepted."""
-    cands = {text, text.rstrip("\n"), text.rstrip("\n") + "\n"}
+    """The hash covers the text above the line with trailing newlines stripped (one trailing newline is also accepted)."""
+    cands = {text.rstrip("\n"), text.rstrip("\n") + "\n"}
     return any(hashlib.sha256(c.encode("utf-8")).hexdigest() == (sha or "").lower() for c in cands)
 
 
-def build_selection(sel, md_text=None):
+def parse_selection_md(text):
+    """({T: pick paragraph}, {T: eliminated line}, {T: name}) from '## Picks' / '### N. T (Name)' and '## Eliminated' / '- T: ...'."""
+    picks, elim, names, section, cur = {}, {}, {}, None, None
+    for line in text.splitlines():
+        h2 = re.match(r"^##\s+(.+?)\s*$", line)
+        if h2 and not line.startswith("###"):
+            section, cur = h2.group(1).strip().lower(), None
+            continue
+        if section == "picks":
+            h3 = re.match(r"^###\s+\d+\.\s+([A-Z]{1,5})\b\s*(?:\((.*)\))?", line)
+            if h3:
+                cur = h3.group(1)
+                names[cur] = h3.group(2)
+                picks[cur] = []
+            elif cur and line.strip():
+                picks[cur].append(line.strip())
+        elif section == "eliminated":
+            b = re.match(r"^\s*[-*]\s+([A-Z]{1,5}):\s*(.+)$", line)
+            if b:
+                cur = b.group(1)
+                elim[cur] = b.group(2).strip()
+            elif cur and line.strip():
+                elim[cur] += " " + line.strip()
+    return {t: " ".join(v) for t, v in picks.items()}, elim, names
+
+
+ROW_COUNT = re.compile(r"\b\d+\s*-?\s*(?:rows?|survivors?)\b", re.I)
+FORM_PLURAL = re.compile(r"\b(?:10-K|10-Q|20-F|8-K|6-K)s\b")
+
+
+def figures(text):
+    """Gate-eligible figures in text: the engine tokenizer's numbers (years, dates, period labels, form names, page
+    numbers and ids glued to letters such as AMGN-c06 are exempt there), with row and survivor counts and plural
+    form names ('10-Qs') also exempt."""
+    t = ROW_COUNT.sub(lambda m: " " * len(m.group(0)), text or "")
+    t = FORM_PLURAL.sub(lambda m: m.group(0)[:-1] + " ", t)
+    return [x for x in tokenize(t) if x.kind == "number"]
+
+
+def _drop_figure_parens(text):
+    """Remove parenthetical groups (innermost first) that hold a figure; groups without one are kept."""
+    keep = []
+    while True:
+        m = re.search(r"\([^()]*\)", text)
+        if not m:
+            break
+        grp = m.group(0)
+        if figures(grp):
+            text = text[:m.start()].rstrip() + text[m.end():]
+        else:
+            keep.append(grp)
+            text = text[:m.start()] + f"\x01{len(keep) - 1}\x02" + text[m.end():]
+    return re.sub(r"\x01(\d+)\x02", lambda m: keep[int(m.group(1))], text)
+
+
+ABBREV = re.compile(r"(?:\b(?:[A-Z]\.){1,3}|\b(?:vs|e\.g|i\.e|Inc|No|Co|Corp|Ltd|approx|est|St|Dr|Mr|Ms)\.)$")
+
+
+def _sentences(text):
+    """Sentence split that does not break after U.S., vs., Inc. and similar."""
+    out, start = [], 0
+    for m in re.finditer(r"(?<=[.!?])\s+(?=[A-Z\"'])", text.strip()):
+        head = text.strip()[start:m.start()]
+        if ABBREV.search(head):
+            continue
+        out.append(head)
+        start = m.end()
+    out.append(text.strip()[start:])
+    return [x for x in out if x.strip()]
+
+
+def _tidy(text):
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"\s+([,;:.!?)])", r"\1", text)
+    text = re.sub(r"\(\s+", "(", text)
+    text = re.sub(r"([,;:])\s*([,;:.])", r"\2", text)
+    text = re.sub(r"[,;:]\s*$", "", text.strip())
+    text = re.sub(r"^(?:and|but|while|with|so|or)\s+", "", text.strip(), flags=re.I)
+    return text.strip()
+
+
+DANGLING = {"a", "an", "the", "of", "to", "and", "or", "with", "plus", "cited", "at", "from", "by", "for", "as",
+            "than", "about", "such", "in", "on", "is", "are", "was", "were"}
+JOINER = re.compile(r"^\s*(?:and|but|while|so|though|although|yet)\b")
+APPOSITIVE = re.compile(r"^\s*(?:a|an|the|which|who|whose|that|this|these|its)\b")
+
+
+def _strip_sentence(sent, min_words=6):
+    """One sentence without figures, or '' when what is left would not read: a sentence whose kept text before the
+    first dropped clause is under six words, or ends on a dangling word, is dropped whole; a kept clause right after
+    a dropped one that only continues it (starts with a, the, which, ...) is dropped too, and so is every clause
+    after it until one opens with a joiner (and, but, while, so, though, yet)."""
+    s = _drop_figure_parens(sent)
+    keep = []
+    s = re.sub(r"\([^()]*\)", lambda m: (keep.append(m.group(0)), f"\x01{len(keep) - 1}\x02")[1], s)
+    end = "." if s.rstrip().endswith((".", "!", "?")) else ""
+    body = s.rstrip().rstrip(".!?")
+    parts = re.split(r"([;,])", body)
+    out, gap, seen_gap, cont = [], False, False, False
+    for i in range(0, len(parts), 2):
+        clause = parts[i]
+        restored = re.sub(r"\x01(\d+)\x02", lambda m: keep[int(m.group(1))], clause)
+        if not clause.strip():
+            continue
+        if cont and not JOINER.match(clause):
+            continue
+        cont = False
+        if figures(restored) or (gap and APPOSITIVE.match(clause)):
+            if not seen_gap:
+                before = re.sub(r"\x01\d+\x02", "", "".join(out))
+                words = re.findall(r"[\w'-]+", before)
+                if len(words) < min_words or (words and words[-1].lower() in DANGLING):
+                    return ""
+            if gap and APPOSITIVE.match(clause):
+                cont = True
+            gap = seen_gap = True
+            continue
+        if out:
+            out.append(parts[i - 1] if i > 0 else ",")
+        out.append(clause)
+        gap = False
+    if seen_gap and out:
+        words = re.findall(r"[\w'-]+", re.sub(r"\x01\d+\x02", "", "".join(out)))
+        if words and words[-1].lower() in DANGLING:
+            return ""
+    text = re.sub(r"\x01(\d+)\x02", lambda m: keep[int(m.group(1))], "".join(out))
+    text = _tidy(text)
+    if seen_gap and ":" in text:  # a colon left introducing only a stub: cut at the colon
+        head, _, tail = text.rpartition(":")
+        if len(re.findall(r"[\w'-]+", tail)) < 6 and len(re.findall(r"[\w'-]+", head)) >= 3:
+            text = head.strip()
+    if not text or not re.search(r"[A-Za-z]{3}", text):
+        return ""
+    return text[0].upper() + text[1:] + (end or ".")
+
+
+def card_text(paragraph, fallback=True):
+    """The paragraph with every figure removed in a way that still reads: parenthetical groups holding a figure go
+    first, then any clause (split on ';' and ',') that still holds one; a paragraph that loses everything falls back
+    to its first and last sentences stripped the same way (short kept openings allowed), then to a fixed note."""
+    sents = _sentences(paragraph or "")
+    out = [x for x in (_strip_sentence(s) for s in sents) if x]
+    if not out and fallback and sents:
+        ends = list(dict.fromkeys([sents[0], sents[-1]]))
+        out = [x for x in (_strip_sentence(s, min_words=1) for s in ends) if x]
+    text = " ".join(out) or (CARD_FALLBACK if fallback else "")
+    if figures(text):
+        raise ExportError(f"card text still carries a figure: {text[:80]}")
+    return text
+
+
+def build_selection(sel, md_text=None, sealed_doc_path="part1/selection.md"):
+    """selection.json for the UI: picked, sealed_at and sha256 from selection.json; reasons and eliminated verbatim
+    from the sealed selection.md (marked ungated), plus figure-free card text."""
     sel = copy.deepcopy(sel)
     if md_text is not None:
         above, line_sha = split_selection_md(md_text)
-        if line_sha and line_sha != str(sel.get("sha256") or "").lower():
+        if line_sha is None:
+            raise ExportError("selection.md has no trailing 'sha256:' line")
+        if line_sha != str(sel.get("sha256") or "").lower():
             raise ExportError("selection.md hash line differs from selection.json sha256")
         sel["selection_md"] = above
+        picks, elim, names = parse_selection_md(above)
+        missing = [t for t in sel.get("picked") or [] if t not in picks]
+        if missing:
+            raise ExportError(f"selection.md has no '### N. T' paragraph under '## Picks' for {missing}")
+        if picks:
+            sel["reasons"] = picks
+            sel["eliminated"] = elim
+        if names:
+            sel["names"] = names
+        sel["sealed_doc_path"] = sealed_doc_path
     if not sha_ok(sel.get("selection_md") or "", sel.get("sha256")):
         raise ExportError("selection.json sha256 is not the sha256 of selection.md above its hash line")
+    sel["reasons_card"] = {t: card_text(v) for t, v in (sel.get("reasons") or {}).items()}
+    sel["eliminated_card"] = {t: card_text(v) for t, v in (sel.get("eliminated") or {}).items()}
+    sel["reasons_note"] = {"ungated": True, "note": UNGATED_NOTE}
+    sel["eliminated_note"] = {"ungated": True, "note": UNGATED_NOTE}
     withhold_tree(sel)
     walk_marked(sel, fix=True)
     return sel
@@ -342,7 +523,8 @@ def build_selection(sel, md_text=None):
 
 def selection_problems(sel):
     errs = []
-    for k in ("picked", "reasons", "eliminated", "sealed_at", "sha256", "selection_md"):
+    for k in ("picked", "reasons", "eliminated", "sealed_at", "sha256", "selection_md", "reasons_card",
+              "eliminated_card", "reasons_note", "eliminated_note", "sealed_doc_path"):
         if k not in sel:
             errs.append(f"selection.json missing {k}")
     picked = sel.get("picked") or []
@@ -351,6 +533,17 @@ def selection_problems(sel):
     for t in picked:
         if t not in (sel.get("reasons") or {}):
             errs.append(f"selection.reasons has no entry for {t}")
+        if not (sel.get("reasons_card") or {}).get(t):
+            errs.append(f"selection.reasons_card has no text for {t}")
+    for k in ("reasons_card", "eliminated_card"):
+        for t, v in (sel.get(k) or {}).items():
+            if figures(v):
+                errs.append(f"selection.{k}.{t} prints figures {[x.raw for x in figures(v)]}")
+        if set(sel.get(k) or {}) != set(sel.get(k.replace("_card", "")) or {}):
+            errs.append(f"selection.{k} tickers differ from {k.replace('_card', '')}")
+    for k in ("reasons_note", "eliminated_note"):
+        if (sel.get(k) or {}).get("ungated") is not True:
+            errs.append(f"selection.{k} must carry ungated: true")
     if not sha_ok(sel.get("selection_md") or "", sel.get("sha256")):
         errs.append("selection.json sha256 does not match selection_md")
     return errs
@@ -508,12 +701,32 @@ def check_dir(d, sample=False):
     sealed = idx.get("sealed") or {}
     if sealed.get("sha256") != sel.get("sha256") or sealed.get("sealed_at") != sel.get("sealed_at"):
         errs.append("index.sealed differs from selection sha256 / sealed_at")
-    if not sample and OUT.joinpath("selection.md").exists():
-        above, _ = split_selection_md(OUT.joinpath("selection.md").read_text())
-        if not sha_ok(above, sel.get("sha256")):
-            errs.append("out/part1/selection.md no longer hashes to the exported sha256: re-export")
+    sdp = str(sel.get("sealed_doc_path") or "")
+    doc = d / Path(sdp).name if sdp.endswith("part1/selection.md") else None
+    if doc is None or not doc.is_file():
+        errs.append(f"sealed document {sel.get('sealed_doc_path')} is not published next to selection.json")
+    else:
+        above, line_sha = split_selection_md(doc.read_text())
+        if line_sha != sel.get("sha256") or not sha_ok(above, sel.get("sha256")):
+            errs.append(f"{doc} does not verify against the sealed sha256")
+        if above != sel.get("selection_md"):
+            errs.append(f"{doc} differs from selection.json selection_md")
+    if not sample and OUT.joinpath("selection.md").exists() and doc is not None and doc.is_file():
+        if OUT.joinpath("selection.md").read_text() != doc.read_text():
+            errs.append("the published selection.md is not a verbatim copy of out/part1/selection.md: re-export")
+    avail, missing = idx.get("available"), idx.get("missing")
+    if not isinstance(avail, list) or not isinstance(missing, list):
+        errs.append("index.json must carry available and missing lists")
+        avail, missing = list(idx.get("tickers") or []), []
+    for t in idx.get("picked") or []:
+        listed = [m.get("ticker") for m in missing if isinstance(m, dict)]
+        if (t in avail) == (t in listed):
+            errs.append(f"picked {t} must be in exactly one of available and missing")
+    for m in missing:
+        if not isinstance(m, dict) or not m.get("reason"):
+            errs.append(f"index.missing entry {m!r} carries no reason")
     files = {"selection.json": sel}
-    for t in idx.get("tickers") or []:
+    for t in avail:
         rec, tr = read_json(d / f"{t}.json"), read_json(d / f"{t}_trace.json")
         if rec is None:
             errs.append(f"{d}/{t}.json missing")
@@ -527,14 +740,10 @@ def check_dir(d, sample=False):
         else:
             errs += trace_problems(tr, t, sample)
             files[f"{t}_trace.json"] = tr
-    for t in idx.get("picked") or []:
-        if t not in (idx.get("tickers") or []):
-            errs.append(f"picked {t} has no exported record")
-    for name, obj in files.items():
-        errs += [f"{name}: {x}" for x in numeric_problems(obj)]
-        errs += [f"{name}: {x}" for x in text_problems(obj)]
-        errs += [f"{name}: {x}" for x in withhold_problems(obj)]
-        errs += [f"{name}: {x}" for x in walk_marked(copy.deepcopy(obj))]
+    for t in [m.get("ticker") for m in missing if isinstance(m, dict)]:
+        if (d / f"{t}.json").exists() or (d / f"{t}_trace.json").exists():
+            errs.append(f"{t} is listed missing but a stale {t}.json or {t}_trace.json is on disk")
+    errs += all_problems(files)
     return errs, warns
 
 
@@ -548,30 +757,58 @@ def all_problems(objs):
     return errs
 
 
-def write_bundle(dest, selection, records, traces, index_extra):
-    """Validate everything in memory, then write the four shapes. Raises ExportError before writing anything."""
-    objs = {"selection.json": selection}
-    errs = selection_problems(selection)
-    for t, rec in records.items():
-        e, _ = company_problems(rec, t, index_extra.get("sample", False))
-        errs += e
-        objs[f"{t}.json"] = rec
-    for t, tr in traces.items():
-        errs += trace_problems(tr, t, index_extra.get("sample", False))
-        objs[f"{t}_trace.json"] = tr
-    meta = read_json(DATA / "meta.json", {}) or {}
-    index = {"generated_at": now_iso(), "engine": meta.get("engine"), "prompt": PROMPT,
-             "picked": selection.get("picked"), "tickers": [t for t in records],
-             "sealed": {"sha256": selection.get("sha256"), "sealed_at": selection.get("sealed_at")},
-             "sample": False}
-    index.update(index_extra)
-    objs["index.json"] = index
-    errs += all_problems(objs)
+def company_bundle_problems(t, rec, tr, sample=False):
+    """All hard-check errors for one company's two files (empty list = safe to write)."""
+    errs, _ = company_problems(rec, t, sample)
+    errs += trace_problems(tr, t, sample)
+    errs += all_problems({f"{t}.json": rec, f"{t}_trace.json": tr})
+    return errs
+
+
+def write_bundle(dest, selection, records, traces, index_extra, sealed_md, missing=None):
+    """Write selection.json, the sealed selection.md (verbatim), index.json and every company whose files pass the
+    hard checks; a company that fails is listed in index.missing with its errors and is not written. Raises
+    ExportError (writing nothing) when the selection itself fails."""
+    sample = index_extra.get("sample", False)
+    missing = list(missing or [])
+    errs = selection_problems(selection) + all_problems({"selection.json": selection})
+    if sealed_md is None:
+        errs.append("no sealed selection.md to publish")
+    else:
+        above, line_sha = split_selection_md(sealed_md)
+        if line_sha != selection.get("sha256") or above != selection.get("selection_md"):
+            errs.append("the sealed selection.md does not match selection.json")
     if errs:
         raise ExportError("refusing to write:\n  " + "\n  ".join(errs[:60]))
+    ok = {}
+    for t in records:
+        cerrs = company_bundle_problems(t, records[t], traces[t], sample)
+        if cerrs:
+            missing.append({"ticker": t, "reason": "failed checks", "errors": cerrs[:20]})
+            print(f"ERROR: {t} not written:\n  " + "\n  ".join(cerrs[:20]))
+        else:
+            ok[t] = (records[t], traces[t])
+    meta = read_json(DATA / "meta.json", {}) or {}
+    picked = list(selection.get("picked") or [])
+    index = {"generated_at": now_iso(), "engine": meta.get("engine"), "prompt": PROMPT, "picked": picked,
+             "tickers": list(ok), "available": [t for t in picked if t in ok] + [t for t in ok if t not in picked],
+             "missing": missing,
+             "sealed": {"sha256": selection.get("sha256"), "sealed_at": selection.get("sealed_at"),
+                        "doc_path": selection.get("sealed_doc_path")},
+             "sample": False}
+    index.update(index_extra)
     dest = Path(dest)
-    for name, obj in objs.items():
-        write(dest / name, obj)
+    dest.mkdir(parents=True, exist_ok=True)
+    gone = {m["ticker"] for m in missing}
+    for t in gone:  # never leave a stale company file that the index does not vouch for
+        for name in (f"{t}.json", f"{t}_trace.json"):
+            (dest / name).unlink(missing_ok=True)
+    (dest / "selection.md").write_text(sealed_md)
+    write(dest / "selection.json", selection)
+    for t, (rec, tr) in ok.items():
+        write(dest / f"{t}.json", rec)
+        write(dest / f"{t}_trace.json", tr)
+    write(dest / "index.json", index)
     return index
 
 
@@ -581,26 +818,30 @@ def export(src=OUT, dest=DEST):
     if not (src / "selection.json").exists():
         print(f"{src} is absent (the model session has not produced Part 1 yet); nothing written.")
         return 0
-    sel_raw = read_json(src / "selection.json")
-    md = (src / "selection.md").read_text() if (src / "selection.md").exists() else None
-    if md is None:
+    if not (src / "selection.md").exists():
         raise ExportError("out/part1/selection.md is missing: the sealed text cannot be checked")
-    selection = build_selection(sel_raw, md)
-    records, traces = {}, {}
-    tickers = list(selection.get("picked") or [])
-    tickers += sorted(p.name for p in src.iterdir() if p.is_dir() and (p / "part1.json").exists() and p.name not in tickers)
-    for t in tickers:
-        pj = src / t / "part1.json"
-        if not pj.exists():
-            raise ExportError(f"{pj} missing for picked ticker {t}")
-        records[t] = build_company(read_json(pj))
-        tj = src / t / "trace.jsonl"
-        if not tj.exists():
-            raise ExportError(f"{tj} missing")
-        traces[t] = build_trace(read_jsonl(tj), t)
-    write_bundle(dest, selection, records, traces, {"sample": False})
-    print(f"wrote {dest}: index.json, selection.json, " + ", ".join(f"{t}.json, {t}_trace.json" for t in records))
-    return 0
+    md = (src / "selection.md").read_text()
+    selection = build_selection(read_json(src / "selection.json"), md, "part1/selection.md")
+    records, traces, missing = {}, {}, []
+    for t in selection.get("picked") or []:
+        pj, tj = src / t / "part1.json", src / t / "trace.jsonl"
+        if not (pj.exists() and tj.exists()):
+            missing.append({"ticker": t, "reason": "writing",
+                            "absent": [p.name for p in (pj, tj) if not p.exists()]})
+            continue
+        try:
+            records[t] = build_company(read_json(pj))
+            traces[t] = build_trace(read_jsonl(tj), t)
+        except (ExportError, ValueError) as e:
+            records.pop(t, None)
+            missing.append({"ticker": t, "reason": "failed checks", "errors": [str(e)]})
+            print(f"ERROR: {t} not written: {e}")
+    index = write_bundle(dest, selection, records, traces, {"sample": False}, md, missing)
+    print(f"wrote {dest}: selection.md, selection.json, index.json; available {index['available']}; "
+          f"missing {[(m['ticker'], m['reason']) for m in index['missing']]}")
+    if not index["available"]:
+        print("no picked company has part1.json and trace.jsonl yet; the UI falls back to the sample for findings")
+    return 1 if any(m["reason"] == "failed checks" for m in index["missing"]) else 0
 
 
 def main(argv=None):

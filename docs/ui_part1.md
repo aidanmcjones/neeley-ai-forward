@@ -12,6 +12,7 @@ real gated data, so the UI can be built now. The UI should prefer `data/part1/` 
 
 ```
 PYTHONPATH=. python -m agent.ui_part1_export                  # out/part1 -> ui/public/data/part1 (exits 0, writes nothing, if out/part1 is absent)
+                                                              # exits 1 when a picked company's files fail the checks (that company is not written)
 PYTHONPATH=. python -m agent.ui_part1_export --check          # validate ui/public/data/part1 (exit 1 on errors)
 PYTHONPATH=. python -m agent.ui_part1_export --check --sample # also validate ui/public/data/_sample/part1
 PYTHONPATH=. python -m agent.ui_part1_fixture                 # rewrite the sample from ui/public/data/companies
@@ -72,13 +73,39 @@ The eight categories, verbatim from the case's "Where findings hide" list, in th
 
 | file | shape |
 |---|---|
-| `index.json` | `{generated_at, engine, prompt, picked: [T1, T2, T3], tickers: [..], sealed: {sha256, sealed_at}, sample: false}`; the sample adds `sample: true` and `sample_note` |
-| `selection.json` | `{picked, reasons, eliminated, sealed_at, sha256, selection_md}` where `selection_md` is selection.md's text above the hash line |
+| `index.json` | `{generated_at, engine, prompt, picked: [T1, T2, T3], tickers, available: [T..], missing: [{ticker, reason: "writing" \| "failed checks", absent? \| errors?}], sealed: {sha256, sealed_at, doc_path}, sample: false}`; the sample adds `sample: true` and `sample_note` |
+| `selection.json` | `{picked, sealed_at, sha256` (from out/part1/selection.json)`, reasons, eliminated` (verbatim from the sealed selection.md)`, reasons_card, eliminated_card` (figure-free)`, reasons_note, eliminated_note` (`{ungated: true, note}`)`, names, sealed_doc_path: "part1/selection.md", selection_md}`; selection.json's own extra keys (e.g. `survivors`) pass through |
+| `selection.md` | verbatim copy of out/part1/selection.md (the sealed record, hash line included); the UI opens it from `sealed_doc_path` with a note |
 | `<T>.json` | part1.json as above after withholding |
 | `<T>_trace.json` | `{header, steps: [...], summary: {candidates, survived, killed, narrowed, documents}}` |
 
 Exporter transforms:
 
+- Selection: `picked`, `sealed_at` and `sha256` come from selection.json; `reasons` and `eliminated` are parsed from
+  the sealed selection.md (each `### N. TICKER (Name)` paragraph under `## Picks`, each `- TICKER: ...` bullet under
+  `## Eliminated`), because the md verifies against its hash and selection.json can carry copy defects (its
+  `reasons.AMGN` lost a "$2": "(.4B TAVNEOS" where the md says "$2.4B"). The hash is checked on the md's content
+  above its trailing `sha256:` line with trailing newlines stripped, and must equal selection.json's; any
+  mismatch fails the export. `reasons` and `eliminated` keep the blind readers' sizing, which the gate has not
+  passed, so they are marked `ungated: true` (`reasons_note`, `eliminated_note`) and the UI never prints them as
+  prose.
+- Card text (`reasons_card`, `eliminated_card`): the md text with every figure removed in a way that still reads.
+  First parenthetical groups holding a figure are dropped, then any clause (split on ";" and ",", kept
+  parentheticals protected) that still holds one. A sentence is dropped whole when the kept text before its
+  first gap is under six words or ends on a dangling word (a, the, of, cited, plus, ...); a kept clause right
+  after a gap that only continues the dropped one (starts with a, the, which, its, ...) is dropped with every
+  clause after it until one opens with and, but, while, so, though or yet; a colon left introducing only a stub is
+  cut. If a paragraph loses everything, its first and last sentences are stripped the same way with short
+  openings allowed, else the card reads "Figures withheld: the reasoning is in the sealed selection record."
+  A figure is any number the engine's tokenizer (`agent/needle/cite/numbers.tokenize`, the numeric gate's)
+  returns with kind "number": years, dates (December 31, 2026), period labels (Q1 2026, H1 2026), filing names
+  (10-K, 10-Q, 20-F), page numbers and ids glued to letters (AMGN-c06) are exempt there; this module also exempts
+  plural form names (10-Qs) and digit counts of rows or survivors (5 rows). Word counts (five-row table, two
+  survivors, four rows short of five) carry no digits.
+- Partial availability: every picked ticker with both `<T>/part1.json` and `<T>/trace.jsonl` is exported; the
+  others are listed in `index.missing` with reason "writing". A company whose files fail any hard check is not
+  written (a stale copy is deleted) and is listed with reason "failed checks" and its errors. selection.json,
+  selection.md and index.json are written even when no company is available yet (`available: []`).
 - Withholding, on every dict in any `cites` list at any depth (the rule of docs/citations.md and
   `agent/ui_export.withhold_reason`): a licensed (Bloomberg) cite always loses quote, excerpt, url, deep_link,
   viewer_link and value; a `machine_data` cite loses quote, excerpt and links, and keeps `value` and `viewer_link`;
@@ -101,12 +128,19 @@ Hard checks (export writes nothing, `--check` exits 1):
 2. Every marker resolves (above). Every `marker_map` value is a cite_id on its record.
 3. No "Citation(" or "Claim(" substring anywhere.
 4. Pitch language: the ui_memos `--check` list ("score L", "S = ", "materiality score", "robustness") plus
-   "league" fail anywhere.
+   "league" fail anywhere except the sealed, ungated record text (`selection_md`, `reasons`, `eliminated`), which
+   is verbatim and states that no league table was read. Lost dollar signs: the pattern `[ (]\.\d` in any exported
+   text fails as a probable lost "$".
 5. The trace header's `categories` equal the eight strings above, verbatim and in order; every step's category is
    one of them and steps are grouped in that order; verdicts are survived, killed or narrowed; the skeptic fields
    are `{round1, round2}` records (the sample may carry null); a killed candidate prints no digits.
-6. `selection.json.sha256` equals sha256 (UTF-8) of selection.md's text above its `sha256:` line (one trailing
-   newline either way is accepted); the hash on that line equals selection.json's; `index.sealed` matches.
+6. `selection.json.sha256` equals sha256 (UTF-8) of selection.md's text above its `sha256:` line with trailing
+   newlines stripped; the hash on that line equals selection.json's; `index.sealed` matches; the published
+   `part1/selection.md` verifies, equals `selection_md` above its hash line, and is a byte-for-byte copy of
+   out/part1/selection.md. `reasons_card` and `eliminated_card` print no figure and cover the same tickers as
+   `reasons` and `eliminated`; the notes carry `ungated: true`.
+6b. Every picked ticker is in exactly one of `available` and `missing`; every missing entry has a reason; no
+   company file is on disk for a missing ticker.
 7. Withholding holds on every cite (above).
 8. Shape: each `<T>.json` has `n, finding, finding_marked, marker_map, source, cites, impact (with
    numeric_check), peer, confidence` per finding; `sharpest_needle.finding_n` is one of the findings; the product
@@ -125,9 +159,12 @@ hash, and the trace.
 - `picked = ["LLY", "GILD", "MRK"]` (illustrative order; stated in `sample_note` and in each reason).
   `reasons` and `eliminated` are short sentences built from `meta.json:evidence_located` (verified and
   high-confidence counts), `needle_source` (red-team read or plain rule) and whether `stance.decide` carries moves
-  (DECIDE run, pipeline demonstration or valued move); no scores. The marked versions with row cites are in
-  `reason_records` and `eliminated_records` (`{T: {text, text_marked, cites}}`). `selection_md` is the fixture's
-  own text; `sha256` is its hash; `sealed_note` says it is not sealed by the model session.
+  (DECIDE run, pipeline demonstration or valued move); no scores. The fixture writes its own selection.md in the
+  model session's layout (`## Picks`, `### N. T (Name)`, `## Eliminated`, `- T: ...`, trailing `sha256:` line) and
+  runs it through the same parser, so `reasons`, `eliminated`, the cards and `sealed_doc_path`
+  ("_sample/part1/selection.md") are built exactly as for real data. The marked versions with row cites are in
+  `reason_records` and `eliminated_records` (`{T: {text, text_marked, cites}}`); `sealed_note` says the hash is
+  the fixture's own, not the model session's. `available` is all three tickers and `missing` is empty.
 - Findings: `ui_memos.ranked_findings` (the findings_table rows by rank, cited findings whose numeric check did
   not fail, needle first), top five. `finding_marked` is the row's `sentence_marked` renumbered to the record's own
   cites by `ui_memos.sentence` (markers in `marker_unresolved` dropped); `finding` is that text with markers
@@ -191,10 +228,12 @@ when the engine recorded only `drop`; evidence gate ("no page-verified citation 
 ## Swap procedure when out/part1 lands
 
 1. Pull the model session's `out/part1/**` into this checkout (selection.json, selection.md, `<T>/part1.json`,
-   `<T>/trace.jsonl`).
+   `<T>/trace.jsonl`). The selection landed first (2e024e8: AMGN, MRK, PFE); re-run the exporter as each
+   company's files land, and the index moves it from `missing` to `available`.
 2. `PYTHONPATH=. python -m agent.ui_part1_export`. It refuses to write on any hard-check failure and prints each
    one; fix the source, never the check.
 3. `PYTHONPATH=. python -m agent.ui_part1_export --check --sample` must report 0 errors for both directories.
-4. The UI prefers `data/part1/index.json` over `data/_sample/part1/index.json`; no UI change is needed. Leave the
-   sample in place as the fallback.
+4. The UI prefers `data/part1/` over `data/_sample/part1/`, per company: a ticker in `data/part1/index.json`
+   `available` is read from `data/part1/`; until then the selection card comes from `data/part1/selection.json`
+   and the findings view falls back to the sample. Leave the sample in place as the fallback.
 5. Commit `ui/public/data/part1/` and republish the artifact.

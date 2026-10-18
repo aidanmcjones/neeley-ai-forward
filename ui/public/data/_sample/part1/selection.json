@@ -538,9 +538,37 @@
    ]
   }
  },
- "sealed_at": "2026-10-18T03:38:22Z",
- "sha256": "77d3ba2838c2285661bb7c4107ca7b44d8e34933cc11ec9bb02c4e5d1745ded9",
- "selection_md": "# Part 1 selection (sample fixture, illustrative)\n\nThis text is written by agent/ui_part1_fixture.py from the gated company files. It is not the model session's sealed selection; the order below is illustrative.\n\n## Picked\n\n1. Eli Lilly (LLY): Illustrative pick 1 of 3: Eli Lilly has 47 page-verified findings, 2 at high confidence; its Sharpest Needle was chosen by the red-team read and confirmed by the gate; a DECIDE run exists (valued move).\n2. Gilead Sciences (GILD): Illustrative pick 2 of 3: Gilead Sciences has 32 page-verified findings, 4 at high confidence; its Sharpest Needle (Medicare price setting reaches this product) was chosen by the red-team read and confirmed by the gate; a DECIDE run exists (pipeline demonstration).\n3. Merck & Co. (MRK): Illustrative pick 3 of 3: Merck & Co. has 44 page-verified findings, 5 at high confidence; its Sharpest Needle was chosen by the red-team read and confirmed by the gate; a DECIDE run exists (pipeline demonstration).\n\n## Not picked\n\n- Johnson & Johnson (JNJ): Johnson & Johnson: 36 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- Amgen (AMGN): Amgen: 46 page-verified findings; needle chosen by the red-team read and confirmed by the gate; a DECIDE run exists (pipeline demonstration). Not picked in this illustrative order, which is not a ranking.\n- AbbVie (ABBV): AbbVie: 34 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- Pfizer (PFE): Pfizer: 41 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- Novo Nordisk (NVO): Novo Nordisk: 37 page-verified findings; needle chosen by the plain rule; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- Bristol Myers Squibb (BMY): Bristol Myers Squibb: 33 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- AstraZeneca (AZN): AstraZeneca: 39 page-verified findings; needle chosen by the plain rule; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n",
+ "sealed_at": "2026-10-18T04:20:26Z",
+ "sha256": "399fdf5d3e9119e111123bd93783295f42791d5d4c314719ab61d6c9bd3add9e",
  "sample": true,
- "sealed_note": "fixture hash of the illustrative selection text above; not sealed by the model session"
+ "sealed_note": "fixture hash of the illustrative selection text; not sealed by the model session",
+ "selection_md": "# Part 1 company selection (sample fixture, illustrative)\n\nThis text is written by agent/ui_part1_fixture.py from the gated company files. It is not the model session's sealed selection; the order below is illustrative.\n\n## Picks\n\n### 1. LLY (Eli Lilly)\n\nIllustrative pick 1 of 3: Eli Lilly has 47 page-verified findings, 2 at high confidence; its Sharpest Needle was chosen by the red-team read and confirmed by the gate; a DECIDE run exists (valued move).\n\n### 2. GILD (Gilead Sciences)\n\nIllustrative pick 2 of 3: Gilead Sciences has 32 page-verified findings, 4 at high confidence; its Sharpest Needle (Medicare price setting reaches this product) was chosen by the red-team read and confirmed by the gate; a DECIDE run exists (pipeline demonstration).\n\n### 3. MRK (Merck & Co.)\n\nIllustrative pick 3 of 3: Merck & Co. has 44 page-verified findings, 5 at high confidence; its Sharpest Needle was chosen by the red-team read and confirmed by the gate; a DECIDE run exists (pipeline demonstration).\n\n## Eliminated\n\n- JNJ: Johnson & Johnson: 36 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- AMGN: Amgen: 46 page-verified findings; needle chosen by the red-team read and confirmed by the gate; a DECIDE run exists (pipeline demonstration). Not picked in this illustrative order, which is not a ranking.\n- ABBV: AbbVie: 34 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- PFE: Pfizer: 41 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- NVO: Novo Nordisk: 37 page-verified findings; needle chosen by the plain rule; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- BMY: Bristol Myers Squibb: 33 page-verified findings; needle chosen by the red-team read and confirmed by the gate; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n- AZN: AstraZeneca: 39 page-verified findings; needle chosen by the plain rule; no DECIDE run exists for it yet. Not picked in this illustrative order, which is not a ranking.\n",
+ "names": {
+  "LLY": "Eli Lilly",
+  "GILD": "Gilead Sciences",
+  "MRK": "Merck & Co."
+ },
+ "sealed_doc_path": "_sample/part1/selection.md",
+ "reasons_card": {
+  "LLY": "Figures withheld: the reasoning is in the sealed selection record.",
+  "GILD": "Figures withheld: the reasoning is in the sealed selection record.",
+  "MRK": "Figures withheld: the reasoning is in the sealed selection record."
+ },
+ "eliminated_card": {
+  "JNJ": "Not picked in this illustrative order, which is not a ranking.",
+  "AMGN": "Not picked in this illustrative order, which is not a ranking.",
+  "ABBV": "Not picked in this illustrative order, which is not a ranking.",
+  "PFE": "Not picked in this illustrative order, which is not a ranking.",
+  "NVO": "Not picked in this illustrative order, which is not a ranking.",
+  "BMY": "Not picked in this illustrative order, which is not a ranking.",
+  "AZN": "Not picked in this illustrative order, which is not a ranking."
+ },
+ "reasons_note": {
+  "ungated": true,
+  "note": "verbatim from the sealed selection.md; carries the blind readers' sizing, which the numeric gate has not passed, so the UI never prints it as prose (use the *_card text)"
+ },
+ "eliminated_note": {
+  "ungated": true,
+  "note": "verbatim from the sealed selection.md; carries the blind readers' sizing, which the numeric gate has not passed, so the UI never prints it as prose (use the *_card text)"
+ }
 }
