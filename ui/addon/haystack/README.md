@@ -12,7 +12,7 @@ Theme layer for https://claude.ai/artifact/3vXs5G4P7JUi3uBgbhxn1i. Two plain fil
 - `haystack.js`: inserts the mark and the "Needle in the Haystack" word into Parker's `h1.font-display` (his text node is
   blanked, not removed, so React never loses a node), sets the favicon and title, and swaps three strings of copy:
   "Thinking" to "Searching the haystack", "Thought for Ns" to "Searched the haystack for Ns", the composer placeholder to
-  "Search the haystack", and renames every visible "Part 2" to "The CEO Move" (tab, chips, eyebrow,
+  "Search the haystack", the hero label "Part 1" to "Find the needle", and renames every visible "Part 2" to "The CEO Move" (tab, chips, eyebrow,
   the pre-filled prompt, footnote labels) through the same pass. Re-applies on every DOM change through one MutationObserver.
 
 Publish list on the artifact: `assets/haystack.css`, `assets/haystack.js`, and in `index.html` the Google Fonts link for

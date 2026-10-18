@@ -36,6 +36,8 @@
     }
     var ta = document.getElementById("chat-input");
     if (ta && ta.getAttribute("placeholder") === "Ask anything") ta.setAttribute("placeholder", "Search the haystack");
+    var hero = document.querySelector("button[data-hero] > span:first-child");
+    if (hero && hero.textContent === "Part 1") hero.textContent = "Find the needle";
   }
 
   /* "Part 2" is never shown: the section is "The CEO Move" everywhere (tab, chips, eyebrow, pre-filled prompt, notes). */
