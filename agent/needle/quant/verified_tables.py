@@ -18,7 +18,8 @@ Tables (paths under data/moat/verified/, facts table name = the path):
   pipeline/target_profiles.csv         candidate EV with ev_method; a blank debt is the zero-debt caveat
   pipeline/loe_calendar.csv            company_stated_loe (with tenk_page), rule_output_loe, rule_method
   rx/partd_prescribers_by_drug.csv, rx/prescriber_concentration.csv, rx/formulary_history.csv,
-  rx/partb_providers_by_drug.csv, rx/open_payments_by_drug.csv   kill-signal baselines (kill.py)
+  rx/partb_providers_by_drug.csv, rx/open_payments_by_drug.csv,
+  rx/open_payments_physicians.csv   kill-signal baselines (kill.py)
 Not used: deals/pr_checks.csv, the timing columns of new_indication_benchmarks.
 
 TableValue(value, citations, derived, label, table, row_key) is what callers consume: `value` in the parameter's
@@ -481,4 +482,25 @@ def rx_baselines(drug):
     if hit:
         v, c, r = hit
         out["promotional"] = (v, c, f"Open Payments promotional ${v:,.0f} (PY{r['program_year']})")
+    out.update(physician_breadth(d))
     return out
+
+
+OP_PHYS = "rx/open_payments_physicians.csv"
+
+
+def physician_breadth(drug):
+    """{"physician_breadth": (value, [Citation, ...], text)} from the latest program year whose three counts all pass.
+    The text carries the paid-relationship vs light-touch split and the row's verify_status (also in each citation
+    note). No row for the drug: empty, and the kill table shows the labelled research-threshold fallback."""
+    flds = ("n_physicians_distinct", "n_physicians_consulting_or_speaking", "n_physicians_no_consulting_or_speaking")
+    rows = [x for x in find_rows(OP_PHYS, {"drug": drug}) if all(_num(x[2].get(f)) is not None for f in flds)]
+    rows.sort(key=lambda x: str(x[2].get("program_year")), reverse=True)
+    for rk, vs, r in rows:
+        cs = [DATA.fact_row_citation(OP_PHYS, f, r[f], row_key=rk) for f in flds]
+        if all(c.verification.ok for c in cs):
+            n, paid, light = (float(r[f]) for f in flds)
+            return {"physician_breadth": (n, cs, f"Open Payments {n:,.0f} distinct physicians (PY{r['program_year']}): "
+                                                 f"{paid:,.0f} paid relationships (consulting, speaking), {light:,.0f} "
+                                                 f"light-touch only; {r.get('verify_status') or vs}")}
+    return {}

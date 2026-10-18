@@ -454,7 +454,7 @@ def build_md(out, findings, public=False):
                 if v is not None and cit is not None and abs(v) <= 1:
                     from agent.needle.cite.gate import derived_entry
                     bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
-                txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, [cit] if cit else [], bd, TOP20)
+                txt_cell = cell("kill signals", f"kill/rx_context[{j}]", txt, (cit if isinstance(cit, list) else [cit]) if cit else [], bd, TOP20)
                 src = cell("kill signals", f"kill/rx_context[{j}]/source", f"{k['source']}; lag {k['lag']}", (), {},
                            {"lag": {"value": "18", "label": "CMS Part D PUF publication lag, about 18 months (assumption)"}})
                 L.append(f"| {k['signal']} | context | {txt_cell} | {src} | n/a | human review |")
@@ -478,14 +478,15 @@ def build_md(out, findings, public=False):
                        "er": {"value": f"{k['ev_remaining_prior']:.12g}", "label": lab},
                        "ev": {"value": f"{k['ev_revised']:.12g}", "label": lab}})
         w = f"kill/{k['id']}"
-        bl = "no rx row: research threshold only"
+        bl = ("no Open Payments physician row: research threshold only (ZS 30% of baseline, month 6)"
+              if k["id"] == "physician_breadth" else "no rx row: research threshold only")
         if k.get("baseline"):
             v, cit, txt = k["baseline"]
             bd = {}
             if v is not None and abs(v) <= 1:
                 from agent.needle.cite.gate import derived_entry
                 bd["pct"] = derived_entry(v * 100, "x * 100", {"x": (v, cit)}, "%")
-            bl = cell("kill signals", w + "/baseline", txt, [cit], bd, TOP20)
+            bl = cell("kill signals", w + "/baseline", txt, cit if isinstance(cit, list) else [cit], bd, TOP20)
         L.append(f"| {k['signal']} | {cell('kill signals', w + '/threshold', k['threshold'], (), {}, ka)} | {bl} | "
                  f"{cell('kill signals', w + '/source', k['source'] + '; lag ' + k['lag'], (), {}, ka)} | "
                  f"{cell('kill signals', w + '/check', k['check_month'], (), {}, ka)} | "

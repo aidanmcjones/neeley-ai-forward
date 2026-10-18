@@ -425,7 +425,7 @@ ACQUIRE = MoveTemplate(
     feeds=[FeedRule(("exclusivity_earlier", "loe"), "peak_sales_replaced", "dollars", 1.0, "LOE gap sizes the revenue the acquisition must replace (strategic fit)")],
     builder=_build_acquire,
     required_assets=("integration capacity", "commercial footprint in the target's therapeutic area", "balance sheet capacity"),
-    kill_signals=("year_one_sales", "coverage", "zs_breadth", "zs_return_writing", "zs_depth", "safety"),
+    kill_signals=("year_one_sales", "coverage", "zs_breadth", "physician_breadth", "zs_return_writing", "zs_depth", "safety"),
     summary="Large committed outflow at close; deal-comp priced; technical risk only if the asset is unapproved.")
 
 
@@ -545,7 +545,7 @@ PRICING = MoveTemplate(
     builder=_build_pricing,
     required_assets=("approved label", "commercial footprint in the TA", "direct-to-patient fulfilment channel"),
     deciders=("patients", "payers", "regulators", "investors", "prescribers"),
-    kill_signals=("self_pay_share", "year_one_sales", "coverage", "sdud_units"),
+    kill_signals=("self_pay_share", "physician_breadth", "year_one_sales", "coverage", "sdud_units"),
     summary="Trades net price for reach; cash at risk is channel cost plus revenue given up in the bear case.")
 
 
@@ -603,7 +603,7 @@ LOE_DEFENSE = MoveTemplate(
     feeds=[FeedRule(("exclusivity_earlier", "loe", "ira_", "mfp"), "rev_at_risk_annual", "dollars", 1.0, "LOE / IRA finding's revenue at risk is the defended base")],
     builder=_build_loe_defense,
     required_assets=("incumbent brand with payer contracts", "successor brand with supply"),
-    kill_signals=("year_one_sales", "coverage", "sdud_units"),
+    kill_signals=("physician_breadth", "year_one_sales", "coverage", "sdud_units"),
     summary="Values a defense as the difference between two erosion paths; margin traded for volume is an explicit cost.")
 
 
@@ -653,7 +653,7 @@ COMMERCIAL = MoveTemplate(
     feeds=[FeedRule(("label_narrower", "demand_divergence", "call_topic"), "epsilon_note", "base", 1.0, "share-loss or label-gap findings justify the campaign (strategic fit only)")],
     builder=_build_commercial,
     required_assets=("approved indication with promotional claims map", "field force or media buying capability"),
-    kill_signals=("zs_breadth", "zs_return_writing", "zs_depth", "year_one_sales", "coverage"),
+    kill_signals=("zs_breadth", "physician_breadth", "zs_return_writing", "zs_depth", "year_one_sales", "coverage"),
     summary="At the physician-level elasticity a pure promotion move is EV-negative; included so it is shown, not assumed.")
 
 

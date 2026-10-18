@@ -25,7 +25,8 @@ The quant data layer calls this from agent.needle.quant.data.fact_citation (see 
 """
 
 VERIFIED_STATUSES = ("verified", "corrected", "fixed", "yes", "true", "match", "matches page")
-MACHINE_STATUSES = ("no_verified_copy",)
+# api_exact_distinct: an exact distinct count from a live API query (Open Payments physicians), no page copy
+MACHINE_STATUSES = ("no_verified_copy", "api_exact_distinct")
 NOT_CHECKED = ("unverified_onboard", "unchecked")
 # Table-scoped verified statuses, from the table's own NOTES.md: "pass" means something only where the scraper
 # defines it (pipeline/NOTES.md: loe_calendar "stated dates re-found in the FY2025 10-K with page (tenk_page)";
