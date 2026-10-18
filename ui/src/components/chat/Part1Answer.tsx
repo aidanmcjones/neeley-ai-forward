@@ -42,8 +42,8 @@ function Math_({ math, cite, check }: { math?: string | null; cite: Cite; check?
   );
 }
 
-function Th({ children }: { children: ReactNode }) {
-  return <th scope="col" className="px-2.5 py-1.5 text-left text-[11px] font-semibold uppercase tracking-wide text-muted">{children}</th>;
+function Th({ children, title }: { children: ReactNode; title?: string }) {
+  return <th scope="col" title={title} className="px-2.5 py-1.5 text-left text-[11px] font-semibold uppercase tracking-wide text-muted">{children}</th>;
 }
 
 function FindingsTable({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }) {
@@ -70,7 +70,10 @@ function FindingRow({ f, ix }: { f: Part1Finding; ix: Map<string, Evidence> }) {
   const imp = f.impact ?? {};
   return (
     <tr id={`p1-finding-${f.n}`} className="border-t border-line align-top">
-      <td className="px-2.5 py-2 font-mono text-[12px] text-muted">{f.n}</td>
+      <td className="px-2.5 py-2 text-muted">
+        <div className="font-mono text-[12px]">{f.n}</div>
+        {f.category && scrub(f.category) && <div className="mt-1 w-[76px] text-[10px] leading-tight">{scrub(f.category)}</div>}
+      </td>
       <td className="px-2.5 py-2 min-w-[180px] leading-snug"><Md md={scrub(f.finding_marked ?? f.finding)} cite={cite} /></td>
       <td className="px-2.5 py-2 min-w-[150px]">
         <div className="font-semibold text-[12.5px]">{where || "Source not exported"}</div>
@@ -83,7 +86,7 @@ function FindingRow({ f, ix }: { f: Part1Finding; ix: Map<string, Evidence> }) {
           : <span className="text-muted">Withheld: failed the numeric gate</span>}
       </td>
       <td className="px-2.5 py-2 min-w-[120px]">{f.peer_marked || f.peer ? <Md md={scrub(f.peer_marked ?? f.peer)} cite={cite} /> : <span className="text-muted">No peer comparison exported</span>}</td>
-      <td className="px-2.5 py-2"><ConfPill level={f.confidence} short /></td>
+      <td className="px-2.5 py-2"><span title={scrub(f.confidence_reason) || undefined} className="inline-block"><ConfPill level={f.confidence} short /></span></td>
     </tr>
   );
 }
@@ -107,7 +110,9 @@ function Needle({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }) {
 function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> }) {
   const p = c.product_table;
   if (!p) return <p className="text-[13px] text-muted">No product table exported for {c.ticker}.</p>;
-  const cols = [p.product, ...(p.rivals ?? [])];
+  const cols = p.columns?.length
+    ? p.columns.map((c) => ({ key: c.key, label: c.label ?? c.key, full: c.full ?? c.label ?? c.key }))
+    : [p.product, ...(p.rivals ?? [])].map((x) => ({ key: x, label: x, full: x }));
   const byRow = new Map((p.rows ?? []).map((r) => [r.row, r]));
   const tie = p.financial_tie, gl = p.growth_limiter, pi = p.priced_in;
   const call = (pi?.call ?? "").toLowerCase();
@@ -116,7 +121,7 @@ function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> })
       <h3 className="text-[16px] font-semibold">Product fine print: {p.product}{p.rivals?.length ? <span className="font-normal text-muted"> vs {p.rivals.join(", ")}</span> : null}</h3>
       <div className="overflow-x-auto rounded-md border border-line">
         <table className="w-full border-collapse text-[13px]" style={{ minWidth: `${160 + cols.length * 190}px` }}>
-          <thead className="bg-surface-2"><tr><Th>&nbsp;</Th>{cols.map((x, i) => <Th key={i}>{x}</Th>)}</tr></thead>
+          <thead className="bg-surface-2"><tr><Th>&nbsp;</Th>{cols.map((x, i) => <Th key={i} title={x.full}>{x.label}</Th>)}</tr></thead>
           <tbody>
             {PART1_ROWS.map((rk) => {
               const r = byRow.get(rk);
@@ -124,7 +129,7 @@ function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> })
                 <tr key={rk} className="border-t border-line align-top">
                   <th scope="row" className="px-2.5 py-2 text-left text-[12px] font-semibold w-[160px]">{ROW_LABEL[rk]}</th>
                   {cols.map((col, j) => {
-                    const cell = r?.cells?.[col];
+                    const cell = r?.cells?.[col.key];
                     const txt = scrub(cell?.text_marked ?? cell?.text);
                     const needs = !txt || cell?.status === "needs citation" || /^needs citation\.?$/i.test(scrub(cell?.text).trim());
                     return (
@@ -145,7 +150,8 @@ function ProductBlock({ c, ix }: { c: Part1Company; ix: Map<string, Evidence> })
           {passed(tie.numeric_check) ? (
             <div className="text-[14px] leading-relaxed">
               <Md md={scrub(tie.text_marked ?? tie.text)} cite={resolver(ix, tie.marker_map, tie.cites)} />
-              <Math_ math={tie.math_marked ?? tie.math} cite={resolver(ix, tie.marker_map, tie.cites)} check={tie.numeric_check} />
+              {tie.numeric_check && <> <NumericPill check={tie.numeric_check} compact /></>}
+              <Math_ math={tie.math_marked ?? tie.math} cite={resolver(ix, tie.marker_map, tie.cites)} check={tie.math_numeric_check} />
             </div>
           ) : <p className="text-[13px] text-muted">Withheld: failed the numeric gate</p>}
         </div>

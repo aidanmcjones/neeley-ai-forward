@@ -329,14 +329,18 @@ export interface Part1Finding extends Loose {
   n: number; finding: string; finding_marked?: string | null; marker_map?: Record<string, string> | null;
   source?: Part1Source | null; cites?: Evidence[]; impact?: Part1Impact | null;
   peer?: string | null; peer_marked?: string | null; confidence?: Confidence;
+  /** One of the eight "Where findings hide" categories. */
+  category?: string | null; confidence_reason?: string | null;
 }
 
 export interface Part1Marked extends Loose { text?: string; text_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null; status?: string; note?: string }
 
 export interface Part1Product extends Loose {
   product: string; rivals?: string[];
+  /** Header columns: cell key, short header label, full name (title). Absent: product then rivals. */
+  columns?: { key: string; label?: string; full?: string }[];
   rows?: { row: string; cells?: Record<string, Part1Marked> }[];
-  financial_tie?: (Part1Marked & { math?: string | null; math_marked?: string | null; numeric_check?: NumericCheck | null }) | null;
+  financial_tie?: (Part1Marked & { math?: string | null; math_marked?: string | null; numeric_check?: NumericCheck | null; math_numeric_check?: NumericCheck | null }) | null;
   growth_limiter?: { sentence?: string; sentence_marked?: string | null; cites?: Evidence[]; marker_map?: Record<string, string> | null; numeric_check?: NumericCheck | null } | null;
   priced_in?: (Part1Marked & { call?: "priced in" | "not priced in" | "untestable" | string }) | null;
 }
