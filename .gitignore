@@ -16,6 +16,7 @@ data/moat/*
 !data/moat/GAPS.md
 !data/moat/manifest.csv
 !data/moat/CENSUS.md
+!data/moat/CASE_SOURCES.md
 
 # Bloomberg terminal exports (licensed, never commit)
 data/corpus/_inbox/bloomberg/
