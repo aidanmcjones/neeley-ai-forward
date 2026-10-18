@@ -104,3 +104,9 @@ Scope of the checks:
 **Fails: MRK 1, AMGN 6, PFE 0 (7 in total). Every cite quote checked is on its page except one MRK table cite. Every derived number re-computes. No Bloomberg-licensed page is quoted.**
 
 **Worst defect: the AMGN Sharpest Needle.** Its stated reason for being the pick, "the only surviving ruling that both skeptics held through both rounds with materiality high and obviousness low", is false. AMGN-c02 has the same profile: not refuted by either skeptic in either round, materiality high, obviousness low. The block also has no `marker_map`, so its numbers cannot be traced from the block itself.
+
+---
+
+## Status (2026-10-18)
+
+All seven fails above were applied and re-gated at quant-model 7eb0dca (AMGN: truthful needle rationale with its own marker_map and the TAVNEOS sales cites, refuted profit-share ratio dropped from finding 5, Repatha financial tie restated on the global base, Lipfendra cash-channel wording matched to Merck's 10-Q; MRK: Tecentriq exclusivity cell cites the row that exists and says no date is in the index; PFE: marker pointers corrected, uncited COVID-mix clause dropped, BridgeBio geography caveat added). The priced-in calls were replaced with gated evidence-graded inferences at a1ddc77 after this report was written, so the "priced_in" rows above describe the earlier "untestable" text. The part1 files have not changed since 7eb0dca.
