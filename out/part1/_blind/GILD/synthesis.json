@@ -1,0 +1,119 @@
+{
+ "ticker": "GILD",
+ "company": "Gilead Sciences, Inc.",
+ "rulings": [
+  {
+   "id": "GILD-c01",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "Killed. Residue for a language-drift footnote only: the FY2025 10-K hardens the 340B wording to 'pervasive violations' (GILD:10k_FY2025.md index p.21). No dollar sizing.",
+   "reason": "Both skeptics found the Medicaid-rebate and 340B ceiling-price spillover sentence already in the FY2024 10-K (GILD:10k_FY2024.md index p.20), so the 'new disclosure' premise fails. Obviousness adds that the same sentence ran in the 10-Qs from 2024Q3 (GILD:companies/GILD/10q_2024Q3.md p.40) and that the Biktarvy selection was a January 2026 headline. Materiality shows the 62.7% 'government share' adds 2025 Part D gross spend to 2024 Medicaid reimbursements and divides by net sales (medicare_market.csv; 10-K FY2025 index p.40), so it measures nothing. Obviousness conceded the math point in round 2, and materiality conceded the prior-disclosure point. No disagreement remains. The kill is confirmed, not merely unrefuted.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "GILD-c02",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "Killed. Footnote residue only: the nucleoside-preference risk sentence (GILD:10k_FY2024.md index p.18) does not appear in the FY2025 10-K.",
+   "reason": "Both skeptics confirm the deletion is real but show the 'replaced near-term growth with long-acting' framing is wrong: long-acting was already priority (ii) in FY2024 (GILD:10k_FY2024.md index p.38) and was promoted to (i) in FY2025 (GILD:10k_FY2025.md index p.37). The $20,752M HIV base includes Gilead's own long-acting Sunlenca and Yeztugo (index p.40), so migration is partly internal, and the 10% illustration is arbitrary. Long-acting erosion is the case's starter thread. Both conceded each other's points in round 2. Confirmed kill.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "GILD-c03",
+   "category": "Gross-to-net",
+   "verdict": "killed",
+   "claim": "Killed. Context only: GTN rose about 250 bps to 41% of gross in 2025, which the 10-K itself prints and attributes to Part D redesign. Management sized that at about $1.1B company-wide ($900M in HIV), leaving an immaterial residual of about $127M.",
+   "reason": "The 10-K's own table prints '41 % 38 % 250 bps' and the Part D attribution (GILD:10k_FY2025.md index p.41). The company-wide figure is on GILD:presentations/2025Q4_earnings_slides.md p.25 ('Excluding an estimated $1.1 billion in Part D Redesign headwinds'). Against it the reader's $1,227M rate effect leaves about $127M (0.4% of revenue). Materiality adds that the rate-at-2024 counterfactual counts list inflation that was never net revenue (Biktarvy WAC +5.9% vs gross +5.35%) plus Veklury/Descovy mix. Dollar rebates and chargebacks are still disclosed ($17.5B vs $15.5B, index p.41 fn 1), so 'stopped giving the split' is wrong. Materiality conceded c03 to refuted in round 2. The remaining dispute was whether the ~$900M was management's number or an analyst's. I settled it from the grade-A transcript (quote_grade A): it is management's, stated in prepared remarks three times. O'Day: 'despite the $900 million headwind for our HIV business in 2025, associated with the Medicare Part D redesign' (GILD:companies/GILD/transcripts/2025Q3_transcript.md p.1). Mercier: 'we managed through a $900 million headwind for the full year related to the Medicare Part D redesign' (p.3). Dickinson: 'we continue to expect approximately $900 million of impact to our HIV business in 2025' (p.9). On p.12, analyst Mohit Bansal only repeats it back. The materiality skeptic's round-1 reading was wrong, and the obviousness skeptic is right. This does not change the kill.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "GILD-c04",
+   "category": "Inventory and receivables growing faster than revenue",
+   "verdict": "narrowed",
+   "claim": "Gilead carries about $568M of pre-commercial Trodelvy inventory made on a manufacturing process FDA has not yet approved ($613M at Dec 2025, peak $638M at Mar 2026). The item is disclosed only in the inventory footnote and appears in no release, slide or call. That is about 41% of a year of Trodelvy sales ($1,397M). If the process is not approved, a write-down would be a one-time contingent charge of about $0.36-0.37 per share, about 4.3% of FY2025 non-GAAP operating income ($568M / $13,193M) and about 4.4% of non-GAAP EPS of $8.15.",
+   "reason": "Confirmed on the source. I re-opened all three footnotes: GILD:10k_FY2025.md index p.80 ('approximately $ 613 million of pre-commercial Trodelvy inventory for which the manufacturing process has not yet been approved by FDA'), GILD:10q_2026Q1.md index p.18 ($638M), and GILD:10q_2026Q2.md index p.21 ($568M). An index search for 'pre-commercial inventory Trodelvy' and 'Trodelvy manufacturing process inventory' hit only these footnotes. The transcript hits (2025Q4, 2026Q1, 2026Q2 p.1) refer only to HIV channel inventory, so the line is unsaid on calls. EPS math: proxy scaling of $0.25 per $400M (proxy_2026 p.A-2) gives 568 x 0.25/400 = $0.355. The obviousness skeptic's 19% tax rate and roughly 1.25B shares give 568 x 0.81/1.25B = $0.37. Hence $0.36-0.37. Both skeptics agreed to narrow the claim. (1) Drop the ASCENT-07 link: the trial miss is about an indication, not process approval, and the 10-K says it caused no impairment. (2) Drop the 21.7% inventory, DIO and AR framing: the MD&A names the build as the operating-cash-flow drag (index p.46), and DIO uses GAAP COGS that includes amortization. (3) Treat it as one-time and contingent, not an operating-income trend. Note that 568/13,193 mixes a 2026 balance with FY2025 operating income. Supporting precedent (my check): Gilead has taken a $479M write-off of manufacturing facilities and related inventories in the past (GILD:companies/GILD/10k_FY2023.md index p.42). No disagreement remains between the skeptics.",
+   "materiality": "medium",
+   "obviousness": "low",
+   "confidence": "high",
+   "unresolved": "Whether FDA approval of the new Trodelvy process is pending or at risk is not disclosed. The declining balance ($638M to $568M in Q2 2026) may mean the lot is being consumed or released, which would shrink the exposure. Gilead may also exclude a write-down from non-GAAP, so the EPS hit would be GAAP only."
+  },
+  {
+   "id": "GILD-c05",
+   "category": "Footnotes",
+   "verdict": "killed",
+   "claim": "Killed. Residue: after the $400M IP true-up was called 'not expected to reoccur' in Q3 2025, a second $156M true-up came in Q2 2026 (about $0.10 per share, approximate). Management flagged that one too.",
+   "reason": "Both skeptics confirm the math: $0.25 is 3.1% of FY2025 non-GAAP EPS $8.15, and $400M is 3.0% of non-GAAP operating income (proxy p.A-2). Both agree the item is material, so the kill rests on obviousness. The candidate's premise that investors get only the inclusive figure is false. On the grade-A 2025Q3 call, CFO Dickinson gives the ex-item EPS: 'Excluding the $400 million non-recurring other revenue, non-GAAP diluted EPS would have been $2.22' (GILD:companies/GILD/transcripts/2025Q3_transcript.md p.9). O'Day cites the $0.25 benefit in prepared remarks (p.1, which I re-read). The Q3 2025 slides p.23 give the $0.25 effect, the proxy p.115 prints the comp-only exclusion, and the Q2 2026 call strips out the $156M (grade C, label only). Materiality conceded from survivor to refuted in round 2. Confirmed kill.",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "GILD-c06",
+   "category": "Earnings-call Q&A",
+   "verdict": "killed",
+   "claim": "Killed. No residue: the price-led Q2 2026 Biktarvy drivers are on Gilead's own slide, release and call script.",
+   "reason": "Obviousness: the Q2 2026 slide p.9 says 'higher average realized price due to channel mix, in addition to inventory build and higher demand' and notes lower QoQ demand. The 8-K release (2026-08-04 p.2) and the call script say the same, and an analyst asked about volume vs mix. Materiality: the October 2025 'demand-driven' remark was about 2025, when realized price fell (10-K FY2025 index p.40). The six-month 10-Q sentence leads with demand (GILD:10q_2026Q2.md index p.33). The 'half of growth' split is unsourced. Each skeptic accepted the other's reasons in round 2. Confirmed kill.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "GILD-c07",
+   "category": "Product fine print",
+   "verdict": "killed",
+   "claim": "Killed. Product-table context only: Yeztugo is dosed twice a year vs six times for Apretude and lacks Apretude's hypersensitivity, hepatotoxicity and depression warnings. No pricing-strategy conclusion.",
+   "reason": "The label and ASP facts check. Materiality shows the $35M figure attributes ViiV's +3.7% Apretude ASP rise to Gilead. Gilead's own -0.7% drift on an ~$800M guide is about $6M, or 0.02% of revenue, and early-launch payment limits come from WAC (partb_asp_quarterly.csv; 2025Q4 slides p.12). Obviousness: twice-yearly dosing is the headline of the approval press release, and management says PrEP realized price is rising. Both conceded each other's points. Confirmed kill.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "GILD-c08",
+   "category": "Product fine print",
+   "verdict": "killed",
+   "claim": "Killed as a finding and moved to the product section as the lead label edge: since label v22 (2025-08-08), Biktarvy is indicated for treatment-experienced patients who are not virologically suppressed, while Dovato and Cabenuva require suppression. Gilead did not announce the change.",
+   "reason": "Both skeptics verified the v19 to v22 widening (biktarvy:drugs/biktarvy/label_v19.md p.1 vs label_v22.md p.1). Obviousness found no release, slide, 10-K key event or call mention, which makes it the least obvious item in the set. Materiality: about $29.9M per 1,000 patients (0.1% of revenue). Reaching 1% of revenue would take about 10,000 incremental patients, and no sourced pool size exists. Some of those patients are likely already on Biktarvy off-label. In round 2 obviousness reversed its round-1 survive and agreed it is too small for the findings table. Both now place it in the product section. Unsaid is confirmed, but material is not shown, so it is killed as a finding.",
+   "materiality": "low",
+   "obviousness": "low",
+   "confidence": "high",
+   "unresolved": "The size of the resistance-free, viremic, treatment-experienced pool is not in the index, so the label edge cannot be sized."
+  },
+  {
+   "id": "GILD-c09",
+   "category": "Peer contrast",
+   "verdict": "killed",
+   "claim": "Killed. Context row only: Biktarvy is 48.7% of FY2025 revenue in IRA selection. Merck's Keytruda is expected to match that share.",
+   "reason": "Obviousness shows the repatriation term is not unique to Gilead. The White House fact sheet says the nine deals 'require the nine companies to repatriate increased foreign revenue' (policy_gov:.../wh_fact_sheet_2025-12-19_nine_deals_mrk_bmy_amgn_gild.md p.1), and Merck's 10-K FY2025 discloses it (MRK:10k_FY2025.md index p.54). Materiality shows peer errors: ABBV is 22.5%, not 16.9%, Keytruda is expected at 48.7%, and every company has the same tariff date (force_summary.csv). The tariff point was said on the grade-A 2025Q3 call p.19. Materiality conceded its 'only discloser' wording in round 2. Confirmed kill.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  }
+ ],
+ "product": {
+  "verdict": "narrowed",
+  "product": "Biktarvy",
+  "rivals": [
+   "ViiV Healthcare Dovato",
+   "ViiV Healthcare Cabenuva"
+  ],
+  "reason": "Both skeptics agree Biktarvy is the right product ($14,334M, 48.7% of FY2025 revenue, GILD:10k_FY2025.md index p.40; IRA price from 2028). The narrowed fine-print edge is the unannounced v19 to v22 indication widening (from c08). Since 2025-08-08, Biktarvy is indicated for patients 'with an antiretroviral treatment history and not virologically suppressed' with no resistance substitutions (biktarvy:drugs/biktarvy/label_v22.md p.1; v19 p.1 limited it to suppressed patients). Dovato and Cabenuva require virologic suppression with no history of treatment failure for switching (drug:dovato:label_sections.md section 1; drug:cabenuva:label_sections.md section 1). Frame it as share defense ahead of the 2028 negotiated price, with no revenue number, because the patient pool is unsized. The HBV-coinfection and 14 kg pediatric contrasts are well-known table filler. Yeztugo vs Apretude dosing and warnings (c07) can go in a secondary product row."
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 1,
+  "best_candidate_id": "GILD-c04",
+  "one_line": "A weak pick on the case's test. Most of Gilead's numbers story (the Part D GTN widening, the $400M IP true-up, price-led Biktarvy growth, IRA and MFN exposure) is already stated by management. The one material, unsaid item is a contingent, one-time write-down of about $0.36-0.37 per share on $568M of Trodelvy inventory made on a process FDA has not approved, and that balance is shrinking."
+ }
+}

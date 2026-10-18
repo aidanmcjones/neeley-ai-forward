@@ -1,0 +1,508 @@
+{
+ "ticker": "PFE",
+ "lens": "materiality",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "PFE-c01",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Re-checked PFE:transcripts/2025Q3_transcript.md p.8-9 (Divan asked about 'pricing and market share dynamics'; Malik answered with share leadership 'on a TRx basis' and first-line share), PFE:companies/PFE/transcripts/2025Q2_transcript.md p.10 ('Attruby is taking some first-line share' and GTN pressure from contracting), and BBIO:earnings/2026-01-12_ef20062706_ex99-2.md p.29 (30-40%+ Attruby share forecast). All verified, all grade A where transcripts. So share loss itself is said. On the '51% revenue share vs TRx leadership' framing: the two are not in conflict. Revenue share mixes price and volume. Amvuttra is a higher-priced per-patient therapy, and its U.S. row includes hATTR-PN. Pfizer can hold TRx leadership and a ~51% revenue share at the same time, so the gap is not evidence that management misstated anything. What survives under my lens is the size of the stall, recomputed on H1 to avoid single-quarter noise. U.S. H1: Vyndaqel 1,975 vs 1,976 (PFE 10-Q p.38); Amvuttra U.S. 1,511.6 vs 559.3 (ALNY p.38); Attruby 403.0 vs 108.2 (BBIO p.56). Class revenue 3,889.6 vs 2,643.5 (+$1,246M, +47%). Vyndaqel took ~0% of that growth, and its revenue share went from 74.8% to 50.8%. Vyndaqel U.S. is ~$3.8B, about 10% of Pfizer U.S. revenue (37,078, 10-K file p.42), so a flat line in a +47% class is material. Pfizer has never put a number on it.",
+   "correction": "Narrowed finding: in H1 2026 the U.S. ATTR-CM class (Vyndaqel + Amvuttra U.S. + Attruby) grew ~$1.25B (+47%) while U.S. Vyndaqel revenue was flat. Vyndaqel's revenue share fell from ~75% to ~51%. This is revenue share, shaped by price and by Amvuttra's PN use, so it does not contradict Pfizer's TRx-share leadership claim. Pfizer has disclosed share pressure and contracting qualitatively but never sized either.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "BBIO:10q_2026Q2.md",
+     "page": 56
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 10
+    },
+    {
+     "doc_id": "BBIO:earnings/2026-01-12_ef20062706_ex99-2.md",
+     "page": 29
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 42
+    }
+   ],
+   "round2": {
+    "conceded": "Share loss and its causes (first-line share to Attruby, payer contracting) were said on the 2025Q2 and 2025Q3 calls, and rivals publish share forecasts. The existence of share loss is not new.",
+    "held": "The quantification is material and unsaid. Vyndaqel took ~0 of $1.25B of H1 U.S. class growth on a ~$3.8B U.S. product, and no Pfizer source sizes it.",
+    "narrowed": "Dropped the 'vs TRx leadership' contrast as a contradiction, because revenue share and TRx share can both be true. Moved the headline from a single quarter (Q2 69.6% to 50.8%) to H1 (74.8% to 50.8%) with class growth captured."
+   }
+  },
+  {
+   "id": "PFE-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Settled whether any version is material. Verified PFE:companies/PFE/transcripts/2024Q4_transcript.md p.7 (grade A): the CFO guided 'a higher gross to net impact on our revenues for all drugs in the beginning of 2025' from the Part D redesign, sized as a net revenue headwind of about $1B. So the 2025 step (38.6% to 41.3%, ~$2.4B at the 2024 rate) is guided Part D plus Paxlovid/Comirnaty mix, and the two cannot be separated from the cited data. For 2026, I backed Q1 out of the H1 and Q2 columns on 10-Q 2026Q2 p.37 and p.5. Q1'26 deductions 8,258 on gross 19,973 = 41.3% vs Q1'25 8,133/19,427 = 41.9%, so Q1 narrowed 0.5 pt. Q2 widened (43.2% vs 41.4% headline; 40.4% vs 39.9% ex-returns). H1 ex-returns is flat (40.04% vs 40.01%). There is no 2026 trend: one quarter down, one up, and the H1 headline move is the returns line, which p.38 ties to Comirnaty's smaller returns-provision benefit and Nurtec. The chargeback rise (+$639M H1) is matched by falls in Medicare rebates (-$207M) and sales allowances (-$142M). That is a shift in composition across deduction lines (consistent with less Medicare rebate under the redesign and more contract and 340B pricing), with no net P&L effect so far. No version of c02 clears the materiality bar as an unsaid, ongoing revenue drag.",
+   "correction": "No material finding. At most a composition note: in H1 2026, chargebacks (+11.8% in Q2) replaced Medicare rebates and sales allowances inside a flat ex-returns deduction rate (~40.0%). The 2025 step-up was guided (~$1B Part D, 2024Q4 call p.7) and partly COVID mix.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 5
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 43
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2024Q4_transcript.md",
+     "page": 7
+    }
+   ],
+   "round2": {
+    "conceded": "The 2025 38.6% to 41.3% step should be dropped, because it was guided on the 2024Q4 call (verified p.7). And c11's chargeback evidence belongs here, not as a separate finding.",
+    "held": "The other skeptic kept the 'H1 2026 chargeback-led widening' as non-obvious, but it fails on math: H1 ex-returns rate is flat, Q1 narrowed and Q2 widened, and chargeback growth is offset line for line. Being unasked does not make a non-move material.",
+    "narrowed": "From 'widening is a lumpy returns move' to 'no 2026 trend at all'. Q1'26 narrowed 0.5 pt, which round 1 did not show."
+   }
+  },
+  {
+   "id": "PFE-c03",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Verified the other skeptic's release cite PFE:earnings/2026-08-04 p.4 and transcripts 2025Q2 p.10 and 2025Q3 p.8-9. The U.S. declines and their payer-contract driver were said in calls and releases. Under my lens the realized four-quarter move is -$78M (~0.1% of revenue), and the $0.4-0.6B figure is foregone growth from an inferred price cut. Its material content is already in narrowed c01 (flat H1 U.S. in a +47% class).",
+   "correction": "Fold into c01; no separate finding.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q3.md",
+     "page": 42
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q1.md",
+     "page": 35
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "PFE:transcripts/2025Q3_transcript.md",
+     "page": 9
+    },
+    {
+     "doc_id": "PFE:transcripts/2026Q1_transcript.md",
+     "page": 5
+    },
+    {
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "page": 4
+    }
+   ],
+   "round2": {
+    "conceded": "Obvious: the driver language and the U.S. declines are in release bullets, and Malik named both GTN headwinds on 2025Q3 p.9. I flip my round 1 'held' to refuted.",
+    "held": "My round 1 math stands: -$78M four-quarter decline, and Q2'26 +7%.",
+    "narrowed": "The only material piece (a U.S. stall that has not been sized) is carried by c01."
+   }
+  },
+  {
+   "id": "PFE-c04",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Verified PFE:earnings/2026-08-04_pfe-6282026xex99.md p.16: the 842/422/1,033/564 legal line and the generic footnote are in the earnings release, so the size is public. Re-checked 10-Q 2026Q2 p.27 and p.46. The Depo-Provera agreement-in-principle (June 2026) and the Chantix MDL agreement (March 2026) are both in the Q2 10-Q. The $867M figure on p.46 (non-GAAP adjustment for legal matters) vs $842M in Note 4 is a $25M difference, probably legal costs booked outside Other deductions; immaterial. Materiality of the remaining item: $842M is ~$0.15 pre-tax GAAP EPS but excluded from adjusted EPS, so it does not touch consensus. It is cash, though: product-liability settlements are paid, so it reduces free cash flow even though adjusted EPS ignores it. The filing does not tie the Q2 accrual to Depo-Provera, so the link stays an inference.",
+   "correction": "Pfizer's legal charges doubled to $842M in Q2 2026 ($1.03B H1), shown in the release but never explained on the call. The quarter coincides with an undisclosed-size Depo-Provera MDL agreement-in-principle, assured only as 'not material to liquidity or financial condition', with state-court cases outside it. Material to GAAP EPS and cash, not to adjusted EPS. The Depo attribution is inferred.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 14
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 27
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 31
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 46
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 5
+    },
+    {
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "page": 16
+    }
+   ],
+   "round2": {
+    "conceded": "The charge size is public in the release reconciliation (p.16). The 'unsaid' part is only the explanation and the Depo-Provera settlement.",
+    "held": "Still only partly established: Chantix also settled in H1, so timing does not single out Depo. The $867M vs $842M gap is real but small.",
+    "narrowed": "Reframed materiality around cash and GAAP, not adjusted EPS, and dropped any claim that the dollar amount was hidden."
+   }
+  },
+  {
+   "id": "PFE-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Verified the release reconciliation PFE:earnings/2026-08-04 p.16 ('255 34 550 42'). The fair-value change is printed in the release. Under my lens it is non-cash, excluded from adjusted EPS (10-Q p.44), and its increase is consistent with the obesity milestones becoming more likely (Phase 3 start is the first CVR milestone, per the other skeptic's 2025-11-04 release p.10 cite). That is good news about the asset, not an unsaid cost. Round 1's double-count point stands: the $632M CVRs are inside the $1.79B balance (10-K FY2025 p.84).",
+   "correction": "Not a finding. The liability ($2.26B) is a modest input to valuing the obesity program, not an unpriced risk.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 11
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 14
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 17
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 70
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 84
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 105
+    },
+    {
+     "doc_id": "PFE:earnings/2026-08-04_pfe-6282026xex99.md",
+     "page": 16
+    }
+   ],
+   "round2": {
+    "conceded": "It is printed in the release and follows pipeline events Pfizer promoted. I flip my round 1 'held' to refuted.",
+    "held": "The candidate's 'on top of $632M CVRs' double counts. The 10-K FY2025 p.84 additions of 1,266 include the CVRs.",
+    "narrowed": "Reduced to a valuation note."
+   }
+  },
+  {
+   "id": "PFE-c06",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Verified PFE:earnings/2026-02-03_pfe-12312025xex99.md p.3 per the other skeptic: FY2026 guidance already reflects the MFN and TrumpRx impact. Combined with my round 1 basis error (list-price discount applied to net revenue), nothing here is unpriced or correctly sized.",
+   "correction": "The only residue is the deleted IP-expiry clause, a wording note with no number.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10k_FY2024.md",
+     "page": 24
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 25
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 26
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 42
+    },
+    {
+     "doc_id": "PFE:policy/press_2025-09-30_mfn_landmark_agreement.md",
+     "page": 1
+    },
+    {
+     "doc_id": "PFE:earnings/2026-02-03_pfe-12312025xex99.md",
+     "page": 3
+    }
+   ],
+   "round2": {
+    "conceded": "MFN and TrumpRx are in the guidance bullet, so the drift is priced. I flip to refuted.",
+    "held": "The $185M per 1% sensitivity was wrong-basis, as in round 1.",
+    "narrowed": "Down to the single deleted clause."
+   }
+  },
+  {
+   "id": "PFE-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Agree with the other skeptic: the recast was announced and asked about, and the restated prior-year column keeps growth comparable. Only Aromasin's removal is unremarked, and at $450M (0.72% of revenue) it is below the bar.",
+   "correction": "No finding. Aromasin is no longer broken out (<1% of revenue).",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "page": 33
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 31
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 108
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 109
+    }
+   ],
+   "round2": {
+    "conceded": "The recast was disclosed and asked about (2025Q4 call p.14, per the other skeptic).",
+    "held": "Materiality kills the Aromasin residue.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "PFE-c08",
+   "refuted": true,
+   "severity": "minor",
+   "argument": "Agree: it is a null, and its explanation was given in prepared remarks.",
+   "correction": "Recast as no_finding.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 58
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 60
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 108
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 5
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 7
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "page": 7
+    }
+   ],
+   "round2": {
+    "conceded": "The wholesaler transition was stated in prepared remarks and in a release bullet.",
+    "held": "The ratios reproduce, but nothing is anomalous.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "PFE-c09",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Verified PFE:companies/PFE/transcripts/2025Q2_transcript.md p.13 (grade A, Bourla): 'Both of them are losing patent on '27 ... the hit on us is very small. The NPV is very small because it's really a few months of exclusivity.' This matches the round 1 finding from the 10-K patent table (Ibrance U.S. 2027). Management sized the effect as small, which removes both the materiality and the 'unsaid' claim.",
+   "correction": "Ibrance's 50% Medicare MFP starts 1 Jan 2027, months before expected U.S. generics. Pfizer has called the NPV hit 'very small'. Not a finding.",
+   "pages_checked": [
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2027.md",
+     "page": 2
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/cms/cms_fact_sheet_selected_list_ipay2028.md",
+     "page": 1
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 25
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "PFE:companies/PFE/transcripts/2025Q2_transcript.md",
+     "page": 13
+    }
+   ],
+   "round2": {
+    "conceded": "Asked and answered on the 2025Q2 call, so severity is raised to fatal.",
+    "held": "The round 1 basis error (Part D gross cost vs net revenue) stands.",
+    "narrowed": "None left."
+   }
+  },
+  {
+   "id": "PFE-c10",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Agree with the other skeptic's sources that the Part B vs Part D contrast is a standard sell-side question asked of the rivals. Under my lens it carries no sized impact, and Pfizer's 2026 driver text cites payer contracts, not the redesign.",
+   "correction": "Background context for c01 only.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:vyndamax:label_sections.md",
+     "page": 1
+    },
+    {
+     "doc_id": "drug:vyndamax:label_sections.md",
+     "page": 2
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "page": 1
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "page": 2
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "page": 3
+    },
+    {
+     "doc_id": "drug:amvuttra:label_sections.md",
+     "page": 5
+    },
+    {
+     "doc_id": "drug:attruby:label_sections.md",
+     "page": 2
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10q_2026Q1.md",
+     "page": 35
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    }
+   ],
+   "round2": {
+    "conceded": "Widely known. I flip my round 1 'held' to refuted.",
+    "held": "Pfizer's 2026 filings attribute U.S. pressure to payer contracts (10-Q 2026Q1 p.35, 2026Q2 p.38).",
+    "narrowed": "Use as context for c01, not as a finding."
+   }
+  },
+  {
+   "id": "PFE-c11",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Agree it folds into c02. My round 1 math holds: chargebacks are offset by other lines, and the CMS 340B proposal cuts hospital payment, not the chargeback line.",
+   "correction": "Fold into c02, which itself has no material residue.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+     "page": 13
+    },
+    {
+     "doc_id": "PFE:transcripts/2026Q2_transcript.md",
+     "page": 15
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 37
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 5
+    }
+   ],
+   "round2": {
+    "conceded": "The deflection was heard by every listener, and Bourla has stated Pfizer's 340B position before (2025Q2 p.10).",
+    "held": "The $1.5B per year and $0.26 EPS figures are gross of offsets and the wrong metric.",
+    "narrowed": "None."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Agree the Part B fine-print edge was asked and answered (ALNY 2025Q1 call p.12, per the other skeptic). Materiality of the product holds: Vyndaqel is ~10% of revenue and its U.S. line is flat in a growing class.",
+   "correction": "Keep Vyndaqel, with the angle being the unsized U.S. class revenue-share loss (narrowed c01), not the label or Part B contrast.",
+   "pages_checked": [
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 44
+    },
+    {
+     "doc_id": "PFE:10k_FY2025.md",
+     "page": 13
+    },
+    {
+     "doc_id": "ALNY:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "BBIO:10q_2026Q2.md",
+     "page": 56
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 29
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 38
+    }
+   ],
+   "round2": {
+    "conceded": "The fine-print edge is not original.",
+    "held": "It is the right product on materiality.",
+    "narrowed": "The edge moves from label and Part B to the quantified U.S. stall."
+   }
+  }
+ ],
+ "overall": "After round 2, two PFE items are both material and not said by management. First, U.S. Vyndaqel was flat in H1 2026 while the U.S. ATTR-CM class grew ~$1.25B (+47%), cutting its revenue share from ~75% to ~51% (narrowed c01, a revenue-share fact, not a contradiction of TRx leadership). Second, the unexplained doubling of legal charges to $842M in Q2 2026 next to an unsized Depo-Provera MDL settlement (c04), which matters for GAAP and cash but not adjusted EPS. No version of the gross-to-net story (c02/c11) survives: the 2025 step was guided and the 2026 ex-returns rate is flat."
+}

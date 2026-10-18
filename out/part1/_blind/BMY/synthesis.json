@@ -1,0 +1,107 @@
+{
+ "ticker": "BMY",
+ "company": "Bristol Myers Squibb",
+ "rulings": [
+  {
+   "id": "BMY-c01",
+   "category": "Language drift",
+   "verdict": "narrowed",
+   "claim": "In FY2025 the charge-backs and cash discounts line (which the 10-K says holds DoD/VA and 340B program pricing plus ~2% prompt-pay discounts) accounted for about $1.95B, roughly 78%, of the ~$2.49B by which BMS's total company gross-to-net adjustments exceeded the 2024 rate, while Medicaid and Medicare rebates accounted for only ~$0.59B; but the mix is a Q4 2025 effect (through nine months the split was about even, $1.03B vs $1.11B), the 340B share is undisclosed, and the 10-K's own 'higher government channel mix' wording covers this line, so it is a composition fact, not a contradiction of management or a sized 340B drag.",
+   "reason": "Both skeptics accept the p49 arithmetic (BMY:10k_FY2025.md p49: charge-backs 14,067 vs 11,510, +22%; gross 88,085 vs 83,671, +5%; Medicaid/Medicare 18,010 vs 16,551). Materiality refuted in round 2 because the line also holds DoD/VA, cash discounts and possibly price protection, so no 340B dollar is isolable; obviousness held it as never said and as contradicting the 'rebates and Part D' framing. I opened the sources. (1) Composition: confirmed arithmetic. At 2024 line rates on 2025 gross, excess is charge-backs $1,950M, Medicaid/Medicare $586M, other -$45M, total $2,490M (p49). This is total-company, not U.S.-only. (2) Timing: the 10-Q filed before the December 2025 government agreement and the January 2026 Eliquis list cut (BMY:companies/BMY/10q_2025Q3.md p36) shows nine-month 2025 charge-backs 9,840 vs 8,366 and Medicaid/Medicare 13,244 vs 11,525 on gross 64,548 vs 61,298: excess $1,030M charge-backs vs $1,108M rebates, an even split. The 78% comes from Q4 2025 (FY minus 9M): charge-backs 4,227 vs 3,144 (+34%) on gross +5%, Medicaid/Medicare 4,766 vs 5,026 (-5%). That quarter coincides with the U.S. Government Agreement announced December 2025 (BMY:10k_FY2025.md p44) and with the charge-back reserve nearly doubling to $1,720M from $900M (p48, p107). Note 2 lists 'pricing protection below wholesaler list price' among U.S. GTN types (p83), so the materiality skeptic's price-protection caveat is plausible though the line placement is not disclosed. The full-year rebate line is also depressed by a $342M Medicaid/Medicare prior-period release (p48); on current-period provisions the charge-back share is roughly 70% (estimate: the 2024 line split of prior-period changes is not on these pages). (3) Framing: the 10-K driver sentence is 'redesign of the U.S. Medicare Part D program and higher government channel mix' (p49), and p65 defines charge-backs as government-entity programs (DoD, VA) and 340B covered entities, so a charge-back-led widening is consistent with 'government channel mix'; the Q3 10-Q framing ('higher government channel rebates and mix, including ... Part D', p36) matches the even nine-month split. The contradiction is not supported; only the Q4 release's 'higher U.S. government channel rebates' wording (BMY:earnings/2026-02-05_a2025q4ex991.md p2, p6) is loose. (4) Persistence: H1 2026 charge-backs fell to 13.8% of gross from 15.1% (BMY:10q_2026Q2.md p31), so the 2025 excess did not carry forward as a rate. The 340B 'could' to 'has' drift is dead on obviousness (MRK and AMGN use the same tense). Composition is confirmed; its significance is unrefuted at best and probably a year-end timing/reserve effect.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": "Which GTN line carries Eliquis price protection for the January 2026 list cut, and the 340B share of charge-backs; neither is disclosed."
+  },
+  {
+   "id": "BMY-c02",
+   "category": "Earnings-call Q&A",
+   "verdict": "killed",
+   "claim": "The 10-K names Part D redesign and government channel mix for the ~4-point U.S. GTN rise; the Q3 2025 call's 'roughly equal' remark was about Part D sales phasing, not the GTN rate, so there is no call-versus-filing contradiction.",
+   "reason": "Both skeptics independently read Lenkowsky's grade-B remark (BMY:transcripts/2025Q3_transcript.md p1) as a revenue-phasing statement (Eliquis evened out, catastrophic-phase cost on Revlimid, Pomalyst, Camzyos), not a GTN-rate claim; the obviousness skeptic shows Part D was asked and answered on 2024Q4 and 2025Q1 (grade C) and the 2026-27 Eliquis guidance request was taken up on later calls. Materiality's sizing objection holds on BMY:10k_FY2025.md p49: Medicaid/Medicare rebates were only ~$0.59B above the 2024 rate for the full year, so $2.9B / $1.15 EPS 'mostly Part D' is unsupported and double-counts c01. No disagreement remains. Confirmed refuted.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "BMY-c03",
+   "category": "Footnotes",
+   "verdict": "narrowed",
+   "claim": "BMS's Keytruda and Tecentriq royalties, about $0.62-0.67B of pretax income a year (FY2025 $635M; H1 2026 $334M), end on December 31, 2026, a step-down of roughly $0.25-0.27 of EPS (about 4% of FY2027 consensus) that sits only in Note 4 and Item 1A, is folded into a combined 'Royalty and licensing income' line in the earnings release, and has not been mentioned on any of the last four calls; whether FY2027 consensus removes it cannot be shown either way.",
+   "reason": "Agreed facts, re-opened: BMY:10k_FY2025.md p34 says Keytruda and Tecentriq royalties 'are expected to terminate on December 31, 2026' and pretax royalties were ~$2.7B in 2025; p91 gives Keytruda 588, Tecentriq 47; BMY:10q_2026Q2.md p10 gives H1 2026 Keytruda (308), Tecentriq (26), booked in Other (income)/expense; MRK:10q_2026Q2.md p34 confirms the 2.5% royalty 'will continue through 2026, terminating thereafter'. EPS: 635 to 668 x 0.82 / 2,039M diluted shares = $0.255-0.269, 3.9-4.1% of the FY2027 I/B/E/S mean of $6.54 (tables/ibes_eps_consensus.csv#510, licensed, cite by locator, do not quote). Both skeptics conceded the diabetes piece ($1,121M) is guided (2025Q4 call; Q2 2026 release p3) and the $1.76B headline goes. Remaining disagreement is only the obviousness test. Obviousness: the end date has been in Item 1A since the FY2023 10-K (BMY:companies/BMY/10k_FY2023.md p32, verified) and is a dated contract term. Materiality: no recent call mentions it, the Q4 2025 release shows only 'Royalty and licensing income (1,093)' (BMY:earnings/2026-02-05_a2025q4ex991.md p14), and the FY2027 consensus pretax decline of ~$0.40B is smaller than the royalty plus the guided $1.5-2B Eliquis step-down, so consensus cannot be shown to include it. How I read the case text: the case excludes 'patent cliffs and exclusivity losses' as 'public and priced in' and defines exclusivity as 'the period when no cheaper copy can be sold'; it separately lists 'partner royalty splits' in footnotes as a hiding place and says the story hides 'in a risk factor', and its working test is 'signals a press-release skim would miss' and nothing 'already said plainly on a call'. I read the exclusion narrowly, as covering a product's loss of exclusivity, not every dated disclosure. A contractual royalty end on a rival's drug is not a BMS exclusivity loss, is missed by a release skim (combined line, no date), and is not said on a call, so it clears the case's test, but only at medium obviousness: it is public in Item 1A, and 'not visibly in consensus' is unrefuted, not confirmed. A judge who reads the exclusion broadly (any dated, long-disclosed income cliff) would kill it, and that is the main risk.",
+   "materiality": "medium",
+   "obviousness": "medium",
+   "confidence": "medium",
+   "unresolved": "Whether FY2027 consensus OI&E already removes the royalty; I/B/E/S has no OI&E line and no analyst model is in the index."
+  },
+  {
+   "id": "BMY-c04",
+   "category": "Gross-to-net",
+   "verdict": "killed",
+   "claim": "The 2026 Eliquis list cut lowered gross sales and rebates together and the U.S. GTN rate fell from 52% to 34% in Q2 2026; management explained the CPI-penalty and $0 Medicaid mechanism on three calls, and the net price benefit is not disclosed separately from demand and FX.",
+   "reason": "Both lenses refute and agree in round 2. Obviousness (fatal): the mechanism (~40% WAC cut eliminates CPI penalties, $0 Medicaid) was stated on the 2025Q4, 2026Q1 and 2026Q2 calls (grade C) and the guidance raise is the Q2 release headline. Materiality: the $2,757M rebate drop is offset by a $4,002M gross decline (BMY:10q_2026Q2.md p31), Eliquis rose only $801M in Q2 (p8), and p35 credits demand first, so '$1.44B rebate effect, not demand' is unsupported; reserve releases recur every year. Confirmed refuted.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": "Whether the 2026 rebate reset implies a 2027 Eliquis step-down larger than the guided $1.5-2B; a lead, not sourced."
+  },
+  {
+   "id": "BMY-c05",
+   "category": "Inventory and receivables growing faster than revenue",
+   "verdict": "killed",
+   "claim": "Gross trade receivables rose 14% on flat revenue because the charge-back reserve nearly doubled ($900M to $1,720M) at year-end 2025; this is the balance-sheet side of the c01 charge-back movement, not channel stuffing.",
+   "reason": "Both skeptics refute and agree to fold it into c01. Verified on BMY:10k_FY2025.md p107 (trade receivables 11,370 vs 9,957; charge-backs reserve 1,720 vs 900) and p48 (reserve rollforward). The reader itself rules out channel stuffing; the effect is working-capital timing (~$0.4B) and reversed by Q2 2026 (BMY:10q_2026Q2.md p18). Kept only as supporting evidence for c01's Q4 timing point.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "BMY-c06",
+   "category": "Segment and product table changes",
+   "verdict": "killed",
+   "claim": "Since Q1 2026 Abecma ($427M in 2025) is no longer broken out and sits in 'Other Growth products'.",
+   "reason": "Both lenses refute and agree. Fact verified (BMY:10k_FY2025.md p85; BMY:10q_2026Q1.md p8) but it is 0.9% of revenue with a ~$60M a year hidden decline, below the materiality bar, and the fold-in is printed in footnote (a) of the 2026 earnings releases (BMY:earnings/2026-04-30_a2026q1ex991.md p2). Confirmed refuted; one-line disclosure note at most.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "BMY-c07",
+   "category": "Peer contrast",
+   "verdict": "narrowed",
+   "claim": "After its 2026 U.S. list cut, Eliquis's pharmacy acquisition cost sits about 1.36x its Medicare negotiated price while Xarelto's sits about 2.83x (EA NDCs only), although both drugs had near-equal 2023 list prices ($521 vs $517) and similar negotiated prices ($231 vs $197); this is a qualitative list-level contrast, not a net-price gap, with no revenue or share effect sized.",
+   "reason": "Round 2 converged. Obviousness holds that no call, release or analyst has set the two post-cut gaps side by side (Xarelto appears once in ten BMS calls); materiality conceded the ratios are citable as verified derived fact rows (data/moat/verified/pricing/gtn_proxy.csv, BLIND_READER_BRIEF rule 4) but refuted the original '44% cheaper in every non-Medicare channel' and the link to 27% growth as a list-vs-net error contradicted by BMY:10q_2026Q2.md p35 (demand first). I checked the rows: Eliquis 2026 nadac_vs_mfp 1.356, NADAC 30-day median $313.24 (pricing:verified/pricing/gtn_proxy.csv#40); Xarelto 2026 2.834, $558.39, with the basis note that the NADAC mixes EA/ML NDCs and the weighted figure uses EA NDCs only and an MFP unit range of 1.329-6.881 (#155). The quotable page is the CMS fact sheet p2 (policy_gov:policy_gov/cms/cms_fact_sheet_negotiated_prices_ipay2026.md p2: Eliquis $231 vs $521; Xarelto $197 vs $517). Ruling: survives only as a qualitative list-level contrast, numbers cited by fact locator, no text quote from the derived rows, EA-NDC caveat attached, no net-price or causal claim. Confirmed as data; unsized, so not material on its own.",
+   "materiality": "low",
+   "obviousness": "low",
+   "confidence": "medium",
+   "unresolved": "Net-price gap in commercial channels (rebates confidential) and any share effect are not sized."
+  },
+  {
+   "id": "BMY-c08",
+   "category": "Product fine print",
+   "verdict": "killed",
+   "claim": "Eliquis allows dosing in severe renal impairment and dialysis where Xarelto says to avoid use; product color only.",
+   "reason": "Both lenses refute in round 2. Label text verified (drug:eliquis:label_sections.md p39; drug:xarelto:label_sections.md p24), but it has been on the Eliquis label since about 2014, management itself names renal-impairment patients in the milvexian pitch (2026Q2 call, grade C), and the 'helps explain 3x Part D enrollees' link is unsized and implausible for the dialysis subgroup alone. Confirmed refuted as a finding.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": "Whether milvexian's eventual label matches the renal/dialysis edge; untestable now."
+  }
+ ],
+ "product": {
+  "verdict": "narrowed",
+  "product": "Eliquis (apixaban)",
+  "rivals": [
+   "Johnson & Johnson's Xarelto (rivaroxaban)"
+  ],
+  "reason": "Both skeptics end with the pick held: Eliquis is $14,443M, about 30% of 2025 revenue (BMY:earnings/2026-02-05_a2025q4ex991.md p6), and Xarelto shares the same 2026 Medicare negotiated-price year (CMS fact sheet p2), so the pair lines up cleanly. Narrowed on the fine-print edge: the renal/dialysis label difference (drug:eliquis:label_sections.md p39 vs drug:xarelto:label_sections.md p24) is decade-old and unsized, so it becomes secondary color; the lead edge is the c07 post-cut list-to-negotiated-price contrast (1.36x vs 2.83x, verified fact rows gtn_proxy.csv#40 and #155, EA NDCs only), stated as list-level, not net. What limits growth (U.S. generics from 2028, guided $1.5-2B 2027 step-down) is public and priced."
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 1,
+  "best_candidate_id": "BMY-c03",
+  "one_line": "Thin pick: BMS's Eliquis pricing story is already told by management, and the only material, arguably non-obvious survivor is the dated 2027 end of the Keytruda/Tecentriq royalties (~$0.25-0.27 EPS, ~4% of FY2027 consensus), which a strict judge could call the royalty form of an exclusivity loss."
+ }
+}

@@ -1,0 +1,266 @@
+{
+ "ticker": "JNJ",
+ "lens": "obviousness",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "JNJ-c01",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2. Materiality held the price leg: -3.1 pts, about $2.75B, the worst in six years (10-K FY2025 p.28). I re-read that page, and the same paragraph still attributes 6.2 points of worldwide growth to the STELARA biosimilar decline. Management named Part D redesign on every 2025 call. The material number is therefore an explained number. Materiality's own check removes the one part that was not explained. Against U.S. Innovative Medicine sales (+7.0% in 2025, 10-K FY2025 p.29; +9.0% in 2024, 10-K FY2024 p.29), rebate accruals outgrew sales by only 0.6 pts in 2025. AbbVie's provisions also outgrew its revenue.",
+   "correction": "Price swung from 0.0 to -3.1 pts in 2025, about $2.75B, explained by STELARA biosimilars and Part D redesign. That is context, not a finding.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 28
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 29
+    },
+    {
+     "doc_id": "JNJ:10k_FY2024.md",
+     "page": 29
+    }
+   ],
+   "round2": {
+    "conceded": "The price leg is material and correctly computed. The rebate-versus-sales gap is mostly a base error (worldwide versus U.S. sales).",
+    "held": "It is still obvious. The 10-K explains it on the same page, and management named both causes every 2025 quarter.",
+    "narrowed": "A finding would need price erosion outside STELARA to continue into 2026, and the 10-Qs have no price/volume split to show it."
+   }
+  },
+  {
+   "id": "JNJ-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2. Materiality reached the same core conclusion from its side: the cost is inside the $11.05-$11.15 guide (2026Q3 call p.8). It also showed that '1% of all U.S. Innovative Medicine sales' has no anchor, because the disclosed terms touch Medicaid, TrumpRx and launch pricing. With the impact base removed and the cost already in guidance, what is left is a disclosure-style gap: one sentence at 10-K p.10 and nothing in the 2026 10-Qs. Consensus took the guide (I/B/E/S FY2026 EPS 11.45 to 11.53, rows 755 and 737).",
+   "correction": "The deal's terms, term length and product scope are confidential (press release p.1), while BMS and Merck name theirs. That leaves the out-year cost unknown. It is a disclosure contrast with no sized impact.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 8
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 10
+    },
+    {
+     "doc_id": "JNJ:policy/press_2026-01-08_us_government_agreement_mfn.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Materiality is right that the $0.12-per-1% figure is a scaling unit with no anchored base. I also accept its point that 'every quarter' rests on quotes from 2 of 4 calls.",
+    "held": "Refuted as a finding. The deal is headline news, its cost sits in a guide that consensus accepted, and the CEO answered about it at JPMorgan.",
+    "narrowed": "The only non-obvious remainder is the confidential term and scope, which also bears on c03's tariff date."
+   }
+  },
+  {
+   "id": "JNJ-c03",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Round 2. This survives as the one JNJ item that is both unsaid and material, but only after narrowing.\n\nChecked against the sources:\n(1) Item 2 counts. U.S. Innovative Medicine plants went from 4 to 3 and non-U.S. from 14 to 16, in the same paragraph in both years (10-K FY2025 p.23, FY2024 p.23).\n(2) Square footage. Materiality correctly notes that Innovative Medicine square footage grew (4,696k to 5,245k). The geographic table on the same page leans offshore, though: Europe rose from 4,521k to 5,035k (+11.4%) and Western Hemisphere excluding U.S. from 898k to 1,054k (+17.4%), against U.S. 2,892k to 3,037k (+5.0%). The U.S. share of total floor space fell from 30.1% to 29.3%. So square footage does not reverse the drift, though it is not split by segment.\n(3) Proclamation 11020. Clause (3)(e) gives zero 'until January 20, 2029' to MFN signers, 'For avoidance of doubt, this zero tariff rate shall also apply per the terms of the agreements listed in Annex II'. J&J's release footnotes its exemption and says the terms are confidential. So J&J's own end date is unproven. I concede that.\n(4) Tariff rate. Clause (3)(b) sets 20% for onshoring-plan companies, rising to 100% on April 2, 2030. Clause (3)(c) sets 15% for EU, Japan, Korea and Swiss-origin products 'unless a lower rate applies'. For J&J's mostly European drug plants, 15% is therefore a defensible rate for EU and Swiss-origin goods, not an error, but non-EU plants would pay 20%, rising to 100%.\n\nOn obviousness, nothing changed. Neither the plant drift, the Q2 2026 exits of drug plants nor the 2029 or 2030 dates appear in any 2025Q4-2026Q3 call, release or slide. Tariff talk on those calls is MedTech-only.",
+   "correction": "J&J's Innovative Medicine plant count moved offshore in 2025 (U.S. 4 to 3, non-U.S. 14 to 16). Non-U.S. floor space grew more than twice as fast as U.S. floor space (Europe +11.4% vs U.S. +5.0%), and a Q2 2026 restructuring exits further drug plants. Meanwhile the generic MFN zero tariff runs to January 20, 2029 (J&J's own term is confidential), after which rates are 15% for EU/Swiss origin and 20% otherwise, rising to 100% in April 2030. Present any dollar figure as an illustration only.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 23
+    },
+    {
+     "doc_id": "JNJ:10k_FY2024.md",
+     "page": 23
+    },
+    {
+     "doc_id": "policy_gov:policy_gov/tariff/wh_proclamation_11020_2026-04-02_section232_pharma.md",
+     "page": 1
+    },
+    {
+     "doc_id": "JNJ:policy/press_2026-01-08_us_government_agreement_mfn.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "J&J's 2029 end date is not proven. Applying 15% to every non-U.S. plant is wrong, since non-EU origin pays 20%, rising to 100%. Plant count is not production value. '$0.9-1.2B bound' should be called an illustration.",
+    "held": "The plant drift is unsaid and like-for-like, and the floor-space table on the same page tilts offshore too. It survives the obviousness test as the least obvious JNJ item.",
+    "narrowed": "The claim moves from 'tariff cliff costs $0.30-0.40 EPS' to 'footprint moving offshore while the exemption has a dated sunset whose J&J-specific term is confidential'."
+   }
+  },
+  {
+   "id": "JNJ-c04",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Round 2 peer check, which I flagged in round 1. Finished goods, June 2025 to June 2026, from each company's own 10-Q inventory note:\n- AbbVie: $1,681M to $1,671M (-0.6%) (ABBV 10q_2025Q2 p.8; 10q_2026Q2 p.8).\n- Merck: $2,142M to $2,186M (+2.1%) (MRK 10q_2025Q2 p.18; 10q_2026Q2 p.19).\n- Pfizer: $4,126M to $3,887M (-5.8%) (PFE 10q_2025Q2 p.20; 10q_2026Q2 p.21).\n- Bristol Myers: $1,157M to $993M (-14.2%) (BMY 10q_2025Q2 p.21; 10q_2026Q2 p.19).\n- J&J: $7,052M to $8,405M (+19.2%) (JNJ 10q_2026Q2 p.13; 10q_2025Q2 p.13).\nSo the 2026 build is J&J-specific, while the 2025 build was shared, as I said in round 1. No call mentions it. On materiality I concede. Finished goods on J&J's own books are unsold stock, so they say nothing about a channel destock. On H1 figures the multiple is about 1.6x, not 2x.",
+   "correction": "J&J's finished goods rose 19% year over year to June 2026, while AbbVie, Merck, Pfizer and BMS were flat to down (-14% to +2%). That makes it a J&J-specific working-capital and write-down watch item worth about $0.9B above a sales-paced level, with launch stock (ICOTYDE, INLEXZO) and the Orthopaedics separation as untested explanations. It is not a revenue risk.",
+   "pages_checked": [
+    {
+     "doc_id": "ABBV:10q_2026Q2.md",
+     "page": 8
+    },
+    {
+     "doc_id": "ABBV:companies/ABBV/10q_2025Q2.md",
+     "page": 8
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "MRK:companies/MRK/10q_2025Q2.md",
+     "page": 18
+    },
+    {
+     "doc_id": "PFE:10q_2026Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "PFE:companies/PFE/10q_2025Q2.md",
+     "page": 20
+    },
+    {
+     "doc_id": "BMY:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "BMY:companies/BMY/10q_2025Q2.md",
+     "page": 21
+    },
+    {
+     "doc_id": "JNJ:10q_2026Q2.md",
+     "page": 13
+    },
+    {
+     "doc_id": "JNJ:companies/JNJ/10q_2025Q2.md",
+     "page": 13
+    }
+   ],
+   "round2": {
+    "conceded": "The revenue and destock framing is wrong, and the multiple is about 1.6x. Materiality fails as a revenue finding.",
+    "held": "It is non-obvious and J&J-specific: four peers' 2026Q2 10-Qs show flat or falling finished goods.",
+    "narrowed": "Narrowed to a J&J-only 2026 finished-goods build as a balance-sheet watch item. It is not a finding."
+   }
+  },
+  {
+   "id": "JNJ-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2. Materiality agrees 'booking little revenue' is unsupported without a net price, and that the per-ever-started-patient ratio is the wrong metric (patients went from 11,000 to 20,000 within the quarter). That removes the only analytic step beyond what the CFO said: Other Immunology is IMAAVY plus ICOTYDE (2026Q3 p.6), and analysts asked about sales on three calls.",
+   "correction": "ICOTYDE U.S. Q3 2026 sales were at most $126M, and management declined to break them out until 2027. The market already watches this and the CFO stated the mapping.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 6
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 14
+    }
+   ],
+   "round2": {
+    "conceded": "The ceiling arithmetic is right, and the materiality lens kept a narrower version.",
+    "held": "Obvious: three straight calls of questions plus the CFO naming the bucket.",
+    "narrowed": "Nothing non-obvious remains without an ICOTYDE WAC."
+   }
+  },
+  {
+   "id": "JNJ-c06",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2. In round 1 I held only the price half as unsaid. Materiality shows that half is immaterial and weakly evidenced. J1628 is the Part B IV vial, a small slice of TREMFYA. The rows are machine CMS data with no page. Most of the drop happened between the 2025Q4 and 2026Q2 files and has been flat since. At $35M per point it is about 0.04% of revenue. The label half is management's prepared-remarks claim (2025Q3 p.4, 2025Q4 p.4). With both halves gone, nothing remains.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:transcripts/2025Q4_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 89
+    }
+   ],
+   "round2": {
+    "conceded": "The ASP signal is immaterial and cannot be cited as a page quote. Extending an IV-vial move to all TREMFYA sales is unsupported.",
+    "held": "The label edge is obvious, as stated in round 1.",
+    "narrowed": "Changed from held (minor) to refuted."
+   }
+  },
+  {
+   "id": "JNJ-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Round 2. Materiality confirms the size: $2.4B, 12-20% (10-K FY2025 p.8), about $1.4B pre-tax and $0.45-0.47 EPS, phasing in from 2029 with the full year in 2030. That is clearly material. The event is still the CEO's own bull point in 2026Q1 Q&A (p.11). One narrow piece is new: the first dollar sizing, in the FY2025 10-K. The FY2024 10-K (p.8) has no royalty figure. The long-dated I/B/E/S horizon in the index ends at FY2028 (row 793), so I cannot show whether 2030 consensus prices the roll-off.",
+   "correction": "The roll-off is said. Only the sizing (about $0.45-0.47 EPS at the full 2030 run-rate) is newly disclosed, and as a quantification of management's own talking point it does not merit finding status. Xoma stays a minor footnote.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:10k_FY2025.md",
+     "page": 8
+    },
+    {
+     "doc_id": "JNJ:10k_FY2024.md",
+     "page": 8
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q1_transcript.md",
+     "page": 11
+    }
+   ],
+   "round2": {
+    "conceded": "It is material. The tax and share refinements ($0.45 rather than $0.47) and the 2029-partial / 2030-full phasing are right.",
+    "held": "Obvious: management volunteered the 2029 roll-off as a reason the stock is the 'cleanest growth story'.",
+    "narrowed": "The non-obvious residue is just the first-time $ sizing."
+   }
+  },
+  {
+   "id": "JNJ-c08",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Round 2. In round 1 I flagged the lapping explanation and held c08 only on the condition that 'patient mix' still acts as a Medicare channel effect after the lap. Materiality's checks close that off. On the page, U.S. ERLEADA was +4.7% in Q2 but +10.2% for H1 (738 vs 670, 10-Q 2026Q2 p.26), and +9.4% on the 2026Q3 call (p.6). The 10-Q sentence also cites 'inventory dynamics'. The 8.2-point gap mixes FX-affected international growth with a single quarter. The relabel is unsaid, but it is what lapping a January 2025 change predicts, and $119M is about 0.13% of revenue.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:10q_2026Q2.md",
+     "page": 26
+    },
+    {
+     "doc_id": "JNJ:10q_2026Q2.md",
+     "page": 40
+    },
+    {
+     "doc_id": "JNJ:transcripts/2026Q3_transcript.md",
+     "page": 6
+    }
+   ],
+   "round2": {
+    "conceded": "Fatal, as materiality argued: the lapping logic plus the cherry-picked quarter.",
+    "held": "Nothing. Being unsaid is not enough when the innocent reading fits.",
+    "narrowed": "Withdrawn."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": true,
+   "severity": "minor",
+   "argument": "Round 2. Materiality is right that TREMFYA is material (5.5% of FY2025 revenue, U.S. +79.1% in Q3 2026) and that the pick is defensible. My point is narrower. The pick adds no non-obvious content, because its stated fine-print edge (fully SC induction) is management's prepared-remarks claim and c06's price side is now gone.",
+   "correction": "Keep TREMFYA as the product, framed as a volume-share driver. Do not present the SC-induction edge as a discovery.",
+   "pages_checked": [
+    {
+     "doc_id": "JNJ:transcripts/2025Q3_transcript.md",
+     "page": 4
+    },
+    {
+     "doc_id": "JNJ:earnings/2026-10-13_a2026q3exhibit992.md",
+     "page": 11
+    }
+   ],
+   "round2": {
+    "conceded": "The pick is material and appropriate.",
+    "held": "Its edge is obvious.",
+    "narrowed": "Severity lowered from major to minor. The pick stands, but not as a non-obvious insight."
+   }
+  }
+ ],
+ "overall": "Only c03 is both unsaid and material: the Innovative Medicine plant count and floor space moving offshore while a dated tariff exemption, with a confidential J&J term, runs toward 2029-2030. It must drop the 15%-everywhere dollar bound and the claim of a firm J&J 2029 end date. The 2026 finished-goods build (c04) is now shown to be J&J-specific against AbbVie, Merck, Pfizer and BMS but is a watch item, not a finding. c08 and c06 are withdrawn, and c01, c02, c05 and c07 stay refuted as already said or priced."
+}

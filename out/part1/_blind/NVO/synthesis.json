@@ -1,0 +1,131 @@
+{
+ "ticker": "NVO",
+ "company": "Novo Nordisk A/S (reports in DKK)",
+ "rulings": [
+  {
+   "id": "NVO-c01",
+   "category": "Footnotes",
+   "verdict": "narrowed",
+   "claim": "Novo's off-balance-sheet, undiscounted purchase obligations to contract manufacturers rose from DKK 33.1bn (end-2023) to DKK 71.1bn (end-2024) and DKK 91.0bn (end-2025); most of the rise was signed in 2024 (+115% on +25% sales), during the supply shortage. The DKK 91.0bn stock equals 71% of 2025 operating profit (DKK 127.7bn), and DKK 15.7bn of it falls due within 12 months. A first charge of about DKK 3bn for 'right-sizing of manufacturing capacity agreements' hit Q2 2026 gross margin (about DKK 0.53 per share after tax), yet no call, release or CMD page has given the size of the remaining stock or how much of it is surplus. Each 10% of the stock found surplus would cost about DKK 9.1bn, about 7% of 2025 operating profit.",
+   "reason": "Confirmed on the facts, not just unrefuted. Both skeptics verified DKK 91,031m (current 15,746m, after one year 75,285m) on NVO:reports/annual_report_2025.md p.110 and DKK 33,107m on NVO:reports/annual_report_2024.md p.130 in the same note-5.2 line, and the ~DKK 3bn right-sizing charge on NVO:6k/2026-08-04_caq22026.md p.13 (repeated p.14). Materiality conceded the charge itself is disclosed (6-K p.13-14, grade-C 2026Q2 CFO prepared remarks); obviousness conceded the build was openly described as strategy on the 2024Q3 (p.8, p.18) and 2024Q4 (p.2) calls and that the 'just as growth turned negative' timing is wrong, because 2025 reported sales grew +6.4% and the stock was mostly signed in 2024. Both narrowed to the same residual: the stock's size and surplus risk were never sized or asked about, even after the 2026 charge; consensus sits at guidance (market/consensus_vs_guidance.csv#10). Corrections applied: 2023-2024-2025 path replaces the 2023-only comparison; the 29.5%-of-sales ratio is replaced by the due-within-a-year portion (DKK 15.7bn, 5.1% of 2025 sales, 12.3% of EBIT) and the per-10%-surplus sensitivity (DKK 9.1bn, about DKK 1.60/share after 22% tax on 4,435.8m diluted shares, 6-K p.38). The reader's 'further DKK 3-9bn' is dropped as an assumption. No remaining disagreement between the skeptics.",
+   "materiality": "high",
+   "obviousness": "low",
+   "confidence": "medium",
+   "unresolved": "The surplus share of the DKK 91.0bn is undisclosed, so the loss is a sensitivity, not a measurement. The 6-K does not say the DKK 3bn charge relates to this note-5.2 line; the link is an inference. No comparable Lilly purchase-obligation table was found for a peer ratio."
+  },
+  {
+   "id": "NVO-c02",
+   "category": "Inventory and receivables growing faster than revenue",
+   "verdict": "killed",
+   "claim": "Trade receivables rose 28% year on year to DKK 88.9bn at 30 June 2026 against +2% Q2 reported sales, but this is not a revenue-quality or collection signal once US rebates are netted.",
+   "reason": "Killed on both lenses after round 2; both skeptics set refuted=true. Facts confirmed: receivables DKK 88,949m vs 70,856m at Dec 2025 (NVO:6k/2026-08-04_caq22026.md p.29). AR2025 p.89 (NVO:reports/annual_report_2025.md) says only wholesaler charge-backs are netted in receivables, so the 82-to-103-day DSO divides near-gross receivables by net sales; the step came in Q1 2026 (DKK 82,565m, NVO:6k/2026-05-06_caq12026.md p.27), not the Q2 pipeline-fill quarter; pipeline fill was asked and answered (about USD 150m, grade-C 2026Q1 call p.15). Obviousness flipped from held to refuted; materiality refuted the candidate as written and as narrowed. Ruling on the materiality skeptic's replacement claim: I opened 6-K Q2 p.29 and p.15 and AR2025 p.88-89. The numbers check: sales deductions and product returns DKK 133,349m + 1,051m = 134,400m at Dec 2025 and 140,201m + 1,529m = 141,730m at Jun 2026 (p.29); the p.29 footnote says the USD 4.2bn (DKK 26.8bn) 340B provision inside that line was fully reversed in Q1 2026, so ex-340B the liability went 107,640 -> 141,730, +DKK 34,090m, 11.0% of 2025 net sales (DKK 309,064m, AR2025 p.88); p.15 credits the H1 FCF rise (DKK 38.4bn -> 55.3bn) partly to 'timing of US rebate payments'. I do not admit it as a narrowed c02. It is a different claim: a different line item (a liability, not receivables), a different metric (free cash flow, not revenue quality), and it never went through the obviousness lens, which matters because the 6-K's own FCF paragraph names rebate timing as a driver. It is recorded under unresolved as a follow-up candidate, not scored here.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": "Replacement claim outside the dialectic, figures verified but untested on obviousness: the US sales-deduction liability ex-340B rose about DKK 34.1bn in H1 2026 (DKK 107,640m -> 141,730m, NVO:6k/2026-08-04_caq22026.md p.29; AR2025 p.88-89), about 11% of 2025 sales, and the 6-K p.15 credits rebate-payment timing for part of the H1 FCF rise to DKK 55.3bn. Open checks before it can be a candidate: the liability is mostly USD and is not FX-adjusted here (2025 FX effect was DKK -12,848m, AR2025 p.88); the share of the DKK 16.9bn FCF rise owed to rebate timing is undisclosed; and whether a computed size beyond the 6-K's own sentence is non-obvious."
+  },
+  {
+   "id": "NVO-c03",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "Inventory write-downs charged rose DKK 1.6bn to DKK 4.3bn in 2025 (+61%), but the capacity-overshoot theme was voiced by management and part of the increase is pre-launch stock charged to R&D.",
+   "reason": "Obviousness refuted in both rounds: the CFO's grade-B 2025Q3 prepared remarks cite 'around DKK 3 billion' of restructuring and impairments on 'a few production assets' and 'adjustments to expansion plans' (NVO:transcripts/2025Q3_transcript.md p.1), plus the 2026 right-sizing charge (NVO:6k/2026-08-04_caq22026.md p.13) and CMD 'manufacturing right-sizing' (NVO:presentations/2026-03_cmd.md p.5); the wording drift and AUC impairments therefore drop. Materiality held only the write-down residual (DKK 4,272m vs 2,660m charged, NVO:reports/annual_report_2025.md p.97), which is 1.26% of EBIT and 0.52% of sales, and found the reader's 4.6bn sum wrong (3,575 + 1,612 = 5,187). In round 2 obviousness withdrew that same residual after conceding the p.97 policy that pre-launch inventory is written down through R&D. Settled: the residual is borderline in size, mixed in cause and not shown to be overcapacity, so it survives only because the reader wanted it. Killed.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "NVO-c04",
+   "category": "Language drift",
+   "verdict": "killed",
+   "claim": "The FY2025 20-F's new 'direct-to-patient cash channel' price-pressure clause and the -22% CER US Wegovy injectable decline are real, but the price story was answered on the call and is net positive once the pill is included.",
+   "reason": "Both skeptics refuted (obviousness fatal; materiality conceded in round 2). Self-pay mix and its price effect were asked and answered on the grade-C 2026Q2 call (NVO:transcripts/2026Q2_transcript.md p.1), the -22% and the 38.7% self-pay share are printed on NVO:6k/2026-08-04_caq22026.md p.7 and p.31 (the self-pay share is one week ending 17 July), and MFN was sized by the company the day it was announced. On materiality, US obesity care grew +4% CER including the Wegovy pill (6-K p.6, p.31), so the reader's ~DKK 10.9bn/yr loss is gross erosion, not lost revenue. No disagreement left.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "NVO-c05",
+   "category": "Gross-to-net",
+   "verdict": "killed",
+   "claim": "The 'gross-to-net tailwind will not repeat, yet repeated' contradiction is a front-page 6-K bullet sized at about DKK 2bn on the call, and the remaining Medicaid-rebate arithmetic is a published historical trend, not a contradiction.",
+   "reason": "Obviousness refuted in both rounds: 'favourable US rebate adjustments in the quarter' is on NVO:6k/2026-08-04_caq22026.md p.2 and was sized at 'DKK 2 billion' in Q&A (grade-C NVO:transcripts/2026Q2_transcript.md p.1). Materiality held the candidate only as a residual and both skeptics converged on the same one: US Medicaid rebates DKK 32,919m -> 38,749m (+17.7%, DKK +5.8bn, 1.9% of 2025 sales) vs US net sales +3.4% (NVO:reports/annual_report_2025.md p.88-89). Both also corrected the 43.5% liability ratio, which includes the 340B provision; ex-340B it is 34.8% and a 5% estimate change is 1.7% of sales vs Lilly 1.4% (LLY:10k_FY2025.md p.54, p.43), too close to call Novo unusually exposed. Ruling on the residual: it is already inside reported 2025 net sales, the forward link it needs (MFN Medicaid pricing) was asked on the 2025Q4 call and is in every outlook paragraph, and nothing sizes the forward effect. It is a different, descriptive claim with no quantified unsaid impact, so the candidate is killed rather than narrowed. Also recorded: the grade-C '$5 billion' H2 2025 GTN figure is DKK ~5bn, mis-transcribed (both skeptics agree).",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": "If the 2026 MFN Medicaid rate change were sized from a primary source, the Medicaid-rebate growth line could be re-read as a standalone forward claim."
+  },
+  {
+   "id": "NVO-c06",
+   "category": "Footnotes",
+   "verdict": "killed",
+   "claim": "Novo recognised the full USD 4.2bn (DKK 26.76bn) 340B provision as Q1 2026 revenue, 21% of 2025 EBIT and excluded from adjusted metrics; the only part no call discussed, the Second Circuit's revival of the Mosaic Health antitrust case, carries no amount and management calls it not expected to be material.",
+   "reason": "Split resolved on the source. Obviousness held only the Mosaic remand (AR2025 p.99 vs AR2024 p.117, no call hit). Materiality refuted that narrowed version: NVO:reports/annual_report_2025.md p.99 gives no claim amount, class size or damages, the case has four defendants, and Novo says it does not expect a material impact; the DKK 26,760m reversal (NVO:reports/2026Q1_financial_report.md p.1; NVO:6k/2026-08-04_caq22026.md p.29 footnote) is not Mosaic's exposure. Both conceded the reversal and the Seventh Circuit pendency are management-voiced (2024Q2 call p.8, p.15; AR2025 p.98 says the Seventh Circuit case involves another manufacturer). The reader's 15% probability and trebled damages have no source. The sized part is obvious and the unsaid part is unsized: killed. Unrefuted as a qualitative tail risk only.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "medium",
+   "unresolved": "Mosaic damages exposure is undisclosed; a sized figure from a court filing would reopen it."
+  },
+  {
+   "id": "NVO-c07",
+   "category": "Segment and product table changes",
+   "verdict": "killed",
+   "claim": "The Rybelsus fold-in to 'Ozempic pill / Rybelsus' and the adjusted measures that exclude impairments above DKK 1bn were announced plainly, and the Q2 2026 carve-out was a named one-off.",
+   "reason": "Both skeptics refuted (obviousness major, materiality fatal). The re-brand and adjusted-measure definitions were in 2025Q4 call prepared remarks and AR2025 p.118; the 6-K front page names the DKK 4.0bn monlunabant impairment inside the DKK 6,328m adjusted-minus-reported gap (NVO:6k/2026-08-04_caq22026.md p.2, p.13); the reader's 'DKK 6bn+ a year' annualised a one-off. No disagreement left.",
+   "materiality": "low",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "NVO-c08",
+   "category": "Earnings-call Q&A",
+   "verdict": "killed",
+   "claim": "The 5 Nov 2025 call deflection on channel-price convergence was resolved the next day by a press release that sized the MFN drag at a low-single-digit hit to 2026 global sales.",
+   "reason": "Both skeptics refuted. The grade-B exchange is real (NVO:transcripts/2025Q3_transcript.md p.1, Harry Sephton and David Moore), but NVO:policy/press_2025-11-06_us_administration_agreement.md p.1 sized the impact within 24 hours, and the H1 2026 US -4% CER decline has several causes (6-K p.11). No information gap an investor could use.",
+   "materiality": "medium",
+   "obviousness": "high",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "NVO-c09",
+   "category": "Product fine print",
+   "verdict": "killed",
+   "claim": "The Wegovy tablet label says it was not studied for weight loss in adults with T2D and warns of subtherapeutic exposure, while Foundayo had a dedicated T2D trial; this is a real but unsized label difference that moves into the product verdict.",
+   "reason": "Both skeptics refuted in round 2 (obviousness flipped from held). Label text verified (drug:wegovy:label_sections.md p.31, p.3; drug:foundayo:label_sections.md p.57, p.4). The reader's own stack gives DKK 1,256m, 0.41% of 2025 sales, before substitution; T2D patients are on-label for Novo's Ozempic pill (drug:rybelsus:label_sections.md p.2; 6-K p.11) and the Wegovy injection, which section 8.6 also says gives less weight loss in T2D. Kept only as a qualitative Foundayo edge in the product ruling.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "high",
+   "unresolved": null
+  },
+  {
+   "id": "NVO-c10",
+   "category": "Peer contrast",
+   "verdict": "narrowed",
+   "claim": "Novo's property, plant and equipment and intangibles excluding goodwill are 61.1% in Denmark (DKK 194.8bn of 318.6bn at end-2025, down from 65.2% a year earlier) against 56% of sales in the US, and its US manufacturing pledge (USD 10bn) is below Lilly's (USD 27bn+), ahead of the same January 2029 end of the Section 232 zero-tariff window; the duty cost cannot be sized from disclosed data, and US assets grew 57% in 2025 (DKK 49.3bn -> 77.4bn), so the gap is closing.",
+   "reason": "Both skeptics left c10 not refuted but narrowed, and split on what the narrowed version is worth. Obviousness holds the footprint contrast because no call since 2025Q1 mentions tariffs or the 2029 date, while the exemption itself is a press-release headline. Materiality says the footprint is a level, not a cost, and the trend cuts against a cliff. I opened NVO:reports/annual_report_2025.md p.89: Denmark DKK 194,790m of 318,586m (61.1%) vs 164,744m of 252,484m (65.2%) in 2024; US 77,394m vs 49,305m (+57.0%; 2024 restated for the Catalent purchase price allocation). Both readings are right. The footprint contrast is unrefuted and non-obvious in its Novo-specific form, so it survives narrowed, but it carries no measured impact: the DKK 2-6bn duty range rests on an undisclosed import share and customs value (Proclamation 11020 p.1 sets 15% for EU goods only if the MFN zero rate is not extended), and the IRA 80% vs 15% contrast is dropped because it uses global brand sales. Low materiality: not counted as a material survivor.",
+   "materiality": "low",
+   "obviousness": "medium",
+   "confidence": "medium",
+   "unresolved": "Import share and customs (transfer-price) value of US-sold semaglutide are undisclosed; whether the 2029 zero rate is extended is unknown."
+  }
+ ],
+ "product": {
+  "verdict": "narrowed",
+  "product": "Wegovy (semaglutide injection and Wegovy pill)",
+  "rivals": [
+   "Mounjaro (tirzepatide, Eli Lilly)",
+   "Zepbound (tirzepatide, Eli Lilly)",
+   "Foundayo (orforglipron pill, Eli Lilly)"
+  ],
+  "reason": "Both skeptics keep Wegovy as the product: DKK 79,106m in 2025, 25.6% of group sales (NVO:reports/annual_report_2025.md p.90, p.83); in Q2 2026 US Wegovy injectable was DKK 9,636m (-22% CER) and the US pill DKK 3,141m (NVO:6k/2026-08-04_caq22026.md p.31). Narrowed on the fine-print edge. The MACE indication, the no-DDI point and the 16.6% weight loss are Novo's own investor messaging (NVO:presentations/2026Q2_earnings_slides.md p.29), and the food/water dosing contrast with Foundayo was asked on the 2026Q1 call (p.14), so they score as obvious. The one unvoiced item is Wegovy label section 8.6 (drug:wegovy:label_sections.md p.31): the tablet 'has not been studied for weight reduction in adults with type 2 diabetes' and some T2D patients 'may experience subtherapeutic semaglutide blood concentrations', against Foundayo's dedicated 1,613-patient T2D trial (drug:foundayo:label_sections.md p.57). It is demoted to a qualitative edge for Foundayo, not a sized revenue hit: the reader's stack was DKK 1,256m (0.41% of 2025 sales) before substitution, the Wegovy injection's own section 8.6 also notes less weight loss in T2D, and Novo's Ozempic pill covers T2D in-house (drug:rybelsus:label_sections.md p.2)."
+ },
+ "company_score": {
+  "material_non_obvious_survivors": 1,
+  "best_candidate_id": "NVO-c01",
+  "one_line": "A borderline pick: Novo has one material, quantified and unsaid item, the DKK 91.0bn contract-manufacturer commitment stock (71% of 2025 operating profit, DKK 15.7bn due within a year), where each 10% found surplus costs about DKK 9.1bn and no call has sized it even after the first DKK ~3bn right-sizing charge; everything on US price, MFN and gross-to-net is already public."
+ }
+}

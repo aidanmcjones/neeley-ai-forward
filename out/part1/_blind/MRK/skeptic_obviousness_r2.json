@@ -1,0 +1,350 @@
+{
+ "ticker": "MRK",
+ "lens": "obviousness",
+ "round": 2,
+ "verdicts": [
+  {
+   "id": "MRK-c01",
+   "refuted": false,
+   "severity": "major",
+   "argument": "I re-read the materiality skeptic's pages. The CEO's tariff remark is on MRK:companies/MRK/transcripts/2025Q1_transcript.md p14 (grade C, Davis): 'we have basically on hand inventory in the U.S. to protect us through all of 2025, and then we've taken steps to be prepared both from a drug substance and a drug product as we move into 2026 and 2027'. The prepared remarks on p2 say 'current inventory levels put us in a good position to navigate potential near-term impacts'. Drug substance staged for 2026-2027 is exactly what lands in 'not expected to be sold within one year', so the build has a stated purpose. MRK:10q_2026Q2.md p19 adds that $490M (vs $211M) of the pool is 'produced in preparation for product launches'. Two facts keep a narrower angle alive. (1) The stated reason has lapsed. Merck's Dec 19 2025 MFN press release says it 'reached an understanding with the U.S. Department of Commerce to delay Section 232 tariffs for three years' (MRK:policy/press_2025-12-19_mfn_agreement.md p1). Yet raw materials/WIP kept rising after that, from 10,645 to 11,194, and the long-dated pool from $5.5B to $5.9B in 1H26 (MRK:10q_2026Q2.md p19). No call since 2025Q1 links the balance to the tariff hedge or says when it unwinds (inventory_channel unasked since 2024Q4, market/never_asked.csv#70). (2) The write-downs management flags are 'primarily vaccines' (MRK:10k_FY2025.md p62; MRK:10q_2026Q2.md p39). So the guided 'higher inventory reserves' are the known Gardasil/vaccine story, not a reserve against the long-dated RM/WIP pool.",
+   "correction": "Merck said in April 2025 (grade C call) that it was staging Keytruda drug substance and product for 2026-2027 against tariffs. Section 232 tariffs were then deferred three years in Dec 2025, yet the long-dated pool kept growing to $5.9B by Jun 2026 (about $5.4B net of $490M pre-launch stock). No one has asked whether the hedge unwinds or whether any of it is at risk once Keytruda IV faces biosimilars from 2028. The write-downs and reserves now in guidance are vaccine items and are already priced.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 14
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q1_transcript.md",
+     "page": 2
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 19
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 39
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 62
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 89
+    },
+    {
+     "doc_id": "MRK:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "The tariff remark is real (2025Q1 p14, grade C, Davis) and explains why a long-dated drug-substance pool exists. 'No explanation on any call' is wrong. Verona added $522M of inventory, $498M of it fair-value step-up (10-K p89), so about a quarter of the FY2025 rise is acquired. Write-downs were already booked in 2025 and 1H26.",
+    "held": "The pool's continued growth after the Dec 2025 tariff deferral is not explained anywhere I or the materiality skeptic searched. The flagged write-downs are 'primarily vaccines', so the long-dated Keytruda-type pool carries no disclosed reserve and no analyst question.",
+    "narrowed": "From 'unexplained build plus write-down risk' to 'a stated tariff hedge whose rationale lapsed in Dec 2025 while the pool kept growing'. The write-down and reserve part is dropped as already guided."
+   }
+  },
+  {
+   "id": "MRK-c02",
+   "refuted": true,
+   "severity": "major",
+   "argument": "No change in verdict. The materiality skeptic independently reached the same point from MRK:10k_FY2025.md p61: the early-2025 Januvia list-price cut lowers gross sales and the rebate provision together, so the 78% decomposition cannot separate a real net-price gain from the reset. That reset is what the CFO announced (MRK:companies/MRK/transcripts/2024Q4_transcript.md p5; 2025Q1 p5, grade C). Their check of MRK:10q_2026Q2.md p38 confirms the Q2-26 Januvia decline is volume plus net price after the May 2026 LOE, i.e. the starter thread.",
+   "correction": "Nothing non-obvious remains at company level. The identifiable one-time piece sits inside Januvia/Janumet's +$0.64B U.S. gain (10-K p134), which was announced and is now overtaken by the guided LOE.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 61
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 85
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 38
+    },
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2024Q4_transcript.md",
+     "page": 5
+    }
+   ],
+   "round2": {
+    "conceded": "Their point that the BMS 53%/49% rate is a full-GTN rate on gross sales, not comparable to Merck's CB+rebate proxy, is right. The peer contrast is direction-only.",
+    "held": "Refuted on obviousness: the mechanism was pre-announced and the unwind is guided.",
+    "narrowed": "My round-1 'residual non-Januvia GTN tailwind' is dropped. A list-price reset makes the $3.3B provision fall a poor signal, so the residual cannot be isolated even in principle from these filings."
+   }
+  },
+  {
+   "id": "MRK-c03",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Rechecked MRK:10k_FY2025.md p131 (printed p129). Unrecognized tax benefits rose from $2,261M to $2,530M in 2025, with $396M of current-year and $59M of prior-year additions. Accrued interest and penalties were $546M. The note does not tie any of this to the NOPA, and it still says 'If the Company is ultimately unsuccessful in defending its position, the impact could be material to its financial statements'. That sentence implies the exposure is not fully reserved, though it does not say how much is. On obviousness, nothing changes. A second full sweep of transcripts (A and C), releases, slides, JPM/ASCO decks and press releases finds no mention of the NOPA, the transition tax or the IRS exam. Merck also excludes audit-reserve adjustments from non-GAAP (MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md p1), so the consensus EPS line would not register it. It is still the least obvious candidate. Framed as a ceiling, it is less likely to be a big surprise, but no less hidden: no analyst can read how much of the $2.53B covers it, and none has asked.",
+   "correction": "IRS NOPAs (April 2025) propose $1.3B of transition tax plus $260M of penalties before interest. That is a gross ceiling of about $0.63/share, roughly 8.7% of FY2025 GAAP EPS of $7.28, of which an undisclosed part may already sit in the $2.53B unrecognized-tax-benefit balance. The Q2-26 10-Q moved from 'all available administrative and, if necessary, judicial proceedings' to 'uncertain whether a resolution can be reached during this phase', signalling litigation. It is absent from every call, release and deck, and it sits outside non-GAAP EPS.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 131
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 41
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 49
+    },
+    {
+     "doc_id": "MRK:earnings/2025-10-30_tm2529620d1_ex99-1.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "It is a gross ceiling, possibly part-reserved in the $2.53B balance. GAAP EPS ($7.28) is the right denominator, not non-GAAP $8.98. The FY2024-to-FY2025 wording change reflects the April 2025 NOPA receipt, not drift; the real hardening is 10-K FY2025 to 10-Q Q2-26.",
+    "held": "Least obvious of the slate. Zero mentions outside the tax note and Item 1A in any call, release or deck, and the reserve ambiguity makes it harder, not easier, for the Street to see.",
+    "narrowed": "Dropped 'wording hardened each filing'. Now one hardening step (10-K to Q2-26 10-Q), expressed as a GAAP and cash ceiling with partial reserve unknown."
+   }
+  },
+  {
+   "id": "MRK-c04",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "Rechecked the three filings. MRK:10k_FY2025.md p118 (printed p116) says 'decision on the appeal in the second quarter of 2026'. MRK:10q_2026Q1.md p22 says 'second or third quarter of 2026'. MRK:10q_2026Q2.md p22 says 'appeal hearing is set for November 19, 2026'. That is two slips across three filings. The Dutch counterclaim covering seven more markets is already in the Q1-26 10-Q (dated February 2026), so it was not a Q2 widening. On obviousness the verdict stands: no MRK call, release, slide or press release mentions Halozyme, the injunction or Germany's sales ban. The ASCO deck promises 'launches in major markets starting in 2026' with no caveat (MRK:presentations/2026-06_asco_investor_event.md p25). Size is the materiality skeptic's call and I accept it: ex-U.S. Qlex is $68M in Q2-26 (10-Q p28). Under my lens it survives only as an unflagged near-term catalyst, not a valuation nugget. The Dutch hearing was end-July 2026 'with a decision expected within three months', so by about end-October 2026, days from now. The German appeal is Nov 19 2026.",
+   "correction": "Keytruda SC has been blocked in Germany since Dec 2025 by a Halozyme preliminary injunction. The appeal date slipped twice to a Nov 19 2026 hearing, and a Dutch ruling covering seven more EU markets is due by about end-October 2026. Management has never mentioned it while promising major-market SC launches in 2026. Near-term revenue is small ($68M/quarter ex-U.S. Qlex); the stake is Merck's EU biosimilar defense.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 118
+    },
+    {
+     "doc_id": "MRK:10q_2026Q1.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 22
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    }
+   ],
+   "round2": {
+    "conceded": "'Three slips' is two. The seven-market counterclaim was first disclosed in Q1-26, not Q2. Near-term dollars are below the materiality bar.",
+    "held": "Not obvious: management silence across every call and deck, against an ASCO promise of 2026 major-market launches, with two court dates inside the next five weeks.",
+    "narrowed": "From a revenue-risk nugget to an unflagged catalyst and disclosure gap. No dollar claim beyond 'small now'."
+   }
+  },
+  {
+   "id": "MRK-c05",
+   "refuted": true,
+   "severity": "major",
+   "argument": "The materiality skeptic's timing point checks out on MRK:10q_2026Q2.md p28. 1H26 U.S. Qlex is 501, so Q1 was 106 against U.S. IV of 9,210-4,611 = 4,599, a 2.3% share; Q2 is 7.9%. Q2-26 is the first quarter with the permanent J-code (April 1). The ramp is in Merck's own slides too: Qlex $128M in Q1-26 (MRK:presentations/2026Q1_earnings_slides.md p10) and $463M in Q2-26 (MRK:presentations/2026Q2_earnings_slides.md p12). The ASCO deck draws exactly that 'acceleration in adoption' after the J-code (MRK:presentations/2026-06_asco_investor_event.md p25). So the 'gap' is the trajectory management is already showing investors. That strengthens my round-1 refutation: the mono/oral skew is framed 'As expected' (MRK:transcripts/2026Q2_transcript.md p4) and conversion pace was asked in 2025Q3 and 2025Q4 Q&A.",
+   "correction": "Nothing non-obvious remains. If anything, the testable point is whether Q3-26 share keeps tripling. That is a tracking question for the next print, not a finding.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 28
+    },
+    {
+     "doc_id": "MRK:presentations/2026Q1_earnings_slides.md",
+     "page": 10
+    },
+    {
+     "doc_id": "MRK:presentations/2026Q2_earnings_slides.md",
+     "page": 12
+    },
+    {
+     "doc_id": "MRK:presentations/2026-06_asco_investor_event.md",
+     "page": 25
+    },
+    {
+     "doc_id": "MRK:transcripts/2026Q2_transcript.md",
+     "page": 4
+    }
+   ],
+   "round2": {
+    "conceded": "Q2-26 is the first J-code quarter, not two quarters after it. Share went 2.3% to 7.9%. Comparing a first-quarter level with a 2027-28 endpoint is a level-versus-endpoint mix.",
+    "held": "Refuted: the ramp, the target and the mono/oral skew are all in management's slides and prepared remarks.",
+    "narrowed": "My round-1 residual (target pulled in to end-2027 while share is 7.9%) is dropped. With the share tripling in one quarter, pulling the target in is consistent with the data, not a tension."
+   }
+  },
+  {
+   "id": "MRK-c06",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Hold. The materiality skeptic kept c06 alive as 'real and unusual vs BMS' but did not open the White House fact sheet, which governs. policy_gov:policy_gov/wh/wh_fact_sheet_2025-12-19_nine_deals_mrk_bmy_amgn_gild.md p1 names both Merck and Bristol Myers Squibb among the nine signers. It states the agreements guarantee 'MFN prices on all new innovative medicines the nine companies bring to market' and 'require the nine companies to repatriate increased foreign revenue'. BMS's 10-K phrase 'a more balanced pricing approach for new launches across developed nations' (BMY:10k_FY2025.md p21) is a description of the same commitment, not a different deal. Merck's press release says it addressed 'all four components' of the July letter (MRK:policy/press_2025-12-19_mfn_agreement.md p1).",
+   "correction": "None. Their own correction (in-term launches only, to about Dec 2028, formula undisclosed) is right but makes it an industry-wide term shared by all nine signers.",
+   "pages_checked": [
+    {
+     "doc_id": "policy_gov:policy_gov/wh/wh_fact_sheet_2025-12-19_nine_deals_mrk_bmy_amgn_gild.md",
+     "page": 1
+    },
+    {
+     "doc_id": "BMY:10k_FY2025.md",
+     "page": 21
+    },
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 32
+    },
+    {
+     "doc_id": "MRK:policy/press_2025-12-19_mfn_agreement.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "Their narrowing of the exposed base to in-term launches, not the full $70B pipeline, is correct.",
+    "held": "Refuted: the terms are identical for Merck and BMS per the White House fact sheet, so the 'unusual vs BMS' basis for keeping it fails.",
+    "narrowed": null
+   }
+  },
+  {
+   "id": "MRK-c07",
+   "refuted": true,
+   "severity": "major",
+   "argument": "No change; the materiality skeptic also refuted it (0.7% of sales even on total loss of U.S. RotaTeq). Their page MRK:10q_2026Q2.md p35 adds that a March 16 2026 preliminary injunction stays the schedule changes. That makes the end-2027 'cliff' conditional and further from a finding.",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10q_2026Q2.md",
+     "page": 35
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 10
+    }
+   ],
+   "round2": {
+    "conceded": "The court stay, which I did not weigh in round 1.",
+    "held": "Refuted: a federal headline shared with GSK.",
+    "narrowed": null
+   }
+  },
+  {
+   "id": "MRK-c08",
+   "refuted": true,
+   "severity": "major",
+   "argument": "No change; both lenses refute. Their point that the $175M milestones were all recognized in 2025 although cash arrives 2026-2028 (MRK:10k_FY2025.md p93) means there is not even a pending revenue drop beyond the optional $150M/$100M, which the Q1-26 release already flags as 'subject to an annual election by AstraZeneca' (MRK:earnings/2026-04-30_tm2612241d1_ex99-1.md p1).",
+   "correction": null,
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 93
+    },
+    {
+     "doc_id": "MRK:earnings/2026-04-30_tm2612241d1_ex99-1.md",
+     "page": 1
+    }
+   ],
+   "round2": {
+    "conceded": "The milestone timing point.",
+    "held": "Refuted.",
+    "narrowed": null
+   }
+  },
+  {
+   "id": "MRK-c09",
+   "refuted": true,
+   "severity": "fatal",
+   "argument": "Hold. The materiality skeptic kept c09 as 'minor' on direction. Their only call cite is the Q4-25 'IRA as of the beginning of 2029' remark, which supports obviousness. The decisive page is the grade-A 2025Q2 call. Davis answered UBS's question on the orphan-drug change with 'selected for negotiation in 2027 for implementation of the negotiated price in 2029' (MRK:companies/MRK/transcripts/2025Q2_transcript.md p16; MRK:verified/calls/src/MRK_2025Q2_official.pdf p16). The 10-K wording change follows that answer, and the 'decline materially' phrasing sits on the Keytruda LOE/IRA starter thread.",
+   "correction": "None. 'Decline materially' versus 'decline' is a wording nuance on a date management gave in Q&A.",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:companies/MRK/transcripts/2025Q2_transcript.md",
+     "page": 16
+    },
+    {
+     "doc_id": "MRK:verified/calls/src/MRK_2025Q2_official.pdf",
+     "page": 16
+    },
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 33
+    },
+    {
+     "doc_id": "MRK:10k_FY2024.md",
+     "page": 32
+    }
+   ],
+   "round2": {
+    "conceded": "The Part B $6.0B base is gross allowed spend (ASP+6% including coinsurance), an upper bound, and the IRA discount is unsourced.",
+    "held": "Refuted: answered directly in grade-A Q&A 14 months before the 10-K.",
+    "narrowed": null
+   }
+  },
+  {
+   "id": "MRK-c10",
+   "refuted": true,
+   "severity": "major",
+   "argument": "Changed verdict. The 4.1% rests on fact:pricing/gtn_proxy.csv#8 (IV J9271, 2026, 4 quarters, $60.96875/mg) and #9 (Qlex J9277, 2026, asp_quarters = 3, $32.12533/mg, sourced from the 2026Q2-2026Q4 payment files). These are derived rows, not a cited page. They average different quarter sets, and for a new HCPCS code the first payment quarters are normally set off WAC because no ASP history exists yet. So the 'premium' may be a launch-pricing artifact that disappears once ASP data flow through. Under my lens the observation was the only non-obvious part of c10; the label scope was a headline (MRK:presentations/2025Q3_earnings_slides.md p23). If the one non-obvious number is provisional and probably an artifact, nothing defensible is left. The contraindication is real (drug:keytruda-qlex:label_sections.md p26) but has no dollar value and is not, by itself, a finding.",
+   "correction": "Drop as a candidate. At most, carry one line under the product pick: on early CMS payment limits Medicare pays roughly the same per Qlex dose as per IV dose (provisional, launch-period quarters), so there is no visible per-dose discount yet. Recheck when J9277 has 4 ASP-based quarters.",
+   "pages_checked": [
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 22
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "drug:keytruda:label_sections.md",
+     "page": 23
+    },
+    {
+     "doc_id": "MRK:presentations/2025Q3_earnings_slides.md",
+     "page": 23
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q4_transcript.md",
+     "page": 11
+    }
+   ],
+   "round2": {
+    "conceded": "The 4.1% compares a 4-quarter IV average with a 3-quarter Qlex average drawn partly from launch-period payment limits likely set off WAC. It also ignores the administration-fee difference, so 'payer saves nothing' covers the drug line only.",
+    "held": "Nothing held as a finding. The arithmetic (12,690 vs 12,194) is right, but the input is not settled.",
+    "narrowed": "From 'Medicare pays ~4% more per Qlex dose, contradicting priced-to-convert' to 'no visible per-dose discount yet on provisional data'. Demoted to a product-section footnote."
+   }
+  },
+  {
+   "id": "product",
+   "refuted": false,
+   "severity": "minor",
+   "argument": "The pick holds on weight (Keytruda family 48.7% of 2025 sales, MRK:10k_FY2025.md p134). The fine-print edge is weak under both lenses. The convenience edge over Opdivo Qvantig is Merck's own launch message (MRK:transcripts/2025Q3_transcript.md p6). The contraindication and the cHL/PMBCL carve-out carry no sales figure. The per-dose payment point is now provisional (see c10).",
+   "correction": "Keep Keytruda/Qlex as the product. Present the label comparison as context for the Qlex conversion story, not as a value driver. The one label difference that bears on conversion is Qvantig being barred from ipilimumab combinations versus no such carve-out for Qlex (drug:opdivo-qvantig:label_sections.md p1).",
+   "pages_checked": [
+    {
+     "doc_id": "MRK:10k_FY2025.md",
+     "page": 134
+    },
+    {
+     "doc_id": "drug:keytruda-qlex:label_sections.md",
+     "page": 26
+    },
+    {
+     "doc_id": "drug:opdivo-qvantig:label_sections.md",
+     "page": 1
+    },
+    {
+     "doc_id": "MRK:transcripts/2025Q3_transcript.md",
+     "page": 6
+    }
+   ],
+   "round2": {
+    "conceded": "The contraindication is not a value driver, and the per-dose gap (my round-1 lead item) is too provisional to lead with.",
+    "held": "The pick is right; Keytruda is the company.",
+    "narrowed": "Fine-print edge reduced to context. I no longer recommend leading with the contraindication or the payment gap."
+   }
+  }
+ ],
+ "overall": "After reading the materiality skeptic against the sources, 7 of 10 candidates are refuted on obviousness (c02, c05, c06, c07, c08, c09, and now c10, whose only non-obvious number is a provisional launch-period ASP comparison). Three survive in narrowed form: c03 (IRS NOPA, a GAAP/cash ceiling possibly part-reserved, still the least obvious item with zero mentions outside the tax note), c01 (a tariff-hedge drug-substance pool that kept growing after tariffs were deferred in Dec 2025, with flagged write-downs being vaccines), and c04 (an unflagged Halozyme catalyst with rulings due late Oct and Nov 19 2026, small in near-term dollars)."
+}
