@@ -661,8 +661,28 @@ function placeChips() {
   }
 }
 
+/** His chat box is a one-row textarea; when his bundle pre-fills the Part 2 prompt (or anyone types a long
+ *  question) it must grow to fit, up to his max height, instead of clipping the second line. */
+function fitChatInput() {
+  let last: string | null = null;
+  const fit = () => {
+    const ta = document.getElementById("chat-input") as HTMLTextAreaElement | null;
+    if (!ta) { last = null; return; }
+    if (ta.value === last && ta.style.height) return;
+    last = ta.value;
+    ta.style.height = "auto";
+    ta.style.height = `${Math.min(ta.scrollHeight, 160)}px`;
+    ta.style.overflowY = ta.scrollHeight > 160 ? "auto" : "hidden";
+  };
+  document.addEventListener("input", (e) => { if ((e.target as HTMLElement | null)?.id === "chat-input") fit(); });
+  window.addEventListener("resize", () => { last = null; fit(); });
+  window.setInterval(fit, 200);
+  fit();
+}
+
 async function main() {
   if (document.getElementById("p2-style")) return;
+  fitChatInput();
   document.head.append(h("style", { id: "p2-style", text: STYLE }));
   const index = await getJson("index.json");
   if (!index) return; // No Part 2 export on this page: no chip at all.
