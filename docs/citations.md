@@ -31,7 +31,7 @@ Citation
   source_url         whole-document URL from the manifest
   deep_link          see below ("" if the document has no http source)
   viewer_link        <VIEWER_BASE>/viewer?doc=<canonical_id>&page=<n>&q=<quote>
-  verification       {status: exact|substring|fuzzy|number_match|unverified, score 0..1, checked_at, detail}
+  verification       {status: exact|substring|fuzzy|number_match|derived|machine_data|unverified, score 0..1, checked_at, detail}
   confidence_note    why a citation failed or what was approximated
 Claim(text, citations, derived=None, assumptions=None)   (derived / assumptions: gate.py shapes)
 ```
@@ -51,6 +51,20 @@ Extra rules (review C7, C9, C10, C13):
 - Zero-width space, ZWNJ, ZWJ, word joiner, BOM and soft hyphen are removed before matching (a ZWSP between two letters counts as a space); spans map back to the raw page.
 - A quote that runs past the end of page N is tried on page N + page N+1 joined; a hit keeps its status with the note "spans pages N-N+1".
 - For number claims whose quote verifies, the value must also be in the matched span, else unverified (quote right, number wrong).
+
+## Statuses and the public rule
+
+| status | meaning | supports a number | public mode (`render.py`, `--public`) |
+|---|---|---|---|
+| `exact` | quote is a byte substring of the page | yes | quote, deep link and viewer link |
+| `substring` | equal after normalisation | yes | quote, deep link and viewer link |
+| `fuzzy` | partial_ratio >= 90 with the numeral and direction guards | yes | quote, deep link and viewer link |
+| `number_match` | the number is on the cited public page, the quote did not verify | yes | page text around the number, deep link and viewer link (a public page) |
+| `derived` | computed in code from cited operands (`operands` lists their cite_ids) | no by itself (the operands carry the support) | the formula, no quote |
+| `machine_data` | licensed or machine feed with no page copy (I/B/E/S, prices, `no_verified_copy`, `api_exact_distinct`), value re-read from the facts row, grade 0.6 | yes, like `number_match` | never quoted and never deep-linked; viewer link only, or none |
+| `unverified` | nothing checked | no | shown as unverified |
+
+Facts rows (`facts.py`) carry `machine_data` instead of `number_match` so a feed row cannot be read as a public page on status alone. Every document writer (`decide.json`, `product_<p>.json`, `findings_table.json`) serializes a Citation or Claim with `locator.json_default` (`to_dict()`), never as a repr string.
 
 ## Gates
 

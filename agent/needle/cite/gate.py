@@ -65,7 +65,7 @@ from dataclasses import dataclass, field
 from .locator import Citation
 from .numbers import parse_value, same_number, scale_lookup, tokenize, tolerance
 
-PASSING = ("exact", "substring", "fuzzy", "number_match")
+PASSING = ("exact", "substring", "fuzzy", "number_match", "machine_data")
 OK_STATUSES = ("passed", "no_numbers")        # numeric_check statuses that may be emitted (no_numbers is not a failure)
 DERIVED_REL_TOL = 0.005
 FORMULA_WORDS = ("formula", "math", "impact")

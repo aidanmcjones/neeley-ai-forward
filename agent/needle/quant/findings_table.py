@@ -15,7 +15,7 @@ and one shared footnote list (agent.needle.cite.render); the model outputs dEPS,
 import json
 
 from agent.needle.cite.gate import gate_document
-from agent.needle.cite.locator import Claim
+from agent.needle.cite.locator import Claim, json_default
 from agent.needle.cite.render import claim_markup, render_footnotes_md
 
 from . import gatewire as GW
@@ -221,6 +221,6 @@ def build(ticker, rows, public=False):
 def write(ticker, rows, out_dir, public=False):
     md, js = build(ticker, rows, public)
     (out_dir / "findings_table.md").write_text(md, encoding="utf-8")
-    (out_dir / "findings_table.json").write_text(json.dumps(js, indent=2, default=str, ensure_ascii=False),
+    (out_dir / "findings_table.json").write_text(json.dumps(js, indent=2, default=json_default, ensure_ascii=False),
                                                  encoding="utf-8")
     return js

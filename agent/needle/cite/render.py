@@ -196,9 +196,16 @@ def _where(c):
     return loc if "file page" in loc else f"{loc} (file page {c.page})"
 
 
+def _machine(c, public):
+    """Public mode: a machine_data citation is never quoted or deep-linked (viewer link only, or none)."""
+    return bool(public) and _status(c) == "machine_data"
+
+
 def _quote(c, public):
     if public and c.license:
         return "(licensed text withheld)"
+    if _machine(c, public):
+        return "(machine data, no page copy)"
     q = " ".join((c.quote or "").split())
     return f"{c.speaker}: {q}" if c.speaker else q
 
@@ -216,7 +223,7 @@ def render_footnotes_md(cites, public=False):
     lines = ["", "**Sources**", ""]
     for n, c in enumerate(cites, 1):
         links = []
-        if c.deep_link:
+        if c.deep_link and not _machine(c, public):
             links.append(f"[open]({_md_url(c.deep_link)})")
         if c.viewer_link and not (public and c.license):
             links.append(f"[viewer]({_md_url(c.viewer_link)})")
@@ -244,7 +251,7 @@ def render_html(claims, public=False, index=None):
         out.append('<ol class="sources">')
         for n, c in enumerate(cites, 1):
             links = []
-            if c.deep_link:
+            if c.deep_link and not _machine(c, public):
                 links.append(f'<a href="{esc(c.deep_link, quote=True)}">open</a>')
             if c.viewer_link and not (public and c.license):
                 links.append(f'<a href="{esc(c.viewer_link, quote=True)}">viewer</a>')

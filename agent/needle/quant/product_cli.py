@@ -12,6 +12,7 @@ import argparse
 import json
 from pathlib import Path
 
+from agent.needle.cite.locator import json_default
 from agent.needle.quant import product as P
 
 REPO = Path(__file__).resolve().parents[3]
@@ -131,7 +132,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--ticker", required=True)
     ap.add_argument("--product", default=None)
-    ap.add_argument("--out", default=str(REPO / "out"))
+    ap.add_argument("--out", default=json_default(REPO / "out"))
     ap.add_argument("--data-root", default=None)
     ap.add_argument("--public", action="store_true", help="render footnotes with licensed text withheld (public build)")
     a = ap.parse_args(argv)
@@ -140,7 +141,7 @@ def main(argv=None):
     data, md = build(t, prod, a.data_root, public=a.public)
     d = Path(a.out) / t
     d.mkdir(parents=True, exist_ok=True)
-    (d / f"product_{prod}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+    (d / f"product_{prod}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False, default=json_default), encoding="utf-8")
     (d / f"product_{prod}.md").write_text(md, encoding="utf-8")
     print(f"{t} {prod}: {len(data['findings'])} finding(s), {len(data['empty_cells'])} empty cell(s) -> {d / ('product_' + prod + '.md')}")
     return data

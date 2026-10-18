@@ -9,22 +9,22 @@ DocIndex.get_page (None until verification locates the span).
 """
 
 import hashlib
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, fields, is_dataclass
 
-STATUSES = ("exact", "substring", "fuzzy", "number_match", "unverified")
+STATUSES = ("exact", "substring", "fuzzy", "number_match", "derived", "machine_data", "unverified")
 CLAIM_TYPES = ("quote", "number", "paraphrase")
 
 
 @dataclass
 class Verification:
-    status: str = "unverified"        # exact | substring | fuzzy | number_match | unverified
+    status: str = "unverified"        # exact | substring | fuzzy | number_match | derived | machine_data | unverified
     score: float = 0.0                # 0..1
     checked_at: str = ""              # ISO-8601 UTC, empty until verified
     detail: str = ""
 
     @property
     def ok(self):
-        return self.status in ("exact", "substring", "fuzzy", "number_match")
+        return self.status in ("exact", "substring", "fuzzy", "number_match", "machine_data")
 
 
 @dataclass
@@ -101,3 +101,13 @@ def _jsonable(x):
 def make_cite_id(canonical_id, page, quote):
     key = f"{canonical_id}|{page}|{' '.join((quote or '').split()).lower()}"
     return "c_" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:10]
+
+
+def json_default(o):
+    """json.dumps default for every document writer: a Citation or Claim is written as its structured dict (never a
+    repr string); anything else falls back to str()."""
+    if isinstance(o, (Citation, Claim)):
+        return o.to_dict()
+    if is_dataclass(o) and not isinstance(o, type):    # e.g. DecideInput: fields only, nested objects hit this again
+        return {f.name: getattr(o, f.name) for f in fields(o)}
+    return str(o)

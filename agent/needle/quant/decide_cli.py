@@ -20,7 +20,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from agent.needle.cite.locator import Claim
+from agent.needle.cite.locator import Claim, json_default
 from agent.needle.cite.render import render_markdown
 from agent.needle.quant import decide as D
 from agent.needle.quant import kill as K
@@ -719,7 +719,7 @@ def main(argv=None):
     out["kill"] = kill_table(out["selection"].top, ctx)
     out["context"] = ctx
     md, summary, withheld = build_md(out, findings, a.public)
-    js = json.dumps(to_json(out, summary, withheld), indent=2, default=str)
+    js = json.dumps(to_json(out, summary, withheld), indent=2, default=json_default)
     if not summary["passed"]:
         _clear_stale(d)
         (d / "decide_rejected.json").write_text(js)
