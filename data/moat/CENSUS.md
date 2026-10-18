@@ -1,18 +1,18 @@
 # Moat database census
 
-As of 2026-10-17T23:06:17. Index file 765 MB. Page id convention: doc_id#p<page_no>, page_no = first number of the [[page N | printed M]] marker.
+As of 2026-10-18T00:21:17. Index file 765 MB. Page id convention: doc_id#p<page_no>, page_no = first number of the [[page N | printed M]] marker.
 
 ## Totals
 
 | What | Count |
 |---|---|
-| Documents | 6,905 |
-| Pages (full-text searchable) | 74,956 |
+| Documents | 6,960 |
+| Pages (full-text searchable) | 76,857 |
 | Speaker turns (earnings calls) | 15,463 |
-| Fact rows (full-text searchable) | 116,438 |
-| Fact tables | 287 |
-| Verified CSV files | 108 |
-| Fact rows naming a drug | 44,789 (3,599 distinct drug names) |
+| Fact rows (full-text searchable) | 117,019 |
+| Fact tables | 295 |
+| Verified CSV files | 117 |
+| Fact rows naming a drug | 45,304 (3,628 distinct drug names) |
 | Licensed (Bloomberg) documents, cite only | 5 |
 | Verified AI errors logged | 515 |
 | Gap notes (what could not be sourced, and why) | 431 |
@@ -22,19 +22,19 @@ As of 2026-10-17T23:06:17. Index file 765 MB. Page id convention: doc_id#p<page_
 | Status | Rows |
 |---|---|
 | rejected, kept for the report only | 6,211 |
-| checked by a verifier | 36,476 |
-| other status values | 5,254 |
+| checked by a verifier | 36,836 |
+| other status values | 5,459 |
 | machine data (prices, I/B/E/S, CMS) | 47,754 |
-| collected, not individually checked | 3,430 |
+| collected, not individually checked | 3,446 |
 | onboarded, awaiting a verifier | 17,313 |
 
 ## Fact rows by locator (what a citation can open)
 
 | Locator | Rows |
 |---|---|
-| document page (doc_id#p<page>) | 11,621 |
-| dataset or API url | 44,987 |
-| row key only | 59,830 |
+| document page (doc_id#p<page>) | 11,827 |
+| dataset or API url | 45,354 |
+| row key only | 59,838 |
 
 ## Documents by type
 
@@ -42,18 +42,18 @@ As of 2026-10-17T23:06:17. Index file 765 MB. Page id convention: doc_id#p<page_
 |---|---|
 | 8-K+EX99 | 2,902 |
 | foreign_current_report | 919 |
-| fda_label_version | 724 |
+| fda_label_version | 722 |
 | current_report_8k | 527 |
 | table | 318 |
 | drug_reference_data | 209 |
 | transcript | 187 |
 | earnings_release | 167 |
 | 10-K asset excerpt | 144 |
-| quarterly_report | 133 |
+| quarterly_report | 134 |
 | sec_comment_letter | 113 |
-| annual_report | 104 |
-| press_release | 71 |
-| fda_label | 67 |
+| annual_report | 105 |
+| press_release | 99 |
+| fda_label | 78 |
 | earnings_slides | 34 |
 | 8-K own | 32 |
 | proxy_statement | 30 |
@@ -68,16 +68,17 @@ As of 2026-10-17T23:06:17. Index file 765 MB. Page id convention: doc_id#p<page_
 | deals | 2,936 |
 | secx | 1,196 |
 | corpus | 881 |
-| product | 731 |
+| product | 740 |
 | peers | 170 |
-| pipeline | 149 |
+| pipeline | 151 |
 | filings | 134 |
 | onboard_VRTX | 106 |
 | onboard_REGN | 97 |
 | calls | 70 |
-| policy | 52 |
-| epi | 34 |
+| policy | 65 |
+| epi | 37 |
 | onboard_NVS | 32 |
+| deals_p2 | 28 |
 | verify_calls | 17 |
 | verify_peers | 15 |
 | pricing | 14 |
@@ -94,42 +95,41 @@ As of 2026-10-17T23:06:17. Index file 765 MB. Page id convention: doc_id#p<page_
 | onboard_drug_promacta | 10 |
 | onboard_drug_kesimpta | 10 |
 | onboard_drug_entresto | 10 |
-| onboard_drug_libtayo | 9 |
 
 ## Documents and pages by company
 
 | Company | Docs | Pages |
 |---|---|---|
-| (none) | 3,214 | 21,679 |
-| AZN | 518 | 3,693 |
+| (none) | 3,238 | 23,063 |
+| AZN | 519 | 3,696 |
 | NVO | 411 | 3,902 |
-| JNJ | 303 | 3,978 |
-| MRK | 250 | 2,976 |
+| JNJ | 304 | 3,982 |
+| MRK | 255 | 3,007 |
 | ABBV | 223 | 2,412 |
-| BMY | 202 | 3,304 |
-| NVS | 193 | 2,753 |
-| REGN | 181 | 2,848 |
-| AMGN | 165 | 3,542 |
-| PFE | 151 | 3,021 |
-| LLY | 150 | 2,378 |
-| VRTX | 138 | 2,218 |
+| BMY | 205 | 3,322 |
+| NVS | 197 | 2,774 |
+| REGN | 182 | 2,858 |
+| AMGN | 167 | 3,598 |
+| PFE | 152 | 3,103 |
+| LLY | 152 | 2,388 |
+| VRTX | 139 | 2,224 |
 | GILD | 136 | 2,449 |
-| SNY | 129 | 2,214 |
+| SNY | 130 | 2,220 |
 | GSK | 103 | 1,511 |
 | TAK | 89 | 2,334 |
-| BBIO | 39 | 1,900 |
-| ALNY | 38 | 1,517 |
+| BBIO | 41 | 1,940 |
+| ALNY | 39 | 1,522 |
 | Roche | 33 | 200 |
 | ROCHE | 24 | 2,981 |
 | Boehringer/Lilly | 23 | 143 |
 | CAH | 16 | 270 |
 | MCK | 14 | 290 |
 | COR | 13 | 263 |
+| NTLA | 5 | 212 |
 | BOEHRINGER | 5 | 174 |
+| SMMT | 4 | 7 |
 | URGN | 3 | 0 |
 | SYRE | 3 | 0 |
-| SMMT | 3 | 0 |
-| RYTM | 3 | 0 |
 
 ## Earnings-call transcripts by company
 
@@ -163,19 +163,19 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 |---|---|
 | tables | 47,754 |
 | onboard | 17,313 |
-| rx | 14,864 |
-| product | 7,793 |
+| rx | 15,110 |
+| product | 8,005 |
 | calls | 7,706 |
 | pipeline | 7,397 |
 | market | 3,015 |
 | costs | 2,353 |
 | peers | 2,278 |
-| deals | 1,978 |
+| deals | 2,044 |
 | filings | 1,276 |
 | pricing | 1,132 |
 | secx | 576 |
+| policy | 537 |
 | epi | 523 |
-| policy | 480 |
 
 ## Fact rows by shortlist company
 
@@ -201,11 +201,11 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | calls/qa_turns.csv | 6,556 |
 | tables/ibes_revenue_consensus.csv | 5,255 |
 | pipeline/pipeline_landscape.csv | 3,383 |
-| product/head_to_head.csv | 2,418 |
+| product/head_to_head.csv | 2,430 |
 | pipeline/pipeline_assets.csv | 2,188 |
 | rx/partd_prescribers_by_specialty.csv | 1,951 |
 | rx/formulary_history.csv | 1,780 |
-| deals/deal_comps.csv | 1,611 |
+| deals/deal_comps.csv | 1,640 |
 | product/label_changes.csv | 1,602 |
 | onboard/NVS/nadac_history.csv | 1,599 |
 | onboard/NVS/product_revenue_quarterly.csv | 1,556 |
@@ -256,6 +256,7 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | onboard/drug_dupixent/medicaid_sdud.csv | 186 |
 | policy/manufacturing_sites_verified.csv | 181 |
 | rx/reconciliation.csv | 179 |
+| rx/cms_spend_part2.csv | 176 |
 | onboard/drug_kalydeco/orange_book_patents.csv | 175 |
 | onboard/drug_entresto/medicaid_sdud.csv | 174 |
 | epi/market_sizing_inputs.csv | 173 |
@@ -282,6 +283,7 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | onboard/VRTX/ibes_eps_quarterly.csv | 132 |
 | onboard/drug_kesimpta/nadac_history.csv | 131 |
 | onboard/drug_kalydeco/medicaid_sdud.csv | 129 |
+| product/label_claims.csv | 124 |
 | costs/open_payments_by_drug.csv | 120 |
 | onboard/drug_orkambi/medicaid_sdud.csv | 120 |
 | pricing/new_launch_prices.csv | 116 |
@@ -299,6 +301,7 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | onboard/drug_cosentyx/head_to_head_pubmed.csv | 84 |
 | onboard/drug_eylea/medicaid_sdud.csv | 83 |
 | costs/open_payments_by_nature.csv | 81 |
+| product/head_to_head_part2.csv | 76 |
 | onboard/drug_eylea/head_to_head_pubmed.csv | 75 |
 | onboard/drug_xolair/head_to_head_pubmed.csv | 75 |
 | deals/deal_benchmarks.csv | 74 |
@@ -317,6 +320,7 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | onboard/drug_dupixent/head_to_head_pubmed.csv | 57 |
 | onboard/drug_kesimpta/head_to_head.csv | 57 |
 | epi/indication_epidemiology.csv | 56 |
+| rx/formulary_part2.csv | 56 |
 | onboard/drug_cosentyx/head_to_head.csv | 55 |
 | pricing/gtn_exposure.csv | 51 |
 | product/rems.csv | 51 |
@@ -333,7 +337,9 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | onboard/REGN/ibes_recommendations.csv | 44 |
 | onboard/VRTX/ibes_recommendations.csv | 44 |
 | onboard/drug_promacta/head_to_head_pubmed.csv | 44 |
+| policy/ira_selected_drugs.csv | 41 |
 | onboard/drug_eylea/label_versions.csv | 38 |
+| deals/part2_comp_sets.csv | 37 |
 | pricing/company_list_vs_net.csv | 37 |
 | product/h2h_by_pair.csv | 37 |
 | onboard/drug_promacta/orange_book_patents.csv | 36 |
@@ -380,6 +386,7 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | onboard/VRTX/ibes_actuals.csv | 17 |
 | onboard/drug_eylea/purple_book.csv | 16 |
 | peers/annual_report_page_checks.csv | 16 |
+| policy/icer_reports.csv | 16 |
 | policy/ira_cut_check.csv | 16 |
 | secx/insider_summary.csv | 16 |
 | onboard/drug_symdeko/label_versions.csv | 15 |
@@ -387,12 +394,5 @@ Transcript quotability grades: {'': 58, 'A': 30, 'B': 21, 'C': 76, 'D': 2}
 | costs/new_indication_timing_summary.csv | 14 |
 | onboard/REGN/policy_mentions.csv | 14 |
 | onboard/REGN/sec_comment_letters.csv | 14 |
+| rx/coverage_policy_docs_part2.csv | 14 |
 | onboard/VRTX/products.csv | 13 |
-| onboard/drug_libtayo/head_to_head.csv | 13 |
-| calls/fix_counts.csv | 12 |
-| onboard/drug_cosentyx/partd_spending.csv | 12 |
-| onboard/drug_orkambi/orange_book_exclusivity.csv | 12 |
-| onboard/VRTX/transcripts_index.csv | 11 |
-| onboard/drug_cosentyx/policy_mentions.csv | 11 |
-| onboard/drug_entresto/policy_mentions.csv | 11 |
-| onboard/drug_kesimpta/label_versions.csv | 11 |
