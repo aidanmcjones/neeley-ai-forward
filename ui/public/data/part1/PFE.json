@@ -2763,16 +2763,231 @@
    }
   },
   "priced_in": {
-   "call": "untestable",
-   "text": "No consensus figure for Vyndaqel's U.S. revenue share is in the index (the priced-in scorecard tracks call topics, not this product line), so whether the share loss is priced in cannot be tested.",
-   "text_marked": "No consensus figure for Vyndaqel's U.S. revenue share is in the index (the priced-in scorecard tracks call topics, not this product line), so whether the share loss is priced in cannot be tested.",
-   "cites": [],
+   "call": "priced in",
+   "confidence": "medium",
+   "text": "Likely priced in: analysts asked about Vyndaqel on every call from 2024Q1 to 2026Q1 and management has described the share loss, FY2026 revenue and EPS consensus were revised up, not down, after the Q2 10-Q and call, and the day-0 abnormal return on the filing was +1.6%; the net-price concession behind the limiter drew gross-to-net questions on 3 of 10 calls, most recently 2026Q2.",
+   "text_marked": "Likely priced in: analysts asked about Vyndaqel on every call from 2024Q1 to 2026Q1 and management has described the share loss, FY2026 revenue and EPS consensus were revised up, not down, after the Q2 10-Q and call, and the day-0 abnormal return on the filing was +1.6%[derived: 3]; the net-price concession behind the limiter drew gross-to-net questions on 3[2] of 10[1] calls, most recently 2026Q2.[4][5][6][7][8]",
+   "marker_map": {
+    "1": "c_7aec28db79",
+    "2": "c_19c0ed57e6",
+    "3": "c_99ff2779a0",
+    "4": "c_859ea374a0",
+    "5": "c_be119fb2fe",
+    "6": "c_a0f75284cc",
+    "7": "c_cf891e6c94",
+    "8": "c_2fa2bacdd6"
+   },
+   "cites": [
+    {
+     "cite_id": "c_859ea374a0",
+     "doc_id": "PFE:transcripts/2026Q1_transcript.md",
+     "page": 11,
+     "quote": null,
+     "url": null,
+     "verify_status": "substring",
+     "withheld": true,
+     "grade": "A",
+     "doc_title": "Pfizer 2026Q1 earnings call (official)",
+     "location": "p. 11",
+     "speaker": "Asad Haider",
+     "locator": "PFE:transcripts/2026Q1_transcript.md#p11",
+     "viewer_link": null,
+     "note": "speaker attributed from transcript label: Asad Haider",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "citation status substring is not public: quote and links withheld"
+    },
+    {
+     "cite_id": "c_7aec28db79",
+     "doc_id": "market/priced_in_scorecard.csv",
+     "page": null,
+     "quote": null,
+     "url": null,
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/priced_in_scorecard.csv",
+     "location": "row market/priced_in_scorecard.csv#86",
+     "speaker": null,
+     "locator": "market/priced_in_scorecard.csv#86 quarters_covered = 10",
+     "viewer_link": null,
+     "note": "facts row market/priced_in_scorecard.csv#86 field quarters_covered re-read from row_json (verified: verified)",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "citation status exact is not public: quote and links withheld"
+    },
+    {
+     "cite_id": "c_19c0ed57e6",
+     "doc_id": "market/priced_in_scorecard.csv",
+     "page": null,
+     "quote": null,
+     "url": null,
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/priced_in_scorecard.csv",
+     "location": "row market/priced_in_scorecard.csv#86",
+     "speaker": null,
+     "locator": "market/priced_in_scorecard.csv#86 quarters_asked = 3",
+     "viewer_link": null,
+     "note": "facts row market/priced_in_scorecard.csv#86 field quarters_asked re-read from row_json (verified: verified)",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "citation status exact is not public: quote and links withheld"
+    },
+    {
+     "cite_id": "c_99ff2779a0",
+     "doc_id": "market/event_returns.csv",
+     "page": null,
+     "quote": null,
+     "url": null,
+     "verify_status": "exact",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table market/event_returns.csv",
+     "location": "row market/event_returns.csv#178",
+     "speaker": null,
+     "locator": "market/event_returns.csv#178 abn_day0 = 0.01604",
+     "viewer_link": null,
+     "note": "facts row market/event_returns.csv#178 field abn_day0 re-read from row_json (verified: verified)",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "citation status exact is not public: quote and links withheld"
+    },
+    {
+     "cite_id": "c_be119fb2fe",
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": null,
+     "quote": null,
+     "url": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_eps_consensus.csv",
+     "location": "row tables/ibes_eps_consensus.csv#1270",
+     "speaker": null,
+     "locator": "fact:tables/ibes_eps_consensus.csv#1270 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_eps_consensus.csv#1270 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_a0f75284cc",
+     "doc_id": "tables/ibes_eps_consensus.csv",
+     "page": null,
+     "quote": null,
+     "url": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_eps_consensus.csv",
+     "location": "row tables/ibes_eps_consensus.csv#1271",
+     "speaker": null,
+     "locator": "fact:tables/ibes_eps_consensus.csv#1271 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_eps_consensus.csv#1271 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_cf891e6c94",
+     "doc_id": "tables/ibes_revenue_consensus.csv",
+     "page": null,
+     "quote": null,
+     "url": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_revenue_consensus.csv",
+     "location": "row tables/ibes_revenue_consensus.csv#5205",
+     "speaker": null,
+     "locator": "fact:tables/ibes_revenue_consensus.csv#5205 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_revenue_consensus.csv#5205 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    },
+    {
+     "cite_id": "c_2fa2bacdd6",
+     "doc_id": "tables/ibes_revenue_consensus.csv",
+     "page": null,
+     "quote": null,
+     "url": null,
+     "verify_status": "machine_data",
+     "withheld": true,
+     "grade": null,
+     "doc_title": "moat table tables/ibes_revenue_consensus.csv",
+     "location": "row tables/ibes_revenue_consensus.csv#5206",
+     "speaker": null,
+     "locator": "fact:tables/ibes_revenue_consensus.csv#5206 (I/B/E/S, licensed; value withheld)",
+     "viewer_link": "",
+     "note": "facts row tables/ibes_revenue_consensus.csv#5206 re-read (no_verified_copy: machine data); machine data (licensed feed, no page copy): the value is re-read from the table row, not a page",
+     "excerpt": null,
+     "deep_link": null,
+     "withheld_reason": "machine data, no page copy: quote withheld, value shown"
+    }
+   ],
+   "derived": {
+    "er": {
+     "value": 1.6,
+     "expr": "a * 100",
+     "operands": {
+      "a": {
+       "value": 0.01604,
+       "text": "0.01604",
+       "cite_id": "c_99ff2779a0"
+      }
+     }
+    }
+   },
+   "evidence": [
+    {
+     "source": "analyst attention (verified/calls/qa_turns.csv)",
+     "finding": "Analysts named Vyndaqel, Vyndamax or tafamidis on all nine calls from 2024Q1 to 2026Q1 (none on the 2026Q2 call); the share loss itself has been described by management, so the finding sizes a known trend. Limiter: gross_to_net_price asked in 3 of 10 covered quarters, last 2026Q2.",
+     "cites": [
+      "c_859ea374a0",
+      "c_19c0ed57e6",
+      "c_7aec28db79"
+     ]
+    },
+    {
+     "source": "press attention (GDELT, tables/news_mentions.csv)",
+     "finding": "No Vyndaqel-only query exists; the proxy \"Pfizer\" (Ibrance OR Vyndaqel) stayed low around the Q2 10-Q (2026-07: 28, 2026-08: 20, 2026-09: 8 articles). Raw table, not re-verified; context only.",
+     "cites": [
+      "gdelt:doc:timelinevolraw:PFE:top_products:202607",
+      "gdelt:doc:timelinevolraw:PFE:top_products:202608",
+      "gdelt:doc:timelinevolraw:PFE:top_products:202609"
+     ]
+    },
+    {
+     "source": "consensus revisions (I/B/E/S; licensed, machine_data)",
+     "finding": "Company-level FY2026 mean revenue and EPS consensus both moved up between the snapshots before and after the Q2 10-Q and call (2026-07-16 to 2026-08-20). Direction only.",
+     "cites": [
+      "c_be119fb2fe",
+      "c_a0f75284cc",
+      "c_cf891e6c94",
+      "c_2fa2bacdd6"
+     ]
+    },
+    {
+     "source": "event returns (verified/market/event_returns.csv)",
+     "finding": "The Q2 10-Q was filed with the pre-market Q2 release on 2026-08-04; the day-0 abnormal return over XLV was positive (+1.6%), so the disclosure did not move the stock down.",
+     "cites": [
+      "c_99ff2779a0"
+     ]
+    }
+   ],
+   "limit": "No product-level or item-level consensus exists in the index: I/B/E/S here is company-level EPS and revenue only (direction used, values withheld), and GDELT was collected for nine fixed topics, not for this item, so the call is an inference from analyst attention and company-level reactions, not a test against a consensus number.",
    "numeric_check": {
-    "status": "no_numbers",
-    "checked": 0,
-    "total": 0,
-    "verified": 0,
-    "derived": 0,
+    "status": "passed",
+    "checked": 3,
+    "total": 3,
+    "verified": 2,
+    "derived": 1,
     "assumed": 0,
     "unsupported": []
    }
