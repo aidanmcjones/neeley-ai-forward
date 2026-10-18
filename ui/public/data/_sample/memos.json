@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T23:53:51+00:00",
+ "generated_at": "2026-10-18T00:07:37+00:00",
  "mode": "cached",
  "engine": "sample",
  "default_ticker": "BMY",
@@ -65,7 +65,7 @@
        "cite": null
       },
       {
-       "label": "Detector",
+       "label": "Signal type",
        "value": "label narrower",
        "cite": null
       }
@@ -149,7 +149,7 @@
      "cite_id": "row:obscurity:BMY:BMY-labels-484154",
      "finding_id": "BMY-labels-484154",
      "ticker": "BMY",
-     "doc_title": "obscurity test: ten quarters of earnings-call Q&A, the earnings-release headline and the case starter thread (agent.needle.quant.obscurity)",
+     "doc_title": "analyst-attention test: ten quarters of earnings-call Q&A, the earnings-release headline and the case starter thread (agent.needle.quant.obscurity)",
      "period": null,
      "page": null,
      "quote": "only in filings / data, not in headlines or call Q&A",
@@ -199,7 +199,7 @@
    "ticker": "BMY",
    "kind": "ceo_memo",
    "generated_by": "template",
-   "summary": "Recommend Defend for BMY: the label is narrower than rivals'; not priced in.",
+   "summary": "Template stance for BMY (no valued move): Defend archetype; the label is narrower than rivals'; not priced in.",
    "blocks": [
     {
      "type": "callout",
@@ -212,7 +212,7 @@
     },
     {
      "type": "p",
-     "md": "**Move: Defend.** Fix the exposure the filings reveal (channel, receivables, margin, disclosure) before the market prices it. No finding in this bucket states an impact formula, so the option is ranked by the size of its cited findings; no budget is valued yet."
+     "md": "**Template stance: Defend archetype, not a valued move.** Fix the exposure the filings reveal (channel, receivables, margin, disclosure) before the market prices it. No DECIDE run has valued a budgeted move for BMY; the options are ranked by rules on the verified findings. No finding in this bucket states an impact formula, so the option is ranked by the size of its cited findings."
     },
     {
      "type": "h",
@@ -222,8 +222,8 @@
      "type": "kpi",
      "items": [
       {
-       "label": "Recommended",
-       "value": "Defend",
+       "label": "Template stance",
+       "value": "Defend archetype",
        "cite": null
       },
       {
@@ -275,23 +275,23 @@
       [
        "eliquis lists 6 indications vs rival median 10 (Xarelto 10); narrower label should show up as a smaller addressable patient pool [1][2]",
        "Not quantified",
-       "no peer figure for this signal",
+       "no peer comparison for this signal type",
        "high",
        "Eliquis label [1]; Xarelto label [2]"
       ],
       [
-       "eliquis twice daily (730/yr) vs xarelto once daily (365/yr) [4][5]",
+       "eliquis twice daily vs xarelto once daily (label regimens: : twice daily; : once daily) [4][5]",
        "Not quantified",
-       "no peer figure for this signal",
+       "no peer comparison for this signal type",
        "high",
        "Eliquis label [4]; Xarelto label [5]"
       ],
       [
-       "Receivables-vs-revenue growth gap -12.3 pts (Q2 2026) vs peers; peer median -0.3 pts (1.7 sd below) [6][7]",
+       "Receivables-vs-revenue growth gap -12.3 pts (Q2 2026) vs peers; peer median -0.3 pts (1.7 standard deviations below) [6][7]",
        "Not quantified",
-       "1.7 sd below the peer median of -0.3 pts",
+       "1.7 standard deviations below the peer median of -0.3 pts",
        "high",
-       "BMY 10-Q 2026-06-30 [6]; BMY 10-Q 2026-06-30 [7]"
+       "BMY 10-Q 2026-06-30, p. 18 [6]; BMY 10-Q 2026-06-30, p. 3 [7]"
       ]
      ]
     },
@@ -326,7 +326,7 @@
     },
     {
      "type": "p",
-     "md": "Each audience named in the case can check the move on its own test: payers (CMS (Medicare negotiation) and Part D plan sponsors); investors (analysts and holders who will read the next 10-Q and earnings call); regulators (FDA (labels, exclusivity) and SEC (disclosure)). Payers see a price they can score, investors see the five numbers and the kill signals they can re-check at the next 10-Q, and regulators see label and disclosure facts cited to the page."
+     "md": "The move answers what the cited filings show: the label is narrower than rivals' [1]; the audiences who decide its fate are payers (CMS (Medicare negotiation) and Part D plan sponsors); investors (analysts and holders who will read the next 10-Q and earnings call); regulators (FDA (labels, exclusivity) and SEC (disclosure)). What that evidence can tell you is the size and timing of the exposure on the cited pages; what it cannot tell you is how prescribers, patients or payers will respond, because no survey, prescriber or claims evidence was gathered for this move."
     },
     {
      "type": "h",
@@ -334,7 +334,7 @@
     },
     {
      "type": "p",
-     "md": "Not priced in: analysts rarely asked about the needle item."
+     "md": "Not priced in: analysts rarely asked about the needle item. Only in filings / data, not in headlines or call Q&A [3]."
     }
    ],
    "cites": [
@@ -409,7 +409,7 @@
      "cite_id": "row:obscurity:BMY:BMY-labels-484154",
      "finding_id": "BMY-labels-484154",
      "ticker": "BMY",
-     "doc_title": "obscurity test: ten quarters of earnings-call Q&A, the earnings-release headline and the case starter thread (agent.needle.quant.obscurity)",
+     "doc_title": "analyst-attention test: ten quarters of earnings-call Q&A, the earnings-release headline and the case starter thread (agent.needle.quant.obscurity)",
      "period": null,
      "page": null,
      "quote": "only in filings / data, not in headlines or call Q&A",

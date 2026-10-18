@@ -109,6 +109,22 @@ robustness variants; `--check` fails on those words anywhere except the league m
   (a percent of a gated decimal counts: "taxed at 15%" for `t 0.1501`, "3% of trailing revenue" for `0.03`).
   Every raw formula and attention note lives in a `math` block; engine variable names (Rev_TTM, D, t, G, k, d,
   m_avoided, s_MFN, qa_turns, pi_min, any snake_case token) never appear in p, list, callout, kpi or table text.
+- Product text gate: growth-limiter and tied-finding dollar figures (base, bull, bear, "$X of annual revenue") print
+  only when their digits appear in a cited quote; otherwise the clause reads "an adverse revenue effect whose size is
+  not page-verified". A product whose priced-in reasons say the test could not run prints "Priced-in call: not
+  testable with the data we hold (reason)". Dosing cells and dosing findings print every regimen in the label quote
+  ("every 2 weeks or once monthly"), not the engine's shortened cell. Boxed-warning findings are dropped when the
+  product table's safety cell for that drug is uncited, so both answers say needs citation.
+- Plain words: row ids such as (R023), Orange Book exclusivity codes and .csv names are stripped from prose; "sd"
+  prints as "standard deviations"; DSO, DIO, SDUD, DTC, HCAI, WAC, NADAC, ASP and MFP are expanded on first use per
+  text; the kpi is "Signal type"; MCDA prints as "weighted score (MCDA)" once, then "weighted score"; amounts in a
+  non-USD company print the currency code ("DKK 309,064M"), never "$".
+- CEO memo: "Why it lands with the deciders" is built from the company's needle and its next quantified finding
+  (cited) with the audiences from `stance.deciders`, and says what the evidence cannot tell you; decide kill signals
+  print their baseline from the kill-signal table and signals with a null baseline are dropped (the findings-based
+  signals fill in); "cash at risk: none under the base case" when cash at risk is 0 beside a budget; template
+  stances are headed "Template stance: <archetype>, not a valued move"; the 3% anchor is stated once per memo as
+  the engine's assumption with [assumption]; Source cells carry the page label ("Amgen 10-Q 2026-06-30, p. 3").
 - Priced-in call: by league status when the rule needle is the league needle; otherwise from the analyst-attention
   scorecard row for the needle's topic (never asked / minority / most of the calls), cited.
 - Findings whose `numeric_check.status` is `failed` are excluded from every memo; impacts flagged suspect are
@@ -141,6 +157,8 @@ robustness variants; `--check` fails on those words anywhere except the league m
 7b. Case mapping: every ceo_memo carries the six Part 2 elements as headings or kpi labels (Recommendation,
    Budget, Return math, Alternatives rejected, kill signals, deciders); every findings table carries the Impact,
    Peer, Confidence and Source columns.
+7d. Freshness: `--check` fails when memos.json is older than any company file, meta.json, proof.json or
+   league.json; every `row:decide` cite's quoted five numbers must equal the decide row it resolves to.
 7c. Pitch language: "score L", "S =", "materiality score" and "robustness" fail anywhere except the league memo's
    caveat callout.
 8. Word counts (prose blocks only: p, list, callout) against the targets: chat 60 to 160, memo 200 to 400; a

@@ -108,6 +108,7 @@ PART2 = [  # case Part 2 elements a CEO memo must carry, as a heading or a kpi l
 ]
 PART1_COLUMNS = ("Impact", "Peer", "Confidence", "Source")
 
+DEMO_NOTE = "Pipeline demonstration; not the team's Part 2 recommendation, which follows the company pick."
 DEMO_LABEL = ("Pipeline demonstration: this move was valued by rules on cited findings; the team's final "
               "recommendation is a separate decision.")
 TEMPLATE_LABEL = ("Template stance, no valued move yet: options are ranked by rules on the verified findings; "
@@ -152,6 +153,15 @@ def match_rule(kind, rules):
         if any(k in (kind or "") for k in keys):
             return val
     return None
+
+
+PROPER = {"Medicare", "Medicaid", "CMS", "MFN", "US", "FDA", "SEC", "TrumpRx", "Part", "IRA", "Q3", "R&D"}
+
+
+def lc(lead):
+    """Lowercase a lead phrase's first letter unless it opens with a proper noun."""
+    first = (lead or "").split(" ")[0]
+    return lead if first in PROPER or first.isupper() or not lead else lead[0].lower() + lead[1:]
 
 
 def poss(name):
@@ -337,7 +347,21 @@ def marked_sentence(f, C, t, row=None, unresolved=()):
     s = remark(plain_sentence(sm.strip()), f, C, t, mm=src.get("marker_map") or {}, lic=src.get("marker_licensed") or [],
                unresolved=unresolved if src is row else ())
     s = re.sub(r"\.\s*((?:\[[^\]]+\])+)\s*$", r"\1", s)
+    s = own_discount(s, C)
     return s.rstrip(".")
+
+
+def own_discount(text, C):
+    """'(CMS-published analog, cited)' becomes 'negotiated discount for this drug' when the discount's cite quote names
+    the drug itself (the row is the drug's own CMS line, not a borrowed analog)."""
+    m = re.search(r"^(\w[\w-]*)'s .*?discount [\d.]+%\[(\d+)\] \(CMS-published analog, cited\)", text)
+    if not m:
+        return text
+    drug, n = m.group(1), int(m.group(2))
+    cite = C.items[n - 1] if 0 < n <= len(C.items) else {}
+    if drug.lower() in f"{cite.get('quote') or ''} {cite.get('excerpt') or ''}".lower():
+        return text.replace("(CMS-published analog, cited)", "(CMS-published negotiated discount for this drug)", 1)
+    return text
 
 
 GENERIC_TITLES = {"government document", "document", "source", ""}
@@ -484,7 +508,8 @@ class Ctx:
     def usable(self, t):
         """Verified findings with page evidence whose numeric check did not fail, best first."""
         fs = [f for f in self.companies[t].get("findings") or []
-              if (f.get("verdict") or "verified") == "verified" and nc_status(f) != "failed" and f.get("evidence")]
+              if (f.get("verdict") or "verified") == "verified" and nc_status(f) != "failed" and f.get("evidence")
+              and not label_cell_uncited(self.companies[t], f)]
 
         def key(f):
             imp = f.get("impact") or {}
@@ -555,11 +580,20 @@ def lead_cites(f, C, t, n=2):
 
 def sentence(f, C, t, n=2, row=None, unresolved=()):
     """(finding sentence, trailing cite numbers). With a sentence_marked the markers are inline, renumbered to this
-    memo, and the trailing list is empty; otherwise the plain sentence plus its first n evidence cites."""
+    memo, and the trailing list is empty; otherwise the plain sentence plus its first n evidence cites. Dosing
+    findings print every regimen in their label quotes."""
     marked = marked_sentence(f, C, t, row, unresolved)
-    if marked:
-        return marked, []
-    return plain_sentence((f.get("finding") or "").strip().rstrip(".")), lead_cites(f, C, t, n)
+    text, ns = (marked, []) if marked else (plain_sentence((f.get("finding") or "").strip().rstrip(".")), lead_cites(f, C, t, n))
+    if "dosing" in (f.get("signal_kind") or ""):
+        labels = []
+        for e in f.get("evidence") or []:
+            regs = regimens([e.get("quote")])
+            if regs:
+                labels.append(f"{str(e.get('doc_title') or '').replace(' label', '')}: {' or '.join(regs)}")
+        if labels:
+            text = re.sub(r"\s*\(\d+(?:\[assumption\])?/yr\)", "", text)
+            text += f" (label regimens: {'; '.join(labels)})"
+    return text, ns
 
 
 def impact_cites(f, C, t, n=3):
@@ -639,9 +673,10 @@ def _pct(x):
     return f"{v:g}%"
 
 
-def _m(x):
+def _m(x, cur="USD"):
     v = _f(x)
-    return f"${v:,.0f}M" if abs(v - round(v)) < 0.05 else f"${v:,.1f}M"
+    sign = "$" if cur in ("USD", None, "") else f"{cur} "
+    return f"{sign}{v:,.0f}M" if abs(v - round(v)) < 0.05 else f"{sign}{v:,.1f}M"
 
 
 def _tuple(x):
@@ -657,7 +692,7 @@ def plain_impact(f):
     m = re.match(r"^([\d.]+) x Rev_TTM ([\d,.]+) x \(1 - t ([\d.]+)\) / D ([\d,.]+)", text)
     if m:
         a, r, t, d = m.groups()
-        return (f"Operating income lower. Base case assumes {_pct(a)} of trailing revenue of {_m(r)} at risk, "
+        return (f"Operating income lower. Base case assumes {_pct(a)} of trailing revenue of {_m(r, cur)} at risk, "
                 f"taxed at {_pct(t)} and spread over {_f(d):,.0f}M diluted shares{fx}"), text
     m = re.match(r"^G ([\d,.]+) x max\(0, k \(([^)]+)\) x d \(([^)]+)\) - m_avoided \(([^)]+)\)\)(?: \(class rule: ([^)]+)\))?", text)
     if m:
@@ -740,16 +775,96 @@ def plain_sentence(text):
     words; numbers unchanged."""
     t = re.sub(r"\(\{([^{}]*)\}\)", _dict_to_words, text or "")
     t = t.replace(" (derived from the shortlist peer panel, not page-cited)", " (peer figures computed, not page-cited)")
-    t = re.sub(r", z ([+-])([\d.]+)", lambda m: f" ({m.group(2)} sd {'above' if m.group(1) == '+' else 'below'})", t)
+    t = re.sub(r", z ([+-])([\d.]+)", lambda m: f" ({m.group(2)} standard deviations {'above' if m.group(1) == '+' else 'below'})", t)
     t = t.replace(" (derived)", "")
+    return plain_terms(t)
+
+
+ABBREV = [  # engine or industry shorthand -> plain words (first use per text; the rest are left as they are)
+    (r"\bDSO\b", "days sales outstanding (DSO)"), (r"\bDIO\b", "days inventory on hand (DIO)"),
+    (r"\bSDUD\b", "state drug utilization data (SDUD)"), (r"\bDTC\b", "direct-to-consumer (DTC)"),
+    (r"\bHCAI WAC\b", "California HCAI-reported list price (WAC)"), (r"\bWAC\b", "list price (WAC)"),
+    (r"\bNADAC\b", "pharmacy acquisition cost (NADAC)"), (r"\bASP\b", "Medicare average sales price (ASP)"),
+    (r"\bMFP\b", "Medicare negotiated price (MFP)"),
+]
+
+
+def plain_terms(text):
+    """Strip traceable row ids such as (R023), Orange Book exclusivity codes before a date, and .csv file names; expand
+    shorthand on first use."""
+    t = re.sub(r"\s*\(R\d{3}(?:, R\d{3})*\)", "", text or "")
+    t = re.sub(r"\b[A-Z]{1,4}-\d{1,4}\s+(?=(?:19|20)\d{2}-\d{2}-\d{2})", "", t)
+    t = re.sub(r"\b[\w/]+\.csv\b", "our verified product-revenue table", t)
+    for pat, full in ABBREV:
+        if re.search(pat, t) and full not in t:
+            t = re.sub(pat, full, t, count=1)
     return t
 
 
 def plain_peer(clause):
     m = re.match(r"peer median (.+?), z ([+-])([\d.]+)", clause or "")
     if m:
-        return f"{m.group(3)} sd {'above' if m.group(2) == '+' else 'below'} the peer median of {m.group(1)}"
+        return f"{m.group(3)} standard deviations {'above' if m.group(2) == '+' else 'below'} the peer median of {m.group(1)}"
     return clause
+
+
+MONEY = r"\$[\d.,]+\s?(?:bn|B|M|K|m|k)?\b"
+
+
+def money_gate(text, quotes):
+    """Dollar figures in product text stay only when their digits appear in a cited quote; otherwise the clause is
+    replaced by its direction and 'size not page-verified'."""
+    qtext = " ".join(q for q in quotes if q)
+
+    def ok(tok):
+        digits = re.sub(r"[^\d.]", "", tok).rstrip(".")
+        return bool(digits) and (digits in qtext or digits.replace(".", ",") in qtext)
+    t = text or ""
+    t = re.sub(r"\s*about (" + MONEY + r") base \((" + MONEY + r") bull to (" + MONEY + r") bear\) on ([^$]+?)'s (" + MONEY + r") of annual revenue",
+               lambda m: m.group(0) if all(ok(m.group(i)) for i in (1, 2, 3, 5)) else
+               f" an adverse revenue effect for {m.group(4)} whose size is not page-verified (the revenue and erosion inputs are not cited)", t)
+    t = re.sub(r",? worth about (" + MONEY + r") a year in the base case",
+               lambda m: m.group(0) if ok(m.group(1)) else ", an adverse revenue effect whose size is not page-verified", t)
+    t = re.sub(r"the range is (" + MONEY + r") base \((" + MONEY + r") bull to (" + MONEY + r") bear\)",
+               lambda m: m.group(0) if all(ok(m.group(i)) for i in (1, 2, 3)) else "the size is not page-verified", t)
+    t = re.sub(r"(?:about |around )?(" + MONEY + r")(?: of annual revenue| a year| per year)?",
+               lambda m: m.group(0) if ok(m.group(1)) else "an amount not page-verified", t)
+    return t
+
+
+REGIMEN = re.compile(r"(?:once |twice )?(?:every|each) (?:\d+|other) (?:weeks?|months?|days?|hours?)|once (?:monthly|weekly|daily)|"
+                     r"twice (?:daily|a day)|(?:once )?a day\b|monthly|weekly|daily", re.I)
+
+
+def regimens(quotes):
+    """Every dosing interval named in the label quotes, in order, deduplicated ('every 2 weeks or once monthly')."""
+    out = []
+    for q in quotes:
+        for m in REGIMEN.finditer(q or ""):
+            x = m.group(0).lower().replace("each", "every")
+            if x not in out:
+                out.append(x)
+    return out
+
+
+def dosing_text(value, quotes):
+    regs = regimens(quotes)
+    if not regs:
+        return value
+    route = (value or "").split(",")[0].strip()
+    route = route if route and route.lower() not in ("", "n/a") and not REGIMEN.search(route) else "Dosing"
+    return f"{route}, {' or '.join(regs)}"
+
+
+def priced_in_line(gl):
+    """(sentence, reasons) for a product's priced-in call; 'not testable' when the engine says it could not test."""
+    reasons = gl.get("reasons") or []
+    untestable = next((r for r in reasons if "cannot be tested" in r or "not tested" in r.split(":")[0]), None)
+    if untestable or not gl.get("sentence") or gl["sentence"].startswith("The data do not support"):
+        why = (untestable or "no quantified channel").split(";")[0].split(":")[-1].strip()
+        return f"Priced-in call: not testable with the data we hold ({why})", reasons
+    call = "the market has already priced this in" if gl.get("priced_in") else "the market has not clearly priced this in"
+    return f"Our call: {call}, on the analyst-attention, starter-thread and consensus tests", reasons
 
 
 def math_block(label, text, cite, text_marked=None):
@@ -783,8 +898,11 @@ def peer_cell(f, C, t):
     if p.get("named_peer_row"):
         return shorten(p["named_peer_row"], 120), []
     if p.get("note"):
-        return shorten(p["note"].split(";")[0], 110), []
-    return "no peer figure for this signal", []
+        note = p["note"].split(";")[0]
+        if note.lower().startswith("no peer"):
+            return "no peer comparison for this signal type", []
+        return shorten(plain_terms(note), 110), []
+    return "no peer comparison for this signal type", []
 
 
 def source_cell(f, C, t):
@@ -792,7 +910,9 @@ def source_cell(f, C, t):
     for i, e in enumerate((f.get("evidence") or [])[:2]):
         n = C.add(ev_cite(e, f["id"], t, i))
         lab = doc_label(e)
-        labels.append(f"{lab} [{n}]")
+        page = e.get("printed") or e.get("page")
+        loc = f", p. {page}" if page not in (None, "", "None") and not str(page).startswith("row") else (f", {e.get('location')}" if e.get("location") and "section" in str(e.get("location")) else "")
+        labels.append(f"{lab}{loc} [{n}]")
     return "; ".join(labels)
 
 
@@ -808,8 +928,15 @@ def findings_table(fs, C, t, ctx=None):
                      f.get("confidence") or "n/a", source_cell(f, C, t)])
         if formula and ins:
             lead = match_rule(f.get("signal_kind"), LEADS) or "finding"
-            maths.append(impact_math(f, C, t, f"Impact math, row {i} ({lead[0].lower() + lead[1:]})", ins[0], row, unres))
+            maths.append(impact_math(f, C, t, f"Impact math, row {i} ({lc(lead)})", ins[0], row, unres))
     return {"type": "table", "columns": ["Finding", "Impact", "Peer", "Confidence", "Source"], "rows": rows}, maths
+
+
+def anchor_note(fs):
+    """One sentence per memo on the 3% anchor when any row's impact uses it."""
+    if any(re.match(r"^0\.03 x Rev_TTM", plain_formula(f)) for f in fs):
+        return "3% of trailing revenue is the engine's anchor assumption for ratio signals, not a measured loss[assumption]; "
+    return ""
 
 
 def aggregate_nc(fs):
@@ -828,8 +955,8 @@ def obscurity_cite(f, C, t):
     if not note:
         return "", []
     n = C.add(row_cite(f"row:obscurity:{t}:{f['id']}", f"companies/{t}.json:findings[id={f['id']}].vector",
-                       "obscurity test: ten quarters of earnings-call Q&A, the earnings-release headline and the "
-                       "case starter thread (agent.needle.quant.obscurity)", note, "computed", ticker=t,
+                       "analyst-attention test: ten quarters of earnings-call Q&A, the earnings-release headline and "
+                       "the case starter thread (agent.needle.quant.obscurity)", note, "computed", ticker=t,
                        finding_id=f["id"]))
     return note, [n]
 
@@ -972,7 +1099,7 @@ def record(kind, ctx, t, prompt, summary, blocks, C, generated_by, numeric_check
            "numeric_check": numeric_check or {"status": "unchecked"}, "ask_next": ask_next(kind, ctx, t)}
     d = (((ctx.companies.get(t) or {}).get("stance") or {}).get("decide") or {}) if t else {}
     rec["demo"] = bool(d.get("demo"))
-    rec["demo_note"] = (d.get("note") or None) if d.get("demo") else None
+    rec["demo_note"] = DEMO_NOTE if d.get("demo") else None
     if kind in MEMO_KINDS:
         rec["memo_header"] = memo_header
     return rec
@@ -988,7 +1115,7 @@ def needle_memo(ctx, t):
     f, status = ctx.needle(t)
     if f is None:
         blocks = [{"type": "callout", "tone": "warn", "md": f"No verified finding with page evidence for {name}, so there is no needle to show."}]
-        return record("needle", ctx, t, f"What is {name}'s Sharpest Needle?", f"No needle for {name}.", blocks, C, "data")
+        return record("needle", ctx, t, f"What is {poss(name)} Sharpest Needle?", f"No needle for {name}.", blocks, C, "data")
     lead = match_rule(f.get("signal_kind"), LEADS) or "The sharpest needle"
     by0, unres0 = ctx.table_rows(t)
     s, ns = sentence(f, C, t, row=by0.get(f.get("id")), unresolved=unres0)
@@ -1015,7 +1142,7 @@ def needle_memo(ctx, t):
         blocks.append(math_block("Analyst-attention test, as computed", note, ons[0]))
     kpi = [{"label": "Confidence", "value": f.get("confidence") or "n/a", "cite": None},
            {"label": "Direction", "value": ("adverse" if (imp.get("adverse") or f.get("direction") in ("adverse", "negative")) else (f.get("direction") or "n/a")), "cite": None},
-           {"label": "Detector", "value": (f.get("signal_family") or f.get("signal_kind") or "n/a").replace("_", " "), "cite": None}]
+           {"label": "Signal type", "value": (f.get("signal_family") or f.get("signal_kind") or "n/a").replace("_", " "), "cite": None}]
     blocks.append({"type": "kpi", "items": kpi})
     nc = f.get("numeric_check") if isinstance(f.get("numeric_check"), dict) else None
     if nc and nc.get("status") == "passed" and nc.get("total"):
@@ -1023,7 +1150,7 @@ def needle_memo(ctx, t):
                            "per-number citation gate (agent.needle.cite.gate_document)", json.dumps(nc), "gate record",
                            ticker=t, finding_id=f["id"]))
         blocks.append({"type": "callout", "tone": "ok",
-                       "md": f"Every number in this answer passed the per-number citation gate: {nc['checked']} of "
+                       "md": f"Every number in the finding sentence passed the per-number citation gate: {nc['checked']} of "
                              f"{nc['total']} checked ({nc.get('verified', 0)} page-verified, {nc.get('derived', 0)} "
                              f"derived, {nc.get('assumed', 0)} stated assumptions) [{n}]."})
     elif nc and nc.get("status") == "failed":
@@ -1032,7 +1159,7 @@ def needle_memo(ctx, t):
         blocks.append({"type": "callout", "tone": "muted",
                        "md": "The quote is located on the cited page; the per-number gate recorded no checked figures for this row."})
     summary = f"{lead}: {name}'s needle, confidence {f.get('confidence') or 'n/a'}."
-    return record("needle", ctx, t, f"What is {name}'s Sharpest Needle?", summary, blocks, C, "template", nc)
+    return record("needle", ctx, t, f"What is {poss(name)} Sharpest Needle?", summary, blocks, C, "template", nc)
 
 
 def ranked_findings(ctx, t, n=5):
@@ -1059,23 +1186,38 @@ def ranked_findings(ctx, t, n=5):
     return fs[:n], "in the engine's order, with the Sharpest Needle first"
 
 
+def label_cell_uncited(c, finding):
+    """True when a boxed-warning finding names a product whose product-table safety cell is uncited."""
+    if "boxed" not in (finding.get("signal_kind") or ""):
+        return False
+    m = re.match(r"^(\w[\w-]*)", finding.get("finding") or "")
+    if not m:
+        return False
+    for v2 in ((c.get("labels") or {}).get("v2") or {}).values():
+        cell = (((v2 or {}).get("rows") or {}).get("safety") or {}).get(m.group(1))
+        if isinstance(cell, dict) and cell.get("uncited"):
+            return True
+    return False
+
+
 def findings_memo(ctx, t):
     name, C = ctx.name(t), Cites()
     needle, _ = ctx.needle(t)
     fs, basis = ranked_findings(ctx, t)
     lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the first row"
     p = (f"Here are {poss(name)} five verified findings, {basis}. Each row carries its source page, its impact "
-         f"math, its peer comparison and our confidence. The Sharpest Needle is {lead[0].lower() + lead[1:]}. Rows "
+         f"math, its peer comparison and our confidence. The Sharpest Needle is {lc(lead)}. Rows "
          f"without a dollar channel are marked not quantified rather than guessed, and every row links to its "
          f"filing page or label section.")
     table, maths = findings_table(fs, C, t, ctx)
     blocks = [{"type": "p", "md": p}, table, *maths]
     quant = sum(1 for f in fs if impact_cell(f, Cites(), t)[2])
     blocks.append({"type": "callout", "tone": "muted",
-                   "md": ("Impact text uses only numbers from the engine's gated math (shown under each row); peer "
-                          "medians are computed across the ten shortlist companies from SEC XBRL and are not page-cited."
+                   "md": ("Impact cells give the direction and the inputs of the engine's gated math (shown under each "
+                          "row); " + anchor_note(fs) + "peer medians are computed across the ten shortlist companies "
+                          "from SEC XBRL and are not page-cited."
                           if quant else "No row in this set states an impact formula; the table shows why.")})
-    return record("findings", ctx, t, f"Show {name}'s five cited findings",
+    return record("findings", ctx, t, f"Show {poss(name)} five cited findings",
                   f"Five cited findings for {name}, {basis}.", blocks, C, "data", aggregate_nc(fs))
 
 
@@ -1096,6 +1238,16 @@ def cell_marks(cell, C, t, slug, rk, ent):
     return [n], True
 
 
+def plain_cell(v):
+    v = plain_terms(str(v))
+    v = re.sub(r"\b1 contraindication\(s\)", "1 contraindication", v)
+    v = re.sub(r"\b(\d+) contraindication\(s\)", r"\1 contraindications", v)
+    v = re.sub(r"\b1 warnings and precautions\b", "1 warning and precaution", v)
+    v = v.replace("REMS: none found in label sections one to five", "no REMS program in the label")
+    v = v.replace("; titration in label", "")
+    return v
+
+
 def product_memo(ctx, t, slug, v2, comp):
     name, C = ctx.name(t), Cites()
     ents = (v2 or {}).get("entities") or []
@@ -1112,28 +1264,29 @@ def product_memo(ctx, t, slug, v2, comp):
         if not gns and re.search(r"\d", gl["sentence"]):
             gns = [C.add(row_cite(f"row:gl:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter",
                                   "product growth limiter (agent.needle.quant.product)", gl["sentence"], "computed", ticker=t))]
-        p += f" {gl['sentence'].rstrip('.')} {C.mark(*gns)}."
+        gq = [e.get("quote") for e in gl.get("citations") or []]
+        p += " " + C.after(money_gate(plain_terms(gl["sentence"].rstrip(".")), gq), *gns) + "."
     tied = ((v2 or {}).get("findings") or [None])[0]
     if isinstance(tied, dict) and tied.get("finding"):
         tns = [C.add(ev_cite(e, tied.get("id"), t, i)) for i, e in list(enumerate(tied.get("evidence") or []))[:2]]
-        p += f" Tied finding: {tied['finding'].rstrip('.')} {C.mark(*tns)}."
+        tq = [e.get("quote") for e in tied.get("evidence") or []]
+        p += " Tied finding: " + C.after(money_gate(plain_terms(tied["finding"].rstrip(".")), tq), *tns) + "."
     elif (v2 or {}).get("notes"):
         notes = [re.sub(r"^\w+ produced no finding: ", "", n) for n in v2["notes"]]
         notes = [n for n in notes if not var_tokens(n)] or ["no label-to-numbers channel had its inputs"]
-        note = shorten(notes[0].rstrip("."), 160)
+        note = shorten(plain_terms(notes[0].rstrip(".")), 160)
         nn = C.add(row_cite(f"row:notes:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.notes",
                             "product module notes (agent.needle.quant.product)", " | ".join(v2["notes"]), "engine note", ticker=t))
         p += f" No label row ties to a financial finding yet: {note} [{nn}]."
     if gl:
-        call = "the market has already priced this in" if gl.get("priced_in") else "the market has not clearly priced this in"
-        reasons = gl.get("reasons") or []
+        call, reasons = priced_in_line(gl)
         if reasons:
             rn = C.add(row_cite(f"row:gl_reasons:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter.reasons",
                                 "priced-in test inputs: analyst-attention scorecard, case starter thread, I/B/E/S consensus "
                                 "(data/moat/verified/market)", " | ".join(reasons), "computed", ticker=t))
-            p += f" Our call: {call}, on the analyst-attention, starter-thread and consensus tests [{rn}]."
+            p += f" {call} [{rn}]."
         else:
-            p += f" Our call: {call}."
+            p += f" {call}."
     blocks = [{"type": "p", "md": p}]
     table_ref = uncited = False
     if v2 and v2.get("rows"):
@@ -1149,7 +1302,10 @@ def product_memo(ctx, t, slug, v2, comp):
                 if cell.get("uncited"):
                     val, uncited = "needs citation: no page located for this value", True
                 else:
-                    val = shorten(cell.get("value") or ("no data: " + (cell.get("empty_reason") or "not located")), 150)
+                    val = cell.get("value") or ("no data: " + (cell.get("empty_reason") or "not located"))
+                    if rk == "dosing" and cell.get("citations"):
+                        val = dosing_text(val, [c.get("quote") for c in cell["citations"]])
+                    val = shorten(plain_cell(val), 170)
                 out.append(C.after(val, *ns))
             rows.append(out)
         blocks.append({"type": "table", "columns": cols, "rows": rows})
@@ -1171,7 +1327,7 @@ def product_memo(ctx, t, slug, v2, comp):
                                          f"companies/{t}.json:labels.comparison[product={slug}].rows[field={r.get('field')}].values.{s}",
                                          v.get("source") or "comparison table", str(val), "table reference", ticker=t))]
                     table_ref = True
-                out.append(f"{shorten(str(val) if val is not None else 'n/a', 150)} {C.mark(*ns)}".strip())
+                out.append(C.after(shorten(plain_cell(val) if val is not None else "n/a", 170), *ns))
             rows.append(out)
         blocks.append({"type": "table", "columns": cols, "rows": rows})
     if table_ref or uncited:
@@ -1207,7 +1363,7 @@ def peers_memo(ctx, t):
         ptxt, _ = peer_cell(needle, C, t)
         pns = lead_cites(needle, C, t)
         lead = match_rule(needle.get("signal_kind"), LEADS) or "the needle"
-        p += f" On its needle metric ({lead[0].lower() + lead[1:]}) the company sits at {ptxt} {C.mark(*pns)}."
+        p += f" On its needle metric ({lc(lead)}) the company sits at {ptxt} {C.mark(*pns)}."
     fr = ctx.companies[t].get("forces") or {}
     if fr:
         n = forces_cite(t, ctx, C)
@@ -1264,6 +1420,20 @@ def priced_call(ctx, t, C):
                 "only partly priced in: analysts asked about the needle topic in a minority of the calls we read" if asked * 2 < cov else
                 "mostly priced in: analysts asked about the needle topic in most of the calls we read")
         return f"{call} ({asked} of {cov} quarters)", [n]
+    if needle:
+        note = ((needle.get("vector") or {}).get("obscurity_note")) or ""
+        if note:
+            n = C.add(row_cite(f"row:obscurity:{t}:{needle['id']}", f"companies/{t}.json:findings[id={needle['id']}].vector",
+                               "analyst-attention test: ten quarters of earnings-call Q&A, the earnings-release headline and "
+                               "the case starter thread (agent.needle.quant.obscurity)", note, "computed", ticker=t, finding_id=needle["id"]))
+            raised = re.search(r"analysts raised (.+?) in (\d+) of the last (\d+) earnings calls", plain_obscurity(note))
+            if raised:
+                k, tot = int(raised.group(2)), int(raised.group(3))
+                call = ("not priced in: analysts never raised " + raised.group(1) + f" in the last {tot} earnings calls" if k == 0 else
+                        f"only partly priced in: analysts raised {raised.group(1)} in {k} of the last {tot} earnings calls" if k * 2 < tot else
+                        f"mostly priced in: analysts raised {raised.group(1)} in {k} of the last {tot} earnings calls")
+                return call, [n]
+            return f"not tested by a scorecard topic; the needle's own attention test reads: {plain_obscurity(note).rstrip('.')}", [n]
     return "not tested: no analyst-attention row matches the needle topic", []
 
 
@@ -1276,7 +1446,7 @@ def priced_in_memo(ctx, t):
         note, ons = obscurity_cite(needle, C, t)
         lead = match_rule(needle.get("signal_kind"), LEADS) or "the needle"
         if note:
-            p += f"How rarely analysts asked about {lead[0].lower() + lead[1:]}: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}. "
+            p += f"How rarely analysts asked about {lc(lead)}: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}. "
             maths.append(math_block("Analyst-attention test, as computed", note, ons[0]))
     rows = sorted(c.get("priced_in") or [], key=lambda r: (r.get("share_of_quarters_asked") if r.get("share_of_quarters_asked") is not None else 9))
     never = [r for r in rows if (r.get("quarters_asked") or 0) == 0]
@@ -1306,7 +1476,7 @@ def priced_in_memo(ctx, t):
         blocks.append({"type": "callout", "tone": "muted",
                        "md": "Topics are sorted least-discussed first; the scorecard counts analyst Q&A turns across the "
                              "ten most recent earnings calls."})
-    return record("priced_in", ctx, t, f"Is {name}'s needle already priced in?",
+    return record("priced_in", ctx, t, f"Is {poss(name)} needle already priced in?",
                   f"Priced-in test for {name}: analyst attention by topic, guidance versus consensus, and our call.",
                   blocks, C, "data")
 
@@ -1487,7 +1657,7 @@ def moat_memo(ctx):
             docs = list(dict.fromkeys(e.get("doc_title") or e.get("citation") for e in f.get("evidence") or []))
             ns = [C.add(ev_cite(e, f["id"], d, i)) for i, e in list(enumerate(f.get("evidence") or []))[:3]]
             note, ons = obscurity_cite(f, C, d)
-            why = (f"Why it mattered: {poss(ctx.name(d))} Sharpest Needle ({lead[0].lower() + lead[1:]}) rests on "
+            why = (f"Why it mattered: {poss(ctx.name(d))} Sharpest Needle ({lc(lead)}) rests on "
                    f"{', '.join(x for x in docs if x)} {C.mark(*ns)}")
             if note:
                 why += f", plus the call transcripts behind its obscurity test ({plain_obscurity(note).rstrip('.')}) {C.mark(*ons)}"
@@ -1559,16 +1729,19 @@ def products_memo(ctx):
                 if not gns and re.search(r"\d", gl["sentence"]):
                     gns = [C.add(row_cite(f"row:gl:{t}:{slug}", f"companies/{t}.json:labels.v2.{slug}.growth_limiter",
                                           "product growth limiter (agent.needle.quant.product)", gl["sentence"], "computed", ticker=t))]
-                line += f" growth limiter: {C.after(gl['sentence'].rstrip('.'), *gns)}."
+                gq = [e.get("quote") for e in gl.get("citations") or []]
+                line += f" growth limiter: {C.after(money_gate(plain_terms(gl['sentence'].rstrip('.')), gq), *gns)}."
             if isinstance(tied, dict) and (tied.get("sentence_marked") or tied.get("finding")):
                 s, ns = sentence(tied, C, t)
-                line += f" Tied finding: {C.after(s, *ns)}."
+                tq = [e.get("quote") for e in tied.get("evidence") or []]
+                line += f" Tied finding: {C.after(money_gate(s, tq), *ns)}."
                 weight = 0
             else:
                 line += " No label row ties to a financial finding yet."
                 weight = 1
             if gl:
-                line += " Priced in: " + ("yes" if gl.get("priced_in") else "not clearly") + "."
+                call, _ = priced_in_line(gl)
+                line += " " + (call.replace("Our call: ", "Priced in: ") if call.startswith("Our call") else call) + "."
             items.append((weight, line))
     items.sort(key=lambda x: x[0])
     p = ("One line per case product: its growth limiter from the fine-print table, the financial finding it ties "
@@ -1608,7 +1781,7 @@ def decides_memo(ctx):
                         "meta.json v2_status.decide_v2 (companies with a DECIDE output)",
                         f"{', '.join(lst)}: {len(have)} of {len(ctx.tickers)} companies", "counted at export"))
     p = (f"{len(have)} of the {len(ctx.tickers)} companies carry a DECIDE output [{cn}]: one CEO move valued against two "
-         f"alternatives on the same five numbers (expected value, cash at risk, payback month, scenario spread, MCDA) "
+         f"alternatives on the same five numbers (expected value, cash at risk, payback month, scenario spread, weighted score) "
          f"with kill signals. Demo flags are stated per line.")
     if rest:
         p += f" The other {len(rest)} ({', '.join(rest)}) carry template stances with no valued move yet [{cn}]."
@@ -1641,7 +1814,7 @@ def why_company_memo(ctx, t):
         lead = match_rule(f.get("signal_kind"), LEADS) or "the needle"
         itxt, _, ins = impact_cell(f, C, t)
         note, ons = obscurity_cite(f, C, t)
-        p += f" Its Sharpest Needle ({NEEDLE_RULE}) is {lead[0].lower() + lead[1:]} {C.mark(*lead_cites(f, C, t))}."
+        p += f" Its Sharpest Needle ({NEEDLE_RULE}) is {lc(lead)} {C.mark(*lead_cites(f, C, t))}."
         p += f" Impact: {C.after(itxt, *ins)}."
         if note:
             p += f" How rarely analysts asked: {C.after(plain_obscurity(note).rstrip('.'), *ons)}."
@@ -1692,11 +1865,11 @@ def how_it_works_memo(ctx):
     tot, led = m.get("totals") or {}, m.get("ledger") or {}
     wf, wrong = howto_cite(ctx, C, "Workflow"), howto_cite(ctx, C, "wrong")
     s = ["**Four outputs.** First, a findings table: every verified finding with its source page, impact math, "
-         "peer comparison and confidence, ranked by dollar impact. Second, the Sharpest Needle, by a plain rule: "
+         "peer comparison and confidence, ranked by impact. Second, the Sharpest Needle, by a plain rule: "
          f"{NEEDLE_RULE}. Third, the product fine-print table: approved uses, safety, dosing, exclusivity and pricing "
          "for each case product against its rivals, with a growth limiter and a priced-in call. Fourth, DECIDE: one "
          "CEO move with a budget, compared with two alternatives on the same five numbers (expected value, cash at "
-         "risk, payback month, scenario spread, MCDA), with kill signals for the first 6 to 12 months."]
+         "risk, payback month, scenario spread, weighted score), with kill signals for the first 6 to 12 months."]
     v = ("**Verify to the page.** A finding survives only if its quote is on the cited page and every figure is "
          "found there or derived from figures that are")
     if tot.get("rejected"):
@@ -1736,9 +1909,8 @@ def how_it_works_memo(ctx):
 
 # ---------------------------------------------------------------- Part 2 memos
 def demo_callout(d, label):
-    note = (d.get("note") or "").strip()
-    if note:
-        return note if note.lower().startswith(label.lower()) else f"{label}: {note}"
+    if d.get("demo"):
+        return DEMO_NOTE
     return label + ": " + DEMO_LABEL.split(": ", 1)[1]
 
 
@@ -1761,7 +1933,7 @@ def decide_label(stance, ctx, t):
 
 
 TOPIC_MAP = [  # finding kind or topic words -> priced-in scorecard topic
-    (("receivable", "inventory", "dso", "dio", "rec_gap"), "inventory_channel"), (("ira", "spend_per_claim"), "IRA_negotiation"),
+    (("inventory", "dio"), "inventory_channel"), (("ira", "spend_per_claim"), "IRA_negotiation"),
     (("mfn",), "MFN"), (("gtn", "pricing", "price"), "gross_to_net_price"), (("tariff",), "tariff"),
     (("generic", "exclusivity", "loe", "biosimilar"), "biosimilar_generic"), (("guidance",), "guidance"),
     (("rnd", "pipeline", "trial"), "pipeline"),
@@ -1833,16 +2005,26 @@ def decide_cite(d, t, mv, C):
                           (mv.get("numeric_check") or {}).get("status") or "decide record", ticker=t))
 
 
+def car_text(mv):
+    car, bud = mv.get("cash_at_risk"), budget_total(mv)[0]
+    if (car or 0) == 0 and bud:
+        return "none under the base case"
+    return mny(car)
+
+
 def five_kpi(mv, n):
     pm = mv.get("payback_month")
+    car = car_text(mv)
     return [{"label": "Expected value, $M", "value": f"{mv.get('ev') or 0:,.1f}", "cite": n},
-            {"label": "Cash at risk, $M", "value": f"{mv.get('cash_at_risk') or 0:,.1f}", "cite": n},
+            {"label": "Cash at risk" + (", $M" if car.startswith(("$", "-$")) else ""), "value": car.lstrip("$") if car.startswith("$") else car, "cite": n},
             {"label": "Payback month", "value": f"{pm}" if pm is not None else "none within the horizon", "cite": n},
             {"label": "Scenario spread, $M", "value": f"{mv.get('spread') or 0:,.1f}", "cite": n},
-            {"label": "MCDA", "value": f"{mv.get('mcda') or 0:.3f}", "cite": n}]
+            {"label": "Weighted score (MCDA)", "value": f"{mv.get('mcda') or 0:.3f}", "cite": n}]
 
 
-def deciders_sentence(st):
+def deciders_sentence(ctx, t, st, C, needle, fs, rec):
+    """Two sentences from this company's cited findings (the needle and the top impact row) naming the audiences from
+    stance.deciders, plus what the evidence can and cannot tell you."""
     ded = st.get("deciders") or ["Payers: CMS (Medicare negotiation) and Part D plan sponsors",
                                  "Investors: analysts and holders who will read the next 10-Q and earnings call",
                                  "Regulators: FDA (labels, exclusivity) and SEC (disclosure)"]
@@ -1850,9 +2032,21 @@ def deciders_sentence(st):
     for x in ded:
         label, _, body = x.partition(":")
         parts.append(f"{label.strip().lower()} ({body.strip()})" if body else x[0].lower() + x[1:])
-    return ("Each audience named in the case can check the move on its own test: " +
-            "; ".join(parts) + ". Payers see a price they can score, investors see the five numbers and the kill "
-            "signals they can re-check at the next 10-Q, and regulators see label and disclosure facts cited to the page.")
+    lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the needle"
+    top = next((f for f in fs if f is not needle and impact_cell(f, Cites(), t)[2]
+                and (match_rule(f.get("signal_kind"), LEADS) or "") != lead), None)
+    bits = []
+    if needle:
+        bits.append(f"{lc(lead)} {C.mark(*lead_cites(needle, C, t, 1))}")
+    if top:
+        tl = match_rule(top.get("signal_kind"), LEADS) or "the next finding"
+        bits.append(f"{lc(tl)} {C.mark(*lead_cites(top, C, t, 1))}")
+    first = (f"The move answers what the cited filings show: " + " and ".join(bits) + "; the audiences who decide "
+             f"its fate are " + "; ".join(parts) + ".") if bits else "The audiences who decide its fate are " + "; ".join(parts) + "."
+    second = ("What that evidence can tell you is the size and timing of the exposure on the cited pages; what it cannot "
+              "tell you is how prescribers, patients or payers will respond, because no survey, prescriber or claims "
+              "evidence was gathered for this move.")
+    return first + " " + second
 
 
 def ceo_memo(ctx, t):
@@ -1867,7 +2061,7 @@ def ceo_memo(ctx, t):
     lead = (match_rule(needle.get("signal_kind"), LEADS) if needle else None) or "the top finding"
     suffix = f" ({label.lower()})" if label else (" (template stance)" if gen == "template" else "")
     re_line = (f"No move clears the hurdle; least-bad option: {rec}{suffix}" if least_bad else
-               f"{rec}{suffix}" if mv else f"{rec}: {lead[0].lower() + lead[1:]}{suffix}")
+               f"{rec}{suffix}" if mv else f"{rec}: {lc(lead)}{suffix}")
     header = {"to": f"CEO, {name}", "from": "NEEDLE desk", "re": re_line, "date": as_of_date(ctx)}
     blocks = []
     if label:
@@ -1905,27 +2099,33 @@ def ceo_memo(ctx, t):
                *five_kpi(mv, n)]
     else:
         rns = option_cites(st, ctx, t, C, rec)
-        p = f"**Move: {rec}.** {OPTION_WHY.get(rec, '').capitalize() or st.get('headline', '')}."
-        if rns:
-            p += (f" The verified findings behind it point the same way: {lead[0].lower() + lead[1:]}, with operating "
-                  f"income lower in the base case {C.mark(*rns)}. No budget is valued yet; the commitment is to act "
-                  f"before the next quarterly filing.")
-        else:
-            p += " No finding in this bucket states an impact formula, so the option is ranked by the size of its cited findings; no budget is valued yet."
-        kpi = [{"label": "Recommended", "value": rec, "cite": None},
+        ndir = impact_cell(needle, Cites(), t)[0].split(".")[0].rstrip() if needle else ""
+        p = (f"**Template stance: {rec} archetype, not a valued move.** {OPTION_WHY.get(rec, '').capitalize() or st.get('headline', '')}. "
+             f"No DECIDE run has valued a budgeted move for {name}; the options are ranked by rules on the verified findings.")
+        if rns and ndir:
+            p += (f" The verified findings behind it point the same way: {lc(lead)}, {lc(ndir)} "
+                  f"{C.mark(*rns)}.")
+        elif not rns:
+            p += " No finding in this bucket states an impact formula, so the option is ranked by the size of its cited findings."
+        kpi = [{"label": "Template stance", "value": f"{rec} archetype", "cite": None},
                {"label": "Budget", "value": "not valued: no DECIDE run for this company", "cite": None},
                {"label": "Expected value", "value": "not valued", "cite": None},
-               {"label": "Direction", "value": "operating income lower" if rns else "not quantified", "cite": rns[0] if rns else None},
+               {"label": "Direction", "value": (lc(ndir)) if (rns and ndir) else "not quantified", "cite": rns[0] if rns else None},
                {"label": "Confidence", "value": (needle or {}).get("confidence") or "n/a", "cite": None}]
     blocks += [{"type": "p", "md": p}, {"type": "h", "text": "Return math: the five numbers" if mv else "Return math"},
                {"type": "kpi", "items": kpi}]
+    if mv:
+        blocks.append({"type": "p", "md": ("Expected value is the present value of the move's cash flows across the bear, base "
+                                            "and bull scenarios; cash at risk is the committed cash the base case does not recover "
+                                            "within the horizon; the weighted score (MCDA) blends strategic fit, capability, execution "
+                                            "risk and stakeholder evidence and decides only when expected-value ranges overlap.")})
     # Why
     blocks.append({"type": "h", "text": "Why: the five findings that drive it"})
     if needle:
         ns = lead_cites(needle, C, t)
         itxt, formula, ins = impact_cell(needle, C, t)
         note, ons = obscurity_cite(needle, C, t)
-        why = f"The Sharpest Needle ({NEEDLE_RULE}): {lead[0].lower() + lead[1:]} {C.mark(*ns)}."
+        why = f"The Sharpest Needle ({NEEDLE_RULE}): {lc(lead)} {C.mark(*ns)}."
         why += f" Impact: {itxt} {C.mark(*ins)}." if ins else f" Impact: {itxt}."
         if note:
             why += f" How rarely analysts asked: {plain_obscurity(note).rstrip('.')} {C.mark(*ons)}."
@@ -1945,9 +2145,10 @@ def ceo_memo(ctx, t):
             reason = m.get("binding_reason") or (alts.get(m.get("name")) or {}).get("why_rejected") or "lower expected value"
             reason = re.sub(r"\s*\(spec [\d.]+\)", "", reason).strip().rstrip(";. ")
             pm = m.get("payback_month")
+            reason = reason.replace("MCDA", "weighted score")
             items.append(f"**{m.get('name')}**: expected value {mny(m.get('ev'))}, cash at risk "
-                         f"{mny(m.get('cash_at_risk'))}, payback month {pm if pm is not None else 'none within the horizon'}, spread "
-                         f"{mny(m.get('spread'))}, MCDA {m.get('mcda') or 0:.3f} [{n}]. Not chosen: {reason}.")
+                         f"{car_text(m)}, payback month {pm if pm is not None else 'none within the horizon'}, spread "
+                         f"{mny(m.get('spread'))}, weighted score {m.get('mcda') or 0:.3f} [{n}]. Not chosen: {reason}.")
     else:
         for alt in (st.get("alternatives") or [])[:2]:
             an = alt.get("name")
@@ -1957,7 +2158,7 @@ def ceo_memo(ctx, t):
             if top:
                 tl = match_rule(top.get("signal_kind"), LEADS) or "its top finding"
                 tns = lead_cites(top, C, t, 1)
-                behind = f" ({tl[0].lower() + tl[1:]} {C.mark(*(tns + ans))})"
+                behind = f" ({lc(tl)} {C.mark(*(tns + ans))})"
             items.append(f"**{an}**: would {OPTION_WHY.get(an, 'address a different finding')}. Its findings{behind} "
                          f"carry smaller cited impacts than the needle; it is the fallback if the {rec} kill signals fire.")
     blocks.append({"type": "list", "items": items or ["No alternative recorded."]})
@@ -1967,7 +2168,7 @@ def ceo_memo(ctx, t):
     blocks.append({"type": "p", "md": "Two signals firing in one quarter pause the move and re-run the valuation."})
     # Deciders
     blocks.append({"type": "h", "text": "Why it lands with the deciders"})
-    blocks.append({"type": "p", "md": deciders_sentence(st)})
+    blocks.append({"type": "p", "md": deciders_sentence(ctx, t, st, C, needle, fs, rec)})
     # Priced in
     blocks.append({"type": "h", "text": "Priced in or not"})
     pi, pns = priced_call(ctx, t, C)
@@ -1977,9 +2178,13 @@ def ceo_memo(ctx, t):
         n = priced_in_cite(t, hit, C)
         pp += (f" Analysts raised {topic_words(hit['topic'])} in {hit.get('quarters_asked')} of "
                f"{hit.get('quarters_covered')} quarters (tier: {hit.get('analyst_attention_tier')}) [{n}].")
+    elif needle:
+        note, ons = obscurity_cite(needle, C, t)
+        if note:
+            pp += f" {plain_obscurity(note).rstrip('.')[0].upper() + plain_obscurity(note).rstrip('.')[1:]} {C.mark(*ons)}."
     blocks.append({"type": "p", "md": pp})
-    summary = (f"{'Least-bad option' if least_bad else 'Recommend'} {rec} for {name}"
-               + (f" (EV {mny(mv.get('ev'))})" if mv else f": {lead[0].lower() + lead[1:]}") + f"; {pi.split(':')[0]}.")
+    summary = ((f"{'Least-bad option' if least_bad else 'Recommend'} {rec} for {name} (EV {mny(mv.get('ev'))})" if mv else
+                f"Template stance for {name} (no valued move): {rec} archetype; {lc(lead)}") + f"; {pi.split(':')[0]}.")
     nc = needle.get("numeric_check") if needle and isinstance(needle.get("numeric_check"), dict) else None
     if gen == "decide_v2":
         nc = d.get("numeric_check") or nc
@@ -1991,16 +2196,22 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
         for i, k in enumerate(st["kill_signals"]):
             if k.get("threshold") == "context" or not k.get("signal"):
                 continue  # baseline context rows are inputs, not signals
+            base = k.get("baseline")
+            label = base[-1] if isinstance(base, list) and base and isinstance(base[-1], str) else (base if isinstance(base, str) else None)
+            if not label:
+                continue  # a signal with no baseline value is dropped (nothing to move from)
             if brief and len(items) >= 4:
                 break
             n = C.add(row_cite(f"row:kill:{t}:{i}", f"companies/{t}.json:stance.kill_signals[{i}]",
                                f"out/{t}/decide.json kill-signal table ({k.get('source')})",
-                               "; ".join(f"{key} {k.get(key)}" for key in ("id", "signal", "threshold", "source", "lag", "check_month", "action", "basis") if k.get(key) not in (None, "")),
-                               "decide record", ticker=t))
+                               "; ".join(f"{key} {k.get(key)}" for key in ("id", "signal", "threshold", "source", "lag", "check_month", "action") if k.get(key) not in (None, ""))
+                               + f"; baseline {label}", "decide record", ticker=t))
             act = ACTION_WORDS.get(k.get("action"), str(k.get("action") or "review").replace("_", " "))
-            items.append(f"**{k.get('signal')}**: {k.get('threshold')} by month {k.get('check_month')} "
-                         f"({k.get('source')}; {k.get('lag')}); action: {act} [{n}].")
-        return items
+            items.append(f"**{plain_terms(k.get('signal'))}**: {k.get('threshold')} by month {k.get('check_month')} "
+                         f"({plain_terms(k.get('source'))}; {plain_terms(k.get('lag'))}); baseline today: {plain_terms(label)}; "
+                         f"action: {act} [{n}].")
+        if len(items) >= 3:
+            return items
     seen = set()
     for f in fs:
         rule = match_rule(f.get("signal_kind"), PROVE_WRONG)
@@ -2009,11 +2220,11 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
         seen.add(rule)
         lead = match_rule(f.get("signal_kind"), LEADS) or "the finding"
         if brief:
-            items.append(f"{rule} Baseline: {lead[0].lower() + lead[1:]} {C.mark(*lead_cites(f, C, t))}.")
+            items.append(f"{rule} Baseline: {lc(lead)} {C.mark(*lead_cites(f, C, t))}.")
         else:
             s, ns = sentence(f, C, t)
             items.append(f"{rule} Baseline today: {C.after(s, *ns)}.")
-        if len(items) == 3:
+        if len(items) >= 3:
             break
     sf = ctx.companies[t].get("sealed_forecast") or {}
     iv = next((b for b in sf.get("basis") or [] if "interval" in b), "")
@@ -2029,6 +2240,18 @@ def kill_signals(ctx, t, C, fs, st, gen, brief=False):
         if not re.search(r"\d", re.sub("|".join(WHITELIST), "", x)) and x not in items:
             items.append(x)
     return items
+
+
+def what_we_would_do(st, needle, rec):
+    has_peer = bool(re.search(r"peer median", (needle or {}).get("finding") or ""))
+    alts = [a.get("name") for a in st.get("alternatives") or [] if a.get("name") and a.get("name") != rec]
+    fallback = alts[0] if alts else None
+    p = "Check each signal at every 10-Q and after every earnings call. "
+    p += ("If the needle metric closes toward the peer median and the sealed forecast holds, " if has_peer else
+          "If the needle's exposure does not materialise in the filings and the sealed forecast holds, ")
+    p += f"the {rec} commitment is released"
+    p += f"; if two signals fire instead, the move shifts toward {fallback}." if fallback else "; if two signals fire instead, the move is paused and re-valued."
+    return p + " We publish the check, hit or miss, in the ledger."
 
 
 def prove_wrong_memo(ctx, t):
@@ -2052,10 +2275,7 @@ def prove_wrong_memo(ctx, t):
                                    f"quarter, leadership pauses the move and the valuation is re-run.")},
               {"type": "list", "items": kill_signals(ctx, t, C, fs[:5], st, gen)},
               {"type": "h", "text": "What we would do"},
-              {"type": "p", "md": (f"Check each signal at every 10-Q and after every earnings call. If the needle metric "
-                                   f"closes toward the peer median and the sealed forecast holds, the {rec} commitment is "
-                                   f"released; if the Medicare or MFN signals fire instead, the move shifts toward Reprice. "
-                                   f"We publish the check, hit or miss, in the ledger.")}]
+              {"type": "p", "md": what_we_would_do(st, needle, rec)}]
     deciders = st.get("deciders") or []
     if deciders:
         blocks.append({"type": "callout", "tone": "muted", "md": "Who decides its fate: " + "; ".join(deciders) + "."})
@@ -2223,6 +2443,7 @@ def product_gated_text(ctx, t, slug):
         for cell in (row or {}).values():
             if not (cell or {}).get("uncited"):
                 parts.append(str((cell or {}).get("value") or ""))
+                parts += [str(c.get("quote") or "") for c in (cell or {}).get("citations") or []]  # label quotes on the page
     gl = v2.get("growth_limiter") or {}
     parts += [gl.get("sentence") or "", gl.get("sentence_raw") or ""]
     for f in v2.get("findings") or []:
@@ -2291,6 +2512,14 @@ def check(path, ctx):
         return [f"{path}: missing or unreadable"], warns, {}
     memos = doc.get("memos") or []
     pools = {}
+    try:
+        mt = Path(path).stat().st_mtime
+        newer = [p.name for p in list((ctx.dir / "companies").glob("*.json")) + [ctx.dir / "meta.json", ctx.dir / "proof.json", ctx.dir / "league.json"]
+                 if p.exists() and p.stat().st_mtime > mt + 1]
+        if newer:
+            errors.append(f"{path.name} is older than {', '.join(sorted(newer))}: regenerate")
+    except OSError:
+        pass
 
     def pool(t):
         if t not in pools:
@@ -2443,6 +2672,11 @@ def check(path, ctx):
                     errors.append(f"{mid}: row cite [{n}] {cid} does not resolve: {err}")
                 elif c.get("value") is not None and str(c["value"]) not in (c.get("quote") or ""):
                     errors.append(f"{mid}: row cite [{n}] value {c['value']} not in quote")
+                if cid.startswith("row:decide:") and isinstance(obj, dict):
+                    for key in FIVE:
+                        qm = re.search(rf"\b{key} (\S+)", c.get("quote") or "")
+                        if qm and str(obj.get(key)) != qm.group(1).rstrip(";"):
+                            errors.append(f"{mid}: row cite [{n}] {cid} quotes {key} {qm.group(1)} but the decide row now says {obj.get(key)}")
             elif cid.startswith("ev:"):
                 _, fid, idx = cid.split(":")
                 f = ctx.finding(c.get("ticker"), fid) if c.get("ticker") in ctx.companies else None
