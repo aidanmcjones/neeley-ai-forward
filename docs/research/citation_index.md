@@ -1,6 +1,8 @@
 # Citation index
 
 The case rule is "Every finding needs a citation... Check everything against the source." This index makes that rule mechanical. Every number or quote an AI output shows should come back from here as a document plus printed page, or as a verified table row plus its source.
+Retrieval helpers built on this index (risk-factor drift, gross-to-net, working capital, segments, footnotes, calls, labels, forces) are documented in `docs/research/case_retrieval.md`.
+
 
 - Build: `python -m agent.moat.index` (about 8 seconds). Add `--upload` to gzip it and put it to R2 at `moat/index/citations.sqlite.gz`.
 - File: `data/moat/index/citations.sqlite`, 329 MB (84.6 MB gzipped). It is gitignored. Fetch it from R2 with `agent.tenk.Store().get("moat/index/citations.sqlite.gz")` and gunzip.
