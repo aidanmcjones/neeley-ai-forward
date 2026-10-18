@@ -661,8 +661,13 @@ def citation_evidence(c, side, pool=None):
           "confidence_note": c.get("confidence_note") or "", "withheld": bool(why), "withheld_reason": why}
     if (c.get("verification") or {}).get("status") == "number_match" and not why:
         # docs/citations.md: the quote did not verify; the public footnote shows page text around the number
-        ev["quote"] = ""
-        ev["quote_note"] = "the quote did not verify; the number is on the cited page"
+        if c.get("page") is None and c.get("value") not in (None, ""):
+            # data row with no page (XBRL frame): show the cited value on its concept, not a quote
+            ev["quote"] = f"{c.get('location') or c.get('doc_title')} = {c.get('value')}"
+            ev["quote_note"] = "constructed from the cited value (no page); not a verbatim quote"
+        else:
+            ev["quote"] = ""
+            ev["quote_note"] = "the quote did not verify; the number is on the cited page"
     if derived:  # never rendered as a quote: the UI shows "derived from [a][b]"
         ev.update(quote="", deep_link="", viewer_link="", url=None, derived_from=derived_operands(c),
                   derived_expr=None if why else (c.get("quote") or None))
