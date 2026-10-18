@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type React from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { useData } from "../lib/data";
-import { isPart1Query, isWhyCompanyQuery, PART1_PROMPT, usePart1 } from "../lib/part1";
+import { useSearchParams } from "react-router-dom";
+import { isPart1Query, isWhyCompanyQuery, PART1_PROMPT, useCompanyNames, usePart1 } from "../lib/part1";
 import { Part1Answer } from "../components/chat/Part1Answer";
 import type { FollowChip } from "../components/chat/Part1Answer";
 import { SelectionCard } from "../components/chat/Part1Selection";
@@ -18,8 +17,8 @@ const noFollow = (): FollowChip[] => [];
 
 export default function Chat() {
   const part1 = usePart1();
-  const { meta, loading: metaLoading } = useData();
-  const nameOf = useCallback((t: string) => meta?.companies.find((c) => c.ticker === t)?.name ?? t, [meta]);
+  const { names, loading: metaLoading } = useCompanyNames();
+  const nameOf = useCallback((t: string) => names[t] ?? t, [names]);
   const [params] = useSearchParams();
   const [turns, setTurns] = useState<Turn[]>([]);
   const [text, setText] = useState("");
@@ -34,8 +33,7 @@ export default function Chat() {
     if (part1.index?.picked.length && isPart1Query(p)) turn = { ...turn, kind: "part1" };
     else if (part1.selection?.picked?.length) {
       const pk = part1.selection.picked;
-      const names = (meta?.companies ?? []).flatMap((c) => [c.ticker, c.name ?? ""]);
-      if (isWhyCompanyQuery(p, names)) {
+      if (isWhyCompanyQuery(p, Object.entries(names).flat())) {
         const lower = p.toLowerCase();
         const named = pk.find((t) => new RegExp(`\\b${t.toLowerCase()}\\b`).test(lower) || lower.includes(nameOf(t).toLowerCase()));
         turn = { ...turn, kind: "selection", ticker: named ?? pk[0] };
@@ -43,7 +41,7 @@ export default function Chat() {
     }
     setTurns((ts) => [...ts, turn]);
     setText("");
-  }, [part1.index, part1.selection, meta, nameOf]);
+  }, [part1.index, part1.selection, names, nameOf]);
 
   // ?q= sends on load (judge links open on an answer).
   const q = params.get("q");
@@ -118,9 +116,8 @@ export default function Chat() {
               className="flex-1 resize-none bg-transparent py-1.5 text-[15px] outline-none placeholder:text-muted max-h-40" />
             <button type="submit" disabled={!text.trim()} className="rounded-lg bg-purple dark:bg-purple-deep px-3.5 py-1.5 text-[14px] font-semibold text-white disabled:opacity-40">Send</button>
           </div>
-          <div className="mt-1.5 flex items-center justify-between text-[11px] text-muted">
-            <span>Cached answer{part1.index?.generated_at ? ` · ${part1.index.generated_at.slice(0, 10)}` : ""} · Enter to send, Shift+Enter for a new line</span>
-            <Link to="/cockpit" className="underline hover:text-purple">Full cockpit</Link>
+          <div className="mt-1.5 text-[11px] text-muted">
+            Cached answer{part1.index?.generated_at ? ` · ${part1.index.generated_at.slice(0, 10)}` : ""} · Enter to send, Shift+Enter for a new line
           </div>
         </form>
       </div>

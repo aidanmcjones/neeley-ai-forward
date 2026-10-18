@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { ReactNode } from "react";
 import type React from "react";
 import type { Evidence } from "../lib/types";
-import { isWithheld, useData, withheldReason } from "../lib/data";
+import { isWithheld, withheldReason } from "../lib/data";
 import { derivedOperands, isConstructed, isDerived, isRowCite, pitchEvidence, pitchLine } from "../lib/cites";
 
 // Global right-side source drawer. Any CiteChip calls useSource().open(evidence).
@@ -52,7 +52,6 @@ function verdictTone(v?: string) {
 
 export function SourceDrawer({ evidence: evRaw, onClose }: { evidence: Evidence; onClose: () => void }) {
   const ev = pitchEvidence(evRaw);
-  const { company } = useData();
   const { open } = useSource();
   const ref = useRef<HTMLDivElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
@@ -105,7 +104,7 @@ export function SourceDrawer({ evidence: evRaw, onClose }: { evidence: Evidence;
   }
 
   if (!withheld && isDerived(ev)) {
-    const ops = derivedOperands(company, ev);
+    const ops = derivedOperands(ev);
     const title = String(ev.doc_title || ev.doc_label || ev.citation || ev.doc_id || "Derived figure");
     const val = ev.value != null && ev.value !== "" ? `${String(ev.value)}${ev.unit ? ` ${ev.unit}` : ""}` : null;
     return (

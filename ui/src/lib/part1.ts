@@ -167,3 +167,25 @@ export async function loadSealedDoc(prefix: string, path: string): Promise<strin
 export function splitSentences(s: string): string[] {
   return s.split(/(?<!\b(?:Co|Inc|Corp|Ltd|vs|No|St|U\.S|e\.g|i\.e)\.)(?<=[.!?])\s+(?=[A-Z("'])/);
 }
+
+/** Company names for the ten (meta.json, the only other file the chat reads), real export else sample. */
+export function useCompanyNames(): { names: Record<string, string>; loading: boolean } {
+  const [st, setSt] = useState<{ names: Record<string, string>; loading: boolean }>({ names: {}, loading: true });
+  useEffect(() => {
+    let live = true;
+    (async () => {
+      for (const base of [ROOT, SAMPLE]) {
+        try {
+          const m = await fetchJson<{ companies?: { ticker: string; name?: string }[] }>(base, "meta.json");
+          const names: Record<string, string> = {};
+          for (const c of m?.companies ?? []) if (c?.ticker) names[c.ticker] = c.name ?? c.ticker;
+          if (live) setSt({ names, loading: false });
+          return;
+        } catch { /* next */ }
+      }
+      if (live) setSt({ names: {}, loading: false });
+    })();
+    return () => { live = false; };
+  }, []);
+  return st;
+}

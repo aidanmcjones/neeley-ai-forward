@@ -2,7 +2,6 @@ import { Fragment, useState } from "react";
 import type { ReactNode } from "react";
 import type { Evidence } from "../../lib/types";
 import { CiteChip } from "../CiteChip";
-import { AssumptionPill, ConstantPill } from "../MarkedSentence";
 
 // Minimal inline markdown for memo blocks: **bold**, *italic*, `code`, and the citation markers
 // [n], [derived: a, b], [assumption]. Markers come only from the data.
@@ -67,3 +66,20 @@ export function Md({ md, cite, prefix }: { md: string; cite: (n: number) => Evid
 
 /** Plain text of a markdown string (markers and emphasis stripped), for the typewriter and copy. */
 export const plainMd = (md: string) => md.replace(/\[(\d+)\]|\[derived:[^\]]+\]|\[constant:[^\]]+\]|\[assumption(?::[^\]]+)?\]/g, "").replace(/\*\*|`/g, "").replace(/\s+([.,;:])/g, "$1");
+
+export function AssumptionPill({ reason }: { reason?: string }) {
+  return (
+    <>
+      <span title={reason ? `Assumption: ${reason}` : "This number is an assumption (a stated input), not a sourced figure"}
+        className="inline-block rounded border border-warn/60 bg-warn/10 px-1 py-px align-middle font-body text-[10px] font-semibold normal-case tracking-normal leading-tight text-warn">assumption</span>
+      {reason && <span className="hidden print:inline font-body text-[9px] normal-case tracking-normal text-warn"> ({reason})</span>}
+    </>
+  );
+}
+
+export function ConstantPill({ name }: { name: string }) {
+  return (
+    <span title={`Constant: ${name} (a fixed model input, not a sourced figure)`}
+      className="inline-block rounded border border-line px-1 py-px align-middle font-body text-[10px] font-semibold normal-case tracking-normal leading-tight text-muted">constant</span>
+  );
+}
